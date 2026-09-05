@@ -176,6 +176,11 @@ def main():
                 baseline[name] = stats
             baseline['train_nll'] = reference_nll(model, encoded, tokenizer, cfg['microbatch_size'])
             baseline['dev_nll'] = reference_nll(model, dev_encoded, tokenizer, cfg['microbatch_size'])
+            if cfg.get('baseline_sampled_dev', False):
+                predictions, stats = generate(model, tokenizer, dev_rows, cfg,
+                                              samples=cfg['samples_per_problem'], sample=True)
+                save_predictions(out/'base_dev_sampled.jsonl', predictions)
+                baseline['dev_sampled'] = stats
             dump(out/'baseline_metrics.json', baseline)
         history, checkpoint_metrics = [], []
         torch.cuda.reset_peak_memory_stats()
