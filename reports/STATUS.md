@@ -10,7 +10,7 @@
 - The initial exact-matching pool was additive-only. A stricter 4096-group CPU audit found 64 blocks / 256 problems with a multiply/divide path in every block: 66416 supervised tokens and 256 updates per arm per cycle, with exact per-update Within-Paths/GCM structural equality. Only 6.25% of candidates are selected and Surface only changes step labels; no final scientific split is frozen.
 - A800 added 436 process-seconds. Cumulative runtime: **1173 / 7200 seconds**; **6027 seconds remain**. Idle billing is separate and A800 hourly price is unknown.
 
-See A800_SESSION.md, main_a800_output_integrity.json, exact_matching_candidate_integrity.json, environment_a800.json and compute_accounting.json. GPU work has ended; artifact backup status is in ARTIFACTS.md.
+See A800_SESSION.md, main_a800_output_integrity.json, exact_matching_candidate_integrity.json, environment_a800.json and compute_accounting.json. GPU work has ended. All 12 main checkpoint files are verified on A800 and in a separate local backup; see ARTIFACTS.md.
 
 ## Retained earlier evidence
 The 0.5B debug gate passed with 31/32 train correctness, while development was also zero. Its higher-LR attempt failed the gate; an earlier uncommitted-source attempt was invalidated and conservatively charged. The original 1.5B 4090 OOM occurred before any optimizer update. All failures and both debug checkpoints' verified backups are retained. See run_registry.json.

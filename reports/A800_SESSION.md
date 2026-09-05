@@ -62,4 +62,4 @@ The final greedy development failures comprise 10 cases with both wrong input us
 
 A800 added 436 charged process-seconds. Shared total: **1173/7200 seconds (19.55 minutes)**; remaining: **6027 seconds (100.45 minutes)**. A800 hourly price was not provided, so the old 4090 price is not applied. Instance idle billing is separate.
 
-The checkpoint contains weights and tokenizer, with 12 files verified on the server. See `ARTIFACTS.md` for local backup status. It omits optimizer/RNG/sampler state and cannot provide exact optimizer resume. GPU processes were absent after completion.
+The checkpoint contains weights and tokenizer, with all 12 files verified on both A800 and a separate local backup. The two verification reports are identical (6190803581 bytes in total). The slow SSH transfer was resumed by ranges and accepted only after complete file hashes matched. See `ARTIFACTS.md`. Optimizer/RNG/sampler state is omitted, so exact optimizer resume is unavailable. GPU processes were absent after completion.
