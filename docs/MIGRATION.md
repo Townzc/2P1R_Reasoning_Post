@@ -7,6 +7,8 @@
 5. To resume optimizer training, separately transfer the checkpoint directory and verify its SHA-256 manifest. A code clone alone does not restore optimizer/model state. CPU/GPU RNG, optimizer, scheduler, sampler position and ledger must be restored by a supported resume implementation; otherwise start a new registered run rather than claiming exact resume.
 6. Transfer the cumulative resource ledger when continuing the same approved budget. A fresh machine is not a new compute authorization.
 
+Use the latest ledger from the active server or its verified local backup. After the A800 continuation it contains 1173 charged seconds; the earlier 4090 copy may still contain only 737 seconds and must not be reused as the current ledger. The file lock is local to one server, so only one authorized GPU job may be active across all copies.
+
 Keep SSH keys and host-specific paths outside Git. Small completed run artifacts are pulled back to the local repository and pushed to GitHub at each milestone. The training server does not need a GitHub write credential.
 
 ## When the GPU server cannot reach GitHub

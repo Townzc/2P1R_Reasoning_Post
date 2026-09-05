@@ -1,0 +1,174 @@
+{
+  "scope": "CPU feasibility, not frozen datasets; label-only surface rendering and selection restrictions remain",
+  "audits": [
+    {
+      "run_id": "exact_matching_candidates_20260905",
+      "candidate_groups": 1024,
+      "selected_groups": 256,
+      "selection_fraction": 0.25,
+      "selected_blocks": 64,
+      "all_expressions_and_structure_ids_verified": true,
+      "exact_supervised_tokens_per_cycle": {
+        "paths": 68608,
+        "gcm": 68608,
+        "repeat": 68608,
+        "surface": 68608
+      },
+      "updates_per_cycle": 256,
+      "all_blocks_include_muldiv": false,
+      "operator_counts_binary_ast": {
+        "+": 1376,
+        "-": 1696
+      },
+      "distinct_full_structures": 10,
+      "target_distribution_tv_selected_vs_candidates": 0.2509765625,
+      "response_lengths": [
+        66,
+        68
+      ],
+      "full_structure_histogram": {
+        "+(-(+(N,N),N),N)": 220,
+        "+(-(-(N,N),N),N)": 36,
+        "+(-(N,-(N,N)),N)": 180,
+        "+(-(N,N),N,N)": 164,
+        "-(+(-(N,N),N),N)": 36,
+        "-(+(N,N),+(N,N))": 36,
+        "-(+(N,N),-(N,N))": 28,
+        "-(N,-(+(N,N),N))": 36,
+        "-(N,-(-(N,N),N))": 68,
+        "-(N,-(N,+(N,N)))": 220
+      }
+    },
+    {
+      "run_id": "exact_matching_muldiv_20260905",
+      "candidate_groups": 1024,
+      "selected_groups": 64,
+      "selection_fraction": 0.0625,
+      "selected_blocks": 16,
+      "all_expressions_and_structure_ids_verified": true,
+      "exact_supervised_tokens_per_cycle": {
+        "paths": 16592,
+        "gcm": 16592,
+        "repeat": 16592,
+        "surface": 16592
+      },
+      "updates_per_cycle": 64,
+      "all_blocks_include_muldiv": true,
+      "operator_counts_binary_ast": {
+        "*": 172,
+        "-": 316,
+        "+": 204,
+        "/": 76
+      },
+      "distinct_full_structures": 34,
+      "target_distribution_tv_selected_vs_candidates": 0.4423828125,
+      "response_lengths": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "full_structure_histogram": {
+        "*(+(-(N,N),N),N)": 8,
+        "*(+(N,N),-(N,N))": 4,
+        "*(+(N,N,N),N)": 4,
+        "*(-(+(N,N),N),N)": 20,
+        "*(-(N,-(N,N)),N)": 4,
+        "*(-(N,N),-(N,N))": 4,
+        "*(/(N,+(N,N)),N)": 4,
+        "*(/(N,-(N,N)),N)": 4,
+        "+(*(+(N,N),N),N)": 4,
+        "+(*(-(N,N),N),N)": 8,
+        "+(*(N,N),-(N,N))": 4,
+        "+(*(N,N),N,N)": 4,
+        "+(-(*(N,N),N),N)": 16,
+        "+(-(N,+(N,N)),N)": 4,
+        "+(-(N,-(N,N)),N)": 8,
+        "+(-(N,N),/(N,N))": 4,
+        "+(/(+(N,N),N),N)": 4,
+        "+(/(N,-(N,N)),N)": 8,
+        "-(*(+(N,N),N),N)": 12,
+        "-(*(-(N,N),N),N)": 4,
+        "-(*(N,N),-(N,N))": 16,
+        "-(+(*(N,N),N),N)": 28,
+        "-(+(/(N,N),N),N)": 12,
+        "-(/(N,-(N,N)),N)": 4,
+        "-(N,*(-(N,N),N))": 4,
+        "-(N,-(N,*(N,N)))": 20,
+        "-(N,-(N,+(N,N)))": 4,
+        "-(N,-(N,-(N,N)))": 4,
+        "-(N,/(N,-(N,N)))": 4,
+        "/(+(N,N),-(N,N))": 4,
+        "/(-(N,N),-(N,N))": 4,
+        "/(N,+(-(N,N),N))": 8,
+        "/(N,-(+(N,N),N))": 8,
+        "/(N,/(N,+(N,N)))": 4
+      }
+    },
+    {
+      "run_id": "exact_matching_muldiv_4096_20260905",
+      "candidate_groups": 4096,
+      "selected_groups": 256,
+      "selection_fraction": 0.0625,
+      "selected_blocks": 64,
+      "all_expressions_and_structure_ids_verified": true,
+      "exact_supervised_tokens_per_cycle": {
+        "paths": 66416,
+        "gcm": 66416,
+        "repeat": 66416,
+        "surface": 66416
+      },
+      "updates_per_cycle": 256,
+      "all_blocks_include_muldiv": true,
+      "operator_counts_binary_ast": {
+        "*": 636,
+        "-": 1228,
+        "+": 860,
+        "/": 348
+      },
+      "distinct_full_structures": 31,
+      "target_distribution_tv_selected_vs_candidates": 0.228759765625,
+      "response_lengths": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        68
+      ],
+      "full_structure_histogram": {
+        "*(+(-(N,N),N),N)": 24,
+        "*(+(N,N),-(N,N))": 44,
+        "*(+(N,N,N),N)": 16,
+        "*(-(+(N,N),N),N)": 48,
+        "*(-(N,-(N,N)),N)": 36,
+        "*(-(N,N),-(N,N))": 20,
+        "+(*(+(N,N),N),N)": 16,
+        "+(*(-(N,N),N),N)": 76,
+        "+(*(N,N),-(N,N))": 40,
+        "+(*(N,N),N,N)": 16,
+        "+(-(*(N,N),N),N)": 88,
+        "+(-(/(N,N),N),N)": 44,
+        "+(-(N,-(N,N)),N)": 20,
+        "+(-(N,N),/(N,N))": 8,
+        "+(/(+(N,N),N),N)": 16,
+        "+(/(N,-(N,N)),N)": 76,
+        "-(*(+(N,N),N),N)": 24,
+        "-(*(N,N),-(N,N))": 48,
+        "-(+(*(N,N),N),N)": 76,
+        "-(+(/(N,N),N),N)": 32,
+        "-(N,*(-(N,N),N))": 16,
+        "-(N,-(N,*(N,N)))": 48,
+        "-(N,-(N,+(N,N)))": 20,
+        "-(N,-(N,-(N,N)))": 20,
+        "-(N,-(N,/(N,N)))": 8,
+        "-(N,/(N,-(N,N)))": 12,
+        "/(+(N,N),-(N,N))": 44,
+        "/(-(N,N),-(N,N))": 20,
+        "/(N,+(-(N,N),N))": 24,
+        "/(N,-(+(N,N),N))": 24,
+        "/(N,/(N,+(N,N)))": 20
+      }
+    }
+  ]
+}

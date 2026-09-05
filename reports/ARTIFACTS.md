@@ -7,7 +7,7 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 | Pinned 0.5B and 1.5B base snapshots | Training server cache | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
 | Higher-LR debug checkpoint (`r2`, gate failed) | Training server and local backup outside Git | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
 | Passing debug checkpoint (`r3`, 31/32) | Training server and local backup outside Git | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
-| First-session runtime ledger | Training server and local private backup | Public summary in `compute_accounting.json`; transfer the private ledger to continue the same approved budget. |
+| First-session runtime ledger | Active A800 and latest local private backup (1173 seconds) | Public summary in `compute_accounting.json`; the old 4090 ledger may be stale. Transfer the latest private ledger to continue the same approved budget. |
 | Main A800 checkpoint (32/32 overfit) | A800 verified; local weight transfer in progress | `checkpoint_main_a800_server_verified.json` and the run's 12-file SHA-256 manifest. Keep the sole verified copy until destination verification completes. |
 | Raw run records | GitHub, local checkout and training server | See `run_registry.json` and each run's recorded code commit; one launch is explicitly invalidated. |
 

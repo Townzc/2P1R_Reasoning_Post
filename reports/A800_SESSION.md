@@ -4,7 +4,7 @@ The intended Qwen2.5-1.5B base model now trains with the unchanged FP32-paramete
 
 ## Environment and provenance
 
-A800-SXM4-80GB; driver 580.126.09; Python 3.12.3; PyTorch 2.8.0+cu128; Transformers 4.56.2. Main model/tokenizer revision: `8faed761d45a263340a0528343f099c05c9a4323`. All nine snapshot files match the expected digests pinned from the official Hugging Face API; a mirror supplied bytes. A slow direct PyPI installation was stopped, then the same pinned packages were installed using an alternate package index. `pip check` and all 40 tests passed.
+A800-SXM4-80GB; driver 580.126.09; Python 3.12.3; PyTorch 2.8.0+cu128; Transformers 4.56.2. Main model/tokenizer revision: `8faed761d45a263340a0528343f099c05c9a4323`. All nine snapshot files match the expected digests pinned from the official Hugging Face API; a mirror supplied bytes. A slow direct PyPI installation was stopped, then the same pinned packages were installed using an alternate package index. `pip check` and all 40 launch-time tests passed; the later operator sensitivity checks bring the passing suite to 42 tests.
 
 Both GPU runs used published commit `58e44b3e801472fd2f31e6ef7d488c03405b2e3d`. The existing 737-second ledger was carried to this server, not reset.
 
@@ -45,7 +45,18 @@ This is candidate feasibility, not a frozen benchmark. Only 25% of candidates ar
 
 An operator audit found that all selected paths use only addition/subtraction (1376 additions, 1696 subtractions over the 1024 binary programs). Thus this first exact-matching construction does not cover the intended multiply/divide path distribution. A separate CPU sensitivity search adds an explicit multiply/divide requirement per block. Operator totals are counted from parsed binary trees; counting symbols in AC-flattened signatures would undercount associative operations.
 
-See `runs/exact_matching_candidates_20260905/`, `exact_matching_candidate_integrity.json` and `../docs/PILOT_PROPOSAL.md`.
+The operator-constrained sensitivity searches completed as follows:
+
+| Candidate groups | Selected groups | Selection fraction | Tokens/arm/cycle | Complete structures | Selected-vs-candidate target TV |
+|---:|---:|---:|---:|---:|---:|
+| 1024 | 64 | 6.25% | 16592 | 34 | 0.44238 |
+| 4096 | 256 | 6.25% | 66416 | 31 | 0.22876 |
+
+Both retain exact per-update matching and a multiply/divide structure in every selected block. The 4096-group version contains 636 multiplications, 348 divisions, 860 additions and 1228 subtractions across its 1024 binary programs. These counts do not establish balanced difficulty or cognitive strategies. The weak rendering control, restricted selection and missing frozen split remain unresolved.
+
+See the three `runs/exact_matching_*` directories, `matching_operator_sensitivity.json`, `exact_matching_candidate_integrity.json` and `../docs/PILOT_PROPOSAL.md`.
+
+The final greedy development failures comprise 10 cases with both wrong input use and wrong target, four with only wrong target, one unparseable case and one with wrong input use only. One generated expression exactly matches a training reference. These are descriptive output checks, not a causal account of memorization; see `main_a800_dev_failure_analysis.json`.
 
 ## Runtime and artifacts
 
