@@ -43,6 +43,8 @@ One proposed cycle gives every arm 256 updates, 1024 presentations and exactly *
 
 This is candidate feasibility, not a frozen benchmark. Only 25% of candidates are selected; selected-vs-candidate target-distribution TV is 0.25098. Search considers the first 12 sorted full structures per length. Surface variants only replace Step with Stage, Part or Line, a weak rendering control. Selection restrictions and rendering scope need review. Group-disjoint development/holdout construction remains to be frozen before augmentation and scientific training. No model outcomes entered the candidate search.
 
+An operator audit found that all selected paths use only addition/subtraction (1376 additions, 1696 subtractions over the 1024 binary programs). Thus this first exact-matching construction does not cover the intended multiply/divide path distribution. A separate CPU sensitivity search adds an explicit multiply/divide requirement per block. Operator totals are counted from parsed binary trees; counting symbols in AC-flattened signatures would undercount associative operations.
+
 See `runs/exact_matching_candidates_20260905/`, `exact_matching_candidate_integrity.json` and `../docs/PILOT_PROPOSAL.md`.
 
 ## Runtime and artifacts

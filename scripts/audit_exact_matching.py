@@ -33,13 +33,15 @@ def candidate(item):
             'trees': sorted(trees, key=canonical)}
 
 
-def matching_blocks(inventories, limit):
+def matching_blocks(inventories, limit, require_muldiv=False):
     """Each key is (response tokens, four complete structure signatures)."""
     support = defaultdict(list)
     for index, inventory in enumerate(inventories):
         for length, by_structure in inventory.items():
             # A declared search cap controls combinatorial cost; no coarsening.
             for structures in itertools.combinations(sorted(by_structure)[:12], 4):
+                if require_muldiv and not any('*' in s or '/' in s for s in structures):
+                    continue
                 support[(length, *structures)].append(index)
     used, blocks = set(), []
     for key, indices in sorted(support.items(), key=lambda item: (-len(item[1]), item[0])):
@@ -61,6 +63,8 @@ def main():
     p.add_argument('--max-number', type=int, default=40)
     p.add_argument('--seed', type=int, default=20260905)
     p.add_argument('--workers', type=int, default=8)
+    p.add_argument('--require-muldiv', action='store_true',
+                   help='Sensitivity audit: require a multiply/divide structure in every selected block')
     a = p.parse_args()
     if min(a.candidates, a.blocks, a.workers) <= 0 or a.max_number < 4:
         p.error('Positive candidate/block/worker counts and at least four numbers are required')
@@ -88,7 +92,7 @@ def main():
             encoded = encode_row(row, tokenizer, 384)
             by_length[encoded['n_supervised']].setdefault(row['structure_id'], row)
         inventories.append(dict(by_length))
-    blocks, keys = matching_blocks(inventories, a.blocks)
+    blocks, keys = matching_blocks(inventories, a.blocks, a.require_muldiv)
     chosen = []
     for block in blocks:
         chosen.append({**{k: block[k] for k in ['response_tokens', 'structures']},
@@ -119,6 +123,7 @@ def main():
               'git_commit': __import__('subprocess').check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
               'domain': {'distinct_inputs': 4, 'min_number': 1, 'max_number': a.max_number, 'target_min': 10, 'target_max': 100},
               'candidate_groups': len(raw), 'eligible_groups': len(problems), 'matching_keys_searched': keys,
+              'require_multiply_or_divide_per_block': a.require_muldiv,
               'requested_blocks': a.blocks, 'selected_blocks': len(chosen), 'selected_problems': len(selected),
               'selection_fraction': len(selected)/len(raw), 'all_updates_exact': bool(chosen) and all(x['exact_match'] for x in update_checks),
               'distinct_surface_responses': bool(chosen) and all(surface_distinct),

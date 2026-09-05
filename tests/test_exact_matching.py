@@ -21,6 +21,15 @@ class ExactMatchingTests(unittest.TestCase):
         inventories = [{60: {s: {} for s in ('abc'+str(i))}} for i in range(4)]
         self.assertEqual(matching_blocks(inventories, 1)[0], [])
 
+    def test_operator_sensitivity_filter_rejects_additive_only_blocks(self):
+        inventories = [{60: {s: {} for s in ['+(N,N)', '-(N,N)', '+(N,-(N,N))', '-(N,+(N,N))']}} for _ in range(4)]
+        self.assertEqual(len(matching_blocks(inventories, 1)[0]), 1)
+        self.assertEqual(matching_blocks(inventories, 1, require_muldiv=True)[0], [])
+
+    def test_operator_sensitivity_filter_retains_valid_shared_block(self):
+        inventories = [{60: {s: {} for s in ['+(N,N)', '-(N,N)', '*(N,N)', '/(N,N)']}} for _ in range(4)]
+        self.assertEqual(len(matching_blocks(inventories, 1, require_muldiv=True)[0]), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

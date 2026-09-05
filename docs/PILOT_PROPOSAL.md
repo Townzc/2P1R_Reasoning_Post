@@ -37,6 +37,8 @@ The CPU search is now implemented in `scripts/audit_exact_matching.py`. It sampl
 
 ### Measured feasibility and next decision
 
+The first selected pool is additive-only despite allowing all four operators in the candidate solver. This is an additional selection limitation: ten full canonical signatures cover only addition/subtraction paths. Before accepting that pool for a general arithmetic claim, inspect a separate `--require-muldiv` sensitivity audit and the actual operator distribution. Exact matching alone is not sufficient task coverage.
+
 The first audit selected 64 blocks / 256 problems out of 1024 eligible candidate groups. All 1024 selected expressions were independently reverified. Every arm has 68608 supervised tokens and 256 optimizer updates per proposed cycle; Within-Paths/GCM TV is exactly zero per update. Selected-vs-candidate target-distribution TV is 0.25098, so the restricted pool needs a selection-bias analysis rather than a representativeness claim. See `reports/exact_matching_candidate_integrity.json` and `reports/A800_SESSION.md`.
 
 The main-model engineering profile is now available: 642.51 response tokens/s at batch 4 / microbatch 2. Dividing 68608 tokens by this measured rate gives about 107 seconds of training per arm per candidate cycle; four arms over four cycles would be about 28.5 minutes of training alone. This is an extrapolation from shorter engineering examples, excludes generation/loading/checkpoint overhead, and is not a launch budget. There are 6027 authorized process-seconds remaining.
