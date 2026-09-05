@@ -10,3 +10,6 @@ The environment overlays pinned project packages in a venv with system site pack
 
 ## GPU diagnostic milestone
 `overfit_debug_20260905_r1` is invalidated for uncommitted server source provenance. The repaired guard requires every source/config file to be Git-tracked. The first valid run (`r2`, code 922d517) completed 400 updates, with 100 measured updates after 10 warmups. It did not meet the 95% train-correctness gate (25/32); low reference NLL alone is insufficient. Raw generation failures remain in the denominator. It used 342 charged seconds; the aborted launch reserves a conservative 120-second upper bound. Total so far: 462/7200 seconds.
+
+## Final engineering checks
+All **37 tests pass on the GPU server**, including two real-Git bundle integration tests that preserve identical untracked run logs and ignored checkpoints, remove obsolete clean tracked code, and reject conflicting logs before changing HEAD. No model process remained on the GPU after the jobs completed. The final overfit run passed (31/32, 300 updates); the intended main profile failed at AdamW state allocation before completing an update. Full final metrics and accounting are in STATUS.md, run_registry.json and compute_accounting.json.

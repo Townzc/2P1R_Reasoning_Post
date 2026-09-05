@@ -1,0 +1,10 @@
+{
+  "parameter_count": 1543714304,
+  "recipe": "FP32 parameters and gradients; two FP32 AdamW moment tensors; BF16 autocast",
+  "persistent_state_lower_bound_bytes": 24699428864,
+  "persistent_state_lower_bound_gib": 23.003135681152344,
+  "visible_gpu_capacity_gib": 23.5184326171875,
+  "excludes": "activations, kernel/optimizer temporary tensors, CUDA context, allocator fragmentation and any additional buffers",
+  "observed": "OutOfMemoryError during first AdamW state allocation; zero completed optimizer updates",
+  "decision": "Do not launch the main grid with this recipe on this 4090. Re-profile unchanged numerical recipe on a larger-memory GPU; this is not a universal minimum for all 1.5B fine-tuning methods."
+}

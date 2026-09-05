@@ -12,11 +12,15 @@ for directory in sorted(Path('runs').iterdir()):
         return json.loads(p.read_text()) if p.exists() else {}
     manifest, metrics, budget=read('run_manifest.json'),read('metrics.json'),read('actual_budget.json')
     valid=not (directory/'INVALIDATED.md').exists()
+    history=directory/'train_history.jsonl'
+    steps=metrics.get('steps')
+    if steps is None and history.exists():
+        steps=sum(bool(line.strip()) for line in history.read_text().splitlines())
     entries.append({'run_id':directory.name,'status':receipt['status'],'evidence_valid':valid,
         'git_commit':manifest.get('git_commit'),'config':manifest.get('config'),
         'model':manifest.get('model'),'charged_gpu_seconds':receipt['charged_seconds'],
         'overfit_passed':metrics.get('overfit_passed') if valid else None,
-        'steps':metrics.get('steps'), 'supervised_response_tokens':budget.get('supervised_response_tokens'),
+        'steps':steps, 'supervised_response_tokens':budget.get('supervised_response_tokens'),
         'train_accuracy':metrics.get('train',{}).get('accuracy_macro') if valid else None,
         'dev_accuracy':metrics.get('dev',{}).get('accuracy_macro') if valid else None,
         'throughput':metrics.get('throughput'), 'exception_type':manifest.get('exception_type'),

@@ -6,7 +6,7 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-The CPU generator is reproduced and 35 server-side tests pass. Exact-token audits and bounded engineering SFT are implemented. No scientific treatment result is claimed. See [reports/STATUS.md](reports/STATUS.md) for verified progress and [docs/PROTOCOL.md](docs/PROTOCOL.md) for the current protocol and unresolved decisions.
+The first engineering session is complete: the 0.5B debug model passed the 32-example overfit gate (31/32); the 1.5B FP32 AdamW profile ran out of memory on a 4090. Development accuracy remains 0/16. Exact-token audits, bounded execution and raw run records are available; no scientific treatment result is claimed. See [reports/STATUS.md](reports/STATUS.md) for verified progress and [docs/PROTOCOL.md](docs/PROTOCOL.md) for the current protocol and unresolved decisions.
 
 ```bash
 python -m unittest discover -s tests -v
@@ -23,7 +23,7 @@ Presentation matching is not token matching. P/T/R are coupled at a fixed budget
 
 ## Bounded engineering run
 
-Use Python 3.12 and a compatible PyTorch 2.8.0+cu128 base image; `bash scripts/bootstrap.sh` checks the base and creates a project overlay. See `reports/environment_4090.json` for the actual image package inventory. Set `HF_HOME` to a persistent model cache outside Git.
+Use Python 3.12 and a compatible PyTorch 2.8.0+cu128 base image; `bash scripts/bootstrap.sh` checks the base and creates a project overlay. See `reports/environment_4090.json` for the actual image package inventory. Activate the created environment with `source "${RUNTIME_ROOT:-$PWD/.local/runtime}/train/bin/activate"` (default `RUNTIME_ROOT="$PWD/.local/runtime"`). Set `HF_HOME` to a persistent model cache outside Git. All `python` commands below refer to that activated environment.
 
 ```bash
 python scripts/download_model.py --role debug
@@ -31,7 +31,7 @@ python scripts/verify_model.py --role debug --out reports/new_model_verification
 python -m scripts.audit_tokens --data runs/cpu_reproduction_20260905/data --out reports/new_token_audit.json
 # Commit code first. Use a new run ID and the same budget ledger for every job.
 python scripts/run_bounded.py --run-id overfit_example --max-seconds 1800 -- \
-  python -m src.experiment --config configs/overfit_debug.json --out runs/overfit_example
+  python -m src.experiment --config configs/overfit_debug_low_lr.json --out runs/overfit_example
 ```
 
 The run wrapper requires GNU `timeout`, reserves runtime persistently, forbids concurrent or unresolved jobs, and caps cumulative process time at the approved 7200 seconds. Instance idle billing is separate. Weights are excluded from Git; the initial engineering checkpoint saves model weights only and cannot resume optimizer state.

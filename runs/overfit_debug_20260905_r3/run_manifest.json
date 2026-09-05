@@ -1,0 +1,101 @@
+{
+  "config": {
+    "mode": "engineering_overfit",
+    "model_role": "debug",
+    "data_dir": "runs/cpu_reproduction_20260905/data",
+    "train_examples": 32,
+    "dev_examples": 16,
+    "steps": 800,
+    "batch_size": 4,
+    "microbatch_size": 2,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "seed": 17,
+    "max_length": 384,
+    "max_new_tokens": 192,
+    "eval_batch_size": 4,
+    "eval_every": 100,
+    "profile_warmup": 10,
+    "profile_updates": 100,
+    "samples_per_problem": 4,
+    "sampled_ks": [
+      1,
+      2,
+      4
+    ],
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "model": {
+    "repo_id": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "tokenizer_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "license": "apache-2.0",
+    "kind": "base",
+    "role": "debug",
+    "files": [
+      {
+        "rfilename": "LICENSE",
+        "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+        "size": 11343
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "2d22b523f8968e42fc6b805e656133fa83f771ab",
+        "size": 3850
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "141506237b9022c4ab3e01734cfafb9310b57d2d",
+        "size": 681
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "cbbb3133034e192527e5321b4c679154e4819ab8",
+        "size": 138
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "size": 1671839
+      },
+      {
+        "rfilename": "model.safetensors",
+        "blobId": "8314b2d2da94035a113b4b6edc0b5c34ffc35dbd",
+        "size": 988097824,
+        "lfs": {
+          "sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+          "size": 988097824,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "443909a61d429dff23010e5bddd28ff530edda00",
+        "size": 7031645
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "size": 7228
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "size": 2776833
+      }
+    ]
+  },
+  "git_commit": "bd4bcc8fef40cbee0f2e8b13a73884ce92282758",
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.56.2",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "status": "completed",
+  "started_at": "2026-09-05T05:47:46.071750+00:00",
+  "parameter_count": 494032768,
+  "steps_completed": 300,
+  "finished_at": "2026-09-05T05:51:59.790363+00:00"
+}

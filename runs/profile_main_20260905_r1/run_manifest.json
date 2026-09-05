@@ -1,0 +1,103 @@
+{
+  "config": {
+    "mode": "memory_profile",
+    "model_role": "main",
+    "data_dir": "runs/cpu_reproduction_20260905/data",
+    "train_examples": 32,
+    "dev_examples": 16,
+    "steps": 110,
+    "batch_size": 1,
+    "microbatch_size": 1,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "seed": 17,
+    "max_length": 384,
+    "max_new_tokens": 192,
+    "eval_batch_size": 4,
+    "eval_every": 100,
+    "profile_warmup": 10,
+    "profile_updates": 100,
+    "samples_per_problem": 4,
+    "sampled_ks": [
+      1,
+      2,
+      4
+    ],
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "model": {
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "license": "apache-2.0",
+    "kind": "base",
+    "role": "main",
+    "files": [
+      {
+        "rfilename": "LICENSE",
+        "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+        "size": 11343
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "b2861f7da85a5af5e321b57c7bbf98ae17255992",
+        "size": 3850
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "size": 684
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "cbbb3133034e192527e5321b4c679154e4819ab8",
+        "size": 138
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "size": 1671839
+      },
+      {
+        "rfilename": "model.safetensors",
+        "blobId": "de4b04359b427ed291b005f62b749531d45e3e5f",
+        "size": 3087467144,
+        "lfs": {
+          "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+          "size": 3087467144,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "443909a61d429dff23010e5bddd28ff530edda00",
+        "size": 7031645
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "size": 7228
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "size": 2776833
+      }
+    ]
+  },
+  "git_commit": "bd4bcc8fef40cbee0f2e8b13a73884ce92282758",
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.56.2",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "status": "failed",
+  "started_at": "2026-09-05T05:53:36.124994+00:00",
+  "parameter_count": 1543714304,
+  "exception_type": "OutOfMemoryError",
+  "exception": "CUDA out of memory. Tried to allocate 54.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 7.75 MiB is free. Including non-PyTorch memory, this process has 23.50 GiB memory in use. Of the allocated memory 22.75 GiB is allocated by PyTorch, and 297.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+  "peak_allocated_mib": 23296.1796875,
+  "finished_at": "2026-09-05T05:53:48.993249+00:00"
+}
