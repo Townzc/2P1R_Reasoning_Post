@@ -8,3 +8,11 @@
 6. Transfer the cumulative resource ledger when continuing the same approved budget. A fresh machine is not a new compute authorization.
 
 Keep SSH keys and host-specific paths outside Git. Small completed run artifacts are pulled back to the local repository and pushed to GitHub at each milestone. The training server does not need a GitHub write credential.
+
+## When the GPU server cannot reach GitHub
+
+Publish from the local authenticated workspace first. Create `git bundle create project.bundle main`, transfer that file over SSH, and on the destination run `git fetch /path/to/project.bundle main`. For a fresh destination, `git clone /path/to/project.bundle project` restores the complete bundled history. In an existing checkout, inspect local changes and advance the branch only after the fetch has completed successfully. Verify the expected commit and tracked source/configuration before starting a job; do not launch while an asynchronous fetch is still pending.
+
+For public model downloads when direct Hugging Face access fails, an optional mirror may supply bytes, but run `scripts/verify_model.py` against the digests pinned from the official API before use. Preserve licenses. Re-download or transfer the Hugging Face cache outside Git and verify again on the destination.
+
+The first engineering runner saves model weights and tokenizer only. It cannot continue the exact optimizer trajectory; a later resume implementation needs optimizer/RNG/sampler checkpoints and a round-trip test. The original budget ledger belongs outside Git during execution, with a sanitized accounting snapshot committed after each milestone. Never reset a ledger to obtain more authorized time.

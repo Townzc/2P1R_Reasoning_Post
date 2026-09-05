@@ -1,0 +1,98 @@
+{
+  "baseline": {
+    "train": {
+      "problems": 32,
+      "generations": 32,
+      "accuracy_macro": 0.0,
+      "parsing_failure_rate": 1.0,
+      "eos_rate": 0.71875,
+      "truncation_rate": 0.28125,
+      "mean_output_tokens": 81.375,
+      "pass_at_k": {},
+      "mean_valid_structure_count": 0.0,
+      "mean_valid_structure_entropy_conditional_on_success": null,
+      "elapsed_seconds": 36.023512810468674,
+      "aggregate_output_tokens_per_second": 72.2861208372566,
+      "decoding": "greedy"
+    },
+    "dev": {
+      "problems": 16,
+      "generations": 16,
+      "accuracy_macro": 0.0,
+      "parsing_failure_rate": 1.0,
+      "eos_rate": 0.8125,
+      "truncation_rate": 0.1875,
+      "mean_output_tokens": 68.1875,
+      "pass_at_k": {},
+      "mean_valid_structure_count": 0.0,
+      "mean_valid_structure_entropy_conditional_on_success": null,
+      "elapsed_seconds": 16.7717514205724,
+      "aggregate_output_tokens_per_second": 65.04985511899302,
+      "decoding": "greedy"
+    },
+    "train_nll": 0.8467781399908809,
+    "dev_nll": 0.8358324854197854
+  },
+  "throughput": {
+    "profile_updates": 100,
+    "warmup_excluded": 10,
+    "profile_complete": true,
+    "supervised_tokens_per_second": 621.0835630734721,
+    "processed_tokens_per_second": 1097.3150956527581,
+    "peak_allocated_mib": 8780.5517578125,
+    "peak_reserved_mib": 10062.0
+  },
+  "steps": 400,
+  "train": {
+    "problems": 32,
+    "generations": 32,
+    "accuracy_macro": 0.78125,
+    "parsing_failure_rate": 0.1875,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 65.15625,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.78125,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 14.554114282131195,
+    "aggregate_output_tokens_per_second": 143.25846008780195,
+    "decoding": "greedy"
+  },
+  "dev": {
+    "problems": 16,
+    "generations": 16,
+    "accuracy_macro": 0.0,
+    "parsing_failure_rate": 0.4375,
+    "eos_rate": 0.9375,
+    "truncation_rate": 0.0625,
+    "mean_output_tokens": 83.0625,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.0,
+    "mean_valid_structure_entropy_conditional_on_success": null,
+    "elapsed_seconds": 12.752447840757668,
+    "aggregate_output_tokens_per_second": 104.21528608432556,
+    "decoding": "greedy"
+  },
+  "dev_sampled": {
+    "problems": 16,
+    "generations": 64,
+    "accuracy_macro": 0.0,
+    "parsing_failure_rate": 0.5625,
+    "eos_rate": 0.9375,
+    "truncation_rate": 0.0625,
+    "mean_output_tokens": 81.734375,
+    "pass_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0
+    },
+    "mean_valid_structure_count": 0.0,
+    "mean_valid_structure_entropy_conditional_on_success": null,
+    "elapsed_seconds": 16.711554030887783,
+    "aggregate_output_tokens_per_second": 313.01696959669937,
+    "decoding": "sampled"
+  },
+  "final_train_nll": 0.011994586023353607,
+  "final_dev_nll": 1.4345729317731724,
+  "overfit_passed": false
+}
