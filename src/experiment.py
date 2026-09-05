@@ -116,6 +116,10 @@ def main():
         raise ValueError('Invalid steps or microbatch accumulation')
     if subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],text=True).strip():
         raise RuntimeError('Commit code before model execution')
+    # A clean index alone does not prove newly added source/config files are committed.
+    source_files = [str(p) for directory in ('src', 'scripts') for p in Path(directory).glob('*.py')]
+    subprocess.run(['git', 'ls-files', '--error-unmatch', *source_files,
+                    args.config, 'configs/models.lock.json'], check=True, stdout=subprocess.DEVNULL)
     lock = json.loads(Path('configs/models.lock.json').read_text())[cfg['model_role']]
     if len(lock['revision']) != 40 or lock['tokenizer_revision'] != lock['revision']:
         raise ValueError('Model/tokenizer revisions must be exact and equal')
