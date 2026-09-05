@@ -1,5 +1,7 @@
 # Move to another GPU server
 
+Start with `docs/NEXT_SESSION.md` for the latest shutdown handoff, required artifacts and the next discussion. These steps apply to a replacement machine or an instance clone; inspect what the clone actually preserved before reinstalling or transferring large files.
+
 1. Commit and push code, configuration, compact run records and predictions from the current work session.
 2. Clone this repository on the new server, or `git pull --ff-only` in an existing clean checkout. Check out the exact commit named in the run record when reproducing a run. For a bundle containing only `main`, use `git clone --branch main /path/to/project.bundle project`; such a bundle may omit a symbolic HEAD.
 3. Recreate the isolated environment with the pinned requirements and bootstrap script; record new driver/GPU details.

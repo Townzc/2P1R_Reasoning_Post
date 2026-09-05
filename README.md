@@ -17,6 +17,8 @@ Choose a new output directory for each run. The imported `fixtures/smoke_handoff
 
 Code, configurations, small raw predictions, metrics, manifests and run records belong in Git. Model weights, optimizer checkpoints, environments and credentials do not. Migration instructions will be maintained in `docs/MIGRATION.md`.
 
+For resuming after shutdown, server replacement or an instance clone, start with [docs/NEXT_SESSION.md](docs/NEXT_SESSION.md). It records independently retained state, the current shared budget and the next decisions.
+
 ## Interpretation limits
 
 Presentation matching is not token matching. P/T/R are coupled at a fixed budget. Canonical arithmetic syntax is an operational proxy for structure, not proof of distinct human strategies. All empirical claims must link to actual run records; negative and failed runs are retained.

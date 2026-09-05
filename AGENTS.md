@@ -10,6 +10,8 @@ Read README.md, docs/PROTOCOL.md, docs/DECISIONS.md and reports/STATUS.md before
 
 ## Workflow
 - The user authorized this repository for code and experiment updates. Commit and push each completed code/experiment milestone, including failures and limitations.
+- Server replacement is routine. Treat GitHub as the authoritative code/compact-record history and keep a current next-session handoff. Before declaring an instance disposable, verify publication, checkpoint backups and the latest cumulative ledger; never leave unique required state only on that instance.
+- A cloned instance is a transfer convenience, not a new experiment or compute budget. Verify its commit, environment, artifacts and ledger before reuse; restore only artifacts needed for the next task. Do not auto-launch training when an instance starts or is cloned.
 - Keep private correspondence, handoffs, credentials, SSH endpoints and local absolute user paths out of this public repository.
 - Record code commit, model/tokenizer revisions, data hashes, commands, seeds, token counts, steps, duration, GPU peak memory and evaluation configuration.
 - Keep raw predictions and small logs; checkpoints and caches are excluded. Maintain migration and artifact-transfer instructions.
