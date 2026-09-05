@@ -13,6 +13,7 @@ import json
 import random
 import statistics
 import time
+import math
 from collections import Counter, defaultdict
 from fractions import Fraction
 from pathlib import Path
@@ -119,6 +120,8 @@ def render_trace(tree: Expr, variant: int = 0) -> str:
     return '\n'.join(steps + ['Answer: ' + expression(tree)])
 
 def make_pool(count: int, seed: int) -> tuple[list[dict[str, Any]], dict[str, int]]:
+    if not 0 < count <= math.comb(20, 4):
+        raise ValueError('The 1..20 unique-number domain contains at most 4845 groups, before eligibility filtering')
     rng = random.Random(seed)
     pool: list[dict[str, Any]] = []
     seen_multisets: set[tuple[int, ...]] = set()
@@ -171,8 +174,10 @@ def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
 
 def build(out: Path, n_train: int, n_dev: int, n_test: int, seed: int) -> dict[str, Any]:
     if n_train <= 0 or n_dev <= 0 or n_test <= 0: raise ValueError('All split sizes must be positive')
-    if (out/'audit.json').exists(): raise FileExistsError('Refusing to overwrite an existing audited dataset; choose a new output directory')
-    out.mkdir(parents=True, exist_ok=True)
+    if out.exists(): raise FileExistsError('Refusing to overwrite an existing dataset directory; choose a new output directory')
+    if n_train % 4: raise ValueError('train count must be divisible by four')
+    if n_train+n_dev+n_test > math.comb(20, 4): raise ValueError('Requested groups exceed the finite 1..20 domain')
+    out.mkdir(parents=True)
     start = time.perf_counter()
     pool, generation = make_pool(n_train+n_dev+n_test, seed)
     train, dev, test = pool[:n_train], pool[n_train:n_train+n_dev], pool[n_train+n_dev:]

@@ -1,0 +1,28 @@
+{
+  "mode": "engineering_overfit",
+  "model_role": "debug",
+  "data_dir": "runs/cpu_reproduction_20260905/data",
+  "train_examples": 32,
+  "dev_examples": 16,
+  "steps": 400,
+  "batch_size": 4,
+  "microbatch_size": 2,
+  "learning_rate": 0.0002,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "seed": 17,
+  "max_length": 384,
+  "max_new_tokens": 192,
+  "eval_batch_size": 4,
+  "eval_every": 100,
+  "profile_warmup": 10,
+  "profile_updates": 100,
+  "samples_per_problem": 4,
+  "sampled_ks": [
+    1,
+    2,
+    4
+  ],
+  "temperature": 0.7,
+  "top_p": 0.95
+}

@@ -1,0 +1,76 @@
+{
+  "status": "CPU_DATA_FEASIBILITY_ONLY",
+  "seed": 20260904,
+  "generation": {
+    "candidate_multisets_seen": 176,
+    "sampling_attempts": 180,
+    "eligible_problems": 176
+  },
+  "split_counts": {
+    "train_pool": 128,
+    "dev": 16,
+    "test_iid": 32
+  },
+  "selected_program_count": 704,
+  "all_programs_independently_ast_verified": true,
+  "four_distinct_ac_structure_signatures_per_problem": true,
+  "number_multiset_disjoint_splits": true,
+  "arms": {
+    "repeat": {
+      "presentations": 128,
+      "unique_problems": 32,
+      "unique_problem_path_pairs": 32,
+      "unique_problem_response_pairs": 32,
+      "mean_response_characters": 94.12,
+      "valid_expressions": 128
+    },
+    "paths": {
+      "presentations": 128,
+      "unique_problems": 32,
+      "unique_problem_path_pairs": 128,
+      "unique_problem_response_pairs": 128,
+      "mean_response_characters": 93.31,
+      "valid_expressions": 128
+    },
+    "surface": {
+      "presentations": 128,
+      "unique_problems": 32,
+      "unique_problem_path_pairs": 32,
+      "unique_problem_response_pairs": 128,
+      "mean_response_characters": 107.62,
+      "valid_expressions": 128
+    },
+    "balanced": {
+      "presentations": 128,
+      "unique_problems": 32,
+      "unique_problem_path_pairs": 64,
+      "unique_problem_response_pairs": 64,
+      "mean_response_characters": 93.81,
+      "valid_expressions": 128
+    },
+    "breadth": {
+      "presentations": 128,
+      "unique_problems": 128,
+      "unique_problem_path_pairs": 128,
+      "unique_problem_response_pairs": 128,
+      "mean_response_characters": 93.7,
+      "valid_expressions": 128
+    }
+  },
+  "elapsed_seconds": 1.006,
+  "not_yet_implemented": [
+    "model-token budget matching",
+    "GPU training or inference",
+    "held-out composition split",
+    "global program-distribution matching",
+    "real mathematics validation",
+    "step-trace evaluation for model-generated output"
+  ],
+  "limitations": [
+    "Selected problems require at least four syntactic program structures; selection bias must be measured.",
+    "Only +/* associativity and commutativity are canonicalized; algebraic equivalence and cognitive strategy are NOT established.",
+    "All five arms match presentation counts ONLY, not BPE tokens or FLOPs.",
+    "New numerical instances are not a guarantee of absence from model pretraining data.",
+    "Four distinct input numbers and targets 10..100 define a limited task domain."
+  ]
+}
