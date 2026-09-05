@@ -1,0 +1,33 @@
+{
+  "candidate_blocks_digest_verified": true,
+  "all_1024_paths_ast_reverified": true,
+  "distinct_problem_groups": 256,
+  "blocks": 64,
+  "updates_per_cycle": 256,
+  "presentations_per_arm_per_cycle": 1024,
+  "supervised_tokens_per_arm_per_cycle": {
+    "paths": 68608,
+    "gcm": 68608,
+    "repeat": 68608,
+    "surface": 68608
+  },
+  "within_paths_vs_gcm_structure_tv": 0.0,
+  "full_structure_histogram_within_paths": {
+    "+(-(+(N,N),N),N)": 220,
+    "+(-(-(N,N),N),N)": 36,
+    "+(-(N,-(N,N)),N)": 180,
+    "+(-(N,N),N,N)": 164,
+    "-(+(-(N,N),N),N)": 36,
+    "-(+(N,N),+(N,N))": 36,
+    "-(+(N,N),-(N,N))": 28,
+    "-(N,-(+(N,N),N))": 36,
+    "-(N,-(-(N,N),N))": 68,
+    "-(N,-(N,+(N,N)))": 220
+  },
+  "operator_histogram_within_paths": {
+    "+": 1212,
+    "-": 1696
+  },
+  "selected_vs_candidate_target_tv": 0.2509765625,
+  "domain_note": "Feasibility candidate pool only. No frozen train/dev/test split exists. Selection effects and weak step-label rendering remain explicit design limitations."
+}

@@ -1,19 +1,23 @@
 # Verified status — 2026-09-05 UTC
 
-## First engineering session complete
-- CPU arithmetic fixtures reproduced byte-for-byte; token/loss/isolation and budget tests pass.
-- Both Qwen base checkpoints and tokenizers are pinned; all nine files for each role match official expected digests.
-- 32-example overfit gate PASSED with debug Qwen2.5-0.5B: 31/32 greedy train correctness and exact trace reproduction, NLL 0.000996 after 300 updates, LR 5e-5.
-- Development: 0/16 greedy correctness; 0/64 sampled correct with four samples per problem. This is a software check and provides no positive generalization evidence.
-- Debug throughput: 645 supervised response tokens/s (100 measured updates after 10 warmups); peak allocated 8779 MiB, reserved 10062 MiB.
-- Main Qwen2.5-1.5B with FP32 parameters, BF16 autocast and standard AdamW failed at the first optimizer-state allocation on the 4090. No optimizer update completed; no valid main-model throughput estimate exists. Keep the adaptation recipe fixed when profiling a larger GPU. This is not a claim that all 1.5B training methods require more than 24 GB.
-- Runtime charged: **737 / 7200 seconds** (12.28 minutes); **6463 seconds remain**. Includes a conservative 120-second aborted provenance attempt and 17-second main-model OOM. Idle instance billing is separate.
+## A800 engineering continuation complete
+- Main Qwen2.5-1.5B base and tokenizer: nine files match pinned official digests. Python/PyTorch/Transformers match the 4090 environment; the new driver is recorded separately.
+- All 40 server tests passed, including three new exact-matching selection tests.
+- Identical main-model profile completes: 110 updates, 280.60 supervised tokens/s at batch 1; peak allocated 25396.92 MiB, reserved 27886 MiB.
+- Main 32-example overfit gate PASSED after 500 updates at LR 5e-5: 32/32 greedy correctness and exact reference trace, train NLL 0.000263.
+- Main batch 4 / microbatch 2 throughput: 642.51 supervised tokens/s; peak allocated 26837.74 MiB, reserved 28996 MiB.
+- Main development: 0/16 greedy and 0/64 sampled both before and after overfit. Formatting/termination improved; dev NLL increased from 0.630177 to 0.741163. No generalization improvement is established.
+- CPU matching search found 64 disjoint blocks / 256 candidate problems. One proposed cycle has exactly 68608 supervised tokens and 256 updates in every arm; Within-Paths/GCM structure TV is zero at each update. Surface diversity currently only changes step labels and selection bias is material; no final scientific split has been frozen.
+- A800 added 436 process-seconds. Cumulative runtime: **1173 / 7200 seconds**; **6027 seconds remain**. Idle billing is separate and A800 hourly price is unknown.
 
-The higher-LR debug run failed its overfit gate; the uncommitted-source attempt is explicitly invalidated. All raw predictions, histories, manifests and failure receipts are retained in `runs/` and indexed in `run_registry.json`. Large checkpoints remain outside Git; see ARTIFACTS.md and ../docs/MIGRATION.md.
+See A800_SESSION.md, main_a800_output_integrity.json, exact_matching_candidate_integrity.json, environment_a800.json and compute_accounting.json. GPU work has ended; artifact backup status is in ARTIFACTS.md.
 
-## Next three work items
-1. Re-profile the identical 1.5B recipe on a larger-memory GPU selected by the owner, then calibrate base performance using development data. No new machine has been rented automatically.
-2. Implement and audit candidate selection for the proposed exact matching construction (or review declared residual tolerances). Freeze an eligible arithmetic pilot split before treatment comparisons. Existing fixture GCM matching is mathematically impossible at the proposed tolerance.
-3. Run one paired-seed SFT pilot only after the control definitions and measured cost are settled; inspect failures before expanding seeds, task families or models.
+## Retained earlier evidence
+The 0.5B debug gate passed with 31/32 train correctness, while development was also zero. Its higher-LR attempt failed the gate; an earlier uncommitted-source attempt was invalidated and conservatively charged. The original 1.5B 4090 OOM occurred before any optimizer update. All failures and both debug checkpoints' verified backups are retained. See run_registry.json.
 
-See ../docs/PILOT_PROPOSAL.md, ../docs/CLOSEST_WORK.md, VALIDATION.md, environment_4090.json and compute_accounting.json.
+## Next scientific work
+1. Review the exact shared-block candidate design, measured selection bias, and a stronger or explicitly narrow surface-rendering control; freeze group-disjoint train/dev/holdout construction before augmentation.
+2. Prepare matched arm schedules and a measured cost proposal within the remaining shared budget. Engineering fixtures and candidate audits are not final scientific datasets.
+3. After design review, run a single paired-seed pilot and inspect failures before expanding seeds, tasks or model families.
+
+See ../docs/PILOT_PROPOSAL.md. No four-arm treatment comparison has been launched.

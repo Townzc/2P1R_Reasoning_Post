@@ -1,0 +1,102 @@
+{
+  "config": {
+    "mode": "engineering_overfit",
+    "model_role": "main",
+    "data_dir": "runs/cpu_reproduction_20260905/data",
+    "train_examples": 32,
+    "dev_examples": 16,
+    "steps": 800,
+    "batch_size": 4,
+    "microbatch_size": 2,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "seed": 17,
+    "max_length": 384,
+    "max_new_tokens": 192,
+    "eval_batch_size": 4,
+    "eval_every": 100,
+    "profile_warmup": 10,
+    "profile_updates": 100,
+    "samples_per_problem": 4,
+    "sampled_ks": [
+      1,
+      2,
+      4
+    ],
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "baseline_sampled_dev": true
+  },
+  "model": {
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "license": "apache-2.0",
+    "kind": "base",
+    "role": "main",
+    "files": [
+      {
+        "rfilename": "LICENSE",
+        "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+        "size": 11343
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "b2861f7da85a5af5e321b57c7bbf98ae17255992",
+        "size": 3850
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "size": 684
+      },
+      {
+        "rfilename": "generation_config.json",
+        "blobId": "cbbb3133034e192527e5321b4c679154e4819ab8",
+        "size": 138
+      },
+      {
+        "rfilename": "merges.txt",
+        "blobId": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "size": 1671839
+      },
+      {
+        "rfilename": "model.safetensors",
+        "blobId": "de4b04359b427ed291b005f62b749531d45e3e5f",
+        "size": 3087467144,
+        "lfs": {
+          "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+          "size": 3087467144,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "tokenizer.json",
+        "blobId": "443909a61d429dff23010e5bddd28ff530edda00",
+        "size": 7031645
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "size": 7228
+      },
+      {
+        "rfilename": "vocab.json",
+        "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "size": 2776833
+      }
+    ]
+  },
+  "git_commit": "58e44b3e801472fd2f31e6ef7d488c03405b2e3d",
+  "python": "3.12.3",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.56.2",
+  "cuda": "12.8",
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "status": "completed",
+  "started_at": "2026-09-05T06:51:23.189671+00:00",
+  "parameter_count": 1543714304,
+  "steps_completed": 500,
+  "finished_at": "2026-09-05T06:58:02.688705+00:00"
+}

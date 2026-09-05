@@ -1,11 +1,14 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 737,
-  "remaining_gpu_seconds": 6463,
-  "gpu_hours": 0.20472222222222222,
-  "reference_process_cost_cny": 0.4462944444444445,
-  "billing_limit": "This is bounded GPU process time, not the cloud invoice. Instance idle time, model downloads and storage may be billed separately.",
+  "charged_gpu_seconds": 1173,
+  "remaining_gpu_seconds": 6027,
+  "gpu_hours": 0.3258333333333333,
+  "billing_limit": "GPU process runtime only. Instance idle time, downloads and storage are separately billable. A800 hourly price was not supplied; the old 4090 reference price is not applied.",
+  "hardware_charged_seconds": {
+    "RTX_4090": 737,
+    "A800_80GB": 436
+  },
   "jobs": [
     {
       "run_id": "overfit_debug_20260905_r1",
@@ -44,6 +47,24 @@
       "started_at": "2026-09-05T05:53:32.864468+00:00",
       "elapsed_seconds": 16.880649513565004,
       "exit_code": 1
+    },
+    {
+      "run_id": "profile_main_a800_20260905_r1",
+      "status": "completed",
+      "max_seconds": 600,
+      "charged_seconds": 32,
+      "started_at": "2026-09-05T06:50:47.165561+00:00",
+      "elapsed_seconds": 31.2082353644073,
+      "exit_code": 0
+    },
+    {
+      "run_id": "overfit_main_a800_20260905_r1",
+      "status": "completed",
+      "max_seconds": 1800,
+      "charged_seconds": 404,
+      "started_at": "2026-09-05T06:51:20.084304+00:00",
+      "elapsed_seconds": 403.39312018826604,
+      "exit_code": 0
     }
   ]
 }

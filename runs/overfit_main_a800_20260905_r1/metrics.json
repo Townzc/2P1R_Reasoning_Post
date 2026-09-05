@@ -1,0 +1,117 @@
+{
+  "baseline": {
+    "train": {
+      "problems": 32,
+      "generations": 32,
+      "accuracy_macro": 0.0,
+      "parsing_failure_rate": 0.9375,
+      "eos_rate": 0.03125,
+      "truncation_rate": 0.96875,
+      "mean_output_tokens": 187.78125,
+      "pass_at_k": {},
+      "mean_valid_structure_count": 0.0,
+      "mean_valid_structure_entropy_conditional_on_success": null,
+      "elapsed_seconds": 40.04632815718651,
+      "aggregate_output_tokens_per_second": 150.0512100988129,
+      "decoding": "greedy"
+    },
+    "dev": {
+      "problems": 16,
+      "generations": 16,
+      "accuracy_macro": 0.0,
+      "parsing_failure_rate": 0.8125,
+      "eos_rate": 0.0,
+      "truncation_rate": 1.0,
+      "mean_output_tokens": 192.0,
+      "pass_at_k": {},
+      "mean_valid_structure_count": 0.0,
+      "mean_valid_structure_entropy_conditional_on_success": null,
+      "elapsed_seconds": 19.790973901748657,
+      "aggregate_output_tokens_per_second": 155.2222753286825,
+      "decoding": "greedy"
+    },
+    "train_nll": 0.6494090710275602,
+    "dev_nll": 0.6301765441894531,
+    "dev_sampled": {
+      "problems": 16,
+      "generations": 64,
+      "accuracy_macro": 0.0,
+      "parsing_failure_rate": 0.71875,
+      "eos_rate": 0.515625,
+      "truncation_rate": 0.484375,
+      "mean_output_tokens": 120.796875,
+      "pass_at_k": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0
+      },
+      "mean_valid_structure_count": 0.0,
+      "mean_valid_structure_entropy_conditional_on_success": null,
+      "elapsed_seconds": 21.538833241909742,
+      "aggregate_output_tokens_per_second": 358.93309136899796,
+      "decoding": "sampled"
+    }
+  },
+  "throughput": {
+    "profile_updates": 100,
+    "warmup_excluded": 10,
+    "profile_complete": true,
+    "supervised_tokens_per_second": 642.5147911540804,
+    "processed_tokens_per_second": 1135.179259976886,
+    "peak_allocated_mib": 26837.73583984375,
+    "peak_reserved_mib": 28996.0
+  },
+  "steps": 500,
+  "train": {
+    "problems": 32,
+    "generations": 32,
+    "accuracy_macro": 1.0,
+    "parsing_failure_rate": 0.0,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 63.71875,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 1.0,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 13.91585686430335,
+    "aggregate_output_tokens_per_second": 146.52349617294482,
+    "decoding": "greedy"
+  },
+  "dev": {
+    "problems": 16,
+    "generations": 16,
+    "accuracy_macro": 0.0,
+    "parsing_failure_rate": 0.0625,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 61.75,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.0,
+    "mean_valid_structure_entropy_conditional_on_success": null,
+    "elapsed_seconds": 6.834343273192644,
+    "aggregate_output_tokens_per_second": 144.56399986160756,
+    "decoding": "greedy"
+  },
+  "dev_sampled": {
+    "problems": 16,
+    "generations": 64,
+    "accuracy_macro": 0.0,
+    "parsing_failure_rate": 0.125,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 62.03125,
+    "pass_at_k": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0
+    },
+    "mean_valid_structure_count": 0.0,
+    "mean_valid_structure_entropy_conditional_on_success": null,
+    "elapsed_seconds": 7.446216810494661,
+    "aggregate_output_tokens_per_second": 533.1566486762381,
+    "decoding": "sampled"
+  },
+  "final_train_nll": 0.00026270064153964757,
+  "final_dev_nll": 0.7411625989658865,
+  "overfit_passed": true
+}

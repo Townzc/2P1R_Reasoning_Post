@@ -6,7 +6,7 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-The first engineering session is complete: the 0.5B debug model passed the 32-example overfit gate (31/32); the 1.5B FP32 AdamW profile ran out of memory on a 4090. Development accuracy remains 0/16. Exact-token audits, bounded execution and raw run records are available; no scientific treatment result is claimed. See [reports/STATUS.md](reports/STATUS.md) for verified progress and [docs/PROTOCOL.md](docs/PROTOCOL.md) for the current protocol and unresolved decisions.
+The intended 1.5B base model passed the 32-example engineering gate on A800 (32/32 after 500 updates), using the FP32 AdamW recipe that exceeded 4090 memory. Development remains 0/16 greedy and 0/64 sampled. A CPU search found 256 candidate problems with exact token and Within-Paths/GCM structural matching; final data/control design remains open. See [reports/STATUS.md](reports/STATUS.md), [reports/A800_SESSION.md](reports/A800_SESSION.md) and [docs/PROTOCOL.md](docs/PROTOCOL.md). No scientific treatment result is claimed.
 
 ```bash
 python -m unittest discover -s tests -v
