@@ -32,3 +32,24 @@ The main A800 checkpoint backup completed after a slow, resumed SSH transfer. Al
 
 ## 2026-09-05 UTC — shutdown and replacement-instance handoff
 The owner emphasized frequent server replacement and Git-based continuity, and planned to pause the instance before discussing the next stage. Codex confirmed no active GPU/data job or unresolved ledger entry, checked that the previously verified local backups still exist at their recorded sizes, and added a next-session handoff plus durable repository workflow rules. The owner can shut down the instance; no new experiment, automated restart or rental was initiated.
+
+## 2026-09-08 — local pilot preparation and bounded research workflow
+
+The owner approved the staged data/calibration/four-arm pilot plan and suggested
+karpathy/autoresearch. Codex inspected the primary repository and adapted compact
+run logging, fixed evaluation and bounded iteration; no upstream code or data
+was imported. The project retains all results in Git and preserves token/update
+matching, cumulative spending limits and holdout separation.
+
+Codex implemented presolver group allocation, exact four-arm schedules, richer
+sentence-frame controls, a frozen artifact loader, a GPU calibration/pilot mode,
+a finite queue with a stale-ledger gate, and JSON/TSV result snapshots. Two CPU
+preparations failed (original tokenizer hash requirement; insufficient dev blocks)
+and were retained. The third produced 256 train, 64 matched dev and 64 broader
+dev problems, with 2048 unsolved holdout groups reserved in advance. Selection
+shifts and the narrow Surface interpretation are explicit. No model weights were
+loaded and no GPU or prior-server connection was used in this preparation.
+
+Local verification completed: 50 tests ran, 48 passed and two GNU-timeout tests
+were skipped pending the Linux server. Full frozen-artifact verification and
+both queue dry runs passed; no GPU execution or comparison outcome is claimed.

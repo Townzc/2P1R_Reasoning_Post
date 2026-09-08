@@ -18,9 +18,10 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from .countdown_smoke import render_trace, verify_expression
-from .evaluation import score_text, summarize
+from .evaluation import score_text, summarize, score_token_caps
 from .sft_data import (prefix, read_jsonl, encode_row, collate, update_schedule,
                        budget_report, shifted_loss_sum, sha256_file)
+from .pilot_runtime import load_pilot_inputs, unique_rows
 
 
 def dump(path, value):
@@ -76,12 +77,16 @@ def generate(model, tokenizer, rows, config, samples=1, sample=False):
                 if eos:
                     tokens = tokens[:tokens.index(tokenizer.eos_token_id)+1]
                 text = tokenizer.decode(tokens, skip_special_tokens=True)
-                predictions.append({'problem_id': row['problem_id'], 'sample_index': i % samples,
+                prediction = {'problem_id': row['problem_id'], 'sample_index': i % samples,
                                     'prompt': row['prompt'], 'numbers': row['numbers'], 'target': row['target'],
                                     'text': text, 'output_tokens': len(tokens), 'eos': eos,
                                     'truncated': not eos and len(tokens) >= config['max_new_tokens'],
                                     'reference_exact_match': text.strip() == row['response'].strip(),
-                                    **score_text(text, row['numbers'], row['target'])})
+                                    **score_text(text, row['numbers'], row['target'])}
+                if config.get('diagnostic_caps'):
+                    prediction['cap_diagnostics'] = score_token_caps(tokens, tokenizer, row,
+                        config['diagnostic_caps'], config['max_new_tokens'])
+                predictions.append(prediction)
     elapsed = time.perf_counter()-started
     stats = summarize(predictions, config['sampled_ks'] if sample else ())
     stats.update(elapsed_seconds=elapsed,
@@ -108,7 +113,8 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     if (out/'run_manifest.json').exists():
         raise FileExistsError('Run already exists')
-    if cfg['mode'] not in ['engineering_overfit', 'memory_profile']:
+    is_pilot = cfg['mode'] in ['pilot_calibration', 'scientific_pilot']
+    if cfg['mode'] not in ['engineering_overfit', 'memory_profile', 'pilot_calibration', 'scientific_pilot']:
         raise ValueError('Scientific comparisons require a reviewed protocol implementation')
     if not torch.cuda.is_available():
         raise RuntimeError('CUDA required for this entry point')
@@ -125,25 +131,38 @@ def main():
         raise ValueError('Model/tokenizer revisions must be exact and equal')
     data_dir = Path(cfg['data_dir'])
     # Final tests are deliberately not opened by this program.
-    train_problems = read_jsonl(data_dir/'train_pool.jsonl')[:cfg['train_examples']]
-    dev_problems = read_jsonl(data_dir/'dev.jsonl')[:cfg['dev_examples']]
-    train_groups = {tuple(sorted(p['numbers'])) for p in train_problems}
-    if train_groups & {tuple(sorted(p['numbers'])) for p in dev_problems}:
-        raise ValueError('Train/dev number-group leakage')
-    train_rows, dev_rows = rows_from_problems(train_problems), rows_from_problems(dev_problems)
-    if len(train_rows) != cfg['train_examples'] or len(dev_rows) != cfg['dev_examples']:
-        raise ValueError('Insufficient data')
+    if not is_pilot:
+        train_problems = read_jsonl(data_dir/'train_pool.jsonl')[:cfg['train_examples']]
+        dev_problems = read_jsonl(data_dir/'dev.jsonl')[:cfg['dev_examples']]
+        train_groups = {tuple(sorted(p['numbers'])) for p in train_problems}
+        if train_groups & {tuple(sorted(p['numbers'])) for p in dev_problems}:
+            raise ValueError('Train/dev number-group leakage')
+        train_rows, dev_rows = rows_from_problems(train_problems), rows_from_problems(dev_problems)
+        if len(train_rows) != cfg['train_examples'] or len(dev_rows) != cfg['dev_examples']:
+            raise ValueError('Insufficient data')
     tokenizer = AutoTokenizer.from_pretrained(lock['repo_id'], revision=lock['tokenizer_revision'],
                                              use_fast=True, local_files_only=True)
     tokenizer.pad_token = tokenizer.eos_token
+    if is_pilot:
+        if cfg['mode'] == 'scientific_pilot':
+            from scripts.run_pilot_queue import check_calibration
+            check_calibration(json.loads(Path('configs/pilot_v1/queue.json').read_text()))
+        data_manifest = json.loads((data_dir/'manifest.json').read_text())
+        subprocess.run(['git', 'ls-files', '--error-unmatch', str(data_dir/'manifest.json'),
+                        *[str(data_dir/name) for name in data_manifest['files_sha256']]],
+                       check=True, stdout=subprocess.DEVNULL)
+        train_rows, dev_rows, broad_rows, schedule, matching = load_pilot_inputs(cfg, tokenizer)
+        dump(out/'matching_audit.json', matching)
+        train_eval_rows = unique_rows(train_rows, 16)
     encoded = [encode_row(r, tokenizer, cfg['max_length']) for r in train_rows]
     dev_encoded = [encode_row(r, tokenizer, cfg['max_length']) for r in dev_rows]
-    schedule = update_schedule(len(encoded), cfg['steps'], cfg['batch_size'], cfg['seed'])
+    if not is_pilot:
+        schedule = update_schedule(len(encoded), cfg['steps'], cfg['batch_size'], cfg['seed'])
     budget = budget_report(encoded, schedule, cfg['microbatch_size'])
     budget.update(model=lock, data_sha256={name: sha256_file(data_dir/name)
-                                         for name in ['train_pool.jsonl', 'dev.jsonl']},
+                                         for name in (['manifest.json', f"train_{cfg['arm']}.jsonl", 'dev_matched.jsonl', 'dev_broad.jsonl', 'schedule_seed17.json'] if is_pilot else ['train_pool.jsonl', 'dev.jsonl'])},
                   max_sequence_tokens=max(r['n_processed'] for r in encoded),
-                  scope='engineering-only, one reference path per problem')
+                  scope='frozen paired pilot v1' if is_pilot else 'engineering-only, one reference path per problem')
     dump(out/'budget_report.json', budget)  # Written BEFORE loading/training the model.
     manifest = {'config': cfg, 'model': lock, 'git_commit': subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
                 'python': importlib.metadata.version('pip'), 'torch': torch.__version__,
@@ -169,6 +188,13 @@ def main():
         optimizer = torch.optim.AdamW(model.parameters(), lr=cfg['learning_rate'],
                                      weight_decay=cfg['weight_decay'], foreach=False)
         baseline = {}
+        if cfg['mode'] == 'pilot_calibration':
+            diagnostics = dict(cfg, diagnostic_caps=[192, 384])
+            predictions, stats = generate(model, tokenizer, dev_rows[:16], diagnostics)
+            save_predictions(out/'base_dev_cap_diagnostics.jsonl', predictions)
+            baseline['dev_first16_caps'] = {str(cap): summarize([p['cap_diagnostics'][str(cap)] for p in predictions]) for cap in [192, 384]}
+            baseline['dev_nll'] = reference_nll(model, dev_encoded, tokenizer, cfg['microbatch_size'])
+            dump(out/'baseline_metrics.json', baseline)
         if cfg['mode'] == 'engineering_overfit':
             for name, rows in [('train', train_rows), ('dev', dev_rows)]:
                 predictions, stats = generate(model, tokenizer, rows, cfg)
@@ -219,6 +245,13 @@ def main():
                 log.flush()
                 if step % 20 == 0 or step == 1:
                     print(json.dumps(record), flush=True)
+                if cfg['mode'] == 'pilot_calibration' and step in cfg['eval_steps']:
+                    predictions, stats = generate(model, tokenizer, dev_rows, cfg)
+                    save_predictions(out/f'dev_step_{step:04d}_greedy.jsonl', predictions)
+                    stats.update(step=step, dev_nll=reference_nll(model, dev_encoded, tokenizer, cfg['microbatch_size']))
+                    checkpoint_metrics.append(stats)
+                    dump(out/'checkpoint_metrics.json', checkpoint_metrics)
+                    print(json.dumps({'development_checkpoint': stats}), flush=True)
                 if cfg['mode'] == 'engineering_overfit' and (step % cfg['eval_every'] == 0 or step == cfg['steps']):
                     predictions, stats = generate(model, tokenizer, train_rows, cfg)
                     save_predictions(out/f'train_step_{step:04d}_greedy.jsonl', predictions)
@@ -239,6 +272,27 @@ def main():
         dump(out/'throughput.json', measured)
         dump(out/'actual_budget.json', budget_report(encoded, schedule[:len(history)], cfg['microbatch_size']))
         results = {'baseline': baseline, 'throughput': measured, 'steps': len(history)}
+        if is_pilot:
+            for name, rows in [('train_sample16', train_eval_rows), ('dev', dev_rows), ('dev_broad', broad_rows)]:
+                predictions, stats = generate(model, tokenizer, rows, cfg)
+                save_predictions(out/f'final_{name}_greedy.jsonl', predictions)
+                results[name] = stats
+            if cfg.get('samples_per_problem', 0):
+                predictions, stats = generate(model, tokenizer, dev_rows, cfg, samples=cfg['samples_per_problem'], sample=True)
+                save_predictions(out/'final_dev_sampled.jsonl', predictions)
+                results['dev_sampled'] = stats
+            results['final_dev_nll'] = reference_nll(model, dev_encoded, tokenizer, cfg['microbatch_size'])
+            if cfg['mode'] == 'pilot_calibration':
+                dev = results['dev']
+                results['pilot_gate'] = {'passed': dev['accuracy_macro'] >= 4/64 and dev['parsing_failure_rate'] <= .1 and dev['truncation_rate'] <= .05,
+                    'rule': 'At least 4/64 dev greedy correct, parse failures <=10%, truncations <=5%; full frozen dose required.',
+                    'meaning': 'Feasibility gate only, not statistical power or a scientific treatment effect.'}
+            if cfg.get('save_checkpoint', False):
+                checkpoint = out/'checkpoint_final'
+                model.save_pretrained(checkpoint, safe_serialization=True)
+                tokenizer.save_pretrained(checkpoint)
+                dump(out/'checkpoint_manifest.json', {'kind': 'model_weights_only_not_optimizer_resume',
+                     'files': {p.name: sha256_file(p) for p in checkpoint.iterdir() if p.is_file()}})
         if cfg['mode'] == 'engineering_overfit':
             for name, rows in [('train', train_rows), ('dev', dev_rows)]:
                 predictions, stats = generate(model, tokenizer, rows, cfg)

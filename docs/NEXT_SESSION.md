@@ -1,5 +1,29 @@
 # Next-session handoff
 
+## Current — 2026-09-08: ready to request replacement A800
+
+The owner approved the staged plan and asked to be told when a server is needed.
+The prior server may no longer be available. Local CPU preparation is complete;
+no old server was contacted. Start with PILOT_V1.md and configs/pilot_v1/queue.json.
+
+The published pilot data has 256 train, 64 matched dev, 64 broader dev and
+2048 unsolved reserved holdout groups. Four arms have exact token/update matching
+at 267456 tokens / 1024 updates each. Preparation failures and integrity reports
+are retained. This is a narrow single-seed pilot, not a generalization result.
+
+On the owner's replacement A800, fetch current main, verify model/environment,
+restore the latest private 1173-second ledger (6027 remaining), and run tests plus
+the pilot verifier. Reuse verified base-model cache; no old overfit-checkpoint
+upload is needed. Comparison checkpoint storage requires 30 GiB free.
+
+Run only the 900-second calibration phase first. Inspect its development gate,
+generation truncation and measured costs, publish results, then use the four
+1050-second comparison jobs if the gate and full-phase budget checks pass.
+No automatic rental, background job or holdout evaluation is configured.
+
+Historical backup/shutdown information follows and remains valid; the old
+open-design discussion at the end is superseded by the approved pilot v1 plan.
+
 ## Shutdown-ready milestone — 2026-09-05 UTC
 
 No GPU training or candidate-audit process was active at the final check. GPU memory and utilization were zero; the ledger had no unresolved job. The owner can shut down the current instance. No background experiment or scheduled GPU restart is requested.

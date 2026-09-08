@@ -4,6 +4,22 @@ from .countdown_smoke import safe_parse, canonical, verify_expression
 from .metrics import macro_pass_at_k
 
 
+def score_token_caps(tokens, tokenizer, row, caps, generation_limit):
+    """Score prefixes of one greedy continuation, preserving EOS/truncation flags."""
+    result = {}
+    for cap in caps:
+        if not 0 < cap <= generation_limit:
+            raise ValueError('Diagnostic cap outside generated sequence limit')
+        capped = tokens[:cap]
+        eos = tokenizer.eos_token_id in capped
+        if eos:
+            capped = capped[:capped.index(tokenizer.eos_token_id)+1]
+        result[str(cap)] = {'problem_id': row['problem_id'], 'eos': eos,
+                            'output_tokens': len(capped), 'truncated': not eos and len(capped) == cap,
+                            **score_text(tokenizer.decode(capped, skip_special_tokens=True), row['numbers'], row['target'])}
+    return result
+
+
 def score_text(text, numbers, target):
     matches = list(re.finditer(r'(?m)^\s*Answer:\s*([^\n]+)', text))
     result = {'parsed': False, 'correct': False, 'expression': None, 'structure_id': None}

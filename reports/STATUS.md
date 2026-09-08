@@ -1,4 +1,28 @@
-# Verified status — 2026-09-05 UTC
+# Verified status — 2026-09-08
+
+## Pilot v1 ready for replacement-A800 calibration
+
+- CPU-only preparation completed; no new GPU process-seconds or server connection.
+- Immutable dataset: runs/pilot_v1_20260908_r3; 256 train, 64 matched dev,
+  64 broader dev, 2048 unsolved holdout-reserved number groups.
+- Raw groups assigned before solving/path augmentation; split and reference
+  integrity checked separately. Two unsuccessful preparations remain recorded.
+- Four arms: 1024 updates, 4096 presentations, 267456 response tokens,
+  472832 processed nonpadding tokens and zero training padding per arm.
+  Exact per-example token equality and per-update Paths/GCM structure equality.
+- Surface uses four complete sentence frames with unchanged equations/order;
+  selection remains restrictive (train target TV .25952, dev .49170).
+- Queue defaults to dry run, rejects stale ledgers and insufficient full-phase
+  budget, and requires a completed development calibration gate for comparison.
+- Original ledger remains 1173 used / 6027 seconds remaining. Planned total
+  maximum reservations are 5175 seconds, leaving 852 seconds headroom.
+- Local verification: 48 tests passed; two GNU-timeout integration tests must
+  run on the replacement Linux server. Full artifact verification and both
+  queue dry runs passed. GPU timing remains unmeasured for this pilot.
+- Source, commands, budget, stopping rules and limitations: ../docs/PILOT_V1.md.
+  No scientific treatment result or calibrated GPU timing exists yet.
+
+The following sections are the retained 2026-09-05 historical status.
 
 ## A800 engineering continuation complete
 - Main Qwen2.5-1.5B base and tokenizer: nine files match pinned official digests. Python/PyTorch/Transformers match the 4090 environment; the new driver is recorded separately.

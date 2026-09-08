@@ -1,5 +1,9 @@
 # Scientific pilot proposal — awaiting review, no comparison launched
 
+**Historical proposal.** The owner approved staged pilot work on 2026-09-08.
+The implemented, audited pilot specification is now [PILOT_V1.md](PILOT_V1.md).
+The earlier candidate discussion below is retained for provenance.
+
 ## Estimand and exposure correction
 
 Estimate the effect of multiple canonical verified structures paired with each problem, relative to one structure per problem when the *exposure-weighted global* structural distribution is approximately matched. This is a narrow operational estimand; algebraic syntax is not a measure of human cognitive strategy.

@@ -1,4 +1,8 @@
-# Protocol v0.2 — implementation draft
+# Protocol v0.3 — pilot v1 frozen; broader benchmark pending
+
+The owner approved staged pilot preparation on 2026-09-08. PILOT_V1.md and
+configs/pilot_v1 are authoritative for this finite pilot; older draft issues
+below are retained as background. No model treatment outcome is available yet.
 
 ## Question and tasks
 
@@ -7,6 +11,11 @@ Does within-problem structural path diversity provide benefits beyond global str
 ## Conditions
 
 Repeat, Surface, Within-Problem Paths, Global-Coverage Matched; Breadth and Balanced are secondary. Shared anchors and paired seeds are required. Single-path coverage matching must report structural-frequency, length and operator-distribution residuals. The draft's fixed-set single-path R=1 row cannot by itself match the token budget of multiple paths; actual exposure allocation must be specified before any causal comparison. This remains a scientific decision, not a silent sampler default.
+
+Pilot v1 explicitly assigns four presentations per problem per cycle in all
+conditions, with four shared cycles. Exact matching is verified on committed
+data. Repeat anchors and GCM assignments are seeded. Surface changes complete
+sentence frames while preserving calculation content and order.
 
 ## Budgets and labels
 

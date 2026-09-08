@@ -20,4 +20,5 @@ Read README.md, docs/PROTOCOL.md, docs/DECISIONS.md and reports/STATUS.md before
 - Run meaningful correctness tests, 32-example overfit and measured profile before scaling. Preserve failed runs.
 - First-session GPU process runtime budget: 7200 seconds, explicitly approved by the user. Enforce per-job bounds and a cumulative ledger. No paid APIs or extra machines are authorized.
 - Main-grid, scientific protocol changes and submissions need user review. Prepare a concrete proposal before requesting review. CPU/data/documentation work can continue independently.
+- The owner approved the finite pilot v1 sequence on 2026-09-08. Follow docs/PILOT_V1.md and program.md: CPU preflight, bounded A800 calibration, then one paired-seed comparison only if the gate and complete-phase budget pass. This does not authorize a main grid or holdout evaluation.
 - Chinese user updates; English code and paper text. Maintain AI_USE_LOG.md.

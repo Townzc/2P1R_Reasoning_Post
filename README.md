@@ -6,6 +6,15 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**2026-09-08:** Pilot v1 CPU preparation is complete: 256 train problems, two
+disjoint 64-problem development sets and 2048 unsolved reserved holdout groups.
+Four arms match exactly at 1024 updates and 267456 response tokens each. Next:
+replacement-A800 calibration, then a gated one-seed comparison. No GPU run was
+launched in this preparation. See [docs/PILOT_V1.md](docs/PILOT_V1.md),
+[program.md](program.md), and [reports/pilot_v1_integrity.json](reports/pilot_v1_integrity.json).
+
+Earlier engineering milestone:
+
 The intended 1.5B base model passed the 32-example engineering gate on A800 (32/32 after 500 updates), using the FP32 AdamW recipe that exceeded 4090 memory. Development remains 0/16 greedy and 0/64 sampled. A CPU search found 256 candidate problems with exact token and Within-Paths/GCM structural matching; final data/control design remains open. See [reports/STATUS.md](reports/STATUS.md), [reports/A800_SESSION.md](reports/A800_SESSION.md) and [docs/PROTOCOL.md](docs/PROTOCOL.md). No scientific treatment result is claimed.
 
 ```bash
