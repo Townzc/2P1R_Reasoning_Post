@@ -1,6 +1,15 @@
 # Verified status — 2026-09-08
 
-## Pilot v1 ready for replacement-A800 calibration
+## Pilot calibration complete; four-arm comparison next
+
+- Full-dose calibration passed: 14/64 matched dev, 2/64 broader dev, 12/16 train sample.
+- All 50 Linux tests passed; model/data hashes and saved-output accounting verified.
+- 546 new process-seconds; cumulative 1719/7200 used, 5481 remaining.
+- Raw results and ledger are backed up independently. No calibration weights were saved.
+- The approved four-arm phase fits its 4260-second reservation. No treatment result yet.
+- See PILOT_CALIBRATION.md and pilot_after_calibration_r1/results.tsv.
+
+## Historical CPU preparation — before the calibration
 
 - CPU-only preparation completed; no new GPU process-seconds or server connection.
 - Immutable dataset: runs/pilot_v1_20260908_r3; 256 train, 64 matched dev,

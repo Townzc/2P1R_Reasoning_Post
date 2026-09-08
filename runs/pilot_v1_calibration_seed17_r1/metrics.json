@@ -1,0 +1,92 @@
+{
+  "baseline": {
+    "dev_first16_caps": {
+      "192": {
+        "problems": 16,
+        "generations": 16,
+        "accuracy_macro": 0.0,
+        "parsing_failure_rate": 1.0,
+        "eos_rate": 0.0,
+        "truncation_rate": 1.0,
+        "mean_output_tokens": 192.0,
+        "pass_at_k": {},
+        "mean_valid_structure_count": 0.0,
+        "mean_valid_structure_entropy_conditional_on_success": null
+      },
+      "384": {
+        "problems": 16,
+        "generations": 16,
+        "accuracy_macro": 0.0,
+        "parsing_failure_rate": 1.0,
+        "eos_rate": 0.0,
+        "truncation_rate": 1.0,
+        "mean_output_tokens": 384.0,
+        "pass_at_k": {},
+        "mean_valid_structure_count": 0.0,
+        "mean_valid_structure_entropy_conditional_on_success": null
+      }
+    },
+    "dev_nll": 0.6392806343410327
+  },
+  "throughput": {
+    "profile_updates": 100,
+    "warmup_excluded": 10,
+    "profile_complete": true,
+    "supervised_tokens_per_second": 683.0791118695835,
+    "processed_tokens_per_second": 1207.3026163276359,
+    "peak_allocated_mib": 26836.93798828125,
+    "peak_reserved_mib": 28988.0
+  },
+  "steps": 1024,
+  "train_sample16": {
+    "problems": 16,
+    "generations": 16,
+    "accuracy_macro": 0.75,
+    "parsing_failure_rate": 0.0,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 65.9375,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.75,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 5.800327338278294,
+    "aggregate_output_tokens_per_second": 181.88628649243697,
+    "decoding": "greedy"
+  },
+  "dev": {
+    "problems": 64,
+    "generations": 64,
+    "accuracy_macro": 0.21875,
+    "parsing_failure_rate": 0.078125,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 64.90625,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.21875,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 23.844048883765936,
+    "aggregate_output_tokens_per_second": 174.21537844724952,
+    "decoding": "greedy"
+  },
+  "dev_broad": {
+    "problems": 64,
+    "generations": 64,
+    "accuracy_macro": 0.03125,
+    "parsing_failure_rate": 0.015625,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 65.421875,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.03125,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 29.42846043780446,
+    "aggregate_output_tokens_per_second": 142.2772356321191,
+    "decoding": "greedy"
+  },
+  "final_dev_nll": 0.3428099496928966,
+  "pilot_gate": {
+    "passed": true,
+    "rule": "At least 4/64 dev greedy correct, parse failures <=10%, truncations <=5%; full frozen dose required.",
+    "meaning": "Feasibility gate only, not statistical power or a scientific treatment effect."
+  }
+}

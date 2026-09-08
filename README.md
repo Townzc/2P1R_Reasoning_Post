@@ -6,12 +6,12 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-08:** Pilot v1 CPU preparation is complete: 256 train problems, two
-disjoint 64-problem development sets and 2048 unsolved reserved holdout groups.
-Four arms match exactly at 1024 updates and 267456 response tokens each. Next:
-replacement-A800 calibration, then a gated one-seed comparison. No GPU run was
-launched in this preparation. See [docs/PILOT_V1.md](docs/PILOT_V1.md),
-[program.md](program.md), and [reports/pilot_v1_integrity.json](reports/pilot_v1_integrity.json).
+**2026-09-08:** Pilot v1 calibration passed at the full 1024-update dose:
+14/64 matched-dev and 2/64 broader-dev correctness. All 50 Linux tests and saved
+output/accounting checks passed. The calibration charged 546 seconds; 5481 of
+the shared 7200 seconds remain. Next is the approved four-arm, one-seed comparison;
+no treatment ordering is available yet. See [reports/PILOT_CALIBRATION.md](reports/PILOT_CALIBRATION.md),
+[docs/PILOT_V1.md](docs/PILOT_V1.md) and [reports/STATUS.md](reports/STATUS.md).
 
 Earlier engineering milestone:
 

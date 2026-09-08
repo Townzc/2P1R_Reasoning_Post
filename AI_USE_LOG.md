@@ -53,3 +53,17 @@ loaded and no GPU or prior-server connection was used in this preparation.
 Local verification completed: 50 tests ran, 48 passed and two GNU-timeout tests
 were skipped pending the Linux server. Full frozen-artifact verification and
 both queue dry runs passed; no GPU execution or comparison outcome is claimed.
+
+## 2026-09-08 — replacement A800 calibration
+
+Codex recovered the published Git history and existing 1173-second ledger on the
+owner's cloned A800 through authenticated Jupyter after SSH banner timeouts. All
+nine model files and frozen data were verified; all 50 Linux tests passed. The
+approved bounded calibration completed 1024 updates, charging 546 seconds and
+passing the fixed feasibility gate (14/64 matched dev, 2/64 broader dev). The
+update-512 matched score was higher; no checkpoint selection or shortened dose
+was used. Codex preserved raw outputs, backed up the ledger, added CPU checks
+that rescore saved predictions and reconcile training exposure accounting, and
+extended the run registry to distinguish calibration/scientific-pilot records.
+The fixed four-arm phase remains the next already-authorized action; no treatment
+ordering, holdout result or general arithmetic capability is inferred.

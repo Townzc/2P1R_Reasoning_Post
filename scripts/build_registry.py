@@ -18,14 +18,19 @@ for directory in sorted(Path('runs').iterdir()):
         steps=sum(bool(line.strip()) for line in history.read_text().splitlines())
     entries.append({'run_id':directory.name,'status':receipt['status'],'evidence_valid':valid,
         'git_commit':manifest.get('git_commit'),'config':manifest.get('config'),
+        'mode':manifest.get('config',{}).get('mode'),
+        'arm':manifest.get('config',{}).get('arm'),
         'model':manifest.get('model'),'charged_gpu_seconds':receipt['charged_seconds'],
         'overfit_passed':metrics.get('overfit_passed') if valid else None,
         'steps':steps, 'supervised_response_tokens':budget.get('supervised_response_tokens'),
         'train_accuracy':metrics.get('train',{}).get('accuracy_macro') if valid else None,
         'dev_accuracy':metrics.get('dev',{}).get('accuracy_macro') if valid else None,
+        'dev_broad_accuracy':metrics.get('dev_broad',{}).get('accuracy_macro') if valid else None,
+        'dev_sampled_pass_at_k':metrics.get('dev_sampled',{}).get('pass_at_k') if valid else None,
+        'pilot_gate':metrics.get('pilot_gate') if valid else None,
         'throughput':metrics.get('throughput'), 'exception_type':manifest.get('exception_type'),
         'records':str(directory)})
-report={'scope':'engineering experiments only; no treatment-effect evidence',
+report={'scope':'Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.',
         'charged_gpu_seconds':sum(e['charged_gpu_seconds'] for e in entries),'runs':entries}
 Path('reports/run_registry.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({'runs':len(entries),'charged_gpu_seconds':report['charged_gpu_seconds']}))

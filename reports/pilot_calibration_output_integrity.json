@@ -1,0 +1,64 @@
+{
+  "run_id": "pilot_v1_calibration_seed17_r1",
+  "status": "VERIFIED_ON_CPU",
+  "training_commit": "423c94f6d109315913111318ca7e266ba254eb25",
+  "steps": 1024,
+  "supervised_response_tokens": 267456,
+  "planned_actual_accounting_equal": true,
+  "evaluation": {
+    "final_train_sample16_greedy.jsonl": {
+      "generations": 16,
+      "sha256": "fd244e4227db6ffbf0926e25792079319efcd0e330af933cb0cc01afb32eabf6",
+      "counts": {
+        "correct": 12,
+        "wrong_target_value": 2,
+        "wrong_number_multiset": 2
+      },
+      "scores_recomputed_from_text": true
+    },
+    "final_dev_greedy.jsonl": {
+      "generations": 64,
+      "sha256": "26a20dde77d560efc09a1a3fa481b030adb3716454ad0e711792ecab49dea8b3",
+      "counts": {
+        "wrong_number_multiset": 19,
+        "correct": 14,
+        "wrong_target_value": 26,
+        "parse_failure": 5
+      },
+      "scores_recomputed_from_text": true
+    },
+    "final_dev_broad_greedy.jsonl": {
+      "generations": 64,
+      "sha256": "4ddf1cc8da3af29e05979141ef2f97cb631ac0fd90d3f2cd3539c12e53e1d39a",
+      "counts": {
+        "wrong_target_value": 32,
+        "wrong_number_multiset": 29,
+        "correct": 2,
+        "parse_failure": 1
+      },
+      "scores_recomputed_from_text": true
+    },
+    "dev_step_0256_greedy.jsonl": {
+      "generations": 64,
+      "sha256": "b8050dcc791f71a51b383a026be9872a0f4e78c076b57782d7c9f14a4215b338",
+      "counts": {
+        "wrong_number_multiset": 26,
+        "wrong_target_value": 21,
+        "correct": 11,
+        "parse_failure": 6
+      },
+      "scores_recomputed_from_text": true
+    },
+    "dev_step_0512_greedy.jsonl": {
+      "generations": 64,
+      "sha256": "56b891d8c7ec8108cdb04bf13b0a3132b7844e037672a882a1af09dfdb967350",
+      "counts": {
+        "wrong_target_value": 27,
+        "wrong_number_multiset": 21,
+        "correct": 16
+      },
+      "scores_recomputed_from_text": true
+    }
+  },
+  "scope": "Final-expression correctness and recorded exposure accounting; intermediate generated steps are not independently verified. No new model inference or holdout evaluation."
+}
