@@ -87,3 +87,10 @@ skips); all 50 had passed on Linux before execution. Authenticated Jupyter file
 transfer was used after SSH banner failures; resumable checkpoint downloads are
 verified against recorded SHA-256 manifests outside Git. No extra run, rental,
 automated restart or expanded research scope is inferred from this pilot signal.
+
+The final independent backups completed for all four scientific checkpoints:
+48 files, about 24.8 GB, with full SHA-256 verification against each run manifest.
+Codex retained the final 3712-second private ledger, verified no active GPU process
+or unresolved reservation, and published a shutdown/replacement handoff. Slow
+network transfers were resumed from retained fragments without rerunning GPU jobs.
+The owner can stop the instance; no next experiment or automatic restart is launched.

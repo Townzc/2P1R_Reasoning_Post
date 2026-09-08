@@ -10,8 +10,9 @@
 - Four-arm phase charged 1993 seconds; cumulative 3712/7200 used, 3488 remaining.
 - Final private ledger independently retained with no unresolved reservation.
 - See PILOT_V1_RESULTS.md and pilot_after_comparison_r1/results.tsv.
-- Weight transfer verification is tracked in ARTIFACTS.md. Shutdown readiness
-  is recorded in ../docs/NEXT_SESSION.md after publication and complete backups.
+- All four weights (48 files, 24.8 GB) have independent SHA-256-verified backups.
+  The server has no GPU job or unresolved reservation and can be shut down.
+  See pilot_checkpoint_backup_summary.json and pilot_final_server_check.json.
 - One paired seed, restricted selection, development only. Review another paired
   replication before any more GPU work; no holdout evaluation or main grid.
 

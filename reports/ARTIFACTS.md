@@ -4,11 +4,11 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 
 | Artifact | Current retained copies | Verification / reproduction |
 |---|---|---|
-| Pinned 0.5B and 1.5B base snapshots | Training server cache | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
-| Higher-LR debug checkpoint (`r2`, gate failed) | Training server and local backup outside Git | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
-| Passing debug checkpoint (`r3`, 31/32) | Training server and local backup outside Git | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
+| Pinned 0.5B and 1.5B base snapshots | Reproducible from pinned sources; current A800 main cache verified before pilot | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
+| Higher-LR debug checkpoint (`r2`, gate failed) | Verified independent local backup outside Git; historical server copy | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
+| Passing debug checkpoint (`r3`, 31/32) | Verified independent local backup outside Git; historical server copy | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
 | First-session runtime ledger | Active A800 and latest local private backup (3712 seconds) | Public summary in `compute_accounting.json`; the old 4090 ledger may be stale. Transfer the latest private ledger to continue the same approved budget. |
-| Main A800 checkpoint (32/32 overfit) | A800 and local backup outside Git, all 12 files verified | `checkpoint_main_a800_server_verified.json` and `checkpoint_main_a800_local_verified.json` are identical. Weights-only checkpoint; no exact optimizer resume. |
+| Main A800 checkpoint (32/32 overfit) | Verified independent local backup outside Git, all 12 files; historical A800 copy | `checkpoint_main_a800_server_verified.json` and `checkpoint_main_a800_local_verified.json` are identical. Weights-only checkpoint; no exact optimizer resume. |
 | Raw run records | GitHub, local checkout and training server | See `run_registry.json` and each run's recorded code commit; one launch is explicitly invalidated. |
 
 Checkpoint files contain model weights and tokenizer, **not** optimizer/RNG/sampler state. The current runner does not provide exact optimizer resume. Copy the checkpoint separately when needed and run:
@@ -29,8 +29,8 @@ All four final FP32 checkpoints were saved on A800. Independent transfer status:
 |---|---|---|
 | repeat | All 12 files verified; 6190803581 bytes | [pilot_v1_repeat_seed17_r1_checkpoint_backup.json](pilot_v1_repeat_seed17_r1_checkpoint_backup.json) |
 | surface | All 12 files verified; 6190803581 bytes | [pilot_v1_surface_seed17_r1_checkpoint_backup.json](pilot_v1_surface_seed17_r1_checkpoint_backup.json) |
-| paths | Transfer in progress; server still required | Pending |
-| gcm | Transfer in progress; server still required | Pending |
+| paths | All 12 files verified; 6190803581 bytes | [pilot_v1_paths_seed17_r1_checkpoint_backup.json](pilot_v1_paths_seed17_r1_checkpoint_backup.json) |
+| gcm | All 12 files verified; 6190803581 bytes | [pilot_v1_gcm_seed17_r1_checkpoint_backup.json](pilot_v1_gcm_seed17_r1_checkpoint_backup.json) |
 
 The exact per-file SHA-256 values are in each run's checkpoint_manifest.json.
 Backups remain outside Git. All raw predictions, logs, training histories,

@@ -14,10 +14,12 @@ were both zero and no experiment/queue process remained. The final ledger has
 The private local ledger backup is current; older 1173/1719-second copies are stale.
 No further seed, main grid, holdout evaluation or GPU restart is approved.
 
-Independent checkpoint backups verified so far: repeat, surface.
-Remaining weight transfers are in progress. GPU work is finished, but do not
-declare the server disposable until all four checkpoint backups are verified.
-Publication and the final server check must also be complete.
+All four weights are independently backed up and SHA-256 verified (48 files,
+24.8 GB total). Source and complete experiment records were published in commit
+`6a7f9616c28a7df92258ee5e086e0eb33ef29510`; the backup reports and this handoff
+are retained with this final milestone. The final server check confirms no active
+GPU job or unresolved budget reservation. The owner can shut down the instance.
+No automatic shutdown, restart or new training is requested.
 
 ## Recovery sources
 

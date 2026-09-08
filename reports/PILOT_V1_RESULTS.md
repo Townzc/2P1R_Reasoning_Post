@@ -27,6 +27,14 @@ both wrong. On broader development: 0 both correct,
 4 Paths only, 1 GCM only, and 59
 both wrong. These paired counts preserve overlap that marginal percentages hide.
 
+The sampled Paths/GCM pass@1 difference is only 0.78 percentage points
+(72/256 versus 70/256 correct generations), whereas pass@4 differs by 17.19
+points (33/64 versus 22/64 problems with a success). This pattern motivates
+replicating the distribution of successes and valid structures, not claiming a
+uniform improvement under every decoding metric. With four draws, mean distinct
+correct structures per problem is .828125 for Paths and .390625 for GCM; this is
+a sparse output diagnostic rather than a count of internal reasoning strategies.
+
 Repeat independently reproduced the calibration's greedy output files byte for
 byte on the train diagnostic and both dev splits. It was trained again from the
 pinned base; the calibration run/checkpoint was not reused as a scientific arm.
@@ -81,7 +89,7 @@ OOD test. Canonical expression structure is an operational proxy. Surface varies
 sentence frames with unchanged equations/order, not arbitrary paraphrases.
 
 Reference dev NLL is available in the machine-readable results, but measures one
-canonical textual reference. Its rendering and chosen path favor some trained
+canonical textual reference. Its rendering and chosen path can favor some training
 texts; it is not a substitute for expression correctness or the primary contrast.
 Four samples give a sparse estimate of output diversity. One paired seed and
 16 matched-dev selection blocks do not justify population or significance claims.
@@ -97,8 +105,10 @@ separately; no A800 hourly price is assumed. No further GPU job is launched.
 All four saved-output audits reproduce scoring and full training accounting.
 All 50 Linux preflight tests passed. Post-comparison local verification ran the
 same 50 tests: 48 passed, with two Linux-only timeout tests skipped on macOS.
-Checkpoint backup state is recorded in ARTIFACTS.md and the individual
-`pilot_v1_*_checkpoint_backup.json` verification reports. A Git clone restores
+All four checkpoints are independently backed up and SHA-256 verified (48 files,
+24.8 GB); see pilot_checkpoint_backup_summary.json and ARTIFACTS.md. The final
+server state is in pilot_final_server_check.json; the CPU phase integrity and test
+records are pilot_comparison_phase_integrity.json and pilot_comparison_tests_local.log. A Git clone restores
 code and compact records; weights and the current private ledger are transferred
 separately. The weights do not contain optimizer/RNG/sampler resume state.
 
