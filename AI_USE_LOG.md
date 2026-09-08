@@ -67,3 +67,23 @@ that rescore saved predictions and reconcile training exposure accounting, and
 extended the run registry to distinguish calibration/scientific-pilot records.
 The fixed four-arm phase remains the next already-authorized action; no treatment
 ordering, holdout result or general arithmetic capability is inferred.
+
+## 2026-09-08 — completed paired four-arm pilot and recovery
+
+Within the owner's approved finite phase and cumulative budget, Codex ran Repeat,
+Surface, Paths and GCM independently from the same pinned base/source and fixed
+1024-update dose. Matched-dev correctness was 14, 12, 23 and 18 out of 64;
+broader-dev correctness was 2, 0, 4 and 1. No checkpoint/dose selection or holdout
+inference occurred. Raw outputs, failure categories, paired problem counts,
+source/data identities, all exposure histories and runtime receipts were retained.
+The comparison charged 1993 seconds; the total is 3712/7200 seconds.
+
+Codex independently rescored outputs on CPU and reconciled the final private
+ledger. Reporting now includes sampled pass@1/2/4, both development slices,
+train diagnostics and parse/truncation rates. The saved-summary verifier permits
+only 1e-12 floating-point roundoff in scalar statistics across operating systems;
+identities and correctness remain exact. Local tests passed (48 plus two Linux-only
+skips); all 50 had passed on Linux before execution. Authenticated Jupyter file
+transfer was used after SSH banner failures; resumable checkpoint downloads are
+verified against recorded SHA-256 manifests outside Git. No extra run, rental,
+automated restart or expanded research scope is inferred from this pilot signal.

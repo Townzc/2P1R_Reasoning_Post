@@ -1,70 +1,66 @@
-# Next-session handoff
+# Next-session handoff — completed paired pilot
 
-## Current — 2026-09-08: calibration complete, comparison next
+## Current state — 2026-09-08
 
-Read reports/PILOT_CALIBRATION.md and configs/pilot_v1/queue.json. The frozen
-1024-update Repeat calibration passed with 14/64 matched-dev and 2/64 broader-dev
-correctness. This is not the scientific Repeat arm. Raw outputs, preflight records
-and the private ledger are independently backed up. All 50 Linux tests passed;
-the new output verifier reproduced saved scores and exposure accounting.
+Read ../reports/PILOT_V1_RESULTS.md and ../reports/pilot_after_comparison_r1/results.json.
+Matched-dev greedy scores: Repeat 14/64, Surface 12/64, Paths 23/64, GCM 18/64.
+Broader-dev scores: 2/64, 0/64, 4/64, 1/64. This is one paired seed on restricted
+development data. All arms completed the same 1024 updates and supervision dose;
+raw predictions and actual exposure accounting were independently checked on CPU.
 
-The current ledger has 1719 seconds used and 5481 remaining, with no unresolved
-reservation at this milestone. Preserve this ledger across any clone/replacement.
-The owner already approved the finite four-arm comparison if the calibration gate
-and full-phase budget pass; both passed. After publishing this milestone, sync the
-clean current main and run the comparison phase. Four 1050-second jobs plus guards
-reserve 4260 seconds. No further approval is needed for this already approved phase.
+The finite comparison queue has exited successfully. A800 GPU memory/utilization
+were both zero and no experiment/queue process remained. The final ledger has
+**3712/7200 process-seconds used, 3488 remaining**, with no unresolved reservation.
+The private local ledger backup is current; older 1173/1719-second copies are stale.
+No further seed, main grid, holdout evaluation or GPU restart is approved.
 
-Use the current private connection settings; the supplied instance is reachable
-through authenticated Jupyter terminal/file access while external SSH stalls before
-authentication. Git bundles provide the published history when remote GitHub fetch
-is unavailable. Do not reset authentication or weaken server protections.
+Independent checkpoint backups verified so far: repeat, surface.
+Remaining weight transfers are in progress. GPU work is finished, but do not
+declare the server disposable until all four checkpoint backups are verified.
+Publication and the final server check must also be complete.
 
-Do not reuse an active/completed run ID. Inspect the ledger and GPU processes before
-launching or shutting down. Keep all comparison predictions and four final weights,
-verify independent checkpoint copies, publish results and refresh this handoff before
-declaring the server disposable. No final holdout, extra seeds or main grid are approved.
+## Recovery sources
 
-Historical backup/shutdown information follows; its older 1173-second balance and
-open-design questions are superseded by the current ledger and approved pilot.
-
-## Shutdown-ready milestone — 2026-09-05 UTC
-
-No GPU training or candidate-audit process was active at the final check. GPU memory and utilization were zero; the ledger had no unresolved job. The owner can shut down the current instance. No background experiment or scheduled GPU restart is requested.
-
-The completed experiment/backup milestone is commit `c8a76eeb86e362d992acb6e6d294110610c41bca`; subsequent documentation is on `main`. Individual run manifests record their actual training source commit. Always fetch the current published branch rather than assuming an old cloned checkout is current.
-
-Read `reports/STATUS.md` and `reports/A800_SESSION.md` for evidence. Main 1.5B overfit reached 32/32 train correctness, but development remained 0/16 greedy and 0/64 sampled. The latest operator-constrained candidate audit finds 256 matched problems from 4096 candidates, with 66416 supervised tokens per arm per cycle. No scientific treatment comparison has run.
-
-## State retained independently of the instance
-
-| State | Recovery source |
+| State | Independent recovery source |
 |---|---|
-| Source, configs, tests, exact model revisions | GitHub `main`; per-run commit for reproduction |
-| Synthetic candidate data, raw predictions, logs and metrics | Versioned `runs/` and `reports/` |
-| Three saved overfit checkpoints (two debug, one main) | Verified local backups outside Git; manifests in each run and verification reports in `reports/` |
-| Current cumulative resource ledger | Latest private local backup or active-server copy: 1173 seconds used, 6027 seconds remaining |
-| Model/tokenizer base weights | Exact revisions and official expected file digests in `configs/models.lock.json`; verified cache if preserved, otherwise re-download |
-| Environment | Pinned requirements/bootstrap and `reports/environment_a800.json` |
+| Code, configs, data, raw predictions and receipts | GitHub main; actual training source is recorded in each run manifest |
+| Four scientific pilot weights | Local backups outside Git once each checkpoint verification report is present; see ARTIFACTS.md |
+| Three earlier engineering checkpoints | Previously verified local copies outside Git; historical manifests/reports retained |
+| Latest cumulative ledger | Current private local backup, reconciled against all 11 receipts: 3712 seconds |
+| Base model/tokenizer | Pinned revision and official file hashes in configs/models.lock.json; verified cache or exact re-download |
+| Environment | Pinned bootstrap/requirements and the current A800 preflight report |
 
-The main checkpoint has 12 files, totaling 6190803581 bytes, verified on the server and in the independent local copy. Previous verification reports and current backup file sizes were rechecked before shutdown. Checkpoints are weights/tokenizer only, without optimizer/RNG/sampler state; they do not support exact optimizer resume.
+All four arms trained from commit `c4f4038f0d1582dc3586802af9d5f22fbfaa13c2`.
+Fetch the latest published main for continuation; do not assume a cloned checkout
+already contains the completed experiment records. The final weights do not
+include optimizer/RNG/sampler state and do not support exact optimizer resume.
 
-## Reuse, replace or clone an instance
+## Reuse, clone or replace an instance
 
-1. Update the private connection configuration if needed. Keep credentials, endpoints and private paths outside Git.
-2. Fetch GitHub and fast-forward a clean checkout. For a new checkout, clone this repository; use the documented Git-bundle fallback if GitHub is unavailable. Compare the remote checkout commit with the intended published commit before execution.
-3. Inspect a cloned instance's actual environment and storage contents. Reuse matching packages/cache when valid; do not assume cloning preserved every required file. Verify model/checkpoint manifests at the destination. Rebuild/download only what is missing or incompatible.
-4. Restore the latest cumulative ledger. An old 4090 image may contain a stale 737-second ledger; do not treat that as the current balance or start a fresh budget. Only one GPU job may run across all copies.
-5. Restore a trained checkpoint only if the next task needs it, such as re-evaluation. A new independent training run should initialize from the pinned base model. This avoids unnecessary transfer of multi-gigabyte trained weights.
-6. Run the relevant correctness/environment checks before starting new work. All GPU jobs remain bounded by `scripts/run_bounded.py` and need fresh run IDs. Do not overwrite recorded datasets or old run directories.
+1. Keep current credentials/endpoints in private connection settings outside Git.
+2. Fetch and fast-forward the published history in a clean checkout. If GitHub is
+   unavailable remotely, use the verified Git-bundle workflow in MIGRATION.md.
+3. Inspect the actual environment, cache and free disk; verify pinned model files
+   and any transferred artifact against its manifest. A clone is a convenience,
+   not proof that files match or that a new compute budget is available.
+4. Restore the latest 3712-second ledger. Permit only one active GPU job across
+   copies. Inspect processes/reservations before any new launch.
+5. Restore trained weights only if the next approved task needs them. A new
+   independent training run starts from the pinned base, so old weights need
+   not be uploaded merely to resume project work.
+6. Starting/cloning the instance alone must not launch training. Use fresh IDs,
+   bounded jobs and a full-phase budget check after owner review of the next phase.
 
-See `docs/MIGRATION.md` and `reports/ARTIFACTS.md` for commands and backup verification.
+The current server is accessible through authenticated Jupyter while external
+SSH stalls before authentication. An independent browser tab and authenticated
+file transfers avoid requiring the owner to keep a desktop browser focused.
+See MIGRATION.md; never reset authentication or weaken protections to reconnect.
 
-## Next discussion before more GPU work
+## Next decision
 
-- Whether to accept the restricted exact-match candidate domain and how to measure its selection bias.
-- Stronger surface renderings, or an explicitly narrow interpretation of the existing label-only control.
-- Group-disjoint train/development/sealed-holdout construction before augmentation.
-- Common training dose, evaluation configuration and a measured single paired-seed pilot budget within the remaining 6027 seconds.
-
-Resume with this design discussion; cloning or restarting an instance alone does not approve or launch the scientific comparison.
+Review PILOT_REPLICATION_PROPOSAL.md: two Paths/GCM jobs with a new paired
+order/assignment seed, unchanged selected problems, dose and evaluation. A mere
+Torch seed change with the old frozen schedule is insufficient. The proposed
+whole phase reserves 2130 of the remaining 3488 seconds. No launch is authorized
+by this proposal. Prepare/verify CPU artifacts first, then request server access
+only if the owner approves. The present A800 has sufficient memory.

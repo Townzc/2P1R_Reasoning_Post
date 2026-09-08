@@ -1,8 +1,10 @@
-# Pilot v1 — CPU preparation complete, A800 calibration next
+# Pilot v1 — completed on 2026-09-08
 
-The owner approved preparation, calibration and the first paired pilot on
-2026-09-08. A replacement A800 will be supplied when GPU work is ready. No
-server was contacted and no new GPU time was consumed during this preparation.
+The approved calibration and four-arm comparison completed at the frozen dose.
+Read ../reports/PILOT_V1_RESULTS.md for outcomes and ../reports/ARTIFACTS.md
+for recovery. Current budget: 3712/7200 process-seconds used, 3488 remaining.
+No further seed, grid or holdout evaluation is authorized. The protocol below
+records the original design; preparation estimates are labeled historical.
 
 ## Question and operational limits
 
@@ -87,9 +89,9 @@ on matched development, also draw four samples per problem at temperature 0.7,
 top-p 0.95 and report problem-macro pass@1/2/4. Holdout evaluation stays closed.
 The calibration run is not reused as the scientific Repeat result.
 
-## Cost and finite queue
+## Original cost plan and finite queue (before calibration)
 
-Current cumulative ledger: 1173/7200 seconds used, **6027 seconds remain**.
+Pre-calibration cumulative ledger: 1173/7200 seconds used, **6027 seconds remain**.
 The earlier engineering rate of 642.51 response tokens/s extrapolates to about
 416 seconds of training per arm and 27.8 minutes for four arms, excluding load,
 decoding and checkpoint costs. This is an estimate, not a new-GPU measurement.
@@ -105,7 +107,7 @@ startup/download/idle billing is separate; no hourly A800 price is assumed.
 After calibration, review measured throughput and decoding time before comparison.
 Timeout or failure stops the queue; never shorten one arm to fit the budget.
 
-## Commands on the replacement server
+## Recorded execution commands (completed run IDs cannot be reused)
 
 First follow MIGRATION.md: fetch the latest published commit, verify the pinned
 base and environment, restore the current ledger, and run tests. A clone can
@@ -141,7 +143,7 @@ no matching tolerance or model-outcome criterion was changed.
 
 Workflow inspiration and its bounded adaptation are recorded in `program.md`.
 
-## Validation completed locally
+## Historical validation before GPU execution
 
 50 tests ran: 48 passed, two GNU-timeout integration tests were skipped on
 macOS and must run on the A800 before training. Real pinned-tokenizer matching,
@@ -152,3 +154,12 @@ verified on the replacement A800; no CUDA training is claimed by these checks.
 
 See reports/pilot_v1_tests_local.log, reports/pilot_v1_integrity.json and
 reports/pilot_v1_before_gpu/results.tsv.
+
+## Completed validation and execution
+
+All 50 Linux preflight tests passed before training. Calibration passed at the
+full dose. Four independent scientific arms then completed from the same source
+commit and base model, charging 1993 additional process-seconds. Saved text was
+rescored on CPU and every update/exposure budget reconciled. After reporting
+changes, 48 local tests passed with two Linux-only skips. Final results and
+paired counts are in ../reports/pilot_after_comparison_r1/results.json.

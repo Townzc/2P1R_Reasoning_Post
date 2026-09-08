@@ -72,7 +72,12 @@ def verify(root):
                     except ZeroDivisionError:
                         errors['division_by_zero'] += 1
         stats = summarize(predictions, ks)
-        if any(stats[k] != expected[k] for k in stats):
+        # Allow only floating-point library roundoff across Linux/macOS when
+        # recomputing entropy; identities, counts and correctness remain exact.
+        def agrees(k):
+            return (math.isclose(stats[k], expected[k], rel_tol=1e-12, abs_tol=1e-12)
+                    if isinstance(stats[k], float) else stats[k] == expected[k])
+        if not all(agrees(k) for k in stats):
             raise ValueError('Summary differs from recomputed scores: '+name)
         checked[name] = {'generations': len(predictions), 'sha256': sha256_file(root/name),
                          'counts': dict(errors), 'scores_recomputed_from_text': True}

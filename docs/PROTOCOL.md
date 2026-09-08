@@ -2,7 +2,8 @@
 
 The owner approved staged pilot preparation on 2026-09-08. PILOT_V1.md and
 configs/pilot_v1 are authoritative for this finite pilot; older draft issues
-below are retained as background. No model treatment outcome is available yet.
+below are retained as background. The completed single-seed pilot is reported in
+../reports/PILOT_V1_RESULTS.md; no holdout result or general effect is claimed.
 
 ## Question and tasks
 

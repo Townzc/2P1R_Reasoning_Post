@@ -6,16 +6,18 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-08:** Pilot v1 calibration passed at the full 1024-update dose:
-14/64 matched-dev and 2/64 broader-dev correctness. All 50 Linux tests and saved
-output/accounting checks passed. The calibration charged 546 seconds; 5481 of
-the shared 7200 seconds remain. Next is the approved four-arm, one-seed comparison;
-no treatment ordering is available yet. See [reports/PILOT_CALIBRATION.md](reports/PILOT_CALIBRATION.md),
-[docs/PILOT_V1.md](docs/PILOT_V1.md) and [reports/STATUS.md](reports/STATUS.md).
+**2026-09-08:** The approved four-arm pilot is complete. Matched-dev greedy
+correctness is Repeat 14/64, Surface 12/64, Paths 23/64 and GCM 18/64;
+broader-dev scores are 2/64, 0/64, 4/64 and 1/64. All arms used the same
+1024 updates and 267456 supervised response tokens. This is one paired seed
+on restricted development sets, not a general treatment-effect claim.
+The cumulative budget is 3712/7200 process-seconds used, 3488 remaining.
+See [results](reports/PILOT_V1_RESULTS.md), [status](reports/STATUS.md) and
+[artifact recovery](reports/ARTIFACTS.md). No further GPU job is scheduled.
 
-Earlier engineering milestone:
-
-The intended 1.5B base model passed the 32-example engineering gate on A800 (32/32 after 500 updates), using the FP32 AdamW recipe that exceeded 4090 memory. Development remains 0/16 greedy and 0/64 sampled. A CPU search found 256 candidate problems with exact token and Within-Paths/GCM structural matching; final data/control design remains open. See [reports/STATUS.md](reports/STATUS.md), [reports/A800_SESSION.md](reports/A800_SESSION.md) and [docs/PROTOCOL.md](docs/PROTOCOL.md). No scientific treatment result is claimed.
+The earlier 1.5B engineering gate reached 32/32 train correctness on A800;
+its FP32 AdamW recipe exceeded 4090 memory. Historical failed/negative runs
+remain available in [reports/A800_SESSION.md](reports/A800_SESSION.md).
 
 ```bash
 python -m unittest discover -s tests -v

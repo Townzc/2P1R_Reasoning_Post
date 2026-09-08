@@ -1,13 +1,13 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 1719,
-  "remaining_gpu_seconds": 5481,
-  "gpu_hours": 0.4775,
+  "charged_gpu_seconds": 3712,
+  "remaining_gpu_seconds": 3488,
+  "gpu_hours": 1.031111111111111,
   "billing_limit": "GPU process runtime only. Instance idle time, downloads and storage are separately billable. A800 hourly price was not supplied; the old 4090 reference price is not applied.",
   "hardware_charged_seconds": {
     "RTX_4090": 737,
-    "A800_80GB": 982
+    "A800_80GB": 2975
   },
   "jobs": [
     {
@@ -15,6 +15,15 @@
       "status": "aborted_provenance_check",
       "max_seconds": 1800,
       "charged_seconds": 120,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/overfit_debug.json",
+        "--out",
+        "runs/overfit_debug_20260905_r1"
+      ],
       "started_at": "2026-09-05T05:32:42.783296+00:00",
       "exit_code": null,
       "accounting": "Conservative upper bound: started 05:32:42 UTC, all run processes observed absent at 05:34:32 UTC. Reserve 120 seconds.",
@@ -26,6 +35,15 @@
       "status": "completed",
       "max_seconds": 1800,
       "charged_seconds": 342,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/overfit_debug.json",
+        "--out",
+        "runs/overfit_debug_20260905_r2"
+      ],
       "started_at": "2026-09-05T05:35:48.481050+00:00",
       "elapsed_seconds": 341.7948096478358,
       "exit_code": 0
@@ -35,6 +53,15 @@
       "status": "completed",
       "max_seconds": 1800,
       "charged_seconds": 258,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/overfit_debug_low_lr.json",
+        "--out",
+        "runs/overfit_debug_20260905_r3"
+      ],
       "started_at": "2026-09-05T05:47:42.898700+00:00",
       "elapsed_seconds": 257.5425599068403,
       "exit_code": 0
@@ -44,6 +71,15 @@
       "status": "failed",
       "max_seconds": 600,
       "charged_seconds": 17,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/profile_main.json",
+        "--out",
+        "runs/profile_main_20260905_r1"
+      ],
       "started_at": "2026-09-05T05:53:32.864468+00:00",
       "elapsed_seconds": 16.880649513565004,
       "exit_code": 1
@@ -53,6 +89,15 @@
       "status": "completed",
       "max_seconds": 600,
       "charged_seconds": 32,
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/profile_main.json",
+        "--out",
+        "runs/profile_main_a800_20260905_r1"
+      ],
       "started_at": "2026-09-05T06:50:47.165561+00:00",
       "elapsed_seconds": 31.2082353644073,
       "exit_code": 0
@@ -62,6 +107,15 @@
       "status": "completed",
       "max_seconds": 1800,
       "charged_seconds": 404,
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/overfit_main.json",
+        "--out",
+        "runs/overfit_main_a800_20260905_r1"
+      ],
       "started_at": "2026-09-05T06:51:20.084304+00:00",
       "elapsed_seconds": 403.39312018826604,
       "exit_code": 0
@@ -71,8 +125,89 @@
       "status": "completed",
       "max_seconds": 900,
       "charged_seconds": 546,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_v1/calibration.json",
+        "--out",
+        "runs/pilot_v1_calibration_seed17_r1"
+      ],
       "started_at": "2026-09-08T21:26:54.442547+00:00",
       "elapsed_seconds": 545.4843577593565,
+      "exit_code": 0
+    },
+    {
+      "run_id": "pilot_v1_repeat_seed17_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 496,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_v1/repeat.json",
+        "--out",
+        "runs/pilot_v1_repeat_seed17_r1"
+      ],
+      "started_at": "2026-09-08T21:41:33.318684+00:00",
+      "elapsed_seconds": 495.7183912284672,
+      "exit_code": 0
+    },
+    {
+      "run_id": "pilot_v1_surface_seed17_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 500,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_v1/surface.json",
+        "--out",
+        "runs/pilot_v1_surface_seed17_r1"
+      ],
+      "started_at": "2026-09-08T21:49:49.075448+00:00",
+      "elapsed_seconds": 499.12344497069716,
+      "exit_code": 0
+    },
+    {
+      "run_id": "pilot_v1_paths_seed17_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 499,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_v1/paths.json",
+        "--out",
+        "runs/pilot_v1_paths_seed17_r1"
+      ],
+      "started_at": "2026-09-08T21:58:08.248438+00:00",
+      "elapsed_seconds": 498.4513152241707,
+      "exit_code": 0
+    },
+    {
+      "run_id": "pilot_v1_gcm_seed17_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 498,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_v1/gcm.json",
+        "--out",
+        "runs/pilot_v1_gcm_seed17_r1"
+      ],
+      "started_at": "2026-09-08T22:06:26.779867+00:00",
+      "elapsed_seconds": 497.9801284521818,
       "exit_code": 0
     }
   ]

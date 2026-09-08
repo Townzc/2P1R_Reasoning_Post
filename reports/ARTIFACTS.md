@@ -7,7 +7,7 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 | Pinned 0.5B and 1.5B base snapshots | Training server cache | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
 | Higher-LR debug checkpoint (`r2`, gate failed) | Training server and local backup outside Git | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
 | Passing debug checkpoint (`r3`, 31/32) | Training server and local backup outside Git | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
-| First-session runtime ledger | Active A800 and latest local private backup (1173 seconds) | Public summary in `compute_accounting.json`; the old 4090 ledger may be stale. Transfer the latest private ledger to continue the same approved budget. |
+| First-session runtime ledger | Active A800 and latest local private backup (3712 seconds) | Public summary in `compute_accounting.json`; the old 4090 ledger may be stale. Transfer the latest private ledger to continue the same approved budget. |
 | Main A800 checkpoint (32/32 overfit) | A800 and local backup outside Git, all 12 files verified | `checkpoint_main_a800_server_verified.json` and `checkpoint_main_a800_local_verified.json` are identical. Weights-only checkpoint; no exact optimizer resume. |
 | Raw run records | GitHub, local checkout and training server | See `run_registry.json` and each run's recorded code commit; one launch is explicitly invalidated. |
 
@@ -21,3 +21,20 @@ python scripts/verify_artifact.py \
 ```
 
 A Git clone plus the pinned base model can reproduce the experiment from initialization. It does not recover an interrupted optimizer trajectory. Do not delete a server's unique artifacts before a destination copy is verified; see `docs/MIGRATION.md` for the bundle path when direct GitHub access is unavailable.
+## Pilot v1 weights — 2026-09-08
+
+All four final FP32 checkpoints were saved on A800. Independent transfer status:
+
+| Arm | Independent local copy | Verification report |
+|---|---|---|
+| repeat | All 12 files verified; 6190803581 bytes | [pilot_v1_repeat_seed17_r1_checkpoint_backup.json](pilot_v1_repeat_seed17_r1_checkpoint_backup.json) |
+| surface | All 12 files verified; 6190803581 bytes | [pilot_v1_surface_seed17_r1_checkpoint_backup.json](pilot_v1_surface_seed17_r1_checkpoint_backup.json) |
+| paths | Transfer in progress; server still required | Pending |
+| gcm | Transfer in progress; server still required | Pending |
+
+The exact per-file SHA-256 values are in each run's checkpoint_manifest.json.
+Backups remain outside Git. All raw predictions, logs, training histories,
+metrics and the sanitized compute-accounting summary belong to the published
+experiment milestone. The current private ledger is independently retained with
+3712 seconds used, 3488 remaining and no unresolved job. The earlier 1173- and
+1719-second balances are historical. Calibration did not save another checkpoint.

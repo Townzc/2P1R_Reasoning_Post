@@ -1,13 +1,26 @@
 # Verified status — 2026-09-08
 
-## Pilot calibration complete; four-arm comparison next
+## Approved pilot complete; no further GPU work scheduled
 
-- Full-dose calibration passed: 14/64 matched dev, 2/64 broader dev, 12/16 train sample.
-- All 50 Linux tests passed; model/data hashes and saved-output accounting verified.
-- 546 new process-seconds; cumulative 1719/7200 used, 5481 remaining.
-- Raw results and ledger are backed up independently. No calibration weights were saved.
-- The approved four-arm phase fits its 4260-second reservation. No treatment result yet.
-- See PILOT_CALIBRATION.md and pilot_after_calibration_r1/results.tsv.
+- All four arms completed 1024 updates, 4096 presentations and 267456 response tokens.
+- Matched dev: Repeat 14/64, Surface 12/64, Paths 23/64, GCM 18/64.
+- Broader dev: 2/64, 0/64, 4/64 and 1/64 respectively.
+- Matched Paths/GCM: 11 both correct, 12 Paths only, 7 GCM only, 34 both wrong.
+- All raw predictions and full-dose accounting independently verified on CPU.
+- Four-arm phase charged 1993 seconds; cumulative 3712/7200 used, 3488 remaining.
+- Final private ledger independently retained with no unresolved reservation.
+- See PILOT_V1_RESULTS.md and pilot_after_comparison_r1/results.tsv.
+- Weight transfer verification is tracked in ARTIFACTS.md. Shutdown readiness
+  is recorded in ../docs/NEXT_SESSION.md after publication and complete backups.
+- One paired seed, restricted selection, development only. Review another paired
+  replication before any more GPU work; no holdout evaluation or main grid.
+
+## Calibration milestone (superseded by completed comparison)
+
+The full-dose feasibility gate passed with 14/64 matched dev, 2/64 broader dev
+and 12/16 train diagnostic. All 50 Linux tests passed. It charged 546 seconds,
+bringing the then-current ledger to 1719; scientific Repeat was trained separately.
+See PILOT_CALIBRATION.md. Historical balances below are not the current ledger.
 
 ## Historical CPU preparation — before the calibration
 
@@ -48,9 +61,10 @@ See A800_SESSION.md, main_a800_output_integrity.json, exact_matching_candidate_i
 ## Retained earlier evidence
 The 0.5B debug gate passed with 31/32 train correctness, while development was also zero. Its higher-LR attempt failed the gate; an earlier uncommitted-source attempt was invalidated and conservatively charged. The original 1.5B 4090 OOM occurred before any optimizer update. All failures and both debug checkpoints' verified backups are retained. See run_registry.json.
 
-## Next scientific work
+## Historical next-work proposal (superseded by pilot v1)
 1. Review the exact shared-block candidate design, measured selection bias, and a stronger or explicitly narrow surface-rendering control; freeze group-disjoint train/dev/holdout construction before augmentation.
 2. Prepare matched arm schedules and a measured cost proposal within the remaining shared budget. Engineering fixtures and candidate audits are not final scientific datasets.
 3. After design review, run a single paired-seed pilot and inspect failures before expanding seeds, tasks or model families.
 
-See ../docs/PILOT_PROPOSAL.md. No four-arm treatment comparison has been launched.
+See ../docs/PILOT_PROPOSAL.md for the earlier proposal. The completed comparison
+and current next decision are described above.

@@ -19,12 +19,21 @@ def collect(queue):
             manifest, metrics, receipt, budget = map(optional, ['run_manifest.json', 'metrics.json', 'resource_receipt.json', 'actual_budget.json'])
             status = receipt.get('status', manifest.get('status', 'not_run'))
             row = {'run_id': job['run_id'], 'phase': phase, 'arm': cfg['arm'], 'status': status,
+                   'seed': cfg['seed'],
                    'git_commit': manifest.get('git_commit'), 'steps': metrics.get('steps'),
                    'supervised_tokens': budget.get('supervised_response_tokens'),
                    'charged_seconds': receipt.get('charged_seconds'),
                    'dev_accuracy': metrics.get('dev', {}).get('accuracy_macro'),
                    'dev_broad_accuracy': metrics.get('dev_broad', {}).get('accuracy_macro'),
+                   'train_sample16_accuracy': metrics.get('train_sample16', {}).get('accuracy_macro'),
+                   'dev_parse_failure_rate': metrics.get('dev', {}).get('parsing_failure_rate'),
+                   'dev_truncation_rate': metrics.get('dev', {}).get('truncation_rate'),
+                   'dev_broad_parse_failure_rate': metrics.get('dev_broad', {}).get('parsing_failure_rate'),
+                   'dev_pass_at_1': metrics.get('dev_sampled', {}).get('pass_at_k', {}).get('1'),
+                   'dev_pass_at_2': metrics.get('dev_sampled', {}).get('pass_at_k', {}).get('2'),
                    'dev_pass_at_4': metrics.get('dev_sampled', {}).get('pass_at_k', {}).get('4'),
+                   'reference_dev_nll': metrics.get('final_dev_nll'),
+                   'supervised_tokens_per_second': metrics.get('throughput', {}).get('supervised_tokens_per_second'),
                    'peak_allocated_mib': metrics.get('throughput', {}).get('peak_allocated_mib'),
                    'config_sha256': job['config_sha256'], 'data_manifest_sha256': cfg['data_manifest_sha256']}
             records.append(row)
@@ -44,6 +53,14 @@ def collect(queue):
             'paths_only': sum(predictions['paths'][p] and not predictions['gcm'][p] for p in predictions['paths']),
             'gcm_only': sum(not predictions['paths'][p] and predictions['gcm'][p] for p in predictions['paths']),
             'both_wrong': sum(not predictions['paths'][p] and not predictions['gcm'][p] for p in predictions['paths'])}
+        broad = {arm: {p['problem_id']: p['correct'] for p in read_jsonl(root/'final_dev_broad_greedy.jsonl')} for arm, root in completed.items()}
+        if any(set(v) != set(broad['paths']) for v in broad.values()):
+            raise ValueError('Broader development problem sets differ')
+        comparison['paired_counts_broader_paths_vs_gcm'] = {
+            'both_correct': sum(broad['paths'][p] and broad['gcm'][p] for p in broad['paths']),
+            'paths_only': sum(broad['paths'][p] and not broad['gcm'][p] for p in broad['paths']),
+            'gcm_only': sum(not broad['paths'][p] and broad['gcm'][p] for p in broad['paths']),
+            'both_wrong': sum(not broad['paths'][p] and not broad['gcm'][p] for p in broad['paths'])}
     return {'runs': records, 'comparison': comparison}
 
 

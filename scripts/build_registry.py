@@ -24,6 +24,7 @@ for directory in sorted(Path('runs').iterdir()):
         'overfit_passed':metrics.get('overfit_passed') if valid else None,
         'steps':steps, 'supervised_response_tokens':budget.get('supervised_response_tokens'),
         'train_accuracy':metrics.get('train',{}).get('accuracy_macro') if valid else None,
+        'train_sample16_accuracy':metrics.get('train_sample16',{}).get('accuracy_macro') if valid else None,
         'dev_accuracy':metrics.get('dev',{}).get('accuracy_macro') if valid else None,
         'dev_broad_accuracy':metrics.get('dev_broad',{}).get('accuracy_macro') if valid else None,
         'dev_sampled_pass_at_k':metrics.get('dev_sampled',{}).get('pass_at_k') if valid else None,
