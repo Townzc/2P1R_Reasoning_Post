@@ -163,7 +163,7 @@ to the training recipe is needed. The preflight records and journal are publishe
 before starting the fixed GPU pair.
 
 
-## 2026-09-09 UTC — completed seed23 replication and pending artifact closeout
+## 2026-09-09 UTC — completed seed23 replication and verified independent backups
 
 Within the reviewed two-arm plan, Codex executed Paths and GCM independently
 from the pinned base at source `6128e4266d62f14f063585d4c8e94dbe3ad8c711`.
@@ -196,7 +196,44 @@ Paths charged 500 seconds and GCM 504, bringing the shared ledger to
 **4716/7200 seconds used, 2484 remaining**. The latest private ledger has been
 retained locally and reconciled exactly against all 13 receipts, with zero
 unresolved reservations. The [ledger verification](reports/replication_seed23_ledger_verification.json)
-records the private copy hash and every receipt hash. Both new FP32 checkpoint
-downloads and independent SHA-256 checks remain pending. The instance must
-remain available until backup and Git publication checks complete. No further GPU job is scheduled; the next work is
-CPU design of legal path families and shared-support controls.
+records the private copy hash and every receipt hash. Both new checkpoints have
+completed independent SHA-256 verification: 24 files, 12,381,607,162 bytes; see
+the [backup summary](reports/replication_seed23_checkpoint_backup_summary.json).
+Seed23 results are published at `a4edae0817c72c11481ce0f7536952500a8e1e02`.
+The final server check records no active training/GPU process or reservation.
+Recovery material is complete; the instance can be stopped after final closeout
+publication and Git alignment. No final alignment commit is assumed here.
+No further GPU job is scheduled; next is the fixed CPU matching-loss diagnostic
+described in the subsequent census entry.
+
+
+## 2026-09-09 UTC — complete ordered-support CPU census after the GPU phase
+
+Codex implemented and independently reviewed C008 under the fixed P002 design,
+then published protocol and execution code at
+`b504cb7b604847b2155bb71dd2bb2c3602d9f371` before running the census. The clean
+launch and unchanged-source checks distinguish this CPU execution from the
+seed23 GPU source `6128e4266d62f14f063585d4c8e94dbe3ad8c711`.
+The [completion report](reports/LEGAL_SUPPORT_CENSUS_20260909.md) preserves the
+fixed scope and interpretation; the journal appended results after execution.
+
+With two local CPU workers and a 600-second ceiling, complete enumeration took
+1.640 seconds across all 256 original training problems. The 1,966,080 attempts
+partitioned into 1,176 undefined divisions, 1,939,058 wrong-target expressions
+and 25,846 legal ordered solutions. All 1,024 stored references were recovered.
+Disjoint-AC support is 132 problems for 2+2 and 131 for 4+4; 112 AC classes on
+56 problems admit both identity labels. Eleven focused tests, independent
+legal-expression checks and source/stream hashes support these counts.
+
+This separates limited stored-reference support from full grammar support.
+It does not make a 256-problem four-cell training design feasible: 125 problems
+fail disjoint 4+4 before matching. Identity labels remain properties of legal
+ordered trajectories and can vary within an AC class; they are not semantic
+strategy labels. No K or reduced pool was selected to rescue the design.
+
+The next CPU gate is a separately fixed matching-loss diagnostic for tokenizer
+lengths including EOS, global structural exposure and shared blocks, with
+explicit cardinality, class-overlap and residual rules. None of those matching
+constraints has been tested by this census. GPU primary outcomes are unchanged;
+there was no model inference, development/holdout inspection, extra GPU charge
+or storage expansion. The ledger remains 4716/7200 used and 2484 remaining.

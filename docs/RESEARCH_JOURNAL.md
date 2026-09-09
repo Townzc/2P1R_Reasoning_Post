@@ -39,9 +39,10 @@ balance. Dates are UTC unless specified otherwise.
 
 | ID | Registered phase or analysis | Status | Outcome / decision |
 |---|---|---|---|
-| [E009](experiments/E009_seed23_paired_replication.md) | Same-problem Paths/GCM seed23; evaluation seed17 | GPU and CPU output audit complete; weight backups pending | Primary 22/64 vs 17/64; complete traces 18/64 vs 16/64; broader 1/64 each; pause before more GPU |
+| [E009](experiments/E009_seed23_paired_replication.md) | Same-problem Paths/GCM seed23; evaluation seed17 | GPU, CPU output audit and independent weight backups complete | Primary 22/64 vs 17/64; complete traces 18/64 vs 16/64; broader 1/64 each; pause before more GPU |
 | [A003](experiments/A003_pairing_seed_semantic_exposure_audit.md) | Are numerical path exposures also matched across allocation procedures/seeds? | Completed CPU audit during training without reading new evaluation outcomes | Identity exposures 2780 vs 2800; structural matching does not imply every numerical property is matched |
 | [C007](experiments/C007_identity_family_inventory_failure.md) | Can the stored four paths support two paths of each identity category on the same problem? | Completed CPU check; proposed inventory reuse fails | 41 problems have at least one of each; zero have two of each; redefine construction before training |
+| [C008](experiments/C008_complete_ordered_support_census.md) | Does complete ordered enumeration recover support hidden by stored-four selection? | Complete local CPU census, 256/256 questions | 132 support disjoint-AC 2+2; 131 support 4+4; matching remains untested |
 
 The E009 registration is preserved and results are appended separately. A003 and
 C007 are dated CPU analyses, not retroactively registered hypotheses. Independent
@@ -52,7 +53,7 @@ weight backup completion is a separate recovery gate from a completed model run.
 | ID | Idea | Status / decision gate |
 |---|---|---|
 | [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
-| [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Code-review design; [C008](experiments/C008_complete_ordered_support_census.md) prepares only its bounded CPU census, outcomes pending |
+| [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Census portion completed in C008; tokenizer/structure/block diagnostics remain proposals |
 
 ## Maintaining the record
 

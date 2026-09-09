@@ -1,0 +1,53 @@
+{
+  "completed": {
+    "all_completed_stored_references_recovered": true,
+    "completed_problems": 256,
+    "legal_ordered_solutions": 25846,
+    "mixed_ac_classes_total": 112,
+    "ordered_candidates_examined": 1966080,
+    "problems_with_mixed_ac_class": 56,
+    "support_problem_counts": {
+      "distinct_ac_four_plus_four_supported": 131,
+      "distinct_ac_two_plus_two_supported": 132,
+      "each_family_has_four_ac_classes_allowing_overlap": 131,
+      "ordered_four_plus_four_supported": 132,
+      "ordered_two_plus_two_supported": 134
+    },
+    "undefined_division_programs": 1176,
+    "wrong_target_programs": 1939058
+  },
+  "created_utc": "2026-09-09T06:40:53.161062+00:00",
+  "elapsed_seconds": 1.639681708009448,
+  "execution_source_commit": "b504cb7b604847b2155bb71dd2bb2c3602d9f371",
+  "maximum_seconds": 600.0,
+  "pending_problem_ids": [],
+  "per_problem_sha256": "8c9da21dc4695be247cdaabed53f8eb55a7e91e537490a22803ef55fb779ec78",
+  "private_solution_archive_requested": true,
+  "requested_problems": 256,
+  "scope": [
+    "Only the fixed 256 original pilot training problems and targets are enumerated.",
+    "All 24 input permutations, 5 ordered full binary shapes and 64 operator assignments are examined: 7680 ordered programs per problem.",
+    "Fractions are exact; undefined divisions are counted and excluded. Negative and fractional intermediates remain allowed.",
+    "Identity is a numerical-trajectory property, not a semantic-strategy label. It includes evaluated intermediate ones and zeros under the existing declared convention.",
+    "AC classes use concrete input values and flatten/sort only associative-commutative addition and multiplication. Identity labels are computed BEFORE any AC grouping.",
+    "The same AC class can contain both identity-present and identity-absent ordered programs; distinct-class allocations cannot count that class twice.",
+    "This is only the full ordered-solution/support census portion of P002. Tokenizer, matched dose, numerical-property matching, difficulty control and the broader semantic taxonomy are not implemented or tested here.",
+    "Training-pool outcomes from earlier model runs motivated this census. No new evaluation outcomes, development data, holdout files or model inference are read.",
+    "A timeout or failure retains only explicitly completed problem records. Partial denominators must not be reported as a completed 256-problem census."
+  ],
+  "solution_archive_gzip_sha256": "42c00622cdf8e9953d50f4a5c781b28e054198dff72915524577fe5a6407f5ef",
+  "solution_archive_records": 25846,
+  "solution_archive_uncompressed_sha256": "fa0563f030ffaa810f23e4eb5e9c63a2e12096f2dc675128a9bd9a9362c338d8",
+  "source_files_unchanged": true,
+  "sources_sha256": {
+    "docs/experiments/C008_complete_ordered_support_census.md": "7e83798fc6c132c148677f9d39e92872d4e10e690a06e23ed13588cbbdc69323",
+    "docs/experiments/P002_legal_support_enumeration_design.md": "2aa021252dffe888e7837b25544a1452fe8003f64b7fe12f5a366b384aa8f3eb",
+    "runs/pilot_v1_20260908_r3/train_blocks.json": "e15857122ad9148a1a209cce7c8ef4c107ff0de27bcfe11b97ba6fce6b7a2cea",
+    "scripts/audit_legal_support.py": "82e48d5c492808fd6013828d2a4b4254332944f5bf126a7dcd1ee2fdbf897123",
+    "scripts/audit_pilot_structure_bias.py": "f868213c4cbc20833356291051b3c31a9ea742ce744c70755abca509c9fee8f8",
+    "src/countdown_smoke.py": "2249e313c60090958d5ddfe474dc44f2dff6337dbccc79a6ee48498254531058"
+  },
+  "status": "completed",
+  "tracked_worktree_dirty_at_start": false,
+  "workers": 2
+}

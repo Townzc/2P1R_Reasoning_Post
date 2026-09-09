@@ -1,10 +1,11 @@
-# Next-session handoff — seed23 complete; next work is CPU design
+# Next-session handoff — seed23 and census complete; next gate is CPU matching
 
 ## Current state — 2026-09-09 UTC
 
-Both frozen seed23 jobs completed. **Checkpoint backups are pending; the
-instance must remain available until independent SHA-256 verification and
-publication are complete. The private ledger is already reconciled.** No further GPU job or
+Both frozen seed23 jobs and their independent checkpoint backups are complete:
+**24 files, 12,381,607,162 bytes, all SHA-256 verified**. The private ledger is
+reconciled. **Recovery material is complete; the instance can be stopped after
+final closeout publication and Git alignment.** No further GPU job or
 holdout evaluation is scheduled. The completed seed17 and seed23 queues are
 historical execution records, not a next-session launch plan.
 
@@ -37,6 +38,9 @@ success coverage distinct. Preserve the adverse broader-development outcomes.
 - Execution source: `6128e4266d62f14f063585d4c8e94dbe3ad8c711`.
 - Journal/preflight publication before outputs:
   `3fb43907c0fb8c951b50adfad6dabcc1bfde6403`.
+- Seed23 result publication: `a4edae0817c72c11481ce0f7536952500a8e1e02`.
+  Final closeout publication/alignment is a separate check; no unverified final
+  commit is assumed here.
 - Data: `runs/pilot_replication_seed23_20260909_r1`; manifest SHA-256
   `0959c217feb4b0c51aebf85c1f08e341e1b6c8034657ee028acb263a2ee18ad4`.
 - Same 256 training problems, two 64-problem dev sets, pinned Qwen2.5-1.5B base,
@@ -62,9 +66,11 @@ reservation was a ceiling for this now-completed phase, not its actual charge.
 | State | Recovery source / current status |
 |---|---|
 | Source, configs, frozen inputs and historical compact records | Published GitHub history; verify the actual fetched commit |
-| New seed23 predictions, receipts and audit | Retrieved and CPU-verified locally; include in the completion publication |
+| New seed23 predictions, receipts and audit | Published at `a4edae0817c72c11481ce0f7536952500a8e1e02`; independently CPU-verified |
 | Four seed17 scientific weights | Independent local SHA-256 backups; all 48 files reverified before redundant remote weights were removed |
-| Two seed23 scientific weights | Saved server copies; independent local download and SHA-256 verification pending |
+| Paths seed23 scientific weights | Independent local copy: all 12 files SHA-256 verified; see ARTIFACTS.md |
+| GCM seed23 scientific weights | Independent local copy: all 12 files SHA-256 verified; see ARTIFACTS.md |
+| Complete legal-solution census | Public compact counts/hashes; private compressed 25,846-record solution stream outside Git |
 | Three earlier engineering checkpoints | Previously verified local copies outside Git |
 | Cumulative private ledger | Retained locally at 4716 seconds; exactly reconciled against all 13 receipts, zero reservations |
 | Base model and environment | Pinned model lock/bootstrap plus recorded A800 preflight; reconstruct only when a later reviewed job requires it |
@@ -75,10 +81,14 @@ disk; no storage expansion was needed. It did not remove their local backups
 or compact run histories. No old checkpoint is needed for the next CPU phase.
 Weights do not contain optimizer/RNG/sampler state for exact training resume.
 
-Finish the two new checkpoint transfers and verify every file against its run
-manifest. Retain the reconciled private ledger, publish the compact completion
-milestone, verify the fetched Git ref, and check no GPU job or unresolved
-reservation remains. Only then tell the owner the instance can be stopped.
+The [backup summary](../reports/replication_seed23_checkpoint_backup_summary.json)
+and [server check](../reports/replication_seed23_final_server_check.json) verify
+both independent copies, no active training/GPU process and zero reservations.
+Retain those copies and the reconciled private ledger. Publish the compact
+closeout and CPU census records, align the server/local Git checkout with the
+verified published ref, then tell the owner the instance can be stopped. The
+recorded idle check still identifies the GPU execution commit, not an already
+synchronized final closeout commit.
 Connection information and live ledger contents remain outside Git. Use
 [MIGRATION](MIGRATION.md) for authenticated transfer or verified Git bundles;
 a clone is a convenience, not proof that its state is current.
@@ -109,13 +119,32 @@ stratum labels, source/config identities and full-dose receipts. Preserve all
 raw generations and both signs of descriptive differences. The holdout remains
 reserved and unevaluated.
 
-## Next scientific decision, while the server is off
+## Completed CPU census and the next matching gate
 
-Define legal path families and test shared problem support on CPU before
-proposing another training phase. Every Countdown input must be consumed once:
-multiplication/division by one may be essential to a legal solution. Numerical
-simplification must retain input provenance and cannot automatically equate
-these paths with Surface changes or invalid strategies.
+[C008](experiments/C008_complete_ordered_support_census.md) ran after the GPU
+phase from prepublished source `b504cb7b604847b2155bb71dd2bb2c3602d9f371`.
+Use that commit for original protocol snapshots; the journal subsequently appends
+completion. It completed all 256 fixed training questions with 1,966,080 attempts,
+25,846 legal ordered solutions and recovery of all 1,024 stored references.
+Disjoint-AC support is 132 problems for 2+2 and 131 for 4+4. There are 112
+mixed-label AC classes on 56 problems. No new model result, development/holdout
+access, GPU charge or storage expansion occurred. See the
+[census analysis](../reports/LEGAL_SUPPORT_CENSUS_20260909.md) and
+[immutable summary](../reports/legal_support_census_20260909_r1/summary.json).
+
+Do not rerun enumeration as the next scientific step. Prepare a separately
+frozen **matching-loss diagnostic** from the complete inventory: fix path
+cardinality, class-overlap rules, tokenizer/serialization and allowed residuals
+before measuring losses from EOS-inclusive token matching, global operator
+structure and shared-block requirements. These constraints have **not** been
+verified by the census. A capped search failure is not proof of infeasibility;
+K=2 or a reduced/new problem pool would change the design and need disclosure.
+
+Every Countdown input must be consumed once. Multiplication/division by one may
+be essential to a legal solution; identity-present/absent is not a partition of
+semantic strategies and can vary inside an AC class. Preserve input provenance
+and never count one mixed class twice in a disjoint-class assignment. Do not
+silently map these trajectories to Surface changes or invalid strategies.
 
 The [training-exposure audit](../reports/PAIRING_SEED_SEMANTIC_AUDIT_20260909.md)
 shows that exact canonical-structure matching does not establish equality of

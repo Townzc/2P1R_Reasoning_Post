@@ -81,6 +81,26 @@ entries. The next decision is a defined legal-path-family construction, not
 another seed or a larger-model grid. See reports/PILOT_REPLICATION_SEED23_RESULTS.md
 and docs/RESEARCH_JOURNAL.md (repository-relative paths).
 
+### D007 preservation completion
+
+Both new checkpoints are independently SHA-256 verified: 24 files and
+12,381,607,162 bytes. The compact results are published at
+`a4edae0817c72c11481ce0f7536952500a8e1e02`; the ledger is reconciled and no GPU
+job/reservation remains. Final recovery synchronization follows publication of
+these completion records. No additional GPU phase is queued.
+
+## D008 — 2026-09-09 UTC: bounded local CPU support census
+
+During checkpoint transfer, the P002/C008 plan and census implementation were
+published as `b504cb7b604847b2155bb71dd2bb2c3602d9f371` before enumerating the
+256 already public training questions. All 1,966,080 ordered candidates were
+checked; 25,846 legal solutions and every stored reference were recovered.
+Disjoint-AC 2+2 and 4+4 support is 132/256 and 131/256 respectively. This resolves
+part of the selected-inventory uncertainty but cannot supply the full original
+256-problem 4+4 experiment. The proposed next gate is fixed CPU token/structure/
+block matching, with declared cardinality and retention; not automatic training.
+No new problem pool, development/holdout inference or GPU spending occurred.
+
 ## RESOLVED FOR PILOT V1 — coverage matching and exposure budget
 The updated condition table specifies one path and one exposure on a fixed problem set. At comparable response lengths this has fewer supervised tokens than the multi-path condition. A concrete matched-exposure proposal, structural-frequency residuals and length audit must be reviewed before launching this decisive scientific comparison.
 

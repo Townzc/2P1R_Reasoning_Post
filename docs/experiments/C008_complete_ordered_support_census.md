@@ -60,3 +60,40 @@ values or infer an allocation effect from this mathematical census.
 Append the exact execution source, runtime/completeness receipt, output hashes,
 all support counts and interpretation. Preserve the design above. This local CPU
 attempt does not consume additional GPU process-seconds or extend that allowance.
+
+## Completion appended — 2026-09-09 UTC
+
+The complete census ran from prepublished source
+`b504cb7b604847b2155bb71dd2bb2c3602d9f371`, with two CPU workers and a measured
+1.640-second elapsed time. All 256 problems completed, all 1,024 stored ordered
+references were recovered, and recorded source files stayed unchanged. There
+was no timeout or retry. The 1,966,080 attempted expressions partition into
+1,176 undefined divisions, 1,939,058 wrong-target programs and 25,846 legal
+ordered solutions. The complete private solution stream and public compact
+records have SHA-256 digests in the [summary](../../reports/legal_support_census_20260909_r1/summary.json).
+
+| Prespecified support rule | Problems |
+|---|---:|
+| Ordered 2+2 | 134/256 |
+| Ordered 4+4 | 132/256 |
+| Disjoint-AC 2+2 | 132/256 |
+| Each family has four AC classes, overlap allowed | 131/256 |
+| Disjoint-AC 4+4 | 131/256 |
+
+There are 112 mixed-label AC classes across 56 problems. Stored-four selection
+therefore hid class support on part of the pool. Yet 125 problems fail disjoint
+4+4 even before tokenizer/structure constraints, so the complete 256-problem
+four-cell design is not feasible under that declared rule. Do not silently use
+K=2 or reduce the problem set. Neither category is a semantic-strategy label.
+
+**Decision:** the next step can be a fixed CPU matching-loss diagnostic, with
+explicit cardinality/class-overlap rules and disclosed retention. Tokenizer,
+global/per-update structural matching, difficulty proxies, sample size and GPU
+work remain untested/unapproved. See the [full interpretation](../../reports/LEGAL_SUPPORT_CENSUS_20260909.md).
+
+Independent archive verification subsequently rechecked all 25,846 solutions,
+all stream hashes, original reference counts and 1,576 allocation witnesses with
+an independent AST/Fraction evaluator and separate Hall-condition support test.
+It confirmed all reported counts without rerunning enumeration or inspecting
+model/development/holdout outputs. See
+[independent proof](../../reports/legal_support_census_20260909_r1/independent_verification.json).

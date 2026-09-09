@@ -1,6 +1,6 @@
 # P002 — Distinguish selected-inventory limits from legal path-family support
 
-**Work date:** 2026-09-09 UTC. **Status:** proposed CPU design from code review;
+**Work date:** 2026-09-09 UTC. **Status at entry:** proposed CPU design from code review;
 not executed. **Hypothesis timing:** follows A003/C007 and the existing pilot
 outcomes; it is not an earlier registration of the pilot or a main-GPU protocol.
 This entry used code/schema review without new solving, model inference, holdout
@@ -195,3 +195,13 @@ existing split/selection history; its holdout groups were not read or solved.
 | `src/pilot_data.py` | `9b72c83c1dcc5c55fa38c3132e7c99075ff2e056bc97465e854e19be75a9d714` |
 | `runs/pilot_v1_20260908_r3/train_blocks.json` | `e15857122ad9148a1a209cce7c8ef4c107ff0de27bcfe11b97ba6fce6b7a2cea` |
 | `runs/pilot_v1_20260908_r3/manifest.json` | `45c51cec657eff48e271a67d99439b5f390bc661562fab3bd3d920c450c03e6b` |
+
+## Subsequent execution of the census portion
+
+[C008](C008_complete_ordered_support_census.md) completed the bounded enumeration
+and support census after the proposal/code publication. Disjoint-AC support is
+132/256 for 2+2 and 131/256 for 4+4; all stored references were recovered. This
+establishes an inventory-selection limitation on part of the existing pool,
+not a ready matched training design. The tokenizer/structure/block diagnostics
+and any later GPU protocol above remain proposals. The original entry is retained;
+see [the census report](../../reports/LEGAL_SUPPORT_CENSUS_20260909.md) for outcomes.

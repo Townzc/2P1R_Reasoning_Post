@@ -16,12 +16,14 @@ See the [result analysis](reports/PILOT_REPLICATION_SEED23_RESULTS.md),
 and [complete-pair audit](reports/pilot_replication_seed23_after_gpu_audit/summary.json).
 
 The two runs charged **1004 process-seconds**. Cumulative usage is
-**4716/7200 seconds**, with **2484 remaining**. New checkpoint downloads and
-independent SHA-256 verification are **pending**. The private ledger has been
+**4716/7200 seconds**, with **2484 remaining**. Both new checkpoints have
+[verified independent backups](reports/replication_seed23_checkpoint_backup_summary.json):
+24 files totaling 12,381,607,162 bytes. The private ledger has been
 [reconciled against all 13 receipts](reports/replication_seed23_ledger_verification.json),
-with zero unresolved reservations. Keep the instance until checkpoint backups
-and publication are complete. No further GPU job or holdout
-evaluation is scheduled. See [status](reports/STATUS.md),
+with zero unresolved reservations. Seed23 results are published at
+`a4edae0817c72c11481ce0f7536952500a8e1e02`. Recovery material is complete;
+the instance can be stopped after the final closeout Git alignment. No further
+GPU job or holdout evaluation is scheduled. See [status](reports/STATUS.md),
 [artifact recovery](reports/ARTIFACTS.md) and the [handoff](docs/NEXT_SESSION.md).
 
 The [research journal](docs/RESEARCH_JOURNAL.md) separates motivations, designs,
@@ -31,7 +33,15 @@ was recorded before its model outputs. Both arms used the same pinned base,
 matched scores were 23/64 versus 18/64; these are two paired seeds on the same
 restricted problem pool, not evidence of broad arithmetic generalization.
 
-Next work is CPU construction of legal path families and shared problem support.
+A separate [CPU census](reports/LEGAL_SUPPORT_CENSUS_20260909.md), executed from
+prepublished source `b504cb7b604847b2155bb71dd2bb2c3602d9f371`, enumerated all
+256 original training problems: 1,966,080 attempts and 25,846 legal ordered
+solutions. Disjoint-AC 2+2 and 4+4 support exists on 132 and 131 problems;
+56 problems contain AC classes with both identity labels. These are inventory
+counts, not new model results. Token, global-structure and shared-block matching
+remain untested. The next gate is a **fixed CPU matching-loss diagnostic**;
+GPU usage and storage allocation are unchanged.
+
 A numerical identity operation may be necessary to consume an input legally;
 it is not automatically a Surface variant or an invalid strategy. The
 [trace audit](reports/pilot_v1_trace_audit_20260909/FINDINGS.md),

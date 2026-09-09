@@ -96,3 +96,14 @@ ledger, with no unresolved reservation; see
 [ledger proof](../../reports/replication_seed23_ledger_verification.json).
 At this results milestone, both new checkpoint downloads are still pending;
 preserve the instance until the separate backup completion record is verified.
+
+## Independent preservation completed
+
+Both new checkpoints are independently retained and all 24 files
+(12,381,607,162 bytes) passed SHA-256 verification. The compact experiment record
+was published at `a4edae0817c72c11481ce0f7536952500a8e1e02`. The current private
+ledger is independently reconciled with 13 receipts, 4716 seconds used and no
+reservation. See [backup summary](../../reports/replication_seed23_checkpoint_backup_summary.json)
+and [server idle check](../../reports/replication_seed23_final_server_check.json).
+Weights remain outside Git and do not include optimizer/RNG/sampler resume state.
+This replaces the pending preservation status at the earlier results milestone.

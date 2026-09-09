@@ -123,6 +123,13 @@ fails. This does not rule out legal alternatives outside the stored four paths;
 it establishes that the next construction needs a separately specified search
 and support audit before any training.
 
+The separately fixed [complete census](../reports/LEGAL_SUPPORT_CENSUS_20260909.md)
+subsequently recovered disjoint-AC 2+2 support on 132/256 training questions and
+4+4 support on 131/256. This diagnoses stored-inventory loss on part of the pool;
+it still cannot supply the full original 256-problem 4+4 construction. Freeze a
+matching-loss diagnostic next. Tokenizer, operator-structure and shared-block
+matching remain untested, and the identity categories are not semantic classes.
+
 ## Stage 3 — independent pools, broader development and uncertainty
 
 Once the intervention is feasible, select problem counts and the number of

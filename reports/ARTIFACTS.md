@@ -44,25 +44,53 @@ compact run records remain retained; see
 [storage cleanup](replication_seed23_storage_cleanup_20260909.json).
 
 
-## Seed23 replication weights — 2026-09-09, backup pending
+## Seed23 replication weights — 2026-09-09, independent backups complete
 
 | Run | Saved source | Independent local backup status |
 |---|---|---|
-| `pilot_replication_paths_seed23_r1` | Final server checkpoint and run manifest | Download/SHA-256 verification pending |
-| `pilot_replication_gcm_seed23_r1` | Final server checkpoint and run manifest | Download/SHA-256 verification pending |
+| `pilot_replication_paths_seed23_r1` | Final server checkpoint and run manifest | All 12 files independently verified; [backup report](pilot_replication_paths_seed23_r1_checkpoint_backup.json) |
+| `pilot_replication_gcm_seed23_r1` | Final server checkpoint and run manifest | All 12 files independently verified; [backup report](pilot_replication_gcm_seed23_r1_checkpoint_backup.json) |
 
 Both jobs completed from source
 `6128e4266d62f14f063585d4c8e94dbe3ad8c711`. Their raw compact records and
 [800-output CPU audit](pilot_replication_seed23_after_gpu_audit/summary.json)
-are available locally for publication. The two additional FP32 checkpoints are
-about 12.4 GB combined; weights remain outside Git. A partially downloaded file
-is not a verified backup.
+are published at `a4edae0817c72c11481ce0f7536952500a8e1e02`. Both additional
+FP32 checkpoints are now independently verified: **24 files, 12,381,607,162
+bytes**. Weights remain outside Git. The
+[backup summary](replication_seed23_checkpoint_backup_summary.json) records the
+per-run verification reports and sizes.
 
 The new private ledger has been retrieved: **4716/7200 seconds used, 2484
 remaining, zero reservations**. All **13 receipts** have been reconciled exactly;
 see [ledger verification](replication_seed23_ledger_verification.json), which
 records SHA-256
 `995d1ec3d484671bb391f3997640712201d6341b97a00e1feafed5378b22633e`.
-Completion still requires both new checkpoint manifests to verify at the
-independent destination and the compact milestone to be published. **The instance is not yet
-ready to discard.** No more training or holdout evaluation is scheduled.
+The [server check](replication_seed23_final_server_check.json) records no active
+training/GPU process and zero reservations. **Recovery material is complete;
+after final closeout publication and Git alignment the instance can be stopped.**
+That final alignment is separate from the recorded idle check. No more training
+or holdout evaluation is scheduled.
+
+
+## Complete legal-support census — local CPU artifact, 2026-09-09
+
+The [census](LEGAL_SUPPORT_CENSUS_20260909.md) executed from prepublished source
+`b504cb7b604847b2155bb71dd2bb2c3602d9f371`, separate from the seed23 GPU source.
+Its [immutable summary](legal_support_census_20260909_r1/summary.json) and
+[per-problem records](legal_support_census_20260909_r1/per_problem.jsonl) retain
+all 256 completed IDs, 1,966,080 attempts, 25,846 legal ordered solutions,
+class witnesses and source/protocol hashes. Disjoint-AC 2+2 support is 132
+problems, 4+4 is 131; 56 problems contain 112 mixed-label classes.
+
+The complete 25,846-record solution archive remains **outside Git**. Its gzip
+SHA-256 is `42c00622cdf8e9953d50f4a5c781b28e054198dff72915524577fe5a6407f5ef`;
+the uncompressed stream SHA-256 is
+`fa0563f030ffaa810f23e4eb5e9c63a2e12096f2dc675128a9bd9a9362c338d8`.
+Use the recorded execution commit and fresh output paths in the census report
+if reconstructing it; later journal completion text is not the original
+protocol snapshot.
+
+This is a mathematical inventory, not a frozen training dataset or a model
+result. EOS-token, global-structure and shared-block matching remain untested;
+the next gate is a separately fixed CPU matching-loss diagnostic. The census
+added no GPU process-seconds and required no storage expansion.

@@ -165,7 +165,7 @@ environment, source and compact results were retained; free space became 41.16
 GiB before new checkpoints. No disk expansion or altered training precision was
 needed. See [cleanup proof](replication_seed23_storage_cleanup_20260909.json).
 
-**Backup status at this results milestone:** raw records and the current private
+**Historical backup status when the results milestone was published:** raw records and the current private
 ledger are local; both new weight downloads are in progress. The instance is not
 yet disposable. Completion requires all 24 checkpoint files to pass independent
 SHA-256 verification, plus a published recovery milestone and final idle check.
@@ -198,3 +198,27 @@ python -m scripts.audit_replication_outputs \
 The audit requires complete matching-source runs and validates official scores,
 data bytes, fixed labels and dose before producing any secondary result. It does
 not launch model inference or evaluate the holdout.
+
+## Subsequent local CPU follow-up — separate from the model experiment
+
+While preserving the new model checkpoints, C008 was implemented and run on the
+original training questions after its plan and code were published.
+Complete enumeration found disjoint-AC 2+2 support on 132/256 questions and 4+4
+support on 131/256, compared with zero 2+2 in the stored-four inventory. There
+are mixed identity labels within some AC classes. This supports an inventory
+selection limitation and rules out silently reusing all 256 questions under
+the 4+4 rule; it does not establish a semantic mechanism or matched training
+feasibility. The next CPU gate is a fixed tokenizer/structure/block matching-loss
+diagnostic. See [the separate census report](LEGAL_SUPPORT_CENSUS_20260909.md).
+No additional GPU time or development/holdout inference was used.
+
+## Preservation completion
+
+Both new checkpoints now have complete independent local copies: **24 files,
+12,381,607,162 bytes**, all matching the saved SHA-256 manifests. The current
+private ledger matches all 13 receipts and the server has no training/GPU process
+or unresolved reservation. See [backup summary](replication_seed23_checkpoint_backup_summary.json)
+and [final server check](replication_seed23_final_server_check.json). The compact
+model results were published at `a4edae0817c72c11481ce0f7536952500a8e1e02`.
+The earlier pending note is retained as milestone history. Weights and the
+live private ledger remain outside Git; recovery requires their independent copies.

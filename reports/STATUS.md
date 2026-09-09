@@ -1,6 +1,6 @@
 # Verified status — 2026-09-09 UTC
 
-## Seed23 pair complete; checkpoint backups pending
+## Seed23 pair and backups complete; final Git alignment remains
 
 - Both frozen runs completed from source
   `6128e4266d62f14f063585d4c8e94dbe3ad8c711`:
@@ -25,15 +25,21 @@
   private ledger is independently retained and reconciled exactly against all
   **13 receipts**, with **zero unresolved reservations**. See the
   [ledger verification](replication_seed23_ledger_verification.json).
-- Both new checkpoint downloads and independent SHA-256 verification are
-  **pending**. Do not declare the instance disposable until backups and
-  publication have both been verified. Ledger reconciliation is complete.
+- Both seed23 checkpoints have independent **SHA-256-verified backups**:
+  **24 files, 12,381,607,162 bytes**. See the
+  [backup summary](replication_seed23_checkpoint_backup_summary.json).
+  The [server check](replication_seed23_final_server_check.json) records no active
+  training/GPU process or reservation. Recovery material is complete; the
+  instance can be stopped after final closeout publication and Git alignment.
+- The seed23 results are published at
+  `a4edae0817c72c11481ce0f7536952500a8e1e02`. The later CPU census has its own
+  execution provenance below; neither changes the frozen GPU primary outcome.
 - The old four seed17 checkpoints were reverified locally (48 files) before
   only their redundant remote weight directories were removed. Preflight free
   space was 41.16 GiB on the existing 50 GB data disk; no expansion was needed.
-- No further GPU phase or holdout evaluation is scheduled. Next work is CPU
-  definition and feasibility testing of legal path families with shared problem
-  support. Numerical identity operations can be required to consume each input
+- No further GPU phase or holdout evaluation is scheduled. The full fixed-pool
+  CPU census is now complete; next is a separately frozen **matching-loss
+  diagnostic** for token lengths, structural exposure and shared blocks. Numerical identity operations can be required to consume each input
   legally; they are not automatically Surface variants or invalid strategies.
 - Two paired seeds on the same selected pool do not establish a population
   effect, a reasoning mechanism or ICLR readiness. The broad question overlaps
@@ -46,6 +52,33 @@ Results: [analysis report](PILOT_REPLICATION_SEED23_RESULTS.md),
 [handoff](../docs/NEXT_SESSION.md). The research journal was published at
 `3fb43907c0fb8c951b50adfad6dabcc1bfde6403` before the pair's outputs;
 this is repository provenance, not external preregistration.
+
+## CPU legal-support census complete — separate from the GPU primary result
+
+- [C008](../docs/experiments/C008_complete_ordered_support_census.md) ran from
+  prepublished source `b504cb7b604847b2155bb71dd2bb2c3602d9f371` with a clean
+  launch worktree and unchanged recorded sources. It is a later CPU diagnostic;
+  seed23 GPU execution source and endpoints remain unchanged.
+- All **256/256 original training problems** were exhaustively enumerated under
+  the fixed binary grammar: **1,966,080 attempts**, **25,846 legal ordered
+  solutions**, and **1,024/1,024 stored references recovered**.
+- **132 problems support disjoint-AC 2+2** and **131 support disjoint-AC 4+4**
+  identity-present/absent class allocation. **56 problems contain 112 mixed-label
+  AC classes**; one class cannot occupy two slots in a disjoint assignment.
+- The stored inventory hid support, but the full 256-problem 4+4 design fails
+  even before matching: 125 questions lack that support. Identity is a legal
+  trajectory attribute, not an invariant semantic-strategy label.
+- **Token/EOS, global structural exposure and shared-block matching are not yet
+  tested.** Freeze cardinality, class-overlap rules and permitted residuals before
+  the next CPU search, and report losses at each constraint. Do not silently
+  change K or the problem pool to rescue feasibility.
+- This added **zero GPU process-seconds** and **zero storage expansion**;
+  the ledger remains 4716 used / 2484 remaining. No model inference,
+  development/holdout inspection or new training dataset was involved.
+
+See [census analysis](LEGAL_SUPPORT_CENSUS_20260909.md) and
+[immutable counts/source receipt](legal_support_census_20260909_r1/summary.json).
+The complete compressed solution stream remains outside Git with public hashes.
 
 ## Historical CPU preparation — 2026-09-09, before seed23 execution
 
@@ -103,7 +136,7 @@ pilot_replication_release_verification_20260909.json.
   At the seed17 shutdown milestone, the instance had no GPU job or unresolved
   reservation. See pilot_checkpoint_backup_summary.json and
   pilot_final_server_check.json. This historical check does not cover the new
-  seed23 checkpoints, whose backups are pending above.
+  seed23 checkpoints; their separate verified backup status is recorded above.
 - One paired seed, restricted selection, development only. Review another paired
   replication before any more GPU work; no holdout evaluation or main grid.
 
