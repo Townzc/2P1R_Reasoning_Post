@@ -1,5 +1,19 @@
 # Next session — prepare bounded engineering after C014 passes CPU gates
 
+## C015/E011 source milestone — publish before extracting inputs
+
+The next executable engineering phase is registered in
+[E011](experiments/E011_relation_engineering.md). Fixed32 train/16 diagnostic
+worlds from declared C014 seed prefixes,256 updates, multi-route only,
+strict32/32 overfit gate and measured long-context profile. One720-second
+process plus15-second guard fits1460 remaining. No scientific pair is queued.
+
+Publish source, materialize immutable `runs/relation_engineering_c015_r1`,
+independently reload/check the compact bundle, freeze the release hash and
+publish the complete CPU-ready record before asking the owner to start A800.
+Use the exact retained15-receipt ledger (5740 used), never a fresh or cloned
+stale ledger. Source/inputs are prepared locally; no server operation occurred.
+
 ## Current: C014 complete, independently verified, no GPU queued
 
 Read [C014 results](../reports/RELATION_TRANSPORT_C014_RESULTS.md),

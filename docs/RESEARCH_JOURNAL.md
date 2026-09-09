@@ -225,3 +225,28 @@ exact data and resource plan before requesting an A800. Do not execute the
 8,000-update CPU accounting schedule. No new GPU charge/reservation, storage
 expansion, server operation or arithmetic holdout access. Read
 [full results and file index](../reports/RELATION_TRANSPORT_C014_RESULTS.md).
+
+## 2026-09-09 —C015/E011 engineering source preparation
+
+**Why.** C014 resolves declared construction gates, not1.5B learnability or the
+1137-token training cost. Additional arithmetic seeds would not repair E010's
+interpretation limits. This step therefore measures a small, fixed engineering
+trajectory before any new scientific comparison.
+
+**Design.**32 original seed401 worlds,16 seed481 diagnostics, no reselection;
+256 full-parameter updates, fixed multi-route dose, unchanged pinned base/recipe.
+Profile updates9–72; greedy clean train and clean/deletion dev, strict full-proof
+and EOS metrics, raw token streams and final train-reference NLL.720-second cap
+plus15-second guard; use original cumulative ledger. Stop and retain failure if
+incomplete, invalid, OOM, nonfinite or out of budget. No automatic next phase.
+
+**Verification so far.**37 of40 initial focused tests passed; one prepared-data
+regression awaits materialization and two GNU-timeout integrations require Linux.
+After adding the under-lock race guard, all8 affected local tests pass; the same
+2 Linux-only integrations remain deferred. No real model execution was tested.
+
+**Status.** Source/configuration are ready to publish before input extraction.
+No newly materialized engineering input, GPU result, server action, reservation
+or holdout use at this milestone. The full prospective design is
+[E011](experiments/E011_relation_engineering.md); later preparation and outcomes
+will be recorded separately.

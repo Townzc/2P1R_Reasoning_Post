@@ -1,5 +1,14 @@
 # Verified status — 2026-09-09 UTC
 
+## C015/E011 source milestone — engineering implementation prepared
+
+The standalone32-world relation overfit/profile runner, strict token-stream
+output auditor and migration/budget guards are prepared. Fixed256 updates,
+103424 supervised tokens;720-second watchdog plus15-second guard within the
+remaining1460. Input extraction and release verification are pending publication
+of this clean source. No server contact, GPU job, reservation or holdout access.
+Read the [frozen engineering design](../docs/experiments/E011_relation_engineering.md).
+
 ## Current: C014 CPU construction and independent verification complete
 
 - **10,000/10,000** intended worlds retained, no duplicate conservative families

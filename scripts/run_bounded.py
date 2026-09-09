@@ -6,6 +6,7 @@ Reservations survive wrapper crashes; reconcile manually instead of resetting.
 import argparse
 import datetime
 import fcntl
+import hashlib
 import json
 import math
 import os
@@ -23,6 +24,8 @@ def main():
     p.add_argument('--max-seconds', type=int, required=True)
     p.add_argument('--ledger', default='.local/resource_ledger.json')
     p.add_argument('--budget', default='configs/resource_budget.json')
+    p.add_argument('--expected-ledger-sha256', help='Optional exact prior ledger, checked under the reservation lock')
+    p.add_argument('--require-full-cap', action='store_true', help='Reject instead of shortening a fixed phase')
     p.add_argument('command', nargs=argparse.REMAINDER)
     a = p.parse_args()
     command = a.command[1:] if a.command[:1] == ['--'] else a.command
@@ -36,6 +39,8 @@ def main():
     ledger_path.parent.mkdir(parents=True, exist_ok=True)
     with ledger_path.with_suffix('.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        if a.expected_ledger_sha256 and (not ledger_path.is_file() or hashlib.sha256(ledger_path.read_bytes()).hexdigest() != a.expected_ledger_sha256):
+            raise ValueError('Expected prior ledger differs under lock; no child launched')
         ledger = json.loads(ledger_path.read_text()) if ledger_path.exists() else {
             'budget_id': budget['budget_id'], 'authorized_gpu_seconds': budget['authorized_gpu_seconds'], 'jobs': []}
         if ledger['budget_id'] != budget['budget_id'] or ledger['authorized_gpu_seconds'] != budget['authorized_gpu_seconds']:
@@ -48,6 +53,8 @@ def main():
             raise ValueError('Run ID already recorded')
         remaining = budget['authorized_gpu_seconds'] - sum(x['charged_seconds'] for x in ledger['jobs'])
         seconds = min(a.max_seconds, remaining-15)
+        if a.require_full_cap and seconds != a.max_seconds:
+            raise RuntimeError('Complete fixed job plus guard does not fit; no shortened job launched')
         if seconds <= 0:
             raise RuntimeError('No approved GPU runtime remains')
         out = Path('runs')/a.run_id

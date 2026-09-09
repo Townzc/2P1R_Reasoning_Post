@@ -398,3 +398,16 @@ claim. No subagents, server operations, LLM/SFT training or inference, GPU
 charge, paid API or old reserved-holdout access occurred. All artifacts are
 lossless, source-bound and suitable for Git recovery; the next proposed gate
 is separately prepared engineering/profile work before a server request.
+
+
+## 2026-09-09 —C015/E011 bounded engineering implementation
+
+Codex recommended Max for bounded implementation/verification, without claiming
+to change the owner's setting. No subagents were used in this turn. It implemented
+fixed engineering input extraction, standalone relation training/scoring,
+compact-output re-audit and stale-ledger/full-cap guards. CPU toy gradient tests
+check response-token normalization; fixtures check removed evidence, alternative
+valid routes, EOS, raw token/text identity, dose and budget rejection. These are
+unit fixtures, not1.5B inference/training results. Source publication must precede
+materialization; GPU execution remains not_run and server contact is deferred
+until the complete release is ready and the owner starts/provides an instance.

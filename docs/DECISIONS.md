@@ -243,3 +243,20 @@ the CPU sandbox as a final test or the accounting schedule as a training plan.
 Retain state/table-exposure residuals and the one-algorithm/one-topology scope.
 See [C014 results](../reports/RELATION_TRANSPORT_C014_RESULTS.md). Ledger stays
 5740/7200 used,1460 remaining,zero reservations; server was not contacted.
+
+## D014 —2026-09-09: one fixed engineering trajectory before a scientific proposal
+
+The owner asked to prepare the next step and signal when a server is needed.
+Prepare C015/E011 locally: fixed C014 seed prefixes,32 training/16 diagnostic
+parents, unchanged pinned1.5B full-parameter recipe,256 updates and96 greedy
+outputs including the16-output baseline. All four routes are exposed eight
+times in training. Strict complete-proof scoring distinguishes a correct final
+state from a verified, EOS-terminated derivation. No output-driven selection
+or automatic retries. The32/32 plus NLL/profile gate tests engineering only.
+
+Reserve at most735 seconds only when actually launching on the owner's A800,
+within the1460 remaining original budget. Source and compact data must be
+published first. The budget guard now supports optional exact-ledger and full-
+cap checks under its lock, closing the inspection-to-reservation race without
+changing historical callers. No GPU spending/reservation is added by this
+source milestone. See [E011 registration](experiments/E011_relation_engineering.md).

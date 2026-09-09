@@ -6,6 +6,11 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**C015/E011 source preparation:** the bounded relation engineering runner and
+[frozen design](docs/experiments/E011_relation_engineering.md) are implemented.
+Publish source before extracting32 fixed training/16 diagnostic worlds and
+preparing the release. No server/GPU action or new scientific comparison.
+
 **C014 CPU audit complete, 2026-09-09 UTC:** The constructive relation task
 retains **10,000/10,000** worlds, with four verified paths and101 supervised
 tokens per reference. All40 fixed shallow-probe tests are unflagged. The
