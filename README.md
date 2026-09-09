@@ -6,7 +6,21 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-08:** The approved four-arm pilot is complete. Matched-dev greedy
+**2026-09-09 UTC:** The seed23 Paths/GCM replication is prepared and CPU-verified,
+with the same problems, exact token/update dose and fixed evaluation seed17.
+The two-job phase reserves 2130 of the remaining 3488 process-seconds; no GPU
+job has started. See the [executable proposal](docs/PILOT_REPLICATION_PROPOSAL.md)
+and [next-session handoff](docs/NEXT_SESSION.md).
+
+Independent [trace](reports/pilot_v1_trace_audit_20260909/FINDINGS.md) and
+[structure](reports/pilot_v1_structure_bias_20260909/summary.json) audits expose
+incorrect intermediate calculations and restrictive selection. The broad
+question also overlaps [recent prior work](reports/ICLR_POSITIONING_20260909.md).
+Our [ICLR evidence roadmap](docs/ICLR_EXPERIMENT_ROADMAP.md) therefore requires
+a substantive semantic-path intervention and broader replication; another
+positive seed on the present slice would not establish novelty.
+
+The approved seed17 four-arm pilot is complete. Matched-dev greedy
 correctness is Repeat 14/64, Surface 12/64, Paths 23/64 and GCM 18/64;
 broader-dev scores are 2/64, 0/64, 4/64 and 1/64. All arms used the same
 1024 updates and 267456 supervised response tokens. This is one paired seed

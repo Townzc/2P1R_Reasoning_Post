@@ -94,3 +94,51 @@ Codex retained the final 3712-second private ledger, verified no active GPU proc
 or unresolved reservation, and published a shutdown/replacement handoff. Slow
 network transfers were resumed from retained fragments without rerunning GPU jobs.
 The owner can stop the instance; no next experiment or automatic restart is launched.
+
+## 2026-09-09 UTC — ICLR positioning, independent audits and fixed replication preparation
+
+The owner requested the next experimental plan before starting or replacing a
+GPU server, emphasizing ICLR, speed and quality. Codex reviewed the completed
+pilot, recent primary papers/author code and the official ICLR 2027 schedule.
+The broad within-problem/global-diversity question overlaps recent work; no
+novelty or submission-readiness claim is inferred from tighter accounting.
+Codex prepared an evidence roadmap centered on a falsifiable semantic-path
+intervention, independent pools/seeds and broader evaluation, with later stages
+remaining conceptual and subject to design/resource review.
+
+Independent agents implemented CPU audits of displayed arithmetic and neutral
+operations, with root integration and a separate code review. The trace checker
+uses exact rationals, enumerates input-consumption provenance and distinguishes
+unsupported/possibly equivalent traces from definite contradictions. Review
+caught and fixed two classification gaps before this code milestone was
+published; 21 focused counterexample tests passed. All 4224 stored references
+verify and all 1600 primary prediction scores agree with independent parsing.
+Matched full-trace verification is Paths 21/GCM 14 of 64; broader is 1/1. The
+identity audit retains 384 per-problem records, all four-arm scores, strata and
+block outcomes. Both audits are explicitly post hoc for seed17, not new primary
+outcomes or evidence about hidden reasoning mechanisms.
+
+Codex froze a separate seed23 preparation from the identical selected problems,
+regenerating assignment/order jointly while retaining the original training
+recipe and dose. GCM changes its assignment on 196/256 problems; all 1024 update
+orders change. Evaluation keeps seed17. Both original and replication datasets
+pass pinned-tokenizer verification, with 267456 response tokens and exact
+per-update Paths/GCM structure matching. The immutable two-job queue rejects
+stale ledgers and reserves 2130 of 3488 remaining process-seconds, preserving the
+original 7200-second cumulative authorization. Both new run IDs remain not_run.
+No model inference, GPU process, old-server connection, rental, extra budget,
+holdout solution generation, final-test evaluation or submission occurred.
+
+Code/config/data/audit provenance, the finite execution plan and migration
+instructions are published together. Existing independently verified model
+backups and the 3712-second private ledger remain available. Final local test
+and artifact-integrity outcomes are recorded in the preparation verification
+report; replacement Linux must execute the GNU-timeout integration checks.
+
+Final local verification ran 96 tests: 94 passed, with only the two GNU-timeout
+integration checks skipped on macOS. The pinned-tokenizer tests were enabled.
+The new completed-pair output audit passed ten focused tests using actual seed17
+outputs, including recipe/code mismatch, corruption, missing results and
+overwrite counterexamples. All 25 trace-audit and 24 structure-audit source hashes
+matched; original seed17 data/configuration had no Git changes. The release
+verification report and test log preserve these checks. No GPU work was added.

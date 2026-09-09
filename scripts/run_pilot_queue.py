@@ -10,7 +10,7 @@ import shutil
 import subprocess
 import sys
 
-from src.pilot_runtime import load_pilot_inputs
+from src.pilot_runtime import load_pilot_inputs, validate_pilot_job
 from src.sft_data import sha256_file
 
 
@@ -65,6 +65,9 @@ def main():
         cfg = json.loads(Path(job['config']).read_text())
         if sha256_file(job['config']) != job['config_sha256']:
             raise ValueError('Queue configuration changed')
+        linked_queue, _ = validate_pilot_job(cfg, job['run_id'], job['config'])
+        if linked_queue != Path(a.queue):
+            raise ValueError('Config references a different queue')
         load_pilot_inputs(cfg)
         signature = {k: v for k, v in cfg.items() if k not in ('arm',)}
         if common is not None and signature != common:
@@ -76,8 +79,9 @@ def main():
     print(json.dumps(summary, indent=2), flush=True)
     if not a.execute:
         return
-    if a.phase == 'comparison' and shutil.disk_usage('runs').free < 30 * 1024**3:
-        raise RuntimeError('Need 30 GiB free for four FP32 checkpoints and write headroom; verify backups before freeing space')
+    minimum_gib = queue.get('minimum_free_disk_gib', 30)
+    if a.phase == 'comparison' and shutil.disk_usage('runs').free < minimum_gib * 1024**3:
+        raise RuntimeError(f'Need {minimum_gib} GiB free for the frozen phase checkpoints and write headroom; verify backups before freeing space')
     for job in queue[a.phase]:
         subprocess.run([sys.executable, 'scripts/run_bounded.py', '--ledger', a.ledger,
                         '--run-id', job['run_id'], '--max-seconds', str(job['max_seconds']), '--',

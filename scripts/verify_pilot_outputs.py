@@ -16,7 +16,7 @@ def verify(root):
         return json.loads((root/name).read_text())
     manifest, receipt, metrics = map(read, ['run_manifest.json', 'resource_receipt.json', 'metrics.json'])
     cfg = manifest['config']
-    queue = json.loads(Path('configs/pilot_v1/queue.json').read_text())
+    queue = json.loads(Path(cfg.get('pilot_queue', 'configs/pilot_v1/queue.json')).read_text())
     jobs = [j for phase in ('calibration', 'comparison') for j in queue[phase] if j['run_id'] == root.name]
     if len(jobs) != 1 or cfg != json.loads(Path(jobs[0]['config']).read_text()):
         raise ValueError('Run does not match the frozen queue')

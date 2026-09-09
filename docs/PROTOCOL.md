@@ -1,4 +1,12 @@
-# Protocol v0.3 — pilot v1 frozen; broader benchmark pending
+# Protocol v0.4 — fixed replication prepared; broader intervention pending
+
+The owner requested an efficient, quality-controlled route toward ICLR on
+2026-09-09 UTC. CPU preparation of the next paired seed is complete; the fixed
+next-phase specification is PILOT_REPLICATION_PROPOSAL.md, with immutable
+configs/pilot_replication_seed23. It preserves the original primary endpoint,
+data and recipe, and adds prespecified secondary trace/identity diagnostics.
+The ICLR_EXPERIMENT_ROADMAP.md describes later conceptual interventions; it
+does not freeze or authorize a larger GPU grid. No seed23 GPU result exists yet.
 
 The owner approved staged pilot preparation on 2026-09-08. PILOT_V1.md and
 configs/pilot_v1 are authoritative for this finite pilot; older draft issues

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "budget_id": "first_session_20260905",
+  "minimum_prior_charged_seconds": 3712,
+  "calibration": [
+    {
+      "run_id": "pilot_v1_calibration_seed17_r1",
+      "config": "configs/pilot_v1/calibration.json",
+      "config_sha256": "4f3318ad9139ad29fde28417018da6571f958d05255ab15bcbb2f13895b24263",
+      "max_seconds": 900
+    }
+  ],
+  "comparison": [
+    {
+      "run_id": "pilot_replication_paths_seed23_r1",
+      "config": "configs/pilot_replication_seed23/paths.json",
+      "config_sha256": "de8492bcfad8478218d4fbcfd24e08ea2907493659ddfe0d445505c6101dc918",
+      "max_seconds": 1050
+    },
+    {
+      "run_id": "pilot_replication_gcm_seed23_r1",
+      "config": "configs/pilot_replication_seed23/gcm.json",
+      "config_sha256": "bcecc0fcfdaa209fc6666ba8c68735aa128066198ae69c439710ac5315c3dd6c",
+      "max_seconds": 1050
+    }
+  ],
+  "minimum_free_disk_gib": 18
+}

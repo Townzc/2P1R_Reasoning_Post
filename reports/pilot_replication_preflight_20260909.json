@@ -1,0 +1,36 @@
+{
+  "status": "CPU_PREPARED_NOT_EXECUTED",
+  "budget": {
+    "used_seconds": 3712,
+    "remaining_seconds": 3488,
+    "phase_reservation_seconds": 2130,
+    "jobs": 2
+  },
+  "calibration_dependency": "runs/pilot_v1_calibration_seed17_r1",
+  "queue_sha256": "029405407693d462b4258e2a85c40d3fbdfa3012e87c8d72fb53137772ca6ab3",
+  "changed_gcm_assignments": 196,
+  "training_problems": 256,
+  "changed_scheduled_updates": 1024,
+  "paths_problem_path_exposure_multiset_identical": true,
+  "both_configs_differ_only_by_arm": true,
+  "old_completed_calibration_reused": true,
+  "minimum_free_disk_gib_after_environment_and_base_cache": 18,
+  "gpu_seconds_added": 0,
+  "jobs": [
+    {
+      "run_id": "pilot_replication_paths_seed23_r1",
+      "config": "configs/pilot_replication_seed23/paths.json",
+      "config_sha256": "de8492bcfad8478218d4fbcfd24e08ea2907493659ddfe0d445505c6101dc918",
+      "max_seconds": 1050,
+      "status": "not_run"
+    },
+    {
+      "run_id": "pilot_replication_gcm_seed23_r1",
+      "config": "configs/pilot_replication_seed23/gcm.json",
+      "config_sha256": "bcecc0fcfdaa209fc6666ba8c68735aa128066198ae69c439710ac5315c3dd6c",
+      "max_seconds": 1050,
+      "status": "not_run"
+    }
+  ],
+  "runtime_estimate_basis": "Previous two relevant arm receipts; about 17 process-minutes total. This is not a runtime guarantee or rental price."
+}

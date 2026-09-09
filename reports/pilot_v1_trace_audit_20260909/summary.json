@@ -1,0 +1,749 @@
+{
+  "audited_records_sha256": "d295ce602c30f87285c843a96ff6deece5f52c1fa17f5ab067729d97423369b4",
+  "base_git_commit": "e3b16c6b6e732510dd65e96912b961feb6fd8439",
+  "created_utc": "2026-09-09T05:26:09.572310+00:00",
+  "final_expression_scores_match_stored_primary_scores": true,
+  "frozen_reference_grammar_check": {
+    "runs/pilot_v1_20260908_r3/dev_broad.jsonl": {
+      "verified": 64
+    },
+    "runs/pilot_v1_20260908_r3/dev_matched.jsonl": {
+      "verified": 64
+    },
+    "runs/pilot_v1_20260908_r3/train_gcm.jsonl": {
+      "verified": 1024
+    },
+    "runs/pilot_v1_20260908_r3/train_paths.jsonl": {
+      "verified": 1024
+    },
+    "runs/pilot_v1_20260908_r3/train_repeat.jsonl": {
+      "verified": 1024
+    },
+    "runs/pilot_v1_20260908_r3/train_surface.jsonl": {
+      "verified": 1024
+    }
+  },
+  "limitations": [
+    "Post-hoc descriptive diagnostic after observing seed17; not a preregistered primary endpoint.",
+    "The complete-trace checker supports only the four frozen pilot sentence frames and one binary operation on displayed integer/rational values per step.",
+    "Unknown syntax is unverifiable, never counted as correct. Inconsistent means an explicit arithmetic/resource/answer contradiction was established.",
+    "Full verification requires legal consumption of every input exactly once and an exact ordered-tree connection to the final Answer. AC-only or other equivalent forms are separately reported as unverifiable under this strict connection rule.",
+    "Equal-valued inputs and intermediate results are handled by enumerating provenance alternatives. Verification proves a consistent interpretation exists, not that the model internally followed it.",
+    "Locally true equations need not form a legal derivation or reach the target; final-expression accuracy and complete-trace verification are reported separately.",
+    "This audits displayed arithmetic, not hidden reasoning, causal faithfulness, cognitive strategies, or natural-language reasoning quality.",
+    "One paired seed on restricted development sets. Sampled generations from the same problem are dependent; generation counts are descriptive, not independent trial counts.",
+    "Only stored pilot development/train predictions and frozen development/train references were read; no generation, GPU work, or holdout evaluation."
+  ],
+  "paths_gcm_paired_complete_trace_verification": {
+    "final_dev_broad_greedy": {
+      "gcm_only_verified": 1,
+      "neither_verified": 62,
+      "paths_only_verified": 1
+    },
+    "final_dev_greedy": {
+      "both_verified": 8,
+      "gcm_only_verified": 6,
+      "neither_verified": 37,
+      "paths_only_verified": 13
+    }
+  },
+  "prediction_count": 1600,
+  "results": {
+    "gcm": {
+      "final_dev_broad_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "verified": 1
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 1
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 1,
+          "unavailable": 63
+        },
+        "complete_trace_status": {
+          "inconsistent": 62,
+          "unverifiable": 1,
+          "verified": 1
+        },
+        "equation_status_counts": {
+          "consistent": 91,
+          "inconsistent": 100
+        },
+        "final_expression_correct": 1,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 2,
+          "inconsistent": 61,
+          "unverifiable": 1
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 1,
+          "false_or_undefined_local_equation": 61,
+          "final_answer_violates_inputs_or_target": 58,
+          "unavailable_or_reused_operand_at_step_3": 1
+        },
+        "resource_derivation_status": {
+          "inconsistent": 62,
+          "unverifiable": 1,
+          "verified": 1
+        },
+        "unknown_line_count": 1
+      },
+      "final_dev_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 4,
+          "verified": 14
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 14,
+          "inconsistent": 4
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 14,
+          "no_exact_or_ac_tree_match": 1,
+          "unavailable": 49
+        },
+        "complete_trace_status": {
+          "inconsistent": 50,
+          "verified": 14
+        },
+        "equation_status_counts": {
+          "consistent": 109,
+          "inconsistent": 82,
+          "unverifiable": 1
+        },
+        "final_expression_correct": 18,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 15,
+          "inconsistent": 49
+        },
+        "problems": 64,
+        "reason_counts": {
+          "derivation_answer_value_mismatch": 1,
+          "false_or_undefined_local_equation": 49,
+          "final_answer_violates_inputs_or_target": 41
+        },
+        "resource_derivation_status": {
+          "inconsistent": 49,
+          "verified": 15
+        },
+        "unknown_line_count": 0
+      },
+      "final_dev_sampled": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 13,
+          "verified": 57
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 57,
+          "inconsistent": 13
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 57,
+          "no_exact_or_ac_tree_match": 2,
+          "unavailable": 197
+        },
+        "complete_trace_status": {
+          "inconsistent": 197,
+          "unverifiable": 2,
+          "verified": 57
+        },
+        "equation_status_counts": {
+          "consistent": 430,
+          "inconsistent": 330,
+          "unverifiable": 7
+        },
+        "final_expression_correct": 70,
+        "generations": 256,
+        "local_equations_status": {
+          "consistent": 59,
+          "inconsistent": 195,
+          "unverifiable": 2
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 1,
+          "derivation_answer_value_mismatch": 2,
+          "equation_outside_single_operation_scalar_grammar": 1,
+          "false_or_undefined_local_equation": 195,
+          "final_answer_violates_inputs_or_target": 169
+        },
+        "resource_derivation_status": {
+          "inconsistent": 195,
+          "unverifiable": 2,
+          "verified": 59
+        },
+        "unknown_line_count": 1
+      },
+      "final_train_sample16_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "verified": 14
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 14
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 14,
+          "unavailable": 2
+        },
+        "complete_trace_status": {
+          "inconsistent": 2,
+          "verified": 14
+        },
+        "equation_status_counts": {
+          "consistent": 46,
+          "inconsistent": 2
+        },
+        "final_expression_correct": 14,
+        "generations": 16,
+        "local_equations_status": {
+          "consistent": 14,
+          "inconsistent": 2
+        },
+        "problems": 16,
+        "reason_counts": {
+          "false_or_undefined_local_equation": 2,
+          "final_answer_violates_inputs_or_target": 2
+        },
+        "resource_derivation_status": {
+          "inconsistent": 2,
+          "verified": 14
+        },
+        "unknown_line_count": 0
+      }
+    },
+    "paths": {
+      "final_dev_broad_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 3,
+          "verified": 1
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 1,
+          "inconsistent": 3
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 1,
+          "unavailable": 63
+        },
+        "complete_trace_status": {
+          "inconsistent": 63,
+          "verified": 1
+        },
+        "equation_status_counts": {
+          "consistent": 92,
+          "inconsistent": 98,
+          "unverifiable": 2
+        },
+        "final_expression_correct": 4,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 3,
+          "inconsistent": 60,
+          "unverifiable": 1
+        },
+        "problems": 64,
+        "reason_counts": {
+          "false_or_undefined_local_equation": 60,
+          "final_answer_violates_inputs_or_target": 58,
+          "unavailable_or_reused_operand_at_step_2": 1,
+          "unavailable_or_reused_operand_at_step_3": 1
+        },
+        "resource_derivation_status": {
+          "inconsistent": 62,
+          "unverifiable": 1,
+          "verified": 1
+        },
+        "unknown_line_count": 0
+      },
+      "final_dev_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 2,
+          "verified": 21
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 21,
+          "inconsistent": 2
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 21,
+          "unavailable": 43
+        },
+        "complete_trace_status": {
+          "inconsistent": 43,
+          "verified": 21
+        },
+        "equation_status_counts": {
+          "consistent": 125,
+          "inconsistent": 69
+        },
+        "final_expression_correct": 23,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 21,
+          "inconsistent": 43
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 1,
+          "calculation_after_answer": 1,
+          "false_or_undefined_local_equation": 43,
+          "final_answer_violates_inputs_or_target": 40
+        },
+        "resource_derivation_status": {
+          "inconsistent": 43,
+          "verified": 21
+        },
+        "unknown_line_count": 0
+      },
+      "final_dev_sampled": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 13,
+          "verified": 59
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 59,
+          "inconsistent": 13
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 59,
+          "no_exact_or_ac_tree_match": 1,
+          "unavailable": 196
+        },
+        "complete_trace_status": {
+          "inconsistent": 197,
+          "verified": 59
+        },
+        "equation_status_counts": {
+          "consistent": 463,
+          "inconsistent": 306
+        },
+        "final_expression_correct": 72,
+        "generations": 256,
+        "local_equations_status": {
+          "consistent": 63,
+          "inconsistent": 193
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 1,
+          "calculation_after_answer": 1,
+          "derivation_answer_value_mismatch": 1,
+          "false_or_undefined_local_equation": 193,
+          "final_answer_violates_inputs_or_target": 183,
+          "unavailable_or_reused_operand_at_step_2": 3
+        },
+        "resource_derivation_status": {
+          "inconsistent": 196,
+          "verified": 60
+        },
+        "unknown_line_count": 0
+      },
+      "final_train_sample16_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "verified": 9
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 9
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 9,
+          "unavailable": 7
+        },
+        "complete_trace_status": {
+          "inconsistent": 7,
+          "verified": 9
+        },
+        "equation_status_counts": {
+          "consistent": 43,
+          "inconsistent": 5
+        },
+        "final_expression_correct": 9,
+        "generations": 16,
+        "local_equations_status": {
+          "consistent": 11,
+          "inconsistent": 5
+        },
+        "problems": 16,
+        "reason_counts": {
+          "false_or_undefined_local_equation": 5,
+          "final_answer_violates_inputs_or_target": 7,
+          "unavailable_or_reused_operand_at_step_2": 2
+        },
+        "resource_derivation_status": {
+          "inconsistent": 7,
+          "verified": 9
+        },
+        "unknown_line_count": 0
+      }
+    },
+    "repeat": {
+      "final_dev_broad_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 1,
+          "verified": 1
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 1,
+          "inconsistent": 1
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 6,
+          "unavailable": 58
+        },
+        "complete_trace_status": {
+          "inconsistent": 63,
+          "verified": 1
+        },
+        "equation_status_counts": {
+          "consistent": 106,
+          "inconsistent": 86
+        },
+        "final_expression_correct": 2,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 14,
+          "inconsistent": 50
+        },
+        "problems": 64,
+        "reason_counts": {
+          "derivation_does_not_reach_target": 5,
+          "false_or_undefined_local_equation": 50,
+          "final_answer_violates_inputs_or_target": 61,
+          "unavailable_or_reused_operand_at_step_2": 8
+        },
+        "resource_derivation_status": {
+          "inconsistent": 58,
+          "verified": 6
+        },
+        "unknown_line_count": 0
+      },
+      "final_dev_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 1,
+          "verified": 13
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 13,
+          "inconsistent": 1
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 14,
+          "no_exact_or_ac_tree_match": 1,
+          "unavailable": 49
+        },
+        "complete_trace_status": {
+          "inconsistent": 49,
+          "unverifiable": 2,
+          "verified": 13
+        },
+        "equation_status_counts": {
+          "consistent": 130,
+          "inconsistent": 61
+        },
+        "final_expression_correct": 14,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 23,
+          "inconsistent": 41
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 1,
+          "derivation_answer_value_mismatch": 1,
+          "derivation_does_not_reach_target": 1,
+          "false_or_undefined_local_equation": 41,
+          "final_answer_violates_inputs_or_target": 45,
+          "unavailable_or_reused_operand_at_step_1": 1,
+          "unavailable_or_reused_operand_at_step_2": 2,
+          "unavailable_or_reused_operand_at_step_3": 3
+        },
+        "resource_derivation_status": {
+          "inconsistent": 47,
+          "verified": 17
+        },
+        "unknown_line_count": 1
+      },
+      "final_dev_sampled": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 10,
+          "verified": 38
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 38,
+          "inconsistent": 10
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 57,
+          "no_exact_or_ac_tree_match": 5,
+          "unavailable": 194
+        },
+        "complete_trace_status": {
+          "inconsistent": 210,
+          "unverifiable": 8,
+          "verified": 38
+        },
+        "equation_status_counts": {
+          "consistent": 531,
+          "inconsistent": 235
+        },
+        "final_expression_correct": 48,
+        "generations": 256,
+        "local_equations_status": {
+          "consistent": 100,
+          "inconsistent": 156
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 2,
+          "derivation_answer_value_mismatch": 5,
+          "derivation_does_not_reach_target": 19,
+          "false_or_undefined_local_equation": 156,
+          "final_answer_violates_inputs_or_target": 193,
+          "unavailable_or_reused_operand_at_step_1": 4,
+          "unavailable_or_reused_operand_at_step_2": 14,
+          "unavailable_or_reused_operand_at_step_3": 12
+        },
+        "resource_derivation_status": {
+          "inconsistent": 186,
+          "verified": 70
+        },
+        "unknown_line_count": 2
+      },
+      "final_train_sample16_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "verified": 12
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 12
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 12,
+          "unavailable": 4
+        },
+        "complete_trace_status": {
+          "inconsistent": 4,
+          "verified": 12
+        },
+        "equation_status_counts": {
+          "consistent": 43,
+          "inconsistent": 5
+        },
+        "final_expression_correct": 12,
+        "generations": 16,
+        "local_equations_status": {
+          "consistent": 12,
+          "inconsistent": 4
+        },
+        "problems": 16,
+        "reason_counts": {
+          "false_or_undefined_local_equation": 4,
+          "final_answer_violates_inputs_or_target": 4
+        },
+        "resource_derivation_status": {
+          "inconsistent": 4,
+          "verified": 12
+        },
+        "unknown_line_count": 0
+      }
+    },
+    "surface": {
+      "final_dev_broad_greedy": {
+        "among_final_correct_complete_trace_status": {},
+        "among_final_correct_local_equations_status": {},
+        "answer_connection_status": {
+          "unavailable": 64
+        },
+        "complete_trace_status": {
+          "inconsistent": 64
+        },
+        "equation_status_counts": {
+          "consistent": 103,
+          "inconsistent": 89
+        },
+        "final_expression_correct": 0,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 4,
+          "inconsistent": 60
+        },
+        "problems": 64,
+        "reason_counts": {
+          "false_or_undefined_local_equation": 60,
+          "final_answer_violates_inputs_or_target": 61,
+          "unavailable_or_reused_operand_at_step_2": 3,
+          "unavailable_or_reused_operand_at_step_3": 1
+        },
+        "resource_derivation_status": {
+          "inconsistent": 64
+        },
+        "unknown_line_count": 0
+      },
+      "final_dev_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 2,
+          "unverifiable": 2,
+          "verified": 8
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 10,
+          "inconsistent": 2
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 8,
+          "no_exact_or_ac_tree_match": 3,
+          "unavailable": 53
+        },
+        "complete_trace_status": {
+          "inconsistent": 54,
+          "unverifiable": 2,
+          "verified": 8
+        },
+        "equation_status_counts": {
+          "consistent": 112,
+          "inconsistent": 80
+        },
+        "final_expression_correct": 12,
+        "generations": 64,
+        "local_equations_status": {
+          "consistent": 12,
+          "inconsistent": 52
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 1,
+          "derivation_answer_value_mismatch": 1,
+          "false_or_undefined_local_equation": 52,
+          "final_answer_violates_inputs_or_target": 49,
+          "full_connection_not_verified_under_exact_tree_rule": 2,
+          "unavailable_or_reused_operand_at_step_2": 1
+        },
+        "resource_derivation_status": {
+          "inconsistent": 53,
+          "verified": 11
+        },
+        "unknown_line_count": 0
+      },
+      "final_dev_sampled": {
+        "among_final_correct_complete_trace_status": {
+          "inconsistent": 6,
+          "unverifiable": 2,
+          "verified": 27
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 29,
+          "inconsistent": 6
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 27,
+          "no_exact_or_ac_tree_match": 10,
+          "unavailable": 219
+        },
+        "complete_trace_status": {
+          "inconsistent": 227,
+          "unverifiable": 2,
+          "verified": 27
+        },
+        "equation_status_counts": {
+          "consistent": 428,
+          "inconsistent": 340
+        },
+        "final_expression_correct": 35,
+        "generations": 256,
+        "local_equations_status": {
+          "consistent": 40,
+          "inconsistent": 216
+        },
+        "problems": 64,
+        "reason_counts": {
+          "answer_line_count_not_one": 7,
+          "calculation_after_answer": 1,
+          "derivation_answer_value_mismatch": 5,
+          "equation_outside_single_operation_scalar_grammar": 1,
+          "false_or_undefined_local_equation": 216,
+          "final_answer_violates_inputs_or_target": 198,
+          "full_connection_not_verified_under_exact_tree_rule": 2,
+          "nonsequential_step_labels": 1,
+          "unavailable_or_reused_operand_at_step_2": 3
+        },
+        "resource_derivation_status": {
+          "inconsistent": 219,
+          "verified": 37
+        },
+        "unknown_line_count": 1
+      },
+      "final_train_sample16_greedy": {
+        "among_final_correct_complete_trace_status": {
+          "unverifiable": 1,
+          "verified": 9
+        },
+        "among_final_correct_local_equations_status": {
+          "consistent": 10
+        },
+        "answer_connection_status": {
+          "exact_ordered_tree_match": 9,
+          "no_exact_or_ac_tree_match": 2,
+          "unavailable": 5
+        },
+        "complete_trace_status": {
+          "inconsistent": 6,
+          "unverifiable": 1,
+          "verified": 9
+        },
+        "equation_status_counts": {
+          "consistent": 42,
+          "inconsistent": 6
+        },
+        "final_expression_correct": 10,
+        "generations": 16,
+        "local_equations_status": {
+          "consistent": 11,
+          "inconsistent": 5
+        },
+        "problems": 16,
+        "reason_counts": {
+          "false_or_undefined_local_equation": 5,
+          "final_answer_violates_inputs_or_target": 6,
+          "full_connection_not_verified_under_exact_tree_rule": 1
+        },
+        "resource_derivation_status": {
+          "inconsistent": 5,
+          "verified": 11
+        },
+        "unknown_line_count": 0
+      }
+    }
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "runs/pilot_v1_20260908_r3/dev_broad.jsonl": "88ac632dfa1d4d5ac3e757021162156c8ac8891d6124cc040db97f38b4f81e73",
+    "runs/pilot_v1_20260908_r3/dev_matched.jsonl": "c83bfcf156b53f6c75f443981d79045b1394f1d7383d17ba46d3200d23181cd3",
+    "runs/pilot_v1_20260908_r3/train_gcm.jsonl": "8f10816657485b8bd33299bcc0d0a4b218c7c7f3f48efa7a33f0000ecb2a69b8",
+    "runs/pilot_v1_20260908_r3/train_paths.jsonl": "882934ff99b28f835d29bb6e4357126bcd746475519890bb25b142a9c70cbe30",
+    "runs/pilot_v1_20260908_r3/train_repeat.jsonl": "16564dae02f4baa5f49f2bddb47a4a5b1f35f93dbb0718a6e91e4aea8d80649b",
+    "runs/pilot_v1_20260908_r3/train_surface.jsonl": "a8d591646bca98aeb5ab21e2e9384c0de394231c0a9efdd8bbc7868245c88e0f",
+    "runs/pilot_v1_gcm_seed17_r1/final_dev_broad_greedy.jsonl": "7630431acc43b1eb975eba55c24c293963a0b2fea67f9e7bfab3ce4b5d364ca9",
+    "runs/pilot_v1_gcm_seed17_r1/final_dev_greedy.jsonl": "4109d40846209a12d7cd5124e486b1f22ad53e739fff1d35bbcaec06c555ccd8",
+    "runs/pilot_v1_gcm_seed17_r1/final_dev_sampled.jsonl": "935842156d4614002cce14f30df4e58abdb8731c35a86cbb0d3fec0a10e97bfe",
+    "runs/pilot_v1_gcm_seed17_r1/final_train_sample16_greedy.jsonl": "855365553d0477720cc2ec0554435ae9cf982660d783d84e26f3a5a86e5b2899",
+    "runs/pilot_v1_paths_seed17_r1/final_dev_broad_greedy.jsonl": "e6a50e2fb178b3c031b5ea5151eec5745768bd2fe8f8bc30e442e43173683ec5",
+    "runs/pilot_v1_paths_seed17_r1/final_dev_greedy.jsonl": "cd6790e036339ddae8f18265780a7cffcaa7444a54ca27ddf2ba336add2c1d18",
+    "runs/pilot_v1_paths_seed17_r1/final_dev_sampled.jsonl": "29711e8a60e83bbcc13305d033611a1e0f234aae94c0962f602e4bd05d736e26",
+    "runs/pilot_v1_paths_seed17_r1/final_train_sample16_greedy.jsonl": "fe2942e7f262b2ffc35719abc6227509fd2b56f3205627dc40183479f90689c6",
+    "runs/pilot_v1_repeat_seed17_r1/final_dev_broad_greedy.jsonl": "4ddf1cc8da3af29e05979141ef2f97cb631ac0fd90d3f2cd3539c12e53e1d39a",
+    "runs/pilot_v1_repeat_seed17_r1/final_dev_greedy.jsonl": "26a20dde77d560efc09a1a3fa481b030adb3716454ad0e711792ecab49dea8b3",
+    "runs/pilot_v1_repeat_seed17_r1/final_dev_sampled.jsonl": "0db6eaece11ab3140d4fb48d3c93c8a399f885e1481d088b75862ec992552adb",
+    "runs/pilot_v1_repeat_seed17_r1/final_train_sample16_greedy.jsonl": "fd244e4227db6ffbf0926e25792079319efcd0e330af933cb0cc01afb32eabf6",
+    "runs/pilot_v1_surface_seed17_r1/final_dev_broad_greedy.jsonl": "6bc7b29abdc22ef3b425f0b89ca2459aee409c72a633e4f861113e0b0ff29cb5",
+    "runs/pilot_v1_surface_seed17_r1/final_dev_greedy.jsonl": "61e6c54acac2b91f2f18311e98c0b84c14f617b2d1ce6b46103c31acf7b0e9d4",
+    "runs/pilot_v1_surface_seed17_r1/final_dev_sampled.jsonl": "7d7775d56ef9c41854cfdbf3bba1bfd71951b8135c8e55888accec2fd6d8b3d0",
+    "runs/pilot_v1_surface_seed17_r1/final_train_sample16_greedy.jsonl": "c423768934dadc22ba99eb37fefc44d40f5458c017797cfd35bb5b5b55c548d5",
+    "scripts/audit_pilot_traces.py": "2c366557f64ed766c1e417d2322be721cf37e14596fed3bf3960da691d1ac75d",
+    "src/trace_audit.py": "734495bc916a04ab627a913b18194126b2c2c4c2d3f854159453de4aa0d7b9cb",
+    "tests/test_trace_audit.py": "c7fc391e2499526becb169ba3b0844a6e62ceb4aeef007e0802e677b3315b021"
+  },
+  "status": "CPU_POSTHOC_TRACE_DIAGNOSTIC"
+}

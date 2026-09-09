@@ -1,0 +1,49 @@
+{
+  "status": "CPU_VERIFIED_NO_GPU_RUN",
+  "data_manifest_sha256": "45c51cec657eff48e271a67d99439b5f390bc661562fab3bd3d920c450c03e6b",
+  "split_groups": {
+    "train": 256,
+    "dev_matched": 64,
+    "dev_broad": 64,
+    "holdout_reserved_unsolved": 2048
+  },
+  "raw_allocation_reproduced": true,
+  "source_hashes_verified": true,
+  "all_references_verified": true,
+  "all_per_example_tokens_equal": true,
+  "all_per_update_structures_equal": true,
+  "budget_per_arm": {
+    "optimizer_updates": 1024,
+    "presentations": 4096,
+    "supervised_response_tokens": 267456,
+    "processed_nonpadding_tokens": 472832,
+    "padding_tokens": 0
+  },
+  "binary_operator_counts_per_arm_cycle": {
+    "repeat": {
+      "-": 1312,
+      "+": 864,
+      "*": 624,
+      "/": 272
+    },
+    "surface": {
+      "-": 1312,
+      "+": 864,
+      "*": 624,
+      "/": 272
+    },
+    "paths": {
+      "*": 596,
+      "-": 1296,
+      "+": 864,
+      "/": 316
+    },
+    "gcm": {
+      "*": 596,
+      "-": 1296,
+      "+": 864,
+      "/": 316
+    }
+  },
+  "gpu_seconds_added": 0
+}

@@ -1,0 +1,34 @@
+{
+  "status": "CPU_VERIFIED_NOT_EXECUTED",
+  "tests": {
+    "run": 96,
+    "passed": 94,
+    "skipped": [
+      {
+        "test": "test_exhausted_budget_never_launches_child (test_budget_guard.BudgetGuardTests.test_exhausted_budget_never_launches_child)",
+        "reason": "GNU timeout required; mandatory on GPU server"
+      },
+      {
+        "test": "test_timeout_records_charge_and_prevents_stale_reservation (test_budget_guard.BudgetGuardTests.test_timeout_records_charge_and_prevents_stale_reservation)",
+        "reason": "GNU timeout required; mandatory on GPU server"
+      }
+    ],
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 3.86
+  },
+  "platform": "Darwin",
+  "python": "3.12.14",
+  "pinned_tokenizer_integration_enabled": true,
+  "all_posthoc_audit_source_hashes_verified": {
+    "reports/pilot_v1_trace_audit_20260909/summary.json": 25,
+    "reports/pilot_v1_structure_bias_20260909/summary.json": 24
+  },
+  "original_seed17_data_and_configs_unchanged_in_git": true,
+  "gpu_seconds_added": 0,
+  "test_log_sha256": "ae0fdc99de6015b34490dbdbb97809fcfd2ee894bfbde71dfb0e07351704378d",
+  "limitations": [
+    "GNU timeout integration checks must run on the supplied Linux server.",
+    "No new model output, holdout evaluation or server connection."
+  ]
+}

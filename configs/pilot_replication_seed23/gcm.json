@@ -1,0 +1,30 @@
+{
+  "mode": "scientific_pilot",
+  "model_role": "main",
+  "data_dir": "runs/pilot_replication_seed23_20260909_r1",
+  "data_manifest_sha256": "0959c217feb4b0c51aebf85c1f08e341e1b6c8034657ee028acb263a2ee18ad4",
+  "steps": 1024,
+  "batch_size": 4,
+  "microbatch_size": 2,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "seed": 23,
+  "max_length": 384,
+  "max_new_tokens": 384,
+  "eval_batch_size": 4,
+  "profile_warmup": 10,
+  "profile_updates": 100,
+  "samples_per_problem": 4,
+  "sampled_ks": [
+    1,
+    2,
+    4
+  ],
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "save_checkpoint": true,
+  "arm": "gcm",
+  "eval_seed": 17,
+  "pilot_queue": "configs/pilot_replication_seed23/queue.json"
+}

@@ -58,7 +58,7 @@ def generate(model, tokenizer, rows, config, samples=1, sample=False):
     model.eval()
     tokenizer.padding_side = 'left'
     predictions = []
-    torch.manual_seed(config['seed'])
+    torch.manual_seed(config.get('eval_seed', config['seed']))
     started = time.perf_counter()
     with torch.no_grad(), torch.autocast('cuda', dtype=torch.bfloat16):
         for start in range(0, len(rows), config['eval_batch_size']):
@@ -144,9 +144,12 @@ def main():
                                              use_fast=True, local_files_only=True)
     tokenizer.pad_token = tokenizer.eos_token
     if is_pilot:
+        from src.pilot_runtime import validate_pilot_job, schedule_filename
+        queue_path, queue = validate_pilot_job(cfg, out.name, args.config)
+        subprocess.run(['git', 'ls-files', '--error-unmatch', str(queue_path)], check=True, stdout=subprocess.DEVNULL)
         if cfg['mode'] == 'scientific_pilot':
             from scripts.run_pilot_queue import check_calibration
-            check_calibration(json.loads(Path('configs/pilot_v1/queue.json').read_text()))
+            check_calibration(queue)
         data_manifest = json.loads((data_dir/'manifest.json').read_text())
         subprocess.run(['git', 'ls-files', '--error-unmatch', str(data_dir/'manifest.json'),
                         *[str(data_dir/name) for name in data_manifest['files_sha256']]],
@@ -160,7 +163,7 @@ def main():
         schedule = update_schedule(len(encoded), cfg['steps'], cfg['batch_size'], cfg['seed'])
     budget = budget_report(encoded, schedule, cfg['microbatch_size'])
     budget.update(model=lock, data_sha256={name: sha256_file(data_dir/name)
-                                         for name in (['manifest.json', f"train_{cfg['arm']}.jsonl", 'dev_matched.jsonl', 'dev_broad.jsonl', 'schedule_seed17.json'] if is_pilot else ['train_pool.jsonl', 'dev.jsonl'])},
+                                         for name in (['manifest.json', f"train_{cfg['arm']}.jsonl", 'dev_matched.jsonl', 'dev_broad.jsonl', schedule_filename(data_manifest)] if is_pilot else ['train_pool.jsonl', 'dev.jsonl'])},
                   max_sequence_tokens=max(r['n_processed'] for r in encoded),
                   scope='frozen paired pilot v1' if is_pilot else 'engineering-only, one reference path per problem')
     dump(out/'budget_report.json', budget)  # Written BEFORE loading/training the model.

@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from src.countdown_smoke import safe_parse
-from src.pilot_data import allocate_groups, verify_row
+from src.pilot_data import allocate_groups, verify_row, make_arms, paired_schedule
 from src.pilot_runtime import load_pilot_inputs
 from src.sft_data import read_jsonl, sha256_file
 
@@ -32,6 +32,21 @@ def verify(cfg, tokenizer):
     for name, digest in manifest['source_files_sha256'].items():
         if sha256_file(name) != digest:
             raise ValueError('Preparation source hash mismatch: ' + name)
+    if manifest['status'] == 'FROZEN_PILOT_REPLICATION_V1':
+        parent = manifest['parent']
+        parent_root = Path(parent['data_dir'])
+        if sha256_file(parent_root/'manifest.json') != parent['manifest_sha256']:
+            raise ValueError('Original pilot manifest changed')
+        for name, digest in parent['preserved_files_sha256'].items():
+            if sha256_file(parent_root/name) != digest or sha256_file(root/name) != digest:
+                raise ValueError('Replication changed a frozen problem file: ' + name)
+        blocks = json.loads((root/'train_blocks.json').read_text())
+        if schedule != paired_schedule(len(blocks), manifest['cycles'], manifest['paired_seed']):
+            raise ValueError('Replication schedule does not reproduce from its paired seed')
+        expected_arms = make_arms(blocks, manifest['paired_seed'])
+        for arm, expected_rows in expected_arms.items():
+            if read_jsonl(root/f'train_{arm}.jsonl') != expected_rows:
+                raise ValueError('Replication assignment does not reproduce: ' + arm)
     operators = {}
     for arm in ('repeat', 'surface', 'paths', 'gcm'):
         values = read_jsonl(root/f'train_{arm}.jsonl')

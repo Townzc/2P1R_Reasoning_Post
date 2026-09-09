@@ -27,6 +27,25 @@ bounded iteration and fixed-evaluation workflow to this causal comparison. Retai
 all attempted runs in Git; use token/update matching plus finite runtime ceilings.
 No open-ended autonomous optimization or extra spending is implied.
 
+## D006 — 2026-09-09 UTC: ICLR evidence review and fixed next-pair preparation
+
+The owner asked to continue, prepare the next experimental idea, then tell them
+when to start or rent a replacement server; the goal is ICLR with efficiency and
+quality. Codex prepared seed23 Paths/GCM on CPU, retaining the selected problems,
+base model, training recipe, 1024 updates and exact token/structure matching.
+Assignment/order/training use seed23 while evaluation keeps seed17. The proposed
+pair reserves 2130 of the 3488 remaining seconds under the original budget.
+No prior server was contacted and no GPU work or additional rental occurred.
+
+Independent intermediate-step and identity-operation audits are post hoc for
+seed17 and fixed secondary diagnostics for seed23. They do not replace greedy
+final-expression correctness. Recent prior work directly overlaps the broad
+question; the new roadmap requires a substantive controlled boundary study,
+independent pools/seeds and broader evaluation before any strong paper claim.
+The next pair is a limited stability gate. The owner will supply/start the
+instance after reviewing this concrete next phase; the later roadmap remains a
+design and budget decision, not an open-ended training authorization.
+
 ## RESOLVED FOR PILOT V1 — coverage matching and exposure budget
 The updated condition table specifies one path and one exposure on a fixed problem set. At comparable response lengths this has fewer supervised tokens than the multi-path condition. A concrete matched-exposure proposal, structural-frequency residuals and length audit must be reviewed before launching this decisive scientific comparison.
 

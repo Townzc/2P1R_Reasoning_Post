@@ -1,5 +1,11 @@
 # Closest-work audit — 2026-09-05 UTC
 
+**Updated 2026-09-09:** The expanded [positioning audit](../reports/ICLR_POSITIONING_20260909.md)
+identifies a recent direct per-problem/global-diversity comparison, including
+its released update-matched full-SFT recipe. It supersedes any impression that
+the broad question below is unaddressed. Exact exposure accounting alone is
+not an established novelty claim. The original narrower audit follows intact.
+
 Scope: targeted reading of original-paper methods, results, and listed appendices; not an exhaustive literature review or reproduction. [closest_work.csv](closest_work.csv) contains the requested task/model/data/control/budget/seed comparison fields. “Not identified” means absent from the sections inspected, not a proof of absence everywhere.
 
 | Paper and inspected sections | Finding and consequence for this project |

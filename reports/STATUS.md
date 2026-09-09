@@ -1,6 +1,48 @@
-# Verified status — 2026-09-08
+# Verified status — 2026-09-09 UTC
 
-## Approved pilot complete; no further GPU work scheduled
+## Next pair prepared on CPU; waiting for an owner-supplied A800
+
+- Fixed next phase: Paths/GCM, seed23 assignment/order/training, evaluation seed17.
+- Frozen data: runs/pilot_replication_seed23_20260909_r1; manifest SHA-256
+  `0959c217feb4b0c51aebf85c1f08e341e1b6c8034657ee028acb263a2ee18ad4`.
+- Parent training blocks, selection audit, split allocation and both development
+  files are byte-identical. No new solving or holdout model evaluation occurred.
+- Both original and new artifacts passed the real-tokenizer CPU verifier;
+  1024 updates, 4096 presentations, 267456 EOS-inclusive response tokens,
+  472832 processed tokens, zero padding. Per-update Paths/GCM structures match.
+- The new seed changes GCM assignments on 196/256 problems and presentation
+  order on all 1024 updates; the Paths exposure set is unchanged.
+- Queue: configs/pilot_replication_seed23/queue.json. Its dry run confirms
+  3712 used, 3488 remaining and a 2130-second whole-phase reservation.
+- No GPU process, server connection, new rental or budget extension this session.
+  Both new scientific run IDs remain not_run. Existing checkpoint backups and
+  the latest private ledger remain the recovery sources.
+- A800 80GB is sufficient for the measured recipe. Require 18 GiB free after
+  environment/base-cache setup; previous completed calibration is reused.
+- Post-hoc CPU audits verified all 4224 frozen references and rescored 1600
+  predictions. Full matched trace verification is Paths 21/64 vs GCM 14/64;
+  broader full traces are 1/64 for each. Original primary scores stay unchanged.
+- Matched-dev input-1 and reference-identity proportions differ markedly from
+  broader dev. These descriptive strata are fixed for the next pair; they do
+  not identify a causal effect or justify selecting a favorable subset.
+- Close prior work already studies per-problem vs global diversity. See
+  ICLR_POSITIONING_20260909.md and ../docs/ICLR_EXPERIMENT_ROADMAP.md.
+  The pair is a stability gate, not an ICLR contribution or a main-grid approval.
+- Final local suite: 96 tests, 94 passed and two GNU-timeout checks skipped on
+  macOS; these are mandatory on the supplied Linux server. Both historical
+  audit source-hash sets verified (25 trace / 24 structure inputs/dependencies).
+- The prepared replication-output audit passed real seed17 regression tests and
+  rejects missing seed23 outputs, changed labels/data, mismatched recipes/code,
+  score corruption and output overwrite. It does not invent results for not_run.
+
+Verification reports: pilot_replication_cpu_verification_20260909.json,
+pilot_original_cpu_verification_20260909.json and
+pilot_replication_seed23_before_gpu/results.json. Exact execution/recovery
+commands are in ../docs/NEXT_SESSION.md.
+The test log and final checks are in pilot_replication_tests_20260909.log and
+pilot_replication_release_verification_20260909.json.
+
+## Completed seed17 pilot — retained evidence
 
 - All four arms completed 1024 updates, 4096 presentations and 267456 response tokens.
 - Matched dev: Repeat 14/64, Surface 12/64, Paths 23/64, GCM 18/64.

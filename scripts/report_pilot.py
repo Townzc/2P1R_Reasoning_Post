@@ -19,7 +19,7 @@ def collect(queue):
             manifest, metrics, receipt, budget = map(optional, ['run_manifest.json', 'metrics.json', 'resource_receipt.json', 'actual_budget.json'])
             status = receipt.get('status', manifest.get('status', 'not_run'))
             row = {'run_id': job['run_id'], 'phase': phase, 'arm': cfg['arm'], 'status': status,
-                   'seed': cfg['seed'],
+                   'seed': cfg['seed'], 'evaluation_seed': cfg.get('eval_seed', cfg['seed']),
                    'git_commit': manifest.get('git_commit'), 'steps': metrics.get('steps'),
                    'supervised_tokens': budget.get('supervised_response_tokens'),
                    'charged_seconds': receipt.get('charged_seconds'),
@@ -40,7 +40,10 @@ def collect(queue):
             if phase == 'comparison' and status == 'completed' and row['steps'] == cfg['steps']:
                 completed[cfg['arm']] = root
     comparison = {'status': 'incomplete', 'interpretation': 'One paired seed, development-only, restricted arithmetic pilot; no population or seed-level significance claim.'}
-    if set(completed) == {'repeat', 'surface', 'paths', 'gcm'}:
+    planned_arms = {json.loads(Path(j['config']).read_text())['arm'] for j in queue['comparison']}
+    if planned_arms not in ({'repeat', 'surface', 'paths', 'gcm'}, {'paths', 'gcm'}):
+        raise ValueError('Unsupported comparison arm set')
+    if set(completed) == planned_arms:
         rows = [r for r in records if r['phase'] == 'comparison']
         if len({r['supervised_tokens'] for r in rows}) != 1 or len({r['steps'] for r in rows}) != 1:
             raise ValueError('Completed arms have unmatched training doses')

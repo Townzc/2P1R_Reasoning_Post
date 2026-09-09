@@ -3,6 +3,14 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
+**Current phase (2026-09-09 UTC):** Pilot v1 is complete. Use the prepared
+seed23 pair in docs/PILOT_REPLICATION_PROPOSAL.md and the commands in
+docs/NEXT_SESSION.md when the owner supplies an instance for that phase.
+Restore the 3712-second ledger. Reuse the completed calibration receipt;
+do not rerun the historical calibration/four-arm sequence below.
+The new pair is a stability check. The larger ICLR roadmap requires a
+substantive design and separate resource review, not autonomous search.
+
 ## Inspiration and scope
 
 Reference: [karpathy/autoresearch](https://github.com/karpathy/autoresearch/tree/228791fb499afffb54b46200aca536f79142f117),
@@ -22,7 +30,7 @@ Commit compact results to Git so another instance can continue.
 - One shared seed (17), four complete training cycles, common decoding settings.
 - No holdout model evaluation, automatic seed grid, architecture search, or RL.
 
-## Finite loop
+## Historical pilot-v1 finite loop (completed)
 
 1. Prepare and audit on CPU. Publish code, configurations, data hashes and plan.
 2. When the owner supplies an A800, restore the current ledger and inspect the
