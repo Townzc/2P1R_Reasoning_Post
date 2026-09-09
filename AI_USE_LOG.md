@@ -364,3 +364,20 @@ Computer Use also read the authenticated provider console, verified the exact
 E010 instance was stopped, and paused the existing confirmation heartbeat.
 No new shutdown command or server startup was required. A sanitized closeout
 preserves the distinction between provider state and billing reconciliation.
+
+## 2026-09-09 —C014 implementation and prospective CPU registration
+
+The owner approved the next CPU stage and reported selecting Max. Codex worked
+locally without delegating, implemented a constructive S5 generator, exposed-
+text state-graph solver and direct table proof checker, full serialization
+audits, conservative world grouping, allocation accounting and eight fixed
+CPU probes. The implementation is deliberately separate from the arithmetic
+training pipeline and cannot start a server or model job.
+
+Development fixtures use different seeds from the registered population.
+Twenty-five focused tests cover every permutation and traversal direction,
+corrupted/disconnected evidence, coherent edits, grouping invariance, exact
+token receipts, loss masks and schedule accounting. C014 freezes10,000 worlds,
+the seed-level8000/2000 fit/audit split, five views, the40-test Bonferroni gate,
+source/tokenizer provenance and immutable failure retention before execution.
+No registered audit result or new model result exists at this source milestone.

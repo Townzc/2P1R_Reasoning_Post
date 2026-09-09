@@ -63,6 +63,7 @@ weight backup completion is a separate recovery gate from a completed model run.
 | [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
 | [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Census completed in C008; token/structure checks measured in C009; global join incomplete |
 | [P003](experiments/P003_task_and_control_redesign.md) | Reassess task construction, causal controls and closest-work overlap after E010 | Review complete; one evidence-route CPU prototype proposed, no new data/model run |
+| [C014](experiments/C014_relation_transport_cpu_audit.md) | Can the constructive evidence-route task pass fixed CPU support/token/shortcut/grouping gates? | Implementation and prospective registration prepared; source publication precedes10,000-world audit |
 
 ## Maintaining the record
 

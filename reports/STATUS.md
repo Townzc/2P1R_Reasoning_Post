@@ -2,6 +2,12 @@
 
 ## Current: design review complete; CPU prototype proposed; server confirmed stopped
 
+**C014 implementation milestone:** [registration](../docs/experiments/C014_relation_transport_cpu_audit.md),
+generator, independent exposed-table verifier, full-token audits, grouping and
+fixed probes are prepared.25 focused correctness/data tests passed. The
+10,000-world8000/2000 CPU audit has not run at this source milestone; publish
+clean source first. No GPU/server action or arithmetic holdout access.
+
 - [P003 integrated design](../docs/CONTROL_REDESIGN_PROPOSAL_20260909.md)
   reconciles independent causal, construction and prior-work reviews. Pause
   additional arithmetic seeds; provisionally audit permutation relation
