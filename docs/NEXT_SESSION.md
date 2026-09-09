@@ -12,6 +12,9 @@ This session did not connect to or start a server.
 Read [the full research analysis](../reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md),
 [training plan](ABSENT_BOUNDARY_TRAINING.md) and [current status](../reports/STATUS.md).
 The research journal records each idea, failure, design, result and interpretation.
+Final [release verification](../reports/matching_completion_release_verification_20260909.json)
+records292 passing tests out of294 (two GNU-timeout checks require Linux) and a
+successful clean-Git-checkout data/queue recovery test with the real tokenizer.
 Do not replay completed seed17/23 queues. A cloned server's old commit may be
 `fc96885c`; fetch current main or synchronize a verified current Git bundle.
 Starting or cloning a server must not automatically launch any experiment.

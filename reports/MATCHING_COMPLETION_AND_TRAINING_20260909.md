@@ -218,3 +218,11 @@ missing commits, altered hashes and invalid paths are rejected. Current data,
 token, split and seeded reconstruction checks are unchanged. The new C012
 preparation did use prepublished clean source; these historical exceptions do
 not change its source record or frozen data.
+
+Final verification:294 tests ran with the real pinned-tokenizer regression
+enabled;292 passed and two GNU-timeout integration checks must run on Linux.
+From a clean Git checkout of `0a57fb1d1af22fc9569799e1e3c12779616cbf88`, both
+new arms passed independent data/token checks, queue/config gates, calibration
+inspection and the unchanged ledger check. No private matching inventory or
+expanded search JSON was required. See the
+[release receipt](matching_completion_release_verification_20260909.json).

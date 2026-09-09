@@ -36,6 +36,12 @@ Read [full reasoning and results](MATCHING_COMPLETION_AND_TRAINING_20260909.md),
 [morning handoff](../docs/NEXT_SESSION.md). The historical snapshots below record
 what was known at their respective milestones; the state above supersedes them.
 
+Final release checks:294 tests,292 passed,two GNU-timeout checks deferred to
+Linux. Real pinned-tokenizer regression is enabled. A clean Git checkout
+successfully loads and independently verifies both new arms and the bounded
+queue without private matching inventory or expanded search JSON. See
+[release verification](matching_completion_release_verification_20260909.json).
+
 ## Historical C009 snapshot — superseded by the completed CPU searches above
 
 - Source `cb2bcedce36f78ae593ce979677e4199aeda26ee` was published before execution.
