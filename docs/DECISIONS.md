@@ -66,6 +66,21 @@ RESEARCH_JOURNAL.md and experiments/E009_seed23_paired_replication.md record
 the reasoning before any seed23 output; historical entries are explicitly
 retrospective reconstructions. No broader grid or additional budget is implied.
 
+### D007 completion update — results verified, weight transfer in progress
+
+Both arms completed from the fixed source with no retries: primary Paths/GCM
+22/64 versus 17/64; complete traces 18/64 versus 16/64; broader final expressions
+1/64 each and complete traces 0/64 versus 1/64. All 800 predictions were audited.
+The phase charged 1004 seconds; the independent ledger matches all 13 receipts,
+4716/7200 used, 2484 remaining and no unresolved reservation. Weight downloads
+remain pending at this results milestone; do not discard the instance yet.
+
+Keep the primary fixed-pool stability finding; do not claim a mechanism or
+broader transfer. CPU exposure and shared-support failures are separate A003/C007
+entries. The next decision is a defined legal-path-family construction, not
+another seed or a larger-model grid. See reports/PILOT_REPLICATION_SEED23_RESULTS.md
+and docs/RESEARCH_JOURNAL.md (repository-relative paths).
+
 ## RESOLVED FOR PILOT V1 — coverage matching and exposure budget
 The updated condition table specifies one path and one exposure on a fixed problem set. At comparable response lengths this has fewer supervised tokens than the multi-path condition. A concrete matched-exposure proposal, structural-frequency residuals and length audit must be reviewed before launching this decisive scientific comparison.
 

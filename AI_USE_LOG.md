@@ -161,3 +161,42 @@ verified Git bundle; all 96 Linux tests, nine official model-file checks, frozen
 data verification and whole-phase budget checks passed. No expansion or change
 to the training recipe is needed. The preflight records and journal are published
 before starting the fixed GPU pair.
+
+
+## 2026-09-09 UTC — completed seed23 replication and pending artifact closeout
+
+Within the reviewed two-arm plan, Codex executed Paths and GCM independently
+from the pinned base at source `6128e4266d62f14f063585d4c8e94dbe3ad8c711`.
+The journal and supplied-instance checks were published at
+`3fb43907c0fb8c951b50adfad6dabcc1bfde6403` before the model outputs. The
+journal distinguishes reconstructed historical entries from the prospective
+seed23 design; it is not an external preregistration.
+
+Both runs completed the fixed 1024 updates and 267456 response tokens, with
+training/assignment/order seed23 and evaluation seed17. Matched greedy
+correctness is Paths 22/64 versus GCM 17/64; broader greedy is 1/64 each.
+Complete-trace verification is 18/64 versus 16/64 matched and 0/64 versus 1/64
+broader. Codex retrieved and independently audited all 800 predictions,
+unchanged development/stratum identities and complete-dose receipts. The
+secondary trace audit does not replace official final-expression scores.
+No dose/checkpoint selection, extra seed, new sampling or holdout evaluation
+was performed.
+
+An independent training-exposure audit was conducted without reading seed23
+model outcomes. It distinguished canonical structure matching from numerical
+feature exposure at global, update and problem levels, and documented the
+limits of joint assignment/order/training-seed replication. A separate scientific
+review noted that numerical identity operations can serve mandatory input
+consumption; they are not automatically lexical Surface changes or invalid
+strategies. Future claims require an explicitly defined legal path construction,
+shared support and a falsifiable comparison with close prior work. No abstract
+semantic-mechanism or ICLR-readiness claim follows from the two-seed pilot.
+
+Paths charged 500 seconds and GCM 504, bringing the shared ledger to
+**4716/7200 seconds used, 2484 remaining**. The latest private ledger has been
+retained locally and reconciled exactly against all 13 receipts, with zero
+unresolved reservations. The [ledger verification](reports/replication_seed23_ledger_verification.json)
+records the private copy hash and every receipt hash. Both new FP32 checkpoint
+downloads and independent SHA-256 checks remain pending. The instance must
+remain available until backup and Git publication checks complete. No further GPU job is scheduled; the next work is
+CPU design of legal path families and shared-support controls.

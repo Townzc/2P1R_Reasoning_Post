@@ -40,3 +40,31 @@ on CPU. A paper-quality extension needs a falsifiable intervention, independent
 pools and prespecified seeds, a meaningful generalization boundary and credible
 uncertainty. A second model/task must test a stated limit. Venue ambition does
 not determine the outcome or authorize a main grid, extra GPU budget or submission.
+
+## Design refinement and evidence update — 2026-09-09 UTC
+
+An independent design critique before inspecting seed23 outcomes identified a
+problem in the provisional wording above: numerically neutral does not mean
+invalid, useless or a Surface rewrite. Countdown requires every input once.
+For `[1,2,3,4]` and target 24, `(1*2)*(3*4)` and `(2*3)*(4/1)` are legal ways to
+consume all inputs, as is `(1+3)*(2+4)`. Simplification can be an analysis
+projection, but removing the neutral operation from a training example may
+violate input-use rules. Retain the legal expression and input provenance.
+
+The refined question asks whether within-problem allocation's benefit depends
+on different numerical calculation structures, or can also arise from different
+legal ways of consuming required inputs. Define the families and their equivalence
+relation before constructing data. Fix problems and audit stated difficulty
+proxies; do not claim all difficulty is controlled. Numerical exposure differences
+can be part of the intervention and should not automatically be adjusted away.
+
+[C007](C007_identity_family_inventory_failure.md) rules out a naive 2+2 reuse of
+the current four-path inventory: no problem has two references in each identity
+category. It does not establish mathematical impossibility beyond that inventory.
+The proposal remains unexecuted. Shared support, matching residuals and retention
+must be established before freezing an experiment or renting more GPU time.
+
+After the critique, [E009](E009_seed23_paired_replication.md) completed with the
+same primary net difference of five problems, a smaller complete-trace gap and
+no broader greedy advantage. The result supports continued CPU design work,
+not an already established semantic mechanism or approval to expand training.

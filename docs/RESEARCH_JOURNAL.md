@@ -35,21 +35,23 @@ balance. Dates are UTC unless specified otherwise.
 | [A001](experiments/A001_seed17_trace_audit.md) | 2026-09-09 | Do displayed calculations support correct final expressions? | Completed post-hoc CPU analysis | Fully verified matched traces 21/64 vs 14/64; broader 1/64 each |
 | [A002](experiments/A002_seed17_identity_and_success_audit.md) | 2026-09-09 | How do identity operations and success concentration qualify the result? | Completed post-hoc CPU analysis | Heavy identity-path selection and endpoint-dependent strata |
 
-## Authorized experiment with pending outcomes
+## Completed replication and concurrent CPU design checks
 
-| ID | Registered phase | Status | Required completion record |
+| ID | Registered phase or analysis | Status | Outcome / decision |
 |---|---|---|---|
-| [E009](experiments/E009_seed23_paired_replication.md) | Same-problem Paths/GCM seed23; evaluation seed17 | CPU preparation complete; owner authorized supplied-A800 execution; results pending | Both receipts, complete-dose output audit, all outcomes, interpretation and verified backups |
+| [E009](experiments/E009_seed23_paired_replication.md) | Same-problem Paths/GCM seed23; evaluation seed17 | GPU and CPU output audit complete; weight backups pending | Primary 22/64 vs 17/64; complete traces 18/64 vs 16/64; broader 1/64 each; pause before more GPU |
+| [A003](experiments/A003_pairing_seed_semantic_exposure_audit.md) | Are numerical path exposures also matched across allocation procedures/seeds? | Completed CPU audit during training without reading new evaluation outcomes | Identity exposures 2780 vs 2800; structural matching does not imply every numerical property is matched |
+| [C007](experiments/C007_identity_family_inventory_failure.md) | Can the stored four paths support two paths of each identity category on the same problem? | Completed CPU check; proposed inventory reuse fails | 41 problems have at least one of each; zero have two of each; redefine construction before training |
 
-The pending row is intentionally conservative. A server connection or a started
-process is not a completed scientific result. Update E009 from verified receipts
-when the phase ends, including any failed or incomplete arm.
+The E009 registration is preserved and results are appended separately. A003 and
+C007 are dated CPU analyses, not retroactively registered hypotheses. Independent
+weight backup completion is a separate recovery gate from a completed model run.
 
 ## Proposed scientific work, not executed
 
 | ID | Idea | Status / decision gate |
 |---|---|---|
-| [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Differentiate substantive computational alternatives from neutral/algebraic rewrites | Literature positioning completed; intervention and larger study are proposals only |
+| [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
 
 ## Maintaining the record
 

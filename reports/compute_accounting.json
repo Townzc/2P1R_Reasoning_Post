@@ -1,13 +1,13 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 3712,
-  "remaining_gpu_seconds": 3488,
-  "gpu_hours": 1.031111111111111,
+  "charged_gpu_seconds": 4716,
+  "remaining_gpu_seconds": 2484,
+  "gpu_hours": 1.31,
   "billing_limit": "GPU process runtime only. Instance idle time, downloads and storage are separately billable. A800 hourly price was not supplied; the old 4090 reference price is not applied.",
   "hardware_charged_seconds": {
     "RTX_4090": 737,
-    "A800_80GB": 2975
+    "A800_80GB": 3979
   },
   "jobs": [
     {
@@ -208,6 +208,42 @@
       ],
       "started_at": "2026-09-08T22:06:26.779867+00:00",
       "elapsed_seconds": 497.9801284521818,
+      "exit_code": 0
+    },
+    {
+      "run_id": "pilot_replication_paths_seed23_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 500,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_replication_seed23/paths.json",
+        "--out",
+        "runs/pilot_replication_paths_seed23_r1"
+      ],
+      "started_at": "2026-09-09T05:56:32.480093+00:00",
+      "elapsed_seconds": 499.1806537248194,
+      "exit_code": 0
+    },
+    {
+      "run_id": "pilot_replication_gcm_seed23_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 504,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/pilot_replication_seed23/gcm.json",
+        "--out",
+        "runs/pilot_replication_gcm_seed23_r1"
+      ],
+      "started_at": "2026-09-09T06:04:51.716013+00:00",
+      "elapsed_seconds": 503.47502033784986,
       "exit_code": 0
     }
   ]

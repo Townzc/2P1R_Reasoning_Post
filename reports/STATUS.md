@@ -1,6 +1,53 @@
 # Verified status — 2026-09-09 UTC
 
-## Next pair prepared on CPU; waiting for an owner-supplied A800
+## Seed23 pair complete; checkpoint backups pending
+
+- Both frozen runs completed from source
+  `6128e4266d62f14f063585d4c8e94dbe3ad8c711`:
+  `pilot_replication_paths_seed23_r1` and `pilot_replication_gcm_seed23_r1`.
+- Matched-development greedy final-expression correctness: Paths **22/64**,
+  GCM **17/64**. Paired counts: 11 both correct, 11 Paths only, 6 GCM only,
+  36 both wrong. Both broader-dev scores are **1/64**, on the same problem.
+- Complete-trace verification: matched **18/64 versus 16/64**; broader
+  **0/64 versus 1/64**. Correct final expressions and verified displayed
+  derivations remain distinct endpoints.
+- Matched sampled pass@1/2/4: Paths **35.16% / 47.14% / 54.69%**;
+  GCM **24.22% / 30.47% / 37.50%**. Four draws share each problem; they are
+  not independent experimental units. All final sets have zero truncations.
+- Both arms used 1024 updates, 4096 presentations, 267456 EOS-inclusive
+  supervised response tokens and 472832 processed tokens. The frozen
+  evaluation seed is 17; training/assignment/order seed is 23.
+- Both saved runs passed independent CPU scoring and dose checks; the frozen
+  complete-pair audit covers all **800 predictions**, development identities
+  and prespecified descriptive strata. All **96 Linux preflight tests** passed.
+- Paths charged 500 seconds and GCM 504: **1004 seconds this phase**.
+  Cumulative **4716/7200 process-seconds used; 2484 remaining**. The latest
+  private ledger is independently retained and reconciled exactly against all
+  **13 receipts**, with **zero unresolved reservations**. See the
+  [ledger verification](replication_seed23_ledger_verification.json).
+- Both new checkpoint downloads and independent SHA-256 verification are
+  **pending**. Do not declare the instance disposable until backups and
+  publication have both been verified. Ledger reconciliation is complete.
+- The old four seed17 checkpoints were reverified locally (48 files) before
+  only their redundant remote weight directories were removed. Preflight free
+  space was 41.16 GiB on the existing 50 GB data disk; no expansion was needed.
+- No further GPU phase or holdout evaluation is scheduled. Next work is CPU
+  definition and feasibility testing of legal path families with shared problem
+  support. Numerical identity operations can be required to consume each input
+  legally; they are not automatically Surface variants or invalid strategies.
+- Two paired seeds on the same selected pool do not establish a population
+  effect, a reasoning mechanism or ICLR readiness. The broad question overlaps
+  existing work; retain the adverse broader-development results.
+
+Results: [analysis report](PILOT_REPLICATION_SEED23_RESULTS.md),
+[snapshot](pilot_replication_seed23_after_gpu/results.json),
+[complete-pair audit](pilot_replication_seed23_after_gpu_audit/summary.json),
+[training-exposure audit](PAIRING_SEED_SEMANTIC_AUDIT_20260909.md), and
+[handoff](../docs/NEXT_SESSION.md). The research journal was published at
+`3fb43907c0fb8c951b50adfad6dabcc1bfde6403` before the pair's outputs;
+this is repository provenance, not external preregistration.
+
+## Historical CPU preparation — 2026-09-09, before seed23 execution
 
 - Fixed next phase: Paths/GCM, seed23 assignment/order/training, evaluation seed17.
 - Frozen data: runs/pilot_replication_seed23_20260909_r1; manifest SHA-256
@@ -37,12 +84,12 @@
 
 Verification reports: pilot_replication_cpu_verification_20260909.json,
 pilot_original_cpu_verification_20260909.json and
-pilot_replication_seed23_before_gpu/results.json. Exact execution/recovery
+pilot_replication_seed23_before_gpu/results.json. Current recovery and CPU reproduction
 commands are in ../docs/NEXT_SESSION.md.
 The test log and final checks are in pilot_replication_tests_20260909.log and
 pilot_replication_release_verification_20260909.json.
 
-## Completed seed17 pilot — retained evidence
+## Completed seed17 pilot — retained evidence from 2026-09-08
 
 - All four arms completed 1024 updates, 4096 presentations and 267456 response tokens.
 - Matched dev: Repeat 14/64, Surface 12/64, Paths 23/64, GCM 18/64.
@@ -53,8 +100,10 @@ pilot_replication_release_verification_20260909.json.
 - Final private ledger independently retained with no unresolved reservation.
 - See PILOT_V1_RESULTS.md and pilot_after_comparison_r1/results.tsv.
 - All four weights (48 files, 24.8 GB) have independent SHA-256-verified backups.
-  The server has no GPU job or unresolved reservation and can be shut down.
-  See pilot_checkpoint_backup_summary.json and pilot_final_server_check.json.
+  At the seed17 shutdown milestone, the instance had no GPU job or unresolved
+  reservation. See pilot_checkpoint_backup_summary.json and
+  pilot_final_server_check.json. This historical check does not cover the new
+  seed23 checkpoints, whose backups are pending above.
 - One paired seed, restricted selection, development only. Review another paired
   replication before any more GPU work; no holdout evaluation or main grid.
 

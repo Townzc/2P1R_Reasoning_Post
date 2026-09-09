@@ -25,6 +25,12 @@ fully explain the observed difference.
 
 ## Stage 1 — fixed low-cost stability check
 
+**Completion update:** the pair completed; see
+[seed23 results](../reports/PILOT_REPLICATION_SEED23_RESULTS.md). Primary is
+22/64 versus 17/64, complete traces 18/64 versus 16/64 and broader greedy 1/64
+each. The primary direction repeated; a mechanism and broader benefit did not
+become established. The protocol description below retains its pre-run budget.
+
 Execute only the [paired seed23 proposal](PILOT_REPLICATION_PROPOSAL.md) after
 CPU artifacts are frozen, reviewed and verified on the supplied instance:
 Paths/GCM, the same training/development problems, a jointly regenerated
@@ -44,20 +50,29 @@ Stage 2 training. A negative repeat should narrow or suspend the positive claim;
 CPU investigation of a falsifiable boundary can still be useful if it does not
 retrofit the conclusion to the observed outcomes.
 
-## Stage 2 — distinguish computational alternatives from neutral rewrites
+## Stage 2 — test a boundary between defined legal path families
 
-The provisional scientific question is: **Does within-problem allocation improve
-success coverage specifically when the supplied paths differ in nontrivial
-computational choices, after global exposure, supervision and task difficulty
-are controlled?** This is an operational question about this task family, not a
-claim that a syntax tree labels a human cognitive strategy.
+The provisional scientific question is: **Does the benefit of within-problem
+legal multitrace allocation depend on supplying different numerical calculation
+structures, or can alternative legal ways to consume the required inputs yield
+a similar benefit on shared problems at a fixed budget?** This is a boundary
+test of the existing diversity literature, not an established new mechanism or
+a claim that a syntax tree labels a human cognitive strategy. Fix problems and
+audit specified difficulty proxies; do not claim to control all task difficulty.
 
 Prepare a controlled construction before training. A candidate factorial design
-has two factors: within-problem versus globally matched allocation, and
-nontrivial computational alternatives versus neutral/algebraic rewrites.
+has two factors: within-problem versus globally matched allocation, and two
+prespecified families of legal trajectories with different numerical properties.
 Repeat and Surface remain useful controls wherever they isolate a stated
 alternative explanation. The exact feasible cells, dose and sample size must be
 frozen after a CPU feasibility audit, rather than improvised during GPU runs.
+
+Numerically neutral does not mean invalid, useless or equivalent to Surface.
+Countdown requires each input exactly once: for inputs `[1,2,3,4]` and target
+24, `(1*2)*(3*4)` and `(2*3)*(4/1)` are legal ways to consume all inputs, as is
+`(1+3)*(2+4)`. Removing multiply/divide-by-one is only an analysis projection;
+the reduced expression may violate mandatory input use. Retain the complete
+legal expression and its input provenance in every construction and analysis.
 
 A scientifically useful construction needs the following properties:
 
@@ -100,6 +115,13 @@ while preserving or explicitly measuring the other factors.
 The existing input-1 and identity-reference counts are useful design diagnostics,
 not a ready-made causal intervention. No Stage 2 configuration, dataset freeze,
 statistical power claim or GPU budget is implied by this conceptual design.
+
+The [CPU inventory check](../reports/SEMANTIC_CONTROL_FEASIBILITY_20260909.md)
+found 41 problems with at least one stored path in each identity category and
+zero with two of each. The naive current-inventory 2+2 construction therefore
+fails. This does not rule out legal alternatives outside the stored four paths;
+it establishes that the next construction needs a separately specified search
+and support audit before any training.
 
 ## Stage 3 — independent pools, broader development and uncertainty
 
@@ -180,6 +202,6 @@ Only Stage 1 has a concrete near-term compute envelope. Prepare later stages on
 CPU, measure the required model/evaluation workload, then present the exact
 jobs, maximum reservation, storage/backup requirements and the decision they
 will resolve. A800 80GB remains sufficient for the unchanged current recipe.
-There is no reason to rent a larger GPU for the seed23 pair, and no approved
-main-grid budget is created by having 3488 process-seconds left. Once the pair
-and its backups finish, release the instance while the next decision is made.
+The completed pair used 1004 seconds, leaving 2484 of the original allowance.
+This balance does not approve a main grid or create a reason to rent a larger GPU.
+Once its backups finish, release the instance while the next design is prepared.
