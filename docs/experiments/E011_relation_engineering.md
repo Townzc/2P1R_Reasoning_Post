@@ -142,3 +142,17 @@ python -m scripts.audit_relation_engineering_outputs --run-dir runs/relation_ove
 
 Results at source registration: **none**. CPU release verification and actual
 GPU outcomes belong in separate immutable receipts and appended journal entries.
+
+
+## Appended C015 completion —2026-09-09; E011 remains not_run
+
+The source registration and executable code were published at
+`8eeb0f9883759a69ca42540932b98d71b2c64414` before extraction. The fixed48 worlds
+were retained; independent verification rechecked192 references and240 views,
+original archive identities,world separation and exact dose. Input manifest
+SHA256:`ddb0068a2ddef8150948b7f8eaf0f2b86d3c3f9a42268c7d7725f44ee1afb854`.
+Extraction0.824s; independent check3.374s.42 focused tests:40 pass,2 mandatory
+GNU-timeout integrations deferred to Linux. No real model execution/server
+contact/GPU charge/reservation occurred. See [release report](../../reports/RELATION_E011_READY.md)
+and [CPU receipt](../../reports/relation_engineering_c015_verification.json).
+The owner can now start/provide A800 for the frozen engineering gate.

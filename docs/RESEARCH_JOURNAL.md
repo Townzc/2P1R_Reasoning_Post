@@ -250,3 +250,24 @@ No newly materialized engineering input, GPU result, server action, reservation
 or holdout use at this milestone. The full prospective design is
 [E011](experiments/E011_relation_engineering.md); later preparation and outcomes
 will be recorded separately.
+
+## 2026-09-09 —C015 complete; E011 ready, GPU not_run
+
+**Execution.** Published source8eeb0f9883759a69ca42540932b98d71b2c64414 preceded
+0.824-second extraction. Independent3.374-second reload verified original-record
+identity,192 clean references,240 view prompts,split groups and exact token dose.
+No selected world was dropped/replaced. The five-file compact bundle is167834 bytes.
+
+**Results.**32 train worlds/128 references,16 dev parents;256 updates,1024
+presentations,103424 supervised tokens,1164288 processed tokens,zero padding.
+Each route appears8 times. Maximum prompt plus generation cap is1164 tokens.
+42 focused tests:40 pass,2 GNU-timeout integrations remain mandatory on Linux;
+real pinned-tokenizer release checks and synthetic output-corruption tests pass.
+
+**Analysis and next action.** CPU feasibility and reproducibility pass. There is
+still no real model learnability,memory,throughput or allocation result. Request
+one owner-started A80080GB,check12GiB free and current exact ledger,then execute
+only the bounded E011 engineering trajectory. Its735-second maximum reservation
+fits1460 remaining; no GPU time or reservation was added by this preparation.
+Preserve all failures and dev outcomes and use the fixed decision rules; no
+scientific pilot follows automatically. See [ready report](../reports/RELATION_E011_READY.md).

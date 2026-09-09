@@ -6,10 +6,12 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**C015/E011 source preparation:** the bounded relation engineering runner and
-[frozen design](docs/experiments/E011_relation_engineering.md) are implemented.
-Publish source before extracting32 fixed training/16 diagnostic worlds and
-preparing the release. No server/GPU action or new scientific comparison.
+**E011 ready for an owner-started A800,2026-09-09 UTC:** the fixed32-world
+engineering runner,input bundle and verification are complete.40 local checks
+pass;2 GNU-timeout integrations await Linux. One720-second process plus15-second
+guard fits1460 remaining. No server contact or model result yet. Read the
+[ready report](reports/RELATION_E011_READY.md) and [next commands](docs/NEXT_SESSION.md).
+This gate tests full-proof overfitting and long-prompt cost; no scientific pair.
 
 **C014 CPU audit complete, 2026-09-09 UTC:** The constructive relation task
 retains **10,000/10,000** worlds, with four verified paths and101 supervised
@@ -17,8 +19,8 @@ tokens per reference. All40 fixed shallow-probe tests are unflagged. The
 independent archive check reverified40,000 clean references,50,000 view prompts
 and80,000 probe predictions. Read the [results and limitations](reports/RELATION_TRANSPORT_C014_RESULTS.md).
 This is CPU feasibility evidence; no LLM/SFT experiment or topology/strategy
-claim follows. State/table-exposure residuals remain documented. Prepare a
-bounded32-example engineering runner and cost plan before requesting a server.
+claim follows. State/table-exposure residuals remain documented. E011 subsequently prepared the
+bounded32-example engineering runner and resource plan linked above.
 
 **Design review completed, 2026-09-09 UTC:** Read the
 [integrated task/control proposal](docs/CONTROL_REDESIGN_PROPOSAL_20260909.md).

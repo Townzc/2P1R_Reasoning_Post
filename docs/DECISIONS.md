@@ -260,3 +260,10 @@ published first. The budget guard now supports optional exact-ledger and full-
 cap checks under its lock, closing the inspection-to-reservation race without
 changing historical callers. No GPU spending/reservation is added by this
 source milestone. See [E011 registration](experiments/E011_relation_engineering.md).
+
+
+D014 implementation outcome: C015 extraction and independent re-verification
+pass with all48 selected worlds retained; the exact256-update/103424-token
+engineering release is ready.40 local tests pass;2 GNU-timeout integrations
+await Linux. Request the owner-started A800 after publishing the complete release.
+No GPU outcome,new allowance,reservation or scientific comparison is implied.

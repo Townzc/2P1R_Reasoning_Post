@@ -1,6 +1,22 @@
-# Verified status — 2026-09-09 UTC
+# Verified status — E011 engineering release ready,2026-09-09 UTC
 
-## C015/E011 source milestone — engineering implementation prepared
+## Current: E011 release prepared; ready to request A800 startup
+
+Read [the CPU-ready report](RELATION_E011_READY.md) and
+[E011 registration](../docs/experiments/E011_relation_engineering.md). C015's
+48 fixed original worlds,192 references and240 view prompts passed re-verification.
+Compact inputs total167834 bytes; exact256-update dose:103424 supervised and
+1164288 processed tokens,zero padding.42 focused tests:40 pass;2 mandatory
+GNU-timeout integrations await Linux. No actual GPU/model profile result exists.
+
+One multi-route engineering run is frozen:32 train/16 diagnostic parents,
+96 greedy generations,32/32 complete-proof overfit gate plus NLL<.2.720-second
+cap plus15-second guard fits1460 remaining. **5740/7200 used,zero reservations**;
+no server contact or model execution during preparation. Scientific comparison
+and fresh final groups require a later reviewed design. The owner can now
+start/provide one A80080GB; verify current source,ledger,base and12GiB free first.
+
+## Historical C015/E011 source milestone — engineering implementation prepared
 
 The standalone32-world relation overfit/profile runner, strict token-stream
 output auditor and migration/budget guards are prepared. Fixed256 updates,
@@ -9,7 +25,7 @@ remaining1460. Input extraction and release verification are pending publication
 of this clean source. No server contact, GPU job, reservation or holdout access.
 Read the [frozen engineering design](../docs/experiments/E011_relation_engineering.md).
 
-## Current: C014 CPU construction and independent verification complete
+## Historical: C014 CPU construction and independent verification complete
 
 - **10,000/10,000** intended worlds retained, no duplicate conservative families
   or failed support/token/verifier gates. Four complete references per world;

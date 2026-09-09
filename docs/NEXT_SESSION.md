@@ -1,6 +1,53 @@
-# Next session — prepare bounded engineering after C014 passes CPU gates
+# Next session — E011 engineering release ready
 
-## C015/E011 source milestone — publish before extracting inputs
+## Current: E011 CPU release complete — request owner-started A800
+
+Read [ready report](../reports/RELATION_E011_READY.md),[registration](experiments/E011_relation_engineering.md),
+[release hashes](../configs/relation_engineering_e011/release.json) and
+[CPU verification](../reports/relation_engineering_c015_verification.json).
+Preparation source `8eeb0f9883759a69ca42540932b98d71b2c64414` preceded extraction.
+`runs/relation_engineering_c015_r1` is immutable and fully tracked; do not rerun.
+Its manifest SHA256 is`ddb0068a2ddef8150948b7f8eaf0f2b86d3c3f9a42268c7d7725f44ee1afb854`.
+
+No server operation/GPU spending occurred. One registered job remains not_run:
+`relation_overfit_e011_r1`. One A80080GB is appropriate for the planned recipe;
+actual long-prompt memory/time is unmeasured. Ask the owner to start/provide it
+now that CPU preparation is complete. Do not reuse any completed queue.
+
+On connection:
+
+1. Fetch and verify the latest published main; do not rely on a cloned checkout.
+2. Restore the independently retained15-receipt ledger:5740 used/1460 remaining,
+ zero reservations,SHA256`1d674f211298aee5eb8bdd1936cab6d68d2d545392b42b9f63a013ebfc11a4c6`.
+ Never initialize a fresh allowance. Restore the pinned original base,not tuned weights.
+3. Verify recorded Python3.12/PyTorch2.8.0+cu128 environment and requirements,
+ idle A80080GB,and12GiB free after model/environment setup. Keep backups before
+ any cleanup; request expansion only if the measured free space requires it.
+4. Run all42 focused tests with the real tokenizer on Linux,including both
+ GNU-timeout integrations. Run launcher inspection,then the fixed `--execute`
+ command below. It reserves at most735 seconds and never auto-retries.
+5. Collect stdout,raw token predictions,history,metrics,checkpoint manifest and
+ process receipt on completion or failure. Independently audit/reconcile/back up,
+ publish the complete result and follow the owner's normal-shutdown preference.
+ Process timeout alone does not power off the instance. Do not expose credentials
+ or private endpoints in tracked files. No automatic scientific follow-up.
+
+```bash
+# Set TOKENIZER_DIR to the verified local pinned snapshot; activate the GPU runtime.
+RELATION_ENGINEERING_TOKENIZER_DIR="$TOKENIZER_DIR" python -m unittest tests.test_relation_engineering tests.test_relation_transport tests.test_relation_cpu_audit tests.test_sft_data tests.test_budget_guard -v
+python -m scripts.run_relation_engineering --ledger .local/resource_ledger.json --tokenizer-dir "$TOKENIZER_DIR"
+python -m scripts.run_relation_engineering --ledger .local/resource_ledger.json --execute
+python -m scripts.audit_relation_engineering_outputs --run-dir runs/relation_overfit_e011_r1 --tokenizer-dir "$TOKENIZER_DIR" --out reports/relation_e011_output_verification_r1.json
+```
+
+The fixed256 updates and96 generations test engineering feasibility only.
+32/32 complete EOS-terminated train proofs,NLL<.2 and complete profile/dose are
+required for the gate. Preserve even zero dev accuracy; do not select by the
+16 diagnostic parents. Report causes of failure before designing a bounded
+repair; a success supports a separately reviewed fresh-group scientific pilot.
+Max remains the recommendation for execution/verification; no mode switch is asserted.
+
+## Historical C015/E011 source milestone — publish before extracting inputs
 
 The next executable engineering phase is registered in
 [E011](experiments/E011_relation_engineering.md). Fixed32 train/16 diagnostic
@@ -14,7 +61,7 @@ publish the complete CPU-ready record before asking the owner to start A800.
 Use the exact retained15-receipt ledger (5740 used), never a fresh or cloned
 stale ledger. Source/inputs are prepared locally; no server operation occurred.
 
-## Current: C014 complete, independently verified, no GPU queued
+## Historical: C014 complete, independently verified, no GPU queued
 
 Read [C014 results](../reports/RELATION_TRANSPORT_C014_RESULTS.md),
 [registration](experiments/C014_relation_transport_cpu_audit.md),
@@ -80,7 +127,7 @@ the confirmation heartbeat is **paused**. See the
 [sanitized closeout](../reports/absent_boundary_seed31_shutdown_closeout.json).
 Do not reopen it merely to complete documentation or CPU development.
 
-## Current verified state,2026-09-09 UTC
+## Historical E010 state,2026-09-09 UTC
 
 The owner restarted the A800 and authorized the frozen seed31 pair. Both runs
 completed normally from the prepublished clean commit

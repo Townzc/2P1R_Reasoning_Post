@@ -62,3 +62,15 @@ label and can include cancellation/computed constants. Claim allocation effects
 only within the selected pool; do not treat old models as an identity-removal
 control. Report all endpoints and residual numerical exposures. No additional
 GPU allowance, main grid or holdout evaluation is authorized by preparation.
+
+
+## E011 engineering extension —2026-09-09
+
+The owner requested preparation of the next step before server startup. C015
+has frozen a small observed C014 subset for a standalone relation engineering
+trajectory. Follow [E011](experiments/E011_relation_engineering.md):32 training
+worlds,256 fixed updates,strict full-proof/EOS/NLL overfit gate,measured long-
+prompt profile,720-second process cap plus15-second guard. This is no scientific
+arm comparison or final-test result. The previous arithmetic protocols remain
+historical; do not reuse their queues or infer an identity-removal effect.
+Original ledger remains5740/7200 used,1460 left; no new budget is authorized.

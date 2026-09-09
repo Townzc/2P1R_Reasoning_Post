@@ -48,3 +48,14 @@ authenticated location outside the public checkout, download into the private
 backup directory, verify the cumulative jobs and remove the temporary export.
 Publish compact accounting separately. Never publish login tokens, SSH endpoints
 or a live authentication file as part of an experiment record.
+
+
+## E011 relation engineering release
+
+C015's five compact input files are fully tracked in
+`runs/relation_engineering_c015_r1`; do not re-extract or replay older queues.
+Follow [NEXT_SESSION.md](NEXT_SESSION.md) for current source,exact ledger hash,
+pinned base and default-inspect launcher. One A80080GB,12GiB free after setup,
+720-second process plus15-second guard. No checkpoint exists for this not-run
+phase. Prior required weights/current cumulative ledger must remain independently
+retained. A cloned instance grants no new budget and must not auto-run training.

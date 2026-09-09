@@ -411,3 +411,11 @@ valid routes, EOS, raw token/text identity, dose and budget rejection. These are
 unit fixtures, not1.5B inference/training results. Source publication must precede
 materialization; GPU execution remains not_run and server contact is deferred
 until the complete release is ready and the owner starts/provides an instance.
+
+
+C015 completion: source8eeb0f9 preceded fixed subset extraction; Codex reloaded
+all48 original records and verified192 references,240 views,token masks and
+exact dose on CPU. It recorded40 passing checks and2 Linux-only deferred tests;
+synthetic predictions in unit tests are explicitly not model results. It prepared
+server handoff,immutable release hashes and a public file index. No server
+contact,GPU/model execution,paid API,delegation or new budget was used.
