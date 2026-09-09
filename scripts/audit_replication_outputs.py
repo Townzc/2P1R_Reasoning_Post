@@ -102,7 +102,8 @@ def validate_data(cfg):
     return manifest
 
 
-def selected_jobs(queue_path):
+def selected_jobs(queue_path, *, data_validator=None):
+    data_validator = validate_data if data_validator is None else data_validator
     queue = read_json(queue_path)
     result = {}
     for job in queue['comparison']:
@@ -117,7 +118,7 @@ def selected_jobs(queue_path):
             raise ValueError('Queue config hash mismatch')
         if cfg['mode'] != 'scientific_pilot' or cfg['samples_per_problem'] != 4:
             raise ValueError('Expected a four-sample scientific pilot pair')
-        manifest = validate_data(cfg)
+        manifest = data_validator(cfg)
         result[arm] = {'job': job, 'config': cfg, 'data_manifest': manifest}
     if set(result) != {'paths', 'gcm'}:
         raise ValueError('Exactly one Paths and one GCM comparison job are required')
@@ -161,12 +162,25 @@ def problem_summary(items):
     return result
 
 
+def check_pilot_dose(verified, spec, root):
+    if verified['steps'] != 1024 or verified['supervised_response_tokens'] != 267456:
+        raise ValueError('Completed dose differs from the fixed pilot')
+
+
 def run(queue_path, out):
+    return _run_pair(queue_path, out, data_validator=validate_data,
+                     completed_dose_validator=check_pilot_dose, source_code=CODE,
+                     limitations=LIMITATIONS)
+
+
+def _run_pair(queue_path, out, *, data_validator, completed_dose_validator,
+              source_code, limitations, profile=None):
+    """Shared complete-output audit; fixed public entry points supply the guards."""
     queue_path, out = Path(queue_path), Path(out)
     if out.exists():
         raise FileExistsError('Refusing to overwrite an existing output directory')
-    jobs, labels = selected_jobs(queue_path), pinned_labels()
-    sources = {path: sha256_file(Path(path)) for path in CODE}
+    jobs, labels = selected_jobs(queue_path, data_validator=data_validator), pinned_labels()
+    sources = {path: sha256_file(Path(path)) for path in source_code}
     sources.update({queue_path.as_posix(): sha256_file(queue_path), LABELS.as_posix(): LABELS_SHA256,
                     (PARENT_DATA/'manifest.json').as_posix(): PARENT_MANIFEST_SHA256,
                     'configs/models.lock.json': sha256_file(Path('configs/models.lock.json'))})
@@ -177,8 +191,7 @@ def run(queue_path, out):
         if not (root/'run_manifest.json').is_file():
             raise FileNotFoundError('Run has no completed outputs: '+root.as_posix())
         verified[arm] = verify(root)
-        if verified[arm]['steps'] != 1024 or verified[arm]['supervised_response_tokens'] != 267456:
-            raise ValueError('Completed dose differs from the fixed pilot')
+        completed_dose_validator(verified[arm], spec, root)
         manifest = read_json(root/'run_manifest.json')
         if manifest['config'] != spec['config']:
             raise ValueError('Provided queue config differs from completed run')
@@ -186,6 +199,7 @@ def run(queue_path, out):
         relevant = [Path(spec['job']['config']), Path(cfg.get('pilot_queue', 'configs/pilot_v1/queue.json')),
                     Path(cfg['data_dir'])/'manifest.json']
         relevant += [Path(cfg['data_dir'])/name for name in spec['data_manifest']['files_sha256']]
+        relevant += [Path(source['path']) for source in spec['data_manifest'].get('candidate_sources', {}).values()]
         relevant += [root/name for name in ('run_manifest.json', 'resource_receipt.json', 'metrics.json',
                                             'train_history.jsonl', 'budget_report.json', 'actual_budget.json', *FILES)]
         for path in relevant:
@@ -265,8 +279,10 @@ def run(queue_path, out):
         'evaluations': evaluations, 'matched_overall': problem_summary(per_problem), 'matched_strata': strata,
         'broader_paired_greedy_final_expression': paired(broader, 'greedy_correct'),
         'broader_paired_greedy_complete_trace': paired(broader, 'greedy_trace_verified', trace=True),
-        'source_sha256': dict(sorted(sources.items())), 'limitations': LIMITATIONS,
+        'source_sha256': dict(sorted(sources.items())), 'limitations': limitations,
     }
+    if profile is not None:
+        summary['audit_profile'] = profile
     # Guard against a source/input changing between validation and serialization.
     if any(sha256_file(Path(path)) != digest for path, digest in sources.items()):
         raise ValueError('A source/input changed during the audit')
