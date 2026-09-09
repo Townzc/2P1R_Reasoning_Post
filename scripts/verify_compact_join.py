@@ -129,12 +129,13 @@ def reconstruct_inventory(records, catalog, check):
         if key not in representatives or encoded < representatives[key][0]:
             representatives[key] = (encoded, ref)
     classes = {k: frozenset(v) for k, v in classes.items()}
-    entries, groups = {}, {}
+    entries, groups, combinations = {}, {}, 0
     for family, name in zip(FAMILIES, ('identity_tuples', 'nonidentity_tuples')):
         domain = sorted(s for f, s in pid_masks if f == family and at_least_four(pid_masks[(f, s)]))
         table, grouped = [], defaultdict(list)
         for item in itertools.combinations(domain, 4):
             check()
+            combinations += 1
             pm, om = pid_masks[(family, item[0])], occurrence_masks[(family, item[0])]
             for sid in item[1:]:
                 pm &= pid_masks[(family, sid)]
@@ -149,7 +150,7 @@ def reconstruct_inventory(records, catalog, check):
         entries[family], groups[family] = table, sorted(grouped.items())
     return {'pids': pids, 'structures': structures, 'occurrences': occurrences,
             'classes': classes, 'entries': entries, 'groups': groups,
-            'representatives': representatives, 'lookup': lookup}
+            'representatives': representatives, 'lookup': lookup, 'combinations_checked': combinations}
 
 
 def exact_support(si, sn, occurrence_mask, occurrences, classes):
@@ -218,6 +219,8 @@ def verify_records(records, catalog, join, support_groups, key_archive, *, check
     total = counts[FAMILIES[0]] * counts[FAMILIES[1]]
     require(join['frequent_tuples_by_family'] == counts, 'Tuple count mismatch')
     require(join['mask_groups_by_family'] == {f: len(groups[f]) for f in FAMILIES}, 'Mask group count mismatch')
+    require(join['tuple_enumeration_complete_by_family'] == {f: True for f in FAMILIES},
+            'Producer tuple enumeration not complete')
     require(join['total_candidate_pairs'] == join['represented_pairs'] == total
             and join['pruned_pairs'] + join['exact_pairs'] == total and join['unrepresented_pairs'] == 0,
             'Producer finite-grid accounting does not close')
@@ -314,6 +317,14 @@ def verify_records(records, catalog, join, support_groups, key_archive, *, check
             and counters['independent_exact_pairs'] == join['exact_pairs']
             and counters['independent_pruned_pairs'] + counters['independent_exact_pairs'] == total
             and counters['independent_valid_keys'] == len(emitted), 'Independent finite counts do not close')
+    expected_counts = {'input_records_indexed': len(records),
+                       'structure_combinations_checked': index['combinations_checked'],
+                       'group_pairs_checked': len(groups[FAMILIES[0]]) * len(groups[FAMILIES[1]]),
+                       'pruned_pairs': counters['independent_pruned_pairs'],
+                       'exact_pairs': counters['independent_exact_pairs'],
+                       'representative_witnesses_checked': counters['representative_witnesses_checked']}
+    require(all(join['counters'][key] == value for key, value in expected_counts.items()),
+            'Producer scientific counters disagree with independent audit')
     return {'audit_complete': True, 'total_candidate_pairs': total, 'counters': counters,
             'frequent_tuples_by_family': counts, 'eligible_records': len(records),
             'eligible_problems': len(index['pids']), 'supported_problem_ids': supported,
@@ -497,7 +508,7 @@ def main():
         raise FileExistsError('Fresh immutable verification output required')
     try:
         result = audit(args.report, args.keys, args.inventory, max_seconds=args.max_seconds)
-    except (AuditFailure, AuditDeadline, FileNotFoundError, KeyError, TypeError, ValueError) as exc:
+    except (AuditFailure, AuditDeadline, OSError, KeyError, TypeError, ValueError) as exc:
         result = {'status': 'incomplete' if isinstance(exc, AuditDeadline) else 'failed',
                   'audit_complete': False, 'error': str(exc)}
         if isinstance(exc, AuditDeadline):
