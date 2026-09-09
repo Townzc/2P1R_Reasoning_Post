@@ -169,10 +169,12 @@ needed for this CPU turn.
 
 Both complete run directories and independent800-output audit are retained
 locally and in the result milestone. Each run saved12 checkpoint files outside
-Git. Paths has an independent SHA256-verified backup; see
-[its receipt](absent_boundary_paths_seed31_r1_checkpoint_backup.json). GCM
-transfer is in progress; do not declare the server disposable until its separate
-verification, publication and fresh idle/ledger checks are complete.
+Git. Both have independent SHA256-verified backups:24 files,12,381,607,162 bytes.
+See [the summary](absent_boundary_seed31_checkpoint_backup_summary.json),
+[Paths receipt](absent_boundary_paths_seed31_r1_checkpoint_backup.json) and
+[GCM receipt](absent_boundary_gcm_seed31_r1_checkpoint_backup.json). The fresh
+server check is idle with zero reservations; preservation is complete. Normal
+shutdown request and provider-state confirmation remain separately recorded.
 
 The new ledger has5740/7200 charged,1460 remaining,15 reconciled receipts and
 zero reservations; the old4716 balance is historical. Its SHA256 is

@@ -320,3 +320,13 @@ claims; the reports explicitly retain nonrepresentativeness and mechanism limits
 Final regression follow-up: repaired legacy preparation-source verification to
 use exact manifest-bound historical published bytes, explicitly preserving the
 old dirty-worktree/later-publication disclosure. No manifest or result rewritten.
+
+## 2026-09-09 UTC — E010 independent preservation complete
+
+Both checkpoint backups passed all24 SHA256 checks, totaling12,381,607,162
+bytes. Results and all15 reconciled receipts are independently local and
+published; the server has the result commit and no active GPU/training process.
+The Mac became locked before final console shutdown. Codex requested unlock
+and checked the provider's documented shutdown helper; an actual shutdown
+request and confirmed provider stopped state will be recorded separately.
+No data deletion, extra experiment or new server is authorized by this recovery.

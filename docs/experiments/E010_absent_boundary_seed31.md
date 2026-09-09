@@ -134,3 +134,13 @@ seconds cannot reserve another2130-second pair under the present limits.
 
 At this results milestone all12 Paths checkpoint files are independently
 SHA256-verified; GCM backup and final normal shutdown remain pending.
+
+## Independent preservation completed
+
+Both final checkpoints are independently backed up:24 files totaling
+12,381,607,162 bytes, all SHA256-verified. The raw result/audit milestone
+`3585ad2d2f6424180b4b3ec345904dc0fc21fea6` is synchronized cleanly to the server.
+The latest ledger is independently reconciled and a fresh server check shows
+no GPU/training process or reservation. See the [backup summary](../../reports/absent_boundary_seed31_checkpoint_backup_summary.json).
+The Mac is locked, so final provider stopped-state confirmation is pending.
+The authorized vendor shutdown request is distinct from that confirmation.

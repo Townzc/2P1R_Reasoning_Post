@@ -18,8 +18,8 @@ published source `9217685`. All294 Linux preflight tests passed; server and
 independent local audits of800 predictions are byte-identical. The pair charged
 1024 seconds: **5740/7200 used,1460 remaining**,15 reconciled receipts and no
 reservation. No new GPU phase is queued and the holdout remains unevaluated.
-Paths weights are independently verified; GCM backup is in progress. Normal
-shutdown follows completed preservation. See [current status](reports/STATUS.md),
+Both weights are independently verified:24 files,12,381,607,162 bytes.
+Normal shutdown follows published preservation; provider confirmation is pending. See [current status](reports/STATUS.md),
 [ledger verification](reports/absent_boundary_seed31_ledger_verification.json),
 [research journal](docs/RESEARCH_JOURNAL.md) and [next-session handoff](docs/NEXT_SESSION.md).
 

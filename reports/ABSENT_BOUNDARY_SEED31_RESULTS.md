@@ -186,9 +186,19 @@ records SHA256 `1d674f211298aee5eb8bdd1936cab6d68d2d545392b42b9f63a013ebfc11a4c6
 The original13 jobs are unchanged. The registry and accounting retain all earlier
 failed attempts. The2048 raw holdout groups remain unsolved/unevaluated.
 
-At this result-publication milestone, all12 Paths checkpoint files have verified
-independent backups; GCM transfer is in progress.
-Weights stay outside Git and are not optimizer/RNG resume state. Keep the instance
-until independent SHA256 verification and publication are complete, then perform
-the previously authorized normal shutdown and verify the provider's stopped state.
-Append the separate preservation/shutdown receipt instead of assuming completion.
+Independent preservation is complete: both checkpoints,24 files and
+12,381,607,162 bytes passed SHA256 verification. See the [backup summary](absent_boundary_seed31_checkpoint_backup_summary.json)
+and [fresh idle/ledger check](absent_boundary_seed31_final_server_check.json).
+All weights remain outside Git and are not optimizer/RNG resume state. The
+result milestone was published at `3585ad2d2f6424180b4b3ec345904dc0fc21fea6`
+and synchronized cleanly onto the server; all compact records and the final
+ledger are independently retained. No required unique artifact remains there.
+
+Normal shutdown is authorized. At this preservation milestone the Mac is locked,
+so authenticated console verification is unavailable. The vendor documents
+`/usr/bin/shutdown` for automatic shutdown; the installed helper was inspected,
+and its trash-removal path is absent. Use the vendor helper only after the
+published preservation gate and a fresh idle/ledger/instance check. Record a
+shutdown request separately from verified provider stopped state. A disconnect
+alone does not prove that billing stopped; retain a follow-up for console
+confirmation after unlock. See [AutoDL's shutdown instructions](https://api.autodl.com/docs/save_money/).

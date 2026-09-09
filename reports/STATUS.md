@@ -1,6 +1,6 @@
 # Verified status — 2026-09-09 UTC
 
-## Current: E010 completed and audited; GCM checkpoint backup remains
+## Current: E010 and all preservation complete; normal shutdown confirmation pending
 
 - Paths/GCM primary matched greedy expression: **7/64 versus5/64**; paired cells
   3 both correct,4 Paths only,2 GCM only,55 neither. Complete traces **4/64 each**.
@@ -16,9 +16,11 @@
   All15 receipts exactly match the independently retrieved ledger; prior13 jobs
   unchanged; zero reservations. The current caps require2130 for a new pair,
   so no additional comparison fits the remaining allowance.
-- Paths checkpoint: all12 files independently SHA256-verified. GCM checkpoint
-  transfer is in progress. GPU is idle; preserve the instance until remaining
-  verification and publication finish, then perform the authorized normal shutdown.
+- Both checkpoints: all24 files,12,381,607,162 bytes independently SHA256-verified.
+  The fresh server check is idle and ledger reservations are zero. Publish the
+  preservation receipt, then perform authorized normal shutdown. Mac lock currently
+  blocks console confirmation; a vendor-command request must be distinguished
+  from a verified provider stopped state.
 - Next: CPU-only scientific design review. Distinguish intended path multiplicity
   from selection/numerical difficulty; consider tasks with multiple paths by
   construction. Do not reinterpret this changed-population pair as identity removal.

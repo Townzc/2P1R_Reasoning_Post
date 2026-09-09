@@ -1,4 +1,4 @@
-# Next session — E010 complete; finish preservation, then review task design
+# Next session — E010 preserved; confirm normal shutdown, then review design
 
 ## Current verified state,2026-09-09 UTC
 
@@ -43,24 +43,30 @@ ledger is historical; do not restore it as current or initialize a new ledger
 on a clone. The current2130-second pair reservation exceeds the1460 balance.
 A new scientific plan and resource review are required before more training.
 
-## Preservation still in progress at this milestone
+## Preservation complete; shutdown verification is the remaining gate
 
-All compact outputs and the final ledger are independently local; the result
-publication includes both run directories, audits, accounting and analysis.
-Paths'12 checkpoint files have passed SHA256 verification. GCM's independent
-transfer is in progress. The private current-round preservation process and
-shutdown gate retain progress outside Git. Do not start another backup writer
-for a file already being transferred; inspect its existing progress first.
+All compact outputs and the final ledger are independently local and published
+at result commit `3585ad2d2f6424180b4b3ec345904dc0fc21fea6`, also synchronized
+cleanly onto the server. Both checkpoints have independent SHA256 verification:
+24 files,12,381,607,162 bytes. See the [backup summary](../reports/absent_boundary_seed31_checkpoint_backup_summary.json)
+and [fresh idle/ledger check](../reports/absent_boundary_seed31_final_server_check.json).
+No required unique experiment state remains only on the instance.
 
-Finish the GCM transfer and verify against its checkpoint manifest, record both
-backup receipts, verify publication/local Git alignment and a fresh server
-GPU/process/ledger check, then mark the E010 private gate ready. The owner's
-normal-shutdown authorization persists. The existing heartbeat covers only
-this phase and must remain gated on verified preservation. Use the authenticated
-provider console, independently match the current instance, perform normal
-shutdown and confirm stopped state. Do not delete/release an instance or treat
-an SSH disconnect/container shutdown command as provider-state confirmation.
-Pause the heartbeat after verified shutdown so it cannot affect a later round.
+The owner's normal-shutdown authorization persists. The Mac is currently locked
+and the tool cannot operate the authenticated console; the owner has been asked
+to unlock it. The provider officially documents `/usr/bin/shutdown`; the installed
+helper is inspected and its trash path does not exist. After preservation is
+published, use that helper with fresh idle/ledger/identity checks if the UI is
+still blocked. Do not delete/release the instance. Record whether shutdown was
+requested, and do not treat an SSH disconnect as verified provider stopped state.
+
+Inspect the private E010 shutdown gate and any appended public closeout before
+another action. The existing heartbeat must only confirm/finish this phase's
+normal shutdown, never train or target another instance. When the console is
+available, independently match the known current instance and confirm stopped
+state; if it still runs and remains idle, complete the authorized normal shutdown.
+Pause the heartbeat only after verified stopped state so it cannot affect later
+experiments. Do not repeatedly try to reconnect to a stopped server or start it.
 
 All earlier seed17/23 scientific weights and engineering weights remain backed
 up outside Git. Current weights also are model/tokenizer only, not exact
