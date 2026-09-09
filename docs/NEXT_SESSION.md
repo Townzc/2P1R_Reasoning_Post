@@ -1,6 +1,41 @@
-# Next session — CPU construction audit after the completed design review
+# Next session — prepare bounded engineering after C014 passes CPU gates
 
-## Latest decision: P003 reviewed; no GPU queue
+## Current: C014 complete, independently verified, no GPU queued
+
+Read [C014 results](../reports/RELATION_TRANSPORT_C014_RESULTS.md),
+[registration](experiments/C014_relation_transport_cpu_audit.md),
+[summary](../reports/relation_transport_c014_r1/summary.json) and
+[independent receipt](../reports/relation_transport_c014_verification.json).
+Source `6c24d4c1379a421be7b44151c653842a6cd9aabf` was published before execution.
+Do not rerun or overwrite `relation_transport_c014_r1`.
+
+All10,000 intended worlds were retained with four valid length-four evidence
+routes and101 supervised tokens per clean reference. Full clean serialized
+length is1137, versus the old arithmetic384-token cap. Useful/irrelevant
+deletion both have949 prompt tokens. All40 predefined CPU probe tests remain
+unflagged; separate verification retokenized40,000 references and50,000 views
+and checked80,000 predictions. This is an observed CPU sandbox; never relabel
+its2,000 audit worlds as an untouched final test. The8,000-update schedule is
+accounting only, not a training queue.
+
+Next implement and freeze a small32-world engineering/profile runner with
+the same pinned1.5B base, full FP32 AdamW/BF16 recipe and new serialization.
+Prepare exact inputs, strict proof metrics, context/generation caps and a
+complete per-job budget before requesting an A800. Existing arithmetic memory/
+throughput measurements do not establish the cost of1137-token examples.
+Do not launch a scientific pair, change optimizer/model, or extend the total
+7200-second allowance. Remaining1460 seconds has zero reservations. The server
+was confirmed stopped after E010; no server operation occurred in C014.
+
+State/table exposure remains unequal under route allocation despite exact
+tokens; do not select a more balanced seed after observing residuals. The
+claim is evidence-route allocation within one algorithm and topology. A
+separate final scientific population/protocol and novelty case remain pending.
+The implementation/verification task fits Max; no setting change is asserted.
+
+## Historical P003 decision and C014 preparation
+
+### P003 reviewed; no GPU queue at the design milestone
 
 The owner requested immediate task/control redesign. Read
 [the integrated proposal](CONTROL_REDESIGN_PROPOSAL_20260909.md) first, then

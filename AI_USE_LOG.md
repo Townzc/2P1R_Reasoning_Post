@@ -381,3 +381,20 @@ token receipts, loss masks and schedule accounting. C014 freezes10,000 worlds,
 the seed-level8000/2000 fit/audit split, five views, the40-test Bonferroni gate,
 source/tokenizer provenance and immutable failure retention before execution.
 No registered audit result or new model result exists at this source milestone.
+
+### C014 completed CPU audit
+
+After source publication at6c24d4c, Codex executed the fixed10,000-world audit
+locally and fitted only the eight declared lightweight CPU predictors. All
+worlds were retained; no gates or seeds were changed after results. There
+were no construction failures or corrected probe flags. A separate archive
+verification rechecked answers, hashes, group identities, exact token receipts,
+allocation totals and80,000 raw probe predictions. Both verification paths
+share the exposed-table solver module; the report states that limitation.
+
+Codex documented the complete outcome and residual state/table exposures,
+without converting a passed CPU gate into a positive LLM result or novelty
+claim. No subagents, server operations, LLM/SFT training or inference, GPU
+charge, paid API or old reserved-holdout access occurred. All artifacts are
+lossless, source-bound and suitable for Git recovery; the next proposed gate
+is separately prepared engineering/profile work before a server request.

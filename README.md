@@ -6,13 +6,23 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**C014 CPU audit complete, 2026-09-09 UTC:** The constructive relation task
+retains **10,000/10,000** worlds, with four verified paths and101 supervised
+tokens per reference. All40 fixed shallow-probe tests are unflagged. The
+independent archive check reverified40,000 clean references,50,000 view prompts
+and80,000 probe predictions. Read the [results and limitations](reports/RELATION_TRANSPORT_C014_RESULTS.md).
+This is CPU feasibility evidence; no LLM/SFT experiment or topology/strategy
+claim follows. State/table-exposure residuals remain documented. Prepare a
+bounded32-example engineering runner and cost plan before requesting a server.
+
 **Design review completed, 2026-09-09 UTC:** Read the
 [integrated task/control proposal](docs/CONTROL_REDESIGN_PROPOSAL_20260909.md).
 Three independent reviews recommend pausing further arithmetic seeds and
 testing one constructive relation task on CPU. Its claim is evidence-route
 allocation under evidence loss, not distinct semantic strategies. Independent
 solver, shortcut, token and split audits must precede a new training proposal;
-no new dataset or model result has been generated. The E010 instance is now
+at that review milestone no new dataset or model result existed. C014's
+subsequent CPU sandbox is reported above. The E010 instance is now
 [confirmed stopped](reports/absent_boundary_seed31_shutdown_closeout.json)
 in the provider console, and its confirmation heartbeat is paused.
 

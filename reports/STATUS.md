@@ -1,6 +1,29 @@
 # Verified status — 2026-09-09 UTC
 
-## Current: design review complete; CPU prototype proposed; server confirmed stopped
+## Current: C014 CPU construction and independent verification complete
+
+- **10,000/10,000** intended worlds retained, no duplicate conservative families
+  or failed support/token/verifier gates. Four complete references per world;
+ 101 EOS-inclusive response tokens,1137 clean processed tokens, no truncation.
+- Useful/irrelevant deletion both yield949 prompt tokens while retaining one/
+  four valid routes respectively. Answers stay fixed; coherent source/target
+  edits change every answer. Negative and metamorphic fixtures pass.
+- Eight frozen CPU probes × five views,2,000 independent audit parents:
+  accuracies18.75%–21%; no registered40-test Bonferroni flag. This is a finite
+  shortcut challenge, not proof of no possible shortcut or a Qwen result.
+- Published execution source `6c24d4c1379a421be7b44151c653842a6cd9aabf` preceded
+  generation. CPU run138.65s; independent archive verification105.03s, checking
+  all40,000 clean references,50,000 view prompts and80,000 raw predictions.
+- The two-arm accounting cycle matches tokens/updates/exposures, but states,
+  transitions and tables are not identical. One algorithm and bare topology
+  remain. All residuals and interpretation limits are in the
+  [result report](RELATION_TRANSPORT_C014_RESULTS.md).
+- No new GPU charge/reservation, server start, LLM/SFT inference or arithmetic
+  holdout access. **5740/7200 GPU seconds used,1460 remaining.** Server remains
+  at the last confirmed stopped state. Next prepare an executable bounded
+ 32-example engineering/profile gate and cost plan before asking for a server.
+
+## Historical C014 source preparation and P003 review
 
 **C014 implementation milestone:** [registration](../docs/experiments/C014_relation_transport_cpu_audit.md),
 generator, independent exposed-table verifier, full-token audits, grouping and

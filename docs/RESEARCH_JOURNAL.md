@@ -63,7 +63,7 @@ weight backup completion is a separate recovery gate from a completed model run.
 | [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
 | [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Census completed in C008; token/structure checks measured in C009; global join incomplete |
 | [P003](experiments/P003_task_and_control_redesign.md) | Reassess task construction, causal controls and closest-work overlap after E010 | Review complete; one evidence-route CPU prototype proposed, no new data/model run |
-| [C014](experiments/C014_relation_transport_cpu_audit.md) | Can the constructive evidence-route task pass fixed CPU support/token/shortcut/grouping gates? | Implementation and prospective registration prepared; source publication precedes10,000-world audit |
+| [C014](experiments/C014_relation_transport_cpu_audit.md) | Can the constructive evidence-route task pass fixed CPU support/token/shortcut/grouping gates? | Complete:10,000/10,000 retained, all fixed gates and independent verification pass; zero new GPU seconds |
 
 ## Maintaining the record
 
@@ -192,3 +192,36 @@ was paused. No new shutdown command, instance start, deletion, GPU spending
 or storage expansion occurred. The latest ledger remains5740/7200 used with
 1460 remaining and no reservations; see the
 [closeout receipt](../reports/absent_boundary_seed31_shutdown_closeout.json).
+
+## 2026-09-09 —C014 full-retention construction and fixed shortcut audit
+
+**Motivation.** Implement the P003 decision without the old arithmetic
+eligibility filter. Establish actual full support, exact tokenization and a
+scoped shortcut challenge before incurring new GPU cost.
+
+**Design.** Published clean source `6c24d4c1379a421be7b44151c653842a6cd9aabf`
+froze100 seeds/10,000 worlds, seed-level8000/2000 CPU fit/audit splits,
+five views, eight predictors,40-test Bonferroni threshold, direct exposed-
+table solving, strict proof checks, conservative world groups and immutable
+archives. Development fixtures used distinct seeds;25 focused tests passed.
+
+**Results.** All10,000 worlds retained with four disjoint four-step proofs;
+all answers, counterfactuals, negative fixtures, masks and matching gates pass.
+All references have101 EOS-inclusive supervised tokens; clean sequences1137.
+No probe test flagged; accuracies18.75%–21%. CPU execution138.647s, followed
+by105.031s independent verification of40,000 references,50,000 view prompts
+and80,000 raw predictions. The complete record is recoverable from ten
+lossless hashed shards and the published source, without a running server.
+
+**Analysis.** The construction resolves retention/token matching for its
+declared population. It does not establish LLM benefit, complete shortcut
+absence or topology/semantic-strategy diversity. The accounting contrast still
+changes state/table exposure: neutral transitions25,599 vs25,468, identity
+tables1053 vs932, and7,041/8,000 questions differ in neutral exposure. These
+are retained treatment/residual descriptors, not reasons to select another seed.
+
+**Next decision.** Prepare a bounded32-example engineering/profile runner,
+exact data and resource plan before requesting an A800. Do not execute the
+8,000-update CPU accounting schedule. No new GPU charge/reservation, storage
+expansion, server operation or arithmetic holdout access. Read
+[full results and file index](../reports/RELATION_TRANSPORT_C014_RESULTS.md).

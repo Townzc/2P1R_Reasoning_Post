@@ -1,0 +1,106 @@
+{
+  "config": {
+    "accounting_cycles": 1,
+    "accounting_microbatch": 2,
+    "assignment_seed": 81401,
+    "attempt_id": "relation_transport_c014_r1",
+    "cpu_wall_deadline_seconds": 1200,
+    "distractor_routes": 4,
+    "edges_per_route": 4,
+    "fit_seed_stop_exclusive": 481,
+    "gpu_seconds": 0,
+    "holdout_access": false,
+    "instances_per_seed": 100,
+    "max_serialized_sequence_tokens": 1536,
+    "model_inference": false,
+    "probe_family_alpha": 0.01,
+    "probe_family_tests": 40,
+    "probe_names": [
+      "prior",
+      "query_state",
+      "topology_ridge",
+      "endpoint_ridge",
+      "table_bag_ridge",
+      "ordered_tables_ridge",
+      "template_1nn",
+      "three_step_prefix"
+    ],
+    "probe_null_accuracy": 0.2,
+    "probe_ridge_alpha": 100.0,
+    "probe_views": [
+      "clean",
+      "useful_delete",
+      "irrelevant_delete",
+      "source_change",
+      "target_change"
+    ],
+    "query_distribution": "iid_uniform",
+    "retain_every_instance": true,
+    "schema_version": 1,
+    "scientific_training_dataset": false,
+    "semantic_seed_start": 401,
+    "semantic_seed_stop_exclusive": 501,
+    "shard_records": 1000,
+    "states": 5,
+    "useful_routes": 4
+  },
+  "environment": {
+    "numpy": "2.5.3",
+    "python": "3.12.14",
+    "scipy": "1.18.0",
+    "tokenizers": "0.22.1",
+    "transformers": "4.56.2"
+  },
+  "gpu_seconds_added": 0,
+  "phase": "C014",
+  "source_commit": "6c24d4c1379a421be7b44151c653842a6cd9aabf",
+  "source_files_sha256": {
+    "configs/diagnostics/relation_transport_c014.json": "be26297e45a7bd6efa0be780989307199f0f766b7bd565dbe1bb30e6d2caff55",
+    "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+    "docs/experiments/C014_relation_transport_cpu_audit.md": "1a659fcc1522c256d8d4049f052024b0bb915ad868db32d17fdcbe8d4d8df939",
+    "scripts/audit_family_matching.py": "7c780d0ce3d63679b8779c636083c8df8dd757336b6fca7069ab064789a75d66",
+    "scripts/run_relation_cpu_audit.py": "2a081223c8599f5cd752d910f6eda7aaa7860e006e49049961e264b09814f57a",
+    "scripts/verify_relation_cpu_audit.py": "e95b5ca5076fed9b6f3f598772512746ff30154f6c768ac40114b09252b5c10d",
+    "src/relation_audit.py": "fbf50519a8fe8bee93c0ff6140b1f318067743ba1cd5a43b383007c35971cebc",
+    "src/relation_probes.py": "9ba81dd8864d2efeb8b088631ac4135d53302d618af72c19f3ef7eb406f00a68",
+    "src/relation_transport.py": "5648211b828eb5c0325b9b77bdec0cc753f31b251b7a4abfd57094aec1c93b46",
+    "src/relation_verifier.py": "257ac27c17a1f7663b245acb38f4159a7209624a44737753f7bdabecd9307bd6",
+    "src/sft_data.py": "259fb1b3432eb4c96f1db2b4e19d684e2739d51f780259b297dfec479d3a8d55",
+    "tests/test_relation_cpu_audit.py": "f39e3d277ff867130c8a43e770a7ce21933608849074af3400ccf7e977011006",
+    "tests/test_relation_transport.py": "a7c8e133385b0e32cf3daf63d08e73f8d350cffe6a87376072d194335108ddbf"
+  },
+  "source_worktree_dirty": false,
+  "started_at_utc": "2026-09-09T20:31:40.480616+00:00",
+  "status": "running",
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  }
+}

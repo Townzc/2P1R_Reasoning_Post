@@ -163,3 +163,24 @@ python -m scripts.verify_relation_cpu_audit --directory reports/relation_transpo
 
 Results are appended after execution, preserving this registration and the
 published execution-source hash. No results are known at registration.
+
+## Appended completion —2026-09-09 UTC
+
+Execution source `6c24d4c1379a421be7b44151c653842a6cd9aabf` was published and
+verified clean before the attempt. All10,000 intended worlds were retained;
+all registered construction/token/grouping gates passed, with zero probe
+flags. CPU wall time138.647s. Independent saved-archive verification passed
+in105.031s, rechecking40,000 full clean references,50,000 view prompts and
+80,000 raw predictions. No GPU/LLM/SFT work or holdout access occurred.
+
+Each clean response has101 supervised tokens including EOS, with1137 total
+processed tokens. The8,000-world accounting cycle matches3,232,000 supervised
+and36,384,000 processed tokens per arm, with zero padding. Global state/table
+exposure differences remain; no balancing-seed search or exclusion was applied.
+The probe accuracy range18.75%–21% does not establish equivalence to chance,
+absence of every possible shortcut, or LLM learnability. See
+[full results](../../reports/RELATION_TRANSPORT_C014_RESULTS.md),
+[immutable summary](../../reports/relation_transport_c014_r1/summary.json) and
+[independent receipt](../../reports/relation_transport_c014_verification.json).
+The next gate is an executable bounded engineering/profile proposal before
+requesting a server; no scientific training grid is queued.

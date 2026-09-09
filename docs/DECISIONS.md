@@ -225,3 +225,21 @@ Separately, the authenticated provider console confirmed the exact E010
 instance as stopped at approximately20:00 UTC, after previously verified
 preservation. The confirmation heartbeat is paused. No instance was started,
 deleted or released; cumulative GPU accounting remains5740 used/1460 remaining.
+
+## D013 —2026-09-09: CPU construction passes; prepare engineering, not scaling
+
+The owner authorized the next CPU stage. C014 ran from prepublished clean
+source6c24d4c and retained all10,000 intended worlds. Independent exposed-table
+solving, gold/negative/counterfactual checks, exact token budgets and conservative
+world grouping passed. Eight predefined CPU predictors across five views
+triggered no corrected test; this does not prove every shortcut absent.
+Independent archive verification reconciled all40,000 clean references,
+50,000 view prompts and80,000 predictions.
+
+The new1137-token serialization needs its own32-example overfit/profile gate.
+Prepare an executable bounded runner and concrete cost proposal before asking
+for a server. No new GPU experiment or allowance is implied. Do not relabel
+the CPU sandbox as a final test or the accounting schedule as a training plan.
+Retain state/table-exposure residuals and the one-algorithm/one-topology scope.
+See [C014 results](../reports/RELATION_TRANSPORT_C014_RESULTS.md). Ledger stays
+5740/7200 used,1460 remaining,zero reservations; server was not contacted.
