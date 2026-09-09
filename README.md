@@ -6,6 +6,13 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+The owner has now supplied an A800 for the fixed pair. All 96 Linux tests,
+model/data checks and the cumulative-ledger check passed. Verified duplicate
+remote checkpoints were removed, leaving 41.16 GiB free without expansion.
+The [research journal](docs/RESEARCH_JOURNAL.md) separately records motivations,
+designs, evidence, failed attempts and interpretation. The [seed23 entry](docs/experiments/E009_seed23_paired_replication.md)
+is recorded before its model outcomes; the original CPU preparation follows.
+
 **2026-09-09 UTC:** The seed23 Paths/GCM replication is prepared and CPU-verified,
 with the same problems, exact token/update dose and fixed evaluation seed17.
 The two-job phase reserves 2130 of the remaining 3488 process-seconds; no GPU

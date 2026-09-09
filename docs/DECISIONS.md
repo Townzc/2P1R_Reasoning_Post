@@ -46,6 +46,26 @@ The next pair is a limited stability gate. The owner will supply/start the
 instance after reviewing this concrete next phase; the later roadmap remains a
 design and budget decision, not an open-ended training authorization.
 
+## D007 — 2026-09-09 UTC: supplied A800, fixed pair and explicit research journal
+
+The owner supplied a replacement A800 for the prepared seed23 pair and requested
+separate records of attempted ideas, motivations, experiment designs, results
+and interpretation, followed by a current assessment and local/GitHub paths.
+The owner also authorized removal of unneeded old server files given a 50 GB
+data disk. All 48 old scientific checkpoint files were independently SHA-256
+verified locally and remotely before deleting only the redundant remote
+checkpoint directories; code, predictions, manifests and local backups remain.
+The data filesystem now has about 41.16 GiB free, so no expansion is needed for
+this pair. All 96 Linux tests, nine pinned model-file checks, frozen-data checks
+and the 3712-second ledger match passed on the supplied instance.
+
+Execute only the published seed23 Paths/GCM comparison under the original
+cumulative budget and full-phase guard. The execution code is the verified
+`6128e4266d62f14f063585d4c8e94dbe3ad8c711` milestone. The new
+RESEARCH_JOURNAL.md and experiments/E009_seed23_paired_replication.md record
+the reasoning before any seed23 output; historical entries are explicitly
+retrospective reconstructions. No broader grid or additional budget is implied.
+
 ## RESOLVED FOR PILOT V1 — coverage matching and exposure budget
 The updated condition table specifies one path and one exposure on a fixed problem set. At comparable response lengths this has fewer supervised tokens than the multi-path condition. A concrete matched-exposure proposal, structural-frequency residuals and length audit must be reviewed before launching this decisive scientific comparison.
 

@@ -142,3 +142,22 @@ outputs, including recipe/code mismatch, corruption, missing results and
 overwrite counterexamples. All 25 trace-audit and 24 structure-audit source hashes
 matched; original seed17 data/configuration had no Git changes. The release
 verification report and test log preserve these checks. No GPU work was added.
+
+## 2026-09-09 UTC — supplied-instance preflight and research journal before seed23
+
+The owner authorized the prepared pair on a replacement A800 and requested
+separate motivation/design/result/analysis records. Codex reconstructed the
+historical research journal with explicit retrospective labels and recorded the
+seed23 hypothesis, controls and stopping rules before its outputs. The broader
+semantic-intervention idea remains a proposal. This journal is an internal
+repository record, not an external preregistration claim.
+
+The supplied clone accepted the existing SSH key. Its 3712-second ledger matched
+the current private backup; the GPU was idle. Codex verified all 48 previous
+scientific weight files against independent local copies, then removed only the
+redundant remote checkpoint directories as authorized. Free space increased to
+41.16 GiB on the 50 GB data disk. The published source was transferred by a
+verified Git bundle; all 96 Linux tests, nine official model-file checks, frozen
+data verification and whole-phase budget checks passed. No expansion or change
+to the training recipe is needed. The preflight records and journal are published
+before starting the fixed GPU pair.
