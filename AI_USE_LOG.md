@@ -330,3 +330,12 @@ The Mac became locked before final console shutdown. Codex requested unlock
 and checked the provider's documented shutdown helper; an actual shutdown
 request and confirmed provider stopped state will be recorded separately.
 No data deletion, extra experiment or new server is authorized by this recovery.
+
+After a final GitHub-pull timeout, the stale-source shutdown precondition
+rejected the first action before the vendor command ran. Codex used a verified
+incremental bundle to synchronize the published preservation commit, then
+rechecked instance identity, clean source, idle GPU, ledger and the absence of
+the vendor helper's trash path. The vendor helper returned0 at19:00:27 UTC;
+SSH was unavailable afterward. The Mac lock prevented provider-console state
+verification. Codex records that limit explicitly and narrowed the existing
+heartbeat to final shutdown confirmation, with no new GPU action authorized.

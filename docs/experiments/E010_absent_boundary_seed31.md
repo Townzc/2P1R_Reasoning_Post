@@ -144,3 +144,14 @@ The latest ledger is independently reconciled and a fresh server check shows
 no GPU/training process or reservation. See the [backup summary](../../reports/absent_boundary_seed31_checkpoint_backup_summary.json).
 The Mac is locked, so final provider stopped-state confirmation is pending.
 The authorized vendor shutdown request is distinct from that confirmation.
+
+## Vendor shutdown requested; console verification pending
+
+After preservation was published at `b27a85c` and synchronized by a verified
+incremental Git bundle, fresh instance/source/GPU/ledger checks passed. The
+vendor shutdown helper returned0 at19:00:27 UTC; SSH was unavailable at19:01:07.
+See the [request receipt](../../reports/absent_boundary_seed31_shutdown_request.json).
+An earlier GitHub pull timeout triggered a stale-HEAD precondition rejection,
+so no premature shutdown occurred; that operational recovery is retained.
+The Mac remains locked. Final provider stopped state is unverified, and the
+existing heartbeat only follows up on console confirmation after unlock.

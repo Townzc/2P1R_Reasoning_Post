@@ -17,10 +17,10 @@
   unchanged; zero reservations. The current caps require2130 for a new pair,
   so no additional comparison fits the remaining allowance.
 - Both checkpoints: all24 files,12,381,607,162 bytes independently SHA256-verified.
-  The fresh server check is idle and ledger reservations are zero. Publish the
-  preservation receipt, then perform authorized normal shutdown. Mac lock currently
-  blocks console confirmation; a vendor-command request must be distinguished
-  from a verified provider stopped state.
+  Preservation is published at `b27a85c` and synchronized via verified Git bundle.
+  The vendor shutdown command returned0 at19:00:27 UTC; SSH is inaccessible
+  afterward. Mac lock blocks final console verification; provider stopped/billing
+  state remains unverified and the heartbeat now only follows up on that check.
 - Next: CPU-only scientific design review. Distinguish intended path multiplicity
   from selection/numerical difficulty; consider tasks with multiple paths by
   construction. Do not reinterpret this changed-population pair as identity removal.

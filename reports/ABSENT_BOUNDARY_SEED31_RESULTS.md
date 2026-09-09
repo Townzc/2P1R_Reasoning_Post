@@ -194,11 +194,21 @@ result milestone was published at `3585ad2d2f6424180b4b3ec345904dc0fc21fea6`
 and synchronized cleanly onto the server; all compact records and the final
 ledger are independently retained. No required unique artifact remains there.
 
-Normal shutdown is authorized. At this preservation milestone the Mac is locked,
-so authenticated console verification is unavailable. The vendor documents
-`/usr/bin/shutdown` for automatic shutdown; the installed helper was inspected,
-and its trash-removal path is absent. Use the vendor helper only after the
-published preservation gate and a fresh idle/ledger/instance check. Record a
-shutdown request separately from verified provider stopped state. A disconnect
-alone does not prove that billing stopped; retain a follow-up for console
-confirmation after unlock. See [AutoDL's shutdown instructions](https://api.autodl.com/docs/save_money/).
+Normal shutdown was requested using the documented vendor helper at19:00:27
+UTC after fresh instance, clean preservation-commit, idle GPU and unreserved
+ledger checks. The installed helper's trash path was absent. Its SSH invocation
+returned0; a19:01:07 check could no longer connect. See the [dispatch receipt](absent_boundary_seed31_shutdown_request.json)
+and [connectivity receipt](absent_boundary_seed31_after_shutdown_connectivity.json).
+
+A final GitHub pull timed out before dispatch. The stale-HEAD precondition
+correctly prevented that first shutdown attempt; a verified incremental Git
+bundle restored the published preservation commit before the successful command.
+The [recovery receipt](absent_boundary_seed31_shutdown_precondition_recovery.json)
+preserves this operational failure without inventing an extra GPU attempt.
+
+**Final provider stopped/billing state is not yet verified:** the Mac is locked
+and the console cannot be operated. A manual unlock was requested; the existing
+heartbeat now only follows up on this exact instance's final state. It must
+publish confirmation and pause when stopped is observed, without reopening the
+instance, adding GPU work or treating network failure as provider-state proof.
+See [AutoDL's shutdown instructions](https://api.autodl.com/docs/save_money/).

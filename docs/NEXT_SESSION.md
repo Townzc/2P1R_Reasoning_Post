@@ -52,21 +52,26 @@ cleanly onto the server. Both checkpoints have independent SHA256 verification:
 and [fresh idle/ledger check](../reports/absent_boundary_seed31_final_server_check.json).
 No required unique experiment state remains only on the instance.
 
-The owner's normal-shutdown authorization persists. The Mac is currently locked
-and the tool cannot operate the authenticated console; the owner has been asked
-to unlock it. The provider officially documents `/usr/bin/shutdown`; the installed
-helper is inspected and its trash path does not exist. After preservation is
-published, use that helper with fresh idle/ledger/identity checks if the UI is
-still blocked. Do not delete/release the instance. Record whether shutdown was
-requested, and do not treat an SSH disconnect as verified provider stopped state.
+The vendor's `/usr/bin/shutdown` command was executed at19:00:27 UTC with
+exit0 after fresh instance/GPU/ledger/source checks. The server had preservation
+commit `b27a85c3ee20c208a1b12a7653dd971c152c7f15`. A prior45-second GitHub-pull
+timeout was recovered with a verified incremental bundle; the first shutdown
+precondition rejected the stale HEAD before any command executed. At19:01:07
+UTC SSH was no longer accessible. See the [shutdown request](../reports/absent_boundary_seed31_shutdown_request.json)
+and [connectivity receipt](../reports/absent_boundary_seed31_after_shutdown_connectivity.json).
 
-Inspect the private E010 shutdown gate and any appended public closeout before
-another action. The existing heartbeat must only confirm/finish this phase's
-normal shutdown, never train or target another instance. When the console is
-available, independently match the known current instance and confirm stopped
-state; if it still runs and remains idle, complete the authorized normal shutdown.
-Pause the heartbeat only after verified stopped state so it cannot affect later
-experiments. Do not repeatedly try to reconnect to a stopped server or start it.
+**Provider stopped state is still unverified.** The Mac is locked and the owner
+has already been asked to unlock it. Neither command exit0 nor an SSH disconnect
+proves the provider's stopped/billing state. Do not repeatedly issue the command
+or reopen the server. The existing heartbeat is now scoped only to final E010
+shutdown confirmation and stays quiet while the lock/state is unchanged.
+
+After unlock, inspect the authenticated AutoDL console and independently match
+the known current instance using the private gate. If stopped, record that state,
+update this handoff and publish the sanitized closeout, then pause the heartbeat.
+If still running, recheck idle GPU and the unchanged ledger before completing
+the owner's already-authorized normal shutdown. Never start, rent, clone, delete,
+release or target another instance. Do not run any further model experiment.
 
 All earlier seed17/23 scientific weights and engineering weights remain backed
 up outside Git. Current weights also are model/tokenizer only, not exact

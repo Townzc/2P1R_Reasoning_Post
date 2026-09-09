@@ -19,7 +19,8 @@ independent local audits of800 predictions are byte-identical. The pair charged
 1024 seconds: **5740/7200 used,1460 remaining**,15 reconciled receipts and no
 reservation. No new GPU phase is queued and the holdout remains unevaluated.
 Both weights are independently verified:24 files,12,381,607,162 bytes.
-Normal shutdown follows published preservation; provider confirmation is pending. See [current status](reports/STATUS.md),
+The vendor shutdown command was executed after preservation; SSH is now
+inaccessible, but final provider-console confirmation awaits Mac unlock. See [current status](reports/STATUS.md),
 [ledger verification](reports/absent_boundary_seed31_ledger_verification.json),
 [research journal](docs/RESEARCH_JOURNAL.md) and [next-session handoff](docs/NEXT_SESSION.md).
 
