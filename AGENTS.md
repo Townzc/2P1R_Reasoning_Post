@@ -9,6 +9,7 @@ Read README.md, docs/PROTOCOL.md, docs/DECISIONS.md and reports/STATUS.md before
 - P/T/R are constrained under fixed budget. Structural syntax is a proxy, not cognitive-strategy equivalence. Never invent outcomes or novelty.
 
 ## Workflow
+- Before substantial work, classify the task and recommend Max or Ultra to the owner, with a short reason. Distinguish a recommendation from an actual settings change; do not claim to have switched modes without evidence. This preference does not itself authorize delegation or additional compute.
 - The user authorized this repository for code and experiment updates. Commit and push each completed code/experiment milestone, including failures and limitations.
 - Server replacement is routine. Treat GitHub as the authoritative code/compact-record history and keep a current next-session handoff. Before declaring an instance disposable, verify publication, checkpoint backups and the latest cumulative ledger; never leave unique required state only on that instance.
 - A cloned instance is a transfer convenience, not a new experiment or compute budget. Verify its commit, environment, artifacts and ledger before reuse; restore only artifacts needed for the next task. Do not auto-launch training when an instance starts or is cloned.

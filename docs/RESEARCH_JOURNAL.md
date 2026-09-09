@@ -15,6 +15,10 @@ balance. Dates are UTC unless specified otherwise.
 
 ## Attempted work and completed analyses
 
+Current execution: [E010](experiments/E010_absent_boundary_seed31.md), the frozen
+C012 Paths/GCM seed31 pair. The owner explicitly authorized the supplied A800
+on2026-09-09; restoration/preflight precede launch. Results are pending.
+
 | ID | Work date | Question or attempted change | Status | Outcome / decision |
 |---|---|---|---|---|
 | [C000](experiments/C000_environment_and_cpu_bootstrap.md) | 2026-09-05 | Establish a supported interpreter, verified model bytes and CPU checks | Environment failures corrected | Python 3.12 and official-digest verification retained; no task-semantic relaxation |

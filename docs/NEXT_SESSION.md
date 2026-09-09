@@ -1,5 +1,16 @@
 # Morning handoff — CPU work complete, finite A800 pair ready
 
+## Execution update —2026-09-09
+
+The owner has now restarted the A800 and explicitly authorized the frozen new
+pair. [E010](experiments/E010_absent_boundary_seed31.md) records the execution
+envelope. SSH works, current Git is restored, and the original4716-second
+ledger is unchanged. All294 Linux tests and pinned-model/data/queue checks passed; publish the
+receipt, then use only the two absent-boundary run IDs below. The historical wait for
+owner launch instruction is satisfied. Preserve the recovery/shutdown gates.
+Task-mode recommendation: Max for this frozen execution, verification and
+recovery workflow; reassess for a later substantial scientific redesign.
+
 ## Current state,2026-09-09 UTC
 
 The owner's request was to resolve avoidable matching selection and prepare

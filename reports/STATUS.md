@@ -1,6 +1,19 @@
 # Verified status — 2026-09-09 UTC
 
-## Current: searches complete;128-question boundary pair prepared, not launched
+## Current execution: E010 authorized; server recovered, preflight passed
+
+The owner restarted the A800 and explicitly authorized the frozen seed31 pair.
+SSH key login succeeds; published Git history is restored. The retained ledger
+exactly matches4716/7200 charged,2484 remaining,13 receipts,zero reservations.
+GPU is A80080GB and idle; about29.6GiB is free before diagnostic setup, above the
+18GiB gate. No disk expansion is currently required. All294 Linux tests, nine pinned model files and independent data/queue checks
+passed before the finite2130-second reservation. The server has31,613,050,880
+free data bytes after setup; no model outcome exists yet.
+See [E010 execution record](../docs/experiments/E010_absent_boundary_seed31.md).
+The preparation-only statements below are historical and are superseded by
+this explicit launch authorization. No new correctness result is asserted yet.
+
+## Historical preparation: searches complete;128-question boundary pair prepared
 
 - C013 completely covers48,429,084 common-length tuple pairs:1,019,005 keys,
   202 support groups,63 questions.15 disjoint blocks/60 questions is optimal;

@@ -1,5 +1,17 @@
 # AI assistance log
 
+## 2026-09-09 UTC — authorized absent-boundary execution preparation
+
+The owner restarted the A800 and explicitly requested the frozen next pair.
+Codex restored published Git history through SSH key authentication and verified
+the original4716-second ledger. CPU-only SciPy diagnostics are added without
+changing measured GPU package pins. E010 preserves the fixed C012 data, recipe,
+endpoints, full-dose stopping rule and exploratory interpretation before new
+outcomes. The owner also requested task-specific Max/Ultra recommendations;
+Codex recommended Max for this execution workflow without claiming to change
+the actual setting. No additional GPU allowance or autonomous seed search was
+inferred. Linux preflight and execution outcomes are recorded separately.
+
 ## 2026-09-05 UTC — repository bootstrap
 Codex imported user-provided CPU arithmetic code and synthetic fixtures, summarized the updated SFT-only protocol, and established public-repository hygiene and compute accounting. Source fixtures are CPU examples, not model results. Private correspondence and server credentials were excluded. Human decisions: start implementation, use this repository for progress, cap initial GPU jobs at two GPU-hours. Validation and actual outcomes are recorded separately in reports and run directories.
 
