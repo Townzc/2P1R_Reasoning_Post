@@ -367,3 +367,32 @@ real pinned-tokenizer field spans and the retained C015 release regression.
 The initial fixture collision and final passing logs are preserved in
 `reports/relation_c016_initial_regression.txt` and
 `reports/relation_c016_source_tests.txt`. No historical runtime source changed.
+
+
+## 2026-09-09 — C016 frozen CPU release and independent reproduction
+
+**Result.** Sourcef073955 was published first. The single registered attempt
+retained all288 rows/48 parents and completed in2.03 CPU seconds. Independent
+reconstruction takes3.56s; after data publication4a5ad97, a clean checkout
+reproduces the same audit in3.23s. All53 focused tests pass, no skips. Exact
+full-reference budget matches E011; given route adds86 prompt tokens; one-step
+serialization is166 tokens. Seven frozen input files total203769 bytes.
+
+**Analysis.** Gold training step states are28/16/31/31/22 for states0..4;
+constant2 is a24.22% hypothetical operation predictor, not a model result.
+The32/16 parent groups do not overlap, but lookup sets share34 tables and13
+table/input operations. Development remains observed engineering data. The
+after-state token fraction is3.45% in one-step versus3.96% in full proofs;
+shortening the task does not itself fix loss dilution. Per-operation exposure
+and final-answer duplication also differ and remain explicit limitations.
+
+**Decision.** Keep the finite diagnostic ladder and source-frozen inputs.
+Collect strict proof/EOS, parent success, field-wise gold-prefix measurements
+and all-line local lookup diagnostics prospectively. No causal verdict follows
+from CPU checks. Next implement/review the bounded runner and raw-output
+auditor locally before asking for startup. No pretrained model, GPU, server
+contact, checkpoint mutation or ledger change occurred;5971 used/1229 left.
+
+**Records.** `reports/RELATION_C016_CPU_READY.md`, exact examples, immutable
+`runs/relation_diagnostics_c016_r1`, release hashes, source and fresh-checkout
+verification/test logs, and resource closeout are all published.

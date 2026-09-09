@@ -461,3 +461,13 @@ collision with retained E011 outputs; Codex isolated the fixture identity and
 kept both the real failure and frozen runtime unchanged. Source publication
 precedes real C016 materialization. These changes do not establish model
 capability, causal localization, novelty or publication readiness.
+
+C016 execution/preservation: after publishing sourcef073955, Codex ran only
+the CPU preparer and verified all288 retained rows. It published data4a5ad97,
+created a clean detached checkout and reproduced the audit and53 tests. It
+reported shared tables/operations, finite state imbalance, different primitive
+exposure and semantic-token fractions without recasting them as model results.
+It verified the private cumulative ledger was byte-unchanged (5971 seconds
+used,1229 remaining,16 receipts,no reservations). No model weights were loaded,
+server contacted, data filtered or GPU job launched. A separate runtime release
+and owner review remain prerequisites to requesting a server.

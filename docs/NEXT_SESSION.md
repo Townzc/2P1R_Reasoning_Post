@@ -1,15 +1,56 @@
-# Next session — complete C016 CPU diagnosis preparation
+# Next session — C016 data ready; prepare the bounded execution release on CPU
 
-## Current: publish diagnostic source, then materialize and independently verify
+## Current: do not ask for server startup yet
 
-Read [C016 registration](experiments/C016_relation_diagnostics.md). Run only
-local CPU preparation and verification after source publication. No server
-startup, model inference, training, GPU reservation or scientific pair.
-The three proposed diagnoses are single-step lookup, full graph with given
-route, and original full graph with fixed-reference training, retaining the
-same 48 parents. State-field metrics and strict full-proof gates are required.
-The prospective three-job cap fits 1229 seconds but needs a separately
-implemented, published and owner-reviewed runtime before execution.
+Read [C016 findings and interpretation](../reports/RELATION_C016_CPU_READY.md),
+[frozen registration](experiments/C016_relation_diagnostics.md),
+[CPU release identities](../configs/diagnostics/relation_c016_release.json) and
+[exact examples](../reports/RELATION_C016_EXAMPLES.md). All288 retained rows,
+state masks and exact exposure schedules are frozen. Independent audit from
+a clean published checkout agrees;53 focused tests pass without skips.
+
+The owner approved CPU preparation only in this round. No GPU task is queued.
+The next concrete CPU implementation is a diagnostic runner plus raw-token
+auditor using these frozen inputs and score functions. Default to inspection;
+require explicit execution after owner review and an owner-started instance.
+Do not point the E011 launcher at these new tasks or reuse its completed ID.
+
+Preserve the proposed order: single_step, given_route, fixed_reference. Each
+starts from the original pinned1.5B base, never E011/preceding tuned weights.
+Prepare one360-second process cap plus15-second guard per arm, no retry,
+and stop after any failed/incomplete training gate. Up to1125 total reservation
+seconds fit in the1229 remaining; do not create a new allowance. Future launch
+guards must compare the current receipt chain under lock, not reuse an initial
+ledger hash after a completed diagnostic changes it.
+
+Current ledger:5971/7200 used,16 receipts,zero reservations,SHA256
+`664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`.
+The independent local backup remains authoritative; cloned disks are not a
+budget reset. E011 checkpoint has12 verified files/6190803414 bytes backed up.
+C016 made no server connection or checkpoint change; the last authenticated
+provider state is stopped in the retained E011 shutdown receipt.
+
+C016 manifestSHA256:
+`cb923a3e11817682f77b4116d7524e615bdffee29e04e5848b3815352aa8133e`.
+Sourcef073955 was published before CPU extraction. Data4a5ad97 were then
+verified from a clean checkout. Do not overwrite or regenerate the registered
+attempt. Shared code hashes are pinned; keep historical runtime dependencies
+unchanged and register revisions rather than silently editing frozen inputs.
+
+Operational cautions for later implementation: strictly enforce the supplied
+route, accept any legal route for fixed-reference scoring, count lookup
+parents as all four subproblems, retain all raw IDs through EOS, distinguish
+free-generation proof correctness from gold-prefix field metrics, and audit
+parseable steps even when the final line is missing. All supervised field
+positions use exact full serialization and logits[j-1]. No packing/truncation
+or loss reweighting. Train/development table overlap is known and documented;
+these are not new holdout groups or independent-row generalization results.
+
+Before a later server run, verify current published source, original pinned
+model/environment/tokenizer, idle A80080GB, latest ledger and measured free
+disk. Preserve independently verified checkpoint copies before any cleanup.
+Signal the owner to start/provide a server only once the execution release is
+fully implemented, tested, published and concretely reviewable.
 
 ## Historical: E011 failed learning gate; no GPU phase queued
 

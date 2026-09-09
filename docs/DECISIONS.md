@@ -301,3 +301,13 @@ Three 360-second caps plus guards fit within 1229 seconds, but this is a
 reviewable proposal only: no GPU runner, job, reservation or server contact is
 authorized by this CPU request. See the frozen
 [construction and interpretation plan](experiments/C016_relation_diagnostics.md).
+
+D016 CPU outcome: all288 rows retained and independently verified;53 focused
+tests pass in the published clean checkout. Sourcef073955 preceded generation,
+data4a5ad97 preceded fresh-checkout verification. Fixed-reference accounting
+matches E011 exactly; supplied route adds86 prompt tokens. State2 is31/128
+training step labels, and train/dev share34 tables and13 table/input operations.
+Retain these finite imbalances/overlaps, with no new filtering or generalization
+claim. The data release is complete; the GPU runner/raw-output auditor remains
+a separate CPU implementation before startup review. Ledger unchanged5971 used.
+See [C016 CPU results](../reports/RELATION_C016_CPU_READY.md).

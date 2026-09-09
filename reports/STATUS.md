@@ -1,15 +1,25 @@
-# Verified status — C016 CPU preparation, 2026-09-09 UTC
+# Verified status — C016 CPU diagnostic release complete, 2026-09-09 UTC
 
-## Current: diagnostic source prepared; CPU materialization pending publication
+## Current: frozen inputs/metrics verified; no model experiment or server needed
 
-The owner approved CPU preparation of single-step lookup, supplied-route
-propagation and fixed-reference tests. Source, independent reconstruction and
-semantic metrics are prepared. All original 32 train / 16 observed dev parents
-will be retained; no new scientific holdout or filtering.
-Read [the registered design](../docs/experiments/C016_relation_diagnostics.md).
-No model calls or server contact. The proposed GPU ladder is not launchable
-or authorized by this CPU task. Current 5971/7200 used, 1229 left, zero
-reservations; A800 remains stopped. E011 remains a failed engineering run.
+All288 derived rows from the original32 train /16 observed dev parents pass
+independent construction, semantic-mask and dose audits. All53 focused CPU
+tests pass with no skips, including from a clean checkout of the published
+source/data. See [results, caveats and next decisions](RELATION_C016_CPU_READY.md).
+Fixed-reference input/order/token dose exactly match E011; provided route adds
+86 prompt tokens; one-step rows are166 total tokens. Dev shares34 tables and
+13 table/input operations with train, so this is engineering diagnosis only.
+
+Code publication f073955 preceded extraction; data publication4a5ad97 preceded
+clean-checkout reproduction. CPU data are203769 bytes. No pretrained-model
+call, server contact, GPU job/reservation, output filtering or new allowance.
+Ledger bytes unchanged:5971/7200 used,1229 left,16 receipts,zero reservations.
+E011 and its verified checkpoint backup remain preserved.
+
+Next CPU work is the bounded diagnostic runner and raw-token output auditor
+for a separate execution release, followed by owner review before requesting
+startup. The current three-job proposal is not launchable; at most1125 seconds
+of reservations would fit, with conditional stopping. Do not restart old jobs.
 
 ## Historical: E011 completed; engineering gate failed, artifacts preserved
 

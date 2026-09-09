@@ -6,11 +6,16 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**C016 CPU diagnostic preparation, 2026-09-09 UTC:** the owner approved
-preparing one-edge lookup, supplied-route propagation and fixed-reference
-training tests. Source and control design are prepared; immutable extraction
-follows source publication. Read the [registered design](docs/experiments/C016_relation_diagnostics.md).
-No model call or server contact; the A800 remains stopped.
+**C016 CPU diagnostics complete, 2026-09-09 UTC:** all288 derived rows from the
+original48 parents are frozen; independent reconstruction and all53 focused
+tests pass in a clean published checkout. One-edge lookup, supplied-route
+propagation and fixed-reference controls have exact dose/semantic masks, with
+observed-dev and operation-overlap limits recorded. No pretrained model call,
+server contact or ledger change. The GPU execution release remains to be
+implemented and reviewed; no server is needed yet.
+[CPU findings and next decisions](reports/RELATION_C016_CPU_READY.md),
+[exact examples](reports/RELATION_C016_EXAMPLES.md),
+[handoff](docs/NEXT_SESSION.md).
 
 **E011 complete; engineering gate failed,2026-09-09 UTC:**0/32 complete train
 proofs and0/16 across dev views,despite train NLL.11939. All333 parseable
