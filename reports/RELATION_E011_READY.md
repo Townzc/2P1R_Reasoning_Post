@@ -58,6 +58,13 @@ leaving725 unreserved. Actual process time is charged; this is a cap,not a speed
 forecast. Setup and provider idle/storage billing are separate. No scientific
 pair or additional GPU allowance is approved by this preparation.
 
+The [clean-checkout receipt](relation_engineering_c015_clean_checkout.json)
+verifies default launcher inspection at published commit
+`f4aec50dab56b50fcdef0295835303a38866b115` using only tracked inputs plus the
+externally supplied pinned tokenizer and current private ledger. It completed
+in3.143 seconds,created no run/runtime directory and left the ledger byte-identical.
+No private matching inventory or server state was needed for input verification.
+
 ## Start and recovery
 
 The owner can now start/provide **one A80080GB**. On connection,fetch current Git,

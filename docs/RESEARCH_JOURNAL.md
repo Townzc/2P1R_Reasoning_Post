@@ -271,3 +271,9 @@ only the bounded E011 engineering trajectory. Its735-second maximum reservation
 fits1460 remaining; no GPU time or reservation was added by this preparation.
 Preserve all failures and dev outcomes and use the fixed decision rules; no
 scientific pilot follows automatically. See [ready report](../reports/RELATION_E011_READY.md).
+
+C015 migration check: default launcher inspection from a clean tracked-files-only
+worktree at published f4aec50 passed in3.143 seconds. The only external inputs
+were the original tokenizer and retained private ledger. No run directory,model
+process or new ledger reservation was created; ledger bytes stayed identical.
+See [clean-checkout receipt](../reports/relation_engineering_c015_clean_checkout.json).
