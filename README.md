@@ -29,8 +29,9 @@ The two runs charged **1004 process-seconds**. Cumulative usage is
 [reconciled against all 13 receipts](reports/replication_seed23_ledger_verification.json),
 with zero unresolved reservations. Seed23 results are published at
 `a4edae0817c72c11481ce0f7536952500a8e1e02`. Recovery material is complete;
-the GPU closeout was aligned at `fc96885c`. The owner has authorized automatic
-shutdown after C009 preservation; its final state is recorded in the handoff. No further
+the GPU closeout was aligned at `fc96885c`. The A800 was
+[confirmed shut down](reports/c009_shutdown_closeout.json) at 07:37 UTC after C009
+preservation, and the automatic backstop was paused. No further
 GPU job or holdout evaluation is scheduled. See [status](reports/STATUS.md),
 [artifact recovery](reports/ARTIFACTS.md) and the [handoff](docs/NEXT_SESSION.md).
 

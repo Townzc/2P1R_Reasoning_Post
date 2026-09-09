@@ -19,12 +19,14 @@ pool, train the tiny witness, or evaluate holdout. The family labels still do
 not isolate semantic strategies. The full256 four-cell design is already
 infeasible under the declared support rule.
 
-The owner explicitly authorized shutdown after this round. A task heartbeat
-backstop targets only the verified preceding project instance. Final shutdown
-confirmation is appended separately after publication and preservation checks.
-The GPU closeout itself was aligned at `fc96885c`; the latest CPU commits can
-be restored from GitHub on any future instance. No scientific state depends
-on keeping the server running.
+**The project A800 was shut down and the authenticated provider console showed
+“已关机” at 07:37 UTC on 2026-09-09.** The automatic backstop is now **paused**.
+See the [shutdown/recovery receipt](../reports/c009_shutdown_closeout.json).
+C009 results were verified on GitHub at `f52d7228fe18bd9667030725348234c790cc7883`
+before shutdown. The later closeout publication records the stopped state.
+The old server remains at prior GPU closeout `fc96885c`; new CPU artifacts are
+local and in GitHub. A future instance must fetch the latest verified Git history;
+do not assume a clone has C009 or let old completed queues auto-launch.
 
 Both seed23 backups remain verified: 24 files,12,381,607,162 bytes. No new weights
 were produced. The latest ledger remains 4716/7200 process-seconds, 2484 remaining,

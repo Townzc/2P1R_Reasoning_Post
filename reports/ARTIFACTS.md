@@ -122,3 +122,15 @@ server check has unchanged ledger SHA-256
 process. CPU publication can be fetched on a replacement server; no new server
 or disk expansion is needed now. The user authorized normal provider shutdown
 after this round; the handoff records its verified completion separately.
+
+
+### C009 shutdown completion — 2026-09-09 07:37 UTC
+
+After C009 result publication at `f52d7228fe18bd9667030725348234c790cc7883`
+and local/Git tree verification, the owner-authorized normal shutdown was
+confirmed in the authenticated provider console as “已关机”. The instance
+identity matched the previous run and the confirmation dialog. A fresh remote
+check immediately before shutdown found no active GPU/training process, no
+reservation and the unchanged 4716-second ledger. No instance was deleted or
+started. The task heartbeat backstop was then paused; no further GPU job is
+queued. See [closeout receipt](c009_shutdown_closeout.json).

@@ -262,3 +262,15 @@ instance, then pause itself. Local checkpoint hashes were rechecked; a first
 remote check using bare python3 returned 127, and a corrected absolute-interpreter
 check succeeded with no training/GPU processes, unchanged 4716-second ledger and
 zero reservations. Provider shutdown confirmation is recorded separately.
+
+
+### C009 shutdown completion — 2026-09-09 07:37 UTC
+
+After C009 result publication at `f52d7228fe18bd9667030725348234c790cc7883`
+and local/Git tree verification, the owner-authorized normal shutdown was
+confirmed in the authenticated provider console as “已关机”. The instance
+identity matched the previous run and the confirmation dialog. A fresh remote
+check immediately before shutdown found no active GPU/training process, no
+reservation and the unchanged 4716-second ledger. No instance was deleted or
+started. The task heartbeat backstop was then paused; no further GPU job is
+queued. See [closeout receipt](reports/c009_shutdown_closeout.json).

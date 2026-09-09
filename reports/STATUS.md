@@ -17,9 +17,9 @@
   [immutable receipt](family_matching_20260909_r1/summary.json).
 - The next step is a separately frozen complete CPU join/selection audit. Do
   not train on the four-question preview or replay the completed GPU queues.
-- The owner explicitly authorized shutdown after this round. A provider-verified
-  target and task heartbeat are ready; final shutdown state is recorded in the
-  next-session handoff after result publication and preservation.
+- The project A800 was **confirmed shut down at 07:37 UTC**, after result
+  publication and recovery checks. Its heartbeat backstop is **paused**; see
+  [closeout receipt](c009_shutdown_closeout.json). No instance was started/deleted.
 
 ## Seed23 pair and backups complete; historical GPU closeout aligned
 
