@@ -1,5 +1,13 @@
 # Evidence roadmap toward an ICLR-quality study
 
+**2026-09-09 E010 update:** the identity-absent boundary pair is complete:
+matched greedy7/64 versus5/64, complete traces4/64 each, broader expressions
+and traces0/64 versus2/64. Read the [result analysis](../reports/ABSENT_BOUNDARY_SEED31_RESULTS.md)
+and D011. Prior stage-execution language below is historical; do not replay
+completed queues. The next proposal is CPU task/estimand design and support/
+shortcut audits before a separately reviewed GPU study. No broad or mechanism
+claim is established;5740 seconds are used and1460 remain.
+
 **The next contribution must explain a controlled boundary, rather than merely
 produce a positive second seed.** The current arithmetic pilot is a useful
 engineering and design result. It is not sufficient evidence for a general

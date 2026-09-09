@@ -3,21 +3,19 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-09 UTC):** Both seed17 and seed23 GPU phases are
-complete; do not replay their queues. C010 retained a CPU deadline failure;
-C011/C012/C013 complete the feasibility/selection work. The next finite pair is
-`configs/absent_boundary_seed31/queue.json`:128 fixed questions, Paths/GCM,
-seed31/eval17,1024 updates and277760 response tokens per arm. Read
-`docs/ABSENT_BOUNDARY_TRAINING.md` and `docs/NEXT_SESSION.md` before startup.
+**Current phase (2026-09-09 UTC):** E010's identity-absent Paths/GCM seed31 pair
+is complete. Do not replay it or seed17/23. Matched greedy is7/64 versus5/64,
+complete traces4/64 each, and broader expression/trace0/64 versus2/64. Both
+full doses and all800 saved outputs passed independent CPU audits. Read
+`reports/ABSENT_BOUNDARY_SEED31_RESULTS.md` and `docs/NEXT_SESSION.md`.
 
-Restore the verified **4716-second** ledger with2484 remaining. The new queue
-requires2130 seconds for both jobs and reuses the completed calibration with
-the unchanged recipe. It is prepared, not running; the server was last verified
-shut down. Wait for the owner to start/provide tomorrow's A800, verify its
-published code/model/ledger/environment and18GiB free, then execute only this
-pair under the later launch instruction. No automatic rental, budget reset,
-main grid or holdout evaluation is implied. Selection and numerical residuals
-limit the boundary interpretation; retain all failed and adverse outcomes.
+The current ledger is **5740 seconds charged,1460 remaining**,15 reconciled
+receipts and zero reservations. No new GPU phase is queued. The remaining
+allowance cannot reserve another2130-second pair at the present caps. Complete
+independent checkpoint preservation and normal shutdown, then work on CPU-only
+task/estimand design for owner review. A clone is not a fresh budget and starting
+an instance must not launch a completed queue. Retain all adverse endpoints and
+selection limitations. Do not evaluate the reserved holdout.
 
 ## Inspiration and scope
 

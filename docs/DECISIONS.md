@@ -178,3 +178,22 @@ Queue2130 seconds against the retained2484 balance, without raising the7200
 allowance. It is prepared, not executed. The user will provide/start tomorrow's
 A800; verify current Git, ledger, base model, idle GPU and18GiB free first.
 See ABSENT_BOUNDARY_TRAINING.md, NEXT_SESSION.md and the complete research report.
+
+## D011 —2026-09-09: retain the weak boundary result; pause scientific scaling
+
+The owner explicitly authorized E010 on the restarted A800. The frozen pair
+completed without GPU failure, retry or recipe changes. Primary matched greedy
+is7/64 versus5/64; complete traces4/64 each; broader expressions/traces0/64
+versus2/64. All800 outputs passed independent server/local CPU audits with
+byte-identical reports. These endpoint-dependent outcomes do not support
+expanding a general path-diversity claim or an identity-removal mechanism.
+They also do not establish zero effect from this one small selected population.
+
+Retain all results and the pre-outcome registration. Propose CPU task/estimand
+construction, support/difficulty/shortcut audits and a small falsifiable design
+for owner review before another scientific phase. Do not turn the development
+endpoint into a seed or hyperparameter search. The cumulative ledger is5740
+used,1460 remaining,15 verified receipts and zero reservations; this cannot
+reserve another current2130-second pair. Complete independent preservation
+and the already authorized normal shutdown. See
+[E010 results](../reports/ABSENT_BOUNDARY_SEED31_RESULTS.md).

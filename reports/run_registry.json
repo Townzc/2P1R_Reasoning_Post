@@ -1,7 +1,253 @@
 {
-  "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison. Two paired seeds on the same selected pool do not establish a population effect.",
-  "charged_gpu_seconds": 4716,
+  "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
+  "charged_gpu_seconds": 5740,
   "runs": [
+    {
+      "run_id": "absent_boundary_gcm_seed31_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "9217685f6bdb4d0c67a0d76513c12f89898593cb",
+      "config": {
+        "mode": "scientific_pilot",
+        "model_role": "main",
+        "data_dir": "runs/absent_boundary_seed31_20260909_r1",
+        "data_manifest_sha256": "cd9a72d187dbb18f2b75b743ccc0cf85c94951ee574c07e55ed8ddf1f4a1ab97",
+        "steps": 1024,
+        "batch_size": 4,
+        "microbatch_size": 2,
+        "learning_rate": 5e-05,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "seed": 31,
+        "max_length": 384,
+        "max_new_tokens": 384,
+        "eval_batch_size": 4,
+        "profile_warmup": 10,
+        "profile_updates": 100,
+        "samples_per_problem": 4,
+        "sampled_ks": [
+          1,
+          2,
+          4
+        ],
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "save_checkpoint": true,
+        "arm": "gcm",
+        "eval_seed": 17,
+        "pilot_queue": "configs/absent_boundary_seed31/queue.json"
+      },
+      "mode": "scientific_pilot",
+      "arm": "gcm",
+      "model": {
+        "repo_id": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "license": "apache-2.0",
+        "kind": "base",
+        "role": "main",
+        "files": [
+          {
+            "rfilename": "LICENSE",
+            "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+            "size": 11343
+          },
+          {
+            "rfilename": "README.md",
+            "blobId": "b2861f7da85a5af5e321b57c7bbf98ae17255992",
+            "size": 3850
+          },
+          {
+            "rfilename": "config.json",
+            "blobId": "169d606d5cf502a5628a52381586679a6d0caaab",
+            "size": 684
+          },
+          {
+            "rfilename": "generation_config.json",
+            "blobId": "cbbb3133034e192527e5321b4c679154e4819ab8",
+            "size": 138
+          },
+          {
+            "rfilename": "merges.txt",
+            "blobId": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+            "size": 1671839
+          },
+          {
+            "rfilename": "model.safetensors",
+            "blobId": "de4b04359b427ed291b005f62b749531d45e3e5f",
+            "size": 3087467144,
+            "lfs": {
+              "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+              "size": 3087467144,
+              "pointerSize": 135
+            }
+          },
+          {
+            "rfilename": "tokenizer.json",
+            "blobId": "443909a61d429dff23010e5bddd28ff530edda00",
+            "size": 7031645
+          },
+          {
+            "rfilename": "tokenizer_config.json",
+            "blobId": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+            "size": 7228
+          },
+          {
+            "rfilename": "vocab.json",
+            "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+            "size": 2776833
+          }
+        ]
+      },
+      "charged_gpu_seconds": 512,
+      "overfit_passed": null,
+      "steps": 1024,
+      "supervised_response_tokens": 277760,
+      "train_accuracy": null,
+      "train_sample16_accuracy": 1.0,
+      "dev_accuracy": 0.078125,
+      "dev_broad_accuracy": 0.03125,
+      "dev_sampled_pass_at_k": {
+        "1": 0.0703125,
+        "2": 0.08854166666666667,
+        "4": 0.109375
+      },
+      "pilot_gate": null,
+      "throughput": {
+        "profile_updates": 100,
+        "warmup_excluded": 10,
+        "profile_complete": true,
+        "supervised_tokens_per_second": 706.2081213009985,
+        "processed_tokens_per_second": 1227.8562840630127,
+        "peak_allocated_mib": 26857.1669921875,
+        "peak_reserved_mib": 28916.0
+      },
+      "exception_type": null,
+      "records": "runs/absent_boundary_gcm_seed31_r1"
+    },
+    {
+      "run_id": "absent_boundary_paths_seed31_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "9217685f6bdb4d0c67a0d76513c12f89898593cb",
+      "config": {
+        "mode": "scientific_pilot",
+        "model_role": "main",
+        "data_dir": "runs/absent_boundary_seed31_20260909_r1",
+        "data_manifest_sha256": "cd9a72d187dbb18f2b75b743ccc0cf85c94951ee574c07e55ed8ddf1f4a1ab97",
+        "steps": 1024,
+        "batch_size": 4,
+        "microbatch_size": 2,
+        "learning_rate": 5e-05,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "seed": 31,
+        "max_length": 384,
+        "max_new_tokens": 384,
+        "eval_batch_size": 4,
+        "profile_warmup": 10,
+        "profile_updates": 100,
+        "samples_per_problem": 4,
+        "sampled_ks": [
+          1,
+          2,
+          4
+        ],
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "save_checkpoint": true,
+        "arm": "paths",
+        "eval_seed": 17,
+        "pilot_queue": "configs/absent_boundary_seed31/queue.json"
+      },
+      "mode": "scientific_pilot",
+      "arm": "paths",
+      "model": {
+        "repo_id": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "license": "apache-2.0",
+        "kind": "base",
+        "role": "main",
+        "files": [
+          {
+            "rfilename": "LICENSE",
+            "blobId": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+            "size": 11343
+          },
+          {
+            "rfilename": "README.md",
+            "blobId": "b2861f7da85a5af5e321b57c7bbf98ae17255992",
+            "size": 3850
+          },
+          {
+            "rfilename": "config.json",
+            "blobId": "169d606d5cf502a5628a52381586679a6d0caaab",
+            "size": 684
+          },
+          {
+            "rfilename": "generation_config.json",
+            "blobId": "cbbb3133034e192527e5321b4c679154e4819ab8",
+            "size": 138
+          },
+          {
+            "rfilename": "merges.txt",
+            "blobId": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+            "size": 1671839
+          },
+          {
+            "rfilename": "model.safetensors",
+            "blobId": "de4b04359b427ed291b005f62b749531d45e3e5f",
+            "size": 3087467144,
+            "lfs": {
+              "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+              "size": 3087467144,
+              "pointerSize": 135
+            }
+          },
+          {
+            "rfilename": "tokenizer.json",
+            "blobId": "443909a61d429dff23010e5bddd28ff530edda00",
+            "size": 7031645
+          },
+          {
+            "rfilename": "tokenizer_config.json",
+            "blobId": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+            "size": 7228
+          },
+          {
+            "rfilename": "vocab.json",
+            "blobId": "4783fe10ac3adce15ac8f358ef5462739852c569",
+            "size": 2776833
+          }
+        ]
+      },
+      "charged_gpu_seconds": 512,
+      "overfit_passed": null,
+      "steps": 1024,
+      "supervised_response_tokens": 277760,
+      "train_accuracy": null,
+      "train_sample16_accuracy": 0.6875,
+      "dev_accuracy": 0.109375,
+      "dev_broad_accuracy": 0.0,
+      "dev_sampled_pass_at_k": {
+        "1": 0.09375,
+        "2": 0.13020833333333334,
+        "4": 0.171875
+      },
+      "pilot_gate": null,
+      "throughput": {
+        "profile_updates": 100,
+        "warmup_excluded": 10,
+        "profile_complete": true,
+        "supervised_tokens_per_second": 702.3790000476017,
+        "processed_tokens_per_second": 1221.198741545998,
+        "peak_allocated_mib": 26857.1669921875,
+        "peak_reserved_mib": 28916.0
+      },
+      "exception_type": null,
+      "records": "runs/absent_boundary_paths_seed31_r1"
+    },
     {
       "run_id": "overfit_debug_20260905_r1",
       "status": "aborted_provenance_check",

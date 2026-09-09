@@ -6,22 +6,27 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-09 UTC:** The owner-authorized [E010 identity-absent boundary pair](docs/experiments/E010_absent_boundary_seed31.md)
-is running from published commit `9217685f6bdb4d0c67a0d76513c12f89898593cb`.
-All294 Linux tests, nine pinned model files and the complete frozen data passed
-[preflight](reports/a800_absent_preflight_20260909_r1/startup.json).
-The bounded queue started at18:24:48 UTC: only Paths/GCM seed31, each1024
-updates and277760 supervised tokens on128 selected questions, unchanged64/64
-development sets. The pair reserves2130 of2484 remaining process-seconds;
-actual charges and correctness outcomes are pending. No holdout evaluation.
+**2026-09-09 UTC:** The [E010 identity-absent boundary pair](reports/ABSENT_BOUNDARY_SEED31_RESULTS.md)
+is complete. Paths/GCM matched greedy scores are **7/64 versus5/64**, complete
+traces **4/64 each**, and broader expression/trace scores **0/64 versus2/64**.
+The weak primary advantage is endpoint-dependent and does not justify scaling
+a general reasoning claim. The changed training population prevents a causal
+comparison with the old identity-heavy pilot.
 
-The [completed CPU analysis](reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md)
-records C009/C010 failures, C013's complete old-design search and C012's fixed
-absence-only selection. Numerical and population restrictions remain: E010 is
-an exploratory allocation boundary, not an identity-removal causal test.
-See the [launch receipt](reports/absent_boundary_seed31_launch_20260909.json),
-[training protocol](docs/ABSENT_BOUNDARY_TRAINING.md) and
-[current handoff](docs/NEXT_SESSION.md).
+Both arms completed1024 updates and277760 supervised tokens from the same
+published source `9217685`. All294 Linux preflight tests passed; server and
+independent local audits of800 predictions are byte-identical. The pair charged
+1024 seconds: **5740/7200 used,1460 remaining**,15 reconciled receipts and no
+reservation. No new GPU phase is queued and the holdout remains unevaluated.
+Paths weights are independently verified; GCM backup is in progress. Normal
+shutdown follows completed preservation. See [current status](reports/STATUS.md),
+[ledger verification](reports/absent_boundary_seed31_ledger_verification.json),
+[research journal](docs/RESEARCH_JOURNAL.md) and [next-session handoff](docs/NEXT_SESSION.md).
+
+The [completed CPU selection analysis](reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md)
+records C009/C010 failures, the complete C013 search and C012's frozen128-question
+preparation. The next proposed scientific work is CPU task/estimand design,
+with support and shortcut audits before a separately reviewed model experiment.
 
 The fixed seed23 Paths/GCM replication is complete.
 Matched-dev greedy correctness is **22/64 versus 17/64**; broader-dev is
@@ -32,7 +37,7 @@ See the [result analysis](reports/PILOT_REPLICATION_SEED23_RESULTS.md),
 [result snapshot](reports/pilot_replication_seed23_after_gpu/results.json)
 and [complete-pair audit](reports/pilot_replication_seed23_after_gpu_audit/summary.json).
 
-The two runs charged **1004 process-seconds**. Cumulative usage is
+At the historical seed23 closeout, those two runs charged **1004 process-seconds**. Cumulative usage then was
 **4716/7200 seconds**, with **2484 remaining**. Both new checkpoints have
 [verified independent backups](reports/replication_seed23_checkpoint_backup_summary.json):
 24 files totaling 12,381,607,162 bytes. The private ledger has been

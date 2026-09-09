@@ -1,5 +1,20 @@
 # AI assistance log
 
+## 2026-09-09 UTC — completed E010 boundary pair and independent audits
+
+Codex ran only the two owner-authorized frozen seed31 arms from clean published
+source9217685. All294 Linux preflight tests passed. Both full1024-update doses
+completed, each charging512 seconds. Matched greedy correctness was7/64 versus
+5/64, complete traces4/64 each, broader expressions/traces0/64 versus2/64.
+Codex retained the weak/adverse secondary results, independently rescored all800
+outputs on server and locally and obtained byte-identical audit artifacts.
+No holdout, additional model inference, retry or validation-based tuning was used.
+All15 cumulative receipts were reconciled:5740/7200 used,1460 remaining,zero
+reservations. The result does not identify an identity-removal mechanism or
+justify scientific scaling. Proposed CPU design review remains a proposal.
+Paths backup is verified; GCM preservation and normal shutdown are tracked as
+separate pending gates at this milestone.
+
 ## 2026-09-09 UTC — authorized absent-boundary execution preparation
 
 The owner restarted the A800 and explicitly requested the frozen next pair.

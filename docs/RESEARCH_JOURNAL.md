@@ -15,9 +15,12 @@ balance. Dates are UTC unless specified otherwise.
 
 ## Attempted work and completed analyses
 
-Current execution: [E010](experiments/E010_absent_boundary_seed31.md), the frozen
-C012 Paths/GCM seed31 pair. The owner explicitly authorized the supplied A800
-on2026-09-09; restoration/preflight precede launch. Results are pending.
+Latest completed experiment: [E010](experiments/E010_absent_boundary_seed31.md),
+the frozen C012 Paths/GCM seed31 pair. Matched greedy is7/64 versus5/64,
+complete traces4/64 each, broader expressions/traces0/64 versus2/64. All800
+outputs and exact full doses passed independent CPU audits. This weak boundary
+result does not justify scaling; prepare a CPU task/estimand review. The result
+report separates completed execution from checkpoint/shutdown preservation.
 
 | ID | Work date | Question or attempted change | Status | Outcome / decision |
 |---|---|---|---|---|

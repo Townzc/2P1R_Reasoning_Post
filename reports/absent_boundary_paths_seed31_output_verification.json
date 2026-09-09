@@ -1,0 +1,53 @@
+{
+  "run_id": "absent_boundary_paths_seed31_r1",
+  "status": "VERIFIED_ON_CPU",
+  "training_commit": "9217685f6bdb4d0c67a0d76513c12f89898593cb",
+  "steps": 1024,
+  "supervised_response_tokens": 277760,
+  "planned_actual_accounting_equal": true,
+  "evaluation": {
+    "final_train_sample16_greedy.jsonl": {
+      "generations": 16,
+      "sha256": "c6537a6126deedcd272cf040ffe72b34835b5962a23230775086940199ba1bcf",
+      "counts": {
+        "correct": 11,
+        "wrong_number_multiset": 4,
+        "parse_failure": 1
+      },
+      "scores_recomputed_from_text": true
+    },
+    "final_dev_greedy.jsonl": {
+      "generations": 64,
+      "sha256": "56b4d644c297480aad52a67648942a630615edbfaf963296dc8d9bfa360438d8",
+      "counts": {
+        "correct": 7,
+        "wrong_target_value": 24,
+        "wrong_number_multiset": 28,
+        "parse_failure": 5
+      },
+      "scores_recomputed_from_text": true
+    },
+    "final_dev_broad_greedy.jsonl": {
+      "generations": 64,
+      "sha256": "92909c0840907162dd7adbd811eb804e200544eca1d5b0bbd018d22a41678ca7",
+      "counts": {
+        "wrong_target_value": 44,
+        "parse_failure": 2,
+        "wrong_number_multiset": 18
+      },
+      "scores_recomputed_from_text": true
+    },
+    "final_dev_sampled.jsonl": {
+      "generations": 256,
+      "sha256": "d7600b976edc251ecc2ae253b47f4a271a2c92395e113eef22b1e5895492fbcf",
+      "counts": {
+        "wrong_target_value": 102,
+        "correct": 24,
+        "wrong_number_multiset": 111,
+        "parse_failure": 19
+      },
+      "scores_recomputed_from_text": true
+    }
+  },
+  "scope": "Final-expression correctness and recorded exposure accounting; intermediate generated steps are not independently verified. No new model inference or holdout evaluation."
+}

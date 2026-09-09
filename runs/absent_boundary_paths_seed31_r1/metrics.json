@@ -1,0 +1,78 @@
+{
+  "baseline": {},
+  "throughput": {
+    "profile_updates": 100,
+    "warmup_excluded": 10,
+    "profile_complete": true,
+    "supervised_tokens_per_second": 702.3790000476017,
+    "processed_tokens_per_second": 1221.198741545998,
+    "peak_allocated_mib": 26857.1669921875,
+    "peak_reserved_mib": 28916.0
+  },
+  "steps": 1024,
+  "train_sample16": {
+    "problems": 16,
+    "generations": 16,
+    "accuracy_macro": 0.6875,
+    "parsing_failure_rate": 0.0625,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 69.0625,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.6875,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 7.480835929512978,
+    "aggregate_output_tokens_per_second": 147.71076526897423,
+    "decoding": "greedy"
+  },
+  "dev": {
+    "problems": 64,
+    "generations": 64,
+    "accuracy_macro": 0.109375,
+    "parsing_failure_rate": 0.078125,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 66.046875,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.109375,
+    "mean_valid_structure_entropy_conditional_on_success": 0.0,
+    "elapsed_seconds": 23.907030183821917,
+    "aggregate_output_tokens_per_second": 176.80991605809933,
+    "decoding": "greedy"
+  },
+  "dev_broad": {
+    "problems": 64,
+    "generations": 64,
+    "accuracy_macro": 0.0,
+    "parsing_failure_rate": 0.03125,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 67.46875,
+    "pass_at_k": {},
+    "mean_valid_structure_count": 0.0,
+    "mean_valid_structure_entropy_conditional_on_success": null,
+    "elapsed_seconds": 29.508270986378193,
+    "aggregate_output_tokens_per_second": 146.33185393997854,
+    "decoding": "greedy"
+  },
+  "dev_sampled": {
+    "problems": 64,
+    "generations": 256,
+    "accuracy_macro": 0.09375,
+    "parsing_failure_rate": 0.07421875,
+    "eos_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_output_tokens": 66.69140625,
+    "pass_at_k": {
+      "1": 0.09375,
+      "2": 0.13020833333333334,
+      "4": 0.171875
+    },
+    "mean_valid_structure_count": 0.25,
+    "mean_valid_structure_entropy_conditional_on_success": 0.2613712956407592,
+    "elapsed_seconds": 26.899852938950062,
+    "aggregate_output_tokens_per_second": 634.6874846768728,
+    "decoding": "sampled"
+  },
+  "final_dev_nll": 0.674791791703966
+}

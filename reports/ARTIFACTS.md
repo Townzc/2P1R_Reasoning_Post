@@ -7,7 +7,7 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 | Pinned 0.5B and 1.5B base snapshots | Reproducible from pinned sources; current A800 main cache verified before pilot | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
 | Higher-LR debug checkpoint (`r2`, gate failed) | Verified independent local backup outside Git; historical server copy | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
 | Passing debug checkpoint (`r3`, 31/32) | Verified independent local backup outside Git; historical server copy | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
-| Shared runtime ledger | Current A800 and independently retained local private copy: 4716 seconds, zero reservations; all 13 receipts reconciled exactly | [Ledger verification](replication_seed23_ledger_verification.json) records the retained copy hash. Older 1173-, 1719- and 3712-second ledgers are historical. A replacement keeps the same approved budget. |
+| Shared runtime ledger | Current A800 and independently retained local private copy: 5740 seconds, zero reservations; all 15 receipts reconciled exactly | [Ledger verification](absent_boundary_seed31_ledger_verification.json) records the retained copy hash. Older 1173-, 1719- and 3712-second ledgers are historical. A replacement keeps the same approved budget. |
 | Main A800 checkpoint (32/32 overfit) | Verified independent local backup outside Git, all 12 files; historical A800 copy | `checkpoint_main_a800_server_verified.json` and `checkpoint_main_a800_local_verified.json` are identical. Weights-only checkpoint; no exact optimizer resume. |
 | Raw run records | GitHub, local checkout and training server | See `run_registry.json` and each run's recorded code commit; one launch is explicitly invalidated. |
 
@@ -164,3 +164,19 @@ used/2484 remaining with13 receipts and no reservation. Do not reset it on a
 clone. Restore the pinned base and current source/data only; require18GiB free
 for the later two-checkpoint phase. No storage expansion or server access was
 needed for this CPU turn.
+
+## E010 identity-absent seed31 — execution and compact preservation complete
+
+Both complete run directories and independent800-output audit are retained
+locally and in the result milestone. Each run saved12 checkpoint files outside
+Git. Paths has an independent SHA256-verified backup; see
+[its receipt](absent_boundary_paths_seed31_r1_checkpoint_backup.json). GCM
+transfer is in progress; do not declare the server disposable until its separate
+verification, publication and fresh idle/ledger checks are complete.
+
+The new ledger has5740/7200 charged,1460 remaining,15 reconciled receipts and
+zero reservations; the old4716 balance is historical. Its SHA256 is
+`1d674f211298aee5eb8bdd1936cab6d68d2d545392b42b9f63a013ebfc11a4c6`.
+The original13 jobs are unchanged. All earlier engineering and six scientific
+checkpoint backups remain independently retained. No current-round cleanup or
+disk expansion was needed. [Analysis and recovery state](ABSENT_BOUNDARY_SEED31_RESULTS.md).

@@ -1,13 +1,13 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 4716,
-  "remaining_gpu_seconds": 2484,
-  "gpu_hours": 1.31,
+  "charged_gpu_seconds": 5740,
+  "remaining_gpu_seconds": 1460,
+  "gpu_hours": 1.5944444444444446,
   "billing_limit": "GPU process runtime only. Instance idle time, downloads and storage are separately billable. A800 hourly price was not supplied; the old 4090 reference price is not applied.",
   "hardware_charged_seconds": {
     "RTX_4090": 737,
-    "A800_80GB": 3979
+    "A800_80GB": 5003
   },
   "jobs": [
     {
@@ -244,6 +244,42 @@
       ],
       "started_at": "2026-09-09T06:04:51.716013+00:00",
       "elapsed_seconds": 503.47502033784986,
+      "exit_code": 0
+    },
+    {
+      "run_id": "absent_boundary_paths_seed31_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 512,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/absent_boundary_seed31/paths.json",
+        "--out",
+        "runs/absent_boundary_paths_seed31_r1"
+      ],
+      "started_at": "2026-09-09T18:24:49.614127+00:00",
+      "elapsed_seconds": 511.9775284193456,
+      "exit_code": 0
+    },
+    {
+      "run_id": "absent_boundary_gcm_seed31_r1",
+      "status": "completed",
+      "max_seconds": 1050,
+      "charged_seconds": 512,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.experiment",
+        "--config",
+        "configs/absent_boundary_seed31/gcm.json",
+        "--out",
+        "runs/absent_boundary_gcm_seed31_r1"
+      ],
+      "started_at": "2026-09-09T18:33:21.636444+00:00",
+      "elapsed_seconds": 511.9267162680626,
       "exit_code": 0
     }
   ]

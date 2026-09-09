@@ -104,3 +104,33 @@ remote PATH and exited before creating any job or reservation; using the verifie
 absolute interpreter resolved it. No model attempt or GPU charge arose from
 that shell error. The existing shutdown follow-up now covers E010 only, with
 publication, independent backups and an idle/unreserved server required first.
+
+## Completion appended —2026-09-09T18:41:53 UTC
+
+Both runs completed from `9217685f6bdb4d0c67a0d76513c12f89898593cb` at the full
+registered dose. Matched greedy final-expression correctness is **7/64 versus5/64**:
+3 both correct,4 Paths only,2 GCM only,55 neither. Matched complete traces are
+**4/64 each**; broader expressions and complete traces are **0/64 versus2/64**.
+Matched sampled pass@1/2/4 are.09375/.13020833/.171875 versus
+.0703125/.08854167/.109375. Complete sampled traces are13/256 versus15/256.
+The [full analysis](../../reports/ABSENT_BOUNDARY_SEED31_RESULTS.md) preserves
+every primary/secondary endpoint, fixed strata, error counts and limitations.
+
+Server and independent local audits of all800 saved predictions are byte-identical.
+Every planned update and all277760 supervised tokens per arm match; no GPU
+failure, retry, nonfinite history, output truncation or dose selection occurred.
+Peak allocated memory is26857.17MiB for each arm. Both charge512 process-seconds:
+1024 this phase,5740/7200 cumulative,1460 remaining,15 reconciled receipts and
+zero reservations. The prior13 ledger jobs are unchanged.
+
+**Analysis/decision:** the primary net two-question advantage has no complete-trace
+or broader-development support. Retain this weak exploratory boundary result;
+do not expand a positive claim, rerun to seek a preferred sign or infer a null
+effect. Differences from seed17/23 cannot identify an identity-operation mechanism
+because training questions, path population, exposures, tokens and seed changed.
+The next proposed work is CPU task/estimand design and support/shortcut audits,
+followed by owner review before any new scientific GPU phase.1460 remaining
+seconds cannot reserve another2130-second pair under the present limits.
+
+At this results milestone all12 Paths checkpoint files are independently
+SHA256-verified; GCM backup and final normal shutdown remain pending.

@@ -1,18 +1,33 @@
 # Verified status — 2026-09-09 UTC
 
-## Current execution: E010 bounded pair running; preflight passed
+## Current: E010 completed and audited; GCM checkpoint backup remains
 
-The owner restarted the A800 and explicitly authorized the frozen seed31 pair.
-SSH key login succeeds; published Git history is restored. The retained ledger
-exactly matches4716/7200 charged,2484 remaining,13 receipts,zero reservations.
-GPU is A80080GB and idle; about29.6GiB is free before diagnostic setup, above the
-18GiB gate. No disk expansion is currently required. All294 Linux tests, nine pinned model files and independent data/queue checks
-passed before the finite2130-second reservation. The server has31,613,050,880
-free data bytes after setup; no model outcome exists yet.
-See [E010 execution record](../docs/experiments/E010_absent_boundary_seed31.md).
-The preparation-only statements below are historical and are superseded by
-this explicit launch authorization. The queue launched at18:24:48 UTC from clean published commit `9217685`;
-Paths is training and no final correctness result is asserted yet.
+- Paths/GCM primary matched greedy expression: **7/64 versus5/64**; paired cells
+  3 both correct,4 Paths only,2 GCM only,55 neither. Complete traces **4/64 each**.
+- Broader greedy expression and complete trace: **0/64 versus2/64**. Sampled
+  matched pass@4 is11/64 versus7/64; complete sampled traces13/256 versus15/256.
+  Primary/secondary directions differ; no broad improvement or ICLR readiness.
+- Both completed the unchanged1024-update,4096-presentation,277760-token dose
+  from clean prepublished source `9217685f6bdb4d0c67a0d76513c12f89898593cb`.
+  No retry, OOM, nonfinite history, truncation, early stopping or holdout use.
+- All294 Linux tests passed before launch. All800 predictions were independently
+  audited on server and locally; their10 audit files are byte-identical.
+- Charged512 seconds each,1024 this pair; **5740/7200 used,1460 remaining**.
+  All15 receipts exactly match the independently retrieved ledger; prior13 jobs
+  unchanged; zero reservations. The current caps require2130 for a new pair,
+  so no additional comparison fits the remaining allowance.
+- Paths checkpoint: all12 files independently SHA256-verified. GCM checkpoint
+  transfer is in progress. GPU is idle; preserve the instance until remaining
+  verification and publication finish, then perform the authorized normal shutdown.
+- Next: CPU-only scientific design review. Distinguish intended path multiplicity
+  from selection/numerical difficulty; consider tasks with multiple paths by
+  construction. Do not reinterpret this changed-population pair as identity removal.
+
+Read [full result/analysis](ABSENT_BOUNDARY_SEED31_RESULTS.md),
+[the E010 journal entry](../docs/experiments/E010_absent_boundary_seed31.md),
+[independent verification](absent_boundary_seed31_independent_verification.json),
+[ledger proof](absent_boundary_seed31_ledger_verification.json) and
+[current handoff](../docs/NEXT_SESSION.md). Earlier states below are historical.
 
 ## Historical preparation: searches complete;128-question boundary pair prepared
 
