@@ -199,3 +199,22 @@ Only start training after the owner supplies/starts an A800 and its fetched
 commit, base model, environment, ledger and disk gates pass. Require18GiB free
 after setup; restore neither historical checkpoints nor CPU witness streams to
 the50GB training disk. No expansion is needed for today's local CPU work.
+
+
+## Legacy provenance regression repair
+
+The final full suite enabled the real pinned-tokenizer regression and exposed
+an old verifier that compared preparation hashes with today's source files.
+Adding the new dataset dispatch legitimately changes pilot_runtime.py, so that
+comparison incorrectly invalidated historical artifacts. The two historical
+data manifests also explicitly record dirty preparation worktrees; their
+recorded commits cannot retroactively be called complete source snapshots.
+
+The repair binds only the two exact historical manifest hashes to the verified
+later published GPU snapshot6128e4266d62f14f063585d4c8e94dbe3ad8c711, checks the
+manifest bytes in that snapshot and every recorded source SHA, and reports
+later_publication=true/prepublication_claimed=false. Unknown dirty provenance,
+missing commits, altered hashes and invalid paths are rejected. Current data,
+token, split and seeded reconstruction checks are unchanged. The new C012
+preparation did use prepublished clean source; these historical exceptions do
+not change its source record or frozen data.

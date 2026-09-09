@@ -52,6 +52,18 @@ retrofit the conclusion to the observed outcomes.
 
 ## Stage 2 — test a boundary between defined legal path families
 
+**CPU completion update,2026-09-09:** C011 confirms both length and structure
+screening. C013 fully searches the old double-family common-length grid:
+63 questions and15 optimal blocks/60 questions. It remains severely selected.
+The separately preselected C012 absence-only contrast removes requirements
+irrelevant to its two model arms and supplies33 blocks. Its frozen preparation
+uses32 blocks/128 questions,277760 tokens and1024 updates per arm, within the
+original remaining budget. See [complete analysis](../reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md)
+and [finite training plan](ABSENT_BOUNDARY_TRAINING.md). Models are not yet run.
+This is a limited allocation boundary pilot; it does **not** estimate the
+allocation-by-family interaction described as a conceptual goal below. A future
+interaction study still needs common-population design and separate review.
+
 The provisional scientific question is: **Does the benefit of within-problem
 legal multitrace allocation depend on supplying different numerical calculation
 structures, or can alternative legal ways to consume the required inputs yield
@@ -113,8 +125,9 @@ a neutral operation. The intervention must manipulate the defined path property
 while preserving or explicitly measuring the other factors.
 
 The existing input-1 and identity-reference counts are useful design diagnostics,
-not a ready-made causal intervention. No Stage 2 configuration, dataset freeze,
-statistical power claim or GPU budget is implied by this conceptual design.
+not a ready-made causal intervention. The conceptual interaction design does not itself authorize a configuration,
+statistical power claim or new GPU budget. The later C012 finite preparation
+has its own narrower estimand and uses the existing remaining allowance.
 
 The [CPU inventory check](../reports/SEMANTIC_CONTROL_FEASIBILITY_20260909.md)
 found 41 problems with at least one stored path in each identity category and
@@ -127,8 +140,10 @@ The separately fixed [complete census](../reports/LEGAL_SUPPORT_CENSUS_20260909.
 subsequently recovered disjoint-AC 2+2 support on 132/256 training questions and
 4+4 support on 131/256. This diagnoses stored-inventory loss on part of the pool;
 it still cannot supply the full original 256-problem 4+4 construction. Freeze a
-matching-loss diagnostic next. Tokenizer, operator-structure and shared-block
-matching remain untested, and the identity categories are not semantic classes.
+matching-loss diagnostic was subsequently executed as C009, then C010/C013
+completed the old global matching question. C011 diagnoses the restrictions
+and C012 prepares the narrower absence-only alternative. The identity
+categories remain numerical trajectory properties, not semantic classes.
 
 ## Stage 3 — independent pools, broader development and uncertainty
 

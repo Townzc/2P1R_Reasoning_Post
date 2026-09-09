@@ -289,3 +289,7 @@ server contacted, GPU charge added or holdout evaluated. Historical outputs
 were read only by regression checks for the shared auditing code, not used to
 choose new rows/seeds. Human interpretation remains necessary for scientific
 claims; the reports explicitly retain nonrepresentativeness and mechanism limits.
+
+Final regression follow-up: repaired legacy preparation-source verification to
+use exact manifest-bound historical published bytes, explicitly preserving the
+old dirty-worktree/later-publication disclosure. No manifest or result rewritten.

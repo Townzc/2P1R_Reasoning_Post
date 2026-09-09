@@ -15,6 +15,8 @@ The research journal records each idea, failure, design, result and interpretati
 Do not replay completed seed17/23 queues. A cloned server's old commit may be
 `fc96885c`; fetch current main or synchronize a verified current Git bundle.
 Starting or cloning a server must not automatically launch any experiment.
+Keep full Git history available: historical provenance checks need the recorded
+source snapshots; a shallow clone must fetch the required history first.
 
 ## Fixed next pair and immutable inputs
 
