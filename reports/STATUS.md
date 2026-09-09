@@ -1,6 +1,6 @@
 # Verified status — 2026-09-09 UTC
 
-## Current execution: E010 authorized; server recovered, preflight passed
+## Current execution: E010 bounded pair running; preflight passed
 
 The owner restarted the A800 and explicitly authorized the frozen seed31 pair.
 SSH key login succeeds; published Git history is restored. The retained ledger
@@ -11,7 +11,8 @@ passed before the finite2130-second reservation. The server has31,613,050,880
 free data bytes after setup; no model outcome exists yet.
 See [E010 execution record](../docs/experiments/E010_absent_boundary_seed31.md).
 The preparation-only statements below are historical and are superseded by
-this explicit launch authorization. No new correctness result is asserted yet.
+this explicit launch authorization. The queue launched at18:24:48 UTC from clean published commit `9217685`;
+Paths is training and no final correctness result is asserted yet.
 
 ## Historical preparation: searches complete;128-question boundary pair prepared
 

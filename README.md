@@ -6,20 +6,22 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-09 UTC:** CPU matching searches and training preparation are complete.
-[C013](reports/compact_join_20260909_r1/summary.json) covers all48,429,084 old-design
-candidate pairs:1,019,005 keys,63 supported questions,15 optimal blocks.
-[C011](reports/family_lengths_20260909_r1/summary.json) shows length and structure
-both drive selection. The preselected absence-only candidate has33 optimal
-blocks; its frozen next pair uses128 questions and1024 updates per arm.
+**2026-09-09 UTC:** The owner-authorized [E010 identity-absent boundary pair](docs/experiments/E010_absent_boundary_seed31.md)
+is running from published commit `9217685f6bdb4d0c67a0d76513c12f89898593cb`.
+All294 Linux tests, nine pinned model files and the complete frozen data passed
+[preflight](reports/a800_absent_preflight_20260909_r1/startup.json).
+The bounded queue started at18:24:48 UTC: only Paths/GCM seed31, each1024
+updates and277760 supervised tokens on128 selected questions, unchanged64/64
+development sets. The pair reserves2130 of2484 remaining process-seconds;
+actual charges and correctness outcomes are pending. No holdout evaluation.
 
-The [full analysis](reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md) records
-failures, revised algorithms, residual selection and exact training controls.
-Data and [queue](configs/absent_boundary_seed31/queue.json) are ready for a later
-A800 launch:277760 supervised tokens per arm, seed31, unchanged development sets,
-2130-second whole-pair ceiling within2484 remaining. [Independent CPU checks](reports/absent_boundary_cpu_verification_20260909.json)
-passed. Both new runs are **not_run**; no server was connected or started.
-Read the [morning handoff](docs/NEXT_SESSION.md) before any launch.
+The [completed CPU analysis](reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md)
+records C009/C010 failures, C013's complete old-design search and C012's fixed
+absence-only selection. Numerical and population restrictions remain: E010 is
+an exploratory allocation boundary, not an identity-removal causal test.
+See the [launch receipt](reports/absent_boundary_seed31_launch_20260909.json),
+[training protocol](docs/ABSENT_BOUNDARY_TRAINING.md) and
+[current handoff](docs/NEXT_SESSION.md).
 
 The fixed seed23 Paths/GCM replication is complete.
 Matched-dev greedy correctness is **22/64 versus 17/64**; broader-dev is
@@ -39,7 +41,7 @@ with zero unresolved reservations. Seed23 results are published at
 `a4edae0817c72c11481ce0f7536952500a8e1e02`. Recovery material is complete;
 the GPU closeout was aligned at `fc96885c`. The A800 was
 [confirmed shut down](reports/c009_shutdown_closeout.json) at 07:37 UTC after C009
-preservation, and the automatic backstop was paused. The new finite pair is prepared but has not been launched; the holdout remains unevaluated. See [status](reports/STATUS.md),
+preservation, and the automatic backstop was paused. These shutdown/accounting statements describe the earlier phase; the owner has restarted the instance for E010. The holdout remains unevaluated. See [status](reports/STATUS.md),
 [artifact recovery](reports/ARTIFACTS.md) and the [handoff](docs/NEXT_SESSION.md).
 
 The [research journal](docs/RESEARCH_JOURNAL.md) separates motivations, designs,

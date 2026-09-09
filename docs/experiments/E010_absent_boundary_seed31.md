@@ -93,3 +93,14 @@ Only registration/status text and these receipts change after that tested source
 Append measured results, source commit, exact paired counts, failures, dose,
 resource charges, interpretation and recovery/publication receipts here after
 completion. Preserve the entry above as the pre-execution record.
+
+## Launch appended —2026-09-09T18:24:48 UTC
+
+The finite queue launched independently of SSH from the clean, prepublished
+commit `9217685f6bdb4d0c67a0d76513c12f89898593cb`. The first arm is training;
+no final outcome or success is implied by launch. See the [launch receipt](../../reports/absent_boundary_seed31_launch_20260909.json).
+A prior launcher-shell attempt found no bare `python3` on the noninteractive
+remote PATH and exited before creating any job or reservation; using the verified
+absolute interpreter resolved it. No model attempt or GPU charge arose from
+that shell error. The existing shutdown follow-up now covers E010 only, with
+publication, independent backups and an idle/unreserved server required first.
