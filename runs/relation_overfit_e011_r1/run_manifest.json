@@ -1,0 +1,188 @@
+{
+  "attention": "sdpa",
+  "autocast_dtype": "bfloat16",
+  "config": {
+    "assignment_seed": 81401,
+    "batch_size": 4,
+    "c014_summary_sha256": "5bc5114f53651f03ec28c0cc1a7cbee71613bda8a48a3715817c3bae179575b8",
+    "cycles": 8,
+    "data_dir": "runs/relation_engineering_c015_r1",
+    "dev_count": 16,
+    "dev_seed": 481,
+    "dev_views": [
+      "clean",
+      "useful_delete",
+      "irrelevant_delete"
+    ],
+    "eval_batch_size": 4,
+    "expected_ledger_sha256": "1d674f211298aee5eb8bdd1936cab6d68d2d545392b42b9f63a013ebfc11a4c6",
+    "expected_prior_jobs": 15,
+    "expected_prior_used_seconds": 5740,
+    "grad_clip": 1.0,
+    "guard_seconds": 15,
+    "holdout_access": false,
+    "learning_rate": 5e-05,
+    "max_length": 1536,
+    "max_new_tokens": 128,
+    "max_seconds": 720,
+    "microbatch_size": 2,
+    "min_free_gib": 12,
+    "model_role": "main",
+    "no_automatic_retry": true,
+    "overfit_max_nll": 0.2,
+    "overfit_required_correct": 32,
+    "phase": "E011",
+    "profile_updates": 64,
+    "profile_warmup": 8,
+    "purpose": "relation_engineering_only",
+    "run_id": "relation_overfit_e011_r1",
+    "save_checkpoint": true,
+    "seed": 41,
+    "steps": 256,
+    "train_count": 32,
+    "train_seed": 401,
+    "weight_decay": 0.01
+  },
+  "data_manifest_sha256": "ddb0068a2ddef8150948b7f8eaf0f2b86d3c3f9a42268c7d7725f44ee1afb854",
+  "eos_token_id": 151643,
+  "finished_at_utc": "2026-09-09T21:31:21.662087+00:00",
+  "gradient_checkpointing": "nonreentrant",
+  "holdout_access": false,
+  "model": "Qwen/Qwen2.5-1.5B",
+  "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "optimizer": "AdamW_foreach_false",
+  "pad_token_id": 151643,
+  "parameter_dtype": "float32",
+  "peak_allocated_mib": 27833.6630859375,
+  "phase": "E011",
+  "preflight_sha256": "e6f1d4ffcff303913a8ba494b946b1b6800120105658e9c9dcf310b7bdc46ae7",
+  "scientific_treatment_comparison": false,
+  "server": {
+    "active_compute_processes": 0,
+    "free_gib": 17.836429595947266,
+    "gpu": "NVIDIA A800-SXM4-80GB, 81920, 580.126.09",
+    "model": {
+      "all_files_verified": true,
+      "files": [
+        {
+          "bytes": 11343,
+          "digest": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+          "file": "LICENSE"
+        },
+        {
+          "bytes": 3850,
+          "digest": "b2861f7da85a5af5e321b57c7bbf98ae17255992",
+          "file": "README.md"
+        },
+        {
+          "bytes": 684,
+          "digest": "169d606d5cf502a5628a52381586679a6d0caaab",
+          "file": "config.json"
+        },
+        {
+          "bytes": 138,
+          "digest": "cbbb3133034e192527e5321b4c679154e4819ab8",
+          "file": "generation_config.json"
+        },
+        {
+          "bytes": 1671839,
+          "digest": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+          "file": "merges.txt"
+        },
+        {
+          "bytes": 3087467144,
+          "digest": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+          "file": "model.safetensors"
+        },
+        {
+          "bytes": 7031645,
+          "digest": "443909a61d429dff23010e5bddd28ff530edda00",
+          "file": "tokenizer.json"
+        },
+        {
+          "bytes": 7228,
+          "digest": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+          "file": "tokenizer_config.json"
+        },
+        {
+          "bytes": 2776833,
+          "digest": "4783fe10ac3adce15ac8f358ef5462739852c569",
+          "file": "vocab.json"
+        }
+      ],
+      "repo_id": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+    },
+    "packages": {
+      "accelerate": "1.10.1",
+      "huggingface-hub": "0.34.4",
+      "numpy": "2.3.2",
+      "safetensors": "0.6.2",
+      "tokenizers": "0.22.1",
+      "transformers": "4.56.2"
+    },
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128"
+  },
+  "source_commit": "33820d9374d9649db06ed1024532f26fa9962cfd",
+  "source_files_sha256": {
+    "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+    "configs/relation_engineering_e011/overfit.json": "9df13582d63773514a8564f5e5c4d650212f3ccd095461f0f2cf54112e69f18c",
+    "configs/relation_engineering_e011/release.json": "7f275bace96497b1ede895c1047b7d8eb4582624b822561f0f2fc2ff18e26087",
+    "configs/resource_budget.json": "64d3611ef7bf8f939dfa7b999754187f1f0fc44582aa194d9687ea5b7b286078",
+    "requirements-diagnostics.txt": "5d081f1abaf2133c07cbeac2d355b99de8c9792eed56af153e7ad8c3c2943c70",
+    "requirements.txt": "973d7d8c0faf8d4dfa2d4026146c47ae288ce423ac3c11b4d9d9667cbfeec952",
+    "scripts/audit_family_matching.py": "7c780d0ce3d63679b8779c636083c8df8dd757336b6fca7069ab064789a75d66",
+    "scripts/audit_relation_engineering_outputs.py": "95b9f67fc0842318c606732ef9993dd2668578f13a42935727610b02106e4de7",
+    "scripts/prepare_relation_engineering.py": "2b894155a1a0aa46455353afc9d8f92a1a47f0b7dd29dfab209d6006fc016085",
+    "scripts/run_bounded.py": "41c79e33cca867689e04d635f71ac64aa3bc2c17ff6e82e8a7fbef493c1f0cf5",
+    "scripts/run_relation_cpu_audit.py": "2a081223c8599f5cd752d910f6eda7aaa7860e006e49049961e264b09814f57a",
+    "scripts/run_relation_engineering.py": "65692cad3b412cfa5f75742afc860999ec96bc00c049f4d38d3b9172cb73b67c",
+    "scripts/verify_relation_cpu_audit.py": "e95b5ca5076fed9b6f3f598772512746ff30154f6c768ac40114b09252b5c10d",
+    "src/relation_audit.py": "fbf50519a8fe8bee93c0ff6140b1f318067743ba1cd5a43b383007c35971cebc",
+    "src/relation_engineering.py": "f773f6cf184391bff1fc31f13b29cc5db8d5d972eb91587b409b3fb9d0f5ae00",
+    "src/relation_experiment.py": "c06c8e960ffae02507bdc2e7c03f696d775528e1f531f6658c3e0542bc0a8bdb",
+    "src/relation_probes.py": "9ba81dd8864d2efeb8b088631ac4135d53302d618af72c19f3ef7eb406f00a68",
+    "src/relation_transport.py": "5648211b828eb5c0325b9b77bdec0cc753f31b251b7a4abfd57094aec1c93b46",
+    "src/relation_verifier.py": "257ac27c17a1f7663b245acb38f4159a7209624a44737753f7bdabecd9307bd6",
+    "src/sft_data.py": "259fb1b3432eb4c96f1db2b4e19d684e2739d51f780259b297dfec479d3a8d55"
+  },
+  "source_worktree_dirty": false,
+  "started_at_utc": "2026-09-09T21:27:37.527836+00:00",
+  "status": "completed",
+  "steps_completed": 256,
+  "tf32": false,
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  },
+  "wall_seconds": 224.13270032405853,
+  "weights": "fresh_pinned_base"
+}

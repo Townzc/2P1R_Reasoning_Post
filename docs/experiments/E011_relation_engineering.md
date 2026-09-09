@@ -156,3 +156,18 @@ GNU-timeout integrations deferred to Linux. No real model execution/server
 contact/GPU charge/reservation occurred. See [release report](../../reports/RELATION_E011_READY.md)
 and [CPU receipt](../../reports/relation_engineering_c015_verification.json).
 The owner can now start/provide A800 for the frozen engineering gate.
+
+
+## Appended E011 result —2026-09-09
+
+The owner started A800 and authorized execution. Clean published33820d9
+completed the fixed256 updates and charged231 seconds. The gate fails:
+0/32 complete train proofs;0/16 on each development view;train NLL.1193898.
+All96 outputs and full dose were independently rechecked on server/locally
+with byte-identical reports. All333 parseable generated step results were2;
+the gold state inventory is varied. Preserve the failed gate and original
+thresholds. No GPU retry,holdout access,recipe change or new scientific pair.
+All12 checkpoint files are independently SHA256-backed up. Current ledger
+5971/7200 used,1229 left,zero reservations. See the
+[full analysis](../../reports/RELATION_E011_RESULTS.md) for post-hoc diagnostics,
+CPU audit performance repair,resource costs and subsequent proposal.

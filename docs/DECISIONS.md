@@ -267,3 +267,15 @@ pass with all48 selected worlds retained; the exact256-update/103424-token
 engineering release is ready.40 local tests pass;2 GNU-timeout integrations
 await Linux. Request the owner-started A800 after publishing the complete release.
 No GPU outcome,new allowance,reservation or scientific comparison is implied.
+
+
+## D015 —2026-09-09: stop at the failed relation engineering gate
+
+E011's complete dose yields0/32 complete train proofs and0/16 per dev view.
+All333 parseable generated step results are2;mean NLL.119 does not indicate
+learned table computation. Independent96-output audits agree exactly. Keep
+the frozen failure and do not scale a scientific comparison. Prepare CPU
+diagnostics separating reference multimodality,provided-route propagation
+and basic lookup;these are prospective engineering tests,not established
+causal explanations. No new GPU run is authorized automatically. Current
+5971/7200 used,1229 left;all checkpoints/receipts preserved for shutdown.

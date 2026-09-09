@@ -1,6 +1,21 @@
-# Verified status — E011 engineering release ready,2026-09-09 UTC
+# Verified status — E011 engineering gate failed,2026-09-09 UTC
 
-## Current: E011 release prepared; ready to request A800 startup
+## Current: E011 completed; engineering gate failed, artifacts preserved
+
+E011 completed the frozen256 updates and charged231 seconds. Complete proofs:
+**0/32 train,0/16 in each development view**. Train NLL.11939 does not rescue
+the failed gate. Post-hoc inspection found all333 parseable generated step
+results equal2, unlike the varied gold states. Do not start a scientific pair.
+
+All96 predictions/dose pass byte-identical server/local audits. All42 Linux
+tests pass;12 checkpoint files/6190803414 bytes are independently SHA256-backed
+up. All16 ledger receipts match: **5971/7200 used,1229 remaining,zero reservations**.
+GPU is idle; normal provider shutdown follows publication and is confirmed in
+its separate receipt. No extra model run,storage expansion or cleanup occurred.
+Read [results and next diagnosis](RELATION_E011_RESULTS.md). Retain all failures;
+prepare CPU operation/route diagnostics before a separately reviewed GPU phase.
+
+## Historical: E011 release prepared; ready to request A800 startup
 
 Read [the CPU-ready report](RELATION_E011_READY.md) and
 [E011 registration](../docs/experiments/E011_relation_engineering.md). C015's

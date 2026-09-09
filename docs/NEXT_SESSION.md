@@ -1,6 +1,38 @@
-# Next session — E011 engineering release ready
+# Next session — diagnose E011 failure on CPU
 
-## Current: E011 CPU release complete — request owner-started A800
+## Current: E011 failed learning gate; no GPU phase queued
+
+Read [full results and analysis](../reports/RELATION_E011_RESULTS.md),
+[CPU verification](../reports/relation_e011_output_verification.json),
+[ledger reconciliation](../reports/relation_e011_ledger_verification.json) and
+[checkpoint backup](../reports/relation_e011_checkpoint_backup.json).
+Run `relation_overfit_e011_r1` completed normally from published33820d9,with
+256 updates/103424 supervised tokens. It failed the engineering gate:0/32
+complete train proofs and0/16 for each dev view; every parseable generated
+step result was2. No additional GPU run is authorized automatically.
+
+**Current ledger:5971/7200 used,1229 remaining,16 receipts,zero reservations.**
+SHA256:`664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`.
+The prior5740 balance and E011's launch config are historical; its guard should
+reject replay. Restore the latest independently retained ledger on a clone.
+All12 checkpoint files (6190803414 bytes) are independently backed up with
+SHA256 verification. Compact outputs are fully tracked; weights remain private.
+Provider shutdown follows result publication; verify the closeout receipt.
+
+Next do CPU diagnosis/preparation. Keep the original full-graph task and failed
+run. Consider one fixed reference per original prompt at the same dose,
+a supplied-route propagation diagnostic,and a one-edge table lookup gate.
+Different diagnostic tasks are not comparable scientific treatment effects.
+Predeclare selection,semantic-field measurements,proof/EOS criteria and complete
+resource caps before any new model evaluation. Do not claim impossibility,
+causal route effects or ICLR readiness from this engineering failure.
+
+The cached CPU audit adapter at ecc7867 memoizes only immutable vocabulary size;
+the original scorer and frozen runtime hashes remain unchanged. All96 outputs
+produce byte-identical server/local audits. All42 Linux tests passed after a
+private tokenizer-path symlink fixed one retained initial skip. No GPU retry.
+
+## Historical: E011 CPU release complete — request owner-started A800
 
 Read [ready report](../reports/RELATION_E011_READY.md),[registration](experiments/E011_relation_engineering.md),
 [release hashes](../configs/relation_engineering_e011/release.json) and

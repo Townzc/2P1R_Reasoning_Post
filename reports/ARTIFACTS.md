@@ -182,3 +182,16 @@ zero reservations; the old4716 balance is historical. Its SHA256 is
 The original13 jobs are unchanged. All earlier engineering and six scientific
 checkpoint backups remain independently retained. No current-round cleanup or
 disk expansion was needed. [Analysis and recovery state](ABSENT_BOUNDARY_SEED31_RESULTS.md).
+
+
+## E011 relation engineering — complete failed gate, preserved artifacts
+
+All compact records are tracked in `runs/relation_overfit_e011_r1`. The
+12-file checkpoint totals6190803414 bytes and has an independent local
+SHA256-verified backup; see `relation_e011_checkpoint_backup.json`. It saves
+weights/tokenizer only,not optimizer/RNG resume state. Previous backups remain.
+All16 receipts match the current ledger:5971 used/1229 remaining,zero
+reservations,SHA256`664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`.
+Do not replay E011 or restore the historical5740 ledger as current. No disk
+expansion or artifact deletion was needed. Normal shutdown is confirmed
+separately after publication; follow `docs/NEXT_SESSION.md`.

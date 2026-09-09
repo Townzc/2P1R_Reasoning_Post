@@ -1,0 +1,86 @@
+{
+  "baseline_dev_clean": {
+    "answer_correct": 0,
+    "complete_correct": 0,
+    "ended_with_eos": 0,
+    "failure_reasons": {
+      "missing_final": 16
+    },
+    "n": 16,
+    "truncated": 16
+  },
+  "dev_by_view": {
+    "clean": {
+      "answer_correct": 2,
+      "complete_correct": 0,
+      "ended_with_eos": 13,
+      "failure_reasons": {
+        "disconnected_trace": 2,
+        "missing_final": 3,
+        "wrong_endpoints": 1,
+        "wrong_state": 10
+      },
+      "n": 16,
+      "truncated": 3
+    },
+    "irrelevant_delete": {
+      "answer_correct": 3,
+      "complete_correct": 0,
+      "ended_with_eos": 13,
+      "failure_reasons": {
+        "disconnected_trace": 4,
+        "missing_final": 3,
+        "wrong_state": 9
+      },
+      "n": 16,
+      "truncated": 3
+    },
+    "useful_delete": {
+      "answer_correct": 1,
+      "complete_correct": 0,
+      "ended_with_eos": 12,
+      "failure_reasons": {
+        "disconnected_trace": 2,
+        "missing_final": 4,
+        "wrong_endpoints": 1,
+        "wrong_state": 9
+      },
+      "n": 16,
+      "truncated": 4
+    }
+  },
+  "engineering_gate": {
+    "passed": false,
+    "scope": "engineering_feasibility_only_no_scientific_treatment_effect"
+  },
+  "peak_including_final_eval_mib": 27833.6630859375,
+  "steps": 256,
+  "throughput": {
+    "peak_allocated_mib": 27833.6630859375,
+    "peak_reserved_mib": 29832.0,
+    "processed_tokens_per_second": 8686.657922736289,
+    "profile_complete": true,
+    "profile_step_seconds": 33.5079385638237,
+    "profile_updates": 64,
+    "supervised_tokens_per_second": 771.6380388710337,
+    "warmup_excluded": 8
+  },
+  "train": {
+    "answer_correct": 2,
+    "complete_correct": 0,
+    "ended_with_eos": 18,
+    "failure_reasons": {
+      "disconnected_trace": 5,
+      "missing_final": 14,
+      "wrong_state": 13
+    },
+    "n": 32,
+    "truncated": 14
+  },
+  "train_reference_nll": {
+    "nll": 0.11938981852023908,
+    "reference_count": 128,
+    "response_loss_sum": 1543.4715738296509,
+    "supervised_tokens": 12928
+  }
+}

@@ -428,3 +428,13 @@ CPU audit timeout,Codex inspected the local tokenizer implementation and measure
 repeated length-query overhead. It prepared a tested read-only vocabulary-size
 cache without editing frozen training/scoring dependencies. Real output audit
 is pending publication of the adapter; no extra GPU retry is authorized.
+
+
+E011 closeout evidence: the read-only cache adapter was published at ecc7867
+before real CPU verification. All96 outputs and complete dose produce
+byte-identical server/local reports. Codex documented the failed0/32 train
+proof gate,constant-state2 outputs,post-hoc line counts and static token
+inventory with explicit limitations. It reconciled all16 receipts (5971 used)
+and verified an independent12-file/6190803414-byte checkpoint backup. No
+additional model execution,seed selection,threshold change or GPU retry.
+A prospective CPU diagnosis replaces immediate scientific scaling.

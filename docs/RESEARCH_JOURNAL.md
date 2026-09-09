@@ -296,3 +296,30 @@ decode methods,and recheck vocabulary size after the audit. A synthetic test
 checks forwarding,caching and mutation rejection. Publish this CPU adapter
 before using it on the real outputs. This repair adds no model execution and
 does not change the failed engineering threshold or authorize a training retry.
+
+## 2026-09-09 —E011 failure independently verified and preserved
+
+**Result.** Fixed256 updates completed;231 seconds charged. Full proofs0/32
+train and0/16 for clean/useful-delete/irrelevant-delete dev. Final train
+NLL.1193898 passes only the NLL sub-gate. The full engineering gate fails.
+Profile771.64 supervised tokens/s,27.18GiB peak allocated memory;no OOM,
+nonfinite history,training truncation,early stop or GPU retry.
+
+**Analysis.** All333 parseable generated step results equal2,while512 gold
+step results span all five states. Only33/133 grounded training step lines
+satisfy their local lookup. State-result tokens are4/101 of supervision;
+this does not measure per-field loss or identify the cause. Formatting and
+termination improve without complete correctness. Mean NLL and answer-only
+counts would give a misleading readiness signal. Do not claim task
+impossibility,route benefit or a deletion effect from this one failed arm.
+
+**Verification/preservation.** All96 token streams/dose give byte-identical
+server/local audit reports. The immutable-size cache fixes CPU audit overhead
+without changing scoring. All16 receipts match the retrieved ledger;prior15
+unchanged.12 checkpoint files/6190803414 bytes independently SHA256-backed up.
+Current5971 used/1229 remaining,zero reservations. Publish and normally shut
+down;provider confirmation is recorded separately.
+
+**Next.** CPU preparation of fixed-reference/full-graph,supplied-route,and
+one-edge diagnostic gates;separately review their order,inputs and total caps.
+No automatic model calls. Read [E011 results](../reports/RELATION_E011_RESULTS.md).
