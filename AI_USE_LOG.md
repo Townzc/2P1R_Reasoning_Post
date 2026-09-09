@@ -419,3 +419,12 @@ exact dose on CPU. It recorded40 passing checks and2 Linux-only deferred tests;
 synthetic predictions in unit tests are explicitly not model results. It prepared
 server handoff,immutable release hashes and a public file index. No server
 contact,GPU/model execution,paid API,delegation or new budget was used.
+
+
+E011 execution/CPU adapter: Codex connected using the existing SSH key,verified
+current source and exact15-receipt ledger,ran the Linux gates and launched only
+the frozen256-update process. It completed and charged231 seconds. After a
+CPU audit timeout,Codex inspected the local tokenizer implementation and measured
+repeated length-query overhead. It prepared a tested read-only vocabulary-size
+cache without editing frozen training/scoring dependencies. Real output audit
+is pending publication of the adapter; no extra GPU retry is authorized.

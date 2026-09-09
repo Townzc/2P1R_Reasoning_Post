@@ -277,3 +277,22 @@ worktree at published f4aec50 passed in3.143 seconds. The only external inputs
 were the original tokenizer and retained private ledger. No run directory,model
 process or new ledger reservation was created; ledger bytes stayed identical.
 See [clean-checkout receipt](../reports/relation_engineering_c015_clean_checkout.json).
+
+## 2026-09-09 —E011 executed; CPU re-audit performance repair before verification
+
+The owner started the supplied A800 and authorized E011. All42 Linux tests
+passed after supplying a canonical private tokenizer-cache symlink; an earlier
+41-pass/1-skip preflight remains retained. The unchanged frozen run completed
+256 updates and saved its checkpoint. Its initial metrics report a failed
+engineering gate (0/32 complete train proofs); independent audit remains pending.
+The process charged231 seconds,bringing the original ledger to5971/7200 used.
+
+The initial post-run CPU audit exceeded its60-second orchestration bound and
+produced no verification receipt. Inspection found repeated vocabulary-size
+queries:100 len(tokenizer) calls took0.648 seconds locally. Prepare a read-only
+memoization adapter,leaving the original frozen auditor,scorer,tokenization,
+training source and result schema byte-unchanged. Forward all tokenization and
+decode methods,and recheck vocabulary size after the audit. A synthetic test
+checks forwarding,caching and mutation rejection. Publish this CPU adapter
+before using it on the real outputs. This repair adds no model execution and
+does not change the failed engineering threshold or authorize a training retry.
