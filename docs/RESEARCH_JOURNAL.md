@@ -52,6 +52,7 @@ weight backup completion is a separate recovery gate from a completed model run.
 | ID | Idea | Status / decision gate |
 |---|---|---|
 | [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
+| [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Code-review design; [C008](experiments/C008_complete_ordered_support_census.md) prepares only its bounded CPU census, outcomes pending |
 
 ## Maintaining the record
 
