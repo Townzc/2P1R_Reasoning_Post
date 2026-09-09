@@ -9,6 +9,7 @@ again, without re-tokenizing every record.
 from __future__ import annotations
 
 import argparse
+import base64
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from fractions import Fraction
@@ -48,6 +49,51 @@ FLAGS = ("target_ge_41", "input_one", "consecutive_pair", "target_is_input",
 
 def record_ref(record):
     return sha(json.dumps(record, sort_keys=True, separators=(",", ":"), allow_nan=False).encode())
+
+
+def artifact_bytes(report, name, *, force_archive=False):
+    """Read a frozen JSON or its hash-checked, byte-exact portable archive."""
+    report = Path(report)
+    original = report / name
+    if original.exists() and not force_archive:
+        return original.read_bytes()
+    configurations = {
+        "join.json": ("join_storage.json", "join_catalog.json.gz.b64", "single-family-slot-catalog-v1"),
+        "length_diagnostic.json": ("length_diagnostic_storage.json", "length_diagnostic.json.gz.b64", "gzip-base64-json-v1"),
+    }
+    require(name in configurations, "No portable archive for this artifact")
+    storage_name, encoded_name, expected_format = configurations[name]
+    storage = json.loads((report / storage_name).read_text())
+    require(storage["format"] == expected_format and storage["original_filename"] == name,
+            "Portable archive schema/name mismatch")
+    require(storage.get("catalog_file", storage.get("archive_file")) == encoded_name,
+            "Portable archive file mismatch")
+    encoded = (report / encoded_name).read_bytes()
+    require(len(encoded) == storage["encoded_bytes"] and sha(encoded) == storage["encoded_sha256"],
+            "Portable encoded bytes/hash mismatch")
+    content = gzip.decompress(base64.b64decode(b"".join(encoded.split()), validate=True))
+    if name == "length_diagnostic.json":
+        restored = content
+    else:
+        require(sha(content) == storage["catalog_sha256"], "Catalog content hash mismatch")
+        catalog = json.loads(content)
+        require(len(catalog["slots"]) == storage["unique_slots"], "Catalog slot count mismatch")
+        result = dict(catalog["metadata"])
+        keys = []
+        for key in catalog["keys"]:
+            witnesses = {}
+            for pid, witness in key["witnesses"].items():
+                indices = witness["slot_indices"]
+                require(len(indices) == 4 and all(type(index) is int and 0 <= index < len(catalog["slots"]) for index in indices),
+                        "Catalog slot reference invalid")
+                witnesses[pid] = {"problem_id": pid, "n_supervised": witness["n_supervised"],
+                                  "slots": [catalog["slots"][index] for index in indices]}
+            keys.append({**{field: value for field, value in key.items() if field != "witnesses"}, "witnesses": witnesses})
+        result["keys"] = keys
+        restored = (json.dumps(result, sort_keys=True, indent=2, ensure_ascii=True) + "\n").encode()
+    require(len(restored) == storage["original_bytes"] and sha(restored) == storage["original_sha256"],
+            "Restored original bytes/hash mismatch")
+    return restored
 
 
 def fixed_structure_matching(rows, structures):
@@ -394,7 +440,7 @@ def verify_report(report, archive, out, repo=None):
     expected_names = {"length_diagnostic.json", "selection.json"} if diagnostic == "C011" else {"join.json", "packing.json", "selection.json"}
     require(set(summary["output_sha256"]) == expected_names, "Unexpected output manifest")
     for name, expected in summary["output_sha256"].items():
-        data = (report / name).read_bytes()
+        data = artifact_bytes(report, name)
         require(sha(data) == expected, "Frozen output hash mismatch")
         payloads[name] = json.loads(data)
     if diagnostic == "C011":
@@ -425,6 +471,7 @@ def verify_report(report, archive, out, repo=None):
                                "tokenized_inventory": INVENTORY_HASH, "tokenized_stream": STREAM_HASH,
                                "prior_independent_token_receipt": PRIOR_RECEIPT_HASH},
               "verifier_sha256": sha(Path(__file__).read_bytes()),
+              "portable_archive_backed_outputs": sorted(name for name in expected_names if not (report / name).exists()),
               "dependencies_sha256": {"scripts/verify_family_matching.py": sha((repo / "scripts/verify_family_matching.py").read_bytes())},
               "networkx_version": nx.__version__,
               "limitations": ["No new arithmetic solution enumeration, tokenization, model, GPU, development or holdout access",

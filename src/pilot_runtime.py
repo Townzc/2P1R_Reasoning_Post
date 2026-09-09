@@ -29,6 +29,9 @@ def load_pilot_inputs(cfg, tokenizer=None):
     manifest = json.loads((root/'manifest.json').read_text())
     if sha256_file(root/'manifest.json') != cfg['data_manifest_sha256']:
         raise ValueError('Frozen data manifest changed')
+    if manifest.get('status') == 'FROZEN_ABSENT_BOUNDARY_V1':
+        from .family_boundary_runtime import load_family_boundary_inputs
+        return load_family_boundary_inputs(cfg, tokenizer)
     if manifest['status'] not in ('FROZEN_PILOT_V1_NO_MODEL_OUTCOMES', 'FROZEN_PILOT_REPLICATION_V1') or cfg['arm'] not in ARMS:
         raise ValueError('Unknown pilot dataset or arm')
     for name, digest in manifest['files_sha256'].items():

@@ -1,0 +1,14 @@
+{
+  "format": "single-family-slot-catalog-v1",
+  "catalog_sha256": "b6350aae1123cadc7e696bea689068a49d56d92359bc052dc42dc055570b3a36",
+  "original_filename": "join.json",
+  "original_bytes": 79406557,
+  "original_sha256": "7472ffcc61c93b7ba98abc5dccef79b19df7beb76c3f95e080a7678e060b1077",
+  "unique_slots": 3622,
+  "reconstruction": "Decode catalog_file from base64, then decompress gzip; parse JSON. For each key witness, restore problem_id from its map key, keep n_supervised and replace slot_indices by slots[index] in order. Set metadata.keys to reconstructed keys; serialize indent=2,sort_keys=True,ensure_ascii=True,newline.",
+  "byte_exact_roundtrip_verified": true,
+  "catalog_file": "join_catalog.json.gz.b64",
+  "catalog_encoding": "base64 ASCII of gzip-compressed UTF-8 JSON",
+  "encoded_sha256": "3acd16bbabbf0358b42edf5154d9a282f851c802abd86b21f0ed4b916fa0bdd5",
+  "encoded_bytes": 845254
+}

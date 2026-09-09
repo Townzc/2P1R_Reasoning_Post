@@ -1,13 +1,16 @@
 """Synthetic counterexamples for independent completion certificates."""
 import copy
+import base64
+import gzip
+import json
 from pathlib import Path
 import tempfile
 import unittest
 
 from scripts.verify_matching_completion import (
-    FAMILIES, _problem_flags, _two_family_support, component_upper_bound,
+    FAMILIES, _problem_flags, _two_family_support, artifact_bytes, component_upper_bound,
     fixed_structure_matching, record_ref, verify_lengths, verify_packing,
-    verify_report, verify_single_keys,
+    sha, verify_report, verify_single_keys,
 )
 
 
@@ -176,6 +179,46 @@ class SelectionAndIOTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "overwrite"):
                 verify_report("missing", "missing", out)
             self.assertEqual(out.read_text(), "preserved")
+
+    def test_portable_length_archive_without_original(self):
+        original = b'{"a": [1, 2]}\n'
+        encoded = base64.encodebytes(gzip.compress(original, mtime=0))
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            storage = {"format": "gzip-base64-json-v1", "original_filename": "length_diagnostic.json",
+                       "archive_file": "length_diagnostic.json.gz.b64", "encoded_bytes": len(encoded),
+                       "encoded_sha256": sha(encoded), "original_bytes": len(original), "original_sha256": sha(original)}
+            (root / "length_diagnostic_storage.json").write_text(json.dumps(storage))
+            archive = root / "length_diagnostic.json.gz.b64"
+            archive.write_bytes(encoded)
+            self.assertEqual(artifact_bytes(root, "length_diagnostic.json"), original)
+            archive.write_bytes(encoded + b"tampered")
+            with self.assertRaisesRegex(ValueError, "encoded"):
+                artifact_bytes(root, "length_diagnostic.json")
+
+    def test_portable_slot_catalog_without_original(self):
+        _, join, _ = single_fixture()
+        key = join["keys"][0]
+        slots, witnesses = [], {}
+        for pid, witness in key["witnesses"].items():
+            start = len(slots)
+            slots.extend(witness["slots"])
+            witnesses[pid] = {"n_supervised": witness["n_supervised"], "slot_indices": list(range(start, start + 4))}
+        catalog = {"metadata": {field: value for field, value in join.items() if field != "keys"},
+                   "slots": slots, "keys": [{"structures": key["structures"], "problem_ids": key["problem_ids"],
+                                               "witnesses": witnesses}]}
+        catalog_bytes = json.dumps(catalog).encode()
+        encoded = base64.encodebytes(gzip.compress(catalog_bytes, mtime=0))
+        original = (json.dumps(join, sort_keys=True, indent=2) + "\n").encode()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            storage = {"format": "single-family-slot-catalog-v1", "original_filename": "join.json",
+                       "catalog_file": "join_catalog.json.gz.b64", "encoded_bytes": len(encoded),
+                       "encoded_sha256": sha(encoded), "original_bytes": len(original), "original_sha256": sha(original),
+                       "catalog_sha256": sha(catalog_bytes), "unique_slots": len(slots)}
+            (root / "join_storage.json").write_text(json.dumps(storage))
+            (root / "join_catalog.json.gz.b64").write_bytes(encoded)
+            self.assertEqual(artifact_bytes(root, "join.json"), original)
 
 
 if __name__ == "__main__":
