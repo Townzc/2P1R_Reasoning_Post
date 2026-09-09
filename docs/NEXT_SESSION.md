@@ -1,13 +1,35 @@
-# Next-session handoff — seed23 and census complete; next gate is CPU matching
+# Next-session handoff — C009 capped join recorded; no GPU needed next
 
 ## Current state — 2026-09-09 UTC
 
-Both frozen seed23 jobs and their independent checkpoint backups are complete:
-**24 files, 12,381,607,162 bytes, all SHA-256 verified**. The private ledger is
-reconciled. **Recovery material is complete; the instance can be stopped after
-final closeout publication and Git alignment.** No further GPU job or
-holdout evaluation is scheduled. The completed seed17 and seed23 queues are
-historical execution records, not a next-session launch plan.
+C009's bounded CPU attempt is recorded. All 256 original questions were checked:
+131 admit disjoint AC 4+4,67 retain common response length and 66 also retain
+four structures per family. Key search hit the frozen 2,000,000-pair ceiling;
+681 discovered keys involve seven questions, with one valid four-question block.
+This is incomplete global discovery, not proof that only one block exists.
+See [C009 analysis](../reports/FAMILY_MATCHING_20260909.md),
+[scientific review](../reports/C009_SCIENTIFIC_REVIEW.md), and
+[receipt](../reports/family_matching_20260909_r1/summary.json).
+
+**Do not open a GPU server for the next step.** Freeze a complete CPU join with
+safe support-mask grouping and independent small-fixture equivalence tests;
+then measure complete support, packing limits and selection. Do not increase
+C009's caps or overwrite its failure, change K, alter targets, create another
+pool, train the tiny witness, or evaluate holdout. The family labels still do
+not isolate semantic strategies. The full256 four-cell design is already
+infeasible under the declared support rule.
+
+The owner explicitly authorized shutdown after this round. A task heartbeat
+backstop targets only the verified preceding project instance. Final shutdown
+confirmation is appended separately after publication and preservation checks.
+The GPU closeout itself was aligned at `fc96885c`; the latest CPU commits can
+be restored from GitHub on any future instance. No scientific state depends
+on keeping the server running.
+
+Both seed23 backups remain verified: 24 files,12,381,607,162 bytes. No new weights
+were produced. The latest ledger remains 4716/7200 process-seconds, 2484 remaining,
+13 receipts and zero reservations. A fresh remote check confirmed no GPU/training
+processes and 29.61 GiB free; no expansion was necessary.
 
 Read [STATUS](../reports/STATUS.md), the
 [result analysis](../reports/PILOT_REPLICATION_SEED23_RESULTS.md),
@@ -61,7 +83,7 @@ The earlier 1173-, 1719- and 3712-second ledgers are historical. A new or cloned
 instance does not reset compute allowance. The previous 2130-second queue
 reservation was a ceiling for this now-completed phase, not its actual charge.
 
-## Recovery and outstanding closeout
+## Recovery sources and historical GPU closeout
 
 | State | Recovery source / current status |
 |---|---|
@@ -84,11 +106,11 @@ Weights do not contain optimizer/RNG/sampler state for exact training resume.
 The [backup summary](../reports/replication_seed23_checkpoint_backup_summary.json)
 and [server check](../reports/replication_seed23_final_server_check.json) verify
 both independent copies, no active training/GPU process and zero reservations.
-Retain those copies and the reconciled private ledger. Publish the compact
-closeout and CPU census records, align the server/local Git checkout with the
-verified published ref, then tell the owner the instance can be stopped. The
-recorded idle check still identifies the GPU execution commit, not an already
-synchronized final closeout commit.
+Retain those copies and the reconciled private ledger. GPU compact closeout
+was published and synchronized at `fc96885c` in the preceding round. C009 is
+local CPU work and does not require uploading its inventory to an idle server.
+A future clone must fetch the latest verified Git commit; old GPU queue files
+remain completed historical records and must not auto-launch.
 Connection information and live ledger contents remain outside Git. Use
 [MIGRATION](MIGRATION.md) for authenticated transfer or verified Git bundles;
 a clone is a convenience, not proof that its state is current.
@@ -119,7 +141,7 @@ stratum labels, source/config identities and full-dose receipts. Preserve all
 raw generations and both signs of descriptive differences. The holdout remains
 reserved and unevaluated.
 
-## Completed CPU census and the next matching gate
+## Historical C008 census and now-measured C009 gate
 
 [C008](experiments/C008_complete_ordered_support_census.md) ran after the GPU
 phase from prepublished source `b504cb7b604847b2155bb71dd2bb2c3602d9f371`.
@@ -132,29 +154,8 @@ access, GPU charge or storage expansion occurred. See the
 [census analysis](../reports/LEGAL_SUPPORT_CENSUS_20260909.md) and
 [immutable summary](../reports/legal_support_census_20260909_r1/summary.json).
 
-Do not rerun enumeration as the next scientific step. Prepare a separately
-frozen **matching-loss diagnostic** from the complete inventory: fix path
-cardinality, class-overlap rules, tokenizer/serialization and allowed residuals
-before measuring losses from EOS-inclusive token matching, global operator
-structure and shared-block requirements. These constraints have **not** been
-verified by the census. A capped search failure is not proof of infeasibility;
-K=2 or a reduced/new problem pool would change the design and need disclosure.
-
-Every Countdown input must be consumed once. Multiplication/division by one may
-be essential to a legal solution; identity-present/absent is not a partition of
-semantic strategies and can vary inside an AC class. Preserve input provenance
-and never count one mixed class twice in a disjoint-class assignment. Do not
-silently map these trajectories to Surface changes or invalid strategies.
-
-The [training-exposure audit](../reports/PAIRING_SEED_SEMANTIC_AUDIT_20260909.md)
-shows that exact canonical-structure matching does not establish equality of
-all numerical features or per-problem exposure. State the path-allocation
-estimand, manipulated property and required controls before constructing a new
-comparison; do not adjust away treatment components after viewing outcomes.
-
-Prior work already covers the broad per-problem/global-diversity idea. A useful
-next study needs an explicit, falsifiable relation to that work, an audited
-construction and credible uncertainty. The current results do not authorize
-another seed, a main grid, changed tuning, more sampling, a holdout experiment,
-a larger rental or a budget increase. Present concrete CPU feasibility and the
-exact proposed jobs before the next resource/design decision.
+Do not rerun enumeration as the next scientific step. C009 has completed the
+fixed token and per-question structure checks. Its global key search remains
+incomplete; the complete-join proposal in the current scientific review is the
+next CPU work. Keep the immutable C008/C009 inputs, hashes and pre-execution
+source commits, including the unsuccessful capped search. No GPU work is queued.

@@ -1,6 +1,27 @@
 # Verified status — 2026-09-09 UTC
 
-## Seed23 pair and backups complete; final Git alignment remains
+## C009 bounded CPU round recorded; complete global matching remains open
+
+- Source `cb2bcedce36f78ae593ce979677e4199aeda26ee` was published before execution.
+- All 25,846 original legal rows encoded; complete per-question stages:
+  **131 raw AC 4+4 → 67 equal-token → 66 distinct-family-structure** of 256.
+- Shared-key search hit its frozen 2,000,000-pair ceiling, with 681 checked keys,
+  seven discovered questions and one four-question accounting block. Global
+  support/maximum packing remain unknown; no cap increase or retry occurred.
+- Surface eligibility caused no loss here; first 12 structure policy reduces
+  structure support 66→56. Common-token matching removes all targets ≥41.
+- Local CPU wall time 23.081 seconds, **zero additional GPU process-seconds**;
+  4716/7200 used, 2484 remaining. No expansion, model inference or holdout access.
+- Read [full results](FAMILY_MATCHING_20260909.md),
+  [scientific review](C009_SCIENTIFIC_REVIEW.md), and
+  [immutable receipt](family_matching_20260909_r1/summary.json).
+- The next step is a separately frozen complete CPU join/selection audit. Do
+  not train on the four-question preview or replay the completed GPU queues.
+- The owner explicitly authorized shutdown after this round. A provider-verified
+  target and task heartbeat are ready; final shutdown state is recorded in the
+  next-session handoff after result publication and preservation.
+
+## Seed23 pair and backups complete; historical GPU closeout aligned
 
 - Both frozen runs completed from source
   `6128e4266d62f14f063585d4c8e94dbe3ad8c711`:
@@ -30,7 +51,7 @@
   [backup summary](replication_seed23_checkpoint_backup_summary.json).
   The [server check](replication_seed23_final_server_check.json) records no active
   training/GPU process or reservation. Recovery material is complete; the
-  instance can be stopped after final closeout publication and Git alignment.
+  GPU closeout was aligned at `fc96885c`; C009 has explicit shutdown authorization.
 - The seed23 results are published at
   `a4edae0817c72c11481ce0f7536952500a8e1e02`. The later CPU census has its own
   execution provenance below; neither changes the frozen GPU primary outcome.
@@ -38,8 +59,8 @@
   only their redundant remote weight directories were removed. Preflight free
   space was 41.16 GiB on the existing 50 GB data disk; no expansion was needed.
 - No further GPU phase or holdout evaluation is scheduled. The full fixed-pool
-  CPU census is now complete; next is a separately frozen **matching-loss
-  diagnostic** for token lengths, structural exposure and shared blocks. Numerical identity operations can be required to consume each input
+  CPU census and C009 bounded matching attempt are recorded; complete global
+  joining remains open. Numerical identity operations can be required to consume each input
   legally; they are not automatically Surface variants or invalid strategies.
 - Two paired seeds on the same selected pool do not establish a population
   effect, a reasoning mechanism or ICLR readiness. The broad question overlaps
@@ -68,10 +89,9 @@ this is repository provenance, not external preregistration.
 - The stored inventory hid support, but the full 256-problem 4+4 design fails
   even before matching: 125 questions lack that support. Identity is a legal
   trajectory attribute, not an invariant semantic-strategy label.
-- **Token/EOS, global structural exposure and shared-block matching are not yet
-  tested.** Freeze cardinality, class-overlap rules and permitted residuals before
-  the next CPU search, and report losses at each constraint. Do not silently
-  change K or the problem pool to rescue feasibility.
+- **C009 now measures token/EOS and per-question structure feasibility.** Its
+  shared-block search is incomplete; the exact counts above supersede the earlier
+  untested matching status. Keep K and the problem pool fixed.
 - This added **zero GPU process-seconds** and **zero storage expansion**;
   the ledger remains 4716 used / 2484 remaining. No model inference,
   development/holdout inspection or new training dataset was involved.

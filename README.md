@@ -6,7 +6,14 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-09 UTC:** The fixed seed23 Paths/GCM replication is complete.
+**2026-09-09 UTC:** [C009 CPU matching-loss results](reports/FAMILY_MATCHING_20260909.md)
+are recorded: 131 raw-support questions become 67 after token matching and 66
+after structure matching. Global key search reached its prespecified cap;
+681 discovered keys/seven questions/one four-question block are feasible lower
+bounds, not maximum capacity. No new GPU run is scheduled. Next is complete
+CPU joining and selection analysis; see [scientific review](reports/C009_SCIENTIFIC_REVIEW.md).
+
+The fixed seed23 Paths/GCM replication is complete.
 Matched-dev greedy correctness is **22/64 versus 17/64**; broader-dev is
 **1/64 for each arm**. Strict complete-trace verification is 18/64 versus
 16/64 on matched dev and 0/64 versus 1/64 on broader dev. All 800 saved
@@ -22,7 +29,8 @@ The two runs charged **1004 process-seconds**. Cumulative usage is
 [reconciled against all 13 receipts](reports/replication_seed23_ledger_verification.json),
 with zero unresolved reservations. Seed23 results are published at
 `a4edae0817c72c11481ce0f7536952500a8e1e02`. Recovery material is complete;
-the instance can be stopped after the final closeout Git alignment. No further
+the GPU closeout was aligned at `fc96885c`. The owner has authorized automatic
+shutdown after C009 preservation; its final state is recorded in the handoff. No further
 GPU job or holdout evaluation is scheduled. See [status](reports/STATUS.md),
 [artifact recovery](reports/ARTIFACTS.md) and the [handoff](docs/NEXT_SESSION.md).
 
@@ -38,9 +46,8 @@ prepublished source `b504cb7b604847b2155bb71dd2bb2c3602d9f371`, enumerated all
 256 original training problems: 1,966,080 attempts and 25,846 legal ordered
 solutions. Disjoint-AC 2+2 and 4+4 support exists on 132 and 131 problems;
 56 problems contain AC classes with both identity labels. These are inventory
-counts, not new model results. Token, global-structure and shared-block matching
-remain untested. The next gate is a **fixed CPU matching-loss diagnostic**;
-GPU usage and storage allocation are unchanged.
+counts, not new model results. C009 has now measured token/structure loss; its
+shared-key join is incomplete. GPU usage and storage allocation are unchanged.
 
 A numerical identity operation may be necessary to consume an input legally;
 it is not automatically a Surface variant or an invalid strategy. The

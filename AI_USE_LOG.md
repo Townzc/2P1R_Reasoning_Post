@@ -237,3 +237,28 @@ explicit cardinality, class-overlap and residual rules. None of those matching
 constraints has been tested by this census. GPU primary outcomes are unchanged;
 there was no model inference, development/holdout inspection, extra GPU charge
 or storage expansion. The ledger remains 4716/7200 used and 2484 remaining.
+
+
+## 2026-09-09 UTC — C009 CPU matching-loss attempt and shutdown authorization
+
+Codex and separate review agents implemented/reviewed a fixed K=4 matching
+protocol, tested synthetic counterexamples, and published execution source
+`cb2bcedce36f78ae593ce979677e4199aeda26ee` before reading real matching results.
+The 23.081-second local CPU attempt retained 131 raw-support questions, 67
+same-token and 66 family-structure questions. Global key discovery hit its
+prespecified two-million-pair ceiling; 681 keys/seven questions/one greedy block
+are lower-bound witnesses, not exhausted support. No model result, new pool,
+holdout access, GPU charge or storage expansion was introduced. Policy loss,
+selection changes and nonsemantic family labels are explicitly recorded in
+[FAMILY_MATCHING_20260909.md](reports/FAMILY_MATCHING_20260909.md).
+A separate AST/Fraction and network-flow verifier audits saved outputs;
+its final receipt states the actual checked scope rather than implying a new
+exhaustive key search. The original large repeated-key JSON has a byte-exact
+public catalog and remains locally retained. No adverse result was overwritten.
+
+The user explicitly authorized shutdown after this round. An app heartbeat
+was configured to verify completion/recovery and stop only the known project
+instance, then pause itself. Local checkpoint hashes were rechecked; a first
+remote check using bare python3 returned 127, and a corrected absolute-interpreter
+check succeeded with no training/GPU processes, unchanged 4716-second ledger and
+zero reservations. Provider shutdown confirmation is recorded separately.

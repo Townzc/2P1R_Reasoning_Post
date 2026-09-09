@@ -1,0 +1,5013 @@
+{
+  "blocks": [
+    {
+      "assignment": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "block_id": 0,
+      "conditions": {
+        "identity_absent_gcm": [
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(+(1,19),20),33)",
+                "encodable": true,
+                "expression": "(33 + ((1 + 19) / 20))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,19),20),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((1 + 19) / 20))",
+                "response_hash": "54ba6698a524a6600b560135209b83710b4e9caceac01f762084b6dd5bac43f8",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(23,+(1,22)),11)",
+                "encodable": true,
+                "expression": "((23 / (1 + 22)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(23,+(1,22)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((23 / (1 + 22)) + 11)",
+                "response_hash": "c9cccfa1e8ad2314fe122ef47fbdc5442c8796119b0b7081d9ddbd8d00e5239b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(-(14,1),13),28)",
+                "encodable": true,
+                "expression": "(28 + ((14 - 1) / 13))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(14,1),13),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((14 - 1) / 13))",
+                "response_hash": "9459727edbae3147e68283432ab4fd3f4e77ccf74fc8f51082f0268c677394bf",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(28,-(29,1)),15)",
+                "encodable": true,
+                "expression": "((28 / (29 - 1)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(28,-(29,1)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((28 / (29 - 1)) + 15)",
+                "response_hash": "a6a82930c5473e1bbf181f42104ffff88846559e7956f125974da0b9c3549270",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 0,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(+(1,19),20),33)",
+                "encodable": true,
+                "expression": "(33 + ((1 + 19) / 20))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,19),20),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((1 + 19) / 20))",
+                "response_hash": "54ba6698a524a6600b560135209b83710b4e9caceac01f762084b6dd5bac43f8",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(23,+(1,22)),11)",
+                "encodable": true,
+                "expression": "((23 / (1 + 22)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(23,+(1,22)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((23 / (1 + 22)) + 11)",
+                "response_hash": "c9cccfa1e8ad2314fe122ef47fbdc5442c8796119b0b7081d9ddbd8d00e5239b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(-(14,1),13),28)",
+                "encodable": true,
+                "expression": "(28 + ((14 - 1) / 13))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(14,1),13),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((14 - 1) / 13))",
+                "response_hash": "9459727edbae3147e68283432ab4fd3f4e77ccf74fc8f51082f0268c677394bf",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(28,-(29,1)),15)",
+                "encodable": true,
+                "expression": "((28 / (29 - 1)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(28,-(29,1)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((28 / (29 - 1)) + 15)",
+                "response_hash": "a6a82930c5473e1bbf181f42104ffff88846559e7956f125974da0b9c3549270",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 1,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(+(1,19),20),33)",
+                "encodable": true,
+                "expression": "(33 + ((1 + 19) / 20))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,19),20),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((1 + 19) / 20))",
+                "response_hash": "54ba6698a524a6600b560135209b83710b4e9caceac01f762084b6dd5bac43f8",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(23,+(1,22)),11)",
+                "encodable": true,
+                "expression": "((23 / (1 + 22)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(23,+(1,22)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((23 / (1 + 22)) + 11)",
+                "response_hash": "c9cccfa1e8ad2314fe122ef47fbdc5442c8796119b0b7081d9ddbd8d00e5239b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(-(14,1),13),28)",
+                "encodable": true,
+                "expression": "(28 + ((14 - 1) / 13))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(14,1),13),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((14 - 1) / 13))",
+                "response_hash": "9459727edbae3147e68283432ab4fd3f4e77ccf74fc8f51082f0268c677394bf",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(28,-(29,1)),15)",
+                "encodable": true,
+                "expression": "((28 / (29 - 1)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(28,-(29,1)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((28 / (29 - 1)) + 15)",
+                "response_hash": "a6a82930c5473e1bbf181f42104ffff88846559e7956f125974da0b9c3549270",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 2,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(+(1,19),20),33)",
+                "encodable": true,
+                "expression": "(33 + ((1 + 19) / 20))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,19),20),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((1 + 19) / 20))",
+                "response_hash": "54ba6698a524a6600b560135209b83710b4e9caceac01f762084b6dd5bac43f8",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(23,+(1,22)),11)",
+                "encodable": true,
+                "expression": "((23 / (1 + 22)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(23,+(1,22)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((23 / (1 + 22)) + 11)",
+                "response_hash": "c9cccfa1e8ad2314fe122ef47fbdc5442c8796119b0b7081d9ddbd8d00e5239b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(-(14,1),13),28)",
+                "encodable": true,
+                "expression": "(28 + ((14 - 1) / 13))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(14,1),13),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((14 - 1) / 13))",
+                "response_hash": "9459727edbae3147e68283432ab4fd3f4e77ccf74fc8f51082f0268c677394bf",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(28,-(29,1)),15)",
+                "encodable": true,
+                "expression": "((28 / (29 - 1)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(28,-(29,1)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((28 / (29 - 1)) + 15)",
+                "response_hash": "a6a82930c5473e1bbf181f42104ffff88846559e7956f125974da0b9c3549270",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 3,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          }
+        ],
+        "identity_absent_paths": [
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(+(1,19),20),33)",
+                "encodable": true,
+                "expression": "(33 + ((1 + 19) / 20))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,19),20),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((1 + 19) / 20))",
+                "response_hash": "54ba6698a524a6600b560135209b83710b4e9caceac01f762084b6dd5bac43f8",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(23,+(1,22)),11)",
+                "encodable": true,
+                "expression": "((23 / (1 + 22)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(23,+(1,22)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((23 / (1 + 22)) + 11)",
+                "response_hash": "c9cccfa1e8ad2314fe122ef47fbdc5442c8796119b0b7081d9ddbd8d00e5239b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(-(14,1),13),28)",
+                "encodable": true,
+                "expression": "(28 + ((14 - 1) / 13))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(14,1),13),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((14 - 1) / 13))",
+                "response_hash": "9459727edbae3147e68283432ab4fd3f4e77ccf74fc8f51082f0268c677394bf",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(28,-(29,1)),15)",
+                "encodable": true,
+                "expression": "((28 / (29 - 1)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(28,-(29,1)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((28 / (29 - 1)) + 15)",
+                "response_hash": "a6a82930c5473e1bbf181f42104ffff88846559e7956f125974da0b9c3549270",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 0,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(-(20,1),19),33)",
+                "encodable": true,
+                "expression": "(33 + ((20 - 1) / 19))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "19",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 19.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(20,1),19),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 1 = 19.\nStep 2: 19 / 19 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((20 - 1) / 19))",
+                "response_hash": "2c39a1eaa466d46bfab37940e05fc8cba40bc785ae2bace5de86b4fd49f77dfa",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(22,-(23,1)),11)",
+                "encodable": true,
+                "expression": "((22 / (23 - 1)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "22",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 22.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(22,-(23,1)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 1 = 22.\nStep 2: 22 / 22 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((22 / (23 - 1)) + 11)",
+                "response_hash": "e196c0a95445960d7031a4096f823660a9606ec263b92ea3d79b5759528d7ffb",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(14,+(1,13)),28)",
+                "encodable": true,
+                "expression": "((14 / (1 + 13)) + 28)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "14",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 14.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(14,+(1,13)),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 13 = 14.\nStep 2: 14 / 14 = 1.\nStep 3: 1 + 28 = 29.\nAnswer: ((14 / (1 + 13)) + 28)",
+                "response_hash": "a7bb04ef10805bafbcce2cfb8dac8a9ffb97c9f7f636b36188364879834df0b5",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(+(1,28),29),15)",
+                "encodable": true,
+                "expression": "(15 + ((1 + 28) / 29))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,28),29),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 29 / 29 = 1.\nStep 3: 15 + 1 = 16.\nAnswer: (15 + ((1 + 28) / 29))",
+                "response_hash": "df0d09eebf4354ea8b15f1d8d5c2a7c858e9065e5b5b7d10a90ff00242d0c637",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 1,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(20,+(1,19)),33)",
+                "encodable": true,
+                "expression": "((20 / (1 + 19)) + 33)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(20,+(1,19)),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 1 + 33 = 34.\nAnswer: ((20 / (1 + 19)) + 33)",
+                "response_hash": "bc897297a0d57b3ee4b0fcc2815ebdd35c18c0b47f698fd39087f839f45b414a",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(+(1,22),23),11)",
+                "encodable": true,
+                "expression": "(11 + ((1 + 22) / 23))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,22),23),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 11 + 1 = 12.\nAnswer: (11 + ((1 + 22) / 23))",
+                "response_hash": "5de24eb199db1d09f20dbe821819576b2efc3ffac12735f0ef1280c3e8e0708e",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(13,-(14,1)),28)",
+                "encodable": true,
+                "expression": "((13 / (14 - 1)) + 28)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(13,-(14,1)),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 1 + 28 = 29.\nAnswer: ((13 / (14 - 1)) + 28)",
+                "response_hash": "b10a5c1960d9519a22b2d88d98200dc406c5101dd14a33704c7c1709adcbe3e9",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(-(29,1),28),15)",
+                "encodable": true,
+                "expression": "(15 + ((29 - 1) / 28))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(29,1),28),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 15 + 1 = 16.\nAnswer: (15 + ((29 - 1) / 28))",
+                "response_hash": "a57b6b2ed5fddf570b949bd04676b74dd57cd90688d9d89889d95a96f874a7d4",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 2,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(/(19,-(20,1)),33)",
+                "encodable": true,
+                "expression": "((19 / (20 - 1)) + 33)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "19",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 19.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(19,-(20,1)),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 1 = 19.\nStep 2: 19 / 19 = 1.\nStep 3: 1 + 33 = 34.\nAnswer: ((19 / (20 - 1)) + 33)",
+                "response_hash": "8f566c237b72f6674b31a9879edd4b9041b9b083339ad809a6079450abdae119",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(/(-(23,1),22),11)",
+                "encodable": true,
+                "expression": "(11 + ((23 - 1) / 22))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "22",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 22.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(23,1),22),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 1 = 22.\nStep 2: 22 / 22 = 1.\nStep 3: 11 + 1 = 12.\nAnswer: (11 + ((23 - 1) / 22))",
+                "response_hash": "59fcc37f61748e163444e9a3cd6ecf2b258e7762c4d998b707b3fd78e03cf55b",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(/(+(1,13),14),28)",
+                "encodable": true,
+                "expression": "(28 + ((1 + 13) / 14))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "14",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 14.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,13),14),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 13 = 14.\nStep 2: 14 / 14 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((1 + 13) / 14))",
+                "response_hash": "d0f00d82acad6b38d053cc89c2d0617f067ad043e4f5e96da1e6a1fada955967",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(/(29,+(1,28)),15)",
+                "encodable": true,
+                "expression": "((29 / (1 + 28)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(29,+(1,28)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 29 / 29 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((29 / (1 + 28)) + 15)",
+                "response_hash": "f515454b4eb5e36a0d4edbcc33aa4db03d39153a5aab9c27e417836ab2da257b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 3,
+            "structure_histogram": {
+              "+(/(+(N,N),N),N)": 1,
+              "+(/(-(N,N),N),N)": 1,
+              "+(/(N,+(N,N)),N)": 1,
+              "+(/(N,-(N,N)),N)": 1
+            },
+            "supervised_tokens": 256
+          }
+        ],
+        "identity_present_gcm": [
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(+(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 + (20 - 19)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 + 1 = 34.\nStep 3: 34 * 1 = 34.\nAnswer: ((33 + (20 - 19)) * 1)",
+                "response_hash": "ad170033860d25bf6848a9246b052c564cebae9bd1abe723fcf7a451745d1bea",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(-(11,-(22,23)),1)",
+                "encodable": true,
+                "expression": "(1 * (11 - (22 - 23)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(11,-(22,23)),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 22 - 23 = -1.\nStep 2: 11 - (-1) = 12.\nStep 3: 1 * 12 = 12.\nAnswer: (1 * (11 - (22 - 23)))",
+                "response_hash": "40497651bdb8080d837d63835c56a4f0ffde59ce63078197a9aed89c0cb0f776",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(+(1,28),-(14,13))",
+                "encodable": true,
+                "expression": "((1 + 28) * (14 - 13))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,28),-(14,13))",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 14 - 13 = 1.\nStep 3: 29 * 1 = 29.\nAnswer: ((1 + 28) * (14 - 13))",
+                "response_hash": "cf6dc15a3d0ab06be590c8603dfcd71a4e965132f365e3e1fbeb9e403fc0e08a",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(*(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 * (29 - 28)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "15"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 15.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 * 1 = 15.\nStep 3: 15 + 1 = 16.\nAnswer: ((15 * (29 - 28)) + 1)",
+                "response_hash": "33cfc21fae7916e7504a5a065871c7b4c38312ba3be1581c5cf5db7effbfd297",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 0,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(+(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 + (20 - 19)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 + 1 = 34.\nStep 3: 34 * 1 = 34.\nAnswer: ((33 + (20 - 19)) * 1)",
+                "response_hash": "ad170033860d25bf6848a9246b052c564cebae9bd1abe723fcf7a451745d1bea",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(-(11,-(22,23)),1)",
+                "encodable": true,
+                "expression": "(1 * (11 - (22 - 23)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(11,-(22,23)),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 22 - 23 = -1.\nStep 2: 11 - (-1) = 12.\nStep 3: 1 * 12 = 12.\nAnswer: (1 * (11 - (22 - 23)))",
+                "response_hash": "40497651bdb8080d837d63835c56a4f0ffde59ce63078197a9aed89c0cb0f776",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(+(1,28),-(14,13))",
+                "encodable": true,
+                "expression": "((1 + 28) * (14 - 13))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,28),-(14,13))",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 14 - 13 = 1.\nStep 3: 29 * 1 = 29.\nAnswer: ((1 + 28) * (14 - 13))",
+                "response_hash": "cf6dc15a3d0ab06be590c8603dfcd71a4e965132f365e3e1fbeb9e403fc0e08a",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(*(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 * (29 - 28)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "15"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 15.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 * 1 = 15.\nStep 3: 15 + 1 = 16.\nAnswer: ((15 * (29 - 28)) + 1)",
+                "response_hash": "33cfc21fae7916e7504a5a065871c7b4c38312ba3be1581c5cf5db7effbfd297",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 1,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(+(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 + (20 - 19)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 + 1 = 34.\nStep 3: 34 * 1 = 34.\nAnswer: ((33 + (20 - 19)) * 1)",
+                "response_hash": "ad170033860d25bf6848a9246b052c564cebae9bd1abe723fcf7a451745d1bea",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(-(11,-(22,23)),1)",
+                "encodable": true,
+                "expression": "(1 * (11 - (22 - 23)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(11,-(22,23)),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 22 - 23 = -1.\nStep 2: 11 - (-1) = 12.\nStep 3: 1 * 12 = 12.\nAnswer: (1 * (11 - (22 - 23)))",
+                "response_hash": "40497651bdb8080d837d63835c56a4f0ffde59ce63078197a9aed89c0cb0f776",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(+(1,28),-(14,13))",
+                "encodable": true,
+                "expression": "((1 + 28) * (14 - 13))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,28),-(14,13))",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 14 - 13 = 1.\nStep 3: 29 * 1 = 29.\nAnswer: ((1 + 28) * (14 - 13))",
+                "response_hash": "cf6dc15a3d0ab06be590c8603dfcd71a4e965132f365e3e1fbeb9e403fc0e08a",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(*(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 * (29 - 28)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "15"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 15.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 * 1 = 15.\nStep 3: 15 + 1 = 16.\nAnswer: ((15 * (29 - 28)) + 1)",
+                "response_hash": "33cfc21fae7916e7504a5a065871c7b4c38312ba3be1581c5cf5db7effbfd297",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 2,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(+(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 + (20 - 19)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 + 1 = 34.\nStep 3: 34 * 1 = 34.\nAnswer: ((33 + (20 - 19)) * 1)",
+                "response_hash": "ad170033860d25bf6848a9246b052c564cebae9bd1abe723fcf7a451745d1bea",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(-(11,-(22,23)),1)",
+                "encodable": true,
+                "expression": "(1 * (11 - (22 - 23)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(11,-(22,23)),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 22 - 23 = -1.\nStep 2: 11 - (-1) = 12.\nStep 3: 1 * 12 = 12.\nAnswer: (1 * (11 - (22 - 23)))",
+                "response_hash": "40497651bdb8080d837d63835c56a4f0ffde59ce63078197a9aed89c0cb0f776",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(+(1,28),-(14,13))",
+                "encodable": true,
+                "expression": "((1 + 28) * (14 - 13))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,28),-(14,13))",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 14 - 13 = 1.\nStep 3: 29 * 1 = 29.\nAnswer: ((1 + 28) * (14 - 13))",
+                "response_hash": "cf6dc15a3d0ab06be590c8603dfcd71a4e965132f365e3e1fbeb9e403fc0e08a",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(*(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 * (29 - 28)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "15"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 15.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 * 1 = 15.\nStep 3: 15 + 1 = 16.\nAnswer: ((15 * (29 - 28)) + 1)",
+                "response_hash": "33cfc21fae7916e7504a5a065871c7b4c38312ba3be1581c5cf5db7effbfd297",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 3,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          }
+        ],
+        "identity_present_paths": [
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(+(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 + (20 - 19)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 + 1 = 34.\nStep 3: 34 * 1 = 34.\nAnswer: ((33 + (20 - 19)) * 1)",
+                "response_hash": "ad170033860d25bf6848a9246b052c564cebae9bd1abe723fcf7a451745d1bea",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(-(11,-(22,23)),1)",
+                "encodable": true,
+                "expression": "(1 * (11 - (22 - 23)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(11,-(22,23)),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 22 - 23 = -1.\nStep 2: 11 - (-1) = 12.\nStep 3: 1 * 12 = 12.\nAnswer: (1 * (11 - (22 - 23)))",
+                "response_hash": "40497651bdb8080d837d63835c56a4f0ffde59ce63078197a9aed89c0cb0f776",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(+(1,28),-(14,13))",
+                "encodable": true,
+                "expression": "((1 + 28) * (14 - 13))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,28),-(14,13))",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 14 - 13 = 1.\nStep 3: 29 * 1 = 29.\nAnswer: ((1 + 28) * (14 - 13))",
+                "response_hash": "cf6dc15a3d0ab06be590c8603dfcd71a4e965132f365e3e1fbeb9e403fc0e08a",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "+(*(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 * (29 - 28)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "15"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 15.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 * 1 = 15.\nStep 3: 15 + 1 = 16.\nAnswer: ((15 * (29 - 28)) + 1)",
+                "response_hash": "33cfc21fae7916e7504a5a065871c7b4c38312ba3be1581c5cf5db7effbfd297",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 0,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(+(1,33),-(20,19))",
+                "encodable": true,
+                "expression": "((1 + 33) * (20 - 19))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "34",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,33),-(20,19))",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 33 = 34.\nStep 2: 20 - 19 = 1.\nStep 3: 34 * 1 = 34.\nAnswer: ((1 + 33) * (20 - 19))",
+                "response_hash": "21636d24bc485364c849fefba6b1d38b2b56d84fa24cca436871cf836a041f61",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "+(*(-(23,22),11),1)",
+                "encodable": true,
+                "expression": "((11 * (23 - 22)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "11"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 11.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(23,22),11),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 22 = 1.\nStep 2: 11 * 1 = 11.\nStep 3: 11 + 1 = 12.\nAnswer: ((11 * (23 - 22)) + 1)",
+                "response_hash": "b0a8a77640ce407e7d73e5699a9e377197dbc604b08f0da74b3af3ea01b3ca7e",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(-(28,-(13,14)),1)",
+                "encodable": true,
+                "expression": "(1 * (28 - (13 - 14)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "29"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(28,-(13,14)),1)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 13 - 14 = -1.\nStep 2: 28 - (-1) = 29.\nStep 3: 1 * 29 = 29.\nAnswer: (1 * (28 - (13 - 14)))",
+                "response_hash": "3f95368d6a6e8a1a5c13b185971921521f7a0adb60c926f13e12a414f7f8e7ce",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "*(+(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 + (29 - 28)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "16"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 16.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 + 1 = 16.\nStep 3: 16 * 1 = 16.\nAnswer: ((15 + (29 - 28)) * 1)",
+                "response_hash": "51902372e927209e171242b866e1678bb5d89b4f081f0a5ef0139e697a96baf7",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 1,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "*(-(33,-(19,20)),1)",
+                "encodable": true,
+                "expression": "(1 * (33 - (19 - 20)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(33,-(19,20)),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 19 - 20 = -1.\nStep 2: 33 - (-1) = 34.\nStep 3: 1 * 34 = 34.\nAnswer: (1 * (33 - (19 - 20)))",
+                "response_hash": "3e2de227a7d8cf386cc2d7b2faef7f57ca85edccb1a6bb5730e54d5b44aa6403",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(+(-(23,22),11),1)",
+                "encodable": true,
+                "expression": "((11 + (23 - 22)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(23,22),11),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 22 = 1.\nStep 2: 11 + 1 = 12.\nStep 3: 12 * 1 = 12.\nAnswer: ((11 + (23 - 22)) * 1)",
+                "response_hash": "6936ee8aa4bba82ce3d0e7d74e22e3915b8fa8d53f92aba3aee4fd911bb946d2",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "+(*(-(14,13),28),1)",
+                "encodable": true,
+                "expression": "((28 * (14 - 13)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "28"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(14,13),28),1)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 13 = 1.\nStep 2: 28 * 1 = 28.\nStep 3: 28 + 1 = 29.\nAnswer: ((28 * (14 - 13)) + 1)",
+                "response_hash": "a5607a3f5bdce81f759102366e2a7cb3da7cdd9e7a350fecee10f390b4e39ee4",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "*(+(1,15),-(29,28))",
+                "encodable": true,
+                "expression": "((1 + 15) * (29 - 28))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "16",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 16.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,15),-(29,28))",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 15 = 16.\nStep 2: 29 - 28 = 1.\nStep 3: 16 * 1 = 16.\nAnswer: ((1 + 15) * (29 - 28))",
+                "response_hash": "bca3ed266ed1589dfbefb91d3397fe062cac3269f727f56132e5a52597df2620",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 2,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          },
+          {
+            "padding_tokens": 0,
+            "processed_tokens": 456,
+            "records": [
+              {
+                "ac_class": "+(*(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 * (20 - 19)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "33"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 33.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 * 1 = 33.\nStep 3: 33 + 1 = 34.\nAnswer: ((33 * (20 - 19)) + 1)",
+                "response_hash": "8a5b059bfc6fe2938f3593069920e978645f9b944b5785487d92027900817e8a",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              {
+                "ac_class": "*(+(1,11),-(23,22))",
+                "encodable": true,
+                "expression": "((1 + 11) * (23 - 22))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "12",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,11),-(23,22))",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 11 = 12.\nStep 2: 23 - 22 = 1.\nStep 3: 12 * 1 = 12.\nAnswer: ((1 + 11) * (23 - 22))",
+                "response_hash": "109ae2c158fb7a64477464eb5df7fbf8d744ae5d07ed0f964ccb452687ee1032",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              {
+                "ac_class": "*(+(-(14,13),28),1)",
+                "encodable": true,
+                "expression": "((28 + (14 - 13)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "29"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(14,13),28),1)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 13 = 1.\nStep 2: 28 + 1 = 29.\nStep 3: 29 * 1 = 29.\nAnswer: ((28 + (14 - 13)) * 1)",
+                "response_hash": "24c2f61770f8192cb45f475e966fd48d41c96c4daa33a7144fec9f866ada302f",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              {
+                "ac_class": "*(-(15,-(28,29)),1)",
+                "encodable": true,
+                "expression": "(1 * (15 - (28 - 29)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "16"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 16.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(15,-(28,29)),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 28 - 29 = -1.\nStep 2: 15 - (-1) = 16.\nStep 3: 1 * 16 = 16.\nAnswer: (1 * (15 - (28 - 29)))",
+                "response_hash": "f0549bd8a21405ddff473e2befcf8c4576eb715cdc58b4a89f41a30c0a5ebf98",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              }
+            ],
+            "round": 3,
+            "structure_histogram": {
+              "*(+(-(N,N),N),N)": 1,
+              "*(+(N,N),-(N,N))": 1,
+              "*(-(N,-(N,N)),N)": 1,
+              "+(*(-(N,N),N),N)": 1
+            },
+            "supervised_tokens": 256
+          }
+        ]
+      },
+      "identity_structures": [
+        "*(+(-(N,N),N),N)",
+        "*(+(N,N),-(N,N))",
+        "*(-(N,-(N,N)),N)",
+        "+(*(-(N,N),N),N)"
+      ],
+      "nonidentity_structures": [
+        "+(/(+(N,N),N),N)",
+        "+(/(-(N,N),N),N)",
+        "+(/(N,+(N,N)),N)",
+        "+(/(N,-(N,N)),N)"
+      ],
+      "problem_ids": [
+        "062be8a0ba4ee3b3f427",
+        "0b5196d75bfed6cfbed7",
+        "0dc1aa79cb45452fdcdf",
+        "443ab24de3216e5e1c75"
+      ],
+      "witnesses": [
+        {
+          "n_supervised": 64,
+          "problem_id": "062be8a0ba4ee3b3f427",
+          "slots": [
+            {
+              "ac_class": "*(+(-(20,19),33),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 + (20 - 19)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 + 1 = 34.\nStep 3: 34 * 1 = 34.\nAnswer: ((33 + (20 - 19)) * 1)",
+                "response_hash": "ad170033860d25bf6848a9246b052c564cebae9bd1abe723fcf7a451745d1bea",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "*(+(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "*(+(1,33),-(20,19))",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(1,33),-(20,19))",
+                "encodable": true,
+                "expression": "((1 + 33) * (20 - 19))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "34",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,33),-(20,19))",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 33 = 34.\nStep 2: 20 - 19 = 1.\nStep 3: 34 * 1 = 34.\nAnswer: ((1 + 33) * (20 - 19))",
+                "response_hash": "21636d24bc485364c849fefba6b1d38b2b56d84fa24cca436871cf836a041f61",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "*(+(N,N),-(N,N))"
+            },
+            {
+              "ac_class": "*(-(33,-(19,20)),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(-(33,-(19,20)),1)",
+                "encodable": true,
+                "expression": "(1 * (33 - (19 - 20)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "34"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 34.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(33,-(19,20)),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 19 - 20 = -1.\nStep 2: 33 - (-1) = 34.\nStep 3: 1 * 34 = 34.\nAnswer: (1 * (33 - (19 - 20)))",
+                "response_hash": "3e2de227a7d8cf386cc2d7b2faef7f57ca85edccb1a6bb5730e54d5b44aa6403",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "*(-(N,-(N,N)),N)"
+            },
+            {
+              "ac_class": "+(*(-(20,19),33),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "+(*(-(20,19),33),1)",
+                "encodable": true,
+                "expression": "((33 * (20 - 19)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "33"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 33.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(20,19),33),1)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 19 = 1.\nStep 2: 33 * 1 = 33.\nStep 3: 33 + 1 = 34.\nAnswer: ((33 * (20 - 19)) + 1)",
+                "response_hash": "8a5b059bfc6fe2938f3593069920e978645f9b944b5785487d92027900817e8a",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "+(*(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(+(1,19),20),33)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(+(1,19),20),33)",
+                "encodable": true,
+                "expression": "(33 + ((1 + 19) / 20))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,19),20),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((1 + 19) / 20))",
+                "response_hash": "54ba6698a524a6600b560135209b83710b4e9caceac01f762084b6dd5bac43f8",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "+(/(+(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(-(20,1),19),33)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(-(20,1),19),33)",
+                "encodable": true,
+                "expression": "(33 + ((20 - 1) / 19))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "19",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 19.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(20,1),19),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 1 = 19.\nStep 2: 19 / 19 = 1.\nStep 3: 33 + 1 = 34.\nAnswer: (33 + ((20 - 1) / 19))",
+                "response_hash": "2c39a1eaa466d46bfab37940e05fc8cba40bc785ae2bace5de86b4fd49f77dfa",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "+(/(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(20,+(1,19)),33)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(20,+(1,19)),33)",
+                "encodable": true,
+                "expression": "((20 / (1 + 19)) + 33)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "20",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 20.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(20,+(1,19)),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 19 = 20.\nStep 2: 20 / 20 = 1.\nStep 3: 1 + 33 = 34.\nAnswer: ((20 / (1 + 19)) + 33)",
+                "response_hash": "bc897297a0d57b3ee4b0fcc2815ebdd35c18c0b47f698fd39087f839f45b414a",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "+(/(N,+(N,N)),N)"
+            },
+            {
+              "ac_class": "+(/(19,-(20,1)),33)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(19,-(20,1)),33)",
+                "encodable": true,
+                "expression": "((19 / (20 - 1)) + 33)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  19,
+                  20,
+                  33
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "19",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 19.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(19,-(20,1)),33)",
+                "problem_id": "062be8a0ba4ee3b3f427",
+                "prompt": "Use the numbers 1, 19, 20, 33 exactly once each with +, -, *, / and parentheses to make 34. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 20 - 1 = 19.\nStep 2: 19 / 19 = 1.\nStep 3: 1 + 33 = 34.\nAnswer: ((19 / (20 - 1)) + 33)",
+                "response_hash": "8f566c237b72f6674b31a9879edd4b9041b9b083339ad809a6079450abdae119",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 34
+              },
+              "structure_id": "+(/(N,-(N,N)),N)"
+            }
+          ]
+        },
+        {
+          "n_supervised": 64,
+          "problem_id": "0b5196d75bfed6cfbed7",
+          "slots": [
+            {
+              "ac_class": "*(+(-(23,22),11),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(-(23,22),11),1)",
+                "encodable": true,
+                "expression": "((11 + (23 - 22)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(23,22),11),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 22 = 1.\nStep 2: 11 + 1 = 12.\nStep 3: 12 * 1 = 12.\nAnswer: ((11 + (23 - 22)) * 1)",
+                "response_hash": "6936ee8aa4bba82ce3d0e7d74e22e3915b8fa8d53f92aba3aee4fd911bb946d2",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "*(+(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "*(+(1,11),-(23,22))",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(1,11),-(23,22))",
+                "encodable": true,
+                "expression": "((1 + 11) * (23 - 22))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "12",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,11),-(23,22))",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 11 = 12.\nStep 2: 23 - 22 = 1.\nStep 3: 12 * 1 = 12.\nAnswer: ((1 + 11) * (23 - 22))",
+                "response_hash": "109ae2c158fb7a64477464eb5df7fbf8d744ae5d07ed0f964ccb452687ee1032",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "*(+(N,N),-(N,N))"
+            },
+            {
+              "ac_class": "*(-(11,-(22,23)),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(-(11,-(22,23)),1)",
+                "encodable": true,
+                "expression": "(1 * (11 - (22 - 23)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "12"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 12.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(11,-(22,23)),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 22 - 23 = -1.\nStep 2: 11 - (-1) = 12.\nStep 3: 1 * 12 = 12.\nAnswer: (1 * (11 - (22 - 23)))",
+                "response_hash": "40497651bdb8080d837d63835c56a4f0ffde59ce63078197a9aed89c0cb0f776",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "*(-(N,-(N,N)),N)"
+            },
+            {
+              "ac_class": "+(*(-(23,22),11),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "+(*(-(23,22),11),1)",
+                "encodable": true,
+                "expression": "((11 * (23 - 22)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "11"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 11.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(23,22),11),1)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 22 = 1.\nStep 2: 11 * 1 = 11.\nStep 3: 11 + 1 = 12.\nAnswer: ((11 * (23 - 22)) + 1)",
+                "response_hash": "b0a8a77640ce407e7d73e5699a9e377197dbc604b08f0da74b3af3ea01b3ca7e",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "+(*(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(+(1,22),23),11)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(+(1,22),23),11)",
+                "encodable": true,
+                "expression": "(11 + ((1 + 22) / 23))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,22),23),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 11 + 1 = 12.\nAnswer: (11 + ((1 + 22) / 23))",
+                "response_hash": "5de24eb199db1d09f20dbe821819576b2efc3ffac12735f0ef1280c3e8e0708e",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "+(/(+(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(-(23,1),22),11)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(-(23,1),22),11)",
+                "encodable": true,
+                "expression": "(11 + ((23 - 1) / 22))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "22",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 22.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(23,1),22),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 1 = 22.\nStep 2: 22 / 22 = 1.\nStep 3: 11 + 1 = 12.\nAnswer: (11 + ((23 - 1) / 22))",
+                "response_hash": "59fcc37f61748e163444e9a3cd6ecf2b258e7762c4d998b707b3fd78e03cf55b",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "+(/(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(23,+(1,22)),11)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(23,+(1,22)),11)",
+                "encodable": true,
+                "expression": "((23 / (1 + 22)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "23",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 23.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(23,+(1,22)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 22 = 23.\nStep 2: 23 / 23 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((23 / (1 + 22)) + 11)",
+                "response_hash": "c9cccfa1e8ad2314fe122ef47fbdc5442c8796119b0b7081d9ddbd8d00e5239b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "+(/(N,+(N,N)),N)"
+            },
+            {
+              "ac_class": "+(/(22,-(23,1)),11)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(22,-(23,1)),11)",
+                "encodable": true,
+                "expression": "((22 / (23 - 1)) + 11)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  11,
+                  22,
+                  23
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "22",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 22.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(22,-(23,1)),11)",
+                "problem_id": "0b5196d75bfed6cfbed7",
+                "prompt": "Use the numbers 1, 11, 22, 23 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 23 - 1 = 22.\nStep 2: 22 / 22 = 1.\nStep 3: 1 + 11 = 12.\nAnswer: ((22 / (23 - 1)) + 11)",
+                "response_hash": "e196c0a95445960d7031a4096f823660a9606ec263b92ea3d79b5759528d7ffb",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 12
+              },
+              "structure_id": "+(/(N,-(N,N)),N)"
+            }
+          ]
+        },
+        {
+          "n_supervised": 64,
+          "problem_id": "0dc1aa79cb45452fdcdf",
+          "slots": [
+            {
+              "ac_class": "*(+(-(14,13),28),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(-(14,13),28),1)",
+                "encodable": true,
+                "expression": "((28 + (14 - 13)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "29"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(14,13),28),1)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 13 = 1.\nStep 2: 28 + 1 = 29.\nStep 3: 29 * 1 = 29.\nAnswer: ((28 + (14 - 13)) * 1)",
+                "response_hash": "24c2f61770f8192cb45f475e966fd48d41c96c4daa33a7144fec9f866ada302f",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "*(+(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "*(+(1,28),-(14,13))",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(1,28),-(14,13))",
+                "encodable": true,
+                "expression": "((1 + 28) * (14 - 13))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,28),-(14,13))",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 14 - 13 = 1.\nStep 3: 29 * 1 = 29.\nAnswer: ((1 + 28) * (14 - 13))",
+                "response_hash": "cf6dc15a3d0ab06be590c8603dfcd71a4e965132f365e3e1fbeb9e403fc0e08a",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "*(+(N,N),-(N,N))"
+            },
+            {
+              "ac_class": "*(-(28,-(13,14)),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(-(28,-(13,14)),1)",
+                "encodable": true,
+                "expression": "(1 * (28 - (13 - 14)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "29"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(28,-(13,14)),1)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 13 - 14 = -1.\nStep 2: 28 - (-1) = 29.\nStep 3: 1 * 29 = 29.\nAnswer: (1 * (28 - (13 - 14)))",
+                "response_hash": "3f95368d6a6e8a1a5c13b185971921521f7a0adb60c926f13e12a414f7f8e7ce",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "*(-(N,-(N,N)),N)"
+            },
+            {
+              "ac_class": "+(*(-(14,13),28),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "+(*(-(14,13),28),1)",
+                "encodable": true,
+                "expression": "((28 * (14 - 13)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "28"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(14,13),28),1)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 13 = 1.\nStep 2: 28 * 1 = 28.\nStep 3: 28 + 1 = 29.\nAnswer: ((28 * (14 - 13)) + 1)",
+                "response_hash": "a5607a3f5bdce81f759102366e2a7cb3da7cdd9e7a350fecee10f390b4e39ee4",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "+(*(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(+(1,13),14),28)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(+(1,13),14),28)",
+                "encodable": true,
+                "expression": "(28 + ((1 + 13) / 14))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "14",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 14.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,13),14),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 13 = 14.\nStep 2: 14 / 14 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((1 + 13) / 14))",
+                "response_hash": "d0f00d82acad6b38d053cc89c2d0617f067ad043e4f5e96da1e6a1fada955967",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "+(/(+(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(-(14,1),13),28)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(-(14,1),13),28)",
+                "encodable": true,
+                "expression": "(28 + ((14 - 1) / 13))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(14,1),13),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 28 + 1 = 29.\nAnswer: (28 + ((14 - 1) / 13))",
+                "response_hash": "9459727edbae3147e68283432ab4fd3f4e77ccf74fc8f51082f0268c677394bf",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "+(/(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(14,+(1,13)),28)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(14,+(1,13)),28)",
+                "encodable": true,
+                "expression": "((14 / (1 + 13)) + 28)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "14",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 14.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(14,+(1,13)),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 13 = 14.\nStep 2: 14 / 14 = 1.\nStep 3: 1 + 28 = 29.\nAnswer: ((14 / (1 + 13)) + 28)",
+                "response_hash": "a7bb04ef10805bafbcce2cfb8dac8a9ffb97c9f7f636b36188364879834df0b5",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "+(/(N,+(N,N)),N)"
+            },
+            {
+              "ac_class": "+(/(13,-(14,1)),28)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(13,-(14,1)),28)",
+                "encodable": true,
+                "expression": "((13 / (14 - 1)) + 28)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  13,
+                  14,
+                  28
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "13",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 13.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(13,-(14,1)),28)",
+                "problem_id": "0dc1aa79cb45452fdcdf",
+                "prompt": "Use the numbers 1, 13, 14, 28 exactly once each with +, -, *, / and parentheses to make 29. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 14 - 1 = 13.\nStep 2: 13 / 13 = 1.\nStep 3: 1 + 28 = 29.\nAnswer: ((13 / (14 - 1)) + 28)",
+                "response_hash": "b10a5c1960d9519a22b2d88d98200dc406c5101dd14a33704c7c1709adcbe3e9",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 29
+              },
+              "structure_id": "+(/(N,-(N,N)),N)"
+            }
+          ]
+        },
+        {
+          "n_supervised": 64,
+          "problem_id": "443ab24de3216e5e1c75",
+          "slots": [
+            {
+              "ac_class": "*(+(-(29,28),15),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 + (29 - 28)) * 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "16"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 16.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 + 1 = 16.\nStep 3: 16 * 1 = 16.\nAnswer: ((15 + (29 - 28)) * 1)",
+                "response_hash": "51902372e927209e171242b866e1678bb5d89b4f081f0a5ef0139e697a96baf7",
+                "structure_id": "*(+(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "*(+(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "*(+(1,15),-(29,28))",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(+(1,15),-(29,28))",
+                "encodable": true,
+                "expression": "((1 + 15) * (29 - 28))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 2,
+                  "exact_nonroot_intermediates": [
+                    "16",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 16.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(+(1,15),-(29,28))",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 15 = 16.\nStep 2: 29 - 28 = 1.\nStep 3: 16 * 1 = 16.\nAnswer: ((1 + 15) * (29 - 28))",
+                "response_hash": "bca3ed266ed1589dfbefb91d3397fe062cac3269f727f56132e5a52597df2620",
+                "structure_id": "*(+(N,N),-(N,N))",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "*(+(N,N),-(N,N))"
+            },
+            {
+              "ac_class": "*(-(15,-(28,29)),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "*(-(15,-(28,29)),1)",
+                "encodable": true,
+                "expression": "(1 * (15 - (28 - 29)))",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "-1",
+                    "16"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 16.0,
+                  "negative_nodes": 1,
+                  "one_nodes": 0,
+                  "operators": {
+                    "*": 1,
+                    "-": 2
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "*(-(15,-(28,29)),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 28 - 29 = -1.\nStep 2: 15 - (-1) = 16.\nStep 3: 1 * 16 = 16.\nAnswer: (1 * (15 - (28 - 29)))",
+                "response_hash": "f0549bd8a21405ddff473e2befcf8c4576eb715cdc58b4a89f41a30c0a5ebf98",
+                "structure_id": "*(-(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "*(-(N,-(N,N)),N)"
+            },
+            {
+              "ac_class": "+(*(-(29,28),15),1)",
+              "family": "identity_present",
+              "record": {
+                "ac_class": "+(*(-(29,28),15),1)",
+                "encodable": true,
+                "expression": "((15 * (29 - 28)) + 1)",
+                "family": "identity_present",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "1",
+                    "15"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 1,
+                  "max_abs_intermediate": 15.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "*": 1,
+                    "+": 1,
+                    "-": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(*(-(29,28),15),1)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 28 = 1.\nStep 2: 15 * 1 = 15.\nStep 3: 15 + 1 = 16.\nAnswer: ((15 * (29 - 28)) + 1)",
+                "response_hash": "33cfc21fae7916e7504a5a065871c7b4c38312ba3be1581c5cf5db7effbfd297",
+                "structure_id": "+(*(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "+(*(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(+(1,28),29),15)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(+(1,28),29),15)",
+                "encodable": true,
+                "expression": "(15 + ((1 + 28) / 29))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(+(1,28),29),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 29 / 29 = 1.\nStep 3: 15 + 1 = 16.\nAnswer: (15 + ((1 + 28) / 29))",
+                "response_hash": "df0d09eebf4354ea8b15f1d8d5c2a7c858e9065e5b5b7d10a90ff00242d0c637",
+                "structure_id": "+(/(+(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "+(/(+(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(-(29,1),28),15)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(-(29,1),28),15)",
+                "encodable": true,
+                "expression": "(15 + ((29 - 1) / 28))",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(-(29,1),28),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 15 + 1 = 16.\nAnswer: (15 + ((29 - 1) / 28))",
+                "response_hash": "a57b6b2ed5fddf570b949bd04676b74dd57cd90688d9d89889d95a96f874a7d4",
+                "structure_id": "+(/(-(N,N),N),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "+(/(-(N,N),N),N)"
+            },
+            {
+              "ac_class": "+(/(29,+(1,28)),15)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(29,+(1,28)),15)",
+                "encodable": true,
+                "expression": "((29 / (1 + 28)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "29",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 29.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 2,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(29,+(1,28)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 1 + 28 = 29.\nStep 2: 29 / 29 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((29 / (1 + 28)) + 15)",
+                "response_hash": "f515454b4eb5e36a0d4edbcc33aa4db03d39153a5aab9c27e417836ab2da257b",
+                "structure_id": "+(/(N,+(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "+(/(N,+(N,N)),N)"
+            },
+            {
+              "ac_class": "+(/(28,-(29,1)),15)",
+              "family": "identity_absent",
+              "record": {
+                "ac_class": "+(/(28,-(29,1)),15)",
+                "encodable": true,
+                "expression": "((28 / (29 - 1)) + 15)",
+                "family": "identity_absent",
+                "n_processed": 114,
+                "n_prompt": 50,
+                "n_supervised": 64,
+                "numbers": [
+                  1,
+                  15,
+                  28,
+                  29
+                ],
+                "numeric_features": {
+                  "depth": 3,
+                  "exact_nonroot_intermediates": [
+                    "28",
+                    "1"
+                  ],
+                  "fraction_nodes": 0,
+                  "identity_nodes": 0,
+                  "max_abs_intermediate": 28.0,
+                  "negative_nodes": 0,
+                  "one_nodes": 1,
+                  "operators": {
+                    "+": 1,
+                    "-": 1,
+                    "/": 1
+                  },
+                  "zero_nodes": 0
+                },
+                "path_id": "+(/(28,-(29,1)),15)",
+                "problem_id": "443ab24de3216e5e1c75",
+                "prompt": "Use the numbers 1, 15, 28, 29 exactly once each with +, -, *, / and parentheses to make 16. Show calculations, then write Answer: followed by one expression.",
+                "response": "Step 1: 29 - 1 = 28.\nStep 2: 28 / 28 = 1.\nStep 3: 1 + 15 = 16.\nAnswer: ((28 / (29 - 1)) + 15)",
+                "response_hash": "a6a82930c5473e1bbf181f42104ffff88846559e7956f125974da0b9c3549270",
+                "structure_id": "+(/(N,-(N,N)),N)",
+                "surface_compatible": true,
+                "surface_lengths": [
+                  64,
+                  64,
+                  64,
+                  64
+                ],
+                "target": 16
+              },
+              "structure_id": "+(/(N,-(N,N)),N)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "condition_totals": {
+    "identity_absent_gcm": {
+      "mean_numeric_features": {
+        "depth": 3.0,
+        "fraction_nodes": 0.0,
+        "identity_nodes": 0.0,
+        "max_abs_intermediate": 21.0,
+        "negative_nodes": 0.0,
+        "one_nodes": 1.0,
+        "zero_nodes": 0.0
+      },
+      "operator_histogram": {
+        "+": 24,
+        "-": 8,
+        "/": 16
+      },
+      "padding_tokens": 0,
+      "presentations": 16,
+      "processed_tokens": 1824,
+      "supervised_tokens": 1024,
+      "updates": 4
+    },
+    "identity_absent_paths": {
+      "mean_numeric_features": {
+        "depth": 3.0,
+        "fraction_nodes": 0.0,
+        "identity_nodes": 0.0,
+        "max_abs_intermediate": 21.0,
+        "negative_nodes": 0.0,
+        "one_nodes": 1.0,
+        "zero_nodes": 0.0
+      },
+      "operator_histogram": {
+        "+": 24,
+        "-": 8,
+        "/": 16
+      },
+      "padding_tokens": 0,
+      "presentations": 16,
+      "processed_tokens": 1824,
+      "supervised_tokens": 1024,
+      "updates": 4
+    },
+    "identity_present_gcm": {
+      "mean_numeric_features": {
+        "depth": 2.75,
+        "fraction_nodes": 0.0,
+        "identity_nodes": 1.0,
+        "max_abs_intermediate": 22.5,
+        "negative_nodes": 0.25,
+        "one_nodes": 0.75,
+        "zero_nodes": 0.0
+      },
+      "operator_histogram": {
+        "*": 16,
+        "+": 12,
+        "-": 20
+      },
+      "padding_tokens": 0,
+      "presentations": 16,
+      "processed_tokens": 1824,
+      "supervised_tokens": 1024,
+      "updates": 4
+    },
+    "identity_present_paths": {
+      "mean_numeric_features": {
+        "depth": 2.75,
+        "fraction_nodes": 0.0,
+        "identity_nodes": 1.0,
+        "max_abs_intermediate": 22.5,
+        "negative_nodes": 0.25,
+        "one_nodes": 0.75,
+        "zero_nodes": 0.0
+      },
+      "operator_histogram": {
+        "*": 16,
+        "+": 12,
+        "-": 20
+      },
+      "padding_tokens": 0,
+      "presentations": 16,
+      "processed_tokens": 1824,
+      "supervised_tokens": 1024,
+      "updates": 4
+    }
+  }
+}

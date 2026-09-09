@@ -94,3 +94,31 @@ This is a mathematical inventory, not a frozen training dataset or a model
 result. EOS-token, global-structure and shared-block matching remain untested;
 the next gate is a separately fixed CPU matching-loss diagnostic. The census
 added no GPU process-seconds and required no storage expansion.
+
+
+## C009 token/structure/block feasibility — 2026-09-09
+
+Execution source: `cb2bcedce36f78ae593ce979677e4199aeda26ee`. All 256 questions
+have complete per-question checks (131→67→66); global key discovery is capped,
+not exhaustive. The [summary](family_matching_20260909_r1/summary.json),
+per_problem.jsonl, policy_emulations.json and block_witnesses.json retain
+provenance, all stage IDs/counts, residuals and explicit accounting schedules.
+The independent verification receipt records which claims were checked.
+
+The 72,820,255-byte full shared-key JSON is retained locally and as a private
+gzip. Git contains a **lossless 904,602-byte catalog with 260 unique records**,
+plus a compact key index and storage manifest. Expansion of record indices
+restores the original object and exact byte hash recorded by the summary.
+The complete tokenized 25,846-row inventory remains outside Git with compressed
+and uncompressed SHA-256 digests in the public summary; recreate from C008 and
+the pinned original tokenizer if necessary. No trained model/checkpoint was
+created by C009. See [analysis/reproduction](FAMILY_MATCHING_20260909.md).
+
+The preceding GPU recovery was synchronized at `fc96885c`. Repeated local
+verification of the two seed23 backups again passed all 24 files. The latest
+server check has unchanged ledger SHA-256
+`995d1ec3d484671bb391f3997640712201d6341b97a00e1feafed5378b22633e`,
+4716 seconds charged,13 receipts,zero reservations and no active training/GPU
+process. CPU publication can be fetched on a replacement server; no new server
+or disk expansion is needed now. The user authorized normal provider shutdown
+after this round; the handoff records its verified completion separately.

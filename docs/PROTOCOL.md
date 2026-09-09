@@ -1,12 +1,15 @@
-# Protocol v0.4 — fixed replication prepared; broader intervention pending
+# Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
-The owner requested an efficient, quality-controlled route toward ICLR on
-2026-09-09 UTC. CPU preparation of the next paired seed is complete; the fixed
-next-phase specification is PILOT_REPLICATION_PROPOSAL.md, with immutable
-configs/pilot_replication_seed23. It preserves the original primary endpoint,
-data and recipe, and adds prespecified secondary trace/identity diagnostics.
-The ICLR_EXPERIMENT_ROADMAP.md describes later conceptual interventions; it
-does not freeze or authorize a larger GPU grid. No seed23 GPU result exists yet.
+The fixed seed23 replication is complete: matched-dev Paths/GCM final-expression
+correctness is 22/64 versus 17/64, with 18/64 versus 16/64 complete traces;
+broader final correctness is 1/64 each. See the immutable completed run reports.
+C009 subsequently measured fixed-inventory CPU matching loss: 131 raw-support
+questions become 67 after exact token matching and 66 after structure matching.
+Its global key search reached the predeclared cap; one four-question witness
+is not a maximum packing or an approved training set. See
+[the report](../reports/FAMILY_MATCHING_20260909.md) and
+[C009's frozen design plus appended results](experiments/C009_token_structure_block_matching.md).
+No new GPU grid, path-family training comparison or holdout evaluation is approved.
 
 The owner approved staged pilot preparation on 2026-09-08. PILOT_V1.md and
 configs/pilot_v1 are authoritative for this finite pilot; older draft issues

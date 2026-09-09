@@ -115,3 +115,24 @@ Four distinct inputs in 1..20 yield at most C(20,4)=4845 groups before eligibili
 Pilot v1 expands to 1..40 and assigns 4096 train, 2048 development and 2048
 reserved holdout raw groups before solving. It is a restricted pilot, with large
 selection shifts reported explicitly, not the final broad benchmark.
+
+
+## D009 — 2026-09-09 UTC: measure matching loss; stop after bounded search
+
+The owner requested the next planned round, review of prior failures and notice
+if storage expansion is needed. C009 was frozen and published before its local
+CPU execution. Complete question-level support is 131 raw, 67 token-matched and
+66 structure-feasible. Global key discovery reached the two-million-pair cap;
+681 keys/seven questions/one block are found witnesses, not total capacity.
+Preserve that incomplete result without increasing caps in the same attempt.
+Next prepare a complete CPU join and selection audit before any reduced-pool
+training proposal. No additional model inference, GPU charge or expansion occurred.
+
+The owner also explicitly authorized automatic shutdown of the current project
+instance after this round. A task heartbeat was configured as a backstop. Stop
+only the verified instance after publication and recovery checks, confirm actual
+provider stopped state, and disable the backstop. This does not authorize a
+new server, deletion, release, or automatically resuming a later experiment.
+The prior seed23 recovery/Git closeout was aligned at `fc96885c`; CPU artifacts
+can be restored from newer Git history after shutdown. GPU ledger remains 4716
+used and 2484 remaining; no unverified final shutdown state is implied here.

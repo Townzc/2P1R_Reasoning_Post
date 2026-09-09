@@ -239,3 +239,20 @@ versions, validation checks, all limits, failures and realized accounting.
 **Results at entry: pending.** Append the executed source commit, completeness,
 stage counts, selection-policy losses, block witnesses and interpretation after
 the run. Do not overwrite the pre-outcome design above.
+
+
+## Execution outcome appended — 2026-09-09 UTC
+
+Executed from prepublished `cb2bcedce36f78ae593ce979677e4199aeda26ee` with
+unchanged recorded sources. All 25,846 rows encoded; raw disjoint support was
+131/256, equal-token support 67/256 and exact family-structure support 66/256.
+The shared-key search stopped after 2,000,000 pair checks as prespecified:
+681 fully checked keys, seven discovered supporting questions, and one valid
+four-question greedy block. This is **incomplete shared-key discovery**;
+seven is not total support and one is not maximum packing. No higher-cap retry
+was performed. Runtime was 23.081 local CPU wall seconds, zero additional GPU
+process-seconds. Surface eligibility caused no loss; first-12 structure policy
+reduced full structure support from 66 to 56. Full policy counts, residuals,
+selection analysis and original hashes are in the
+[report](../../reports/FAMILY_MATCHING_20260909.md). The next step remains CPU
+complete-join/selection work, not training on the tiny witness or changing K.
