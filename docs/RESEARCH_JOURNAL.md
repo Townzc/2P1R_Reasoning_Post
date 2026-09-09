@@ -70,3 +70,54 @@ factor gets a new design entry. Avoid copying large logs into prose: link the
 immutable artifact and retain the exact source/config/data identifiers there.
 Publish each completed milestone and update this index. Credentials, connection
 details, personal filesystem locations and model weights stay outside this journal.
+
+
+## 2026-09-09 —C010–C013 matching completion and morning training preparation
+
+**Question.** Can the original two-family construction be searched completely,
+and which of its restrictions select the data? What control-preserving smaller
+question can be executed within the original remaining GPU allowance?
+
+**Prior failures reviewed.** C009's2,000,000-pair prefix did not measure total
+capacity. C010 improved safe pruning but stopped after600 seconds with671,108
+pairs remaining, repeating7.70GB of witnesses. Preserve both failures. Equal
+length alone was not the whole cause: C011 restores high targets with separate
+family lengths, then loses them again when both families require four structures.
+
+**Design.** Before new outcomes, C012 fixed an absence-only allocation pair,
+removing irrelevant requirements for present alternatives and cross-family
+class/length constraints. Keep original questions/targets, exact serialization,
+K4, within-question length, structure matching and untouched holdout. Sort and
+shuffle an optimal packing with independent Random31; take32 blocks else16.
+Use complete cycles for1024updates. After C010's stop, C013 independently froze
+a new exact Hall occurrence-bitset algorithm and compact indexed output, with
+the same600-second ceiling; it never chooses C012's family or seed.
+
+**CPU results.** C013 completes48,429,084 pairs in4.833s:1,019,005 keys,63 questions,
+15 optimal blocks. C012 completes74,764 combinations/4,182 keys,138 supported
+questions and33 optimal blocks. Independent support/packing checks corroborate
+the latter; its19- and119-question components give a33-block upper certificate.
+C011 four cell counts are67/66/129/84 in common-class/common-structure/separate-
+class/separate-structure order. All protocols and execution hashes are retained.
+
+**Training preparation.** From published d537c31, immutable128-question data
+use32 blocks/eight cycles, each arm1024updates/4096presentations/277760 response
+tokens. Independent arithmetic/token/RNG/schedule/exposure checks pass. Both
+old development files and split allocation are byte-identical. Only the new
+Paths/GCM seed31 pair is queued; eval17. CPU inspection confirms2130 seconds
+reserved within2484 remaining; no new charge or server connection occurred.
+
+**Analysis.** Removing unnecessary family screening restores33 high targets,
+but55/128 targets still equal inputs and all7 preview templates remain. Matched
+batch structures/counts do not make each question's numeric exposure equal:
+depth differs for120/128 questions, negatives for52/128, maximum intermediate
+magnitude for90/128. Magnitude differs in600/1024updates. These are measured
+components/limits of this allocation contrast, not a semantic mechanism or an
+ICLR claim. Old models use a different pool and are not a causal identity control.
+
+**Decision and records.** Prepare the preselected finite pair for the owner's
+morning A800 launch; do not open a server now, change seed based on descriptors,
+train a four-arm grid or evaluate holdout. Full results, paths, exact source
+commits, archives, residuals and commands are in
+[the integrated report](../reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md)
+and [NEXT_SESSION](NEXT_SESSION.md). Negative and failed attempts remain in Git.

@@ -1,0 +1,30 @@
+{
+  "mode": "scientific_pilot",
+  "model_role": "main",
+  "data_dir": "runs/absent_boundary_seed31_20260909_r1",
+  "data_manifest_sha256": "cd9a72d187dbb18f2b75b743ccc0cf85c94951ee574c07e55ed8ddf1f4a1ab97",
+  "steps": 1024,
+  "batch_size": 4,
+  "microbatch_size": 2,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "seed": 31,
+  "max_length": 384,
+  "max_new_tokens": 384,
+  "eval_batch_size": 4,
+  "profile_warmup": 10,
+  "profile_updates": 100,
+  "samples_per_problem": 4,
+  "sampled_ks": [
+    1,
+    2,
+    4
+  ],
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "save_checkpoint": true,
+  "arm": "gcm",
+  "eval_seed": 17,
+  "pilot_queue": "configs/absent_boundary_seed31/queue.json"
+}

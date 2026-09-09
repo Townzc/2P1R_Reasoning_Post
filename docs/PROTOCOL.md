@@ -44,3 +44,21 @@ Fixed development-only subsets first. Greedy correctness, parse failures, EOS/te
 ## Gates
 
 CPU correctness -> token/loss audit -> 32-example overfit and measured profile -> base capability calibration -> reviewed coverage/budget design -> single paired-seed scientific pilot -> human review before more seeds. Engineering smoke tests are not scientific treatment comparisons.
+
+
+## 2026-09-09 boundary preparation extension
+
+C010/C011/C012 were published before their CPU execution; C013 separately
+replaces the computational representation after C010's retained deadline
+failure. These are fixed-pool diagnostics, not model outcomes or holdout tuning.
+The finite old join is complete, but its population remains strongly selected.
+
+The next proposed finite training pair follows
+[the absence-family training plan](ABSENT_BOUNDARY_TRAINING.md) and frozen
+[queue](../configs/absent_boundary_seed31/queue.json):128 questions, seed31,
+1024 updates,277760 response tokens, Paths/GCM only. Both development sets and
+evaluation seed17 remain fixed. Identity absence is a numerical trajectory
+label and can include cancellation/computed constants. Claim allocation effects
+only within the selected pool; do not treat old models as an identity-removal
+control. Report all endpoints and residual numerical exposures. No additional
+GPU allowance, main grid or holdout evaluation is authorized by preparation.

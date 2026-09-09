@@ -148,3 +148,33 @@ check immediately before shutdown found no active GPU/training process, no
 reservation and the unchanged 4716-second ledger. No instance was deleted or
 started. The task heartbeat backstop was then paused; no further GPU job is
 queued. See [closeout receipt](../reports/c009_shutdown_closeout.json).
+
+
+## D010 —2026-09-09: remove irrelevant family selection; prepare a fixed boundary pair
+
+Before CPU outcome counts, C012 chose identity_absent-only Paths/GCM with
+selection/assignment/order/training seed31, evaluation17,32-block then16-block
+scale tiers,1024 complete updates, and the original recipe. Requiring present
+paths and cross-family equality has no control role for this two-arm contrast.
+Keep all within-family/exposure/structure checks. This removes avoidable
+screening; it does not restore the original256-question population.
+
+C011 found common-class67/common-structure66 versus separate-family-class129/
+separate-family-structure84; high targets vanish again with the two-family
+structure requirement. C010 retained a600-second incomplete failure. C013's
+new compact exact Hall-bitset algorithm completed all48,429,084 pairs in4.833s,
+with1,019,005 keys,63 supported questions and15 optimal blocks. Do not relabel
+C010 complete or infer capacity from its search prefix.
+
+C012 independently completes74,764 local combinations,4,182 shared keys,
+138 supported questions and33 optimal blocks. Follow the frozen Random31
+selection rule to use32 blocks/128 questions. Prepare only Paths/GCM, each with
+277760 supervised tokens,482848 nonpadding tokens,3734 padding,1024 updates.
+Independent CPU checks pass; retain selection and numerical-exposure residuals.
+The new pair estimates allocation on this selected population, not a causal
+identity-removal effect or a direct comparison to the old256-question models.
+
+Queue2130 seconds against the retained2484 balance, without raising the7200
+allowance. It is prepared, not executed. The user will provide/start tomorrow's
+A800; verify current Git, ledger, base model, idle GPU and18GiB free first.
+See ABSENT_BOUNDARY_TRAINING.md, NEXT_SESSION.md and the complete research report.

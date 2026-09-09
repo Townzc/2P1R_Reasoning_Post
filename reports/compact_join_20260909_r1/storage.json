@@ -1,0 +1,59 @@
+{
+  "format": "gzip-base64-original-bytes-v1",
+  "files": {
+    "support_groups.json": {
+      "archive_file": "support_groups.json.gz.b64",
+      "original_sha256": "f1cd4e5268fcbfa93c73e6f9d46cafeaf157f22eaf0e6c522ad200e45a78685e",
+      "original_bytes": 8792164,
+      "encoded_sha256": "d8cebbcb2e48cfb87cd4b5e832913f867bdc367b081ffd722bc5398672c57ff2",
+      "encoded_bytes": 1957089,
+      "byte_exact_roundtrip_verified": true
+    },
+    "catalog.json": {
+      "archive_file": "catalog.json.gz.b64",
+      "original_sha256": "6e02f7e1e50578d7799a3c822df2c42d1ff973d97a5ab7b0b276e5b046d50dd5",
+      "original_bytes": 1569384,
+      "encoded_sha256": "b1d35070f81a41fde23d27fa36d2a0a2c3e04b02bbdd221c9a2ebefaf5ee683b",
+      "encoded_bytes": 111780,
+      "byte_exact_roundtrip_verified": true
+    }
+  },
+  "compact_key_archive": {
+    "original_sha256": "aef2aebb9f211a95c7b607f5c458d139201b76b976ec886a84772313cf5f1770",
+    "original_bytes": 2571804,
+    "parts_in_order": [
+      {
+        "file": "compact_keys.part01.b64",
+        "encoded_sha256": "e3eb7c586d612df496d9dcfe89ceec2ba44432f5ba7d1986669ffdc108927c79",
+        "encoded_bytes": 607895
+      },
+      {
+        "file": "compact_keys.part02.b64",
+        "encoded_sha256": "a4ea6b34d1477fc53d920b5b820f89a2ed50790dacc342104a3e4ea2a4e73b55",
+        "encoded_bytes": 607895
+      },
+      {
+        "file": "compact_keys.part03.b64",
+        "encoded_sha256": "c959ebff1cf68f0b26197a1264e07449fde850729c85799246d659deeb229b7a",
+        "encoded_bytes": 607895
+      },
+      {
+        "file": "compact_keys.part04.b64",
+        "encoded_sha256": "2ad06e1308980531c122ca7d98437b1b983d8936054ee900cc222b07a5a9d767",
+        "encoded_bytes": 607895
+      },
+      {
+        "file": "compact_keys.part05.b64",
+        "encoded_sha256": "8110be4d22db3ffafbf83a8786a4a6f9d397635eb5350d5cb693d650a52804de",
+        "encoded_bytes": 607895
+      },
+      {
+        "file": "compact_keys.part06.b64",
+        "encoded_sha256": "54573484ecebfa44eb32df4310e09e0cf944218d52709507133da19f048d6b09",
+        "encoded_bytes": 434718
+      }
+    ],
+    "reconstruction": "Concatenate base64-decoded parts in order to reconstruct exact original compact_keys.jsonl.gz; gzip decompress for JSONL keys.",
+    "byte_exact_roundtrip_verified": true
+  }
+}

@@ -6,12 +6,20 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**2026-09-09 UTC:** [C009 CPU matching-loss results](reports/FAMILY_MATCHING_20260909.md)
-are recorded: 131 raw-support questions become 67 after token matching and 66
-after structure matching. Global key search reached its prespecified cap;
-681 discovered keys/seven questions/one four-question block are feasible lower
-bounds, not maximum capacity. No new GPU run is scheduled. Next is complete
-CPU joining and selection analysis; see [scientific review](reports/C009_SCIENTIFIC_REVIEW.md).
+**2026-09-09 UTC:** CPU matching searches and training preparation are complete.
+[C013](reports/compact_join_20260909_r1/summary.json) covers all48,429,084 old-design
+candidate pairs:1,019,005 keys,63 supported questions,15 optimal blocks.
+[C011](reports/family_lengths_20260909_r1/summary.json) shows length and structure
+both drive selection. The preselected absence-only candidate has33 optimal
+blocks; its frozen next pair uses128 questions and1024 updates per arm.
+
+The [full analysis](reports/MATCHING_COMPLETION_AND_TRAINING_20260909.md) records
+failures, revised algorithms, residual selection and exact training controls.
+Data and [queue](configs/absent_boundary_seed31/queue.json) are ready for a later
+A800 launch:277760 supervised tokens per arm, seed31, unchanged development sets,
+2130-second whole-pair ceiling within2484 remaining. [Independent CPU checks](reports/absent_boundary_cpu_verification_20260909.json)
+passed. Both new runs are **not_run**; no server was connected or started.
+Read the [morning handoff](docs/NEXT_SESSION.md) before any launch.
 
 The fixed seed23 Paths/GCM replication is complete.
 Matched-dev greedy correctness is **22/64 versus 17/64**; broader-dev is
@@ -31,8 +39,7 @@ with zero unresolved reservations. Seed23 results are published at
 `a4edae0817c72c11481ce0f7536952500a8e1e02`. Recovery material is complete;
 the GPU closeout was aligned at `fc96885c`. The A800 was
 [confirmed shut down](reports/c009_shutdown_closeout.json) at 07:37 UTC after C009
-preservation, and the automatic backstop was paused. No further
-GPU job or holdout evaluation is scheduled. See [status](reports/STATUS.md),
+preservation, and the automatic backstop was paused. The new finite pair is prepared but has not been launched; the holdout remains unevaluated. See [status](reports/STATUS.md),
 [artifact recovery](reports/ARTIFACTS.md) and the [handoff](docs/NEXT_SESSION.md).
 
 The [research journal](docs/RESEARCH_JOURNAL.md) separates motivations, designs,
@@ -47,8 +54,7 @@ prepublished source `b504cb7b604847b2155bb71dd2bb2c3602d9f371`, enumerated all
 256 original training problems: 1,966,080 attempts and 25,846 legal ordered
 solutions. Disjoint-AC 2+2 and 4+4 support exists on 132 and 131 problems;
 56 problems contain AC classes with both identity labels. These are inventory
-counts, not new model results. C009 has now measured token/structure loss; its
-shared-key join is incomplete. GPU usage and storage allocation are unchanged.
+counts, not new model results. C009 measured token/structure loss; C010 retained a deadline failure and C013 subsequently completed the shared-key join. GPU usage and storage allocation are unchanged.
 
 A numerical identity operation may be necessary to consume an input legally;
 it is not automatically a Surface variant or an invalid strategy. The

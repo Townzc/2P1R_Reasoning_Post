@@ -1,6 +1,42 @@
 # Verified status — 2026-09-09 UTC
 
-## C009 bounded CPU round recorded; complete global matching remains open
+## Current: searches complete;128-question boundary pair prepared, not launched
+
+- C013 completely covers48,429,084 common-length tuple pairs:1,019,005 keys,
+  202 support groups,63 questions.15 disjoint blocks/60 questions is optimal;
+  complete finite discovery replaces both capped prefixes, not their records.
+- C011 independently reproduces common-class67/common-structure66 versus
+  separate-family-class129/separate-family-structure84. Large targets disappear
+  again with the two-family structure constraint, even after relaxing lengths.
+- C012's preselected absence-only search is complete:139 locally feasible,
+  138 shared-supported,33 optimal blocks. Fixed Random31 chooses32 blocks/128
+  questions. Original question/target/split identities remain unchanged.
+- Frozen data: `runs/absent_boundary_seed31_20260909_r1`; manifest SHA256
+  `cd9a72d187dbb18f2b75b743ccc0cf85c94951ee574c07e55ed8ddf1f4a1ab97`.
+  Source was published at `d537c31cf6c5498e6ca7d8e8045b976b0fadb1f9` before preparation.
+- Independent arithmetic/token/exposure audit passed:512 absent references,
+  1024 updates,4096 presentations,277760 supervised and482848 processed tokens,
+  3734 padding tokens per arm. Every update matches tokens/structures/operators.
+- Selection remains restricted:33/128 high targets,55/128 target-equals-input.
+  Per-question depth/negative exposure and intermediate magnitudes still differ;
+  the analysis records them. This is exploratory allocation evidence, not an
+  identity-removal causal test or an ICLR-ready result.
+- Queue: `configs/absent_boundary_seed31/queue.json`, only Paths/GCM seed31 with
+  eval seed17. CPU inspection and original calibration checks pass. Both new
+  run IDs are not_run. Reserve2130 seconds against2484 remaining; ledger stays
+  4716/7200 charged with13 receipts and no reservation. No GPU seconds added.
+- A800 last verified shut down at07:37 UTC; backstop paused. No server was
+  contacted in this CPU round. Tomorrow fetch current Git, restore the verified
+  ledger/base model, check environment/idle GPU and18GiB free, then launch only
+  the new pair on the owner's provided/started server.
+
+Read [full reasoning and results](MATCHING_COMPLETION_AND_TRAINING_20260909.md),
+[independent data audit](absent_boundary_cpu_verification_20260909.json),
+[training plan](../docs/ABSENT_BOUNDARY_TRAINING.md) and
+[morning handoff](../docs/NEXT_SESSION.md). The historical snapshots below record
+what was known at their respective milestones; the state above supersedes them.
+
+## Historical C009 snapshot — superseded by the completed CPU searches above
 
 - Source `cb2bcedce36f78ae593ce979677e4199aeda26ee` was published before execution.
 - All 25,846 original legal rows encoded; complete per-question stages:

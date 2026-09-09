@@ -37,9 +37,9 @@ existing audits only; their models are not in this queue.
 
 Keep full-parameter FP32 AdamW, BF16 autocast, LR5e-5, weight decay0.01,
 gradient clip1, sequence and generation limits384, and the existing sampling
-settings (four draws, temperature0.7, top-p0.95). Exact token totals are measured
-from the materialized schedule and saved in its manifest; do not reuse the old
-267456-token total or shorten an arm to a time budget.
+settings (four draws, temperature0.7, top-p0.95). The materialized schedule has277760 supervised tokens,482848 nonpadding
+processed tokens and3734 padding tokens per arm. These exact totals are saved
+in its manifest; do not reuse the old267456-token total or shorten an arm.
 
 Primary endpoint: signed Paths-minus-GCM greedy final-expression correctness
 on the unchanged64 matched-development questions. Report all paired cells.

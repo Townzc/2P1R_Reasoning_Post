@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "budget_id": "first_session_20260905",
+  "minimum_prior_charged_seconds": 4716,
+  "calibration": [
+    {
+      "run_id": "pilot_v1_calibration_seed17_r1",
+      "config": "configs/pilot_v1/calibration.json",
+      "config_sha256": "4f3318ad9139ad29fde28417018da6571f958d05255ab15bcbb2f13895b24263",
+      "max_seconds": 900
+    }
+  ],
+  "comparison": [
+    {
+      "run_id": "absent_boundary_paths_seed31_r1",
+      "config": "configs/absent_boundary_seed31/paths.json",
+      "config_sha256": "637bc5d3aa447e272eb34bba75579b50984e946810dd4ec124049c9d946a3187",
+      "max_seconds": 1050
+    },
+    {
+      "run_id": "absent_boundary_gcm_seed31_r1",
+      "config": "configs/absent_boundary_seed31/gcm.json",
+      "config_sha256": "c5d72b1ca3db50e8ef67aff043a1cdaa77b6767ea20c5a63c657108ea14c5edd",
+      "max_seconds": 1050
+    }
+  ],
+  "minimum_free_disk_gib": 18
+}

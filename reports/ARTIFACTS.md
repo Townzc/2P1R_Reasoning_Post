@@ -134,3 +134,33 @@ check immediately before shutdown found no active GPU/training process, no
 reservation and the unchanged 4716-second ledger. No instance was deleted or
 started. The task heartbeat backstop was then paused; no further GPU job is
 queued. See [closeout receipt](c009_shutdown_closeout.json).
+
+
+## 2026-09-09 CPU completion and new128-question training artifacts
+
+The authoritative current handoff is docs/NEXT_SESSION.md. C010's incomplete
+witness stream remains private (614821423-byte gzip; public hashes and partial
+receipts), with no need to copy it to a GPU disk. C013 fully completes the old
+finite grid; every compact key is retained in six public base64 parts. Its
+storage.json verifies assembly of the2571804-byte original gzip, and public
+compressed catalog/support-group files reconstruct original JSON bytes.
+
+C011 has a byte-exact gzip/base64 diagnostic archive. C012 has a lossless slot
+catalog restoring its79406557-byte repeated join JSON; independent fresh-clone
+archive checks passed. Original C009 tokenized inventory remains private with
+public digests and source reproduction. CPU search archives are unnecessary
+for training because its verified witness rows are materialized in Git.
+
+All new training bytes are in `runs/absent_boundary_seed31_20260909_r1`, including
+128-question blocks, four compatibility datasets, actual paired schedule,
+selection/exclusion audit, token budgets and unchanged development/split files.
+Manifest SHA256: `cd9a72d187dbb18f2b75b743ccc0cf85c94951ee574c07e55ed8ddf1f4a1ab97`.
+New configs are in `configs/absent_boundary_seed31`; both GPU run IDs are not_run.
+Independent data audit: `reports/absent_boundary_cpu_verification_20260909.json`.
+
+No new checkpoint exists; all six old scientific checkpoint backups remain
+retained outside Git. The same independently reconciled ledger remains4716
+used/2484 remaining with13 receipts and no reservation. Do not reset it on a
+clone. Restore the pinned base and current source/data only; require18GiB free
+for the later two-checkpoint phase. No storage expansion or server access was
+needed for this CPU turn.

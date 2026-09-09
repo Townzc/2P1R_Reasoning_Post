@@ -274,3 +274,18 @@ check immediately before shutdown found no active GPU/training process, no
 reservation and the unchanged 4716-second ledger. No instance was deleted or
 started. The task heartbeat backstop was then paused; no further GPU job is
 queued. See [closeout receipt](reports/c009_shutdown_closeout.json).
+
+
+## 2026-09-09 —CPU search completion and absence-family training preparation
+
+Codex coordinated independent code/research reviewers to diagnose matching
+selection, implement/test finite exact searches, preserve a600-second failed
+attempt and complete the old grid with a compact Hall-bitset algorithm. C012's
+family, seed and scale tiers were published before support outcomes. Codex
+materialized immutable data from published source, independently checked exact
+arithmetic/tokenization/exposure and selection residuals, and prepared bounded
+configs plus complete-output auditing. No new model result was generated,
+server contacted, GPU charge added or holdout evaluated. Historical outputs
+were read only by regression checks for the shared auditing code, not used to
+choose new rows/seeds. Human interpretation remains necessary for scientific
+claims; the reports explicitly retain nonrepresentativeness and mechanism limits.
