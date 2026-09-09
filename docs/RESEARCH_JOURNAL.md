@@ -323,3 +323,13 @@ down;provider confirmation is recorded separately.
 **Next.** CPU preparation of fixed-reference/full-graph,supplied-route,and
 one-edge diagnostic gates;separately review their order,inputs and total caps.
 No automatic model calls. Read [E011 results](../reports/RELATION_E011_RESULTS.md).
+
+
+E011 shutdown closeout: after result publication at1a999ad,verified backups,
+latest ledger and synchronization to the instance,the vendor shell helper was
+invoked through Bash. Direct exec had failed before execution because the
+helper lacks an interpreter header; its cleanup target was verified absent.
+SSH ended during shutdown. The authenticated console subsequently displayed
+the exact instance as已关机,which is the independent state confirmation.
+No instance deletion/release,new GPU phase or storage expansion occurred.
+See [shutdown receipt](../reports/relation_e011_shutdown_closeout.json).

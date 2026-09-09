@@ -10,8 +10,8 @@ results equal2, unlike the varied gold states. Do not start a scientific pair.
 All96 predictions/dose pass byte-identical server/local audits. All42 Linux
 tests pass;12 checkpoint files/6190803414 bytes are independently SHA256-backed
 up. All16 ledger receipts match: **5971/7200 used,1229 remaining,zero reservations**.
-GPU is idle; normal provider shutdown follows publication and is confirmed in
-its separate receipt. No extra model run,storage expansion or cleanup occurred.
+The authenticated provider console now confirms **已关机** after publication
+and preservation; see [closeout](relation_e011_shutdown_closeout.json). No extra model run,storage expansion or cleanup occurred.
 Read [results and next diagnosis](RELATION_E011_RESULTS.md). Retain all failures;
 prepare CPU operation/route diagnostics before a separately reviewed GPU phase.
 

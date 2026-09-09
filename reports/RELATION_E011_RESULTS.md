@@ -110,9 +110,10 @@ unlearnable; it establishes failure under the frozen256-update recipe.
 
 The GPU was idle after completion. Existing50GB storage sufficed; no expansion
 or deletion was needed. Instance idle/setup/transfer/storage billing is separate
-from the231-second process charge. Provider shutdown is the remaining operational
-closeout after publishing these preserved records; confirm its actual state in
-its separate receipt rather than inferring shutdown from GPU idleness.
+from the231-second process charge. The authenticated provider console subsequently confirmed the exact instance
+as **已关机**, after publication and synchronized preservation. See the
+[shutdown receipt](relation_e011_shutdown_closeout.json). No instance was deleted
+or released; no GPU phase is queued.
 
 ## Current decision and next diagnostic proposal
 
@@ -158,4 +159,14 @@ output filename:
 
 ```bash
 python -m scripts.audit_relation_engineering_cached --run-dir runs/relation_overfit_e011_r1 --tokenizer-dir "$TOKENIZER_DIR" --out reports/new_e011_verification.json
+```
+
+The post-hoc counts and static inventory also have an executable
+[reproduction script](../scripts/describe_relation_engineering.py); both JSON
+descriptions match the earlier counts exactly in the
+[replay receipt](relation_e011_description_reproduction.json). This was
+implemented after observing the failure and is not a prospective hypothesis test.
+
+```bash
+python -m scripts.describe_relation_engineering --tokenizer-dir "$TOKENIZER_DIR" --out-dir reports/new_e011_description
 ```

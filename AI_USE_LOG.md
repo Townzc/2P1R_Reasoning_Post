@@ -438,3 +438,13 @@ inventory with explicit limitations. It reconciled all16 receipts (5971 used)
 and verified an independent12-file/6190803414-byte checkpoint backup. No
 additional model execution,seed selection,threshold change or GPU retry.
 A prospective CPU diagnosis replaces immediate scientific scaling.
+
+
+E011 shutdown closeout: after result publication at1a999ad,verified backups,
+latest ledger and synchronization to the instance,the vendor shell helper was
+invoked through Bash. Direct exec had failed before execution because the
+helper lacks an interpreter header; its cleanup target was verified absent.
+SSH ended during shutdown. The authenticated console subsequently displayed
+the exact instance as已关机,which is the independent state confirmation.
+No instance deletion/release,new GPU phase or storage expansion occurred.
+See [shutdown receipt](reports/relation_e011_shutdown_closeout.json).

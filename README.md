@@ -11,7 +11,8 @@ proofs and0/16 across dev views,despite train NLL.11939. All333 parseable
 predicted step results are state2. Retain this failure and prepare CPU diagnosis;
 no scientific pair is queued. All96 outputs/dose independently rechecked,
 all12 checkpoint files backed up,and16 ledger receipts reconciled:
-5971/7200 seconds used,1229 left. [Results and analysis](reports/RELATION_E011_RESULTS.md).
+5971/7200 seconds used,1229 left. The provider confirms the A800 is shut down.
+[Results and analysis](reports/RELATION_E011_RESULTS.md),[shutdown receipt](reports/relation_e011_shutdown_closeout.json).
 
 **E011 ready for an owner-started A800,2026-09-09 UTC:** the fixed32-world
 engineering runner,input bundle and verification are complete.40 local checks

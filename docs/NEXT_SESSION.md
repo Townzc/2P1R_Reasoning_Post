@@ -17,7 +17,10 @@ The prior5740 balance and E011's launch config are historical; its guard should
 reject replay. Restore the latest independently retained ledger on a clone.
 All12 checkpoint files (6190803414 bytes) are independently backed up with
 SHA256 verification. Compact outputs are fully tracked; weights remain private.
-Provider shutdown follows result publication; verify the closeout receipt.
+The authenticated provider console confirms **已关机** after publication and
+preservation; see [closeout](../reports/relation_e011_shutdown_closeout.json).
+No server is needed for the next CPU preparation. On any later restart or
+clone,fetch current Git and restore the latest5971-second ledger before work.
 
 Next do CPU diagnosis/preparation. Keep the original full-graph task and failed
 run. Consider one fixed reference per original prompt at the same dose,
