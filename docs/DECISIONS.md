@@ -197,3 +197,31 @@ used,1460 remaining,15 verified receipts and zero reservations; this cannot
 reserve another current2130-second pair. Complete independent preservation
 and the already authorized normal shutdown. See
 [E010 results](../reports/ABSENT_BOUNDARY_SEED31_RESULTS.md).
+
+## D012 —2026-09-09: separate evidence routes from strategies; audit before training
+
+The owner requested an immediate review of construction and controls. Three
+independent reviews and a coordinating consistency check reject adding more
+arithmetic seeds as the next step. C009–C013 establish the cost of support
+selection; E010 supplies weak, endpoint-dependent allocation evidence rather
+than a causal identity-removal result.
+
+Select a single CPU falsification candidate: latent-permutation relation
+transport with four equal-length routes. Its mathematically guaranteed support
+and uniform population labels avoid two failures of naive constructions.
+The routes are automorphic instances of one algorithm, so the claim is
+evidence-route allocation, not semantic strategy diversity. Exact route-slot
+matching also does not equalize every realized state/table exposure.
+
+The concrete proposal has a multi-route/repeated-route schedule, complete
+certificate scoring, useful versus irrelevant evidence deletion, coherent
+counterfactuals, world-level splits and CPU rejection gates. Passing these
+would establish implementation feasibility, not novelty or ICLR readiness.
+No data was generated and no new scientific GPU protocol is approved by this
+review. See [P003](experiments/P003_task_and_control_redesign.md) and
+[the integrated proposal](CONTROL_REDESIGN_PROPOSAL_20260909.md).
+
+Separately, the authenticated provider console confirmed the exact E010
+instance as stopped at approximately20:00 UTC, after previously verified
+preservation. The confirmation heartbeat is paused. No instance was started,
+deleted or released; cumulative GPU accounting remains5740 used/1460 remaining.

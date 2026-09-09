@@ -1,4 +1,35 @@
-# Next session — E010 preserved; confirm normal shutdown, then review design
+# Next session — CPU construction audit after the completed design review
+
+## Latest decision: P003 reviewed; no GPU queue
+
+The owner requested immediate task/control redesign. Read
+[the integrated proposal](CONTROL_REDESIGN_PROPOSAL_20260909.md) first, then
+the three linked independent reviews. The current arithmetic study is retained
+as a restricted boundary result; do not add seeds to seek a preferred sign.
+The selected **CPU candidate** is permutation relation transport with four
+equal-length evidence routes, a repeated-route allocation control, and
+predeclared useful/irrelevant evidence deletion. It is not a semantic-strategy
+benchmark, and anonymous slot balancing is not global strategy coverage.
+
+Prepare one bounded CPU implementation/registration and publish source and
+config before materialization. The 10,000-instance audit size in the proposal
+is prospective, not a completed result. Freeze probe definitions/thresholds,
+seed list, serialization, symmetry groups and solver negatives. Independently
+verify full support, counterfactuals, exact tokens, schedules and leakage;
+retain every generation attempt and every failure. No selective token filtering.
+Report state/table-exposure residuals and the limitations of fixed-topology IID
+evaluation. No existing holdout access or automatic training is authorized.
+
+The task recommendation is Ultra for separable scientific review and Max for
+the bounded implementation/verification stage; no setting change is asserted.
+Only after CPU receipts pass should a concrete training/profile/replication
+and resource proposal be prepared. Remaining GPU allowance is1460 seconds;
+there is no new reservation, startup or extension.
+
+The E010 provider instance is **confirmed stopped** at approximately20:00 UTC;
+the confirmation heartbeat is **paused**. See the
+[sanitized closeout](../reports/absent_boundary_seed31_shutdown_closeout.json).
+Do not reopen it merely to complete documentation or CPU development.
 
 ## Current verified state,2026-09-09 UTC
 
@@ -43,7 +74,7 @@ ledger is historical; do not restore it as current or initialize a new ledger
 on a clone. The current2130-second pair reservation exceeds the1460 balance.
 A new scientific plan and resource review are required before more training.
 
-## Preservation complete; shutdown verification is the remaining gate
+## Preservation and shutdown verification complete
 
 All compact outputs and the final ledger are independently local and published
 at result commit `3585ad2d2f6424180b4b3ec345904dc0fc21fea6`, also synchronized
@@ -60,18 +91,13 @@ precondition rejected the stale HEAD before any command executed. At19:01:07
 UTC SSH was no longer accessible. See the [shutdown request](../reports/absent_boundary_seed31_shutdown_request.json)
 and [connectivity receipt](../reports/absent_boundary_seed31_after_shutdown_connectivity.json).
 
-**Provider stopped state is still unverified.** The Mac is locked and the owner
-has already been asked to unlock it. Neither command exit0 nor an SSH disconnect
-proves the provider's stopped/billing state. Do not repeatedly issue the command
-or reopen the server. The existing heartbeat is now scoped only to final E010
-shutdown confirmation and stays quiet while the lock/state is unchanged.
-
-After unlock, inspect the authenticated AutoDL console and independently match
-the known current instance using the private gate. If stopped, record that state,
-update this handoff and publish the sanitized closeout, then pause the heartbeat.
-If still running, recheck idle GPU and the unchanged ledger before completing
-the owner's already-authorized normal shutdown. Never start, rent, clone, delete,
-release or target another instance. Do not run any further model experiment.
+The Mac lock initially prevented confirmation. During the later CPU design
+review, Computer Use read the authenticated provider instance list and matched
+the exact instance against the private gate: it displayed **已关机**. Confirmation
+was recorded at20:00:03 UTC and the heartbeat paused. No second shutdown command,
+server start, deletion or release occurred. This verifies provider stopped
+state, not an itemized billing-history reconciliation. The prior pending-state
+receipts remain historical. Do not reopen the instance for CPU work.
 
 All earlier seed17/23 scientific weights and engineering weights remain backed
 up outside Git. Current weights also are model/tokenizer only, not exact
@@ -79,7 +105,7 @@ optimizer/RNG resume checkpoints. See [artifact inventory](../reports/ARTIFACTS.
 and [migration protocol](MIGRATION.md). Public Git excludes private connection
 information, credentials, local user paths, live ledger and weights.
 
-## Proposed next scientific work — CPU only
+## Historical motivation for P003 — CPU only
 
 The evidence does not justify scaling from the small favorable primary count:
 trace results tie and broader results favor GCM. Preserve that weak boundary

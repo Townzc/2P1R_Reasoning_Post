@@ -6,6 +6,16 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**Design review completed, 2026-09-09 UTC:** Read the
+[integrated task/control proposal](docs/CONTROL_REDESIGN_PROPOSAL_20260909.md).
+Three independent reviews recommend pausing further arithmetic seeds and
+testing one constructive relation task on CPU. Its claim is evidence-route
+allocation under evidence loss, not distinct semantic strategies. Independent
+solver, shortcut, token and split audits must precede a new training proposal;
+no new dataset or model result has been generated. The E010 instance is now
+[confirmed stopped](reports/absent_boundary_seed31_shutdown_closeout.json)
+in the provider console, and its confirmation heartbeat is paused.
+
 **2026-09-09 UTC:** The [E010 identity-absent boundary pair](reports/ABSENT_BOUNDARY_SEED31_RESULTS.md)
 is complete. Paths/GCM matched greedy scores are **7/64 versus5/64**, complete
 traces **4/64 each**, and broader expression/trace scores **0/64 versus2/64**.
@@ -19,8 +29,8 @@ independent local audits of800 predictions are byte-identical. The pair charged
 1024 seconds: **5740/7200 used,1460 remaining**,15 reconciled receipts and no
 reservation. No new GPU phase is queued and the holdout remains unevaluated.
 Both weights are independently verified:24 files,12,381,607,162 bytes.
-The vendor shutdown command was executed after preservation; SSH is now
-inaccessible, but final provider-console confirmation awaits Mac unlock. See [current status](reports/STATUS.md),
+The vendor shutdown command was executed after preservation; provider-console
+confirmation completed at approximately20:00 UTC. See [current status](reports/STATUS.md),
 [ledger verification](reports/absent_boundary_seed31_ledger_verification.json),
 [research journal](docs/RESEARCH_JOURNAL.md) and [next-session handoff](docs/NEXT_SESSION.md).
 

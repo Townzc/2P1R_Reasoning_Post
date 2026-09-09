@@ -1,6 +1,25 @@
 # Verified status — 2026-09-09 UTC
 
-## Current: E010 and all preservation complete; normal shutdown confirmation pending
+## Current: design review complete; CPU prototype proposed; server confirmed stopped
+
+- [P003 integrated design](../docs/CONTROL_REDESIGN_PROPOSAL_20260909.md)
+  reconciles independent causal, construction and prior-work reviews. Pause
+  additional arithmetic seeds; provisionally audit permutation relation
+  transport as evidence-route allocation, without a strategy-diversity claim.
+- Use identical prompts and matched-dose multi-route/repeated-route supervision;
+  predeclare useful/irrelevant evidence deletion and fully verified certificates.
+  Global route-slot counts do not establish matched state/table distributions.
+- Mathematical support and the schedule were reviewed; no new scientific data,
+  CPU probe outcome, model output or holdout result exists yet. Generator,
+  independent verifier, token, shortcut and world-split gates remain pending.
+- At approximately20:00 UTC the authenticated provider console displayed the
+  exact E010 instance as **已关机**. Its confirmation heartbeat is now **PAUSED**.
+  See [closeout receipt](absent_boundary_seed31_shutdown_closeout.json).
+- No server startup, new GPU charge, new reservation or storage expansion.
+  The next step is one source-frozen CPU prototype, followed by a concrete
+  training/resource proposal only if its gates pass.
+
+## Completed E010 evidence and preservation
 
 - Paths/GCM primary matched greedy expression: **7/64 versus5/64**; paired cells
   3 both correct,4 Paths only,2 GCM only,55 neither. Complete traces **4/64 each**.
@@ -19,9 +38,9 @@
 - Both checkpoints: all24 files,12,381,607,162 bytes independently SHA256-verified.
   Preservation is published at `b27a85c` and synchronized via verified Git bundle.
   The vendor shutdown command returned0 at19:00:27 UTC; SSH is inaccessible
-  afterward. Mac lock blocks final console verification; provider stopped/billing
-  state remains unverified and the heartbeat now only follows up on that check.
-- Next: CPU-only scientific design review. Distinguish intended path multiplicity
+  afterward. The initial Mac lock delayed console verification; at approximately
+  20:00 UTC the provider stopped state was confirmed and the heartbeat paused.
+- Next: implement the reviewed CPU-only construction audit. Distinguish intended path multiplicity
   from selection/numerical difficulty; consider tasks with multiple paths by
   construction. Do not reinterpret this changed-population pair as identity removal.
 

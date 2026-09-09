@@ -62,6 +62,7 @@ weight backup completion is a separate recovery gate from a completed model run.
 |---|---|---|
 | [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
 | [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Census completed in C008; token/structure checks measured in C009; global join incomplete |
+| [P003](experiments/P003_task_and_control_redesign.md) | Reassess task construction, causal controls and closest-work overlap after E010 | Review complete; one evidence-route CPU prototype proposed, no new data/model run |
 
 ## Maintaining the record
 
@@ -147,3 +148,46 @@ missing commits, altered hashes and invalid paths are rejected. Current data,
 token, split and seeded reconstruction checks are unchanged. The new C012
 preparation did use prepublished clean source; these historical exceptions do
 not change its source record or frozen data.
+
+## 2026-09-09 —P003 task/control redesign and final E010 shutdown confirmation
+
+**Question and motivation.** Can a constructive task avoid rare support
+selection while isolating a scientifically interpretable allocation contrast?
+C009/C010 matching failures and completed C013 support, C012 residuals, and
+E010's7/64 versus5/64 primary/4-versus4 traces motivate the review. Those
+outcomes remain unchanged and do not identify identity removal.
+
+**Methods considered.** Independent reviews assessed causal identification,
+arithmetic identities, planted equal expressions, reachability, permutation
+transport, mixed proof networks and seven closest primary works. Reject
+always-positive reachability and orientation-as-strategy claims. Defer mixed
+algorithms whose proof complexity and support guarantees are unresolved.
+
+**Design decision.** Provisionally select S5 relation transport only for an
+evidence-route CPU prototype: four paths by construction, independent exposed-
+table solver, fixed allocation schedules, strict proof scoring, useful/irrelevant
+evidence deletion and coherent counterfactuals. A second review checked the
+telescoping/gauge argument and both Latin/factorial schedules. Corrections
+make uniform query sampling, undirected disconnection, deranged endpoint edits,
+full serialization checks,16-example factorial updates and remaining table/
+state-exposure residuals explicit.
+
+**Results and analysis.** This round produced design arguments and rejection
+criteria only. No generator audit, shortcut score, data split, training result
+or new holdout observation exists. All chains share one algorithm and bare
+topology; no semantic-strategy or topology-OOD claim is supported. Closest work
+already covers allocation and constructed proofs; evidence deletion supplies
+a candidate operational distinction, not established novelty.
+
+**Next step.** Publish one fixed CPU source/configuration before materialization,
+then test support, solver agreement, tokens, shortcuts and grouped splits.
+Only successful concrete receipts can support a later reviewed GPU/resource
+proposal. Read [the integrated review](CONTROL_REDESIGN_PROPOSAL_20260909.md)
+and its three independent memos for exact reasoning, controls and kill criteria.
+
+**Operational closeout.** The authenticated provider console showed the exact
+E010 instance as **已关机**, recorded20:00:03 UTC. The confirmation heartbeat
+was paused. No new shutdown command, instance start, deletion, GPU spending
+or storage expansion occurred. The latest ledger remains5740/7200 used with
+1460 remaining and no reservations; see the
+[closeout receipt](../reports/absent_boundary_seed31_shutdown_closeout.json).

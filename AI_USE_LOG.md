@@ -339,3 +339,28 @@ the vendor helper's trash path. The vendor helper returned0 at19:00:27 UTC;
 SSH was unavailable afterward. The Mac lock prevented provider-console state
 verification. Codex records that limit explicitly and narrowed the existing
 heartbeat to final shutdown confirmation, with no new GPU action authorized.
+
+## 2026-09-09 —P003 independent design reviews and E010 shutdown confirmation
+
+At the owner's request, Codex coordinated three independent reviews of causal
+identification, constructive tasks and closest primary literature, then wrote
+an integrated proposal and obtained bounded mathematical/causal consistency
+checks. The reviews distinguish evidence-route allocation from semantic
+strategies, mathematical guarantees from untested implementations, and an
+operational distinction from novelty. Corrections clarify gauge assumptions,
+token boundaries, counterfactual edits, seed/schedule units and residual
+supervised-feature differences. No new data, model inference, reserved holdout
+work or GPU charge was introduced. Proposed CPU audit sizes and training
+conditions are explicitly unexecuted. Human review remains necessary before
+scientific protocol changes or claims.
+
+The prior-work reviewer used accessible primary HTTPS pages after the web
+connector failed; the report identifies abstract-only and inaccessible evidence
+without filling gaps from inference. Literature scope was bounded rather than
+an exhaustive novelty search. Public records include the reasoning, rejected
+alternatives and the next falsification gates.
+
+Computer Use also read the authenticated provider console, verified the exact
+E010 instance was stopped, and paused the existing confirmation heartbeat.
+No new shutdown command or server startup was required. A sanitized closeout
+preserves the distinction between provider state and billing reconciliation.
