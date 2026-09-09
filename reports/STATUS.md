@@ -1,6 +1,17 @@
-# Verified status — E011 engineering gate failed,2026-09-09 UTC
+# Verified status — C016 CPU preparation, 2026-09-09 UTC
 
-## Current: E011 completed; engineering gate failed, artifacts preserved
+## Current: diagnostic source prepared; CPU materialization pending publication
+
+The owner approved CPU preparation of single-step lookup, supplied-route
+propagation and fixed-reference tests. Source, independent reconstruction and
+semantic metrics are prepared. All original 32 train / 16 observed dev parents
+will be retained; no new scientific holdout or filtering.
+Read [the registered design](../docs/experiments/C016_relation_diagnostics.md).
+No model calls or server contact. The proposed GPU ladder is not launchable
+or authorized by this CPU task. Current 5971/7200 used, 1229 left, zero
+reservations; A800 remains stopped. E011 remains a failed engineering run.
+
+## Historical: E011 completed; engineering gate failed, artifacts preserved
 
 E011 completed the frozen256 updates and charged231 seconds. Complete proofs:
 **0/32 train,0/16 in each development view**. Train NLL.11939 does not rescue

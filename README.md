@@ -6,6 +6,12 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**C016 CPU diagnostic preparation, 2026-09-09 UTC:** the owner approved
+preparing one-edge lookup, supplied-route propagation and fixed-reference
+training tests. Source and control design are prepared; immutable extraction
+follows source publication. Read the [registered design](docs/experiments/C016_relation_diagnostics.md).
+No model call or server contact; the A800 remains stopped.
+
 **E011 complete; engineering gate failed,2026-09-09 UTC:**0/32 complete train
 proofs and0/16 across dev views,despite train NLL.11939. All333 parseable
 predicted step results are state2. Retain this failure and prepare CPU diagnosis;
@@ -14,7 +20,7 @@ all12 checkpoint files backed up,and16 ledger receipts reconciled:
 5971/7200 seconds used,1229 left. The provider confirms the A800 is shut down.
 [Results and analysis](reports/RELATION_E011_RESULTS.md),[shutdown receipt](reports/relation_e011_shutdown_closeout.json).
 
-**E011 ready for an owner-started A800,2026-09-09 UTC:** the fixed32-world
+**Historical E011 preparation,2026-09-09 UTC:** the fixed32-world
 engineering runner,input bundle and verification are complete.40 local checks
 pass;2 GNU-timeout integrations await Linux. One720-second process plus15-second
 guard fits1460 remaining. No server contact or model result yet. Read the

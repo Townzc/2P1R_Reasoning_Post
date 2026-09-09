@@ -1,6 +1,17 @@
-# Next session — diagnose E011 failure on CPU
+# Next session — complete C016 CPU diagnosis preparation
 
-## Current: E011 failed learning gate; no GPU phase queued
+## Current: publish diagnostic source, then materialize and independently verify
+
+Read [C016 registration](experiments/C016_relation_diagnostics.md). Run only
+local CPU preparation and verification after source publication. No server
+startup, model inference, training, GPU reservation or scientific pair.
+The three proposed diagnoses are single-step lookup, full graph with given
+route, and original full graph with fixed-reference training, retaining the
+same 48 parents. State-field metrics and strict full-proof gates are required.
+The prospective three-job cap fits 1229 seconds but needs a separately
+implemented, published and owner-reviewed runtime before execution.
+
+## Historical: E011 failed learning gate; no GPU phase queued
 
 Read [full results and analysis](../reports/RELATION_E011_RESULTS.md),
 [CPU verification](../reports/relation_e011_output_verification.json),

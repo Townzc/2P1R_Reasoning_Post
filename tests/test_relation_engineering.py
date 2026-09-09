@@ -132,7 +132,10 @@ class LedgerTests(unittest.TestCase):
         self.ledger = {'budget_id': 'unit', 'authorized_gpu_seconds': 7200,
                        'jobs': [{'run_id': f'old_{i}', 'status': 'completed', 'charged_seconds': 1 if i<14 else 5726} for i in range(15)]}
         self.path.write_text(json.dumps(self.ledger))
-        self.cfg = {**CFG, 'expected_ledger_sha256': hashlib.sha256(self.path.read_bytes()).hexdigest()}
+        # A retained real E011 directory now exists. Budget unit fixtures must
+        # not reuse a historical experiment identity or depend on its absence.
+        self.cfg = {**CFG, 'run_id': f'fixture_{self.path.parent.name}',
+                    'expected_ledger_sha256': hashlib.sha256(self.path.read_bytes()).hexdigest()}
         self.budget = {'budget_id': 'unit', 'authorized_gpu_seconds': 7200, 'gpus': 1}
 
     def test_whole_phase_fits_without_reserving(self):

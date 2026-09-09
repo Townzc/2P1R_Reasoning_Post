@@ -1,0 +1,22 @@
+{
+  "phase": "C016",
+  "attempt_id": "relation_diagnostics_c016_r1",
+  "output_dir": "runs/relation_diagnostics_c016_r1",
+  "purpose": "cpu_preparation_only_no_model_execution",
+  "parent_dir": "runs/relation_engineering_c015_r1",
+  "parent_manifest_sha256": "ddb0068a2ddef8150948b7f8eaf0f2b86d3c3f9a42268c7d7725f44ee1afb854",
+  "arms": ["single_step", "given_route", "fixed_reference"],
+  "train_worlds": 32,
+  "dev_worlds": 16,
+  "assignment_seed": 81401,
+  "cycles": 8,
+  "steps": 256,
+  "batch_size": 4,
+  "microbatch_size": 2,
+  "max_length": 1536,
+  "cpu_wall_deadline_seconds": 300,
+  "filter_by_outcome": false,
+  "holdout_access": false,
+  "model_calls": 0,
+  "gpu_seconds_added": 0
+}

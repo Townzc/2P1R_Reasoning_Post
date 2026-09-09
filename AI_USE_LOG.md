@@ -448,3 +448,16 @@ SSH ended during shutdown. The authenticated console subsequently displayed
 the exact instance as已关机,which is the independent state confirmation.
 No instance deletion/release,new GPU phase or storage expansion occurred.
 See [shutdown receipt](reports/relation_e011_shutdown_closeout.json).
+
+
+C016 source preparation: Codex recommended Ultra for control-design review
+and Max for implementation without claiming a settings change. It used no
+subagents, external model calls, server connection or paid compute. It designed
+three engineering diagnoses from the retained C015 parents, wrote deterministic
+derivation, an independently reconstructing auditor, semantic field metrics
+and strict route-aware scoring. Synthetic tests include all 1200 primitive
+input/direction cases. A broader test revealed a historical unit fixture ID
+collision with retained E011 outputs; Codex isolated the fixture identity and
+kept both the real failure and frozen runtime unchanged. Source publication
+precedes real C016 materialization. These changes do not establish model
+capability, causal localization, novelty or publication readiness.

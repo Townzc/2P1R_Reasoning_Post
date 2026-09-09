@@ -333,3 +333,37 @@ SSH ended during shutdown. The authenticated console subsequently displayed
 the exact instance as已关机,which is the independent state confirmation.
 No instance deletion/release,new GPU phase or storage expansion occurred.
 See [shutdown receipt](../reports/relation_e011_shutdown_closeout.json).
+
+
+## 2026-09-09 — C016 diagnostic construction/source milestone
+
+**Question.** E011 learned some formatting but no complete proof, with all
+parseable after-states equal to 2. Is a short lookup learnable under the same
+recipe, does a supplied route permit propagation, and does a fixed target
+trajectory permit full-graph learning? These are prospective questions.
+
+**Design.** Use the same parents, original assignment and update order.
+Separate shorter one-edge lookup from original full graph plus route hint and
+original full graph with one fixed reference. Record what each change also
+alters. Add exposed-text route enforcement and independently reconstruct
+queries from C015, without importing the new builder. Preserve all labels,
+steps and parent groups; report table-operation overlap and frequencies.
+
+**Implementation checks.** Twelve new synthetic tests initially pass, including
+all 1200 permutation/input/direction combinations and planted semantic loss
+dilution. Broader regression exposed an old unit fixture that reused the now
+retained E011 run ID; its overwrite guard correctly refused it. Give the unit
+fixture a distinct temporary identity, without changing the frozen experiment
+runtime or deleting real outputs. An old release test also requires its
+explicit tokenizer environment variable; supply the verified local cache.
+Retain the initial log and rerun focused regressions before source publication.
+
+**Resource boundary.** CPU/tokenizer work only. A800 stays stopped; no model
+weights loaded, no ledger mutation, no GPU reservation. Materialization and
+its independent audit will follow publication of this registered source.
+
+C016 source check result: all 53 focused tests pass, no skips, including the
+real pinned-tokenizer field spans and the retained C015 release regression.
+The initial fixture collision and final passing logs are preserved in
+`reports/relation_c016_initial_regression.txt` and
+`reports/relation_c016_source_tests.txt`. No historical runtime source changed.

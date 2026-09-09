@@ -279,3 +279,25 @@ diagnostics separating reference multimodality,provided-route propagation
 and basic lookup;these are prospective engineering tests,not established
 causal explanations. No new GPU run is authorized automatically. Current
 5971/7200 used,1229 left;all checkpoints/receipts preserved for shutdown.
+
+
+## D016 — 2026-09-09: prepare a diagnostic ladder on CPU, preserve E011
+
+The owner approved CPU preparation of single-step lookup, supplied-route
+propagation and fixed-reference diagnostics. Keep all original 32 training and
+16 observed dev parents. Recover the training anchor from E011 round zero;
+retain all four assigned-route operations, without output-driven filtering.
+The full fixed-reference arm keeps original prompts and exactly matched update,
+parent and token dose. Given-route keeps all 32 edges and the same target,
+adding only an oriented path hint. One-edge lookup changes context/target
+length and per-operation repetitions; it is a capability gate, not a matched
+treatment effect. Dev groups remain an observed sandbox and tables can repeat.
+
+Prepare strict route-aware scoring, parent denominators, field-wise target
+measurements and all-line lookup diagnostics so truncation and low mean NLL
+cannot mask semantic failure. The proposed later order is lookup, route given,
+full fixed reference, with fresh base weights and no continuation past failure.
+Three 360-second caps plus guards fit within 1229 seconds, but this is a
+reviewable proposal only: no GPU runner, job, reservation or server contact is
+authorized by this CPU request. See the frozen
+[construction and interpretation plan](experiments/C016_relation_diagnostics.md).
