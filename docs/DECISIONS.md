@@ -339,3 +339,23 @@ The current 16-receipt ledger remains 5971 used / 1229 left; the two previously
 stale aggregate summaries now include E011's existing failed-gate result.
 The conditional sequence and failure stopping rule are unchanged. See
 [ready report](../reports/RELATION_E012_READY.md).
+
+
+## D018 — 2026-09-10: respond to framing questions before more experiments
+
+The owner asked to resolve the project question and concrete deliverables first.
+Pause E012 execution while preparing a reply. P004 proposes treating asymmetric
+problem/solution acquisition costs as the primary SFT allocation question;
+structural diversity and exact repetition become targeted explanations/controls.
+Use P for acquired problems, K for target usable solutions, E for training
+exposure; preserve historical labels. Measured generation/verification costs
+must remain distinct from hypothetical problem-acquisition prices and sunk
+public-dataset creation costs. Count rejected and duplicate outputs, selection
+loss and calibration overhead. Do not assume more problems always wins or claim
+that a cost equation itself establishes novelty.
+
+Proposed initial assets are Qwen2.5-1.5B base, GSM8K and a fixed math-specialized
+7B teacher; OLMo2-1B is the proposed second-family check. This is a reviewable
+scientific proposal and unsent private reply, not a change to frozen experimental
+sources or permission to execute its grid. No GPU/model/server action or ledger
+change occurred. See [P004](experiments/P004_cost_aware_sft_allocation_proposal.md).

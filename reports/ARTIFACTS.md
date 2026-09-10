@@ -1,5 +1,11 @@
 # Artifact inventory and migration limits
 
+**Workflow pause, 2026-09-10 UTC:** the current task is the proposed P004 framing
+and deliverable discussion. E012's ready artifacts remain preserved; no model
+job has run. The personally addressed reply is retained privately outside Git,
+and [P004](../docs/experiments/P004_cost_aware_sft_allocation_proposal.md) contains
+only the scientific proposal. No checkpoint, ledger or migration state changed.
+
 **Current E012 ready milestone, 2026-09-10 UTC:** execution source and immutable
 release are published; clean-checkout checks and default inspection passed.
 See [ready report](RELATION_E012_READY.md) and

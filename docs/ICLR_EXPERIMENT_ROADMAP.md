@@ -1,5 +1,16 @@
 # Evidence roadmap toward an ICLR-quality study
 
+**Current discussion, 2026-09-10 UTC:** [P004](experiments/P004_cost_aware_sft_allocation_proposal.md)
+proposes a revised primary question: when asymmetric acquisition prices make
+another usable solution preferable to another problem under a specified SFT
+budget. The owner requested framing/deliverable discussion before continuing;
+E012 is paused. The proposed course study foregrounds Qwen1.5B/GSM8K, measured
+generation/verification cost and clearly labeled problem-price scenarios.
+Prior diversity-boundary plans below are historical candidates, not the only
+possible contribution or an instruction to launch. A validated recommendation,
+independent outcomes and a further novelty check would be necessary; no paper
+claim follows from repricing old results. No new experimental allowance.
+
 **2026-09-09 E011/C016/E012 update:** the relation engineering run completed
 256 updates but failed0/32 complete train proofs despite low mean NLL; all333
 parseable after-states were2. C016's288 CPU-verified rows support a diagnostic

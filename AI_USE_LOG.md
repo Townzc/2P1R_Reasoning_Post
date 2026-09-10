@@ -505,3 +505,18 @@ After publishing readiness, Codex made one read-only SSH availability probe to
 the previously supplied endpoint. It returned connection refused at 02:11 UTC;
 no remote command/model job ran and no instance was started. The owner was
 asked for available A800 access; endpoint/credential details remain private.
+
+
+## 2026-09-10 UTC — proposed cost-aware framing and private reply
+
+At the owner's request to answer framing/deliverable questions before continuing,
+Codex paused E012 execution work, reviewed the saved evidence/protocol, checked
+maintainer model/dataset pages and a bounded set of primary papers, and drafted
+a personally addressed reply outside Git. No message was sent. A public P004
+proposal records only the scientific framing, concrete prospective assets,
+cost/selection limitations and staged deliverables; private correspondence and
+names are not copied into it. Cost-aware framing is proposed for owner review,
+not a proven novel contribution or an approved training grid. The runtime/data
+releases, prior failures and current ledger remain unchanged. Codex recommended
+Ultra for subsequent scientific-design review without claiming a settings
+change. No server, GPU, teacher call, paid API or model download was used.

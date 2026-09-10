@@ -6,7 +6,15 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**E012 execution release ready, 2026-09-10 UTC:** source and immutable release
+**Current discussion, 2026-09-10 UTC:** the owner asked to resolve the project
+framing and concrete course deliverables before continuing experiments. E012
+is prepared but paused. [P004](docs/experiments/P004_cost_aware_sft_allocation_proposal.md)
+proposes making asymmetric problem/solution acquisition costs the primary SFT
+question, with Qwen1.5B/GSM8K as the initial real-data study. This is a proposal
+for review, not an approved new training grid or a completed cost experiment.
+The personally addressed response remains private; no message was sent.
+
+**Historical readiness — E012 execution release ready, 2026-09-10 UTC:** source and immutable release
 are published; clean-checkout inspection and 76 focused CPU checks pass. Two
 GNU-timeout integrations remain mandatory on Linux before the first model run.
 The next requirement is an owner-started A800 for single-step lookup, followed

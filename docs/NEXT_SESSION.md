@@ -1,6 +1,23 @@
-# Next session — E012 ready; owner-started A800 required
+# Next session — resolve framing and deliverables before experiments
 
-## Current: execute only the verified finite diagnostic ladder
+## Current: discuss P004 and revise the proposal before any launch
+
+The owner's latest instruction is to answer the project-framing and deliverable
+questions first, then continue. Read [P004](experiments/P004_cost_aware_sft_allocation_proposal.md).
+A personally addressed English reply has been drafted privately, not sent.
+The proposed core is asymmetric acquisition cost for problems versus solutions,
+with a specified SFT budget. Models/data, cost assumptions, candidate P/K grid,
+selection caveats and course deliverables are concrete but remain proposals.
+
+Next discuss the reply and revised scope with the owner, then prepare a revised
+abstract and a bounded acquisition/feasibility protocol with measured cost
+estimates. Assess whether E012 is still a necessary engineering diagnostic.
+It is paused, not discarded or rerun; frozen inputs/runtime stay unchanged.
+The earlier request for server availability does not override this newer pause.
+No startup, GPU job, paid API, new budget or main grid follows from this document.
+Current ledger remains 5971 / 7200 used, 1229 left, 16 receipts, zero reservations.
+
+## Historical E012 handoff — use only after the owner resumes this sequence
 
 Read [the ready report](../reports/RELATION_E012_READY.md),
 [E012 registration](experiments/E012_relation_diagnostic_ladder.md) and

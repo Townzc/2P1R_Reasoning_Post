@@ -18,7 +18,8 @@ balance. Dates are UTC unless specified otherwise.
 Latest completed model experiment: [E011](experiments/E011_relation_engineering.md),
 with 0/32 complete train proofs despite target NLL .11939; all 333 parseable
 predicted after-states were 2. The failure is preserved. C016 CPU diagnostics
-and the E012 execution release are now verified; no E012 model run has occurred.
+and the E012 execution release are verified; no E012 model run has occurred.
+The current owner-requested framing discussion is P004; E012 is paused.
 [Current readiness and interpretation](../reports/RELATION_E012_READY.md).
 
 | ID | Work date | Question or attempted change | Status | Outcome / decision |
@@ -61,6 +62,7 @@ weight backup completion is a separate recovery gate from a completed model run.
 |---|---|---|
 | [P001](experiments/P001_iclr_positioning_and_semantic_intervention.md) | Test a controlled boundary between defined legal path families | Literature positioning and design critique completed; intervention and larger study remain proposals |
 | [P002](experiments/P002_legal_support_enumeration_design.md) | Distinguish selected-inventory loss from legal path support and matching constraints | Census completed in C008; token/structure checks measured in C009; global join incomplete |
+| [P004](experiments/P004_cost_aware_sft_allocation_proposal.md) | Asymmetric acquisition costs for new problems versus additional usable solutions under a fixed SFT budget | Proposed for review; E012 paused; no cost or model experiment executed |
 | [P003](experiments/P003_task_and_control_redesign.md) | Reassess task construction, causal controls and closest-work overlap after E010 | Review complete; one evidence-route CPU prototype proposed, no new data/model run |
 | [C014](experiments/C014_relation_transport_cpu_audit.md) | Can the constructive evidence-route task pass fixed CPU support/token/shortcut/grouping gates? | Complete:10,000/10,000 retained, all fixed gates and independent verification pass; zero new GPU seconds |
 
@@ -478,3 +480,43 @@ Readiness follow-up: after publishing the CPU results, a single read-only SSH
 probe at 02:11 UTC returned connection refused. No authenticated remote action,
 model job, startup or new reservation occurred. The owner was asked to provide
 an available A800 or updated connection information. Power state is unconfirmed.
+
+
+## 2026-09-10 — P004 cost-aware SFT framing proposal and reply preparation
+
+**Question.** Under a fixed SFT budget, when is the marginal benefit of a new
+problem worth its acquisition price compared with another usable solution to
+an owned problem? The owner asked to answer framing and concrete-deliverable
+questions before continuing experiments.
+
+**Motivation and earlier evidence.** Earlier same-problem arithmetic comparisons
+and E011's failed full-proof gate do not measure acquisition costs or determine
+an optimal problem/solution allocation. Further E012 engineering is paused while
+its relevance to the revised question is discussed. No earlier failure was
+removed or retroactively reclassified.
+
+**Proposed design.** Stage a Qwen1.5B/GSM8K P/K surface with fixed SFT budgets,
+one fixed math teacher and transparent acquisition/failure accounting; vary
+problem-price scenarios separately from measured generation costs. Use synthetic
+verification for targeted structural/repetition diagnostics. Validate any
+recommended allocation on fresh problem draws and unfit allocations before
+second-family replication. Full cost/difficulty/quality/diversity/model factorial
+coverage is outside the minimum scope. Refer to P004 for proposed counts/seeds
+and course deliverables, none of which is a registered or funded training grid.
+
+**Work completed.** Checked official student/teacher model cards and GSM8K's
+source repository, reread prior positioning/evidence, and performed a bounded
+primary-paper check including Spend Wisely, CoScale-RL, repetition and coverage
+work. Existing work already covers broad multi-solution and budget-allocation
+ideas; the candidate distinction still needs evidence and novelty review.
+Prepared a privately addressed English reply and a public scientific proposal.
+No reply was sent. No new data generated, student/teacher model called, server
+contacted, training run reserved or resource ledger changed.
+
+**Analysis and decision.** Explicitly distinguish attempted/accepted solutions,
+nonduplicate text/semantic strategies, marginal/sunk problem costs, actual whole-
+study spending/counterfactual policy costs and same-example/same-token budgets.
+Do not eliminate hard questions by requiring K successful traces. A correct
+final answer alone cannot certify a reasoning trace. Discuss the reply first;
+then revise the abstract and prepare a bounded feasibility plan. Current
+5971/7200 used, 1229 remaining, 16 receipts, zero reservations.

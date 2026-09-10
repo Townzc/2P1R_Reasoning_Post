@@ -1,6 +1,24 @@
-# Verified status — E012 release ready, 2026-09-10 UTC
+# Verified status — framing discussion before execution, 2026-09-10 UTC
 
-## Current: request owner-started A800 for the frozen first diagnostic
+## Current: P004 proposed cost-aware framing; E012 paused
+
+The owner requested a response about the project's framing and specific models,
+datasets and deliverables before continuing experiments. A private reply draft
+and [public scientific proposal](../docs/experiments/P004_cost_aware_sft_allocation_proposal.md)
+are prepared. The proposed core is acquiring new problems versus additional
+usable solutions under asymmetric acquisition costs and a fixed SFT budget.
+Primary proposed assets: Qwen2.5-1.5B base, GSM8K, a fixed Qwen2.5-Math-7B-Instruct
+teacher; second student OLMo-2-0425-1B base. Costs from public-data subsampling
+are scenario assumptions, not measurements of human problem-writing prices.
+
+This has not revised a frozen protocol, approved a new grid, produced model
+results or established novelty. E012 inputs/release and earlier failed runs
+remain unchanged. Do not request startup or launch while this discussion is
+pending. Decide whether E012 still serves the revised question before resuming.
+No server contact, model call, acquisition charge or ledger change in this
+response task: 5971 / 7200 used, 1229 left, 16 receipts, zero reservations.
+
+## Historical readiness: E012 execution release complete
 
 Execution source `1fc27d4` preceded the immutable release at `27a0943`.
 Default inspection and the focused suite pass from a clean published checkout:
