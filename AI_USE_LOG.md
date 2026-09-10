@@ -1,3 +1,17 @@
+# 2026-09-10 — E017 authorized implementation and offline checks
+
+The owner accepted the next step after P006 and requested startup notification.
+Codex implemented a separate per-row stopping callback, bounded base-only runner,
+independent raw-prefix auditor and release verifier. No historical source was
+edited. CPU fixtures exercise the actual Transformers generation loop with
+scripted logits, mixed termination, left padding and output-file auditing;
+62 tests pass and two GNU-timeout integrations remain mandatory on Linux.
+Early fixture setup errors were corrected before publication; their logs remain
+private. No pretrained checkpoint, GPU server, new development/test text,
+reservation, delegation or external message was used. Max was recommended for
+implementation, without claiming a setting change. Source publication precedes
+immutable input preparation. E015 independent weights recovery remains pending.
+
 # 2026-09-10 — C020 verified results and P006 finite proposal
 
 After publishing CPU source `cf6525b`, Codex generated immutable post-hoc
