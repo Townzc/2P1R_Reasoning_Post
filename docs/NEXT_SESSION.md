@@ -18,9 +18,13 @@ retained. Do not restore the former16-receipt ledger or replay E013/E012.
 
 GPU execution has stopped. Compact outputs are in
 `runs/gsm8k_overfit_e013_r1`; preflight/test evidence is in
-`reports/real_math_e013_execution_r1`. Independent6.19GB checkpoint backup is
-in progress at this milestone. Verify its complete manifest and current
-publication before declaring the server disposable.
+`reports/real_math_e013_execution_r1`. All12 checkpoint files (6,190,803,414
+bytes) have independent SHA256-verified backups; see
+`reports/real_math_e013_checkpoint_backup.json`. The local recovery directory
+is `.local/checkpoint_backups/gsm8k_overfit_e013_r1`. It contains weights and
+tokenizer files, not an optimizer/RNG resume. Verify current publication and
+ledger before shutdown/replacement; do not mistake this failed checkpoint
+for the original base snapshot.
 
 The four-arm training-only proxy is2096–2165 seconds versus903 available,
 excluding scientific evaluation and overhead; the failed gate also blocks
@@ -28,6 +32,14 @@ scaling. A proposed next step is a separately frozen inference diagnostic on
 this saved checkpoint: reproducibility at batch8, selected-case batch1 decoding,
 and teacher-forced first-divergence token probabilities. No new model run is
 registered/launched by this handoff. Preserve C017's existing pool and proposal.
+
+The concrete review-only parameters are in
+`configs/diagnostics/real_math_e014_proposal.json`: original32-prompt batch8
+replay, eight failed cases plus two predetermined successful controls decoded
+individually, and reference-conditioned divergence/EOS logits. Proposed cap
+360+15 seconds; no new training, dev/test scoring or teacher call. It is not a
+launchable implementation. The completed post-hoc CPU analysis is
+`reports/real_math_e013_execution_r1/failure_analysis.json`.
 
 ## Historical preparation: fixed GSM8K engineering, after Linux preflight
 

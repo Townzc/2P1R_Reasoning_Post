@@ -7,8 +7,8 @@ finite research loop; it is not permission to rent hardware or exceed the ledger
 Read `reports/REAL_MATH_E013_RESULTS.md` and `docs/NEXT_SESSION.md`. All256
 updates and64 output records verify;24/32 train answers terminate correctly,
 five outputs truncate, three give wrong final numbers. Final dev is0/16 and
-baseline format limitations are explicit. GPU execution has stopped; independent
-checkpoint backup is in progress. Diagnose generation before another model run.
+baseline format limitations are explicit. GPU execution has stopped; all12
+checkpoint files have independent verified backups. Diagnose generation before another model run.
 C017's four-arm training-only proxy is2096–2165 seconds, before other costs.
 E012 remains paused; no retry or scientific comparison is queued.
 

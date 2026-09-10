@@ -13,7 +13,8 @@ scorer; the base 0/16 is format-limited and is not zero mathematical ability.
 All 40 Linux tests and all 64 output/256-update record checks pass. E013 charges
 326 seconds; the reconciled balance is **6297 used / 903 left**. Four-arm
 training-only projections are about35–36 minutes and do not fit that balance.
-Generation diagnosis comes before scaling. Checkpoint backup is in progress.
+Generation diagnosis comes before scaling. All12 checkpoint files have a
+[verified independent backup](reports/real_math_e013_checkpoint_backup.json).
 [Results and limitations](reports/REAL_MATH_E013_RESULTS.md).
 
 **E013 GSM8K engineering prepared, 2026-09-10 UTC:** the owner requested the

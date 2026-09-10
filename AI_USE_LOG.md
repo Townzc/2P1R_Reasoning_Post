@@ -15,8 +15,20 @@ train answers, five truncations, three wrong numeric finals, final train NLL
 raw token records and256 update doses, inspected the failures and reconciled
 all17 resource receipts. The326-second charge leaves903. Analysis is post-hoc,
 descriptive and does not replace registered metrics or prove reasoning validity.
-An independent checkpoint backup is in progress. No retry, teacher call,
+At the first result publication, checkpoint backup was still in progress. No retry, teacher call,
 scientific grid, new allowance, rental or external message was initiated.
+
+The post-hoc analysis code was published in c068f2c before producing its
+derived JSON. It records first-divergence prefixes, repeated n-grams/digits
+and frozen failure categories without changing scores. A separate E014
+proposal fixes diagnostic cases and a prospective360+15-second cap, but has
+no executable queue and performs no additional model call.
+
+Preservation closeout: authenticated SSH byte-range transfer completed and
+all12 local checkpoint files (6,190,803,414 bytes) independently match their
+SHA256 manifest. Transfer took about974 seconds of wall time and added no GPU
+process charge. The ledger remains6297 used /903 left; no experiment process
+or subsequent job remains active. The updated report preserves the failed gate.
 
 ## 2026-09-10 UTC — E013 real-data engineering implementation
 

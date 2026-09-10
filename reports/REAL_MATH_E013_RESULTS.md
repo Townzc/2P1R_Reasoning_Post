@@ -69,6 +69,15 @@ fifth. Three completed answers are 28 instead of 12, 135 instead of 45, and
 value, then add incorrect reasoning. These are observable output failures;
 their causal source is not established by an average NLL or this inspection.
 
+The [reproducible post-hoc CPU analysis](real_math_e013_execution_r1/failure_analysis.json)
+preserves all registered scores. Each failed training generation shares
+46–355 initial tokens with its reference before diverging. The decimal-loop
+case contains 639 consecutive copies of a digit; the other four truncations
+repeat exact 16-token segments 8–13 times. These observations narrow the next
+diagnostic without establishing a model/runtime/data cause. The
+[analysis code](../analyses/real_math_e013_failures.py) was published before this
+derived artifact was computed. No model was rerun for this analysis.
+
 Preserve the failed checkpoint for diagnosis. Before another training run,
 prepare a bounded inference diagnostic comparing the recorded batch-eight
 decoding with individual decoding and inspect teacher-forced probabilities
@@ -76,6 +85,15 @@ at the first divergent tokens. This would distinguish reproducibility/batch
 sensitivity from failures that persist in single-problem generation. Freeze
 the diagnostic, its selected cases and its complete cap first. Do not select
 easier training parents or treat post-hoc case selection as a new benchmark.
+
+A [concrete E014 proposal](../configs/diagnostics/real_math_e014_proposal.json)
+would replay all 32 train prompts at the original batch size of eight, decode the eight
+failures plus the first two successful controls individually, and inspect
+reference-conditioned logits at the first divergence/EOS. It proposes a
+360-second process cap plus 15-second guard, within the remaining 903 seconds.
+This is not implemented, queued or an extension of E013; it requires its own
+source/input/weight checks and a request/review before execution. It performs
+zero optimizer updates and accesses no development/test data or teacher.
 
 ## Measured runtime and scale decision
 
@@ -111,6 +129,11 @@ audited pool and candidate schedules as proposals; do not set a launchable
 scientific scale until the generation/scoring diagnostic and full-phase budget
 are resolved. No additional allowance is inferred.
 
-At this result milestone, compact outputs and the updated ledger are local
-and verified; independent checkpoint transfer is still in progress. Do not
-declare the server disposable until the backup manifest is fully verified.
+All compact outputs and the updated ledger are preserved. The
+[independent checkpoint backup](real_math_e013_checkpoint_backup.json) verifies
+all 12 files totaling 6,190,803,414 bytes against the saved SHA256 manifest.
+The backup is weights/tokenizer only, not an optimizer/RNG resume. No checkpoint
+weights enter Git. The [server closeout](real_math_e013_execution_r1/server_closeout.json)
+confirms GPU execution is stopped and no next model job is queued.
+The original model/data caches remain available on the server; the verified
+backup permits recovery after shutdown or replacement.

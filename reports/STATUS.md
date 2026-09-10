@@ -10,8 +10,9 @@ its own 0/16 as zero mathematical capability. All 40 Linux tests and all64
 raw-output/256-update record checks pass. Read [results](REAL_MATH_E013_RESULTS.md).
 
 The new charge is326 seconds. All17 receipts reconcile: **6297 used /903 left,
-zero reservations**. GPU execution has stopped. Checkpoint backup remains in
-progress; do not declare the instance disposable yet. The four-arm training-
+zero reservations**. GPU execution has stopped. All12 checkpoint files
+(6,190,803,414 bytes) have a [verified backup](real_math_e013_checkpoint_backup.json).
+The four-arm training-
 only proxy is2096–2165 seconds, before evaluation/overhead. Diagnose generation
 and scoring before a new training phase. E012 stays paused.
 

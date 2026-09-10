@@ -1,0 +1,90 @@
+{
+  "attention": "sdpa",
+  "autocast_dtype": "bfloat16",
+  "cap_rationale": "A review proposal informed by E013 generation times; not a guaranteed completion forecast. Guard the entire new process and retain incomplete phases without retry.",
+  "checkpoint_manifest_sha256": "b0afd4cf81a8c41a2268d5d797a3f832c8b530206f1fa3a6539a43ddf91fab6a",
+  "current_ledger_sha256": "a332e3ff326f768c6d985786c41fd6352df1c52fc73f34bae9f47d7d264ba614",
+  "current_remaining_seconds": 903,
+  "decision_rules": [
+    "If batch8 replay differs from saved IDs, investigate reproducibility/checkpoint integrity before interpreting a batch-size contrast.",
+    "If replay matches but batch1 differs, report batch-sensitive outputs and inspect positions/logits; this alone does not identify a causal software bug.",
+    "If failures persist at batch1, examine first-divergence margins and termination rather than silently raising the generation cap.",
+    "No successful diagnostic automatically launches training or the four-arm grid."
+  ],
+  "development_access": false,
+  "e013_input_manifest_sha256": "37f868089001c62131e0c53f86634d94efd882bc8ef6383a6b10ae9ad8ee129b",
+  "e013_source_commit": "4fa838a368f8197338d8a20513a21755830dfc7d",
+  "forced_stop_or_repetition_penalty": false,
+  "guard_seconds": 15,
+  "launchable": false,
+  "max_context": 1024,
+  "max_new_tokens": 768,
+  "max_seconds_proposal": 360,
+  "maximum_reservation_seconds": 375,
+  "official_test_access": false,
+  "original_tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "parameter_dtype": "float32",
+  "phase": "E014_PROPOSAL",
+  "phases": [
+    {
+      "compare": "all saved generated token IDs, scores, EOS and lengths",
+      "name": "repeat_original_batch8",
+      "order": "exact original training order",
+      "problems": 32
+    },
+    {
+      "compare": "same prompts, weights, greedy settings and explicit masks; only batch size changes",
+      "name": "selected_batch1",
+      "order": "single_example_decode_order",
+      "problems": 10
+    },
+    {
+      "measure": "reference token probability, chosen generation token probability, argmax/rank and per-row reference NLL",
+      "name": "reference_conditioned_logits",
+      "positions": "each failed row first divergence from the reference; EOS for all ten",
+      "problems": 10
+    }
+  ],
+  "prelaunch_requirements": [
+    "owner requests/reviews this distinct diagnostic",
+    "complete and independently verify the checkpoint backup",
+    "implement and publish input/weight/source checks and bounded diagnostic code",
+    "validate cached and per-example decode/position/mask handling with CPU fixtures",
+    "check unchanged ledger, idle recorded A800 and pinned environment"
+  ],
+  "purpose": "Diagnose E013 generation reproducibility, batch sensitivity, and first-divergence token confidence before more training.",
+  "reference_prediction_sha256": "418e208f5e597bc5f882205f6437f4a2849c84f544dda10b815ee1d2e816048a",
+  "remaining_after_maximum": 528,
+  "seed": 17,
+  "selected_control_ids": [
+    "gsm8k/train/07460",
+    "gsm8k/train/06803"
+  ],
+  "selected_failed_ids": [
+    "gsm8k/train/03552",
+    "gsm8k/train/02301",
+    "gsm8k/train/06477",
+    "gsm8k/train/04768",
+    "gsm8k/train/02775",
+    "gsm8k/train/04719",
+    "gsm8k/train/02262",
+    "gsm8k/train/03893"
+  ],
+  "selection": "Post-hoc diagnostic: all eight failed training cases plus first two successful cases by frozen train order. Not a representative new test set.",
+  "single_example_decode_order": [
+    "gsm8k/train/03552",
+    "gsm8k/train/02301",
+    "gsm8k/train/07460",
+    "gsm8k/train/06477",
+    "gsm8k/train/06803",
+    "gsm8k/train/04768",
+    "gsm8k/train/02775",
+    "gsm8k/train/04719",
+    "gsm8k/train/02262",
+    "gsm8k/train/03893"
+  ],
+  "status": "review_only_not_queued",
+  "teacher_calls": 0,
+  "training_updates": 0,
+  "weights_run_id": "gsm8k_overfit_e013_r1"
+}

@@ -1,5 +1,34 @@
 # Research journal
 
+## 2026-09-10 — E013 completed, engineering gate failed
+
+**Executed.** After server startup and40 Linux tests, run the fixed32-parent
+GSM8K trajectory from4fa838a. All256 updates,167232 response tokens and229056
+processed tokens complete. Full32-response memorization is not achieved:24/32
+correct terminated generations, five truncations and three wrong numeric
+finals.20 responses exactly match references; final NLL is0.014206. The profile
+is complete. Preserve the failed gate despite a normal process exit.
+
+**Interpretation.** Base dev strict0/16 is format-limited; final dev0/16 has11
+parsed wrong answers and five truncations. This small descriptive set is not
+a scientific treatment result. Post-hoc raw-output inspection finds repeated
+derivations and one repeated-digit loop; all eight failed train generations
+initially reproduce46–355 reference tokens. Record consistency passes for all
+64 token streams and256 doses. No NLL rerun or proof-validity claim is made.
+
+**Budget and next decision.**326 seconds are charged;17 receipts reconcile to
+6297 used /903 remaining with no reservations. Four-arm training-only proxies
+are2096–2165 seconds before evaluation/overhead, and the failed gate separately
+blocks scale-up. A review-only E014 proposal would inspect saved-checkpoint
+batch8 replay,10 selected single-problem decodes and first-divergence logits;
+no model job is queued. All12 checkpoint files (6,190,803,414 bytes) now have
+independent verified backups. No additional GPU job was run during analysis
+or preservation.
+
+[Result](../reports/REAL_MATH_E013_RESULTS.md),
+[post-hoc analysis](../reports/real_math_e013_execution_r1/failure_analysis.json),
+[proposal](../configs/diagnostics/real_math_e014_proposal.json).
+
 ## 2026-09-10 — E013 engineering preparation
 
 The owner requested the next experiment after C017. Freeze its 32 selected
