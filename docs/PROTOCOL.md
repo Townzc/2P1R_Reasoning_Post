@@ -1,3 +1,15 @@
+## E016 observed outcome — 2026-09-10 UTC
+
+The owner-started inference-only run completed all128 generations. Base/E015
+clean correct is26/64 versus0/64, but base truncation14/64 fails its predeclared
+8/64 bound. Both screens therefore fail, despite measurable base numeric
+capability. Do not loosen the gate or enter the base-pass conditional branch.
+No training grid, new prompt, model substitution or final-test evaluation is
+authorized by the result. The80 development parents seen so far are observed;
+432 remain reserved. Prepare any changed evaluation or adaptation contract
+separately for review. Server/local audits and all20 receipts agree; provider
+shutdown is confirmed. [Results](../reports/REAL_MATH_E016_RESULTS.md).
+
 ## E016 development calibration extension — 2026-09-10 UTC
 
 The owner requested the next step before server startup. Prepare the fixed

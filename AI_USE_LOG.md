@@ -1,3 +1,22 @@
+# 2026-09-10 — authorized E016 execution, independent audit and shutdown
+
+Codex used the owner-started instance to stage the prepublished source, preserve
+14 identical untracked E015 compact files, verify the unchanged19-entry ledger,
+original base/complete E015 weights and all42 Linux checks. One fixed E016 job
+produced128 development streams with no SFT, teacher, test evaluation or new
+checkpoint. Both registered screens fail; adverse outcomes and original scores
+are retained. Codex set a provider shutdown timer before launch, independently
+exported25 compact/auxiliary files/current ledger, confirmed normal shutdown,
+and cancelled the timer. No full checkpoint export or restart followed.
+
+After shutdown, Codex independently repeated the frozen CPU record audit,
+reconciled all20 complete receipts, wrote a post-run descriptive reconstruction,
+and documented format/capability limits and review-only alternatives. No scorer,
+frozen execution dependency, threshold or original output was changed. All
+source/private connection details remain separated appropriately; E015 independent
+weights backup is still incomplete. No subagent, external message or additional
+model call was used. Max was recommended without claiming a settings change.
+
 # 2026-09-10 — E016 offline readiness verified
 
 Published implementation d27c17c and immutable input release32240fd. Codex

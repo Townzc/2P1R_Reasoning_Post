@@ -112,3 +112,16 @@ updates per proposed arm. Do not infer equal LR strength, equal runtime or
 reasoning diversity from equal token budgets. Full scientific protocol changes
 remain subject to the concrete review required by AGENTS.md. E016 automatically
 authorizes neither training nor a new process allowance.
+
+
+## Appended outcome — 2026-09-10 UTC; registration above retained
+
+The single owner-started run completed all128 generations from84e9ea3. Base/E015
+clean correct26/64 versus0/64; marked numeric correct39/64 versus0/64; paired
+losses26/gains0. The base fails its14/64 truncations against the8/64 maximum,
+so both registered screens fail. No base-pass training branch or grid follows.
+All42 Linux checks and both raw-token audits pass;235seconds charged,20 receipts
+6921used/279left. Compact outputs/current ledger are independently verified and
+provider shutdown is confirmed. E015 weights recovery remains incomplete.
+No thresholds, original raw scores, prompt or runtime inputs were revised.
+[Full result and limits](../../reports/REAL_MATH_E016_RESULTS.md).

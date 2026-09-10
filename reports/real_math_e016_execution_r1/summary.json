@@ -1,0 +1,71 @@
+{
+  "base_gate_components": {
+    "clean_correct_at_least_8": true,
+    "parsed_at_least_48": true,
+    "truncated_at_most_8": false
+  },
+  "execution_source_commit": "84e9ea35fc54a0d94e70d4efca74b5f15783091b",
+  "gate_interpretation": "Base fails the registered truncation requirement despite measurable numeric capability. Both registered screens fail; do not silently enter the base-pass conditional branch.",
+  "new_model_calls": 0,
+  "observed_development_parents_after_e016": 80,
+  "original_strict": {
+    "base": {
+      "answer_correct": 1,
+      "ended_with_eos": 50,
+      "terminated_correct": 1,
+      "truncated": 14
+    },
+    "e015": {
+      "answer_correct": 0,
+      "ended_with_eos": 62,
+      "terminated_correct": 0,
+      "truncated": 2
+    }
+  },
+  "phase": "E016_POST_RUN_DESCRIPTIVE_SUMMARY",
+  "raw_files": {
+    "runs/gsm8k_capability_e016_r1/base.jsonl": "1f0f5d37332dfbbec881d212e942dbe0bb69e0d00ecdc51b302bf15d638226b1",
+    "runs/gsm8k_capability_e016_r1/e015.jsonl": "c2d7f2eb5a58e66177fd980c06dff9365df0ef178098feadf47be71b96ec13cc"
+  },
+  "reasoning_proofs_verified": false,
+  "remaining_reserved_development_parents": 432,
+  "result": {
+    "base_nonfloor_gate": false,
+    "e015_retention_screen": false,
+    "interpretation": "Operational screening thresholds, not a powered noninferiority test or proof of generalization. Fixed 32-parent overfit endpoint is not the final scientific training recipe.",
+    "metrics": {
+      "base": {
+        "answer_correct": 39,
+        "clean_correct": 26,
+        "correct_with_eos": 29,
+        "ended_with_eos": 50,
+        "n": 64,
+        "new_problem_continuations": 16,
+        "parse_status": {
+          "missing_marked_answer": 14,
+          "parsed": 49,
+          "unresolved_marked_answer": 1
+        },
+        "truncated": 14
+      },
+      "e015": {
+        "answer_correct": 0,
+        "clean_correct": 0,
+        "correct_with_eos": 0,
+        "ended_with_eos": 62,
+        "n": 64,
+        "new_problem_continuations": 0,
+        "parse_status": {
+          "missing_marked_answer": 2,
+          "parsed": 62
+        },
+        "truncated": 2
+      }
+    },
+    "paired_gained": 0,
+    "paired_lost": 26,
+    "paired_net_correct_change": -26,
+    "scientific_grid_authorized": false
+  },
+  "scores_changed": false
+}

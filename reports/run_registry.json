@@ -1,6 +1,6 @@
 {
   "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 6686,
+  "charged_gpu_seconds": 6921,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2202,6 +2202,102 @@
         "provider_shutdown_confirmed": true,
         "independent_checkpoint_backup_complete": false
       }
+    },
+    {
+      "run_id": "gsm8k_capability_e016_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "84e9ea35fc54a0d94e70d4efca74b5f15783091b",
+      "config": {
+        "automatic_retry": false,
+        "automatic_scientific_queue": false,
+        "checkpoint_manifest_sha256": "a37c3264bbb44628c1f62105940fb8b1cbcae251b85b8b2c6e1399d8ccc86eab",
+        "checkpoint_write": false,
+        "development_ranks": [
+          17,
+          80
+        ],
+        "driver_version": "580.126.09",
+        "endpoints": [
+          "original_pinned_Qwen2.5_1.5B_base",
+          "gsm8k_terminal_decay_e015_r1"
+        ],
+        "eval_batch_size": 8,
+        "expected_ledger_sha256": "ad45fa615091d9f47d16b5b80b07aa23313f356b5ab96bdcab4fa74ff60891d0",
+        "expected_prior_jobs": 19,
+        "expected_prior_used_seconds": 6686,
+        "guard_seconds": 15,
+        "max_length": 1024,
+        "max_new_tokens": 768,
+        "max_seconds": 470,
+        "min_free_gib": 0.25,
+        "mode": "inference_only_base_vs_e015",
+        "model_role": "main",
+        "official_test_evaluation": false,
+        "optimizer_updates": 0,
+        "phase": "E016",
+        "run_id": "gsm8k_capability_e016_r1",
+        "scorer_version": "marked_answer_v1",
+        "seed": 17,
+        "teacher_calls": 0
+      },
+      "mode": "inference_only_base_vs_e015",
+      "arm": null,
+      "model": {
+        "repo_id": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "kind": "base",
+        "tuned_endpoint": "gsm8k_terminal_decay_e015_r1"
+      },
+      "charged_gpu_seconds": 235,
+      "overfit_passed": null,
+      "steps": 0,
+      "supervised_response_tokens": 0,
+      "train_accuracy": null,
+      "dev_accuracy": null,
+      "exception_type": null,
+      "records": "runs/gsm8k_capability_e016_r1",
+      "capability_diagnostic": {
+        "base_nonfloor_gate": false,
+        "e015_retention_screen": false,
+        "interpretation": "Operational screening thresholds, not a powered noninferiority test or proof of generalization. Fixed 32-parent overfit endpoint is not the final scientific training recipe.",
+        "metrics": {
+          "base": {
+            "answer_correct": 39,
+            "clean_correct": 26,
+            "correct_with_eos": 29,
+            "ended_with_eos": 50,
+            "n": 64,
+            "new_problem_continuations": 16,
+            "parse_status": {
+              "missing_marked_answer": 14,
+              "parsed": 49,
+              "unresolved_marked_answer": 1
+            },
+            "truncated": 14
+          },
+          "e015": {
+            "answer_correct": 0,
+            "clean_correct": 0,
+            "correct_with_eos": 0,
+            "ended_with_eos": 62,
+            "n": 64,
+            "new_problem_continuations": 0,
+            "parse_status": {
+              "missing_marked_answer": 2,
+              "parsed": 62
+            },
+            "truncated": 2
+          }
+        },
+        "paired_gained": 0,
+        "paired_lost": 26,
+        "paired_net_correct_change": -26,
+        "scientific_grid_authorized": false
+      },
+      "official_test_evaluated": false,
+      "provider_shutdown_confirmed": true,
+      "independent_e015_checkpoint_backup_complete": false
     }
   ]
 }

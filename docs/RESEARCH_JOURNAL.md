@@ -1,3 +1,22 @@
+## 2026-09-10 — E016 reveals tuning loss while base termination still fails
+
+The prospective64-parent comparison completes with base26/64 clean correct and
+E0150/64; all26 base successes are lost. E015 produces62 parseable but incorrect
+marked answers. The base has39 numeric endpoints, yet14 truncations fail its
+frozen limit. Preserve both failed screens and do not convert this into an
+unregistered base-pass result. Example text contains actual arithmetic errors
+and repetition, while the frozen parser still omits some correct unmarked prose.
+These examples are post-hoc; no revised score or causal LR explanation follows.
+
+All42 Linux checks and server/local128-stream audits pass. One235-second process
+leaves279; all20 full receipts equal ledger entries. Export25 compact/auxiliary
+files in6.47seconds, then confirm normal provider shutdown; no full-weight
+transfer or second job. About12minutes/CNY1.60 is an observed-span estimate,
+not the invoice. Keep the432 unused dev parents reserved and unique E015 weights
+on the stopped volume pending independent recovery. Next work is local review
+of evaluation termination and capability-preserving tuning before any scaling.
+[Complete result](../reports/REAL_MATH_E016_RESULTS.md).
+
 ## 2026-09-10 — Saved capability audit changes the next question
 
 **Evidence.** Raw tokens and old strict scores revalidate for all 32 E013 dev

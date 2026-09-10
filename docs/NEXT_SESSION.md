@@ -1,4 +1,60 @@
-# Next session — E016 ready; owner startup needed
+# Next session — E016 complete; server off; offline redesign and weights recovery
+
+Read [E016 results](../reports/REAL_MATH_E016_RESULTS.md). The single authorized
+run completed from84e9ea35fc54a0d94e70d4efca74b5f15783091b. All128 generation
+records and42 Linux checks pass; server/local raw-token audit reports agree
+byte for byte. The registered base/E015 clean-correct counts are26/64 versus0/64,
+with26 paired losses/no gains. Base marked-answer correctness is39/64, but14
+truncations exceed the8/64 limit. **Both registered screens fail.** The base-pass
+conditional training branch was not reached. E015 is62/64 parseable yet0 correct.
+
+Provider normal shutdown was confirmed by18:41:10UTC and the temporary timer
+was cancelled. Keep the server off. All25 compact/auxiliary files, including13
+run files and the latest ledger, were independently exported/verified. No new
+weights, training, teacher calls, official-test evaluation, retry or next job.
+The notification-to-confirmation span is721seconds (~CNY1.60 atCNY8/hour), not
+an exact invoice; actual power-on time and historical billed spend are unknown.
+
+Current private ledger backup: **20 receipts,6921used/279left,zero reservations**.
+SHA256 `c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106`.
+The pre-E01619-receipt backup remains private as history; never restore it as
+current or reset receipts. The stopped server already has the current20-entry
+ledger and the E016 execution source84e9ea3. Post-shutdown publication is newer;
+synchronize published source before any later separately authorized use.
+Private connection/closeout details remain under `.local/e015_connection.json`
+and `.local/e016_session_r1`; do not publish credentials or endpoint details.
+
+Next useful work is local, with no startup needed yet:
+
+1. Diagnose the base's missing-marker/continuation/truncation behavior from the
+   existing80 observed development parents. Prepare one explicit prompt/output
+   contract proposal; do not rescore E016 or call these parents fresh again.
+2. Prepare a capability-preserving SFT calibration for review, considering lower
+   integrated update strength and broader training coverage; partial freezing
+   is a separate literature-motivated alternative. Do not execute the old512-step
+   fallback or the scientific allocation grid. Preserve the432 reserved dev
+   parents and untouched official tests for their registered future roles.
+3. Price the complete chosen phase, including preparation, evaluation/export and
+   shutdown, before asking for GPU startup. The279 historical process seconds
+   are not a permanent monetary ceiling; future allowance must be explicit and
+   additive, retaining all20 receipts. CNY3000 remains an overall ceiling.
+
+**E015 independent weights recovery is still open.** E016 rehashed the12 complete
+files/6190803414bytes before inference. They remain on the retained stopped
+volume; the local five small files and partial shard are not a full backup.
+Do not release/delete the instance. Its post-stop UI showed14days23hours58minutes
+of retention; recheck the exact deadline before recovery. Follow the separate
+[bounded no-card plan](E015_RECOVERY_PLAN.md), not a GPU-window full transfer.
+No no-card restart or checkpoint transfer occurred in E016.
+
+Reproduce the frozen raw-token audit with `python -m analyses.e016 audit` and
+the original tokenizer. Rebuild paired tables/all20 receipt checks with
+`python -m analyses.e016_result_summary --ledger PRIVATE_CURRENT_LEDGER --out-dir NEW_OUTPUT_DIRECTORY`.
+Public result verification is in `reports/real_math_e016_execution_r1/`;
+raw streams/profiles are in `runs/gsm8k_capability_e016_r1/`. Preserve all frozen
+runtime/input bytes and completed outputs. No automatic model job is queued.
+
+# Historical E016 startup handoff — completed, do not replay
 
 Read [E016 readiness](../reports/REAL_MATH_E016_READY.md) and
 [the registration](experiments/E016_capability_preservation.md). C019 completed

@@ -1,3 +1,27 @@
+## D029 — 2026-09-10: retain both E016 failures and stop before scaling
+
+Executed only the published64-parent/two-endpoint diagnostic on owner startup.
+Base clean correctness26/64 versus E0150/64 loses26 paired successes with0 gains;
+E015 parses62/64 answers, so missing markers alone cannot explain the result.
+The base's39 marked-correct answers establish measurable numeric endpoints,
+but14 truncations fail the frozen8 limit. Both registered screens remain failed.
+Do not substitute a post-hoc answer-only gate or silently activate the base-pass
+training branch. Engineering memorization does not license an allocation grid.
+
+Complete all128 outputs,42 Linux checks and both independent record audits;
+retain immutable raw scores/configurations and observed-development status.
+Charge235seconds, yielding20 reconciled receipts/6921used/279left/no reservation.
+Export compact records and current ledger, then confirm provider shutdown and
+cancel the temporary timer. The observed721-second span costs aboutCNY1.60 at
+the stated rate, not a reconciled invoice. No further model job, training,
+checkpoint transfer or restart followed; unique E015 weights recovery stays open.
+
+The next local proposal must distinguish evaluation termination from tuning
+capability loss, consider lower integrated update strength/broader coverage and
+separately reviewed freezing, and price the complete rental before startup.
+No cause, fix, scientific effect or new allowance is established by this result.
+[Evidence and follow-up](../reports/REAL_MATH_E016_RESULTS.md).
+
 ## D028 — 2026-09-10: test capability preservation before training scale
 
 The owner requested the next experiment or offline planning and notification

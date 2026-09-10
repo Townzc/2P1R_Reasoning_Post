@@ -1,13 +1,14 @@
 # 2P1R Reasoning Post-Training
 
-**E016 ready, 2026-09-10 UTC:** CPU audit finds capability loss in saved E013
-outputs; historical scores remain unchanged. The next fixed diagnostic compares
-original base/E015 on64 new development parents,128 generations and zero SFT.
-Source/inputs are published;40 CPU tests and independent clean-checkout checks
-pass,2 Linux watchdog tests await startup. Whole GPU window15–20minutes,
-about CNY2–2.67. No server/model call occurred during preparation;E015 independent
-weights recovery is still pending. [Findings](reports/REAL_MATH_C019_CAPABILITY_AUDIT.md),
-[readiness and next action](reports/REAL_MATH_E016_READY.md).
+**E016 completed; provider shut down, 2026-09-10 UTC:** 128 fixed development
+outputs and both record audits are complete. Base/E015 clean correctness is
+**26/64 versus 0/64**, with 26 paired losses and no gains. Base truncation14/64
+exceeds the registered8/64 limit, so both screens fail; no training grid follows.
+All42 Linux checks pass. The235-second charge leaves279; all20 receipts reconcile.
+Compact outputs/ledger are retained; the observed rental span is about12minutes
+(~CNY1.60, not an invoice). E015 independent weights recovery remains incomplete.
+[Results and next decision](reports/REAL_MATH_E016_RESULTS.md),
+[current handoff](docs/NEXT_SESSION.md).
 
 **E015 completed and server shut down, 2026-09-10 UTC:** the unchanged
 engineering gate passes:32/32 correct/terminated, zero truncations, NLL0.001106.

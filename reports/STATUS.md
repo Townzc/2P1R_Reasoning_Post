@@ -1,4 +1,23 @@
-# Current status — E016 ready for owner-started capability calibration
+# Current status — E016 complete; both screens fail; provider off
+
+The frozen base/E015 diagnostic completed all128 generations. Clean correct is
+26/64 versus0/64; marked numeric correct39/64 versus0/64; parsed49/64 versus62/64.
+The base fails only its truncation component (14 exceeds8), despite measurable
+numeric capability. E015 loses all26 clean base successes with no gains.
+Keep both failed registered screens; no silent entry into the base-pass branch.
+
+All42 Linux checks and byte-identical server/local record audits pass. Process
+charge235seconds;20 full receipts reconcile to6921/7200 used,279left,no reservation.
+Compact outputs/current ledger are independently verified. Provider shutdown
+and later timer cancellation are confirmed; observed notification-to-check span
+is721seconds/aboutCNY1.60, not the exact invoice. No next model job is queued.
+
+Keep the server off for diagnosis and concrete protocol review. Preserve E015
+unique weights pending the separate no-card recovery; no instance disposal.
+The next proposal must address base termination and tuning capability separately.
+Read [E016 results](REAL_MATH_E016_RESULTS.md) and [handoff](../docs/NEXT_SESSION.md).
+
+# Historical E016 readiness — before this completed run
 
 C019 CPU output audit is complete. Its new post-hoc marked-answer diagnostic
 counts base10/16 clean correct versus E0130/16, without changing historical

@@ -1,9 +1,21 @@
+# E016 closeout — 2026-09-10 UTC
+
+- Completed immutable128-stream run: `runs/gsm8k_capability_e016_r1/` (repository root), including13 compact files; no checkpoint.
+- Server/local raw-token audits, all42 Linux checks, preflight summary, paired records, compact-transfer verification and provider stop evidence: `real_math_e016_execution_r1/`.
+- Complete result and limitations: [REAL_MATH_E016_RESULTS.md](REAL_MATH_E016_RESULTS.md). Both frozen gates failed; no next job is queued.
+- Current private ledger:20 receipts,6921used/279left,zero reservations; SHA256 `c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106`. The pre-E01619-entry snapshot is retained as history.
+- E015 complete12-file/6.19GB weights were rehashed before E016 and remain on the retained stopped volume. Independent backup is still incomplete. Do not dispose of it; use the separate no-card recovery plan.
+
+Provider shutdown and temporary-timer cancellation are confirmed. Source on the
+stopped instance is84e9ea3; post-shutdown result publication must be synchronized
+before later authorized use. No full-weight transfer or next startup occurred.
+
 # C019 / E016 artifacts — 2026-09-10
 
 - C019 completed audit: REAL_MATH_C019_CAPABILITY_AUDIT.md and real_math_c019_saved_capability_r1/.
 - E016 frozen registration/runner: docs/experiments/E016_capability_preservation.md, analyses/e016.py, configs/real_math_e016/ (from repository root).
 - E016 immutable inputs: real_math_e016_inputs_r1/; independent CPU evidence: real_math_e016_verification_r1/.
-- E016 readiness: REAL_MATH_E016_READY.md; no GPU results exist yet.
+- Historical E016 readiness: REAL_MATH_E016_READY.md; completed results now in REAL_MATH_E016_RESULTS.md.
 - E015 independent weights recovery is incomplete: docs/E015_RECOVERY_PLAN.md (repository root). Unique complete weights stay on the stopped instance; do not dispose of it.
 
 # Artifact inventory and migration limits
@@ -89,7 +101,7 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 | Pinned 0.5B and 1.5B base snapshots | Reproducible from pinned sources; current A800 main cache verified before pilot | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
 | Higher-LR debug checkpoint (`r2`, gate failed) | Verified independent local backup outside Git; historical server copy | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
 | Passing debug checkpoint (`r3`, 31/32) | Verified independent local backup outside Git; historical server copy | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
-| Shared runtime ledger | Independently retained current private backup:6467 seconds, zero reservations; all18 receipts reconciled | [E014 ledger proof](real_math_e014_execution_r1/ledger_verification.json). Older16/17-receipt balances are historical. A replacement keeps the same approved budget. |
+| Shared runtime ledger | Independently retained current private backup:6921 seconds, zero reservations; all20 full receipts reconciled | [E016 ledger proof](real_math_e016_execution_r1/ledger_verification.json). Older balances are historical. A replacement preserves all receipts. |
 | E013 failed GSM8K checkpoint |12 files /6,190,803,414 bytes, independently retained; server copy must be rechecked at startup | [Backup proof](real_math_e013_checkpoint_backup.json), [post-run hashes](real_math_e014_execution_r1/checkpoint_preservation.json). E014 reads these weights, not a fresh base snapshot. |
 | E014 active input release | Public configs/real_math_e014 and reports/real_math_e014_inputs_r2; r1 retained | [r2 release](../configs/real_math_e014/release_r2.json), [independent checks](real_math_e014_execution_r1/input_verification_r2.json). Case/evidence bytes match r1. |
 | E014 completed diagnostic | Local and public compact run records,42 free generations and32 full-reference records | [Both audits and resource proof](REAL_MATH_E014_RESULTS.md);170-second receipt. No new weights. |

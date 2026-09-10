@@ -1,3 +1,14 @@
+## E016 measured closeout — 2026-09-10 UTC
+
+The owner notification at18:29:09UTC to provider-off confirmation by18:41:10UTC
+spans721seconds, about12minutes/CNY1.60 atCNY8/hour. Actual power-on may predate
+notification and provider billing/rounding/storage fees remain unreconciled.
+The registered15-minute target/20-minute ceiling was met on this observed span.
+The single process charged235seconds; compact export/verification took6.47seconds.
+Set the platform stop timer before execution, export25 compact/auxiliary files,
+confirm normal shutdown, then cancel the timer. No full checkpoint export or
+restart was performed. [Evidence](../reports/real_math_e016_execution_r1/shutdown_closeout.json).
+
 # Account for the whole powered-on rental window
 
 **E015 operational outcome, 2026-09-10 UTC:** the new clone's real transfer
