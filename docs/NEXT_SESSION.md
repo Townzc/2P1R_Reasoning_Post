@@ -1,3 +1,72 @@
+# Next session — E016 ready; owner startup needed
+
+Read [E016 readiness](../reports/REAL_MATH_E016_READY.md) and
+[the registration](experiments/E016_capability_preservation.md). C019 completed
+locally: the post-hoc diagnostic finds 10/16 clean base successes versus E013
+0/16; all original strict scores and raw streams remain unchanged. This is
+observed development, not a result for E015. Do not scale from memorization.
+
+The next single run is `gsm8k_capability_e016_r1`: original pinned base then
+exact E015 checkpoint, the same 64 new development parents (C017 ranks17–80),
+128 greedy generations, zero training or checkpoint writes. Scoring and
+operational floor/retention gates are frozen. No automatic fallback or grid.
+Implementation d27c17c and input release32240fd are public. Release SHA256:
+`c95f7c6d48c5aac11b330bab4989d4efe8a231ec1e4c18e3f8b8bbb21a9204ac`.
+Independent CPU reconstruction and clean-checkout bundle import pass;40 focused
+tests pass,2 GNU-timeout integrations await Linux.432 development parents remain
+reserved. No server contact/model call occurred in this preparation.
+
+Notify the owner that the existing A800 is now needed for this diagnostic.
+Whole GPU window targets15minutes/CNY2, caps20minutes/CNY2.67 atCNY8/hour.
+Set a provider stop backstop; record the power-on time and evidence source.
+Admission needs785seconds remaining:485 guarded process,120 compact export,
+180 shutdown/slack. A blocked connection/preflight ends the window. No paid
+GPU weight-transfer attempt, troubleshooting session or second job.
+
+The current private ledger backup remains19 receipts,6686used/514left,zero
+reservations, SHA256
+`ad45fa615091d9f47d16b5b80b07aa23313f356b5ab96bdcab4fa74ff60891d0`.
+E016 reserves470+15=485 at most. Restore this exact ledger into an older clone;
+never reset it. The stopped instance's execution source is e508321. The local
+`.local/e016_ready.bundle` is based on that prerequisite; final staging metadata
+is `.local/e016_final_publication_verification.json`. Import the final published
+commit before launch, set origin/main to the verified published commit, require
+a clean tracked tree and verify that the release plus every input file is tracked.
+Do not overwrite remote unique outputs while synchronizing source.
+
+Private `.local/e015_connection.json` identifies the existing instance; never
+publish credentials or endpoints. Use its existing pinned training interpreter
+(the nonlogin default Python is unsuitable), original model snapshot and the
+E015 `checkpoint_final` directory. After the two Linux watchdog tests and the
+entire focused suite pass, use the frozen CLI below. Arguments here are names
+for already verified local server paths/timestamps, not values to guess.
+
+```sh
+python -m unittest tests.test_e016 tests.test_gsm8k_answer_audit tests.test_e014 tests.test_real_math_engineering tests.test_budget_guard -v
+python -m analyses.e016 inspect --tokenizer-dir "$E016_SNAPSHOT" --ledger .local/resource_ledger.json
+python -m analyses.e016 launch --execute --tokenizer-dir "$E016_SNAPSHOT" --checkpoint "$E016_CHECKPOINT" --ledger .local/resource_ledger.json --power-on-at-utc "$E016_POWER_ON_UTC" --power-on-time-source owner_start_notification
+python -m analyses.e016 audit --tokenizer-dir "$E016_SNAPSHOT" --out .local/e016_server_record_verification.json
+```
+
+Use `provider_timestamp` instead when an actual provider start timestamp is the
+recorded source. The launcher checks idle A80080GB/driver580.126.09, pinned
+packages, original base hashes, every E015 checkpoint file, current ledger and
+whole-rental admission. The256MiB scratch gate writes no checkpoint and permits
+no cleanup. Inspect defaults to no execution. Preserve failed/incomplete runs;
+no automatic retry. Export all compact records and updated ledger, obtain
+provider-confirmed shutdown, then analyze/publish locally. Compare saved raw
+streams and original/marked scores on both server and local CPU before claims.
+
+**E015 independent weights backup is still incomplete.** The full12files/6.19GB
+remain on the stopped volume; local five small files plus a partial shard are
+not a backup. Do not release/delete the instance. E016 only reads these weights.
+The separate [no-card recovery plan](E015_RECOVERY_PLAN.md) has a two-hour/CNY0.20
+planning cap, two bounded throughput probes and one admitted verified copy.
+It is not part of E016's GPU window. Recheck the displayed retention deadline
+(approximately2026-09-25UTC); keep recovery open until all12 local hashes pass.
+
+# Historical E015 closeout and startup handoffs
+
 # Next session — E015 complete; server off; weights recovery still open
 
 Read [E015 results](../reports/REAL_MATH_E015_RESULTS.md). The owner-supplied

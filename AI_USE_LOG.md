@@ -1,3 +1,16 @@
+# 2026-09-10 — E016 offline readiness verified
+
+Published implementation d27c17c and immutable input release32240fd. Codex
+independently reconstructed all64 prompt streams and reconciled all19 receipts
+in a clean checkout imported from an e508321-based Git bundle. Reports match
+byte for byte;40 tests pass and2 GNU-timeout integrations remain for Linux.
+No source in the historical E013 freeze changed. No model/server/teacher call,
+reservation or delegation occurred. Corrected the new literature note's early
+training dynamics section reference to3.7; its conclusions are unchanged.
+E015 independent weights backup remains incomplete, with a separate finite
+no-card preservation plan. Notify the owner that E016 now needs one bounded
+A800 window; end it with compact export and provider-confirmed shutdown.
+
 # 2026-09-10 — C019 results and E016 preparation
 
 C019 reverified all 32 saved E013 development streams. A separate post-hoc,

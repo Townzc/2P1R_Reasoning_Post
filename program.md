@@ -1,9 +1,20 @@
+# Current finite phase — E016 capability-preservation diagnostic
+
+E016 is CPU-ready; read reports/REAL_MATH_E016_READY.md and docs/NEXT_SESSION.md.
+Run only after owner startup and exact published release/current ledger checks:
+base/E015,64 distinct development prompts each,128 generations,zero training.
+470+15 process seconds fit514 remaining. Whole rental15minutes target/20maximum;
+export compact records and current ledger, then provider-confirmed shutdown.
+No automatic scientific grid. Keep E015 unique weights on the stopped instance
+pending separately verified independent no-card recovery. No server was contacted
+in this preparation.
+
 # Bounded research workflow
 
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** E015 is complete, passes the original
+**Historical E015 closeout (2026-09-10 UTC):** E015 is complete, passes the original
 engineering gate, and the provider is confirmed off. Read
 `reports/REAL_MATH_E015_RESULTS.md` and `docs/NEXT_SESSION.md`. All19 receipts
 reconcile to6686used/514left; compact records/ledger are independent. Complete

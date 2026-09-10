@@ -1,3 +1,22 @@
+# Current status — E016 ready for owner-started capability calibration
+
+C019 CPU output audit is complete. Its new post-hoc marked-answer diagnostic
+counts base10/16 clean correct versus E0130/16, without changing historical
+strict scores. E015 development capability is still unknown. The next release
+fixes64 new C017 development parents, two existing model endpoints and128 greedy
+generations, with zero SFT or checkpoint writes. All64 prompt streams and19
+ledger receipts independently reconstruct in the main and clean checkout.
+40 focused tests pass;2 Linux watchdog tests remain before launch.
+
+No server/model call or reservation in preparation. Ledger6686used/514left;
+maximum485-second reservation fits. Whole GPU window15minutes target,20minutes
+ceiling, about CNY2–2.67. Published source/input release and migration bundle
+are ready. Follow [readiness](REAL_MATH_E016_READY.md) and the current handoff.
+E015 full weights remain on the stopped volume; independent recovery is still
+open and no instance disposal is allowed. The no-card recovery plan is separate.
+
+# Historical E015 closeout
+
 # Verified status — E015 gate passes; provider off; independent weights backup incomplete
 
 [E015 completed](REAL_MATH_E015_RESULTS.md):32/32 correct/terminated training

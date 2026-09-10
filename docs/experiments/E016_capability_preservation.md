@@ -28,6 +28,9 @@ two fixed endpoints; it does not continue training or isolate an LR mechanism.
 - No SFT, optimizer, reference-conditioned logits, intermediate checkpoint
   selection, sampling, teacher, test decode, new weight file or automatic retry.
 
+These are previously undecoded questions in this project; unknown exposure
+during base-model pretraining is not ruled out.
+
 The public CPU release stores original prompt/reference hashes, complete
 serialized prompts and token IDs before any model generation. Only the already
 cached original **training** JSONL is opened for text; official tests are not

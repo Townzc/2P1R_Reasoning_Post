@@ -41,14 +41,14 @@ or generated new questions. Six adversarial fixtures cover these edge cases.
 ## New primary-source reading and its practical consequence
 
 - **ICLR 2025, Unveiling the Secret Recipe: A Guide For Supervised Fine-Tuning
-  Small LLMs.** Sections 3.3, 3.5 and 3.8 distinguish generalization from training
+  Small LLMs.** Sections 3.3, 3.5 and 3.7 distinguish generalization from training
   fit: lower learning rates helped their benchmark performance, lower loss was
   not necessarily better, and constant LR could match cosine under their large
   batch setup. Their models are 3B–7B, and Table 4 uses roughly 1.2M–2.7M sample
   presentations. This motivates checking retained capability and a later bounded
   lower-LR calibration; it does not prescribe their batch sizes for our 32-row,
   1.5B setting or attribute E015's success solely to terminal decay.
-  [Paper, Sections 3.3/3.5/3.8](https://proceedings.iclr.cc/paper_files/paper/2025/file/b6e2c96bc4702f761d7d108d6e31930f-Paper-Conference.pdf).
+  [Paper, Sections 3.3/3.5/3.7](https://proceedings.iclr.cc/paper_files/paper/2025/file/b6e2c96bc4702f761d7d108d6e31930f-Paper-Conference.pdf).
 - **ACL 2025 main, HFT: Half Fine-Tuning for Large Language Models.** Section 3
   freezes a selected portion of parameters to preserve earlier capabilities.
   Their Appendix A.3.3 uses two SFT epochs, a decreasing 2e-5 LR and eight A100

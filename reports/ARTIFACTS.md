@@ -1,3 +1,11 @@
+# C019 / E016 artifacts — 2026-09-10
+
+- C019 completed audit: REAL_MATH_C019_CAPABILITY_AUDIT.md and real_math_c019_saved_capability_r1/.
+- E016 frozen registration/runner: docs/experiments/E016_capability_preservation.md, analyses/e016.py, configs/real_math_e016/ (from repository root).
+- E016 immutable inputs: real_math_e016_inputs_r1/; independent CPU evidence: real_math_e016_verification_r1/.
+- E016 readiness: REAL_MATH_E016_READY.md; no GPU results exist yet.
+- E015 independent weights recovery is incomplete: docs/E015_RECOVERY_PLAN.md (repository root). Unique complete weights stay on the stopped instance; do not dispose of it.
+
 # Artifact inventory and migration limits
 
 ## E015 closeout — complete result records, incomplete independent weights backup
