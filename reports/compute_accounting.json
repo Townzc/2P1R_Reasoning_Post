@@ -1,13 +1,13 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 5740,
-  "remaining_gpu_seconds": 1460,
-  "gpu_hours": 1.5944444444444446,
+  "charged_gpu_seconds": 5971,
+  "remaining_gpu_seconds": 1229,
+  "gpu_hours": 1.658611111111111,
   "billing_limit": "GPU process runtime only. Instance idle time, downloads and storage are separately billable. A800 hourly price was not supplied; the old 4090 reference price is not applied.",
   "hardware_charged_seconds": {
     "RTX_4090": 737,
-    "A800_80GB": 5003
+    "A800_80GB": 5234
   },
   "jobs": [
     {
@@ -280,6 +280,24 @@
       ],
       "started_at": "2026-09-09T18:33:21.636444+00:00",
       "elapsed_seconds": 511.9267162680626,
+      "exit_code": 0
+    },
+    {
+      "run_id": "relation_overfit_e011_r1",
+      "status": "completed",
+      "max_seconds": 720,
+      "charged_seconds": 231,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "src.relation_experiment",
+        "--snapshot",
+        "/root/autodl-tmp/cs294-runtime/cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323",
+        "--preflight",
+        ".local/e011_preflight_20260909T212731747117.json"
+      ],
+      "started_at": "2026-09-09T21:27:31.787876+00:00",
+      "elapsed_seconds": 230.66415121033788,
       "exit_code": 0
     }
   ]

@@ -1,0 +1,135 @@
+{
+  "arms": {
+    "fixed_reference": {
+      "dev_rows": 16,
+      "generation_prompts": 64,
+      "guard_seconds": 15,
+      "max_seconds": 360,
+      "optimizer_updates": 256,
+      "processed_tokens": 1164288,
+      "run_id": "relation_fixed_reference_e012_r1",
+      "supervised_tokens": 103424,
+      "train_rows": 32
+    },
+    "given_route": {
+      "dev_rows": 16,
+      "generation_prompts": 64,
+      "guard_seconds": 15,
+      "max_seconds": 360,
+      "optimizer_updates": 256,
+      "processed_tokens": 1252352,
+      "run_id": "relation_given_route_e012_r1",
+      "supervised_tokens": 103424,
+      "train_rows": 32
+    },
+    "single_step": {
+      "dev_rows": 64,
+      "generation_prompts": 256,
+      "guard_seconds": 15,
+      "max_seconds": 360,
+      "optimizer_updates": 256,
+      "processed_tokens": 169984,
+      "run_id": "relation_single_step_e012_r1",
+      "supervised_tokens": 29696,
+      "train_rows": 128
+    }
+  },
+  "data_manifest_sha256": "cb923a3e11817682f77b4116d7524e615bdffee29e04e5848b3815352aa8133e",
+  "execution_config_sha256": "bf9e4f5b53db98245e867eb43107350ee17bd4996f8afaea7ec9bc0d45a720f5",
+  "gpu_seconds_added": 0,
+  "initial_accounting": {
+    "current_job_max_reservation_seconds": 375,
+    "ledger_sha256": "664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5",
+    "prior_receipts": 16,
+    "remaining_ladder_max_reservation_seconds": 1125,
+    "remaining_seconds": 1229,
+    "reservations": 0,
+    "used_seconds": 5971,
+    "verified_prior_stages": []
+  },
+  "model_calls": 0,
+  "phase": "E012",
+  "prepared_at_utc": "2026-09-10T01:57:23.563711+00:00",
+  "source_commit": "1fc27d459c8445417e3db73d944a7d2c7c064ffd",
+  "source_files_sha256": {
+    "configs/diagnostics/relation_c016.json": "aecd8a3c64b325886c0a83299ea2b1c67a4ac3c2d7c1c27c0a18d3e2468cb010",
+    "configs/diagnostics/relation_c016_gpu_proposal.json": "d51422175e4f1fb77de2ec70b13bf9819b5a5b464db7b5c72f49cd8cd21847c5",
+    "configs/diagnostics/relation_c016_release.json": "22f1f0d1b4c4b8217147dd0f314f6f565b208538267756583020d51a1a51b535",
+    "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+    "configs/relation_diagnostics_e012/execution.json": "bf9e4f5b53db98245e867eb43107350ee17bd4996f8afaea7ec9bc0d45a720f5",
+    "configs/relation_engineering_e011/overfit.json": "9df13582d63773514a8564f5e5c4d650212f3ccd095461f0f2cf54112e69f18c",
+    "configs/resource_budget.json": "64d3611ef7bf8f939dfa7b999754187f1f0fc44582aa194d9687ea5b7b286078",
+    "docs/experiments/C016_relation_diagnostics.md": "45c6cccffdcdb0f672ba3b1a7379dab3a2a1f4d804a5e1b9906e436c307aef6f",
+    "docs/experiments/E012_relation_diagnostic_ladder.md": "3de25fc47e9a7c5a23ef2b87f342feb9fb7ec48c28613a9ed1597930af292a0f",
+    "requirements-diagnostics.txt": "5d081f1abaf2133c07cbeac2d355b99de8c9792eed56af153e7ad8c3c2943c70",
+    "requirements.txt": "973d7d8c0faf8d4dfa2d4026146c47ae288ce423ac3c11b4d9d9667cbfeec952",
+    "runs/relation_diagnostics_c016_r1/assignment.json": "716ba3b3eeae344b757800b65a1253e437fdc65f9d5ae158ce16dfa2200f2599",
+    "runs/relation_diagnostics_c016_r1/audit.json": "23b0c901c88855d4309b40d791273469256336c43e1caedf6eb1a62365a61f95",
+    "runs/relation_diagnostics_c016_r1/budgets.json": "5ee2a9119cbffda899e293e09a342e6e7cb80a62f79557077bb8e20c135d54f8",
+    "runs/relation_diagnostics_c016_r1/initial.json": "5acfcdb9a5271def04bc58a478f9c21a180dbc5da4c868da2c37625e38ffc6c8",
+    "runs/relation_diagnostics_c016_r1/manifest.json": "cb923a3e11817682f77b4116d7524e615bdffee29e04e5848b3815352aa8133e",
+    "runs/relation_diagnostics_c016_r1/rows.json": "b029b89603f46f8c4864263f36dee819b6120a3bd1dd0537be63bb622988ff7f",
+    "runs/relation_diagnostics_c016_r1/schedules.json": "43b7440d5d87482f3d991072b61e5a532593de0a5a4a95b5fc061c9cfa6276af",
+    "scripts/audit_family_matching.py": "7c780d0ce3d63679b8779c636083c8df8dd757336b6fca7069ab064789a75d66",
+    "scripts/audit_relation_diagnostic_outputs.py": "71a1fccfea7bff0f264c8b7cfd9ff2d9c75b533f7bc18c40803f5c8734844d55",
+    "scripts/audit_relation_engineering_outputs.py": "95b9f67fc0842318c606732ef9993dd2668578f13a42935727610b02106e4de7",
+    "scripts/build_registry.py": "343d86f9b531e19f8f8d461c503afed10cbc26383507b082ab8a87d05240d3cb",
+    "scripts/prepare_relation_diagnostic_execution.py": "51659bee0f75b1030ef9c5113900bced11d4f65c02ef5a79ad9f6e10dbfd310b",
+    "scripts/prepare_relation_diagnostics.py": "34e628452dc212905447a489cd51fb23b59cc1ca1b8ec202c694d7f1ac31ba1b",
+    "scripts/prepare_relation_engineering.py": "2b894155a1a0aa46455353afc9d8f92a1a47f0b7dd29dfab209d6006fc016085",
+    "scripts/run_bounded.py": "41c79e33cca867689e04d635f71ac64aa3bc2c17ff6e82e8a7fbef493c1f0cf5",
+    "scripts/run_relation_cpu_audit.py": "2a081223c8599f5cd752d910f6eda7aaa7860e006e49049961e264b09814f57a",
+    "scripts/run_relation_diagnostics.py": "6ddf38662dd41ba6627d2b01ead983087e367b5c115a5469e6fb9c4614a05bc3",
+    "scripts/run_relation_engineering.py": "65692cad3b412cfa5f75742afc860999ec96bc00c049f4d38d3b9172cb73b67c",
+    "scripts/update_compute_accounting.py": "4547340ce28100e5adb9d13538b07eb9a772a82b8b03f00cf30c871dd3a9b40b",
+    "scripts/verify_relation_cpu_audit.py": "e95b5ca5076fed9b6f3f598772512746ff30154f6c768ac40114b09252b5c10d",
+    "scripts/verify_relation_diagnostics.py": "ded0e027ddfe44478833d3d792bb2751692fdca36d4a7978e7a4507f7da151e0",
+    "src/relation_audit.py": "fbf50519a8fe8bee93c0ff6140b1f318067743ba1cd5a43b383007c35971cebc",
+    "src/relation_diagnostic_execution.py": "a488db2aa532d31dd162a8e9d2e120c38e3198dccebe100d764e0381454527b2",
+    "src/relation_diagnostic_training.py": "e9b1180f35656ed4605084c4694626eab132b114e484ebf117972c44b9f266bc",
+    "src/relation_diagnostic_verifier.py": "55a73332b98e39eb7ff8ca88dc3d640abcb8fd0e9f025d46cda87f0ecf295db4",
+    "src/relation_diagnostics.py": "42861dc2fc3b1fad937cdc8ed2e1cdf0b476519533300fa698fcd1a56eb1f3c7",
+    "src/relation_engineering.py": "f773f6cf184391bff1fc31f13b29cc5db8d5d972eb91587b409b3fb9d0f5ae00",
+    "src/relation_experiment.py": "c06c8e960ffae02507bdc2e7c03f696d775528e1f531f6658c3e0542bc0a8bdb",
+    "src/relation_probes.py": "9ba81dd8864d2efeb8b088631ac4135d53302d618af72c19f3ef7eb406f00a68",
+    "src/relation_transport.py": "5648211b828eb5c0325b9b77bdec0cc753f31b251b7a4abfd57094aec1c93b46",
+    "src/relation_verifier.py": "257ac27c17a1f7663b245acb38f4159a7209624a44737753f7bdabecd9307bd6",
+    "src/sft_data.py": "259fb1b3432eb4c96f1db2b4e19d684e2739d51f780259b297dfec479d3a8d55",
+    "tests/test_relation_diagnostic_execution.py": "cae2cb6a8bcf69c426acb022e8cb9bde54ed0597fcaae11ca6fefa31a4f3dae9",
+    "tests/test_relation_diagnostics.py": "64805aa88b1fe8eb6049ed57f37ccb3e78c44b57220c2d3c7fc917cf449cc82f",
+    "tests/test_relation_engineering.py": "5c06e03de1f9f980c798d3f08a752ea0d593ad2b52ebf5a323bac1688fbf99a1"
+  },
+  "source_worktree_dirty": false,
+  "status": "prepared_execution_not_run",
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  }
+}

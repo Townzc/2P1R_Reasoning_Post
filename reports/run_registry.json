@@ -1,6 +1,6 @@
 {
   "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 5740,
+  "charged_gpu_seconds": 5971,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -1797,6 +1797,145 @@
       },
       "exception_type": null,
       "records": "runs/profile_main_a800_20260905_r1"
+    },
+    {
+      "run_id": "relation_overfit_e011_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "33820d9374d9649db06ed1024532f26fa9962cfd",
+      "config": {
+        "assignment_seed": 81401,
+        "batch_size": 4,
+        "c014_summary_sha256": "5bc5114f53651f03ec28c0cc1a7cbee71613bda8a48a3715817c3bae179575b8",
+        "cycles": 8,
+        "data_dir": "runs/relation_engineering_c015_r1",
+        "dev_count": 16,
+        "dev_seed": 481,
+        "dev_views": [
+          "clean",
+          "useful_delete",
+          "irrelevant_delete"
+        ],
+        "eval_batch_size": 4,
+        "expected_ledger_sha256": "1d674f211298aee5eb8bdd1936cab6d68d2d545392b42b9f63a013ebfc11a4c6",
+        "expected_prior_jobs": 15,
+        "expected_prior_used_seconds": 5740,
+        "grad_clip": 1.0,
+        "guard_seconds": 15,
+        "holdout_access": false,
+        "learning_rate": 5e-05,
+        "max_length": 1536,
+        "max_new_tokens": 128,
+        "max_seconds": 720,
+        "microbatch_size": 2,
+        "min_free_gib": 12,
+        "model_role": "main",
+        "no_automatic_retry": true,
+        "overfit_max_nll": 0.2,
+        "overfit_required_correct": 32,
+        "phase": "E011",
+        "profile_updates": 64,
+        "profile_warmup": 8,
+        "purpose": "relation_engineering_only",
+        "run_id": "relation_overfit_e011_r1",
+        "save_checkpoint": true,
+        "seed": 41,
+        "steps": 256,
+        "train_count": 32,
+        "train_seed": 401,
+        "weight_decay": 0.01
+      },
+      "mode": null,
+      "arm": null,
+      "model": "Qwen/Qwen2.5-1.5B",
+      "charged_gpu_seconds": 231,
+      "overfit_passed": false,
+      "steps": 256,
+      "supervised_response_tokens": 103424,
+      "train_accuracy": null,
+      "train_sample16_accuracy": null,
+      "dev_accuracy": null,
+      "dev_broad_accuracy": null,
+      "dev_sampled_pass_at_k": null,
+      "pilot_gate": null,
+      "throughput": {
+        "peak_allocated_mib": 27833.6630859375,
+        "peak_reserved_mib": 29832.0,
+        "processed_tokens_per_second": 8686.657922736289,
+        "profile_complete": true,
+        "profile_step_seconds": 33.5079385638237,
+        "profile_updates": 64,
+        "supervised_tokens_per_second": 771.6380388710337,
+        "warmup_excluded": 8
+      },
+      "exception_type": null,
+      "records": "runs/relation_overfit_e011_r1",
+      "relation_diagnostic": {
+        "phase": "E011",
+        "engineering_gate": {
+          "passed": false,
+          "scope": "engineering_feasibility_only_no_scientific_treatment_effect"
+        },
+        "train": {
+          "answer_correct": 2,
+          "complete_correct": 0,
+          "ended_with_eos": 18,
+          "failure_reasons": {
+            "disconnected_trace": 5,
+            "missing_final": 14,
+            "wrong_state": 13
+          },
+          "n": 32,
+          "truncated": 14
+        },
+        "dev": {
+          "clean": {
+            "answer_correct": 2,
+            "complete_correct": 0,
+            "ended_with_eos": 13,
+            "failure_reasons": {
+              "disconnected_trace": 2,
+              "missing_final": 3,
+              "wrong_endpoints": 1,
+              "wrong_state": 10
+            },
+            "n": 16,
+            "truncated": 3
+          },
+          "irrelevant_delete": {
+            "answer_correct": 3,
+            "complete_correct": 0,
+            "ended_with_eos": 13,
+            "failure_reasons": {
+              "disconnected_trace": 4,
+              "missing_final": 3,
+              "wrong_state": 9
+            },
+            "n": 16,
+            "truncated": 3
+          },
+          "useful_delete": {
+            "answer_correct": 1,
+            "complete_correct": 0,
+            "ended_with_eos": 12,
+            "failure_reasons": {
+              "disconnected_trace": 2,
+              "missing_final": 4,
+              "wrong_endpoints": 1,
+              "wrong_state": 9
+            },
+            "n": 16,
+            "truncated": 4
+          }
+        },
+        "reference_measurement": {
+          "nll": 0.11938981852023908,
+          "reference_count": 128,
+          "response_loss_sum": 1543.4715738296509,
+          "supervised_tokens": 12928
+        },
+        "scope": "engineering_learning_measurements_not_scientific_treatment_comparison"
+      }
     }
   ]
 }
