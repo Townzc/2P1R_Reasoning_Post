@@ -1,5 +1,12 @@
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
+**Current extension, 2026-09-10 UTC:** after C017 the owner requested the next
+real-data experiment. [E013](experiments/E013_gsm8k_engineering.md) registers a
+single 32-parent GSM8K overfit/profile on the pinned 1.5B base and existing
+allowance. Its numeric endpoint scorer and data are separate from historical
+synthetic experiments. E012 stays paused. The four-arm cost-allocation study
+remains a proposal until engineering, complete-phase budgeting and review.
+
 The fixed seed23 replication is complete: matched-dev Paths/GCM final-expression
 correctness is 22/64 versus 17/64, with 18/64 versus 16/64 complete traces;
 broader final correctness is 1/64 each. See the immutable completed run reports.

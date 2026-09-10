@@ -1,5 +1,17 @@
 # Decisions and open questions
 
+## D020 — 2026-09-10: begin finite real-data engineering before scaling
+
+The owner asked to start the next experiment. Prepare and run one E013 GSM8K
+engineering trajectory on the existing authorized A800 if available, with the
+unchanged cumulative ledger. Freeze C017's 32 selected responses and the first
+16 development ranks; 256 fixed updates, numeric/EOS/NLL gate, 900-second process
+cap plus 15-second guard. Publish code before preparation and immutable inputs
+before launch. Do not restart the paused E012 ladder or infer authorization for
+the four-arm grid, new teacher generation, rentals or an extra allowance.
+Max is recommended for this bounded implementation task; no setting is changed.
+See [E013 registration](experiments/E013_gsm8k_engineering.md).
+
 ## D019 — 2026-09-10: execute C017 CPU audit, propose a measured small scale
 
 The owner authorized the next CPU source/split, coverage and attrition audit

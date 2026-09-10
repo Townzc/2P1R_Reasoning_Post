@@ -1,5 +1,18 @@
 # AI assistance log
 
+## 2026-09-10 UTC — E013 real-data engineering implementation
+
+The owner requested the next experiment and an effort recommendation. Codex
+recommended Max without claiming a settings change, registered a finite GSM8K
+engineering trajectory, and implemented exact source materialization, numeric
+completion scoring, a bounded launcher, raw-token verification and measured
+training-cost proxies. Shared token-normalized gradient, profile, model-hash
+and ledger checks are reused from the published engineering stack. Initial
+30 focused scoring/data/loss tests pass. Source publication precedes immutable
+CPU preparation; model execution and availability remain pending at this
+implementation milestone. No GPU charge, new teacher, rental, external message
+or scientific comparison occurred.
+
 ## 2026-09-10 UTC — C017 CPU data audit and scale proposal
 
 At the owner's request, Codex inspected prior discussion/proposals and implemented
