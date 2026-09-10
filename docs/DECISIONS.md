@@ -1,3 +1,21 @@
+## D028 — 2026-09-10: test capability preservation before training scale
+
+The owner requested the next experiment or offline planning and notification
+before startup. C019's separate post-hoc saved-output audit finds 10/16 clean
+base successes lost by E013, while original strict scores stay 0/16. This is
+observed-development evidence, not an E015 result. Prepare E016: original base
+and E015, fixed C017 development ranks 17–80, unchanged prompt/greedy decoding,
+prospectively frozen marked-answer and capability/retention screens. Zero SFT
+updates, no checkpoint writes, no final-test use and no automatic scientific
+queue. Reserve at most 470+15 within the existing 514 process seconds; whole
+GPU window targets 15 minutes/CNY2 and caps at 20 minutes/CNY2.67. Keep the
+server off until published-source and CPU-release verification are complete.
+E015 weights recovery remains separate, with no disposal before independent
+verification. Lower update strength and partial freezing are conditional
+literature-informed alternatives; scientific recipe/grid changes need concrete
+review. See [C019](../reports/REAL_MATH_C019_CAPABILITY_AUDIT.md) and
+[E016](experiments/E016_capability_preservation.md).
+
 # Decisions and open questions
 
 ## D027 — 2026-09-10: retain the passing endpoint, numerical drift and incomplete export

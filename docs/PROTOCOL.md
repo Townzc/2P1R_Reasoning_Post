@@ -1,3 +1,15 @@
+## E016 development calibration extension — 2026-09-10 UTC
+
+The owner requested the next step before server startup. Prepare the fixed
+[E016 capability-preservation diagnostic](experiments/E016_capability_preservation.md):
+64 previously undecoded C017 development parents, original base versus E015,
+identical original prompts/greedy decoding and zero training. A new marked-answer
+screen is frozen prospectively and reported alongside immutable historical
+strict scoring. Do not tune on these outputs and describe them as fresh again.
+The old 16-parent C019 reanalysis is explicitly post-hoc. This authorizes bounded
+preparation and the single diagnostic on owner startup, not the scientific grid
+or final-test evaluation. Preserve the current ledger and all old source bytes.
+
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
 **E015 completed, 2026-09-10 UTC:** the original engineering gate passes with

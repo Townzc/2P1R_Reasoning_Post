@@ -1,3 +1,16 @@
+# 2026-09-10 — C019 results and E016 preparation
+
+C019 reverified all 32 saved E013 development streams. A separate post-hoc,
+gold-blind diagnostic counts base 12/16 marked answers and 10/16 clean correct,
+versus E013 0/16; historical strict scores remain unchanged. Codex read two
+additional ICLR/ACL papers and the official evaluation task configuration.
+E016 prepares a fixed 64-parent development comparison of original base and
+E015 weights, with zero training and prospective floor/retention screens.
+CPU tests, source publication and frozen-input verification precede startup.
+No delegation, server contact, model call, new allowance or external message.
+The E015 backup remains incomplete; a separate no-card recovery plan has a
+finite two-hour window and throughput gate, not a claim of completed recovery.
+
 # AI assistance log
 
 ## 2026-09-10 UTC — owner-authorized E015 execution and provider shutdown

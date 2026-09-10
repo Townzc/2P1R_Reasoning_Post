@@ -1,3 +1,17 @@
+## 2026-09-10 — Saved capability audit changes the next question
+
+**Evidence.** Raw tokens and old strict scores revalidate for all 32 E013 dev
+streams. The new post-hoc marked-answer diagnostic finds base 12/16 numeric
+endpoints, 11/16 with EOS, 10/16 without new-question continuations, versus
+E013 0/16. This is substantive tuning degradation in observed examples, not
+merely a common 0/16 capability floor; the E015 endpoint is still unmeasured.
+
+**Decision.** Read ICLR's small-SFT recipe study and ACL's HFT as conditional
+routes, then prepare a 64-parent, two-endpoint inference calibration with fixed
+scoring, operational thresholds, full denominators and finite rental budget.
+Do not scale solely from 32-example memorization. No server/model activity.
+Preserve E015 unique weights on the stopped volume; recovery stays pending.
+
 # Research journal
 
 ## 2026-09-10 — E015 passes; preserve early divergence and stop on slow export
