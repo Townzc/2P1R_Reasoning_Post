@@ -1,5 +1,16 @@
 # AI assistance log
 
+## 2026-09-10 UTC — revised project abstract
+
+Codex drafted the prospective abstract and accompanying deliverables from P004,
+the primary-source model audit and the existing experimental record. It kept
+SFT as the scope, named concrete small-model/data candidates, and distinguished
+measured local costs from hypothetical prices and unknown public-corpus costs.
+Prior failures are preserved in the linked evidence report. No new result,
+model/server call, protocol change or GPU allowance was introduced. Reviewed
+the text and links and verified frozen-source/ledger hashes; no training tests
+were rerun for this documentation change.
+
 ## 2026-09-10 UTC — related-work model and compute audit
 
 Codex checked primary experimental sections of the original three references

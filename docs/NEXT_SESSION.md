@@ -12,7 +12,7 @@ generation price. No large-model grid or new GPU job follows from this revision.
 
 The owner's latest instruction is to answer the project-framing and deliverable
 questions first, then continue. Read [P004](experiments/P004_cost_aware_sft_allocation_proposal.md).
-A personally addressed English reply has been drafted privately, not sent.
+The full personally addressed reply remains a private unsent draft.
 The proposed core is asymmetric acquisition cost for problems versus solutions,
 with a specified SFT budget. Models/data, cost assumptions, candidate P/K grid,
 selection caveats and course deliverables are concrete but remain proposals.
@@ -23,6 +23,10 @@ and failures and distinguishes the tested student checkpoint from untested
 teacher/second-family candidates. Review [the model-selection evidence](../reports/MODEL_SELECTION_EVIDENCE_20260910.md).
 The proposed GSM8K grid is a tentative range; establish feasibility and actual
 cost before fixing its executed subset.
+
+The [revised abstract and deliverables](PROJECT_ABSTRACT_20260910.md) express
+this scope for review. The external course document has not been edited, and
+the abstract does not itself approve an executable allocation grid.
 
 Next discuss the reply and revised scope with the owner, then prepare a revised
 abstract and a bounded acquisition/feasibility protocol with measured cost

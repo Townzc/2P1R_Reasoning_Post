@@ -12,13 +12,15 @@ is prepared but paused. [P004](docs/experiments/P004_cost_aware_sft_allocation_p
 proposes making asymmetric problem/solution acquisition costs the primary SFT
 question, with Qwen1.5B/GSM8K as the initial real-data study. This is a proposal
 for review, not an approved new training grid or a completed cost experiment.
-The personally addressed response remains private; no message was sent.
+The full personally addressed response remains private and unsent.
 The [model-selection evidence note](reports/MODEL_SELECTION_EVIDENCE_20260910.md)
 clarifies actual synthetic results, untested candidates and the revised reply.
 The [related-work model/compute audit](reports/RELATED_WORK_MODEL_COMPUTE_20260910.md)
 compares the original papers' students, teachers and reported hardware. The
 minimum proposal retains small students and removes the default 7B teacher;
 reusable solutions or a bounded 1.5B teacher calibration remain untested options.
+The [revised abstract and deliverables](docs/PROJECT_ABSTRACT_20260910.md) state
+the cost-allocation question and small-model scope as prospective research.
 
 **Historical readiness — E012 execution release ready, 2026-09-10 UTC:** source and immutable release
 are published; clean-checkout inspection and 76 focused CPU checks pass. Two

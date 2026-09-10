@@ -1,5 +1,15 @@
 # Research journal
 
+## 2026-09-10 — revised proposal abstract
+
+Produced a [standalone abstract and deliverables](PROJECT_ABSTRACT_20260910.md)
+from P004 and the model/compute audit. The central question is allocating
+acquisition expenditure between problems and additional solutions, with measured
+local costs separate from assumed public-data prices. The text names the small
+student, candidate generator, dataset and conditional second-family check;
+synthetic tasks remain diagnostics. It makes no claim of completed acquisition
+results. No new scientific protocol, GPU execution or ledger change occurred.
+
 ## 2026-09-10 — P004 literature/model/compute follow-up
 
 Question: do the proposed assets reflect the earlier papers and a small-compute

@@ -20,7 +20,13 @@ An evidence check now separates completed synthetic Qwen1.5B work from the
 untested GSM8K/Math7B/OLMo proposals. The revised private bilingual reply includes
 the limited generalization and failed relation gate, makes model choices
 conditional, and treats the grid as tentative pending profiling. See
-[model-choice evidence](MODEL_SELECTION_EVIDENCE_20260910.md). No reply was sent.
+[model-choice evidence](MODEL_SELECTION_EVIDENCE_20260910.md). The full reply
+remains a private unsent draft.
+
+The [revised project abstract](../docs/PROJECT_ABSTRACT_20260910.md) now states
+the cost-allocation question, concrete small-model/data candidates, validation
+plan and planned deliverables. This is a proposal text, not an experimental
+result or launch approval; the external course document has not been edited.
 
 This has not revised a frozen protocol, approved a new grid, produced model
 results or established novelty. E012 inputs/release and earlier failed runs
