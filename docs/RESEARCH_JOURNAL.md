@@ -520,3 +520,34 @@ Do not eliminate hard questions by requiring K successful traces. A correct
 final answer alone cannot certify a reasoning trace. Discuss the reply first;
 then revise the abstract and prepare a bounded feasibility plan. Current
 5971/7200 used, 1229 remaining, 16 receipts, zero reservations.
+
+
+## 2026-09-10 — P004 reply grounded in progress and model-choice evidence
+
+**Question.** Did the proposed reply use actual progress, and why were the three
+models proposed? The owner requested those distinctions and aligned English /
+Chinese text before continuing experiments.
+
+**Evidence.** Reconciled the 1.5B arithmetic overfit (32/32 train, 0/16 greedy dev),
+restricted arithmetic allocation comparisons with weak broader transfer, and
+E011's complete-proof training failure. Only the Qwen0.5B debugging model and
+Qwen1.5B main model have project run records. Math7B is a new P004 teacher
+candidate; OLMo1B was already in the original plan but has never run. No GSM8K
+acquisition/model result exists. Maintainer cards establish identities and
+intended uses, not this project's performance or teacher-cost advantage.
+
+**Analysis and correction.** The first reply drew on the existing stack but
+understated the distinction between measured assets and prospective candidates.
+An independent read-only review agreed. Prepared an evidence note and a revised
+privately addressed bilingual reply, retaining the first draft as history.
+Qwen1.5B is the first candidate for real-task calibration, Math7B needs yield,
+reasoning/duplicate/length/cost checks, and OLMo is conditional replication.
+Base checkpoints do not establish absence of benchmark exposure; Instruct/TIR
+scores do not apply to untested base/tool-free configurations. The nine-cell
+allocation grid is tentative pending profiling, not an executed or funded plan.
+
+**Outcome.** Documentation and aligned reply completed; no new teacher/student
+call, GPU job, server contact, reservation or ledger change. E012 remains paused
+for the owner's framing discussion. The personally addressed draft was not sent
+or included in the public repository. See the
+[model evidence note](../reports/MODEL_SELECTION_EVIDENCE_20260910.md).

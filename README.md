@@ -13,6 +13,8 @@ proposes making asymmetric problem/solution acquisition costs the primary SFT
 question, with Qwen1.5B/GSM8K as the initial real-data study. This is a proposal
 for review, not an approved new training grid or a completed cost experiment.
 The personally addressed response remains private; no message was sent.
+The [model-selection evidence note](reports/MODEL_SELECTION_EVIDENCE_20260910.md)
+clarifies actual synthetic results, untested candidates and the revised reply.
 
 **Historical readiness — E012 execution release ready, 2026-09-10 UTC:** source and immutable release
 are published; clean-checkout inspection and 76 focused CPU checks pass. Two

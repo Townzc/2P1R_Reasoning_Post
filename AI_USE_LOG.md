@@ -520,3 +520,19 @@ not a proven novel contribution or an approved training grid. The runtime/data
 releases, prior failures and current ledger remain unchanged. Codex recommended
 Ultra for subsequent scientific-design review without claiming a settings
 change. No server, GPU, teacher call, paid API or model download was used.
+
+
+## 2026-09-10 UTC — model-selection evidence review and bilingual reply
+
+The owner asked whether the previous reply reflected actual progress, why the
+models were chosen, and requested English/Chinese alignment. The root agent
+reconciled saved evidence and drafted the revision while one independent
+read-only agent checked model rationale and maintainer cards. Both distinguished
+actual Qwen synthetic/A800 results from untested GSM8K, Math7B and OLMo work.
+The reply now includes unfavorable results, conditional selection and tentative
+grid scope. Model role/source checks are not new performance measurements.
+The personally addressed English and bilingual drafts remain private and unsent;
+only the generic scientific evidence note and workflow updates are public.
+No frozen experimental dependency, runtime ledger, server or model was changed.
+Max was recommended for this bounded fact-checking and translation task; no
+settings change was claimed.

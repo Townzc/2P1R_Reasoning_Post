@@ -9,6 +9,13 @@ The proposed core is asymmetric acquisition cost for problems versus solutions,
 with a specified SFT budget. Models/data, cost assumptions, candidate P/K grid,
 selection caveats and course deliverables are concrete but remain proposals.
 
+The latest privately retained reply is the revised bilingual version, which
+supersedes the first concise draft. It explicitly states prior synthetic pilots
+and failures and distinguishes the tested student checkpoint from untested
+teacher/second-family candidates. Review [the model-selection evidence](../reports/MODEL_SELECTION_EVIDENCE_20260910.md).
+The proposed GSM8K grid is a tentative range; establish feasibility and actual
+cost before fixing its executed subset.
+
 Next discuss the reply and revised scope with the owner, then prepare a revised
 abstract and a bounded acquisition/feasibility protocol with measured cost
 estimates. Assess whether E012 is still a necessary engineering diagnostic.

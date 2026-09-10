@@ -11,6 +11,12 @@ Primary proposed assets: Qwen2.5-1.5B base, GSM8K, a fixed Qwen2.5-Math-7B-Instr
 teacher; second student OLMo-2-0425-1B base. Costs from public-data subsampling
 are scenario assumptions, not measurements of human problem-writing prices.
 
+An evidence check now separates completed synthetic Qwen1.5B work from the
+untested GSM8K/Math7B/OLMo proposals. The revised private bilingual reply includes
+the limited generalization and failed relation gate, makes model choices
+conditional, and treats the grid as tentative pending profiling. See
+[model-choice evidence](MODEL_SELECTION_EVIDENCE_20260910.md). No reply was sent.
+
 This has not revised a frozen protocol, approved a new grid, produced model
 results or established novelty. E012 inputs/release and earlier failed runs
 remain unchanged. Do not request startup or launch while this discussion is

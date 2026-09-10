@@ -7,6 +7,18 @@ prepared and immutable, but execution/startup is paused during this discussion.
 This document records our proposed scientific response; private correspondence
 and the personally addressed reply stay outside the public repository.
 
+## Model-choice clarification after evidence review
+
+The first concise reply did not adequately expose candidate status or actual
+negative results. [The model-selection evidence note](../../reports/MODEL_SELECTION_EVIDENCE_20260910.md)
+now ties every choice to completed work. Qwen1.5B has existing synthetic/A800
+measurements but needs GSM8K calibration; Math7B is a newly proposed, untested
+teacher; OLMo1B is an earlier planned but untested second family. A privately
+retained revised bilingual reply states actual progress and these conditions.
+The nine-cell grid remains tentative and must be profiled before a bounded
+subset is frozen. Neither published Instruct/TIR benchmark scores nor model
+size establish the proposed base/teacher configuration's measured performance.
+
 ## Proposed primary question
 
 For a fixed student-training budget and a specified data-acquisition budget,
@@ -162,7 +174,7 @@ verified against a course website.
 | Date | Concrete proposed deliverable |
 | --- | --- |
 | October 20, 2026 | Primary Qwen1.5B/GSM8K acquisition pilot and small P/K grid; two seeds for key contrasts; measured generation/verification yield and costs; token/update audit; preliminary accuracy-versus-cost curves; course report/presentation |
-| December 14, 2026 | Three seeds for key primary comparisons; validate allocation recommendations on independent problem draws and unfit allocations; replicate decisive comparisons with OLMo2-1B; targeted quality/diversity checks; release reproducible data manifests, code, cost accounting and final report |
+| December 14, 2026 | Three seeds for key primary comparisons; validate allocation recommendations on independent problem draws and allocations not used to fit the recommendation; replicate decisive comparisons with OLMo2-1B; targeted quality/diversity checks; release reproducible data manifests, code, cost accounting and final report |
 
 The synthetic generator supports diagnostics; neither a new graph benchmark nor
 RL is a prerequisite for these course deliverables. A fully factored sweep of

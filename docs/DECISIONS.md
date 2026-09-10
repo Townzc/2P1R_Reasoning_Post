@@ -359,3 +359,12 @@ Proposed initial assets are Qwen2.5-1.5B base, GSM8K and a fixed math-specialize
 scientific proposal and unsent private reply, not a change to frozen experimental
 sources or permission to execute its grid. No GPU/model/server action or ledger
 change occurred. See [P004](experiments/P004_cost_aware_sft_allocation_proposal.md).
+
+
+D018 evidence clarification: retain Qwen2.5-1.5B as the first real-task calibration
+candidate because its synthetic/A800 stack is measured, not because generalization
+or cost optimality has been demonstrated. Math7B teacher selection and OLMo1B
+replication are conditional on their own unrun capability/cost checks. The
+initial reply overstated readiness through omission; the revised private bilingual
+version states prior failures and prospective status. Keep the grid tentative
+until profiling. See [model rationale](../reports/MODEL_SELECTION_EVIDENCE_20260910.md).
