@@ -98,3 +98,42 @@ python -m scripts.audit_real_math_solutions --cache .local/real_math_c017_source
 Publish scripts, configuration, hashes and compact measurements. Keep third-party
 problem/response texts in the ignored cache and retain attributable, pinned
 retrieval URLs for reconstruction. Record failures without overwriting outputs.
+
+## Completed outcome and same-candidate correction
+
+The completed findings and training-scale proposal are in
+[REAL_MATH_CPU_AUDIT_20260910.md](../../reports/REAL_MATH_CPU_AUDIT_20260910.md).
+Original problems:21,292 rows; acquired draws:1,024 GSM8K/512 MATH.
+Corrected K>=4 coverage:963/1,024 and481/512. No model/GPU execution occurred.
+
+The initial solution pass at published sourcefc13272 is preserved as
+`real_math_c017_solutions_r1`. A formatting repair at022ffa6 preserves matrix
+row separators, unwraps whole-answer text formatting and normalizes unambiguous
+unbraced fractions/square roots. Replay the same four shards and first16
+candidates with new `solutions_r2` output directories. Both raw candidate files
+have the same SHA256. This yields357 additional accepted MATH responses without
+changing any acquired question or candidate. All residual equivalence uncertainty
+is retained; no semantic/unit repair or reference-label correction was made.
+
+The corrected result has an independent verifier:
+
+```bash
+python -m scripts.verify_real_math_audit \
+  --parents .local/real_math_c017_parents_r2/problem_records.jsonl \
+  --frozen reports/real_math_c017_parents_r2 \
+  --solutions reports/real_math_c017_solutions_r2 \
+  --raw .local/real_math_c017_solutions_r2/raw_candidates.jsonl \
+  --cache .local/real_math_c017_sources --tokenizer-json "$TOKENIZER_DIR/tokenizer.json" \
+  --previous reports/real_math_c017_solutions_r1 --out reports/new_c017_verification.json
+python -m scripts.plan_real_math_scale \
+  --parents .local/real_math_c017_parents_r2/problem_records.jsonl \
+  --decisions reports/real_math_c017_solutions_r2/candidate_decisions.jsonl \
+  --out reports/new_c017_scale_proposal
+```
+
+On a fresh checkout, decode adjacent `.jsonl.gz.b64` archives with base64 then
+gzip and check the SHA256 in `manifest_storage.json` or `decision_storage.json`.
+The original JSONL files are ignored to avoid duplicating byte-exact archives.
+Retrieve only pinned source files and regenerate parent/raw-candidate caches
+into new output paths; compare full hashes before using reconstructed rows.
+No reference text or generated answer is needed in Git for recovery.

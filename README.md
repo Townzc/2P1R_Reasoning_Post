@@ -6,7 +6,22 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**Current discussion, 2026-09-10 UTC:** the owner asked to resolve the project
+**C017 real-math CPU audit complete, 2026-09-10 UTC:** original split and
+parent grouping checks retain 7,470 GSM8K and 2,908 text-only MATH level-1–3
+training groups. Frozen audit draws are 1,024 and 512 parents; four pinned
+OpenMathInstruct-2 shards yield K>=4 coverage of **963/1,024 and 481/512** after
+documented conservative checks. A MATH mirror ID error, a GSM8K reference error,
+answer-format losses and superseded preparations are preserved. Twenty-four
+focused tests and independent source/token/denominator verification pass.
+
+The [audit and training-scale recommendation](reports/REAL_MATH_CPU_AUDIT_20260910.md)
+propose four GSM8K conditions: (P,K)=(256,1),(256,4),(512,2),(1024,1), each with
+524,288 supervised tokens and256 updates. Exact whole-response CPU schedules
+exist for seeds17/23; these are review-only. A new32-parent real-data overfit
+and measured profile must precede a priced training phase. No model/GPU/server
+call occurred; E012 stays paused and the ledger remains5971 used/1229 left.
+
+**Earlier discussion, 2026-09-10 UTC:** the owner asked to resolve the project
 framing and concrete course deliverables before continuing experiments. E012
 is prepared but paused. [P004](docs/experiments/P004_cost_aware_sft_allocation_proposal.md)
 proposes making asymmetric problem/solution acquisition costs the primary SFT

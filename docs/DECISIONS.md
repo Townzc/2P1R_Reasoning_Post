@@ -1,5 +1,21 @@
 # Decisions and open questions
 
+## D019 — 2026-09-10: execute C017 CPU audit, propose a measured small scale
+
+The owner authorized the next CPU source/split, coverage and attrition audit
+following P004. C017 freezes parent draws before capped solution retrieval,
+retains mirror/partition/parser failures, and verifies acquired denominators,
+complete-response tokens and corrected filtering outcomes. Read
+[the results](../reports/REAL_MATH_CPU_AUDIT_20260910.md).
+
+Data support a proposed four-condition GSM8K study with P up to1,024 and K up
+to4. Exact CPU schedules use524,288 supervised tokens and256 updates per arm;
+actual unique-pair and exposure differences are explicit. This is a concrete
+proposal requiring scientific review and a real-data32-example overfit/profile
+before pricing/launch. It is not approval to execute eight model jobs or
+reopen E012. No GPU, teacher, server, additional budget or external message.
+The original ledger remains5971/7200 used,1229 left,16 receipts,zero reservations.
+
 ## D001 — 2026-09-05 UTC: public reproducible workspace
 The user requested starting the agreed project and updating the provided GitHub repository after code and experiments. Import only code and synthetic fixtures; keep private handoffs and connection information outside the public repository.
 

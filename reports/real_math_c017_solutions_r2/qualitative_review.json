@@ -1,0 +1,133 @@
+{
+  "reviewer": "Codex; no separate human or subagent review",
+  "sampling": "Prespecified hash-order sample, eight parent-distinct accepted responses per dataset; same policy applied to corrected r2 acceptance.",
+  "rows": [
+    {
+      "problem_id": "gsm8k/train/06027",
+      "stratum": "gsm8k",
+      "response_sha256": "c8bf997615478c5eda83a7b61786d551494eeef83f4695f252e01c4712731d98",
+      "assessment": "clear_in_sample",
+      "review_note": "10-5+2*3=11; displayed steps agree."
+    },
+    {
+      "problem_id": "gsm8k/train/06393",
+      "stratum": "gsm8k",
+      "response_sha256": "0b60d0db74b6697abb7d0857d90a67e85f4eba6b73a893909fe7266d66017cb0",
+      "assessment": "clear_in_sample",
+      "review_note": "60 items, four 45-minute cycles, 180/60=3 hours."
+    },
+    {
+      "problem_id": "gsm8k/train/06052",
+      "stratum": "gsm8k",
+      "response_sha256": "bc290c74f42282b1515edd582aed9e6d03059a98d3930b094ad45d8056192a85",
+      "assessment": "clear_in_sample",
+      "review_note": "200 chickens, 400 ducks, 1200 turkeys; total 1800."
+    },
+    {
+      "problem_id": "gsm8k/train/03889",
+      "stratum": "gsm8k",
+      "response_sha256": "64208cf2f2d6d118bb44874fd8de3d5e7640c68c78daf382763eeddf5bfd1db2",
+      "assessment": "clear_in_sample",
+      "review_note": "20+40+40+60=160 pencils, 160/20=8 boxes."
+    },
+    {
+      "problem_id": "gsm8k/train/06730",
+      "stratum": "gsm8k",
+      "response_sha256": "cb2eb0e4e1f160c20de7c20a0c1c059371343bc3ff4ad68bc7414769aaa4ff66",
+      "assessment": "clear_in_sample",
+      "review_note": "300*(1-2/5)*(1-3/5)=72."
+    },
+    {
+      "problem_id": "gsm8k/train/02094",
+      "stratum": "gsm8k",
+      "response_sha256": "8e4d47babc86e52d4213d6209d35fed39f634dd3369b7a5a9c49d182793d4443",
+      "assessment": "clear_in_sample",
+      "review_note": "2*22+2*7=58."
+    },
+    {
+      "problem_id": "gsm8k/train/00622",
+      "stratum": "gsm8k",
+      "response_sha256": "cc9df91db7898ed64a58bd832681c1462278c9b5cf3c4bc24086e95d3903c906",
+      "assessment": "prompt_ambiguity",
+      "review_note": "Two times heavier is ambiguous between twice the weight and twice as much additional weight. Reference/response use male weight 4 and total 6; arithmetic is internally consistent."
+    },
+    {
+      "problem_id": "gsm8k/train/01183",
+      "stratum": "gsm8k",
+      "response_sha256": "5b83cd6867b4c10b5fb7ed890463a4150ff867a0069e0e071daabeda85bde854",
+      "assessment": "clear_in_sample",
+      "review_note": "68-6+1+3=66; 66+x+2x=90 gives x=8."
+    },
+    {
+      "problem_id": "math/train/precalculus/559.json",
+      "stratum": "Precalculus / L3",
+      "response_sha256": "e557e82ecd88ce081e574327ee2d34ddde4ffad3dbdbede5faff1741a39b39ca",
+      "assessment": "clear_in_sample",
+      "review_note": "Dot-product expansion gives x+3y-22=0 and (m,b)=(-1/3,22/3)."
+    },
+    {
+      "problem_id": "math/train/algebra/212.json",
+      "stratum": "Algebra / L3",
+      "response_sha256": "53d41b416ac19ab9a17473aec45ddb5c690e83d752a24dbd9b5916e74279407a",
+      "assessment": "minor_wording_inconsistency",
+      "review_note": "Intro says to subtract S, whereas question and displayed equations correctly add S; arithmetic yields 6-3i."
+    },
+    {
+      "problem_id": "math/train/algebra/1285.json",
+      "stratum": "Algebra / L2",
+      "response_sha256": "4ba2be4821b96bc444c849c34408500a6ecaaba7ee1e039c59a51c3bc4727428",
+      "assessment": "clear_in_sample",
+      "review_note": "Absolute value is 34.1, floor is 34."
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/665.json",
+      "stratum": "Counting & Probability / L3",
+      "response_sha256": "706085fefd7c8af4fe14222497de537fa6c0a98f6fe0e5098d684dbf4f604c85",
+      "assessment": "unstated_assumption",
+      "review_note": "(1/4)^3 requires independence of snow events. The prompt gives marginal daily probabilities but does not state independence; perfectly correlated events would instead give 1/4. Reference follows the independence convention."
+    },
+    {
+      "problem_id": "math/train/geometry/16.json",
+      "stratum": "Geometry / L2",
+      "response_sha256": "237cf53c46645f17fc71fc553e6e79ddf74480d330da59c6650b13c47599157c",
+      "assessment": "clear_in_sample",
+      "review_note": "12*pi=8*pi+4*pi*h gives h=1."
+    },
+    {
+      "problem_id": "math/train/algebra/1333.json",
+      "stratum": "Algebra / L1",
+      "response_sha256": "403ce4f669231bf0266c30172310dbd169cb0697bb97a4fb5847d6278f235ef0",
+      "assessment": "clear_in_sample",
+      "review_note": "Distributive expansion yields x^2+7x+10."
+    },
+    {
+      "problem_id": "math/train/algebra/664.json",
+      "stratum": "Algebra / L3",
+      "response_sha256": "28283f78e3c05970d3a459170561f58b1c91000df501b78c02f6aa56333dda60",
+      "assessment": "clear_in_sample",
+      "review_note": "Other endpoint is 2*(2,3)-(-1,-1)=(5,7)."
+    },
+    {
+      "problem_id": "math/train/precalculus/301.json",
+      "stratum": "Precalculus / L2",
+      "response_sha256": "97b7e72343a24a7ef8186291fef0c747474337c208611adae6d7fb34af7f24af",
+      "assessment": "clear_in_sample",
+      "review_note": "Matrix linearity: -2*(1,-5)+(7,2)=(5,12)."
+    }
+  ],
+  "counts": {
+    "clear_in_sample": 13,
+    "prompt_ambiguity": 1,
+    "minor_wording_inconsistency": 1,
+    "unstated_assumption": 1
+  },
+  "limits": "Not a full-proof verifier or population correctness estimate. Flags did not trigger backfill or post-hoc filtering of the frozen allocation.",
+  "additional_source_reference_issue": {
+    "problem_id": "gsm8k/train/03529",
+    "official_reference": "3",
+    "released_source_expected": "13",
+    "independent_arithmetic": "50*(1-0.40-0.34)=13",
+    "reason": "Native solution substitutes 60% for the stated 40%.",
+    "action": "Quarantine under source/reference disagreement; no silent gold correction."
+  }
+}

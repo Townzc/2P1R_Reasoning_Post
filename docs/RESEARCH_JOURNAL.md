@@ -1,5 +1,45 @@
 # Research journal
 
+## 2026-09-10 — C017 real-math data audit and scale proposal
+
+**Question and motivation.** Following the cost-allocation discussion, the
+owner asked to establish original problem splits, usable-solution coverage and
+selection losses before choosing training size. Preserve source failures and
+zero-solution parents; do not make support conditional on knowing four solutions.
+
+**Design.** Pinned original GSM8K, three MATH mirrors plus loader lineage, and
+GSM-Symbolic parent metadata. Group before partition; draw1,024 GSM8K and512
+stratified MATH parents, with separate dev and fresh reserves. Four seeded
+OpenMathInstruct-2 shards, first16 released candidates per parent, conservative
+answer checks, exact tokenizer serialization, no models or paid generation.
+
+**Failures and repairs.** One original-ID mirror incorrectly maps a train row
+to a duplicated test ID; quarantine it. A first balanced partition depleted
+rare strata; preserve it and freeze proportional partitions before responses.
+Real JSON strings exposed Unicode line-separator handling; fix physical JSONL
+reading. Preserve the initial answer audit, then replay exactly the same raw
+candidates after repairing matrix separators and unambiguous LaTeX formatting.
+The published parent/code tree and exact-reproduction receipts record provenance.
+
+**Results.** Eligible groups7,470 GSM8K/2,908 MATH. Four-shard K>=4 coverage is
+963/1,024 and481/512; accepted solutions7,776 and7,532. A native GSM8K reference
+has incorrect arithmetic; MATH still loses answers to unresolved units/formats.
+Sixteen AI-reviewed traces show prompt/assumption/wording limitations, not a
+human-gold quality rate. Twenty-four focused tests and independent source,
+identity, cap, token, denominator and schedule checks pass.
+
+**Decision proposal.** Start with (P,K)=(256,1),(256,4),(512,2),(1024,1). Eight
+CPU schedules covering seeds17/23 each match524,288 response tokens/256 updates,
+with actual pairs253/996/1,011/1,013 and disclosed processed-token/exposure
+residuals. First measure a32-parent GSM8K engineering profile before a priced,
+reviewed phase. MATH stays a decisive second-task check; no full second grid.
+This audit gives no allocation-performance finding or teacher production cost.
+Zero new GPU seconds; original5971 used/1229 left. E012 stays paused.
+
+Evidence: [C017](experiments/C017_real_math_cpu_audit.md),
+[complete findings](../reports/REAL_MATH_CPU_AUDIT_20260910.md),
+[scale proposal](../reports/real_math_c017_scale_proposal_r1/proposal.json).
+
 ## 2026-09-10 — revised proposal abstract
 
 Produced a [standalone abstract and deliverables](PROJECT_ABSTRACT_20260910.md)

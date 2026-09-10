@@ -1,6 +1,45 @@
-# Next session — resolve framing and deliverables before experiments
+# Next session — C017 completed; prepare real-data engineering/profile
 
-## Current: discuss P004 and revise the proposal before any launch
+## Current: review the measured data scope and prepare the next finite phase
+
+The owner requested and C017 completed original-problem split, solution coverage
+and attrition audits. Read [the findings](../reports/REAL_MATH_CPU_AUDIT_20260910.md)
+and [review-only scale proposal](../reports/real_math_c017_scale_proposal_r1/proposal.json).
+The accepted freeze is `real_math_c017_parents_r2`; `parents_r1` is superseded.
+The accepted measurement is `real_math_c017_solutions_r2`; the first answer-
+format pass is retained for comparison. Do not redownload or expand the source
+bank, replace zero-success parents, or restart old model queues automatically.
+
+Data capacity: GSM8K audit1,024 parents,1,013 with a usable answer,963 with K>=4;
+MATH audit512 parents,486 with a usable answer,481 with K>=4. “Usable” means
+conservative final-answer agreement, complete serialization/length and text
+uniqueness, not proved reasoning. MATH remaining units/percent/base/mixed-number
+formats are unresolved; original-reference and qualitative-review flags are
+in the report. No final-test model scoring was performed.
+
+Proposed first study: Repeat256x1, Solutions256x4, Mixed512x2, Breadth1024x1.
+Each CPU schedule has524,288 supervised tokens and256 updates, with whole
+responses and every accepted selected pair used. Seed17 first; seed23 only
+after a measured complete-phase budget. New32-parent GSM8K overfit/profile
+comes first, using pinned Qwen2.5-1.5B base and a reviewed scorer/runtime.
+The CPU proposal is not a launchable GPU queue. Review scientific residuals,
+reference-quality handling and the priced bounded phase before training.
+
+The ledger remains5971/7200 used,1229 left,16 receipts and zero reservations;
+its SHA256 is664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5.
+No remaining GPU runtime estimate has been established for real-data SFT.
+E012 is still paused and unrelated to the proposed GSM8K engineering stage.
+
+Recovery: the ignored source cache is `.local/real_math_c017_sources`; parent
+texts are in `.local/real_math_c017_parents_r2`, and raw response candidates in
+`.local/real_math_c017_solutions_r2`. These locations are repository-relative,
+not server paths. Public source receipts pin every input. Parent manifests and
+candidate decisions have adjacent gzip/base64 archives: decode base64, gunzip,
+and verify the recorded SHA256 before use. Full reproducibility commands are
+in [C017](experiments/C017_real_math_cpu_audit.md). Keep raw third-party text
+outside Git; no large model weights or corpus download is needed for CPU reuse.
+
+## Historical: P004 discussion before C017 authorization
 
 Latest data proposal: read the
 [dataset evidence review](../reports/DATASET_SELECTION_EVIDENCE_20260910.md).

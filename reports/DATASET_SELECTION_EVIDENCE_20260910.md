@@ -1,5 +1,9 @@
 # Dataset selection: evidence, roles and proposed scope
 
+**Subsequent work:** [C017 completed the CPU source/split, solution and attrition
+audit](REAL_MATH_CPU_AUDIT_20260910.md). Statements below that no ingestion/audit
+had occurred describe this earlier literature-review milestone.
+
 2026-09-10 UTC. Read-only literature and dataset-metadata review supporting
 [P004](../docs/experiments/P004_cost_aware_sft_allocation_proposal.md).
 This is a proposed data-scope extension, not an approved training grid, a data

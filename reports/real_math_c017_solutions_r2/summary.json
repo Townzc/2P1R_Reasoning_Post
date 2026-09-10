@@ -1,0 +1,539 @@
+{
+  "audit": "C017",
+  "audit_seconds": 12.85347941701184,
+  "config_sha256": "550b307749c93a5932343ef9c671dca3bf6b72cf28bc44f01e32cec6fc1dec2d",
+  "created_at_utc": "2026-09-10T03:56:25.599497+00:00",
+  "evaluations": 0,
+  "gpu_seconds": 0,
+  "historical_teacher_attempts": null,
+  "historical_teacher_cost": null,
+  "interpretation": "Released-slice, cap-16, conservative answer agreement and normalized text uniqueness; not total-bank coverage, generation yield, full-proof correctness, or distinct strategies.",
+  "private_raw_candidates_sha256": "6703ce3516e6555fbeb9394fe52d22ae47a658d8c115781e1596f3c1c6d4bb77",
+  "problem_manifest_sha256": "df41e03d1f41a4dd72f55a34cecc1150f70b30961ed257a30dcf2992805778a0",
+  "scope": "CPU source/split, bounded released-solution retrieval, attrition and scale feasibility; no model run or historical generation-cost inference",
+  "shards_in_complete_bank": 32,
+  "source_commit": "022ffa6fef97fedc218775c934335702a5c3e1a7",
+  "source_counts": {
+    "augmented_gsm8k": 264158,
+    "augmented_math": 1117634,
+    "gsm8k": 57236,
+    "math": 307572
+  },
+  "source_linkage": {
+    "augmented_or_other_excluded": 1381792,
+    "gsm8k:audit_draw": 7793,
+    "gsm8k:development": 3914,
+    "gsm8k:excluded": 23,
+    "gsm8k:fresh_draw_reserved": 7757,
+    "gsm8k:unused_training_reserve": 37749,
+    "math:audit_draw": 24294,
+    "math:development": 12035,
+    "math:excluded": 170415,
+    "math:fresh_draw_reserved": 24336,
+    "math:official_test_match_excluded": 2,
+    "math:unused_training_reserve": 76490
+  },
+  "source_shards": [
+    4,
+    7,
+    10,
+    16
+  ],
+  "tables": {
+    "gsm8k": {
+      "accepted_k_histogram": {
+        "0": 11,
+        "1": 8,
+        "2": 16,
+        "3": 26,
+        "4": 73,
+        "5": 87,
+        "6": 130,
+        "7": 147,
+        "8": 162,
+        "9": 116,
+        "10": 101,
+        "11": 57,
+        "12": 49,
+        "13": 24,
+        "14": 12,
+        "15": 3,
+        "16": 2
+      },
+      "acquired_p": 1024,
+      "available_in_scanned_shards": 7793,
+      "candidate_cap_reached_p": 2,
+      "checked_candidates": 7792,
+      "coverage_p": {
+        "1": 1013,
+        "16": 2,
+        "2": 1005,
+        "4": 963,
+        "8": 526
+      },
+      "first_reason_counts": {
+        "accepted": 7776,
+        "final_answer_unresolved": 7,
+        "source_reference_disagree": 9
+      },
+      "grid": [
+        {
+          "acquired_p": 256,
+          "one_pass_processed_tokens": 54717,
+          "one_pass_supervised_tokens": 38596,
+          "target_k": 1,
+          "target_pair_shortfall": 3,
+          "target_reached_p": 253,
+          "trainable_p": 253,
+          "unique_pairs": 253,
+          "zero_solution_p": 3
+        },
+        {
+          "acquired_p": 256,
+          "one_pass_processed_tokens": 109170,
+          "one_pass_supervised_tokens": 77104,
+          "target_k": 2,
+          "target_pair_shortfall": 9,
+          "target_reached_p": 250,
+          "trainable_p": 253,
+          "unique_pairs": 503,
+          "zero_solution_p": 3
+        },
+        {
+          "acquired_p": 256,
+          "one_pass_processed_tokens": 216492,
+          "one_pass_supervised_tokens": 152924,
+          "target_k": 4,
+          "target_pair_shortfall": 28,
+          "target_reached_p": 245,
+          "trainable_p": 253,
+          "unique_pairs": 996,
+          "zero_solution_p": 3
+        },
+        {
+          "acquired_p": 512,
+          "one_pass_processed_tokens": 110074,
+          "one_pass_supervised_tokens": 77757,
+          "target_k": 1,
+          "target_pair_shortfall": 4,
+          "target_reached_p": 508,
+          "trainable_p": 508,
+          "unique_pairs": 508,
+          "zero_solution_p": 4
+        },
+        {
+          "acquired_p": 512,
+          "one_pass_processed_tokens": 218951,
+          "one_pass_supervised_tokens": 154623,
+          "target_k": 2,
+          "target_pair_shortfall": 13,
+          "target_reached_p": 503,
+          "trainable_p": 508,
+          "unique_pairs": 1011,
+          "zero_solution_p": 4
+        },
+        {
+          "acquired_p": 512,
+          "one_pass_processed_tokens": 430043,
+          "one_pass_supervised_tokens": 303157,
+          "target_k": 4,
+          "target_pair_shortfall": 58,
+          "target_reached_p": 484,
+          "trainable_p": 508,
+          "unique_pairs": 1990,
+          "zero_solution_p": 4
+        },
+        {
+          "acquired_p": 1024,
+          "one_pass_processed_tokens": 219228,
+          "one_pass_supervised_tokens": 155630,
+          "target_k": 1,
+          "target_pair_shortfall": 11,
+          "target_reached_p": 1013,
+          "trainable_p": 1013,
+          "unique_pairs": 1013,
+          "zero_solution_p": 11
+        },
+        {
+          "acquired_p": 1024,
+          "one_pass_processed_tokens": 437677,
+          "one_pass_supervised_tokens": 310994,
+          "target_k": 2,
+          "target_pair_shortfall": 30,
+          "target_reached_p": 1005,
+          "trainable_p": 1013,
+          "unique_pairs": 2018,
+          "zero_solution_p": 11
+        },
+        {
+          "acquired_p": 1024,
+          "one_pass_processed_tokens": 858584,
+          "one_pass_supervised_tokens": 608827,
+          "target_k": 4,
+          "target_pair_shortfall": 126,
+          "target_reached_p": 963,
+          "trainable_p": 1013,
+          "unique_pairs": 3970,
+          "zero_solution_p": 11
+        }
+      ],
+      "length_sensitivity": {
+        "1024": {
+          "k4_p": 963,
+          "solutions": 7776
+        },
+        "2048": {
+          "k4_p": 963,
+          "solutions": 7776
+        },
+        "4096": {
+          "k4_p": 963,
+          "solutions": 7776
+        }
+      },
+      "near_text_sensitivity_coverage_p": {
+        "1": 1013,
+        "2": 1005,
+        "4": 963
+      },
+      "processed_tokens": {
+        "max": 687,
+        "mean": 216.52597736625515,
+        "min": 93,
+        "n": 7776,
+        "p50": 204,
+        "p90": 310,
+        "p95": 350,
+        "p99": 424,
+        "sum": 1683706
+      },
+      "response_tokens_including_eos": {
+        "max": 641,
+        "mean": 153.50102880658437,
+        "min": 56,
+        "n": 7776,
+        "p50": 143,
+        "p90": 227,
+        "p95": 260,
+        "p99": 329,
+        "sum": 1193624
+      },
+      "strata": {
+        "gsm8k": {
+          "accepted_solutions": 7776,
+          "acquired_p": 1024,
+          "k4_p": 963,
+          "zero_solution_p": 11
+        }
+      },
+      "zero_solution_p": 11
+    },
+    "math": {
+      "accepted_k_histogram": {
+        "0": 26,
+        "1": 4,
+        "3": 1,
+        "4": 2,
+        "5": 1,
+        "7": 1,
+        "8": 2,
+        "9": 1,
+        "10": 1,
+        "11": 5,
+        "12": 6,
+        "13": 4,
+        "14": 8,
+        "15": 21,
+        "16": 429
+      },
+      "acquired_p": 512,
+      "available_in_scanned_shards": 24294,
+      "candidate_cap_reached_p": 495,
+      "checked_candidates": 8045,
+      "coverage_p": {
+        "1": 486,
+        "16": 429,
+        "2": 482,
+        "4": 481,
+        "8": 477
+      },
+      "first_reason_counts": {
+        "accepted": 7532,
+        "final_answer_unresolved": 142,
+        "source_reference_unresolved": 371
+      },
+      "grid": [
+        {
+          "acquired_p": 128,
+          "one_pass_processed_tokens": 35431,
+          "one_pass_supervised_tokens": 29509,
+          "target_k": 1,
+          "target_pair_shortfall": 4,
+          "target_reached_p": 124,
+          "trainable_p": 124,
+          "unique_pairs": 124,
+          "zero_solution_p": 4
+        },
+        {
+          "acquired_p": 128,
+          "one_pass_processed_tokens": 70824,
+          "one_pass_supervised_tokens": 58998,
+          "target_k": 2,
+          "target_pair_shortfall": 9,
+          "target_reached_p": 123,
+          "trainable_p": 124,
+          "unique_pairs": 247,
+          "zero_solution_p": 4
+        },
+        {
+          "acquired_p": 128,
+          "one_pass_processed_tokens": 141032,
+          "one_pass_supervised_tokens": 117398,
+          "target_k": 4,
+          "target_pair_shortfall": 19,
+          "target_reached_p": 123,
+          "trainable_p": 124,
+          "unique_pairs": 493,
+          "zero_solution_p": 4
+        },
+        {
+          "acquired_p": 256,
+          "one_pass_processed_tokens": 71371,
+          "one_pass_supervised_tokens": 59355,
+          "target_k": 1,
+          "target_pair_shortfall": 10,
+          "target_reached_p": 246,
+          "trainable_p": 246,
+          "unique_pairs": 246,
+          "zero_solution_p": 10
+        },
+        {
+          "acquired_p": 256,
+          "one_pass_processed_tokens": 144161,
+          "one_pass_supervised_tokens": 120147,
+          "target_k": 2,
+          "target_pair_shortfall": 21,
+          "target_reached_p": 245,
+          "trainable_p": 246,
+          "unique_pairs": 491,
+          "zero_solution_p": 10
+        },
+        {
+          "acquired_p": 256,
+          "one_pass_processed_tokens": 284203,
+          "one_pass_supervised_tokens": 236193,
+          "target_k": 4,
+          "target_pair_shortfall": 43,
+          "target_reached_p": 245,
+          "trainable_p": 246,
+          "unique_pairs": 981,
+          "zero_solution_p": 10
+        },
+        {
+          "acquired_p": 512,
+          "one_pass_processed_tokens": 140986,
+          "one_pass_supervised_tokens": 117430,
+          "target_k": 1,
+          "target_pair_shortfall": 26,
+          "target_reached_p": 486,
+          "trainable_p": 486,
+          "unique_pairs": 486,
+          "zero_solution_p": 26
+        },
+        {
+          "acquired_p": 512,
+          "one_pass_processed_tokens": 283100,
+          "one_pass_supervised_tokens": 236192,
+          "target_k": 2,
+          "target_pair_shortfall": 56,
+          "target_reached_p": 482,
+          "trainable_p": 486,
+          "unique_pairs": 968,
+          "zero_solution_p": 26
+        },
+        {
+          "acquired_p": 512,
+          "one_pass_processed_tokens": 557022,
+          "one_pass_supervised_tokens": 463460,
+          "target_k": 4,
+          "target_pair_shortfall": 117,
+          "target_reached_p": 481,
+          "trainable_p": 486,
+          "unique_pairs": 1931,
+          "zero_solution_p": 26
+        }
+      ],
+      "length_sensitivity": {
+        "1024": {
+          "k4_p": 481,
+          "solutions": 7516
+        },
+        "2048": {
+          "k4_p": 481,
+          "solutions": 7532
+        },
+        "4096": {
+          "k4_p": 481,
+          "solutions": 7532
+        }
+      },
+      "near_text_sensitivity_coverage_p": {
+        "1": 486,
+        "2": 482,
+        "4": 481
+      },
+      "processed_tokens": {
+        "max": 1143,
+        "mean": 290.0606744556559,
+        "min": 69,
+        "n": 7532,
+        "p50": 253,
+        "p90": 481,
+        "p95": 577,
+        "p99": 834,
+        "sum": 2184737
+      },
+      "response_tokens_including_eos": {
+        "max": 1074,
+        "mean": 241.6773765268189,
+        "min": 50,
+        "n": 7532,
+        "p50": 207,
+        "p90": 417,
+        "p95": 513,
+        "p99": 751,
+        "sum": 1820314
+      },
+      "strata": {
+        "Algebra / L1": {
+          "accepted_solutions": 371,
+          "acquired_p": 28,
+          "k4_p": 26,
+          "zero_solution_p": 1
+        },
+        "Algebra / L2": {
+          "accepted_solutions": 783,
+          "acquired_p": 51,
+          "k4_p": 50,
+          "zero_solution_p": 1
+        },
+        "Algebra / L3": {
+          "accepted_solutions": 941,
+          "acquired_p": 63,
+          "k4_p": 59,
+          "zero_solution_p": 4
+        },
+        "Counting & Probability / L1": {
+          "accepted_solutions": 96,
+          "acquired_p": 6,
+          "k4_p": 6,
+          "zero_solution_p": 0
+        },
+        "Counting & Probability / L2": {
+          "accepted_solutions": 240,
+          "acquired_p": 15,
+          "k4_p": 15,
+          "zero_solution_p": 0
+        },
+        "Counting & Probability / L3": {
+          "accepted_solutions": 384,
+          "acquired_p": 25,
+          "k4_p": 24,
+          "zero_solution_p": 1
+        },
+        "Geometry / L1": {
+          "accepted_solutions": 48,
+          "acquired_p": 3,
+          "k4_p": 3,
+          "zero_solution_p": 0
+        },
+        "Geometry / L2": {
+          "accepted_solutions": 112,
+          "acquired_p": 7,
+          "k4_p": 7,
+          "zero_solution_p": 0
+        },
+        "Geometry / L3": {
+          "accepted_solutions": 174,
+          "acquired_p": 11,
+          "k4_p": 11,
+          "zero_solution_p": 0
+        },
+        "Intermediate Algebra / L1": {
+          "accepted_solutions": 144,
+          "acquired_p": 9,
+          "k4_p": 9,
+          "zero_solution_p": 0
+        },
+        "Intermediate Algebra / L2": {
+          "accepted_solutions": 431,
+          "acquired_p": 28,
+          "k4_p": 28,
+          "zero_solution_p": 0
+        },
+        "Intermediate Algebra / L3": {
+          "accepted_solutions": 713,
+          "acquired_p": 49,
+          "k4_p": 46,
+          "zero_solution_p": 1
+        },
+        "Number Theory / L1": {
+          "accepted_solutions": 112,
+          "acquired_p": 7,
+          "k4_p": 7,
+          "zero_solution_p": 0
+        },
+        "Number Theory / L2": {
+          "accepted_solutions": 320,
+          "acquired_p": 21,
+          "k4_p": 20,
+          "zero_solution_p": 0
+        },
+        "Number Theory / L3": {
+          "accepted_solutions": 432,
+          "acquired_p": 28,
+          "k4_p": 27,
+          "zero_solution_p": 1
+        },
+        "Prealgebra / L1": {
+          "accepted_solutions": 294,
+          "acquired_p": 19,
+          "k4_p": 19,
+          "zero_solution_p": 0
+        },
+        "Prealgebra / L2": {
+          "accepted_solutions": 591,
+          "acquired_p": 47,
+          "k4_p": 38,
+          "zero_solution_p": 8
+        },
+        "Prealgebra / L3": {
+          "accepted_solutions": 518,
+          "acquired_p": 36,
+          "k4_p": 33,
+          "zero_solution_p": 3
+        },
+        "Precalculus / L1": {
+          "accepted_solutions": 112,
+          "acquired_p": 8,
+          "k4_p": 7,
+          "zero_solution_p": 1
+        },
+        "Precalculus / L2": {
+          "accepted_solutions": 379,
+          "acquired_p": 25,
+          "k4_p": 24,
+          "zero_solution_p": 1
+        },
+        "Precalculus / L3": {
+          "accepted_solutions": 337,
+          "acquired_p": 26,
+          "k4_p": 22,
+          "zero_solution_p": 4
+        }
+      },
+      "zero_solution_p": 26
+    }
+  },
+  "teacher_calls": 0
+}

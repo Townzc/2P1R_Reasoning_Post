@@ -3,13 +3,24 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-09 UTC):** E010's identity-absent Paths/GCM seed31 pair
+**Current phase (2026-09-10 UTC):** C017 real-math CPU audit is complete. Read
+`reports/REAL_MATH_CPU_AUDIT_20260910.md` and `docs/NEXT_SESSION.md`. A small
+four-condition GSM8K scale has exact CPU token/update schedules for review.
+Prepare a new32-parent real-data overfit/profile before pricing any training
+phase; no model/GPU run follows automatically. E012 remains paused.
+
+The current ledger is **5971 seconds charged,1229 remaining**,16 reconciled
+receipts and zero reservations. Do not restore an old ledger, run a completed
+queue, or interpret a server clone as a new compute budget. No final-test model
+evaluation or external-message sending is authorized by the CPU audit.
+
+**Historical phase (2026-09-09 UTC):** E010's identity-absent Paths/GCM seed31 pair
 is complete. Do not replay it or seed17/23. Matched greedy is7/64 versus5/64,
 complete traces4/64 each, and broader expression/trace0/64 versus2/64. Both
 full doses and all800 saved outputs passed independent CPU audits. Read
 `reports/ABSENT_BOUNDARY_SEED31_RESULTS.md` and `docs/NEXT_SESSION.md`.
 
-The current ledger is **5740 seconds charged,1460 remaining**,15 reconciled
+At that historical milestone the ledger was **5740 seconds charged,1460 remaining**,15 reconciled
 receipts and zero reservations. No new GPU phase is queued. The remaining
 allowance cannot reserve another2130-second pair at the present caps. Complete
 independent checkpoint preservation and normal shutdown, then work on CPU-only

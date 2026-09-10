@@ -1,5 +1,30 @@
 # AI assistance log
 
+## 2026-09-10 UTC — C017 CPU data audit and scale proposal
+
+At the owner's request, Codex inspected prior discussion/proposals and implemented
+original split reconstruction, conservative grouping, proportional frozen parent
+draws, capped public-solution retrieval, answer/duplicate/token checks and exact
+whole-response schedule proposals. No subagent was used. Original source issues,
+superseded balanced splits, a Unicode JSONL bug and the initial LaTeX answer
+normalizer are retained with their corrections and same-candidate replay.
+
+Codex also reviewed16 prespecified accepted responses on CPU, recording prompt
+ambiguity, an unstated independence assumption and a minor wording inconsistency;
+this is explicitly AI review, not human verification or a corpus correctness
+estimate. It flagged a native GSM8K reference error without changing the gold
+label.24 focused tests pass; full source/identity/cap/token totals and all eight
+proposed schedules were independently reconciled. Parent archives reproduce
+byte-for-byte and publication/local-tree mapping is recorded.
+
+Only pinned public data and the retained tokenizer were used. Raw third-party
+texts and private correspondence stay outside Git. No model weights were loaded,
+no teacher inference/server/GPU/paid API action occurred, no external message was
+sent, and the5971/7200-second ledger stayed byte-identical. Public-cache creation
+cost and unobserved teacher attempts are unknown. Data-scale recommendations and
+exact CPU schedules are prospective; real-data training cost and performance
+remain unmeasured. See reports/REAL_MATH_CPU_AUDIT_20260910.md.
+
 ## 2026-09-10 UTC — revised project abstract
 
 Codex drafted the prospective abstract and accompanying deliverables from P004,

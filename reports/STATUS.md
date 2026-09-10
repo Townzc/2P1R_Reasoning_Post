@@ -1,6 +1,28 @@
-# Verified status — framing discussion before execution, 2026-09-10 UTC
+# Verified status — real-math CPU audit complete, 2026-09-10 UTC
 
-## Current: P004 proposed cost-aware framing; E012 paused
+## Current: C017 complete; bounded GSM8K scale prepared for review
+
+Read [the complete CPU findings and scale](REAL_MATH_CPU_AUDIT_20260910.md).
+Original MATH split reconstruction quarantines one bad mirror ID; grouping and
+scope selection retain7,470 GSM8K/2,908 MATH parents. Corrected proportional
+draws and dev/fresh reserves are frozen before solution retrieval. The4-shard
+audit checks15,837 released candidates: K>=4 on963/1,024 GSM8K and481/512 MATH
+parents. Zero parents and unresolved answers remain in all denominators.
+
+The four proposed GSM8K conditions have253/996/1,011/1,013 actual pairs. CPU
+schedules match524,288 supervised tokens and256 updates per arm for seeds17/23;
+processed-token and per-update/exposure residuals are explicit. All24 focused
+tests, full source re-enumeration, independent token accounting and schedule
+reconciliation pass. This establishes data feasibility, not learning or cost
+optimality. The next model step is32-parent real-data overfit/profile, then a
+complete priced phase for review. No GPU training grid is approved by this audit.
+
+No server or pretrained-model call, teacher generation, GPU charge or ledger
+change occurred. **5971/7200 used,1229 left,16 receipts,zero reservations.**
+E012 remains paused. Raw caches stay local; code, hashes and compact records
+are published. See [the handoff](../docs/NEXT_SESSION.md).
+
+## Historical: P004 framing discussion; E012 paused
 
 Latest data-scope review: GSM8K is the proposed first calibration task;
 stratified MATH levels 1–3 are proposed for decisive second-task checks, subject

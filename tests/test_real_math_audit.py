@@ -9,6 +9,26 @@ from src.real_math_audit import (answer_status, assign_partitions, final_answer,
 
 
 class RealMathAuditTests(unittest.TestCase):
+    def test_exact_schedule_keeps_every_row_and_whole_traces(self):
+        from scripts.plan_real_math_scale import whole_response_schedule
+        from collections import Counter
+        lengths = [7, 11, 13, 17]
+        schedule = whole_response_schedule(lengths, 48*3+18, 7, 17)
+        counts = Counter(i for update in schedule for i in update)
+        self.assertEqual(len(schedule), 7)
+        self.assertTrue(all(schedule))
+        self.assertEqual(set(counts), {0,1,2,3})
+        self.assertTrue(all(n in (3,4) for n in counts.values()))
+        self.assertEqual(sum(lengths[i]*n for i,n in counts.items()), 162)
+        self.assertEqual(schedule, whole_response_schedule(lengths, 162, 7, 17))
+
+    def test_exact_schedule_refuses_impossible_budget(self):
+        from scripts.plan_real_math_scale import whole_response_schedule
+        with self.assertRaises(ValueError):
+            whole_response_schedule([8, 10], 19, 2, 17)
+        with self.assertRaises(ValueError):
+            whole_response_schedule([8, 10], 17, 2, 17)
+
     def test_jsonl_unicode_line_separators_inside_strings(self):
         from src.sft_data import read_jsonl
         rows = [{'problem': 'a\u2028b\u2029c'}, {'problem': 'next'}]

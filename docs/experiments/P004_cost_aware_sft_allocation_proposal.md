@@ -1,5 +1,11 @@
 # P004 — cost-aware allocation of problems and solutions for SFT
 
+**Follow-up:** the owner subsequently authorized [C017](C017_real_math_cpu_audit.md).
+The [completed CPU audit and reduced training-scale proposal](../../reports/REAL_MATH_CPU_AUDIT_20260910.md)
+now measure original splits, bounded solution coverage and selection losses.
+The initial nine-cell range below is historical; no real-data model experiment
+or training grid has been launched.
+
 Date: 2026-09-10 UTC. Status: **proposal for owner review; no new experiment
 registered or executed**. The owner requested a response about the project's
 framing and concrete deliverables before continuing experiments. E012 remains
