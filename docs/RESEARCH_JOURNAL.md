@@ -1,5 +1,22 @@
 # Research journal
 
+## 2026-09-10 — implement the approved finite terminal-LR repair offline
+
+The owner supplied CNY8/hour and a CNY3000 ceiling and requested continuing P005.
+Codex isolated the E015 implementation outside frozen E013 sources, preserving
+256 updates and all data/dose/decoder factors. The intervention is terminal LR
+decay with255 nonzero updates. Tiny CPU fixtures check actual optimizer LR,
+zero-LR state advancement, interrupted-dose preservation and reference logits;
+a full mocked-worker/real-auditor fixture checks the artifact lifecycle.
+
+Fresh local hashes confirm all12 E013 backup files and the18-receipt ledger.
+The measured prior16.24-minute checkpoint export corrects the optimistic old
+20-minute illustration: now target40minutes and plan at most45 (~CNY6).
+Prepare streaming backup with a whole-transfer deadline; reclamation permits
+only the independently preserved E013 duplicate and retains the12GiB gate.
+No model run, server contact, reservation or historical-ledger change occurred.
+Publication and independent input-release verification follow implementation.
+
 ## 2026-09-10 — rental correction and literature-guided planning
 
 The owner's billing correction changes operations: preparation and analysis on

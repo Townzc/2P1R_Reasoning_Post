@@ -1,5 +1,16 @@
 # Artifact inventory and migration limits
 
+## 2026-09-10 — E015 implementation and rental authorization
+
+- `analyses/e015.py`, `e015_core.py`, `e015_audit.py`, `verify_e015_inputs.py`: isolated one-factor runner, reference measurements and independent audits.
+- `analyses/e015_storage.py`, `e015_export.py` and focused tests: verified duplicate reclamation and bounded streaming backup; no server actions during CPU preparation.
+- `configs/real_math_e015/terminal_decay.json` and `configs/rental_budget_20260910.json`: original-dose256-step repair and owner-supplied CNY8/hour, CNY3000 ceiling.
+- `real_math_e015_local_preservation.json`: freshly verified12-file independent E013 backup and unchanged18-receipt ledger.
+- `docs/experiments/E015_terminal_decay.md`, `docs/E015_STORAGE_AND_RENTAL.md`: fixed run, stop conditions,40/45-minute rental/export plan.
+
+Source publication precedes input release and readiness evidence. No new weights,
+model results, process receipts, server connection or provider stop claim exists.
+
 ## 2026-09-10 — P005 and C018, local CPU only
 
 - `LITERATURE_NEXT_EXPERIMENT_20260910.md` and `literature_next_20260910_sources.json`: eleven primary-paper methods/limits, official venues and PDF hashes; full text stays private.

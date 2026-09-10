@@ -3,7 +3,16 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** P005 literature-guided planning and C018
+**Current phase (2026-09-10 UTC):** implement/publish the owner-authorized
+single E015 terminal-decay repair offline; then freeze/verify inputs and prepare
+the transfer bundle before requesting startup. Read `docs/NEXT_SESSION.md` and
+`docs/experiments/E015_terminal_decay.md`. User rate/cap: CNY8/hour/CNY3000.
+Current conservative power-on plan:40minute target,45minute planned ceiling,
+including export and shutdown. Keep original ledger history and360+15 guard;
+no automatic next model job. Later finite phases may be budgeted within the
+financial ceiling after scientific gates;733seconds is not the money cap.
+
+**Historical P005 phase (2026-09-10 UTC):** P005 literature-guided planning and C018
 local CPU analysis are complete. Read `docs/NEXT_SESSION.md`,
 `docs/experiments/P005_literature_guided_next_phase.md` and
 `docs/RENTAL_WALL_CLOCK.md`. No server/model call or new reservation occurred.

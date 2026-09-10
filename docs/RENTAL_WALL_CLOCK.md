@@ -6,9 +6,20 @@ GPU-process runtime is a separate scientific guard, not the rental bill.
 
 ## What is known and unknown
 
-The current guard remains **6,467 / 7,200 process seconds used, 733 remaining**,
-18 receipts and zero reservations. Do not reset it, equate its balance with
-cash remaining, or change historical receipts to approximate rental charges.
+The owner has authorized the next E015 step and supplied **CNY 8 per hour**
+with an **overall CNY 3,000 spending ceiling**, requesting continued economy.
+That ceiling equals 375 nominal powered-on hours before other fees; it is not
+a spending target. Historical billed spend and the remaining financial balance
+are unknown until reconciled against provider records. Do not report CNY 3,000
+as a measured account balance or assert that it covers a particular deadline.
+
+The original process guard remains **6,467 / 7,200 seconds used, 733 remaining**,
+18 receipts and zero reservations. E015 uses one 360-second process plus a
+15-second guard within that allowance. Preserve its history; do not equate it
+with cash or rewrite receipts to approximate rental charges. The 733 seconds
+are not a permanent financial limit on later scientifically approved finite
+phases. Record any new phase-specific process allowance explicitly, linked to
+the historical ledger and the overall money ceiling, before that phase runs.
 
 E014 charged 170 process seconds. Existing private orchestration receipts span
 2026-09-10 06:35:27.712431 UTC (first successful inspection record) to
@@ -20,20 +31,22 @@ includes preparation/debugging, transfer and publication work; it does not
 identify the duration of each component. The rental could extend beyond it.
 Reporting only 170 seconds did not describe this cost exposure.
 
-Hourly rate, billing granularity, actual start/stop events and money limit are
-unknown. Once supplied, record them separately. For a continuously billed
-instance, compute `compute_charge = rate_per_hour * powered_on_seconds / 3600`;
-apply provider-specific rounding/minimums only when verified, and list storage
-or other charges separately. For repeated windows, sum every billable window.
-Cached teacher creation expense remains a third, separately unknown quantity.
+Billing granularity, actual start/stop events and historical charges remain
+unknown. For a continuously billed instance, compute
+`compute_charge = rate_per_hour * powered_on_seconds / 3600`; apply provider
+rounding/minimums only when verified, and list storage or other charges
+separately. For repeated windows or billing modes, sum all charged intervals
+at their verified rates. Cached teacher creation expense remains separately
+unknown.
 
 ## Operating sequence
 
 1. **Server off:** read papers, decide the finite experiment, implement changes,
    run all transferable CPU tests, hash/check data and tokenizer files, prepare
    an immutable release and tested transfer bundle. Precompute manifests and
-   verify the local checkpoint/ledger recovery copies. Do local review and
-   publication before asking for startup.
+   verify the local checkpoint/ledger recovery copies. Publish the execution
+   source and pass offline CPU checks before notifying the owner that startup
+   is needed; the owner has already authorized the next E015 step.
 2. **Before startup:** state the exact queue, required assets/storage, process
    allowance, total powered-on window, rate/money cap and exit plan. Confirm who
    will stop the instance in the provider console. No queue may auto-start when
@@ -56,20 +69,23 @@ Cached teacher creation expense remains a third, separately unknown quantity.
    a final GitHub upload need not keep a disposable instance running after all
    unique state has a verified independent copy. Reconcile both ledgers later.
 
-## Example planning envelope, not a reservation
+## Current E015 planning envelope
 
-For P005's one repair only, a **conditional 20-minute** power-on target could
-allocate 2 minutes to startup/staging, 1 to instance checks, 6.25 to the bounded
-job, 8 to export/verification, and 2.75 to shutdown/slack. This requires assets
-already staged and roughly 13 MiB/s or better for a 6.19 GB checkpoint plus
-headroom. Startup variability, verification and provider shutdown may make this
-insufficient. Measure/validate these prerequisites before presenting a firm
-window; do not silently exceed a reviewed monetary cap.
+The previous E013 checkpoint export and verification took 16.24 minutes, so
+the former illustrative 20-minute whole window is superseded. Plan a
+**40-minute target/about CNY 5.33** and a **45-minute planned ceiling/CNY 6.00**
+at the owner's rate, before rounding or other fees. The target assigns 360
+seconds to startup/staging/checks, 375 to the guarded process, 1,320 to export
+and verification, and 345 to shutdown/slack. Before admitting the job, require
+at least **2,040 seconds** to the absolute powered-on deadline for the last
+three components; do not trade preservation or shutdown time for more work.
 
-At hourly rate r the illustrative compute charge is r/3, versus about 0.5732r
-for the observed E014 orchestration span, both before rounding or other charges.
-Neither number is an actual invoice. The current task creates no reservation,
-server contact, shutdown claim or additional allowance.
+Use the [E015 storage and rental plan](E015_STORAGE_AND_RENTAL.md) for the
+single duplicate-checkpoint cleanup, unchanged 12 GiB gate, finite queue and
+transfer failure exit. That plan also documents an optional lower-cost CPU
+export mode, subject to provider-console verification; the conservative
+45-minute GPU-mode envelope remains the fallback. Neither plan establishes an
+actual invoice, observed current server state or confirmed shutdown.
 
 Store a future rental receipt with provider/instance identifier privately,
 power-on and confirmed stop timestamps, rate/currency, rounding rule, planned

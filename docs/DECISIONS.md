@@ -1,5 +1,35 @@
 # Decisions and open questions
 
+## D026 — 2026-09-10: authorize the finite terminal-decay repair and price rental time
+
+The owner supplied CNY8 per powered-on hour and a total CNY3000 ceiling, and
+requested proceeding with the next plan plus notification when startup is
+needed. This authorizes implementation and the single E015 repair after owner
+startup. No repeat wording approval is needed. The ceiling is not a spending
+target; historical invoices and the remaining monetary balance are unknown.
+The existing process ledger is preserved for this run (360+15 seconds fits733).
+Future finite phases may be budgeted within the monetary ceiling while retaining
+all historical receipts;733 seconds is not the newly authorized financial cap.
+
+Register `gsm8k_terminal_decay_e015_r1`: original32 references,256 updates,
+seed17, fresh pinned base/AdamW, same masks/dose/decoder/gate. Only terminal LR
+changes:192 constant steps then64 cosine steps to zero. Report255 nonzero-LR
+steps and summedLR0.011175. No dev/test generation, automatic512 fallback,
+retry, selection sweep or model substitution. If the gate fails, review a
+separate small-student/capability route from P005 before more of the same tuning.
+
+Fresh local hashing confirms all12 E013 backup files and the18-receipt ledger.
+Verified duplicate reclamation can recover the old server checkpoint only;
+retain unique data and the inherited12GiB free-space gate. Its predicted margin
+is just59.6MiB, so inspect actual storage after staging before launch. The prior
+export took16.24minutes. Budget40minutes target (~CNY5.33),45minutes planned
+ceiling (~CNY6), including22minutes export plus safe shutdown. A POSIX deadline
+bounds the whole local export, including stalled reads; a model watchdog does
+not stop provider billing. A fresh provider inspection remains for startup.
+See [E015 registration](experiments/E015_terminal_decay.md),
+[preservation and rental](E015_STORAGE_AND_RENTAL.md). Max is recommended for
+implementation/verification; no model setting was changed.
+
 ## D025 — 2026-09-10: plan from literature and total rental time
 
 The owner clarified that rental billing starts at power-on, including idle and

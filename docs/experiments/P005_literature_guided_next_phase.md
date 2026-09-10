@@ -108,3 +108,17 @@ An illustrative 20-minute repair window costs `hourly_rate / 3` before billing
 rounding/storage charges; it is not a quote or an approved expense. It requires
 already staged assets and sufficient backup bandwidth. If prerequisites fail,
 keep the server off and return to local work.
+
+## Subsequent owner authorization and implementation — 2026-09-10 UTC
+
+The owner supplied CNY8/hour, CNY3000 total ceiling and asked to proceed with the
+next plan. The terminal repair is now registered in [E015](E015_terminal_decay.md)
+and implemented separately; the proposal JSON and original plan above remain
+historical. There is no need for another approval of the same repair. Input
+release and local verification precede startup. The measured prior checkpoint
+export took16.24minutes, so the conservative whole-rental plan is40minutes target,
+45minutes planned ceiling (~CNY5.33/~CNY6), superseding the20-minute illustration.
+The existing process ledger is preserved for E015; future finite scientific
+phases can be budgeted within the money ceiling after their scientific gates,
+without treating733 historical process seconds as the new monetary allowance.
+No scientific grid, automatic fallback or model substitution is authorized here.

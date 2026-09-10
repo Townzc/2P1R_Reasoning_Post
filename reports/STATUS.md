@@ -1,4 +1,19 @@
-# Verified status — P005 planning and C018 CPU audit complete, 2026-09-10 UTC
+# Verified status — E015 source preparation, 2026-09-10 UTC
+
+The owner approved the next P005 repair and supplied CNY8/hour, CNY3000 ceiling.
+Implementation and focused CPU validation are in progress; source publication,
+immutable inputs and independent release verification precede a startup notice.
+No server/model call or reservation has occurred. The conservative rental plan
+is40minutes target (~CNY5.33),45minutes planned ceiling (~CNY6), including backup.
+
+All12 E013 backup files and the latest private ledger were freshly rehashed.
+The ledger remains6467/7200 used,733left,18receipts,zero reservations. Original
+E013/E014 outcomes and source files are unchanged. Historical monetary spend
+remains unknown. Future finite phases are budgeted within the financial ceiling
+with preserved accounting; no automatic grid is queued.
+
+## Historical P005/C018 milestone
+
 
 The current task used local CPU and primary-source literature only: no server
 contact, model call, reservation or extra allowance. Eleven paper methods,

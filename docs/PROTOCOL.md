@@ -1,5 +1,15 @@
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
+**Current authorized E015 extension, 2026-09-10 UTC:** the owner requested the
+next step after P005 and supplied CNY8/hour, CNY3000 overall ceiling. Follow
+[E015](experiments/E015_terminal_decay.md): original256-step data/dose/seed,
+only terminal LR changes; no new dev/test decode. Preserve the original gate
+and all prior adverse outcomes. Prepare/publish and verify locally before
+requesting startup. Current360+15 fits the unchanged733 process seconds;
+future finite phases can be budgeted within the money ceiling without resetting
+historical receipts. This authorizes the one repair, not an automatic grid.
+The earlier review-only language below is historical.
+
 **Current planning amendment, 2026-09-10 UTC:**
 [P005](experiments/P005_literature_guided_next_phase.md) supersedes the default
 priority of E015 dose doubling. A 256-update terminal-decay repair and a staged

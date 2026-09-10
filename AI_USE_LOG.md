@@ -1,5 +1,23 @@
 # AI assistance log
 
+## 2026-09-10 UTC — authorized E015 implementation and local verification
+
+At the owner's request Codex implemented the P005 terminal-LR repair with the
+original base/data/dose/decoder and isolated all code outside frozen src/scripts.
+Three subagents independently covered optimizer/reference tests, runtime output
+audit, and preservation/rental review; the test agent also prepared a bounded
+streaming export helper. Fixtures use tiny CPU models or mocked pretrained
+loading; they are not E015 model results. Codex recommended Max without changing
+settings. CPU release preparation and verification precede server startup.
+
+The owner supplied CNY8/hour and CNY3000 ceiling. Codex rehashed all12 independent
+E013 backup files, reconciled the unchanged18 receipts, and used the measured
+prior export duration to budget40/45minutes (~CNY5.33/6) for the whole rental.
+Official AutoDL operational documentation was checked for ordinary shutdown
+persistence and an optional no-card export route; no provider account was used.
+No SSH/server/pretrained model/teacher call, external message or new reservation
+occurred. Future financial planning retains historical ledger receipts.
+
 ## 2026-09-10 UTC — broader literature, C018 and rental-time planning
 
 At the owner's request, Codex used primary conference sources to inspect

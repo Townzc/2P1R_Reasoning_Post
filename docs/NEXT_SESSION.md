@@ -1,4 +1,25 @@
-# Next session — offline preparation; literature-guided P005 replaces default dose scaling
+# Next session — E015 offline implementation and publication
+
+The owner authorized P005's single terminal-decay repair and supplied CNY8/hour
+with CNY3000 overall ceiling. Finish source publication, immutable CPU inputs,
+independent verification and the transfer bundle before requesting startup.
+No server is needed during this preparation. Read
+[E015 registration](experiments/E015_terminal_decay.md) and
+[storage/rental instructions](E015_STORAGE_AND_RENTAL.md).
+
+The conservative whole-rental plan targets40minutes (~CNY5.33), with45minutes
+(~CNY6) as planned ceiling. Preserve the original ledger:6467/7200 used,733left,
+18receipts,zero reservations;360+15 fits and leaves at least358. All12 original
+E013 backup files were freshly rehashed locally. No current server/provider
+state is implied. Subsequent priced finite phases can use the financial ceiling
+while retaining historical accounting; the scientific grid remains conditional.
+
+Run only `gsm8k_terminal_decay_e015_r1` after startup and all published gates.
+No new dev/test generation, retry,512-step fallback or model substitution.
+The original failed E013/E014 results and E012 pause remain intact.
+
+## Historical P005 planning handoff
+
 
 No server is needed for the current work. The owner corrected billing: the
 whole powered-on window is charged, including CPU work and idle time. Read

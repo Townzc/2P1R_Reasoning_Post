@@ -1,5 +1,15 @@
 # 2P1R Reasoning Post-Training
 
+**E015 implementation in progress, 2026-09-10 UTC:** the owner authorized the
+next P005 repair and supplied CNY8/hour with a CNY3000 total ceiling. A single
+256-update terminal-LR repair preserves the original data/dose/base/gate;
+no automatic scientific grid follows. Source, CPU checks and backup deadlines
+are prepared offline before a startup notice. The conservative rental window
+is40minutes target (~CNY5.33),45minutes planned ceiling (~CNY6). The original
+6467/7200 process ledger is unchanged and fits360+15; historical monetary
+spend is unknown. [Registered next experiment](docs/experiments/E015_terminal_decay.md),
+[storage/rental plan](docs/E015_STORAGE_AND_RENTAL.md).
+
 **Problems, Paths, or Repeats?** A research workbench for controlled reasoning supervised fine-tuning (SFT).
 
 The central question is whether within-problem structural path diversity helps beyond global strategy coverage, exact repetition, and surface diversity under matched supervision and optimizer-update budgets. Arithmetic is the first task; graph/relational reasoning and a second model family are planned boundary-condition checks. RL is outside the current scope.
