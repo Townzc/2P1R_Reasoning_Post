@@ -1,5 +1,24 @@
 # Research journal
 
+## 2026-09-10 — E015 passes; preserve early divergence and stop on slow export
+
+Executed only the frozen repair after restoring an older owner-supplied clone.
+All112 Linux tests pass, all32 train answers terminate correctly, and final
+reference NLL is0.001106. There is one reference argmax miss and31 exact outputs.
+All eight old failures are repaired at this endpoint. No dev/test generation.
+
+Post-hoc CPU comparison finds equal base reference metrics but different gradient
+norms atstep3 and NLL atstep4. Do not attribute the entire endpoint change to
+terminal decay alone; no proven CUDA/SDPA cause is established. The successful
+engineering configuration can precede a separately frozen capability check.
+
+Process charge219seconds;19 receipts6686used/514left. Compact data/ledger and
+server weight hashes verify. Slow SSH export was stopped with partials retained;
+two bounded multiplex probes did not establish adequate throughput. Provider
+shutdown and timer cancellation are confirmed. Complete weights remain on the
+stopped volume pending independent recovery. Analysis/publication proceed locally.
+[Result](../reports/REAL_MATH_E015_RESULTS.md).
+
 E015 offline outcome: source09a00c0 and immutable release73b054b published.
 Independent all32-parent/5226-target/dose/LR verification and clean-checkout
 bundle import pass; default inspection takes4.59seconds. The112-test suite has

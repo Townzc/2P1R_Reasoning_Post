@@ -1,5 +1,14 @@
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
+**E015 completed, 2026-09-10 UTC:** the original engineering gate passes with
+32/32 correct/terminated, zero truncations and NLL0.001106. The first192-step
+numerical trajectories are not identical, so terminal-decay causal attribution
+is limited. No held-out generalization or scientific allocation claim follows.
+The provider is confirmed off; compact records/current19-receipt ledger are
+independent, but the complete checkpoint still needs independent export.
+Follow [the result and limits](../reports/REAL_MATH_E015_RESULTS.md); prior E013
+failure and all frozen protocols remain unchanged.
+
 **Current authorized E015 extension, 2026-09-10 UTC:** the owner requested the
 next step after P005 and supplied CNY8/hour, CNY3000 overall ceiling. Follow
 [E015](experiments/E015_terminal_decay.md): original256-step data/dose/seed,

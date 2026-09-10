@@ -1,6 +1,6 @@
 {
   "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 6467,
+  "charged_gpu_seconds": 6686,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2101,6 +2101,106 @@
           "supervised_tokens": 12928
         },
         "scope": "engineering_learning_measurements_not_scientific_treatment_comparison"
+      }
+    },
+    {
+      "run_id": "gsm8k_terminal_decay_e015_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "e5083217d40c1f83477d18aa7331d94bac328987",
+      "config": {
+        "automatic_retry": false,
+        "automatic_scientific_queue": false,
+        "base_generation": false,
+        "batch_size": 4,
+        "data_dir": "reports/real_math_e013_inputs_r1",
+        "dev_count": 16,
+        "development_evaluation": false,
+        "driver_version": "580.126.09",
+        "eval_batch_size": 8,
+        "expected_ledger_sha256": "8813caaa4a3661900f874033fac68b802b3e856bc9c449f28f1fff3983b4aae9",
+        "expected_prior_jobs": 18,
+        "expected_prior_used_seconds": 6467,
+        "grad_clip": 1.0,
+        "guard_seconds": 15,
+        "learning_rate": 5e-05,
+        "learning_rate_schedule": "constant_192_then_cosine_64_to_zero",
+        "max_length": 1024,
+        "max_new_tokens": 768,
+        "max_seconds": 360,
+        "microbatch_size": 1,
+        "min_free_gib": 12,
+        "mode": "terminal_learning_rate_repair_only",
+        "model_role": "main",
+        "model_vocab_size": 151936,
+        "new_gpu_allowance_created": false,
+        "nonzero_lr_updates": 255,
+        "official_test_evaluation": false,
+        "overfit_max_nll": 0.1,
+        "overfit_required_correct": 31,
+        "parent_freeze_sha256": "2762df003554c7504952449850960e13b2fa47daa4c872556297fc24936c6f65",
+        "phase": "E015",
+        "profile_updates": 64,
+        "profile_warmup": 8,
+        "raw_candidates_sha256": "6703ce3516e6555fbeb9394fe52d22ae47a658d8c115781e1596f3c1c6d4bb77",
+        "run_id": "gsm8k_terminal_decay_e015_r1",
+        "seed": 17,
+        "selection_sha256": "4ffb840bd40f0262e9cf070926676a74bb572a66b3697201747dbf2f9975707f",
+        "steps": 256,
+        "teacher_calls": 0,
+        "terminal_lr_sum": 0.011175,
+        "train_count": 32,
+        "weight_decay": 0.01
+      },
+      "mode": "terminal_learning_rate_repair_only",
+      "arm": null,
+      "model": null,
+      "charged_gpu_seconds": 219,
+      "overfit_passed": true,
+      "steps": 256,
+      "supervised_response_tokens": 167232,
+      "train_accuracy": 1.0,
+      "train_sample16_accuracy": null,
+      "dev_accuracy": null,
+      "dev_broad_accuracy": null,
+      "dev_sampled_pass_at_k": null,
+      "pilot_gate": null,
+      "throughput": {
+        "peak_allocated_mib": 27195.38818359375,
+        "peak_reserved_mib": 28910.0,
+        "processed_tokens_per_second": 1383.4387781095538,
+        "profile_complete": true,
+        "profile_step_seconds": 41.39250750094652,
+        "profile_updates": 64,
+        "supervised_tokens_per_second": 1010.0378673373189,
+        "warmup_excluded": 8
+      },
+      "exception_type": null,
+      "records": "runs/gsm8k_terminal_decay_e015_r1",
+      "real_math_engineering": {
+        "train": {
+          "answer_correct": 32,
+          "ended_with_eos": 32,
+          "n": 32,
+          "output_tokens": 5244,
+          "parse_status": {
+            "parsed": 32
+          },
+          "reference_exact_matches": 31,
+          "terminated_correct": 32,
+          "truncated": 0
+        },
+        "reference_nll": {
+          "nll": 0.001105942949430849,
+          "reference_count": 32,
+          "response_loss_sum": 5.779657853725617,
+          "supervised_tokens": 5226
+        },
+        "reference_argmax_misses": 1,
+        "early_trajectory_equal_to_e013": false,
+        "generalization_evaluated": false,
+        "provider_shutdown_confirmed": true,
+        "independent_checkpoint_backup_complete": false
       }
     }
   ]

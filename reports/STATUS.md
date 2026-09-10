@@ -1,4 +1,23 @@
-# Verified status — E015 ready for owner startup, 2026-09-10 UTC
+# Verified status — E015 gate passes; provider off; independent weights backup incomplete
+
+[E015 completed](REAL_MATH_E015_RESULTS.md):32/32 correct/terminated training
+answers,zero truncations,NLL0.001106,31exact references and1/5226 reference
+argmax miss. All112 Linux tests and server/local record audits pass; all256
+updates and original dose are complete. No new dev/test measurements.
+
+Early training trajectories differ from E013 before LR decay (gradient step3,
+NLL step4), limiting causal attribution. The result establishes an engineering
+configuration endpoint, not a scientific allocation effect or generalization.
+
+The219-second charge leaves514; all19 receipts reconcile at6686/7200 with no
+reservation. Compact outputs and the current ledger are independently retained.
+Provider UI confirms shutdown and timer cancellation. Complete new weights
+passed server hashes and remain on the stopped volume; the local copy is only
+partial because export was too slow. Preserve that instance pending recovery.
+No model retry,512-step fallback, scientific grid or server restart followed.
+
+## Historical E015 preparation status
+
 
 [E015 is ready](REAL_MATH_E015_READY.md). Implementation09a00c0 and immutable
 release73b054b are published. Independent token/dose/LR reconstruction, default

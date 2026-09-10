@@ -1,12 +1,22 @@
 # 2P1R Reasoning Post-Training
 
+**E015 completed and server shut down, 2026-09-10 UTC:** the unchanged
+engineering gate passes:32/32 correct/terminated, zero truncations, NLL0.001106.
+All112 Linux tests and server/local output audits pass. Early training logs
+differ before LR decay, so this is a successful configuration endpoint, not
+an isolated causal LR estimate or a generalization result.219 process seconds
+leave514; all19 receipts reconcile. Compact results/ledger are retained locally.
+**The complete weights remain on the stopped instance; independent weights
+backup is incomplete because the new transfer route was too slow.** Preserve
+that instance pending recovery. [Results and limitations](reports/REAL_MATH_E015_RESULTS.md).
+
 **Problems, Paths, or Repeats?** A research workbench for controlled reasoning supervised fine-tuning (SFT).
 
 The central question is whether within-problem structural path diversity helps beyond global strategy coverage, exact repetition, and surface diversity under matched supervision and optimizer-update budgets. Arithmetic is the first task; graph/relational reasoning and a second model family are planned boundary-condition checks. RL is outside the current scope.
 
 ## Current status
 
-**E015 ready for owner startup, 2026-09-10 UTC:** the single terminal-LR repair
+**Historical E015 startup preparation, 2026-09-10 UTC:** the single terminal-LR repair
 is implemented, published and independently CPU-verified.110 tests pass; two
 Linux timeout integrations remain for startup. Original data/dose/base/gate stay
 fixed; no new dev/test generation or automatic grid. User budget: CNY8/hour,

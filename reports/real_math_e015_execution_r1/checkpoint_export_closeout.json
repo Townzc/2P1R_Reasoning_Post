@@ -1,0 +1,80 @@
+{
+  "bounded_mux_probe": {
+    "bytes": 2490368,
+    "error_type": "TimeoutError",
+    "model_call": false,
+    "prefix_sha256": "6de76112428c783df02f5b00204e392b58910ec93fcb213edd6492bacb226aff",
+    "same_eight_ranges_with_connection_multiplexing": true,
+    "seconds": 20.005431541998405,
+    "source": "E015 checkpoint prefix",
+    "status": "incomplete"
+  },
+  "bounded_warm_mux_probe": {
+    "bytes": 262144,
+    "connection_warmed_before_parallel_ranges": true,
+    "error_type": "TimeoutError",
+    "model_call": false,
+    "seconds": 15.00295358299627,
+    "status": "incomplete"
+  },
+  "complete_checkpoint_retained_on_server_volume": true,
+  "export_allowance_not_reset": true,
+  "full_backup_verified": false,
+  "late_pre_shutdown_probe": "A20-second read-only SSH check timed out; it did not provide new verification. Last complete checkpoint hash evidence is the completed server output audit.",
+  "local_start_error": "Private export entrypoint initially lacked repository import path; corrected before any network transfer or destination creation.",
+  "model_jobs_added": 0,
+  "partial_transfer_receipt": {
+    "all_files_verified": false,
+    "bytes_written": 11703349,
+    "canonical_file_entries_sha256": "33fa381a065e9393a3aa02c6364e0165526515f4e6177e188504ecaf47f9efe2",
+    "checkpoint_directory": "checkpoint_final",
+    "deadline_scope": "Includes opener, context entry/exit, streaming and verification; excludes connection setup before this call and failure receipt cleanup.",
+    "elapsed_seconds": 154.59245508298045,
+    "expected_bytes": 6190803414,
+    "expected_file_count": 12,
+    "failure": "",
+    "failure_type": "KeyboardInterrupt",
+    "finished_at_utc": "2026-09-10T08:47:49.374689+00:00",
+    "full_backup_verified": false,
+    "kind": "weights_only_not_optimizer_rng_resume",
+    "max_seconds": 1320,
+    "partial_files": {
+      "model-00001-of-00002.safetensors.part": {
+        "bytes": 10027008,
+        "sha256_of_partial_bytes": "f3630ddd2b16a83165b0cbc4801a30de62b1fce6d1c721e280614b956721671c"
+      }
+    },
+    "rental_billing_status": "not_checked",
+    "schema": "e015_checkpoint_export_v1",
+    "source_manifest_hash_provenance": "caller_supplied_not_verified_from_original_json_bytes",
+    "source_manifest_sha256": "a37c3264bbb44628c1f62105940fb8b1cbcae251b85b8b2c6e1399d8ccc86eab",
+    "started_at_utc": "2026-09-10T08:45:14.781085+00:00",
+    "status": "partial_not_full_backup",
+    "verified_files": {
+      "added_tokens.json": {
+        "bytes": 605,
+        "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+      },
+      "chat_template.jinja": {
+        "bytes": 2427,
+        "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5"
+      },
+      "config.json": {
+        "bytes": 1339,
+        "sha256": "3a4b52f98f6debb9b74c410b8d843672b78cedb67d207c4c9018f5bbf279f55c"
+      },
+      "generation_config.json": {
+        "bytes": 117,
+        "sha256": "84df728a3785026c42a0668310ead46d1024f52dd892d44432032e53b9bd01c1"
+      },
+      "merges.txt": {
+        "bytes": 1671853,
+        "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      }
+    }
+  },
+  "phase": "E015_INDEPENDENT_EXPORT_CLOSEOUT",
+  "preservation_status": "Compact outputs and19-receipt ledger are verified locally. Only five small checkpoint files plus a partial weight shard are copied; complete weights remain on the stopped instance. Do not dispose of that instance before a separate verified backup.",
+  "remote_checkpoint_evidence": "runs/gsm8k_terminal_decay_e015_r1/record_verification.json confirms all12 checkpoint file hashes before read-only export",
+  "transfer_stopped_early_for_economy": true
+}

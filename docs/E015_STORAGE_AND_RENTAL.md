@@ -1,5 +1,15 @@
 # E015 storage preservation and rental window
 
+**Execution closeout, 2026-09-10 UTC:** E015 completed and passed its original
+gate. The provider is confirmed shut down after local compact-data/ledger export.
+The12-file checkpoint passed server hashes but its independent copy is incomplete:
+five small files and a partial weight shard are retained locally. Two bounded
+multiplex probes did not show adequate transfer progress, so the GPU rental
+was ended early with the volume retained. Preserve that instance pending a
+separate recovery plan; do not infer a full backup from the preparation below.
+See [results](../reports/REAL_MATH_E015_RESULTS.md) and
+[export closeout](../reports/real_math_e015_execution_r1/checkpoint_export_closeout.json).
+
 The owner supplied **CNY 8 per powered-on hour** and a **CNY 3,000 overall
 spending ceiling** on 2026-09-10 and authorized the next E015 step. These
 authorize economical preparation and the finite experiment; they are not a

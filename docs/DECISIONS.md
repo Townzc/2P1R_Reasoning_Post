@@ -1,5 +1,26 @@
 # Decisions and open questions
 
+## D027 — 2026-09-10: retain the passing endpoint, numerical drift and incomplete export
+
+The owner supplied a new clone for the single E015 run and explicitly requested
+shutdown when the round ended. Restore published source/current18-receipt ledger,
+verify original base/runtime and all112 Linux checks, and reclaim only the
+independently preserved E013 checkpoint duplicate before the12GiB gate.
+
+E015 passes unchanged engineering criteria:32/32 correct/terminated, no truncation,
+NLL0.001106, complete256-step dose. Early gradient norms differ from E013 atstep3
+and NLL atstep4 before terminal decay, despite equal base NLL/data/dose. Preserve
+this attribution limit; claim a passing configuration, not a same-state causal
+LR estimate or generalization. No automatic512-step or scientific grid follows.
+
+Charge219seconds; all19 receipts reconcile to6686 used/514remaining. Raw compact
+records and the latest ledger are independently retained. Server checkpoint
+hashes pass, but a bounded export and two short multiplexing probes show poor
+transfer progress. Stop early preserving volume; provider UI confirms shutdown
+and the timer is cancelled. Independent weights backup remains incomplete;
+do not dispose of that instance. Prepare recovery/capability work locally.
+See [results](../reports/REAL_MATH_E015_RESULTS.md).
+
 D026 release outcome: implementation09a00c0 and release73b054b are published;
 110 focused CPU tests pass, with two GNU-timeout integrations mandatory on
 Linux. Independent raw-token/dose/LR reconstruction and a clean checkout imported

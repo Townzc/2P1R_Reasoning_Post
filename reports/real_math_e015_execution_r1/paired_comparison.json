@@ -1,0 +1,413 @@
+{
+  "base_reference_metrics_exactly_equal": true,
+  "causal_limit": "Configuration contrast and successful engineering endpoint, not a verified same-state terminal-LR causal intervention. Gradient norms diverge atstep3 and logged trainingNLL atstep4, before the schedule changes at193. The source of GPU numerical trajectory divergence is unresolved; do not label it a proven SDPA/CUDA bug.",
+  "early_trajectory_bitwise_equal": false,
+  "input_artifact_hashes": {
+    "runs/gsm8k_generation_e014_r1/reference_tokens.jsonl": "a3c0c7f60e09cf23c33165d4ca58eb1e736ad0be4d2337cc28a2887e7d284606",
+    "runs/gsm8k_overfit_e013_r1/final_train.jsonl": "418e208f5e597bc5f882205f6437f4a2849c84f544dda10b815ee1d2e816048a",
+    "runs/gsm8k_overfit_e013_r1/train_history.jsonl": "aeaf9bf690f6cc181b4e93fe9e80b844ee2412f00d5db9e79799213809a34b28",
+    "runs/gsm8k_terminal_decay_e015_r1/final_train.jsonl": "be390ef11d201802250aa4f462af2b35076ff7dd3c84d9d8bf6f62e5b99ad257",
+    "runs/gsm8k_terminal_decay_e015_r1/reference_tokens.jsonl": "70561ccaeb3bea0876ac0aa7de07aff980df02222ea539eb1f994ea0e9849f6b",
+    "runs/gsm8k_terminal_decay_e015_r1/train_history.jsonl": "aa87d3bf696f8e3ec605b620c4ec462a60220c1f57a0765209441046d35fe7a7"
+  },
+  "model_call": false,
+  "new_dev_or_test_generations": 0,
+  "new_mismatches": [
+    {
+      "argmax_id": 21,
+      "argmax_text": "6",
+      "problem_id": "gsm8k/train/02775",
+      "target_id": 353,
+      "target_minus_best_other_logit": -0.5,
+      "target_nll": 0.9825586676597595,
+      "target_position": 145,
+      "target_text": " *"
+    }
+  ],
+  "new_reference_argmax_misses": 1,
+  "new_run_id": "gsm8k_terminal_decay_e015_r1",
+  "nll_reduction_ratio": 12.844709785172526,
+  "nonexact_but_correct_ids": [
+    "gsm8k/train/02775"
+  ],
+  "old_failures_repaired": 8,
+  "old_reference_argmax_misses": 17,
+  "old_run_id": "gsm8k_overfit_e013_r1",
+  "old_successes_lost": 0,
+  "original_supervised_and_processed_token_dose_equal": true,
+  "paired_rows": [
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 201,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 768,
+      "old_reference_exact": false,
+      "old_truncated": true,
+      "problem_id": "gsm8k/train/03552"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 134,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 768,
+      "old_reference_exact": false,
+      "old_truncated": true,
+      "problem_id": "gsm8k/train/02301"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 302,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 302,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/07460"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 224,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 768,
+      "old_reference_exact": false,
+      "old_truncated": true,
+      "problem_id": "gsm8k/train/06477"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 136,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 136,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/06803"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 222,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 222,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/05594"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 88,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 768,
+      "old_reference_exact": false,
+      "old_truncated": true,
+      "problem_id": "gsm8k/train/04768"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 128,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 128,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/02678"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 153,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 153,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/05596"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 126,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 126,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/01126"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 84,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 127,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/02025"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 181,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 181,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/05507"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 322,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 322,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/00310"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 104,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 104,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04791"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 191,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 191,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04769"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 235,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 235,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/00019"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 133,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 133,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04028"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 163,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 156,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/00353"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 191,
+      "new_reference_exact": false,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 768,
+      "old_reference_exact": false,
+      "old_truncated": true,
+      "problem_id": "gsm8k/train/02775"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 153,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 153,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/02490"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 201,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 201,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04298"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 137,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 137,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/06651"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 141,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 149,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04719"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 169,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 256,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04742"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 89,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 89,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/00479"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 113,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 113,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04901"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 82,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 119,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/02262"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 110,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 110,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/03668"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 114,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 114,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/04451"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 148,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 148,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/06466"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 368,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": false,
+      "old_output_tokens": 606,
+      "old_reference_exact": false,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/03893"
+    },
+    {
+      "new_correct_terminated": true,
+      "new_output_tokens": 101,
+      "new_reference_exact": true,
+      "new_truncated": false,
+      "old_correct_terminated": true,
+      "old_output_tokens": 101,
+      "old_reference_exact": true,
+      "old_truncated": false,
+      "problem_id": "gsm8k/train/02140"
+    }
+  ],
+  "phase": "E015_POSTHOC_LOCAL_COMPARISON",
+  "planned_first192_learning_rates_identical": true,
+  "pre_decay_training_logs": {
+    "grad_norm": {
+      "exact_matches": 2,
+      "first_difference_step": 3,
+      "maximum_absolute_difference": 102.44597744941711,
+      "mean_absolute_difference": 1.4580009574322805,
+      "step192_new": 1.824289083480835,
+      "step192_old": 1.3436052799224854
+    },
+    "response_nll": {
+      "exact_matches": 3,
+      "first_difference_step": 4,
+      "maximum_absolute_difference": 0.16043299562716612,
+      "mean_absolute_difference": 0.025571072798910206,
+      "step192_new": 0.08612904779049528,
+      "step192_old": 0.0331965657185857
+    }
+  },
+  "server_contacted": false
+}

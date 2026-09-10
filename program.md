@@ -3,15 +3,17 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** E015 execution source/input release and
-independent CPU checks are complete. Notify the owner to start the existing
-A800 for this one repair; see `reports/REAL_MATH_E015_READY.md` and
-`docs/NEXT_SESSION.md`. Budget CNY8/hour, CNY3000 total ceiling; conservative
-40-minute target/45-minute planned rental ceiling includes export and shutdown.
-Keep the historical ledger and360+15 process guard. Startup requires the exact
-112-test Linux suite, source/base/ledger verification and12GiB storage gate.
-No automatic next model job. Later phases can be priced within the financial
-ceiling after scientific gates, with historical receipts preserved.
+**Current phase (2026-09-10 UTC):** E015 is complete, passes the original
+engineering gate, and the provider is confirmed off. Read
+`reports/REAL_MATH_E015_RESULTS.md` and `docs/NEXT_SESSION.md`. All19 receipts
+reconcile to6686used/514left; compact records/ledger are independent. Complete
+weights remain on the stopped volume with an incomplete independent export;
+preserve that instance pending a separately bounded recovery plan. Early GPU
+training drift limits causal LR attribution. No automatic next model job or
+server restart. Local capability/format planning precedes scientific scale.
+
+**Historical E015 startup phase:** published implementation and frozen inputs
+were verified before owner startup; the finite360+15-second cap was enforced.
 
 **Historical P005 phase (2026-09-10 UTC):** P005 literature-guided planning and C018
 local CPU analysis are complete. Read `docs/NEXT_SESSION.md`,

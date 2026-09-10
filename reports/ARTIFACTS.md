@@ -1,5 +1,22 @@
 # Artifact inventory and migration limits
 
+## E015 closeout — complete result records, incomplete independent weights backup
+
+`runs/gsm8k_terminal_decay_e015_r1/` contains all compact raw outputs,256-update
+history, metrics, manifest, receipt and server hash audit. Independent local
+comparison/audit, all19 ledger receipts, cleanup, transfer failure and confirmed
+provider stop are in `real_math_e015_execution_r1/`. Read `REAL_MATH_E015_RESULTS.md`.
+The current ledger SHA256 is
+`ad45fa615091d9f47d16b5b80b07aa23313f356b5ab96bdcab4fa74ff60891d0`.
+
+The authoritative digest is also recorded in the ledger verification. Full
+E015 weights are on the retained stopped server volume,12files/6190803414bytes;
+server hashes passed. `.local/checkpoint_backups/gsm8k_terminal_decay_e015_r1`
+contains only five verified small files plus one partial weight shard and a
+failure receipt. It is not a verified backup. Preserve the instance until an
+independent copy is complete. Original E013 weights remain fully backed up.
+No post-run source was synchronized to the stopped server.
+
 E015 immutable release is now published in `configs/real_math_e015/release.json`
 and `real_math_e015_inputs_r1/`. Independent source/token/dose verification is
 in `real_math_e015_verification_r1/`; local test evidence is in

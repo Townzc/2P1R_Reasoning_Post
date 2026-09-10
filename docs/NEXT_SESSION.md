@@ -1,4 +1,60 @@
-# Next session — E015 is ready; request the existing A800
+# Next session — E015 complete; server off; weights recovery still open
+
+Read [E015 results](../reports/REAL_MATH_E015_RESULTS.md). The owner-supplied
+new clone ran one frozen E015 job frome508321 after all112 Linux tests passed.
+The unchanged engineering gate passes:32/32 correct/terminated,zero truncations,
+NLL0.001106,31exact references. Server/local output audits verify all32 streams,
+5226 targets and256 updates. No dev/test generation or next scientific job.
+
+Important attribution limit: base reference measurements agree exactly, but
+training gradient norms diverge from E013 atstep3 and NLL atstep4, before terminal
+LR decay. Treat E015 as a successful engineering configuration; do not claim
+an isolated causal LR repair, deterministic GPU replay or generalization gain.
+
+**Provider shutdown is confirmed. Keep the server off during local work.**
+The complete E015 checkpoint,12files/6190803414bytes, passed server hashes and
+remains on that stopped volume. Independent backup is incomplete because the
+new transfer route was too slow. The local path
+`.local/checkpoint_backups/gsm8k_terminal_decay_e015_r1` has five verified small
+files, one partial weight shard and a failure receipt; never treat it as full.
+The original E013 independent backup remains complete. Do not release/delete
+the new instance before recovery; its displayed retention deadline is about
+2026-09-25UTC and must be verified before a later recovery window.
+
+The owner explicitly requested end-of-round shutdown; it was performed via the
+provider UI, then the temporary stop timer was cancelled. No CPU/no-card or GPU
+restart followed. Private `.local/e015_connection.json` identifies the stopped
+instance; do not publish credentials, SSH endpoints or instance identifiers.
+The last optional read-only SSH check timed out, so use the completed server
+weight audit and provider UI stop evidence, not invented fresh verification.
+A separately bounded no-card transfer is the economical next preservation route;
+first measure real throughput and avoid another full unbounded copy attempt.
+
+All19 public receipts match the private current ledger: **6686/7200 used,
+514remaining,zero reservations**. SHA256:
+`ad45fa615091d9f47d16b5b80b07aa23313f356b5ab96bdcab4fa74ff60891d0`.
+The pre-E01518-receipt snapshot is preserved. Restore the latest balance into
+any older clone; never reset it or replay E015/E014/E013/E012. The server's
+execution source remainse508321; post-shutdown result publication is on GitHub,
+so synchronize before any future authorized use.
+
+Current money authorization: CNY8/hour, CNY3000 overall ceiling, not a spending
+target. Historical spend is unknown. The notification-to-final-check span was
+about23minutes (~CNY3.07 at the stated rate), not the exact provider invoice.
+Future finite phases may be priced within the ceiling while retaining receipts;
+514process seconds is not a permanent financial restriction.
+
+Next research work is local: inspect saved format-limited baseline outputs,
+freeze a separate held-out capability/profile check before generation, and price
+the complete P005 three-arm minimum only after a non-floor capability gate.
+Selection/curriculum or a task-matched small student remain conditional routes.
+Do not add a512-step sweep or infer that32-example memorization fixes test-time
+reasoning. Full comparison and ledger reports reproduce through
+`python -m analyses.e015_result_comparison --tokenizer-dir ... --ledger ... --out-dir ...`
+using a fresh output directory. All original runtime sources/inputs remain frozen.
+
+## Historical E015 startup handoff
+
 
 The owner authorized P005's single terminal-decay repair and supplied CNY8/hour,
 CNY3000 overall ceiling. Read [E015 readiness](../reports/REAL_MATH_E015_READY.md),

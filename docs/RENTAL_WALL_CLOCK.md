@@ -1,5 +1,15 @@
 # Account for the whole powered-on rental window
 
+**E015 operational outcome, 2026-09-10 UTC:** the new clone's real transfer
+route did not sustain the previous server's measured export rate. After the
+single job and compact-record export, stop early and preserve the volume.
+Provider shutdown is confirmed; full weights backup remains incomplete. The
+rough23-minute notification-to-final-check span is aboutCNY3.07 at the supplied
+rate, not an invoice. For a future changed endpoint, measure a bounded transfer
+before relying on a whole-checkpoint export estimate; a tested local transport
+fixture does not measure the network. Prefer a separately priced CPU/no-card
+recovery window to GPU idle transfer. No recovery startup occurred here.
+
 The owner's 2026-09-10 correction is authoritative: the server is billed while
 powered on, including idle time, CPU preparation, transfers and human analysis.
 GPU-process runtime is a separate scientific guard, not the rental bill.

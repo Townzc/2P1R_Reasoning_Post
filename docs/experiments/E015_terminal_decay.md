@@ -122,3 +122,19 @@ The independent audit records checkpoint hashes separately from independent
 backup verification. Preserve source/release hashes and actual power-on/stop
 observations in the execution closeout. No current provider state is inferred
 from this offline preparation.
+
+## Execution outcome — 2026-09-10 UTC
+
+Sourcee508321 completed one219-second charged job on the owner-supplied clone.
+All112 Linux tests and server/local record audits pass.32/32 train answers are
+correct/terminated, no truncations,31 exact references, NLL0.001106 and1/5226
+reference argmax miss. The original gate passes; no new dev/test measurement.
+The early training trajectory differs from E013 before decay (gradient step3,
+NLL step4), so causal attribution to the terminal schedule alone is limited.
+
+All19 receipts reconcile to6686used/514left. Compact outputs/current ledger are
+independent. The complete12-file checkpoint passed server hashes and remains
+on the stopped volume; independent export is incomplete after poor transfer
+progress. Provider UI confirms normal shutdown, timer cancelled. No retry,
+512-step fallback, scientific grid or server restart. See
+[the full result](../../reports/REAL_MATH_E015_RESULTS.md).

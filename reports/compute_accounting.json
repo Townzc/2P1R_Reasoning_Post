@@ -1,13 +1,13 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 6467,
-  "remaining_gpu_seconds": 733,
-  "gpu_hours": 1.7963888888888888,
-  "billing_limit": "GPU process runtime only. Instance idle time, downloads and storage are separately billable. A800 hourly price was not supplied; the old 4090 reference price is not applied.",
+  "charged_gpu_seconds": 6686,
+  "remaining_gpu_seconds": 514,
+  "gpu_hours": 1.8572222222222223,
+  "billing_limit": "Historical guarded model-process accounting, not a rental invoice. Owner supplied CNY8 per powered-on hour and CNY3000 total ceiling; all power-on time counts. Historical actual spend is unreconciled.",
   "hardware_charged_seconds": {
     "RTX_4090": 737,
-    "A800_80GB": 5730
+    "A800_80GB": 5949
   },
   "jobs": [
     {
@@ -338,6 +338,32 @@
       "started_at": "2026-09-10T06:54:25.508058+00:00",
       "elapsed_seconds": 169.8054342418909,
       "exit_code": 0
+    },
+    {
+      "run_id": "gsm8k_terminal_decay_e015_r1",
+      "status": "completed",
+      "max_seconds": 360,
+      "charged_seconds": 219,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "analyses.e015",
+        "worker",
+        "--tokenizer-dir",
+        ".local/hf-cache/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323",
+        "--preflight",
+        ".local/e015_preflight_20260910T083855468124.json"
+      ],
+      "started_at": "2026-09-10T08:38:55.506775+00:00",
+      "elapsed_seconds": 218.16412770748138,
+      "exit_code": 0
     }
-  ]
+  ],
+  "rental_authorization": {
+    "currency": "CNY",
+    "hourly_rate": 8,
+    "overall_ceiling": 3000,
+    "historical_spend": null,
+    "e015_closeout": "reports/real_math_e015_execution_r1/shutdown_closeout.json"
+  }
 }

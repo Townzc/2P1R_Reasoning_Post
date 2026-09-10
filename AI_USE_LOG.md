@@ -1,5 +1,28 @@
 # AI assistance log
 
+## 2026-09-10 UTC — owner-authorized E015 execution and provider shutdown
+
+Codex used the newly supplied private SSH connection to restore published source
+and the existing current ledger on an older clone, verify original base/runtime,
+run all112 Linux checks and reclaim only the reverified E013 duplicate. One
+frozen E015 job completed and passed the original engineering gate; raw outputs,
+reference records and all256 updates passed server/local CPU consistency audits.
+
+Codex independently compared saved histories after shutdown, found early
+numerical divergence before LR decay, and retained the attribution limit.
+PyTorch2.8 primary documentation was checked for general reproducibility context;
+no particular backend fault was diagnosed. No new dev/test, teacher, model retry,
+scientific comparison or additional process allowance was used.
+
+The user explicitly authorized end-of-round shutdown. Codex set a provider timer,
+exported compact outputs/current19-receipt ledger, retained a failed/partial
+checkpoint transfer and two bounded connection-multiplex probes, then confirmed
+normal shutdown through the provider UI and cancelled the timer. Full weights
+remain on the retained stopped volume; independent backup is explicitly incomplete.
+The late read-only SSH check timed out and is not shutdown evidence. Credentials
+and connection details remain private. No external message or subagent was used.
+Max was recommended without changing model settings.
+
 E015 preparation outcome: source09a00c0 and release73b054b were published before
 independent token/dose/LR and clean-checkout verification.110 CPU tests pass;
 two GNU-timeout tests remain mandatory on Linux. The source transfer bundle
