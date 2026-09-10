@@ -1,5 +1,13 @@
 # Artifact inventory and migration limits
 
+E015 immutable release is now published in `configs/real_math_e015/release.json`
+and `real_math_e015_inputs_r1/`. Independent source/token/dose verification is
+in `real_math_e015_verification_r1/`; local test evidence is in
+`real_math_e015_local_tests.json`. Read `REAL_MATH_E015_READY.md`. The verified
+private incremental transfer bundle and preservation transport remain local;
+no model weights, process receipt or provider state was created by preparation.
+
+
 ## 2026-09-10 — E015 implementation and rental authorization
 
 - `analyses/e015.py`, `e015_core.py`, `e015_audit.py`, `verify_e015_inputs.py`: isolated one-factor runner, reference measurements and independent audits.

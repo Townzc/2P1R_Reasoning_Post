@@ -1,0 +1,50 @@
+{
+  "case_count": 4,
+  "cases": [
+    {
+      "case": "nan",
+      "exception_type": "ValueError",
+      "input_and_release_hashes_coherently_updated": true,
+      "message": "Released learning rate sequence differs",
+      "status": "rejected_at_independent_lr_check"
+    },
+    {
+      "case": "positive_infinity",
+      "exception_type": "ValueError",
+      "input_and_release_hashes_coherently_updated": true,
+      "message": "Released learning rate sequence differs",
+      "status": "rejected_at_independent_lr_check"
+    },
+    {
+      "case": "boolean_true",
+      "exception_type": "ValueError",
+      "input_and_release_hashes_coherently_updated": true,
+      "message": "Released learning rate sequence differs",
+      "status": "rejected_at_independent_lr_check"
+    },
+    {
+      "case": "finite_wrong_lr",
+      "exception_type": "ValueError",
+      "input_and_release_hashes_coherently_updated": true,
+      "message": "Released learning rate sequence differs",
+      "status": "rejected_at_independent_lr_check"
+    }
+  ],
+  "checked_at_utc": "2026-09-10T08:25:06.905736+00:00",
+  "fresh_checkout_git_status_clean": true,
+  "gpu_execution_performed": false,
+  "input_preparation_source_commit": "09a00c0a8d2e260f74cfcd02a2967fda0a757d36",
+  "inputs_restored_byte_identically": true,
+  "phase": "E015_INDEPENDENT_LR_NEGATIVE_CHECKS",
+  "pretrained_model_calls": 0,
+  "restored_file_sha256": {
+    "configs/real_math_e015/release.json": "a88cf1732d13ce00f235dda0eb7d8f3288273987270352de03e0a9551bcc3230",
+    "reports/real_math_e015_inputs_r1/learning_rates.json": "d6910d264becda386608517a318f61c2d5095bcf4a08d7a1e1450c491e3916ee",
+    "reports/real_math_e015_inputs_r1/manifest.json": "b8720bf6c0c836f59a29d876fc0a53c51ff3f9683d04883f8b37a806dca9f6d0"
+  },
+  "scope": "Four bounded mutations in an isolated local fresh checkout; public frozen inputs unchanged.",
+  "server_contacted": false,
+  "source_commit": "73b054bf9e7f5bd03d6f96d63dd6a32c51d82e27",
+  "status": "passed",
+  "tokenizer_revision": "8faed761d45a263340a0528343f099c05c9a4323"
+}

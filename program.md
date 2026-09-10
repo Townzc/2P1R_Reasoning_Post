@@ -3,14 +3,15 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** implement/publish the owner-authorized
-single E015 terminal-decay repair offline; then freeze/verify inputs and prepare
-the transfer bundle before requesting startup. Read `docs/NEXT_SESSION.md` and
-`docs/experiments/E015_terminal_decay.md`. User rate/cap: CNY8/hour/CNY3000.
-Current conservative power-on plan:40minute target,45minute planned ceiling,
-including export and shutdown. Keep original ledger history and360+15 guard;
-no automatic next model job. Later finite phases may be budgeted within the
-financial ceiling after scientific gates;733seconds is not the money cap.
+**Current phase (2026-09-10 UTC):** E015 execution source/input release and
+independent CPU checks are complete. Notify the owner to start the existing
+A800 for this one repair; see `reports/REAL_MATH_E015_READY.md` and
+`docs/NEXT_SESSION.md`. Budget CNY8/hour, CNY3000 total ceiling; conservative
+40-minute target/45-minute planned rental ceiling includes export and shutdown.
+Keep the historical ledger and360+15 process guard. Startup requires the exact
+112-test Linux suite, source/base/ledger verification and12GiB storage gate.
+No automatic next model job. Later phases can be priced within the financial
+ceiling after scientific gates, with historical receipts preserved.
 
 **Historical P005 phase (2026-09-10 UTC):** P005 literature-guided planning and C018
 local CPU analysis are complete. Read `docs/NEXT_SESSION.md`,

@@ -1,22 +1,63 @@
-# Next session — E015 offline implementation and publication
+# Next session — E015 is ready; request the existing A800
 
-The owner authorized P005's single terminal-decay repair and supplied CNY8/hour
-with CNY3000 overall ceiling. Finish source publication, immutable CPU inputs,
-independent verification and the transfer bundle before requesting startup.
-No server is needed during this preparation. Read
-[E015 registration](experiments/E015_terminal_decay.md) and
-[storage/rental instructions](E015_STORAGE_AND_RENTAL.md).
+The owner authorized P005's single terminal-decay repair and supplied CNY8/hour,
+CNY3000 overall ceiling. Read [E015 readiness](../reports/REAL_MATH_E015_READY.md),
+[registration](experiments/E015_terminal_decay.md) and
+[storage/rental instructions](E015_STORAGE_AND_RENTAL.md). Implementation09a00c0
+and immutable release73b054b are published. Independent raw-tokenizer checks,
+default inspection and fresh-checkout bundle import pass. The112-test CPU suite
+has110 passes; two GNU-timeout integrations must pass on Linux before execution.
+No server, pretrained model, new process receipt or reservation in this phase.
+
+Notify the owner to start the existing A800 for **only**
+`gsm8k_terminal_decay_e015_r1`. Same32 parents,256 updates and original dose,
+only terminal LR changes. No dev/test generation,512-step fallback, retry or
+model substitution. E012 stays paused and E013/E014 must not repeat.
 
 The conservative whole-rental plan targets40minutes (~CNY5.33), with45minutes
-(~CNY6) as planned ceiling. Preserve the original ledger:6467/7200 used,733left,
-18receipts,zero reservations;360+15 fits and leaves at least358. All12 original
-E013 backup files were freshly rehashed locally. No current server/provider
-state is implied. Subsequent priced finite phases can use the financial ceiling
-while retaining historical accounting; the scientific grid remains conditional.
+(~CNY6) as planned ceiling. Record power-on time/source; require2040seconds left
+for375seconds guarded process,1320seconds export/verification and345seconds
+shutdown/slack. The prior export took16.24minutes. Do full analysis/publication
+locally after shutdown, and verify provider state before claiming billing stopped.
 
-Run only `gsm8k_terminal_decay_e015_r1` after startup and all published gates.
-No new dev/test generation, retry,512-step fallback or model substitution.
-The original failed E013/E014 results and E012 pause remain intact.
+Preserve the exact18-receipt ledger:6467/7200 used,733remaining,zero reservations;
+360+15 fits and leaves at least358. SHA256:
+`8813caaa4a3661900f874033fac68b802b3e856bc9c449f28f1fff3983b4aae9`.
+All12 E013 independent backup files were freshly rehashed locally. Before the
+next model reservation, publish/stage code, export a cleanup preview locally,
+then reclaim only the exact verified E013 server duplicate if needed. Recheck
+actual free space; the predicted12GiB margin is only59.6MiB. Preserve the original
+base and unique files. Use an unused new export destination with the whole-copy
+deadline; never call partials a backup or dispose of unbacked unique weights.
+
+Final bundle: `.local/e015_ready.bundle`; final verification:
+`.local/e015_final_publication_verification.json`. The private transport adapter
+`.local/e015_ssh_export.py` passes five local subprocess fixtures. Import its
+`make_open_remote` with already supplied authenticated SSH argv and the exact
+remote E015 checkpoint path, then pass the opener into public `copy_checkpoint`.
+It uses eight concurrent16MiB ranges and a20-second inactivity bound inside the
+1320-second whole-export deadline. Do not load connection code at import or
+contact the server before owner startup. Use a new local destination beneath
+`.local/checkpoint_backups/gsm8k_terminal_decay_e015_r1`. Record progress at least
+every20seconds; preserve failures without retry. Private transport preparation
+is under`.local/`. The public
+fresh-checkout verification identifies the release bundle; refresh/import the
+final handoff bundle before use. Verify driver580.126.09, idle A80080GB, original
+snapshot and pinned runtime. Exact Linux suite:
+
+```sh
+python -m unittest tests.test_e015 tests.test_e015_core tests.test_e015_audit \
+  tests.test_e015_storage tests.test_e015_export tests.test_e014 \
+  tests.test_real_math_engineering tests.test_sft_data \
+  tests.test_relation_engineering.ScoringTests tests.test_relation_engineering.DoseTests \
+  tests.test_relation_engineering.LedgerTests tests.test_relation_engineering.OutputAuditTests \
+  tests.test_budget_guard -v
+```
+
+The financial ceiling is known; historical spend and remaining money are not.
+Later finite phases can be priced within it while retaining historical process
+receipts. A usable recipe and separately frozen held-out capability check still
+precede scientific scale; no automatic grid follows E015.
 
 ## Historical P005 planning handoff
 

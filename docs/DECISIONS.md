@@ -1,5 +1,13 @@
 # Decisions and open questions
 
+D026 release outcome: implementation09a00c0 and release73b054b are published;
+110 focused CPU tests pass, with two GNU-timeout integrations mandatory on
+Linux. Independent raw-token/dose/LR reconstruction and a clean checkout imported
+from the prior server commit pass. No pretrained model/server call, reservation
+or new receipt occurred. Request the existing A800 now for the single prepared
+E015 window. See [readiness](../reports/REAL_MATH_E015_READY.md).
+
+
 ## D026 — 2026-09-10: authorize the finite terminal-decay repair and price rental time
 
 The owner supplied CNY8 per powered-on hour and a total CNY3000 ceiling, and

@@ -1,16 +1,22 @@
-# Verified status — E015 source preparation, 2026-09-10 UTC
+# Verified status — E015 ready for owner startup, 2026-09-10 UTC
 
-The owner approved the next P005 repair and supplied CNY8/hour, CNY3000 ceiling.
-Implementation and focused CPU validation are in progress; source publication,
-immutable inputs and independent release verification precede a startup notice.
-No server/model call or reservation has occurred. The conservative rental plan
-is40minutes target (~CNY5.33),45minutes planned ceiling (~CNY6), including backup.
+[E015 is ready](REAL_MATH_E015_READY.md). Implementation09a00c0 and immutable
+release73b054b are published. Independent token/dose/LR reconstruction, default
+inspection and fresh-checkout bundle verification pass.110 focused CPU tests
+pass; two GNU-timeout integrations await Linux. This is preparation, not a model
+result. No server contact, pretrained model call or GPU reservation occurred.
 
-All12 E013 backup files and the latest private ledger were freshly rehashed.
-The ledger remains6467/7200 used,733left,18receipts,zero reservations. Original
-E013/E014 outcomes and source files are unchanged. Historical monetary spend
-remains unknown. Future finite phases are budgeted within the financial ceiling
-with preserved accounting; no automatic grid is queued.
+The owner authorized this single terminal-LR repair and supplied CNY8/hour,
+CNY3000 overall ceiling. The conservative whole-rental plan targets40minutes
+(~CNY5.33), with45minutes (~CNY6) as planned ceiling including export/shutdown.
+All12 E013 independent backup files and the latest18-receipt ledger were freshly
+rehashed. Ledger6467/7200 used,733left,zero reservations;360+15 fits. Historical
+monetary spend is unknown. Later finite phases can use the financial ceiling
+with preserved receipts; no automatic scientific grid is queued.
+
+The original E013 gate stays failed and E014 remains complete. Run only the
+registered E015 after owner startup and runtime/storage/time checks. E012 stays
+paused. Keep original data, old proposals, scores and frozen source unchanged.
 
 ## Historical P005/C018 milestone
 

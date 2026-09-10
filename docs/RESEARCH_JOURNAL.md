@@ -1,5 +1,13 @@
 # Research journal
 
+E015 offline outcome: source09a00c0 and immutable release73b054b published.
+Independent all32-parent/5226-target/dose/LR verification and clean-checkout
+bundle import pass; default inspection takes4.59seconds. The112-test suite has
+110passes and two Linux-only integrations pending startup. A source-only bundle
+from last server commitd2ddb6a is140486bytes. Request one existing A800 window;
+there is no E015 learning result or ledger change yet.
+
+
 ## 2026-09-10 — implement the approved finite terminal-LR repair offline
 
 The owner supplied CNY8/hour and a CNY3000 ceiling and requested continuing P005.

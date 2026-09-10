@@ -1,5 +1,12 @@
 # AI assistance log
 
+E015 preparation outcome: source09a00c0 and release73b054b were published before
+independent token/dose/LR and clean-checkout verification.110 CPU tests pass;
+two GNU-timeout tests remain mandatory on Linux. The source transfer bundle
+was imported from the last server commit and verified locally. No model/server
+call, reservation or new result was introduced by this preparation.
+
+
 ## 2026-09-10 UTC — authorized E015 implementation and local verification
 
 At the owner's request Codex implemented the P005 terminal-LR repair with the
