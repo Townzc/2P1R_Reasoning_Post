@@ -3,15 +3,16 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** E013 engineering is CPU-prepared and verified.
-Read `reports/REAL_MATH_E013_READY.md` and `docs/NEXT_SESSION.md`. The owner
-requested one 32-parent GSM8K overfit/profile, 256 updates, with a 900-second
-process cap plus 15-second guard. The existing SSH endpoint refused connection;
-model execution awaits restored availability and Linux preflight. C017's four-
-condition scale still needs measured complete-phase budgeting and scientific
-review. E012 remains paused.
+**Current phase (2026-09-10 UTC):** E013 completed with a failed overfit gate.
+Read `reports/REAL_MATH_E013_RESULTS.md` and `docs/NEXT_SESSION.md`. All256
+updates and64 output records verify;24/32 train answers terminate correctly,
+five outputs truncate, three give wrong final numbers. Final dev is0/16 and
+baseline format limitations are explicit. GPU execution has stopped; independent
+checkpoint backup is in progress. Diagnose generation before another model run.
+C017's four-arm training-only proxy is2096–2165 seconds, before other costs.
+E012 remains paused; no retry or scientific comparison is queued.
 
-The current ledger is **5971 seconds charged,1229 remaining**,16 reconciled
+The current ledger is **6297 seconds charged,903 remaining**,17 reconciled
 receipts and zero reservations. Do not restore an old ledger, run a completed
 queue, or interpret a server clone as a new compute budget. No final-test model
 evaluation or external-message sending is authorized by the CPU audit.

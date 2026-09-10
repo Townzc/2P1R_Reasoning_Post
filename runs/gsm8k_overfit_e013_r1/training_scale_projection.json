@@ -1,0 +1,48 @@
+{
+  "automatic_launch_authorized": false,
+  "complete_phase_bound_available": false,
+  "limitations": "Linear response/processed-token extrapolations are proxies, not confidence bounds. Different rows per update and length distributions change throughput. Full phase also needs frozen development decoding, base loads, checkpoints, verification and watchdog margins. Public source creation/generation costs remain unknown.",
+  "observed_training_seconds": 167.13603872805834,
+  "seed17_arms": [
+    {
+      "arm": "repeat",
+      "supervised_tokens": 524288,
+      "training_only_seconds_proxy_range": [
+        523.987152414946,
+        542.1727723190086
+      ],
+      "updates": 256
+    },
+    {
+      "arm": "solutions",
+      "supervised_tokens": 524288,
+      "training_only_seconds_proxy_range": [
+        523.987152414946,
+        542.2223901008327
+      ],
+      "updates": 256
+    },
+    {
+      "arm": "mixed",
+      "supervised_tokens": 524288,
+      "training_only_seconds_proxy_range": [
+        523.987152414946,
+        541.9830572708576
+      ],
+      "updates": 256
+    },
+    {
+      "arm": "breadth",
+      "supervised_tokens": 524288,
+      "training_only_seconds_proxy_range": [
+        523.987152414946,
+        538.7929257688708
+      ],
+      "updates": 256
+    }
+  ],
+  "seed17_training_only_proxy_range": [
+    2095.948609659784,
+    2165.1711454595697
+  ]
+}

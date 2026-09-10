@@ -1,6 +1,35 @@
-# Next session — E013 ready; resume once the existing A800 is available
+# Next session — E013 gate failed; preserve state and diagnose generation
 
-## Immediate action: fixed GSM8K engineering, after Linux preflight
+## Current: E013 finished, no automatic next model job
+
+Read [the result](../reports/REAL_MATH_E013_RESULTS.md). The owner restored the
+existing A800 and E013 completed from source
+`4fa838a368f8197338d8a20513a21755830dfc7d`. All40 Linux tests and64 raw-output /
+256-update checks pass. The overfit gate fails:24/32 train answers correct and
+terminated, five truncations, three wrong numeric finals, NLL0.014206. Final
+development is0/16. Its base0/16 is format-limited; do not claim zero underlying
+base ability. No changed scorer, cap, checkpoint selection or retry.
+
+All17 receipts reconcile: **6297/7200 used,903 remaining,zero reservations**.
+Current ledger SHA256 is
+`a332e3ff326f768c6d985786c41fd6352df1c52fc73f34bae9f47d7d264ba614`.
+The current private ledger backup is updated; an immutable pre-E013 copy is
+retained. Do not restore the former16-receipt ledger or replay E013/E012.
+
+GPU execution has stopped. Compact outputs are in
+`runs/gsm8k_overfit_e013_r1`; preflight/test evidence is in
+`reports/real_math_e013_execution_r1`. Independent6.19GB checkpoint backup is
+in progress at this milestone. Verify its complete manifest and current
+publication before declaring the server disposable.
+
+The four-arm training-only proxy is2096–2165 seconds versus903 available,
+excluding scientific evaluation and overhead; the failed gate also blocks
+scaling. A proposed next step is a separately frozen inference diagnostic on
+this saved checkpoint: reproducibility at batch8, selected-case batch1 decoding,
+and teacher-forced first-divergence token probabilities. No new model run is
+registered/launched by this handoff. Preserve C017's existing pool and proposal.
+
+## Historical preparation: fixed GSM8K engineering, after Linux preflight
 
 The owner requested the next experiment. E013 code and immutable 32-train /
 16-development inputs are prepared and CPU-verified. Read the

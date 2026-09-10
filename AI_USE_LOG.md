@@ -1,5 +1,23 @@
 # AI assistance log
 
+## 2026-09-10 UTC — E013 execution and failed-gate audit
+
+After the owner restored the existing server, Codex verified its unchanged
+16-receipt ledger, original A800/base-model cache and pinned training environment.
+Direct Git fetch timed out; a hash-verified public-history bundle was transferred
+over authenticated SSH. All40 Linux tests pass, including GNU-timeout checks.
+The already requested single E013 job ran from published source4fa838a.
+No model setting, tuning recipe, scorer, data selection or decode cap changed.
+
+All256 updates complete, but the engineering gate fails:24/32 correct terminated
+train answers, five truncations, three wrong numeric finals, final train NLL
+0.014206. Final dev is0/16; baseline0/16 is format-limited. Codex checked all64
+raw token records and256 update doses, inspected the failures and reconciled
+all17 resource receipts. The326-second charge leaves903. Analysis is post-hoc,
+descriptive and does not replace registered metrics or prove reasoning validity.
+An independent checkpoint backup is in progress. No retry, teacher call,
+scientific grid, new allowance, rental or external message was initiated.
+
 ## 2026-09-10 UTC — E013 real-data engineering implementation
 
 The owner requested the next experiment and an effort recommendation. Codex

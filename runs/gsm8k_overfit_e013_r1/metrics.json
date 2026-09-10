@@ -1,0 +1,69 @@
+{
+  "base_dev": {
+    "answer_correct": 0,
+    "ended_with_eos": 14,
+    "n": 16,
+    "output_tokens": 4547,
+    "parse_status": {
+      "missing_final_marker": 15,
+      "unresolved_numeric_final": 1
+    },
+    "reference_exact_matches": 0,
+    "terminated_correct": 0,
+    "truncated": 2
+  },
+  "base_train_reference_nll": {
+    "nll": 0.48851944375576484,
+    "reference_count": 32,
+    "response_loss_sum": 2553.002613067627,
+    "supervised_tokens": 5226
+  },
+  "engineering_gate": {
+    "passed": false,
+    "scope": "engineering_memorization_feasibility_only; no proof-validity or treatment-effect claim"
+  },
+  "final_dev": {
+    "answer_correct": 0,
+    "ended_with_eos": 11,
+    "n": 16,
+    "output_tokens": 5743,
+    "parse_status": {
+      "missing_final_marker": 5,
+      "parsed": 11
+    },
+    "reference_exact_matches": 0,
+    "terminated_correct": 0,
+    "truncated": 5
+  },
+  "interpretation": "Development n=16 is descriptive. No test, generalization-effect, or intermediate-proof claim.",
+  "steps": 256,
+  "throughput": {
+    "peak_allocated_mib": 27180.86083984375,
+    "peak_reserved_mib": 29830.0,
+    "processed_tokens_per_second": 1374.4090239090826,
+    "profile_complete": true,
+    "profile_step_seconds": 41.664452869445086,
+    "profile_updates": 64,
+    "supervised_tokens_per_second": 1003.4453141867654,
+    "warmup_excluded": 8
+  },
+  "train": {
+    "answer_correct": 24,
+    "ended_with_eos": 27,
+    "n": 32,
+    "output_tokens": 8652,
+    "parse_status": {
+      "missing_final_marker": 5,
+      "parsed": 27
+    },
+    "reference_exact_matches": 20,
+    "terminated_correct": 24,
+    "truncated": 5
+  },
+  "train_reference_nll": {
+    "nll": 0.01420551622439699,
+    "reference_count": 32,
+    "response_loss_sum": 74.23802778869867,
+    "supervised_tokens": 5226
+  }
+}

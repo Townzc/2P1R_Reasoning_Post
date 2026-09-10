@@ -1,6 +1,21 @@
-# Verified status — GSM8K engineering ready, server unavailable, 2026-09-10 UTC
+# Verified status — E013 complete; overfit gate failed, 2026-09-10 UTC
 
-## Current: E013 CPU-verified; model run not started
+## Current: recorded generation failure; no scientific launch
+
+E013 completed all 256 updates and 167232 response / 229056 processed tokens.
+Final training: 24/32 correct terminated answers, 20 exact references, five
+truncations and three wrong numeric finals. NLL is 0.014206; the overfit gate
+fails. Development is 0/16; baseline format limitations prevent interpreting
+its own 0/16 as zero mathematical capability. All 40 Linux tests and all64
+raw-output/256-update record checks pass. Read [results](REAL_MATH_E013_RESULTS.md).
+
+The new charge is326 seconds. All17 receipts reconcile: **6297 used /903 left,
+zero reservations**. GPU execution has stopped. Checkpoint backup remains in
+progress; do not declare the instance disposable yet. The four-arm training-
+only proxy is2096–2165 seconds, before evaluation/overhead. Diagnose generation
+and scoring before a new training phase. E012 stays paused.
+
+## Historical: E013 CPU-verified; model run not started
 
 E013 freezes 32 training responses and 16 development parents for one 256-update
 engineering trajectory: 167,232 response / 229,056 processed tokens, 32 exposures

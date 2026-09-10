@@ -1,5 +1,21 @@
 # Decisions and open questions
 
+## D021 — 2026-09-10: retain failed E013; defer scientific scale
+
+The owner restored the existing server. The fixed E013 trajectory completed
+and all raw-record/dose checks pass, but its overfit gate fails:24/32 correct
+terminated train answers, five truncations, three wrong numeric finals. Low
+teacher-forced NLL does not establish reliable free generation. Baseline output
+format limits interpretation of its strict0/16 development score.
+
+Retain the frozen metrics and failed checkpoint; do not add updates, relax
+the scorer, extend the cap, replace parents or auto-retry. Diagnose generation
+and evaluation before setting a launchable scientific scale. The current
+four-arm training-only proxy (2096–2165 seconds) also exceeds the903-second
+remaining allowance. All17 receipts reconcile, with6297 seconds used and no
+reservation. No new GPU stage or allowance is approved by this result.
+See [E013 results](../reports/REAL_MATH_E013_RESULTS.md).
+
 ## D020 — 2026-09-10: begin finite real-data engineering before scaling
 
 The owner asked to start the next experiment. Prepare and run one E013 GSM8K
