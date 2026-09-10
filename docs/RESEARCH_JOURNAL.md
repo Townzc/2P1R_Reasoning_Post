@@ -1,5 +1,38 @@
 # Research journal
 
+## 2026-09-10 — E014 CPU diagnosis and inference release ready
+
+**Motivation.** E013 has low aggregate NLL but eight failed free generations.
+Inspect training/inference serialization, EOS/shift, generation defaults,
+padding/cached positions and checkpoint integrity before spending the remaining
+budget on another training trajectory. No causal implementation error is yet
+established; training microbatch1 and generation batch8 remain a testable
+distinction alongside full-reference versus cached generation.
+
+**CPU evidence.** Source3dd0034 precedes preparation and releasee79a0e1 precedes
+the independent verifier/default inspection. All32 original references agree
+under raw tokenization:1932 prompt tokens,5226 targets,32 supervised EOS.
+Batch widths87/86/84/87 fit the1024 context. The effective cap remains768 and
+cache remains enabled despite resaved defaults. All12 checkpoint hashes pass.
+52 component/tiny-random-model tests pass; two GNU-timeout integrations await
+Linux. A separately attempted old E011 release test rejects the pre-existing
+C017 source change; its failure is retained without weakening that freeze.
+
+**Prospective experiment.** Reuse the failed E013 checkpoint for one32-prompt
+batch8 replay,10 fixed batch1 cases and all32 reference-token/EOS measurements.
+Selected first-divergence queries carry raw IDs, causal positions, prefix
+hashes and target/alternative probabilities. These are post-hoc engineering
+diagnostics, not a new test population or proof of a mechanism. Replay failure
+blocks isolated batch-effect interpretation; no outcome automatically trains.
+
+**Resource state.** No server, pretrained forward pass, teacher or reservation
+in this preparation. All17 receipts reconcile:6297 used /903 left. A360-second
+process plus15 guard leaves528 unreserved. The owner is notified to start the
+existing A800 for this prepared diagnostic; no extra rental or allowance.
+
+[CPU findings and readiness](../reports/REAL_MATH_E014_READY.md),
+[registration and next-decision table](experiments/E014_generation_diagnostic.md).
+
 ## 2026-09-10 — E013 completed, engineering gate failed
 
 **Executed.** After server startup and40 Linux tests, run the fixed32-parent

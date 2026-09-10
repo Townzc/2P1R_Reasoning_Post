@@ -3,14 +3,20 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** E013 completed with a failed overfit gate.
-Read `reports/REAL_MATH_E013_RESULTS.md` and `docs/NEXT_SESSION.md`. All256
-updates and64 output records verify;24/32 train answers terminate correctly,
-five outputs truncate, three give wrong final numbers. Final dev is0/16 and
-baseline format limitations are explicit. GPU execution has stopped; all12
-checkpoint files have independent verified backups. Diagnose generation before another model run.
-C017's four-arm training-only proxy is2096–2165 seconds, before other costs.
-E012 remains paused; no retry or scientific comparison is queued.
+**Current phase (2026-09-10 UTC):** E014 saved-checkpoint diagnostic is prepared
+and CPU-verified. Read `reports/REAL_MATH_E014_READY.md` and `docs/NEXT_SESSION.md`.
+After the owner starts/provides the existing A800, execute one bounded process:
+32-prompt batch8 replay,10 fixed batch1 cases and32 reference-token/EOS probes.
+The360+15-second cap leaves528 unreserved. No training, teacher, dev/test decode,
+new checkpoint, automatic retry or scientific comparison.52 CPU tests pass;
+two GNU-timeout integrations remain mandatory on Linux. Source/input/weight
+and exact-ledger checks precede launch. No server was contacted in preparation.
+
+E013's overfit gate stays failed:24/32 correct terminated train outputs, five
+truncations, three wrong numbers despite NLL0.014206. Its weights and records
+are preserved. C017's four-arm training-only proxy is2096–2165 seconds, before
+other costs. E012 remains paused. The diagnostic does not establish a causal
+bug or retroactively replace E013's metrics.
 
 The current ledger is **6297 seconds charged,903 remaining**,17 reconciled
 receipts and zero reservations. Do not restore an old ledger, run a completed

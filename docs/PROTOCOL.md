@@ -1,5 +1,15 @@
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
+**Current E014 engineering extension, 2026-09-10 UTC:** after the failed E013
+gate, the owner requested local diagnosis and preparation before server startup.
+[E014](experiments/E014_generation_diagnostic.md) freezes one saved-checkpoint
+inference process: original32-prompt batch8 replay,10 predetermined batch1
+cases, and32 teacher-forced token/EOS records. CPU source/input/weight checks
+pass; no pretrained model or server action occurred. At most360+15 seconds fit
+the existing903-second balance. No training, new dev/test scoring, new budget
+or scientific-grid authorization follows. Preserve the original failed gate;
+use the registered decision table before proposing any subsequent repair.
+
 **Current extension, 2026-09-10 UTC:** after C017 the owner requested the next
 real-data experiment. [E013](experiments/E013_gsm8k_engineering.md) registers a
 single 32-parent GSM8K overfit/profile on the pinned 1.5B base and existing

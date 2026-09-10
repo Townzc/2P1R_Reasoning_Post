@@ -1,6 +1,24 @@
-# Verified status — E013 complete; overfit gate failed, 2026-09-10 UTC
+# Verified status — E014 CPU release ready; no model run, 2026-09-10 UTC
 
-## Current: recorded generation failure; no scientific launch
+## Current: inference diagnostic prepared, existing A800 required
+
+[E014 is ready](REAL_MATH_E014_READY.md). Published source and immutable inputs
+pass independent raw-tokenizer/source/position verification and default CPU
+inspection. All32 original training parents,5226 reference targets and32 EOS
+are retained; only the fixed8 failures plus2 successful controls get additional
+batch1 decoding. All12 saved-checkpoint files are independently hash-verified.
+52 CPU tests pass; two GNU-timeout integrations remain mandatory on Linux.
+The attempted old E011 release check and its pre-existing source mismatch are
+preserved separately; actual E013/E014 source/input checks pass.
+
+No pretrained model, server, GPU, teacher or reservation in this CPU phase.
+All17 receipts still reconcile to **6297 used /903 left,zero reservations**.
+One360-second process plus15 guard fits, leaving528 unreserved. Notify the owner
+to start/provide the existing A800 for this specific diagnostic. No training,
+dev/test evaluation, new allowance or automatic scientific queue. Causal
+explanation of the failed E013 generations remains unresolved.
+
+## Historical: E013 recorded generation failure; no scientific launch
 
 E013 completed all 256 updates and 167232 response / 229056 processed tokens.
 Final training: 24/32 correct terminated answers, 20 exact references, five

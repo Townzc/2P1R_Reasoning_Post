@@ -1,12 +1,21 @@
 # Artifact inventory and migration limits
 
-**Workflow pause, 2026-09-10 UTC:** the current task is the proposed P004 framing
+**Current E014 preparation, 2026-09-10 UTC:** source and immutable case release
+are public and independently CPU-verified. No new model job or checkpoint was
+created. The next diagnostic reads the failed E013 checkpoint; all12 files
+(6,190,803,414 bytes) have a verified independent backup and were rehashed in
+this preparation. Current ledger: **6297 used /903 remaining,17 receipts,zero
+reservations**. See [E014 readiness](REAL_MATH_E014_READY.md),
+[independent verification](real_math_e014_independent_verification.json) and
+[current recovery/launch commands](../docs/NEXT_SESSION.md).
+
+**Historical workflow pause, 2026-09-10 UTC:** the current task is the proposed P004 framing
 and deliverable discussion. E012's ready artifacts remain preserved; no model
 job has run. The personally addressed reply is retained privately outside Git,
 and [P004](../docs/experiments/P004_cost_aware_sft_allocation_proposal.md) contains
 only the scientific proposal. No checkpoint, ledger or migration state changed.
 
-**Current E012 ready milestone, 2026-09-10 UTC:** execution source and immutable
+**Historical E012 ready milestone, 2026-09-10 UTC:** execution source and immutable
 release are published; clean-checkout checks and default inspection passed.
 See [ready report](RELATION_E012_READY.md) and
 [verification](relation_e012_fresh_checkout_verification.json). No E012 model
@@ -24,7 +33,9 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 | Pinned 0.5B and 1.5B base snapshots | Reproducible from pinned sources; current A800 main cache verified before pilot | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
 | Higher-LR debug checkpoint (`r2`, gate failed) | Verified independent local backup outside Git; historical server copy | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
 | Passing debug checkpoint (`r3`, 31/32) | Verified independent local backup outside Git; historical server copy | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
-| Shared runtime ledger | Independently retained current private backup: 5971 seconds, zero reservations; all 16 receipts reconciled exactly | [E011 ledger verification](relation_e011_ledger_verification.json) and [C016 unchanged-ledger closeout](relation_c016_resource_closeout.json) record the retained copy hash. Older 1173-, 1719- and 3712-second ledgers are historical. A replacement keeps the same approved budget. |
+| Shared runtime ledger | Independently retained current private backup: 6297 seconds, zero reservations; all17 receipts reconciled | [E013 ledger proof](real_math_e013_ledger_verification.json) and [E014 independent verification](real_math_e014_independent_verification.json). Older16-receipt balances are historical. A replacement keeps the same approved budget. |
+| E013 failed GSM8K checkpoint |12 files /6,190,803,414 bytes, independently retained; server copy must be rechecked at startup | [Backup proof](real_math_e013_checkpoint_backup.json), [fresh CPU inspection](real_math_e014_published_inspection.json). E014 reads these weights, not a fresh base snapshot. |
+| E014 CPU input release | Public configs/real_math_e014 and reports/real_math_e014_inputs_r1 | [Release](../configs/real_math_e014/release.json), [independent raw-tokenizer checks](real_math_e014_independent_verification.json). No new weights, teacher outputs or resource receipt. |
 | Main A800 checkpoint (32/32 overfit) | Verified independent local backup outside Git, all 12 files; historical A800 copy | `checkpoint_main_a800_server_verified.json` and `checkpoint_main_a800_local_verified.json` are identical. Weights-only checkpoint; no exact optimizer resume. |
 | Raw run records | GitHub, local checkout and training server | See `run_registry.json` and each run's recorded code commit; one launch is explicitly invalidated. |
 

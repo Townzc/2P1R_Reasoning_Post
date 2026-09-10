@@ -1,6 +1,64 @@
-# Next session — E013 gate failed; preserve state and diagnose generation
+# Next session — run the prepared E014 checkpoint diagnostic
 
-## Current: E013 finished, no automatic next model job
+## Current: CPU work complete; owner-started A800 needed
+
+Read [E014 readiness](../reports/REAL_MATH_E014_READY.md) and the
+[registration](experiments/E014_generation_diagnostic.md). The owner requested
+generation-anomaly inspection, next-experiment preparation and notice when the
+server is needed. Implementation3dd0034 and releasee79a0e1 are published.
+Independent raw-tokenizer checks and published default inspection pass;52
+focused CPU tests pass, with two GNU-timeout integrations pending Linux.
+No server was contacted and no pretrained inference or reservation occurred.
+
+Execute only `gsm8k_generation_e014_r1` after the owner supplies/starts the
+existing A800 for this phase. It loads the **failed E013 checkpoint**, replays
+all32 training prompts at batch8, decodes the fixed10 cases at batch1 and
+measures all32 reference token/EOS distributions. No optimizer/training,
+development/test decode, teacher call, new checkpoint or automatic next job.
+Keep original max_new_tokens768, context1024, FP32/BF16/SDPA, seed17 and masks.
+Do not relax the original E013 score or infer a passed gate from this diagnostic.
+
+Current ledger SHA256:
+`a332e3ff326f768c6d985786c41fd6352df1c52fc73f34bae9f47d7d264ba614`.
+All17 receipts reconcile:6297/7200 used,903 left,zero reservations. Maximum
+reservation360+15=375 leaves528. Restore the latest private ledger if needed;
+never initialize a fresh allowance or restore the older16-receipt ledger.
+
+Synchronize published main first. If direct fetch is unavailable, transfer a
+hash-verified Git bundle from the current local clone. Do not overwrite unique
+outputs or checkpoint files. The latest known server already retained E013's
+12 checkpoint files and original tokenizer; recheck their content and source
+before relying on that state. Independently retained weights are in
+`.local/checkpoint_backups/gsm8k_overfit_e013_r1`; all12 hashes were rechecked
+during CPU preparation and published inspection. No new base-model download
+or storage expansion should be needed; at least2GiB free is required.
+
+Set repository-relative paths on the server, using the existing pinned runtime:
+
+```sh
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+E014_TOKENIZER=.local/hf-cache/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323
+E014_CHECKPOINT=runs/gsm8k_overfit_e013_r1/checkpoint_final
+E014_LEDGER=.local/resource_ledger.json
+python -m unittest tests.test_e014 tests.test_real_math_engineering tests.test_sft_data \
+  tests.test_relation_engineering.ScoringTests tests.test_relation_engineering.DoseTests \
+  tests.test_relation_engineering.LedgerTests tests.test_relation_engineering.OutputAuditTests \
+  tests.test_budget_guard -v
+python -m analyses.e014 inspect --tokenizer-dir "$E014_TOKENIZER" --checkpoint-dir "$E014_CHECKPOINT" --ledger "$E014_LEDGER"
+python -m analyses.e014 launch --execute --tokenizer-dir "$E014_TOKENIZER" --checkpoint-dir "$E014_CHECKPOINT" --ledger "$E014_LEDGER"
+python -m analyses.e014_audit --tokenizer-dir "$E014_TOKENIZER" --out runs/gsm8k_generation_e014_r1/record_verification.json
+```
+
+Require all54 tests on Linux, the recorded driver580.126.09 and package recipe,
+and one idle A80080GB. The launcher checks current source/input/weight hashes
+and exact ledger, then uses the existing cumulative watchdog. Preserve any
+failure/timeout without retry. Reconcile the next receipt, update the private
+ledger backup, audit/publish compact outputs and refresh this handoff. The
+checkpoint is read-only and remains independently preserved. Inspect the
+registration's decision table before proposing a later repair; the remaining
+budget does not authorize a training sweep or the four-arm comparison.
+
+## Historical: E013 finished, no automatic next model job
 
 Read [the result](../reports/REAL_MATH_E013_RESULTS.md). The owner restored the
 existing A800 and E013 completed from source

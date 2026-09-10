@@ -21,6 +21,13 @@ and the old guard. Input materialization and clean-release verification follow
 source publication. No pretrained model, GPU, server contact or reservation
 occurred at this source milestone. Max is recommended; no setting is changed.
 
+D022 CPU release outcome: published source3dd0034 and releasee79a0e1 pass
+independent token/position/source verification and default CPU inspection. All32
+parents,5226 reference targets and12 checkpoint files verify. All17 receipts
+remain reconciled at6297 used /903 left. The concrete release and decision table
+are complete; request the existing owner-started A800 for this single diagnostic.
+See [readiness](../reports/REAL_MATH_E014_READY.md).
+
 ## D021 — 2026-09-10: retain failed E013; defer scientific scale
 
 The owner restored the existing server. The fixed E013 trajectory completed

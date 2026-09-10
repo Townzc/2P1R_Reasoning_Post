@@ -6,6 +6,17 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**E014 CPU preparation complete, 2026-09-10 UTC:** saved-output/source inspection,
+independent32-parent token/position checks, all12 checkpoint hashes and published
+default inspection pass.52 CPU tests pass; two GNU-timeout tests await Linux.
+The next single diagnostic replays batch8, decodes10 fixed cases at batch1 and
+measures all32 reference-token/EOS distributions. No new model/GPU/server call
+occurred; the ledger stays **6297 used /903 left**. Its360+15-second maximum
+reservation leaves528. The existing A800 is now needed for model measurements;
+no retraining or scientific comparison is queued.
+[Findings and readiness](reports/REAL_MATH_E014_READY.md),
+[registered experiment](docs/experiments/E014_generation_diagnostic.md).
+
 **E013 completed with failed overfit gate, 2026-09-10 UTC:** all 256 updates
 finished, but only 24/32 train answers are correct and terminated; five train
 outputs truncate. Train NLL is 0.0142. Final development is 0/16 under the frozen

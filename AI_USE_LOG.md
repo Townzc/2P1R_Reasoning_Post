@@ -22,6 +22,14 @@ or external message occurred. Codex recommended Max for bounded implementation
 and consulted OpenAI Docs for the recommendation without changing settings.
 The ledger remains6297 used /903 remaining with17 receipts and no reservations.
 
+CPU release closeout: source3dd0034 was published before materialization and
+releasee79a0e1 before independent verification/default inspection. Both pass:
+32 original parents,5226 targets,32 EOS and exact selected-case causal offsets;
+all12 checkpoint files are rehashed and all17 receipts reconciled. Code, input
+freeze, CPU evidence and the server handoff are published. The owner is notified
+that the existing A800 is now needed for the single360+15-second diagnostic.
+No pretrained model was loaded and the ledger did not change.
+
 ## 2026-09-10 UTC — E013 execution and failed-gate audit
 
 After the owner restored the existing server, Codex verified its unchanged
