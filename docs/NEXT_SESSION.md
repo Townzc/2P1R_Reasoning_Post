@@ -2,12 +2,15 @@
 
 ## Current: owner-started A800 verified; CPU cache amendment before launch
 
-The owner has now started the existing A800 and authorized E014. D023 preserves
-45/180-second CPU-only inspection timeouts and adds an audit-only vocabulary
-size cache. No model run/reservation exists and the ledger is unchanged. Publish
-the amended implementation, prepare/publish immutable r2 inputs, prove their
-case/evidence bytes match r1, rerun the amended55-test suite on Linux and inspect
-before the single original launch. Do not ask for server startup again.
+The owner has now started the existing A800 and authorized E014. D023 preserved
+45/180-second CPU-only timeouts and published an audit-only vocabulary size cache
+in d9c0bb4. Active immutable inputs are `reports/real_math_e014_inputs_r2`, with
+`configs/real_math_e014/release_r2.json`. Independent input verification passes;
+r2 cases and CPU evidence are byte-identical to r1, all12 checkpoint files verify,
+and53 local tests pass (2 GNU-timeout checks await amended Linux validation).
+No model run/reservation exists;6297 used /903 left and the exact ledger below.
+Synchronize this published release, run the amended55-test Linux suite, inspect
+and execute the single original command below. Do not ask for startup again.
 
 ## Historical: CPU work complete; owner-started A800 needed
 

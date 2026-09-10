@@ -1,5 +1,14 @@
 # E014 — CPU checks complete; saved-model diagnosis needs the A800
 
+Execution amendment: after owner startup, CPU-only inspections timed out in
+repeated tokenizer length reads. D023/source d9c0bb4 caches size only inside the
+unchanged auditor. Use `release_r2.json` and `real_math_e014_inputs_r2`; original
+cases and CPU evidence are byte-identical, and the independent verifier passes.
+All12 checkpoint files verify.53 local tests pass; amended55-test Linux suite
+and published inspection must pass before the original authorized launch. All
+historical r1 evidence below remains retained. No GPU reservation occurred.
+
+
 The local investigation and executable diagnostic are ready. No pretrained
 forward pass, server contact, GPU job, teacher call or reservation occurred.
 The causal source of E013's generation failures remains unresolved; the next
