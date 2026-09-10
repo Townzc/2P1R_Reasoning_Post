@@ -1,5 +1,26 @@
 # AI assistance log
 
+## 2026-09-10 UTC — broader literature, C018 and rental-time planning
+
+At the owner's request, Codex used primary conference sources to inspect
+relevant methods, ablations and setup sections of eleven papers, identifying
+venue status, matching/cost limits and concrete alternative hypotheses. Four
+PDF method/figure pages were visually checked. Full copyrighted source files
+remain in the private cache; public records contain links, hashes and concise
+paraphrases. This is a targeted audit, not independent replication.
+
+Codex implemented and ran a local CPU audit of immutable C017/E013 records,
+checking all 15,308 accepted response hashes and selection/length effects.
+It prepared P005 and an unimplemented terminal-decay proposal, preserving the
+old 512-update plan and all historical outcomes. No data-selection learning
+benefit, optimization fix or paper-level novelty is claimed.
+
+The workflow now separately budgets rental wall time from power-on; actual
+rate/start-stop events and money cap remain unknown. No SSH/server/pretrained
+model/teacher API call, external message, GPU reservation or new allowance
+occurred. The process balance remains 733. Ultra was recommended for research
+synthesis without changing settings. No subagent was used.
+
 ## 2026-09-10 UTC — E014 execution, output audit and next proposal
 
 Codex executed the owner's single authorized diagnostic on the restored A800

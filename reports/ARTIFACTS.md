@@ -1,5 +1,16 @@
 # Artifact inventory and migration limits
 
+## 2026-09-10 — P005 and C018, local CPU only
+
+- `LITERATURE_NEXT_EXPERIMENT_20260910.md` and `literature_next_20260910_sources.json`: eleven primary-paper methods/limits, official venues and PDF hashes; full text stays private.
+- `REAL_MATH_C018_SELECTION_AUDIT.md` and `real_math_c018_selection_audit_r1/`: immutable post-hoc counts and selections from existing C017/E013 artifacts, with independent verification.
+- `analyses/c018_selection_audit.py`: reproducible, model-free audit with hash checks and overwrite refusal.
+- `docs/experiments/P005_literature_guided_next_phase.md`, `docs/RENTAL_WALL_CLOCK.md`, and `configs/diagnostics/real_math_terminal_decay_proposal.json`: review-only staged plan, separate rental accounting and unimplemented repair.
+
+No model weights, teacher outputs, GPU run, process receipt or additional
+allowance was created. Historical E015512 proposal and experiment data remain
+unchanged. Latest checkpoint and 18-receipt ledger recovery copies remain private.
+
 **Current E014 completion, 2026-09-10 UTC:** all compact raw outputs and CPU
 verification are retained in `runs/gsm8k_generation_e014_r1` and
 `reports/real_math_e014_execution_r1`. No new checkpoint was written. All12 E013

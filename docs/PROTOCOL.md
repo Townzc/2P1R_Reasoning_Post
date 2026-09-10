@@ -1,6 +1,15 @@
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
-**Current E014 outcome, 2026-09-10 UTC:** the owner-started A800 completed the
+**Current planning amendment, 2026-09-10 UTC:**
+[P005](experiments/P005_literature_guided_next_phase.md) supersedes the default
+priority of E015 dose doubling. A 256-update terminal-decay repair and a staged
+three-arm allocation minimum are review-only. C018's immutable CPU outputs do
+not change accepted data, historical scoring, the failed E013 gate or the
+733-second process balance. Rental charges cover all powered-on time; follow
+[the offline-first workflow](RENTAL_WALL_CLOCK.md). No new model execution,
+scientific grid or allowance is authorized by this amendment.
+
+**Historical E014 outcome, 2026-09-10 UTC:** the owner-started A800 completed the
 single registered diagnostic.32/32 replay streams agree; batch1 fixesno failed
 case. Reference-token probes expose17 top-one misses while all32 reference EOS
 targets win. Both record audits pass. E013 remains failed; no score/cap is

@@ -1,5 +1,28 @@
 # Decisions and open questions
 
+## D025 — 2026-09-10: plan from literature and total rental time
+
+The owner clarified that rental billing starts at power-on, including idle and
+CPU work, and requested broader ICLR/ACL ideas. Keep the existing process guard
+unchanged and add separate rental-time/money accounting. E014's 170-second
+process charge must not stand in for its observed 34.39-minute orchestration
+span; provider start/stop times and actual charges remain unknown.
+
+Inspect eleven full-paper methods/ablations/setups and run C018 on local CPU.
+Shorter-only filtering substantially loses parents; surface-diverse selection
+is feasible at fixed P/K but establishes no learning gain. Prior work already
+covers breadth, multiple rationales, variable K and selection; do not claim
+novelty from those labels or a cost equation alone.
+
+Replace default 512-update scaling with a review-only 256-update terminal-LR
+repair, preserving all other E013 training factors and the original gate.
+Keep the old proposal unchanged as a fallback. A three-arm allocation minimum,
+then conditional selection/curriculum/model/objective checks, needs independent
+capability and complete-budget gates. No automatic next run or new allowance.
+No server contact/model call was made; ledger stays 6,467 used / 733 left.
+See [P005](experiments/P005_literature_guided_next_phase.md) and
+[rental workflow](RENTAL_WALL_CLOCK.md).
+
 ## D024 — 2026-09-10: retain E014 diagnosis and defer scientific scale
 
 E014 completes fromd78aa77 with32/32 exact raw replays and no selected-case

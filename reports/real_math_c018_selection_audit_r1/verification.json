@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "summary.json exact reproduction",
+    "selection_by_parent.jsonl exact reproduction",
+    "All 256 parent selections preserve min(4, K), uniqueness, acceptance and token totals",
+    "Source-order arm matches the original 996 C017 selected pairs",
+    "Independent accepted-bank length/coverage totals agree",
+    "Existing-output refusal preserves all output bytes",
+    "Modified source response is rejected before output creation",
+    "Review-only proposal dose, schedule endpoints and budget arithmetic agree; no runner tested",
+    "Latest private 18-receipt ledger remains byte-identical",
+    "All 11 inspected primary PDF hashes agree"
+  ],
+  "elapsed_cpu_wall_seconds": 1.0263029160000001,
+  "audit_source_sha256": "64fa39608b0982fa102f1a9aa2b4981cd2bc93118c1885281c9f1956e776fd71",
+  "output_sha256": {
+    "summary.json": "2078e2f3b70d4ceea7588ba21381df7c489a267a28ec02d31115a474556dd025",
+    "selection_by_parent.jsonl": "51854ab65015c5fdf6635991f3f0467beddbc1bdf734e7839adf3e9a7f346489"
+  },
+  "server_contacts": 0,
+  "pretrained_model_calls": 0,
+  "process_ledger_changed": false,
+  "scope": "CPU data analysis and proposal arithmetic only; terminal-decay training is not implemented or validated"
+}

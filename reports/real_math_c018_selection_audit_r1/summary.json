@@ -1,0 +1,254 @@
+{
+  "accepted_raw_hashes_checked": 15308,
+  "datasets": {
+    "gsm8k": {
+      "accepted_lengths": {
+        "max": 641,
+        "mean": 153.50102880658437,
+        "min": 56,
+        "n": 7776,
+        "p50": 143.0,
+        "p90_nearest_rank": 227,
+        "sum": 1193624
+      },
+      "baseline_parents_with_k1": 1013,
+      "baseline_parents_with_k4": 963,
+      "frozen_parent_denominator": 1024,
+      "hypothetical_length_filters": [
+        {
+          "max_supervised_tokens": 128,
+          "parents_with_k1": 629,
+          "parents_with_k4": 373,
+          "retained_pairs": 2973
+        },
+        {
+          "max_supervised_tokens": 256,
+          "parents_with_k1": 1006,
+          "parents_with_k4": 915,
+          "retained_pairs": 7361
+        },
+        {
+          "max_supervised_tokens": 512,
+          "parents_with_k1": 1013,
+          "parents_with_k4": 962,
+          "retained_pairs": 7773
+        }
+      ]
+    },
+    "math": {
+      "accepted_lengths": {
+        "max": 1074,
+        "mean": 241.6773765268189,
+        "min": 50,
+        "n": 7532,
+        "p50": 207.0,
+        "p90_nearest_rank": 417,
+        "sum": 1820314
+      },
+      "baseline_parents_with_k1": 486,
+      "baseline_parents_with_k4": 481,
+      "frozen_parent_denominator": 512,
+      "hypothetical_length_filters": [
+        {
+          "max_supervised_tokens": 128,
+          "parents_with_k1": 288,
+          "parents_with_k4": 139,
+          "retained_pairs": 1449
+        },
+        {
+          "max_supervised_tokens": 256,
+          "parents_with_k1": 448,
+          "parents_with_k4": 383,
+          "retained_pairs": 4840
+        },
+        {
+          "max_supervised_tokens": 512,
+          "parents_with_k1": 486,
+          "parents_with_k4": 475,
+          "retained_pairs": 7155
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "diversity_policy": "Deterministic farthest-first, same first item as hash_random",
+    "length": "C017 exact supervised tokenizer count, including EOS",
+    "limitations": "Length and lexical overlap do not establish learnability or strategy diversity. Cached K is not teacher pass rate. No SFT outcomes or equal-token training comparison.",
+    "random_policy": "SHA256 ordering with fixed seed label 17 per parent/response",
+    "similarity": "Jaccard of case-folded word/punctuation trigram sets"
+  },
+  "e013_reference_lengths": {
+    "all": {
+      "max": 368,
+      "mean": 163.3125,
+      "min": 82,
+      "n": 32,
+      "p50": 144.5,
+      "p90_nearest_rank": 235,
+      "sum": 5226
+    },
+    "failed": {
+      "max": 368,
+      "mean": 176.375,
+      "min": 82,
+      "n": 8,
+      "p50": 157.0,
+      "p90_nearest_rank": 368,
+      "sum": 1411
+    },
+    "passed": {
+      "max": 322,
+      "mean": 158.95833333333334,
+      "min": 84,
+      "n": 24,
+      "p50": 142.5,
+      "p90_nearest_rank": 235,
+      "sum": 3815
+    }
+  },
+  "e013_training_loss": {
+    "caveat": "Different minibatches across updates; these summaries do not prove optimization causality.",
+    "first_32_updates": {
+      "max": 0.6290439224243164,
+      "mean": 0.27107404862823464,
+      "min": 0.06007543469334508,
+      "n": 32,
+      "p50": 0.2366897868634739,
+      "p90_nearest_rank": 0.5583510219029018,
+      "sum": 8.67436955610351
+    },
+    "last_32_updates": {
+      "max": 0.07332014357845665,
+      "mean": 0.01260827558456096,
+      "min": 0.00022438073383389617,
+      "n": 32,
+      "p50": 0.01063211218434875,
+      "p90_nearest_rank": 0.02212448763631044,
+      "sum": 0.40346481870595075
+    }
+  },
+  "first_256_gsm8k": {
+    "frozen_parent_denominator": 256,
+    "parents_with_any_pair_jaccard_ge_0_8": 8,
+    "policies": {
+      "hash_random": {
+        "parent_count_distribution": {
+          "0": 3,
+          "1": 3,
+          "2": 2,
+          "3": 3,
+          "4": 245
+        },
+        "parent_mean_jaccard": {
+          "max": 0.5597441309621972,
+          "mean": 0.2643272375578881,
+          "min": 0.10240366883891093,
+          "n": 250,
+          "p50": 0.24776230446112535,
+          "p90_nearest_rank": 0.3881454417040019,
+          "sum": 66.08180938947204
+        },
+        "selected_lengths": {
+          "max": 411,
+          "mean": 153.69779116465864,
+          "min": 59,
+          "n": 996,
+          "p50": 145.0,
+          "p90_nearest_rank": 227,
+          "sum": 153083
+        }
+      },
+      "lexical_diverse": {
+        "parent_count_distribution": {
+          "0": 3,
+          "1": 3,
+          "2": 2,
+          "3": 3,
+          "4": 245
+        },
+        "parent_mean_jaccard": {
+          "max": 0.49346488734561256,
+          "mean": 0.21110693943557549,
+          "min": 0.08260742860469746,
+          "n": 250,
+          "p50": 0.193072729884657,
+          "p90_nearest_rank": 0.3044208790013177,
+          "sum": 52.776734858893846
+        },
+        "selected_lengths": {
+          "max": 461,
+          "mean": 155.289156626506,
+          "min": 59,
+          "n": 996,
+          "p50": 145.0,
+          "p90_nearest_rank": 230,
+          "sum": 154668
+        }
+      },
+      "shortest": {
+        "parent_count_distribution": {
+          "0": 3,
+          "1": 3,
+          "2": 2,
+          "3": 3,
+          "4": 245
+        },
+        "parent_mean_jaccard": {
+          "max": 0.7354724032884953,
+          "mean": 0.28327438834362373,
+          "min": 0.09910654446989221,
+          "n": 250,
+          "p50": 0.2620767319569659,
+          "p90_nearest_rank": 0.43421695113582615,
+          "sum": 70.81859708590589
+        },
+        "selected_lengths": {
+          "max": 373,
+          "mean": 137.35441767068272,
+          "min": 57,
+          "n": 996,
+          "p50": 129.0,
+          "p90_nearest_rank": 201,
+          "sum": 136805
+        }
+      },
+      "source_first": {
+        "parent_count_distribution": {
+          "0": 3,
+          "1": 3,
+          "2": 2,
+          "3": 3,
+          "4": 245
+        },
+        "parent_mean_jaccard": {
+          "max": 0.5118409013347703,
+          "mean": 0.2600243984626631,
+          "min": 0.09057834268653199,
+          "n": 250,
+          "p50": 0.24034535975173354,
+          "p90_nearest_rank": 0.39240539616547027,
+          "sum": 65.00609961566579
+        },
+        "selected_lengths": {
+          "max": 411,
+          "mean": 153.53815261044176,
+          "min": 64,
+          "n": 996,
+          "p50": 143.0,
+          "p90_nearest_rank": 227,
+          "sum": 152924
+        }
+      }
+    }
+  },
+  "schema": "c018-selection-audit-v1",
+  "source_sha256": {
+    ".local/real_math_c017_solutions_r2/raw_candidates.jsonl": "6703ce3516e6555fbeb9394fe52d22ae47a658d8c115781e1596f3c1c6d4bb77",
+    "reports/real_math_c017_solutions_r2/candidate_decisions.jsonl.gz.b64": "a45a3c107ce44f4b89547b182932642868a1f8ea98d51af9ff54c417cfdcea80",
+    "reports/real_math_c017_solutions_r2/per_problem.jsonl": "eabe7bffde3d9730eb50b5e677ccd7884077390b36ba783dffab1285b02782d1",
+    "reports/real_math_e013_inputs_r1/train.jsonl": "a8dd0238de1612c1764e15e1b8309276a162c19d60209d06c0449722dd9586ec",
+    "runs/gsm8k_overfit_e013_r1/final_train.jsonl": "418e208f5e597bc5f882205f6437f4a2849c84f544dda10b815ee1d2e816048a",
+    "runs/gsm8k_overfit_e013_r1/train_history.jsonl": "aeaf9bf690f6cc181b4e93fe9e80b844ee2412f00d5db9e79799213809a34b28"
+  },
+  "status": "post_hoc_cpu_only"
+}

@@ -1,0 +1,49 @@
+{
+  "phase": "P005_TERMINAL_DECAY_REVIEW_ONLY",
+  "status": "not_registered_not_implemented_not_launched",
+  "automatic_launch_authorized": false,
+  "proposed_run_id": "gsm8k_terminal_decay_e015_r1",
+  "initialization": "Original pinned Qwen2.5-1.5B base; fresh optimizer. E013 has weights-only backup, so do not label a checkpoint restart an exact optimizer continuation.",
+  "model_lock_sha256": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+  "inherit_e013_config_sha256": "127f3e1e08be511df00d2b9f64fde66cfaa61461488a506950a5094ba77d7c24",
+  "change": "Only terminal learning-rate schedule; keep the original 256-update data/order/seed/batch/optimizer/serialization/scoring settings.",
+  "updates": 256,
+  "nonzero_lr_updates": 255,
+  "exposures_per_response": 32,
+  "learning_rate": {
+    "steps_1_through_192": 5e-05,
+    "steps_193_through_256": "5e-5 * (1 + cos(pi * (step - 192) / 64)) / 2",
+    "summed_lr": 0.011174999999999971,
+    "integrated_lr_is_not_matched": true
+  },
+  "budget": {
+    "supervised_tokens": 167232,
+    "processed_nonpadding_tokens": 229056,
+    "proposed_process_cap_seconds": 360,
+    "guard_seconds": 15,
+    "maximum_reservation_seconds": 375,
+    "existing_balance_seconds": 733,
+    "unreserved_after_maximum": 358,
+    "hypothetical_power_on_window_seconds": 1200,
+    "hourly_rate": null,
+    "currency": null,
+    "monetary_cap": null,
+    "window_is_validated": false,
+    "new_allowance_authorized": false
+  },
+  "endpoints": {
+    "primary": "At least 31/32 correct and terminated, zero truncations, reference NLL < 0.1, full 256-update records and profile. Engineering only.",
+    "secondary": "Final reference-token/EOS top-one probabilities and margins; fixed original batch8/768-token/context1024 greedy decoding.",
+    "new_dev_test_decodes": 0,
+    "intermediate_checkpoint_selection": false
+  },
+  "launch_blockers": [
+    "Owner review of the concrete one-factor repair",
+    "Independent implementation/registration/release and passing relevant CPU/Linux validation",
+    "Known hourly rate, monetary limit and feasible power-on/export/shutdown window",
+    "Resolved checkpoint preservation; latest 6.29 GiB free fails inherited 12 GiB gate",
+    "Original base/18-receipt ledger and staged assets verified"
+  ],
+  "on_failure": "Preserve outputs and ledger; no automatic retry, longer-dose run, model switch or scientific grid.",
+  "supersedes_priority_of": "configs/diagnostics/real_math_e015_proposal.json; file preserved as an unexecuted fallback"
+}

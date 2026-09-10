@@ -6,13 +6,25 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**Literature-guided planning and C018 CPU audit complete, 2026-09-10 UTC:**
+reviewed relevant methods/ablations from eleven ICLR/ACL/EMNLP/NeurIPS papers.
+The next proposal isolates terminal LR decay before scaling; the older
+512-update plan is a fallback. C018 verifies 15,308 accepted responses and
+shows that aggressive shortening sacrifices problem coverage. No server/model
+call or new allowance occurred. Account for the **whole powered-on rental
+window**, separately from the unchanged 733-second process balance.
+[Evidence review](reports/LITERATURE_NEXT_EXPERIMENT_20260910.md),
+[CPU findings](reports/REAL_MATH_C018_SELECTION_AUDIT.md),
+[next plan](docs/experiments/P005_literature_guided_next_phase.md),
+[rental workflow](docs/RENTAL_WALL_CLOCK.md).
+
 **E014 completed, 2026-09-10 UTC:** all32 batch8 outputs reproduce E013 exactly.
 Batch1 changes3/10 selected streams but fixes0/8 original failures. All27
 first-difference query records favor the generated alternative;17/5226 reference
 targets lose top-one across12 rows, while all32 reference EOS targets win.
 The55-test Linux suite and server/local raw-record audits pass.170 seconds are
 charged: **6467 used /733 left,18 receipts,zero reservations**. The failed E013
-gate is unchanged. A single512-update calibration is proposed for review only;
+gate is unchanged. The original512-update proposal is now a fallback under P005;
 no training grid or next GPU job is queued.
 [Results and next proposal](reports/REAL_MATH_E014_RESULTS.md).
 

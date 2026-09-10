@@ -1,25 +1,30 @@
-# Verified status — E014 complete; E013 gate remains failed, 2026-09-10 UTC
+# Verified status — P005 planning and C018 CPU audit complete, 2026-09-10 UTC
 
-The fixed saved-checkpoint diagnostic completed from published sourced78aa77.
-All32 original batch8 streams reproduce exactly. Batch1 changes3/10 selected
-streams but fixesnone of the eight original failures; both controls stay correct.
-Reference NLL agrees to1.25e-10;17/5226 reference targets lose top-one across12
-rows. All27 selected first-difference records (10 distinct combinations) favor
-the generated alternative, while all32 reference-conditioned EOS targets win.
-This supports local fit gaps, not a causal software-bug or generalization claim.
+The current task used local CPU and primary-source literature only: no server
+contact, model call, reservation or extra allowance. Eleven paper methods,
+ablations and setup sections informed the [revised plan](../docs/experiments/P005_literature_guided_next_phase.md).
+Rental time starts at power-on; the 170-second E014 process charge does not
+represent its observed 34.39-minute orchestration span or an actual invoice.
+See [rental accounting](../docs/RENTAL_WALL_CLOCK.md).
 
-All55 Linux tests and both server/local42-generation/32-reference/5226-target
-audits pass. Both CPU preflight timeouts are preserved with the audit-only cache
-correction; old cases/evidence are byte-identical to r2. The170-second charge
-leaves **6467/7200 used,733 remaining,18 receipts,zero reservations**. The latest
-private ledger is backed up. All12 E013 weight files remain independently
-preserved and pass post-run server hashes. No GPU process or next job remains.
+[C018](REAL_MATH_C018_SELECTION_AUDIT.md) checks all 15,308 accepted hashes.
+GSM8K median supervised length is 143; a 128-token cutoff drops coverage from
+1,013 to 629 parents. Fixed-parent random/diverse policies retain 996 pairs each;
+this measures surface-selection feasibility, not training performance.
 
-Read [the result](REAL_MATH_E014_RESULTS.md). E015 is a review-only512-update
-fresh-base calibration with600+15 proposed cap; no implementation or launch.
-Its12GiB checkpoint-writing capacity gate is not met by the6.29GiB observed
-free space. Scientific scale remains blocked by the failed engineering gate
-and four-arm2096–2165-second training-only proxy. E012 stays paused.
+The first review proposal now isolates terminal LR decay at the original 256
+updates; the previous 512-update E015 proposal remains an unexecuted fallback.
+No new GPU code/release is ready, hourly rate and money cap are unknown, and
+checkpoint storage still needs resolution. No startup request or queue exists.
+A three-arm allocation minimum and selection/curriculum/model alternatives are
+conditional on engineering, held-out calibration, budget and review.
+
+E014's published results are unchanged: 32/32 exact raw replays, batch1 fixes
+0/8 failures, 17/5,226 reference top-one misses and 32 winning reference EOS
+targets. Both output audits and 55 Linux tests passed. E013 remains failed.
+The ledger remains **6,467/7,200 used, 733 remaining, 18 receipts, zero
+reservations**. Original checkpoint/ledger backups remain retained; no new
+provider shutdown state was verified. E012 stays paused.
 
 ## Historical E014 preparation and preflight
 

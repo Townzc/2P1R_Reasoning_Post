@@ -3,24 +3,26 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** E014 saved-checkpoint diagnosis is complete.
-Read `reports/REAL_MATH_E014_RESULTS.md` and `docs/NEXT_SESSION.md`.32/32 raw
-replays agree, batch1 fixes0/8 failures, and reference-token probes expose17
-local top-one misses despite low average NLL. All32 reference EOS targets win;
-these do not measure termination after a generated loop. The55-test Linux suite
-and server/local raw-record audits pass. E013's engineering gate remains failed.
+**Current phase (2026-09-10 UTC):** P005 literature-guided planning and C018
+local CPU analysis are complete. Read `docs/NEXT_SESSION.md`,
+`docs/experiments/P005_literature_guided_next_phase.md` and
+`docs/RENTAL_WALL_CLOCK.md`. No server/model call or new reservation occurred.
+Finish papers, code, CPU validation and transfer preparation with the rental off.
+Budget the whole power-on-to-confirmed-stop interval, not just GPU processes.
 
-The ledger is **6467 seconds charged,733 remaining**,18 reconciled receipts,
-zero reservations. GPU execution has stopped and no next job is queued. All12
-E013 checkpoint files are independently preserved and rehashed after E014.
-The former903-second balance is historical; a server clone is not a new budget.
+E014 is complete; E013 remains failed. Preserve all adverse endpoints and the
+18-receipt ledger: **6,467 process seconds used, 733 remaining**, no reservations.
+Original checkpoint/ledger backups remain independent. The next review-only
+repair holds 256 updates fixed and changes terminal LR decay; 512-update E015
+is a fallback, with no automatic launch or continuation. The proposed repair
+cap is 360+15 seconds, but storage, implementation, rate/money cap and a safe
+whole-rental window remain prerequisites.
 
-E015 is only a review proposal for one fresh-base512-update calibration with
-unchanged32 rows/seed/LR/scorer/decoder, no new dev/test decode and a600+15 cap.
-Implementation, publication, validation and checkpoint preservation capacity
-are still prerequisites. Do not automatically launch it. C017's four-arm
-training-only proxy is2096–2165 seconds before other costs, outside the733
-balance; E012 remains paused. Scientific scale remains unset.
+A minimum three-arm allocation comparison, followed conditionally by selection,
+curriculum or small-model/objective checks, replaces an automatic full grid.
+The entire scientific phase needs a usable recipe, held-out capability check,
+complete budget and owner review. It does not fit the existing balance.
+No startup request exists; E012 stays paused.
 
 **Historical phase (2026-09-09 UTC):** E010's identity-absent Paths/GCM seed31 pair
 is complete. Do not replay it or seed17/23. Matched greedy is7/64 versus5/64,

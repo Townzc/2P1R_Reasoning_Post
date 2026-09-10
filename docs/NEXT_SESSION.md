@@ -1,49 +1,56 @@
-# Next session — review one longer-dose calibration; E014 complete
+# Next session — offline preparation; literature-guided P005 replaces default dose scaling
 
-## Current: no queued model job or server-start request
+No server is needed for the current work. The owner corrected billing: the
+whole powered-on window is charged, including CPU work and idle time. Read
+[the rental workflow](RENTAL_WALL_CLOCK.md),
+[P005](experiments/P005_literature_guided_next_phase.md) and
+[the eleven-paper review](../reports/LITERATURE_NEXT_EXPERIMENT_20260910.md).
+This milestone used no SSH/server/model call and changed no compute allowance.
+Shutdown/provider billing state has not been inspected or confirmed here.
 
-The owner's single E014 execution request is complete. Read
-[the result](../reports/REAL_MATH_E014_RESULTS.md):32/32 raw batch8 replays match;
-batch1 fixes0/8 failures;17/5226 reference targets lose top-one across12 rows;
-all27 selected divergence records favor the generated alternative, while all32
-reference EOS targets win. Mean NLL agrees with E013. The original gate remains
-failed.55 Linux tests and both full CPU output audits pass.
+C018 completed on local CPU: 15,308 accepted response hashes match cached text.
+GSM8K references are already short (median 143 tokens); a 128-token cutoff
+reduces covered parents from 1,013 to 629. Fixed-parent surface-diverse selection
+retains the same 996 pairs as random with 1.04% more tokens per traversal.
+This is selection feasibility, not a downstream learning effect or strategy proof.
+Read [the audit](../reports/REAL_MATH_C018_SELECTION_AUDIT.md).
 
-Run `gsm8k_generation_e014_r1`, sourced78aa7731af7e42d73e532348a123c4f1d4ce868,
-completed in169.8054 seconds and charged170. All18 receipts reconcile:
-**6467/7200 used,733 remaining,zero reservations**. Restore only the latest
-private ledger backup with SHA256
+Recommended first repair for review: original 256-update E013 recipe with only
+terminal LR decay (192 constant updates, 64 cosine decay updates). The proposed
+360+15 process reservation fits the existing 733-second balance, leaving 358.
+The review-only JSON is `configs/diagnostics/real_math_terminal_decay_proposal.json`.
+No implementation, registration, launch, fresh development/test decode or next
+allowance follows from this plan. The old 512-update E015 proposal is retained
+as a fallback, not the default and not an automatic second job.
+
+Before startup, finish a reviewed frozen implementation, meaningful CPU/Linux
+validation and staged transfer bundle. Resolve checkpoint preservation: the last
+6.29 GiB free fails the inherited 12 GiB gate. Hourly rate and money cap are
+still unknown. The illustrative 20-minute total power-on window is conditional,
+not a quote or approved expense. Notify the owner only when an actual finite
+queue, rate/cap and safe export/shutdown plan are ready; do not contact or start
+the server to do literature review or open-ended debugging.
+
+E014 is complete and must not repeat. All 32 batch8 streams replay exactly;
+batch1 rescues zero of eight failures; 17/5,226 reference targets lose top-one.
+All 32 reference-conditioned EOS targets win. The original E013 gate is failed.
+The 55 Linux tests and full server/local output audits passed at execution.
+Latest source/result publication before this planning milestone: d2ddb6a.
+
+Current ledger: **6,467/7,200 process seconds used, 733 remaining, 18 receipts,
+zero reservations**. Latest private backup SHA256:
 `8813caaa4a3661900f874033fac68b802b3e856bc9c449f28f1fff3983b4aae9`.
-An immutable pre-E01417-receipt snapshot remains retained. Do not restore the
-old903-second balance, repeat E014/E013, or launch the paused E012 sequence.
-The public compute accounting and run registry both include all18 receipts.
+The 12 E013 checkpoint files (6,190,803,414 bytes) remain independently retained
+at `.local/checkpoint_backups/gsm8k_overfit_e013_r1`; E014 created no new weights.
+Do not restore older ledger balances or launch paused E012. A clone is not a
+new allowance. Prior backup/hash verification remains evidence, not a new server
+inspection this turn.
 
-Compact results are in `runs/gsm8k_generation_e014_r1`; execution evidence,
-local verification and descriptive findings are in
-`reports/real_math_e014_execution_r1`. Active source/input freeze is r2;
-original r1 and both CPU-only timeouts remain immutable. The correction caches
-vocabulary size only for CPU auditing; it changes no experimental setting.
-All12 E013 checkpoint files (6,190,803,414 bytes) remain independently retained
-under `.local/checkpoint_backups/gsm8k_overfit_e013_r1` and pass post-run server
-hashes. There are no new weights or optimizer state from E014. GPU execution
-has stopped. Preserve publication and this ledger before retiring the instance.
-
-Next review `configs/diagnostics/real_math_e015_proposal.json`. It proposes one
-fresh-original-base512-update calibration, same32 rows/seed17/LR5e-5/batch4/
-microbatch1 and unchanged numeric/EOS/NLL scorer/decoder. CPU dose is334464
-supervised tokens,458112 processed tokens and64 exposures per response. No new
-dev/test scoring or intermediate checkpoint selection is proposed. The600+15
-cap would leave118 seconds; measured phase proxies are not upper bounds.
-This proposal is not registered, implemented or launched. Prepare a separate
-immutable E015 implementation/release only after owner review, including all
-necessary checks and checkpoint preservation. Its12GiB free-space gate is not
-met by E014's6.29GiB observed capacity; resolve preservation without losing
-unique state, buying storage or renting another server automatically. No server
-is needed for reviewing/preparing that work; notify only when it is ready.
-
-C017's four-arm training-only proxy is2096–2165 seconds before other costs.
-Neither the current733 seconds nor E013's failed engineering gate permits
-scientific scaling. Preserve the CPU audit/proposal and all adverse endpoints.
+The prospective scientific minimum is three arms: Repeat256x1, Solutions256x4,
+Breadth1024x1, then conditional selection/curriculum or model/objective checks.
+A usable recipe, held-out capability calibration and a priced complete phase
+must precede it. Existing training projections exceed 733 seconds. Final scale
+and additional allowance remain unset; no underfunded grid is queued.
 
 ## Historical: CPU work complete; owner-started A800 needed
 

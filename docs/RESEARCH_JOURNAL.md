@@ -1,5 +1,27 @@
 # Research journal
 
+## 2026-09-10 — rental correction and literature-guided planning
+
+The owner's billing correction changes operations: preparation and analysis on
+a powered-on rental are not free. E014's receipts expose a 34.39-minute observed
+orchestration span against its 170-second process charge; actual billed time and
+rate are unknown. Move literature/code/CPU review before startup and full report
+publication after verified export and shutdown.
+
+Reviewed relevant full-text methods/ablations from eleven primary papers.
+Breadth, adaptive K and rationale selection already have direct precedents.
+C018 checks 15,308 accepted hashes: aggressive length cuts lose many parents;
+fixed-parent lexical selection changes surface overlap at similar pair-token
+volume. Neither is a student-learning measurement.
+
+P005 proposes one terminal-LR repair at the original dose, then a minimal
+allocation comparison and conditional selection/curriculum/model/objective
+alternatives. The old longer-dose proposal is preserved as a fallback.
+No server/model call or extra allowance; 733 process seconds remain.
+[Literature](../reports/LITERATURE_NEXT_EXPERIMENT_20260910.md),
+[CPU audit](../reports/REAL_MATH_C018_SELECTION_AUDIT.md),
+[plan](experiments/P005_literature_guided_next_phase.md).
+
 ## 2026-09-10 — E014 complete: local fit gaps persist at batch1
 
 The owner restored the existing A800. CPU preflight exposed repeated vocabulary
