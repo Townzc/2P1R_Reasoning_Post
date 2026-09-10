@@ -1,5 +1,19 @@
 # 2P1R Reasoning Post-Training
 
+**C020 CPU audit complete; P006 proposed, 2026-09-10 UTC:** independent checks
+cover 160 saved streams. Thirteen of the base's 14 E016 truncations continue
+past a new-question header. The proposed stop rule yields 39/64 correct saved
+prefixes versus E015 0/64; these are post-hoc counts, **not new GPU results or
+revised E016 scores**. Sixteen focused tests pass. The next finite proposal
+validates stopping, then conditionally tests one 253-parent, two-epoch LoRA
+recipe with both learning and paired-retention screens. Training scale remains
+undecided. Keep the server off: production stopping and a training release still
+need implementation/review. Ledger unchanged: 6,921 used / 279 left, 20 receipts.
+[CPU evidence](reports/REAL_MATH_C020_COMPLETION_AUDIT.md),
+[concrete proposal](docs/experiments/P006_evaluation_and_capability_preservation.md),
+[primary-paper review](reports/LITERATURE_CAPABILITY_PRESERVATION_20260910.md),
+[current handoff](docs/NEXT_SESSION.md).
+
 **E016 completed; provider shut down, 2026-09-10 UTC:** 128 fixed development
 outputs and both record audits are complete. Base/E015 clean correctness is
 **26/64 versus 0/64**, with 26 paired losses and no gains. Base truncation14/64

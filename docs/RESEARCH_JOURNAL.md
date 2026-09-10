@@ -1,3 +1,29 @@
+## 2026-09-10 — C020 distinguishes continuation overhead from wrong answers
+
+**Evidence.** The independent CPU audit checks all 160 saved E013/E016 streams
+and all 18 minimal boundary triggers. Thirteen of 14 E016 base truncations occur
+after a new question starts; 9,431 of 19,391 generated tokens are later tails
+under the proposed stop rule. This is saved-trace accounting, not runtime gain.
+Candidate prefix correctness is 39/64 versus E015 0/64; old 26/64 versus 0/64
+clean scores and failed gates remain immutable. All 16 focused tests pass.
+
+**Decision.** Use task completion and native EOS as separate records. Prepare
+one stop-only implementation calibration, then a modest LoRA recipe motivated
+by the learning/forgetting tradeoff in primary papers. Existing metadata gives
+253 accepted single-response parents, two epochs, 506 presentations and 64
+updates; raw supervision still needs reconstruction and quality review. Require
+both learning and preservation of baseline-correct questions so neither an
+unchanged model nor offsetting new successes can hide failure. Lower-LR full
+SFT, HFT and rehearsal remain explicit alternatives with their own costs.
+
+**Limits.** The proposed recipe changes multiple factors, does not isolate a
+LoRA effect, and cannot establish general knowledge retention. Fixed observed
+dev is for calibration; the 432 unused parents stay reserved. No new model,
+server contact, GPU receipt or allowance; provider state was not rechecked.
+E015 independent weights backup remains pending. Training scale is still open.
+[C020 evidence](../reports/REAL_MATH_C020_COMPLETION_AUDIT.md),
+[P006 proposal](experiments/P006_evaluation_and_capability_preservation.md).
+
 ## 2026-09-10 — E016 reveals tuning loss while base termination still fails
 
 The prospective64-parent comparison completes with base26/64 clean correct and

@@ -1,0 +1,951 @@
+{
+  "batch_size": 8,
+  "epochs": 2,
+  "kind": "review_only_metadata_schedule_not_training_ready",
+  "last_batch_size_each_epoch": 5,
+  "limits": "Uses existing accepted metadata; raw response reconstruction, quality review and token re-verification remain mandatory. Do not interpret this as a checked training release.",
+  "microbatch_size": 1,
+  "nominal_parents": 256,
+  "nonpadding_processed_tokens": 109434,
+  "optimizer_updates": 64,
+  "proposed_lora_shape_estimate": {
+    "alpha": 32,
+    "bias": "none",
+    "dropout": 0,
+    "float32_tensor_bytes": 73859072,
+    "layers": 28,
+    "limits": "Shape arithmetic only; actual PEFT parameter names, count, dtype, optimizer scope and serialized file sizes must be verified before a training release. Metadata and optimizer state are excluded.",
+    "pinned_model_config_sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+    "rank": 16,
+    "target_module_dimensions_in_out": {
+      "down_proj": [
+        8960,
+        1536
+      ],
+      "gate_proj": [
+        1536,
+        8960
+      ],
+      "k_proj": [
+        1536,
+        256
+      ],
+      "o_proj": [
+        1536,
+        1536
+      ],
+      "q_proj": [
+        1536,
+        1536
+      ],
+      "up_proj": [
+        1536,
+        8960
+      ],
+      "v_proj": [
+        1536,
+        256
+      ]
+    },
+    "trainable_adapter_parameters": 18464768
+  },
+  "retained_parents": 253,
+  "right_padded_training_tokens_microbatch1": 109434,
+  "sample_presentations": 506,
+  "schedule_uses_full_response_counts": true,
+  "selected_rows_sha256": "5ccf3d01c046be74f0056b07f4424f39a0ba563fa87db68cefdfc3aab00677d6",
+  "supervised_tokens": 77192,
+  "unavailable_parents": 3,
+  "updates": [
+    {
+      "epoch": 1,
+      "row_indices": [
+        151,
+        25,
+        59,
+        65,
+        60,
+        109,
+        115,
+        57
+      ],
+      "supervised_tokens": 1104
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        7,
+        201,
+        139,
+        249,
+        158,
+        145,
+        204,
+        218
+      ],
+      "supervised_tokens": 1059
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        203,
+        149,
+        47,
+        172,
+        82,
+        105,
+        178,
+        221
+      ],
+      "supervised_tokens": 1300
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        97,
+        72,
+        251,
+        123,
+        247,
+        26,
+        213,
+        248
+      ],
+      "supervised_tokens": 955
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        167,
+        18,
+        165,
+        41,
+        212,
+        239,
+        34,
+        8
+      ],
+      "supervised_tokens": 1018
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        232,
+        155,
+        127,
+        55,
+        246,
+        252,
+        45,
+        193
+      ],
+      "supervised_tokens": 1112
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        152,
+        0,
+        96,
+        67,
+        170,
+        135,
+        222,
+        83
+      ],
+      "supervised_tokens": 1411
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        22,
+        76,
+        125,
+        161,
+        48,
+        108,
+        23,
+        91
+      ],
+      "supervised_tokens": 1166
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        131,
+        21,
+        42,
+        144,
+        173,
+        80,
+        3,
+        190
+      ],
+      "supervised_tokens": 1223
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        194,
+        112,
+        101,
+        224,
+        195,
+        58,
+        130,
+        56
+      ],
+      "supervised_tokens": 1450
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        209,
+        52,
+        166,
+        94,
+        87,
+        228,
+        75,
+        62
+      ],
+      "supervised_tokens": 1418
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        111,
+        37,
+        187,
+        73,
+        160,
+        118,
+        238,
+        30
+      ],
+      "supervised_tokens": 1718
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        156,
+        99,
+        10,
+        210,
+        9,
+        176,
+        51,
+        250
+      ],
+      "supervised_tokens": 946
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        32,
+        117,
+        237,
+        88,
+        11,
+        207,
+        198,
+        120
+      ],
+      "supervised_tokens": 1180
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        114,
+        126,
+        40,
+        113,
+        132,
+        39,
+        168,
+        231
+      ],
+      "supervised_tokens": 1136
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        236,
+        27,
+        116,
+        240,
+        189,
+        137,
+        181,
+        159
+      ],
+      "supervised_tokens": 1116
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        140,
+        46,
+        100,
+        162,
+        177,
+        217,
+        171,
+        5
+      ],
+      "supervised_tokens": 1533
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        124,
+        19,
+        66,
+        200,
+        214,
+        184,
+        244,
+        150
+      ],
+      "supervised_tokens": 1237
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        119,
+        188,
+        157,
+        182,
+        2,
+        164,
+        69,
+        179
+      ],
+      "supervised_tokens": 1497
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        147,
+        24,
+        85,
+        43,
+        226,
+        89,
+        78,
+        230
+      ],
+      "supervised_tokens": 1225
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        33,
+        219,
+        211,
+        192,
+        154,
+        49,
+        70,
+        16
+      ],
+      "supervised_tokens": 1164
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        68,
+        14,
+        92,
+        134,
+        235,
+        54,
+        142,
+        29
+      ],
+      "supervised_tokens": 1160
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        61,
+        103,
+        1,
+        148,
+        186,
+        122,
+        12,
+        90
+      ],
+      "supervised_tokens": 1466
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        13,
+        146,
+        95,
+        110,
+        4,
+        86,
+        197,
+        199
+      ],
+      "supervised_tokens": 1243
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        174,
+        36,
+        153,
+        215,
+        121,
+        129,
+        20,
+        104
+      ],
+      "supervised_tokens": 1083
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        79,
+        17,
+        225,
+        183,
+        31,
+        241,
+        84,
+        53
+      ],
+      "supervised_tokens": 1082
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        223,
+        227,
+        143,
+        136,
+        242,
+        38,
+        50,
+        202
+      ],
+      "supervised_tokens": 1161
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        233,
+        229,
+        15,
+        141,
+        35,
+        102,
+        185,
+        175
+      ],
+      "supervised_tokens": 1207
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        216,
+        163,
+        81,
+        205,
+        128,
+        220,
+        64,
+        107
+      ],
+      "supervised_tokens": 1082
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        191,
+        208,
+        98,
+        63,
+        6,
+        234,
+        28,
+        71
+      ],
+      "supervised_tokens": 1105
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        169,
+        138,
+        243,
+        180,
+        196,
+        44,
+        74,
+        93
+      ],
+      "supervised_tokens": 1068
+    },
+    {
+      "epoch": 1,
+      "row_indices": [
+        245,
+        77,
+        206,
+        106,
+        133
+      ],
+      "supervised_tokens": 971
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        235,
+        62,
+        232,
+        121,
+        15,
+        251,
+        4,
+        200
+      ],
+      "supervised_tokens": 1273
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        178,
+        149,
+        3,
+        249,
+        113,
+        228,
+        35,
+        49
+      ],
+      "supervised_tokens": 1249
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        229,
+        213,
+        82,
+        209,
+        158,
+        234,
+        14,
+        40
+      ],
+      "supervised_tokens": 1131
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        231,
+        144,
+        21,
+        217,
+        224,
+        96,
+        24,
+        6
+      ],
+      "supervised_tokens": 1029
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        39,
+        190,
+        180,
+        152,
+        57,
+        119,
+        68,
+        5
+      ],
+      "supervised_tokens": 1245
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        198,
+        202,
+        107,
+        132,
+        123,
+        239,
+        97,
+        127
+      ],
+      "supervised_tokens": 1333
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        124,
+        74,
+        250,
+        148,
+        99,
+        91,
+        26,
+        225
+      ],
+      "supervised_tokens": 1042
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        168,
+        10,
+        196,
+        142,
+        59,
+        17,
+        79,
+        81
+      ],
+      "supervised_tokens": 1072
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        42,
+        171,
+        8,
+        130,
+        13,
+        84,
+        16,
+        187
+      ],
+      "supervised_tokens": 1398
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        238,
+        9,
+        216,
+        27,
+        166,
+        206,
+        204,
+        155
+      ],
+      "supervised_tokens": 1381
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        45,
+        11,
+        7,
+        191,
+        156,
+        80,
+        47,
+        226
+      ],
+      "supervised_tokens": 1250
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        143,
+        28,
+        19,
+        53,
+        220,
+        108,
+        116,
+        247
+      ],
+      "supervised_tokens": 1060
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        167,
+        95,
+        112,
+        208,
+        218,
+        215,
+        118,
+        184
+      ],
+      "supervised_tokens": 1274
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        12,
+        70,
+        58,
+        105,
+        109,
+        71,
+        65,
+        0
+      ],
+      "supervised_tokens": 1430
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        179,
+        233,
+        140,
+        94,
+        78,
+        154,
+        138,
+        18
+      ],
+      "supervised_tokens": 1523
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        54,
+        73,
+        115,
+        2,
+        110,
+        135,
+        89,
+        174
+      ],
+      "supervised_tokens": 1402
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        32,
+        189,
+        163,
+        248,
+        36,
+        92,
+        101,
+        192
+      ],
+      "supervised_tokens": 1054
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        212,
+        106,
+        98,
+        241,
+        199,
+        102,
+        157,
+        245
+      ],
+      "supervised_tokens": 1315
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        34,
+        205,
+        194,
+        164,
+        100,
+        176,
+        90,
+        162
+      ],
+      "supervised_tokens": 1114
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        23,
+        63,
+        20,
+        159,
+        38,
+        170,
+        182,
+        244
+      ],
+      "supervised_tokens": 1239
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        22,
+        120,
+        139,
+        86,
+        136,
+        66,
+        150,
+        214
+      ],
+      "supervised_tokens": 1206
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        25,
+        237,
+        185,
+        131,
+        104,
+        33,
+        111,
+        165
+      ],
+      "supervised_tokens": 1238
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        52,
+        48,
+        41,
+        161,
+        175,
+        210,
+        37,
+        128
+      ],
+      "supervised_tokens": 1035
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        145,
+        240,
+        72,
+        29,
+        141,
+        77,
+        181,
+        153
+      ],
+      "supervised_tokens": 930
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        211,
+        69,
+        134,
+        146,
+        151,
+        88,
+        137,
+        203
+      ],
+      "supervised_tokens": 1431
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        186,
+        197,
+        56,
+        103,
+        87,
+        1,
+        236,
+        76
+      ],
+      "supervised_tokens": 1317
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        183,
+        55,
+        242,
+        193,
+        173,
+        223,
+        219,
+        129
+      ],
+      "supervised_tokens": 1054
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        147,
+        93,
+        188,
+        51,
+        222,
+        43,
+        60,
+        207
+      ],
+      "supervised_tokens": 1105
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        221,
+        44,
+        201,
+        195,
+        172,
+        133,
+        83,
+        30
+      ],
+      "supervised_tokens": 1396
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        177,
+        230,
+        64,
+        246,
+        67,
+        227,
+        117,
+        75
+      ],
+      "supervised_tokens": 1231
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        122,
+        252,
+        126,
+        160,
+        125,
+        243,
+        50,
+        61
+      ],
+      "supervised_tokens": 1037
+    },
+    {
+      "epoch": 2,
+      "row_indices": [
+        85,
+        114,
+        169,
+        31,
+        46
+      ],
+      "supervised_tokens": 802
+    }
+  ]
+}

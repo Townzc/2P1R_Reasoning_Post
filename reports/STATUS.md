@@ -1,4 +1,30 @@
-# Current status — E016 complete; both screens fail; provider off
+# Current status — C020 verified; P006 review proposal; no startup needed
+
+The local CPU audit verifies all 160 saved E013/E016 streams. Of the 14 E016
+base truncations, 13 occur after a new-question header; the candidate saved
+prefixes count 39/64 correct versus E015 0/64. Historical scores and both failed
+E016 screens are unchanged. These are post-hoc trace calculations, not a new
+GPU result or speed measurement. The independent verifier checks all 18 minimal
+boundary triggers and the 506-presentation dose; all 16 focused tests pass.
+
+P006 fixes a staged evaluation and learning-retention proposal: first implement
+and validate stop-only generation on the same observed 64 parents, then one
+conditional LoRA calibration on 253 parents/two epochs/64 updates. Require
+learning and preservation of at least 90% of the base's correct questions;
+newly correct questions cannot hide lost ones. One untouched 64-parent dev
+confirmation is conditional on a frozen passing recipe. The scientific scale
+and training release remain undecided; no automatic grid or GPU job is ready.
+
+All work used local CPU/tokenizer and primary-source literature. No server,
+model, fresh dev/test evaluation, process reservation or allowance change.
+Current ledger: 20 full receipts, 6,921/7,200 used, 279 left, no reservations.
+Last verified provider state is off; no server recheck was made. E015 independent
+full weights backup is still incomplete; preserve that instance for separate
+bounded no-card recovery. Read [C020 evidence](REAL_MATH_C020_COMPLETION_AUDIT.md),
+[P006](../docs/experiments/P006_evaluation_and_capability_preservation.md) and
+[handoff](../docs/NEXT_SESSION.md).
+
+# Historical E016 closeout — both screens fail; provider off
 
 The frozen base/E015 diagnostic completed all128 generations. Clean correct is
 26/64 versus0/64; marked numeric correct39/64 versus0/64; parsed49/64 versus62/64.

@@ -1,3 +1,24 @@
+# C020 / P006 artifacts — 2026-09-10 UTC
+
+- [C020 findings](REAL_MATH_C020_COMPLETION_AUDIT.md) and immutable
+  `real_math_c020_completion_r1/`: 160 saved-stream records, aggregate counts,
+  exact proposed metadata dose, independent verifier receipt and 16-test log.
+- CPU oracle/audit/verifier: `analyses/completion_contract.py`,
+  `analyses/c020_completion_audit.py`, `analyses/verify_c020_completion.py`
+  and `tests/test_completion_contract.py`, from repository root. Source
+  `cf6525b` preceded formal C020 result generation.
+- [P006](../docs/experiments/P006_evaluation_and_capability_preservation.md) and
+  [exact configuration](../configs/diagnostics/real_math_p006_proposal.json):
+  review-only stage gates, 64 LR values, two fixed 32-ID samples and rental caps.
+  No production stopper, training release, adapter or new process receipt.
+- [Primary evidence review](LITERATURE_CAPABILITY_PRESERVATION_20260910.md):
+  ICLR/ACL/TMLR methods, scales, limits and official harness provenance.
+
+The current ledger remains 20 receipts, 6,921 used / 279 left, zero reservations.
+No server contact or provider recheck occurred. E015 unique weights still require
+separate independent recovery; retain the stopped instance. All earlier model
+outputs, gate decisions and accounting bytes are unchanged.
+
 # E016 closeout — 2026-09-10 UTC
 
 - Completed immutable128-stream run: `runs/gsm8k_capability_e016_r1/` (repository root), including13 compact files; no checkpoint.

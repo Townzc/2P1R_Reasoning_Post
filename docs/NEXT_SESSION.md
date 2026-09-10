@@ -1,4 +1,68 @@
-# Next session — E016 complete; server off; offline redesign and weights recovery
+# Next session — C020 complete; implement reviewed P006 locally before startup
+
+**Keep the server off. No GPU startup is needed yet.** Read
+[C020 results](../reports/REAL_MATH_C020_COMPLETION_AUDIT.md),
+[P006](experiments/P006_evaluation_and_capability_preservation.md),
+[exact proposal configuration](../configs/diagnostics/real_math_p006_proposal.json)
+and [primary-paper review](../reports/LITERATURE_CAPABILITY_PRESERVATION_20260910.md).
+
+C020 source `cf6525b40f36fd714bebbada254af3235fba85c1` preceded its immutable
+CPU outputs. All 160 raw streams, 18 minimal boundary triggers and 506 proposed
+training presentations independently verify; 16 focused tests pass. E016 base
+candidate saved-prefix correctness is 39/64 versus E015 0/64, with 13/14 base
+truncations occurring after another question starts. This is post-hoc; original
+E016 clean counts 26/64 versus 0/64 and both failed gates remain frozen.
+
+Next concrete work, before any startup notification:
+
+1. Implement the reviewed E017 stop-only contract outside frozen `src/` and
+   `scripts/` sources. Preserve generated trigger tokens, actual EOS and explicit
+   stop reasons; never stop on answer correctness. Prove prompt exclusion,
+   mixed-batch handling, split delimiters and raw-output/oracle agreement.
+   Freeze and publish the 64 observed-parent input/runtime release, then verify
+   a clean checkout. The current CPU oracle is not a GPU runner.
+2. Only once the stop contract is measured and passes, release the proposed
+   E018 training calibration for review: 253 existing single-response parents,
+   two epochs, 64 updates, one fresh rank-16 LoRA adapter. Reconstruct all raw
+   responses/masks/EOS, inspect the fixed 32-row quality sample, pin PEFT and
+   verify trainable scope, unchanged base, zero-adapter identity and reload.
+   No larger memorization dose, learning-rate grid or automatic alternative.
+3. Preserve learning and paired-retention gates. At least 90% of base-correct
+   questions must remain correct, alongside a training-NLL reduction. New
+   successes cannot cancel the gross-loss gate. Report descriptive paired
+   intervals and all failures. Hold out the 432 unused dev parents; proposed
+   ranks 81–144 are for one later fixed-recipe confirmation, not tuning.
+4. Before each paid window, publish the complete bounded run, transfer plan and
+   additive allowance if needed. E017 proposes 255 process seconds and a
+   15-minute whole-rental ceiling/CNY2. E018 proposes 915 process seconds and
+   30 minutes/CNY4; later confirmation proposes 435 and 20 minutes/CNY2.67.
+   These optional windows are review proposals, not executed allowances,
+   measured runtimes or an automatic queue. Confirm provider shutdown after
+   compact export; a stopped Python process does not end rental billing.
+
+The private current ledger remains **20 full receipts, 6,921 used / 279 left,
+zero reservations**, SHA256
+`c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106`.
+The prior 19-receipt copy is history only. Stage A fits the existing allowance;
+B+C need a separately recorded allowance of at most 1,350 process seconds.
+Preserve the old 7,200-second configuration and every receipt; do not edit frozen
+budget dependencies or reset the history. CNY3,000 is the overall spending
+ceiling, not a target; historical invoices remain unreconciled.
+
+E015's complete 12-file/6.19GB checkpoint remains uniquely on the retained,
+last-confirmed stopped volume. Its independent backup is incomplete. Do not
+release/delete that instance; follow the separate
+[bounded no-card recovery plan](E015_RECOVERY_PLAN.md) before its verified
+retention deadline. No server contact/recheck or recovery happened in C020.
+All current results/plans are local and published; synchronize the final
+published source before any later authorized server use.
+
+Do not change historical raw outputs, scorers, release inputs or frozen runtime
+sources. C020's three result artifacts are immutable; use fresh output paths
+when reproducing. GPU stopping, training quality and general knowledge/language
+retention remain unverified; no scientific training scale has been selected.
+
+# Historical E016 closeout — retained evidence and weights-recovery obligation
 
 Read [E016 results](../reports/REAL_MATH_E016_RESULTS.md). The single authorized
 run completed from84e9ea35fc54a0d94e70d4efca74b5f15783091b. All128 generation

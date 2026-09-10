@@ -1,3 +1,22 @@
+# 2026-09-10 — C020 verified results and P006 finite proposal
+
+After publishing CPU source `cf6525b`, Codex generated immutable post-hoc
+C020 outputs and independently checked all 160 raw streams, 18 minimal stop
+triggers, 506 metadata presentations and adapter-size arithmetic. Sixteen
+focused tests pass. Historical scores/gates, all prior model outputs and
+frozen runtime sources remain unchanged. The CPU reference is not a production
+GPU stopper, and metadata does not certify full reasoning or a training release.
+
+Codex reviewed four primary ICLR/ACL/TMLR papers and the official harness task,
+then wrote a review-only staged proposal and exact configuration: stop-only
+calibration, one conditional LoRA recipe, paired original-success retention
+plus a learning signal, one later untouched-dev confirmation, finite rental
+caps and conditional alternatives. The fixed quality/decode sample identities
+were selected from already published metadata without opening new responses.
+No server, model, unused-dev/test evaluation, process reservation, additional
+allowance, delegation or external message occurred. Ledger and registry stay
+unchanged; E015 independent weights recovery remains incomplete.
+
 # 2026-09-10 — C020 completion-contract preparation
 
 The owner requested improved evaluation and capability-preservation plans.

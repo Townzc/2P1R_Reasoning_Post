@@ -1,3 +1,32 @@
+## D030 — 2026-09-10: separate completion validity from retained learning
+
+C020 independently verifies 160 saved outputs: 13/14 base truncations continue
+past another question, while the same proposed stopping rule leaves E015 at
+zero correct. Preserve the 39/64 candidate prefix count as post-hoc; do not
+rewrite E016's 26/64 clean score or failed screens. Token-tail counts do not
+establish GPU speed. The proposed stopper is gold-blind, keeps trigger tokens
+and never fabricates native EOS. Runtime batched stopping is still unimplemented.
+
+After primary ICLR/ACL/TMLR methods review, make P006 concrete: first stop-only
+calibration on observed dev, then one 253-parent/two-epoch LoRA candidate with
+both reference-learning and paired-retention screens. Require survival of 90%
+of originally correct questions, not only total accuracy. Freeze 64 positive-LR
+updates and explicit sample identities; check raw supervision and actual adapter
+scope before training. Changing breadth, repetition and adaptation together is
+a recipe feasibility check, not an isolated LoRA effect. One later untouched
+dev confirmation follows only a frozen passing recipe; scale remains undecided.
+
+Low-LR full SFT, explicit HFT tensor masks and bounded rehearsal remain distinct
+conditional routes, with one reviewed choice after a failure rather than an
+automatic sweep. Broader knowledge/language retention is not measured by GSM8K.
+No GPU startup, new process receipt, additional allowance or scientific grid
+was requested or executed in this phase. Ledger remains 20 receipts/6,921 used/
+279 left; the last verified provider state is off. Keep unique E015 weights on
+the retained volume pending independent recovery. See
+[P006](experiments/P006_evaluation_and_capability_preservation.md),
+[C020](../reports/REAL_MATH_C020_COMPLETION_AUDIT.md) and
+[evidence review](../reports/LITERATURE_CAPABILITY_PRESERVATION_20260910.md).
+
 ## D029 — 2026-09-10: retain both E016 failures and stop before scaling
 
 Executed only the published64-parent/two-endpoint diagnostic on owner startup.

@@ -1,3 +1,23 @@
+## C020 completion evidence and P006 proposal — 2026-09-10 UTC
+
+The owner's request authorizes local evaluation/capability-preservation work.
+C020 verifies 160 saved streams and proposes a gold-blind first-question stop
+contract. Its 39/64 base saved-prefix count is post-hoc and does not replace
+E016's 26/64 clean-correct score or either failed gate. The numeric extractor,
+old raw outputs and execution sources remain unchanged. No model/server call,
+new allowance, unused-dev evaluation or scientific grid occurred.
+
+[P006](experiments/P006_evaluation_and_capability_preservation.md) is a concrete
+review proposal: stop-only implementation calibration, then conditional modest
+LoRA training with a learning gate and paired survival of base-correct answers,
+then one untouched development confirmation. The CPU oracle and metadata dose
+are ready; production stopping and a training release are not. All future
+scientific arms must share one reviewed adaptation/evaluation recipe and start
+fresh from the same base. Keep the 432 reserved dev parents untouched until a
+separate input release. No new method is silently substituted into old arms.
+Keep the server off during preparation and retain the 20-entry historical
+ledger (6,921 used / 279 left). See [C020](../reports/REAL_MATH_C020_COMPLETION_AUDIT.md).
+
 ## E016 observed outcome — 2026-09-10 UTC
 
 The owner-started inference-only run completed all128 generations. Base/E015

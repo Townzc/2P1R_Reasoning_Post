@@ -1,0 +1,132 @@
+{
+  "endpoints": {
+    "e013_base16": {
+      "candidate_stop_reasons": {
+        "length_cap": 1,
+        "native_eos": 13,
+        "new_problem_boundary": 2
+      },
+      "n": 16,
+      "original_batch_maximum_lengths_sum": 1536,
+      "original_generated_tokens": 4547,
+      "original_marked": {
+        "answer_correct": 12,
+        "clean_correct": 10,
+        "correct_with_eos": 11,
+        "ended_with_eos": 14,
+        "n": 16,
+        "new_problem_continuations": 2,
+        "parse_status": {
+          "missing_marked_answer": 2,
+          "parsed": 14
+        },
+        "truncated": 2
+      },
+      "original_truncated_with_prior_boundary": 1,
+      "prefix_batch_maximum_lengths_sum": 985,
+      "retained_prefix_tokens_including_stop_trigger": 3308,
+      "saved_prefix_task_answer_correct": 12
+    },
+    "e013_tuned16": {
+      "candidate_stop_reasons": {
+        "length_cap": 5,
+        "native_eos": 11
+      },
+      "n": 16,
+      "original_batch_maximum_lengths_sum": 1536,
+      "original_generated_tokens": 5743,
+      "original_marked": {
+        "answer_correct": 0,
+        "clean_correct": 0,
+        "correct_with_eos": 0,
+        "ended_with_eos": 11,
+        "n": 16,
+        "new_problem_continuations": 0,
+        "parse_status": {
+          "missing_marked_answer": 5,
+          "parsed": 11
+        },
+        "truncated": 5
+      },
+      "original_truncated_with_prior_boundary": 0,
+      "prefix_batch_maximum_lengths_sum": 1536,
+      "retained_prefix_tokens_including_stop_trigger": 5743,
+      "saved_prefix_task_answer_correct": 0
+    },
+    "e016_base64": {
+      "candidate_stop_reasons": {
+        "length_cap": 1,
+        "native_eos": 47,
+        "new_problem_boundary": 16
+      },
+      "n": 64,
+      "original_batch_maximum_lengths_sum": 5313,
+      "original_generated_tokens": 19391,
+      "original_marked": {
+        "answer_correct": 39,
+        "clean_correct": 26,
+        "correct_with_eos": 29,
+        "ended_with_eos": 50,
+        "n": 64,
+        "new_problem_continuations": 16,
+        "parse_status": {
+          "missing_marked_answer": 14,
+          "parsed": 49,
+          "unresolved_marked_answer": 1
+        },
+        "truncated": 14
+      },
+      "original_truncated_with_prior_boundary": 13,
+      "prefix_batch_maximum_lengths_sum": 2601,
+      "retained_prefix_tokens_including_stop_trigger": 9960,
+      "saved_prefix_task_answer_correct": 39
+    },
+    "e016_e01564": {
+      "candidate_stop_reasons": {
+        "length_cap": 2,
+        "native_eos": 62
+      },
+      "n": 64,
+      "original_batch_maximum_lengths_sum": 2942,
+      "original_generated_tokens": 10086,
+      "original_marked": {
+        "answer_correct": 0,
+        "clean_correct": 0,
+        "correct_with_eos": 0,
+        "ended_with_eos": 62,
+        "n": 64,
+        "new_problem_continuations": 0,
+        "parse_status": {
+          "missing_marked_answer": 2,
+          "parsed": 62
+        },
+        "truncated": 2
+      },
+      "original_truncated_with_prior_boundary": 0,
+      "prefix_batch_maximum_lengths_sum": 2942,
+      "retained_prefix_tokens_including_stop_trigger": 10086,
+      "saved_prefix_task_answer_correct": 0
+    }
+  },
+  "execution_source_commit": "cf6525b40f36fd714bebbada254af3235fba85c1",
+  "historical_scores_modified": false,
+  "implementation_hashes": {
+    "analyses/c020_completion_audit.py": "f3fbfe6e60680b439352c5fe70894397393f3e35fe494fa31a50b1f9ff1a1011",
+    "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+    "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325"
+  },
+  "input_hashes": {
+    "runs/gsm8k_capability_e016_r1/base.jsonl": "1f0f5d37332dfbbec881d212e942dbe0bb69e0d00ecdc51b302bf15d638226b1",
+    "runs/gsm8k_capability_e016_r1/e015.jsonl": "c2d7f2eb5a58e66177fd980c06dff9365df0ef178098feadf47be71b96ec13cc",
+    "runs/gsm8k_overfit_e013_r1/base_dev.jsonl": "ce9b9a106411c88b7a237948225e924b8fad9ea8107036d7f1bfad3b50dc2c6f",
+    "runs/gsm8k_overfit_e013_r1/final_dev.jsonl": "10801c5344d43433e852e5b1876de29b899054e0fa94051a370aff422682bd06"
+  },
+  "limits": "Candidate prefix counts are not new GPU results, verified reasoning, benchmark scores, or unbiased confirmation. Batch shape/numerics can change under runtime stopping; token-tail savings do not establish wall-clock speedup.",
+  "new_model_calls": 0,
+  "official_test_evaluation": false,
+  "phase": "C020",
+  "raw_token_streams_reverified": 160,
+  "server_contacted": false,
+  "status": "post_hoc_saved_stream_diagnostic_only",
+  "unused_development_parents_opened": 0
+}
