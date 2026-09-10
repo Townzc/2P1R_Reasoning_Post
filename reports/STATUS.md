@@ -5,10 +5,15 @@
 Execution source `1fc27d4` preceded the immutable release at `27a0943`.
 Default inspection and the focused suite pass from a clean published checkout:
 76 passed, zero failed, 2 GNU-timeout integrations pending Linux. Both private
-ledger copies stayed byte-identical. No E012 model run, server contact or
-reservation has occurred. Read [the ready report](RELATION_E012_READY.md),
+ledger copies stayed byte-identical. No E012 model run or reservation has occurred; CPU release checks
+did not contact a server. Read [the ready report](RELATION_E012_READY.md),
 [verification](relation_e012_fresh_checkout_verification.json) and
 [registration](../docs/experiments/E012_relation_diagnostic_ladder.md).
+
+After CPU release publication, one read-only SSH availability probe at
+02:11 UTC returned connection refused. This does not confirm current power
+state. Owner startup or updated connection information is pending; no model
+job was launched. [Availability receipt](relation_e012_server_availability.json).
 
 All 16 public receipts and both refreshed aggregate summaries now agree:
 **5971 / 7200 seconds used, 1229 remaining, zero reservations**. The registry

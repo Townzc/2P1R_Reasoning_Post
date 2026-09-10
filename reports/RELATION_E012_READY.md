@@ -91,6 +91,12 @@ billable. No new allowance, paid API, extra machine or storage expansion is
 included. The last provider-confirmed server state was stopped after E011;
 availability has not been rechecked in this CPU phase.
 
+After readiness publication, one read-only SSH probe at 02:11 UTC returned
+connection refused. This confirms only that the previous SSH endpoint is
+unavailable, not the instance's power state. Owner startup or updated connection
+information is pending; no model job or reservation was created. See
+[availability receipt](relation_e012_server_availability.json).
+
 On the supplied server, synchronize the independently verified current GitHub
 commit, restore the current ledger, check the pinned original model/environment,
 one idle A800 80GB and at least 12 GiB free after setup, and pass the two Linux

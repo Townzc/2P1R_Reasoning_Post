@@ -500,3 +500,8 @@ launch prerequisites and stage-by-stage preservation duties are recorded in
 the ready report, journal, decisions, status, artifact inventory and handoff.
 Codex recommended Max for implementation/execution/audit; the owner reported
 selecting Max. No settings change or new model result is claimed.
+
+After publishing readiness, Codex made one read-only SSH availability probe to
+the previously supplied endpoint. It returned connection refused at 02:11 UTC;
+no remote command/model job ran and no instance was started. The owner was
+asked for available A800 access; endpoint/credential details remain private.

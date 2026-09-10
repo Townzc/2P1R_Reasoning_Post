@@ -473,3 +473,8 @@ require a separately reviewed scientific design before scaling.
 See [ready report](../reports/RELATION_E012_READY.md),
 [clean-checkout evidence](../reports/relation_e012_fresh_checkout_verification.json)
 and [frozen registration](experiments/E012_relation_diagnostic_ladder.md).
+
+Readiness follow-up: after publishing the CPU results, a single read-only SSH
+probe at 02:11 UTC returned connection refused. No authenticated remote action,
+model job, startup or new reservation occurred. The owner was asked to provide
+an available A800 or updated connection information. Power state is unconfirmed.

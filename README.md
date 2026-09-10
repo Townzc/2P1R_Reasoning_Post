@@ -11,8 +11,10 @@ are published; clean-checkout inspection and 76 focused CPU checks pass. Two
 GNU-timeout integrations remain mandatory on Linux before the first model run.
 The next requirement is an owner-started A800 for single-step lookup, followed
 conditionally by given-route propagation and fixed-reference full questions.
-No E012 model run, server contact or GPU reservation has occurred. All 16 public
-receipts now agree with the unchanged private ledger: 5971 used / 1229 left.
+No E012 model run or GPU reservation has occurred. One subsequent SSH probe
+returned connection refused; owner-started availability or updated access is
+pending. All 16 public receipts agree with the unchanged private ledger:
+5971 used / 1229 left.
 [Ready report and rationale](reports/RELATION_E012_READY.md),
 [execution registration](docs/experiments/E012_relation_diagnostic_ladder.md),
 [current handoff](docs/NEXT_SESSION.md).

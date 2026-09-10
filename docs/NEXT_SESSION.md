@@ -15,6 +15,11 @@ checks pass, with 2 mandatory GNU-timeout integrations awaiting Linux. See
 [verification receipt](../reports/relation_e012_fresh_checkout_verification.json).
 No E012 model execution, server connection or reservation has occurred.
 
+After release publication, the prior SSH endpoint returned connection refused
+on one read-only probe at 02:11 UTC. Current power state is unconfirmed. The
+owner has been asked for startup/updated connection information; no model run
+or new reservation occurred. [Receipt](../reports/relation_e012_server_availability.json).
+
 Initial private ledger SHA256:
 `664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`;
 **5971 / 7200 used, 1229 remaining, 16 receipts, zero reservations**. Both public
