@@ -6,6 +6,16 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**E012 execution implementation, 2026-09-09 UTC:** the owner requested the
+finite diagnostic ladder after C016. The default-inspect launcher, bounded
+model worker, raw-token/field-statistics auditor and ordered budget/backup
+gates are implemented.76 focused CPU tests pass;2 GNU-timeout integrations
+remain mandatory on Linux before model execution. Source publication and the
+immutable execution release precede requesting an A800. No model run or GPU
+reservation has occurred.
+[Execution registration](docs/experiments/E012_relation_diagnostic_ladder.md),
+[current handoff](docs/NEXT_SESSION.md).
+
 **C016 CPU diagnostics complete, 2026-09-09 UTC:** all288 derived rows from the
 original48 parents are frozen; independent reconstruction and all53 focused
 tests pass in a clean published checkout. One-edge lookup, supplied-route

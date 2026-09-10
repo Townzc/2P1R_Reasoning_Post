@@ -1,5 +1,15 @@
 # Evidence roadmap toward an ICLR-quality study
 
+**2026-09-09 E011/C016/E012 update:** the relation engineering run completed
+256 updates but failed0/32 complete train proofs despite low mean NLL; all333
+parseable after-states were2. C016's288 CPU-verified rows support a diagnostic
+ladder, not a scientific effect. The owner requested E012: short lookup, given
+route, then fixed-reference full tasks, with strict stopping and separate field
+measurements. Keep novelty/independent-generalization claims deferred until
+engineering succeeds and a reviewed scientific design exists. Current5971
+seconds used/1229 remaining; no E012 GPU result yet.
+[Diagnostic rationale](experiments/E012_relation_diagnostic_ladder.md).
+
 **2026-09-09 E010 update:** the identity-absent boundary pair is complete:
 matched greedy7/64 versus5/64, complete traces4/64 each, broader expressions
 and traces0/64 versus2/64. Read the [result analysis](../reports/ABSENT_BOUNDARY_SEED31_RESULTS.md)

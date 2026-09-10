@@ -396,3 +396,37 @@ contact, checkpoint mutation or ledger change occurred;5971 used/1229 left.
 **Records.** `reports/RELATION_C016_CPU_READY.md`, exact examples, immutable
 `runs/relation_diagnostics_c016_r1`, release hashes, source and fresh-checkout
 verification/test logs, and resource closeout are all published.
+
+
+## 2026-09-09 — E012 implementation and source milestone
+
+**Why.** E011's0/32 complete proofs and constant2 after-states make another
+scientific comparison premature. C016 supplies frozen diagnostic questions
+with documented confounds. The owner now requests the finite next experiment.
+Max is appropriate for this implementation/verification stage; no delegation
+or additional compute allowance was inferred.
+
+**Design implemented.** One explicit bounded stage at a time, fresh pinned
+base, unchanged loss/optimizer and C016 schedules. Save every generated token,
+actual update index, target-position CE/top-one ID and partial failure history.
+Enforce prior full-proof gates, current receipt prefix, complete remaining caps,
+published compact outputs and independent checkpoint backup before continuation.
+Default inspection has no model/server side effect.
+
+**Checks and refinement.** The first18 new tests passed. Additional tests cover
+published-commit binding, backup/publication gates and mutable registry/accounting
+repair; the focused suite now has76 passes and2 GNU-timeout tests reserved for
+Linux. Pinned Qwen output vocabulary151936 exceeds tokenizer entries; unknown
+output IDs are kept and fail strict proof checks, while token CE consistency
+uses the real model vocabulary. This is a stream-validation boundary, not a
+change to old scores. No pretrained model was called.
+
+**Record maintenance.** Registry/accounting summaries were stale at5740 even
+though the16 verified receipts total5971. Implemented a tested registry that
+recognizes source_commit and failed engineering gates, plus a public-receipt
+accounting reconciler that preserves the old prefix and never mutates the live
+ledger. Publish the code before applying it to current aggregate snapshots.
+
+**Next.** Freeze the runtime release, independently inspect it from a clean
+checkout, then request owner-started A800. No new model result, GPU charge,
+server contact, storage expansion or checkpoint cleanup at this milestone.

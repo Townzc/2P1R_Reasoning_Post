@@ -1,56 +1,51 @@
-# Next session — C016 data ready; prepare the bounded execution release on CPU
+# Next session — E012 execution release, then owner-started A800
 
-## Current: do not ask for server startup yet
+## Current: source publication and CPU release verification first
 
-Read [C016 findings and interpretation](../reports/RELATION_C016_CPU_READY.md),
-[frozen registration](experiments/C016_relation_diagnostics.md),
-[CPU release identities](../configs/diagnostics/relation_c016_release.json) and
-[exact examples](../reports/RELATION_C016_EXAMPLES.md). All288 retained rows,
-state masks and exact exposure schedules are frozen. Independent audit from
-a clean published checkout agrees;53 focused tests pass without skips.
+Read [E012 registration](experiments/E012_relation_diagnostic_ladder.md) and
+[C016 findings](../reports/RELATION_C016_CPU_READY.md). The owner requested the
+next experiment after reviewing the finite ladder; no further budget approval
+is needed for its conditional stages inside the existing allowance. This is
+engineering diagnosis, not a scientific pair/main grid.
 
-The owner approved CPU preparation only in this round. No GPU task is queued.
-The next concrete CPU implementation is a diagnostic runner plus raw-token
-auditor using these frozen inputs and score functions. Default to inspection;
-require explicit execution after owner review and an owner-started instance.
-Do not point the E011 launcher at these new tasks or reuse its completed ID.
+Implementation is complete with76 passing CPU checks and2 mandatory GNU-timeout
+integration tests awaiting Linux. Publish source before creating the immutable
+`configs/relation_diagnostics_e012/release.json`. Publish that release, verify
+default inspection from a clean checkout and independently reconcile the
+current16-receipt ledger before asking the owner to start/provide an A800.
+No server connection, model execution or reservation has occurred this phase.
 
-Preserve the proposed order: single_step, given_route, fixed_reference. Each
-starts from the original pinned1.5B base, never E011/preceding tuned weights.
-Prepare one360-second process cap plus15-second guard per arm, no retry,
-and stop after any failed/incomplete training gate. Up to1125 total reservation
-seconds fit in the1229 remaining; do not create a new allowance. Future launch
-guards must compare the current receipt chain under lock, not reuse an initial
-ledger hash after a completed diagnostic changes it.
+Initial ledger SHA256:
+`664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`;
+5971/7200 used,1229 remaining,zero reservations. A clone must restore this
+current verified ledger, not an older allowance. Three conditional375-second
+reservations total1125. One stage at a time: single_step, given_route,
+fixed_reference. No retry, shortened run, warm start or continuation past a
+failed proof/NLL/profile gate. Before later stages require published compact
+outputs and independently verified checkpoint backup.
 
-Current ledger:5971/7200 used,16 receipts,zero reservations,SHA256
-`664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`.
-The independent local backup remains authoritative; cloned disks are not a
-budget reset. E011 checkpoint has12 verified files/6190803414 bytes backed up.
-C016 made no server connection or checkpoint change; the last authenticated
-provider state is stopped in the retained E011 shutdown receipt.
+When ready, request owner startup/connection information. On the supplied
+instance verify the latest GitHub commit independently on the local host, then
+fetch or synchronize that commit by a verified bundle. Default inspection
+contacts no GPU. Actual launch requires `--execute` plus
+`--expected-published-commit <the independently verified current SHA>`.
+Verify pinned original base/environment, one idle A80080GB and12GiB free after
+setup. Run the mandatory Linux watchdog tests before model execution.
 
-C016 manifestSHA256:
-`cb923a3e11817682f77b4116d7524e615bdffee29e04e5848b3815352aa8133e`.
-Sourcef073955 was published before CPU extraction. Data4a5ad97 were then
-verified from a clean checkout. Do not overwrite or regenerate the registered
-attempt. Shared code hashes are pinned; keep historical runtime dependencies
-unchanged and register revisions rather than silently editing frozen inputs.
+After each actual stage retrieve all compact files/current ledger, independently
+re-audit raw tokens and field statistics, backup/hash the checkpoint, and publish
+the records before considering continuation or shutdown. Update journal, phase
+report, decisions, status, README, AI-use log, artifact inventory, run registry,
+compute accounting and this handoff. The two aggregate summaries need the
+already completed E011231-second result added after this source milestone;
+they must not silently remain at5740 while detailed receipts say5971.
 
-Operational cautions for later implementation: strictly enforce the supplied
-route, accept any legal route for fixed-reference scoring, count lookup
-parents as all four subproblems, retain all raw IDs through EOS, distinguish
-free-generation proof correctness from gold-prefix field metrics, and audit
-parseable steps even when the final line is missing. All supervised field
-positions use exact full serialization and logits[j-1]. No packing/truncation
-or loss reweighting. Train/development table overlap is known and documented;
-these are not new holdout groups or independent-row generalization results.
-
-Before a later server run, verify current published source, original pinned
-model/environment/tokenizer, idle A80080GB, latest ledger and measured free
-disk. Preserve independently verified checkpoint copies before any cleanup.
-Signal the owner to start/provide a server only once the execution release is
-fully implemented, tested, published and concretely reviewable.
+E011 had0/32 complete training proofs and all333 parseable after-states equal2;
+C016 retains all48 parents/288 rows and reports finite imbalance/operation
+overlap. Complete free generation is separate from gold-prefix measurements.
+The new auditor treats model-vocabulary IDs without tokenizer entries as
+retained proof failures, and uses the true output vocabulary for token CE
+consistency. Existing E011/C016 runtime/data bytes remain frozen.
 
 ## Historical: E011 failed learning gate; no GPU phase queued
 

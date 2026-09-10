@@ -74,3 +74,19 @@ prompt profile,720-second process cap plus15-second guard. This is no scientific
 arm comparison or final-test result. The previous arithmetic protocols remain
 historical; do not reuse their queues or infer an identity-removal effect.
 Original ledger remains5740/7200 used,1460 left; no new budget is authorized.
+
+
+## E012 engineering extension — 2026-09-09
+
+The owner requested execution of the finite C016 diagnostic ladder. Follow
+[E012](experiments/E012_relation_diagnostic_ladder.md): one-edge lookup, original
+full graph with supplied route, then original full graph with fixed-reference
+training, stopping after any failed/incomplete gate. Every stage uses a fresh
+original1.5B base and the frozen256-update recipe. Raw-token and semantic-field
+measurements complement strict complete-proof/EOS gates; no scientific effect
+or fresh-holdout inference follows. Source/release verification precedes startup.
+
+The current initial ledger is5971/7200 used,1229 remaining,16 receipts,zero
+reservations. Maximum three360-second process caps plus15-second guards total
+1125. No new allowance, model variant, retry, automatic rental or main grid.
+Historical phase-specific balances above remain historical.

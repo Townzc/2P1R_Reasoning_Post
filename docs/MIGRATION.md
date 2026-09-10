@@ -1,5 +1,21 @@
 # Move to another GPU server
 
+**Current E012 preparation (2026-09-09):** use the E012 execution registration
+and latest next-session handoff. C016 inputs are frozen; E011 completed and
+failed its learning gate. The independently reconciled initial ledger has
+16 receipts/5971 seconds used,1229 remaining,zero reservations. Do not restore
+the historical5740 balance described in older sections. No E012 run or
+checkpoint exists at this source milestone.
+
+For E012 verify the latest GitHub commit on the local authenticated host, then
+synchronize that exact commit by fetch or a verified bundle. Actual execution
+requires `--expected-published-commit` matching this independently checked SHA;
+an old clone's cached origin/main is insufficient evidence of current source.
+The first arm is single_step. Following arms require raw-output verification,
+published compact records and an independent per-file checkpoint backup.
+Keep the existing16-receipt ledger prefix exact and append only the ordered
+E012 receipts. No run auto-starts after cloning or booting an instance.
+
 Start with `docs/NEXT_SESSION.md` for the latest shutdown handoff, required artifacts and the next discussion. These steps apply to a replacement machine or an instance clone; inspect what the clone actually preserved before reinstalling or transferring large files.
 
 1. Commit and push code, configuration, compact run records and predictions from the current work session.
@@ -50,12 +66,12 @@ Publish compact accounting separately. Never publish login tokens, SSH endpoints
 or a live authentication file as part of an experiment record.
 
 
-## E011 relation engineering release
+## Historical E011 relation engineering release
 
 C015's five compact input files are fully tracked in
 `runs/relation_engineering_c015_r1`; do not re-extract or replay older queues.
 Follow [NEXT_SESSION.md](NEXT_SESSION.md) for current source,exact ledger hash,
 pinned base and default-inspect launcher. One A80080GB,12GiB free after setup,
-720-second process plus15-second guard. No checkpoint exists for this not-run
-phase. Prior required weights/current cumulative ledger must remain independently
+720-second process plus15-second guard. This paragraph described E011 before execution; its failed-gate checkpoint
+is now independently backed up. Prior required weights/current cumulative ledger must remain independently
 retained. A cloned instance grants no new budget and must not auto-run training.

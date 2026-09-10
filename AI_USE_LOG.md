@@ -471,3 +471,14 @@ It verified the private cumulative ledger was byte-unchanged (5971 seconds
 used,1229 remaining,16 receipts,no reservations). No model weights were loaded,
 server contacted, data filtered or GPU job launched. A separate runtime release
 and owner review remain prerequisites to requesting a server.
+
+E012 source preparation: the owner requested the next diagnostic experiment and
+reported switching to Max. Codex implemented the bounded one-stage runner,
+original-base preflight, updated-ledger/receipt-chain gates, strict raw-token
+auditor, gold-prefix token-field measurements and checkpoint/publication
+continuation checks. It added synthetic numerical, corruption and failure
+tests;76 focused CPU checks pass and2 Linux watchdog integrations remain.
+It found and prepared repair of stale aggregate accounting/registry records
+without changing the verified5971-second live ledger. No subagents, server
+connection, pretrained model inference, new allowance or GPU reservation were
+used during this source milestone. Source publication precedes release use.

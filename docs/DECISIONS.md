@@ -311,3 +311,20 @@ Retain these finite imbalances/overlaps, with no new filtering or generalization
 claim. The data release is complete; the GPU runner/raw-output auditor remains
 a separate CPU implementation before startup review. Ledger unchanged5971 used.
 See [C016 CPU results](../reports/RELATION_C016_CPU_READY.md).
+
+
+## D017 — 2026-09-09: execute the reviewed finite diagnostic ladder
+
+The owner requested the next experiment after C016 and reported switching to
+Max. Implement E012 with the frozen lookup / given-route / fixed-reference
+sequence, fresh original base for each stage,256 updates each and no automatic
+retry or continuation past a failed gate. The prior concrete1125-second maximum
+reservation plan fits1229 remaining; this is within existing authorization.
+Prepare/publish the runtime release before asking for server startup.
+
+Raw-token scores, exact update indices and per-target CE/top-one records must
+be independently reconciled. Separate completed learning failure from incomplete
+execution, and preserve both. Unknown padded-vocabulary outputs are retained
+as proof failures. Add the E011 result to stale registry/accounting summaries
+without altering the actual ledger or treating a failed gate as success.
+See [E012 registration](experiments/E012_relation_diagnostic_ladder.md).

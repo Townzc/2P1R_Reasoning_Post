@@ -1,5 +1,12 @@
 # Artifact inventory and migration limits
 
+**Current E012 source milestone:** the owner requested the finite diagnostic
+ladder; execution code is prepared and no E012 model has run. C016's seven-file
+203769-byte input bundle and source/data verification are fully public. The
+latest ledger is5971 used/1229 remaining,16 receipts,zero reservations. The
+E011 checkpoint has12 independently verified files/6190803414 bytes; no
+checkpoint was loaded, changed or removed in CPU execution preparation.
+
 Git contains source, configuration, data hashes, environment inventory, compact predictions/history, metrics and failure receipts. It does **not** contain model weights or the live private resource ledger.
 
 | Artifact | Current retained copies | Verification / reproduction |
@@ -7,7 +14,7 @@ Git contains source, configuration, data hashes, environment inventory, compact 
 | Pinned 0.5B and 1.5B base snapshots | Reproducible from pinned sources; current A800 main cache verified before pilot | `model_verified_debug.json`, `model_verified_main.json`; re-download exact revisions and verify against official file digests. |
 | Higher-LR debug checkpoint (`r2`, gate failed) | Verified independent local backup outside Git; historical server copy | `checkpoint_r2_local_verified.json`, plus the run's checkpoint manifest. |
 | Passing debug checkpoint (`r3`, 31/32) | Verified independent local backup outside Git; historical server copy | `checkpoint_r3_server_verified.json` and `checkpoint_r3_local_verified.json`; all ten files verified on both copies. |
-| Shared runtime ledger | Current A800 and independently retained local private copy: 5740 seconds, zero reservations; all 15 receipts reconciled exactly | [Ledger verification](absent_boundary_seed31_ledger_verification.json) records the retained copy hash. Older 1173-, 1719- and 3712-second ledgers are historical. A replacement keeps the same approved budget. |
+| Shared runtime ledger | Independently retained current private backup: 5971 seconds, zero reservations; all 16 receipts reconciled exactly | [E011 ledger verification](relation_e011_ledger_verification.json) and [C016 unchanged-ledger closeout](relation_c016_resource_closeout.json) record the retained copy hash. Older 1173-, 1719- and 3712-second ledgers are historical. A replacement keeps the same approved budget. |
 | Main A800 checkpoint (32/32 overfit) | Verified independent local backup outside Git, all 12 files; historical A800 copy | `checkpoint_main_a800_server_verified.json` and `checkpoint_main_a800_local_verified.json` are identical. Weights-only checkpoint; no exact optimizer resume. |
 | Raw run records | GitHub, local checkout and training server | See `run_registry.json` and each run's recorded code commit; one launch is explicitly invalidated. |
 
@@ -195,3 +202,22 @@ reservations,SHA256`664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c8
 Do not replay E011 or restore the historical5740 ledger as current. No disk
 expansion or artifact deletion was needed. Normal shutdown is confirmed
 separately after publication; follow `docs/NEXT_SESSION.md`.
+
+
+## Relation diagnosis artifacts — C016 and E012
+
+C016: `runs/relation_diagnostics_c016_r1` holds all288 rows, exact assignments,
+update schedules, supervised-field masks/budgets and exposed-fact audit. Read
+[CPU findings](RELATION_C016_CPU_READY.md),
+[release identities](../configs/diagnostics/relation_c016_release.json) and
+[fresh-checkout verification](relation_c016_fresh_checkout_verification.json).
+No new weights or live-ledger copy belong in Git.
+
+E012 source: `configs/relation_diagnostics_e012/execution.json` and
+[registration](../docs/experiments/E012_relation_diagnostic_ladder.md) define
+three conditional runs. The execution release will be frozen after source
+publication. Do not label planned stages as completed or add fictitious
+receipts/checkpoints. Every actual stage must preserve all raw token records,
+teacher-forced token measurements, history, manifests, metrics and its resource
+receipt. Weights require independent per-file hashing; compact backup proof
+uses `reports/<run_id>_checkpoint_backup.json` with the schema in E012.

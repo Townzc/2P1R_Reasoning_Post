@@ -1,6 +1,21 @@
-# Verified status — C016 CPU diagnostic release complete, 2026-09-09 UTC
+# Verified status — E012 execution preparation, 2026-09-09 UTC
 
-## Current: frozen inputs/metrics verified; no model experiment or server needed
+## Current: E012 implementation passed CPU checks; release publication pending
+
+The owner asked to begin the next finite experiment after C016. Implemented
+strict one-arm execution, source/data binding, complete remaining-phase budget
+checks, raw-token/field measurement audits and passed-stage/publication/backup
+continuation gates.76 focused tests pass;2 GNU-timeout integrations await Linux.
+No pretrained model or server has been used and no reservation was made.
+Read [E012 registration](../docs/experiments/E012_relation_diagnostic_ladder.md).
+
+All16 actual receipts total5971 seconds;1229 remain. The aggregate registry
+and compute summary were found stale at15 receipts/5740 seconds. A tested
+reconciler and relation-aware registry will update those summaries from their
+immutable public receipts after source publication; the live ledger stays
+unchanged. Historical E011 remains completed with its learning gate failed.
+
+## Historical: C016 frozen inputs/metrics verified
 
 All288 derived rows from the original32 train /16 observed dev parents pass
 independent construction, semantic-mask and dose audits. All53 focused CPU
