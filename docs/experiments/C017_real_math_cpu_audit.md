@@ -24,7 +24,7 @@ scale. This authorizes this finite CPU data task; no GPU execution follows.
    report losses and do not call it semantic or pretraining decontamination.
 4. GSM8K: 512 development parents, 1,024 audit parents, 1,024 disjoint fresh
    parents reserved. MATH: levels 1–3 without explicit diagram markup; 256 dev,
-   512 audit, 512 fresh reserved, with balanced subject/level prefixes. These
+   512 audit, 512 fresh reserved, with proportional subject/level quotas. These
    pools precede output availability and preserve zero-success denominators.
 5. Use pinned OpenMathInstruct-2 full-train shards 4, 7, 10, 16, selected by
    Random(20260910).sample(range(32), 4), in ascending order. Approximately
@@ -58,6 +58,13 @@ on all 12,500 four-field records. The revised conservative rule above resolves
 repair its ID by guessing. This change precedes all parent draws and solution
 retrieval. Original source bytes and the failed discovery log remain retained.
 
+The first parent-only preparation (`real_math_c017_parents_r1`) exposed another
+selection issue: balanced round-robin development/draw allocation exhausted the
+rare geometry-level-1 stratum before the fresh draw. Retain that preparation as
+superseded, not training input. Before any solution retrieval, switch to separate
+seeded proportional largest-remainder quotas per partition, with at least one
+parent per available stratum. The corrected freeze is `real_math_c017_parents_r2`.
+
 This measures accessible released-slice coverage and our filtering yield. It
 does not recover unpublished attempts, full-bank coverage, teacher production
 cost, full proof correctness or distinct reasoning strategies. Fresh draw and
@@ -78,13 +85,13 @@ Commands use new output directories; source files are cached outside Git.
 python -m scripts.fetch_real_math_sources --cache .local/real_math_c017_sources
 python -m unittest tests.test_real_math_audit tests.test_sft_data -v
 python -m scripts.prepare_real_math_audit --cache .local/real_math_c017_sources \
-  --out reports/real_math_c017_parents_r1 --private-out .local/real_math_c017_parents_r1
+  --out reports/real_math_c017_parents_r2 --private-out .local/real_math_c017_parents_r2
 # Commit the frozen public parent manifest before the next two commands.
 python -m scripts.fetch_real_math_sources --cache .local/real_math_c017_sources \
-  --solutions --frozen-manifest reports/real_math_c017_parents_r1/problem_manifest.jsonl
+  --solutions --frozen-manifest reports/real_math_c017_parents_r2/problem_manifest.jsonl
 python -m scripts.audit_real_math_solutions --cache .local/real_math_c017_sources \
-  --parents .local/real_math_c017_parents_r1/problem_records.jsonl \
-  --frozen reports/real_math_c017_parents_r1 --tokenizer-dir "$TOKENIZER_DIR" \
+  --parents .local/real_math_c017_parents_r2/problem_records.jsonl \
+  --frozen reports/real_math_c017_parents_r2 --tokenizer-dir "$TOKENIZER_DIR" \
   --out reports/real_math_c017_solutions_r1 --private-out .local/real_math_c017_solutions_r1
 ```
 

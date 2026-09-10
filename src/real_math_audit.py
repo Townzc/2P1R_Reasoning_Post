@@ -99,6 +99,36 @@ def stratified_order(records, seed, purpose):
     return result
 
 
+def stratified_take(records, count, seed, purpose):
+    """Proportional largest-remainder quotas, at least one per available stratum."""
+    strata = defaultdict(list)
+    for row in records:
+        strata[row['stratum']].append(row)
+    if count == 0:
+        return []
+    if count > len(records):
+        raise ValueError('Insufficient parents for stratified sample')
+    keys = sorted(strata, key=lambda k: sha(f'{seed}:{purpose}:stratum:{k}'))
+    ideal = {k: count*len(strata[k])/len(records) for k in keys}
+    floor = 1 if count >= len(keys) else 0
+    quota = {k: min(len(strata[k]), max(floor, int(ideal[k]))) for k in keys}
+    while sum(quota.values()) > count:
+        k = max((k for k in keys if quota[k] > floor), key=lambda k: quota[k]-ideal[k])
+        quota[k] -= 1
+    while sum(quota.values()) < count:
+        k = max((k for k in keys if quota[k] < len(strata[k])), key=lambda k: ideal[k]-quota[k])
+        quota[k] += 1
+    for k in keys:
+        strata[k].sort(key=lambda r: sha(f'{seed}:{purpose}:{r["id"]}'))
+    used, result = Counter(), []
+    # Weighted ordering keeps nested prefixes close to the frozen full-draw quotas.
+    for _ in range(count):
+        k = min((k for k in keys if used[k] < quota[k]), key=lambda k: (used[k]+.5)/quota[k])
+        result.append(strata[k][used[k]])
+        used[k] += 1
+    return result
+
+
 def assign_partitions(records, config, groups):
     test_groups = {groups[r['id']] for r in records if r['original_split'] == 'test'}
     used = set()
@@ -124,18 +154,18 @@ def assign_partitions(records, config, groups):
         r['partition'] = 'excluded' if r['exclusions'] else 'eligible_unassigned'
     for dataset in ('gsm8k', 'math'):
         eligible = [r for r in records if r['dataset'] == dataset and r['partition'] == 'eligible_unassigned']
-        order = stratified_order(eligible, config['seed'], dataset)
         counts = [("development", config['development_parents'][dataset]),
                   ("audit_draw", config['audit_parents'][dataset]),
                   ("fresh_draw_reserved", config['reserved_fresh_parents'][dataset])]
-        if len(order) < sum(count for _, count in counts):
+        if len(eligible) < sum(count for _, count in counts):
             raise ValueError(f'Insufficient eligible parent groups for declared {dataset} splits')
-        cursor = 0
         for partition, count in counts:
-            for rank, r in enumerate(order[cursor:cursor+count], 1):
+            selected = stratified_take(eligible, count, config['seed'], dataset+':'+partition)
+            for rank, r in enumerate(selected, 1):
                 r['partition'], r['rank'] = partition, rank
-            cursor += count
-        for r in order[cursor:]:
+            selected_ids = {r['id'] for r in selected}
+            eligible = [r for r in eligible if r['id'] not in selected_ids]
+        for r in eligible:
             r['partition'] = 'unused_training_reserve'
     return records
 

@@ -2,7 +2,7 @@ import unittest
 
 from src.real_math_audit import (answer_status, assign_partitions, final_answer,
                                 grid_statistics, group_records, last_boxed,
-                                scalar, stratified_order)
+                                scalar, stratified_order, stratified_take)
 
 
 class RealMathAuditTests(unittest.TestCase):
@@ -60,6 +60,17 @@ class RealMathAuditTests(unittest.TestCase):
         self.assertEqual(one, two)
         self.assertEqual(len({r['stratum'] for r in one[:3]}), 3)
         self.assertEqual(len({r['id'] for r in one}), 30)
+
+    def test_small_stratum_not_exhausted_in_early_partition(self):
+        rows = [dict(id=str(i), stratum='rare' if i < 19 else 'common') for i in range(2908)]
+        dev = stratified_take(rows, 256, 42, 'dev')
+        self.assertEqual(sum(r['stratum'] == 'rare' for r in dev), 2)
+        left = [r for r in rows if r not in dev]
+        draw = stratified_take(left, 512, 42, 'draw')
+        fresh = stratified_take([r for r in left if r not in draw], 512, 42, 'fresh')
+        self.assertGreater(sum(r['stratum'] == 'rare' for r in draw), 0)
+        self.assertGreater(sum(r['stratum'] == 'rare' for r in fresh), 0)
+        self.assertFalse({r['id'] for r in draw} & {r['id'] for r in fresh})
 
 
 if __name__ == '__main__':
