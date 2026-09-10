@@ -191,9 +191,19 @@ def canonical_answer(answer):
         return None
     value = unicodedata.normalize('NFC', str(answer)).strip().strip('$')
     value = value.replace('\\dfrac', '\\frac').replace('\\tfrac', '\\frac')
-    for token in ('\\left', '\\right', '\\!', '\\,', '\\;', '\\quad', '\\ '):
+    for token in ('\\left', '\\right', '\\!', '\\,', '\\;', '\\quad'):
         value = value.replace(token, '')
-    return ''.join(value.split())
+    # Do not consume the second backslash of a matrix row separator (\\\\ ).
+    value = re.sub(r'(?<!\\)\\ ', '', value)
+    value = ''.join(value.split())
+    # Unambiguous LaTeX presentation only. Units, base subscripts, percent,
+    # variable assignments, mixed numbers and arbitrary algebra stay unresolved.
+    wrapper = re.fullmatch(r'\\(?:text|textrm|mathrm|mbox)\{([^{}]*)\}', value)
+    if wrapper:
+        value = wrapper[1]
+    value = re.sub(r'\\frac([0-9])([0-9])', r'\\frac{\1}{\2}', value)
+    value = re.sub(r'\\sqrt([0-9a-zA-Z])', r'\\sqrt{\1}', value)
+    return value
 
 
 def scalar(answer):

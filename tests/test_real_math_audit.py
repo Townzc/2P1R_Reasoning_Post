@@ -34,6 +34,17 @@ class RealMathAuditTests(unittest.TestCase):
         self.assertIsNone(scalar('1/0'))
         self.assertEqual(answer_status(r'\left(1,2\right)', '(1,2)'), 'agree')
 
+    def test_latex_layout_does_not_change_matrix_rows(self):
+        a = r'\begin{pmatrix} 7 \\ -13 \end{pmatrix}'
+        b = r'\begin{pmatrix}7\\-13\end{pmatrix}'
+        self.assertEqual(answer_status(a, b), 'agree')
+        self.assertEqual(answer_status(a, r'\begin{pmatrix}7-13\end{pmatrix}'), 'unresolved')
+        self.assertEqual(answer_status(r'\text{(A)}', '(A)'), 'agree')
+        self.assertEqual(answer_status(r'\frac14', r'\frac{1}{4}'), 'agree')
+        self.assertEqual(answer_status(r'3-\sqrt3', r'3-\sqrt{3}'), 'agree')
+        self.assertEqual(answer_status(r'20\%', '20'), 'unresolved')
+        self.assertEqual(answer_status(r'101_2', '101'), 'unresolved')
+
     def test_number_variants_linked_before_split(self):
         rows = [dict(id='a', problem='Amy bought 15 apples and sold 3 apples. How many apples remain?'),
                 dict(id='b', problem='Amy bought 25 apples and sold 4 apples. How many apples remain?'),
