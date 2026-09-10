@@ -6,14 +6,15 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**E012 execution implementation, 2026-09-09 UTC:** the owner requested the
-finite diagnostic ladder after C016. The default-inspect launcher, bounded
-model worker, raw-token/field-statistics auditor and ordered budget/backup
-gates are implemented.76 focused CPU tests pass;2 GNU-timeout integrations
-remain mandatory on Linux before model execution. Source publication and the
-immutable execution release precede requesting an A800. No model run or GPU
-reservation has occurred.
-[Execution registration](docs/experiments/E012_relation_diagnostic_ladder.md),
+**E012 execution release ready, 2026-09-10 UTC:** source and immutable release
+are published; clean-checkout inspection and 76 focused CPU checks pass. Two
+GNU-timeout integrations remain mandatory on Linux before the first model run.
+The next requirement is an owner-started A800 for single-step lookup, followed
+conditionally by given-route propagation and fixed-reference full questions.
+No E012 model run, server contact or GPU reservation has occurred. All 16 public
+receipts now agree with the unchanged private ledger: 5971 used / 1229 left.
+[Ready report and rationale](reports/RELATION_E012_READY.md),
+[execution registration](docs/experiments/E012_relation_diagnostic_ladder.md),
 [current handoff](docs/NEXT_SESSION.md).
 
 **C016 CPU diagnostics complete, 2026-09-09 UTC:** all288 derived rows from the
@@ -21,8 +22,8 @@ original48 parents are frozen; independent reconstruction and all53 focused
 tests pass in a clean published checkout. One-edge lookup, supplied-route
 propagation and fixed-reference controls have exact dose/semantic masks, with
 observed-dev and operation-overlap limits recorded. No pretrained model call,
-server contact or ledger change. The GPU execution release remains to be
-implemented and reviewed; no server is needed yet.
+server contact or ledger change. E012 subsequently implemented and verified
+the GPU execution release; its current readiness is reported above.
 [CPU findings and next decisions](reports/RELATION_C016_CPU_READY.md),
 [exact examples](reports/RELATION_C016_EXAMPLES.md),
 [handoff](docs/NEXT_SESSION.md).

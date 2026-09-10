@@ -1,51 +1,65 @@
-# Next session — E012 execution release, then owner-started A800
+# Next session — E012 ready; owner-started A800 required
 
-## Current: source publication and CPU release verification first
+## Current: execute only the verified finite diagnostic ladder
 
-Read [E012 registration](experiments/E012_relation_diagnostic_ladder.md) and
-[C016 findings](../reports/RELATION_C016_CPU_READY.md). The owner requested the
-next experiment after reviewing the finite ladder; no further budget approval
-is needed for its conditional stages inside the existing allowance. This is
-engineering diagnosis, not a scientific pair/main grid.
+Read [the ready report](../reports/RELATION_E012_READY.md),
+[E012 registration](experiments/E012_relation_diagnostic_ladder.md) and
+[C016 findings](../reports/RELATION_C016_CPU_READY.md). The owner requested this
+conditional engineering sequence; no further budget approval is needed inside
+the existing allowance. Server availability/connection is still required.
 
-Implementation is complete with76 passing CPU checks and2 mandatory GNU-timeout
-integration tests awaiting Linux. Publish source before creating the immutable
-`configs/relation_diagnostics_e012/release.json`. Publish that release, verify
-default inspection from a clean checkout and independently reconcile the
-current16-receipt ledger before asking the owner to start/provide an A800.
-No server connection, model execution or reservation has occurred this phase.
+Source `1fc27d459c8445417e3db73d944a7d2c7c064ffd` was published before release
+preparation; release `27a0943fef352e67072e8b2d7db36a3259524246` was published
+before the clean-checkout inspection and repeated checks. All 76 local CPU
+checks pass, with 2 mandatory GNU-timeout integrations awaiting Linux. See
+[verification receipt](../reports/relation_e012_fresh_checkout_verification.json).
+No E012 model execution, server connection or reservation has occurred.
 
-Initial ledger SHA256:
+Initial private ledger SHA256:
 `664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5`;
-5971/7200 used,1229 remaining,zero reservations. A clone must restore this
-current verified ledger, not an older allowance. Three conditional375-second
-reservations total1125. One stage at a time: single_step, given_route,
-fixed_reference. No retry, shortened run, warm start or continuation past a
-failed proof/NLL/profile gate. Before later stages require published compact
-outputs and independently verified checkpoint backup.
+**5971 / 7200 used, 1229 remaining, 16 receipts, zero reservations**. Both public
+aggregate summaries have been repaired to include E011. Never restore the
+older 5740-second ledger or initialize a new allowance on a clone.
 
-When ready, request owner startup/connection information. On the supplied
-instance verify the latest GitHub commit independently on the local host, then
-fetch or synchronize that commit by a verified bundle. Default inspection
-contacts no GPU. Actual launch requires `--execute` plus
-`--expected-published-commit <the independently verified current SHA>`.
-Verify pinned original base/environment, one idle A80080GB and12GiB free after
-setup. Run the mandatory Linux watchdog tests before model execution.
+1. Obtain owner-started A800 availability and current connection information.
+   Verify the latest GitHub main independently on the local host, then fetch
+   or synchronize that exact commit by a verified Git bundle. Preserve private
+   keys/endpoints and current ledger outside Git; do not trust cached origin/main.
+2. Verify pinned original Qwen2.5-1.5B model bytes (not tuned weights), recorded
+   Linux Python 3.12 / PyTorch 2.8.0+cu128 environment, one idle A800 80GB and
+   at least 12 GiB free after setup. Confirm any redundant artifact has a verified
+   independent backup before cleanup; report measured expansion needs.
+3. Run the 78-test focused suite from the verification receipt, setting
+   `RELATION_ENGINEERING_TOKENIZER_DIR` to the verified snapshot. Both watchdog
+   integration tests skipped on macOS must pass here. Run the default inspection.
+4. Launch `single_step` using `--execute` and `--expected-published-commit`
+   equal to the independently verified latest commit. Its registered run ID is
+   `relation_single_step_e012_r1`; cap 360 seconds plus 15-second guard.
+5. Retrieve all compact outputs and the updated ledger, independently re-audit
+   raw IDs and field statistics, verify every checkpoint file on an independent
+   destination, and publish the result. Update the files listed below. Only a
+   complete proof/NLL/profile gate plus preservation permits `given_route`, and
+   then `fixed_reference`, each from the fresh base and within its same cap.
 
-After each actual stage retrieve all compact files/current ledger, independently
-re-audit raw tokens and field statistics, backup/hash the checkpoint, and publish
-the records before considering continuation or shutdown. Update journal, phase
-report, decisions, status, README, AI-use log, artifact inventory, run registry,
-compute accounting and this handoff. The two aggregate summaries need the
-already completed E011231-second result added after this source milestone;
-they must not silently remain at5740 while detailed receipts say5971.
+Three maximum reservations total 1125 seconds. No shortened run, retry, seed
+search, warm start or continuation past a failed gate. The launcher requires
+the latest ledger after each job, ordered receipts, published prior outputs
+and a matching published backup receipt. Run one explicit stage at a time.
+Completed learning failure and incomplete infrastructure execution are distinct;
+both preserve all available evidence. No scientific pair/main grid is queued.
 
-E011 had0/32 complete training proofs and all333 parseable after-states equal2;
-C016 retains all48 parents/288 rows and reports finite imbalance/operation
-overlap. Complete free generation is separate from gold-prefix measurements.
-The new auditor treats model-vocabulary IDs without tokenizer entries as
-retained proof failures, and uses the true output vocabulary for token CE
-consistency. Existing E011/C016 runtime/data bytes remain frozen.
+For every result or failure update the research journal (question, motivation,
+design, result, analysis, decision), detailed phase report, decisions, status,
+README, AI-use log, artifact inventory, run registry, compute accounting and
+this handoff. Before declaring a server disposable, verify Git publication,
+independent checkpoint copies and the latest cumulative ledger. Process timeout
+alone does not shut down a paid instance.
+
+E011 had 0/32 complete training proofs and all 333 parseable after-states equal
+2. C016 retains all 48 parents / 288 rows and records finite imbalance and
+train/dev operation overlap. Complete free generation is separate from gold-
+prefix measurements. Low aggregate NLL cannot substitute for proof correctness.
+Existing E011/C016 runtime and data bytes remain frozen.
 
 ## Historical: E011 failed learning gate; no GPU phase queued
 

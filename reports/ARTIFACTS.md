@@ -1,11 +1,15 @@
 # Artifact inventory and migration limits
 
-**Current E012 source milestone:** the owner requested the finite diagnostic
-ladder; execution code is prepared and no E012 model has run. C016's seven-file
-203769-byte input bundle and source/data verification are fully public. The
-latest ledger is5971 used/1229 remaining,16 receipts,zero reservations. The
-E011 checkpoint has12 independently verified files/6190803414 bytes; no
-checkpoint was loaded, changed or removed in CPU execution preparation.
+**Current E012 ready milestone, 2026-09-10 UTC:** execution source and immutable
+release are published; clean-checkout checks and default inspection passed.
+See [ready report](RELATION_E012_READY.md) and
+[verification](relation_e012_fresh_checkout_verification.json). No E012 model
+has run; there are no new weights or GPU receipts. C016's seven-file 203769-byte
+input bundle remains fully public and unchanged. The latest private ledger
+remains 5971 used / 1229 remaining, 16 receipts, zero reservations; both public
+aggregate summaries now agree. E011's 12 independently verified checkpoint
+files / 6190803414 bytes remain retained. No checkpoint was loaded, changed
+or removed in this CPU phase.
 
 Git contains source, configuration, data hashes, environment inventory, compact predictions/history, metrics and failure receipts. It does **not** contain model weights or the live private resource ledger.
 

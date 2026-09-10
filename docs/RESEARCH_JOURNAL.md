@@ -15,12 +15,11 @@ balance. Dates are UTC unless specified otherwise.
 
 ## Attempted work and completed analyses
 
-Latest completed experiment: [E010](experiments/E010_absent_boundary_seed31.md),
-the frozen C012 Paths/GCM seed31 pair. Matched greedy is7/64 versus5/64,
-complete traces4/64 each, broader expressions/traces0/64 versus2/64. All800
-outputs and exact full doses passed independent CPU audits. This weak boundary
-result does not justify scaling; prepare a CPU task/estimand review. The result
-report separates completed execution from checkpoint/shutdown preservation.
+Latest completed model experiment: [E011](experiments/E011_relation_engineering.md),
+with 0/32 complete train proofs despite target NLL .11939; all 333 parseable
+predicted after-states were 2. The failure is preserved. C016 CPU diagnostics
+and the E012 execution release are now verified; no E012 model run has occurred.
+[Current readiness and interpretation](../reports/RELATION_E012_READY.md).
 
 | ID | Work date | Question or attempted change | Status | Outcome / decision |
 |---|---|---|---|---|
@@ -430,3 +429,47 @@ ledger. Publish the code before applying it to current aggregate snapshots.
 **Next.** Freeze the runtime release, independently inspect it from a clean
 checkout, then request owner-started A800. No new model result, GPU charge,
 server contact, storage expansion or checkpoint cleanup at this milestone.
+
+
+## 2026-09-10 — E012 execution release and clean-checkout verification complete
+
+**Question and motivation.** E011's low mean target loss coexisted with zero
+complete training proofs and constant generated after-states. Before scaling,
+can the same fixed recipe learn a single exposed operation, supplied-route
+propagation and a full question with one repeated reference? The original
+failed run remains evidence; the new task views do not identify a unique cause.
+
+**Design.** E012 implements C016's already frozen ladder on the same original
+32 train / 16 observed dev parents. Fresh pinned base for each stage; exact
+256 updates; no outcome-selected examples, loss reweighting or changed stop
+threshold. Continue only after complete train proofs/EOS, assigned-reference
+NLL < .2, full finite dose/profile, independent output audit, published compact
+records and verified independent checkpoint backup. The three maximum caps and
+guards total 1125 seconds inside the original 1229 remaining.
+
+**Preparation result.** Execution source was published at `1fc27d4`, then the
+immutable release at `27a0943`. In a clean detached checkout, default inspection
+passed and 78 focused tests collected: 76 passed, 2 explicitly skipped pending
+GNU timeout on Linux. Both private ledger copies stayed byte-identical. No
+pretrained model was loaded, server contacted or process reserved. E012 stages
+remain not run; readiness is not a learning outcome.
+
+**Additional maintenance finding.** The central registry and compute summary
+still showed 15 receipts / 5740 seconds although the preserved private ledger
+and detailed E011 receipt already showed 16 / 5971. A tested reconciler repaired
+both summaries from immutable receipts without modifying the ledger. E011 is
+recorded as completed with its learning gate failed, not as successful training.
+
+**Analysis and next decision.** The execution path now makes proof correctness,
+semantic-field loss and gold-prefix/free-generation behavior separately
+reviewable. The auditor retains unmapped model-vocabulary IDs as explicit proof
+failures and checks necessary CE/top-one consistency; scalar records do not
+independently reconstruct original logits. The three task views differ in
+length, exposure and hints, and dev is neither fresh nor unseen-table. Request
+owner-started A800 availability, pass mandatory Linux checks, and run only the
+first bounded stage. Stop on any failed gate; even all passing gates would
+require a separately reviewed scientific design before scaling.
+
+See [ready report](../reports/RELATION_E012_READY.md),
+[clean-checkout evidence](../reports/relation_e012_fresh_checkout_verification.json)
+and [frozen registration](experiments/E012_relation_diagnostic_ladder.md).

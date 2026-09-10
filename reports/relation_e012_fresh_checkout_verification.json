@@ -1,0 +1,53 @@
+{
+  "phase": "E012",
+  "status": "cpu_release_verified_gpu_execution_not_run",
+  "verified_at_utc": "2026-09-10T02:06:07.213046+00:00",
+  "source_publication_commit": "1fc27d459c8445417e3db73d944a7d2c7c064ffd",
+  "release_publication_commit": "27a0943fef352e67072e8b2d7db36a3259524246",
+  "execution_release_sha256": "beb536bbea21354c37a2336fc6d6b99f2fbf7f92ad9102109cc2bf393df38749",
+  "c016_data_manifest_sha256": "cb923a3e11817682f77b4116d7524e615bdffee29e04e5848b3815352aa8133e",
+  "clean_detached_checkout": true,
+  "clean_before_and_after_checks": true,
+  "test_command": "python -m unittest tests.test_relation_diagnostic_execution tests.test_relation_diagnostics tests.test_relation_transport tests.test_relation_cpu_audit tests.test_relation_engineering tests.test_relation_audit_cache tests.test_sft_data tests.test_budget_guard -v",
+  "tests": {
+    "collected": 78,
+    "passed": 76,
+    "failed": 0,
+    "skipped": 2,
+    "skip_reason": "GNU timeout required; mandatory on GPU server",
+    "runtime_seconds": 6.579
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "os": "Darwin",
+    "pretrained_weights_loaded": false,
+    "local_tokenizer_only": true
+  },
+  "resource": {
+    "gpu_process_seconds_added": 0,
+    "model_runs": 0,
+    "server_contact": false,
+    "reservations": 0,
+    "ledger_bytes_unchanged_original_and_worktree": true,
+    "ledger_sha256": "664a177b847b678d41d52fe7dbb62667630256db70f416b11b4facbbb9c82cb5",
+    "used_seconds": 5971,
+    "remaining_seconds": 1229,
+    "receipts": 16
+  },
+  "remaining_requirements": [
+    "Owner-started A800 availability and connection information",
+    "Verify latest published commit, pinned runtime/base, actual free disk and current ledger on server",
+    "Pass GNU-timeout integration tests on Linux before first stage",
+    "Execute at most one bounded registered stage; audit, back up and publish before any conditional continuation"
+  ],
+  "evidence_files": {
+    "relation_e012_fresh_checkout_tests.txt": {
+      "sha256": "60cc60ee41e79083244964cda353feb9a3b875f345cf25efeda1b608a5f5b115",
+      "bytes": 12649
+    },
+    "relation_e012_fresh_inspection.json": {
+      "sha256": "e9d9fce974c51b87fd88849d663a44a771f6585a1f7e86b246928f2767fec962",
+      "bytes": 944
+    }
+  }
+}

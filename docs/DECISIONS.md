@@ -328,3 +328,14 @@ execution, and preserve both. Unknown padded-vocabulary outputs are retained
 as proof failures. Add the E011 result to stale registry/accounting summaries
 without altering the actual ledger or treating a failed gate as success.
 See [E012 registration](experiments/E012_relation_diagnostic_ladder.md).
+
+
+D017 implementation outcome — 2026-09-10 UTC: source `1fc27d4` and immutable
+release `27a0943` are published. Clean-checkout default inspection and 76 CPU
+checks pass; 2 GNU-timeout integrations remain mandatory on Linux. Request an
+owner-started A800 now that the reviewable execution release is complete.
+No E012 model run, new allowance, server contact or reservation occurred.
+The current 16-receipt ledger remains 5971 used / 1229 left; the two previously
+stale aggregate summaries now include E011's existing failed-gate result.
+The conditional sequence and failure stopping rule are unchanged. See
+[ready report](../reports/RELATION_E012_READY.md).

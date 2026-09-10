@@ -482,3 +482,21 @@ It found and prepared repair of stale aggregate accounting/registry records
 without changing the verified5971-second live ledger. No subagents, server
 connection, pretrained model inference, new allowance or GPU reservation were
 used during this source milestone. Source publication precedes release use.
+
+
+## 2026-09-10 UTC — E012 published release and independent CPU recheck
+
+Following the owner's request to start the next experiment and keep all reasons
+and prior outcomes recorded, Codex published execution source `1fc27d4`, prepared
+an immutable release without loading weights, published it at `27a0943`, then
+reran default inspection and the focused suite from a clean detached checkout.
+76 checks passed and 2 GNU-timeout integrations explicitly await Linux. No E012
+model run, server contact, reservation, new allowance or checkpoint alteration
+occurred. Both current private ledger copies were byte-identical before and
+after checks. The stale aggregate registry/accounting were repaired using the
+16 existing public receipts, retaining E011's failed learning gate and the
+5971-second actual total. Source/config/data identities, limitations, first-stage
+launch prerequisites and stage-by-stage preservation duties are recorded in
+the ready report, journal, decisions, status, artifact inventory and handoff.
+Codex recommended Max for implementation/execution/audit; the owner reported
+selecting Max. No settings change or new model result is claimed.

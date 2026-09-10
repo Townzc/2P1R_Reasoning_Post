@@ -1,19 +1,27 @@
-# Verified status — E012 execution preparation, 2026-09-09 UTC
+# Verified status — E012 release ready, 2026-09-10 UTC
 
-## Current: E012 implementation passed CPU checks; release publication pending
+## Current: request owner-started A800 for the frozen first diagnostic
 
-The owner asked to begin the next finite experiment after C016. Implemented
-strict one-arm execution, source/data binding, complete remaining-phase budget
-checks, raw-token/field measurement audits and passed-stage/publication/backup
-continuation gates.76 focused tests pass;2 GNU-timeout integrations await Linux.
-No pretrained model or server has been used and no reservation was made.
-Read [E012 registration](../docs/experiments/E012_relation_diagnostic_ladder.md).
+Execution source `1fc27d4` preceded the immutable release at `27a0943`.
+Default inspection and the focused suite pass from a clean published checkout:
+76 passed, zero failed, 2 GNU-timeout integrations pending Linux. Both private
+ledger copies stayed byte-identical. No E012 model run, server contact or
+reservation has occurred. Read [the ready report](RELATION_E012_READY.md),
+[verification](relation_e012_fresh_checkout_verification.json) and
+[registration](../docs/experiments/E012_relation_diagnostic_ladder.md).
 
-All16 actual receipts total5971 seconds;1229 remain. The aggregate registry
-and compute summary were found stale at15 receipts/5740 seconds. A tested
-reconciler and relation-aware registry will update those summaries from their
-immutable public receipts after source publication; the live ledger stays
-unchanged. Historical E011 remains completed with its learning gate failed.
+All 16 public receipts and both refreshed aggregate summaries now agree:
+**5971 / 7200 seconds used, 1229 remaining, zero reservations**. The registry
+and compute summary were stale at 15 receipts / 5740; the tested reconciler
+added E011's existing 231-second result without changing the live ledger.
+E011 remains completed with its learning gate failed.
+
+Next verify the supplied A800, published source, pinned base/environment,
+current ledger and at least 12 GiB free. Pass both Linux watchdog checks, then
+run only `single_step` within its 360-second cap plus 15-second guard.
+`given_route` and `fixed_reference` are conditional on each preceding complete
+training gate, independent output audit, published results and verified backup.
+All three maximum reservations total 1125 seconds. No new allowance or retry.
 
 ## Historical: C016 frozen inputs/metrics verified
 
@@ -31,10 +39,10 @@ call, server contact, GPU job/reservation, output filtering or new allowance.
 Ledger bytes unchanged:5971/7200 used,1229 left,16 receipts,zero reservations.
 E011 and its verified checkpoint backup remain preserved.
 
-Next CPU work is the bounded diagnostic runner and raw-token output auditor
-for a separate execution release, followed by owner review before requesting
-startup. The current three-job proposal is not launchable; at most1125 seconds
-of reservations would fit, with conditional stopping. Do not restart old jobs.
+At the C016 milestone the bounded runner and separate execution release were
+still proposals. The owner subsequently requested E012; its current prepared
+release and conditional launch requirements are recorded above. Historical
+completed jobs remain immutable and must not be restarted.
 
 ## Historical: E011 completed; engineering gate failed, artifacts preserved
 
