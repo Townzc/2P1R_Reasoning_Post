@@ -1,6 +1,22 @@
-# Verified status — real-math CPU audit complete, 2026-09-10 UTC
+# Verified status — GSM8K engineering ready, server unavailable, 2026-09-10 UTC
 
-## Current: C017 complete; bounded GSM8K scale prepared for review
+## Current: E013 CPU-verified; model run not started
+
+E013 freezes 32 training responses and 16 development parents for one 256-update
+engineering trajectory: 167,232 response / 229,056 processed tokens, 32 exposures
+per row, microbatch one, no padding or truncation. The original model/optimizer
+recipe is preserved. [Ready report](REAL_MATH_E013_READY.md) and
+[verification](real_math_e013_inputs_r1/independent_verification.json).
+
+38 focused tests pass; two GNU-timeout integrations await Linux. Independent
+tokenizer labels, source identity, schedule and eight negative tampering checks
+pass. The existing SSH endpoint refused a read-only connection; the owner was
+asked to restore availability or update access. No model, teacher call or
+reservation occurred. **5971 used / 1229 left, 16 receipts, zero reservations.**
+The 900-second cap plus 15-second guard fits. No throughput/overfit result is
+available; E012 and the proposed scientific grid are not queued.
+
+## Historical: C017 complete; bounded GSM8K scale prepared for review
 
 Read [the complete CPU findings and scale](REAL_MATH_CPU_AUDIT_20260910.md).
 Original MATH split reconstruction quarantines one bad mirror ID; grouping and

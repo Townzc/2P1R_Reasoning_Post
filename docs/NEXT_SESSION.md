@@ -1,6 +1,40 @@
-# Next session — C017 completed; prepare real-data engineering/profile
+# Next session — E013 ready; resume once the existing A800 is available
 
-## Current: review the measured data scope and prepare the next finite phase
+## Immediate action: fixed GSM8K engineering, after Linux preflight
+
+The owner requested the next experiment. E013 code and immutable 32-train /
+16-development inputs are prepared and CPU-verified. Read the
+[ready report](../reports/REAL_MATH_E013_READY.md) and
+[registration](experiments/E013_gsm8k_engineering.md). Preparation source commit
+is `c11bf824b31c683d823d0d7d3e5627ad368f3fbb`; the release and compact inputs are
+under `configs/real_math_e013` and `reports/real_math_e013_inputs_r1`.
+
+The 04:32:40 UTC read-only SSH probe returned connection refused. The owner was
+asked to start the existing A800 or provide updated access. Do not repeat
+unchanged probes, rent another instance or launch old queues. Once reachable,
+fetch and synchronize published main, restore/verify the current 16-receipt
+ledger and original base snapshot, and run the registered focused tests,
+including both GNU-timeout integrations on Linux. The launcher requires the
+recorded environment, idle A800 80GB, original model hashes and 12 GiB free.
+Set `E013_SNAPSHOT` to that snapshot, inspect, then execute this requested run.
+
+```sh
+python -m scripts.run_real_math_engineering --tokenizer-dir "$E013_SNAPSHOT"
+python -m scripts.run_real_math_engineering --tokenizer-dir "$E013_SNAPSHOT" --execute
+python -m scripts.audit_real_math_engineering_outputs --tokenizer-dir "$E013_SNAPSHOT" --out runs/gsm8k_overfit_e013_r1/record_verification.json
+```
+
+Run ID `gsm8k_overfit_e013_r1` is unused. Reserve 915 seconds (900 process + 15
+guard), leaving 314 of the current 1229 seconds unreserved. No E013 GPU seconds
+or reservation exist. Full dose: 256 updates, 167232 response / 229056 processed
+tokens, 32 exposures per row. Numeric/EOS/NLL gate, raw IDs and phase timings
+are mandatory. Preserve failed gates/timeouts without retries. Back up weights
+and their manifest, reconcile the ledger and publish compact results before
+ending the instance. Training-only projections do not approve a full scientific
+phase. E012 stays paused. This finite experiment is already requested; further
+permission is unnecessary once the existing server connection is restored.
+
+## Historical C017 handoff: measured scope and candidate training scale
 
 The owner requested and C017 completed original-problem split, solution coverage
 and attrition audits. Read [the findings](../reports/REAL_MATH_CPU_AUDIT_20260910.md)

@@ -13,6 +13,14 @@ CPU preparation; model execution and availability remain pending at this
 implementation milestone. No GPU charge, new teacher, rental, external message
 or scientific comparison occurred.
 
+Preparation closeout: source and independent raw-tokenizer checks pass for
+32 training responses and 16 development parents; all 256 updates and eight
+input-tampering cases reconcile. The extended suite has 38 passing tests and
+two GNU-timeout skips pending Linux. A read-only SSH probe returned connection
+refused. No model run or ledger reservation was made; the owner was asked for
+server availability. Compact attributed inputs, verification and handoff are
+published for resumption without reconstructing data.
+
 ## 2026-09-10 UTC — C017 CPU data audit and scale proposal
 
 At the owner's request, Codex inspected prior discussion/proposals and implemented

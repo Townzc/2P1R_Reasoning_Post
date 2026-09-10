@@ -1,5 +1,21 @@
 # Research journal
 
+## 2026-09-10 — E013 engineering preparation
+
+The owner requested the next experiment after C017. Freeze its 32 selected
+GSM8K responses and first 16 development ranks; implement one overfit/profile
+before any treatment comparison. Preserve the base-model recipe and ledger.
+Published source precedes immutable inputs. Each row is exposed 32 times in
+256 updates, totaling 167232 response / 229056 processed tokens. Original
+source hashes, independent tokenizer labels and every update agree. Eight
+input-tampering cases fail closed. 38 tests pass, two GNU-timeout integrations
+await Linux. Numeric answer agreement is separate from proof validity and EOS.
+
+The existing SSH endpoint refused a read-only connection. No model was loaded,
+job reserved or GPU cost measured. The owner was asked for server availability
+or updated access. Balance: 5971 used / 1229 left. The next step is Linux
+preflight and this single run; E012 stays paused.
+
 ## 2026-09-10 — C017 real-math data audit and scale proposal
 
 **Question and motivation.** Following the cost-allocation discussion, the

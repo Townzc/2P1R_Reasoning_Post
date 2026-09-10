@@ -6,6 +6,17 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
+**E013 GSM8K engineering prepared, 2026-09-10 UTC:** the owner requested the
+next experiment. The frozen 32-parent overfit/profile has 256 updates and
+167,232 supervised tokens. CPU source, label, exposure and tampering checks
+pass; 38 focused tests pass, with two GNU-timeout integrations pending on Linux.
+The existing SSH endpoint refused connection, so no E013 model run has started.
+The 900-second process cap plus 15-second guard fits the existing 1,229-second
+balance. [Ready report](reports/REAL_MATH_E013_READY.md),
+[registration](docs/experiments/E013_gsm8k_engineering.md),
+[handoff](docs/NEXT_SESSION.md). E012 stays paused and the four-condition
+scientific comparison still requires measured budgeting and review.
+
 **C017 real-math CPU audit complete, 2026-09-10 UTC:** original split and
 parent grouping checks retain 7,470 GSM8K and 2,908 text-only MATH level-1–3
 training groups. Frozen audit draws are 1,024 and 512 parents; four pinned
