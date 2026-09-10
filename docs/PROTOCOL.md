@@ -1,14 +1,14 @@
 # Protocol v0.5 — fixed pilot complete; C009 CPU matching gate measured
 
-**Current E014 engineering extension, 2026-09-10 UTC:** after the failed E013
-gate, the owner requested local diagnosis and preparation before server startup.
-[E014](experiments/E014_generation_diagnostic.md) freezes one saved-checkpoint
-inference process: original32-prompt batch8 replay,10 predetermined batch1
-cases, and32 teacher-forced token/EOS records. CPU source/input/weight checks
-pass; no pretrained model or server action occurred. At most360+15 seconds fit
-the existing903-second balance. No training, new dev/test scoring, new budget
-or scientific-grid authorization follows. Preserve the original failed gate;
-use the registered decision table before proposing any subsequent repair.
+**Current E014 outcome, 2026-09-10 UTC:** the owner-started A800 completed the
+single registered diagnostic.32/32 replay streams agree; batch1 fixesno failed
+case. Reference-token probes expose17 top-one misses while all32 reference EOS
+targets win. Both record audits pass. E013 remains failed; no score/cap is
+revised. All18 receipts reconcile to6467 used /733 left. The E015512-update
+fresh-base calibration is a separate review-only proposal requiring its own
+registration/implementation and preservation checks; no next launch, training
+sweep, dev/test decode, new allowance or scientific grid is authorized here.
+See [E014 results](../reports/REAL_MATH_E014_RESULTS.md).
 
 **Current extension, 2026-09-10 UTC:** after C017 the owner requested the next
 real-data experiment. [E013](experiments/E013_gsm8k_engineering.md) registers a

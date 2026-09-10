@@ -1,5 +1,32 @@
 # Research journal
 
+## 2026-09-10 — E014 complete: local fit gaps persist at batch1
+
+The owner restored the existing A800. CPU preflight exposed repeated vocabulary
+length reads; retain45/180-second CPU timeouts, publish audit-only cached-size
+source d9c0bb4 and immutable r2 release d78aa77 with identical cases/evidence.
+All55 Linux tests pass and inspection takes10.38 seconds. One original-scope
+inference run completes in169.81 seconds, charging170; no retry or training.
+
+All32 batch8 streams reproduce exactly.3/10 selected batch1 streams change but
+all eight original failures persist; both controls remain correct.17/5226 full-
+reference targets lose top-one across12 rows, exactly the non-exact replay
+rows. All27 queried first-difference records favor the generated alternative
+at10 distinct combinations, while all32 reference-conditioned EOS targets win.
+NLL agrees to1.25e-10. These facts support local reference-fit gaps, not a claim
+that cached and full-forward kernels agree everywhere or that EOS on loops is
+healthy. The scientific effect is still unmeasured and E013 stays failed.
+
+Server/local audits cover42 generations,32 references and5226 targets. Weights
+are unchanged, rehashed and independently backed up.18 receipts reconcile to
+6467 used /733 remaining with zero reservations. Propose one512-update fresh-
+base calibration for review; no next job is queued. Its CPU dose and600+15 cap
+are explicit, but more training is not guaranteed to fix the failures and the
+checkpoint-writing storage gate still needs resolution.
+
+[Results and limitations](../reports/REAL_MATH_E014_RESULTS.md).
+
+
 ## 2026-09-10 — E014 CPU diagnosis and inference release ready
 
 **Motivation.** E013 has low aggregate NLL but eight failed free generations.

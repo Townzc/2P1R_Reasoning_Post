@@ -1,6 +1,29 @@
-# Verified status — E014 CPU preflight correction; no model run, 2026-09-10 UTC
+# Verified status — E014 complete; E013 gate remains failed, 2026-09-10 UTC
 
-Current: the owner-started A800 is verified.54 Linux tests passed, but CPU-only
+The fixed saved-checkpoint diagnostic completed from published sourced78aa77.
+All32 original batch8 streams reproduce exactly. Batch1 changes3/10 selected
+streams but fixesnone of the eight original failures; both controls stay correct.
+Reference NLL agrees to1.25e-10;17/5226 reference targets lose top-one across12
+rows. All27 selected first-difference records (10 distinct combinations) favor
+the generated alternative, while all32 reference-conditioned EOS targets win.
+This supports local fit gaps, not a causal software-bug or generalization claim.
+
+All55 Linux tests and both server/local42-generation/32-reference/5226-target
+audits pass. Both CPU preflight timeouts are preserved with the audit-only cache
+correction; old cases/evidence are byte-identical to r2. The170-second charge
+leaves **6467/7200 used,733 remaining,18 receipts,zero reservations**. The latest
+private ledger is backed up. All12 E013 weight files remain independently
+preserved and pass post-run server hashes. No GPU process or next job remains.
+
+Read [the result](REAL_MATH_E014_RESULTS.md). E015 is a review-only512-update
+fresh-base calibration with600+15 proposed cap; no implementation or launch.
+Its12GiB checkpoint-writing capacity gate is not met by the6.29GiB observed
+free space. Scientific scale remains blocked by the failed engineering gate
+and four-arm2096–2165-second training-only proxy. E012 stays paused.
+
+## Historical E014 preparation and preflight
+
+Historical preflight: the owner-started A800 is verified.54 Linux tests passed, but CPU-only
 inspection timed out before launch due to repeated tokenizer-length reads.
 D023 adds an audit-only cache with equivalence checks and an immutable r2 release;
 no model call/reservation or budget change occurred. See the retained evidence in

@@ -6,7 +6,17 @@ The central question is whether within-problem structural path diversity helps b
 
 ## Current status
 
-**E014 CPU preparation complete, 2026-09-10 UTC:** saved-output/source inspection,
+**E014 completed, 2026-09-10 UTC:** all32 batch8 outputs reproduce E013 exactly.
+Batch1 changes3/10 selected streams but fixes0/8 original failures. All27
+first-difference query records favor the generated alternative;17/5226 reference
+targets lose top-one across12 rows, while all32 reference EOS targets win.
+The55-test Linux suite and server/local raw-record audits pass.170 seconds are
+charged: **6467 used /733 left,18 receipts,zero reservations**. The failed E013
+gate is unchanged. A single512-update calibration is proposed for review only;
+no training grid or next GPU job is queued.
+[Results and next proposal](reports/REAL_MATH_E014_RESULTS.md).
+
+**Historical E014 CPU preparation complete, 2026-09-10 UTC:** saved-output/source inspection,
 independent32-parent token/position checks, all12 checkpoint hashes and published
 default inspection pass.52 CPU tests pass; two GNU-timeout tests await Linux.
 The next single diagnostic replays batch8, decodes10 fixed cases at batch1 and

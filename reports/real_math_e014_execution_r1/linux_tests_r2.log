@@ -1,0 +1,66 @@
+test_complete_fixture_and_rehashed_raw_score_corruption (tests.test_e014.CompletedOutputAudit.test_complete_fixture_and_rehashed_raw_score_corruption) ... ok
+test_actual_saved_defaults_resolve_to_registered_cache_and_cap (tests.test_e014.FrozenChecks.test_actual_saved_defaults_resolve_to_registered_cache_and_cap) ... `generation_config` default values have been modified to match model-specific defaults: {'bos_token_id': 151643}. If this is not desired, please set these values explicitly.
+ok
+test_cached_vocabulary_audit_preserves_outputs_and_rejections (tests.test_e014.FrozenChecks.test_cached_vocabulary_audit_preserves_outputs_and_rejections) ... ok
+test_checkpoint_hash_size_extra_and_symlink_guards (tests.test_e014.FrozenChecks.test_checkpoint_hash_size_extra_and_symlink_guards) ... ok
+test_model_default_merging_is_detected_instead_of_silently_changed (tests.test_e014.FrozenChecks.test_model_default_merging_is_detected_instead_of_silently_changed) ... `generation_config` default values have been modified to match model-specific defaults: {'use_cache': False}. If this is not desired, please set these values explicitly.
+ok
+test_selection_is_all_failures_plus_first_two_controls (tests.test_e014.FrozenChecks.test_selection_is_all_failures_plus_first_two_controls) ... ok
+test_worker_cannot_load_pretrained_model_without_bound_wrapper (tests.test_e014.FrozenChecks.test_worker_cannot_load_pretrained_model_without_bound_wrapper) ... ok
+test_early_eos_is_a_real_first_difference (tests.test_e014.ReferenceMeasurements.test_early_eos_is_a_real_first_difference) ... ok
+test_exact_match_still_probes_reference_eos (tests.test_e014.ReferenceMeasurements.test_exact_match_still_probes_reference_eos) ... ok
+test_first_difference_uses_only_shared_reference_prefix (tests.test_e014.ReferenceMeasurements.test_first_difference_uses_only_shared_reference_prefix) ... ok
+test_independent_auditor_rejects_shift_loss_and_query_tampering (tests.test_e014.ReferenceMeasurements.test_independent_auditor_rejects_shift_loss_and_query_tampering) ... ok
+test_independent_reference_auditor_accepts_consistent_record (tests.test_e014.ReferenceMeasurements.test_independent_reference_auditor_accepts_consistent_record) ... ok
+test_low_mean_loss_can_hide_wrong_terminal_top_one (tests.test_e014.ReferenceMeasurements.test_low_mean_loss_can_hide_wrong_terminal_top_one) ... ok
+test_nonfinite_logits_and_out_of_range_positions_fail (tests.test_e014.ReferenceMeasurements.test_nonfinite_logits_and_out_of_range_positions_fail) ... ok
+test_raw_comparison_checks_length_and_token_mismatches (tests.test_e014.ReferenceMeasurements.test_raw_comparison_checks_length_and_token_mismatches) ... ok
+test_shift_matches_independent_training_loss_including_eos (tests.test_e014.ReferenceMeasurements.test_shift_matches_independent_training_loss_including_eos) ... ok
+test_tie_rank_is_distinct_from_argmax_identity (tests.test_e014.ReferenceMeasurements.test_tie_rank_is_distinct_from_argmax_identity) ... ok
+test_unselected_rows_only_probe_eos (tests.test_e014.ReferenceMeasurements.test_unselected_rows_only_probe_eos) ... ok
+test_exact_e013_generate_function_preserves_order_mask_eos_and_cap (tests.test_e014.TinyQwenGeneration.test_exact_e013_generate_function_preserves_order_mask_eos_and_cap) ... `generation_config` default values have been modified to match model-specific defaults: {'bos_token_id': 1}. If this is not desired, please set these values explicitly.
+{"evaluation": "paired.jsonl", "completed_prompts": 2, "batch_seconds": 0.029476292431354523}
+{"evaluation": "single.jsonl", "completed_prompts": 1, "batch_seconds": 0.011039108037948608}
+{"evaluation": "single.jsonl", "completed_prompts": 2, "batch_seconds": 0.0108322873711586}
+ok
+test_left_padding_positions_and_cached_next_logits_match_unpadded (tests.test_e014.TinyQwenGeneration.test_left_padding_positions_and_cached_next_logits_match_unpadded) ... ok
+test_do_not_mine_working_or_join_numeric_tokens (tests.test_real_math_engineering.NumericCompletionTests.test_do_not_mine_working_or_join_numeric_tokens) ... ok
+test_eos_truncation_and_specials_separate_from_numeric_answer (tests.test_real_math_engineering.NumericCompletionTests.test_eos_truncation_and_specials_separate_from_numeric_answer) ... ok
+test_exact_scalar_equivalence_and_formatting (tests.test_real_math_engineering.NumericCompletionTests.test_exact_scalar_equivalence_and_formatting) ... ok
+test_gate_requires_dose_profile_termination_and_nll (tests.test_real_math_engineering.NumericCompletionTests.test_gate_requires_dose_profile_termination_and_nll) ... ok
+test_last_marker_overrides_earlier_correct_working (tests.test_real_math_engineering.NumericCompletionTests.test_last_marker_overrides_earlier_correct_working) ... ok
+test_token_identity_and_score_tampering_block (tests.test_real_math_engineering.NumericCompletionTests.test_token_identity_and_score_tampering_block) ... ok
+test_boundary_crossing_refused (tests.test_sft_data.DataTests.test_boundary_crossing_refused) ... ok
+test_deterministic_exposure_across_epoch_boundary (tests.test_sft_data.DataTests.test_deterministic_exposure_across_epoch_boundary) ... ok
+test_finite_domain_and_existing_outputs_refused (tests.test_sft_data.DataTests.test_finite_domain_and_existing_outputs_refused) ... ok
+test_generated_split_reproduction (tests.test_sft_data.DataTests.test_generated_split_reproduction) ... ok
+test_refuse_truncation_and_empty_response (tests.test_sft_data.DataTests.test_refuse_truncation_and_empty_response) ... ok
+test_response_mask_eos_and_first_prediction (tests.test_sft_data.DataTests.test_response_mask_eos_and_first_prediction) ... ok
+test_token_budget_counts_exposure_and_padding (tests.test_sft_data.DataTests.test_token_budget_counts_exposure_and_padding) ... ok
+test_expression_parse_and_correctness_are_separate (tests.test_sft_data.EvaluationTests.test_expression_parse_and_correctness_are_separate) ... ok
+test_multiple_answers_rejected (tests.test_sft_data.EvaluationTests.test_multiple_answers_rejected) ... ok
+test_problem_macro_not_generation_micro (tests.test_sft_data.EvaluationTests.test_problem_macro_not_generation_micro) ... ok
+test_accumulation_matches_combined_token_normalization (tests.test_sft_data.TorchTests.test_accumulation_matches_combined_token_normalization) ... ok
+test_padding_same_id_as_eos_keeps_real_eos_label (tests.test_sft_data.TorchTests.test_padding_same_id_as_eos_keeps_real_eos_label) ... ok
+test_separate_batch_rows_do_not_attend_to_other_samples (tests.test_sft_data.TorchTests.test_separate_batch_rows_do_not_attend_to_other_samples) ... ok
+test_all_legal_routes_not_only_exact_anchor (tests.test_relation_engineering.ScoringTests.test_all_legal_routes_not_only_exact_anchor) ... ok
+test_answer_only_and_no_eos_are_not_complete (tests.test_relation_engineering.ScoringTests.test_answer_only_and_no_eos_are_not_complete) ... ok
+test_deleted_evidence_invalidates_removed_proof (tests.test_relation_engineering.ScoringTests.test_deleted_evidence_invalidates_removed_proof) ... ok
+test_outer_whitespace_only (tests.test_relation_engineering.ScoringTests.test_outer_whitespace_only) ... ok
+test_token_stream_and_identity_tampering_rejected (tests.test_relation_engineering.ScoringTests.test_token_stream_and_identity_tampering_rejected) ... ok
+test_complete_eight_cycle_allocation (tests.test_relation_engineering.DoseTests.test_complete_eight_cycle_allocation) ... ok
+test_gradients_equal_unsplit_token_normalized_objective (tests.test_relation_engineering.DoseTests.test_gradients_equal_unsplit_token_normalized_objective) ... ok
+test_missing_round_repeated_problem_and_wrong_slot_rejected (tests.test_relation_engineering.DoseTests.test_missing_round_repeated_problem_and_wrong_slot_rejected) ... ok
+test_profile_window_and_strict_gate (tests.test_relation_engineering.DoseTests.test_profile_window_and_strict_gate) ... ok
+test_absent_stale_reserved_and_used_ledgers_block (tests.test_relation_engineering.LedgerTests.test_absent_stale_reserved_and_used_ledgers_block) ... ok
+test_shortened_cap_and_authorization_change_block (tests.test_relation_engineering.LedgerTests.test_shortened_cap_and_authorization_change_block) ... ok
+test_watchdog_rechecks_hash_and_full_cap_under_lock_without_child (tests.test_relation_engineering.LedgerTests.test_watchdog_rechecks_hash_and_full_cap_under_lock_without_child) ... ok
+test_whole_phase_fits_without_reserving (tests.test_relation_engineering.LedgerTests.test_whole_phase_fits_without_reserving) ... ok
+test_complete_synthetic_receipt_and_corruption_rejection (tests.test_relation_engineering.OutputAuditTests.test_complete_synthetic_receipt_and_corruption_rejection) ... ok
+test_exhausted_budget_never_launches_child (tests.test_budget_guard.BudgetGuardTests.test_exhausted_budget_never_launches_child) ... ok
+test_timeout_records_charge_and_prevents_stale_reservation (tests.test_budget_guard.BudgetGuardTests.test_timeout_records_charge_and_prevents_stale_reservation) ... ok
+
+----------------------------------------------------------------------
+Ran 55 tests in 1.783s
+
+OK

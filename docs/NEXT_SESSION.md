@@ -1,16 +1,49 @@
-# Next session — run the prepared E014 checkpoint diagnostic
+# Next session — review one longer-dose calibration; E014 complete
 
-## Current: owner-started A800 verified; CPU cache amendment before launch
+## Current: no queued model job or server-start request
 
-The owner has now started the existing A800 and authorized E014. D023 preserved
-45/180-second CPU-only timeouts and published an audit-only vocabulary size cache
-in d9c0bb4. Active immutable inputs are `reports/real_math_e014_inputs_r2`, with
-`configs/real_math_e014/release_r2.json`. Independent input verification passes;
-r2 cases and CPU evidence are byte-identical to r1, all12 checkpoint files verify,
-and53 local tests pass (2 GNU-timeout checks await amended Linux validation).
-No model run/reservation exists;6297 used /903 left and the exact ledger below.
-Synchronize this published release, run the amended55-test Linux suite, inspect
-and execute the single original command below. Do not ask for startup again.
+The owner's single E014 execution request is complete. Read
+[the result](../reports/REAL_MATH_E014_RESULTS.md):32/32 raw batch8 replays match;
+batch1 fixes0/8 failures;17/5226 reference targets lose top-one across12 rows;
+all27 selected divergence records favor the generated alternative, while all32
+reference EOS targets win. Mean NLL agrees with E013. The original gate remains
+failed.55 Linux tests and both full CPU output audits pass.
+
+Run `gsm8k_generation_e014_r1`, sourced78aa7731af7e42d73e532348a123c4f1d4ce868,
+completed in169.8054 seconds and charged170. All18 receipts reconcile:
+**6467/7200 used,733 remaining,zero reservations**. Restore only the latest
+private ledger backup with SHA256
+`8813caaa4a3661900f874033fac68b802b3e856bc9c449f28f1fff3983b4aae9`.
+An immutable pre-E01417-receipt snapshot remains retained. Do not restore the
+old903-second balance, repeat E014/E013, or launch the paused E012 sequence.
+The public compute accounting and run registry both include all18 receipts.
+
+Compact results are in `runs/gsm8k_generation_e014_r1`; execution evidence,
+local verification and descriptive findings are in
+`reports/real_math_e014_execution_r1`. Active source/input freeze is r2;
+original r1 and both CPU-only timeouts remain immutable. The correction caches
+vocabulary size only for CPU auditing; it changes no experimental setting.
+All12 E013 checkpoint files (6,190,803,414 bytes) remain independently retained
+under `.local/checkpoint_backups/gsm8k_overfit_e013_r1` and pass post-run server
+hashes. There are no new weights or optimizer state from E014. GPU execution
+has stopped. Preserve publication and this ledger before retiring the instance.
+
+Next review `configs/diagnostics/real_math_e015_proposal.json`. It proposes one
+fresh-original-base512-update calibration, same32 rows/seed17/LR5e-5/batch4/
+microbatch1 and unchanged numeric/EOS/NLL scorer/decoder. CPU dose is334464
+supervised tokens,458112 processed tokens and64 exposures per response. No new
+dev/test scoring or intermediate checkpoint selection is proposed. The600+15
+cap would leave118 seconds; measured phase proxies are not upper bounds.
+This proposal is not registered, implemented or launched. Prepare a separate
+immutable E015 implementation/release only after owner review, including all
+necessary checks and checkpoint preservation. Its12GiB free-space gate is not
+met by E014's6.29GiB observed capacity; resolve preservation without losing
+unique state, buying storage or renting another server automatically. No server
+is needed for reviewing/preparing that work; notify only when it is ready.
+
+C017's four-arm training-only proxy is2096–2165 seconds before other costs.
+Neither the current733 seconds nor E013's failed engineering gate permits
+scientific scaling. Preserve the CPU audit/proposal and all adverse endpoints.
 
 ## Historical: CPU work complete; owner-started A800 needed
 

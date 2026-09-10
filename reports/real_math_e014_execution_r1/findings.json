@@ -1,0 +1,3911 @@
+{
+  "all_available_rows": {
+    "original_batch8": {
+      "generated_tokens": 8652,
+      "reference_exact_match": 20,
+      "rows": 32,
+      "terminated_correct": 24,
+      "truncated": 5
+    },
+    "replay_batch8": {
+      "generated_tokens": 8652,
+      "reference_exact_match": 20,
+      "rows": 32,
+      "terminated_correct": 24,
+      "truncated": 5
+    },
+    "selected_batch1": {
+      "generated_tokens": 4905,
+      "reference_exact_match": 1,
+      "rows": 10,
+      "terminated_correct": 2,
+      "truncated": 5
+    }
+  },
+  "control_rows": {
+    "original_batch8": {
+      "generated_tokens": 438,
+      "reference_exact_match": 1,
+      "rows": 2,
+      "terminated_correct": 2,
+      "truncated": 0
+    },
+    "replay_batch8": {
+      "generated_tokens": 438,
+      "reference_exact_match": 1,
+      "rows": 2,
+      "terminated_correct": 2,
+      "truncated": 0
+    },
+    "selected_batch1": {
+      "generated_tokens": 438,
+      "reference_exact_match": 1,
+      "rows": 2,
+      "terminated_correct": 2,
+      "truncated": 0
+    }
+  },
+  "first_difference_queries_generated_alternative_is_argmax": 27,
+  "first_difference_queries_reference_target_is_argmax": 0,
+  "first_difference_query_count": 27,
+  "inputs_sha256": "281170f0553d43d79e6da26d23598030f1e9dec94ce838b0d41fecde495d5b48",
+  "limitations": [
+    "Post-hoc selected ten-case contrast is not an all32 batch1 evaluation.",
+    "Full-reference argmax is not cached generation under the same kernel.",
+    "Reference EOS probabilities do not measure termination on diverged generated prefixes.",
+    "This descriptive analysis neither changes E013 scoring nor establishes a causal bug."
+  ],
+  "original_failed_rows": {
+    "original_batch8": {
+      "generated_tokens": 4714,
+      "reference_exact_match": 0,
+      "rows": 8,
+      "terminated_correct": 0,
+      "truncated": 5
+    },
+    "replay_batch8": {
+      "generated_tokens": 4714,
+      "reference_exact_match": 0,
+      "rows": 8,
+      "terminated_correct": 0,
+      "truncated": 5
+    },
+    "selected_batch1": {
+      "generated_tokens": 4467,
+      "reference_exact_match": 0,
+      "rows": 8,
+      "terminated_correct": 0,
+      "truncated": 5
+    }
+  },
+  "phase": "E014_POST_HOC_DESCRIPTIVE_FINDINGS",
+  "pretrained_model_calls": 0,
+  "record_verification_sha256": "550f23200b3bdf0c415b12fb00993b23adbf0cab2dc37808554ac7f2017807e2",
+  "reference_eos_top1_misses": 0,
+  "reference_rows_with_any_top1_miss": 12,
+  "reference_top1_misses": 17,
+  "rows": [
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 16,
+          "alternative_log_probability": -0.007124139927327633,
+          "argmax_id": 16,
+          "argmax_log_probability": -0.007124139927327633,
+          "causal_logit_index": 179,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "a82692205c20afd7855a2eeaa13742a9d84b9127a6127fed802cda4b03b458b0",
+          "context_token_count": 180,
+          "kind": "original_batch8_first_difference",
+          "target_id": 19,
+          "target_is_argmax": false,
+          "target_log_probability": -8.194623947143555,
+          "target_minus_alternative_logit": -8.1875,
+          "target_minus_argmax_logit": -8.1875,
+          "target_position": 123,
+          "target_rank_strict_greater": 5,
+          "top5": [
+            {
+              "id": 16,
+              "log_probability": -0.007124139927327633
+            },
+            {
+              "id": 17,
+              "log_probability": -5.444623947143555
+            },
+            {
+              "id": 21,
+              "log_probability": -6.944623947143555
+            },
+            {
+              "id": 20,
+              "log_probability": -7.819623947143555
+            },
+            {
+              "id": 15,
+              "log_probability": -8.194623947143555
+            }
+          ]
+        },
+        {
+          "alternative_id": 16,
+          "alternative_log_probability": -0.007124139927327633,
+          "argmax_id": 16,
+          "argmax_log_probability": -0.007124139927327633,
+          "causal_logit_index": 179,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "a82692205c20afd7855a2eeaa13742a9d84b9127a6127fed802cda4b03b458b0",
+          "context_token_count": 180,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 19,
+          "target_is_argmax": false,
+          "target_log_probability": -8.194623947143555,
+          "target_minus_alternative_logit": -8.1875,
+          "target_minus_argmax_logit": -8.1875,
+          "target_position": 123,
+          "target_rank_strict_greater": 5,
+          "top5": [
+            {
+              "id": 16,
+              "log_probability": -0.007124139927327633
+            },
+            {
+              "id": 17,
+              "log_probability": -5.444623947143555
+            },
+            {
+              "id": 21,
+              "log_probability": -6.944623947143555
+            },
+            {
+              "id": 20,
+              "log_probability": -7.819623947143555
+            },
+            {
+              "id": 15,
+              "log_probability": -8.194623947143555
+            }
+          ]
+        },
+        {
+          "alternative_id": 16,
+          "alternative_log_probability": -0.007124139927327633,
+          "argmax_id": 16,
+          "argmax_log_probability": -0.007124139927327633,
+          "causal_logit_index": 179,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "a82692205c20afd7855a2eeaa13742a9d84b9127a6127fed802cda4b03b458b0",
+          "context_token_count": 180,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 19,
+          "target_is_argmax": false,
+          "target_log_probability": -8.194623947143555,
+          "target_minus_alternative_logit": -8.1875,
+          "target_minus_argmax_logit": -8.1875,
+          "target_position": 123,
+          "target_rank_strict_greater": 5,
+          "top5": [
+            {
+              "id": 16,
+              "log_probability": -0.007124139927327633
+            },
+            {
+              "id": 17,
+              "log_probability": -5.444623947143555
+            },
+            {
+              "id": 21,
+              "log_probability": -6.944623947143555
+            },
+            {
+              "id": 20,
+              "log_probability": -7.819623947143555
+            },
+            {
+              "id": 15,
+              "log_probability": -8.194623947143555
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/03552",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.07648943364620209,
+        "causal_logit_index": 256,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "619d7f240ae3a9bdb5b384c00355765d33d292febdbc89959c0e912aa8e1ebb2",
+        "context_token_count": 257,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.07648943364620209,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 200,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.07648943364620209
+          },
+          {
+            "id": 4354,
+            "log_probability": -3.2014894485473633
+          },
+          {
+            "id": 1124,
+            "log_probability": -5.076489448547363
+          },
+          {
+            "id": 576,
+            "log_probability": -5.138989448547363
+          },
+          {
+            "id": 1988,
+            "log_probability": -5.888989448547363
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.926362702513169,
+      "reference_nll": 0.07735524749609336,
+      "reference_targets": 201,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 16,
+          "target_id": 19,
+          "target_nll": 8.194623947143555,
+          "target_position": 123
+        },
+        {
+          "argmax_id": 16,
+          "target_id": 23,
+          "target_nll": 0.9096422791481018,
+          "target_position": 173
+        },
+        {
+          "argmax_id": 3983,
+          "target_id": 4416,
+          "target_nll": 5.375064849853516,
+          "target_position": 179
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 353,
+          "alternative_log_probability": -0.4158397614955902,
+          "argmax_id": 353,
+          "argmax_log_probability": -0.4158397614955902,
+          "causal_logit_index": 139,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "2dfa25394e208797edb27e9fb1690e7d42e23a2b9a5cfde4b46d0ea8210964bc",
+          "context_token_count": 140,
+          "kind": "original_batch8_first_difference",
+          "target_id": 4236,
+          "target_is_argmax": false,
+          "target_log_probability": -1.5408397912979126,
+          "target_minus_alternative_logit": -1.125,
+          "target_minus_argmax_logit": -1.125,
+          "target_position": 96,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 353,
+              "log_probability": -0.4158397614955902
+            },
+            {
+              "id": 4236,
+              "log_probability": -1.5408397912979126
+            },
+            {
+              "id": 3,
+              "log_probability": -2.290839672088623
+            },
+            {
+              "id": 400,
+              "log_probability": -4.540839672088623
+            },
+            {
+              "id": 9,
+              "log_probability": -5.040839672088623
+            }
+          ]
+        },
+        {
+          "alternative_id": 353,
+          "alternative_log_probability": -0.4158397614955902,
+          "argmax_id": 353,
+          "argmax_log_probability": -0.4158397614955902,
+          "causal_logit_index": 139,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "2dfa25394e208797edb27e9fb1690e7d42e23a2b9a5cfde4b46d0ea8210964bc",
+          "context_token_count": 140,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 4236,
+          "target_is_argmax": false,
+          "target_log_probability": -1.5408397912979126,
+          "target_minus_alternative_logit": -1.125,
+          "target_minus_argmax_logit": -1.125,
+          "target_position": 96,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 353,
+              "log_probability": -0.4158397614955902
+            },
+            {
+              "id": 4236,
+              "log_probability": -1.5408397912979126
+            },
+            {
+              "id": 3,
+              "log_probability": -2.290839672088623
+            },
+            {
+              "id": 400,
+              "log_probability": -4.540839672088623
+            },
+            {
+              "id": 9,
+              "log_probability": -5.040839672088623
+            }
+          ]
+        },
+        {
+          "alternative_id": 353,
+          "alternative_log_probability": -0.4158397614955902,
+          "argmax_id": 353,
+          "argmax_log_probability": -0.4158397614955902,
+          "causal_logit_index": 139,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "2dfa25394e208797edb27e9fb1690e7d42e23a2b9a5cfde4b46d0ea8210964bc",
+          "context_token_count": 140,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 4236,
+          "target_is_argmax": false,
+          "target_log_probability": -1.5408397912979126,
+          "target_minus_alternative_logit": -1.125,
+          "target_minus_argmax_logit": -1.125,
+          "target_position": 96,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 353,
+              "log_probability": -0.4158397614955902
+            },
+            {
+              "id": 4236,
+              "log_probability": -1.5408397912979126
+            },
+            {
+              "id": 3,
+              "log_probability": -2.290839672088623
+            },
+            {
+              "id": 400,
+              "log_probability": -4.540839672088623
+            },
+            {
+              "id": 9,
+              "log_probability": -5.040839672088623
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/02301",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -4.351044481154531e-05,
+        "causal_logit_index": 176,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "22932930d2e6d4ad437a66ac3f39e841dd3bb1d78f7eaffd7484f035e316293c",
+        "context_token_count": 177,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -4.351044481154531e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 133,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -4.351044481154531e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.125043869018555
+          },
+          {
+            "id": 576,
+            "log_probability": -13.875043869018555
+          },
+          {
+            "id": 8704,
+            "log_probability": -15.062543869018555
+          },
+          {
+            "id": 1416,
+            "log_probability": -15.250043869018555
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999564905017542,
+      "reference_nll": 0.027033186819445144,
+      "reference_targets": 134,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 353,
+          "target_id": 4236,
+          "target_nll": 1.5408397912979126,
+          "target_position": 96
+        },
+        {
+          "argmax_id": 2679,
+          "target_id": 44500,
+          "target_nll": 1.161705493927002,
+          "target_position": 114
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/07460",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -7.510157047363464e-06,
+        "causal_logit_index": 368,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "dd35c22d1b45492a0a976e84d4f2c97d58d74738022dc0cfe1c21e326087dca4",
+        "context_token_count": 369,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -7.510157047363464e-06,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 301,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -7.510157047363464e-06
+          },
+          {
+            "id": 576,
+            "log_probability": -12.625007629394531
+          },
+          {
+            "id": 1096,
+            "log_probability": -13.375007629394531
+          },
+          {
+            "id": 8704,
+            "log_probability": -14.000007629394531
+          },
+          {
+            "id": 1416,
+            "log_probability": -14.562507629394531
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999924898711537,
+      "reference_nll": 0.002241244175522325,
+      "reference_targets": 302,
+      "reference_top1_misses": [],
+      "selection_role": "control",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 302,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "1080",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 302,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "1080",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 302,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "1080",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 3,
+          "alternative_log_probability": -0.0006117141456343234,
+          "argmax_id": 3,
+          "argmax_log_probability": -0.0006117141456343234,
+          "causal_logit_index": 132,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "feeb073bb005b1bc5eb3c93c637af7f55760759c8663f3e94c4df6655438d3af",
+          "context_token_count": 133,
+          "kind": "original_batch8_first_difference",
+          "target_id": 4416,
+          "target_is_argmax": false,
+          "target_log_probability": -7.750611782073975,
+          "target_minus_alternative_logit": -7.75,
+          "target_minus_argmax_logit": -7.75,
+          "target_position": 46,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 3,
+              "log_probability": -0.0006117141456343234
+            },
+            {
+              "id": 4416,
+              "log_probability": -7.750611782073975
+            },
+            {
+              "id": 400,
+              "log_probability": -10.063111305236816
+            },
+            {
+              "id": 785,
+              "log_probability": -10.313111305236816
+            },
+            {
+              "id": 1519,
+              "log_probability": -10.438111305236816
+            }
+          ]
+        },
+        {
+          "alternative_id": 3,
+          "alternative_log_probability": -0.0006117141456343234,
+          "argmax_id": 3,
+          "argmax_log_probability": -0.0006117141456343234,
+          "causal_logit_index": 132,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "feeb073bb005b1bc5eb3c93c637af7f55760759c8663f3e94c4df6655438d3af",
+          "context_token_count": 133,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 4416,
+          "target_is_argmax": false,
+          "target_log_probability": -7.750611782073975,
+          "target_minus_alternative_logit": -7.75,
+          "target_minus_argmax_logit": -7.75,
+          "target_position": 46,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 3,
+              "log_probability": -0.0006117141456343234
+            },
+            {
+              "id": 4416,
+              "log_probability": -7.750611782073975
+            },
+            {
+              "id": 400,
+              "log_probability": -10.063111305236816
+            },
+            {
+              "id": 785,
+              "log_probability": -10.313111305236816
+            },
+            {
+              "id": 1519,
+              "log_probability": -10.438111305236816
+            }
+          ]
+        },
+        {
+          "alternative_id": 3,
+          "alternative_log_probability": -0.0006117141456343234,
+          "argmax_id": 3,
+          "argmax_log_probability": -0.0006117141456343234,
+          "causal_logit_index": 132,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "feeb073bb005b1bc5eb3c93c637af7f55760759c8663f3e94c4df6655438d3af",
+          "context_token_count": 133,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 4416,
+          "target_is_argmax": false,
+          "target_log_probability": -7.750611782073975,
+          "target_minus_alternative_logit": -7.75,
+          "target_minus_argmax_logit": -7.75,
+          "target_position": 46,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 3,
+              "log_probability": -0.0006117141456343234
+            },
+            {
+              "id": 4416,
+              "log_probability": -7.750611782073975
+            },
+            {
+              "id": 400,
+              "log_probability": -10.063111305236816
+            },
+            {
+              "id": 785,
+              "log_probability": -10.313111305236816
+            },
+            {
+              "id": 1519,
+              "log_probability": -10.438111305236816
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/06477",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.00015400654228869826,
+        "causal_logit_index": 309,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "8986d562348cf9bcdf8f3c14bb39ce25ee8dd7cea656ee0de651c6ee11c4b67c",
+        "context_token_count": 310,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.00015400654228869826,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 223,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.00015400654228869826
+          },
+          {
+            "id": 8704,
+            "log_probability": -9.875153541564941
+          },
+          {
+            "id": 576,
+            "log_probability": -10.125153541564941
+          },
+          {
+            "id": 1416,
+            "log_probability": -10.875153541564941
+          },
+          {
+            "id": 1260,
+            "log_probability": -10.875153541564941
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9998460053161101,
+      "reference_nll": 0.04328814454929243,
+      "reference_targets": 224,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 3,
+          "target_id": 4416,
+          "target_nll": 7.750611782073975,
+          "target_position": 46
+        },
+        {
+          "argmax_id": 16,
+          "target_id": 17,
+          "target_nll": 0.878276526927948,
+          "target_position": 147
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 4416,
+          "alternative_log_probability": -0.6468691825866699,
+          "argmax_id": 4416,
+          "argmax_log_probability": -0.6468691825866699,
+          "causal_logit_index": 169,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "7c2f479017b20351399217ac3029ebcfd3c2f8494d92bf8913ff6607130f270b",
+          "context_token_count": 170,
+          "kind": "original_batch8_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -1.02186918258667,
+          "target_minus_alternative_logit": -0.375,
+          "target_minus_argmax_logit": -0.375,
+          "target_position": 112,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 4416,
+              "log_probability": -0.6468691825866699
+            },
+            {
+              "id": 44500,
+              "log_probability": -1.02186918258667
+            },
+            {
+              "id": 1654,
+              "log_probability": -2.64686918258667
+            },
+            {
+              "id": 23949,
+              "log_probability": -4.02186918258667
+            },
+            {
+              "id": 2679,
+              "log_probability": -4.89686918258667
+            }
+          ]
+        },
+        {
+          "alternative_id": 4416,
+          "alternative_log_probability": -0.6468691825866699,
+          "argmax_id": 4416,
+          "argmax_log_probability": -0.6468691825866699,
+          "causal_logit_index": 169,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "7c2f479017b20351399217ac3029ebcfd3c2f8494d92bf8913ff6607130f270b",
+          "context_token_count": 170,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -1.02186918258667,
+          "target_minus_alternative_logit": -0.375,
+          "target_minus_argmax_logit": -0.375,
+          "target_position": 112,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 4416,
+              "log_probability": -0.6468691825866699
+            },
+            {
+              "id": 44500,
+              "log_probability": -1.02186918258667
+            },
+            {
+              "id": 1654,
+              "log_probability": -2.64686918258667
+            },
+            {
+              "id": 23949,
+              "log_probability": -4.02186918258667
+            },
+            {
+              "id": 2679,
+              "log_probability": -4.89686918258667
+            }
+          ]
+        },
+        {
+          "alternative_id": 4416,
+          "alternative_log_probability": -0.6468691825866699,
+          "argmax_id": 4416,
+          "argmax_log_probability": -0.6468691825866699,
+          "causal_logit_index": 169,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "7c2f479017b20351399217ac3029ebcfd3c2f8494d92bf8913ff6607130f270b",
+          "context_token_count": 170,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -1.02186918258667,
+          "target_minus_alternative_logit": -0.375,
+          "target_minus_argmax_logit": -0.375,
+          "target_position": 112,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 4416,
+              "log_probability": -0.6468691825866699
+            },
+            {
+              "id": 44500,
+              "log_probability": -1.02186918258667
+            },
+            {
+              "id": 1654,
+              "log_probability": -2.64686918258667
+            },
+            {
+              "id": 23949,
+              "log_probability": -4.02186918258667
+            },
+            {
+              "id": 2679,
+              "log_probability": -4.89686918258667
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/06803",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -5.245195097813848e-06,
+        "causal_logit_index": 192,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "7414fec79359ccbdd893afed3a8bbfccc488cfaf088f29ea2765511bb9b73b4d",
+        "context_token_count": 193,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -5.245195097813848e-06,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 135,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -5.245195097813848e-06
+          },
+          {
+            "id": 1124,
+            "log_probability": -13.375004768371582
+          },
+          {
+            "id": 576,
+            "log_probability": -13.687504768371582
+          },
+          {
+            "id": 1416,
+            "log_probability": -14.062504768371582
+          },
+          {
+            "id": 8704,
+            "log_probability": -14.750004768371582
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999947548186582,
+      "reference_nll": 0.008338583868818465,
+      "reference_targets": 136,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 4416,
+          "target_id": 44500,
+          "target_nll": 1.02186918258667,
+          "target_position": 112
+        }
+      ],
+      "selection_role": "control",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 136,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "10",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 136,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "10",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 136,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "10",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/05594",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.0001225396408699453,
+        "causal_logit_index": 257,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "acfaa12d7de273738dba12860eb13afd476ebfe4ff20d94d22f70823d0cce16b",
+        "context_token_count": 258,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.0001225396408699453,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 221,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.0001225396408699453
+          },
+          {
+            "id": 1124,
+            "log_probability": -9.3751220703125
+          },
+          {
+            "id": 48794,
+            "log_probability": -11.4376220703125
+          },
+          {
+            "id": 758,
+            "log_probability": -12.3751220703125
+          },
+          {
+            "id": 2014,
+            "log_probability": -12.7501220703125
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9998774678668052,
+      "reference_nll": 0.001025947590553007,
+      "reference_targets": 222,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 222,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "5",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 222,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "5",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 785,
+          "alternative_log_probability": -0.11632496863603592,
+          "argmax_id": 785,
+          "argmax_log_probability": -0.11632496863603592,
+          "causal_logit_index": 119,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "b79edec26087a1a6c9f1260b185ef5a8ca1d340f576f1ce921a62b649bbc4c39",
+          "context_token_count": 120,
+          "kind": "original_batch8_first_difference",
+          "target_id": 4416,
+          "target_is_argmax": false,
+          "target_log_probability": -2.6163249015808105,
+          "target_minus_alternative_logit": -2.5,
+          "target_minus_argmax_logit": -2.5,
+          "target_position": 72,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 785,
+              "log_probability": -0.11632496863603592
+            },
+            {
+              "id": 4416,
+              "log_probability": -2.6163249015808105
+            },
+            {
+              "id": 11209,
+              "log_probability": -3.7413249015808105
+            },
+            {
+              "id": 2679,
+              "log_probability": -5.7413249015808105
+            },
+            {
+              "id": 2132,
+              "log_probability": -6.2413249015808105
+            }
+          ]
+        },
+        {
+          "alternative_id": 785,
+          "alternative_log_probability": -0.11632496863603592,
+          "argmax_id": 785,
+          "argmax_log_probability": -0.11632496863603592,
+          "causal_logit_index": 119,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "b79edec26087a1a6c9f1260b185ef5a8ca1d340f576f1ce921a62b649bbc4c39",
+          "context_token_count": 120,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 4416,
+          "target_is_argmax": false,
+          "target_log_probability": -2.6163249015808105,
+          "target_minus_alternative_logit": -2.5,
+          "target_minus_argmax_logit": -2.5,
+          "target_position": 72,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 785,
+              "log_probability": -0.11632496863603592
+            },
+            {
+              "id": 4416,
+              "log_probability": -2.6163249015808105
+            },
+            {
+              "id": 11209,
+              "log_probability": -3.7413249015808105
+            },
+            {
+              "id": 2679,
+              "log_probability": -5.7413249015808105
+            },
+            {
+              "id": 2132,
+              "log_probability": -6.2413249015808105
+            }
+          ]
+        },
+        {
+          "alternative_id": 785,
+          "alternative_log_probability": -0.11632496863603592,
+          "argmax_id": 785,
+          "argmax_log_probability": -0.11632496863603592,
+          "causal_logit_index": 119,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "b79edec26087a1a6c9f1260b185ef5a8ca1d340f576f1ce921a62b649bbc4c39",
+          "context_token_count": 120,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 4416,
+          "target_is_argmax": false,
+          "target_log_probability": -2.6163249015808105,
+          "target_minus_alternative_logit": -2.5,
+          "target_minus_argmax_logit": -2.5,
+          "target_position": 72,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 785,
+              "log_probability": -0.11632496863603592
+            },
+            {
+              "id": 4416,
+              "log_probability": -2.6163249015808105
+            },
+            {
+              "id": 11209,
+              "log_probability": -3.7413249015808105
+            },
+            {
+              "id": 2679,
+              "log_probability": -5.7413249015808105
+            },
+            {
+              "id": 2132,
+              "log_probability": -6.2413249015808105
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/04768",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -3.659658250398934e-05,
+        "causal_logit_index": 134,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "862d6e2586ba48a2b0b4d23fd4c710d3f001ec67ac392a715af293cf5ad2adf5",
+        "context_token_count": 135,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -3.659658250398934e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 87,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -3.659658250398934e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.875036239624023
+          },
+          {
+            "id": 220,
+            "log_probability": -11.750036239624023
+          },
+          {
+            "id": 3757,
+            "log_probability": -12.750036239624023
+          },
+          {
+            "id": 576,
+            "log_probability": -12.875036239624023
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999634040871428,
+      "reference_nll": 0.029972098683839734,
+      "reference_targets": 88,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 785,
+          "target_id": 4416,
+          "target_nll": 2.6163249015808105,
+          "target_position": 72
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/02678",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.00015960850578267127,
+        "causal_logit_index": 173,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "15b940e0ae776d0c0cd4b383c3e493b98f7e7d490cfe334ca02a7966c87e0b60",
+        "context_token_count": 174,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.00015960850578267127,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 127,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.00015960850578267127
+          },
+          {
+            "id": 87770,
+            "log_probability": -9.00015926361084
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.75015926361084
+          },
+          {
+            "id": 4710,
+            "log_probability": -12.62515926361084
+          },
+          {
+            "id": 63678,
+            "log_probability": -12.81265926361084
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9998404042309772,
+      "reference_nll": 0.00031114431184864344,
+      "reference_targets": 128,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 128,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "27",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 128,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "27",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/05596",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -6.592056161025539e-05,
+        "causal_logit_index": 229,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "25500c8871d433ed178df9033a3b08a1ca41c901b9f87528398f5b90e67abba2",
+        "context_token_count": 230,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -6.592056161025539e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 152,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -6.592056161025539e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.250065803527832
+          },
+          {
+            "id": 56774,
+            "log_probability": -11.000065803527832
+          },
+          {
+            "id": 576,
+            "log_probability": -12.375065803527832
+          },
+          {
+            "id": 2014,
+            "log_probability": -12.875065803527832
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999340816111022,
+      "reference_nll": 0.000667942263268006,
+      "reference_targets": 153,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 153,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "8800",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 153,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "8800",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/01126",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -5.531158240046352e-05,
+        "causal_logit_index": 188,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "f07889cae37ceaeccb5af72dabd829bfab045ead43c44aca043c705e76456a0a",
+        "context_token_count": 189,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -5.531158240046352e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 125,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -5.531158240046352e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.750055313110352
+          },
+          {
+            "id": 576,
+            "log_probability": -11.375055313110352
+          },
+          {
+            "id": 2014,
+            "log_probability": -11.500055313110352
+          },
+          {
+            "id": 8704,
+            "log_probability": -12.625055313110352
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999446899472569,
+      "reference_nll": 0.0021510235346686125,
+      "reference_targets": 126,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 126,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "90",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 126,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "90",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/02025",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -1.156323378381785e-05,
+        "causal_logit_index": 116,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "8277eeca5eac7418d50eb20b17051f8baa88a4c4b35b1d741a6520d9e9ce59a1",
+        "context_token_count": 117,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -1.156323378381785e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 83,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -1.156323378381785e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -12.000011444091797
+          },
+          {
+            "id": 576,
+            "log_probability": -12.875011444091797
+          },
+          {
+            "id": 8704,
+            "log_probability": -14.625011444091797
+          },
+          {
+            "id": 1096,
+            "log_probability": -14.750011444091797
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999884368330701,
+      "reference_nll": 0.04355303854553794,
+      "reference_targets": 84,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 11209,
+          "target_id": 44500,
+          "target_nll": 3.600283622741699,
+          "target_position": 65
+        }
+      ],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 127,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "120",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 127,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "120",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/05507",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -6.97350042173639e-05,
+        "causal_logit_index": 233,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "21795340a03d04450ba39e3bbdae1f36115fe9ba3846cde69780d0fd68f0cdd4",
+        "context_token_count": 234,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -6.97350042173639e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 180,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -6.97350042173639e-05
+          },
+          {
+            "id": 1416,
+            "log_probability": -10.250069618225098
+          },
+          {
+            "id": 4354,
+            "log_probability": -11.750069618225098
+          },
+          {
+            "id": 576,
+            "log_probability": -11.750069618225098
+          },
+          {
+            "id": 1260,
+            "log_probability": -12.500069618225098
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999302674272115,
+      "reference_nll": 0.0005593776021077653,
+      "reference_targets": 181,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 181,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "550",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 181,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "550",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/00310",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -5.173549288883805e-05,
+        "causal_logit_index": 406,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "e241621aa7242e2c5b2ed087e55c4a9ef1c2ebefa072a5f4b14c091a0120f8fe",
+        "context_token_count": 407,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -5.173549288883805e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 321,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -5.173549288883805e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.000051498413086
+          },
+          {
+            "id": 576,
+            "log_probability": -13.062551498413086
+          },
+          {
+            "id": 1416,
+            "log_probability": -14.062551498413086
+          },
+          {
+            "id": 2014,
+            "log_probability": -14.187551498413086
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999482658453687,
+      "reference_nll": 0.0031508501578023608,
+      "reference_targets": 322,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 322,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "22000",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 322,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "22000",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04791",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -5.125986263010418e-06,
+        "causal_logit_index": 138,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "4e90d775d975d4588c9e9c694c009b3c289eff18ffd7bd5e4f85631e4afbf76f",
+        "context_token_count": 139,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -5.125986263010418e-06,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 103,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -5.125986263010418e-06
+          },
+          {
+            "id": 1124,
+            "log_probability": -12.500004768371582
+          },
+          {
+            "id": 576,
+            "log_probability": -14.250004768371582
+          },
+          {
+            "id": 1416,
+            "log_probability": -15.375004768371582
+          },
+          {
+            "id": 1096,
+            "log_probability": -16.6250057220459
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999948740268748,
+      "reference_nll": 0.0008381389262181161,
+      "reference_targets": 104,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 104,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "70",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 104,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "70",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04769",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -8.821448318485636e-06,
+        "causal_logit_index": 268,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "b0cf6b3452e28158ae1cd5dba7baf49667c3acb8f2fc45676405f990bd8abe46",
+        "context_token_count": 269,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -8.821448318485636e-06,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 190,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -8.821448318485636e-06
+          },
+          {
+            "id": 1124,
+            "log_probability": -12.125008583068848
+          },
+          {
+            "id": 576,
+            "log_probability": -14.062508583068848
+          },
+          {
+            "id": 1416,
+            "log_probability": -14.625008583068848
+          },
+          {
+            "id": 1260,
+            "log_probability": -15.250008583068848
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999911785905904,
+      "reference_nll": 0.0018906673919469106,
+      "reference_targets": 191,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 191,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "364",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 191,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "364",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/00019",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -1.597391747054644e-05,
+        "causal_logit_index": 301,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "e43a8fbb6cd3fd91ae58b2cecd3b1ffd04b460cf58f6fcd86e320f5c8ade9c37",
+        "context_token_count": 302,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -1.597391747054644e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 234,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -1.597391747054644e-05
+          },
+          {
+            "id": 576,
+            "log_probability": -11.875016212463379
+          },
+          {
+            "id": 1416,
+            "log_probability": -12.750016212463379
+          },
+          {
+            "id": 1124,
+            "log_probability": -13.125016212463379
+          },
+          {
+            "id": 1096,
+            "log_probability": -13.375016212463379
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999840262101118,
+      "reference_nll": 0.0042825550718092135,
+      "reference_targets": 235,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 235,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "16",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 235,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "16",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04028",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -8.940656698541716e-06,
+        "causal_logit_index": 214,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "7fc78e67c5f058cdbb037fef18246bd13c517b54c6bc03c4d7e3cfadaea35400",
+        "context_token_count": 215,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -8.940656698541716e-06,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 132,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -8.940656698541716e-06
+          },
+          {
+            "id": 1416,
+            "log_probability": -13.125008583068848
+          },
+          {
+            "id": 1260,
+            "log_probability": -13.125008583068848
+          },
+          {
+            "id": 1124,
+            "log_probability": -13.500008583068848
+          },
+          {
+            "id": 5301,
+            "log_probability": -13.750008583068848
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.999991059383269,
+      "reference_nll": 0.000642692320700135,
+      "reference_targets": 133,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 133,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "10",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 133,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "10",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/00353",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -3.8265450712060556e-05,
+        "causal_logit_index": 245,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "e8cec1279be5372d514e257bef0628bc5b0c9c3654607db9ff4159419ff00ce3",
+        "context_token_count": 246,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -3.8265450712060556e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 162,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -3.8265450712060556e-05
+          },
+          {
+            "id": 576,
+            "log_probability": -10.875038146972656
+          },
+          {
+            "id": 8704,
+            "log_probability": -12.125038146972656
+          },
+          {
+            "id": 1416,
+            "log_probability": -12.500038146972656
+          },
+          {
+            "id": 1124,
+            "log_probability": -12.750038146972656
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.999961735281401,
+      "reference_nll": 0.024179115906616318,
+      "reference_targets": 163,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 7171,
+          "target_id": 431,
+          "target_nll": 2.1883766651153564,
+          "target_position": 42
+        }
+      ],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 156,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "600",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 156,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "600",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 21,
+          "alternative_log_probability": -0.1842983216047287,
+          "argmax_id": 21,
+          "argmax_log_probability": -0.1842983216047287,
+          "causal_logit_index": 215,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "f16bdcbec21c925514eca5d2d8c61cdef4136d8d663aa9382313edbe91c21565",
+          "context_token_count": 216,
+          "kind": "original_batch8_first_difference",
+          "target_id": 353,
+          "target_is_argmax": false,
+          "target_log_probability": -1.9342982769012451,
+          "target_minus_alternative_logit": -1.75,
+          "target_minus_argmax_logit": -1.75,
+          "target_position": 145,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 21,
+              "log_probability": -0.1842983216047287
+            },
+            {
+              "id": 353,
+              "log_probability": -1.9342982769012451
+            },
+            {
+              "id": 20,
+              "log_probability": -5.684298515319824
+            },
+            {
+              "id": 23,
+              "log_probability": -5.746798515319824
+            },
+            {
+              "id": 17,
+              "log_probability": -5.746798515319824
+            }
+          ]
+        },
+        {
+          "alternative_id": 21,
+          "alternative_log_probability": -0.1842983216047287,
+          "argmax_id": 21,
+          "argmax_log_probability": -0.1842983216047287,
+          "causal_logit_index": 215,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "f16bdcbec21c925514eca5d2d8c61cdef4136d8d663aa9382313edbe91c21565",
+          "context_token_count": 216,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 353,
+          "target_is_argmax": false,
+          "target_log_probability": -1.9342982769012451,
+          "target_minus_alternative_logit": -1.75,
+          "target_minus_argmax_logit": -1.75,
+          "target_position": 145,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 21,
+              "log_probability": -0.1842983216047287
+            },
+            {
+              "id": 353,
+              "log_probability": -1.9342982769012451
+            },
+            {
+              "id": 20,
+              "log_probability": -5.684298515319824
+            },
+            {
+              "id": 23,
+              "log_probability": -5.746798515319824
+            },
+            {
+              "id": 17,
+              "log_probability": -5.746798515319824
+            }
+          ]
+        },
+        {
+          "alternative_id": 21,
+          "alternative_log_probability": -0.1842983216047287,
+          "argmax_id": 21,
+          "argmax_log_probability": -0.1842983216047287,
+          "causal_logit_index": 215,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "f16bdcbec21c925514eca5d2d8c61cdef4136d8d663aa9382313edbe91c21565",
+          "context_token_count": 216,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 353,
+          "target_is_argmax": false,
+          "target_log_probability": -1.9342982769012451,
+          "target_minus_alternative_logit": -1.75,
+          "target_minus_argmax_logit": -1.75,
+          "target_position": 145,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 21,
+              "log_probability": -0.1842983216047287
+            },
+            {
+              "id": 353,
+              "log_probability": -1.9342982769012451
+            },
+            {
+              "id": 20,
+              "log_probability": -5.684298515319824
+            },
+            {
+              "id": 23,
+              "log_probability": -5.746798515319824
+            },
+            {
+              "id": 17,
+              "log_probability": -5.746798515319824
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/02775",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.00014029949670657516,
+        "causal_logit_index": 242,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "c4ef11a38f117371a65cd816415ec1e60195ac67134b89b1262b7fd15e798ff5",
+        "context_token_count": 243,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.00014029949670657516,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 172,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.00014029949670657516
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.375140190124512
+          },
+          {
+            "id": 576,
+            "log_probability": -10.875140190124512
+          },
+          {
+            "id": 24927,
+            "log_probability": -10.937640190124512
+          },
+          {
+            "id": 2014,
+            "log_probability": -11.000140190124512
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9998597103448076,
+      "reference_nll": 0.019556256165977785,
+      "reference_targets": 173,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 21,
+          "target_id": 353,
+          "target_nll": 1.9342982769012451,
+          "target_position": 145
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 768,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": false,
+            "extracted_answer": null,
+            "parse_status": "missing_final_marker",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": true
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/02490",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -3.349725011503324e-05,
+        "causal_logit_index": 196,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "3b773c05cb675db8ad10b344d07af6dd5d5bcda8a82543065523af78f237d77c",
+        "context_token_count": 197,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -3.349725011503324e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 152,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -3.349725011503324e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.750033378601074
+          },
+          {
+            "id": 576,
+            "log_probability": -12.250033378601074
+          },
+          {
+            "id": 2379,
+            "log_probability": -12.500033378601074
+          },
+          {
+            "id": 1096,
+            "log_probability": -14.250033378601074
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999665033109116,
+      "reference_nll": 0.0035528638193584043,
+      "reference_targets": 153,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 153,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "39",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 153,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "39",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04298",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -4.4225667807040736e-05,
+        "causal_logit_index": 280,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "e6bad7906b86e8743d3b9f69957b04bf1d310788ad9bfdb298a6eb6ad009288f",
+        "context_token_count": 281,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -4.4225667807040736e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 200,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -4.4225667807040736e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.875043869018555
+          },
+          {
+            "id": 1260,
+            "log_probability": -11.375043869018555
+          },
+          {
+            "id": 8704,
+            "log_probability": -12.625043869018555
+          },
+          {
+            "id": 576,
+            "log_probability": -12.875043869018555
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999557753101334,
+      "reference_nll": 0.0006212044241727352,
+      "reference_targets": 201,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 201,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "426",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 201,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "426",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/06651",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.5255758762359619,
+        "causal_logit_index": 180,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "ce5bf30fca8bd69dea085920a7bcabb9cd25bfe830307c7969b9d695f90b96a9",
+        "context_token_count": 181,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.5255758762359619,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 136,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.5255758762359619
+          },
+          {
+            "id": 75557,
+            "log_probability": -0.9005758762359619
+          },
+          {
+            "id": 1124,
+            "log_probability": -7.025575637817383
+          },
+          {
+            "id": 576,
+            "log_probability": -8.713075637817383
+          },
+          {
+            "id": 1096,
+            "log_probability": -9.525575637817383
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.591214799761164,
+      "reference_nll": 0.01571920444534389,
+      "reference_targets": 137,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 137,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "177",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 137,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "177",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 11209,
+          "alternative_log_probability": -1.1875958442687988,
+          "argmax_id": 11209,
+          "argmax_log_probability": -1.1875958442687988,
+          "causal_logit_index": 154,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "ca252d844ab645ba7446fed702a316a12aa5982d20f5196ddafa503474b32020",
+          "context_token_count": 155,
+          "kind": "original_batch8_first_difference",
+          "target_id": 2662,
+          "target_is_argmax": false,
+          "target_log_probability": -5.062595844268799,
+          "target_minus_alternative_logit": -3.875,
+          "target_minus_argmax_logit": -3.875,
+          "target_position": 92,
+          "target_rank_strict_greater": 8,
+          "top5": [
+            {
+              "id": 11209,
+              "log_probability": -1.1875958442687988
+            },
+            {
+              "id": 67653,
+              "log_probability": -1.5625958442687988
+            },
+            {
+              "id": 1519,
+              "log_probability": -1.5625958442687988
+            },
+            {
+              "id": 3,
+              "log_probability": -3.000095844268799
+            },
+            {
+              "id": 2679,
+              "log_probability": -3.062595844268799
+            }
+          ]
+        },
+        {
+          "alternative_id": 11209,
+          "alternative_log_probability": -1.1875958442687988,
+          "argmax_id": 11209,
+          "argmax_log_probability": -1.1875958442687988,
+          "causal_logit_index": 154,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "ca252d844ab645ba7446fed702a316a12aa5982d20f5196ddafa503474b32020",
+          "context_token_count": 155,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 2662,
+          "target_is_argmax": false,
+          "target_log_probability": -5.062595844268799,
+          "target_minus_alternative_logit": -3.875,
+          "target_minus_argmax_logit": -3.875,
+          "target_position": 92,
+          "target_rank_strict_greater": 8,
+          "top5": [
+            {
+              "id": 11209,
+              "log_probability": -1.1875958442687988
+            },
+            {
+              "id": 67653,
+              "log_probability": -1.5625958442687988
+            },
+            {
+              "id": 1519,
+              "log_probability": -1.5625958442687988
+            },
+            {
+              "id": 3,
+              "log_probability": -3.000095844268799
+            },
+            {
+              "id": 2679,
+              "log_probability": -3.062595844268799
+            }
+          ]
+        },
+        {
+          "alternative_id": 624,
+          "alternative_log_probability": -0.6336669325828552,
+          "argmax_id": 624,
+          "argmax_log_probability": -0.6336669325828552,
+          "causal_logit_index": 123,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "f623dd9f8ba2f6a6b58662b6904ae5a97de7c392c5629f577426e6b54c334a4f",
+          "context_token_count": 124,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 11,
+          "target_is_argmax": false,
+          "target_log_probability": -0.7586669325828552,
+          "target_minus_alternative_logit": -0.125,
+          "target_minus_argmax_logit": -0.125,
+          "target_position": 61,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 624,
+              "log_probability": -0.6336669325828552
+            },
+            {
+              "id": 11,
+              "log_probability": -0.7586669325828552
+            },
+            {
+              "id": 345,
+              "log_probability": -7.7586669921875
+            },
+            {
+              "id": 323,
+              "log_probability": -8.7586669921875
+            },
+            {
+              "id": 3,
+              "log_probability": -9.0086669921875
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/04719",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -3.421248038648628e-05,
+        "causal_logit_index": 202,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "2af17c34117634b48fc5e7ab16290a46ecec6bdf614e60a22853f21cb7ffdfc1",
+        "context_token_count": 203,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -3.421248038648628e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 140,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -3.421248038648628e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.37503433227539
+          },
+          {
+            "id": 1260,
+            "log_probability": -14.62503433227539
+          },
+          {
+            "id": 576,
+            "log_probability": -14.62503433227539
+          },
+          {
+            "id": 1096,
+            "log_probability": -15.00003433227539
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999657881048537,
+      "reference_nll": 0.04808174394200457,
+      "reference_targets": 141,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 624,
+          "target_id": 11,
+          "target_nll": 0.7586669325828552,
+          "target_position": 61
+        },
+        {
+          "argmax_id": 11209,
+          "target_id": 2662,
+          "target_nll": 5.062595844268799,
+          "target_position": 92
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 149,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "28",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 149,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "28",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 96,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "20",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04742",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -1.823885577323381e-05,
+        "causal_logit_index": 243,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "267e54bfb1534b671754614e63a98e6ea713038867edbc756f143e6e05918e96",
+        "context_token_count": 244,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -1.823885577323381e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 168,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -1.823885577323381e-05
+          },
+          {
+            "id": 576,
+            "log_probability": -12.000018119812012
+          },
+          {
+            "id": 220,
+            "log_probability": -12.125018119812012
+          },
+          {
+            "id": 1416,
+            "log_probability": -13.437518119812012
+          },
+          {
+            "id": 1124,
+            "log_probability": -13.562518119812012
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999817613105537,
+      "reference_nll": 0.029489013105437938,
+      "reference_targets": 169,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 11209,
+          "target_id": 44500,
+          "target_nll": 4.892599105834961,
+          "target_position": 144
+        }
+      ],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 256,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "70",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 256,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "70",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/00479",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -1.2397689715726301e-05,
+        "causal_logit_index": 154,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "36deeddc2ee584690480712b94bf29f8d8fef686f40b7111800e135c675d3425",
+        "context_token_count": 155,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -1.2397689715726301e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 88,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -1.2397689715726301e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -11.750012397766113
+          },
+          {
+            "id": 220,
+            "log_probability": -13.375012397766113
+          },
+          {
+            "id": 576,
+            "log_probability": -14.125012397766113
+          },
+          {
+            "id": 1416,
+            "log_probability": -14.750012397766113
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999876023871354,
+      "reference_nll": 0.0013305068948584978,
+      "reference_targets": 89,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 89,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "9",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 89,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "9",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04901",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.0007651500636711717,
+        "causal_logit_index": 148,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "c5a5f791be2980d1f54d415ad44a9b938cf1153a8b7182e6f3638523d426bfbe",
+        "context_token_count": 149,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.0007651500636711717,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 112,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.0007651500636711717
+          },
+          {
+            "id": 9043,
+            "log_probability": -7.625765323638916
+          },
+          {
+            "id": 576,
+            "log_probability": -9.375764846801758
+          },
+          {
+            "id": 358,
+            "log_probability": -10.125764846801758
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.250764846801758
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9992351425889929,
+      "reference_nll": 0.0009568211103270042,
+      "reference_targets": 113,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 113,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "17",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 113,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "17",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 12549,
+          "alternative_log_probability": -0.07605501264333725,
+          "argmax_id": 12549,
+          "argmax_log_probability": -0.07605501264333725,
+          "causal_logit_index": 112,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "36138c56872c973926d9d4303f5607101a80bdaf6bd82ed6cfeaf6a018d94ead",
+          "context_token_count": 113,
+          "kind": "original_batch8_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -3.4510550498962402,
+          "target_minus_alternative_logit": -3.375,
+          "target_minus_argmax_logit": -3.375,
+          "target_position": 65,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 12549,
+              "log_probability": -0.07605501264333725
+            },
+            {
+              "id": 44500,
+              "log_probability": -3.4510550498962402
+            },
+            {
+              "id": 11209,
+              "log_probability": -4.32605504989624
+            },
+            {
+              "id": 7941,
+              "log_probability": -4.57605504989624
+            },
+            {
+              "id": 2679,
+              "log_probability": -4.57605504989624
+            }
+          ]
+        },
+        {
+          "alternative_id": 12549,
+          "alternative_log_probability": -0.07605501264333725,
+          "argmax_id": 12549,
+          "argmax_log_probability": -0.07605501264333725,
+          "causal_logit_index": 112,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "36138c56872c973926d9d4303f5607101a80bdaf6bd82ed6cfeaf6a018d94ead",
+          "context_token_count": 113,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -3.4510550498962402,
+          "target_minus_alternative_logit": -3.375,
+          "target_minus_argmax_logit": -3.375,
+          "target_position": 65,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 12549,
+              "log_probability": -0.07605501264333725
+            },
+            {
+              "id": 44500,
+              "log_probability": -3.4510550498962402
+            },
+            {
+              "id": 11209,
+              "log_probability": -4.32605504989624
+            },
+            {
+              "id": 7941,
+              "log_probability": -4.57605504989624
+            },
+            {
+              "id": 2679,
+              "log_probability": -4.57605504989624
+            }
+          ]
+        },
+        {
+          "alternative_id": 12549,
+          "alternative_log_probability": -0.07605501264333725,
+          "argmax_id": 12549,
+          "argmax_log_probability": -0.07605501264333725,
+          "causal_logit_index": 112,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "36138c56872c973926d9d4303f5607101a80bdaf6bd82ed6cfeaf6a018d94ead",
+          "context_token_count": 113,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -3.4510550498962402,
+          "target_minus_alternative_logit": -3.375,
+          "target_minus_argmax_logit": -3.375,
+          "target_position": 65,
+          "target_rank_strict_greater": 2,
+          "top5": [
+            {
+              "id": 12549,
+              "log_probability": -0.07605501264333725
+            },
+            {
+              "id": 44500,
+              "log_probability": -3.4510550498962402
+            },
+            {
+              "id": 11209,
+              "log_probability": -4.32605504989624
+            },
+            {
+              "id": 7941,
+              "log_probability": -4.57605504989624
+            },
+            {
+              "id": 2679,
+              "log_probability": -4.57605504989624
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/02262",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -1.4066597032069694e-05,
+        "causal_logit_index": 128,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "df197de086ff9b099acb99bead3a8db0c7d7578c8d9f18fc87abfd7c46ed7456",
+        "context_token_count": 129,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -1.4066597032069694e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 81,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -1.4066597032069694e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -11.875014305114746
+          },
+          {
+            "id": 8704,
+            "log_probability": -12.875014305114746
+          },
+          {
+            "id": 576,
+            "log_probability": -13.625014305114746
+          },
+          {
+            "id": 1416,
+            "log_probability": -14.312514305114746
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.999985933501902,
+      "reference_nll": 0.04276465506096961,
+      "reference_targets": 82,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 12549,
+          "target_id": 44500,
+          "target_nll": 3.4510550498962402,
+          "target_position": 65
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 119,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "135",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 119,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "135",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 119,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "135",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/03668",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -4.5298504119273275e-05,
+        "causal_logit_index": 195,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "c53d6e638e987e511cc27cc272ec39d9393d5384a34c0920e76067ea7b5da0cf",
+        "context_token_count": 196,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -4.5298504119273275e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 109,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -4.5298504119273275e-05
+          },
+          {
+            "id": 8704,
+            "log_probability": -10.500044822692871
+          },
+          {
+            "id": 1124,
+            "log_probability": -11.875044822692871
+          },
+          {
+            "id": 1416,
+            "log_probability": -12.625044822692871
+          },
+          {
+            "id": 576,
+            "log_probability": -13.312544822692871
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999547025218425,
+      "reference_nll": 0.009556764022278424,
+      "reference_targets": 110,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 110,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "12",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 110,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "12",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/04451",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -2.3483953555114567e-05,
+        "causal_logit_index": 166,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "55a3a7c625e2864a9a4e95b49212744e824dccb6af88b8b40d83cc0ccbc79bd9",
+        "context_token_count": 167,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -2.3483953555114567e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 113,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -2.3483953555114567e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -11.12502384185791
+          },
+          {
+            "id": 576,
+            "log_probability": -13.06252384185791
+          },
+          {
+            "id": 8704,
+            "log_probability": -13.31252384185791
+          },
+          {
+            "id": 2932,
+            "log_probability": -13.68752384185791
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999765163221908,
+      "reference_nll": 0.002900906098614685,
+      "reference_targets": 114,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 114,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "13",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 114,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "13",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/06466",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.00027616979787126184,
+        "causal_logit_index": 200,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "1eecf9fe2bdc02b5bdac3313a8e43c3ab1ef07cd4b8fe1ecbd41f108628f15c5",
+        "context_token_count": 201,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.00027616979787126184,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 147,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.00027616979787126184
+          },
+          {
+            "id": 576,
+            "log_probability": -9.250276565551758
+          },
+          {
+            "id": 8704,
+            "log_probability": -10.000276565551758
+          },
+          {
+            "id": 1096,
+            "log_probability": -10.500276565551758
+          },
+          {
+            "id": 2055,
+            "log_probability": -10.937776565551758
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.999723868333497,
+      "reference_nll": 0.0006677219754906322,
+      "reference_targets": 148,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 148,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "1890",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 148,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "1890",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [
+        {
+          "alternative_id": 11209,
+          "alternative_log_probability": -0.6429524421691895,
+          "argmax_id": 11209,
+          "argmax_log_probability": -0.6429524421691895,
+          "causal_logit_index": 410,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "cd16f52ca272898464da955a2705e4d883cfac942e127731b12c7e4bd68de02b",
+          "context_token_count": 411,
+          "kind": "original_batch8_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -5.0804524421691895,
+          "target_minus_alternative_logit": -4.4375,
+          "target_minus_argmax_logit": -4.4375,
+          "target_position": 355,
+          "target_rank_strict_greater": 5,
+          "top5": [
+            {
+              "id": 11209,
+              "log_probability": -0.6429524421691895
+            },
+            {
+              "id": 1519,
+              "log_probability": -0.8929524421691895
+            },
+            {
+              "id": 785,
+              "log_probability": -4.3929524421691895
+            },
+            {
+              "id": 3983,
+              "log_probability": -4.5179524421691895
+            },
+            {
+              "id": 12549,
+              "log_probability": -5.0804524421691895
+            }
+          ]
+        },
+        {
+          "alternative_id": 11209,
+          "alternative_log_probability": -0.6429524421691895,
+          "argmax_id": 11209,
+          "argmax_log_probability": -0.6429524421691895,
+          "causal_logit_index": 410,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "cd16f52ca272898464da955a2705e4d883cfac942e127731b12c7e4bd68de02b",
+          "context_token_count": 411,
+          "kind": "replay_batch8_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -5.0804524421691895,
+          "target_minus_alternative_logit": -4.4375,
+          "target_minus_argmax_logit": -4.4375,
+          "target_position": 355,
+          "target_rank_strict_greater": 5,
+          "top5": [
+            {
+              "id": 11209,
+              "log_probability": -0.6429524421691895
+            },
+            {
+              "id": 1519,
+              "log_probability": -0.8929524421691895
+            },
+            {
+              "id": 785,
+              "log_probability": -4.3929524421691895
+            },
+            {
+              "id": 3983,
+              "log_probability": -4.5179524421691895
+            },
+            {
+              "id": 12549,
+              "log_probability": -5.0804524421691895
+            }
+          ]
+        },
+        {
+          "alternative_id": 11209,
+          "alternative_log_probability": -0.6429524421691895,
+          "argmax_id": 11209,
+          "argmax_log_probability": -0.6429524421691895,
+          "causal_logit_index": 410,
+          "conditioning": "reference_prefix_full_forward_use_cache_false",
+          "context_ids_sha256": "cd16f52ca272898464da955a2705e4d883cfac942e127731b12c7e4bd68de02b",
+          "context_token_count": 411,
+          "kind": "selected_batch1_first_difference",
+          "target_id": 44500,
+          "target_is_argmax": false,
+          "target_log_probability": -5.0804524421691895,
+          "target_minus_alternative_logit": -4.4375,
+          "target_minus_argmax_logit": -4.4375,
+          "target_position": 355,
+          "target_rank_strict_greater": 5,
+          "top5": [
+            {
+              "id": 11209,
+              "log_probability": -0.6429524421691895
+            },
+            {
+              "id": 1519,
+              "log_probability": -0.8929524421691895
+            },
+            {
+              "id": 785,
+              "log_probability": -4.3929524421691895
+            },
+            {
+              "id": 3983,
+              "log_probability": -4.5179524421691895
+            },
+            {
+              "id": 12549,
+              "log_probability": -5.0804524421691895
+            }
+          ]
+        }
+      ],
+      "problem_id": "gsm8k/train/03893",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -0.00010597144137136638,
+        "causal_logit_index": 422,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "70070824910d49528361ff26cccdf0ab81ddff935e4e1724b50da3e948480c25",
+        "context_token_count": 423,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -0.00010597144137136638,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 367,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -0.00010597144137136638
+          },
+          {
+            "id": 576,
+            "log_probability": -10.125105857849121
+          },
+          {
+            "id": 1124,
+            "log_probability": -10.750105857849121
+          },
+          {
+            "id": 1260,
+            "log_probability": -11.562605857849121
+          },
+          {
+            "id": 2014,
+            "log_probability": -11.812605857849121
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9998940341734035,
+      "reference_nll": 0.016983495177046573,
+      "reference_targets": 368,
+      "reference_top1_misses": [
+        {
+          "argmax_id": 11209,
+          "target_id": 44500,
+          "target_nll": 5.0804524421691895,
+          "target_position": 355
+        }
+      ],
+      "selection_role": "failed",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 606,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "26",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 606,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "26",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        },
+        "selected_batch1": {
+          "generated_tokens": 412,
+          "score": {
+            "answer_correct": false,
+            "ended_with_eos": true,
+            "extracted_answer": "20",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": false,
+            "terminated_correct": false,
+            "truncated": false
+          }
+        }
+      }
+    },
+    {
+      "first_difference_queries": [],
+      "problem_id": "gsm8k/train/02140",
+      "reference_eos_query": {
+        "alternative_id": null,
+        "alternative_log_probability": null,
+        "argmax_id": 151643,
+        "argmax_log_probability": -1.8715683836489916e-05,
+        "causal_logit_index": 135,
+        "conditioning": "reference_prefix_full_forward_use_cache_false",
+        "context_ids_sha256": "c171c05847a75393b1b9df59c067b5d893b57afffbdf4582b3b9c17411cb98b9",
+        "context_token_count": 136,
+        "kind": "reference_eos",
+        "target_id": 151643,
+        "target_is_argmax": true,
+        "target_log_probability": -1.8715683836489916e-05,
+        "target_minus_alternative_logit": null,
+        "target_minus_argmax_logit": 0.0,
+        "target_position": 100,
+        "target_rank_strict_greater": 1,
+        "top5": [
+          {
+            "id": 151643,
+            "log_probability": -1.8715683836489916e-05
+          },
+          {
+            "id": 1124,
+            "log_probability": -11.000019073486328
+          },
+          {
+            "id": 576,
+            "log_probability": -14.750019073486328
+          },
+          {
+            "id": 220,
+            "log_probability": -15.437519073486328
+          },
+          {
+            "id": 8704,
+            "log_probability": -15.750019073486328
+          }
+        ]
+      },
+      "reference_eos_target_probability": 0.9999812844913009,
+      "reference_nll": 0.005875466292018875,
+      "reference_targets": 101,
+      "reference_top1_misses": [],
+      "selection_role": "replay_only",
+      "streams": {
+        "original_batch8": {
+          "generated_tokens": 101,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "3000",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        },
+        "replay_batch8": {
+          "generated_tokens": 101,
+          "score": {
+            "answer_correct": true,
+            "ended_with_eos": true,
+            "extracted_answer": "3000",
+            "parse_status": "parsed",
+            "reasoning_validated": false,
+            "reference_exact_match": true,
+            "terminated_correct": true,
+            "truncated": false
+          }
+        }
+      }
+    }
+  ],
+  "run_manifest_sha256": "435a333382a5863c9af8e7b31ee8184a0f88788978de44721cb85f2290c07090",
+  "selected_rows": {
+    "original_batch8": {
+      "generated_tokens": 5152,
+      "reference_exact_match": 1,
+      "rows": 10,
+      "terminated_correct": 2,
+      "truncated": 5
+    },
+    "replay_batch8": {
+      "generated_tokens": 5152,
+      "reference_exact_match": 1,
+      "rows": 10,
+      "terminated_correct": 2,
+      "truncated": 5
+    },
+    "selected_batch1": {
+      "generated_tokens": 4905,
+      "reference_exact_match": 1,
+      "rows": 10,
+      "terminated_correct": 2,
+      "truncated": 5
+    }
+  },
+  "source_sha256": "949a184850a4d966a2ca3cb2c1060b58ed434eb3b9d284e451bbd3737acb8623"
+}

@@ -3,25 +3,24 @@
 Read AGENTS.md and docs/NEXT_SESSION.md first. This file describes this project's
 finite research loop; it is not permission to rent hardware or exceed the ledger.
 
-**Current phase (2026-09-10 UTC):** E014 saved-checkpoint diagnostic is prepared
-and CPU-verified. Read `reports/REAL_MATH_E014_READY.md` and `docs/NEXT_SESSION.md`.
-After the owner starts/provides the existing A800, execute one bounded process:
-32-prompt batch8 replay,10 fixed batch1 cases and32 reference-token/EOS probes.
-The360+15-second cap leaves528 unreserved. No training, teacher, dev/test decode,
-new checkpoint, automatic retry or scientific comparison.52 CPU tests pass;
-two GNU-timeout integrations remain mandatory on Linux. Source/input/weight
-and exact-ledger checks precede launch. No server was contacted in preparation.
+**Current phase (2026-09-10 UTC):** E014 saved-checkpoint diagnosis is complete.
+Read `reports/REAL_MATH_E014_RESULTS.md` and `docs/NEXT_SESSION.md`.32/32 raw
+replays agree, batch1 fixes0/8 failures, and reference-token probes expose17
+local top-one misses despite low average NLL. All32 reference EOS targets win;
+these do not measure termination after a generated loop. The55-test Linux suite
+and server/local raw-record audits pass. E013's engineering gate remains failed.
 
-E013's overfit gate stays failed:24/32 correct terminated train outputs, five
-truncations, three wrong numbers despite NLL0.014206. Its weights and records
-are preserved. C017's four-arm training-only proxy is2096–2165 seconds, before
-other costs. E012 remains paused. The diagnostic does not establish a causal
-bug or retroactively replace E013's metrics.
+The ledger is **6467 seconds charged,733 remaining**,18 reconciled receipts,
+zero reservations. GPU execution has stopped and no next job is queued. All12
+E013 checkpoint files are independently preserved and rehashed after E014.
+The former903-second balance is historical; a server clone is not a new budget.
 
-The current ledger is **6297 seconds charged,903 remaining**,17 reconciled
-receipts and zero reservations. Do not restore an old ledger, run a completed
-queue, or interpret a server clone as a new compute budget. No final-test model
-evaluation or external-message sending is authorized by the CPU audit.
+E015 is only a review proposal for one fresh-base512-update calibration with
+unchanged32 rows/seed/LR/scorer/decoder, no new dev/test decode and a600+15 cap.
+Implementation, publication, validation and checkpoint preservation capacity
+are still prerequisites. Do not automatically launch it. C017's four-arm
+training-only proxy is2096–2165 seconds before other costs, outside the733
+balance; E012 remains paused. Scientific scale remains unset.
 
 **Historical phase (2026-09-09 UTC):** E010's identity-absent Paths/GCM seed31 pair
 is complete. Do not replay it or seed17/23. Matched greedy is7/64 versus5/64,

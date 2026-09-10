@@ -1,5 +1,24 @@
 # AI assistance log
 
+## 2026-09-10 UTC — E014 execution, output audit and next proposal
+
+Codex executed the owner's single authorized diagnostic on the restored A800
+from published sourced78aa77 after the CPU-cache correction and55 passing Linux
+tests. All32 original streams reproduce; batch1 fixesnone of eight failures.
+The reference records show17 local top-one misses and32 correct EOS argmaxes.
+Codex verified42 raw generations and5226 reference targets on server and local
+CPU, reproduced descriptive counts independently and retained all limitations.
+No causal bug, proof-correctness or scientific treatment effect is claimed.
+
+The170-second charge leaves733; all18 receipts and public accounting/registry
+reconcile, and the private recovery ledger is updated. Original checkpoint files
+remain independently retained and pass post-run server hashes. No additional
+model process, training, teacher, new allowance, rental or external message was
+initiated. A512-update fresh-base calibration is a CPU-counted review proposal,
+not an executed result; its storage and source-release prerequisites are stated.
+Max was recommended without changing model settings. No subagent was used.
+
+
 ## 2026-09-10 UTC — E014 server preflight and CPU audit correction
 
 After owner startup, Codex verified the idle A800, checkpoint inventory, exact

@@ -1,0 +1,56 @@
+{
+  "phase": "E015_REVIEW_ONLY_PROPOSAL",
+  "status": "not_registered_not_implemented_not_launched",
+  "automatic_launch_authorized": false,
+  "proposed_run_id": "gsm8k_overfit_e015_r1",
+  "reason": "E014 reproduces all32 original outputs; batch1 fixes none of eight failures; all27 measured first-difference queries favor the generated alternative under reference conditioning. Test a fixed longer dose before changing decoding or scientific scale.",
+  "initialization": "Original pinned Qwen2.5-1.5B base; fresh optimizer. E013 has weights-only backup, so do not label a checkpoint restart an exact optimizer continuation.",
+  "model_lock_sha256": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+  "inherit_e013_config_sha256": "127f3e1e08be511df00d2b9f64fde66cfaa61461488a506950a5094ba77d7c24",
+  "unchanged": [
+    "32 train parents/references/order",
+    "seed17",
+    "learning_rate5e-5",
+    "batch4_microbatch1",
+    "FP32_parameters_BF16_autocast_SDPA_TF32_off",
+    "prompt_mask_EOS_token_normalization",
+    "greedy_batch8_max_new_tokens768_context1024",
+    "original_numeric_termination_NLL_gate"
+  ],
+  "proposed_changes": {
+    "fixed_training_updates": 512,
+    "exposures_per_response": 64,
+    "new_dev_or_test_decodes": 0
+  },
+  "budget": {
+    "supervised_response_tokens": 334464,
+    "processed_nonpadding_tokens": 458112,
+    "proposed_process_cap_seconds": 600,
+    "guard_seconds": 15,
+    "maximum_reservation_seconds": 615,
+    "current_remaining_seconds": 733,
+    "unreserved_after_maximum": 118,
+    "training_only_linear_proxy_seconds": 334.2720774561167,
+    "recorded_phase_sum_proxy_seconds": 412.34871320798993,
+    "proxy_is_upper_bound": false,
+    "unpriced_overhead": "Input/checkpoint hashing, new all-token reference report, process setup and write variability; full cap still mandatory."
+  },
+  "primary_endpoint": "Final all32 batch8 decode: at least31 correct terminated, zero truncations, NLL<0.1 and complete512-update dose/profile. E013 remains failed.",
+  "secondary_endpoint": "Final all5226 reference targets and32 EOS top-one/NLL; no intermediate checkpoint selection.",
+  "required_before_start": [
+    "Owner review of this one fixed dose calibration",
+    "Publish independent E015 source/registration/input release and passing CPU/Linux tests",
+    "Verify original base hashes and latest18-receipt ledger",
+    "Resolve checkpoint preservation capacity without losing any unique state; retain12GiB free preflight for the proposed checkpoint-writing run"
+  ],
+  "disk_capacity_at_e014_preflight_gib": 6.2925262451171875,
+  "checkpoint_preservation_capacity_ready": false,
+  "not_authorized": [
+    "automatic GPU launch",
+    "extra server or paid budget",
+    "four-arm or seed/LR sweep",
+    "changing scores or cap after observation",
+    "using final test",
+    "automatic continuation after failure"
+  ]
+}

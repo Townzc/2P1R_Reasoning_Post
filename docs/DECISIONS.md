@@ -1,5 +1,22 @@
 # Decisions and open questions
 
+## D024 — 2026-09-10: retain E014 diagnosis and defer scientific scale
+
+E014 completes fromd78aa77 with32/32 exact raw replays and no selected-case
+repair at batch1. All27 queried first differences prefer the generated token;
+17 reference targets lose top-one across12 rows, despite NLL0.014206. All32
+reference EOS targets win, which does not measure EOS on generated loops.
+Retain E013's failed gate and the observed batch sensitivity without claiming
+a causal software bug. Both raw-record audits and55 Linux tests pass.
+
+Charge170 seconds;18 receipts reconcile to6467 used /733 left,zero reservations.
+Original weights remain independently preserved and rehashed. No next job is
+queued. Prepare a review-only512-update fresh-base calibration with the same
+32 rows and original score/decoder; proposed600+15 cap fits but its12GiB free
+checkpoint-preservation gate is unmet at6.29GiB. No promised repair, new budget,
+training sweep or scientific comparison follows. See
+[results](../reports/REAL_MATH_E014_RESULTS.md) and the separate E015 proposal.
+
 ## D023 — 2026-09-10: repair CPU audit overhead before the authorized E014 launch
 
 The owner restored the existing A800 specifically for E014. Published source

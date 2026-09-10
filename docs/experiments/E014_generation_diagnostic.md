@@ -169,3 +169,14 @@ be frozen in `reports/real_math_e014_inputs_r2` and
 Publication, new-release inspection and the amended Linux suite precede the
 single already-authorized launch. CPU timeout evidence is in
 `reports/real_math_e014_execution_r1`; no GPU-process cap was increased.
+
+## Recorded execution outcome — 2026-09-10 UTC
+
+Source d78aa77 completed the single original-scope run after55 Linux tests and
+r2 inspection.32/32 raw replays agree; selected batch1 changes3/10 streams but
+fixes0/8 failures. All27 first-difference records favor the generated alternative;
+17/5226 reference targets lose top-one across12 rows and all32 EOS targets win.
+NLL agrees with E013. Both CPU auditors pass. Charge170 seconds;18 receipts
+reconcile to6467 used /733 left,zero reservations. Preserve E013's failed gate,
+all raw data and the original decision table. E015 is a separate review proposal,
+not an automatic next run. See [results](../../reports/REAL_MATH_E014_RESULTS.md).
