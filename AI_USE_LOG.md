@@ -1,3 +1,15 @@
+# 2026-09-10 — C020 completion-contract preparation
+
+The owner requested improved evaluation and capability-preservation plans.
+Codex inspected the saved E016 truncation/boundary intersections, reviewed
+primary ICLR/ACL/TMLR papers and the official evaluation harness, and prepared
+a separate CPU reference and immutable saved-stream audit. This is post-hoc
+work; original data, scores, gates and execution dependencies remain frozen.
+Sixteen focused fixtures pass. Source publication precedes the formal audit.
+No server contact, model call, fresh development text, delegation, external
+message or new process reservation. Ultra was recommended for design tradeoffs
+without claiming a settings change. E015 weights recovery remains pending.
+
 # 2026-09-10 — authorized E016 execution, independent audit and shutdown
 
 Codex used the owner-started instance to stage the prepublished source, preserve
