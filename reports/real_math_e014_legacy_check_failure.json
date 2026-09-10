@@ -1,0 +1,15 @@
+{
+  "phase": "E014_CPU_TEST_SCOPE_CHECK",
+  "test": "tests.test_relation_engineering.ReleaseTests",
+  "status": "rejected_historical_E011_source_mismatch",
+  "current_e014_changed_historical_source": false,
+  "differences": [
+    {
+      "file": "src/sft_data.py",
+      "frozen_e011_sha256": "259fb1b3432eb4c96f1db2b4e19d684e2739d51f780259b297dfec479d3a8d55",
+      "current_sha256": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e",
+      "already_different_before_e014": true
+    }
+  ],
+  "resolution": "Retain the source guard. Test the reusable loss/ledger/scoring/audit components explicitly; validate E013/E014 releases independently. E011 is a paused historical release."
+}

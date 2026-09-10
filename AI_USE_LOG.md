@@ -1,5 +1,27 @@
 # AI assistance log
 
+## 2026-09-10 UTC — E014 diagnosis design and CPU implementation
+
+At the owner's request, Codex inspected frozen E013 data/scoring/training and
+generation source, checkpoint metadata and pinned Transformers implementation.
+It prepared a single saved-checkpoint inference diagnostic, raw-output auditor
+and CPU fixtures without changing historical runtime files. The fixed selected
+cases come from the existing post-hoc proposal; all32 reference targets/EOS are
+added to diagnose the aggregate loss denominator. No causal bug is claimed.
+
+52 focused CPU checks pass, including tiny randomly initialized Qwen2 cached/
+padded decoding, the unchanged E013 generator, default-config merging, causal
+shift/EOS, token/score/probability tampering, a complete synthetic output audit,
+checkpoint integrity and budget guards. Two GNU-timeout tests await Linux.
+An attempted historical E011 release regression rejects the pre-existing C017
+change to sft_data; its failure and source comparison are retained. The old
+freeze is not weakened. Source publication precedes immutable E014 preparation.
+
+No pretrained forward pass, training, teacher, GPU, server contact, new budget
+or external message occurred. Codex recommended Max for bounded implementation
+and consulted OpenAI Docs for the recommendation without changing settings.
+The ledger remains6297 used /903 remaining with17 receipts and no reservations.
+
 ## 2026-09-10 UTC — E013 execution and failed-gate audit
 
 After the owner restored the existing server, Codex verified its unchanged

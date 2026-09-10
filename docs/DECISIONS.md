@@ -1,5 +1,26 @@
 # Decisions and open questions
 
+## D022 — 2026-09-10: diagnose the saved checkpoint before another training run
+
+The owner requested local inspection of E013 generation anomalies, preparation
+of the subsequent experiment, and notice when the existing server is required.
+Prepare [E014](experiments/E014_generation_diagnostic.md): original32-parent
+batch8 replay, all eight failed cases plus two fixed successful controls at
+batch1, and all32 teacher-forced token/EOS records with selected first-divergence
+queries. Preserve the original decoder, source, weights, labels and scores.
+This is an inference diagnostic with a360-second process cap plus15-second
+guard, leaving528 of the existing903 seconds unreserved; no training or new
+allowance is approved. A supplied A800 for this phase permits this single
+prepared diagnostic, not automatic old-queue or scientific-grid execution.
+
+The implementation lives outside the frozen E013 src/scripts set.52 component
+and tiny-random-model CPU tests pass; two GNU-timeout integrations remain
+mandatory on Linux. A separately attempted historical E011 input regression
+correctly rejects the pre-existing C017 sft_data change; retain that failure
+and the old guard. Input materialization and clean-release verification follow
+source publication. No pretrained model, GPU, server contact or reservation
+occurred at this source milestone. Max is recommended; no setting is changed.
+
 ## D021 — 2026-09-10: retain failed E013; defer scientific scale
 
 The owner restored the existing server. The fixed E013 trajectory completed
