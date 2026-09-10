@@ -1,3 +1,20 @@
+## D031 — 2026-09-10: execute only the prepared E017 completion calibration
+
+The owner accepted proceeding after P006 and requested a startup notification.
+Implement and freeze one original-base, 64-observed-parent run with per-row
+boundary stopping and independent token-prefix audit. Keep the original
+prompt, numerical extractor and all historical adverse outcomes; no first-answer
+stopping, invented native EOS or silent method/model change. E018 stays pending.
+
+Source `b365bd8` precedes immutable release `410ee3e`. All 62 CPU checks pass,
+with two Linux watchdog integrations pending startup. Independent 64-input/
+20-receipt reconstruction, 160-stream incremental replay and a clean transfer
+from the prior server commit pass. No pretrained model/server call, reservation,
+new receipt or additional allowance occurred. Notify the owner now that the
+finite execution release is ready: 255 process seconds, a 15-minute whole-rental
+ceiling/CNY2, compact export then confirmed shutdown. Retain unique E015 weights
+for separate no-card recovery. [Evidence](../reports/REAL_MATH_E017_READY.md).
+
 ## D030 — 2026-09-10: separate completion validity from retained learning
 
 C020 independently verifies 160 saved outputs: 13/14 base truncations continue

@@ -1,5 +1,17 @@
 # 2P1R Reasoning Post-Training
 
+**E017 execution release ready, 2026-09-10 UTC:** per-row task stopping,
+independent raw-prefix auditing and the finite base-only runner are published.
+62 CPU tests pass; two Linux watchdog tests remain for startup. All 64 observed
+inputs and 20 ledger receipts reconstruct; 160 recorded streams agree with the
+C020 stopping oracle. A clean import from the prior server commit passes.
+The existing A800 is now needed for one 64-question calibration: maximum
+255 process seconds, 15-minute whole-rental ceiling/CNY2. No training or new
+model result yet; E018 and the scientific grid stay paused. Current balance
+remains 279 seconds and E015 full weights recovery remains incomplete.
+[Readiness and limitations](reports/REAL_MATH_E017_READY.md),
+[startup handoff](docs/NEXT_SESSION.md).
+
 **C020 CPU audit complete; P006 proposed, 2026-09-10 UTC:** independent checks
 cover 160 saved streams. Thirteen of the base's 14 E016 truncations continue
 past a new-question header. The proposed stop rule yields 39/64 correct saved

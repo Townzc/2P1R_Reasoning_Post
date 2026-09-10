@@ -1,3 +1,10 @@
+**Subsequent authorization, 2026-09-10 UTC:** the owner accepted the next step.
+Stage A is now implemented and released as
+[E017](E017_task_completion_calibration.md), with
+[offline readiness verified](../../reports/REAL_MATH_E017_READY.md).
+Stages B/C and scientific training remain conditional proposals. The planning
+text below records the original proposal; it is not the current startup handoff.
+
 # P006: fix task completion, then test retained learning
 
 2026-09-10 UTC. Concrete review proposal after E016; CPU planning is authorized.

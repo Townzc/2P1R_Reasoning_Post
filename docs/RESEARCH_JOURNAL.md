@@ -1,3 +1,20 @@
+## 2026-09-10 — E017 ready to measure the proposed stopping contract
+
+The next authorized question is implementation usability, not training scale.
+A per-row stopping callback now preserves actual EOS versus a new-question
+trigger and later batch padding. Scripted-logit CPU tests exercise the actual
+generation loop; 62 tests pass and two Linux watchdog integrations remain.
+The independent oracle agrees with incremental stopping for all 160 saved
+streams across 8,064 steps. A clean import from the prior server history
+reconstructs the fixed 64 observed prompts and all 20 receipts.
+
+This establishes readiness only; no new model accuracy, GPU prefix identity,
+runtime speedup or retained learning has been measured. E017 fits the unchanged
+279-second historical balance with a 255-second maximum reservation; whole
+rental caps at 15 minutes/CNY2. Request startup only after publication, then
+export and shut down before analysis. E018 remains conditional and unique E015
+weights recovery remains separate. [Ready report](../reports/REAL_MATH_E017_READY.md).
+
 ## 2026-09-10 — C020 distinguishes continuation overhead from wrong answers
 
 **Evidence.** The independent CPU audit checks all 160 saved E013/E016 streams

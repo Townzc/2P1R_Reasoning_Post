@@ -1,3 +1,18 @@
+## E017 authorized extension — 2026-09-10 UTC
+
+The owner accepted the next step after P006 and requested startup notification.
+Execute only the [fixed E017 calibration](experiments/E017_task_completion_calibration.md)
+after published CPU preparation and owner startup: original base, 64 observed
+E016 parents, per-row question-boundary stopping, unchanged numerical extractor,
+zero SFT and no new test/development selection. Keep native EOS, boundary triggers
+and later batch padding distinct. Old E016 scores and failed gates stay unchanged.
+
+The 255-second maximum reservation fits the current 279-second balance. Bound
+the complete powered-on rental to 15 minutes/CNY2 with provider-confirmed shutdown.
+This accepts the explicit Stage-A completion change, not the E018 training method,
+main scientific grid or a reset/addition to the historical ledger. Review the
+measured result before any next training release. [Readiness](../reports/REAL_MATH_E017_READY.md).
+
 ## C020 completion evidence and P006 proposal — 2026-09-10 UTC
 
 The owner's request authorizes local evaluation/capability-preservation work.

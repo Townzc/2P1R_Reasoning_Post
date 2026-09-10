@@ -1,4 +1,20 @@
-# Current status — C020 verified; P006 review proposal; no startup needed
+# Current status — E017 ready; owner-started A800 needed
+
+The user accepted the next P006 step. E017 source `b365bd8` and input release
+`410ee3e` are published. 62 focused CPU tests pass; the two GNU-timeout tests are
+mandatory on Linux before generation. All 64 observed inputs reconstruct, all
+20 full receipts reconcile, and 160 recorded-stream stopping replays agree with
+the independent oracle. Clean-checkout bundle import and default inspection pass.
+
+Next is one 64-question base-only stopping calibration, no SFT or checkpoint.
+Maximum reservation 255 seconds fits 279 remaining. Whole-rental target 12 minutes,
+cap 15 minutes/CNY2. Export compact records/current ledger and confirm provider
+shutdown after the run. No server/model call, reservation, new accuracy claim
+or automatic training occurred during preparation. E018 and scientific scale
+remain conditional; retain E015 unique weights pending independent recovery.
+[Ready evidence](REAL_MATH_E017_READY.md), [handoff](../docs/NEXT_SESSION.md).
+
+# Historical C020 milestone — P006 planning before E017 authorization
 
 The local CPU audit verifies all 160 saved E013/E016 streams. Of the 14 E016
 base truncations, 13 occur after a new-question header; the candidate saved

@@ -1,3 +1,22 @@
+# E017 frozen execution release — 2026-09-10 UTC
+
+- [Ready report](REAL_MATH_E017_READY.md) and
+  [registration](../docs/experiments/E017_task_completion_calibration.md).
+- Source: `analyses/e017.py`, `e017_stopping.py`, `e017_audit.py`,
+  `verify_e017_inputs.py` and `tests/test_e017.py` from the repository root.
+  Source commit `b365bd8` precedes input release `410ee3e`.
+- `configs/real_math_e017/` (repository root) and `real_math_e017_inputs_r1/`:
+  exact observed rows, prompt token streams, input evidence and 104-file freeze.
+- `real_math_e017_verification_r1/`: 62-pass/two-pending test log, independent
+  64-input/20-receipt checks, 160-stream replay, clean-checkout reconstruction
+  and default inspection. The release bundle was verified from prior server
+  history; final staging metadata remains private.
+
+No GPU run, new checkpoint, receipt or E015 recovery occurred. Historical
+accounting and all earlier outputs are unchanged. The current balance is
+279 seconds. Keep E015 unique weights on its retained volume; do not dispose
+of that instance before independent recovery.
+
 # C020 / P006 artifacts — 2026-09-10 UTC
 
 - [C020 findings](REAL_MATH_C020_COMPLETION_AUDIT.md) and immutable

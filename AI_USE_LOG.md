@@ -1,3 +1,21 @@
+# 2026-09-10 — E017 frozen release and clean-checkout readiness
+
+After source publication, Codex froze byte-identical E016 observed inputs for
+E017. Independent checks reconstructed 64 prompt streams, reconciled every one
+of 20 full ledger receipts and replayed 160 saved outputs through 8,064 stopping
+steps. All events agree with the separate C020 oracle. A clean repository seeded
+only with prior server history imported the prepared bundle and reproduced
+verification/default inspection; measured replay times are allowed to differ.
+The 64-test suite has 62 passes and two Linux-only watchdog tests pending.
+
+Codex prepared the finite startup/transfer/shutdown handoff and published the
+readiness milestone. There was no server contact, pretrained-model inference,
+new dev/test use, process reservation, added allowance, delegation or external
+message. Old scores/gates/accounting remain frozen. E018 training is not queued;
+E015 independent full weights recovery remains incomplete. Notify the owner
+that the prepared single E017 calibration now needs the existing A800.
+
+
 # 2026-09-10 — E017 authorized implementation and offline checks
 
 The owner accepted the next step after P006 and requested startup notification.

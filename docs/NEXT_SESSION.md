@@ -1,66 +1,81 @@
-# Next session — C020 complete; implement reviewed P006 locally before startup
+# Next session — E017 release ready; one owner-started A800 window
 
-**Keep the server off. No GPU startup is needed yet.** Read
-[C020 results](../reports/REAL_MATH_C020_COMPLETION_AUDIT.md),
-[P006](experiments/P006_evaluation_and_capability_preservation.md),
-[exact proposal configuration](../configs/diagnostics/real_math_p006_proposal.json)
-and [primary-paper review](../reports/LITERATURE_CAPABILITY_PRESERVATION_20260910.md).
+Read [readiness](../reports/REAL_MATH_E017_READY.md) and
+[E017 registration](experiments/E017_task_completion_calibration.md).
+The user accepted the next P006 step and requested notification before startup.
+**Notify the owner that the existing A800 is now needed.** There has been no
+server contact or new model run in preparation; the last verified provider
+state remains off. Only E017 is ready, not E018 training or the scientific grid.
 
-C020 source `cf6525b40f36fd714bebbada254af3235fba85c1` preceded its immutable
-CPU outputs. All 160 raw streams, 18 minimal boundary triggers and 506 proposed
-training presentations independently verify; 16 focused tests pass. E016 base
-candidate saved-prefix correctness is 39/64 versus E015 0/64, with 13/14 base
-truncations occurring after another question starts. This is post-hoc; original
-E016 clean counts 26/64 versus 0/64 and both failed gates remain frozen.
+Run `gsm8k_stop_e017_r1`: original pinned base, exactly 64 previously observed
+E016 development parents, ranks 17–80, same prompts and generation configuration.
+Add per-row boundary stopping, retain trigger tokens, and record subsequent
+batch padding separately from actual EOS. No E015 weights load, training,
+teacher call, new checkpoint, prompt sweep or final-test evaluation.
 
-Next concrete work, before any startup notification:
+Source `b365bd8` and input release `410ee3e` are published. Release SHA256:
+`daeb946c7e3d01afe54552224770f3429129ab05022adeb76138222b87ce56af`.
+62 CPU tests pass; two GNU-timeout integrations await Linux. Independent checks
+reconstruct all 64 input streams and 20 ledger receipts; 160 saved outputs
+exercise 8,064 incremental stop calls matching the C020 oracle. This is recorded
+replay, not new GPU accuracy. Preserve old E016 clean26/64 versus0/64 and both
+failed gates; keep all 432 reserved development parents untouched.
 
-1. Implement the reviewed E017 stop-only contract outside frozen `src/` and
-   `scripts/` sources. Preserve generated trigger tokens, actual EOS and explicit
-   stop reasons; never stop on answer correctness. Prove prompt exclusion,
-   mixed-batch handling, split delimiters and raw-output/oracle agreement.
-   Freeze and publish the 64 observed-parent input/runtime release, then verify
-   a clean checkout. The current CPU oracle is not a GPU runner.
-2. Only once the stop contract is measured and passes, release the proposed
-   E018 training calibration for review: 253 existing single-response parents,
-   two epochs, 64 updates, one fresh rank-16 LoRA adapter. Reconstruct all raw
-   responses/masks/EOS, inspect the fixed 32-row quality sample, pin PEFT and
-   verify trainable scope, unchanged base, zero-adapter identity and reload.
-   No larger memorization dose, learning-rate grid or automatic alternative.
-3. Preserve learning and paired-retention gates. At least 90% of base-correct
-   questions must remain correct, alongside a training-NLL reduction. New
-   successes cannot cancel the gross-loss gate. Report descriptive paired
-   intervals and all failures. Hold out the 432 unused dev parents; proposed
-   ranks 81–144 are for one later fixed-recipe confirmation, not tuning.
-4. Before each paid window, publish the complete bounded run, transfer plan and
-   additive allowance if needed. E017 proposes 255 process seconds and a
-   15-minute whole-rental ceiling/CNY2. E018 proposes 915 process seconds and
-   30 minutes/CNY4; later confirmation proposes 435 and 20 minutes/CNY2.67.
-   These optional windows are review proposals, not executed allowances,
-   measured runtimes or an automatic queue. Confirm provider shutdown after
-   compact export; a stopped Python process does not end rental billing.
+## Startup and admission
 
-The private current ledger remains **20 full receipts, 6,921 used / 279 left,
-zero reservations**, SHA256
-`c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106`.
-The prior 19-receipt copy is history only. Stage A fits the existing allowance;
-B+C need a separately recorded allowance of at most 1,350 process seconds.
-Preserve the old 7,200-second configuration and every receipt; do not edit frozen
-budget dependencies or reset the history. CNY3,000 is the overall spending
-ceiling, not a target; historical invoices remain unreconciled.
+Whole-rental target 12 minutes/CNY1.60, cap 15 minutes/CNY2 at CNY8/hour. Set a
+provider shutdown backstop before the model job. Record actual power-on time
+when available, or label the owner startup notification as a proxy. Require
+555 seconds remaining: 255 guarded process + 120 compact export + 180 shutdown.
+No launch after 345 elapsed seconds; failed preflight ends the window promptly.
+Only the exact original model/software and one idle A80080GB are allowed. Verify
+256MiB scratch space; there is no cleanup or full-weight transfer in this run.
+
+The current ledger has **20 full receipts, 6,921 used / 279 left, zero reservations**,
+SHA256 `c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106`.
+Restore this exact state if a clone is older; never reset it or restore the
+19-receipt history as current. E017 reserves at most 240+15=255, leaving at least
+24. No additional phase allowance has been recorded. Future E018 requires its
+own reviewed training release and explicit additive accounting, preserving all
+historical receipts and the overall CNY3,000 financial ceiling.
+
+The last server source is `84e9ea35fc54a0d94e70d4efca74b5f15783091b`.
+A clean checkout seeded with only that history successfully imports the E017
+release bundle. The current final transfer bundle and publication verification
+are private `.local/e017_ready.bundle` and
+`.local/e017_final_publication_verification.json`. Import the final published
+commit; require `HEAD == origin/main`, a clean tracked checkout, and all release
+inputs tracked. Preserve remote unique outputs while synchronizing.
+The private `.local/e015_connection.json` holds existing connection details;
+never publish its credentials, endpoints or instance identifiers.
+
+Use the verified training interpreter and pinned original model snapshot. After
+all 64 focused checks pass on Linux, run the fixed commands below. Variables
+stand for paths/timestamps verified in that session, never guessed values.
+
+```sh
+python -m unittest tests.test_e017 tests.test_completion_contract tests.test_gsm8k_answer_audit tests.test_e016 tests.test_e014 tests.test_real_math_engineering tests.test_budget_guard -v
+python -m analyses.e017 inspect --tokenizer-dir "$E017_SNAPSHOT" --ledger .local/resource_ledger.json
+python -m analyses.e017 launch --execute --tokenizer-dir "$E017_SNAPSHOT" --ledger .local/resource_ledger.json --power-on-at-utc "$E017_POWER_ON_UTC" --power-on-time-source owner_start_notification
+python -m analyses.e017 audit --tokenizer-dir "$E017_SNAPSHOT" --out .local/e017_server_record_verification.json
+```
+
+Use `provider_timestamp` if the power-on timestamp came from the provider.
+Default inspection and launch without `--execute` perform no server/model action.
+The run audits its output before completion; the post-run audit also checks the
+completed receipt. Independently export all compact records/current ledger,
+verify hashes and provider shutdown, then repeat the CPU audit and publish
+locally. Preserve failures; never retry or chain E018 in the same rental.
+No task accuracy or GPU runtime has yet been measured for this implementation.
+
+## Unique checkpoint recovery remains separate
 
 E015's complete 12-file/6.19GB checkpoint remains uniquely on the retained,
-last-confirmed stopped volume. Its independent backup is incomplete. Do not
-release/delete that instance; follow the separate
-[bounded no-card recovery plan](E015_RECOVERY_PLAN.md) before its verified
-retention deadline. No server contact/recheck or recovery happened in C020.
-All current results/plans are local and published; synchronize the final
-published source before any later authorized server use.
-
-Do not change historical raw outputs, scorers, release inputs or frozen runtime
-sources. C020's three result artifacts are immutable; use fresh output paths
-when reproducing. GPU stopping, training quality and general knowledge/language
-retention remain unverified; no scientific training scale has been selected.
+last-confirmed stopped volume. The independent copy is partial. Do not release
+or delete the instance; follow the [no-card recovery plan](E015_RECOVERY_PLAN.md)
+before its verified retention deadline. E017 does not require those weights and
+must not spend its GPU window on a full transfer. No recovery or provider-state
+recheck occurred during this offline preparation.
 
 # Historical E016 closeout — retained evidence and weights-recovery obligation
 
