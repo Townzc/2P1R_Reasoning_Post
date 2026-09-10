@@ -2,6 +2,17 @@
 
 ## Current: discuss P004 and revise the proposal before any launch
 
+Latest data proposal: read the
+[dataset evidence review](../reports/DATASET_SELECTION_EVIDENCE_20260910.md).
+Keep GSM8K first; propose stratified MATH levels 1–3 for key second-task checks.
+The next independent CPU task is a source/split and capped solution-availability
+audit specification. Verify original MATH train/test membership rather than
+trusting a mirror's merged `train` label. Audit OpenMathInstruct-2 responses
+linked to original eligible problems; keep augmented questions separate and
+GSM-Symbolic evaluation-only. Draw problem pools before inspecting accepted K_i.
+Do not infer a cached large teacher's generation cost from a small local teacher.
+This is a scope proposal, not an executable grid or a request for server startup.
+
 Latest constraint: keep the proposed core on small students, with Qwen1.5B
 primary and OLMo1B conditional. Read the
 [paper/model/compute audit](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md).

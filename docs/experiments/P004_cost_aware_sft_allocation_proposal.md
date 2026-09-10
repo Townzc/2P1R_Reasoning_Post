@@ -30,6 +30,28 @@ size establish the proposed base/teacher configuration's measured performance.
 
 ## Proposed primary question
 
+### Data-scope clarification for review
+
+The [dataset evidence review](../../reports/DATASET_SELECTION_EVIDENCE_20260910.md)
+distinguishes question pools, solution corpora and evaluation data in the seven
+referenced papers. GSM8K remains the first calibration task. Propose adding
+MATH levels 1–3, stratified by subject/difficulty, for decisive second-task
+comparisons after feasibility and split-provenance checks. This conditional
+extension strengthens the proposed final validation; it does not promise two
+full grids or alter a frozen run. The earlier single-task deliverables below
+remain a draft pending this scope review.
+
+Audit OpenMathInstruct-2 as a specific reusable-output candidate, initially
+restricted to responses linked to original eligible GSM8K/MATH training problems.
+Synthetic augmented questions have different answer provenance and are outside
+that initial audit population. Reserve GSM-Symbolic and its GSM8K-test parents
+for final robustness evaluation only. Keep existing synthetic tasks diagnostic.
+Draw problem pools before inspecting solution availability, and never use a
+small local teacher's costs to price a different large teacher's cached outputs.
+The source-selection and CPU manifest audit have not been executed.
+
+### Allocation question
+
 For a fixed student-training budget and a specified data-acquisition budget,
 when is acquiring another problem more valuable than acquiring another usable
 solution to a problem already owned? How does that decision change with

@@ -560,3 +560,18 @@ only the generic scientific evidence note and workflow updates are public.
 No frozen experimental dependency, runtime ledger, server or model was changed.
 Max was recommended for this bounded fact-checking and translation task; no
 settings change was claimed.
+
+
+## 2026-09-10 UTC — dataset selection evidence and scope review
+
+Codex reviewed the seven referenced primary papers and official/author-linked
+dataset metadata to separate problem pools, output corpora and evaluation.
+It documented GSM8K's calibration role, a conditional stratified MATH extension,
+OpenMathInstruct-2 as a reusable-output candidate and GSM-Symbolic as evaluation-
+only. The review identifies original-split reconstruction, solution-availability
+selection and source-specific cost accounting as unresolved preparation work.
+The preceding abstract text is retained with a link to this proposed extension.
+No benchmark evaluation, data/model download, server/GPU call, new reservation
+or frozen-source change occurred. Max was recommended for this bounded review;
+no settings change was claimed. Documentation verification covers local links,
+frozen release hashes and unchanged ledger state; no model tests were rerun.

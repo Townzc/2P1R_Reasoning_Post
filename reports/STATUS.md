@@ -2,6 +2,13 @@
 
 ## Current: P004 proposed cost-aware framing; E012 paused
 
+Latest data-scope review: GSM8K is the proposed first calibration task;
+stratified MATH levels 1–3 are proposed for decisive second-task checks, subject
+to source-split verification and feasibility. OpenMathInstruct-2 is a candidate
+solution bank; GSM-Symbolic is evaluation-only and shares GSM8K test parents.
+No source is selected and no real-data experiment has run. See the
+[dataset evidence report](DATASET_SELECTION_EVIDENCE_20260910.md).
+
 The owner requested a response about the project's framing and specific models,
 datasets and deliverables before continuing experiments. A private reply draft
 and [public scientific proposal](../docs/experiments/P004_cost_aware_sft_allocation_proposal.md)

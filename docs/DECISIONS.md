@@ -379,3 +379,14 @@ Neither route is validated, and public cached outputs without attempt/cost logs
 cannot establish measured generation price. Preserve the historical rationale,
 paused E012 release and existing allowance. See
 [paper/model/compute evidence](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md).
+
+D018 data-scope clarification: the earlier GSM8K-only draft did not adequately
+specify a second real problem distribution. Propose MATH levels 1–3 with
+subject/difficulty stratification for decisive validation after feasibility and
+original-split verification. Audit OpenMathInstruct-2 as an output source, not
+an independent third task; GSM-Symbolic stays evaluation-only because it derives
+from GSM8K test parents. Problem pools precede solution-success inspection.
+Cached accepted outputs cannot establish generation costs, and a different
+small teacher cannot price them. This review changes no frozen protocol or
+resource allowance. See the
+[dataset evidence review](../reports/DATASET_SELECTION_EVIDENCE_20260910.md).

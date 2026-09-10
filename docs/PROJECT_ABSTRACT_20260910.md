@@ -5,6 +5,13 @@ Draft proposal abstract, 2026-09-10 UTC. Based on
 [model/compute audit](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md).
 This describes prospective research, not completed acquisition experiments.
 
+Subsequent data-scope review: the
+[dataset evidence note](../reports/DATASET_SELECTION_EVIDENCE_20260910.md)
+proposes MATH for decisive second-task validation and GSM-Symbolic for final
+robustness evaluation, with OpenMathInstruct-2 as a candidate solution source.
+The abstract below is retained as the preceding draft; the extension is for
+review and has not been run.
+
 ## Abstract
 
 Reasoning supervised fine-tuning (SFT) requires both input problems and output solutions, but their acquisition costs can differ substantially. This project asks how to divide a limited data-acquisition budget between more unique problems and additional solutions to existing problems under fixed SFT supervision and update budgets.

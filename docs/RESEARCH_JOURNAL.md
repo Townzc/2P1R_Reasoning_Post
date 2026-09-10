@@ -574,3 +574,30 @@ call, GPU job, server contact, reservation or ledger change. E012 remains paused
 for the owner's framing discussion. The personally addressed draft was not sent
 or included in the public repository. See the
 [model evidence note](../reports/MODEL_SELECTION_EVIDENCE_20260910.md).
+
+
+## 2026-09-10 — P004 dataset rationale and proposed second real task
+
+**Question.** Which datasets do the referenced papers actually use, why begin
+with GSM8K, and what data evidence is needed beyond a single arithmetic benchmark?
+
+**Work and evidence.** Read the seven primary papers and maintainer dataset
+metadata, distinguishing training question pools, generated solution corpora
+and evaluation sets. GSM8K supports bounded calibration; MATH adds subject and
+difficulty labels. Found that the author-linked MATH mirror combines 12.5k rows
+under one train label, requiring original split reconstruction before use.
+OpenMathInstruct-2 separates original and augmented questions with different
+answer provenance. GSM-Symbolic links variants to GSM8K test parents.
+
+**Analysis.** Propose GSM8K primary plus stratified MATH levels 1–3 for decisive
+second-task checks, after feasibility. Audit reusable outputs and keep symbolic
+variants evaluation-only. Prior matching-induced selection makes drawing pools
+before solution-success inspection essential. Cached outputs cannot reveal
+historical rejection costs; local small-teacher costs cannot price another
+teacher's cache. Data manifests, coverage/quality attrition, budget accounting
+and independent validation are the contribution to develop, not dataset count.
+
+**Outcome.** Saved the [dataset evidence review](../reports/DATASET_SELECTION_EVIDENCE_20260910.md)
+and linked the proposal/status/handoff. No source was ingested, model called,
+server contacted or experiment launched. E012 and all earlier outcomes remain
+unchanged; ledger 5971/7200 used, 1229 left, 16 receipts, zero reservations.

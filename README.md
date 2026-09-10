@@ -21,6 +21,10 @@ minimum proposal retains small students and removes the default 7B teacher;
 reusable solutions or a bounded 1.5B teacher calibration remain untested options.
 The [revised abstract and deliverables](docs/PROJECT_ABSTRACT_20260910.md) state
 the cost-allocation question and small-model scope as prospective research.
+The [dataset-selection review](reports/DATASET_SELECTION_EVIDENCE_20260910.md)
+now proposes GSM8K plus stratified MATH validation, distinguishes reusable
+solutions from evaluation datasets, and specifies selection/cost audits.
+This extension is for review; no new dataset experiment has run.
 
 **Historical readiness — E012 execution release ready, 2026-09-10 UTC:** source and immutable release
 are published; clean-checkout inspection and 76 focused CPU checks pass. Two
