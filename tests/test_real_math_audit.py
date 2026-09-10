@@ -1,4 +1,7 @@
 import unittest
+import tempfile
+import json
+from pathlib import Path
 
 from src.real_math_audit import (answer_status, assign_partitions, final_answer,
                                 grid_statistics, group_records, last_boxed,
@@ -6,6 +9,14 @@ from src.real_math_audit import (answer_status, assign_partitions, final_answer,
 
 
 class RealMathAuditTests(unittest.TestCase):
+    def test_jsonl_unicode_line_separators_inside_strings(self):
+        from src.sft_data import read_jsonl
+        rows = [{'problem': 'a\u2028b\u2029c'}, {'problem': 'next'}]
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / 'rows.jsonl'
+            p.write_text(''.join(json.dumps(r, ensure_ascii=False)+'\n' for r in rows))
+            self.assertEqual(read_jsonl(p), rows)
+
     def test_nested_box(self):
         self.assertEqual(last_boxed(r'old \boxed{2}; final \boxed{\frac{3}{4}}.'), r'\frac{3}{4}')
         self.assertIsNone(last_boxed(r'\boxed{\frac{3}{4}'))

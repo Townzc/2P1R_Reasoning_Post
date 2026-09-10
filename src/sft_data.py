@@ -17,7 +17,10 @@ def sha256_file(path):
 
 
 def read_jsonl(path):
-    return [json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
+    # JSON strings may legally contain U+2028/U+2029; str.splitlines() would
+    # split those inside a record. Only physical newlines delimit JSONL rows.
+    with Path(path).open(encoding='utf-8') as stream:
+        return [json.loads(line) for line in stream if line.strip()]
 
 
 def prefix(prompt):

@@ -15,6 +15,7 @@ from scripts.fetch_real_math_sources import digest, specifications
 from scripts.prepare_real_math_audit import write_json, write_jsonl
 from src.real_math_audit import (check_candidate, grid_statistics, jaccard,
                                 normalized, quantiles, sha, shingles)
+from src.sft_data import read_jsonl
 
 
 def main():
@@ -51,7 +52,7 @@ def main():
         if git_blob != expected_blob:
             raise ValueError('Tokenizer does not match pinned base')
         tokenizer = AutoTokenizer.from_pretrained(tokenizer_dir, local_files_only=True)
-        parents = [json.loads(line) for line in Path(args.parents).read_text().splitlines()]
+        parents = read_jsonl(args.parents)
         lookup = defaultdict(list)
         for parent in parents:
             lookup[(parent['dataset'], normalized(parent['problem']))].append(parent)

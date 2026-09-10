@@ -13,6 +13,7 @@ import pyarrow.parquet as pq
 
 from scripts.fetch_real_math_sources import SUBJECTS, digest, specifications
 from src.real_math_audit import assign_partitions, group_records, last_boxed, normalized, sha
+from src.sft_data import read_jsonl
 
 
 def write_json(path, value):
@@ -38,7 +39,7 @@ def math_key(r):
 def source_records(cache, config):
     records, gsm_test = [], []
     for split in ('train', 'test'):
-        rows = [json.loads(line) for line in (cache / f'gsm8k_{split}.jsonl').read_text().splitlines()]
+        rows = read_jsonl(cache / f'gsm8k_{split}.jsonl')
         if len(rows) != (7473 if split == 'train' else 1319):
             raise ValueError('Unexpected official GSM8K population')
         if split == 'test':
