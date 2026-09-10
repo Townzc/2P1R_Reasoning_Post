@@ -1,5 +1,18 @@
 # AI assistance log
 
+## 2026-09-10 UTC — related-work model and compute audit
+
+Codex checked primary experimental sections of the original three references
+and four later related works, separating trained students, solution teachers,
+inference baselines and paper-reported hardware/time. It revised P004's
+prospective minimum scope to small students and removed the default 7B teacher,
+while retaining the original rationale. Reusable solutions and a bounded 1.5B
+teacher calibration are untested candidates; unknown public-corpus production
+cost is not presented as measured local generation cost. Updated the scientific
+record and private reply drafts; no correspondence was sent. No subagent,
+SSH/model call, GPU job or budget change occurred. Frozen release and ledger
+hash checks accompany documentation review; no training tests were rerun.
+
 ## 2026-09-09 UTC — completed E010 boundary pair and independent audits
 
 Codex ran only the two owner-authorized frozen seed31 arms from clean published

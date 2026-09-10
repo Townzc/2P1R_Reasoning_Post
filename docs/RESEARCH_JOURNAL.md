@@ -1,5 +1,18 @@
 # Research journal
 
+## 2026-09-10 — P004 literature/model/compute follow-up
+
+Question: do the proposed assets reflect the earlier papers and a small-compute
+research plan? Rechecked the original three references and four later related
+works against primary experimental sections. Small-student precedents exist,
+but large teachers, long generations and many evaluations can dominate cost.
+Outcome: preserve the measured Qwen1.5B student candidate; keep OLMo1B conditional;
+remove the default Math7B teacher commitment. Propose auditing reusable solutions
+and bounded Math1.5B generation before selection, with cache-cost limitations
+explicit. No model outcome, new protocol, GPU process or ledger change follows.
+The [full comparison](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md) records
+paper models, costs, rationale and next feasibility requirements. E012 is paused.
+
 This index records the question, motivation, competing explanation, design,
 outcome and decision for each substantive attempt. It complements the
 [machine-readable run registry](../reports/run_registry.json),

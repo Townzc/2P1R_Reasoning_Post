@@ -1,5 +1,9 @@
 # Closest-work audit — 2026-09-05 UTC
 
+**Updated 2026-09-10:** Verified student/teacher identities and compute settings
+are in the [primary-source model audit](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md).
+The earlier notes below remain historical framing evidence.
+
 **Updated 2026-09-09:** The expanded [positioning audit](../reports/ICLR_POSITIONING_20260909.md)
 identifies a recent direct per-problem/global-diversity comparison, including
 its released update-matched full-SFT recipe. It supersedes any impression that

@@ -15,6 +15,10 @@ for review, not an approved new training grid or a completed cost experiment.
 The personally addressed response remains private; no message was sent.
 The [model-selection evidence note](reports/MODEL_SELECTION_EVIDENCE_20260910.md)
 clarifies actual synthetic results, untested candidates and the revised reply.
+The [related-work model/compute audit](reports/RELATED_WORK_MODEL_COMPUTE_20260910.md)
+compares the original papers' students, teachers and reported hardware. The
+minimum proposal retains small students and removes the default 7B teacher;
+reusable solutions or a bounded 1.5B teacher calibration remain untested options.
 
 **Historical readiness — E012 execution release ready, 2026-09-10 UTC:** source and immutable release
 are published; clean-checkout inspection and 76 focused CPU checks pass. Two

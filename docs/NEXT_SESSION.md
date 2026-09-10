@@ -2,6 +2,14 @@
 
 ## Current: discuss P004 and revise the proposal before any launch
 
+Latest constraint: keep the proposed core on small students, with Qwen1.5B
+primary and OLMo1B conditional. Read the
+[paper/model/compute audit](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md).
+Math7B is no longer the default teacher; inspect reusable multi-solution data
+and specify a possible bounded Math1.5B generation calibration. Neither has
+run. Cached outputs without attempt/cost logs do not identify effective
+generation price. No large-model grid or new GPU job follows from this revision.
+
 The owner's latest instruction is to answer the project-framing and deliverable
 questions first, then continue. Read [P004](experiments/P004_cost_aware_sft_allocation_proposal.md).
 A personally addressed English reply has been drafted privately, not sent.

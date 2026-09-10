@@ -3,6 +3,14 @@
 2026-09-10 UTC. This is an evidence clarification for P004, not a new
 experimental protocol or model-selection result. E012 remains paused.
 
+**Subsequent compute review:** the
+[primary-paper model/compute comparison](RELATED_WORK_MODEL_COMPUTE_20260910.md)
+grounds small-student feasibility in related work and removes Math7B as the
+default teacher commitment. The section below preserves its original rationale.
+Current candidates are reusable multi-solution data or a bounded Math1.5B-Instruct
+calibration, with neither selected nor run. The latest private reply includes
+this constraint; earlier drafts are retained as history.
+
 The first concise P004 reply drew on the existing engineering infrastructure,
 but did not sufficiently distinguish completed results from new candidates.
 In particular, the teacher and second student have not been tested, and the
@@ -46,7 +54,7 @@ allocation comparison. Base status does not establish absence of mathematical
 training data or benchmark contamination. Do not switch to Instruct merely to
 obtain better starting numbers inside a comparison.
 
-### Qwen/Qwen2.5-Math-7B-Instruct — proposed solution teacher
+### Qwen/Qwen2.5-Math-7B-Instruct — historical teacher proposal
 
 The [maintainer card](https://huggingface.co/Qwen/Qwen2.5-Math-7B-Instruct)
 explicitly targets mathematical CoT and tool-integrated reasoning. Its proposed
@@ -86,7 +94,7 @@ benchmark numbers must not be attributed to the planned base checkpoint.
 Second-family replication can challenge a Qwen-specific result, but does not
 by itself eliminate all teacher or dataset biases.
 
-## Concrete corrections to the proposed reply and deliverables
+## Earlier corrections to the proposed reply and deliverables
 
 - State the actual synthetic pilots and unfavorable generalization/learning
   results before describing prospective real-data work.

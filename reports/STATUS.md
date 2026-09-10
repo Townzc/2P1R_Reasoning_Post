@@ -7,8 +7,13 @@ datasets and deliverables before continuing experiments. A private reply draft
 and [public scientific proposal](../docs/experiments/P004_cost_aware_sft_allocation_proposal.md)
 are prepared. The proposed core is acquiring new problems versus additional
 usable solutions under asymmetric acquisition costs and a fixed SFT budget.
-Primary proposed assets: Qwen2.5-1.5B base, GSM8K, a fixed Qwen2.5-Math-7B-Instruct
-teacher; second student OLMo-2-0425-1B base. Costs from public-data subsampling
+Primary proposed assets: Qwen2.5-1.5B base and GSM8K; conditional second student
+OLMo-2-0425-1B base. The latest
+[related-work compute audit](RELATED_WORK_MODEL_COMPUTE_20260910.md) removes
+Math7B as the default teacher. Audit reusable solutions first and consider a
+bounded Math1.5B-Instruct calibration; neither source is selected or measured.
+Large-student sweeps and a 32B teacher are outside the minimum plan.
+Costs from public-data subsampling
 are scenario assumptions, not measurements of human problem-writing prices.
 
 An evidence check now separates completed synthetic Qwen1.5B work from the

@@ -368,3 +368,14 @@ replication are conditional on their own unrun capability/cost checks. The
 initial reply overstated readiness through omission; the revised private bilingual
 version states prior failures and prospective status. Keep the grid tentative
 until profiling. See [model rationale](../reports/MODEL_SELECTION_EVIDENCE_20260910.md).
+
+D018 compute constraint: the owner explicitly rules out compute-heavy model
+plans. Recheck the original three papers and later related work, distinguishing
+small students from large teachers and expensive long-trace evaluation. Keep
+Qwen1.5B as the primary calibration candidate and OLMo1B as a conditional
+second family. Remove Math7B as the default teacher and from the minimum plan;
+audit reusable solutions and consider bounded Math1.5B-Instruct calibration.
+Neither route is validated, and public cached outputs without attempt/cost logs
+cannot establish measured generation price. Preserve the historical rationale,
+paused E012 release and existing allowance. See
+[paper/model/compute evidence](../reports/RELATED_WORK_MODEL_COMPUTE_20260910.md).
