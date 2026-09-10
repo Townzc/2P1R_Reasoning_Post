@@ -155,3 +155,17 @@ python -m analyses.e014_audit --tokenizer-dir "$E014_TOKENIZER" --out runs/gsm8k
 Inspection is CPU-only and does not reserve budget or contact the server.
 Supplying a running instance for this prepared phase permits its single bounded
 diagnostic; startup must never auto-launch an old queue or a scientific grid.
+
+## Pre-execution CPU amendment — 2026-09-10 UTC
+
+D023 retains two CPU-only timeouts before any GPU reservation. The tokenizer
+length operation repeated for every audited token, costing0.364809 seconds per
+16 calls on the restored server. An audit-only view caches this stable size
+and delegates all other reads to the original tokenizer; it is never passed to
+the model. E013 source, scoring, decoding and all experimental settings remain
+unchanged. The old input/release files remain immutable. The active source will
+be frozen in `reports/real_math_e014_inputs_r2` and
+`configs/real_math_e014/release_r2.json`, with exact r1 case/evidence comparison.
+Publication, new-release inspection and the amended Linux suite precede the
+single already-authorized launch. CPU timeout evidence is in
+`reports/real_math_e014_execution_r1`; no GPU-process cap was increased.

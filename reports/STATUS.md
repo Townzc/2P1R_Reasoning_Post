@@ -1,4 +1,10 @@
-# Verified status — E014 CPU release ready; no model run, 2026-09-10 UTC
+# Verified status — E014 CPU preflight correction; no model run, 2026-09-10 UTC
+
+Current: the owner-started A800 is verified.54 Linux tests passed, but CPU-only
+inspection timed out before launch due to repeated tokenizer-length reads.
+D023 adds an audit-only cache with equivalence checks and an immutable r2 release;
+no model call/reservation or budget change occurred. See the retained evidence in
+`real_math_e014_execution_r1`. The original single-run scope/cap remains fixed.
 
 ## Current: inference diagnostic prepared, existing A800 required
 

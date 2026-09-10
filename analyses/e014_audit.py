@@ -4,9 +4,8 @@ import json
 import math
 from pathlib import Path
 
-from analyses.e014 import CONFIG, INPUTS, ORIGINAL, RELEASE, load_release, token_hash
+from analyses.e014 import CONFIG, INPUTS, ORIGINAL, RELEASE, load_release, token_hash, audit_predictions
 from scripts.audit_family_matching import verified_tokenizer
-from scripts.audit_real_math_engineering_outputs import audit_predictions
 from src.real_math_engineering import dump
 from src.sft_data import read_jsonl, sha256_file
 

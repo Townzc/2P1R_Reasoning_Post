@@ -1,5 +1,25 @@
 # Decisions and open questions
 
+## D023 — 2026-09-10: repair CPU audit overhead before the authorized E014 launch
+
+The owner restored the existing A800 specifically for E014. Published source
+5f7a417 passed all54 Linux tests, but CPU-only inspection exceeded45 seconds;
+a profiled180-second check also timed out while repeatedly computing tokenizer
+length in the unchanged E013 auditor. Sixteen length calls took0.364809 seconds
+and all returned151665. No E014 run directory, reservation or model call exists;
+the17-receipt ledger remains6297 used /903 left.
+
+Before any model execution, add an audit-only tokenizer view that snapshots
+vocabulary size once and delegates decoding/EOS to the original tokenizer.
+Keep the E013 auditor, generator and every src/scripts file byte-identical.
+Equivalence fixtures check accepted records and invalid token/type/EOS/text/score
+rejections.53 local tests pass; two GNU-timeout checks await the amended Linux
+suite. Preserve both CPU timeouts and r1 inputs; prepare an immutable r2 source
+release. Verify r2 cases and CPU evidence against r1 before launch. The run ID,
+model, prompts, selection, reference queries and360+15-second bound stay fixed.
+This changes CPU audit cost, not the experiment or its scoring, and is completed
+under the owner's execution request. Max remains the recommendation.
+
 ## D022 — 2026-09-10: diagnose the saved checkpoint before another training run
 
 The owner requested local inspection of E013 generation anomalies, preparation

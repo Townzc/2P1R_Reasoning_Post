@@ -1,6 +1,15 @@
 # Next session — run the prepared E014 checkpoint diagnostic
 
-## Current: CPU work complete; owner-started A800 needed
+## Current: owner-started A800 verified; CPU cache amendment before launch
+
+The owner has now started the existing A800 and authorized E014. D023 preserves
+45/180-second CPU-only inspection timeouts and adds an audit-only vocabulary
+size cache. No model run/reservation exists and the ledger is unchanged. Publish
+the amended implementation, prepare/publish immutable r2 inputs, prove their
+case/evidence bytes match r1, rerun the amended55-test suite on Linux and inspect
+before the single original launch. Do not ask for server startup again.
+
+## Historical: CPU work complete; owner-started A800 needed
 
 Read [E014 readiness](../reports/REAL_MATH_E014_READY.md) and the
 [registration](experiments/E014_generation_diagnostic.md). The owner requested

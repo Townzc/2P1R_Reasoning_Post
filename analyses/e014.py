@@ -24,16 +24,38 @@ from types import SimpleNamespace
 
 from analyses.real_math_e013_failures import common_prefix
 from scripts.audit_family_matching import verified_tokenizer
-from scripts.audit_real_math_engineering_outputs import audit_predictions
+from scripts.audit_real_math_engineering_outputs import audit_predictions as original_audit_predictions
 from scripts.run_relation_engineering import check_ledger
 from src.real_math_engineering import dump, git, load_frozen, source_files
 from src.real_math_experiment import generate
 from src.sft_data import sha256_file
 
 CONFIG = Path('configs/real_math_e014/diagnostic.json')
-RELEASE = Path('configs/real_math_e014/release.json')
-INPUTS = Path('reports/real_math_e014_inputs_r1')
+RELEASE = Path('configs/real_math_e014/release_r2.json')
+INPUTS = Path('reports/real_math_e014_inputs_r2')
 ORIGINAL = Path('runs/gsm8k_overfit_e013_r1')
+
+
+class AuditTokenizer:
+    """Read-only audit view: snapshot vocabulary size once, delegate decoding.
+
+    The frozen E013 auditor asks for len(tokenizer) for every recorded token.
+    Some fast-tokenizer builds enumerate the vocabulary on each call. This
+    view is confined to that CPU auditor and never reaches model generation.
+    """
+    def __init__(self, tokenizer):
+        self.tokenizer = tokenizer
+        self.size = len(tokenizer)
+
+    def __len__(self):
+        return self.size
+
+    def __getattr__(self, name):
+        return getattr(self.tokenizer, name)
+
+
+def audit_predictions(path, expected_rows, tokenizer, cfg):
+    return original_audit_predictions(path, expected_rows, AuditTokenizer(tokenizer), cfg)
 
 
 def stream_hash(path):

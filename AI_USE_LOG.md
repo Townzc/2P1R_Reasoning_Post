@@ -1,5 +1,20 @@
 # AI assistance log
 
+## 2026-09-10 UTC — E014 server preflight and CPU audit correction
+
+After owner startup, Codex verified the idle A800, checkpoint inventory, exact
+ledger and published source; all54 Linux tests passed. CPU inspections exceeded
+45 and180 seconds before any launch. Stack samples located repeated tokenizer
+length calls in the historical raw-output auditor; a separate CPU measurement
+confirmed their cost. The preflight failures are retained without a GPU charge.
+
+Codex added a read-only vocabulary-size cache only around CPU auditing, leaving
+historical source/scoring and the model-facing tokenizer unchanged. Accepted and
+negative-record equivalence fixtures pass;53 local tests pass and2 timeout tests
+await Linux for the amendment. An immutable r2 release will precede inference.
+No pretrained model call, training, teacher, extra allowance or external message
+occurred at this source milestone. Max was recommended without a setting change.
+
 ## 2026-09-10 UTC — E014 diagnosis design and CPU implementation
 
 At the owner's request, Codex inspected frozen E013 data/scoring/training and

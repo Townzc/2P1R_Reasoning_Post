@@ -13,7 +13,8 @@ from transformers import GenerationConfig, Qwen2Config, Qwen2ForCausalLM
 
 from analyses.e014 import (distribution_record, make_cases, probe_queries,
     reference_measurement, stream_hash, token_hash, verify_checkpoint, worker,
-    effective_generation_config, check_generation_settings)
+    effective_generation_config, check_generation_settings, audit_predictions,
+    original_audit_predictions)
 from analyses.e014_audit import audit, audit_reference, checked_difference
 from analyses.e014 import diagnosis
 from src.real_math_engineering import score_completion
@@ -120,6 +121,41 @@ class ReferenceMeasurements(unittest.TestCase):
 
 
 class FrozenChecks(unittest.TestCase):
+    def test_cached_vocabulary_audit_preserves_outputs_and_rejections(self):
+        class Tokens:
+            eos_token_id = 2
+            length_calls = 0
+            def __len__(self):
+                self.length_calls += 1
+                return 300
+            def decode(self, ids, **kwargs):
+                return ''.join(chr(i - 3) for i in ids)
+        row = {'problem_id': 'fixture', 'response': r'\boxed{1}', 'answer': '1'}
+        ids = [ord(c) + 3 for c in row['response']] + [2]
+        pred = {**row, 'generated_ids': ids, 'text': row['response'],
+                'generated_tokens': len(ids), 'score': score_completion(row, row['response'], True, False)}
+        variants = [pred]
+        for invalid in (-1, 300, True, 1.5):
+            variants.append({**pred, 'generated_ids': [invalid] + ids[1:]})
+        variants.extend([{**pred, 'generated_ids': ids[:-1]},
+                         {**pred, 'generated_ids': [2] + ids},
+                         {**pred, 'text': 'wrong'}, {**pred, 'score': {}}])
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'predictions.jsonl'
+            for variant in variants:
+                path.write_text(json.dumps(variant) + '\n')
+                outcomes = []
+                for fn in (original_audit_predictions, audit_predictions):
+                    tok = Tokens()
+                    try:
+                        outcomes.append(('accepted', fn(path, [row], tok, {'max_new_tokens': 20})))
+                    except ValueError as exc:
+                        outcomes.append(('rejected', str(exc)))
+                    if fn is audit_predictions:
+                        self.assertEqual(tok.length_calls, 1)
+                self.assertEqual(outcomes[0], outcomes[1])
+        self.assertEqual(variants[0], pred)
+
     def test_actual_saved_defaults_resolve_to_registered_cache_and_cap(self):
         saved = GenerationConfig(bos_token_id=151643, eos_token_id=151643, max_new_tokens=2048)
         tokenizer = types.SimpleNamespace(eos_token_id=151643)

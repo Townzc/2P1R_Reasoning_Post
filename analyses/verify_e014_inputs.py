@@ -30,9 +30,9 @@ def main():
     if Path(a.out).exists():
         raise FileExistsError('Independent verification output is immutable')
     cfg = json.loads(Path('configs/real_math_e014/diagnostic.json').read_text())
-    folder = Path('reports/real_math_e014_inputs_r1')
+    folder = Path('reports/real_math_e014_inputs_r2')
     manifest = json.loads((folder / 'manifest.json').read_text())
-    release = json.loads(Path('configs/real_math_e014/release.json').read_text())
+    release = json.loads(Path('configs/real_math_e014/release_r2.json').read_text())
     assert release['manifest_sha256'] == sha(folder / 'manifest.json')
     assert manifest['config_sha256'] == sha('configs/real_math_e014/diagnostic.json')
     for name, digest in manifest['files_sha256'].items():
@@ -106,7 +106,7 @@ def main():
     assert used == 6297 and 7200 - used - cfg['max_seconds'] - cfg['guard_seconds'] == 528
     result = {'phase': 'E014_INDEPENDENT_CPU_INPUT_VERIFICATION', 'status': 'passed',
         'source_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-        'verifier_sha256': sha(__file__), 'release_sha256': sha('configs/real_math_e014/release.json'),
+        'verifier_sha256': sha(__file__), 'release_sha256': sha('configs/real_math_e014/release_r2.json'),
         'raw_tokenizer_api_used': True, 'training_rows_checked': 32, 'individual_decode_rows': 10,
         'reference_targets_including_eos': target_count, 'prompt_tokens': prompt_count,
         'all_eos_supervised': True, 'all_case_offsets_checked': offsets,
