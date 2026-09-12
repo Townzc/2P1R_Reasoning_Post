@@ -1,3 +1,21 @@
+# 2026-09-11 — LT001 long-term literature and research design
+
+Codex read the shared protocol/evidence, checked five close primary papers,
+inspected a pinned PathGeneralization author-code release without executing it,
+and verified course/venue pages. It drafted a falsifiable acquisition study,
+three explicit policies, independent-pool/seed validation, precision calculations
+and semester deliverables. The inspection does not establish full reproduction
+or novelty. All new statistics are analytic planning scenarios, not model data.
+
+The task used the configured default model/settings without an asserted mode
+switch or delegation. No server/model call, reserved development/test content,
+new prediction, unchanged test rerun, budget reservation or external message
+was made. Literature source files remain an ignored local reading cache; public
+records contain citations, code hashes and scientific design only. Existing
+E017 authorization, E016 failures, C020's post-hoc status, shared receipts and
+the incomplete independent E015 weights backup remain unchanged. Future phases
+require concrete review; no implementation or GPU readiness is claimed here.
+
 # 2026-09-10 — E017 frozen release and clean-checkout readiness
 
 After source publication, Codex froze byte-identical E016 observed inputs for

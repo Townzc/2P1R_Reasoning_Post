@@ -1,4 +1,19 @@
-# Current status — E017 ready; owner-started A800 needed
+# Long-term status — LT001 offline research design complete, 2026-09-11
+
+The [study package](../docs/tracks/icml_acl_2027/README.md) contains a primary-paper
+and pinned author-code audit, falsifiable acquisition question, event/policy
+protocol, independent-validation/precision plan and course/manuscript schedule.
+Only documentation and analytic planning calculations were produced. No model,
+compute-server contact, reserved-content access, resource reservation or
+unchanged test rerun occurred. No new allowance or scientific grid is approved.
+
+The sprint coordinates E017; this track consumes its actual evidence and future
+frozen usable recipe. E017 remains not run at this branch's evidence baseline.
+E016's 26/64 versus 0/64 failed screens and C020's post-hoc status are unchanged.
+Preserve unique E015 weights. Shared historical accounting is still 20 receipts,
+6,921 used / 279 left, no reservation; financial balance remains unverified.
+
+# Shared execution baseline — E017 ready; sprint coordinates the existing window
 
 The user accepted the next P006 step. E017 source `b365bd8` and input release
 `410ee3e` are published. 62 focused CPU tests pass; the two GNU-timeout tests are

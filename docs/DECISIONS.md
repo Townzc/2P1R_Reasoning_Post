@@ -1,3 +1,25 @@
+## LT001 — 2026-09-11: test acquisition constraints before claiming a new allocation principle
+
+Choose the long-term primary question as a prospective test of whether measured
+acquisition yield changes a useful breadth/depth recommendation on new pools
+and a held-out allocation scale. The shortest-path paper and MathQA extension
+directly overlap the generic P/K question; its pinned source also uses known
+solution capacities. Keep cache scenarios separate from measured generation.
+A small teacher cannot price the strong teacher's cached training outcomes.
+
+Prepare PF/SF/fixed-mix protocols and independent validation, preserving all
+zero/incomplete-K parents, common SFT dose and evaluation, and separate pool/
+training/question uncertainty. Twelve proposed confirmation endpoints test
+resource-constrained policy performance; stronger causal cost attribution
+requires a separately reviewed within-pool control. No grid or acquisition
+stage is authorized by this plan. Shared finances/exposure history do not reset.
+
+The course core targets November 8 completion, before November presentations;
+December 14 is the final report and January 10 an internal manuscript target.
+ICLR continuation depends on submission/acceptance and actual content overlap.
+See [design package](tracks/icml_acl_2027/README.md). All prior decisions remain
+historical evidence; E017 authorization does not need to be requested again.
+
 ## D031 — 2026-09-10: execute only the prepared E017 completion calibration
 
 The owner accepted proceeding after P006 and requested a startup notification.

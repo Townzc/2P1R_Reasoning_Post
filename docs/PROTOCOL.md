@@ -1,3 +1,13 @@
+## LT001 — long-term design proposal, 2026-09-11
+
+The [acquisition and independent-validation design](tracks/icml_acl_2027/README.md)
+is prospective and does not amend any frozen experiment, scorer or allowance.
+The common usable scientific SFT/evaluation release must be supplied by the
+sprint after actual completion/learning/retention evidence. The four-point
+allocation proposal remains unexecuted. No reserved development/test contents,
+new model predictions or compute servers were accessed for this milestone.
+The sprint alone coordinates the existing E017 window and canonical ledger.
+
 ## E017 authorized extension — 2026-09-10 UTC
 
 The owner accepted the next step after P006 and requested startup notification.

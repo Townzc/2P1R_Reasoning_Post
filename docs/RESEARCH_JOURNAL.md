@@ -1,3 +1,26 @@
+## 2026-09-11 — LT001: a falsifiable long-term acquisition study
+
+**Question.** Does measured acquisition yield change an allocation recommendation
+at fixed SFT dose, and does it transfer to independent problem pools and scale?
+
+**Evidence.** A primary-paper audit confirms direct question/answer-budget
+overlap, including MathQA, and a pinned author-code check identifies an
+inventory-informed sampler. Existing cache attrition cannot recover original
+generation failures or prices. All E015/E016 failures and E017's not-run state
+remain part of the baseline; no new model results were created.
+
+**Design.** Specify PF/SF/fixed-mix with capped attempts, retained zero-yield
+parents, a common information contract and matched scientific SFT dose. The
+proposed independent block uses two pools and two paired optimizer seeds;
+question, training and acquisition uncertainty remain separate. Stronger causal
+cost wording needs a within-pool control beyond the minimal policy block.
+
+**Decision.** Complete the course core by November 8 and use January for the
+manuscript. Reuse compatible sprint results, preserve the shared finances and
+exposure history, and prepare each new compute stage concretely for review.
+See [the full study package](tracks/icml_acl_2027/README.md). This milestone is
+offline literature/design and analytic precision planning only.
+
 ## 2026-09-10 — E017 ready to measure the proposed stopping contract
 
 The next authorized question is implementation usability, not training scale.

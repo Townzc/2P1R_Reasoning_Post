@@ -1,4 +1,32 @@
-# Next session — E017 release ready; one owner-started A800 window
+# Next session for the long-term track — LT001 complete
+
+Read [the research design package](tracks/icml_acl_2027/README.md) and its
+[validation plan](tracks/icml_acl_2027/VALIDATION_PLAN.md). The concrete next
+independent work is CPU implementation of the attempt-event schema and blinded
+policy replay, using synthetic fixtures and existing observed metadata only.
+Publish a source/config specification before any future input materialization.
+Do not open reserved parents merely to prepare code or rerun unchanged tests.
+
+The sprint is the sole coordinator for the next GPU window and canonical
+resource ledger. Reuse its results only when data, dose, recipe, source and seed
+match; do not repeat conditions or execute the legacy handoffs below from this
+track. No server, teacher/model, paid API or new training is requested by LT001.
+
+Before dependent empirical work, obtain the actual E017 outcome and reviewed
+capability-preserving recipe release. Then prepare one finite, source-matched
+acquisition phase with a measured profile and complete rental/recovery cap.
+Reconcile the shared financial balance before review; CNY3,000 is the common
+ceiling, not remaining money. Do not duplicate or initialize a resource ledger.
+Known historical state is 20 receipts, 6,921/7,200 used, 279 left, no reservation.
+Existing E017 approval remains valid and does not need repeated approval.
+
+Keep E016 scores and failures, the post-hoc C020 limitation and incomplete E015
+independent weights recovery. Retain its stopped instance. No provider recheck
+or recovery was performed here. Course core completion targets November 8;
+January 10 is internal and ICML/ACL 2027 submission dates remain unverified/TBA.
+External messages and submissions remain user-sent drafts.
+
+# Shared E017 handoff — retained for the sprint, not a long-term execution queue
 
 Read [readiness](../reports/REAL_MATH_E017_READY.md) and
 [E017 registration](experiments/E017_task_completion_calibration.md).

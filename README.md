@@ -1,5 +1,13 @@
 # 2P1R Reasoning Post-Training
 
+**Long-term research design LT001, 2026-09-11:** the
+[ICML/ACL study package](docs/tracks/icml_acl_2027/README.md) now specifies the
+closest-work overlap, source-matched acquisition measurements, independent
+policy validation and course milestones through January's internal manuscript
+target. This is an offline proposal, not a new result or compute authorization.
+The sprint coordinates the existing E017 window; all historical evidence below
+is retained. [Next work for this track](docs/NEXT_SESSION.md).
+
 **E017 execution release ready, 2026-09-10 UTC:** per-row task stopping,
 independent raw-prefix auditing and the finite base-only runner are published.
 62 CPU tests pass; two Linux watchdog tests remain for startup. All 64 observed
