@@ -902,3 +902,25 @@ This is post-hoc analysis of observed development data; no server contact,
 pretrained model call, delegation, new allowance or external message occurred.
 Publication precedes the immutable audit run. Follow-up literature reads focus
 on capability preservation and evaluation extraction, not a new model grid.
+
+## 2026-09-11 — ICLR sprint scope, evidence and budget planning
+
+Codex prepared an offline sprint plan, claim-to-evidence inventory, manuscript
+outline, E017 source-routing supplement, and concrete conditional method/resource
+review. It read the retained protocol/results and primary sources for ICLR dates
+and the five closest works, including the direct Shortest Path questions-versus-
+answers comparison and MathQA study. It calculated planning estimates from
+existing timing JSON; no new runtime or performance measurement was inferred.
+The draft explicitly leaves novelty and scientific outcomes unresolved.
+
+The existing E017 main-publication guard was inspected without modifying it.
+The plan retains the published execution snapshot and prior passed CPU evidence;
+no unchanged test suite was replayed. Documentation checks cover links, arithmetic,
+frozen-dependency preservation and private-material exclusion. All changes are
+research documentation and estimate artifacts, not model/runner changes.
+
+No research-model call, compute-server contact, GPU process, reserved-development
+or final-test access, new allowance, live-ledger mutation or submission occurred.
+Historical scores, failures and the incomplete E015 weights recovery remain
+explicit. The configured default assistant settings were retained; no Max/Ultra
+setting change was asserted and no additional agents were used.

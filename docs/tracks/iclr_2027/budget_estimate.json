@@ -1,0 +1,177 @@
+{
+  "status": "offline_planning_not_runtime_readiness_or_allowance",
+  "as_of": "2026-09-11",
+  "research_model_calls": 0,
+  "compute_server_contacted": false,
+  "live_ledger_mutated": false,
+  "new_process_allowance_recorded": false,
+  "reserved_development_or_test_opened": false,
+  "currency": "CNY",
+  "hourly_rate_supplied_by_owner": 8,
+  "shared_project_spending_ceiling": 3000,
+  "actual_historical_billed_spend": null,
+  "actual_financial_balance": null,
+  "historical_process_ledger": {
+    "receipts": 20,
+    "used_seconds": 6921,
+    "allowance_seconds": 7200,
+    "remaining_seconds": 279,
+    "reservations": 0,
+    "sha256": "c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106"
+  },
+  "measured_inputs": {
+    "e013": {
+      "source": "runs/gsm8k_overfit_e013_r1/phase_timings.json",
+      "training_seconds": 167.13603872805834,
+      "supervised_tokens": 167232,
+      "processed_tokens": 229056,
+      "updates": 256
+    },
+    "e015": {
+      "source": "runs/gsm8k_terminal_decay_e015_r1/phase_timings.json",
+      "training_seconds": 166.42985402792692,
+      "supervised_tokens": 167232,
+      "processed_tokens": 229056,
+      "updates": 256,
+      "checkpoint_save_hash_seconds": 14.060152366757393
+    },
+    "e016": {
+      "source": "runs/gsm8k_capability_e016_r1/phase_timings.json",
+      "base_questions": 64,
+      "base_generation_seconds": 145.3555851392448,
+      "e015_generation_seconds": 80.71433124691248,
+      "base_load_seconds": 1.9674300588667393,
+      "base_seconds_per_question": 2.2711810178007,
+      "observed_notification_to_provider_off_seconds": 721,
+      "observed_span_not_invoice": true
+    }
+  },
+  "extrapolation": {
+    "e018_training_full_sft_response_ratio_proxy_seconds": 76.82174040927416,
+    "e018_training_full_sft_processed_ratio_proxy_seconds": 79.51367633108129,
+    "c017_training_full_sft_response_ratio_proxy_seconds_per_arm": 521.7731971667728,
+    "c017_three_arm_two_seed_supervised_tokens": 3145728,
+    "c017_to_e018_supervised_dose_ratio": 6.7919991708985386,
+    "lora_speed_measured": false,
+    "e017_speed_measured": false,
+    "generation_formula": "questions * E016.base_generation_seconds / 64; baseline point scenario only",
+    "twofold_latency_stress_is_not_a_statistical_bound": true,
+    "unknowns": [
+      "LoRA training speed",
+      "new stopping latency and padding",
+      "generation length and batching on unopened evaluation questions",
+      "adapter export throughput",
+      "provider billing rounding and storage fees"
+    ]
+  },
+  "proposed_scientific_lr": {
+    "status": "review_only_not_a_changed_frozen_recipe",
+    "updates": 256,
+    "warmup_steps": 16,
+    "peak": 0.0001,
+    "floor": 1e-05,
+    "sum": 0.01400500000000001,
+    "positive_lr_updates": 256,
+    "formula": "t<=16: 1e-4*t/16; t>=17: 1e-5 + 0.5*(1e-4-1e-5)*(1+cos(pi*(t-16)/240))"
+  },
+  "phases": [
+    {
+      "phase": "E017",
+      "generations": 64,
+      "guarded_process_ceiling_seconds": 255,
+      "whole_rental_ceiling_minutes": 15,
+      "rental_ceiling_cny": 2.0,
+      "status": "existing_authorization_not_executed",
+      "generation_point_proxy_seconds": 145.3555851392448
+    },
+    {
+      "phase": "P006_B_E018",
+      "generations": 160,
+      "guarded_process_ceiling_seconds": 915,
+      "whole_rental_ceiling_minutes": 30,
+      "rental_ceiling_cny": 4.0,
+      "status": "proposal",
+      "generation_point_proxy_seconds": 363.388962848112
+    },
+    {
+      "phase": "P006_C",
+      "generations": 128,
+      "guarded_process_ceiling_seconds": 435,
+      "whole_rental_ceiling_minutes": 20,
+      "rental_ceiling_cny": 2.6666666666666665,
+      "status": "proposal_reserved_development",
+      "generation_point_proxy_seconds": 290.7111702784896
+    },
+    {
+      "phase": "science_seed17",
+      "generations": 192,
+      "guarded_process_ceiling_seconds": 2745,
+      "whole_rental_ceiling_minutes": 75,
+      "rental_ceiling_cny": 10.0,
+      "status": "proposal",
+      "generation_point_proxy_seconds": 436.0667554177344
+    },
+    {
+      "phase": "science_seed23",
+      "generations": 192,
+      "guarded_process_ceiling_seconds": 2745,
+      "whole_rental_ceiling_minutes": 75,
+      "rental_ceiling_cny": 10.0,
+      "status": "proposal",
+      "generation_point_proxy_seconds": 436.0667554177344
+    },
+    {
+      "phase": "science_development_368",
+      "generations": 2576,
+      "guarded_process_ceiling_seconds": 12705,
+      "whole_rental_ceiling_minutes": 240,
+      "rental_ceiling_cny": 32.0,
+      "status": "proposal_reserved_development",
+      "generation_point_proxy_seconds": 5850.562301854603
+    },
+    {
+      "phase": "science_final_test_1319",
+      "generations": 9233,
+      "guarded_process_ceiling_seconds": 46305,
+      "whole_rental_ceiling_minutes": 840,
+      "rental_ceiling_cny": 112.0,
+      "status": "proposal_final_test",
+      "generation_point_proxy_seconds": 20969.814337353862
+    }
+  ],
+  "totals": {
+    "phases_are_conditional_not_one_authorized_queue": true,
+    "e017_existing_guarded_seconds": 255,
+    "post_e017_proposed_guarded_process_seconds": 65850,
+    "all_listed_whole_rental_ceiling_minutes": 1295,
+    "all_listed_rental_ceiling_cny": 172.66666666666666,
+    "p006_b_plus_c_proposed_guarded_seconds": 1350,
+    "p006_b_plus_c_rental_ceiling_cny": 6.666666666666667,
+    "separate_e015_recovery_and_storage_fees_included": false
+  },
+  "power_planning": {
+    "status": "analytic_approximation_no_evaluation_data_inspected",
+    "formula": "halfwidth=1.96*sqrt(q/n); approximate MDE=(1.96+0.84)*sqrt(q/n), q=0.25 scenario near null",
+    "two_seed_variability_not_estimated_by_question_intervals": true,
+    "rows": [
+      {
+        "questions": 64,
+        "assumed_discordant_fraction": 0.25,
+        "approx_95_interval_halfwidth": 0.1225,
+        "approx_80_power_detectable_difference": 0.175
+      },
+      {
+        "questions": 368,
+        "assumed_discordant_fraction": 0.25,
+        "approx_95_interval_halfwidth": 0.05108603144398332,
+        "approx_80_power_detectable_difference": 0.07298004491997616
+      },
+      {
+        "questions": 1319,
+        "assumed_discordant_fraction": 0.25,
+        "approx_95_interval_halfwidth": 0.026983835331900196,
+        "approx_80_power_detectable_difference": 0.038548336188428844
+      }
+    ]
+  }
+}

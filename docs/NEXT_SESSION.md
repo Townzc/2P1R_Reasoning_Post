@@ -1,3 +1,20 @@
+# September11 supplement — E017 execution source and sprint decisions
+
+Read the [ICLR next-run supplement](tracks/iclr_2027/NEXT_RUN_HANDOFF.md) before
+using the unchanged E017 commands below. Its frozen launcher requires
+`HEAD == origin/main`; a research branch with new planning documents must not
+be substituted or relabeled as main. The existing published execution snapshot
+is `73170a459e9fed2c5fdea6a9afb40b4b80837bb2`. Resolve source routing offline and
+reuse the verified release. No new experiment check or repeated local test suite
+is required merely because research proceeds on separate branches.
+
+E017 is still prepared, not run, and already authorized after owner startup.
+The [sprint plan](tracks/iclr_2027/SPRINT_PLAN.md) and
+[next-phase packet](tracks/iclr_2027/NEXT_PHASE_REVIEW.md) add no automatic
+training, reserved-data access or budget. Historical ledger:20 receipts,
+6,921 used/279 remaining,zero reservations. E015 full weights recovery remains
+incomplete. No server/model action or provider-state recheck occurred here.
+
 # Next session — E017 release ready; one owner-started A800 window
 
 Read [readiness](../reports/REAL_MATH_E017_READY.md) and

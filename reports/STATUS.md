@@ -1,4 +1,25 @@
-# Current status — E017 ready; owner-started A800 needed
+# Current status — offline sprint plan; E017 remains not run
+
+September11, 2026. The [ICLR sprint packet](../docs/tracks/iclr_2027/README.md)
+contains a daily plan, current claims and closest-work challenges, manuscript
+outline, existing-run handoff and conditional method/resource proposal.
+The paper is not currently submission-ready. No real-data allocation contrast,
+retained-learning recipe result, or new novelty claim has been established.
+
+This milestone reviewed existing records and primary sources, and calculated
+planning estimates. It made no compute-server/model call, reserved-development
+or final-test access, process reservation, or allowance change. No unchanged
+test suite was replayed. E017's original source and release remain frozen;
+its `HEAD == origin/main` guard requires the existing published execution
+snapshot, as explained in the [routing supplement](../docs/tracks/iclr_2027/NEXT_RUN_HANDOFF.md).
+
+Historical state remains20 receipts,6,921/7,200 seconds used,279 remaining,
+zero reservations. E015 full independent weights recovery stays incomplete;
+retain its stopped instance. The shared CNY3,000 ceiling is not an account
+balance. The next conditional B/C method/resource review is separate from
+the already accepted E017 specification.
+
+# E017 execution readiness — unchanged since September10
 
 The user accepted the next P006 step. E017 source `b365bd8` and input release
 `410ee3e` are published. 62 focused CPU tests pass; the two GNU-timeout tests are

@@ -1,5 +1,14 @@
 # 2P1R Reasoning Post-Training
 
+**ICLR sprint planning, 2026-09-11:** a [bounded September11–25 plan](docs/tracks/iclr_2027/README.md)
+now links the claim/evidence inventory, manuscript outline, E017 handoff and
+priced next-phase review. Submission is not currently supported by the evidence.
+E017 remains the one authorized pending calibration; no new model run, reserved
+data exposure, allowance or experimental-source change occurred. The existing
+E017 execution snapshot is retained to satisfy its frozen publication guard;
+research-branch publication does not alter that guard. September17/22 are explicit
+quality decisions, not promises to submit.
+
 **E017 execution release ready, 2026-09-10 UTC:** per-row task stopping,
 independent raw-prefix auditing and the finite base-only runner are published.
 62 CPU tests pass; two Linux watchdog tests remain for startup. All 64 observed

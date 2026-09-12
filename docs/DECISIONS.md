@@ -1,3 +1,26 @@
+## ICLR planning note — 2026-09-11: retain a narrow question and explicit quality exits
+
+Prepare an offline September11–25 sprint, with genuine-abstract review on
+September17 and complete-paper review on September22. Current evidence supports
+engineering and evaluation prerequisites, not a real-data allocation advantage
+or a novel contribution. Direct prior work includes the Shortest Path question/
+answer comparison and MathQA study; P/K, accounting, or model-size changes alone
+cannot resolve novelty. See the [claim inventory](tracks/iclr_2027/CLAIMS_AND_EVIDENCE.md).
+
+The review-only scientific minimum retains Repeat/Solutions/Breadth and defers
+Mixed, second-task/model and acquisition-cost expansion. P006's small LoRA dose
+does not establish feasibility at C017's6.79-times larger supervision; an explicit
+larger-dose retention gate is part of the proposed review. No frozen recipe,
+score, data, source, receipt, allowance or reserved-data status changes here.
+
+E017's accepted one-run scope remains in force. Its frozen main-publication
+guard requires the existing published execution snapshot, not a research-branch
+tip; document source routing without changing the guard or rewriting refs.
+Reuse prior passed CPU evidence and leave the two Linux watchdog checks for
+startup. E018 and the later scientific/test phases remain separate decisions.
+If either quality gate fails, retain all evidence and continue research.
+[Plan and review packet](tracks/iclr_2027/README.md).
+
 ## D031 — 2026-09-10: execute only the prepared E017 completion calibration
 
 The owner accepted proceeding after P006 and requested a startup notification.
