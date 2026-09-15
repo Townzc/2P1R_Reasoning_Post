@@ -1,3 +1,14 @@
+# Closeout supersedes this startup handoff — 2026-09-15 UTC
+
+E017 is complete and must not be relaunched. [Results](../../../reports/REAL_MATH_E017_RESULTS.md)
+verify39/64 task-correct,49 parsed,one cap,zero invalid/false EOS,64 Linux passes
+and matching independent audits. The provider is off;18 exported files are
+hash-verified. Current ledger:21 receipts,7,001 used/199 remaining,zero reservations;
+SHA256 `48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e`.
+Private coordination holds current recovery locations. E018 remains subject to
+the [method/resource review](NEXT_PHASE_REVIEW.md) and an implemented, verified
+release. The unchanged E017 startup record below is historical only.
+
 # Next run: the existing E017 only
 
 September 11, 2026. **Prepared, not executed.** The existing authorization is

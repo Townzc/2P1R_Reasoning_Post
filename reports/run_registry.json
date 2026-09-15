@@ -1,6 +1,6 @@
 {
   "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 6921,
+  "charged_gpu_seconds": 7001,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2294,6 +2294,93 @@
         "paired_lost": 26,
         "paired_net_correct_change": -26,
         "scientific_grid_authorized": false
+      },
+      "official_test_evaluated": false,
+      "provider_shutdown_confirmed": true,
+      "independent_e015_checkpoint_backup_complete": false
+    },
+    {
+      "run_id": "gsm8k_stop_e017_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "73170a459e9fed2c5fdea6a9afb40b4b80837bb2",
+      "config": {
+        "automatic_retry": false,
+        "automatic_scientific_queue": false,
+        "automatic_training": false,
+        "checkpoint_write": false,
+        "completion_version": "task_boundary_proposal_v1",
+        "development_already_observed": true,
+        "development_ranks": [
+          17,
+          80
+        ],
+        "driver_version": "580.126.09",
+        "eval_batch_size": 8,
+        "expected_ledger_sha256": "c33623087b752f0bbc82a32bb90ac8f11a489fc910b2ebdaacb57000c0893106",
+        "expected_prior_jobs": 20,
+        "expected_prior_used_seconds": 6921,
+        "guard_seconds": 15,
+        "max_length": 1024,
+        "max_new_tokens": 768,
+        "max_seconds": 240,
+        "min_free_gib": 0.25,
+        "mode": "base_only_stop_contract_calibration",
+        "model_role": "main",
+        "official_test_evaluation": false,
+        "optimizer_updates": 0,
+        "phase": "E017",
+        "rental_cap_seconds": 900,
+        "rental_rate_cny_per_hour": 8,
+        "rental_target_seconds": 720,
+        "required_admission_seconds": 555,
+        "run_id": "gsm8k_stop_e017_r1",
+        "seed": 17,
+        "teacher_calls": 0,
+        "usability_screen": {
+          "maximum_actual_length_cap_stops": 8,
+          "maximum_false_native_eos_records": 0,
+          "maximum_invalid_stop_records": 0,
+          "minimum_parsed": 48,
+          "minimum_task_answer_correct": 8,
+          "n": 64,
+          "status": "prospective_operational_tolerances_not_statistical_proof"
+        }
+      },
+      "mode": "base_only_stop_contract_calibration",
+      "model": {
+        "repo_id": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "kind": "base"
+      },
+      "charged_gpu_seconds": 80,
+      "steps": 0,
+      "supervised_response_tokens": 0,
+      "records": "runs/gsm8k_stop_e017_r1",
+      "completion_calibration": {
+        "automatic_training_authorized": false,
+        "batch_maximum_lengths_sum": 2601,
+        "false_native_eos_records": 0,
+        "interpretation": "Observed-development implementation calibration; not fresh confirmation, proof validation or a revised E016 score.",
+        "invalid_stop_records": 0,
+        "legacy_marked_prefix_clean_correct": 26,
+        "n": 64,
+        "native_eos_correct": 26,
+        "operational_usability_passed": true,
+        "padded_batch_output_tokens": 20808,
+        "parse_status": {
+          "missing_marked_answer": 14,
+          "parsed": 49,
+          "unresolved_marked_answer": 1
+        },
+        "retained_generated_tokens": 9960,
+        "scientific_grid_authorized": false,
+        "stop_reasons": {
+          "length_cap": 1,
+          "native_eos": 47,
+          "new_problem_boundary": 16
+        },
+        "task_answer_correct": 39
       },
       "official_test_evaluated": false,
       "provider_shutdown_confirmed": true,

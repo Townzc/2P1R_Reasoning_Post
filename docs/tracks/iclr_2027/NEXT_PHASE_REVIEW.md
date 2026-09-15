@@ -1,13 +1,22 @@
 # Next method and resource review
 
-September 11, 2026. **Review packet, not execution approval or runtime readiness.**
-E017 already has authorization. The next decision is conditional P006 Stage B/C;
-the scientific comparison below is a separately reviewable later phase. No
-allowance, reservation, run, or reserved-data release was created here.
+Updated September15, 2026 UTC. **Review packet, not execution approval or runtime readiness.**
+[E017 now passes](../../../reports/REAL_MATH_E017_RESULTS.md):49 parsed,39 task-correct,
+one cap,zero invalid/false EOS. The next decision is P006 Stage B/C; the
+scientific comparison below remains a separately reviewable later phase.
+This packet creates no allowance, reservation or reserved-data release.
+
+The actual starting ledger now has21 receipts,7,001 used/199 remaining,zero
+reservations; SHA256 `48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e`.
+Proposed B/C maxima remain915+435=1,350 additional guarded-process seconds and
+30+20=50 powered-on minutes/about CNY6.67 total. These are new phase-specific
+ceilings, not a reset or permission to consume other allowances. Stage C runs
+only after a complete passing B and a frozen confirmation release. The two
+phases need not share a paid window; perform offline review with the server off.
 
 ## 1. Immediate decision: one retained-learning recipe
 
-After a complete passing E017, review the following fixed proposal together:
+E017 has passed; review the following fixed proposal together:
 
 | Item | P006 Stage B: E018 |
 | --- | --- |
@@ -59,10 +68,10 @@ Before requesting its startup, complete the actual implementation and review:
   gradients, and adapter save/reload. Only new implementation gets new focused
   tests; do not repeat unrelated unchanged suites as a project milestone.
 - Implement an explicit phase authorization record and cumulative guard that
-  preserve the20 historical receipts and frozen7,200-second configuration.
+  preserve the21 complete historical receipts and frozen7,200-second configuration.
   P006's1,350 seconds are an additive proposed B/C envelope, not permission to
   reset a ledger or edit a frozen budget dependency. Rebase its starting hash
-  to the actual post-E017 ledger after E017 completes.
+  to the actual post-E017 ledger hash recorded above.
 - Freeze unique run IDs, exact inputs, source hashes, Linux preflight,
   measured-profile reporting, absolute rental deadline, export and shutdown
   behavior; publish the execution release before startup.

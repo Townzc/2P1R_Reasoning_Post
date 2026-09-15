@@ -1,3 +1,19 @@
+## D032 — 2026-09-15: accept E017 completion calibration; preserve prior failures
+
+The owner explicitly resumed the sprint and supplied a new A800 connection.
+Execute only the prepublished E017 release after64 Linux passes, matching model/
+software, exact20-entry ledger and provider shutdown backstop. The one64-parent
+run passes its fixed completion screen:49 parsed,39 task-correct,one cap,zero
+invalid/false-EOS records. All retained prefixes match E016; the13 additional
+task-correct counts are a completion-contract difference, not learned accuracy.
+
+Independent export, local/server audits,21-receipt reconciliation and provider
+shutdown are complete. Preserve all old records; charge80 seconds, leaving199.
+No automatic E018 or new phase allowance. Review P006 B/C against this actual
+ledger and finish a verified release before requesting further startup. The
+scientific question and ICLR submission readiness remain unresolved.
+[Result and limitations](../reports/REAL_MATH_E017_RESULTS.md).
+
 ## ICLR planning note — 2026-09-11: retain a narrow question and explicit quality exits
 
 Prepare an offline September11–25 sprint, with genuine-abstract review on

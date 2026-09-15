@@ -1,4 +1,23 @@
-# Current status — offline sprint plan; E017 remains not run
+# Current status — E017 passes; server off; retained-learning review next
+
+September15, 2026 UTC. [E017](REAL_MATH_E017_RESULTS.md) completes the registered
+64-observed-parent stop calibration:49 parsed,39 task-correct,47 native EOS,
+16 boundary stops,1 true length cap,zero invalid/false-EOS records. All64 Linux
+checks and both independent raw-prefix audits pass. Every retained stream is
+an exact prefix of its E016 base output; historical scores and failed gates
+are unchanged. This establishes operational completion on observed data, not
+retained learning, independent generalization, or the scientific allocation effect.
+
+The provider confirmed normal shutdown after18 exported files were independently
+hash-verified. Process charge80 seconds;21 full receipts reconcile to7,001/7,200
+used,199 remaining,zero reservations. Notification-to-confirmation record spans
+436 seconds/about CNY0.97 at CNY8/hour; this is a proxy, not an invoice.
+Keep the server off. The P006 B/C [review packet](../docs/tracks/iclr_2027/NEXT_PHASE_REVIEW.md)
+now uses the actual post-E017 ledger; no E018, reserved-data release, new allowance
+or grid is authorized. E015 independent full weights recovery remains incomplete.
+The ICLR paper is still not submission-ready.
+
+# Historical September11 status — offline plan before E017
 
 September11, 2026. The [ICLR sprint packet](../docs/tracks/iclr_2027/README.md)
 contains a daily plan, current claims and closest-work challenges, manuscript

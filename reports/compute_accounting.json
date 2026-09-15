@@ -1,13 +1,13 @@
 {
   "budget_id": "first_session_20260905",
   "authorized_gpu_seconds": 7200,
-  "charged_gpu_seconds": 6921,
-  "remaining_gpu_seconds": 279,
-  "gpu_hours": 1.9225,
+  "charged_gpu_seconds": 7001,
+  "remaining_gpu_seconds": 199,
+  "gpu_hours": 1.9447222222222222,
   "billing_limit": "Historical guarded model-process accounting, not a rental invoice. Owner supplied CNY8 per powered-on hour and CNY3000 total ceiling; all power-on time counts. Historical actual spend is unreconciled.",
   "hardware_charged_seconds": {
     "RTX_4090": 737,
-    "A800_80GB": 6184
+    "A800_80GB": 6264
   },
   "jobs": [
     {
@@ -378,6 +378,25 @@
       "started_at": "2026-09-10T18:35:35.705487+00:00",
       "elapsed_seconds": 234.17446396127343,
       "exit_code": 0
+    },
+    {
+      "run_id": "gsm8k_stop_e017_r1",
+      "status": "completed",
+      "max_seconds": 240,
+      "charged_seconds": 80,
+      "command": [
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "analyses.e017",
+        "worker",
+        "--tokenizer-dir",
+        "/root/autodl-tmp/cs294-runtime/cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B/snapshots/8faed761d45a263340a0528343f099c05c9a4323",
+        "--preflight",
+        ".local/e017_preflight_20260915T053902531871.json"
+      ],
+      "started_at": "2026-09-15T05:39:02.570611+00:00",
+      "elapsed_seconds": 79.75670675933361,
+      "exit_code": 0
     }
   ],
   "rental_authorization": {
@@ -386,6 +405,7 @@
     "overall_ceiling": 3000,
     "historical_spend": null,
     "e015_closeout": "reports/real_math_e015_execution_r1/shutdown_closeout.json",
-    "e016_closeout": "reports/real_math_e016_execution_r1/shutdown_closeout.json"
+    "e016_closeout": "reports/real_math_e016_execution_r1/shutdown_closeout.json",
+    "e017_closeout": "reports/real_math_e017_execution_r1/shutdown_closeout.json"
   }
 }

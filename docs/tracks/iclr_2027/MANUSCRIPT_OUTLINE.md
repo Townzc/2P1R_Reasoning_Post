@@ -1,6 +1,6 @@
 # Working manuscript: solutions, repetition, and retained learning
 
-September 11, 2026. Research draft and outline only. The central comparison has
+Updated September15, 2026 UTC after E017. Research draft and outline only. The central comparison has
 not run and the novelty claim is unresolved. Do not submit this document or turn
 its missing results into promises in an abstract.
 
@@ -37,10 +37,18 @@ produced correct terminated answers on all32 training prompts. On a separate
 clean-correct answers, compared with26 for the original base. The base itself
 failed a predeclared truncation screen. These observations separate successful
 memorization from retained development performance and identify evaluation
-completion as an unresolved prerequisite. They do not establish why the loss
+completion as a prerequisite requiring calibration. They do not establish why the loss
 occurred or how any allocation of additional solutions would change it.
 [E015](../../../reports/REAL_MATH_E015_RESULTS.md),
 [E016](../../../reports/REAL_MATH_E016_RESULTS.md).
+
+A subsequent fixed64-problem calibration of task-boundary stopping produced
+39 task-completed correct answers,49 parsed answers and one length cap, passing
+the predeclared operational screen. All retained token sequences matched the
+corresponding historical base prefixes. This validates the implementation on
+observed development inputs; the contract change does not establish a learned
+accuracy improvement or independent generalization. Retained learning and the
+allocation comparison remain unmeasured. [E017](../../../reports/REAL_MATH_E017_RESULTS.md).
 
 The study proposed here asks a narrower question: once completion and retained
 learning are established, what is the held-out effect of additional cached

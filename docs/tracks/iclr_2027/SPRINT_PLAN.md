@@ -1,3 +1,14 @@
+# September14 resumption update — E017 complete
+
+E017 completed on September14 local time (September15 UTC), following the
+owner-requested pause. Its operational gate passes and the server is off.
+E018 and Stage C have not run; the original September12–14 entries below were
+conditional targets and are not completed milestones. Do not catch up by skipping
+method review, data-quality checks, release verification or independent
+confirmation. The next concrete decision is [P006 B/C](NEXT_PHASE_REVIEW.md).
+September17/22 quality criteria remain unchanged; no scientific contrast or
+submission-ready claim has yet been established.
+
 # September 11–25: a conditional, quality-first sprint
 
 September 11, 2026. Dates in the work plan are America/Los_Angeles. The internal

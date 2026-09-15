@@ -1,3 +1,26 @@
+# Current handoff — E017 complete; no GPU startup needed yet
+
+September15, 2026 UTC. Do not rerun E017. [Results](../reports/REAL_MATH_E017_RESULTS.md)
+verify49/64 parsed,39/64 task-correct,47 EOS/16 boundary/1 length-cap stops,
+zero invalid/false-EOS records,64 Linux passes and matching server/local audits.
+All64 retained prefixes match E016. Both historical E016 failures stay unchanged.
+
+The owner-supplied new A800 was shut down normally after independent18-file
+compact export. The80-second charge brings the canonical ledger to21 receipts,
+7,001 used/199 remaining,zero reservations; SHA256
+`48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e`.
+Current independent recovery locations are in private shared coordination; old
+20-entry snapshots are history and must not be restored as current. All104 frozen
+dependencies and original7200-second authorization remain unchanged.
+
+Next: review the concrete [P006 B/C method and allowance packet](tracks/iclr_2027/NEXT_PHASE_REVIEW.md).
+E018 has no executable release or new allowance yet. Keep GPU off while its
+review, implementation, raw-training-quality checks, CPU verification and source
+publication are completed. Passing E017 does not authorize training or a grid.
+Retain the stopped E015 volume; full independent weights recovery is still open.
+
+Everything below is historical startup/readiness context, not a pending queue.
+
 # September11 supplement — E017 execution source and sprint decisions
 
 Read the [ICLR next-run supplement](tracks/iclr_2027/NEXT_RUN_HANDOFF.md) before

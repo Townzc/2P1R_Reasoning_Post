@@ -1,3 +1,22 @@
+# 2026-09-15 — E017 execution, independent closeout and sprint resumption
+
+After the owner explicitly resumed work and supplied a new server connection,
+Codex staged the unchanged published E017 snapshot on the cloned A800, preserving
+existing outputs. All64 Linux checks passed before the single64-parent base-only
+run. No training, teacher, new checkpoint, reserved development, official test,
+retry, delegated agent or external correspondence occurred.
+
+Codex exported and hashed18 compact/auxiliary files and the21-entry ledger,
+confirmed provider shutdown, and cancelled the temporary provider backstop.
+Local and server raw-prefix audits agree byte for byte. A new CPU-only summary
+checks all64 historical prefixes and all21 receipts; initial summary-script
+interpreter/schema errors were corrected before publication and did not affect
+experimental execution or records. All104 frozen dependencies remain unchanged.
+Original scores/failures remain immutable; E017 is a completion calibration,
+not a training benefit or independent held-out finding. The updated packet
+keeps E018 method/resource review and a verified release as separate prerequisites.
+Private credentials, endpoints and recovery paths are excluded from publication.
+
 # 2026-09-10 — E017 frozen release and clean-checkout readiness
 
 After source publication, Codex froze byte-identical E016 observed inputs for

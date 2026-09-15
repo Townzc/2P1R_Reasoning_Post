@@ -1,6 +1,15 @@
 # 2P1R Reasoning Post-Training
 
-**ICLR sprint planning, 2026-09-11:** a [bounded September11–25 plan](docs/tracks/iclr_2027/README.md)
+**E017 completed, 2026-09-15 UTC:** the fixed64-parent stopping calibration passes:
+49 parsed,39 task-correct,47 native EOS/16 boundary/1 length-cap stops,zero invalid
+or false-EOS records. All64 Linux checks and byte-identical server/local audits
+pass; all64 retained streams match their historical E016 prefixes. Old E016
+scores and failures are unchanged. Provider shutdown and18-file compact export
+are verified. The80-second charge leaves199, with21 complete receipts and no
+new allowance. E018 still requires its method/resource review and verified release.
+[Results](reports/REAL_MATH_E017_RESULTS.md), [current handoff](docs/NEXT_SESSION.md).
+
+**Historical ICLR sprint planning, 2026-09-11:** a [bounded September11–25 plan](docs/tracks/iclr_2027/README.md)
 now links the claim/evidence inventory, manuscript outline, E017 handoff and
 priced next-phase review. Submission is not currently supported by the evidence.
 E017 remains the one authorized pending calibration; no new model run, reserved
@@ -9,7 +18,7 @@ E017 execution snapshot is retained to satisfy its frozen publication guard;
 research-branch publication does not alter that guard. September17/22 are explicit
 quality decisions, not promises to submit.
 
-**E017 execution release ready, 2026-09-10 UTC:** per-row task stopping,
+**Historical E017 readiness, 2026-09-10 UTC:** per-row task stopping,
 independent raw-prefix auditing and the finite base-only runner are published.
 62 CPU tests pass; two Linux watchdog tests remain for startup. All 64 observed
 inputs and 20 ledger receipts reconstruct; 160 recorded streams agree with the

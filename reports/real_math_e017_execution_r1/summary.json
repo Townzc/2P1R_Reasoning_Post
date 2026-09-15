@@ -1,0 +1,87 @@
+{
+  "all_retained_prefixes_equal_e016": true,
+  "charged_process_seconds": 80,
+  "comparison_changes_completion_contract": true,
+  "correct_by_stop_reason": {
+    "length_cap": 0,
+    "native_eos": 26,
+    "new_problem_boundary": 13
+  },
+  "e016_base_profile": {
+    "generation_seconds": 145.3555851392448,
+    "n": 64,
+    "output_tokens": 19391,
+    "peak_allocated_mib": 6738.5341796875,
+    "peak_reserved_mib": 7042.0
+  },
+  "e017_profile": {
+    "generation_seconds": 72.3805231936276,
+    "n": 64,
+    "output_tokens": 9960,
+    "padded_output_tokens": 20808,
+    "peak_allocated_mib": 6738.5341796875,
+    "peak_reserved_mib": 7042.0
+  },
+  "execution_source_commit": "73170a459e9fed2c5fdea6a9afb40b4b80837bb2",
+  "new_development_parents": 0,
+  "new_model_calls": 0,
+  "new_phase_allowance": 0,
+  "observed_development_parents": 80,
+  "observed_generation_time_ratio_e017_over_e016": 0.4979548816393259,
+  "official_test_evaluated": false,
+  "old_clean_vs_new_task_cells": {
+    "both_correct": 26,
+    "both_wrong": 25,
+    "new_task_only": 13
+  },
+  "old_e016_metrics_unchanged": {
+    "answer_correct": 39,
+    "clean_correct": 26,
+    "correct_with_eos": 29,
+    "ended_with_eos": 50,
+    "n": 64,
+    "new_problem_continuations": 16,
+    "parse_status": {
+      "missing_marked_answer": 14,
+      "parsed": 49,
+      "unresolved_marked_answer": 1
+    },
+    "truncated": 14
+  },
+  "original_scores_changed": false,
+  "phase": "E017_POST_RUN_DESCRIPTIVE_SUMMARY",
+  "post_stop_padding_tokens": 10848,
+  "raw_files_sha256": {
+    "runs/gsm8k_capability_e016_r1/base.jsonl": "1f0f5d37332dfbbec881d212e942dbe0bb69e0d00ecdc51b302bf15d638226b1",
+    "runs/gsm8k_stop_e017_r1/base.jsonl": "729b0414d19c7188746ca30ac204a1f79bfcdd36187acdaf3d0fe5e1d7818d53"
+  },
+  "reasoning_proofs_verified": false,
+  "reserved_development_parents": 432,
+  "result": {
+    "automatic_training_authorized": false,
+    "batch_maximum_lengths_sum": 2601,
+    "false_native_eos_records": 0,
+    "interpretation": "Observed-development implementation calibration; not fresh confirmation, proof validation or a revised E016 score.",
+    "invalid_stop_records": 0,
+    "legacy_marked_prefix_clean_correct": 26,
+    "n": 64,
+    "native_eos_correct": 26,
+    "operational_usability_passed": true,
+    "padded_batch_output_tokens": 20808,
+    "parse_status": {
+      "missing_marked_answer": 14,
+      "parsed": 49,
+      "unresolved_marked_answer": 1
+    },
+    "retained_generated_tokens": 9960,
+    "scientific_grid_authorized": false,
+    "stop_reasons": {
+      "length_cap": 1,
+      "native_eos": 47,
+      "new_problem_boundary": 16
+    },
+    "task_answer_correct": 39
+  },
+  "retained_prefix_mismatches": 0,
+  "timing_interpretation": "One run on each cloned A800 instance; not a repeated causal throughput benchmark."
+}

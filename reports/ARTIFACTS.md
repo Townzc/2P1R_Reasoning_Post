@@ -1,3 +1,12 @@
+# E017 completed artifacts — 2026-09-15 UTC
+
+[Result](REAL_MATH_E017_RESULTS.md), `runs/gsm8k_stop_e017_r1/`, and
+`reports/real_math_e017_execution_r1/` retain the8 run files,64 Linux checks,
+matching raw-token audits,64 prefix comparisons,21-receipt reconciliation and
+18-file export/provider closeout proof. No new weights. Current independent
+ledger recovery is private and supersedes the old20-entry snapshot; E015 full
+weights recovery remains incomplete.
+
 # E017 frozen execution release — 2026-09-10 UTC
 
 - [Ready report](REAL_MATH_E017_READY.md) and
