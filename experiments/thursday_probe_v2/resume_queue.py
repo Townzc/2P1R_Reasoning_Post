@@ -153,10 +153,11 @@ def worker(snapshot, initial_checkpoint):
                 reserve=max(120.,max((t['generation_seconds']+(t.get('cpu_score_seconds') or 0)
                     for t in timings),default=0)*1.5+30)
                 admit(reserve+30)
+                raw_count=len(list((path.with_suffix('.resume')/'batches').glob('*.raw.json')))
                 result=run_batches(model,tokenizer,inputs[key],path,event,
                     dict(model_hash=adapter['sha256'],split_hash=sha256_file(split_path),
                         batch_time_reserve_seconds=reserve,exit_reserve_seconds=30),
-                    1 if first_batch else (event['generations']+7)//8,budget,deadline)
+                    max(0,1-raw_count) if first_batch else (event['generations']+7)//8,budget,deadline)
                 record=dict(**event,status=result['status'],completed_records=len(result['records']),
                     metrics=summarize(result['records']) if result['records'] else None,
                     predictions_sha256=sha256_file(path),adapter=adapter,
