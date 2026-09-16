@@ -1,3 +1,24 @@
+## D034 — 2026-09-16: authorize separate arithmetic factorial after E018
+
+The owner explicitly requested execution of the post-E018 revision. Preserve
+E018's failed34/39 retention result and all old source/data/receipts; its noisy
+text-task threshold no longer gates the new arithmetic protocol. Start all new
+states from the original base/identical initial LoRA, never the E018 adapter.
+The finite E030–E036 queue uses uniform5e-5 peak LR, one32-update arithmetic
+calibration, two32-update prep parents and four256-update main children. Probe
+significance, score improvement and Paths benefit affect interpretation, not
+cell selection. Only hard implementation/resource errors stop execution.
+
+The existing primary subtraction-to-multiplication data are retained. CPU audit
+freezes202/54 train and79/17 discovery nondegenerate/degenerate supports, keeps
+8.98% fine-structure TV and2.75% prep token residual. Evaluation is4704 fixed new
+generations including96 C0 greedy, bounded by4864. Optional prefixes/n=8 remain
+off. Publish the complete CPU-tested source before owner startup; bound the whole
+rental and preserve every new adapter/recovery state before provider shutdown.
+See [protocol v2](../experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md).
+No new model result, server call, old ledger reset, extra machine or delegate
+occurred in offline preparation. E015 preservation remains open.
+
 ## D033 — 2026-09-16: execute finite Thursday plan; stop at E018 retention failure
 
 The owner's explicit execution request supersedes prior review-only status for

@@ -1,3 +1,14 @@
+# 2026-09-16 — owner-authorized post-E018 arithmetic protocol preparation
+
+Codex implemented the finite v2 queue and independent analysis without delegated
+agents or pretrained-model calls. CPU work verified exact old data/dose hashes,
+local target degeneracy, fixed calibration/sentinel/midpoint selections and
+adapter branching/recovery on tiny randomly initialized fixtures. A first ID
+allocator error was caught before execution; its immutable CPU release is kept
+and the corrected release reserves E030–E036. E018 historical failure, old data,
+source and ledgers remain unchanged. New scientific claims await actual output.
+No external message, recharge, extra machine or reserved-test access occurred.
+
 # 2026-09-15 — E017 execution, independent closeout and sprint resumption
 
 After the owner explicitly resumed work and supplied a new server connection,

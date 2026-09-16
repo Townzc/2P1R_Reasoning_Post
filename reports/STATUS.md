@@ -1,3 +1,14 @@
+# Current status — authorized arithmetic v2 prepared offline
+
+The owner explicitly authorized the post-E018 revision. E018 remains failed;
+its retention threshold no longer gates this separate arithmetic study. The
+finite E030–E036 queue and immutable CPU audit are prepared, with no new model
+results yet. Read [current v2 status](../experiments/thursday_probe_v2/CURRENT_STATUS.md) and
+[the full protocol](../experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md). Publish source before
+owner startup; preserve the old ledgers and E015. Earlier entries below are historical.
+
+---
+
 # Current status — E018 learned but failed preservation; server off
 
 September16, 2026. The owner authorized execution of the finite Thursday plan.

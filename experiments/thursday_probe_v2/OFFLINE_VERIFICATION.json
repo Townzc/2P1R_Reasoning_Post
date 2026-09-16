@@ -1,0 +1,24 @@
+{
+  "status": "passed_before_new_model_execution",
+  "focused_cpu_tests_passed": 12,
+  "tests": ["tests.test_thursday_v2", "tests.test_thursday_lora", "tests.test_thursday_scoring"],
+  "data_release": "release_r2",
+  "old_primary_data_manifest_verified": true,
+  "old_thursday_execution_source_modified": false,
+  "calibration_dose": {"rows": 32, "updates": 32, "presentations": 512, "supervised_tokens": 23856},
+  "queue_dry_run": {"training_runs": 7, "updates": 1120, "planned_generations": 4704, "generation_cap": 4864},
+  "verified_behaviors": [
+    "Directed adjacent target edges and local zero/one degeneracy",
+    "Fixed calibration split and sentinel membership before outputs",
+    "Frozen old data and exact cumulative token budgets",
+    "Fresh optimizer on independent parent copy; parent bytes preserved",
+    "Exact tiny-model continuation after adapter/AdamW/RNG recovery",
+    "Frozen base and token-normalized microbatch accumulation",
+    "Generation reservation ceiling and duplicate/reset refusal",
+    "Outcome-independent continuation policy used by the queue",
+    "Paired question/cluster intervals and finite n=4 pass@4"
+  ],
+  "linux_startup_checks_required": ["Pinned environment/model and idle A800", "GNU timeout", "4.5GiB free disk", "Focused suite and existing two watchdog integrations"],
+  "not_claimed": ["Pretrained-model learning", "GPU throughput", "Manipulation success", "Treatment effect", "Provider current price or billing state"],
+  "known_preparation_failure": "First CPU ID allocator scanned hash substrings; release_r1 retained and superseded by identity-field-only release_r2. No model result affected."
+}
