@@ -1,3 +1,44 @@
+# Current handoff — E018 complete, failed fixed retention screen
+
+September16, 2026. Read [Thursday status](../experiments/thursday_probe/CURRENT_STATUS.md)
+and [decision brief](../experiments/thursday_probe/THURSDAY_BRIEF.md). E018 must
+not be replayed. Its immutable raw outputs are in runs/gsm8k_lora_e018_r1;
+the final manifest, not the initial running manifest, records completion.
+Execution source20d33d6; independent160-stream audit has no discrepancies.
+
+Observed-dev39/64 ->51/64,17 gained/5 lost, retention34/39 below90%; reference
+NLL0.493771 ->0.267110. All other fixed screens pass. Do not relax90% after seeing
+these data. The5 losses were manually checked and remain true errors. One
+material erroneous reference was discovered in the fixed training-quality
+sample and explicitly retained for this fixed-corpus engineering comparison.
+
+The owner-started A800 is off; all18 E018 files and complete adapter independently
+verified. Temporary provider auto-shutdown was cleared after normal shutdown.
+E015 full-weight independent recovery remains incomplete: no instance disposal.
+
+The old7200-second ledger remains unchanged at21 receipts/7001 used/199 unused.
+New E018 allowance915, charged371, closed; the unused part is not permission for
+another job. Combined accounting is22 receipts/7372 seconds with zero reservations.
+Use experiments/thursday_probe/PHASE_LEDGER.json and COST_REPORT.json alongside
+the unchanged historical ledger. Old accounting scripts assume a single7200-
+second phase and must not reinterpret this cross-phase total as overspending or
+reset history. Private recovery routing is in this worktree's local handoff.
+
+Three CPU arithmetic candidates are frozen; no arithmetic model calls occurred.
+The rank1 candidate supports256 train,96 discovery,96 probes and32 prefix pairs;
+main residual0.030%,prep2.75%,fine-structure TV8.98%,identity paths A59/B57.
+All discovery is dev. Reserved arithmetic/GSM8K text and official test are unopened.
+Sampling/scoring helper tests pass; the full GPU prep/main scheduler is not
+implemented. Complete that release only if the owner changes the next plan.
+
+Proposals, not queued work: one lower-LR calibration with unchanged corpus/dose,
+or an explicitly revised task-matched arithmetic gate. Do not simultaneously
+change LR, data, dose and model. No automatic second model, RL or extra machine.
+
+---
+
+The following handoffs are historical.
+
 # Current handoff — E017 complete; no GPU startup needed yet
 
 September15, 2026 UTC. Do not rerun E017. [Results](../reports/REAL_MATH_E017_RESULTS.md)

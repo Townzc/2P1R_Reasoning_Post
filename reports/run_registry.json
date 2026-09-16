@@ -1,6 +1,6 @@
 {
   "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 7001,
+  "charged_gpu_seconds": 7372,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2385,6 +2385,44 @@
       "official_test_evaluated": false,
       "provider_shutdown_confirmed": true,
       "independent_e015_checkpoint_backup_complete": false
+    },
+    {
+      "run_id": "gsm8k_lora_e018_r1",
+      "status": "completed",
+      "evidence_valid": true,
+      "git_commit": "20d33d68c48b43488125a2863cbb8d1b8ca30dfe",
+      "mode": "fixed_lora_learning_retention_calibration",
+      "model": {
+        "adapter_weight_dtype": "float32",
+        "attention": "sdpa",
+        "autocast_dtype": "bfloat16",
+        "base_weight_dtype": "float32",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "quantization": false,
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "role": "main_base",
+        "tf32": false
+      },
+      "charged_gpu_seconds": 371,
+      "steps": 64,
+      "supervised_response_tokens": 77192,
+      "records": "runs/gsm8k_lora_e018_r1",
+      "retention_calibration": {
+        "passed": false,
+        "base_correct": 39,
+        "final_correct": 51,
+        "gained": 17,
+        "lost": 5,
+        "retained_correct": 34,
+        "retention_denominator": 39,
+        "reference_nll_reduction_fraction": 0.45904019067296076
+      },
+      "official_test_evaluated": false,
+      "provider_shutdown_confirmed": true,
+      "independent_adapter_backup_complete": true,
+      "independent_e015_checkpoint_backup_complete": false,
+      "phase_accounting": "experiments/thursday_probe/PHASE_LEDGER.json"
     }
-  ]
+  ],
+  "accounting_scope": "Across separate historical and Thursday E018 phases; historical7200-second ledger is immutable."
 }

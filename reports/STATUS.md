@@ -1,3 +1,33 @@
+# Current status — E018 learned but failed preservation; server off
+
+September16, 2026. The owner authorized execution of the finite Thursday plan.
+E018 ran once:253 anchors,2 epochs,64 updates,77,192 supervised tokens and160
+free generations. Observed-dev correctness39/64 ->51/64;17 gained,5 lost,
+34/39 retained (87.18%, below the fixed90% screen). Reference NLL decreased45.90%.
+All160 raw outputs pass independent local audits; all64 base streams match E017.
+The five losses are substantive quantity/arithmetic errors, not parser failures.
+No prep, four-cell comparison, fallback or reserved-set evaluation followed.
+
+C021 generated three disjoint candidate releases. Primary main-token residual is
+0.030%; prep residual2.75%. Model calibration and manipulation remain untested.
+A fixed32 training-quality audit found one material source-label/reasoning error,
+explicitly retained for engineering-only calibration; no source correction or
+backfill occurred. This is not evidence of a novel allocation or internal mechanism.
+
+Provider shutdown and full E018 adapter backup are verified. New process charge
+371 seconds is separately accounted; old21-receipt/7001-second ledger unchanged.
+Across phases:22 receipts/7372 seconds,zero reservations. Whole-rental proxy is
+about CNY3.19 at the verified CNY7.98/hour, including setup/export, not an invoice.
+E015's unique full-weight preservation obligation remains open.
+
+Read [Thursday brief](../experiments/thursday_probe/THURSDAY_BRIEF.md) and
+[current handoff](../docs/NEXT_SESSION.md). No further job starts until the
+owner adjusts the failed prerequisite or specifies the next bounded calibration.
+
+---
+
+The following status entries are historical.
+
 # Current status — E017 passes; server off; retained-learning review next
 
 September15, 2026 UTC. [E017](REAL_MATH_E017_RESULTS.md) completes the registered

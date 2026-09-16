@@ -1,3 +1,21 @@
+## D033 — 2026-09-16: execute finite Thursday plan; stop at E018 retention failure
+
+The owner's explicit execution request supersedes prior review-only status for
+this bounded phase. Register C021 and E018, preserving the historical ledger.
+Retain the exact253 training anchors despite a disclosed material reference
+error found in the fixed32 quality sample; use this corpus only for engineering
+optimization and retention, not certified reasoning-path claims. Preserve all
+source bytes; no correction, filtering or backfill.
+
+E018 completes its exact dose and160 free generations. Its net observed-dev
+improvement (+12 correct) does not cancel5 lost successes:34/39 retention fails
+the prespecified90% screen. Stop before preps/main/fallback. Do not relabel an
+operational failure as a statistical proof of universal harm. All160 raw streams
+are independently checked; complete adapter and compact outputs are retained.
+Provider shutdown is confirmed. Charge371 seconds to a separate915-second phase;
+the old7001/7200 remains immutable. No unused allowance creates a pending queue.
+[Evidence and next-decision alternatives](../experiments/thursday_probe/THURSDAY_BRIEF.md).
+
 ## D032 — 2026-09-15: accept E017 completion calibration; preserve prior failures
 
 The owner explicitly resumed the sprint and supplied a new A800 connection.

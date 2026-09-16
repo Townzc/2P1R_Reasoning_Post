@@ -957,3 +957,21 @@ are independently exact-verified. Six data and two tiny-random-model LoRA tests
 pass. No extra agent or external message was used. The owner started an A800;
 read-only hardware and provider-price checks precede the separately bounded run.
 Historical21 receipts and E015 unique weights remain unchanged.
+
+## 2026-09-16 — E018 bounded execution and stopped queue
+
+Codex ran the published E018 release once on the owner-started A800. Its fixed
+retention criterion failed despite net observed-dev improvement, so no further
+model run was launched. Codex independently audited160 raw streams, matched64
+base streams to E017, reviewed all five lost cases, verified18 exported files
+and the complete adapter, and obtained provider-confirmed shutdown. The phase
+charged371 model-process seconds without changing the historical ledger.
+
+All reported tables and two charts derive from retained artifacts. The report
+separates operational failure, descriptive bootstrap uncertainty, source-label
+defects and untested arithmetic hypotheses. CPU-only alternate candidate pools
+remain uncalibrated. New tests total11 focused passes locally (8 data/LoRA checks
+also passed on Linux); no unchanged historical suite was rerun.114 frozen E018
+source files and four data manifests were hash-verified. Report spacing was
+polished after generation without changing numeric results. No delegation,
+external correspondence, reserved test, paid teacher API or automatic retry.

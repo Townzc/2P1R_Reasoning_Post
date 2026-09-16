@@ -1,0 +1,155 @@
+{
+  "actual_gated_result": {
+    "adapter_backup_complete": true,
+    "adapter_correct": 51,
+    "after_nll": 0.2671101816405483,
+    "base_correct": 39,
+    "base_tokens_identical_to_E017": 64,
+    "before_nll": 0.4937708440352282,
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 17020,
+    "both_correct": 34,
+    "checked_at_utc": "2026-09-16T18:39:16.264102+00:00",
+    "checkpoint_bytes": 73917577,
+    "checks": {
+      "adapter_changed": true,
+      "base_unchanged": true,
+      "base_usability": true,
+      "complete_dose": true,
+      "final_usability": true,
+      "net_loss": true,
+      "nll_reduction": true,
+      "retention": false
+    },
+    "gained": 17,
+    "interpretation": "Descriptive observed-development calibration with one known erroneous training reference; no fresh confirmation, general capability retention or treatment effect.",
+    "lost": 5,
+    "nll_reduction_fraction": 0.45904019067296076,
+    "paired_accuracy_difference": 0.1875,
+    "paired_accuracy_difference_CI95": [
+      0.046875,
+      0.328125
+    ],
+    "passed": false,
+    "phase": "E018",
+    "raw_streams_independently_audited": 160,
+    "receipt": {
+      "charged_seconds": 371,
+      "command": [
+        "timeout",
+        "--signal=TERM",
+        "--kill-after=15s",
+        "900s",
+        "/root/autodl-tmp/cs294-runtime/train/bin/python",
+        "-m",
+        "experiments.thursday_probe.e018",
+        "worker",
+        "--snapshot",
+        "PINNED_MODEL_SNAPSHOT"
+      ],
+      "exit_code": 0,
+      "finished_at_utc": "2026-09-16T18:36:44.678243+00:00",
+      "guard_seconds": 15,
+      "new_phase_allowance_seconds": 915,
+      "old_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
+      "old_ledger_unchanged": true,
+      "process_cap_seconds": 900,
+      "run_id": "gsm8k_lora_e018_r1",
+      "started_at_utc": "2026-09-16T18:30:29.895375+00:00",
+      "status": "completed",
+      "wall_seconds": 370.8340142816305
+    },
+    "retained_fraction": 0.8717948717948718,
+    "retained_fraction_CI95": [
+      0.7575757575757576,
+      0.9722222222222222
+    ],
+    "train_decode_correct": 26,
+    "undefined_zero_baseline_bootstraps": 0
+  },
+  "adapter": {
+    "actual_peft_version_parameter_scope_and_reload_checks_pending": true,
+    "alpha": 32,
+    "base_embeddings_head_norms_and_all_base_weights_frozen": true,
+    "bias": "none",
+    "dropout": 0,
+    "estimate_excludes": [
+      "serialization metadata",
+      "optimizer state"
+    ],
+    "estimated_float32_tensor_bytes": 73859072,
+    "estimated_trainable_parameters": 18464768,
+    "rank": 16,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "aliases": {
+    "E018": "gsm8k_lora_e018_r1",
+    "THU_B_PATHS": "thu_b_paths_e024_r1",
+    "THU_B_REPEAT": "thu_b_repeat_e026_r1",
+    "THU_B_SURFACE": "thu_b_surface_e023_r1",
+    "THU_C_PATHS": "thu_c_paths_e022_r1",
+    "THU_C_REPEAT": "thu_c_repeat_e025_r1",
+    "THU_C_SURFACE": "thu_c_surface_e021_r1",
+    "THU_F_PATHS": "thu_f_paths_e029_r1",
+    "THU_F_REPEAT": "thu_f_repeat_e027_r1",
+    "THU_F_SURFACE": "thu_f_surface_e028_r1",
+    "THU_PREP_B": "thu_prep_bridge_e020_r1",
+    "THU_PREP_C": "thu_prep_control_e019_r1"
+  },
+  "built_from_source_commit": "c392ee50333c77feb63afdfaee1749a42b91474e",
+  "completed": [
+    "C021 CPU candidate audit",
+    "E018 one fixed learning/retention calibration",
+    "independent160-stream audit",
+    "complete E018 adapter export",
+    "provider shutdown"
+  ],
+  "entrypoint_command": "PYTHONPATH=.local/thu_deps PINNED_PYTHON -m experiments.thursday_probe.e018 launch --snapshot PINNED_MODEL_SNAPSHOT --ledger HISTORICAL_LEDGER --power-on-at-utc 2026-09-16T18:16:00Z",
+  "execution_source_commit": "20d33d68c48b43488125a2863cbb8d1b8ca30dfe",
+  "free_generations": 160,
+  "full_runtime_manifest": "runs/gsm8k_lora_e018_r1/run_manifest_final.json",
+  "missing_planned_artifacts": {
+    "FOUR_CELL_RESULTS.csv": "Four children were not trained; no interaction estimate.",
+    "PER_PROBLEM_RESULTS.jsonl": "No arithmetic discovery outputs. E018 observed-dev pairs are in e018_audit_r1/per_problem.jsonl.",
+    "PREP_MANIPULATION_CHECK.csv": "No prep model or probe generation: E018 retention gate failed."
+  },
+  "model": {
+    "adapter_weight_dtype": "float32",
+    "attention": "sdpa",
+    "autocast_dtype": "bfloat16",
+    "base_weight_dtype": "float32",
+    "id": "Qwen/Qwen2.5-1.5B",
+    "quantization": false,
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "role": "main_base",
+    "tf32": false
+  },
+  "not_executed": [
+    "arithmetic model calibration",
+    "both preps",
+    "four main cells",
+    "optional Repeat",
+    "single-C0 fallback"
+  ],
+  "not_executed_reason": "E018 retained34/39 original successes; fixed90% screen requires at least36/39.",
+  "optimizer_reset": true,
+  "parent": "Original pinned base, not E015",
+  "raw_run_directory": "runs/gsm8k_lora_e018_r1",
+  "seeds": {
+    "bootstrap": 17020,
+    "data": 20260916,
+    "training": 17
+  },
+  "source_quality_disposition": "E018_QUALITY_REVIEW.json",
+  "status": "STOPPED_AT_PRESPECIFIED_E018_GATE",
+  "supervised_tokens": 77192,
+  "updates": 64
+}

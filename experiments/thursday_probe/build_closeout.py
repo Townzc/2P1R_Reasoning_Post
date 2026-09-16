@@ -4,6 +4,7 @@ from datetime import datetime
 from fractions import Fraction
 import csv
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -191,6 +192,9 @@ PER_PROBLEM_RESULTS.jsonl, because their runs did not occur. Actual E018 pairs:
 
 ![E018 calibration](E018_CALIBRATION.png)
 '''
+    brief=re.sub(r'(?<=[a-z])(?=[0-9])',' ',brief)
+    brief=re.sub(r'(?<=[a-z],)(?=[0-9])',' ',brief)
+    brief=brief.replace('CNY3.19','CNY 3.19').replace('CNY7.98','CNY 7.98').replace('NLL,253','NLL, 253').replace('All18','All 18')
     with (ROOT/'THURSDAY_BRIEF.md').open('x') as f:f.write(brief)
     return {'status':manifest['status'],'gate_passed':a['passed'],'figures':2,'estimated_rental_proxy_cny':cost['whole_window_proxy_cost']}
 
