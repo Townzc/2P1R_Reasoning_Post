@@ -1,39 +1,47 @@
-# Arithmetic v2 — offline release prepared; no new model result
+# Arithmetic v2 — partial execution closed; server off
 
-September16,2026. The owner authorized the post-E018 revision. E018 remains
-failed; the new arithmetic protocol has its own implementation/resource stops.
-The server was confirmed off at the prior closeout. No startup or new model
-generation occurred during this preparation.
+September16,2026. The requested factorial study is **not complete**.
 
-Read [the complete protocol](PROTOCOL_AMENDMENT_v2.md),
-[CPU data audit](DATA_AUDIT_v2.json), [immutable release](release_r2/manifest.json),
-[registered queue](release_r2/registrations.json) and [run status](RUN_MANIFEST_v2.json).
+The finite window ended after E030 and base measurements, before either prep
+parent or any factorial child. E030 used the exact32 updates/23,856 supervised
+tokens; fit correctness23/32 ->25/32, check8/16 ->8/16. Separate task types:
+construction0/16 ->1/16 (fit0/8 ->1/8; check0/8 ->0/8), computation31/32 ->32/32.
+Native EOS32/48 ->48/48, caps13 ->0, parsed33/48 ->44/48. Reference NLL fell,
+but free construction learning/generalization is not established. C0 discovery
+was0/96 correct with72 caps; these failures remain in the denominator.
 
-E030–E036: one32-update calibration, two32-update prep parents, four256-update
-children. The fixed common recipe uses5e-5 peak LR and original base+LoRA r16.
-Core4608 generations plus96 C0 greedy=4704; cap4864, no E018 double charge.
-No accuracy/probe/p-value gate or candidate fallback. Optional prefixes/n=8 off.
+The outcome-independent resource estimate was23,059s for the remaining queue,
+versus6,827s remaining in the registered window. It applies the slowest base
+throughput to all later models, then adds a1.5 multiplier and420s; this is a
+conservative forecast, not measured evidence that the grid takes6.4h. The
+three-hour planning window/estimator was inadequate for admission; the owner
+was not missing authorization and disk space did not cause the stop. No
+accuracy, probe significance, NLL or retention criterion selected the stop.
 
-CPU audit confirms unchanged256 main/96 discovery questions, exact labels and
-full-instance separation; only128 intended atomic prep instances overlap.
-Target-nondegenerate reference support is202/256 train and79/96 discovery.
-Retain54/17 degenerate examples as prespecified subgroups. Main token residual
-0.0301%, prep2.7522%, fine-structure TV8.9844% remain disclosed.
+Two attempts charged478+1065=1543 process seconds. The first was manually
+stopped before training for tokenizer metadata overhead; the published repair
+reproduced all12 persisted fault records except duration.48 completed baseline
+records were reused. There are576 unique completed results,592 actual attempts,
+12 saved fault records and4 unpersisted fault records (never reconstructed).
+All576 completed prediction records and66 raw batch records covering528 newly generated outputs pass independent audit.
+All64 export-inventory entries (about522MB), including every new full adapter
+and recovery state, are independently SHA-verified; two final manifests are
+separately retained and hashed. Provider shutdown confirmed20:54:07UTC, timer
+cleared, final data-disk free5.60GiB.43m07s powered-window proxy at7.98CNY/h is
+aboutCNY5.73, not an invoice. Combined24 receipts/8915 charged seconds; original
+21-receipt ledger remains unchanged. E018 remains failed and E015 is preserved.
 
-The complete bounded queue, per-run manifests, raw-token outputs, parent/child
-hash checks, optimizer reset, full recovery state and local analysis are implemented.
-All runtime/transitive source must be published before the owner startup request.
-At startup verify current price/balance, one idle A800, pinned runtime/model and
-4.5GiB free; set the provider shutdown backstop before loading the model.
-Maximum process8400+15s, entire powered-on window3h, export/shutdown reserve25min,
-price at most10CNY/h and compute cap30CNY. Actual throughput after calibration
-must support the complete remaining queue; bounds are not runtime promises.
+Read [one-page discussion brief](THURSDAY_BRIEF_v2.md), [actual manifest](RUN_MANIFEST_v2.json), [resource closeout](COST_REPORT_v2.json), [immutable release](release_r2/manifest.json), and [full protocol](PROTOCOL_AMENDMENT_v2.md).
 
-The historical ledgers remain22 completed receipts/7372 seconds across phases,
-zero reservations. This is a separately accounted finite phase under the owner's
-existing financial ceiling. Historical billed spend is unknown. Preserve E015.
-After independently exporting all new raw results,23 adapters and7 final recovery
-states, confirm provider shutdown before full local analysis and publication.
-
-Result tables, cost closeout and discussion brief will be written only from
-actual completed outputs. No score is inferred for a not-run state.
+Next planning adjustment, not an active queue: reuse completed E030/C0
+measurements, keep the same release/recipe/seeds and remaining E031–E036.
+Prepare an outcome-independent staged runtime plan: measure both already
+registered prep parents and their existing evaluations first, then size a
+bounded complete four-cell phase using relevant trained-model throughput.
+Reordering evaluations requires a published engineering amendment and seed/RNG
+identity checks; scores still cannot determine cell inclusion. Do not simply
+raise the timer based on the6.4h worst-case forecast, tune LR on these outcomes,
+replay E030 or use its adapter as a prep parent. Preserve592 historical attempts
+against the4864 phase generation cap; remaining fixed work is4128 generations
+and1088 updates. No new phase allowance, server startup, optional expansion or
+paid API is scheduled; the owner will adjust the plan.

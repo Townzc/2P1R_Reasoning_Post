@@ -1,32 +1,7 @@
 {
-  "actual_generation_attempts": 592,
   "base_parameter_digest": {
     "parameters": 1543714304,
     "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
-  },
-  "completed": [
-    "E030: independent32-update arithmetic calibration",
-    "C0:48 calibration,384 probe and96 discovery outputs",
-    "Independent576-record replay and528-new-record batch journal audit",
-    "Full new checkpoint/recovery export",
-    "Provider-confirmed shutdown"
-  ],
-  "continuation": {
-    "cancelled_uninvoked_reservation": 368,
-    "charged_seconds": 478,
-    "completed_reused_generations": 48,
-    "fault_generations": 16,
-    "generation_accounting": "The synchronous generator returned batch2 before audit stopped at row12. Exactly16 probe outputs were attempted;48 completed calibration outputs are reused byte-for-byte. Remaining368 reserved probe outputs were never invoked. Replay the entire probe evaluation from its unchanged fixed seed; charge16 duplicates to the fault reserve.",
-    "incomplete_saved_records": 12,
-    "power_on_at_utc": "2026-09-16T20:11:00+00:00",
-    "previous_attempt": "runs/thursday_arithmetic_v2_r1",
-    "previous_export_manifest_sha256": "6165dc9c93fe42b3a256554ca7fefc965a53662e214bb260b6969e6d67e7eba4",
-    "reason": "Operator SIGTERM for repeated tokenizer metadata lookup inside per-token audit; no training started. The old generic timeout traceback is preserved and is not evidence that the8400s cap elapsed.",
-    "reused_adapter": {
-      "parameters": 18464768,
-      "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
-    },
-    "total_previous_attempted_generations": 64
   },
   "evaluations": [
     {
@@ -61,150 +36,28 @@
       "name": "C0_calibration",
       "predictions_sha256": "81a69fff373993ffae33cc3cd888c2ed985ef3c8b680b0b893bdd83ea2d73efb",
       "questions": 48,
-      "reused_from": "runs/thursday_arithmetic_v2_r1",
       "samples": 1,
       "sampling": false,
-      "seconds": 0.14990463852882385,
+      "seconds": 303.72473668679595,
       "state": "C0",
-      "status": "completed",
-      "view": "calibration"
-    },
-    {
-      "adapter": {
-        "parameters": 18464768,
-        "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
-      },
-      "generations": 384,
-      "metrics": {
-        "completed_fraction": 0.9427083333333334,
-        "failures": {
-          "none": 199,
-          "parse": 140,
-          "stop_length_cap": 22,
-          "wrong_answer_or_resources": 23
-        },
-        "generations": 384,
-        "parse_fraction": 0.5989583333333334,
-        "pass_at_1": 0.5182291666666666,
-        "questions": 96,
-        "stop_reasons": {
-          "length_cap": 22,
-          "native_eos": 281,
-          "new_problem_boundary": 81
-        },
-        "trace_status": {
-          "not_certified": 384
-        }
-      },
-      "name": "C0_probes",
-      "predictions_sha256": "62efc1184e1378bd6f8bbfcab5dabea08342889964fe19030cc2fe90cc234d34",
-      "questions": 96,
-      "reused_from": null,
-      "samples": 4,
-      "sampling": true,
-      "seconds": 662.4835654944181,
-      "state": "C0",
-      "status": "completed",
-      "view": "probes"
-    },
-    {
-      "adapter": {
-        "parameters": 18464768,
-        "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
-      },
-      "generations": 96,
-      "metrics": {
-        "completed_fraction": 0.25,
-        "failures": {
-          "parse": 20,
-          "stop_length_cap": 72,
-          "wrong_answer_or_resources": 4
-        },
-        "generations": 96,
-        "parse_fraction": 0.0625,
-        "pass_at_1": 0.0,
-        "questions": 96,
-        "stop_reasons": {
-          "length_cap": 72,
-          "native_eos": 4,
-          "new_problem_boundary": 20
-        },
-        "trace_status": {
-          "inconsistent": 6,
-          "unverifiable": 90
-        }
-      },
-      "name": "C0_discovery_greedy",
-      "predictions_sha256": "82496e07620754e2e84015151188c77e1b5946974acd597afe5d97adbfd3022b",
-      "questions": 96,
-      "reused_from": null,
-      "samples": 1,
-      "sampling": false,
-      "seconds": 278.8527008853853,
-      "state": "C0",
-      "status": "completed",
-      "view": "discovery_greedy"
-    },
-    {
-      "adapter": {
-        "parameters": 18464768,
-        "sha256": "5f07f098782227f84684fd0c2de1dba7e3db5ba39b8c62ae69eb80b7e2214b15"
-      },
-      "generations": 48,
-      "metrics": {
-        "completed_fraction": 1.0,
-        "failures": {
-          "none": 33,
-          "parse": 4,
-          "wrong_answer_or_resources": 11
-        },
-        "generations": 48,
-        "parse_fraction": 0.9166666666666666,
-        "pass_at_1": 0.6875,
-        "questions": 48,
-        "stop_reasons": {
-          "native_eos": 48
-        },
-        "trace_status": {
-          "inconsistent": 13,
-          "not_certified": 32,
-          "unverifiable": 3
-        }
-      },
-      "name": "calibration_calibration",
-      "predictions_sha256": "fe3a43bc042340c2e5bc4018a718262a3f7b106e72c0ff8cca12f9d47c215851",
-      "questions": 48,
-      "reused_from": null,
-      "samples": 1,
-      "sampling": false,
-      "seconds": 17.295574210584164,
-      "state": "calibration",
       "status": "completed",
       "view": "calibration"
     }
   ],
-  "exception_message": "Complete fixed factorial does not fit measured phase budget; preserve calibration and stop",
+  "exception_message": "Finite v2 process cap reached",
   "exception_type": "TimeoutError",
-  "execution_status": "failed_hard_or_resource",
-  "finished_at_utc": "2026-09-16T20:51:57.157334+00:00",
-  "independent_audit": "runs/thursday_arithmetic_v2_r2/partial_independent_audit/summary.json",
+  "finished_at_utc": "2026-09-16T20:25:14.181698+00:00",
   "initial_adapter": {
     "bytes": 73917577,
     "files_sha256": {
       "README.md": "45bfa3da46d1fe3a49b0145da964700c566cd9367ffffa843294e6c56724cd56",
-      "adapter_config.json": "4599b90c263b3d5928e371295e2b511f5d02aca1dd4719da26b559393cb34986",
+      "adapter_config.json": "7a425d94d07672195a4c13602a7890664d9e1930abdca70874a55a6a88639dc6",
       "adapter_model.safetensors": "fb44186cb5c1126e1565186ae87388fbc597f61bb962158b036f612fe667c23d"
     },
     "parameter_digest": {
       "parameters": 18464768,
       "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
     }
-  },
-  "missing_planned_artifacts": {
-    "FOUR_CELL_RESULTS.csv": "E033\u2013E036 were not trained; no delta_C, delta_B or interaction estimate exists.",
-    "MIDPOINT_RESULTS.csv": "No main training run reached step128.",
-    "POST_MAIN_SENTINEL.csv": "No main endpoint was trained; no sentinel generations.",
-    "PREP_MANIPULATION_CHECK.csv": "No C/B prep states were trained; C0 baseline only is separately reported."
   },
   "model": {
     "attention": "sdpa",
@@ -215,144 +68,83 @@
     "revision": "8faed761d45a263340a0528343f099c05c9a4323",
     "tf32": false
   },
-  "next_execution": "Not scheduled. Prepare an outcome-independent resource-plan revision and continue E031\u2013E036 only after owner planning adjustment/startup; do not repeat E018/E030 or reset generation history.",
   "old_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
   "optional_n8_status": "not_run_core_priority",
   "optional_prefix_status": "not_run_core_priority",
-  "peak_memory_allocated_bytes": 10146353664,
+  "peak_memory_allocated_bytes": 7030141952,
   "peft": "0.17.1",
-  "process_worker_seconds": 1058.747077897191,
-  "provider_shutdown_confirmed": true,
-  "raw_final_manifest": "runs/thursday_arithmetic_v2_r2/run_manifest_final.json",
-  "raw_final_manifest_sha256": "59c11954333315e7b8a8ac9a54d3a1cbc94365f4e3447a3796ba2f49788bac00",
+  "process_worker_seconds": 473.15994810685515,
   "release_manifest_sha256": "05b06ca9b8e260ce57002716193df2970025fbf1e16f58c98716db2a1a8fc556",
-  "reserved_generations": 592,
+  "reserved_generations": 432,
   "runs": [
     {
-      "checkpoint": "runs/thursday_arithmetic_v2_r2/thu_v2_e030_r1/checkpoint_32",
       "data": "calibration_fit",
-      "data_sha256": "bf9d188a72be02467de70cf1184ce9fa13e36cadc4197d4ba7d6a3f2a73934f0",
-      "elapsed_seconds": 85.22899501770735,
       "experiment_id": "E030",
-      "final_adapter": {
-        "parameters": 18464768,
-        "sha256": "5f07f098782227f84684fd0c2de1dba7e3db5ba39b8c62ae69eb80b7e2214b15"
-      },
-      "finished_at_utc": "2026-09-16T20:51:39.768916+00:00",
-      "frozen_base_unchanged": true,
-      "optimizer_reset": true,
       "parent": "C0",
-      "parent_adapter": {
-        "parameters": 18464768,
-        "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
-      },
-      "parent_checkpoint": "runs/thursday_arithmetic_v2_r2/checkpoint_C0",
-      "recipe": {
-        "batch_size": 16,
-        "betas": [
-          0.9,
-          0.999
-        ],
-        "bias": "none",
-        "dropout": 0.0,
-        "eps": 1e-08,
-        "floor_lr": 1e-05,
-        "grad_clip": 1.0,
-        "lora_alpha": 32,
-        "lora_rank": 16,
-        "microbatch_size": 1,
-        "peak_lr": 5e-05,
-        "schedule": "linear warmup round(updates/16), cosine to floor",
-        "weight_decay": 0.0
-      },
-      "recoverable_state": {
-        "bytes": 222035381,
-        "created_at_utc": "2026-09-16T20:51:26.314683+00:00",
-        "file": "step_000032.pt",
-        "fingerprint": "234f5acc2584af9d4b3118286c17b16c186f0a6c69bbde526e38689edad0f007",
-        "sha256": "4fab4495af6270f7443ac5da44521a71c5609da3ab882538964caef150c31354",
-        "step": 32
-      },
-      "reference_nll_after": {
-        "nll": 0.057627081511246125,
-        "reference_count": 32,
-        "response_loss_sum": 85.92197853326797,
-        "supervised_tokens": 1491
-      },
-      "reference_nll_before": {
-        "nll": 0.6363542353363344,
-        "reference_count": 32,
-        "response_loss_sum": 948.8041648864746,
-        "supervised_tokens": 1491
-      },
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e030_r1",
-      "scheduler_reset": true,
-      "seed": 17,
-      "source_commit": "930bd49e4c1672992c89ab0049547131834ed856",
-      "started_at_utc": "2026-09-16T20:50:14.537538+00:00",
       "state": "calibration",
-      "status": "completed",
-      "updates": 32,
-      "warning": null
+      "status": "not_run",
+      "updates": 32
     },
     {
       "data": "prep_control",
       "experiment_id": "E031",
       "parent": "C0",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e031_r1",
       "state": "C",
-      "status": "not_run_resource_admission",
+      "status": "not_run",
       "updates": 32
     },
     {
       "data": "prep_bridge",
       "experiment_id": "E032",
       "parent": "C0",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e032_r1",
       "state": "B",
-      "status": "not_run_resource_admission",
+      "status": "not_run",
       "updates": 32
     },
     {
       "data": "surface",
       "experiment_id": "E033",
       "parent": "C",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e033_r1",
       "state": "C-S",
-      "status": "not_run_resource_admission",
+      "status": "not_run",
       "updates": 256
     },
     {
       "data": "paths",
       "experiment_id": "E034",
       "parent": "C",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e034_r1",
       "state": "C-P",
-      "status": "not_run_resource_admission",
+      "status": "not_run",
       "updates": 256
     },
     {
       "data": "surface",
       "experiment_id": "E035",
       "parent": "B",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e035_r1",
       "state": "B-S",
-      "status": "not_run_resource_admission",
+      "status": "not_run",
       "updates": 256
     },
     {
       "data": "paths",
       "experiment_id": "E036",
       "parent": "B",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "reason": "Phase stopped: TimeoutError",
       "run_id": "thu_v2_e036_r1",
       "state": "B-P",
-      "status": "not_run_resource_admission",
+      "status": "not_run",
       "updates": 256
     }
   ],
@@ -364,7 +156,7 @@
     "prep": 2026091601,
     "training": 17
   },
-  "source_commit": "930bd49e4c1672992c89ab0049547131834ed856",
+  "source_commit": "a85d615fd7c2e7b4efe30fe248059ad195c16823",
   "source_files_sha256": {
     "analyses/c018_selection_audit.py": "64fa39608b0982fa102f1a9aa2b4981cd2bc93118c1885281c9f1956e776fd71",
     "analyses/c019_saved_capability.py": "9a0dca25679461c34c3b50b47e048cd9616b77a62a27282888826181d418bde2",
@@ -402,14 +194,12 @@
     "experiments/thursday_probe/e018_prepare.py": "419d31c658086f3a0ef29777ddb52a3cfd8be3c17ef8af8fba32561cb8d8d4d1",
     "experiments/thursday_probe/lora.py": "5f07c9a1e7ef67933c6536974a7990c918cd62953939d9b9442043aeddadf5ff",
     "experiments/thursday_probe_v2/__init__.py": "0ec590a740a9ea5492e7b4673d9addd27521dfb3bdead50cb9022da2fbc78898",
-    "experiments/thursday_probe_v2/analyze.py": "10f761948094b537f9e159f3aa6997d5e52fb1fd10f30324eb52792ea120f26e",
+    "experiments/thursday_probe_v2/analyze.py": "2bfdf5ab77bff9cb88996d3a3ec35b127887e0ad075d65b243f876d47ba49c1f",
     "experiments/thursday_probe_v2/config.py": "b349a8b021ea3ca4a02fcf377aa33f556365acea96b8ba0e94ef944ec508b23e",
-    "experiments/thursday_probe_v2/continuation.py": "0120f89009c0dc754b16ddbdde0001f1d42f8c547ff34290f45e119747c8e25c",
-    "experiments/thursday_probe_v2/generation.py": "837ac54f145e44ed2d6c35a72c158aa85c5385806e6c16870e847c0f48a3b108",
     "experiments/thursday_probe_v2/prepare.py": "284265f05f5135aa0c1d94de7ff69391e948ea9c7dd0847bdc5059adbf54df2d",
-    "experiments/thursday_probe_v2/queue.py": "c214fbbc8c6de824596a1fd965d05b3367d8d7b9d3a9964399ef1e9c4a694522",
+    "experiments/thursday_probe_v2/queue.py": "8d5f08855af57660c4a4fda663693ca25498094a02cfee28fed78b17b1fb9aa9",
     "experiments/thursday_probe_v2/report.py": "efb6d9eaae8f80613089945e06d6bbf9b59db7f2841cb8773e85db65e28d2a7b",
-    "experiments/thursday_probe_v2/runtime.py": "1ee0bebf5b0e9f7dc5ce7bf41d86bf900c8e523e4902c2a2513de3b12f9b95cd",
+    "experiments/thursday_probe_v2/runtime.py": "25216574484f1d8557f00c36ccd7c66ebb8c119baa3fa88bd0739e885e4f7324",
     "experiments/thursday_probe_v2/training.py": "87a04541b2170840cb6f584a8fa0d91555089e1592569f82a48f6e7cef4d7893",
     "scripts/audit_absent_boundary_outputs.py": "07399ac029743b618983dc89d1705f6b403512323db6af664565af631c92e9bb",
     "scripts/audit_coverage_feasibility.py": "c99ddca852a1095d7035d50b5d3115044e141ef70b42b506cfb9cc28a20bbb8c",
@@ -494,8 +284,8 @@
     "src/single_family_matching.py": "8e5e8e047c6ba7baa7db492dd923a76ccae9c566342d67bb50e699e92f2bd12c",
     "src/trace_audit.py": "734495bc916a04ab627a913b18194126b2c2c4c2d3f854159453de4aa0d7b9cb"
   },
-  "started_at_utc": "2026-09-16T20:34:18.425890+00:00",
-  "status": "closed_after_conservative_resource_admission_stop",
+  "started_at_utc": "2026-09-16T20:17:21.037896+00:00",
+  "status": "failed_hard_or_resource",
   "tokenizer": {
     "files": {
       "config.json": {
@@ -526,6 +316,5 @@
     },
     "repo_id": "Qwen/Qwen2.5-1.5B",
     "revision": "8faed761d45a263340a0528343f099c05c9a4323"
-  },
-  "unique_completed_results": 576
+  }
 }

@@ -1,0 +1,616 @@
+{
+  "error_partition": {
+    "correct": 1,
+    "unparsed": 4,
+    "wrong_resources_only": 1,
+    "wrong_target_and_resources": 2,
+    "wrong_target_only": 8
+  },
+  "example_selection": "First two incorrect construct questions in fixed problem_id lexicographic order.",
+  "fixed_lexicographic_examples": [
+    {
+      "answer_segment": "Step 1: 29 - 26 = 3.\nStep 2: 30 / 3 = 10.\nStep 3: 21 * 10 = 210.\nStep 4: 210 - 3 = 207.\nAnswer: (21 * (30 / (29 - 26)))",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "210",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        21,
+        26,
+        29,
+        30
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(21 * (30 / (29 - 26)))",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->/": 1,
+          "/->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/27080cf112a174767f28",
+      "prompt": "Use the numbers 21, 26, 29, 30 exactly once each with +, -, *, / and parentheses to make 47. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 30 - 29 = 1.\nStep 2: 26 / 1 = 26.\nStep 3: 21 + 26 = 47.\nAnswer: (21 + (26 / (30 - 29)))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 47,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 25 - 19 = 6.\nWe now calculate: 8 * 6 = 48.\nWe now calculate: 48 - 21 = 27.\nAnswer: ((8 * (25 - 19)) - 21)",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "27",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        8,
+        19,
+        21,
+        25
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "((8 * (25 - 19)) - 21)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "*->-": 1,
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/32aac39e97447ce6c729",
+      "prompt": "Use the numbers 8, 19, 21, 25 exactly once each with +, -, *, / and parentheses to make 42. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 19 - 25 = -6.\nStep 2: 8 + (-6) = 2.\nStep 3: 21 * 2 = 42.\nAnswer: (21 * (8 + (19 - 25)))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 42,
+      "target_value_matches": false,
+      "task": "construct"
+    }
+  ],
+  "questions": 16,
+  "records": [
+    {
+      "answer_segment": "Step 1: 29 - 26 = 3.\nStep 2: 30 / 3 = 10.\nStep 3: 21 * 10 = 210.\nStep 4: 210 - 3 = 207.\nAnswer: (21 * (30 / (29 - 26)))",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "210",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        21,
+        26,
+        29,
+        30
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(21 * (30 / (29 - 26)))",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->/": 1,
+          "/->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/27080cf112a174767f28",
+      "prompt": "Use the numbers 21, 26, 29, 30 exactly once each with +, -, *, / and parentheses to make 47. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 30 - 29 = 1.\nStep 2: 26 / 1 = 26.\nStep 3: 21 + 26 = 47.\nAnswer: (21 + (26 / (30 - 29)))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 47,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 25 - 19 = 6.\nWe now calculate: 8 * 6 = 48.\nWe now calculate: 48 - 21 = 27.\nAnswer: ((8 * (25 - 19)) - 21)",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "27",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        8,
+        19,
+        21,
+        25
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "((8 * (25 - 19)) - 21)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "*->-": 1,
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/32aac39e97447ce6c729",
+      "prompt": "Use the numbers 8, 19, 21, 25 exactly once each with +, -, *, / and parentheses to make 42. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 19 - 25 = -6.\nStep 2: 8 + (-6) = 2.\nStep 3: 21 * 2 = 42.\nAnswer: (21 * (8 + (19 - 25)))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 42,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 21 - 6 = 15.\nWe now calculate: 23 - 10 = 13.\nWe now calculate: 15 * 13 = 195.\nWe now calculate: 195 / 6 = 32.5.\nAnswer: (195 / (15 * (23 - 10)))",
+      "classification": "wrong_target_and_resources",
+      "exact_expression_value": "1",
+      "exact_number_multiset_matches": false,
+      "numbers": [
+        6,
+        10,
+        21,
+        23
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(195 / (15 * (23 - 10)))",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "*->/": 1,
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/48520fe5a3a483025c2f",
+      "prompt": "Use the numbers 6, 10, 21, 23 exactly once each with +, -, *, / and parentheses to make 48. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 6 - 10 = -4.\nWe now calculate: 23 - (-4) = 27.\nWe now calculate: 21 + 27 = 48.\nAnswer: (21 + (23 - (6 - 10)))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 48,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 33 - 27 = 6.\nWe now calculate: 14 - 6 = 8.\nWe now calculate: 8 * 8 = 64.\nAnswer: ((14 - (33 - 27)) * 8)",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "64",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        8,
+        14,
+        27,
+        33
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "((14 - (33 - 27)) * 8)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->*": 1,
+          "-->-": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/579e3557f277cdd810b2",
+      "prompt": "Use the numbers 8, 14, 27, 33 exactly once each with +, -, *, / and parentheses to make 28. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 8 + 14 = 22.\nWe now calculate: 33 - 27 = 6.\nWe now calculate: 22 + 6 = 28.\nAnswer: ((8 + 14) + (33 - 27))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 28,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 29 - 37 = -8.\nStep 2: 27 - (-8) = 35.\nStep 3: 4 * 35 = 140.\nStep 4: 140 / 27 = 5.185185185185185.\nAnswer: (4 * (27 - (37 - 29))) / 27 = 5.185185185185185",
+      "classification": "unparsed",
+      "exact_expression_value": null,
+      "exact_number_multiset_matches": null,
+      "numbers": [
+        4,
+        27,
+        29,
+        37
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": null,
+        "failure": "parse",
+        "interfaces": {},
+        "parsed": false,
+        "structure_id": null,
+        "trace_status": "unverifiable"
+      },
+      "problem_id": "thu/5cc0724bb7b404ef3ad1",
+      "prompt": "Use the numbers 4, 27, 29, 37 exactly once each with +, -, *, / and parentheses to make 76. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 37 - 29 = 8.\nWe now calculate: 27 - 8 = 19.\nWe now calculate: 4 * 19 = 76.\nAnswer: (4 * (27 - (37 - 29)))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 76,
+      "target_value_matches": null,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 21 - 16 = 5.\nWe now calculate: 12 * 5 = 60.\nWe now calculate: 23 - 60 = -37.\nWe now calculate: -37 / 12 = -3.083333333333333.\nAnswer: (-37 / (12 * (12 - 16)))",
+      "classification": "unparsed",
+      "exact_expression_value": null,
+      "exact_number_multiset_matches": null,
+      "numbers": [
+        12,
+        16,
+        21,
+        23
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": null,
+        "failure": "parse",
+        "interfaces": {},
+        "parsed": false,
+        "structure_id": null,
+        "trace_status": "unverifiable"
+      },
+      "problem_id": "thu/6452570d98a672192b7d",
+      "prompt": "Use the numbers 12, 16, 21, 23 exactly once each with +, -, *, / and parentheses to make 20. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 21 - 23 = -2.\nWe now calculate: 16 / (-2) = -8.\nWe now calculate: 12 - (-8) = 20.\nAnswer: (12 - (16 / (21 - 23)))",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 20,
+      "target_value_matches": null,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 17 - 11 = 6.\nWe now calculate: 10 * 6 = 60.\nWe now calculate: 20 / 60 = 1/3.\nAnswer: ((10 * (17 - 11)) / 20)",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "3",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        10,
+        11,
+        17,
+        20
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "((10 * (17 - 11)) / 20)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "*->/": 1,
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/788862d59e3809f69d3f",
+      "prompt": "Use the numbers 10, 11, 17, 20 exactly once each with +, -, *, / and parentheses to make 12. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 17 - 11 = 6.\nWe now calculate: 6 * 20 = 120.\nWe now calculate: 120 / 10 = 12.\nAnswer: (((17 - 11) * 20) / 10)",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 12,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 30 - 17 = 13.\nStep 2: 9 * 13 = 117.\nStep 3: 27 - 117 = -90.\nStep 4: -90 / 30 = -3.\nAnswer: ((9 * (30 - 17)) - 27) / 30 = -3",
+      "classification": "unparsed",
+      "exact_expression_value": null,
+      "exact_number_multiset_matches": null,
+      "numbers": [
+        9,
+        17,
+        27,
+        30
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": null,
+        "failure": "parse",
+        "interfaces": {},
+        "parsed": false,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/7a0a0ac024b35d980f36",
+      "prompt": "Use the numbers 9, 17, 27, 30 exactly once each with +, -, *, / and parentheses to make 39. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 30 - 17 = 13.\nStep 2: 27 * 13 = 351.\nStep 3: 351 / 9 = 39.\nAnswer: ((27 * (30 - 17)) / 9)",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 39,
+      "target_value_matches": null,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 30 - 20 = 10.\nWe now calculate: 9 * 8 = 72.\nWe now calculate: 72 - 10 = 62.\nAnswer: (9 * (8 - (30 - 20)))",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "-18",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        8,
+        9,
+        20,
+        30
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(9 * (8 - (30 - 20)))",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->*": 1,
+          "-->-": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/7a71190ae227b917847f",
+      "prompt": "Use the numbers 8, 9, 20, 30 exactly once each with +, -, *, / and parentheses to make 60. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 8 * 30 = 240.\nWe now calculate: 9 * 20 = 180.\nWe now calculate: 240 - 180 = 60.\nAnswer: ((8 * 30) - (9 * 20))",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 60,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 39 - 23 = 16.\nStep 2: 8 * 16 = 128.\nStep 3: 40 - 128 = -88.\nAnswer: (40 - (8 * (39 - 23)))",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "-88",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        8,
+        23,
+        39,
+        40
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(40 - (8 * (39 - 23)))",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "*->-": 1,
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/852c2de8c329785c62c1",
+      "prompt": "Use the numbers 8, 23, 39, 40 exactly once each with +, -, *, / and parentheses to make 80. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 39 - 23 = 16.\nStep 2: 8 / 40 = 1/5.\nStep 3: 16 / (1/5) = 80.\nAnswer: ((39 - 23) / (8 / 40))",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 80,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 36 - 22 = 14.\nStep 2: 16 - 14 = 2.\nStep 3: 2 * 20 = 40.\nAnswer: (20 * (16 - (36 - 22)))",
+      "classification": "correct",
+      "exact_expression_value": "40",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        16,
+        20,
+        22,
+        36
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": true,
+        "completed": true,
+        "correct": true,
+        "expression": "(20 * (16 - (36 - 22)))",
+        "failure": "none",
+        "interfaces": {
+          "-->*": 1,
+          "-->-": 1
+        },
+        "parsed": true,
+        "structure_id": "*(-(N,-(N,N)),N)",
+        "trace_status": "unverifiable"
+      },
+      "problem_id": "thu/968910941ca9eec2e3b8",
+      "prompt": "Use the numbers 16, 20, 22, 36 exactly once each with +, -, *, / and parentheses to make 40. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 16 - 36 = -20.\nStep 2: 22 + (-20) = 2.\nStep 3: 20 * 2 = 40.\nAnswer: (20 * (22 + (16 - 36)))",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 40,
+      "target_value_matches": true,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 24 - 30 = -6.\nWe now calculate: 8 * (-6) = -48.\nWe now calculate: -48 - 12 = -60.\nAnswer: ((24 - 30) * 8 - 12)",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "-60",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        8,
+        12,
+        24,
+        30
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "((24 - 30) * 8 - 12)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "*->-": 1,
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/9e007bcda6107324aaa4",
+      "prompt": "Use the numbers 8, 12, 24, 30 exactly once each with +, -, *, / and parentheses to make 24. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 30 - 24 = 6.\nWe now calculate: 8 - 6 = 2.\nWe now calculate: 12 * 2 = 24.\nAnswer: (12 * (8 - (30 - 24)))",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 24,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 35 - 16 = 19.\nStep 2: 13 * 14 = 182.\nStep 3: 182 - 19 = 163.\nAnswer: (13 * (14 - (35 / 16)))",
+      "classification": "wrong_target_only",
+      "exact_expression_value": "2457/16",
+      "exact_number_multiset_matches": true,
+      "numbers": [
+        13,
+        14,
+        16,
+        35
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(13 * (14 - (35 / 16)))",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->*": 1,
+          "/->-": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/cafa15be6b6651899192",
+      "prompt": "Use the numbers 13, 14, 16, 35 exactly once each with +, -, *, / and parentheses to make 19. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 14 - 13 = 1.\nStep 2: 1 * 16 = 16.\nStep 3: 35 - 16 = 19.\nAnswer: (35 - ((14 - 13) * 16))",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 19,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 28 - 19 = 9.\nStep 2: 12 - 9 = 3.\nStep 3: 7 * 3 = 21.\nStep 4: 21 + 7 = 28.\nAnswer: ((12 - (28 - 19)) * 7) + 7 = 28",
+      "classification": "unparsed",
+      "exact_expression_value": null,
+      "exact_number_multiset_matches": null,
+      "numbers": [
+        7,
+        12,
+        19,
+        28
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": null,
+        "failure": "parse",
+        "interfaces": {},
+        "parsed": false,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/d7021276f19a7dabfd7c",
+      "prompt": "Use the numbers 7, 12, 19, 28 exactly once each with +, -, *, / and parentheses to make 75. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 19 - 28 = -9.\nStep 2: 7 * (-9) = -63.\nStep 3: 12 - (-63) = 75.\nAnswer: (12 - (7 * (19 - 28)))",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 75,
+      "target_value_matches": null,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "We now calculate: 16 - 8 = 8.\nWe now calculate: 20 - 17 = 3.\nWe now calculate: 8 * 3 = 24.\nWe now calculate: 24 / 17 = 1.411764705882353.\nAnswer: (20 - (16 - 8)) / (20 - 17)",
+      "classification": "wrong_target_and_resources",
+      "exact_expression_value": "4",
+      "exact_number_multiset_matches": false,
+      "numbers": [
+        8,
+        16,
+        17,
+        20
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "(20 - (16 - 8)) / (20 - 17)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->-": 1,
+          "-->/": 2
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/e4ec6bad7308e96d9be1",
+      "prompt": "Use the numbers 8, 16, 17, 20 exactly once each with +, -, *, / and parentheses to make 15. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "Step 1: 20 - 16 = 4.\nStep 2: 8 * 4 = 32.\nStep 3: 32 - 17 = 15.\nAnswer: ((8 * (20 - 16)) - 17)",
+      "split": "fit",
+      "stop_reason": "native_eos",
+      "target": 15,
+      "target_value_matches": false,
+      "task": "construct"
+    },
+    {
+      "answer_segment": "Step 1: 28 - 2 = 26.\nStep 2: 26 * 2 = 52.\nAnswer: ((28 - 2) * 2)",
+      "classification": "wrong_resources_only",
+      "exact_expression_value": "52",
+      "exact_number_multiset_matches": false,
+      "numbers": [
+        2,
+        14,
+        26,
+        28
+      ],
+      "original_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "expression": "((28 - 2) * 2)",
+        "failure": "wrong_answer_or_resources",
+        "interfaces": {
+          "-->*": 1
+        },
+        "parsed": true,
+        "structure_id": null,
+        "trace_status": "inconsistent"
+      },
+      "problem_id": "thu/e6753eb7c147f0647645",
+      "prompt": "Use the numbers 2, 14, 26, 28 exactly once each with +, -, *, / and parentheses to make 52. Show calculations, then write Answer: followed by one expression.",
+      "reference_response": "We now calculate: 26 - 14 = 12.\nWe now calculate: 2 * 12 = 24.\nWe now calculate: 24 + 28 = 52.\nAnswer: ((2 * (26 - 14)) + 28)",
+      "split": "check",
+      "stop_reason": "native_eos",
+      "target": 52,
+      "target_value_matches": true,
+      "task": "construct"
+    }
+  ],
+  "scope": "Post-E030 construct questions only; unchanged final-expression scoring, exact AST/Fraction recomputation.",
+  "trace_caution": "A trace_status of inconsistent can reflect disagreement with the requested target; it does not by itself establish an incorrect intermediate arithmetic equation."
+}

@@ -1,0 +1,34 @@
+{
+  "closed": true,
+  "phase_allowance_seconds": 8415,
+  "prior_charged_seconds": 7372,
+  "prior_receipts": 22,
+  "receipt": {
+    "charged_seconds": 478,
+    "command": [
+      "timeout",
+      "--signal=TERM",
+      "--kill-after=15s",
+      "8400s",
+      "PINNED_RUNTIME",
+      "-m",
+      "experiments.thursday_probe_v2.queue",
+      "worker",
+      "--snapshot",
+      "PINNED_MODEL_SNAPSHOT"
+    ],
+    "exit_code": 1,
+    "finished_at_utc": "2026-09-16T20:25:15.077237+00:00",
+    "guard_seconds": 15,
+    "historical_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
+    "historical_ledger_unchanged": true,
+    "new_phase_allowance_seconds": 8415,
+    "process_cap_seconds": 8400,
+    "run_id": "thursday_arithmetic_v2_r1",
+    "started_at_utc": "2026-09-16T20:17:17.221642+00:00",
+    "status": "failed",
+    "wall_seconds": 477.8552077226341
+  },
+  "reservations": 0,
+  "total_charged_seconds_across_phases": 7850
+}

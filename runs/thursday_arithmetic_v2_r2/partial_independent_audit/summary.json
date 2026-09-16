@@ -1,0 +1,207 @@
+{
+  "accounting_note": "Completed results count reused calibration once. Prior fault outputs remain charged separately. Incomplete current streams are inventoried separately and excluded from completed-view metrics; a reservation is not proof that every reserved generation was invoked.",
+  "completed_batch_journal_audits": {
+    "C0_calibration": {
+      "note": "Legacy or reused calibration is verified from its original prediction hash and token audit; no journal is invented.",
+      "status": "absent_legacy_stream"
+    },
+    "C0_discovery_greedy": {
+      "batches": 12,
+      "generated_records": 96,
+      "sha256": "8c69243a53710f51f00a1875c7b918c9241ab429d1cd846892b603d4a49263c0",
+      "status": "verified_against_completed_predictions"
+    },
+    "C0_probes": {
+      "batches": 48,
+      "generated_records": 384,
+      "sha256": "39298ad785a6f5baa5f6b5a7f5527e1fd1a27ac95bfbeae347a52266142c4b55",
+      "status": "verified_against_completed_predictions"
+    },
+    "calibration_calibration": {
+      "batches": 6,
+      "generated_records": 48,
+      "sha256": "5a20858f6f0966ef2a2a2350ed43c3e6314b0f8acbf47f288bee15aae4263390",
+      "status": "verified_against_completed_predictions"
+    }
+  },
+  "completed_evaluations": [
+    "C0_calibration",
+    "C0_probes",
+    "C0_discovery_greedy",
+    "calibration_calibration"
+  ],
+  "completed_prediction_files_sha256": {
+    "C0_calibration": "81a69fff373993ffae33cc3cd888c2ed985ef3c8b680b0b893bdd83ea2d73efb",
+    "C0_discovery_greedy": "82496e07620754e2e84015151188c77e1b5946974acd597afe5d97adbfd3022b",
+    "C0_probes": "62efc1184e1378bd6f8bbfcab5dabea08342889964fe19030cc2fe90cc234d34",
+    "calibration_calibration": "fe3a43bc042340c2e5bc4018a718262a3f7b106e72c0ff8cca12f9d47c215851"
+  },
+  "completed_unique_results_plus_previous_fault_generations": 592,
+  "continuation_fault_generations": 16,
+  "continuation_provenance": {
+    "cancelled_uninvoked_reservation": 368,
+    "charged_seconds": 478,
+    "completed_reused_generations": 48,
+    "fault_generations": 16,
+    "generation_accounting": "The synchronous generator returned batch2 before audit stopped at row12. Exactly16 probe outputs were attempted;48 completed calibration outputs are reused byte-for-byte. Remaining368 reserved probe outputs were never invoked. Replay the entire probe evaluation from its unchanged fixed seed; charge16 duplicates to the fault reserve.",
+    "incomplete_saved_records": 12,
+    "power_on_at_utc": "2026-09-16T20:11:00+00:00",
+    "previous_attempt": "runs/thursday_arithmetic_v2_r1",
+    "previous_export_manifest_sha256": "6165dc9c93fe42b3a256554ca7fefc965a53662e214bb260b6969e6d67e7eba4",
+    "reason": "Operator SIGTERM for repeated tokenizer metadata lookup inside per-token audit; no training started. The old generic timeout traceback is preserved and is not evidence that the8400s cap elapsed.",
+    "reused_adapter": {
+      "parameters": 18464768,
+      "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
+    },
+    "total_previous_attempted_generations": 64
+  },
+  "final_manifest_sha256": "59c11954333315e7b8a8ac9a54d3a1cbc94365f4e3447a3796ba2f49788bac00",
+  "frozen_release_manifest_sha256": "05b06ca9b8e260ce57002716193df2970025fbf1e16f58c98716db2a1a8fc556",
+  "generation_ledger_reserved_count": 592,
+  "incomplete_evaluations": [],
+  "interpretations_not_established": [
+    "prep manipulation",
+    "four-cell treatment effects",
+    "interaction",
+    "post-main sentinel effects"
+  ],
+  "newly_generated_completed_records_in_this_attempt": 528,
+  "phase_status": "failed_hard_or_resource",
+  "previous_fault_limitation": "The previous attempt returned16 probe outputs but persisted only12 per-row token records. The remaining4 outputs have no recoverable token records and cannot be reconstructed.",
+  "previous_fault_saved_records": 12,
+  "previous_fault_unrecoverable_records": 4,
+  "reserved_test_contents_read": false,
+  "reused_completed_records": 48,
+  "source_commit": "930bd49e4c1672992c89ab0049547131834ed856",
+  "status": "partial_completed_measurements_independently_verified",
+  "training_status": [
+    {
+      "checkpoint": "runs/thursday_arithmetic_v2_r2/thu_v2_e030_r1/checkpoint_32",
+      "data": "calibration_fit",
+      "data_sha256": "bf9d188a72be02467de70cf1184ce9fa13e36cadc4197d4ba7d6a3f2a73934f0",
+      "elapsed_seconds": 85.22899501770735,
+      "experiment_id": "E030",
+      "final_adapter": {
+        "parameters": 18464768,
+        "sha256": "5f07f098782227f84684fd0c2de1dba7e3db5ba39b8c62ae69eb80b7e2214b15"
+      },
+      "finished_at_utc": "2026-09-16T20:51:39.768916+00:00",
+      "frozen_base_unchanged": true,
+      "optimizer_reset": true,
+      "parent": "C0",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
+      },
+      "parent_checkpoint": "runs/thursday_arithmetic_v2_r2/checkpoint_C0",
+      "recipe": {
+        "batch_size": 16,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "bias": "none",
+        "dropout": 0.0,
+        "eps": 1e-08,
+        "floor_lr": 1e-05,
+        "grad_clip": 1.0,
+        "lora_alpha": 32,
+        "lora_rank": 16,
+        "microbatch_size": 1,
+        "peak_lr": 5e-05,
+        "schedule": "linear warmup round(updates/16), cosine to floor",
+        "weight_decay": 0.0
+      },
+      "recoverable_state": {
+        "bytes": 222035381,
+        "created_at_utc": "2026-09-16T20:51:26.314683+00:00",
+        "file": "step_000032.pt",
+        "fingerprint": "234f5acc2584af9d4b3118286c17b16c186f0a6c69bbde526e38689edad0f007",
+        "sha256": "4fab4495af6270f7443ac5da44521a71c5609da3ab882538964caef150c31354",
+        "step": 32
+      },
+      "reference_nll_after": {
+        "nll": 0.057627081511246125,
+        "reference_count": 32,
+        "response_loss_sum": 85.92197853326797,
+        "supervised_tokens": 1491
+      },
+      "reference_nll_before": {
+        "nll": 0.6363542353363344,
+        "reference_count": 32,
+        "response_loss_sum": 948.8041648864746,
+        "supervised_tokens": 1491
+      },
+      "run_id": "thu_v2_e030_r1",
+      "scheduler_reset": true,
+      "seed": 17,
+      "source_commit": "930bd49e4c1672992c89ab0049547131834ed856",
+      "started_at_utc": "2026-09-16T20:50:14.537538+00:00",
+      "state": "calibration",
+      "status": "completed",
+      "updates": 32,
+      "warning": null
+    },
+    {
+      "data": "prep_control",
+      "experiment_id": "E031",
+      "parent": "C0",
+      "reason": "Phase stopped: TimeoutError",
+      "run_id": "thu_v2_e031_r1",
+      "state": "C",
+      "status": "not_run",
+      "updates": 32
+    },
+    {
+      "data": "prep_bridge",
+      "experiment_id": "E032",
+      "parent": "C0",
+      "reason": "Phase stopped: TimeoutError",
+      "run_id": "thu_v2_e032_r1",
+      "state": "B",
+      "status": "not_run",
+      "updates": 32
+    },
+    {
+      "data": "surface",
+      "experiment_id": "E033",
+      "parent": "C",
+      "reason": "Phase stopped: TimeoutError",
+      "run_id": "thu_v2_e033_r1",
+      "state": "C-S",
+      "status": "not_run",
+      "updates": 256
+    },
+    {
+      "data": "paths",
+      "experiment_id": "E034",
+      "parent": "C",
+      "reason": "Phase stopped: TimeoutError",
+      "run_id": "thu_v2_e034_r1",
+      "state": "C-P",
+      "status": "not_run",
+      "updates": 256
+    },
+    {
+      "data": "surface",
+      "experiment_id": "E035",
+      "parent": "B",
+      "reason": "Phase stopped: TimeoutError",
+      "run_id": "thu_v2_e035_r1",
+      "state": "B-S",
+      "status": "not_run",
+      "updates": 256
+    },
+    {
+      "data": "paths",
+      "experiment_id": "E036",
+      "parent": "B",
+      "reason": "Phase stopped: TimeoutError",
+      "run_id": "thu_v2_e036_r1",
+      "state": "B-P",
+      "status": "not_run",
+      "updates": 256
+    }
+  ],
+  "visible_independent_result_records": 576
+}

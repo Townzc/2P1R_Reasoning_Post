@@ -1,6 +1,6 @@
 {
   "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 7372,
+  "charged_gpu_seconds": 8915,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2422,6 +2422,66 @@
       "independent_adapter_backup_complete": true,
       "independent_e015_checkpoint_backup_complete": false,
       "phase_accounting": "experiments/thursday_probe/PHASE_LEDGER.json"
+    },
+    {
+      "actual_generated_this_attempt": 64,
+      "charged_gpu_seconds": 478,
+      "completed_training_experiment_ids": [],
+      "evidence_scope": "Only complete independently audited measurements; no prep or factorial comparison. r1 has4 unavailable fault output records.",
+      "evidence_valid": true,
+      "git_commit": "a85d615fd7c2e7b4efe30fe248059ad195c16823",
+      "independent_new_checkpoints_backup_complete": true,
+      "mode": "bounded_arithmetic_v2_phase_attempt",
+      "model": {
+        "attention": "sdpa",
+        "autocast": "bfloat16",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "kind": "base",
+        "parameters": "float32",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tf32": false
+      },
+      "official_test_evaluated": false,
+      "phase_accounting": "experiments/thursday_probe_v2/PHASE_LEDGER_v2.json",
+      "provider_shutdown_confirmed": true,
+      "receipt_status": "failed",
+      "records": "runs/thursday_arithmetic_v2_r1",
+      "reused_calibration_outputs": 0,
+      "run_id": "thursday_arithmetic_v2_r1",
+      "status": "operator_stopped_engineering_metadata_overhead",
+      "steps": 0,
+      "supervised_response_tokens": 0
+    },
+    {
+      "actual_generated_this_attempt": 528,
+      "charged_gpu_seconds": 1065,
+      "completed_training_experiment_ids": [
+        "E030"
+      ],
+      "evidence_scope": "Only complete independently audited measurements; no prep or factorial comparison. r1 has4 unavailable fault output records.",
+      "evidence_valid": true,
+      "git_commit": "930bd49e4c1672992c89ab0049547131834ed856",
+      "independent_new_checkpoints_backup_complete": true,
+      "mode": "bounded_arithmetic_v2_phase_attempt",
+      "model": {
+        "attention": "sdpa",
+        "autocast": "bfloat16",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "kind": "base",
+        "parameters": "float32",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tf32": false
+      },
+      "official_test_evaluated": false,
+      "phase_accounting": "experiments/thursday_probe_v2/PHASE_LEDGER_v2.json",
+      "provider_shutdown_confirmed": true,
+      "receipt_status": "failed",
+      "records": "runs/thursday_arithmetic_v2_r2",
+      "reused_calibration_outputs": 48,
+      "run_id": "thursday_arithmetic_v2_r2",
+      "status": "stopped_after_conservative_resource_forecast",
+      "steps": 32,
+      "supervised_response_tokens": 23856
     }
   ],
   "accounting_scope": "Across separate historical and Thursday E018 phases; historical7200-second ledger is immutable.",
@@ -2433,9 +2493,11 @@
       "run_id": "thu_v2_e030_r1",
       "state": "calibration",
       "updates": 32,
-      "status": "not_run",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Fixed32-update calibration completed and independently verified",
+      "actual_updates": 32,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
     },
     {
       "data": "prep_control",
@@ -2444,9 +2506,11 @@
       "run_id": "thu_v2_e031_r1",
       "state": "C",
       "updates": 32,
-      "status": "not_run",
+      "status": "not_run_resource_admission",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "actual_updates": 0,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
     },
     {
       "data": "prep_bridge",
@@ -2455,9 +2519,11 @@
       "run_id": "thu_v2_e032_r1",
       "state": "B",
       "updates": 32,
-      "status": "not_run",
+      "status": "not_run_resource_admission",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "actual_updates": 0,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
     },
     {
       "data": "surface",
@@ -2466,9 +2532,11 @@
       "run_id": "thu_v2_e033_r1",
       "state": "C-S",
       "updates": 256,
-      "status": "not_run",
+      "status": "not_run_resource_admission",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "actual_updates": 0,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
     },
     {
       "data": "paths",
@@ -2477,9 +2545,11 @@
       "run_id": "thu_v2_e034_r1",
       "state": "C-P",
       "updates": 256,
-      "status": "not_run",
+      "status": "not_run_resource_admission",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "actual_updates": 0,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
     },
     {
       "data": "surface",
@@ -2488,9 +2558,11 @@
       "run_id": "thu_v2_e035_r1",
       "state": "B-S",
       "updates": 256,
-      "status": "not_run",
+      "status": "not_run_resource_admission",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "actual_updates": 0,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
     },
     {
       "data": "paths",
@@ -2499,9 +2571,20 @@
       "run_id": "thu_v2_e036_r1",
       "state": "B-P",
       "updates": 256,
-      "status": "not_run",
+      "status": "not_run_resource_admission",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Published offline release and owner startup required"
+      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
+      "actual_updates": 0,
+      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+    }
+  ],
+  "phase_execution_receipts": [
+    {
+      "charged_seconds": 1543,
+      "manifest": "experiments/thursday_probe_v2/PHASE_LEDGER_v2.json",
+      "note": "The two attempt receipts cover all base generations plus E030; they are not additional scientific training runs.",
+      "phase": "Thursday_arithmetic_v2",
+      "receipts": 2
     }
   ]
 }

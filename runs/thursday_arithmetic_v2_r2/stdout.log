@@ -1,0 +1,21 @@
+{"evaluation": "C0_probes.jsonl", "generated": 64, "reserved": 384}
+{"evaluation": "C0_probes.jsonl", "generated": 128, "reserved": 384}
+{"evaluation": "C0_probes.jsonl", "generated": 192, "reserved": 384}
+{"evaluation": "C0_probes.jsonl", "generated": 256, "reserved": 384}
+{"evaluation": "C0_probes.jsonl", "generated": 320, "reserved": 384}
+{"evaluation": "C0_probes.jsonl", "generated": 384, "reserved": 384}
+{"evaluation": "C0_discovery_greedy.jsonl", "generated": 64, "reserved": 96}
+{"evaluation": "C0_discovery_greedy.jsonl", "generated": 96, "reserved": 96}
+{"step": 1, "row_indices": [16, 23, 19, 14, 28, 27, 1, 18, 2, 6, 10, 31, 20, 15, 4, 13], "learning_rate": 2.5e-05, "response_nll": 0.6365979448182059, "gradient_norm": 1.4866033792495728, "supervised_tokens": 741, "processed_tokens": 1306, "seconds": 2.2760495096445084, "peak_memory_bytes": 9996767744}
+{"step": 16, "row_indices": [17, 14, 0, 9, 4, 2, 23, 21, 30, 27, 28, 6, 5, 18, 26, 24], "learning_rate": 3.209056926535307e-05, "response_nll": 0.0985441315526521, "gradient_norm": 1.5511415004730225, "supervised_tokens": 778, "processed_tokens": 1365, "seconds": 2.091200601309538, "peak_memory_bytes": 10146353664}
+{"step": 32, "row_indices": [19, 26, 20, 16, 10, 3, 1, 0, 15, 7, 22, 9, 31, 6, 29, 4], "learning_rate": 1e-05, "response_nll": 0.08203117411899205, "gradient_norm": 0.35555943846702576, "supervised_tokens": 791, "processed_tokens": 1397, "seconds": 2.1588307097554207, "peak_memory_bytes": 10146353664}
+{"evaluation": "calibration_calibration.jsonl", "generated": 48, "reserved": 48}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/queue.py", line 291, in <module>
+    elif args.action=='worker':worker(args.snapshot)
+                               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/queue.py", line 195, in worker
+    raise TimeoutError('Complete fixed factorial does not fit measured phase budget; preserve calibration and stop')
+TimeoutError: Complete fixed factorial does not fit measured phase budget; preserve calibration and stop
