@@ -170,3 +170,11 @@ Confirm provider shutdown, then perform full local analysis/publication. SSH or
 Python ending is not shutdown evidence. E015 remains protected; its independent
 full-weight backup is still an unrelated open item. No next experiment follows
 this finite queue without the owner's next plan.
+
+## Engineering continuation, 2026-09-16
+
+Attempt `thursday_arithmetic_v2_r1` was stopped by the operator after478 charged process seconds, before any SFT. The old generic SIGTERM handler printed a timeout message; this was a performance-defect stop, not exhaustion of the8400-second cap. Repeated full-vocabulary metadata queries inside the per-token audit left the GPU waiting for CPU. All18 files and74,182,012 bytes were independently exported and SHA-verified, including the unchanged C0 adapter and adverse raw outputs.
+
+Attempt r2 uses the same immutable release_r2, original seeds, model, training recipe, stopping oracle, scoring and fixed queue. Immutable tokenizer metadata is cached once per evaluation, and returned batch tensors are fsynced before downstream auditing. CPU fake-decoding equivalence tests compare full records against the frozen generator. The48 completed C0 calibration predictions are byte-identically reused and independently audited. The partial C0 probe stream contains12 saved records from two synchronous batches:16 attempted outputs are charged as fault duplicates;368 reserved but never invoked outputs are cancelled. The entire probe evaluation is replayed from the unchanged seed. Planned total across attempts is4720 of4864 generations, leaving144 fault slots.
+
+The original8415-second guarded process allowance is shared:478 seconds remain charged to r1. The r2 worker cap is the smaller of7922 seconds and the remaining original three-hour powered-on window after the1500-second export/shutdown reserve and15-second guard. No timer extension, budget reset, score-based selection, new data, or new training run is introduced. The conservative post-calibration measured admission remains active; a forecast rejection is a resource planning result and does not establish that the full grid could not finish under an exact runtime measurement.

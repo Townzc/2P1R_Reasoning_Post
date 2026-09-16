@@ -986,3 +986,6 @@ also passed on Linux); no unchanged historical suite was rerun.114 frozen E018
 source files and four data manifests were hash-verified. Report spacing was
 polished after generation without changing numeric results. No delegation,
 external correspondence, reserved test, paid teacher API or automatic retry.
+
+### 2026-09-16 v2 engineering repair
+The first v2 attempt was manually stopped before SFT after a repeated tokenizer-vocabulary lookup caused CPU delays during generation audit. All output was independently preserved. A bounded subagent implemented and tested a metadata-cache-equivalent generator with durable raw batch journaling; the primary agent implemented continuation accounting and independent replay caching. Same release, recipe, seed and whole-window limit;478 prior seconds and16 partial probe outputs remain charged. The complete48-row calibration is reused with hash and independent token/score checks. Source is published before continuation.

@@ -50,9 +50,10 @@ def paired_interval(values,clusters):
 def audit_records(path,rows,tokenizer):
     by={r['problem_id']:r for r in rows};records=read_jsonl(path);audited=[]
     decode=lambda ids:tokenizer.decode(ids,skip_special_tokens=True,clean_up_tokenization_spaces=False)
+    vocab_size=len(tokenizer);special_ids=set(tokenizer.all_special_ids)
     for r in records:
         problem=by[r['problem_id']];ids=r['batch_output_ids'];forced=r['forced_prefix']
-        stop=first_stop(ids,decode,tokenizer.eos_token_id,512,set(tokenizer.all_special_ids)|{t for t in ids if t>=len(tokenizer)})
+        stop=first_stop(ids,decode,tokenizer.eos_token_id,512,special_ids|{t for t in ids if t>=vocab_size})
         if (stop!=r['stop'] or r['generated_ids']!=ids[:stop['retained_tokens']]
             or any(t!=tokenizer.eos_token_id for t in ids[stop['retained_tokens']:])
             or r['prompt_ids']!=tokenizer.encode(prefix(problem['prompt'])+forced,add_special_tokens=False)

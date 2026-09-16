@@ -4,15 +4,17 @@ from pathlib import Path
 import time
 
 from experiments.thursday_probe.common import dump, stamp
-from experiments.thursday_probe.arithmetic_eval import generate as frozen_generate
+from experiments.thursday_probe_v2.generation import generate as frozen_generate
 from experiments.thursday_probe_v2.config import LIMITS
 from experiments.thursday_probe_v2.training import atomic_json
 
 
 class GenerationBudget:
-    def __init__(self,path,cap=LIMITS['generation_cap']):
-        self.path=Path(path); self.cap=cap; self.used=0
-        dump(self.path,dict(cap=cap,used=0,events=[],accounting='New v2 generations only; E018 is historical.'))
+    def __init__(self,path,cap=LIMITS['generation_cap'],fault_generations=0):
+        if type(cap) is not int or cap<=0 or type(fault_generations) is not int or not 0<=fault_generations<=cap:
+            raise ValueError('Invalid generation cap or carryover fault charge')
+        self.path=Path(path); self.cap=cap; self.used=fault_generations
+        dump(self.path,dict(cap=cap,used=fault_generations,events=[],fault_generations=fault_generations,accounting='Same v2 phase across attempts; completed reused outputs count once, interrupted attempts remain charged; E018 is historical.'))
 
     def reserve(self,name,n):
         record=json.loads(self.path.read_text())

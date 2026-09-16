@@ -7,6 +7,7 @@ import math
 import os
 from pathlib import Path
 import signal
+import shutil
 import subprocess
 import sys
 import time
@@ -18,6 +19,11 @@ from experiments.thursday_probe_v2.config import (
     ROOT,DATA,RELEASE,OUT,BRANCH,REVISION,OLD_LEDGER_HASH,STATES,TRAINING,LIMITS,evaluation_queue,continue_after_measurement)
 from experiments.thursday_probe_v2.training import train,restore_adapter,atomic_json
 from experiments.thursday_probe_v2.runtime import GenerationBudget,evaluate,projected_remainder
+from experiments.thursday_probe_v2.continuation import validate_previous, continuation_cap
+
+OUT=Path(os.environ.get("THU_V2_OUTPUT",str(OUT)))
+if OUT not in (Path("runs/thursday_arithmetic_v2_r1"),Path("runs/thursday_arithmetic_v2_r2")):
+    raise ValueError("Unregistered attempt directory")
 from scripts.audit_family_matching import verified_tokenizer
 from scripts.run_relation_engineering import server_preflight
 from src.relation_experiment import reference_nll
@@ -82,7 +88,13 @@ def worker(snapshot):
         runs=[{**r,'status':'not_run','reason':'Earlier fixed stages pending'} for r in regs],evaluations=[])
     dump(OUT/'run_manifest.json',manifest)
     atomic_json(OUT/'progress.json',manifest)
-    budget=GenerationBudget(OUT/'generation_ledger.json')
+    previous=os.environ.get('THU_V2_PREVIOUS')
+    carry=validate_previous(Path(previous)) if previous else None
+    if bool(carry)!=(OUT.name=='thursday_arithmetic_v2_r2'):
+        raise ValueError('Worker continuation and output identity disagree')
+    fault=carry['fault_generations'] if carry else 0
+    manifest['continuation']=carry
+    budget=GenerationBudget(OUT/'generation_ledger.json',fault_generations=fault)
     def termination(*args):raise TimeoutError('Finite v2 process cap reached')
     signal.signal(signal.SIGTERM,termination)
     events={e['name']:e for e in evaluation_queue()};evaluation_records={}
@@ -90,11 +102,21 @@ def worker(snapshot):
         name=state+'_'+view;event=events[name]
         key='discovery_problems' if view.startswith('discovery_') else view
         tick=time.monotonic()
-        records=evaluate(model,tokenizer,inputs[key],OUT/(name+'.jsonl'),budget,event,deadline)
+        if carry and name=='C0_calibration':
+            if parameter_digest(model,True)!=carry['reused_adapter']:
+                raise ValueError('Reused evaluation adapter differs')
+            for suffix in ('.jsonl','.generation.json'):
+                shutil.copy2(Path(previous)/(name+suffix),OUT/(name+suffix))
+            records=read_jsonl(OUT/(name+'.jsonl'))
+            from experiments.thursday_probe_v2.analyze import audit_records
+            audit_records(OUT/(name+'.jsonl'),inputs[key],tokenizer)
+            budget.reserve(name+'.jsonl',event['generations'])
+        else:
+            records=evaluate(model,tokenizer,inputs[key],OUT/(name+'.jsonl'),budget,event,deadline)
         evaluation_records[name]=records
         record=dict(**event,status='completed',seconds=time.monotonic()-tick,metrics=summarize(records),
                     predictions_sha256=sha256_file(OUT/(name+'.jsonl')),
-                    adapter=parameter_digest(model,True))
+                    adapter=parameter_digest(model,True),reused_from=previous if carry and name=='C0_calibration' else None)
         dump(OUT/(name+'.summary.json'),record)
         manifest['evaluations'].append(record);atomic_json(OUT/'progress.json',manifest)
         return records
@@ -164,7 +186,7 @@ def worker(snapshot):
                 dump(OUT/'ARITH_CALIBRATION_RESULTS.json',cal)
                 projection=projected_remainder(history,list(evaluation_records.values()),1088,
                     sum(doses[x['data']]['processed_nonpadding_tokens'] for x in regs[1:]),
-                    LIMITS['planned_generations']-budget.used)
+                    LIMITS['planned_generations']-(budget.used-fault))
                 projection.update(remaining_process_seconds=deadline-time.time())
                 dump(OUT/'measured_admission.json',projection)
                 if not continue_after_measurement(hard_errors=[],
@@ -179,7 +201,7 @@ def worker(snapshot):
             ev(state,'discovery_sampled');ev(state,'discovery_greedy')
         for state in STATES[2:]:
             restore_adapter(model,checkpoints[state]);ev(state,'sentinel')
-        if budget.used!=LIMITS['planned_generations'] or len(manifest['evaluations'])!=len(events):
+        if budget.used!=LIMITS['planned_generations']+fault or len(manifest['evaluations'])!=len(events):
             raise ValueError('Finite queue not fully accounted')
         if parameter_digest(model)!=base_hash:raise ValueError('Frozen base changed')
         manifest['status']='completed'
@@ -200,50 +222,61 @@ def worker(snapshot):
             dict(sha256=sha256_file(p),bytes=p.stat().st_size) for p in sorted(OUT.rglob('*')) if p.is_file()}))
 
 
-def launch(snapshot,ledger,power_on,current_rate):
+def launch(snapshot,ledger,power_on,current_rate,previous=None):
     source();dry_run()
+    carry=validate_previous(Path(previous)) if previous else None
+    if bool(carry)!=(OUT.name=='thursday_arithmetic_v2_r2'):
+        raise ValueError('Continuation and output identity disagree')
     if sha256_file(ledger)!=OLD_LEDGER_HASH:raise ValueError('Historical ledger differs; never reset it')
     prior=json.loads(Path('experiments/thursday_probe/PHASE_LEDGER.json').read_text())
     if not prior['closed'] or prior['total_charged_seconds_across_phases']!=7372 or prior['reservations']!=0:
         raise ValueError('Prior phase not reconciled')
     if OUT.exists():raise FileExistsError('No automatic phase replay or overwrite')
     now=datetime.now(timezone.utc);started=datetime.fromisoformat(power_on.replace('Z','+00:00'))
+    if carry and started!=datetime.fromisoformat(carry['power_on_at_utc'].replace('Z','+00:00')):
+        raise ValueError('Continuation must preserve the original powered-on window')
     age=(now-started).total_seconds()
     maximum_age=LIMITS['whole_window_seconds']-LIMITS['process_seconds']-LIMITS['kill_grace_seconds']-LIMITS['export_shutdown_reserve_seconds']
-    if not 0<=age<=maximum_age:raise ValueError('Insufficient whole-window admission time')
+    if age<0 or (not carry and age>maximum_age):raise ValueError('Insufficient whole-window admission time')
     if not 0<current_rate<=LIMITS['maximum_current_rate_cny_per_hour']:
         raise ValueError('Current verified hourly price exceeds phase cap')
     server=server_preflight({'min_free_gib':LIMITS['minimum_free_disk_gib']},Path(snapshot))
     if importlib.metadata.version('peft')!='0.17.1':raise ValueError('Pinned PEFT required')
     now=datetime.now(timezone.utc)
-    if (now-started).total_seconds()>maximum_age:
+    age=(now-started).total_seconds()
+    if not carry and age>maximum_age:
         raise ValueError('Preflight consumed the complete-queue admission margin')
+    cap=continuation_cap(age,carry['charged_seconds'] if carry else 0)
+    guard=LIMITS['kill_grace_seconds']
     OUT.mkdir()
     preflight=dict(server=server,power_on_at_utc=power_on,age_seconds=age,limits=LIMITS,
         verified_current_rate_cny_per_hour=current_rate,
         whole_window_compute_cost_bound_cny=current_rate*LIMITS['whole_window_seconds']/3600,
         historical_ledger_sha256=OLD_LEDGER_HASH,historical_phase_seconds=7372,
         phase_process_allowance_seconds=LIMITS['process_seconds']+LIMITS['kill_grace_seconds'],
+        continuation=carry,current_attempt_process_cap_seconds=cap,
         budget_basis='Owner-approved finite protocol within existing CNY3000 ceiling; no recharge or extra machine.',
         remaining_historical_money_allowance='unknown; ceiling is not a measured account balance')
     dump(OUT/'preflight.json',preflight)
-    tick=time.monotonic();cap=LIMITS['process_seconds'];guard=LIMITS['kill_grace_seconds']
+    tick=time.monotonic()
     command=['timeout','--signal=TERM',f'--kill-after={guard}s',f'{cap}s',sys.executable,'-m',
              'experiments.thursday_probe_v2.queue','worker','--snapshot',snapshot]
     with (OUT/'stdout.log').open('x') as stream:
         code=subprocess.call(command,stdout=stream,stderr=subprocess.STDOUT,env={**os.environ,
             'THU_V2_BOUNDED':'thursday_arithmetic_v2_r1','THU_V2_DEADLINE':str(time.time()+cap),
+            'THU_V2_OUTPUT':str(OUT),'THU_V2_PREVIOUS':str(previous) if previous else '',
             'TOKENIZERS_PARALLELISM':'false','HF_HUB_OFFLINE':'1','TRANSFORMERS_OFFLINE':'1'})
     elapsed=time.monotonic()-tick
     receipt=dict(run_id=OUT.name,status='completed' if code==0 else 'failed',exit_code=code,
         wall_seconds=elapsed,charged_seconds=math.ceil(elapsed),process_cap_seconds=cap,guard_seconds=guard,
         started_at_utc=now.isoformat(),finished_at_utc=stamp(),historical_ledger_sha256=OLD_LEDGER_HASH,
         historical_ledger_unchanged=sha256_file(ledger)==OLD_LEDGER_HASH,
-        new_phase_allowance_seconds=cap+guard,command=command[:4]+['PINNED_RUNTIME']+command[5:-1]+['PINNED_MODEL_SNAPSHOT'])
+        new_phase_allowance_seconds=LIMITS['process_seconds']+guard,continuation=carry,command=command[:4]+['PINNED_RUNTIME']+command[5:-1]+['PINNED_MODEL_SNAPSHOT'])
     dump(OUT/'resource_receipt.json',receipt)
     dump(OUT/'phase_ledger.json',dict(closed=True,reservations=0,prior_receipts=22,prior_charged_seconds=7372,
-        phase_allowance_seconds=cap+guard,receipt=receipt,
-        total_charged_seconds_across_phases=7372+receipt['charged_seconds']))
+        phase_allowance_seconds=LIMITS['process_seconds']+guard,receipt=receipt,
+        previous_attempt_charged_seconds=carry['charged_seconds'] if carry else 0,
+        total_charged_seconds_across_phases=7372+receipt['charged_seconds']+(carry['charged_seconds'] if carry else 0)))
     # The parent runs after worker stdout, failure traceback and receipt are closed.
     dump(OUT/'export_manifest_final.json',dict(created_at_utc=stamp(),files={str(p.relative_to(OUT)):
         dict(sha256=sha256_file(p),bytes=p.stat().st_size) for p in sorted(OUT.rglob('*')) if p.is_file()}))
@@ -253,7 +286,7 @@ def launch(snapshot,ledger,power_on,current_rate):
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('action',nargs='?',default='dry-run',choices=['dry-run','launch','worker'])
     parser.add_argument('--snapshot');parser.add_argument('--ledger');parser.add_argument('--power-on-at-utc')
-    parser.add_argument('--current-rate-cny',type=float);args=parser.parse_args()
+    parser.add_argument('--current-rate-cny',type=float);parser.add_argument('--continue-from');args=parser.parse_args()
     if args.action=='dry-run':print(json.dumps(dry_run(),indent=2))
     elif args.action=='worker':worker(args.snapshot)
-    else:sys.exit(launch(args.snapshot,args.ledger,args.power_on_at_utc,args.current_rate_cny))
+    else:sys.exit(launch(args.snapshot,args.ledger,args.power_on_at_utc,args.current_rate_cny,args.continue_from))
