@@ -943,3 +943,17 @@ or final-test access, new allowance, live-ledger mutation or submission occurred
 Historical scores, failures and the incomplete E015 weights recovery remain
 explicit. The configured default assistant settings were retained; no Max/Ultra
 setting change was asserted and no additional agents were used.
+
+## 2026-09-16 — Thursday execution preparation
+
+The owner explicitly requested execution of the finite September15 plan. Codex
+prepared a disjoint arithmetic release and reconstructed the fixed253 GSM8K
+anchors, preserving all original source bytes, masks and64-update dose. The fixed
+32-row manual review identifies one material speed/time inversion, two wording
+flags and one decimal-notation issue. The documented disposition retains the
+original corpus for engineering-only optimization/retention calibration, with no
+reasoning-quality claim, correction, filtering or backfill. New arithmetic labels
+are independently exact-verified. Six data and two tiny-random-model LoRA tests
+pass. No extra agent or external message was used. The owner started an A800;
+read-only hardware and provider-price checks precede the separately bounded run.
+Historical21 receipts and E015 unique weights remain unchanged.
