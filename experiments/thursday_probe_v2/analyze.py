@@ -186,18 +186,44 @@ def analyze(snapshot,out=OUT):
     manipulation['cluster_interval']=None
     manipulation['cluster_limitation']='Each compute category has one canonical template; no across-template population interval can be estimated.'
     dump(audit_dir/'manipulation_contrasts.json',manipulation)
-    sentinel_ids={r['problem_id'] for r in inputs['sentinel']};sentinel=[]
+    sentinel_ids={r['problem_id'] for r in inputs['sentinel']};sentinel=[];sentinel_q={}
     for state in ('C0',)+STATES:
         rs=([r for r in all_records[state+'_probes'] if r['problem_id'] in sentinel_ids and r['sample_index']<2]
             if state in ('C0','C','B') else all_records[state+'_sentinel'])
         for category in ('atomic','target','control'):
             sub=[r for r in rs if r['category']==category];qs=per_question(sub)
+            sentinel_q[state,category]=qs
+            parent=None if state=='C0' else 'C0' if state in ('C','B') else state.split('-')[0]
+            delta=None
+            if parent:
+                ids=sorted(qs)
+                delta=paired_interval([qs[pid]['pass_at_1']-sentinel_q[parent,category][pid]['pass_at_1'] for pid in ids],[category]*len(ids))
             sentinel.append(dict(state=state,category=category,questions=len(qs),samples_per_question=2,
                 pass_at_1=sum(x['pass_at_1'] for x in qs.values())/len(qs),
                 parse_fraction=sum(r['score']['parsed'] for r in sub)/len(sub),
                 completed_fraction=sum(r['score']['completed'] for r in sub)/len(sub),
+                comparison_parent=parent,change_from_parent=delta['mean'] if delta else None,
+                paired_change_ci_low=delta['question_ci'][0] if delta else None,
+                paired_change_ci_high=delta['question_ci'][1] if delta else None,
                 source='first_two_parent_samples' if state in ('C0','C','B') else 'new_endpoint_sampling'))
     csv_write(ROOT/'POST_MAIN_SENTINEL.csv',sentinel)
+    sentinel_contrasts=[]
+    for stage,c,b in (('prep','C','B'),('surface','C-S','B-S'),('paths','C-P','B-P')):
+        differences={}
+        for category in ('atomic','target','control'):
+            ids=sorted(sentinel_q[c,category])
+            diff=[sentinel_q[b,category][pid]['pass_at_1']-sentinel_q[c,category][pid]['pass_at_1'] for pid in ids]
+            stat=paired_interval(diff,[category]*len(ids));differences[category]=stat['mean']
+            sentinel_contrasts.append(dict(stage=stage,category=category,bridge_minus_control=stat))
+        sentinel_contrasts.append(dict(stage=stage,category='target_minus_control',D=differences['target']-differences['control']))
+    dump(audit_dir/'sentinel_stage_contrasts.json',sentinel_contrasts)
+    midpoint=[];mid_ids=sorted(r['problem_id'] for r in inputs['midpoint'])
+    for child in STATES[2:]:
+        parent=child.split('-')[0]
+        for stage,state,view in (('parent',parent,'discovery_greedy'),('128',child,'midpoint'),('256',child,'discovery_greedy')):
+            qs=per_question(all_records[state+'_'+view]);values=[qs[pid]['pass_at_1'] for pid in mid_ids]
+            midpoint.append(dict(child=child,stage=stage,state=state,questions=len(mid_ids),correct=sum(values),greedy_pass_at_1=sum(values)/len(values)))
+    csv_write(ROOT/'MIDPOINT_RESULTS.csv',midpoint)
     cal=json.loads((out/'ARITH_CALIBRATION_RESULTS.json').read_text())
     dump(ROOT/'ARITH_CALIBRATION_RESULTS.json',cal)
     atomic_json(ROOT/'RUN_MANIFEST_v2.json',manifest)
