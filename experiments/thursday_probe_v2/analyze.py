@@ -101,18 +101,20 @@ def per_question(records):
 
 
 def analyze(snapshot,out=OUT):
+    from experiments.thursday_probe_v2.partial_audit import audit_batch_journal
     out=Path(out);manifest=json.loads((out/'run_manifest_final.json').read_text())
     if manifest['status']!='completed':
         raise ValueError('Use a separately labeled partial audit for an incomplete queue; no fake four-cell table')
     inputs,_,_,_,_=load_inputs();tokenizer,_=verified_tokenizer(Path(snapshot))
     audit_dir=out/'independent_audit';audit_dir.mkdir()
-    all_records={};hashes={};failures=[];perq=[]
+    all_records={};hashes={};journals={};failures=[];perq=[]
     for event in manifest['evaluations']:
         name=event['name'];key='discovery_problems' if event['view'].startswith('discovery_') else event['view']
         path=out/(name+'.jsonl')
         if sha256_file(path)!=event['predictions_sha256']:raise ValueError('Prediction bytes changed')
         rs=audit_records(path,inputs[key],tokenizer)
         if len(rs)!=event['generations']:raise ValueError('Wrong generation denominator')
+        journals[name]=audit_batch_journal(path,rs,inputs[key],event,tokenizer,allow_missing=bool(event.get('reused_from')))
         all_records[name]=rs;hashes[name]=sha256_file(path)
         qs=per_question(rs)
         if len(qs)!=event['questions'] or any(x['n']!=event['samples'] for x in qs.values()):
@@ -229,7 +231,7 @@ def analyze(snapshot,out=OUT):
     dump(ROOT/'ARITH_CALIBRATION_RESULTS.json',cal)
     atomic_json(ROOT/'RUN_MANIFEST_v2.json',manifest)
     dump(audit_dir/'summary.json',dict(status='all_raw_streams_independently_verified',generations=4704,
-        files_sha256=hashes,reference_subgroups=groups,manipulation=manipulation,
+        files_sha256=hashes,batch_journal_audits=journals,reference_subgroups=groups,manipulation=manipulation,
         reserved_test_contents_read=False))
     return dict(table=table,prep=prep,sentinel=sentinel,calibration=cal,manipulation=manipulation)
 

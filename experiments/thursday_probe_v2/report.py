@@ -1,4 +1,5 @@
 """Build discussion artifacts exclusively from audited measured result tables."""
+import argparse
 import csv
 import json
 from pathlib import Path
@@ -12,12 +13,13 @@ def read_csv(name):
     with (ROOT/name).open() as f:return list(csv.DictReader(f))
 
 
-def build():
+def build(out=OUT):
+    out=Path(out)
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     import numpy as np
-    audit=json.loads((OUT/'independent_audit/summary.json').read_text())
+    audit=json.loads((out/'independent_audit/summary.json').read_text())
     cost=json.loads((ROOT/'COST_REPORT_v2.json').read_text())
     if audit['status']!='all_raw_streams_independently_verified':raise ValueError('Independent audit required')
     four=read_csv('FOUR_CELL_RESULTS.csv');prep=read_csv('PREP_MANIPULATION_CHECK.csv');sent=read_csv('POST_MAIN_SENTINEL.csv')
@@ -26,7 +28,7 @@ def build():
         return next(r for r in four if r['state_or_contrast']==state and r['subgroup']==group and r['view']==view and r['metric']==metric)
     def pct(x):return f'{100*float(x):.2f}%'
     def interval(r):return f"[{100*float(r['question_ci_low']):.2f}, {100*float(r['question_ci_high']):.2f}] pp"
-    manip=json.loads((OUT/'independent_audit/manipulation_contrasts.json').read_text())
+    manip=json.loads((out/'independent_audit/manipulation_contrasts.json').read_text())
     plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'savefig.dpi':180})
     fig,axes=plt.subplots(1,3,figsize=(15,4.6),layout='constrained')
     cats=('atomic','target','control');colors=('#64748b','#2563eb','#d97706')
@@ -80,13 +82,16 @@ def build():
         '',*table,'',f"**Primary contrasts:** delta_C={100*float(result('delta_C')['estimate']):.2f}pp, delta_B={100*float(result('delta_B')['estimate']):.2f}pp, I={100*float(result('interaction')['estimate']):.2f}pp; I's question-bootstrap interval is {interval(result('interaction'))}. Template-cluster intervals and all paired question gains/losses are also provided.",
         '',f"**Reference subgroup sensitivity:** nondegenerate I={pct(result('interaction','target_nondegenerate')['estimate'])}; degenerate I={pct(result('interaction','target_degenerate')['estimate'])}. These are fixed79/17-question subgroups, not filters chosen from model output.",
         '', '**Limits and next decision:** inspect prep and sentinel separation together before describing students as differently prepared. If separation is weak, retain the factorial result and redesign the intervention/probes. If a candidate interaction persists across both bootstrap views and nondegenerate questions, the next informative experiment is a preregistered complete2×2 replication with a fresh prep/training seed, followed by structure/dose controls. None starts automatically. Fine-structure TV8.98%, prep-token residual2.75%, formatting/stopping changes and single-seed uncertainty limit causal and novelty claims.',
-        '',f"**Resources:** {audit['generations']} audited new generations. Cost/whole-window/process/export/provider facts are recorded in COST_REPORT_v2.json; provider shutdown confirmed={cost.get('provider_shutdown_confirmed','unavailable')}. No optional prefix or n=8 expansion, final-test evaluation or extra machine.",
+        '',f"**Resources:** {audit['generations']} unique audited evaluation outputs (including reused calibration); actual generation attempts are counted separately in the cost report. Cost/whole-window/process/export/provider facts are recorded in COST_REPORT_v2.json; provider shutdown confirmed={cost.get('provider_shutdown_confirmed','unavailable')}. No optional prefix or n=8 expansion, final-test evaluation or extra machine.",
         '', '![Measured prep, discovery and sentinel results](ARITHMETIC_V2_RESULTS.png)',
         '', '![Reference-subgroup interaction intervals](ARITHMETIC_V2_SUBGROUPS.png)']
     with (ROOT/'THURSDAY_BRIEF_v2.md').open('x') as f:f.write('\n'.join(lines)+'\n')
     dump(ROOT/'FIGURE_PROVENANCE.json',dict(inputs={name:sha256_file(ROOT/name) for name in
         ('FOUR_CELL_RESULTS.csv','PREP_MANIPULATION_CHECK.csv','POST_MAIN_SENTINEL.csv','ARITH_CALIBRATION_RESULTS.json','COST_REPORT_v2.json')},
-        generator='experiments.thursday_probe_v2.report',manual_score_entry=False))
+        generator='experiments.thursday_probe_v2.report',run_directory=str(out),
+        audit_summary_sha256=sha256_file(out/'independent_audit/summary.json'),manual_score_entry=False))
 
 
-if __name__=='__main__':build()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--run-dir',default=str(OUT))
+    args=parser.parse_args();build(args.run_dir)
