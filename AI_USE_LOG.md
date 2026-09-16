@@ -1,3 +1,14 @@
+# 2026-09-16 — owner-authorized post-E030 continuation preparation
+
+Codex and three bounded subagents implemented independent training and batch
+recovery, CPU diagnostics and a cumulative resource launcher. Tiny CPU fixtures
+check uninterrupted versus resumed tensors/RNG, raw-output crash recovery,
+parent optimizer reset and immutable dose/request identities. The owner's
+new document authorizes the six previously registered runs and64 fixed training
+diagnostic outputs. Source is published before new pretrained-model execution.
+The existing provider instance was already powered on by the owner; setup idle
+time counts in the cumulative rental ledger. No external messages are sent.
+
 # 2026-09-16 — owner-authorized post-E018 arithmetic protocol preparation
 
 Codex implemented the finite v2 queue and independent analysis without delegated

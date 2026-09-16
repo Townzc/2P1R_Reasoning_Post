@@ -1,3 +1,14 @@
+# Current: post-E030 continuation authorized and prepared
+
+September16,2026: the owner supplied and authorized the resume plan. Execute
+only E031–E036 and64 fixed diagnostic generations under the published
+[resume amendment](RESUME_AMENDMENT_r1.md). Carry592 historical attempts,
+use next-unit admission, preserve all scientific recipes and old results.
+The cumulative envelope is8 powered-on hours/CNY65, first limit wins; setup
+counts. No new results are asserted by this preparation entry.
+
+---
+
 # Arithmetic v2 — partial execution closed; server off
 
 September16,2026. The requested factorial study is **not complete**.

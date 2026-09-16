@@ -1,3 +1,16 @@
+# Post-E030 continuation authorized — September16,2026
+
+The owner requested execution of the new resume plan. E031–E036 will continue
+with unchanged scientific recipes and next-segment/batch resource admission.
+Carry592 actual generations;4192 new fixed requests lead to4784 within4864.
+The finite package is cumulative8 powered-on hours/CNY65, first limit wins;
+no outcome-based cell selection or repeated E030. Read
+[resume amendment](../experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md).
+Execution source and recovery checks are being published before new model work.
+Earlier closeouts below remain historical evidence.
+
+---
+
 # Current status — arithmetic v2 closed after resource forecast
 
 The finite window ended after E030 and base measurements, before either prep
