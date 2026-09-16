@@ -1,3 +1,23 @@
+# E031–E036 completed artifacts — 2026-09-16 UTC
+
+[Full result](ARITHMETIC_E031_E036_RESULTS.md),
+[paired analysis](thursday_resume_analysis_r1/manifest.json),
+[discussion draft](../experiments/thursday_probe_v2/THURSDAY_BRIEF_resume_r1.md),
+and `runs/thursday_arithmetic_resume_r1/` retain the complete restricted-discovery
+four-grid, parents/sentinels/midpoints/train16, raw/scored request journals and
+all20 checkpoint identities. The compact directory contains3443byte-identical
+JSON/JSONL/log/Markdown files; binaries remain excluded from Git.
+
+The independent private export contains3515inventoried files/2900439829bytes,
+plus its separately hashed final manifest939dd5f8bc43e482909c9b64e5446241da26e10d995b8190680f94848b70f32d.
+All20adapter tensors and6latestAdamW/RNG recovery binaries are verified. The
+original raw active-rental ledger is immutable; separate PROVIDER_CLOSEOUT,
+RENTAL_LEDGER, PHASE_LEDGER, COST_REPORT and EXPORT_VERIFICATION resume_r1
+sidecars record completed export and observed platform shutdown. The independent
+CPU verifier and training-contract audit state the limits of recomputation.
+Previous v2 raw/compact history and E030 are preserved; E015 full independent
+weights recovery remains open and its stopped instance must not be released.
+
 # E017 completed artifacts — 2026-09-15 UTC
 
 [Result](REAL_MATH_E017_RESULTS.md), `runs/gsm8k_stop_e017_r1/`, and

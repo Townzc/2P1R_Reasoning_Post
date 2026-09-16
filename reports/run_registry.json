@@ -1,6 +1,6 @@
 {
-  "scope": "Engineering checks and restricted development-only pilot runs; calibration is not a treatment comparison, and one seed does not establish a population effect.",
-  "charged_gpu_seconds": 8915,
+  "scope": "Historical engineering checks and restricted development pilots, plus a complete one-seed arithmetic discovery factorial (E031\u2013E036). Calibration is not a treatment comparison; one seed does not establish a population or pure mechanism effect.",
+  "charged_gpu_seconds": 13456,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2482,9 +2482,50 @@
       "status": "stopped_after_conservative_resource_forecast",
       "steps": 32,
       "supervised_response_tokens": 23856
+    },
+    {
+      "run_id": "thursday_arithmetic_resume_r1",
+      "attempt": 1,
+      "status": "completed",
+      "receipt_status": "completed",
+      "mode": "registered_arithmetic_resume_phase_attempt",
+      "git_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "charged_gpu_seconds": 4541,
+      "records": "runs/thursday_arithmetic_resume_r1",
+      "receipt": "runs/thursday_arithmetic_resume_r1/attempts/attempt_000001/resource_receipt.json",
+      "phase_accounting": "experiments/thursday_probe_v2/PHASE_LEDGER_resume_r1.json",
+      "model": {
+        "attention": "sdpa",
+        "autocast": "bfloat16",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "kind": "base",
+        "parameters": "float32",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tf32": false
+      },
+      "completed_training_experiment_ids": [
+        "E031",
+        "E032",
+        "E033",
+        "E034",
+        "E035",
+        "E036"
+      ],
+      "steps": 1088,
+      "supervised_response_tokens": 1094936,
+      "processed_nonpadding_tokens": 1943692,
+      "actual_generated_this_attempt": 4192,
+      "historical_cumulative_generations_before": 592,
+      "cumulative_generation_attempts_after": 4784,
+      "new_generation_fault_repeats": 0,
+      "evidence_valid": true,
+      "independent_new_checkpoints_backup_complete": true,
+      "provider_shutdown_confirmed": true,
+      "official_test_evaluated": false,
+      "evidence_scope": "Complete one-seed restricted discovery 2x2; paired question/template uncertainty excludes training-seed uncertainty. Fine-structure/prep-token residuals remain; no pure mechanism or confirmatory population claim."
     }
   ],
-  "accounting_scope": "Across separate historical and Thursday E018 phases; historical7200-second ledger is immutable.",
+  "accounting_scope": "Across separate historical, E018, arithmetic-v2 and post-E030 resume phases; original7200-second ledger and all prior receipts remain immutable. Process charges are not whole-instance rental invoices.",
   "planned_experiments": [
     {
       "data": "calibration_fit",
@@ -2506,11 +2547,14 @@
       "run_id": "thu_v2_e031_r1",
       "state": "C",
       "updates": 32,
-      "status": "not_run_resource_admission",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
-      "actual_updates": 0,
-      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+      "reason": "Original frozen dose completed in the explicitly authorized post-E030 continuation; all new outputs independently audited.",
+      "actual_updates": 32,
+      "manifest": "runs/thursday_arithmetic_resume_r1/thu_v2_e031_r1/run_manifest_final.json",
+      "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
+      "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
     },
     {
       "data": "prep_bridge",
@@ -2519,11 +2563,14 @@
       "run_id": "thu_v2_e032_r1",
       "state": "B",
       "updates": 32,
-      "status": "not_run_resource_admission",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
-      "actual_updates": 0,
-      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+      "reason": "Original frozen dose completed in the explicitly authorized post-E030 continuation; all new outputs independently audited.",
+      "actual_updates": 32,
+      "manifest": "runs/thursday_arithmetic_resume_r1/thu_v2_e032_r1/run_manifest_final.json",
+      "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
+      "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
     },
     {
       "data": "surface",
@@ -2532,11 +2579,14 @@
       "run_id": "thu_v2_e033_r1",
       "state": "C-S",
       "updates": 256,
-      "status": "not_run_resource_admission",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
-      "actual_updates": 0,
-      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+      "reason": "Original frozen dose completed in the explicitly authorized post-E030 continuation; all new outputs independently audited.",
+      "actual_updates": 256,
+      "manifest": "runs/thursday_arithmetic_resume_r1/thu_v2_e033_r1/run_manifest_final.json",
+      "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
+      "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
     },
     {
       "data": "paths",
@@ -2545,11 +2595,14 @@
       "run_id": "thu_v2_e034_r1",
       "state": "C-P",
       "updates": 256,
-      "status": "not_run_resource_admission",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
-      "actual_updates": 0,
-      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+      "reason": "Original frozen dose completed in the explicitly authorized post-E030 continuation; all new outputs independently audited.",
+      "actual_updates": 256,
+      "manifest": "runs/thursday_arithmetic_resume_r1/thu_v2_e034_r1/run_manifest_final.json",
+      "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
+      "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
     },
     {
       "data": "surface",
@@ -2558,11 +2611,14 @@
       "run_id": "thu_v2_e035_r1",
       "state": "B-S",
       "updates": 256,
-      "status": "not_run_resource_admission",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
-      "actual_updates": 0,
-      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+      "reason": "Original frozen dose completed in the explicitly authorized post-E030 continuation; all new outputs independently audited.",
+      "actual_updates": 256,
+      "manifest": "runs/thursday_arithmetic_resume_r1/thu_v2_e035_r1/run_manifest_final.json",
+      "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
+      "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
     },
     {
       "data": "paths",
@@ -2571,11 +2627,14 @@
       "run_id": "thu_v2_e036_r1",
       "state": "B-P",
       "updates": 256,
-      "status": "not_run_resource_admission",
+      "status": "completed",
       "protocol": "experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md",
-      "reason": "Conservative whole-queue runtime forecast exceeded remaining finite window. No accuracy/NLL/probe-significance gate was used; actual full-grid runtime was not measured.",
-      "actual_updates": 0,
-      "manifest": "experiments/thursday_probe_v2/RUN_MANIFEST_v2.json"
+      "reason": "Original frozen dose completed in the explicitly authorized post-E030 continuation; all new outputs independently audited.",
+      "actual_updates": 256,
+      "manifest": "runs/thursday_arithmetic_resume_r1/thu_v2_e036_r1/run_manifest_final.json",
+      "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
+      "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
     }
   ],
   "phase_execution_receipts": [
@@ -2585,6 +2644,13 @@
       "note": "The two attempt receipts cover all base generations plus E030; they are not additional scientific training runs.",
       "phase": "Thursday_arithmetic_v2",
       "receipts": 2
+    },
+    {
+      "phase": "Thursday_arithmetic_resume_r1",
+      "receipts": 1,
+      "charged_seconds": 4541,
+      "manifest": "experiments/thursday_probe_v2/PHASE_LEDGER_resume_r1.json",
+      "note": "One worker receipt covers six logical training runs and4192 new outputs; logical runs are not six additional process receipts."
     }
   ]
 }

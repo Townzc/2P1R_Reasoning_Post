@@ -1,0 +1,70 @@
+{
+  "adapter": {
+    "parameters": 18464768,
+    "sha256": "9c30d2a2211aa7992078f0268b5fa80cbd81b1da801c0e93fb024c98e61238d3"
+  },
+  "batch_size": 8,
+  "batch_timings": [
+    {
+      "batch_index": 0,
+      "cpu_score_seconds": 0.0044400654733181,
+      "decode_only_seconds": null,
+      "generated_tokens_with_padding": 800,
+      "generation_seconds": 4.451715048402548,
+      "generation_seconds_includes_prefill": true,
+      "input_nonpadding_tokens": 400,
+      "prefill_seconds": null,
+      "raw_save_seconds": 0.006970636546611786,
+      "retained_generated_tokens": 548,
+      "score_save_seconds": 0.002065889537334442
+    },
+    {
+      "batch_index": 1,
+      "cpu_score_seconds": 0.003958296030759811,
+      "decode_only_seconds": null,
+      "generated_tokens_with_padding": 616,
+      "generation_seconds": 3.4052243791520596,
+      "generation_seconds_includes_prefill": true,
+      "input_nonpadding_tokens": 403,
+      "prefill_seconds": null,
+      "raw_save_seconds": 0.006879061460494995,
+      "retained_generated_tokens": 519,
+      "score_save_seconds": 0.0015086643397808075
+    }
+  ],
+  "checkpoint_step": 256,
+  "completed_records": 16,
+  "experiment_id": "E035",
+  "generations": 16,
+  "max_new_tokens": 512,
+  "metrics": {
+    "completed_fraction": 1.0,
+    "failures": {
+      "none": 10,
+      "wrong_answer_or_resources": 6
+    },
+    "generations": 16,
+    "parse_fraction": 1.0,
+    "pass_at_1": 0.625,
+    "questions": 16,
+    "stop_reasons": {
+      "native_eos": 16
+    },
+    "trace_status": {
+      "inconsistent": 6,
+      "verified": 10
+    }
+  },
+  "name": "B-S_train_diagnostic",
+  "predictions_sha256": "23aebf407dcf960fc163b7254c43ce58c2110df405e4afc838b0ad9d0b3f34ac",
+  "questions": 16,
+  "reason": null,
+  "request_count": 16,
+  "samples": 1,
+  "sampling": false,
+  "seconds": 7.856939427554607,
+  "seed": 2026091603,
+  "state": "B-S",
+  "status": "completed",
+  "view": "train_diagnostic"
+}

@@ -1,3 +1,38 @@
+# Current: E031–E036 complete and provider off
+
+The owner-authorized E031–E036 queue is complete: two32-update parents and
+four256-update endpoints (1,088 updates), all4,192 new generations, and the
+optional A/B-reference NLL forwards. Independent local verification covers
+all20 adapter checkpoints,6 optimizer/RNG recoveries and4,192 unique new requests;
+30/30 combined historical/new evaluation views pass tokenizer/math replay.
+There are4,768 unique completed outputs and4,784 actual generations, preserving
+the original16 fault attempts;80 of the4,864 cap remain unused.
+
+Discovery sampled pass@1 for C-S/C-P/B-S/B-P is29/384,26/384,36/384,16/384;
+pass@4 is15/96,20/96,14/96,15/96; greedy is8/96,13/96,10/96,17/96.
+Interactions are−4.43pp,−4.17pp,+2.08pp, respectively; all full/nondegenerate
+question/template interaction intervals include zero and exclude training-seed uncertainty.
+C and B both reach128/128 target/atomic compute scores; target-specific readiness
+is not demonstrated. Training16 greedy is8/16,3/16,10/16,4/16 despite lower Paths
+reference NLL. This is a one-seed restricted discovery result, not equivalence,
+a general Paths benefit/harm, or a pure skill/routing mechanism.
+
+Provider shutdown confirmed23:02:11UTC; temporary timer cleared. Conservative
+whole-window proxy1h38m11s at7.98CNY/h isCNY13.06, not an invoice. All3,515
+inventoried files (2,900,439,829bytes) are independently SHA-verified; final disk
+free2.885GiB. One new receipt charges4,541s, bringing the total to25/13,456;
+old24/8,915 and E030 stay unchanged. E015 unique full weights remain protected.
+
+The task is now paused for the owner’s next plan. The proposed bounded
+one-hole target-conditioned completion study is a proposal only. No next GPU
+job, repeat, LR sweep, n8, RL, alternative model or reserved-test run is queued.
+
+[Full results](../../reports/ARITHMETIC_E031_E036_RESULTS.md) · [Thursday draft](THURSDAY_BRIEF_resume_r1.md) · [Cost](COST_REPORT_resume_r1.json) · [Independent audit](INDEPENDENT_VERIFICATION_resume_r1.json)
+
+---
+
+Historical authorization and prior partial closeout follow; they do not queue another run.
+
 # Current: post-E030 continuation authorized and prepared
 
 September16,2026: the owner supplied and authorized the resume plan. Execute

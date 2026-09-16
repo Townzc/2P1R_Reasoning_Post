@@ -1,3 +1,30 @@
+# 2026-09-16 — complete E031–E036 execution and independent closeout
+
+Following the owner’s explicit resume instruction, Codex executed the published
+2379c90 queue on the existing single A800. No scientific recipe/seed/endpoint or
+scorer changed. Six runs,1088updates and4192newoutputs completed without new
+fault duplication. Codex incrementally exported and SHA-verified full adapters,
+optimizer/RNG recoveries and raw records, confirmed provider shutdown, cancelled
+the temporary timer, then performed CPU-only analysis and publication.
+
+Three bounded subagents independently reviewed recovery, request/tensor/dose
+consistency, accounting/export history, and interpretation. Offline reviewers
+caught and fixed physical-JSONL-line handling, stale partial-summary SHA binding,
+and NLL-runtime reporting before final publication; none changed model outputs.
+The final verifier/analyzer suite has19 passes; all30combined views and4768unique
+outputs were replayed through the frozen tokenizer/stop/math contracts. No
+training gradients or CUDA sampling were recomputed. The scientific plot was
+rendered and visually inspected. A separate CPU training-contract audit documents
+serialization and target masks without model forward calls.
+
+The interpretation reports all metrics, parent-probe ceiling, wide paired
+interaction intervals, nondegenerate strata, and NLL/free-generation divergence.
+The next target-conditioned completion study is a proposal only. The discussion
+brief is a local draft for the owner; no external message was sent. No reserved
+confirmation/official test, extra machine, recharge, paid storage, RL, n8 or new
+model was used. Private credentials/endpoints and machine-specific paths stay
+outside the public repository.
+
 # 2026-09-16 — owner-authorized post-E030 continuation preparation
 
 Codex and three bounded subagents implemented independent training and batch

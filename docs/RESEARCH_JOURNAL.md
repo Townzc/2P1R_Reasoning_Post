@@ -1,3 +1,33 @@
+## 2026-09-16 — complete E031–E036; readiness interaction remains unestablished
+
+**Question and motivation.** Does the Paths-versus-Surface benefit change with
+target versus control computational preparation? The prior whole-queue forecast
+prevented admission after E030, so the owner authorized next-saveable-unit
+admission and64fixed training diagnostics while preserving the scientific recipe.
+
+**Design.** Original C0→two32-update parents→four256-update children; shared96
+question discovery set with4samples and separategreedy; post-training sentinel,
+fixed24midpoint and16training diagnostics. Same base/LoRA,seed17,LR5e-5,data and
+scorer. Total1088updates/4192newgenerations; no score selected whether a cell ran.
+
+**Result.** Sampledpass@1 CS/CP/BS/BP=29/384,26/384,36/384,16/384;pass@4=15/96,
+20/96,14/96,15/96;greedy=8/96,13/96,10/96,17/96. Full interactions−4.43/−4.17/
++2.08pp have intervals crossingzero. Both parents already get128/128 on target
+and atomic compute probes. Train16=8/16,3/16,10/16,4/16 despite lower Paths
+referenceNLL. Many outputs use correct resources but miss the target.
+
+**Analysis.** The intended selective readiness difference was not demonstrated;
+metric signs disagree, and nondegenerate greedy interaction iszero. Neither
+nonsignificance nor low scores show equivalence. One seed, structure/token
+residuals and stratifiedtrain16 constrain interpretation. Complete results expose
+an answer-fit/free-construction gap but do not identify a neural mechanism.
+
+**Decision.** Preserve this complete discovery result. Propose a bounded paired
+goal-conditioned one-hole completion diagnostic before another training grid;
+freeze counterfactual targets and scoring under a new protocol. No extension
+started. Provideroff23:02:11UTC, fullbackupverified, CNY13.06whole-windowproxy,
+25receipts/13456processseconds. [Result](../reports/ARITHMETIC_E031_E036_RESULTS.md).
+
 ## 2026-09-10 — E017 ready to measure the proposed stopping contract
 
 The next authorized question is implementation usability, not training scale.
