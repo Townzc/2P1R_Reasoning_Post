@@ -1,12 +1,19 @@
-# Current owner scheduling amendment: overlap training and evaluation
+# Current execution — public math active
 
-The owner requested maximum server utilization. Use
-experiments/public_math_pilot_v1/CONCURRENCY_AMENDMENT.md: after all4096 masks and
-the fixed64 audit, allow one trainer and one generator concurrently, plus CPU
-scoring. Base-dev may finish while SFT starts. Consume only committed checkpoints;
-keep separate RNG/state, fixed counts and a midnight stop. No additional arm or
-model call is authorized by this scheduling change. Earlier serial-only order
-statements are superseded for execution scheduling.
+Read reports/public_math_pilot_v1/LIVE_EXECUTION.md and LIVE_PROGRESS.json for
+current observations. SFT completed128 updates; DFT is training; the other two
+arms remain queued. All4096 masks,8192 annotation forwards and512 Base-dev
+outputs are complete. Public benchmark results are pending. The first GSM128
+batch failed with concurrent CUDA OOM before saving any output; its128 physical
+attempts remain charged. The evidence-bound replacement uses64-way GSM,
+256-way MATH and16-way dev. Measured training cache growth to about70GiB now places GPU evaluation after
+all four training arms; CPU scoring continues independently. The canceled
+admission-only evaluator added zero model calls.
+
+Follow CONCURRENCY_AMENDMENT.md and INFRASTRUCTURE_RECOVERY.md in
+experiments/public_math_pilot_v1. Keep all frozen scientific counts, separate
+process RNG, committed checkpoints, server-only large-artifact retention and
+the nightly stop. All older current-state sections below are historical snapshots.
 
 # Measured engineering preflight complete; formal preparation executing next
 

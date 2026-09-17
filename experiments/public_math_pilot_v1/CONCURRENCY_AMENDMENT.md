@@ -1,5 +1,12 @@
 # Owner-requested overlapping execution
 
+Measured fallback on2026-09-17: the DFT process's existing CUDA cache approached
+70GiB while active allocations peaked near32GiB. The replacement evaluator's
+admission gate correctly waited. It was canceled before model load after456seconds,
+with zero new model calls/reservations, and the same unchanged source is queued
+after TRAINING_COMPLETE.json. CPU scoring continues concurrently. This is the
+predeclared resource-based scheduling fallback; no scientific setting changed.
+
 Current batch policy after the first128-way GSM batch failed with concurrent
 CUDA OOM:64-way GSM with26GiB admission;256-way MATH with64GiB admission;
 16-way dev with22GiB admission. Read INFRASTRUCTURE_RECOVERY.md. The original
