@@ -1,12 +1,39 @@
-# Post-E037 paired training authorized — preparation
+# Current closeout — E038/E039 complete; provider off; paused
 
-The owner requested the finite G-single/G-paired plan. E038/E039 are registered
-from E031, with shared Surface F replay,256 updates per arm,3344 planned
-generations/3600 hard cap and288 operator contexts. No new scientific outputs
-yet. Follow experiments/post_e037_goal_training/PROTOCOL.md. Historical closeouts
-and the E030 lineage correction remain unchanged.
+The owner-authorized G-single/G-paired phase completed from E031 step32:
+256 updates per arm, 3,344 unique generations, zero fault repeats, 288 operator
+contexts and 4,096 reference forwards. Execution source is
+801ef1279a2a817f754f856d9191725eebb1121a; E030 is not an ancestor.
 
-# Current closeout — E037 complete; provider off
+The two primary paired-minus-single outcomes show no observed recipe advantage.
+Counts below are ordered G-single versus G-paired.
+H greedy both-target success is 12/48 versus 10/48 (−4.17pp, 95% group interval
+[−16.67,+8.33]); F sampled pass@1 is 14/384 versus 13/384 (−0.26pp,
+[−2.60,+2.34]). Shared training repairs most H interface failures, but conditional
+choice/free construction remain weak. One seed and 48 exploratory number groups
+do not establish equivalence, a population effect, structural OOD or a mechanism.
+
+All 3,422 inventoried files plus the export manifest are independently preserved,
+including four adapters and two latest optimizer/RNG states. Compact public data
+has 3,409 byte-exact files including the manifest; six binaries and eight machine
+metadata files remain private with original identities. Independent audits cover
+154 executed sources, 512 updates and all token/stop/math/generation contracts.
+40,473,429,556 bytes of verified historical duplicates were removed; final free
+space is 39.59 GiB. Preserve E015 unique weights: its independent full backup is
+still incomplete. Do not release/delete the instance volume.
+
+Provider off confirmed 2026-09-17 04:54:39 UTC; temporary timer cleared04:55:16.
+Whole powered window85m39s, CNY11.39145 proxy at7.98/hour, not an invoice.
+One new process receipt3018s; combined27 receipts/17623s. Older generation and
+process ledgers remain immutable. No further GPU/model work is authorized.
+
+Read reports/post_e037_goal_training/EXECUTION_SUMMARY_ZH.md, RESULTS.md,
+C_INTERFACE_ERROR_AUDIT.md, SEWON_BRIEF.md and COST_AND_CLOSEOUT.json. Next-step
+training-example/critical-token diagnostics are proposals only. The task is
+complete and paused for owner planning. Earlier current/preparation/proposal-only
+statements below are historical and superseded by this closeout.
+
+# Historical closeout — E037 complete; provider off
 
 E037 finished the owner-authorized post-E036 goal diagnostic:2112 unique outputs,
 192 operator contexts/768 candidate scores, zero new training. All2124 exported

@@ -1,0 +1,1402 @@
+{
+  "C_error_records": [
+    {
+      "answer_segment": "Step 1: 9 - 1 = 8.\nStep 2: 8 - 39 = -31.\nStep 3: -31 + 40 = 9.\nAnswer: 9",
+      "automatic_category": "parenthesis_grouping_changed",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "8",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "8",
+          "status": "consistent",
+          "text": "Step 1: 9 - 1 = 8."
+        },
+        {
+          "lhs_value": "-31",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "-31",
+          "status": "consistent",
+          "text": "Step 2: 8 - 39 = -31."
+        },
+        {
+          "lhs_value": "9",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "9",
+          "status": "consistent",
+          "text": "Step 3: -31 + 40 = 9."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [],
+      "final_category": "parenthesis_grouping_changed",
+      "group_id": "goal_train_v1_eval_g006",
+      "inferred_displayed_program": "(((9 - 1) - 39) + 40)",
+      "inferred_exact_value": "9",
+      "key": "E031_C_greedy/goal_train_v1_eval_g006_t1_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "parenthesis_grouping_changed",
+        "evidence_quotes": [
+          "Step 1: 9 - 1 = 8.",
+          "Step 2: 8 - 39 = -31."
+        ],
+        "inferred_program": "(((9 - 1) - 39) + 40)",
+        "review_note": "The original inner subtraction is1-39; displayed left-to-right9-1 then minus39 changes grouping. All displayed equalities are exact.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "87",
+      "original_expression": "((9 - (1 - 39)) + 40)",
+      "original_numbers": [
+        9,
+        1,
+        39,
+        40
+      ],
+      "original_target": 87,
+      "problem_id": "goal_train_v1_eval_g006_t1_C",
+      "program_change_flags": {},
+      "reconstruction_candidates": [
+        "(((9 - 1) - 39) + 40)"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "9",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "9",
+        "expression": "9",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 1,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 5 + (27 - 12) = 19.\nStep 2: 19 + 38 = 57.\nAnswer: 57",
+      "automatic_category": "local_arithmetic_error",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "20",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "19",
+          "status": "inconsistent",
+          "text": "Step 1: 5 + (27 - 12) = 19."
+        },
+        {
+          "lhs_value": "57",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "57",
+          "status": "consistent",
+          "text": "Step 2: 19 + 38 = 57."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [
+        {
+          "lhs_value": "20",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "19",
+          "status": "inconsistent",
+          "text": "Step 1: 5 + (27 - 12) = 19."
+        }
+      ],
+      "final_category": "local_arithmetic_error",
+      "group_id": "goal_train_v1_eval_g007",
+      "inferred_displayed_program": null,
+      "key": "E031_C_greedy/goal_train_v1_eval_g007_t0_C/0",
+      "local_equations_status": "inconsistent",
+      "manual_annotation": {
+        "category": "local_arithmetic_error",
+        "evidence_quotes": [
+          "Step 1: 5 + (27 - 12) = 19."
+        ],
+        "inferred_program": null,
+        "review_note": "5+(27-12)=20, so the displayed19 is an explicit false equality. Do not infer an omitted input or latent program from this alone.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "58",
+      "original_expression": "((5 + (27 - 12)) + 38)",
+      "original_numbers": [
+        5,
+        27,
+        12,
+        38
+      ],
+      "original_target": 58,
+      "problem_id": "goal_train_v1_eval_g007_t0_C",
+      "reconstruction_candidates": [],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "not_attempted",
+      "returned_exact_value": "57",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "57",
+        "expression": "57",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "inconsistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 5 - 27 = -22.\nStep 2: -22 - 12 = -34.\nStep 3: -34 + 38 = 4.\nAnswer: 4",
+      "automatic_category": "parenthesis_grouping_changed",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "-22",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "-22",
+          "status": "consistent",
+          "text": "Step 1: 5 - 27 = -22."
+        },
+        {
+          "lhs_value": "-34",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "-34",
+          "status": "consistent",
+          "text": "Step 2: -22 - 12 = -34."
+        },
+        {
+          "lhs_value": "4",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "4",
+          "status": "consistent",
+          "text": "Step 3: -34 + 38 = 4."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [],
+      "final_category": "parenthesis_grouping_changed",
+      "group_id": "goal_train_v1_eval_g007",
+      "inferred_displayed_program": "(((5 - 27) - 12) + 38)",
+      "inferred_exact_value": "4",
+      "key": "E031_C_greedy/goal_train_v1_eval_g007_t1_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "parenthesis_grouping_changed",
+        "evidence_quotes": [
+          "Step 1: 5 - 27 = -22.",
+          "Step 2: -22 - 12 = -34."
+        ],
+        "inferred_program": "(((5 - 27) - 12) + 38)",
+        "review_note": "Original5-(27-12)=-10; trace instead computes(5-27)-12=-34. All displayed local equations are exact.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "28",
+      "original_expression": "((5 - (27 - 12)) + 38)",
+      "original_numbers": [
+        5,
+        27,
+        12,
+        38
+      ],
+      "original_target": 28,
+      "problem_id": "goal_train_v1_eval_g007_t1_C",
+      "program_change_flags": {},
+      "reconstruction_candidates": [
+        "(((5 - 27) - 12) + 38)"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "4",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "4",
+        "expression": "4",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 1,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 20 + (33 - 1) = 32.\nStep 2: 32 / 2 = 16.\nAnswer: 16",
+      "automatic_category": "local_arithmetic_error",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "52",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "32",
+          "status": "inconsistent",
+          "text": "Step 1: 20 + (33 - 1) = 32."
+        },
+        {
+          "lhs_value": "16",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "16",
+          "status": "consistent",
+          "text": "Step 2: 32 / 2 = 16."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [
+        {
+          "lhs_value": "52",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "32",
+          "status": "inconsistent",
+          "text": "Step 1: 20 + (33 - 1) = 32."
+        }
+      ],
+      "final_category": "local_arithmetic_error",
+      "group_id": "goal_train_v1_eval_g016",
+      "inferred_displayed_program": null,
+      "key": "E031_C_greedy/goal_train_v1_eval_g016_t0_C/0",
+      "local_equations_status": "inconsistent",
+      "manual_annotation": {
+        "category": "local_arithmetic_error",
+        "evidence_quotes": [
+          "Step 1: 20 + (33 - 1) = 32."
+        ],
+        "inferred_program": null,
+        "review_note": "20+(33-1)=52, not32. Returning the inner32 is compatible with dropping20, but the displayed equation explicitly retains20; the warranted category is false local arithmetic.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "26",
+      "original_expression": "((20 + (33 - 1)) / 2)",
+      "original_numbers": [
+        20,
+        33,
+        1,
+        2
+      ],
+      "original_target": 26,
+      "problem_id": "goal_train_v1_eval_g016_t0_C",
+      "reconstruction_candidates": [],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "not_attempted",
+      "returned_exact_value": "16",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "16",
+        "expression": "16",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "inconsistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 20 + (33 - 1) = 32.\nStep 2: 32 + 2 = 34.\nAnswer: 34",
+      "automatic_category": "local_arithmetic_error",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "52",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "32",
+          "status": "inconsistent",
+          "text": "Step 1: 20 + (33 - 1) = 32."
+        },
+        {
+          "lhs_value": "34",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "34",
+          "status": "consistent",
+          "text": "Step 2: 32 + 2 = 34."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [
+        {
+          "lhs_value": "52",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "32",
+          "status": "inconsistent",
+          "text": "Step 1: 20 + (33 - 1) = 32."
+        }
+      ],
+      "final_category": "local_arithmetic_error",
+      "group_id": "goal_train_v1_eval_g016",
+      "inferred_displayed_program": null,
+      "key": "E031_C_greedy/goal_train_v1_eval_g016_t1_C/0",
+      "local_equations_status": "inconsistent",
+      "manual_annotation": {
+        "category": "local_arithmetic_error",
+        "evidence_quotes": [
+          "Step 1: 20 + (33 - 1) = 32."
+        ],
+        "inferred_program": null,
+        "review_note": "Same explicit false equality:20+(33-1)=52, not32. No separate claim about the internal cause.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "54",
+      "original_expression": "((20 + (33 - 1)) + 2)",
+      "original_numbers": [
+        20,
+        33,
+        1,
+        2
+      ],
+      "original_target": 54,
+      "problem_id": "goal_train_v1_eval_g016_t1_C",
+      "reconstruction_candidates": [],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "not_attempted",
+      "returned_exact_value": "34",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "34",
+        "expression": "34",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "inconsistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 1,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 39 / 9 = 4.\nStep 2: 4 / 3 = 4/3.\nStep 3: 4/3 * 6 = 24/3 = 8.\nAnswer: 8",
+      "automatic_category": "local_arithmetic_error",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "13/3",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": true,
+          "rhs_value": "4",
+          "status": "inconsistent",
+          "text": "Step 1: 39 / 9 = 4."
+        },
+        {
+          "lhs_value": "4/3",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "4/3",
+          "status": "consistent",
+          "text": "Step 2: 4 / 3 = 4/3."
+        },
+        {
+          "line": 3,
+          "reason": "equation_must_have_one_equality",
+          "status": "unverifiable",
+          "text": "Step 3: 4/3 * 6 = 24/3 = 8."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [
+        {
+          "lhs_value": "13/3",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": true,
+          "rhs_value": "4",
+          "status": "inconsistent",
+          "text": "Step 1: 39 / 9 = 4."
+        }
+      ],
+      "final_category": "local_arithmetic_error",
+      "group_id": "goal_train_v1_eval_g037",
+      "inferred_displayed_program": null,
+      "key": "E031_C_greedy/goal_train_v1_eval_g037_t1_C/0",
+      "local_equations_status": "inconsistent",
+      "manual_annotation": {
+        "category": "local_arithmetic_error",
+        "evidence_quotes": [
+          "Step 1: 39 / 9 = 4.",
+          "Step 2: 4 / 3 = 4/3.",
+          "Step 3: 4/3 * 6 = 24/3 = 8."
+        ],
+        "inferred_program": null,
+        "overlapping_observation": "Changed division grouping plus false local arithmetic; final chained equality is true but unsupported by the conservative parser.",
+        "review_note": "39/9=13/3, not4. The trace also begins with39/9 then divides by3, unlike the original39/(9/3). The final chained equality4/3*6=24/3=8 is mathematically true but outside the conservative one-equality parser. Primary category remains the explicit false first equation.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "78",
+      "original_expression": "((39 / (9 / 3)) * 6)",
+      "original_numbers": [
+        39,
+        9,
+        3,
+        6
+      ],
+      "original_target": 78,
+      "problem_id": "goal_train_v1_eval_g037_t1_C",
+      "reconstruction_candidates": [],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "not_attempted",
+      "returned_exact_value": "8",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "8",
+        "expression": "8",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "inconsistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 1,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 40 + (5 - 15) = 20.\nStep 2: 20 / 2 = 10.\nAnswer: 10",
+      "automatic_category": "local_arithmetic_error",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "30",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "20",
+          "status": "inconsistent",
+          "text": "Step 1: 40 + (5 - 15) = 20."
+        },
+        {
+          "lhs_value": "10",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "10",
+          "status": "consistent",
+          "text": "Step 2: 20 / 2 = 10."
+        }
+      ],
+      "evaluation": "E031_C_greedy",
+      "false_local_equations": [
+        {
+          "lhs_value": "30",
+          "line": 1,
+          "reason": "false_equality",
+          "resource_step_supported": false,
+          "rhs_value": "20",
+          "status": "inconsistent",
+          "text": "Step 1: 40 + (5 - 15) = 20."
+        }
+      ],
+      "final_category": "local_arithmetic_error",
+      "group_id": "goal_train_v1_eval_g042",
+      "inferred_displayed_program": null,
+      "key": "E031_C_greedy/goal_train_v1_eval_g042_t0_C/0",
+      "local_equations_status": "inconsistent",
+      "manual_annotation": {
+        "category": "local_arithmetic_error",
+        "evidence_quotes": [
+          "Step 1: 40 + (5 - 15) = 20."
+        ],
+        "inferred_program": null,
+        "review_note": "40+(5-15)=30, not20. The displayed second division is true for the wrong intermediate.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "15",
+      "original_expression": "((40 + (5 - 15)) / 2)",
+      "original_numbers": [
+        40,
+        5,
+        15,
+        2
+      ],
+      "original_target": 15,
+      "problem_id": "goal_train_v1_eval_g042_t0_C",
+      "reconstruction_candidates": [],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "not_attempted",
+      "returned_exact_value": "10",
+      "sample_index": 0,
+      "state": "E031",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "10",
+        "expression": "10",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "inconsistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 31 - 34 = -3.\nStep 2: 18 + (-3) = 15.\nStep 3: 15 + 9 = 24.\nAnswer: 24",
+      "automatic_category": "subtraction_operands_reversed",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "-3",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "-3",
+          "status": "consistent",
+          "text": "Step 1: 31 - 34 = -3."
+        },
+        {
+          "lhs_value": "15",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "15",
+          "status": "consistent",
+          "text": "Step 2: 18 + (-3) = 15."
+        },
+        {
+          "lhs_value": "24",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "24",
+          "status": "consistent",
+          "text": "Step 3: 15 + 9 = 24."
+        }
+      ],
+      "evaluation": "G-single_C_greedy",
+      "false_local_equations": [],
+      "final_category": "subtraction_operands_reversed",
+      "group_id": "goal_train_v1_eval_g013",
+      "inferred_displayed_program": "((18 + (31 - 34)) + 9)",
+      "inferred_exact_value": "24",
+      "key": "G-single_C_greedy/goal_train_v1_eval_g013_t1_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "subtraction_operands_reversed",
+        "evidence_quotes": [
+          "Step 1: 31 - 34 = -3."
+        ],
+        "inferred_program": "((18 + (31 - 34)) + 9)",
+        "review_note": "The supplied34-31 is reversed to31-34. The connected displayed program gives24 exactly, but the original gives30.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "30",
+      "original_expression": "((18 + (34 - 31)) + 9)",
+      "original_numbers": [
+        18,
+        34,
+        31,
+        9
+      ],
+      "original_target": 30,
+      "problem_id": "goal_train_v1_eval_g013_t1_C",
+      "program_change_flags": {
+        "reversed_subtraction_path": [
+          1,
+          2
+        ]
+      },
+      "reconstruction_candidates": [
+        "((18 + (31 - 34)) + 9)"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "24",
+      "sample_index": 0,
+      "state": "G-single",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "24",
+        "expression": "24",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 1,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 3 - 1 = 2.\nStep 2: 4 - 2 = 2.\nStep 3: 34 - 2 = 32.\nStep 4: 32 - 2 = 30.\nAnswer: 30",
+      "automatic_category": "needs_manual_review",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "2",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "2",
+          "status": "consistent",
+          "text": "Step 1: 3 - 1 = 2."
+        },
+        {
+          "lhs_value": "2",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "2",
+          "status": "consistent",
+          "text": "Step 2: 4 - 2 = 2."
+        },
+        {
+          "lhs_value": "32",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "32",
+          "status": "consistent",
+          "text": "Step 3: 34 - 2 = 32."
+        },
+        {
+          "lhs_value": "30",
+          "line": 4,
+          "resource_step_supported": true,
+          "rhs_value": "30",
+          "status": "consistent",
+          "text": "Step 4: 32 - 2 = 30."
+        }
+      ],
+      "evaluation": "G-single_C_greedy",
+      "false_local_equations": [],
+      "final_category": "other_program_or_order_change",
+      "group_id": "goal_train_v1_eval_g032",
+      "inferred_displayed_program": null,
+      "key": "G-single_C_greedy/goal_train_v1_eval_g032_t1_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "other_program_or_order_change",
+        "descriptive_subcategory": "extra_subtraction_after_correct_result",
+        "evidence_quotes": [
+          "Step 3: 34 - 2 = 32.",
+          "Step 4: 32 - 2 = 30."
+        ],
+        "inferred_program": "((34 - (4 - (3 - 1))) - 2)",
+        "intermediate_provenance_ambiguous": true,
+        "review_note": "The first three steps correctly compute the supplied expression to32. Step4 adds an unsupported subtraction of2, producing30. Both steps1 and2 produced2, so which earlier value was reused is ambiguous. The inferred program transcribes the displayed extra scalar2 without claiming its provenance.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "32",
+      "original_expression": "(34 - (4 - (3 - 1)))",
+      "original_numbers": [
+        34,
+        4,
+        3,
+        1
+      ],
+      "original_target": 32,
+      "problem_id": "goal_train_v1_eval_g032_t1_C",
+      "reconstruction_candidates": [
+        "((34 - (3 - 1)) - (4 - 2))",
+        "((34 - (4 - (3 - 1))) - 2)",
+        "((34 - (4 - 2)) - (3 - 1))",
+        "((34 - 2) - (4 - (3 - 1)))"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "ambiguous_or_disconnected",
+      "returned_exact_value": "30",
+      "sample_index": 0,
+      "state": "G-single",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "30",
+        "expression": "30",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 1,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 21 - 21 = 0.\nStep 2: 9 - 0 = 9.\nStep 3: 20 - 9 = 11.\nAnswer: 11",
+      "automatic_category": "input_literal_substituted",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "0",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "0",
+          "status": "consistent",
+          "text": "Step 1: 21 - 21 = 0."
+        },
+        {
+          "lhs_value": "9",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "9",
+          "status": "consistent",
+          "text": "Step 2: 9 - 0 = 9."
+        },
+        {
+          "lhs_value": "11",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "11",
+          "status": "consistent",
+          "text": "Step 3: 20 - 9 = 11."
+        }
+      ],
+      "evaluation": "G-single_C_greedy",
+      "false_local_equations": [],
+      "final_category": "input_literal_substituted",
+      "group_id": "goal_train_v1_eval_g034",
+      "inferred_displayed_program": "(20 - (9 - (21 - 21)))",
+      "inferred_exact_value": "11",
+      "key": "G-single_C_greedy/goal_train_v1_eval_g034_t0_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "input_literal_substituted",
+        "evidence_quotes": [
+          "Step 1: 21 - 21 = 0."
+        ],
+        "inferred_program": "(20 - (9 - (21 - 21)))",
+        "review_note": "The innermost28-21 becomes21-21;28 is replaced by a second21 in the displayed connected computation. It evaluates to11 rather than the original18.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "18",
+      "original_expression": "(20 - (9 - (28 - 21)))",
+      "original_numbers": [
+        20,
+        9,
+        28,
+        21
+      ],
+      "original_target": 18,
+      "problem_id": "goal_train_v1_eval_g034_t0_C",
+      "program_change_flags": {
+        "introduced_literals": {
+          "21": 1
+        },
+        "removed_input_literals": {
+          "28": 1
+        }
+      },
+      "reconstruction_candidates": [
+        "(20 - (9 - (21 - 21)))"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "11",
+      "sample_index": 0,
+      "state": "G-single",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "11",
+        "expression": "11",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 23 - 20 = 3.\nStep 2: 24 - 3 = 21.\nStep 3: 34 + 21 = 55.\nAnswer: 55",
+      "automatic_category": "subtraction_operands_reversed",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "3",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "3",
+          "status": "consistent",
+          "text": "Step 1: 23 - 20 = 3."
+        },
+        {
+          "lhs_value": "21",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "21",
+          "status": "consistent",
+          "text": "Step 2: 24 - 3 = 21."
+        },
+        {
+          "lhs_value": "55",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "55",
+          "status": "consistent",
+          "text": "Step 3: 34 + 21 = 55."
+        }
+      ],
+      "evaluation": "G-single_C_greedy",
+      "false_local_equations": [],
+      "final_category": "subtraction_operands_reversed",
+      "group_id": "goal_train_v1_eval_g036",
+      "inferred_displayed_program": "(34 + (24 - (23 - 20)))",
+      "inferred_exact_value": "55",
+      "key": "G-single_C_greedy/goal_train_v1_eval_g036_t0_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "subtraction_operands_reversed",
+        "evidence_quotes": [
+          "Step 1: 23 - 20 = 3."
+        ],
+        "inferred_program": "(34 + (24 - (23 - 20)))",
+        "review_note": "The supplied20-23 is reversed to23-20, yielding55 instead of61. All three local equations are true.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "61",
+      "original_expression": "(34 + (24 - (20 - 23)))",
+      "original_numbers": [
+        34,
+        24,
+        20,
+        23
+      ],
+      "original_target": 61,
+      "problem_id": "goal_train_v1_eval_g036_t0_C",
+      "program_change_flags": {
+        "reversed_subtraction_path": [
+          2,
+          2
+        ]
+      },
+      "reconstruction_candidates": [
+        "(34 + (24 - (23 - 20)))"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "55",
+      "sample_index": 0,
+      "state": "G-single",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "55",
+        "expression": "55",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 21 - 21 = 0.\nStep 2: 28 - 0 = 28.\nStep 3: 9 - 28 = -19.\nStep 4: 20 - (-19) = 39.\nAnswer: 39",
+      "automatic_category": "other_program_or_order_change",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "0",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "0",
+          "status": "consistent",
+          "text": "Step 1: 21 - 21 = 0."
+        },
+        {
+          "lhs_value": "28",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "28",
+          "status": "consistent",
+          "text": "Step 2: 28 - 0 = 28."
+        },
+        {
+          "lhs_value": "-19",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "-19",
+          "status": "consistent",
+          "text": "Step 3: 9 - 28 = -19."
+        },
+        {
+          "lhs_value": "39",
+          "line": 4,
+          "resource_step_supported": true,
+          "rhs_value": "39",
+          "status": "consistent",
+          "text": "Step 4: 20 - (-19) = 39."
+        }
+      ],
+      "evaluation": "G-paired_C_greedy",
+      "false_local_equations": [],
+      "final_category": "other_program_or_order_change",
+      "group_id": "goal_train_v1_eval_g034",
+      "inferred_displayed_program": "(20 - (9 - (28 - (21 - 21))))",
+      "inferred_exact_value": "39",
+      "key": "G-paired_C_greedy/goal_train_v1_eval_g034_t0_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "other_program_or_order_change",
+        "descriptive_subcategory": "added_operation_and_reused_input_literal",
+        "evidence_quotes": [
+          "Step 1: 21 - 21 = 0.",
+          "Step 2: 28 - 0 = 28."
+        ],
+        "inferred_program": "(20 - (9 - (28 - (21 - 21))))",
+        "intermediate_provenance_ambiguous": false,
+        "review_note": "The trace adds21-21 as a new innermost step, then uses28-0. This connected displayed program reuses21 and changes the original program; it gives39, not18. This is not merely a subtraction reversal or a single literal substitution.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "18",
+      "original_expression": "(20 - (9 - (28 - 21)))",
+      "original_numbers": [
+        20,
+        9,
+        28,
+        21
+      ],
+      "original_target": 18,
+      "problem_id": "goal_train_v1_eval_g034_t0_C",
+      "program_change_flags": {
+        "introduced_literals": {
+          "21": 1
+        },
+        "removed_input_literals": {}
+      },
+      "reconstruction_candidates": [
+        "(20 - (9 - (28 - (21 - 21))))"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "39",
+      "sample_index": 0,
+      "state": "G-paired",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "39",
+        "expression": "39",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    },
+    {
+      "answer_segment": "Step 1: 23 - 20 = 3.\nStep 2: 24 - 3 = 21.\nStep 3: 34 + 21 = 55.\nAnswer: 55",
+      "automatic_category": "subtraction_operands_reversed",
+      "descriptive_only": true,
+      "equations": [
+        {
+          "lhs_value": "3",
+          "line": 1,
+          "resource_step_supported": true,
+          "rhs_value": "3",
+          "status": "consistent",
+          "text": "Step 1: 23 - 20 = 3."
+        },
+        {
+          "lhs_value": "21",
+          "line": 2,
+          "resource_step_supported": true,
+          "rhs_value": "21",
+          "status": "consistent",
+          "text": "Step 2: 24 - 3 = 21."
+        },
+        {
+          "lhs_value": "55",
+          "line": 3,
+          "resource_step_supported": true,
+          "rhs_value": "55",
+          "status": "consistent",
+          "text": "Step 3: 34 + 21 = 55."
+        }
+      ],
+      "evaluation": "G-paired_C_greedy",
+      "false_local_equations": [],
+      "final_category": "subtraction_operands_reversed",
+      "group_id": "goal_train_v1_eval_g036",
+      "inferred_displayed_program": "(34 + (24 - (23 - 20)))",
+      "inferred_exact_value": "55",
+      "key": "G-paired_C_greedy/goal_train_v1_eval_g036_t0_C/0",
+      "local_equations_status": "consistent",
+      "manual_annotation": {
+        "category": "subtraction_operands_reversed",
+        "evidence_quotes": [
+          "Step 1: 23 - 20 = 3."
+        ],
+        "inferred_program": "(34 + (24 - (23 - 20)))",
+        "review_note": "The supplied20-23 is reversed to23-20, yielding55 instead of61. All three local equations are true.",
+        "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+        "reviewer": "independent_assistant_manual_trace_review"
+      },
+      "manual_review_status": "reviewed",
+      "model_internal_program_claimed": false,
+      "original_exact_value": "61",
+      "original_expression": "(34 + (24 - (20 - 23)))",
+      "original_numbers": [
+        34,
+        24,
+        20,
+        23
+      ],
+      "original_target": 61,
+      "problem_id": "goal_train_v1_eval_g036_t0_C",
+      "program_change_flags": {
+        "reversed_subtraction_path": [
+          2,
+          2
+        ]
+      },
+      "reconstruction_candidates": [
+        "(34 + (24 - (23 - 20)))"
+      ],
+      "reconstruction_caveat": "Connected displayed-operation reconstruction is a descriptive reading, not proof of model internals. Missing/implicit steps may require manual interpretation; no output is repaired or rescored.",
+      "reconstruction_status": "unique",
+      "returned_exact_value": "55",
+      "sample_index": 0,
+      "state": "G-paired",
+      "stop_reason": "native_eos",
+      "strict_score": {
+        "answer_correct_ignoring_stop": false,
+        "completed": true,
+        "correct": false,
+        "exact_value": "55",
+        "expression": "55",
+        "failure": "wrong_answer_or_resources",
+        "free_correct": null,
+        "interface": "C",
+        "interfaces": {},
+        "intermediate_arithmetic_status": "consistent",
+        "operator_correct": null,
+        "ordered_expression": null,
+        "parsed": true,
+        "reaches_target": false,
+        "resource_target_category": "not_applicable",
+        "scaffold_followed": null,
+        "selected_operator": null,
+        "structure_id": null,
+        "trace_status": "not_certified",
+        "unconstrained_target_achieved": null,
+        "uses_input_multiset": null
+      },
+      "target_index": 0,
+      "unknown_lines": []
+    }
+  ],
+  "all_failure_category_counts": {
+    "input_literal_substituted": 1,
+    "local_arithmetic_error": 5,
+    "other_program_or_order_change": 2,
+    "parenthesis_grouping_changed": 2,
+    "subtraction_operands_reversed": 3
+  },
+  "all_failures_manually_reviewed": true,
+  "generations_added": 0,
+  "implementation_sha256": "c98e5d1c9d0046ed9a54b3e0633f2888b12a43663ce3efea0d6a2cba3ca54484",
+  "limitations": [
+    "No token re-decoding in this supplemental pass; core analysis already binds tokens/stops.",
+    "Automatic program reconstruction only uses supported displayed operations and requires one complete connected tree.",
+    "A local arithmetic error can coexist with other trace changes; primary categories are descriptive, not exhaustive causal labels.",
+    "Consistent local equations are not evidence of faithfully computing the supplied original expression.",
+    "Same48 groups/one training seed; no new independent scientific observations."
+  ],
+  "manual_review_method": {
+    "arithmetic": "Exact rational arithmetic for the original expression and each supported displayed equation; manually inspect unsupported chained equalities.",
+    "classification": "One descriptive primary category per failure; overlapping observations and ambiguity retained. This does not infer hidden model computation.",
+    "primary_precedence": "An explicitly false displayed equality receives local_arithmetic_error even if an additional program change is visible.",
+    "replay_scope": "All 288 C strict scores replayed from stored outputs and stop metadata; raw outputs exactly equal the core analysis records. Token decoding was already checked by core analysis, not repeated here.",
+    "reviewer": "independent_assistant_manual_trace_review",
+    "scope": "All 13 stored C greedy failures across all three registered states; no selection of examples."
+  },
+  "model_calls": 0,
+  "raw_analysis_exact": true,
+  "score_records_replayed": 288,
+  "source_files_sha256": {
+    "experiments/post_e037_goal_training/release_v1/manifest.json": "ca97959cac646eb709d428bede41e6aacc35ee7362b5fe01ddfa95e28d2e5536",
+    "reports/post_e037_goal_training/C_INTERFACE_ERROR_ANNOTATIONS.json": "415680ba33bcf2c6ace28f7b0d103fdfcfb59ae47aa1bc23214d6d11003c0d54",
+    "reports/post_e037_goal_training/SCORED_OUTPUTS.jsonl": "2472ad5b97a76273012000855be544ec3a86724234c9c2342ea893a6e882beee",
+    "runs/post_e037_goal_training_v1/E031_C_greedy.jsonl": "0ae56a728900ef6cb5920350ebc4e794fa05f44a045a62d6faa4daac9d8f3be6",
+    "runs/post_e037_goal_training_v1/G-paired_C_greedy.jsonl": "809f3526e2999845d757830adf374e25885196ffa3a4bb762ef47f0b93b50d23",
+    "runs/post_e037_goal_training_v1/G-single_C_greedy.jsonl": "06226a1e3b7d19816cdea15c6822c44ce45cd55f63da98a1edfa75b3cbe9867c"
+  },
+  "status": "INDEPENDENT_CPU_C_INTERFACE_ERROR_AUDIT_ALL_FAILURES_REVIEWED",
+  "strict_scores_changed": false,
+  "summaries": [
+    {
+      "categories": {
+        "local_arithmetic_error": 5,
+        "parenthesis_grouping_changed": 2
+      },
+      "groups": 48,
+      "local_equation_status_among_failures": {
+        "consistent": 2,
+        "inconsistent": 5
+      },
+      "manual_reviewed": 7,
+      "outputs": 96,
+      "state": "E031",
+      "strict_correct": 89,
+      "strict_failures": 7
+    },
+    {
+      "categories": {
+        "input_literal_substituted": 1,
+        "other_program_or_order_change": 1,
+        "subtraction_operands_reversed": 2
+      },
+      "groups": 48,
+      "local_equation_status_among_failures": {
+        "consistent": 4
+      },
+      "manual_reviewed": 4,
+      "outputs": 96,
+      "state": "G-single",
+      "strict_correct": 92,
+      "strict_failures": 4
+    },
+    {
+      "categories": {
+        "other_program_or_order_change": 1,
+        "subtraction_operands_reversed": 1
+      },
+      "groups": 48,
+      "local_equation_status_among_failures": {
+        "consistent": 2
+      },
+      "manual_reviewed": 2,
+      "outputs": 96,
+      "state": "G-paired",
+      "strict_correct": 94,
+      "strict_failures": 2
+    }
+  ],
+  "trained_states_failure_summary": {
+    "causal_inference": false,
+    "changed_supplied_program": 6,
+    "consistent_displayed_local_equations": 6,
+    "extra_subtraction_intermediate_provenance_unresolved": 1,
+    "failures": 6
+  }
+}

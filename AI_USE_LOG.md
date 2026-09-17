@@ -1,3 +1,32 @@
+# 2026-09-16 — E038/E039 completed, independently audited and closed
+
+Codex executed the owner's finite post-E037 G-single/G-paired training plan from
+E031. Both256-update arms and all3344 registered generations completed once;
+no score-based stop, checkpoint selection or extra model work.45 Linux checks
+passed before model calls, after a CPU-only1ULP LR-validation repair; the executed
+frozen schedule was unchanged. Source801ef1279a2a817f754f856d9191725eebb1121a
+was published before execution. Independent CPU audits verified154 source files,
+512 updates, optimizer/RNG states, token/stop/math contracts and288 operator
+contexts. Paired bootstrap primary intervals were independently recomputed.
+All13 C failures were manually annotated and all288 C scores replayed.
+
+Full backup hashes cover3422 inventoried files plus the manifest, four scientific
+adapters and two latest recovery states.40,473,429,556 bytes of historical
+duplicates were deleted only after independent backup/file-set/SHA verification;
+E015 unique weights remain protected. Backup transport faults did not create model
+retries. Provider off and timer clearing were confirmed; whole-window cost proxy
+is11.39145CNY, not an invoice. One3018s receipt brings totals to27/17623s.
+
+Public compact files preserve original bytes. Six binaries and eight PEFT
+machine-path metadata files remain private, with exact omissions documented.
+One public core-manifest input key was normalized to a relative path without
+changing its digest or any core result. Public generation-audit metadata omits
+one private provider instance ID and records the original private report SHA;
+scientific evidence is unchanged. Supplemental report wording and the result
+plot were reviewed; main comparisons show no observed paired-recipe advantage.
+The present task ends paused. Proposed task-learning diagnostics were not run.
+No external messages were sent.
+
 # 2026-09-16 — E037 completed and independently verified
 
 Codex executed the owner-requested finite frozen-endpoint diagnostic; no new

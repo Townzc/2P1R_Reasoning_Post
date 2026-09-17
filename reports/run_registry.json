@@ -1,6 +1,6 @@
 {
-  "scope": "Historical engineering checks and restricted development pilots, plus a complete one-seed arithmetic discovery factorial (E031\u2013E036). Calibration is not a treatment comparison; one seed does not establish a population or pure mechanism effect.",
-  "charged_gpu_seconds": 14605,
+  "scope": "Historical engineering and restricted development pilots, a complete one-seed arithmetic discovery factorial (E031–E036), frozen goal diagnostics (E037), and a completed single-seed paired-goal training comparison (E038/E039). Exploratory results do not establish a population or pure mechanism effect.",
+  "charged_gpu_seconds": 17623,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2557,9 +2557,49 @@
       "independent_new_outputs_backup_complete": true,
       "official_test_evaluated": false,
       "evidence_scope": "24 exploratory paired number groups across four frozen single-seed endpoints; no additional training; uncertainty excludes training-seed variation."
+    },
+    {
+      "run_id": "post_e037_goal_training_v1",
+      "attempt": 1,
+      "status": "completed",
+      "receipt_status": "completed",
+      "mode": "registered_paired_goal_training_phase",
+      "git_commit": "801ef1279a2a817f754f856d9191725eebb1121a",
+      "charged_gpu_seconds": 3018,
+      "records": "runs/post_e037_goal_training_v1",
+      "receipt": "runs/post_e037_goal_training_v1/attempts/attempt_000001/resource_receipt.json",
+      "phase_accounting": "reports/post_e037_goal_training/PHASE_LEDGER.json",
+      "model": {
+        "attention": "sdpa",
+        "autocast": "bfloat16",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "kind": "base",
+        "parameters": "float32",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tf32": false
+      },
+      "completed_training_experiment_ids": [
+        "E038",
+        "E039"
+      ],
+      "steps": 512,
+      "supervised_response_tokens": 530396,
+      "processed_nonpadding_tokens": 1130184,
+      "actual_generated_this_attempt": 3344,
+      "new_generation_cap": 3600,
+      "new_generation_fault_repeats": 0,
+      "operator_contexts": 288,
+      "candidate_scores": 1152,
+      "actual_forward_calls": 288,
+      "reference_forward_calls": 4096,
+      "evidence_valid": true,
+      "provider_shutdown_confirmed": true,
+      "independent_new_checkpoints_backup_complete": true,
+      "official_test_evaluated": false,
+      "evidence_scope": "48 exploratory paired number groups; one training seed; no observed paired-recipe advantage on primary outcomes. Uncertainty excludes training-seed variation and does not establish equivalence or a mechanism."
     }
   ],
-  "accounting_scope": "Across separate historical, E018, arithmetic-v2 and post-E030 resume phases; original7200-second ledger and all prior receipts remain immutable. Process charges are not whole-instance rental invoices.",
+  "accounting_scope": "Across separate historical, E018, arithmetic-v2, post-E030 resume, E037 goal-probe and E038/E039 goal-training phases; original7200-second ledger and all prior receipts remain immutable. Process charges are not whole-instance rental invoices.",
   "planned_experiments": [
     {
       "data": "calibration_fit",
@@ -2689,8 +2729,13 @@
       "experiment_id": "E038",
       "parent": "E031",
       "updates": 256,
-      "status": "registered_not_executed",
-      "protocol": "experiments/post_e037_goal_training/PROTOCOL.md"
+      "status": "completed",
+      "protocol": "experiments/post_e037_goal_training/PROTOCOL.md",
+      "actual_updates": 256,
+      "manifest": "runs/post_e037_goal_training_v1/goal_train_e038_r1/run_manifest_final.json",
+      "execution_source_commit": "801ef1279a2a817f754f856d9191725eebb1121a",
+      "independent_verification": "reports/post_e037_goal_training/INDEPENDENT_TRAINING_VERIFICATION.json",
+      "results": "reports/post_e037_goal_training/RESULTS.md"
     },
     {
       "state": "G-paired",
@@ -2699,8 +2744,13 @@
       "experiment_id": "E039",
       "parent": "E031",
       "updates": 256,
-      "status": "registered_not_executed",
-      "protocol": "experiments/post_e037_goal_training/PROTOCOL.md"
+      "status": "completed",
+      "protocol": "experiments/post_e037_goal_training/PROTOCOL.md",
+      "actual_updates": 256,
+      "manifest": "runs/post_e037_goal_training_v1/goal_train_e039_r1/run_manifest_final.json",
+      "execution_source_commit": "801ef1279a2a817f754f856d9191725eebb1121a",
+      "independent_verification": "reports/post_e037_goal_training/INDEPENDENT_TRAINING_VERIFICATION.json",
+      "results": "reports/post_e037_goal_training/RESULTS.md"
     }
   ],
   "phase_execution_receipts": [
@@ -2724,6 +2774,13 @@
       "charged_seconds": 1149,
       "manifest": "reports/post_e036_goal_probe/PHASE_LEDGER.json",
       "note": "One inference-only process receipt; four inherited adapters are not four new training runs."
+    },
+    {
+      "phase": "E038_E039_paired_goal_training",
+      "receipts": 1,
+      "charged_seconds": 3018,
+      "manifest": "reports/post_e037_goal_training/PHASE_LEDGER.json",
+      "note": "One worker receipt covers two logical256-update training runs and3344 new outputs; logical runs are not additional physical process receipts."
     }
   ]
 }
