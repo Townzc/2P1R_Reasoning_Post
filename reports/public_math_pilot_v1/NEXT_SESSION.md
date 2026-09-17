@@ -1,7 +1,8 @@
 # Active-session handoff
 
 Read [LIVE_EXECUTION.md](LIVE_EXECUTION.md), [LIVE_PROGRESS.json](LIVE_PROGRESS.json),
-the owner retention/daytime/concurrency amendments, and
+the owner retention/daytime/concurrency amendments,
+[HOST_CACHE_RECOVERY.md](../../experiments/public_math_pilot_v1/HOST_CACHE_RECOVERY.md), and
 [INFRASTRUCTURE_RECOVERY.md](../../experiments/public_math_pilot_v1/INFRASTRUCTURE_RECOVERY.md).
 Earlier zero-model startup blockers and serial-only scheduling are superseded.
 
@@ -36,7 +37,8 @@ If incomplete, record exact saved coverage and resume only in the next owner-ope
 window with freshly checked deadlines. The formal external abstract deadline is
 Sep18 23:59AoE; no submission or external message is authorized.
 
-Final audit must reconcile512 updates,8192 annotation forwards,31,203 saved logical
+Final audit must reconcile512 final scientific updates,544 physical completed-update
+records including32 lost uncommitted TrimSFT updates,8192 annotation forwards,31,203 saved logical
 outputs,128 additional failed physical attempts, all54 scored runs and four full
 terminal recoveries. Keep the one official empty MATH reference unresolved in the
 full500-question denominator; publish bounds and whole-question paired intervals.
@@ -48,3 +50,20 @@ The queued evaluator uses a06:35UTC model deadline and a06:45UTC hard timeout,
 leaving600seconds of additional completion reserve for larger batches. Its
 per-batch admission check prevents starting new batches about240seconds before
 the model deadline. This changes scheduling only, not any scientific output ID.
+
+The TrimSFT trainer later stopped before saving step64 because the strict host
+RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
+restored headroom without deleting or changing data; the original trainer resumed
+from the verified step32 model/AdamW/RNG. Step64 and96 then committed; the latest
+observation shows this trajectory reached step128, with its final save
+pending. Preserve the32 lost uncommitted updates: the final scientific dose remains
+512, while expected physical completed-update records are544. GPU replay follows
+the same rows/LR/source but is not bitwise equivalent; disclose the measured
+numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
+
+Keep the bounded CPU cache helper until training finishes. Both old and recovered
+training attempts stay immutable, and all earlier evaluator launchers are inactive.
+The current evaluator waits for recovered TRAINING_COMPLETE.json. The private
+handoff records current process IDs; inspect fresh state before acting. Report the
+full finite results to the owner, including numerical replay limitations, then wait
+for their direction. No optional follow-on work is authorized.

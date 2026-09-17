@@ -1169,3 +1169,15 @@ The first128-way Base GSM batch subsequently failed with CUDA OOM after257second
 All85 CPU checks passed before the recovery source was published/deployed. Observed DFT caches subsequently approached70GiB despite active-allocation peaks near32GiB. Canceled only the replacement evaluator's waiting admission process (456seconds, zero model calls or reservations) and queued the identical source after all four training arms; CPU scoring remains concurrent. Added bounded read-only resource telemetry and a15-minute native follow-up for completion and the already-authorized nightly shutdown. Large artifacts remain on-server. The current registry/handoff distinguishes ongoing work from older zero-model startup reports.
 
 The trainer later stopped at TrimSFT64 before checkpoint admission because its strict cgroup headroom calculation included about67GiB of clean file cache. SFT/DFT128 and TrimSFT32 remain verified. Added a separate bounded CPU cache-maintenance helper that advises only committed owned checkpoint files, without changing the frozen trainer, its48GiB gate or file bytes.88 CPU tests pass. Resume requires one documented replay of32 uncommitted updates from the exact saved optimizer/RNG:512 final scientific updates,544 physical completed-update records including the32 lost work. The owner requested a full training/evaluation report before deciding the next direction; no optional follow-on is queued.
+
+The owned-file cache helper reduced measured cgroup usage from73.25GB to1.73GB
+without modifying or deleting checkpoint bytes. Exact-source recovery committed
+TrimSFT64 and96; the latest snapshot records128 computed steps, with its final
+save pending. A passive audit of all32 recomputed updates confirms identical
+rows/LR/token dose/source, but not a bitwise-identical CUDA trajectory. Scalars
+match through48 and diverge later, with max absolute CE/loss/gradient differences
+0.0374005/0.000245364/0.0200737; cause not isolated. Published the comparison and
+explicit final-report limitation. This audit adds zero model calls; no public
+score was available when the durable recovery point was chosen. Historical failed
+updates and process receipts remain preserved. The CPU test result is88 checks;
+no tests were repeated for this documentation-only milestone.

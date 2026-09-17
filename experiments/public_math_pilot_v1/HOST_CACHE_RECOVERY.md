@@ -37,3 +37,16 @@ frozen evaluation contract behind TRAINING_COMPLETE.json, preserving the same
 one-time GSM OOM retry evidence and all generation accounting. CPU scoring stays
 running. Report all results to the owner after the finite evaluation, then wait
 for their next-direction decision; no optional experiment follows automatically.
+
+The first cache pass reduced cgroup usage from73.25GB to1.73GB without changing
+any checkpoint bytes. The recovered TrimSFT64 checkpoint subsequently committed
+successfully. A passive comparison of the32 recomputed update records confirms
+unchanged row identities, dose, learning rates and source. Scalar losses and
+gradient norms match through step48, but the later GPU numerical trajectory
+diverges; it is not bitwise equivalent. The cause of that divergence was not
+isolated. Preserve the per-step measurements in
+reports/public_math_pilot_v1/GPU_RECOVERY_COMPARISON.json and do not generalize
+the exact CPU toy recovery test to full GPU trajectory reproducibility. The
+recovery point was chosen from durable state before any public benchmark score,
+not from either trajectory's performance. This execution limitation accompanies
+the one-training-seed result in the final report.

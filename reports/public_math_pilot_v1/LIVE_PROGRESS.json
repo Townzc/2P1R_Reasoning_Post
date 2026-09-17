@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-09-17T22:09:39.381242+00:00",
+  "observed_at_utc": "2026-09-17T22:40:41.902087+00:00",
   "status": "active_incomplete",
   "training": {
     "SFT": {
@@ -7,28 +7,81 @@
       "largest_completed_step": 128,
       "latest_committed_step": 128,
       "peak_allocated_bytes": 34132935680,
-      "mean_update_seconds": 6.147876319068018
+      "mean_update_seconds": 6.147876319068018,
+      "attempts": [
+        {
+          "attempt": "a6090a1cfcc448f5b5e453e44bd6ce02",
+          "started_at_utc": "2026-09-17T21:37:37.720105+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 128,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "SFT",
+            "initial_step": 0,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
     },
     "DFT": {
       "completed_update_records": 128,
       "largest_completed_step": 128,
       "latest_committed_step": 128,
       "peak_allocated_bytes": 34130915328,
-      "mean_update_seconds": 3.4946048833080567
+      "mean_update_seconds": 3.4946048833080567,
+      "attempts": [
+        {
+          "attempt": "313f107b19bf4eea9ffb96fac7ec16b3",
+          "started_at_utc": "2026-09-17T21:56:01.519295+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 128,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "DFT",
+            "initial_step": 0,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
     },
     "TrimSFT": {
-      "completed_update_records": 14,
-      "largest_completed_step": 14,
-      "latest_committed_step": 0,
-      "peak_allocated_bytes": 33611560960,
-      "mean_update_seconds": 3.490803863587124
+      "completed_update_records": 160,
+      "largest_completed_step": 128,
+      "latest_committed_step": 96,
+      "peak_allocated_bytes": 34130915328,
+      "mean_update_seconds": 3.5414924759184943,
+      "attempts": [
+        {
+          "attempt": "c073d306a74c400785fad48a14e1dad4",
+          "started_at_utc": "2026-09-17T22:08:47.450520+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 64,
+          "last_completed_step": 64,
+          "end": null
+        },
+        {
+          "attempt": "d049ee0b6f6849c085097c9a54029501",
+          "started_at_utc": "2026-09-17T22:30:38.340240+00:00",
+          "initial_checkpoint": "slot_000032_82201bae6085451790c98851cad98627",
+          "completed_records": 96,
+          "last_completed_step": 128,
+          "end": null
+        }
+      ]
     },
     "QDW_v0": {
       "completed_update_records": 0,
       "largest_completed_step": 0,
       "latest_committed_step": 0,
       "peak_allocated_bytes": null,
-      "mean_update_seconds": null
+      "mean_update_seconds": null,
+      "attempts": []
     }
   },
   "base_dev_complete_outputs": 512,
@@ -41,16 +94,17 @@
   "saved_public_outputs": 0,
   "failed_public_attempt_seconds": 257,
   "public_results_available": false,
-  "disk_free_bytes": 141837647872,
+  "disk_free_bytes": 95791923200,
   "telemetry_peak_device_used_mib": 81009.0,
-  "current_evaluation": "queued_after_all_four_training_arms_due_to_measured_cache_pressure",
+  "current_evaluation": "queued_after_recovered_training_finishes",
   "sources": {
     "preflight": "0f66e8ceb9138be52d3d51169944486d75c1ea94",
     "preparation": "e1aa912b10c37f846e7993f16c30a8a5d07b20d3",
     "training": "afc9c407fb526c4110d344b4e7501742c24c27f7",
     "failed_evaluation": "c9239c86bc929eea8dc40d33a3666f2d387704b9",
     "current_evaluation": "c833d732a7e5b7ecf7589a41ea30f2fb7068a6d9",
-    "scoring": "c87ce060c3146f77f2f5f9e9dd0e96b2bb25a1a4"
+    "scoring": "c87ce060c3146f77f2f5f9e9dd0e96b2bb25a1a4",
+    "cache_maintenance": "eb49f902c1e690f4b3e2f89cd921465e99cb5a75"
   },
   "gpu_stop_utc": "2026-09-18T06:45:00Z",
   "provider_timer_utc": "2026-09-18T06:58:00Z",
@@ -59,5 +113,22 @@
   "admission_only_canceled_seconds": 456,
   "admission_only_added_model_calls": 0,
   "evaluator_model_deadline_utc": "2026-09-18T06:35:00Z",
-  "large_batch_completion_reserve_seconds": 600
+  "large_batch_completion_reserve_seconds": 600,
+  "expected_physical_completed_training_records": 544,
+  "lost_uncommitted_training_updates": 32,
+  "training_recovery": {
+    "status": "same_source_recovery_active",
+    "failure": "checkpoint_admission_included_clean_file_cache",
+    "failed_process_seconds": 2180,
+    "restored_TrimSFT_step": 32,
+    "committed_step64_recovery_verified": true,
+    "gpu_trajectory_bitwise_equivalent": false,
+    "comparison": "GPU_RECOVERY_COMPARISON.json",
+    "cache_measurement": "HOST_CACHE_RECOVERY_MEASURED.json",
+    "original_failure_and_all_update_records_preserved": true,
+    "recomputed_step_range_inclusive": [
+      33,
+      64
+    ]
+  }
 }

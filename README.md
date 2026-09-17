@@ -10,8 +10,18 @@ attempts remain charged. The evidence-bound replacement uses64-way GSM,
 all four training arms; CPU scoring continues independently. The canceled
 admission-only evaluator added zero model calls.
 
+The TrimSFT trainer later stopped before saving step64 because the strict host
+RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
+restored headroom without deleting or changing data; the original trainer resumed
+from the verified step32 model/AdamW/RNG. Step64 and96 then committed; the latest
+observation shows this trajectory reached step128, with its final save
+pending. Preserve the32 lost uncommitted updates: the final scientific dose remains
+512, while expected physical completed-update records are544. GPU replay follows
+the same rows/LR/source but is not bitwise equivalent; disclose the measured
+numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
+
 Follow CONCURRENCY_AMENDMENT.md and INFRASTRUCTURE_RECOVERY.md in
-experiments/public_math_pilot_v1. Keep all frozen scientific counts, separate
+experiments/public_math_pilot_v1, plus HOST_CACHE_RECOVERY.md. Keep all frozen scientific counts, separate
 process RNG, committed checkpoints, server-only large-artifact retention and
 the nightly stop. All older current-state sections below are historical snapshots.
 

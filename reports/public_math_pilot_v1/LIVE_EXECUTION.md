@@ -6,7 +6,8 @@ use the server efficiently. The frozen four-arm scientific scope remains intact.
 The timestamped observation is [LIVE_PROGRESS.json](LIVE_PROGRESS.json).
 
 SFT and DFT each completed128 updates with committed, verified full recoveries.
-TrimSFT is training; QDW-v0 follows from its separate fresh public base.
+TrimSFT has resumed after a checkpoint-admission failure; QDW-v0 follows from
+its separate fresh public base.
 All4096 frozen masks and8192 annotation forwards are complete. The fixed64
 technical audit passed, without changing masks. All512 Base-dev outputs are
 durable, including32 preflight outputs reused exactly once; CPU scoring completed
@@ -22,6 +23,26 @@ ran456seconds and added zero model calls. MATH uses256-way batches with64GiB
 admission after training, and dev stays16-way. The one evidence-bound retry preserves the initial failed attempt.
 See [the recovery record](../../experiments/public_math_pilot_v1/INFRASTRUCTURE_RECOVERY.md).
 Maximum physical generation attempts are31,331 for31,203 logical outputs.
+
+The TrimSFT trainer later stopped before saving step64 because the strict host
+RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
+restored headroom without deleting or changing data; the original trainer resumed
+from the verified step32 model/AdamW/RNG. Step64 and96 then committed; the latest
+observation shows this trajectory reached step128, with its final save
+pending. Preserve the32 lost uncommitted updates: the final scientific dose remains
+512, while expected physical completed-update records are544. GPU replay follows
+the same rows/LR/source but is not bitwise equivalent; disclose the measured
+numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
+
+The passive32-update replay audit found matching row identities, learning rates,
+token dose and source. CE/loss/gradient scalars matched through step48; later
+max absolute differences were0.0374005 in raw CE,0.000245364 in weighted loss and
+0.0200737 in gradient norm. The cause is not isolated. No public benchmark score
+was available when the durable step32 recovery was selected. See
+[host-cache recovery](../../experiments/public_math_pilot_v1/HOST_CACHE_RECOVERY.md),
+[cache measurements](HOST_CACHE_RECOVERY_MEASURED.json), and
+[GPU replay comparison](GPU_RECOVERY_COMPARISON.json). The old2180-second failed
+trainer receipt remains separate from the current recovery process.
 
 The detached trainer, evaluator and isolated four-worker CPU scorer survive an
 SSH disconnection. Do not restart a live worker or repeat a completed output.
@@ -50,3 +71,7 @@ The queued evaluator uses a06:35UTC model deadline and a06:45UTC hard timeout,
 leaving600seconds of additional completion reserve for larger batches. Its
 per-batch admission check prevents starting new batches about240seconds before
 the model deadline. This changes scheduling only, not any scientific output ID.
+
+After complete training and evaluation, report the method comparisons, paired
+uncertainty, execution limitations and resource use to the owner. Wait for their
+next-direction decision; no optional follow-on experiment is queued.
