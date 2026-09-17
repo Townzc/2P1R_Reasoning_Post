@@ -1,3 +1,13 @@
+# Current owner scheduling amendment: overlap training and evaluation
+
+The owner requested maximum server utilization. Use
+experiments/public_math_pilot_v1/CONCURRENCY_AMENDMENT.md: after all4096 masks and
+the fixed64 audit, allow one trainer and one generator concurrently, plus CPU
+scoring. Base-dev may finish while SFT starts. Consume only committed checkpoints;
+keep separate RNG/state, fixed counts and a midnight stop. No additional arm or
+model call is authorized by this scheduling change. Earlier serial-only order
+statements are superseded for execution scheduling.
+
 # Measured engineering preflight complete; formal preparation executing next
 
 The replacement A800 completed five discarded engineering updates,64 reusable

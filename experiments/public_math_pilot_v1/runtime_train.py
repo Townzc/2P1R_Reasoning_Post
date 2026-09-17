@@ -29,7 +29,7 @@ def frozen_batches(rows):
     return [[rows[i] for i in order[j:j+32]] for j in range(0,4096,32)]
 
 
-def training_contract(identity, batches, mask_sha, learning_rates):
+def training_contract(identity, batches, mask_sha, learning_rates, concurrent_evaluation=False):
     if len(learning_rates)!=128 or learning_rates[-1]!=0:
         raise ValueError('Frozen128-step learning-rate schedule required')
     return dict(schema=1, scientific_identity=identity, arms=list(ARMS),
@@ -40,7 +40,9 @@ def training_contract(identity, batches, mask_sha, learning_rates):
         optimizer=dict(name='AdamW',betas=[.9,.999],eps=1e-8,weight_decay=0.,max_grad_norm=1.),
         microbatch=2,gradient_accumulation=16,training_length_cap=2048,packing=False,
         checkpoints=[32,64,96,128],scientific_endpoints=[64,128],formal_endpoint=128,
-        inference_not_interleaved_with_training=True,
+        generation_calls_in_training_process=0,
+        separate_evaluation_process_may_overlap=concurrent_evaluation,
+        resource_accounting='Overlapping process wall times are not additive GPU rental hours',
         implementation_sha256={n:sha(Path(__file__).with_name(n))
             for n in ('losses.py','tokenization.py','preflight.py','checkpoints.py','runtime_train.py')})
 
@@ -79,14 +81,22 @@ def manifests_for(store):
     return result
 
 
-def checked_masks(out, rows, identity):
-    out=Path(out); manifest=read(out/'MASK_MANIFEST.json');prepared=read(out/'PREPARATION_COMPLETE.json')
-    if (prepared['identity']!=identity or not prepared['technical_audit_passed']
+def checked_masks(out, rows, identity, concurrent_evaluation=False):
+    out=Path(out); manifest=read(out/'MASK_MANIFEST.json');audit=read(out/'MASK_AUDIT.json')
+    if (manifest['count']!=4096 or manifest['identity']!=identity
+            or len(audit['records'])!=64 or len(set(audit['fixed_ids']))!=64
+            or [r['id'] for r in audit['records']]!=audit['fixed_ids']
+            or any(not r['technical_alignment_passed'] for r in audit['records'])
+            or audit['masks_modified_after_audit']):
+        raise ValueError('Mask freeze and64 technical audit are incomplete')
+    if not concurrent_evaluation or (out/'PREPARATION_COMPLETE.json').exists():
+        prepared=read(out/'PREPARATION_COMPLETE.json')
+        if (prepared['identity']!=identity or not prepared['technical_audit_passed']
             or prepared['mask_manifest_sha256']!=sha(out/'MASK_MANIFEST.json')
             or prepared['audit_sha256']!=sha(out/'MASK_AUDIT.json')
             or prepared['dev_complete_sha256']!=sha(out/'generation'/'Base-dev'/'COMPLETE.json')
             or manifest['count']!=4096 or manifest['identity']!=identity):
-        raise ValueError('Formal preparation is incomplete or changed')
+            raise ValueError('Formal preparation is incomplete or changed')
     masks={}
     by_id={r['problem_id']:r for r in rows}
     for rec in manifest['records']:
@@ -103,6 +113,19 @@ def checked_masks(out, rows, identity):
     return masks
 
 
+def wait_for_training_memory(deadline):
+    """Only one training worker; allow one separately locked generation worker."""
+    waiting=False
+    while torch.cuda.is_available():
+        free,total=torch.cuda.mem_get_info()
+        if free>=50*2**30:return dict(free_bytes=free,total_bytes=total)
+        if stop_due(deadline,300):raise TimeoutError('Training memory admission reached daytime boundary')
+        if not waiting:
+            print(json.dumps(dict(event='waiting_for_training_memory',free_bytes=free,required_bytes=50*2**30)),flush=True)
+            waiting=True
+        time.sleep(2)
+
+
 def train_arm(args, contract, batches, masks, arm):
     out=Path(args.output); store=store_for(out,args.volume_root,contract,arm)
     latest=store.latest_manifest()
@@ -116,6 +139,7 @@ def train_arm(args, contract, batches, masks, arm):
     write_json(attempt_dir/'START.json',dict(arm=arm,source_commit=args.source_commit,
         contract_sha256=json_hash(contract),initial_checkpoint=latest['checkpoint_id'] if latest else None,
         started_at_utc=datetime.now(timezone.utc).isoformat()))
+    wait_for_training_memory(args.deadline_unix)
     model=load_base(args.base,training=True)
     optimizer=torch.optim.AdamW(model.parameters(),lr=5e-5,betas=(.9,.999),eps=1e-8,weight_decay=0)
     history=[];step=0;token_step=0
@@ -196,15 +220,17 @@ def train_arm(args, contract, batches, masks, arm):
 
 def run(args):
     out=Path(args.output)
-    with (out/'GPU.lock').open('a+') as lock:
+    with (out/'TRAIN_GPU.lock').open('a+') as lock:
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         torch.set_num_threads(8)
         torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
         _,identity,_=prepare_identity(args.base,args.release,args.inputs)
         released=load_inputs(args.release);rows=released['tokenized_pilot'];batches=frozen_batches(rows)
-        masks=checked_masks(out,rows,identity)
+        if read(out/'MASK_AUDIT.json')['fixed_ids']!=released['audit64']:
+            raise ValueError('Technical audit IDs differ from predeclared release')
+        masks=checked_masks(out,rows,identity,args.concurrent_evaluation)
         lr=read(Path(__file__).with_name('EXECUTION_CONTRACT.json'))['learning_rates']
-        contract=training_contract(identity,batches,sha(out/'MASK_MANIFEST.json'),lr)
+        contract=training_contract(identity,batches,sha(out/'MASK_MANIFEST.json'),lr,args.concurrent_evaluation)
         ensure_record(out/'TRAIN_CONTRACT.json',contract)
         results=[]
         for arm in ARMS:
@@ -228,4 +254,5 @@ if __name__=='__main__':
     for name in ('base','release','inputs','output','source-commit'):p.add_argument('--'+name,required=True)
     p.add_argument('--volume-root',action='append',required=True)
     p.add_argument('--deadline-unix',type=float,required=True)
+    p.add_argument('--concurrent-evaluation',action='store_true')
     print(json.dumps(run(p.parse_args()),sort_keys=True),flush=True)
