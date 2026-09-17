@@ -1,3 +1,11 @@
+# Post-E037 paired training authorized — preparation
+
+The owner requested the finite G-single/G-paired plan. E038/E039 are registered
+from E031, with shared Surface F replay,256 updates per arm,3344 planned
+generations/3600 hard cap and288 operator contexts. No new scientific outputs
+yet. Follow experiments/post_e037_goal_training/PROTOCOL.md. Historical closeouts
+and the E030 lineage correction remain unchanged.
+
 # Current closeout — E031–E036 complete; server off
 
 The owner-authorized E031–E036 queue is complete: two32-update parents and

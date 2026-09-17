@@ -1,0 +1,118 @@
+{
+  "E030_is_ancestor": false,
+  "F_per_update": 8,
+  "H_per_update": 8,
+  "H_rows_per_arm": 512,
+  "dose_comparison": {
+    "H_supervised_token_relative_difference": 0.0004535284513516036,
+    "H_within_two_percent": true,
+    "exact_equal_tokens_or_flops_claimed": false,
+    "matching": "Fixed source rows/presentations/256 updates. Exact F bytes and slots. Natural token residual retained; no answer truncation, padding filler or epoch adjustment.",
+    "rendering_adjustment": "None: two preexisting deterministic styles0/1, independent balanced allocation frozen before token audit.",
+    "shared_F_rows_equal": true,
+    "shared_F_slots_equal": true,
+    "token_residual_denominator": "G-single",
+    "total_supervised_token_relative_difference": 0.00022627164665411925
+  },
+  "effective_batch_size": 16,
+  "epochs": 4,
+  "evaluation_groups": 48,
+  "evaluation_rows": {
+    "C": 96,
+    "F": 96,
+    "H": 96
+  },
+  "files_sha256": {
+    "C.jsonl": "5e8f56812b8170ccb24f20ab2a71e502af6ad1796e128ff58a8b63dd1fd46a72",
+    "DATA_AUDIT.json": "e35220b8bca14ce7906f1f9aed5459632b309d8b4d6cc0cc0c29d64969d2a588",
+    "F.jsonl": "9d54df11ae6cad4c6f25dd4cd5d6af71fcb6dbfa3641dedbe0569360c2663748",
+    "H.jsonl": "34fe7a889f8ee1a6f5cea3685bef0032a73f2d7e8e1e3ca6f7504fc13a3ec328",
+    "LEAKAGE_AUDIT.json": "f812bc7785412cd9a0123c3245cb00840dcbf8188d44677ae4be5c0436b8a991",
+    "TRAIN_TARGET_SUPPORT_AUDIT.json": "cb3c06325d5e44f517d0ea1f7837a932c2703ab93a1a75c0600f71eb02a3f841",
+    "dose.json": "3632a62bdfc616a628584bec24ee0171fb6727beb41e7fd09cd2c451f3b59924",
+    "eval_groups.jsonl": "725f281775629ced5a0136e29a70799f7b38ac1ff5fcaa77ebed3a5b60d00706",
+    "learning_rates.json": "9f2034ff9677cbf75ec4df30613041203fd349a09d66f136b1ad4c1e3ea80cef",
+    "midpoint_H.jsonl": "edabaed1cd2f74e4a28f927c4e675360d487a31c2a5503ee9be8de8b34275c44",
+    "operator_contexts.jsonl": "875977c4192fbc3add0dd78a9bb6f1099cd66bd32fb3479fdeed55e6c7694452",
+    "paired.jsonl": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+    "schedules.json": "046f1b7ba7ba40e6580a44213a9b6b262b4e8c5db510a4728ff0e605f9db5f68",
+    "shared_F.jsonl": "9d5a6be1fbeba1f948f0c09c66faf5af33e953a59b6b0014361695d041a4be8c",
+    "single.jsonl": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+    "train_F.jsonl": "867ba43868e44d4773deadbf6ee7cbf70d2e2c81ed05c539c1fc86a65e3856e9",
+    "train_H.jsonl": "8bbaab824c54ee7a3d974cd3b0ba10cbc7c5141af29bdb4b60b91771c364aa28",
+    "train_groups.jsonl": "8b2ee7cd04b5f4bc1773af42864f94c9ed96947f24cf45715dc4f209beb225ee"
+  },
+  "generation_cap": 3600,
+  "interpretation": "New numerical instances, exploratory single-training-seed recipe contrast; no structural OOD, exact-token matching, pure mechanism or pretraining-support claim.",
+  "microbatch_size": 1,
+  "midpoint_groups": 12,
+  "new_model_calls": 0,
+  "new_training_performed": false,
+  "no_reserved_contents_read": true,
+  "operator_contexts_available_per_model": 96,
+  "operator_contexts_per_model": 96,
+  "parent": "E031",
+  "parent_manifest_sha256": "4d32b586d01d51496d4b40d33dd84fccddcacd2e05566299f4be609b3f9a2cea",
+  "planned_candidate_scores": 1152,
+  "planned_generations": 3344,
+  "planned_operator_contexts": 288,
+  "prior_artifacts_modified": false,
+  "seeds": {
+    "assignment": 2026091706,
+    "bootstrap": 2026091708,
+    "data": 2026091705,
+    "evaluation": 2026091707,
+    "training": 17
+  },
+  "shared_F_rows_per_arm": 512,
+  "shared_F_source": "experiments/thursday_probe/data_r1/surface.jsonl",
+  "shared_F_source_sha256": "9d5a6be1fbeba1f948f0c09c66faf5af33e953a59b6b0014361695d041a4be8c",
+  "source_files_sha256": {
+    "experiments/post_e036_goal_probe/data.py": "201297255a68442323906c0202b307551d600a6218fd78f55905baec55c3a5ca",
+    "experiments/post_e037_goal_training/data.py": "5cbf0e187505b0391c2a5bc2de99eb9e0899eb33b6b66957cf6d972700690fa6",
+    "experiments/thursday_probe/common.py": "0f4b923d0811d648c807940f5aff76c4c1195312ad8c59d4876b549516d5e50e",
+    "experiments/thursday_probe_v2/config.py": "b349a8b021ea3ca4a02fcf377aa33f556365acea96b8ba0e94ef944ec508b23e",
+    "src/countdown_smoke.py": "2249e313c60090958d5ddfe474dc44f2dff6337dbccc79a6ee48498254531058",
+    "src/pilot_data.py": "9b72c83c1dcc5c55fa38c3132e7c99075ff2e056bc97465e854e19be75a9d714",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "status": "FROZEN_BEFORE_NEW_MODEL_OUTPUTS_CPU_ONLY",
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  },
+  "train_diagnostic_groups": 16,
+  "training_groups": 256,
+  "training_rows": {
+    "paired": 1024,
+    "single": 1024
+  },
+  "updates_per_arm": 256
+}

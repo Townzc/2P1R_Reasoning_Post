@@ -1060,3 +1060,10 @@ While the published930bd49 continuation ran, a bounded subagent added an offline
 
 ### 2026-09-16 arithmetic v2 actual closeout
 Owner-started existing A800; published fixed source and Linux checks preceded model execution. Attempt r1 stopped before training for metadata overhead and was completely exported. Repair930bd49 reused48 audited calibration records and charged all16 interrupted probe attempts plus478 seconds. Continuation r2 completed E030 and four base/calibration evaluations, then stopped at the registered conservative runtime forecast. No prep/main cell ran. Independent analysis verified576 complete results and66 raw batches covering528 newly generated outputs;4 fault outputs remain unavailable. All64 manifest-inventoried files and full new adapters/recovery state were independently preserved; normal provider shutdown confirmed20:54:07UTC and timer cleared. A bounded review agent independently checked arithmetic/accounting and the task-stratified interpretation; no external messages were sent. Reports state partial completion, base construction failure, NLL/format gains without construction generalization, resource-planning limitations, and no automatic continuation.
+
+## Post-E037 paired-target implementation
+
+The assistant interpreted the owner-supplied execution plan, registered E038/E039,
+prepared isolated data/runtime/analysis code and independent CPU checks, and
+audited unused server checkpoints against independent backups before deletion.
+No external messages or claims of novelty. New results remain pending.
