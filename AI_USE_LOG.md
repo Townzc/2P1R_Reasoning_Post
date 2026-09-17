@@ -1110,3 +1110,38 @@ gradients, exact interrupted recovery, real cached generation alignment, durable
 queue replay and joint paired bootstrap. The pipeline uses passive observation
 for the Stage A consistency gate and has no outcome-based accuracy gate.
 Source is published before server scientific execution; no external messages.
+
+## 2026-09-17 — E040–E043 completed, independently audited and closed
+
+Codex executed the owner's finite Stage A plus four-arm decision-supervision
+plan from the exact E038/E039 step256 parents. The source
+2bb39fbdf5bf83bb471e436804e1b968262ff530 was published before execution.
+Stage A passive same-prefix greedy/logit consistency passed before training.
+All four independent 128-update runs, 4,736 unique generations and 7,552
+diagnostic sequence forwards completed, without additional model retries or
+outcome-based stopping. Candidate scoring comprises 704 contexts/2,816 scores;
+6,848 reference decomposition records are separate from autoregressive outputs.
+A descriptive launch-field erratum preserves the original frozen metadata.
+
+Independent CPU audit verified all 19,265 inventory files plus the manifest,
+eight scientific adapters, four complete optimizer/RNG recoveries, exact source
+and parent identities, every row/LR/token/mask dose, unchanged F weights and the
+per-response normalized H weighting formula. All 512 scientific updates match
+immutable journals, with zero uncommitted or interrupted work. Fixed-output CPU
+analysis checks the scientific outcomes without new model calls. H both-goal
+success is S-U13/48 versus S-D20/48 and P-U16/48 versus P-D24/48; F sampled
+transfer differences remain unclear. One seed and two recipes do not identify
+a mechanism or establish broad generalization; earlier results remain intact.
+
+Provider shutdown was confirmed at 2026-09-17 07:58:23 UTC and the temporary
+timer was cleared. Whole powered-window cost is CNY16.2778 proxy, not an invoice.
+One 4,785-second process receipt brings the cumulative ledger to 28 receipts /
+22,408 seconds, preserving every prior receipt. Explicit verified exporter
+ACK/prune records account for 30 obsolete rolling files / 6,218,016,984 bytes;
+older cleanup is not counted again. E015 unique full weights remain protected.
+
+The current status documents and registry were updated after verification;
+scientific execution source, raw records and old conclusions were not changed.
+The final account is reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md.
+The phase is complete and paused for owner adjustments; no new experiment was
+selected or launched, and no external message was sent.

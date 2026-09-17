@@ -1,6 +1,6 @@
 {
-  "scope": "Historical engineering and restricted development pilots, a complete one-seed arithmetic discovery factorial (E031–E036), frozen goal diagnostics (E037), and a completed single-seed paired-goal training comparison (E038/E039). Exploratory results do not establish a population or pure mechanism effect.",
-  "charged_gpu_seconds": 17623,
+  "scope": "Historical engineering and restricted development pilots, arithmetic discovery (E031–E036), frozen goal diagnostics (E037), paired-goal training (E038/E039), and completed within-recipe decision-supervision continuations (E040–E043). One-seed exploratory results do not establish a population or pure mechanism effect.",
+  "charged_gpu_seconds": 22408,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2597,9 +2597,56 @@
       "independent_new_checkpoints_backup_complete": true,
       "official_test_evaluated": false,
       "evidence_scope": "48 exploratory paired number groups; one training seed; no observed paired-recipe advantage on primary outcomes. Uncertainty excludes training-seed variation and does not establish equivalence or a mechanism."
+    },
+    {
+      "run_id": "post_e039_decision_supervision_v1",
+      "attempt": 1,
+      "status": "completed",
+      "receipt_status": "completed",
+      "mode": "registered_decision_supervision_continuation_phase",
+      "git_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+      "charged_gpu_seconds": 4785,
+      "records": "runs/post_e039_decision_supervision_v1",
+      "receipt": "runs/post_e039_decision_supervision_v1/attempts/attempt_000001/resource_receipt.json",
+      "phase_accounting": "reports/post_e039_decision_supervision/PHASE_LEDGER.json",
+      "model": {
+        "attention": "sdpa",
+        "autocast": "bfloat16",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "kind": "base",
+        "parameters": "float32",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tf32": false
+      },
+      "completed_training_experiment_ids": [
+        "E040",
+        "E041",
+        "E042",
+        "E043"
+      ],
+      "steps": 512,
+      "supervised_response_tokens": 530396,
+      "processed_nonpadding_tokens": 1130184,
+      "actual_generated_this_attempt": 4736,
+      "new_generation_cap": 5000,
+      "new_generation_fault_repeats": 0,
+      "operator_contexts": 704,
+      "candidate_scores": 2816,
+      "actual_forward_calls": 7552,
+      "reference_forward_calls": 6848,
+      "diagnostic_sequence_equivalents": 7552,
+      "forward_sequence_equivalent_cap": 16384,
+      "evidence_valid": true,
+      "provider_shutdown_confirmed": true,
+      "provider_timer_cleared": true,
+      "independent_new_checkpoints_backup_complete": true,
+      "official_test_evaluated": false,
+      "execution_summary": "reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md",
+      "evidence_scope": "Four equal-dose128-update continuations within two inherited recipes, one training seed and48 exploratory number groups. D-minus-U H both-goal success is13/48 to20/48 within S and16/48 to24/48 within P; F sampled transfer differences remain unclear. No pure mechanism, broad transfer or independent-seed confirmation claim.",
+      "candidate_forward_calls": 704
     }
   ],
-  "accounting_scope": "Across separate historical, E018, arithmetic-v2, post-E030 resume, E037 goal-probe and E038/E039 goal-training phases; original7200-second ledger and all prior receipts remain immutable. Process charges are not whole-instance rental invoices.",
+  "accounting_scope": "Across separate historical, E018, arithmetic-v2, post-E030 resume, E037 goal-probe, E038/E039 goal-training and E040–E043 decision-supervision phases; original7200-second ledger and all prior27 receipts remain immutable. Current28 receipts charge22408 process seconds, not whole-instance rental invoices. GPU is off and work is paused for owner adjustments.",
   "planned_experiments": [
     {
       "data": "calibration_fit",
@@ -2760,8 +2807,14 @@
       "experiment_id": "E040",
       "run_id": "decision_e040_r1",
       "updates": 128,
-      "status": "registered_not_executed",
-      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md"
+      "status": "completed",
+      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md",
+      "actual_updates": 128,
+      "manifest": "runs/post_e039_decision_supervision_v1/decision_e040_r1/run_manifest_final.json",
+      "execution_source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+      "independent_verification": "reports/post_e039_decision_supervision/INDEPENDENT_TRAINING_VERIFICATION.json",
+      "results": "reports/post_e039_decision_supervision/RESULTS.md",
+      "execution_summary": "reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md"
     },
     {
       "state": "S-D",
@@ -2771,8 +2824,14 @@
       "experiment_id": "E041",
       "run_id": "decision_e041_r1",
       "updates": 128,
-      "status": "registered_not_executed",
-      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md"
+      "status": "completed",
+      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md",
+      "actual_updates": 128,
+      "manifest": "runs/post_e039_decision_supervision_v1/decision_e041_r1/run_manifest_final.json",
+      "execution_source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+      "independent_verification": "reports/post_e039_decision_supervision/INDEPENDENT_TRAINING_VERIFICATION.json",
+      "results": "reports/post_e039_decision_supervision/RESULTS.md",
+      "execution_summary": "reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md"
     },
     {
       "state": "P-U",
@@ -2782,8 +2841,14 @@
       "experiment_id": "E042",
       "run_id": "decision_e042_r1",
       "updates": 128,
-      "status": "registered_not_executed",
-      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md"
+      "status": "completed",
+      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md",
+      "actual_updates": 128,
+      "manifest": "runs/post_e039_decision_supervision_v1/decision_e042_r1/run_manifest_final.json",
+      "execution_source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+      "independent_verification": "reports/post_e039_decision_supervision/INDEPENDENT_TRAINING_VERIFICATION.json",
+      "results": "reports/post_e039_decision_supervision/RESULTS.md",
+      "execution_summary": "reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md"
     },
     {
       "state": "P-D",
@@ -2793,8 +2858,14 @@
       "experiment_id": "E043",
       "run_id": "decision_e043_r1",
       "updates": 128,
-      "status": "registered_not_executed",
-      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md"
+      "status": "completed",
+      "protocol": "experiments/post_e039_decision_supervision/PROTOCOL.md",
+      "actual_updates": 128,
+      "manifest": "runs/post_e039_decision_supervision_v1/decision_e043_r1/run_manifest_final.json",
+      "execution_source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+      "independent_verification": "reports/post_e039_decision_supervision/INDEPENDENT_TRAINING_VERIFICATION.json",
+      "results": "reports/post_e039_decision_supervision/RESULTS.md",
+      "execution_summary": "reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md"
     }
   ],
   "phase_execution_receipts": [
@@ -2825,6 +2896,13 @@
       "charged_seconds": 3018,
       "manifest": "reports/post_e037_goal_training/PHASE_LEDGER.json",
       "note": "One worker receipt covers two logical256-update training runs and3344 new outputs; logical runs are not additional physical process receipts."
+    },
+    {
+      "phase": "E040_E043_decision_supervision",
+      "receipts": 1,
+      "charged_seconds": 4785,
+      "manifest": "reports/post_e039_decision_supervision/PHASE_LEDGER.json",
+      "note": "One worker receipt covers four logical128-update training runs,4736 generations and7552 diagnostic sequence forwards; logical runs and candidate scores are not additional process receipts."
     }
   ]
 }

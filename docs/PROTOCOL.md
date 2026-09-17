@@ -1,4 +1,44 @@
-# Post-E039 decision supervision authorized — preparation
+# Current closeout — E040–E043 complete; provider off; paused
+
+The owner-authorized decision-supervision phase is complete. E040/S-U and
+E041/S-D start from E038 step256; E042/P-U and E043/P-D start from E039 step256.
+Each completed 128 additional updates with an independent optimizer reset:
+512 updates, 4,736 unique generations and 7,552 diagnostic sequence forwards.
+The latter include 704 candidate contexts/2,816 candidate scores and 6,848
+reference decompositions. Execution source is
+2bb39fbdf5bf83bb471e436804e1b968262ff530. Stage A consistency passed before
+training; no accuracy gate, extra generation or automatic continuation was used.
+
+On the fresh 48 exploratory number groups, H greedy both-target success is
+13/48 for S-U versus 20/48 for S-D, and 16/48 for P-U versus 24/48 for P-D.
+These are D-minus-U comparisons within each recipe, not parent-to-child gains.
+F sampled pass@1 differences remain unclear. This one-training-seed result does
+not establish a pure mechanism, broad transfer, structural OOD or equivalence;
+the two recipes are not two independent seeds. Earlier E038/E039 findings remain
+unchanged on their original evaluation pool.
+
+All 19,265 inventoried files plus the export manifest are independently preserved,
+including eight scientific adapters and four latest optimizer/RNG states.
+Independent training verification confirms every 128-step dose/LR/mask identity,
+unchanged F weights, normalized H scalar weight mass and zero uncommitted updates.
+Explicit exporter ACK/prune receipts cover 30 obsolete rolling recovery files,
+6,218,016,984 bytes; this excludes earlier historical cleanup.
+
+Provider off confirmed 2026-09-17 07:58:23 UTC; the temporary timer was cleared.
+The whole powered-window proxy is CNY16.2778 at CNY7.98/hour, not an invoice.
+One new process receipt charges 4,785 seconds; combined totals are 28 receipts /
+22,408 seconds. All prior process and generation ledgers remain immutable.
+Preserve E015 unique weights: its independent full backup remains incomplete.
+Do not release/delete the instance volume.
+
+Read [the final execution summary](../reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md),
+[results](../reports/post_e039_decision_supervision/RESULTS.md) and [cost/closeout evidence](../reports/post_e039_decision_supervision/COST_AND_CLOSEOUT.json).
+The task is complete and paused for the owner's adjustments. No new experiment,
+GPU/model call, sweep or automatic restart is queued or authorized. Preparation
+and earlier current-state statements below are historical snapshots superseded
+by this closeout.
+
+# Historical authorization — Post-E039 preparation
 
 The owner requested the finite Stage A + four-arm continuation plan on the existing
 A800. E040/S-U, E041/S-D, E042/P-U and E043/P-D are registered from E038/E039
@@ -8,7 +48,7 @@ whole powered cap4hours/CNY40. Follow experiments/post_e039_decision_supervision
 No new scientific outputs yet. Historical outcomes and ledgers remain unchanged;
 the current owner's authorization supersedes the previous pause for this phase.
 
-# Current closeout — E038/E039 complete; provider off; paused
+# Historical closeout — E038/E039 complete; provider off; paused
 
 The owner-authorized G-single/G-paired phase completed from E031 step32:
 256 updates per arm, 3,344 unique generations, zero fault repeats, 288 operator

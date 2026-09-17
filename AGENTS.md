@@ -1,4 +1,44 @@
-# Post-E039 decision supervision authorized — preparation
+# Current closeout — E040–E043 complete; provider off; paused
+
+The owner-authorized decision-supervision phase is complete. E040/S-U and
+E041/S-D start from E038 step256; E042/P-U and E043/P-D start from E039 step256.
+Each completed 128 additional updates with an independent optimizer reset:
+512 updates, 4,736 unique generations and 7,552 diagnostic sequence forwards.
+The latter include 704 candidate contexts/2,816 candidate scores and 6,848
+reference decompositions. Execution source is
+2bb39fbdf5bf83bb471e436804e1b968262ff530. Stage A consistency passed before
+training; no accuracy gate, extra generation or automatic continuation was used.
+
+On the fresh 48 exploratory number groups, H greedy both-target success is
+13/48 for S-U versus 20/48 for S-D, and 16/48 for P-U versus 24/48 for P-D.
+These are D-minus-U comparisons within each recipe, not parent-to-child gains.
+F sampled pass@1 differences remain unclear. This one-training-seed result does
+not establish a pure mechanism, broad transfer, structural OOD or equivalence;
+the two recipes are not two independent seeds. Earlier E038/E039 findings remain
+unchanged on their original evaluation pool.
+
+All 19,265 inventoried files plus the export manifest are independently preserved,
+including eight scientific adapters and four latest optimizer/RNG states.
+Independent training verification confirms every 128-step dose/LR/mask identity,
+unchanged F weights, normalized H scalar weight mass and zero uncommitted updates.
+Explicit exporter ACK/prune receipts cover 30 obsolete rolling recovery files,
+6,218,016,984 bytes; this excludes earlier historical cleanup.
+
+Provider off confirmed 2026-09-17 07:58:23 UTC; the temporary timer was cleared.
+The whole powered-window proxy is CNY16.2778 at CNY7.98/hour, not an invoice.
+One new process receipt charges 4,785 seconds; combined totals are 28 receipts /
+22,408 seconds. All prior process and generation ledgers remain immutable.
+Preserve E015 unique weights: its independent full backup remains incomplete.
+Do not release/delete the instance volume.
+
+Read [the final execution summary](reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md),
+[results](reports/post_e039_decision_supervision/RESULTS.md) and [cost/closeout evidence](reports/post_e039_decision_supervision/COST_AND_CLOSEOUT.json).
+The task is complete and paused for the owner's adjustments. No new experiment,
+GPU/model call, sweep or automatic restart is queued or authorized. Preparation
+and earlier current-state statements below are historical snapshots superseded
+by this closeout.
+
+# Historical authorization — Post-E039 preparation
 
 The owner requested the finite Stage A + four-arm continuation plan on the existing
 A800. E040/S-U, E041/S-D, E042/P-U and E043/P-D are registered from E038/E039
@@ -8,7 +48,7 @@ whole powered cap4hours/CNY40. Follow experiments/post_e039_decision_supervision
 No new scientific outputs yet. Historical outcomes and ledgers remain unchanged;
 the current owner's authorization supersedes the previous pause for this phase.
 
-# Current closeout — E038/E039 complete; provider off; paused
+# Historical closeout — E038/E039 complete; provider off; paused
 
 The owner-authorized G-single/G-paired phase completed from E031 step32:
 256 updates per arm, 3,344 unique generations, zero fault repeats, 288 operator
@@ -77,10 +117,10 @@ Read README.md, docs/PROTOCOL.md, docs/DECISIONS.md and reports/STATUS.md before
 - P/T/R are constrained under fixed budget. Structural syntax is a proxy, not cognitive-strategy equivalence. Never invent outcomes or novelty.
 
 ## Workflow
-- Latest actual closeout (2026-09-16, post-E030): E031–E036 completed once, all1088updates/4192newoutputs/20adapters/6recoveries verified. Read reports/ARITHMETIC_E031_E036_RESULTS.md and experiments/thursday_probe_v2/THURSDAY_BRIEF_resume_r1.md. Provider off23:02:11UTC, timer cleared;1h38m11s/CNY13.06 proxy, not invoice. New1receipt4541s; combined25/13456; old24/8915 unchanged. Four-grid interaction is inconclusive and compute-parent probes saturate; do not claim selective readiness or pure mechanism. The task is paused for owner planning; no new GPU job or automatic extension. Preserve E015 unique weights.
+- Historical closeout (2026-09-16, post-E030): E031–E036 completed once, all1088updates/4192newoutputs/20adapters/6recoveries verified. Read reports/ARITHMETIC_E031_E036_RESULTS.md and experiments/thursday_probe_v2/THURSDAY_BRIEF_resume_r1.md. Provider off23:02:11UTC, timer cleared;1h38m11s/CNY13.06 proxy, not invoice. New1receipt4541s; combined25/13456; old24/8915 unchanged. Four-grid interaction is inconclusive and compute-parent probes saturate; do not claim selective readiness or pure mechanism. The task is paused for owner planning; no new GPU job or automatic extension. Preserve E015 unique weights.
 - Historical closeout (2026-09-16, before post-E030 continuation): arithmetic v2 stopped after E030 and C0 measurements at conservative resource admission (23,059s predicted vs6,827s remaining), not a score gate. The requested two-prep/four-child comparison remains incomplete. Read experiments/thursday_probe_v2/CURRENT_STATUS.md and THURSDAY_BRIEF_v2.md. Construction0/16 ->1/16, held-out-check construction0/8 ->0/8; do not conflate total31/48 ->33/48 with construction learning.576 unique completed outputs independently audited,592 actual attempts including16 fault repeats (4 fault rows unavailable); all new adapters/recovery states exported. Provider off20:54:07UTC, timer cleared;43m07s/CNY5.73 proxy, not invoice. Two v2 receipts1543s; combined24/8915, historical ledger unchanged. No automatic restart or new sweep. Owner will adjust runtime plan; preserve E015.
 - Historical authorization before the above actual closeout (2026-09-16, after E018 closeout): the owner explicitly requested execution of the post-E018 revision. Follow experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md and CURRENT_STATUS.md. E018 remains failed; its retention gate no longer blocks the separate arithmetic protocol. Prepare/publish offline, then notify the owner to start the existing A800 for E030–E036: independent arithmetic calibration, two prep parents and all four main cells, subject only to hard implementation/resource stops. No score/probe-significance gate, alternative interface, optional extension or new model. Keep historical ledgers/source unchanged and E015 protected. The prior closeout entries below remain historical.
-- Current closeout (2026-09-16): E018 completed once after the owner authorized the finite Thursday plan. Its90% retention gate failed (34/39), despite39/64 ->51/64 observed-dev correctness and45.90% reference-NLL reduction. No prep/main/fallback run followed. Read experiments/thursday_probe/CURRENT_STATUS.md and THURSDAY_BRIEF.md. All160 raw streams and full adapter backup are independently verified; provider shutdown confirmed. Separate phase915 seconds authorized/371 charged; old21-receipt7001-second ledger unchanged, combined22 receipts7372 seconds, zero reservations. No automatic retry or further GPU startup; the owner will adjust the plan. Preserve E015 unique weights.
+- Historical closeout (2026-09-16): E018 completed once after the owner authorized the finite Thursday plan. Its90% retention gate failed (34/39), despite39/64 ->51/64 observed-dev correctness and45.90% reference-NLL reduction. No prep/main/fallback run followed. Read experiments/thursday_probe/CURRENT_STATUS.md and THURSDAY_BRIEF.md. All160 raw streams and full adapter backup are independently verified; provider shutdown confirmed. Separate phase915 seconds authorized/371 charged; old21-receipt7001-second ledger unchanged, combined22 receipts7372 seconds, zero reservations. No automatic retry or further GPU startup; the owner will adjust the plan. Preserve E015 unique weights.
 - Historical closeout (2026-09-15 UTC; superseded by September16 above): E017 completed and its usability screen passed (49 parsed/39 task-correct,47 EOS/16 boundary/1 length cap,zero invalid or false EOS). All64 Linux checks and matching server/local audits pass; all retained prefixes match E016, whose old scores and failed screens remain immutable. Provider shutdown and18-file export are verified. Current ledger has21 receipts,7001 used/199 remaining,zero reservations; current hash48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e. Read reports/REAL_MATH_E017_RESULTS.md and docs/NEXT_SESSION.md. Do not replay E017 or restore the old20-entry ledger. No GPU startup is needed until P006 B/C review and a verified E018 release; no new allowance or training is authorized. Preserve E015 unique weights.
 - Historical execution readiness (2026-09-10 UTC), superseded by the closeout above: the owner accepted E017 after P006. Source and fixed64-observed-parent input release are published;62 CPU tests pass and2 GNU-timeout tests await Linux. Independent160-stream stopping replay,20-receipt reconciliation and clean-checkout transfer pass. Read reports/REAL_MATH_E017_READY.md and docs/NEXT_SESSION.md. The existing A800 is now needed for one base-only stop-contract calibration:255 process seconds maximum,15-minute whole-rental ceiling/CNY2, compact export then provider-confirmed shutdown. No server/model call or reservation occurred in preparation; do not auto-run E018 or a grid. Keep old E016 scores and failures; E015 independent full weights recovery remains incomplete, so do not dispose of its instance.
 - Historical E015 closeout (2026-09-10 UTC): E015 is complete and passes the engineering gate; do not replay it. Provider shutdown is confirmed. Compact results/current ledger are independently retained, but the complete E015 checkpoint is only on the stopped instance volume; the local copy is partial. Do not release/delete that instance before verified independent recovery. Keep the server off for analysis/planning; read reports/REAL_MATH_E015_RESULTS.md and docs/NEXT_SESSION.md.

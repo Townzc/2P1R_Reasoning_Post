@@ -1,0 +1,4784 @@
+{
+  "midpoint_scope": "Fixed step64 dynamics only; formal endpoint step128; no selection by outcomes.",
+  "training": [
+    {
+      "final_manifest": {
+        "budget": {
+          "encoded_rows_sha256": "00547d9eb33c6a0fe637b8228e4d755e14cef7eed3b3b277afc6c602fd536e78",
+          "processed_nonpadding_tokens": 282532,
+          "supervised_response_tokens": 132584
+        },
+        "checkpoint": "runs/post_e039_decision_supervision_v1/decision_e040_r1/checkpoint_128",
+        "checkpoint0_is_parent_reference": true,
+        "completed_updates": 128,
+        "data": "single",
+        "experiment_id": "E040",
+        "final_adapter": {
+          "parameters": 18464768,
+          "sha256": "8367502548808d872b3ccaec707494e4349461e0bbe98a765ca07363c1c7bf10"
+        },
+        "finished_at_utc": "2026-09-17T06:48:25.817171+00:00",
+        "frozen_base_unchanged": true,
+        "identity": {
+          "base": {
+            "parameters": 1543714304,
+            "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+          },
+          "data_sha256": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+          "decision_spans_sha256": "5661520afa4d694589361eb40cf50cdc1cb16930ae697c4121691935740151fe",
+          "objective": "U",
+          "parent": {
+            "parameters": 18464768,
+            "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+          },
+          "run_id": "decision_e040_r1",
+          "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+        },
+        "objective": "U",
+        "optimizer_reset": true,
+        "parent": "E038",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "recoverable_state": {
+          "bytes": 222098869,
+          "created_at_utc": "2026-09-17T06:48:12.909620+00:00",
+          "file": "rolling_step_000128_f94bd45e784b4d9ba4f477826ec22b8a.pt",
+          "fingerprint": "df2337b7d006f03687e7e8e7444d49f94a72ee726b4f0f4d8fc7bd9577d5b4f1",
+          "sha256": "df04b044e862a7ea8d215f85c83a899b1b41c2786dc5cf80f5a620cfaaaae70e",
+          "step": 128
+        },
+        "run_id": "decision_e040_r1",
+        "scheduler_reset": true,
+        "seed": 17,
+        "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+        "started_at_utc": "2026-09-17T06:42:49.499394+00:00",
+        "state": "S-U",
+        "status": "completed",
+        "updates": 128
+      },
+      "interpretation": "Objective loss differs between U and D; only ordinary unweighted reference NLL is comparable.",
+      "state": "S-U",
+      "status": "completed",
+      "training_identity": {
+        "created_at_utc": "2026-09-17T06:42:49.647472+00:00",
+        "fingerprint": "df2337b7d006f03687e7e8e7444d49f94a72ee726b4f0f4d8fc7bd9577d5b4f1",
+        "initial_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "protocol": {
+          "F_weights": 1.0,
+          "H_weight_mass": "per_response_raw_supervised_tokens",
+          "checkpoint_steps": [
+            0,
+            64,
+            128
+          ],
+          "clip": 1.0,
+          "decision_masks_sha256": "122b3b17c9a4f8920602287c7a80d39413dd9ee54ef21db790d8887cd1bcecc2",
+          "decision_multiplier": 1.0,
+          "denominator": "raw_supervised_tokens",
+          "encoded_rows_sha256": "a27184856391057af9ac37d92fbba866272c2f8961d69f5591b00d3990f79074",
+          "identity": {
+            "base": {
+              "parameters": 1543714304,
+              "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+            },
+            "data_sha256": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+            "decision_spans_sha256": "5661520afa4d694589361eb40cf50cdc1cb16930ae697c4121691935740151fe",
+            "objective": "U",
+            "parent": {
+              "parameters": 18464768,
+              "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+            },
+            "run_id": "decision_e040_r1",
+            "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+          },
+          "identity_sha256": "c02283f776d73ec0a2c7c06c5fa973e407cf651029bde13d08dcd67e06e9ee72",
+          "lr_vector_sha256": "bef94c65a8a38ec50ea82602db705c446229920435dcf83e76e5f06c33926fa3",
+          "microbatch": 1,
+          "objective": "U",
+          "optimizer": "AdamW(.9,.999,1e-8,0)",
+          "schedule_sha256": "ea96b14a411dabac324c917dfcc9ea4f58dc1feb058f87dc51551f5cc09c986a",
+          "total_updates": 128,
+          "training_seed": 17
+        }
+      }
+    },
+    {
+      "final_manifest": {
+        "budget": {
+          "encoded_rows_sha256": "00547d9eb33c6a0fe637b8228e4d755e14cef7eed3b3b277afc6c602fd536e78",
+          "processed_nonpadding_tokens": 282532,
+          "supervised_response_tokens": 132584
+        },
+        "checkpoint": "runs/post_e039_decision_supervision_v1/decision_e041_r1/checkpoint_128",
+        "checkpoint0_is_parent_reference": true,
+        "completed_updates": 128,
+        "data": "single",
+        "experiment_id": "E041",
+        "final_adapter": {
+          "parameters": 18464768,
+          "sha256": "dcbdc798aca57c7fe1146c582a58406fcf6c8b0918fa6296d869e4da6b3ea297"
+        },
+        "finished_at_utc": "2026-09-17T06:53:51.456748+00:00",
+        "frozen_base_unchanged": true,
+        "identity": {
+          "base": {
+            "parameters": 1543714304,
+            "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+          },
+          "data_sha256": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+          "decision_spans_sha256": "5661520afa4d694589361eb40cf50cdc1cb16930ae697c4121691935740151fe",
+          "objective": "D",
+          "parent": {
+            "parameters": 18464768,
+            "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+          },
+          "run_id": "decision_e041_r1",
+          "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+        },
+        "objective": "D",
+        "optimizer_reset": true,
+        "parent": "E038",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "recoverable_state": {
+          "bytes": 222098869,
+          "created_at_utc": "2026-09-17T06:53:42.370383+00:00",
+          "file": "rolling_step_000128_295d864429e44ab2beb774d6e419e77f.pt",
+          "fingerprint": "800957945dc8a43b7a9a43452bda5000edbe41ab660e26a980f3cdc300aa4633",
+          "sha256": "ae4fedc68202227cce52ffcc2441f32e591ffc0757360f1207398663b963e79c",
+          "step": 128
+        },
+        "run_id": "decision_e041_r1",
+        "scheduler_reset": true,
+        "seed": 17,
+        "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+        "started_at_utc": "2026-09-17T06:48:26.124613+00:00",
+        "state": "S-D",
+        "status": "completed",
+        "updates": 128
+      },
+      "interpretation": "Objective loss differs between U and D; only ordinary unweighted reference NLL is comparable.",
+      "state": "S-D",
+      "status": "completed",
+      "training_identity": {
+        "created_at_utc": "2026-09-17T06:48:26.275699+00:00",
+        "fingerprint": "800957945dc8a43b7a9a43452bda5000edbe41ab660e26a980f3cdc300aa4633",
+        "initial_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "protocol": {
+          "F_weights": 1.0,
+          "H_weight_mass": "per_response_raw_supervised_tokens",
+          "checkpoint_steps": [
+            0,
+            64,
+            128
+          ],
+          "clip": 1.0,
+          "decision_masks_sha256": "122b3b17c9a4f8920602287c7a80d39413dd9ee54ef21db790d8887cd1bcecc2",
+          "decision_multiplier": 5.0,
+          "denominator": "raw_supervised_tokens",
+          "encoded_rows_sha256": "a27184856391057af9ac37d92fbba866272c2f8961d69f5591b00d3990f79074",
+          "identity": {
+            "base": {
+              "parameters": 1543714304,
+              "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+            },
+            "data_sha256": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+            "decision_spans_sha256": "5661520afa4d694589361eb40cf50cdc1cb16930ae697c4121691935740151fe",
+            "objective": "D",
+            "parent": {
+              "parameters": 18464768,
+              "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+            },
+            "run_id": "decision_e041_r1",
+            "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+          },
+          "identity_sha256": "85f937e20a4b1923ca57c3afe8dbbf40c731a501d3bed5ac88526959dda28cc4",
+          "lr_vector_sha256": "bef94c65a8a38ec50ea82602db705c446229920435dcf83e76e5f06c33926fa3",
+          "microbatch": 1,
+          "objective": "D",
+          "optimizer": "AdamW(.9,.999,1e-8,0)",
+          "schedule_sha256": "ea96b14a411dabac324c917dfcc9ea4f58dc1feb058f87dc51551f5cc09c986a",
+          "total_updates": 128,
+          "training_seed": 17
+        }
+      }
+    },
+    {
+      "final_manifest": {
+        "budget": {
+          "encoded_rows_sha256": "cb48eb3118b9e044263d1535226695f5e0cb4f249e2595e114c75196006de396",
+          "processed_nonpadding_tokens": 282560,
+          "supervised_response_tokens": 132614
+        },
+        "checkpoint": "runs/post_e039_decision_supervision_v1/decision_e042_r1/checkpoint_128",
+        "checkpoint0_is_parent_reference": true,
+        "completed_updates": 128,
+        "data": "paired",
+        "experiment_id": "E042",
+        "final_adapter": {
+          "parameters": 18464768,
+          "sha256": "927a1c8ac4d78b465ad40e6601de9ed2dd7a86a69ec4cd7f3b6c5a00681a1a25"
+        },
+        "finished_at_utc": "2026-09-17T06:59:21.691505+00:00",
+        "frozen_base_unchanged": true,
+        "identity": {
+          "base": {
+            "parameters": 1543714304,
+            "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+          },
+          "data_sha256": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+          "decision_spans_sha256": "26d756ae56a3c9fd3334449eab0af8de83f002fbda5ac1855949f2b6256428da",
+          "objective": "U",
+          "parent": {
+            "parameters": 18464768,
+            "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+          },
+          "run_id": "decision_e042_r1",
+          "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+        },
+        "objective": "U",
+        "optimizer_reset": true,
+        "parent": "E039",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "recoverable_state": {
+          "bytes": 222098869,
+          "created_at_utc": "2026-09-17T06:59:11.520257+00:00",
+          "file": "rolling_step_000128_11341c49d6394b3986d71ff6b2733132.pt",
+          "fingerprint": "c56f90af58f104e06fb4567c681164973778db587470d137d574f21d5c6a4da6",
+          "sha256": "fa628d9446a92b6827e06fb8543729e08ab53c3f70ac1f322fe628ede0f90b0a",
+          "step": 128
+        },
+        "run_id": "decision_e042_r1",
+        "scheduler_reset": true,
+        "seed": 17,
+        "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+        "started_at_utc": "2026-09-17T06:53:51.741627+00:00",
+        "state": "P-U",
+        "status": "completed",
+        "updates": 128
+      },
+      "interpretation": "Objective loss differs between U and D; only ordinary unweighted reference NLL is comparable.",
+      "state": "P-U",
+      "status": "completed",
+      "training_identity": {
+        "created_at_utc": "2026-09-17T06:53:51.891323+00:00",
+        "fingerprint": "c56f90af58f104e06fb4567c681164973778db587470d137d574f21d5c6a4da6",
+        "initial_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "protocol": {
+          "F_weights": 1.0,
+          "H_weight_mass": "per_response_raw_supervised_tokens",
+          "checkpoint_steps": [
+            0,
+            64,
+            128
+          ],
+          "clip": 1.0,
+          "decision_masks_sha256": "16173953b2174978a9385f03afcf9f5fc068996eafae03de10c882d236cfcbca",
+          "decision_multiplier": 1.0,
+          "denominator": "raw_supervised_tokens",
+          "encoded_rows_sha256": "ea0d1139601a7ab17d5c33582cb6c9af73a56cb5fef5ca562e0d0d0f4c38be05",
+          "identity": {
+            "base": {
+              "parameters": 1543714304,
+              "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+            },
+            "data_sha256": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+            "decision_spans_sha256": "26d756ae56a3c9fd3334449eab0af8de83f002fbda5ac1855949f2b6256428da",
+            "objective": "U",
+            "parent": {
+              "parameters": 18464768,
+              "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+            },
+            "run_id": "decision_e042_r1",
+            "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+          },
+          "identity_sha256": "096252a0baa325e0b945e2e639287c55b34506cb12ebb00f27bcf48b166c1142",
+          "lr_vector_sha256": "bef94c65a8a38ec50ea82602db705c446229920435dcf83e76e5f06c33926fa3",
+          "microbatch": 1,
+          "objective": "U",
+          "optimizer": "AdamW(.9,.999,1e-8,0)",
+          "schedule_sha256": "ea96b14a411dabac324c917dfcc9ea4f58dc1feb058f87dc51551f5cc09c986a",
+          "total_updates": 128,
+          "training_seed": 17
+        }
+      }
+    },
+    {
+      "final_manifest": {
+        "budget": {
+          "encoded_rows_sha256": "cb48eb3118b9e044263d1535226695f5e0cb4f249e2595e114c75196006de396",
+          "processed_nonpadding_tokens": 282560,
+          "supervised_response_tokens": 132614
+        },
+        "checkpoint": "runs/post_e039_decision_supervision_v1/decision_e043_r1/checkpoint_128",
+        "checkpoint0_is_parent_reference": true,
+        "completed_updates": 128,
+        "data": "paired",
+        "experiment_id": "E043",
+        "final_adapter": {
+          "parameters": 18464768,
+          "sha256": "d3b69d2b13aaa47412a31948550334c29a0199ebfe1f9838258b65943b5558f3"
+        },
+        "finished_at_utc": "2026-09-17T07:04:51.997887+00:00",
+        "frozen_base_unchanged": true,
+        "identity": {
+          "base": {
+            "parameters": 1543714304,
+            "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+          },
+          "data_sha256": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+          "decision_spans_sha256": "26d756ae56a3c9fd3334449eab0af8de83f002fbda5ac1855949f2b6256428da",
+          "objective": "D",
+          "parent": {
+            "parameters": 18464768,
+            "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+          },
+          "run_id": "decision_e043_r1",
+          "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+        },
+        "objective": "D",
+        "optimizer_reset": true,
+        "parent": "E039",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "recoverable_state": {
+          "bytes": 222098869,
+          "created_at_utc": "2026-09-17T07:04:43.822205+00:00",
+          "file": "rolling_step_000128_5659732089e849e4a1553c6acbfc95e5.pt",
+          "fingerprint": "525c117c2cb068fa9cf181735b4c09cccccdeaae2994b665a5e4ccbf354904fb",
+          "sha256": "33775270d44859e42982b8efaab359716638d797690f3ae2050697b101237885",
+          "step": 128
+        },
+        "run_id": "decision_e043_r1",
+        "scheduler_reset": true,
+        "seed": 17,
+        "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530",
+        "started_at_utc": "2026-09-17T06:59:21.990559+00:00",
+        "state": "P-D",
+        "status": "completed",
+        "updates": 128
+      },
+      "interpretation": "Objective loss differs between U and D; only ordinary unweighted reference NLL is comparable.",
+      "state": "P-D",
+      "status": "completed",
+      "training_identity": {
+        "created_at_utc": "2026-09-17T06:59:22.143738+00:00",
+        "fingerprint": "525c117c2cb068fa9cf181735b4c09cccccdeaae2994b665a5e4ccbf354904fb",
+        "initial_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "protocol": {
+          "F_weights": 1.0,
+          "H_weight_mass": "per_response_raw_supervised_tokens",
+          "checkpoint_steps": [
+            0,
+            64,
+            128
+          ],
+          "clip": 1.0,
+          "decision_masks_sha256": "16173953b2174978a9385f03afcf9f5fc068996eafae03de10c882d236cfcbca",
+          "decision_multiplier": 5.0,
+          "denominator": "raw_supervised_tokens",
+          "encoded_rows_sha256": "ea0d1139601a7ab17d5c33582cb6c9af73a56cb5fef5ca562e0d0d0f4c38be05",
+          "identity": {
+            "base": {
+              "parameters": 1543714304,
+              "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+            },
+            "data_sha256": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+            "decision_spans_sha256": "26d756ae56a3c9fd3334449eab0af8de83f002fbda5ac1855949f2b6256428da",
+            "objective": "D",
+            "parent": {
+              "parameters": 18464768,
+              "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+            },
+            "run_id": "decision_e043_r1",
+            "source_commit": "2bb39fbdf5bf83bb471e436804e1b968262ff530"
+          },
+          "identity_sha256": "8a0f8bc7c73e194c31f92d13b00ecb23902ea35701fcb02367dc0220e393dd85",
+          "lr_vector_sha256": "bef94c65a8a38ec50ea82602db705c446229920435dcf83e76e5f06c33926fa3",
+          "microbatch": 1,
+          "objective": "D",
+          "optimizer": "AdamW(.9,.999,1e-8,0)",
+          "schedule_sha256": "ea96b14a411dabac324c917dfcc9ea4f58dc1feb058f87dc51551f5cc09c986a",
+          "total_updates": 128,
+          "training_seed": 17
+        }
+      }
+    }
+  ],
+  "views": [
+    {
+      "checkpoint_step": 256,
+      "data_key": "train_F",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 256,
+      "generations": 256,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 256
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 256,
+          "mean": 1.0,
+          "numerator": 256,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 218,
+            "true": 38
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.0851063829787234,
+            0.20668892977123657
+          ],
+          "group_ci": [
+            0.10546875,
+            0.1953125
+          ],
+          "groups": 256,
+          "mean": 0.1484375,
+          "numerator": 38,
+          "raw_fraction": 0.1484375
+        },
+        "failures": {
+          "none": 38,
+          "parse": 1,
+          "wrong_answer_or_resources": 217
+        },
+        "free_correct": {
+          "counts": {
+            "false": 218,
+            "true": 38
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.0851063829787234,
+            0.20668892977123657
+          ],
+          "group_ci": [
+            0.10546875,
+            0.1953125
+          ],
+          "groups": 256,
+          "mean": 0.1484375,
+          "numerator": 38,
+          "raw_fraction": 0.1484375
+        },
+        "generations": 256,
+        "groups": 256,
+        "intermediate_arithmetic": {
+          "NA": 8,
+          "consistent": 221,
+          "inconsistent": 27
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 256
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 256,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 1,
+            "true": 255
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.9874463802257305,
+            1.0
+          ],
+          "group_ci": [
+            0.98828125,
+            1.0
+          ],
+          "groups": 256,
+          "mean": 0.99609375,
+          "numerator": 255,
+          "raw_fraction": 0.99609375
+        },
+        "questions": 256,
+        "reaches_target": {
+          "counts": {
+            "NA": 1,
+            "false": 214,
+            "true": 41
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.09473467619666451,
+            0.2210533080773914
+          ],
+          "group_ci": [
+            0.1171875,
+            0.20703125
+          ],
+          "groups": 256,
+          "mean": 0.16015625,
+          "numerator": 41,
+          "raw_fraction": 0.16015625
+        },
+        "resource_target_categories": {
+          "both_satisfied": 38,
+          "both_wrong": 68,
+          "resource_correct_target_wrong": 146,
+          "target_correct_resource_wrong": 3,
+          "unparseable": 1
+        },
+        "retained_length_quantiles": {
+          "max": 113.0,
+          "min": 57.0,
+          "p25": 63.0,
+          "p50": 66.0,
+          "p75": 78.0,
+          "p95": 92.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 256
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 256,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 256
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 1,
+            "false": 71,
+            "true": 184
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.6746025020177563,
+            0.7711453326587402
+          ],
+          "group_ci": [
+            0.6640625,
+            0.7734375
+          ],
+          "groups": 256,
+          "mean": 0.71875,
+          "numerator": 184,
+          "raw_fraction": 0.71875
+        }
+      },
+      "name": "E038_stage_a_F_greedy",
+      "questions": 256,
+      "samples": 1,
+      "sampling": false,
+      "state": "E038",
+      "status": "measured",
+      "view": "stage_a"
+    },
+    {
+      "checkpoint_step": 256,
+      "data_key": "train_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 32,
+          "families": 27,
+          "family_ci": [
+            0.09090909090909091,
+            0.36666666666666664
+          ],
+          "group_ci": [
+            0.09375,
+            0.375
+          ],
+          "groups": 32,
+          "mean": 0.21875,
+          "numerator": 7
+        },
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 28,
+            "true": 36
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.45454545454545453,
+            0.6617647058823529
+          ],
+          "group_ci": [
+            0.46875,
+            0.65625
+          ],
+          "groups": 32,
+          "mean": 0.5625,
+          "numerator": 36,
+          "raw_fraction": 0.5625
+        },
+        "failures": {
+          "none": 36,
+          "template_violation": 1,
+          "wrong_answer_or_resources": 27
+        },
+        "free_correct": {
+          "counts": {
+            "false": 28,
+            "true": 36
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.45454545454545453,
+            0.6617647058823529
+          ],
+          "group_ci": [
+            0.46875,
+            0.65625
+          ],
+          "groups": 32,
+          "mean": 0.5625,
+          "numerator": 36,
+          "raw_fraction": 0.5625
+        },
+        "generations": 64,
+        "groups": 32,
+        "interface_error_categories": {
+          "strict_correct": 36,
+          "template_followed_wrong_hole_operator": 27,
+          "template_input_resources_changed": 1
+        },
+        "intermediate_arithmetic": {
+          "consistent": 63,
+          "inconsistent": 1
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 28,
+            "true": 36
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.45454545454545453,
+            0.6617647058823529
+          ],
+          "group_ci": [
+            0.46875,
+            0.65625
+          ],
+          "groups": 32,
+          "mean": 0.5625,
+          "numerator": 36,
+          "raw_fraction": 0.5625
+        },
+        "parsed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "false": 28,
+            "true": 36
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.45454545454545453,
+            0.6617647058823529
+          ],
+          "group_ci": [
+            0.46875,
+            0.65625
+          ],
+          "groups": 32,
+          "mean": 0.5625,
+          "numerator": 36,
+          "raw_fraction": 0.5625
+        },
+        "resource_target_categories": {
+          "both_satisfied": 36,
+          "both_wrong": 1,
+          "resource_correct_target_wrong": 27
+        },
+        "retained_length_quantiles": {
+          "max": 83.0,
+          "min": 58.0,
+          "p25": 63.75,
+          "p50": 65.0,
+          "p75": 67.0,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.9482758620689655,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.71875,
+            "numerator": 23
+          },
+          "countergoal": {
+            "H_target_supervised": false,
+            "denominator": 32,
+            "fraction": 0.40625,
+            "numerator": 13
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.9482758620689655,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        }
+      },
+      "name": "E038_stage_a_H_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "E038",
+      "status": "measured",
+      "view": "stage_a"
+    },
+    {
+      "checkpoint_step": 256,
+      "data_key": "train_F",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 256,
+      "generations": 256,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "false": 1,
+            "true": 255
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.9859154929577465,
+            1.0
+          ],
+          "group_ci": [
+            0.98828125,
+            1.0
+          ],
+          "groups": 256,
+          "mean": 0.99609375,
+          "numerator": 255,
+          "raw_fraction": 0.99609375
+        },
+        "correct": {
+          "counts": {
+            "false": 221,
+            "true": 35
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.0762321161648516,
+            0.19387852099014508
+          ],
+          "group_ci": [
+            0.09765625,
+            0.1796875
+          ],
+          "groups": 256,
+          "mean": 0.13671875,
+          "numerator": 35,
+          "raw_fraction": 0.13671875
+        },
+        "failures": {
+          "none": 35,
+          "parse": 1,
+          "stop_length_cap": 1,
+          "wrong_answer_or_resources": 219
+        },
+        "free_correct": {
+          "counts": {
+            "false": 221,
+            "true": 35
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.0762321161648516,
+            0.19387852099014508
+          ],
+          "group_ci": [
+            0.09765625,
+            0.1796875
+          ],
+          "groups": 256,
+          "mean": 0.13671875,
+          "numerator": 35,
+          "raw_fraction": 0.13671875
+        },
+        "generations": 256,
+        "groups": 256,
+        "intermediate_arithmetic": {
+          "NA": 4,
+          "consistent": 227,
+          "inconsistent": 25
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 256
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 256,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 2,
+            "true": 254
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.9793089140077263,
+            1.0
+          ],
+          "group_ci": [
+            0.98046875,
+            1.0
+          ],
+          "groups": 256,
+          "mean": 0.9921875,
+          "numerator": 254,
+          "raw_fraction": 0.9921875
+        },
+        "questions": 256,
+        "reaches_target": {
+          "counts": {
+            "NA": 2,
+            "false": 217,
+            "true": 37
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.0833254716981132,
+            0.2028482644798597
+          ],
+          "group_ci": [
+            0.1015625,
+            0.19140625
+          ],
+          "groups": 256,
+          "mean": 0.14453125,
+          "numerator": 37,
+          "raw_fraction": 0.14453125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 35,
+          "both_wrong": 50,
+          "resource_correct_target_wrong": 167,
+          "target_correct_resource_wrong": 2,
+          "unparseable": 2
+        },
+        "retained_length_quantiles": {
+          "max": 512.0,
+          "min": 57.0,
+          "p25": 63.0,
+          "p50": 65.0,
+          "p75": 70.5,
+          "p95": 88.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 256
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 256,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "length_cap": 1,
+          "native_eos": 255
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 2,
+            "false": 52,
+            "true": 202
+          },
+          "denominator": 256,
+          "families": 78,
+          "family_ci": [
+            0.7399103139013453,
+            0.8401644022756194
+          ],
+          "group_ci": [
+            0.73828125,
+            0.8359375
+          ],
+          "groups": 256,
+          "mean": 0.7890625,
+          "numerator": 202,
+          "raw_fraction": 0.7890625
+        }
+      },
+      "name": "E039_stage_a_F_greedy",
+      "questions": 256,
+      "samples": 1,
+      "sampling": false,
+      "state": "E039",
+      "status": "measured",
+      "view": "stage_a"
+    },
+    {
+      "checkpoint_step": 256,
+      "data_key": "train_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 32,
+          "families": 27,
+          "family_ci": [
+            0.15151515151515152,
+            0.4838709677419355
+          ],
+          "group_ci": [
+            0.15625,
+            0.46875
+          ],
+          "groups": 32,
+          "mean": 0.3125,
+          "numerator": 10
+        },
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 27,
+            "true": 37
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.4444444444444444,
+            0.7037037037037037
+          ],
+          "group_ci": [
+            0.46875,
+            0.6875
+          ],
+          "groups": 32,
+          "mean": 0.578125,
+          "numerator": 37,
+          "raw_fraction": 0.578125
+        },
+        "failures": {
+          "none": 37,
+          "wrong_answer_or_resources": 27
+        },
+        "free_correct": {
+          "counts": {
+            "false": 27,
+            "true": 37
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.4444444444444444,
+            0.7037037037037037
+          ],
+          "group_ci": [
+            0.46875,
+            0.6875
+          ],
+          "groups": 32,
+          "mean": 0.578125,
+          "numerator": 37,
+          "raw_fraction": 0.578125
+        },
+        "generations": 64,
+        "groups": 32,
+        "interface_error_categories": {
+          "strict_correct": 37,
+          "template_followed_wrong_hole_operator": 27
+        },
+        "intermediate_arithmetic": {
+          "consistent": 64
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 27,
+            "true": 37
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.4444444444444444,
+            0.7037037037037037
+          ],
+          "group_ci": [
+            0.46875,
+            0.6875
+          ],
+          "groups": 32,
+          "mean": 0.578125,
+          "numerator": 37,
+          "raw_fraction": 0.578125
+        },
+        "parsed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "false": 27,
+            "true": 37
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.4444444444444444,
+            0.7037037037037037
+          ],
+          "group_ci": [
+            0.46875,
+            0.6875
+          ],
+          "groups": 32,
+          "mean": 0.578125,
+          "numerator": 37,
+          "raw_fraction": 0.578125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 37,
+          "resource_correct_target_wrong": 27
+        },
+        "retained_length_quantiles": {
+          "max": 76.0,
+          "min": 58.0,
+          "p25": 64.0,
+          "p50": 65.0,
+          "p75": 67.0,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.5625,
+            "numerator": 18
+          },
+          "countergoal": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.59375,
+            "numerator": 19
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "E039_stage_a_H_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "E039",
+      "status": "measured",
+      "view": "stage_a"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_F64",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 43,
+            "true": 21
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.2,
+            0.4666666666666667
+          ],
+          "group_ci": [
+            0.21875,
+            0.4375
+          ],
+          "groups": 64,
+          "mean": 0.328125,
+          "numerator": 21,
+          "raw_fraction": 0.328125
+        },
+        "failures": {
+          "none": 21,
+          "parse": 1,
+          "wrong_answer_or_resources": 42
+        },
+        "free_correct": {
+          "counts": {
+            "false": 43,
+            "true": 21
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.2,
+            0.4666666666666667
+          ],
+          "group_ci": [
+            0.21875,
+            0.4375
+          ],
+          "groups": 64,
+          "mean": 0.328125,
+          "numerator": 21,
+          "raw_fraction": 0.328125
+        },
+        "generations": 64,
+        "groups": 64,
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 56,
+          "inconsistent": 7
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.9433962264150944,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "NA": 1,
+            "false": 42,
+            "true": 21
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.2,
+            0.4666666666666667
+          ],
+          "group_ci": [
+            0.21875,
+            0.4375
+          ],
+          "groups": 64,
+          "mean": 0.328125,
+          "numerator": 21,
+          "raw_fraction": 0.328125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 21,
+          "both_wrong": 8,
+          "resource_correct_target_wrong": 34,
+          "unparseable": 1
+        },
+        "retained_length_quantiles": {
+          "max": 117.0,
+          "min": 59.0,
+          "p25": 63.0,
+          "p50": 65.5,
+          "p75": 69.0,
+          "p95": 89.69999999999999
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 1,
+            "false": 8,
+            "true": 55
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.7611940298507462,
+            0.9384615384615385
+          ],
+          "group_ci": [
+            0.765625,
+            0.9375
+          ],
+          "groups": 64,
+          "mean": 0.859375,
+          "numerator": 55,
+          "raw_fraction": 0.859375
+        }
+      },
+      "name": "S-U_endpoint_F_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-U",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 32,
+          "families": 27,
+          "family_ci": [
+            0.21212121212121213,
+            0.6060606060606061
+          ],
+          "group_ci": [
+            0.25,
+            0.5625
+          ],
+          "groups": 32,
+          "mean": 0.40625,
+          "numerator": 13
+        },
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.55,
+            0.7878787878787878
+          ],
+          "group_ci": [
+            0.5625,
+            0.78125
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "failures": {
+          "none": 43,
+          "wrong_answer_or_resources": 21
+        },
+        "free_correct": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.55,
+            0.7878787878787878
+          ],
+          "group_ci": [
+            0.5625,
+            0.78125
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "generations": 64,
+        "groups": 32,
+        "interface_error_categories": {
+          "strict_correct": 43,
+          "template_followed_wrong_hole_operator": 21
+        },
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 61,
+          "inconsistent": 2
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.55,
+            0.7878787878787878
+          ],
+          "group_ci": [
+            0.5625,
+            0.78125
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "parsed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.55,
+            0.7878787878787878
+          ],
+          "group_ci": [
+            0.5625,
+            0.78125
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "resource_target_categories": {
+          "both_satisfied": 43,
+          "resource_correct_target_wrong": 21
+        },
+        "retained_length_quantiles": {
+          "max": 72.0,
+          "min": 58.0,
+          "p25": 63.75,
+          "p50": 65.0,
+          "p75": 66.25,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.9375,
+            "numerator": 30
+          },
+          "countergoal": {
+            "H_target_supervised": false,
+            "denominator": 32,
+            "fraction": 0.40625,
+            "numerator": 13
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "S-U_endpoint_H_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-U",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_F",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "failures": {
+          "none": 2,
+          "wrong_answer_or_resources": 14
+        },
+        "free_correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "generations": 16,
+        "groups": 16,
+        "intermediate_arithmetic": {
+          "consistent": 13,
+          "inconsistent": 3
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 2,
+          "both_wrong": 3,
+          "resource_correct_target_wrong": 11
+        },
+        "retained_length_quantiles": {
+          "max": 126.0,
+          "min": 61.0,
+          "p25": 62.0,
+          "p50": 65.5,
+          "p75": 72.5,
+          "p95": 123.75
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "false": 3,
+            "true": 13
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.625,
+            1.0
+          ],
+          "group_ci": [
+            0.625,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 0.8125,
+          "numerator": 13,
+          "raw_fraction": 0.8125
+        }
+      },
+      "name": "S-U_midpoint_F_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-U",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 8,
+          "families": 8,
+          "family_ci": [
+            0.125,
+            0.75
+          ],
+          "group_ci": [
+            0.125,
+            0.75
+          ],
+          "groups": 8,
+          "mean": 0.375,
+          "numerator": 3
+        },
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.375,
+            0.875
+          ],
+          "group_ci": [
+            0.375,
+            0.8125
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "failures": {
+          "none": 10,
+          "wrong_answer_or_resources": 6
+        },
+        "free_correct": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.375,
+            0.875
+          ],
+          "group_ci": [
+            0.375,
+            0.8125
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "generations": 16,
+        "groups": 8,
+        "interface_error_categories": {
+          "strict_correct": 10,
+          "template_followed_wrong_hole_operator": 6
+        },
+        "intermediate_arithmetic": {
+          "consistent": 15,
+          "inconsistent": 1
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.375,
+            0.875
+          ],
+          "group_ci": [
+            0.375,
+            0.8125
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.375,
+            0.875
+          ],
+          "group_ci": [
+            0.375,
+            0.8125
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "resource_target_categories": {
+          "both_satisfied": 10,
+          "resource_correct_target_wrong": 6
+        },
+        "retained_length_quantiles": {
+          "max": 69.0,
+          "min": 64.0,
+          "p25": 64.0,
+          "p50": 66.5,
+          "p75": 67.25,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 8,
+            "fraction": 0.875,
+            "numerator": 7
+          },
+          "countergoal": {
+            "H_target_supervised": false,
+            "denominator": 8,
+            "fraction": 0.375,
+            "numerator": 3
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "S-U_midpoint_H_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-U",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_F64",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 48,
+            "true": 16
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.14893617021276595,
+            0.35294117647058826
+          ],
+          "group_ci": [
+            0.15625,
+            0.359375
+          ],
+          "groups": 64,
+          "mean": 0.25,
+          "numerator": 16,
+          "raw_fraction": 0.25
+        },
+        "failures": {
+          "none": 16,
+          "parse": 4,
+          "wrong_answer_or_resources": 44
+        },
+        "free_correct": {
+          "counts": {
+            "false": 48,
+            "true": 16
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.14893617021276595,
+            0.35294117647058826
+          ],
+          "group_ci": [
+            0.15625,
+            0.359375
+          ],
+          "groups": 64,
+          "mean": 0.25,
+          "numerator": 16,
+          "raw_fraction": 0.25
+        },
+        "generations": 64,
+        "groups": 64,
+        "intermediate_arithmetic": {
+          "NA": 3,
+          "consistent": 48,
+          "inconsistent": 13
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 4,
+            "true": 60
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.8688524590163934,
+            0.9857142857142858
+          ],
+          "group_ci": [
+            0.875,
+            0.984375
+          ],
+          "groups": 64,
+          "mean": 0.9375,
+          "numerator": 60,
+          "raw_fraction": 0.9375
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "NA": 4,
+            "false": 44,
+            "true": 16
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.14893617021276595,
+            0.35294117647058826
+          ],
+          "group_ci": [
+            0.15625,
+            0.359375
+          ],
+          "groups": 64,
+          "mean": 0.25,
+          "numerator": 16,
+          "raw_fraction": 0.25
+        },
+        "resource_target_categories": {
+          "both_satisfied": 16,
+          "both_wrong": 22,
+          "resource_correct_target_wrong": 22,
+          "unparseable": 4
+        },
+        "retained_length_quantiles": {
+          "max": 147.0,
+          "min": 60.0,
+          "p25": 64.0,
+          "p50": 69.0,
+          "p75": 85.25,
+          "p95": 118.09999999999997
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 4,
+            "false": 22,
+            "true": 38
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.44154889228418637,
+            0.7321491448692151
+          ],
+          "group_ci": [
+            0.46875,
+            0.71875
+          ],
+          "groups": 64,
+          "mean": 0.59375,
+          "numerator": 38,
+          "raw_fraction": 0.59375
+        }
+      },
+      "name": "S-D_endpoint_F_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-D",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 32,
+          "families": 27,
+          "family_ci": [
+            0.20689655172413793,
+            0.6060606060606061
+          ],
+          "group_ci": [
+            0.25,
+            0.59375
+          ],
+          "groups": 32,
+          "mean": 0.40625,
+          "numerator": 13
+        },
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 19,
+            "true": 45
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.603448275862069,
+            0.803030303030303
+          ],
+          "group_ci": [
+            0.625,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.703125,
+          "numerator": 45,
+          "raw_fraction": 0.703125
+        },
+        "failures": {
+          "none": 45,
+          "template_violation": 1,
+          "wrong_answer_or_resources": 18
+        },
+        "free_correct": {
+          "counts": {
+            "false": 19,
+            "true": 45
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.603448275862069,
+            0.803030303030303
+          ],
+          "group_ci": [
+            0.625,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.703125,
+          "numerator": 45,
+          "raw_fraction": 0.703125
+        },
+        "generations": 64,
+        "groups": 32,
+        "interface_error_categories": {
+          "strict_correct": 45,
+          "template_followed_wrong_hole_operator": 18,
+          "template_input_resources_changed": 1
+        },
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 62,
+          "inconsistent": 1
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 19,
+            "true": 45
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.603448275862069,
+            0.803030303030303
+          ],
+          "group_ci": [
+            0.625,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.703125,
+          "numerator": 45,
+          "raw_fraction": 0.703125
+        },
+        "parsed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "false": 19,
+            "true": 45
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.603448275862069,
+            0.803030303030303
+          ],
+          "group_ci": [
+            0.625,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.703125,
+          "numerator": 45,
+          "raw_fraction": 0.703125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 45,
+          "both_wrong": 1,
+          "resource_correct_target_wrong": 18
+        },
+        "retained_length_quantiles": {
+          "max": 84.0,
+          "min": 58.0,
+          "p25": 64.0,
+          "p50": 65.0,
+          "p75": 67.0,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.9482758620689655,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 1.0,
+            "numerator": 32
+          },
+          "countergoal": {
+            "H_target_supervised": false,
+            "denominator": 32,
+            "fraction": 0.40625,
+            "numerator": 13
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.9482758620689655,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        }
+      },
+      "name": "S-D_endpoint_H_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-D",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_F",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "failures": {
+          "none": 2,
+          "wrong_answer_or_resources": 14
+        },
+        "free_correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "generations": 16,
+        "groups": 16,
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 10,
+          "inconsistent": 5
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 2,
+          "both_wrong": 8,
+          "resource_correct_target_wrong": 6
+        },
+        "retained_length_quantiles": {
+          "max": 97.0,
+          "min": 61.0,
+          "p25": 62.75,
+          "p50": 75.5,
+          "p75": 83.75,
+          "p95": 95.5
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "false": 8,
+            "true": 8
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.25,
+            0.75
+          ],
+          "group_ci": [
+            0.25,
+            0.75
+          ],
+          "groups": 16,
+          "mean": 0.5,
+          "numerator": 8,
+          "raw_fraction": 0.5
+        }
+      },
+      "name": "S-D_midpoint_F_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-D",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 8,
+          "families": 8,
+          "family_ci": [
+            0.0,
+            0.375
+          ],
+          "group_ci": [
+            0.0,
+            0.375
+          ],
+          "groups": 8,
+          "mean": 0.125,
+          "numerator": 1
+        },
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 7,
+            "true": 9
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.6875
+          ],
+          "group_ci": [
+            0.5,
+            0.6875
+          ],
+          "groups": 8,
+          "mean": 0.5625,
+          "numerator": 9,
+          "raw_fraction": 0.5625
+        },
+        "failures": {
+          "none": 9,
+          "wrong_answer_or_resources": 7
+        },
+        "free_correct": {
+          "counts": {
+            "false": 7,
+            "true": 9
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.6875
+          ],
+          "group_ci": [
+            0.5,
+            0.6875
+          ],
+          "groups": 8,
+          "mean": 0.5625,
+          "numerator": 9,
+          "raw_fraction": 0.5625
+        },
+        "generations": 16,
+        "groups": 8,
+        "interface_error_categories": {
+          "strict_correct": 9,
+          "template_followed_wrong_hole_operator": 7
+        },
+        "intermediate_arithmetic": {
+          "consistent": 15,
+          "inconsistent": 1
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 7,
+            "true": 9
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.6875
+          ],
+          "group_ci": [
+            0.5,
+            0.6875
+          ],
+          "groups": 8,
+          "mean": 0.5625,
+          "numerator": 9,
+          "raw_fraction": 0.5625
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 7,
+            "true": 9
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.6875
+          ],
+          "group_ci": [
+            0.5,
+            0.6875
+          ],
+          "groups": 8,
+          "mean": 0.5625,
+          "numerator": 9,
+          "raw_fraction": 0.5625
+        },
+        "resource_target_categories": {
+          "both_satisfied": 9,
+          "resource_correct_target_wrong": 7
+        },
+        "retained_length_quantiles": {
+          "max": 69.0,
+          "min": 64.0,
+          "p25": 64.0,
+          "p50": 66.5,
+          "p75": 67.25,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 8,
+            "fraction": 1.0,
+            "numerator": 8
+          },
+          "countergoal": {
+            "H_target_supervised": false,
+            "denominator": 8,
+            "fraction": 0.125,
+            "numerator": 1
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "S-D_midpoint_H_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "S-D",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_F64",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 41,
+            "true": 23
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.23333333333333334,
+            0.5
+          ],
+          "group_ci": [
+            0.234375,
+            0.484375
+          ],
+          "groups": 64,
+          "mean": 0.359375,
+          "numerator": 23,
+          "raw_fraction": 0.359375
+        },
+        "failures": {
+          "none": 23,
+          "parse": 2,
+          "wrong_answer_or_resources": 39
+        },
+        "free_correct": {
+          "counts": {
+            "false": 41,
+            "true": 23
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.23333333333333334,
+            0.5
+          ],
+          "group_ci": [
+            0.234375,
+            0.484375
+          ],
+          "groups": 64,
+          "mean": 0.359375,
+          "numerator": 23,
+          "raw_fraction": 0.359375
+        },
+        "generations": 64,
+        "groups": 64,
+        "intermediate_arithmetic": {
+          "consistent": 56,
+          "inconsistent": 8
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 2,
+            "true": 62
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.9107142857142857,
+            1.0
+          ],
+          "group_ci": [
+            0.921875,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 0.96875,
+          "numerator": 62,
+          "raw_fraction": 0.96875
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "NA": 2,
+            "false": 39,
+            "true": 23
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.23333333333333334,
+            0.5
+          ],
+          "group_ci": [
+            0.234375,
+            0.484375
+          ],
+          "groups": 64,
+          "mean": 0.359375,
+          "numerator": 23,
+          "raw_fraction": 0.359375
+        },
+        "resource_target_categories": {
+          "both_satisfied": 23,
+          "both_wrong": 14,
+          "resource_correct_target_wrong": 25,
+          "unparseable": 2
+        },
+        "retained_length_quantiles": {
+          "max": 128.0,
+          "min": 59.0,
+          "p25": 63.75,
+          "p50": 67.0,
+          "p75": 78.0,
+          "p95": 107.09999999999997
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 2,
+            "false": 14,
+            "true": 48
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.625,
+            0.8591549295774648
+          ],
+          "group_ci": [
+            0.640625,
+            0.859375
+          ],
+          "groups": 64,
+          "mean": 0.75,
+          "numerator": 48,
+          "raw_fraction": 0.75
+        }
+      },
+      "name": "P-U_endpoint_F_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-U",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 32,
+          "families": 27,
+          "family_ci": [
+            0.29411764705882354,
+            0.6551724137931034
+          ],
+          "group_ci": [
+            0.3125,
+            0.65625
+          ],
+          "groups": 32,
+          "mean": 0.46875,
+          "numerator": 15
+        },
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.53125,
+            0.8055555555555556
+          ],
+          "group_ci": [
+            0.546875,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "failures": {
+          "none": 43,
+          "wrong_answer_or_resources": 21
+        },
+        "free_correct": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.53125,
+            0.8055555555555556
+          ],
+          "group_ci": [
+            0.546875,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "generations": 64,
+        "groups": 32,
+        "interface_error_categories": {
+          "strict_correct": 43,
+          "template_followed_wrong_hole_operator": 21
+        },
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 63
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.53125,
+            0.8055555555555556
+          ],
+          "group_ci": [
+            0.546875,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "parsed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "false": 21,
+            "true": 43
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.53125,
+            0.8055555555555556
+          ],
+          "group_ci": [
+            0.546875,
+            0.796875
+          ],
+          "groups": 32,
+          "mean": 0.671875,
+          "numerator": 43,
+          "raw_fraction": 0.671875
+        },
+        "resource_target_categories": {
+          "both_satisfied": 43,
+          "resource_correct_target_wrong": 21
+        },
+        "retained_length_quantiles": {
+          "max": 72.0,
+          "min": 58.0,
+          "p25": 63.75,
+          "p50": 65.0,
+          "p75": 67.0,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.5625,
+            "numerator": 18
+          },
+          "countergoal": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.78125,
+            "numerator": 25
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "P-U_endpoint_H_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-U",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_F",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "failures": {
+          "none": 2,
+          "parse": 1,
+          "wrong_answer_or_resources": 13
+        },
+        "free_correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "generations": 16,
+        "groups": 16,
+        "intermediate_arithmetic": {
+          "consistent": 13,
+          "inconsistent": 3
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 1,
+            "true": 15
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.8125,
+            1.0
+          ],
+          "group_ci": [
+            0.8125,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 0.9375,
+          "numerator": 15,
+          "raw_fraction": 0.9375
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "NA": 2,
+            "false": 12,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "resource_target_categories": {
+          "both_satisfied": 2,
+          "both_wrong": 1,
+          "resource_correct_target_wrong": 11,
+          "undefined_value": 1,
+          "unparseable": 1
+        },
+        "retained_length_quantiles": {
+          "max": 86.0,
+          "min": 61.0,
+          "p25": 63.0,
+          "p50": 66.0,
+          "p75": 72.0,
+          "p95": 82.25
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 1,
+            "false": 2,
+            "true": 13
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.625,
+            1.0
+          ],
+          "group_ci": [
+            0.625,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 0.8125,
+          "numerator": 13,
+          "raw_fraction": 0.8125
+        }
+      },
+      "name": "P-U_midpoint_F_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-U",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 8,
+          "families": 8,
+          "family_ci": [
+            0.125,
+            0.875
+          ],
+          "group_ci": [
+            0.125,
+            0.875
+          ],
+          "groups": 8,
+          "mean": 0.5,
+          "numerator": 4
+        },
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 5,
+            "true": 11
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.4375,
+            0.9375
+          ],
+          "group_ci": [
+            0.4375,
+            0.875
+          ],
+          "groups": 8,
+          "mean": 0.6875,
+          "numerator": 11,
+          "raw_fraction": 0.6875
+        },
+        "failures": {
+          "none": 11,
+          "wrong_answer_or_resources": 5
+        },
+        "free_correct": {
+          "counts": {
+            "false": 5,
+            "true": 11
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.4375,
+            0.9375
+          ],
+          "group_ci": [
+            0.4375,
+            0.875
+          ],
+          "groups": 8,
+          "mean": 0.6875,
+          "numerator": 11,
+          "raw_fraction": 0.6875
+        },
+        "generations": 16,
+        "groups": 8,
+        "interface_error_categories": {
+          "strict_correct": 11,
+          "template_followed_wrong_hole_operator": 5
+        },
+        "intermediate_arithmetic": {
+          "consistent": 16
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 5,
+            "true": 11
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.4375,
+            0.9375
+          ],
+          "group_ci": [
+            0.4375,
+            0.875
+          ],
+          "groups": 8,
+          "mean": 0.6875,
+          "numerator": 11,
+          "raw_fraction": 0.6875
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 5,
+            "true": 11
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.4375,
+            0.9375
+          ],
+          "group_ci": [
+            0.4375,
+            0.875
+          ],
+          "groups": 8,
+          "mean": 0.6875,
+          "numerator": 11,
+          "raw_fraction": 0.6875
+        },
+        "resource_target_categories": {
+          "both_satisfied": 11,
+          "resource_correct_target_wrong": 5
+        },
+        "retained_length_quantiles": {
+          "max": 69.0,
+          "min": 64.0,
+          "p25": 64.0,
+          "p50": 66.5,
+          "p75": 67.25,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 8,
+            "fraction": 0.875,
+            "numerator": 7
+          },
+          "countergoal": {
+            "H_target_supervised": true,
+            "denominator": 8,
+            "fraction": 0.5,
+            "numerator": 4
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "P-U_midpoint_H_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-U",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_F64",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 53,
+            "true": 11
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.08333333333333333,
+            0.2631578947368421
+          ],
+          "group_ci": [
+            0.078125,
+            0.265625
+          ],
+          "groups": 64,
+          "mean": 0.171875,
+          "numerator": 11,
+          "raw_fraction": 0.171875
+        },
+        "failures": {
+          "none": 11,
+          "parse": 1,
+          "wrong_answer_or_resources": 52
+        },
+        "free_correct": {
+          "counts": {
+            "false": 53,
+            "true": 11
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.08333333333333333,
+            0.2631578947368421
+          ],
+          "group_ci": [
+            0.078125,
+            0.265625
+          ],
+          "groups": 64,
+          "mean": 0.171875,
+          "numerator": 11,
+          "raw_fraction": 0.171875
+        },
+        "generations": 64,
+        "groups": 64,
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 42,
+          "inconsistent": 21
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.9444444444444444,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 64,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "NA": 1,
+            "false": 52,
+            "true": 11
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.08333333333333333,
+            0.2631578947368421
+          ],
+          "group_ci": [
+            0.078125,
+            0.265625
+          ],
+          "groups": 64,
+          "mean": 0.171875,
+          "numerator": 11,
+          "raw_fraction": 0.171875
+        },
+        "resource_target_categories": {
+          "both_satisfied": 11,
+          "both_wrong": 33,
+          "resource_correct_target_wrong": 19,
+          "unparseable": 1
+        },
+        "retained_length_quantiles": {
+          "max": 129.0,
+          "min": 60.0,
+          "p25": 65.75,
+          "p50": 80.0,
+          "p75": 88.0,
+          "p95": 118.69999999999999
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 64
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 64,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "NA": 1,
+            "false": 33,
+            "true": 30
+          },
+          "denominator": 64,
+          "families": 30,
+          "family_ci": [
+            0.34375,
+            0.5833333333333334
+          ],
+          "group_ci": [
+            0.34375,
+            0.59375
+          ],
+          "groups": 64,
+          "mean": 0.46875,
+          "numerator": 30,
+          "raw_fraction": 0.46875
+        }
+      },
+      "name": "P-D_endpoint_F_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-D",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 128,
+      "data_key": "train_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 64,
+      "generations": 64,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 32,
+          "families": 27,
+          "family_ci": [
+            0.3,
+            0.7
+          ],
+          "group_ci": [
+            0.3125,
+            0.6875
+          ],
+          "groups": 32,
+          "mean": 0.5,
+          "numerator": 16
+        },
+        "completed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 17,
+            "true": 47
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.6212121212121212,
+            0.8448275862068966
+          ],
+          "group_ci": [
+            0.640625,
+            0.828125
+          ],
+          "groups": 32,
+          "mean": 0.734375,
+          "numerator": 47,
+          "raw_fraction": 0.734375
+        },
+        "failures": {
+          "none": 47,
+          "template_violation": 1,
+          "wrong_answer_or_resources": 16
+        },
+        "free_correct": {
+          "counts": {
+            "false": 17,
+            "true": 47
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.6212121212121212,
+            0.8448275862068966
+          ],
+          "group_ci": [
+            0.640625,
+            0.828125
+          ],
+          "groups": 32,
+          "mean": 0.734375,
+          "numerator": 47,
+          "raw_fraction": 0.734375
+        },
+        "generations": 64,
+        "groups": 32,
+        "interface_error_categories": {
+          "strict_correct": 47,
+          "template_fixed_operator_changed": 1,
+          "template_followed_wrong_hole_operator": 16
+        },
+        "intermediate_arithmetic": {
+          "NA": 1,
+          "consistent": 62,
+          "inconsistent": 1
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 17,
+            "true": 47
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.6212121212121212,
+            0.8448275862068966
+          ],
+          "group_ci": [
+            0.640625,
+            0.828125
+          ],
+          "groups": 32,
+          "mean": 0.734375,
+          "numerator": 47,
+          "raw_fraction": 0.734375
+        },
+        "parsed": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        },
+        "questions": 64,
+        "reaches_target": {
+          "counts": {
+            "false": 17,
+            "true": 47
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.6212121212121212,
+            0.8448275862068966
+          ],
+          "group_ci": [
+            0.640625,
+            0.828125
+          ],
+          "groups": 32,
+          "mean": 0.734375,
+          "numerator": 47,
+          "raw_fraction": 0.734375
+        },
+        "resource_target_categories": {
+          "both_satisfied": 47,
+          "resource_correct_target_wrong": 17
+        },
+        "retained_length_quantiles": {
+          "max": 80.0,
+          "min": 58.0,
+          "p25": 64.0,
+          "p50": 65.0,
+          "p75": 67.0,
+          "p95": 69.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "false": 1,
+            "true": 63
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            0.9516129032258065,
+            1.0
+          ],
+          "group_ci": [
+            0.953125,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 0.984375,
+          "numerator": 63,
+          "raw_fraction": 0.984375
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 64
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.6875,
+            "numerator": 22
+          },
+          "countergoal": {
+            "H_target_supervised": true,
+            "denominator": 32,
+            "fraction": 0.78125,
+            "numerator": 25
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 64
+          },
+          "denominator": 64,
+          "families": 27,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 32,
+          "mean": 1.0,
+          "numerator": 64,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "P-D_endpoint_H_greedy",
+      "questions": 64,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-D",
+      "status": "measured",
+      "view": "endpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_F",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "F",
+      "metrics": {
+        "H_to_F_transfer": false,
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "failures": {
+          "none": 2,
+          "wrong_answer_or_resources": 14
+        },
+        "free_correct": {
+          "counts": {
+            "false": 14,
+            "true": 2
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.3125
+          ],
+          "group_ci": [
+            0.0,
+            0.3125
+          ],
+          "groups": 16,
+          "mean": 0.125,
+          "numerator": 2,
+          "raw_fraction": 0.125
+        },
+        "generations": 16,
+        "groups": 16,
+        "intermediate_arithmetic": {
+          "NA": 2,
+          "consistent": 12,
+          "inconsistent": 2
+        },
+        "operator_correct": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 16,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 13,
+            "true": 3
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.0,
+            0.375
+          ],
+          "group_ci": [
+            0.0,
+            0.375
+          ],
+          "groups": 16,
+          "mean": 0.1875,
+          "numerator": 3,
+          "raw_fraction": 0.1875
+        },
+        "resource_target_categories": {
+          "both_satisfied": 2,
+          "both_wrong": 4,
+          "resource_correct_target_wrong": 9,
+          "target_correct_resource_wrong": 1
+        },
+        "retained_length_quantiles": {
+          "max": 133.0,
+          "min": 61.0,
+          "p25": 64.5,
+          "p50": 68.5,
+          "p75": 83.25,
+          "p95": 100.0
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "NA": 16
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": null,
+          "group_ci": null,
+          "groups": 16,
+          "mean": null,
+          "numerator": null,
+          "raw_fraction": null
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "training_pool": "Actual shared F replay prompts, deduplicated by exact prompt token sequence.",
+        "uses_input_multiset": {
+          "counts": {
+            "false": 5,
+            "true": 11
+          },
+          "denominator": 16,
+          "families": 16,
+          "family_ci": [
+            0.4375,
+            0.875
+          ],
+          "group_ci": [
+            0.4375,
+            0.875
+          ],
+          "groups": 16,
+          "mean": 0.6875,
+          "numerator": 11,
+          "raw_fraction": 0.6875
+        }
+      },
+      "name": "P-D_midpoint_F_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-D",
+      "status": "measured",
+      "view": "midpoint"
+    },
+    {
+      "checkpoint_step": 64,
+      "data_key": "midpoint_H",
+      "decoding": "greedy",
+      "evaluation_seed": 2026091713,
+      "expected_records": 16,
+      "generations": 16,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 8,
+          "families": 8,
+          "family_ci": [
+            0.0,
+            0.625
+          ],
+          "group_ci": [
+            0.0,
+            0.5
+          ],
+          "groups": 8,
+          "mean": 0.25,
+          "numerator": 2
+        },
+        "completed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.8125
+          ],
+          "group_ci": [
+            0.5,
+            0.75
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "failures": {
+          "none": 10,
+          "wrong_answer_or_resources": 6
+        },
+        "free_correct": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.8125
+          ],
+          "group_ci": [
+            0.5,
+            0.75
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "generations": 16,
+        "groups": 8,
+        "interface_error_categories": {
+          "strict_correct": 10,
+          "template_followed_wrong_hole_operator": 6
+        },
+        "intermediate_arithmetic": {
+          "consistent": 15,
+          "inconsistent": 1
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.8125
+          ],
+          "group_ci": [
+            0.5,
+            0.75
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "parsed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "questions": 16,
+        "reaches_target": {
+          "counts": {
+            "false": 6,
+            "true": 10
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            0.5,
+            0.8125
+          ],
+          "group_ci": [
+            0.5,
+            0.75
+          ],
+          "groups": 8,
+          "mean": 0.625,
+          "numerator": 10,
+          "raw_fraction": 0.625
+        },
+        "resource_target_categories": {
+          "both_satisfied": 10,
+          "resource_correct_target_wrong": 6
+        },
+        "retained_length_quantiles": {
+          "max": 71.0,
+          "min": 64.0,
+          "p25": 64.0,
+          "p50": 66.5,
+          "p75": 67.0,
+          "p95": 69.5
+        },
+        "samples_per_question": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        },
+        "scope": "Fixed training-instance diagnostic; not held-out generalization and never a checkpoint-selection gate.",
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "target_exposure": {
+          "anchor": {
+            "H_target_supervised": true,
+            "denominator": 8,
+            "fraction": 0.75,
+            "numerator": 6
+          },
+          "countergoal": {
+            "H_target_supervised": true,
+            "denominator": 8,
+            "fraction": 0.5,
+            "numerator": 4
+          }
+        },
+        "training_pool": "Stratified H training groups. Single countergoals were not supervised; paired countergoals were supervised.",
+        "uses_input_multiset": {
+          "counts": {
+            "true": 16
+          },
+          "denominator": 16,
+          "families": 8,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 8,
+          "mean": 1.0,
+          "numerator": 16,
+          "raw_fraction": 1.0
+        }
+      },
+      "name": "P-D_midpoint_H_greedy",
+      "questions": 16,
+      "samples": 1,
+      "sampling": false,
+      "state": "P-D",
+      "status": "measured",
+      "view": "midpoint"
+    }
+  ]
+}
