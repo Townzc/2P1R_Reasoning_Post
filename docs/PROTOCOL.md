@@ -1,3 +1,13 @@
+# Latest owner override — retain artifacts on server; no Mac export gate
+
+The owner removed mandatory Mac downloads for the public math pilot. Keep full
+scientific artifacts on the server and verify them there. Read
+experiments/public_math_pilot_v1/SERVER_RETENTION_AMENDMENT.md and the current
+reports/public_math_pilot_v1/NEXT_SESSION.md before using historical resource
+reports. The former A800-priced backup-transfer blocker is superseded; actual
+GPU runtime, disk availability, scoring boundaries and elapsed caps still need
+verification. Latest SSH check returned connection refused; no new job started.
+
 # Current status — public math CPU preparation; provider off; no model run
 
 The owner-requested public math pilot has not produced training or evaluation

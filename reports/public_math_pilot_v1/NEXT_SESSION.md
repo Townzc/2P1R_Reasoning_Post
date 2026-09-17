@@ -1,3 +1,7 @@
+# Current override — server-only retention
+
+The owner removed mandatory Mac downloads. Read [the retention amendment](../../experiments/public_math_pilot_v1/SERVER_RETENTION_AMENDMENT.md) first. Keep and verify full artifacts on the server; the historical A800-priced export gate below is superseded. Do not delete scientific finals or reset elapsed budgets. The endpoint was unreachable (connection refused) on the latest check; no new worker started.
+
 # Next-session handoff — public math pilot remains unrun
 
 Read `EXECUTION_SUMMARY_ZH.md`, `RESOURCE_FEASIBILITY.json`, `COST_AND_CLOSEOUT.json`, `PHYSICAL_LEDGER.json`, the final data/CPU audit, and `../../experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json` before any paid work. Current state is provider-off, zero model execution. Do not resume any E040–E043 or earlier phase. Their ledgers and results remain immutable.
