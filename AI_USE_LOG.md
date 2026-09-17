@@ -1145,3 +1145,8 @@ scientific execution source, raw records and old conclusions were not changed.
 The final account is reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md.
 The phase is complete and paused for owner adjustments; no new experiment was
 selected or launched, and no external message was sent.
+
+
+2026-09-17: Codex implemented the owner-requested public math pilot CPU data/loss/tokenization/scoring/recovery modules and a bounded engineering preflight. Independent agents reviewed scientific contracts and persistence. No formal training/evaluation is claimed; main admission requires complete resource feasibility. Existing history is retained. Model assets are independently hash-verified, no paid model APIs or external messages used.
+
+The server was stopped before model execution: platform off confirmed2026-09-17 19:40:40UTC and timer cleared. Whole startup/preparation/transfer window2087.554989seconds yields CNY4.6274 proxy at7.98/hour, not invoice. Zero new model calls, optimizer updates, annotation forwards or generations. Data preparation uncovered missing-image eligibility cases and one official MATH500 empty-reference normalization boundary, retained explicitly. The raw terminal backup transport estimate fails current complete-phase admission. CPU tests do not validate real GPU recovery or throughput.

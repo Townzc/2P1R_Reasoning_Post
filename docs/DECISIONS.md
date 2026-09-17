@@ -899,3 +899,6 @@ Cached accepted outputs cannot establish generation costs, and a different
 small teacher cannot price them. This review changes no frozen protocol or
 resource allowance. See the
 [dataset evidence review](../reports/DATASET_SELECTION_EVIDENCE_20260910.md).
+
+
+2026-09-17 public-math finite phase: execute the owner-supplied plan subject to its complete-phase resource gate. Register E044–E047, fresh base/full parameters, no inherited adapters. Engineering-only preflight source is separately frozen. Raw recovery export at measured SSH throughput prevents main admission; do not reduce the benchmark or omit recoveries. Preserve MATH-500 official empty-normalization reference as unresolved, without modifying upstream rules or denominators.

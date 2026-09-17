@@ -1,3 +1,11 @@
+# Current handoff — public math preparation, no model run
+
+The server is off. The new public-math phase has zero training/generation and is
+blocked by complete resource admission and one common scoring-contract boundary.
+Use [the current public-math handoff](../reports/public_math_pilot_v1/NEXT_SESSION.md).
+Do not reset the consumed preflight rental allowance or repeat older completed
+phases. Historical handoffs below remain evidence only.
+
 # Current closeout — E038/E039 complete; provider off; paused
 
 The owner-authorized G-single/G-paired phase completed from E031 step32:

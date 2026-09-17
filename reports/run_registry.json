@@ -1,5 +1,5 @@
 {
-  "scope": "Historical engineering and restricted development pilots, arithmetic discovery (E031–E036), frozen goal diagnostics (E037), paired-goal training (E038/E039), and completed within-recipe decision-supervision continuations (E040–E043). One-seed exploratory results do not establish a population or pure mechanism effect.",
+  "scope": "Historical engineering and restricted development pilots, arithmetic discovery (E031–E036), frozen goal diagnostics (E037), paired-goal training (E038/E039), and completed within-recipe decision-supervision continuations (E040–E043). One-seed exploratory results do not establish a population or pure mechanism effect. Public math E044–E047 and Base are registered but not run; preparation is not a scientific result.",
   "charged_gpu_seconds": 22408,
   "runs": [
     {
@@ -2646,7 +2646,7 @@
       "candidate_forward_calls": 704
     }
   ],
-  "accounting_scope": "Across separate historical, E018, arithmetic-v2, post-E030 resume, E037 goal-probe, E038/E039 goal-training and E040–E043 decision-supervision phases; original7200-second ledger and all prior27 receipts remain immutable. Current28 receipts charge22408 process seconds, not whole-instance rental invoices. GPU is off and work is paused for owner adjustments.",
+  "accounting_scope": "Across separate historical, E018, arithmetic-v2, post-E030 resume, E037 goal-probe, E038/E039 goal-training and E040–E043 decision-supervision phases; original7200-second ledger and all prior27 receipts remain immutable. Current28 receipts charge22408 process seconds, not whole-instance rental invoices. GPU is off and work is paused for owner adjustments. Public-math setup added no model-process receipt or update; its separate whole-powered cost is in reports/public_math_pilot_v1/COST_AND_CLOSEOUT.json.",
   "planned_experiments": [
     {
       "data": "calibration_fit",
@@ -2866,6 +2866,66 @@
       "independent_verification": "reports/post_e039_decision_supervision/INDEPENDENT_TRAINING_VERIFICATION.json",
       "results": "reports/post_e039_decision_supervision/RESULTS.md",
       "execution_summary": "reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md"
+    },
+    {
+      "experiment_id": "E044-B0",
+      "phase": "public_math_pilot_v1",
+      "arm": "Base",
+      "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
+      "planned_updates": 0,
+      "actual_updates": 0,
+      "status": "not_run_resource_and_scoring_contract_blocked",
+      "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
+      "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
+      "scientific_result": null
+    },
+    {
+      "experiment_id": "E044",
+      "phase": "public_math_pilot_v1",
+      "arm": "SFT",
+      "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
+      "planned_updates": 128,
+      "actual_updates": 0,
+      "status": "not_run_resource_and_scoring_contract_blocked",
+      "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
+      "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
+      "scientific_result": null
+    },
+    {
+      "experiment_id": "E045",
+      "phase": "public_math_pilot_v1",
+      "arm": "DFT",
+      "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
+      "planned_updates": 128,
+      "actual_updates": 0,
+      "status": "not_run_resource_and_scoring_contract_blocked",
+      "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
+      "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
+      "scientific_result": null
+    },
+    {
+      "experiment_id": "E046",
+      "phase": "public_math_pilot_v1",
+      "arm": "TrimSFT",
+      "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
+      "planned_updates": 128,
+      "actual_updates": 0,
+      "status": "not_run_resource_and_scoring_contract_blocked",
+      "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
+      "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
+      "scientific_result": null
+    },
+    {
+      "experiment_id": "E047",
+      "phase": "public_math_pilot_v1",
+      "arm": "QDW_v0",
+      "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
+      "planned_updates": 128,
+      "actual_updates": 0,
+      "status": "not_run_resource_and_scoring_contract_blocked",
+      "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
+      "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
+      "scientific_result": null
     }
   ],
   "phase_execution_receipts": [

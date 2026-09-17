@@ -1,3 +1,24 @@
+# Current status — public math CPU preparation; provider off; no model run
+
+The owner-requested public math pilot has not produced training or evaluation
+results. CPU implementation/data audit and official asset checks are recorded in
+reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md. E044–E047 and Base are
+registered but unrun. Formal and nonformal optimizer updates, generations and
+annotation forwards are all zero; the formal phase orchestrator is still pending.
+
+CPU qualification corrections consumed the preparation window. The GPU preflight
+was not launched; no measured GPU throughput or full-model recovery is claimed.
+The four-arm raw recovery export also exceeds current effective resources after
+the required safety factor, and one official MATH-500 reference normalizes to
+empty. These are resource/contract limits, not model-performance gates.
+
+Provider off was confirmed 2026-09-17 19:40:40 UTC; the temporary timer was cleared.
+Whole powered-window cost is approximately CNY4.63, not an invoice. No automatic
+restart or optional run is queued. Preserve the stopped instance and all old
+unique checkpoints, especially E015. Historical results and process ledgers below
+remain unchanged. Next startup requires ready source and complete resource review;
+previously consumed phase time does not reset across sessions.
+
 # Current closeout — E040–E043 complete; provider off; paused
 
 The owner-authorized decision-supervision phase is complete. E040/S-U and
