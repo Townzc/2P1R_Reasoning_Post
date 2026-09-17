@@ -11,7 +11,7 @@ import time
 
 import torch
 
-from .preflight import (PHASE, generation_batch, json_hash, seed_all, write_json)
+from .preflight import (PHASE, generation_batch, json_hash, seed_all, sha, write_json)
 from .tokenization import ASSISTANT_END_ID, EOS_ID, trim_stop_text
 
 
@@ -121,7 +121,7 @@ def checked_completed_batch(path, request):
 
 
 def generate_rows(model, tokenizer, rows, folder, *, model_identity, logical_name,
-                  ledger, deadline, batch_size, seed=None, reused=None):
+                  ledger, deadline, batch_size, seed=None, reused=None, allow_new_calls=True):
     """One seeded stream per draw. Completed batches restore their post-call RNG."""
     folder = Path(folder); folder.mkdir(parents=True, exist_ok=True)
     if len({r['id'] for r in rows}) != len(rows):
@@ -139,7 +139,10 @@ def generate_rows(model, tokenizer, rows, folder, *, model_identity, logical_nam
         top_k=0 if seed is not None else None, seed=seed, repetition_penalty=1.0,
         stop_token_ids=[ASSISTANT_END_ID, EOS_ID], stop_strings=['</s>'],
         tools=False, extra_generation_rounds=0, batch_size=batch_size,
-        precision='FP32_master_BF16_autocast', attention='sdpa', schema=1)
+        precision='FP32_master_BF16_autocast', attention='sdpa', schema=2,
+        implementation_sha256={n:sha(Path(__file__).with_name(n))
+            for n in ('runtime_common.py','preflight.py','tokenization.py')},
+        torch_version=torch.__version__,transformers_version=__import__('transformers').__version__)
     ensure_record(folder/'identity.json', dict(model=model_identity, logical_name=logical_name,
         decoding=decode, all_ids=[r['id'] for r in rows], reused_ids=sorted(reused)))
     records = []
@@ -159,6 +162,8 @@ def generate_rows(model, tokenizer, rows, folder, *, model_identity, logical_nam
             result = checked_completed_batch(path, request)
             restore_generation_rng(result['rng_after'])
             records.extend(result['records']); continue
+        if not allow_new_calls:
+            raise ValueError('Completed run has missing batch outputs; no regeneration allowed')
         require_time(deadline, 240)
         ledger.reserve('generation', [logical_name + '/' + r['id'] for r in group])
         write_json(folder/f'batch_{offset:05d}.reservation.json', request)

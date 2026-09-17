@@ -13,6 +13,7 @@ import torch
 
 from experiments.public_math_pilot_v1 import runtime_common as rc
 from experiments.public_math_pilot_v1 import runtime_train as rt
+from experiments.public_math_pilot_v1.runtime_evaluate import evaluation_jobs
 
 
 class Tokenizer:
@@ -30,6 +31,17 @@ class Model:
 
 
 class RuntimeTest(unittest.TestCase):
+    def test_complete_evaluation_contract_has_no_extra_or_missing_draws(self):
+        jobs=evaluation_jobs();self.assertEqual(len(jobs),53)
+        self.assertEqual(len({j['name'] for j in jobs}),53)
+        counts={'math500':500,'gsm8k':1319,'dev':512}
+        self.assertEqual(sum(counts[j['dataset']] for j in jobs)+512,31203)
+        for arm in ('Base',*rt.ARMS):
+            math=[j for j in jobs if j['arm']==arm and j['dataset']=='math500']
+            self.assertEqual([j['seed'] for j in math],list(range(2026091800,2026091808)))
+            self.assertTrue(all(j['step']==(0 if arm=='Base' else 128) for j in math))
+        self.assertEqual(sum(j['step']==64 for j in jobs),4)
+
     def test_reservation_duplicate_and_cap_are_not_retries(self):
         with tempfile.TemporaryDirectory() as d:
             ledger=rc.PhysicalLedger(Path(d)/'ledger')
