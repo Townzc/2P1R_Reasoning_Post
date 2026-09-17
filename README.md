@@ -1,3 +1,13 @@
+# Current execution — owner reopened daytime public-math experiments
+
+The owner has opened the replacement A800, expanded its data disk to195GiB,
+and requested immediate execution with cost deprioritized until tomorrow's
+abstract deadline. Use experiments/public_math_pilot_v1/DAYTIME_EXECUTION_AMENDMENT.md.
+Mandatory Mac downloads and the old monetary/transfer admission blockers are
+superseded. Scientific scope and historical accounting remain intact. Run finite
+detached jobs, preserve server recovery state, and pause for the owner’s nighttime
+schedule. Engineering preflight precedes the frozen four-arm experiment.
+
 # Latest owner override — retain artifacts on server; no Mac export gate
 
 The owner removed mandatory Mac downloads for the public math pilot. Keep full
