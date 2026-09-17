@@ -1,3 +1,12 @@
+# Active E037 — frozen-endpoint goal-conditioning diagnostic
+
+The owner requested the post-E036 handoff execution on September16. Prepare and
+publish the24-group three-interface release, then run the finite2112-generation
+inference-only queue on E033–E036, with192 operator contexts. No new training.
+Independent cap2304 generations and7200 powered seconds/CNY20; preserve all old
+ledgers and E015 weights. See experiments/post_e036_goal_probe/PROTOCOL.md.
+The earlier pause below is historical and superseded only for this bounded task.
+
 # Project instructions
 
 Read README.md, docs/PROTOCOL.md, docs/DECISIONS.md and reports/STATUS.md before substantive changes.

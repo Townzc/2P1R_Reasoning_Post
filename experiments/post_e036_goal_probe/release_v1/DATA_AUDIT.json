@@ -1,0 +1,58 @@
+{
+  "attempts_per_slot": 100000,
+  "correct_operator_counts": {
+    "*": 12,
+    "+": 12,
+    "-": 12,
+    "/": 12
+  },
+  "degeneracy_rule": "At selected hole: + excludes either operand0; - excludes right0; * excludes either operand0/1; / excludes numerator0 or denominator0/1. Other nodes labelled, not excluded.",
+  "domain_changed": false,
+  "group_count": 24,
+  "hole_depth_counts": {
+    "0": 12,
+    "1": 9,
+    "2": 3
+  },
+  "number_domain": "Four distinct integers 1..40; ordered numeric leaves and displayed input order frozen.",
+  "operator_by_target_index": {
+    "0": {
+      "*": 6,
+      "+": 6,
+      "-": 6,
+      "/": 6
+    },
+    "1": {
+      "*": 6,
+      "+": 6,
+      "-": 6,
+      "/": 6
+    }
+  },
+  "operator_pair_counts": {
+    "*/": 4,
+    "+*": 4,
+    "+-": 4,
+    "+/": 4,
+    "-*": 4,
+    "-/": 4
+  },
+  "rejections": {
+    "excluded_or_duplicate_numbers": 429,
+    "initial_family_diversity": 5,
+    "not_unique_switch": 18,
+    "target_domain": 3869
+  },
+  "seed": 20260917,
+  "selection_uses_model_outputs": false,
+  "skeleton_families": 21,
+  "structural_ood_claim": false,
+  "target_count": 48,
+  "target_domain": "Exact integers 10..100, unchanged from src.countdown_smoke.solve_all.",
+  "target_numeric_order": {
+    "ascending": 10,
+    "descending": 14
+  },
+  "target_order_rule": "For each fixed unordered operator pair: forward, reverse, forward, reverse; each operator occurs six times at each target index. Numeric direction is audited, not silently selected.",
+  "total_attempts": 4345
+}

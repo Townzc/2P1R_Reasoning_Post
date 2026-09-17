@@ -1,3 +1,10 @@
+# 2026-09-16 — E037 frozen goal diagnostic preparation
+
+Owner explicitly requested the post-E036 handoff. Codex prepared outcome-blind
+paired goals, target-support audit, ordered-AST scoring, local operator probability
+scoring, independent finite resource accounting, and new CPU checks. Separate
+agents reviewed data/scoring/runtime. No correspondence sent; no new training.
+
 # 2026-09-16 — complete E031–E036 execution and independent closeout
 
 Following the owner’s explicit resume instruction, Codex executed the published
