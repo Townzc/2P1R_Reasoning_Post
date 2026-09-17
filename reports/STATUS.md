@@ -1,29 +1,18 @@
-# Current execution — public math active
+# Current execution — training complete; single-GPU evaluation active
 
-Read reports/public_math_pilot_v1/LIVE_EXECUTION.md and LIVE_PROGRESS.json for
-current observations. SFT and DFT each completed128 updates; TrimSFT is training;
-QDW-v0 remains queued. All4096 masks,8192 annotation forwards and512 Base-dev
-outputs are complete. Public benchmark results are pending. The first GSM128
-batch failed with concurrent CUDA OOM before saving any output; its128 physical
-attempts remain charged. The evidence-bound replacement uses64-way GSM,
-256-way MATH and16-way dev. Measured training cache growth to about70GiB now places GPU evaluation after
-all four training arms; CPU scoring continues independently. The canceled
-admission-only evaluator added zero model calls.
+All four arms completed their fixed128-update training and verified terminal
+recoveries. Final scientific dose is512 updates;544 physical completed records
+include32 lost uncommitted TrimSFT updates. The first64 formal GSM outputs are
+saved, taking155.304 seconds. Full benchmark results remain pending. Read the
+latest timestamped reports/public_math_pilot_v1/LIVE_PROGRESS.json.
 
-The TrimSFT trainer later stopped before saving step64 because the strict host
-RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
-restored headroom without deleting or changing data; the original trainer resumed
-from the verified step32 model/AdamW/RNG. Step64 and96 then committed; the latest
-observation shows this trajectory reached step128, with its final save
-pending. Preserve the32 lost uncommitted updates: the final scientific dose remains
-512, while expected physical completed-update records are544. GPU replay follows
-the same rows/LR/source but is not bitwise equivalent; disclose the measured
-numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
-
-Follow CONCURRENCY_AMENDMENT.md and INFRASTRUCTURE_RECOVERY.md in
-experiments/public_math_pilot_v1, plus HOST_CACHE_RECOVERY.md. Keep all frozen scientific counts, separate
-process RNG, committed checkpoints, server-only large-artifact retention and
-the nightly stop. All older current-state sections below are historical snapshots.
+The owner is considering temporarily changing the same instance to two A800s.
+DUAL_GPU_PREPARATION.md documents the prepared scheduler;98 CPU checks pass.
+No hardware change, maintenance pause or two-GPU model run has occurred. The
+original detached evaluator continues; never shut it down mid-generation.
+Use the live handoff for current workers and transition readiness. Preserve the
+previous failure evidence and the non-bitwise TrimSFT GPU recovery limitation.
+All earlier current-state paragraphs below are timestamped historical snapshots.
 
 # Measured engineering preflight complete; formal preparation executing next
 

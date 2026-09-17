@@ -5,9 +5,9 @@ deprioritized cost until the abstract deadline, and requested concurrent work to
 use the server efficiently. The frozen four-arm scientific scope remains intact.
 The timestamped observation is [LIVE_PROGRESS.json](LIVE_PROGRESS.json).
 
-SFT and DFT each completed128 updates with committed, verified full recoveries.
-TrimSFT has resumed after a checkpoint-admission failure; QDW-v0 follows from
-its separate fresh public base.
+All four arms completed128 updates with committed, verified full recoveries.
+The recovered trainer exited0 after1534seconds. The original single-GPU evaluator
+is active and has saved its first64 formal GSM outputs.
 All4096 frozen masks and8192 annotation forwards are complete. The fixed64
 technical audit passed, without changing masks. All512 Base-dev outputs are
 durable, including32 preflight outputs reused exactly once; CPU scoring completed
@@ -27,12 +27,11 @@ Maximum physical generation attempts are31,331 for31,203 logical outputs.
 The TrimSFT trainer later stopped before saving step64 because the strict host
 RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
 restored headroom without deleting or changing data; the original trainer resumed
-from the verified step32 model/AdamW/RNG. Step64 and96 then committed; the latest
-observation shows this trajectory reached step128, with its final save
-pending. Preserve the32 lost uncommitted updates: the final scientific dose remains
+from the verified step32 model/AdamW/RNG. The recovered trajectory reached128 and its terminal recovery committed
+successfully. Preserve the32 lost uncommitted updates: the final scientific dose remains
 512, while expected physical completed-update records are544. GPU replay follows
 the same rows/LR/source but is not bitwise equivalent; disclose the measured
-numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
+numerical divergence in GPU_RECOVERY_COMPARISON.json. Full public scores remain pending.
 
 The passive32-update replay audit found matching row identities, learning rates,
 token dose and source. CE/loss/gradient scalars matched through step48; later
@@ -75,3 +74,11 @@ the model deadline. This changes scheduling only, not any scientific output ID.
 After complete training and evaluation, report the method comparisons, paired
 uncertainty, execution limitations and resource use to the owner. Wait for their
 next-direction decision; no optional follow-on experiment is queued.
+
+The first64 formal GSM outputs took155.304 seconds and contain71587 output tokens.
+The owner asked about an in-place two-A800 upgrade. A two-worker scheduler is
+prepared and all98 CPU checks pass; it has not been launched and current single
+GPU generation continues. See
+[the temporary two-GPU plan](../../experiments/public_math_pilot_v1/DUAL_GPU_PREPARATION.md).
+Any maintenance shutdown needs a verified durable pause first. The original
+workers already survive SSH loss; a tmux session provides reconnectable log views.

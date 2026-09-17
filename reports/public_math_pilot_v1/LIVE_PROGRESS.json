@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-09-17T22:40:41.902087+00:00",
+  "observed_at_utc": "2026-09-17T23:00:38.245488+00:00",
   "status": "active_incomplete",
   "training": {
     "SFT": {
@@ -53,7 +53,7 @@
     "TrimSFT": {
       "completed_update_records": 160,
       "largest_completed_step": 128,
-      "latest_committed_step": 96,
+      "latest_committed_step": 128,
       "peak_allocated_bytes": 34130915328,
       "mean_update_seconds": 3.5414924759184943,
       "attempts": [
@@ -71,17 +71,40 @@
           "initial_checkpoint": "slot_000032_82201bae6085451790c98851cad98627",
           "completed_records": 96,
           "last_completed_step": 128,
-          "end": null
+          "end": {
+            "arm": "TrimSFT",
+            "initial_step": 32,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
         }
       ]
     },
     "QDW_v0": {
-      "completed_update_records": 0,
-      "largest_completed_step": 0,
-      "latest_committed_step": 0,
-      "peak_allocated_bytes": null,
-      "mean_update_seconds": null,
-      "attempts": []
+      "completed_update_records": 128,
+      "largest_completed_step": 128,
+      "latest_committed_step": 128,
+      "peak_allocated_bytes": 34137061376,
+      "mean_update_seconds": 3.5101280317176133,
+      "attempts": [
+        {
+          "attempt": "e04304af893140b7b50b544d0202f7c8",
+          "started_at_utc": "2026-09-17T22:41:15.887505+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 128,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "QDW_v0",
+            "initial_step": 0,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
     }
   },
   "base_dev_complete_outputs": 512,
@@ -91,12 +114,12 @@
   "planned_logical_outputs": 31203,
   "physical_generation_cap_after_recorded_oom": 31331,
   "failed_physical_generations": 128,
-  "saved_public_outputs": 0,
+  "saved_public_outputs": 64,
   "failed_public_attempt_seconds": 257,
   "public_results_available": false,
-  "disk_free_bytes": 95791923200,
+  "disk_free_bytes": 88650039296,
   "telemetry_peak_device_used_mib": 81009.0,
-  "current_evaluation": "queued_after_recovered_training_finishes",
+  "current_evaluation": "single_gpu_formal_generation_active",
   "sources": {
     "preflight": "0f66e8ceb9138be52d3d51169944486d75c1ea94",
     "preparation": "e1aa912b10c37f846e7993f16c30a8a5d07b20d3",
@@ -117,7 +140,7 @@
   "expected_physical_completed_training_records": 544,
   "lost_uncommitted_training_updates": 32,
   "training_recovery": {
-    "status": "same_source_recovery_active",
+    "status": "completed_final_endpoints_verified",
     "failure": "checkpoint_admission_included_clean_file_cache",
     "failed_process_seconds": 2180,
     "restored_TrimSFT_step": 32,
@@ -129,6 +152,24 @@
     "recomputed_step_range_inclusive": [
       33,
       64
-    ]
+    ],
+    "successful_process_seconds": 1534
+  },
+  "training_complete": true,
+  "actual_formal_updates": 512,
+  "actual_physical_completed_training_records": 544,
+  "first_formal_gsm_batch": {
+    "outputs": 64,
+    "seconds": 155.30447260662913,
+    "output_tokens": 71587,
+    "peak_memory_allocated_bytes": 20029231104,
+    "completed_at_utc": "2026-09-17T22:58:08.925324+00:00"
+  },
+  "dual_gpu_preparation": {
+    "status": "cpu_validated_not_launched",
+    "cpu_tests_passed": 98,
+    "owner_considering_same_instance_upgrade": true,
+    "current_worker_not_restarted": true,
+    "plan": "../../experiments/public_math_pilot_v1/DUAL_GPU_PREPARATION.md"
   }
 }

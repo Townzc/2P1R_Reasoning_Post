@@ -1181,3 +1181,15 @@ explicit final-report limitation. This audit adds zero model calls; no public
 score was available when the durable recovery point was chosen. Historical failed
 updates and process receipts remain preserved. The CPU test result is88 checks;
 no tests were repeated for this documentation-only milestone.
+
+All four public-math arms subsequently completed128 updates with verified final
+recoveries; the recovered trainer exited0 after1534seconds. The first64 formal
+GSM outputs completed in155.304seconds. The owner emphasized disconnection
+resilience: verified existing setsid workers have no controlling terminal and
+server-backed logs; installed tmux and added four read-only log windows without
+restarting a model worker. The owner asked about additional hardware and clarified
+an in-place change to two A800s. Prepared an optional scheduler over disjoint whole
+runs, retaining original model/evaluation code, all requests, one-visible-device
+RNG topology, shared exclusion and reservation locks, and per-worker deadlines.
+All98 CPU checks pass; the two-GPU scheduler has not generated anything or changed
+current execution. Hardware changes and maintenance timing remain for owner choice.

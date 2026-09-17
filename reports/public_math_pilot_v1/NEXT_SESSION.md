@@ -6,7 +6,7 @@ the owner retention/daytime/concurrency amendments,
 [INFRASTRUCTURE_RECOVERY.md](../../experiments/public_math_pilot_v1/INFRASTRUCTURE_RECOVERY.md).
 Earlier zero-model startup blockers and serial-only scheduling are superseded.
 
-SFT128 and DFT128 are complete; TrimSFT is active, followed by QDW-v0. Preparation
+All four128-update training arms and verified final recoveries are complete. Preparation
 completed4096 masks,8192 annotation forwards and512 Base-dev outputs. The fixed64
 technical audit did not change masks. Public benchmark results remain pending.
 The first GSM128 batch lost128 attempts to CUDA OOM, with no saved public output.
@@ -54,16 +54,21 @@ the model deadline. This changes scheduling only, not any scientific output ID.
 The TrimSFT trainer later stopped before saving step64 because the strict host
 RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
 restored headroom without deleting or changing data; the original trainer resumed
-from the verified step32 model/AdamW/RNG. Step64 and96 then committed; the latest
-observation shows this trajectory reached step128, with its final save
-pending. Preserve the32 lost uncommitted updates: the final scientific dose remains
+from the verified step32 model/AdamW/RNG. The recovered trajectory reached128 and its terminal recovery committed
+successfully. Preserve the32 lost uncommitted updates: the final scientific dose remains
 512, while expected physical completed-update records are544. GPU replay follows
 the same rows/LR/source but is not bitwise equivalent; disclose the measured
 numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
 
 Keep the bounded CPU cache helper until training finishes. Both old and recovered
 training attempts stay immutable, and all earlier evaluator launchers are inactive.
-The current evaluator waits for recovered TRAINING_COMPLETE.json. The private
+The current single-GPU evaluator passed TRAINING_COMPLETE.json and is generating formal GSM outputs. The private
 handoff records current process IDs; inspect fresh state before acting. Report the
 full finite results to the owner, including numerical replay limitations, then wait
 for their direction. No optional follow-on work is authorized.
+
+Same-instance dual-A800 capacity is under owner consideration. CPU-only preparation
+and98 checks are complete; no maintenance pause or two-GPU job has been authorized
+by the hardware clarification alone. Read DUAL_GPU_PREPARATION.md and the private
+handoff before any transition. Continue current evaluation pending owner timing;
+never release an instance or interrupt an uncommitted generation for this proposal.
