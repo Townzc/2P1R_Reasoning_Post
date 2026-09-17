@@ -126,7 +126,7 @@ def generate_rows(model, tokenizer, rows, folder, *, model_identity, logical_nam
     folder = Path(folder); folder.mkdir(parents=True, exist_ok=True)
     if len({r['id'] for r in rows}) != len(rows):
         raise ValueError('Duplicate generation IDs')
-    if batch_size not in (16, 64):
+    if batch_size not in (16, 128, 256):
         raise ValueError('Unfrozen batch size')
     reused = reused or {}
     if seed is not None and reused:

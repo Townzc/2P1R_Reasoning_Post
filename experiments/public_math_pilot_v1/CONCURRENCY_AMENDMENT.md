@@ -14,8 +14,10 @@ trainer and one generator. Generation consumes only immutable committed64/128
 weights, never live tensors from a running optimizer.
 
 Training admission requires50GiB currently free (measured longest engineering
-reservation48.30GiB); generation admission requires32GiB for64-way GSM,40GiB for
-64-way MATH,22GiB for16-way dev. The already-running Base-dev peak was about17GiB.
+reservation48.30GiB); generation admission requires32GiB for128-way GSM,64GiB for
+256-way MATH,22GiB for16-way dev. The initial Base-dev reservation was about17GiB;
+the long-running preparation process later reserved about29GiB. During observed
+overlap the two processes used about71GiB combined and GPU utilization reached100%.
 Record actual device memory and throughput under overlap. Spare memory alone
 does not establish a speedup. If contention defeats progress, restore serial
 scheduling at committed boundaries without changing scientific parameters.
@@ -26,3 +28,17 @@ GPU work. Training and inference process wall times overlap and must not be
 summed as billed GPU hours. Preserve the complete powered-window accounting.
 The midnight stop, finite requests, all official denominators and artifact
 retention rules remain in force.
+
+Before the first public-benchmark generation, the waiting evaluator was replaced
+to use128-way GSM and256-way MATH batches uniformly across all five states. Dev
+stays16-way, preserving the already-running Base-dev stream. Installed
+Transformers4.56.2 automatically uses Qwen2's supported logits_to_keep=1 during
+generation; this avoids materializing full-sequence vocabulary logits. The
+larger public batches are an engineering throughput choice, not a score-based
+choice. All IDs, seeds, draw counts, decode limits and scientific comparisons
+are unchanged. Batch shape is bound into each immutable generation request;
+sampled token streams need not equal the unexecuted64-way proposal. The64GiB
+MATH admission effectively reserves the GPU for inference after training.
+All82 CPU checks passed before deploying this evaluator. Actual first-batch
+throughput and memory remain to be measured; a failed reserved batch must not
+be silently regenerated.

@@ -26,11 +26,11 @@ def evaluation_jobs():
     # state at each MATH draw. An overnight pause therefore has explicit coverage.
     for arm in states:
         jobs.append(dict(arm=arm,step=0 if arm=='Base' else 128,dataset='gsm8k',seed=None,
-            name=arm+'-GSM8K',batch_size=64))
+            name=arm+'-GSM8K',batch_size=128))
     for draw in range(8):
         for arm in states:
             jobs.append(dict(arm=arm,step=0 if arm=='Base' else 128,dataset='math500',
-                seed=2026091800+draw,name=f'{arm}-MATH500-draw{draw}',batch_size=64))
+                seed=2026091800+draw,name=f'{arm}-MATH500-draw{draw}',batch_size=256))
     for arm in ARMS:
         for step in (64,128):
             jobs.append(dict(arm=arm,step=step,dataset='dev',seed=None,
@@ -63,7 +63,7 @@ def wait_endpoint(out,volumes,contract,arm,step,deadline):
 
 
 def wait_generation_memory(dataset,deadline):
-    required=(40 if dataset=='math500' else 32 if dataset=='gsm8k' else 22)*2**30
+    required=(64 if dataset=='math500' else 32 if dataset=='gsm8k' else 22)*2**30
     waiting=False
     while True:
         require_time(deadline,300)
