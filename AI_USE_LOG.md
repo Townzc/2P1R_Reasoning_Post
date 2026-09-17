@@ -1,3 +1,23 @@
+# 2026-09-16 — E037 completed and independently verified
+
+Codex executed the owner-requested finite frozen-endpoint diagnostic; no new
+training or external messages. Four agents split data, scoring/statistics,
+resource-accounting review, and integration.30 targeted tests passed both locally
+and on Linux. All2112 actual generations and192 local forwards were exported;
+2124 files/50,011,905 bytes independently hash-verified before provider shutdown.
+CPU audits replayed prompts, token/stop contracts, math and ordered templates;
+local probability arithmetic and candidate token spans were checked without
+rerunning model inference. Supplemental1152 H/C scores exactly revalidated.
+
+A reviewer caught a preparation-audit lineage-label error: the non-ancestor E030
+calibration-fit rows were wrongly included in endpoint support unions. The frozen
+original was preserved and an explicit source-bound correction supplies768 rows/
+512 groups. Core measurements and leakage exclusions did not change. A separate
+post-run one-line analyzer fix normalizes public source paths; all8 core analysis
+artifacts were verified byte-identical after rerun. The new plot was visually
+checked. Costs use verified live7.98/h and conservative whole-power timestamps,
+not a claimed invoice. User will decide the proposed next data intervention.
+
 # 2026-09-16 — E037 frozen goal diagnostic preparation
 
 Owner explicitly requested the post-E036 handoff. Codex prepared outcome-blind

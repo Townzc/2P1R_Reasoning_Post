@@ -555,7 +555,7 @@ def analyze(run=RUN, release=RELEASE, output=OUTPUT, *, tokenizer_dir):
     (output/'REPORT.md').write_text(_report(summary, metrics, operator_results))
     dump(output/'manifest.json', dict(input_files_sha256=bindings,
         source_files_sha256={str(p): sha256_file(p) for p in (
-            Path(__file__), Path('experiments/post_e036_goal_probe/scoring.py'),
+            Path('experiments/post_e036_goal_probe/analyze.py'), Path('experiments/post_e036_goal_probe/scoring.py'),
             Path('experiments/post_e036_goal_probe/generation.py'), Path('src/evaluation.py'),
             Path('src/trace_audit.py'), Path('analyses/completion_contract.py'))},
         files_sha256={p.name: sha256_file(p) for p in sorted(output.iterdir())}))

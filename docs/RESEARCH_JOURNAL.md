@@ -1,3 +1,14 @@
+## 2026-09-16 — E037 goal diagnostic complete
+
+Four frozen endpoints:2112 outputs and192 local contexts, no new training.
+Supplied skeleton improves sampled accuracy by14.6–19.3pp, but strict both-target
+completion is only1–2/96 paired draws per model. Positive local target-log-odds
+shifts coexist with0–1/24 both-target unique argmaxes. Interface copying and wrong
+operator choice both matter. The trace audit distinguishes correct local equations
+from faithful evaluation of the supplied program. Read the E037 results and
+explicit training-support lineage correction; no automatic G-single/G-paired run.
+Provider off02:47:37UTC, whole-windowCNY5.5361 proxy, full output backup verified.
+
 ## 2026-09-16 — complete E031–E036; readiness interaction remains unestablished
 
 **Question and motivation.** Does the Paths-versus-Surface benefit change with

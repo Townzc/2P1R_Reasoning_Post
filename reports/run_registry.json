@@ -1,6 +1,6 @@
 {
   "scope": "Historical engineering checks and restricted development pilots, plus a complete one-seed arithmetic discovery factorial (E031\u2013E036). Calibration is not a treatment comparison; one seed does not establish a population or pure mechanism effect.",
-  "charged_gpu_seconds": 13456,
+  "charged_gpu_seconds": 14605,
   "runs": [
     {
       "run_id": "absent_boundary_gcm_seed31_r1",
@@ -2523,6 +2523,40 @@
       "provider_shutdown_confirmed": true,
       "official_test_evaluated": false,
       "evidence_scope": "Complete one-seed restricted discovery 2x2; paired question/template uncertainty excludes training-seed uncertainty. Fine-structure/prep-token residuals remain; no pure mechanism or confirmatory population claim."
+    },
+    {
+      "run_id": "post_e036_goal_probe_v1",
+      "experiment_id": "E037",
+      "attempt": 1,
+      "status": "completed",
+      "receipt_status": "completed",
+      "mode": "frozen_endpoint_goal_conditioning_diagnostic",
+      "git_commit": "0a6770f5fceb929aff6d425b9ce8af293c12e71b",
+      "charged_gpu_seconds": 1149,
+      "records": "runs/post_e036_goal_probe_v1",
+      "receipt": "runs/post_e036_goal_probe_v1/attempts/attempt_000001/resource_receipt.json",
+      "phase_accounting": "reports/post_e036_goal_probe/PHASE_LEDGER.json",
+      "model": {
+        "attention": "sdpa",
+        "autocast": "bfloat16",
+        "id": "Qwen/Qwen2.5-1.5B",
+        "kind": "base",
+        "parameters": "float32",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "tf32": false
+      },
+      "steps": 0,
+      "actual_generated_this_attempt": 2112,
+      "new_generation_cap": 2304,
+      "new_generation_fault_repeats": 0,
+      "operator_contexts": 192,
+      "candidate_scores": 768,
+      "actual_forward_calls": 192,
+      "evidence_valid": true,
+      "provider_shutdown_confirmed": true,
+      "independent_new_outputs_backup_complete": true,
+      "official_test_evaluated": false,
+      "evidence_scope": "24 exploratory paired number groups across four frozen single-seed endpoints; no additional training; uncertainty excludes training-seed variation."
     }
   ],
   "accounting_scope": "Across separate historical, E018, arithmetic-v2 and post-E030 resume phases; original7200-second ledger and all prior receipts remain immutable. Process charges are not whole-instance rental invoices.",
@@ -2635,6 +2669,18 @@
       "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
       "resume_amendment": "experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md",
       "independent_verification": "experiments/thursday_probe_v2/INDEPENDENT_VERIFICATION_resume_r1.json"
+    },
+    {
+      "experiment_id": "E037",
+      "run_id": "goal_probe_e037_r1",
+      "phase_run_id": "post_e036_goal_probe_v1",
+      "updates": 0,
+      "actual_updates": 0,
+      "status": "completed",
+      "protocol": "experiments/post_e036_goal_probe/PROTOCOL.md",
+      "manifest": "runs/post_e036_goal_probe_v1/run_manifest_final.json",
+      "execution_source_commit": "0a6770f5fceb929aff6d425b9ce8af293c12e71b",
+      "independent_verification": "reports/post_e036_goal_probe/INDEPENDENT_VERIFICATION.json"
     }
   ],
   "phase_execution_receipts": [
@@ -2651,6 +2697,13 @@
       "charged_seconds": 4541,
       "manifest": "experiments/thursday_probe_v2/PHASE_LEDGER_resume_r1.json",
       "note": "One worker receipt covers six logical training runs and4192 new outputs; logical runs are not six additional process receipts."
+    },
+    {
+      "phase": "E037_frozen_goal_probe",
+      "receipts": 1,
+      "charged_seconds": 1149,
+      "manifest": "reports/post_e036_goal_probe/PHASE_LEDGER.json",
+      "note": "One inference-only process receipt; four inherited adapters are not four new training runs."
     }
   ]
 }
