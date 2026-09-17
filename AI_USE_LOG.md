@@ -1096,3 +1096,17 @@ The assistant interpreted the owner-supplied execution plan, registered E038/E03
 prepared isolated data/runtime/analysis code and independent CPU checks, and
 audited unused server checkpoints against independent backups before deletion.
 No external messages or claims of novelty. New results remain pending.
+
+## Post-E039 decision-supervision preparation
+
+The owner authorized Stage A and four fixed 128-update continuations from E038/E039.
+Codex read and hash-checked the handoff, registered E040–E043, froze original
+training rows and a fresh 48-group evaluation, and implemented separate generation,
+forward and whole-powered-window ledgers. Three bounded agents independently
+prepared data/span audits, loss/runtime/observer checks and CPU analysis. All 38
+focused CPU tests passed with the pinned tokenizer; no scientific model calls
+had occurred at this milestone. Tests cover inherited CE parity, weighted causal
+gradients, exact interrupted recovery, real cached generation alignment, durable
+queue replay and joint paired bootstrap. The pipeline uses passive observation
+for the Stage A consistency gate and has no outcome-based accuracy gate.
+Source is published before server scientific execution; no external messages.

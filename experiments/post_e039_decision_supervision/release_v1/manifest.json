@@ -1,0 +1,138 @@
+{
+  "F_endpoint_questions": 64,
+  "F_midpoint_questions": 16,
+  "H_midpoint_groups": 8,
+  "H_training_diagnostic_groups": 32,
+  "actual_unique_F_training_prompts": 256,
+  "evaluation_groups": 48,
+  "evaluation_rows": {
+    "F": 96,
+    "H": 96
+  },
+  "files_sha256": {
+    "CONTINUATION_MANIFEST.json": "52b040c3bb6241cfba0c942618628abe48feb8b826e5ed0d8b1cd4c08e6da25b",
+    "DATA_AUDIT.json": "d0a11966fda4adb4f4f3e3bc4b551314a8c1b67066adfbfbec470363e4ac2c22",
+    "DECISION_SPAN_AUDIT.jsonl": "eba6ad19cc69411a5f117228b14cae56ea695fb091b2cf2ce6778c8300725f1c",
+    "F.jsonl": "1664a8769714525463886895c7ce233c027350e8ddf65ab337b9b18f53ae0a78",
+    "F_SPAN_AUDIT.jsonl": "ee2d84f0de30ab1db6ee5f330480442f396437e2339dbb06d7df97bcd41c004e",
+    "F_train16.jsonl": "044e4ce657662b340fb257709d1a305a2f2ec9077039849116dc921d9fa03082",
+    "F_train64.jsonl": "47444c4f874e65c811a44c255739b1ea4e4f9aa4ce98dbcef904b7149b1687c9",
+    "F_train_all.jsonl": "b65c64d71d39fb523e6f994aacf2ba6790c2c2dd35ea9c49b0b57fccab8138f7",
+    "H.jsonl": "819b1f21a56ea9c962f23aa218dfe439d9dcf9d76c8eb34753ffca2acbbcdda2",
+    "H_train32.jsonl": "7baa528d0598cceebed8eb4d25018285aa52eb9b4356e2c8563384f94fbf831a",
+    "H_train8.jsonl": "2586a03f23fc0764cccbadfafdd5cd11e488ee1b8c03cf83a456d1d24f79d6b7",
+    "LEAKAGE_AUDIT.json": "0c197aa265ad93eb22578fe62b8d95b42beec52d240679743f522f1431d5dd80",
+    "dose.json": "5ec6a94e18a805debe5c4cba664fbaac95ae2a07c0bfdeca95aa6d3ba04442d4",
+    "eval_H_spans.jsonl": "43094f08f895444ad565c24739016d3e53aed02026902ce49efd94d9548a2c54",
+    "eval_groups.jsonl": "e7e7577898661ea7b73b336733da68cbbb628d125b08a8a26b9e5ad1bf2f6622",
+    "learning_rates.json": "1a1e4a9f34cc13287b35724ee468697fb6616fb86433cf0e818a8adc1968bcea",
+    "paired.jsonl": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+    "schedules.json": "93c2eb1a89884e7be811b9fd1124f966d2006d36f590636516ebed8f265ca4d9",
+    "shared_F.jsonl": "9d5a6be1fbeba1f948f0c09c66faf5af33e953a59b6b0014361695d041a4be8c",
+    "single.jsonl": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+    "train_H_spans.jsonl": "c3a040de2f47b2854620e59541357f5b5e4bf31b8f63891e18ddf4bd5c7c891d"
+  },
+  "first_decision_span_rule": "First unknown-hole-dependent semantic atom in exact postorder renderer; four counterfactual operation prefixes must have identical preceding tokens.",
+  "forward_sequence_equivalents_cap": 16384,
+  "generation_cap": 5000,
+  "inherited_schedule": "Exact first128 updates/two epochs of frozen prior shared seed17 schedule; not a continuation of its optimizer/LR state.",
+  "interpretation": "Pre-frozen new numerical instances; exploratory, not structural OOD or training-seed confirmation. Loss weighting preserves scalar token mass, not gradients or effective learning rate.",
+  "intervention_implementable": true,
+  "lambda_multiplier": 5.0,
+  "lr_recipe": "Existing v2 learning_rates(128): peak5e-5, warmup8, cosine to1e-5.",
+  "new_model_calls": 0,
+  "new_training_performed": false,
+  "no_reserved_contents_read": true,
+  "old_source_or_data_modified": false,
+  "original_H_rows_per_recipe": 512,
+  "parents": {
+    "paired": {
+      "checkpoint_identity_sha256": "1220828d601e87cb3f5937b49004be69fc41e173281df8f14f50740f568da55c",
+      "original_checkpoint128_identity_sha256": "14f4ee8afb7df5ceeb70c2cff97ac20692ffc9e9331ae6fcacb8648073f7169d",
+      "original_training_identity_sha256": "4903d26455a8870fe3775314d4e0212c73c0ad64303593587e83689fc16a02a3",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+      },
+      "parent_checkpoint_step": 256,
+      "parent_experiment_id": "E039",
+      "run_id": "goal_train_e039_r1",
+      "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e039_r1/run_manifest_final.json",
+      "source_manifest_sha256": "4b0495c89b7abb74bc851862302c49da01a3066a160b99fb376a828ea368274a"
+    },
+    "single": {
+      "checkpoint_identity_sha256": "c464bd4265ef80b877abe3a57e34325760f45c7b16c22a5b98aa2d9b3a6ee857",
+      "original_checkpoint128_identity_sha256": "2c9757707a6be303c53520405524cf3b4dbf7ab61a42c0a3fd1b1ca6a295b11e",
+      "original_training_identity_sha256": "f8e5db29413de344b2784d94d828c36e03c0cd480d77737bd809aa38a9c2e75b",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+      },
+      "parent_checkpoint_step": 256,
+      "parent_experiment_id": "E038",
+      "run_id": "goal_train_e038_r1",
+      "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e038_r1/run_manifest_final.json",
+      "source_manifest_sha256": "85004a9d6fae95def4db31f44a307c0604c7fefa6f7cd5b83e76664e7239f795"
+    }
+  },
+  "phase": "post_e039_decision_supervision_v1",
+  "planned_generations": 4736,
+  "prior_release_manifest_sha256": "ca97959cac646eb709d428bede41e6aacc35ee7362b5fe01ddfa95e28d2e5536",
+  "seeds": {
+    "bootstrap": 2026091714,
+    "data": 2026091711,
+    "evaluation": 2026091713,
+    "selection": 2026091712,
+    "training": 17
+  },
+  "shared_F_rows": 512,
+  "source_files_sha256": {
+    "experiments/post_e036_goal_probe/data.py": "201297255a68442323906c0202b307551d600a6218fd78f55905baec55c3a5ca",
+    "experiments/post_e037_goal_training/data.py": "5cbf0e187505b0391c2a5bc2de99eb9e0899eb33b6b66957cf6d972700690fa6",
+    "experiments/post_e039_decision_supervision/data.py": "4286e3d1dc05b0f484b80b90d2b2566bd757af1ccc7ea2ebf1eb8fdc2b1dfa82",
+    "experiments/post_e039_decision_supervision/decision_spans.py": "eaf3ede9d645cb4c80972d88e77e1e10b6ba90e374c5ff151fa99c32a11806c5",
+    "experiments/thursday_probe/common.py": "0f4b923d0811d648c807940f5aff76c4c1195312ad8c59d4876b549516d5e50e",
+    "experiments/thursday_probe_v2/config.py": "b349a8b021ea3ca4a02fcf377aa33f556365acea96b8ba0e94ef944ec508b23e",
+    "src/countdown_smoke.py": "2249e313c60090958d5ddfe474dc44f2dff6337dbccc79a6ee48498254531058",
+    "src/pilot_data.py": "9b72c83c1dcc5c55fa38c3132e7c99075ff2e056bc97465e854e19be75a9d714",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "status": "FROZEN_CPU_ONLY_BEFORE_NEW_MODEL_OUTPUTS",
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  },
+  "total_updates": 512,
+  "training_rows": {
+    "paired": 1024,
+    "single": 1024
+  },
+  "updates_per_arm": 128
+}

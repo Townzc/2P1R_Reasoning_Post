@@ -1,3 +1,13 @@
+# Post-E039 decision supervision authorized — preparation
+
+The owner requested the finite Stage A + four-arm continuation plan on the existing
+A800. E040/S-U, E041/S-D, E042/P-U and E043/P-D are registered from E038/E039
+step256:128 additional updates each, unchanged original H/F rows, ordinary CE
+versus first semantic decision weighting. New generation cap5000, forward cap16384,
+whole powered cap4hours/CNY40. Follow experiments/post_e039_decision_supervision/PROTOCOL.md.
+No new scientific outputs yet. Historical outcomes and ledgers remain unchanged;
+the current owner's authorization supersedes the previous pause for this phase.
+
 # Current closeout — E038/E039 complete; provider off; paused
 
 The owner-authorized G-single/G-paired phase completed from E031 step32:

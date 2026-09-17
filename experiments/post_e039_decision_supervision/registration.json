@@ -1,0 +1,44 @@
+{
+  "phase": "post_e039_decision_supervision_v1",
+  "status": "registered_not_executed",
+  "entries": [
+    {
+      "state": "S-U",
+      "data": "single",
+      "parent": "E038",
+      "objective": "U",
+      "experiment_id": "E040",
+      "run_id": "decision_e040_r1",
+      "updates": 128
+    },
+    {
+      "state": "S-D",
+      "data": "single",
+      "parent": "E038",
+      "objective": "D",
+      "experiment_id": "E041",
+      "run_id": "decision_e041_r1",
+      "updates": 128
+    },
+    {
+      "state": "P-U",
+      "data": "paired",
+      "parent": "E039",
+      "objective": "U",
+      "experiment_id": "E042",
+      "run_id": "decision_e042_r1",
+      "updates": 128
+    },
+    {
+      "state": "P-D",
+      "data": "paired",
+      "parent": "E039",
+      "objective": "D",
+      "experiment_id": "E043",
+      "run_id": "decision_e043_r1",
+      "updates": 128
+    }
+  ],
+  "allocation": "Existing run/planned registry inspected through E039; next unused IDs E040\u2013E043 allocated atomically before any model calls.",
+  "source_parent_commit": "f03b3b6778d45e236d573b82ab6bac9faa085c8b"
+}
