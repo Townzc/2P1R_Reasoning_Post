@@ -1,5 +1,11 @@
 # Owner-requested overlapping execution
 
+Current batch policy after the first128-way GSM batch failed with concurrent
+CUDA OOM:64-way GSM with26GiB admission;256-way MATH with64GiB admission;
+16-way dev with22GiB admission. Read INFRASTRUCTURE_RECOVERY.md. The original
+failed128 attempts remain charged and the one bounded retry is evidence-bound.
+The128-way proposal below records the initial choice and is superseded.
+
 The owner explicitly requested maximizing server utilization by evaluating while
 performing the next step. Replace the previous strictly serial execution order
 with one training process and one generation process on the same A800, plus

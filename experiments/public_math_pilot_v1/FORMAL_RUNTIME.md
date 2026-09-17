@@ -31,12 +31,15 @@ stop new work for checkpointing before2026-09-18 06:45UTC; platform shutdown is
 confirmed for2026-09-18 06:58UTC (23:58 America/Los_Angeles). Midnight is a pause,
 not permission to reduce benchmark denominators or replace missing results.
 
-Evaluation uses fixed128-way GSM,256-way MATH and16-way dev batches,
+Evaluation uses fixed64-way GSM,256-way MATH and16-way dev batches,
 FP32 weights/BF16 autocast/SDPA throughout. Each MATH draw reseeds once to
 2026091800+j, and persists post-batch CPU/CUDA RNG in the same atomic result
 record. Resume restores that stream; a reserved call lacking an output fails
 closed rather than generating an undocumented replacement. The complete fixed
 queue contains31,203 outputs, including32 preflight outputs reused in Base-dev.
+The failed initial128-way GSM batch is retained separately and charged as128
+additional physical attempts; see INFRASTRUCTURE_RECOVERY.md for its one bounded
+infrastructure retry. It produced no saved public result.
 The deterministic order is all five GSM states, then all five states for each
 MATH draw, then the eight trained dev endpoints. Scores do not alter the queue.
 

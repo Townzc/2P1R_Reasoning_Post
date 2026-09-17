@@ -126,7 +126,7 @@ def generate_rows(model, tokenizer, rows, folder, *, model_identity, logical_nam
     folder = Path(folder); folder.mkdir(parents=True, exist_ok=True)
     if len({r['id'] for r in rows}) != len(rows):
         raise ValueError('Duplicate generation IDs')
-    if batch_size not in (16, 128, 256):
+    if batch_size not in (16, 64, 256):
         raise ValueError('Unfrozen batch size')
     reused = reused or {}
     if seed is not None and reused:
@@ -140,6 +140,7 @@ def generate_rows(model, tokenizer, rows, folder, *, model_identity, logical_nam
         stop_token_ids=[ASSISTANT_END_ID, EOS_ID], stop_strings=['</s>'],
         tools=False, extra_generation_rounds=0, batch_size=batch_size,
         precision='FP32_master_BF16_autocast', attention='sdpa', schema=2,
+        cuda_allocator_config=os.environ.get('PYTORCH_CUDA_ALLOC_CONF','default'),
         implementation_sha256={n:sha(Path(__file__).with_name(n))
             for n in ('runtime_common.py','preflight.py','tokenization.py')},
         torch_version=torch.__version__,transformers_version=__import__('transformers').__version__)

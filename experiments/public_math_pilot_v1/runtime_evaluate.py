@@ -12,6 +12,7 @@ import time
 import torch
 
 from .data import load_inputs
+from .infrastructure_retry import GsmOomRetryLedger
 from .losses import ARMS
 from .preflight import drop_model, json_hash, load_base, sha
 from .runtime_common import PhysicalLedger, ensure_record, generate_rows, read, require_time
@@ -26,7 +27,7 @@ def evaluation_jobs():
     # state at each MATH draw. An overnight pause therefore has explicit coverage.
     for arm in states:
         jobs.append(dict(arm=arm,step=0 if arm=='Base' else 128,dataset='gsm8k',seed=None,
-            name=arm+'-GSM8K',batch_size=128))
+            name=arm+'-GSM8K',batch_size=64))
     for draw in range(8):
         for arm in states:
             jobs.append(dict(arm=arm,step=0 if arm=='Base' else 128,dataset='math500',
@@ -63,7 +64,7 @@ def wait_endpoint(out,volumes,contract,arm,step,deadline):
 
 
 def wait_generation_memory(dataset,deadline):
-    required=(64 if dataset=='math500' else 32 if dataset=='gsm8k' else 22)*2**30
+    required=(64 if dataset=='math500' else 26 if dataset=='gsm8k' else 22)*2**30
     waiting=False
     while True:
         require_time(deadline,300)
@@ -92,7 +93,9 @@ def run(args):
             for r in released[name]] for name in ('gsm8k','math500','dev')}
         if [len(rows[n]) for n in ('gsm8k','math500','dev')]!=[1319,500,512]:
             raise ValueError('Benchmark denominators differ')
-        jobs=evaluation_jobs();ledger=PhysicalLedger(args.ledger)
+        jobs=evaluation_jobs()
+        ledger=(GsmOomRetryLedger(args.ledger,args.retry_evidence,rows['gsm8k'][:128],base_identity)
+                if args.retry_evidence else PhysicalLedger(args.ledger))
         ensure_record(out/'EVALUATION_CONTRACT.json',dict(schema=1, jobs=jobs,
             base_identity=base_identity,training_contract_sha256=json_hash(contract),
             model_identities_bound_per_run_before_generation=True,
@@ -100,6 +103,7 @@ def run(args):
             prompt_sha256={name:[json_hash(r['prompt_ids']) for r in rr] for name,rr in rows.items()},
             public_generations=26595,dev_generations_including_base=4608,total_generations=31203,
             checkpoint_selection='step128 fixed before results; step64 diagnostic only',
+            infrastructure_retry_evidence_sha256=getattr(ledger,'evidence_sha256',None),
             source_commit=args.source_commit,implementation_sha256={n:sha(Path(__file__).with_name(n))
                 for n in ('runtime_evaluate.py','runtime_common.py','preflight.py','tokenization.py')}))
         done=[]
@@ -147,4 +151,5 @@ if __name__=='__main__':
     for name in ('base','release','inputs','output','ledger','source-commit'):p.add_argument('--'+name,required=True)
     p.add_argument('--volume-root',action='append',required=True)
     p.add_argument('--deadline-unix',type=float,required=True)
+    p.add_argument('--retry-evidence',help='The single audited first-GSM128 OOM incident; no generic retry')
     print(json.dumps(run(p.parse_args()),sort_keys=True),flush=True)

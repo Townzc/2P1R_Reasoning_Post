@@ -41,7 +41,7 @@ class RuntimeTest(unittest.TestCase):
             self.assertEqual([j['seed'] for j in math],list(range(2026091800,2026091808)))
             self.assertTrue(all(j['step']==(0 if arm=='Base' else 128) for j in math))
         self.assertEqual(sum(j['step']==64 for j in jobs),4)
-        self.assertTrue(all(j['batch_size']==128 for j in jobs if j['dataset']=='gsm8k'))
+        self.assertTrue(all(j['batch_size']==64 for j in jobs if j['dataset']=='gsm8k'))
         self.assertTrue(all(j['batch_size']==256 for j in jobs if j['dataset']=='math500'))
 
     def test_reservation_duplicate_and_cap_are_not_retries(self):
