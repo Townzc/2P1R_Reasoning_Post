@@ -5,8 +5,8 @@ deprioritized cost until the abstract deadline, and requested concurrent work to
 use the server efficiently. The frozen four-arm scientific scope remains intact.
 The timestamped observation is [LIVE_PROGRESS.json](LIVE_PROGRESS.json).
 
-SFT has completed128 updates and its full recovery is committed and verified.
-DFT is training; TrimSFT and QDW-v0 follow from separate fresh public bases.
+SFT and DFT each completed128 updates with committed, verified full recoveries.
+TrimSFT is training; QDW-v0 follows from its separate fresh public base.
 All4096 frozen masks and8192 annotation forwards are complete. The fixed64
 technical audit passed, without changing masks. All512 Base-dev outputs are
 durable, including32 preflight outputs reused exactly once; CPU scoring completed

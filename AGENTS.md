@@ -1,8 +1,8 @@
 # Current execution — public math active
 
 Read reports/public_math_pilot_v1/LIVE_EXECUTION.md and LIVE_PROGRESS.json for
-current observations. SFT completed128 updates; DFT is training; the other two
-arms remain queued. All4096 masks,8192 annotation forwards and512 Base-dev
+current observations. SFT and DFT each completed128 updates; TrimSFT is training;
+QDW-v0 remains queued. All4096 masks,8192 annotation forwards and512 Base-dev
 outputs are complete. Public benchmark results are pending. The first GSM128
 batch failed with concurrent CUDA OOM before saving any output; its128 physical
 attempts remain charged. The evidence-bound replacement uses64-way GSM,

@@ -5,7 +5,7 @@ the owner retention/daytime/concurrency amendments, and
 [INFRASTRUCTURE_RECOVERY.md](../../experiments/public_math_pilot_v1/INFRASTRUCTURE_RECOVERY.md).
 Earlier zero-model startup blockers and serial-only scheduling are superseded.
 
-SFT128 is complete; DFT is active, followed by TrimSFT and QDW-v0. Preparation
+SFT128 and DFT128 are complete; TrimSFT is active, followed by QDW-v0. Preparation
 completed4096 masks,8192 annotation forwards and512 Base-dev outputs. The fixed64
 technical audit did not change masks. Public benchmark results remain pending.
 The first GSM128 batch lost128 attempts to CUDA OOM, with no saved public output.
