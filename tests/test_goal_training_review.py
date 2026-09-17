@@ -43,4 +43,19 @@ class DurableReferenceProgressTests(unittest.TestCase):
             self.assertEqual(json.loads((output/'generation_ledger.json').read_text())['used'],0)
 
 
+
+class CrossPlatformLearningRateTests(unittest.TestCase):
+    def test_roundoff_is_allowed_without_replacing_frozen_vector(self):
+        import math
+        from experiments.post_e037_goal_training.queue import validate_learning_rates
+        from experiments.thursday_probe_v2.config import learning_rates
+        frozen=learning_rates(256);frozen[192]=math.nextafter(frozen[192],math.inf)
+        original=list(frozen);validate_learning_rates(frozen)
+        self.assertEqual(frozen,original)
+        for value in (float('nan'),float('inf'),0.,-1.,original[192]+1e-12):
+            changed=list(original);changed[192]=value
+            with self.assertRaises(ValueError):validate_learning_rates(changed)
+        with self.assertRaises(ValueError):validate_learning_rates(original[:-1])
+
+
 if __name__=='__main__':unittest.main()

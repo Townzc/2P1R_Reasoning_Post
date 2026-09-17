@@ -1,6 +1,7 @@
 """Two fixed E031 children and a finite, outcome-independent new evaluation."""
 import argparse
 import json
+import math
 import os
 from pathlib import Path
 import shutil
@@ -48,6 +49,15 @@ def evaluation_queue():
     return result
 
 
+def validate_learning_rates(frozen):
+    """Execute the released values; allow only two ULPs in libc recomputation."""
+    computed=learning_rates(256)
+    if len(frozen)!=len(computed) or any(
+        not math.isfinite(x) or x<=0 or abs(x-y)>2*max(math.ulp(x),math.ulp(y))
+        for x,y in zip(frozen,computed)):
+        raise ValueError('Released learning-rate recipe changed beyond cross-platform roundoff')
+
+
 def frozen_inputs():
     from .data import load_inputs
     manifest=verify_manifest(RELEASE);inputs=load_inputs()
@@ -59,7 +69,8 @@ def frozen_inputs():
     for key,count in dict(single=1024,paired=1024,F=96,H=96,C=96,midpoint_H=24,train_F=32,train_H=32).items():
         if len(inputs[key])!=count:raise ValueError('Frozen input shape changed: '+key)
     schedules=inputs['schedules'];lrs=inputs['learning_rates']
-    if lrs!=learning_rates(256) or schedules['single']!=schedules['paired']:
+    validate_learning_rates(lrs)
+    if schedules['single']!=schedules['paired']:
         raise ValueError('Released LR/schedule differs from shared frozen256 update recipe')
     for arm in ('single','paired'):
         schedule=schedules[arm]

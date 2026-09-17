@@ -255,7 +255,7 @@ def _forward_progress(output):
         forward_seconds=progress.get('forward_seconds', sum(o.get('seconds', 0.) for o in operators)),
         teacher_forced_scores_are_autoregressive_generations=False,
         reference_forward_calls=progress.get('reference_forward_calls',0),
-        reference_forward_tokens=progress.get('reference_forward_tokens',0),
+        reference_forward_tokens=progress.get('reference_forward_input_tokens',0),
         reference_forward_seconds=progress.get('reference_forward_seconds',0.))
 
 
