@@ -1,3 +1,18 @@
+# Measured engineering preflight complete; formal preparation executing next
+
+The replacement A800 completed five discarded engineering updates,64 reusable
+annotation forwards and32 reusable Base-dev generations. Full FP32 model,
+optimizer and RNG roundtrip passed. Training peak was33.41GiB on the longest
+profile;16-way dev generation produced31,215 tokens in123.42seconds.
+See reports/public_math_pilot_v1/PREFLIGHT_MEASURED.json. These are engineering
+measurements, not public benchmark scores. No formal updates yet.
+
+The finite preparation runtime now adds immutable per-batch output/RNG journals,
+full4096 mask freeze and the predeclared64 technical audit. Large artifacts stay
+on the195GiB server. Tonight's work stops for saving by23:45PDT and the instance
+must be off by00:00PDT. Owner cost/retention amendments supersede old blockers;
+historical reports below describe earlier states, not the current execution.
+
 # Current execution — owner reopened daytime public-math experiments
 
 The owner has opened the replacement A800, expanded its data disk to195GiB,

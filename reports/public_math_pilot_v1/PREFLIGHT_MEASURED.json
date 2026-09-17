@@ -1,0 +1,108 @@
+{
+  "checkpoint_roundtrip": {
+    "formal": false,
+    "load_seconds": 39.37785152718425,
+    "roundtrip_verified": true,
+    "save_seconds": 68.09602727368474,
+    "step": 1,
+    "token_step": 15651
+  },
+  "finished_at_utc": "2026-09-17T20:29:14.081373+00:00",
+  "formal_optimizer_updates": 0,
+  "generation": {
+    "batch_size": 16,
+    "length_caps": 6,
+    "output_tokens": 31215,
+    "output_tokens_per_second": 252.9101555547253,
+    "outputs": 32,
+    "pure_text_generation": true,
+    "seconds": 123.42327626794577,
+    "whole_benchmark_performance_estimate": false
+  },
+  "hardware": {
+    "name": "NVIDIA A800-SXM4-80GB",
+    "total_memory_bytes": 85093777408
+  },
+  "identity": {
+    "attention": "sdpa",
+    "inputs_sha256": "06660ef5f0a12dde2118b3f7d436a7c0f3f34f492632ec13e438523b33d50c8c",
+    "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "model_sha256": "f7aa8d665ab44d3b461bed742fe93cdcedc15d2e31e50dc372c126e6f720857b",
+    "precision": "FP32_master_BF16_autocast",
+    "release_manifest_sha256": "f7c67a1c523c3ec5dfbd1ae63506a9ce91dd03683643dcf3b7a72c70b16fa370",
+    "source_commit": "0f66e8ceb9138be52d3d51169944486d75c1ea94",
+    "tokenizer": {
+      "actual_context_limit": 4096,
+      "assistant_end_id": 151645,
+      "extra_eos_tokens": 0,
+      "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "response_encoding": "separate_then_concatenate_shared_full_and_blank",
+      "tokenizer_advertised_limit": 131072
+    }
+  },
+  "nonformal_optimizer_updates": 5,
+  "source_receipt_sha256": "6403c5516c4138b1cd2f3a0cddf70f839ce0b838272c075c9848d2867f023085",
+  "status": "engineering_preflight_completed_not_main_admission",
+  "training": [
+    {
+      "arm": "SFT",
+      "grad_norm_before_clipping": 1.2464572191238403,
+      "max_input_length": 1612,
+      "max_memory_allocated": 30992694272,
+      "max_memory_reserved": 35030827008,
+      "max_response_length": 1415,
+      "profile": "train_profile",
+      "seconds": 4.366291429847479,
+      "supervised_tokens": 15651
+    },
+    {
+      "arm": "DFT",
+      "grad_norm_before_clipping": 0.3721199631690979,
+      "max_input_length": 1612,
+      "max_memory_allocated": 30990423040,
+      "max_memory_reserved": 34881929216,
+      "max_response_length": 1415,
+      "profile": "train_profile",
+      "seconds": 3.8742184042930603,
+      "supervised_tokens": 15651
+    },
+    {
+      "arm": "TrimSFT",
+      "grad_norm_before_clipping": 0.3331369161605835,
+      "max_input_length": 1612,
+      "max_memory_allocated": 30990423040,
+      "max_memory_reserved": 34881929216,
+      "max_response_length": 1415,
+      "profile": "train_profile",
+      "seconds": 3.962681084871292,
+      "supervised_tokens": 15651
+    },
+    {
+      "arm": "TrimSFT",
+      "grad_norm_before_clipping": 0.24122819304466248,
+      "max_input_length": 1969,
+      "max_memory_allocated": 35877329408,
+      "max_memory_reserved": 51860471808,
+      "max_response_length": 1822,
+      "profile": "longest_profile",
+      "seconds": 8.365388322621584,
+      "supervised_tokens": 55840
+    },
+    {
+      "arm": "QDW_v0",
+      "grad_norm_before_clipping": 2.1698219776153564,
+      "max_input_length": 1612,
+      "max_memory_allocated": 30990423040,
+      "max_memory_reserved": 34881929216,
+      "max_response_length": 1415,
+      "profile": "train_profile",
+      "seconds": 3.884029660373926,
+      "supervised_tokens": 15651
+    }
+  ],
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.56.2"
+  },
+  "wall_seconds": 302.9688964523375
+}

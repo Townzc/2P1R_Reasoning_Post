@@ -1153,3 +1153,5 @@ The server was stopped before model execution: platform off confirmed2026-09-17 
 
 
 Owner retention amendment: no model/recovery downloads to the Mac; continue on-server with local verification and retained full scientific state. Recorded SERVER_RETENTION_AMENDMENT.md and superseded the expensive-export admission condition, while preserving historical evidence and elapsed budgets. A read-only SSH probe returned connection refused; no model process started. A800 memory discussion distinguishes the calculated23GiB training-state floor from unmeasured activation/temporary peaks.
+
+2026-09-17 expanded-server window: executed the published engineering preflight successfully (5 nonformal updates,64 annotation forwards,32 dev outputs). Added deterministic durable generation with saved per-batch RNG and ambiguous-call retry refusal, preparation identity checks, full mask freeze and fixed64 character-span audit.76 CPU tests pass including interrupted sampled-stream equivalence and immutable output corruption rejection. No optional arm or external submission.
