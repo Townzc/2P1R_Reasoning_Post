@@ -1,18 +1,22 @@
-# Current status — maintenance pause; provider off
+# Current status — two A800 workers evaluating in tmux
 
-The owner requested shutdown to change the same instance to two A800 GPUs.
-Provider off was visibly confirmed by2026-09-18 00:26:11UTC. All four128-update
-training endpoints are verified. Evaluation paused with4021 public outputs plus
-512 Base-dev outputs saved, and zero uncommitted evaluation reservations. No new
-failed generation or replay was added by this maintenance pause. Large artifacts
-remain verified on the persistent server volume; no instance/volume was deleted.
+The owner reopened the same persistent instance with two A80080GB GPUs and
+requested prompt, efficient use. The published scheduler abfff696 is deployed;
+both independent workers are generating under detached tmux. The unchanged CPU
+scorer runs concurrently. All four128-update training arms remain complete.
+No training, preparation or completed generation is repeated.
 
-Read reports/public_math_pilot_v1/MAINTENANCE_PAUSE.json, LIVE_EXECUTION.md and
-NEXT_SESSION.md. Full scientific evaluation remains incomplete:26670 logical
-outputs remain. The optional two-GPU scheduler is CPU-validated atabfff696 and
-awaits an owner-reopened, verified two-A800 instance. The heartbeat is paused.
-Do not restart a server automatically. Prior current-state sections below are
-historical snapshots; failed-attempt evidence and GPU replay limitations persist.
+Read reports/public_math_pilot_v1/DUAL_GPU_RESUME.json, LIVE_EXECUTION.md and
+NEXT_SESSION.md. The hardware transition preserved4533 logical outputs with
+zero uncommitted reservations; the current timestamped snapshot records4661
+saved outputs. The original128 failed generations,32 lost training updates and
+non-bitwise GPU replay limitation remain. Linux parallel checks10/10 passed,
+including original-contract equality and GNU-timeout inherited lock verification.
+
+The heartbeat is active. Nightly model/hard-GPU/CPU deadlines remain06:35/06:45/
+06:50UTC; the provider23:58PDT timer was reconfirmed after the upgrade. No new
+arm, seed or model is authorized. Inspect real workers before any resume action;
+do not duplicate them. Earlier current-state sections below are historical.
 
 # Measured engineering preflight complete; formal preparation executing next
 

@@ -1,0 +1,81 @@
+{
+  "source_commit": "abfff696f68cdd8aa9b32dd410330ee5424d5c80",
+  "published_origin_commit": "a821b15f28a60ab4786e3e52efc03129847c20df",
+  "inventory_sha256": "94c8d213bac2abd68e5ce82aa13ae80e1678199f5ccbf5af78e7457eca5d9f04",
+  "archive_sha256": "aecc572de0a272233e83dbb35418f5ea18ce91d37f37ba578f3bfc153592a0bc",
+  "archive_bytes": 857081,
+  "model_deadline_unix": 1789713300,
+  "hard_deadline_unix": 1789713900,
+  "wrapper_sha256": "75f2b7f7f446d7fbbb29fc0787440165159ea90087ad69e312409b48e9ccda28",
+  "status": "two_A800_evaluation_running",
+  "observed_at_utc": "2026-09-18T00:41:32.377329+00:00",
+  "started_at_utc": "2026-09-18T00:39:53.355649+00:00",
+  "attempt": "attempt_b9105611db9d4f5c956fa6b5155622fa",
+  "training_rerun": false,
+  "immutable_original_evaluator_source": "c833d732a7e5b7ecf7589a41ea30f2fb7068a6d9",
+  "cpu_validation": {
+    "all_pilot_checks_previously_passed": 98,
+    "linux_parallel_checks_passed": 10,
+    "linux_timeout_inherited_lock_passed": true,
+    "original_contract_equality_passed": true,
+    "new_model_calls": 0
+  },
+  "software": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.56.2"
+  },
+  "hardware": {
+    "gpus": 2,
+    "model": "NVIDIA A800-SXM4-80GB",
+    "memory_mib_per_gpu": 81920,
+    "cgroup_memory_limit_bytes": 257698037760
+  },
+  "preservation": {
+    "retained_scientific_file_manifest_components_compared": 12,
+    "previous_full_file_rehash_receipt": "PRE_UPGRADE_ARTIFACT_VERIFICATION.json",
+    "new_full_106GB_rehash_not_repeated": true,
+    "consumed_checkpoint_files_verified_before_model_load": true,
+    "large_artifacts_on_server": true
+  },
+  "original_maintenance_saved_logical_outputs": 4533,
+  "partition_remaining_outputs_at_resume": [
+    13367,
+    13303
+  ],
+  "total_saved_logical_outputs": 4661,
+  "remaining_logical_outputs": 26542,
+  "generation_physical_reservations": 4917,
+  "preserved_failed_generations": 128,
+  "preserved_lost_training_updates": 32,
+  "detached_session": "cs294-public-math-dual",
+  "scorer_source": "c87ce060c3146f77f2f5f9e9dd0e96b2bb25a1a4",
+  "telemetry_sample": {
+    "observed_at_utc": "2026-09-18T00:41:23.924854+00:00",
+    "disk_free_bytes": 88571445248,
+    "cgroup_current_bytes": 4305448960,
+    "cgroup_limit_bytes": 257698037760
+  },
+  "gpu_telemetry_sample": [
+    {
+      "index": 0,
+      "memory_used_mib": 17367.0,
+      "memory_total_mib": 81920.0,
+      "utilization_percent": 96.0,
+      "power_watts": 300.88
+    },
+    {
+      "index": 1,
+      "memory_used_mib": 14507.0,
+      "memory_total_mib": 81920.0,
+      "utilization_percent": 96.0,
+      "power_watts": 294.36
+    }
+  ],
+  "provider_timer_reconfirmed_utc": "2026-09-18T06:58:00Z",
+  "heartbeat_status": "ACTIVE",
+  "model_deadline_utc": "2026-09-18T06:35:00Z",
+  "hard_gpu_deadline_utc": "2026-09-18T06:45:00Z",
+  "cpu_deadline_utc": "2026-09-18T06:50:00Z",
+  "operator_setup_corrections": "SSH ControlPath length and initial tmux shell invocation corrected before any new model call; empty support-launch logs retained; no new failed generation or physical retry allowance",
+  "full_scientific_evaluation_complete": false
+}

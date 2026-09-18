@@ -1207,3 +1207,18 @@ were preserved; no large file was downloaded. Provider off was visibly confirmed
 by2026-09-18 00:26:11UTC, and the existing heartbeat was paused. The optional
 published two-GPU scheduler awaits owner startup. Partial GSM results are retained
 without changing the remaining frozen evaluation or selecting a scientific follow-on.
+
+The owner reopened the same instance with two A80080GB GPUs and requested prompt
+utilization. Verified device identities, persistent source/data/checkpoint manifests,
+unchanged Torch2.8.0+cu128/Transformers4.56.2 and original evaluation contract.
+The previously published abfff696 scheduling source was independently inventoried
+and deployed; all10 parallel tests and an actual GNU-timeout descriptor-inheritance
+check passed on Linux, with zero qualification model calls. Both GPU workers and
+the unchanged CPU scorer now run in detached tmux, with bounded deadlines and
+separate logs/receipts. Saved generation/RNG streams are resumed; no completed
+outputs or training are rerun. Corrected a local SSH socket-path length and an
+empty tmux shell invocation before model startup; empty setup logs are retained.
+The first successful dual telemetry shows both cards around90–97% utilization.
+Reconfirmed the existing23:58PDT provider timer and reactivated the existing
+heartbeat without changing its configured cadence. Large artifacts remain on
+server; existing failure records and the TrimSFT numerical replay limitation remain.

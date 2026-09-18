@@ -1,47 +1,49 @@
-# Resume after owner hardware configuration
+# Continue the live dual-A800 public-math evaluation
 
-The current instance is confirmed off by2026-09-18 00:26:11UTC for the owner's
-same-instance dual-A800 change. The heartbeat is paused. Do not start a server,
-change paid configuration or restart model work until the owner reopens it.
-Connection details, immutable deployment directories and private receipts are in
-.local/public_math_session/ACTIVE_HANDOFF.md; recheck the current endpoint.
+The owner reopened the same persistent instance with two A80080GB GPUs. Two
+workers from published sourceabfff696 are running inside detached tmux session
+cs294-public-math-dual. Do not restart or duplicate them. Read the latest private
+.local/public_math_session/ACTIVE_HANDOFF.md and run its read-only status snapshot
+before acting. CPU scoring and20-second resource telemetry run concurrently.
 
-Read LIVE_EXECUTION.md, LIVE_PROGRESS.json, MAINTENANCE_PAUSE.json and
-PRE_UPGRADE_ARTIFACT_VERIFICATION.json. All four128-update terminal recoveries
-are complete. Never rerun training or preparation. The12 retained scientific
-files and all512 committed training steps have been independently verified on
-server; large files were not downloaded to the Mac. Preserve the original128
-failed generations,32 lost training updates and non-bitwise GPU replay limitation.
+The live attempt isattempt_b9105611db9d4f5c956fa6b5155622fa. Each worker has its own
+log, start and eventual receipt under main/parallel_evaluation. The coordinator
+and workers hold the original phase lock. Inspect receipts and GPU processes,
+not just SSH status. A completed worker's outputs remain valid if its sibling
+fails. Diagnose any new failure before a separate bounded repair; never retry an
+ambiguous reservation or completed mathematical error automatically.
 
-Resume4021 public outputs plus512 Base-dev outputs. Base/SFT/DFT GSM are complete
-and scored; TrimSFT has64 saved GSM outputs. All other public/dev jobs remain.
-There are zero uncommitted evaluation reservations and no extra retry allowance
-is needed for this pause. Original evaluator receipt5039s/exit143 and CPU scorer
-receipt10561s/exit143 are intentional maintenance stops, not new failed model calls.
-Do not overwrite or discard these receipts when launching new attempts.
+Read DUAL_GPU_RESUME.json, LIVE_EXECUTION.md and LIVE_PROGRESS.json. Current
+public evidence is a timestamped live snapshot; later progress remains on server.
+The original maintenance receipt and12-file/106270841556-byte full verification
+remain immutable. All four terminal model/optimizer/RNG recoveries are on server.
+Never rerun the512 formal updates, preparation or already saved outputs.
 
-Optional dual-GPU scheduler source isabfff696f68cdd8aa9b32dd410330ee5424d5c80.
-It is published and98 CPU checks pass, but is not deployed or GPU-tested. Read
-experiments/public_math_pilot_v1/DUAL_GPU_PREPARATION.md before deployment.
-After owner startup, verify the persistent disk, base/data/source identities,
-checkpoints, unchanged scientific libraries, two distinct A80080GB devices and
-free phase locks. Publish/inventory a unique source archive and perform read-only
-Linux contract/lock checks before new model calls. Each worker must expose only
-one GPU to retain saved one-device RNG topology. New execution provenance is
-separate from the immutable original EVALUATION_CONTRACT.json. Hold the original
-GPU.lock across both children; use detached tmux and independent hard deadlines.
+Original scientific evaluator sourcec833d732 and all decoding, batching, seeds,
+rows and endpoint choices remain unchanged. The separate DUAL_GPU_CONTRACT.json
+records the actual two-worker scheduler. Original128 failed GSM attempts,32 lost
+training updates and the non-bitwise TrimSFT replay limitation are preserved.
+Final totals remain512 scientific updates/544 physical completed update records,
+8192 annotation forwards,31203 logical outputs and31331 physical generation cap.
+Each process sees exactlyone GPU, preserving the saved RNG topology.
 
-Restart the same pinned CPU scorer sourcec87ce060 in its separate environment
-with a new preserved process receipt; it reuses completed scores and watches
-remaining complete runs. Restore bounded resource telemetry with a new journal.
-Recheck provider timer and reactivate the existing heartbeat after a verified
-owner-requested resume; do not create a duplicate automation.
+The same pinned CPU scorer c87ce060 uses its separate environment. Its previous
+10561-second exit143 receipt is preserved as analyze_attempt01_process_receipt;
+current scorer log isanalyze_attempt03_dual.log. The aborted empty shell setup
+added no model calls. The old5039-second evaluator maintenance receipt remains
+untouched; the new coordinator has separate dual_evaluate_attempt01 receipts.
+Count overlapping worker times explicitly; their sum is not billed instance time.
 
-The current nightly deadlines remain model06:35UTC, hard GPU06:45UTC, CPU06:50UTC,
-provider timer06:58UTC. Preserve unfinished coverage if the night's window ends.
-No overnight restart, release/delete action, new arm, seed or model is authorized.
-Full closeout must reconcile512 final/544 physical training records,8192 annotation
-forwards,31203 logical outputs/31331 maximum physical attempts and54 scored runs.
+Nightly model/hard-GPU/CPU deadlines remain2026-09-18 06:35/06:45/06:50UTC. The
+06:58UTC provider timer was reconfirmed after owner startup. Keep the existing
+heartbeat active while running, then pause it after verified provider shutdown.
+At the nightly boundary, preserve incomplete coverage and report remaining work.
+No overnight restart, instance/volume release or new scientific direction.
+
+After all53 scheduled runs plus Base-dev and all54 scored runs complete, reconcile
+outputs, dose, physical reservations, scores and retained recoveries independently.
 Keep the official empty MATH reference unresolved in the full500 denominator.
-Report complete paired comparisons, uncertainty, execution limits and resources
-before the owner decides the next scientific direction.
+Report four-method GSM8K/MATH avg@8/pass@8, dev trends, paired uncertainty,
+limitations and actual resources in Chinese. Publish compact evidence, perform
+normal provider shutdown and verify the exact instance stopped. Wait for the
+owner's decision before any further scientific work.

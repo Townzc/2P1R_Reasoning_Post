@@ -1,3 +1,11 @@
+# Activated after owner hardware upgrade
+
+On2026-09-18 00:39UTC, after the owner reopened the same instance with two A800s,
+the previously published abfff696 scheduler was deployed and launched in tmux.
+Ten Linux checks passed, and both workers resumed the frozen remaining evaluation.
+Read [the activation receipt](../../reports/public_math_pilot_v1/DUAL_GPU_RESUME.json).
+The preparation text below records the earlier proposal and its preserved design.
+
 # Optional temporary upgrade to two A800 GPUs in the same instance
 
 The owner asked whether an additional A800 would help and clarified that it

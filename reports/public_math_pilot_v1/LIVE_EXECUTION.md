@@ -1,13 +1,21 @@
-# Public math pilot paused for hardware configuration
+# Public math pilot running on two A800 GPUs
 
-Provider off was visibly confirmed by2026-09-18 00:26:11UTC after the owner
-requested an in-place change to two A800 GPUs. Full scientific evaluation is
-incomplete. The heartbeat is paused pending owner startup. No instance or volume
-was deleted, and all large artifacts remain on the server.
+The owner reopened the same instance and authorized immediate use of both cards.
+The published abfff696 scheduler started at2026-09-18 00:39:53UTC under detached
+tmux. Both workers have one visible CUDA UUID, complete disjoint run assignments,
+and independent hard timeouts. The unchanged CPU scorer reuses its saved scores
+while evaluating newly completed runs. Source, contract and GNU-timeout lock checks
+passed on Linux; all10 parallel tests passed. See [resume evidence](DUAL_GPU_RESUME.json).
+
+At00:41:32UTC,4661 logical outputs are saved and26542 remain. Both GPUs showed
+96% utilization in the latest telemetry sample; disk has82.49GiB free and the
+new cgroup memory limit is240GiB. This is a live, non-atomic snapshot, with active
+batch reservations. Full evaluation and actual dual-GPU end-to-end speedup are
+not yet measured. No model output or training step was repeated for the upgrade.
 
 All four arms completed their fixed128 updates and verified terminal recoveries.
-Final scientific dose512 and physical completed-update records544 include the32
-lost uncommitted TrimSFT updates. Independent on-server verification rehashed all
+Final scientific dose is512 updates. The544 physical completed-update records
+include32 lost uncommitted TrimSFT updates. Independent on-server verification rehashed all
 12 retained scientific files: eight64/128 models and four terminal training states,
 106270841556 bytes total. It also checked committed ancestry and all512 update
 histories. See [artifact verification](PRE_UPGRADE_ARTIFACT_VERIFICATION.json).
@@ -37,8 +45,9 @@ Single-GPU8–14h and two-GPU5–8h evaluation windows remain planning estimates
 MATH and actual dual-GPU throughput have not been measured.
 
 The original evaluation source isc833d732a7e5b7ecf7589a41ea30f2fb7068a6d9.
-Optional parallel scheduling is prepared atabfff696f68cdd8aa9b32dd410330ee5424d5c80;
-all98 CPU checks pass, but it is not deployed or GPU-tested. The same-instance
+Activated parallel scheduling is fromabfff696f68cdd8aa9b32dd410330ee5424d5c80;
+all98 CPU checks passed before deployment, and10 parallel tests passed on Linux.
+Both GPU workers are now active, preserving the original scientific contract. The same-instance
 upgrade needs no Mac checkpoint transfer. The source keeps complete sampled
 streams on one worker, with one visible CUDA device per process and the original
 scientific generator code. Read
@@ -50,6 +59,6 @@ the one-training-seed limitation in the final report. No additional arm, seed,
 model or result-based stopping rule is introduced by the hardware change.
 
 Existing nightly model/hard-GPU/CPU cutoffs are06:35/06:45/06:50UTC. The provider
-23:58PDT timer was left enabled and must be rechecked after hardware changes.
+23:58PDT timer was visibly reconfirmed after the hardware change.
 After complete evaluation, report all comparisons and limitations to the owner
 and wait for their next-direction decision. No optional experiment follows.
