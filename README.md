@@ -1,3 +1,21 @@
+# Final closeout — public math complete; provider off; awaiting owner
+
+All31,203 logical outputs and54 scored runs are complete and independently
+reconciled. Four arms each committed128 updates;544 physical completed training
+records and31,331 physical generation attempts preserve32 lost updates and128
+lost attempts. QDW's primary MATH result is negative versus DFT and TrimSFT;
+QDW versus SFT is inconclusive. GSM/dev gains do not establish broad superiority.
+
+Provider OFF was confirmed2026-09-18 11:26UTC (04:26PDT); the temporary timer
+was cleared, heartbeat paused and finite local observer cancelled. Final128
+model/optimizer/RNG artifacts remain on the stopped server; planned step64
+pruning is independently receipt-verified. Never restart or repeat this round.
+
+Read [the final report](reports/public_math_pilot_v1/FINAL_EXECUTION_SUMMARY_ZH.md) and the adjacent FINAL_HANDOFF_ACL_ICML_20260918.md.
+Future experiments require the owner's direction and advance runtime/GPU-hour/
+cost/stop estimates. The long-term branch was not changed. All older current-state
+sections below are dated historical snapshots superseded by this final closeout.
+
 # Latest evidence — public benchmarks complete; dev evaluation continues
 
 At2026-09-18 10:10UTC, all26,595 public outputs are complete and scored. The

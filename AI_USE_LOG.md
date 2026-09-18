@@ -1292,3 +1292,22 @@ Actual MATH batch times331–778seconds supersede the prior optimistic engineeri
 ETA: remaining MATH alone is roughly7–8 dual-GPU hours, before dev and closeout.
 No worker was restarted, no extra output requested, no queue/setting changed and
 no new failure found. Existing nightly deadlines and provider shutdown remain.
+
+## 2026-09-18 — full public-math closeout
+
+Read-only final auditing bound all31,203 raw outputs to frozen references/scores,
+reconciled54 completed scored runs,512 committed updates/544 physical records
+and31,331 generation attempts with zero uncommitted reservations. Independently
+recomputed benchmark/dev aggregates and paired mean bounds; bootstrap intervals
+remain those of the unchanged scorer. Preserved primary-negative MATH findings,
+all47 unresolved judgments, historical faults and non-bitwise GPU replay limits.
+Verified8 terminal128 recovery components against manifests and4 exact planned
+step64 deletion receipts; no new model/scoring calls or binary download. Two
+55-second read-only collection timeouts were retained; unchanged audit succeeded
+in32.57seconds and final report copies agreed.
+
+After essential collection, used normal provider shutdown and verified the exact
+instance OFF at11:26UTC, cleared its temporary timer, paused the existing heartbeat
+and cancelled the identity-checked finite local observer. Published full results,
+resource/cost proxies and owner-decision handoff locally after shutdown. No new
+experiment, subagent, external message, payment or long-term branch change.

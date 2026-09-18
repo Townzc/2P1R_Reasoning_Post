@@ -1,3 +1,21 @@
+# Final closeout — public math complete; provider off; awaiting owner
+
+All31,203 logical outputs and54 scored runs are complete and independently
+reconciled. Four arms each committed128 updates;544 physical completed training
+records and31,331 physical generation attempts preserve32 lost updates and128
+lost attempts. QDW's primary MATH result is negative versus DFT and TrimSFT;
+QDW versus SFT is inconclusive. GSM/dev gains do not establish broad superiority.
+
+Provider OFF was confirmed2026-09-18 11:26UTC (04:26PDT); the temporary timer
+was cleared, heartbeat paused and finite local observer cancelled. Final128
+model/optimizer/RNG artifacts remain on the stopped server; planned step64
+pruning is independently receipt-verified. Never restart or repeat this round.
+
+Read [the final report](FINAL_EXECUTION_SUMMARY_ZH.md) and the adjacent FINAL_HANDOFF_ACL_ICML_20260918.md.
+Future experiments require the owner's direction and advance runtime/GPU-hour/
+cost/stop estimates. The long-term branch was not changed. All older current-state
+sections below are dated historical snapshots superseded by this final closeout.
+
 # 公共数学 Pilot v1：CPU 准备结果与执行阻断
 
 本轮没有完成四臂实验，也没有开始 GPU 预检。完成的是公开模型/数据身份核验、CPU 实现与数据冻结审核，以及服务器资源实测。所有模型生成、标注前向、正式和非正式 optimizer updates 均为 0。E044–E047 只是已登记的待运行实验，不能报告为已训练模型，更不能给出准确率、方法差或置信区间。
