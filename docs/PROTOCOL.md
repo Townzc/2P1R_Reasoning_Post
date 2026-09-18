@@ -8,8 +8,8 @@ No training, preparation or completed generation is repeated.
 
 Read reports/public_math_pilot_v1/DUAL_GPU_RESUME.json, LIVE_EXECUTION.md and
 NEXT_SESSION.md. The hardware transition preserved4533 logical outputs with
-zero uncommitted reservations; the current timestamped snapshot records4661
-saved outputs. The original128 failed generations,32 lost training updates and
+zero uncommitted reservations; the01:49UTC snapshot records9363 saved outputs, including all five complete
+GSM8K states. Primary MATH average@8/pass@8 and trained dev remain pending. The original128 failed generations,32 lost training updates and
 non-bitwise GPU replay limitation remain. Linux parallel checks10/10 passed,
 including original-contract equality and GNU-timeout inherited lock verification.
 

@@ -7,11 +7,17 @@ and independent hard timeouts. The unchanged CPU scorer reuses its saved scores
 while evaluating newly completed runs. Source, contract and GNU-timeout lock checks
 passed on Linux; all10 parallel tests passed. See [resume evidence](DUAL_GPU_RESUME.json).
 
-At00:41:32UTC,4661 logical outputs are saved and26542 remain. Both GPUs showed
-96% utilization in the latest telemetry sample; disk has82.49GiB free and the
-new cgroup memory limit is240GiB. This is a live, non-atomic snapshot, with active
-batch reservations. Full evaluation and actual dual-GPU end-to-end speedup are
-not yet measured. No model output or training step was repeated for the upgrade.
+At01:49:28UTC,9363 of31203 logical outputs are saved;21840 remain. All five
+GSM8K states are complete and scored. Four complete MATH draws plus256 additional
+MATH outputs are saved; both original workers and the scorer remain active.
+No new failure or worker restart occurred. The live physical ledger has9991
+reservations:9363 saved,128 old failures and500 currently in flight. This is a
+non-atomic monitoring snapshot, not a final reservation reconciliation.
+
+Instantaneous GPU utilization was100%/98%. Across206 active telemetry samples,
+mean utilization was96.94%/98.00%; memory peaks were80607/80687MiB. Disk remains
+about82.43GiB free. Cgroup memory events report zero OOM and zero OOM kills since
+the current boot. The unchanged jobs continue in tmux.
 
 All four arms completed their fixed128 updates and verified terminal recoveries.
 Final scientific dose is512 updates. The544 physical completed-update records
@@ -35,14 +41,27 @@ See [maintenance evidence](MAINTENANCE_PAUSE.json).
 | Base | 495 | 37.53% | 53.31 min |
 | SFT | 1068 | 80.97% | 19.16 min |
 | DFT | 1046 | 79.30% | 7.79 min |
+| TrimSFT | 1009 | 76.50% | 15.73 min |
+| QDW-v0 | 1080 | 81.88% | 7.84 min |
 
-These are partial results for the overall experiment. TrimSFT and QDW-v0 GSM,
-all MATH draws and all trained dev endpoints are still incomplete. No primary
-QDW comparison or overall method claim is available. See the immutable
-[partial scoring snapshot](PARTIAL_RESULTS_BEFORE_UPGRADE.json). Different
-lengths make the first Base-batch speed unsuitable as a measured whole-round ETA.
-Single-GPU8–14h and two-GPU5–8h evaluation windows remain planning estimates;
-MATH and actual dual-GPU throughput have not been measured.
+GSM QDW-minus-DFT is+2.58pp with a97.5% paired question-bootstrap interval
+[+0.30,+4.85]pp; QDW-minus-Trim is+5.38pp,[+2.88,+7.88]pp. These GSM intervals
+are secondary/descriptive, not the confirmatory MATH family. QDW-minus-SFT is
++0.91pp with a95% interval[-0.99,+2.81]pp. None includes training-seed uncertainty.
+All1319 official GSM questions remain in each denominator; unresolved judgments
+are zero. Base has many parse/length failures; trained arms have zero parse failures.
+See [the immutable GSM snapshot](GSM8K_COMPLETE_PARTIAL_RESULTS.json). Full primary
+MATH average@8/pass@8 and trained dev comparisons remain unavailable.
+
+The first nine completed MATH batches take331–778seconds, mean704seconds. With71
+batches remaining at the snapshot, a two-device mean/max-observed extrapolation
+is6.94–7.67hours for MATH alone, excluding development evaluation, loads, scoring
+and closeout, and without deducting progress inside two in-flight batches. It is
+an engineering projection, not a runtime confidence interval. The former unmeasured
+5–8hour whole-evaluation estimate was optimistic and is superseded by these actual
+measurements. Full completion tonight is not expected; preserve exact coverage at
+the existing nightly cutoff and resume only after owner startup. No benchmark,
+draw, setting or endpoint is reduced to force an overnight finish.
 
 The original evaluation source isc833d732a7e5b7ecf7589a41ea30f2fb7068a6d9.
 Activated parallel scheduling is fromabfff696f68cdd8aa9b32dd410330ee5424d5c80;

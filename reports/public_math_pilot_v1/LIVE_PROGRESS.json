@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-09-18T00:41:32.377329+00:00",
+  "observed_at_utc": "2026-09-18T01:49:28.100827+00:00",
   "status": "training_complete_two_A800_evaluation_running",
   "training": {
     "SFT": {
@@ -114,10 +114,10 @@
   "planned_logical_outputs": 31203,
   "physical_generation_cap_after_recorded_oom": 31331,
   "failed_physical_generations": 128,
-  "saved_public_outputs": 4149,
+  "saved_public_outputs": 8851,
   "failed_public_attempt_seconds": 257,
   "public_results_available": true,
-  "disk_free_bytes": 88571445248,
+  "disk_free_bytes": 88509296640,
   "telemetry_peak_device_used_mib": 81009.0,
   "current_evaluation": "two_locked_workers_one_visible_GPU_each",
   "sources": {
@@ -175,46 +175,83 @@
     "owner_requested_shutdown_for_configuration_change": true,
     "linux_parallel_checks_passed": 10
   },
-  "total_saved_logical_outputs": 4661,
-  "remaining_logical_outputs": 26542,
+  "total_saved_logical_outputs": 9363,
+  "remaining_logical_outputs": 21840,
   "full_public_results_available": false,
-  "public_result_scope": "Complete scored GSM8K for Base/SFT/DFT; TrimSFT/QDW GSM in progress, MATH and trained dev endpoints pending",
+  "public_result_scope": "All five GSM8K states complete. Four MATH draw0 runs complete; QDW draw0 and Base draw1 active. Primary average@8/pass@8 and trained dev pending.",
   "provider_off_confirmed": false,
   "heartbeat_status": "ACTIVE",
   "maintenance_receipt": "MAINTENANCE_PAUSE.json",
   "dual_gpu_resume_receipt": "DUAL_GPU_RESUME.json",
-  "current_generation_physical_reservations": 4917,
+  "current_generation_physical_reservations": 9991,
   "generation_saved_by_run": {
     "Base-GSM8K": 1319,
+    "Base-MATH500-draw0": 500,
+    "Base-MATH500-draw1": 256,
     "Base-dev": 512,
     "DFT-GSM8K": 1319,
-    "QDW_v0-GSM8K": 0,
+    "DFT-MATH500-draw0": 500,
+    "QDW_v0-GSM8K": 1319,
+    "QDW_v0-MATH500-draw0": 0,
     "SFT-GSM8K": 1319,
-    "TrimSFT-GSM8K": 192
+    "SFT-MATH500-draw0": 500,
+    "TrimSFT-GSM8K": 1319,
+    "TrimSFT-MATH500-draw0": 500
   },
   "cgroup_memory_limit_bytes": 257698037760,
-  "cgroup_current_bytes": 4391927808,
+  "cgroup_current_bytes": 7070756864,
   "dual_gpu_latest_sample": [
     {
       "index": 0,
-      "memory_used_mib": 17367.0,
+      "memory_used_mib": 80607.0,
       "memory_total_mib": 81920.0,
-      "utilization_percent": 96.0,
-      "power_watts": 300.88
+      "utilization_percent": 100.0,
+      "power_watts": 315.48
     },
     {
       "index": 1,
-      "memory_used_mib": 14507.0,
+      "memory_used_mib": 50647.0,
       "memory_total_mib": 81920.0,
-      "utilization_percent": 96.0,
-      "power_watts": 294.36
+      "utilization_percent": 98.0,
+      "power_watts": 324.82
     }
   ],
   "dual_gpu_device_peaks_mib": {
-    "0": 17367.0,
-    "1": 14507.0
+    "0": 80607.0,
+    "1": 80687.0
   },
   "prior_maintenance_provider_off_confirmed_by_utc": "2026-09-18T00:26:11Z",
   "prior_maintenance_uncommitted_evaluation_reservations": 0,
-  "live_snapshot_is_not_an_atomic_reservation_closeout": true
+  "live_snapshot_is_not_an_atomic_reservation_closeout": true,
+  "gsm_all_five_complete": true,
+  "completed_MATH_draw_runs": 4,
+  "completed_scored_runs": [
+    "Base-GSM8K",
+    "Base-MATH500-draw0",
+    "Base-dev",
+    "DFT-GSM8K",
+    "DFT-MATH500-draw0",
+    "QDW_v0-GSM8K",
+    "SFT-GSM8K",
+    "SFT-MATH500-draw0",
+    "TrimSFT-GSM8K",
+    "TrimSFT-MATH500-draw0"
+  ],
+  "new_failure_detected": false,
+  "GSM_partial_results": "GSM8K_COMPLETE_PARTIAL_RESULTS.json",
+  "remaining_MATH_time_estimate": {
+    "completed_MATH_batches": 9,
+    "mean_MATH_batch_seconds": 703.8218429465261,
+    "min_MATH_batch_seconds": 330.9140350930393,
+    "max_MATH_batch_seconds": 777.9303904399276,
+    "remaining_MATH_batches": 71,
+    "remaining_MATH_dual_device_hours_mean_proxy": 6.940465395722687,
+    "remaining_MATH_dual_device_hours_max_observed_proxy": 7.671258016838174,
+    "excludes_dev_model_loads_scoring_closeout": true,
+    "credits_for_two_inflight_batches_not_subtracted": true,
+    "estimate_not_a_confidence_interval": true,
+    "remaining_trained_dev_outputs": 4096,
+    "base_dev_speed_conservative_proxy_hours": 2.497973310722245,
+    "tonight_complete_not_expected": true
+  }
 }

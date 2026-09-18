@@ -1,5 +1,13 @@
 # Continue the live dual-A800 public-math evaluation
 
+Latest monitoring at2026-09-18 01:49UTC: both original GPU workers/scorer are alive,
+no new failure,9363 saved outputs, all five GSM states complete/scored. See
+GSM8K_COMPLETE_PARTIAL_RESULTS.json. MATH has four complete runs and256 further
+outputs; primary average@8/pass@8 and4096 trained-dev outputs remain incomplete.
+Measured MATH alone needs roughly7–8 further dual-GPU hours at this early rate,
+so expect an incomplete nightly pause. Do not extend the nightly boundary or reduce
+science; preserve remaining coverage for an owner-reopened next session.
+
 The owner reopened the same persistent instance with two A80080GB GPUs. Two
 workers from published sourceabfff696 are running inside detached tmux session
 cs294-public-math-dual. Do not restart or duplicate them. Read the latest private

@@ -1222,3 +1222,14 @@ The first successful dual telemetry shows both cards around90–97% utilization.
 Reconfirmed the existing23:58PDT provider timer and reactivated the existing
 heartbeat without changing its configured cadence. Large artifacts remain on
 server; existing failure records and the TrimSFT numerical replay limitation remain.
+
+Heartbeat monitoring at2026-09-18 01:49UTC found both original dual-GPU workers
+and CPU scorer healthy, with all five GSM8K states complete and9363 logical
+outputs saved. Collected only compact score/timing/telemetry records and checked
+all five1319-question score arrays against counts and denominators. Published the
+GSM milestone as secondary/descriptive evidence, including paired intervals and
+single-seed/TrimSFT-recovery limitations. Primary MATH metrics remain incomplete.
+Actual MATH batch times331–778seconds supersede the prior optimistic engineering
+ETA: remaining MATH alone is roughly7–8 dual-GPU hours, before dev and closeout.
+No worker was restarted, no extra output requested, no queue/setting changed and
+no new failure found. Existing nightly deadlines and provider shutdown remain.
