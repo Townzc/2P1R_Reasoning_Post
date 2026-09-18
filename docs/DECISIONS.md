@@ -1,3 +1,13 @@
+# Latest override — finish this round overnight, then shut down
+
+The owner now authorizes overnight completion of the existing finite queue and
+requires a runtime/cost estimate before every future experiment. This supersedes
+all older midnight/no-overnight instructions below. New UTC deadlines on
+2026-09-18: model13:35, GPU13:45, CPU13:50, provider13:58 (06:58 PDT).
+Finish early and shut down promptly; no new science or automatic next direction.
+See [the overnight amendment](../reports/public_math_pilot_v1/OVERNIGHT_COMPLETION_AMENDMENT_20260918.md) for the budget, safe deadline transition,
+record retention and future pre-experiment estimation requirements.
+
 # 2026-09-18 UTC — complete the current pilot and move toward ACL/ICML
 
 The owner ended the ICLR submission sprint and requested a careful progress

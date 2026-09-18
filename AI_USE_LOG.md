@@ -1,3 +1,15 @@
+# 2026-09-18 — owner-authorized overnight deadline extension
+
+Codex verified and changed the provider failsafe through its visible UI, retaining
+the same persistent two-A800 instance. It requested the existing evaluator's
+complete-run pause to change execution deadlines safely, preserving all scientific
+contracts and historical records. The obsolete local read-only midnight observer
+was cancelled. The native heartbeat instructions now reflect overnight completion.
+No new scientific arm, training run, model or payment is authorized. The amendment
+separates expected rental time/cost from measured process time and makes the owner's
+future pre-experiment estimation preference explicit. The actual drained boundary
+and resumed attempt will be recorded after verification.
+
 # 2026-09-18 — stage review and ACL/ICML transition planning
 
 Codex followed the owner’s change from an ICLR submission sprint to longer-term
