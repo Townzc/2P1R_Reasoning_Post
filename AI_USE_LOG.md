@@ -1,3 +1,19 @@
+# 2026-09-18 — completed public benchmark result, dev still running
+
+Codex inspected actual dual workers/scorer, receipts, telemetry, cgroup memory,
+disk and saved coverage without changing the queue. A read-only audit bound all
+26,595 public outputs to scores and retained all original failures. Independent
+pure-Python aggregation reconstructed the five500-by8 MATH matrices and five1319
+GSM arrays, verifying correctness/unresolved counts, full denominators, average
+and pass bounds, and paired mean-difference bounds. Published bootstrap intervals
+were preserved from the frozen scorer rather than recomputed here.
+
+QDW's negative primary MATH result and inconclusive QDW–SFT comparison are stated
+explicitly. All47 unresolved MATH judgments are retained:40 official-empty-reference
+outputs and7 CPU timeouts after the allowed retry. No rescore/model call, altered
+setting, added seed or outcome-based stop was introduced. Development evaluation
+and final closeout continue; this benchmark milestone is not full completion.
+
 # 2026-09-18 — overnight continuation verified
 
 The scheduled check verified both actual resumed GPU workers, their unchanged

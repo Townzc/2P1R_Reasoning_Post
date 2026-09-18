@@ -1,3 +1,14 @@
+# Latest evidence — public benchmarks complete; dev evaluation continues
+
+At2026-09-18 10:10UTC, all26,595 public outputs are complete and scored. The
+predeclared primary MATH result is negative for QDW versus DFT and TrimSFT;
+its small observed gain over SFT is inconclusive. GSM's secondary gains do not
+establish broad superiority. See [the benchmark evidence](public_math_pilot_v1/BENCHMARK_COMPLETE_DEV_PENDING.md).
+The unchanged dev queue is still active; final phase reconciliation and shutdown
+remain pending. No result-based early stop or extra model work is authorized.
+The overnight deadlines below remain unchanged. Owner is asleep; provide the
+complete Chinese report after full evaluation and verified normal shutdown.
+
 # Latest override — finish this round overnight, then shut down
 
 The owner now authorizes overnight completion of the existing finite queue and
