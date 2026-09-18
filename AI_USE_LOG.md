@@ -1193,3 +1193,17 @@ runs, retaining original model/evaluation code, all requests, one-visible-device
 RNG topology, shared exclusion and reservation locks, and per-worker deadlines.
 All98 CPU checks pass; the two-GPU scheduler has not generated anything or changed
 current execution. Hardware changes and maintenance timing remain for owner choice.
+
+The owner then requested shutdown for the same-instance GPU configuration change.
+A bounded maintenance helper, using the original immutable evaluation sources,
+verified saved-batch identities/RNG and the physical ledger while briefly stopping
+the evaluator. It resumed an in-flight batch, then captured a durable boundary and
+terminated with4021 public outputs saved and zero unmatched reservations. Five
+reconciliation checks passed; no new model call, failed generation or replay was
+introduced. The actual operator source is preserved as maintenance_pause.py.
+Independent server-only verification rehashed12 model/training files totaling
+106270841556 bytes and checked all512 final update histories. Completed CPU scores
+were preserved; no large file was downloaded. Provider off was visibly confirmed
+by2026-09-18 00:26:11UTC, and the existing heartbeat was paused. The optional
+published two-GPU scheduler awaits owner startup. Partial GSM results are retained
+without changing the remaining frozen evaluation or selecting a scientific follow-on.

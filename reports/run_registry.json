@@ -2874,12 +2874,18 @@
       "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
       "planned_updates": 0,
       "actual_updates": 0,
-      "status": "dev_complete_formal_public_generation_active",
+      "status": "evaluation_incomplete_maintenance_pause",
       "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
       "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
       "scientific_result": null,
       "current_execution": "reports/public_math_pilot_v1/LIVE_EXECUTION.md",
-      "observed_at_utc": "2026-09-17T23:00:38.245488+00:00"
+      "observed_at_utc": "2026-09-18T00:26:11Z",
+      "partial_gsm8k_result": {
+        "correct": 495,
+        "expected_outputs": 1319,
+        "average_lower": 0.3752843062926459,
+        "average_upper": 0.3752843062926459
+      }
     },
     {
       "experiment_id": "E044",
@@ -2888,15 +2894,21 @@
       "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
       "planned_updates": 128,
       "actual_updates": 128,
-      "status": "training_complete_evaluation_pending",
+      "status": "training_complete_evaluation_incomplete_maintenance_pause",
       "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
       "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
       "scientific_result": null,
       "current_execution": "reports/public_math_pilot_v1/LIVE_EXECUTION.md",
-      "observed_at_utc": "2026-09-17T23:00:38.245488+00:00",
+      "observed_at_utc": "2026-09-18T00:26:11Z",
       "observed_completed_update_records": 128,
       "execution_source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
-      "actual_updates_scope": "latest_durably_committed_training_dose"
+      "actual_updates_scope": "latest_durably_committed_training_dose",
+      "partial_gsm8k_result": {
+        "correct": 1068,
+        "expected_outputs": 1319,
+        "average_lower": 0.8097043214556482,
+        "average_upper": 0.8097043214556482
+      }
     },
     {
       "experiment_id": "E045",
@@ -2905,15 +2917,21 @@
       "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
       "planned_updates": 128,
       "actual_updates": 128,
-      "status": "training_complete_evaluation_pending",
+      "status": "training_complete_evaluation_incomplete_maintenance_pause",
       "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
       "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
       "scientific_result": null,
       "current_execution": "reports/public_math_pilot_v1/LIVE_EXECUTION.md",
-      "observed_at_utc": "2026-09-17T23:00:38.245488+00:00",
+      "observed_at_utc": "2026-09-18T00:26:11Z",
       "observed_completed_update_records": 128,
       "execution_source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
-      "actual_updates_scope": "latest_durably_committed_training_dose"
+      "actual_updates_scope": "latest_durably_committed_training_dose",
+      "partial_gsm8k_result": {
+        "correct": 1046,
+        "expected_outputs": 1319,
+        "average_lower": 0.7930250189537529,
+        "average_upper": 0.7930250189537529
+      }
     },
     {
       "experiment_id": "E046",
@@ -2922,12 +2940,12 @@
       "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
       "planned_updates": 128,
       "actual_updates": 128,
-      "status": "training_complete_evaluation_pending",
+      "status": "training_complete_evaluation_incomplete_maintenance_pause",
       "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
       "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
       "scientific_result": null,
       "current_execution": "reports/public_math_pilot_v1/LIVE_EXECUTION.md",
-      "observed_at_utc": "2026-09-17T23:00:38.245488+00:00",
+      "observed_at_utc": "2026-09-18T00:26:11Z",
       "observed_completed_update_records": 160,
       "execution_source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
       "actual_updates_scope": "latest_durably_committed_training_dose",
@@ -2941,12 +2959,12 @@
       "parent": "fresh_public_Qwen2.5-Math-1.5B_base",
       "planned_updates": 128,
       "actual_updates": 128,
-      "status": "training_complete_evaluation_pending",
+      "status": "training_complete_evaluation_incomplete_maintenance_pause",
       "protocol": "experiments/public_math_pilot_v1/EXECUTION_CONTRACT.json",
       "execution_summary": "reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md",
       "scientific_result": null,
       "current_execution": "reports/public_math_pilot_v1/LIVE_EXECUTION.md",
-      "observed_at_utc": "2026-09-17T23:00:38.245488+00:00",
+      "observed_at_utc": "2026-09-18T00:26:11Z",
       "observed_completed_update_records": 128,
       "execution_source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
       "actual_updates_scope": "latest_durably_committed_training_dose"
@@ -2991,15 +3009,21 @@
   ],
   "active_public_math_phase": {
     "progress": "reports/public_math_pilot_v1/LIVE_PROGRESS.json",
-    "closed_process_receipts": 7,
-    "closed_process_seconds": 8887,
-    "running_processes_not_yet_reconciled": true,
+    "closed_process_receipts": 9,
+    "closed_process_seconds": 24487,
+    "running_processes_not_yet_reconciled": false,
     "extra_failed_generation_attempts": 128,
     "extra_lost_uncommitted_training_updates": 32,
     "expected_physical_completed_training_records": 544,
     "recovery_comparison": "reports/public_math_pilot_v1/GPU_RECOVERY_COMPARISON.json",
     "training_complete": true,
     "actual_physical_completed_training_records": 544,
-    "dual_gpu_preparation": "cpu_validated_not_launched"
+    "dual_gpu_preparation": "cpu_validated_not_launched",
+    "status": "maintenance_pause_provider_off",
+    "process_seconds_include_overlapping_cpu_workers": true,
+    "provider_off_confirmed": true,
+    "total_saved_logical_outputs": 4533,
+    "remaining_logical_outputs": 26670,
+    "maintenance_receipt": "reports/public_math_pilot_v1/MAINTENANCE_PAUSE.json"
   }
 }

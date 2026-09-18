@@ -1,84 +1,55 @@
-# Public-math execution is active and incomplete
+# Public math pilot paused for hardware configuration
 
-The owner reopened the expanded A800, removed mandatory Mac checkpoint downloads,
-deprioritized cost until the abstract deadline, and requested concurrent work to
-use the server efficiently. The frozen four-arm scientific scope remains intact.
-The timestamped observation is [LIVE_PROGRESS.json](LIVE_PROGRESS.json).
+Provider off was visibly confirmed by2026-09-18 00:26:11UTC after the owner
+requested an in-place change to two A800 GPUs. Full scientific evaluation is
+incomplete. The heartbeat is paused pending owner startup. No instance or volume
+was deleted, and all large artifacts remain on the server.
 
-All four arms completed128 updates with committed, verified full recoveries.
-The recovered trainer exited0 after1534seconds. The original single-GPU evaluator
-is active and has saved its first64 formal GSM outputs.
-All4096 frozen masks and8192 annotation forwards are complete. The fixed64
-technical audit passed, without changing masks. All512 Base-dev outputs are
-durable, including32 preflight outputs reused exactly once; CPU scoring completed
-that run. None of these statements is a public benchmark performance result.
+All four arms completed their fixed128 updates and verified terminal recoveries.
+Final scientific dose512 and physical completed-update records544 include the32
+lost uncommitted TrimSFT updates. Independent on-server verification rehashed all
+12 retained scientific files: eight64/128 models and four terminal training states,
+106270841556 bytes total. It also checked committed ancestry and all512 update
+histories. See [artifact verification](PRE_UPGRADE_ARTIFACT_VERIFICATION.json).
 
-The first128-way Base GSM batch failed with concurrent CUDA OOM before saving
-any public output. Its257seconds and128 physical reservations remain recorded.
-Training was not interrupted. The replacement uses64-way GSM uniformly across
-all five states and an expandable CUDA allocator; it waits if less than26GiB
-is free. Training caches later approached70GiB, so the unchanged evaluator is
-now queued after all four arms complete. The stopped admission-only process
-ran456seconds and added zero model calls. MATH uses256-way batches with64GiB
-admission after training, and dev stays16-way. The one evidence-bound retry preserves the initial failed attempt.
-See [the recovery record](../../experiments/public_math_pilot_v1/INFRASTRUCTURE_RECOVERY.md).
-Maximum physical generation attempts are31,331 for31,203 logical outputs.
+At maintenance pause, saved public outputs were Base-GSM8K1319, SFT-GSM8K1319,
+DFT-GSM8K1319 and TrimSFT-GSM8K64. With512 Base-dev outputs,4533 of31203 logical
+outputs are saved;26670 remain. The physical generation ledger has4661 entries,
+including128 previously failed GSM attempts. The pause added zero failed calls,
+zero model calls and zero uncommitted reservations. Every completed batch and
+post-batch RNG was verified before terminating the evaluator at a durable boundary.
+The5039-second evaluator exit143 and10561-second CPU scorer exit143 are intentional
+maintenance stops. Their process durations overlap and are not billed GPU hours.
+See [maintenance evidence](MAINTENANCE_PAUSE.json).
 
-The TrimSFT trainer later stopped before saving step64 because the strict host
-RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
-restored headroom without deleting or changing data; the original trainer resumed
-from the verified step32 model/AdamW/RNG. The recovered trajectory reached128 and its terminal recovery committed
-successfully. Preserve the32 lost uncommitted updates: the final scientific dose remains
-512, while expected physical completed-update records are544. GPU replay follows
-the same rows/LR/source but is not bitwise equivalent; disclose the measured
-numerical divergence in GPU_RECOVERY_COMPARISON.json. Full public scores remain pending.
+| Completed GSM evaluation | Correct /1319 | Accuracy | Generation time |
+|---|---:|---:|---:|
+| Base | 495 | 37.53% | 53.31 min |
+| SFT | 1068 | 80.97% | 19.16 min |
+| DFT | 1046 | 79.30% | 7.79 min |
 
-The passive32-update replay audit found matching row identities, learning rates,
-token dose and source. CE/loss/gradient scalars matched through step48; later
-max absolute differences were0.0374005 in raw CE,0.000245364 in weighted loss and
-0.0200737 in gradient norm. The cause is not isolated. No public benchmark score
-was available when the durable step32 recovery was selected. See
-[host-cache recovery](../../experiments/public_math_pilot_v1/HOST_CACHE_RECOVERY.md),
-[cache measurements](HOST_CACHE_RECOVERY_MEASURED.json), and
-[GPU replay comparison](GPU_RECOVERY_COMPARISON.json). The old2180-second failed
-trainer receipt remains separate from the current recovery process.
+These are partial results for the overall experiment. TrimSFT and QDW-v0 GSM,
+all MATH draws and all trained dev endpoints are still incomplete. No primary
+QDW comparison or overall method claim is available. See the immutable
+[partial scoring snapshot](PARTIAL_RESULTS_BEFORE_UPGRADE.json). Different
+lengths make the first Base-batch speed unsuitable as a measured whole-round ETA.
+Single-GPU8–14h and two-GPU5–8h evaluation windows remain planning estimates;
+MATH and actual dual-GPU throughput have not been measured.
 
-The detached trainer, evaluator and isolated four-worker CPU scorer survive an
-SSH disconnection. Do not restart a live worker or repeat a completed output.
-Raw batch identities, reserved call IDs, post-batch RNG and committed checkpoint
-ancestry control resumption. Source commits are recorded in LIVE_PROGRESS.json;
-new report commits do not replace the actual execution sources.
+The original evaluation source isc833d732a7e5b7ecf7589a41ea30f2fb7068a6d9.
+Optional parallel scheduling is prepared atabfff696f68cdd8aa9b32dd410330ee5424d5c80;
+all98 CPU checks pass, but it is not deployed or GPU-tested. The same-instance
+upgrade needs no Mac checkpoint transfer. The source keeps complete sampled
+streams on one worker, with one visible CUDA device per process and the original
+scientific generator code. Read
+[the dual-GPU plan](../../experiments/public_math_pilot_v1/DUAL_GPU_PREPARATION.md).
 
-The server will retain all four final FP32 model/AdamW/RNG recoveries. Scientific64
-weights remain until their required512 dev outputs and final recovery are verified.
-Only verified superseded rolling files from this phase may be pruned. Compact
-progress/receipts may be mirrored locally; no large checkpoint download is required.
+Preserve the128 failed GSM attempts and the32 lost training updates. The passive
+GPU replay comparison remains non-bitwise; cause is not isolated. Keep this and
+the one-training-seed limitation in the final report. No additional arm, seed,
+model or result-based stopping rule is introduced by the hardware change.
 
-GPU cutoff is2026-09-18 06:45UTC, CPU cutoff06:50UTC, and the exact current
-instance's provider shutdown timer was confirmed for06:58UTC (23:58PDT).
-A15-minute follow-up checks meaningful changes and completes authorized closeout.
-At the nighttime boundary preserve unfinished coverage explicitly; do not drop
-questions, shorten draws, count missing answers as wrong, or restart overnight.
-Full completion also requires independent reconciliation and provider-off evidence.
-
-The prior EXECUTION_SUMMARY_ZH.md and COST_AND_CLOSEOUT.json describe the earlier
-zero-model startup window. They remain historical evidence. Current process
-durations overlap and are not additive billed GPU hours; final accounting remains
-open until the active processes and powered window close.
-
-The queued evaluator uses a06:35UTC model deadline and a06:45UTC hard timeout,
-leaving600seconds of additional completion reserve for larger batches. Its
-per-batch admission check prevents starting new batches about240seconds before
-the model deadline. This changes scheduling only, not any scientific output ID.
-
-After complete training and evaluation, report the method comparisons, paired
-uncertainty, execution limitations and resource use to the owner. Wait for their
-next-direction decision; no optional follow-on experiment is queued.
-
-The first64 formal GSM outputs took155.304 seconds and contain71587 output tokens.
-The owner asked about an in-place two-A800 upgrade. A two-worker scheduler is
-prepared and all98 CPU checks pass; it has not been launched and current single
-GPU generation continues. See
-[the temporary two-GPU plan](../../experiments/public_math_pilot_v1/DUAL_GPU_PREPARATION.md).
-Any maintenance shutdown needs a verified durable pause first. The original
-workers already survive SSH loss; a tmux session provides reconnectable log views.
+Existing nightly model/hard-GPU/CPU cutoffs are06:35/06:45/06:50UTC. The provider
+23:58PDT timer was left enabled and must be rechecked after hardware changes.
+After complete evaluation, report all comparisons and limitations to the owner
+and wait for their next-direction decision. No optional experiment follows.

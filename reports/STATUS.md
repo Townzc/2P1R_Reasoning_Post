@@ -1,18 +1,18 @@
-# Current execution — training complete; single-GPU evaluation active
+# Current status — maintenance pause; provider off
 
-All four arms completed their fixed128-update training and verified terminal
-recoveries. Final scientific dose is512 updates;544 physical completed records
-include32 lost uncommitted TrimSFT updates. The first64 formal GSM outputs are
-saved, taking155.304 seconds. Full benchmark results remain pending. Read the
-latest timestamped reports/public_math_pilot_v1/LIVE_PROGRESS.json.
+The owner requested shutdown to change the same instance to two A800 GPUs.
+Provider off was visibly confirmed by2026-09-18 00:26:11UTC. All four128-update
+training endpoints are verified. Evaluation paused with4021 public outputs plus
+512 Base-dev outputs saved, and zero uncommitted evaluation reservations. No new
+failed generation or replay was added by this maintenance pause. Large artifacts
+remain verified on the persistent server volume; no instance/volume was deleted.
 
-The owner is considering temporarily changing the same instance to two A800s.
-DUAL_GPU_PREPARATION.md documents the prepared scheduler;98 CPU checks pass.
-No hardware change, maintenance pause or two-GPU model run has occurred. The
-original detached evaluator continues; never shut it down mid-generation.
-Use the live handoff for current workers and transition readiness. Preserve the
-previous failure evidence and the non-bitwise TrimSFT GPU recovery limitation.
-All earlier current-state paragraphs below are timestamped historical snapshots.
+Read reports/public_math_pilot_v1/MAINTENANCE_PAUSE.json, LIVE_EXECUTION.md and
+NEXT_SESSION.md. Full scientific evaluation remains incomplete:26670 logical
+outputs remain. The optional two-GPU scheduler is CPU-validated atabfff696 and
+awaits an owner-reopened, verified two-A800 instance. The heartbeat is paused.
+Do not restart a server automatically. Prior current-state sections below are
+historical snapshots; failed-attempt evidence and GPU replay limitations persist.
 
 # Measured engineering preflight complete; formal preparation executing next
 

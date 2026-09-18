@@ -1,74 +1,47 @@
-# Active-session handoff
+# Resume after owner hardware configuration
 
-Read [LIVE_EXECUTION.md](LIVE_EXECUTION.md), [LIVE_PROGRESS.json](LIVE_PROGRESS.json),
-the owner retention/daytime/concurrency amendments,
-[HOST_CACHE_RECOVERY.md](../../experiments/public_math_pilot_v1/HOST_CACHE_RECOVERY.md), and
-[INFRASTRUCTURE_RECOVERY.md](../../experiments/public_math_pilot_v1/INFRASTRUCTURE_RECOVERY.md).
-Earlier zero-model startup blockers and serial-only scheduling are superseded.
+The current instance is confirmed off by2026-09-18 00:26:11UTC for the owner's
+same-instance dual-A800 change. The heartbeat is paused. Do not start a server,
+change paid configuration or restart model work until the owner reopens it.
+Connection details, immutable deployment directories and private receipts are in
+.local/public_math_session/ACTIVE_HANDOFF.md; recheck the current endpoint.
 
-All four128-update training arms and verified final recoveries are complete. Preparation
-completed4096 masks,8192 annotation forwards and512 Base-dev outputs. The fixed64
-technical audit did not change masks. Public benchmark results remain pending.
-The first GSM128 batch lost128 attempts to CUDA OOM, with no saved public output.
-Its evidence is preserved; the one bounded retry uses64-way GSM for every state.
-MATH remains256-way and dev16-way. All31,203 logical outputs remain required;
-the physical cap is31,331 including the128 lost attempts. No additional arm,
-training seed, model or new mathematical-error retry is authorized.
+Read LIVE_EXECUTION.md, LIVE_PROGRESS.json, MAINTENANCE_PAUSE.json and
+PRE_UPGRADE_ARTIFACT_VERIFICATION.json. All four128-update terminal recoveries
+are complete. Never rerun training or preparation. The12 retained scientific
+files and all512 committed training steps have been independently verified on
+server; large files were not downloaded to the Mac. Preserve the original128
+failed generations,32 lost training updates and non-bitwise GPU replay limitation.
 
-Inspect current detached PIDs, receipts, locks, committed recoveries and immutable
-generation journals before acting. An SSH disconnect does not mean execution
-stopped. Measured training caches approached70GiB. The same unchanged evaluator is now
-queued after TRAINING_COMPLETE.json; its prior admission-only process was stopped
-with zero new model calls. Do not kill training to free cache. CPU scoring runs separately.
-Exact private connection/deployment details are in the local active handoff,
-outside Git. Never reuse old expired one-off deployment commands.
+Resume4021 public outputs plus512 Base-dev outputs. Base/SFT/DFT GSM are complete
+and scored; TrimSFT has64 saved GSM outputs. All other public/dev jobs remain.
+There are zero uncommitted evaluation reservations and no extra retry allowance
+is needed for this pause. Original evaluator receipt5039s/exit143 and CPU scorer
+receipt10561s/exit143 are intentional maintenance stops, not new failed model calls.
+Do not overwrite or discard these receipts when launching new attempts.
 
-Retain full scientific weights/optimizer/RNG on the server and verify them there.
-No Mac export gate applies. Prune only verified superseded files in this phase;
-preserve old unique artifacts and all failed-attempt evidence. Every implementation
-change must pass relevant checks and be published before a fresh immutable source
-deployment. Do not edit the running trainer or rewrite its source contract.
+Optional dual-GPU scheduler source isabfff696f68cdd8aa9b32dd410330ee5424d5c80.
+It is published and98 CPU checks pass, but is not deployed or GPU-tested. Read
+experiments/public_math_pilot_v1/DUAL_GPU_PREPARATION.md before deployment.
+After owner startup, verify the persistent disk, base/data/source identities,
+checkpoints, unchanged scientific libraries, two distinct A80080GB devices and
+free phase locks. Publish/inventory a unique source archive and perform read-only
+Linux contract/lock checks before new model calls. Each worker must expose only
+one GPU to retain saved one-device RNG topology. New execution provenance is
+separate from the immutable original EVALUATION_CONTRACT.json. Hold the original
+GPU.lock across both children; use detached tmux and independent hard deadlines.
 
-Stop new GPU work for preservation by2026-09-18 06:45UTC; CPU deadline06:50UTC;
-provider timer06:58UTC, before local midnight in America/Los_Angeles. Close out
-earlier if the full finite queue finishes. Verify the exact current instance is
-stopped and pause its follow-up. Never release/delete a volume or restart overnight.
-If incomplete, record exact saved coverage and resume only in the next owner-opened
-window with freshly checked deadlines. The formal external abstract deadline is
-Sep18 23:59AoE; no submission or external message is authorized.
+Restart the same pinned CPU scorer sourcec87ce060 in its separate environment
+with a new preserved process receipt; it reuses completed scores and watches
+remaining complete runs. Restore bounded resource telemetry with a new journal.
+Recheck provider timer and reactivate the existing heartbeat after a verified
+owner-requested resume; do not create a duplicate automation.
 
-Final audit must reconcile512 final scientific updates,544 physical completed-update
-records including32 lost uncommitted TrimSFT updates,8192 annotation forwards,31,203 saved logical
-outputs,128 additional failed physical attempts, all54 scored runs and four full
-terminal recoveries. Keep the one official empty MATH reference unresolved in the
-full500-question denominator; publish bounds and whole-question paired intervals.
-One training seed does not establish training-seed robustness. Historical startup
-cost/closeout records stay immutable; overlapping process seconds are not summed
-as whole-instance rental hours.
-
-The queued evaluator uses a06:35UTC model deadline and a06:45UTC hard timeout,
-leaving600seconds of additional completion reserve for larger batches. Its
-per-batch admission check prevents starting new batches about240seconds before
-the model deadline. This changes scheduling only, not any scientific output ID.
-
-The TrimSFT trainer later stopped before saving step64 because the strict host
-RAM gate counted clean checkpoint file cache. A separate owned-file cache helper
-restored headroom without deleting or changing data; the original trainer resumed
-from the verified step32 model/AdamW/RNG. The recovered trajectory reached128 and its terminal recovery committed
-successfully. Preserve the32 lost uncommitted updates: the final scientific dose remains
-512, while expected physical completed-update records are544. GPU replay follows
-the same rows/LR/source but is not bitwise equivalent; disclose the measured
-numerical divergence in GPU_RECOVERY_COMPARISON.json. Public scores remain pending.
-
-Keep the bounded CPU cache helper until training finishes. Both old and recovered
-training attempts stay immutable, and all earlier evaluator launchers are inactive.
-The current single-GPU evaluator passed TRAINING_COMPLETE.json and is generating formal GSM outputs. The private
-handoff records current process IDs; inspect fresh state before acting. Report the
-full finite results to the owner, including numerical replay limitations, then wait
-for their direction. No optional follow-on work is authorized.
-
-Same-instance dual-A800 capacity is under owner consideration. CPU-only preparation
-and98 checks are complete; no maintenance pause or two-GPU job has been authorized
-by the hardware clarification alone. Read DUAL_GPU_PREPARATION.md and the private
-handoff before any transition. Continue current evaluation pending owner timing;
-never release an instance or interrupt an uncommitted generation for this proposal.
+The current nightly deadlines remain model06:35UTC, hard GPU06:45UTC, CPU06:50UTC,
+provider timer06:58UTC. Preserve unfinished coverage if the night's window ends.
+No overnight restart, release/delete action, new arm, seed or model is authorized.
+Full closeout must reconcile512 final/544 physical training records,8192 annotation
+forwards,31203 logical outputs/31331 maximum physical attempts and54 scored runs.
+Keep the official empty MATH reference unresolved in the full500 denominator.
+Report complete paired comparisons, uncertainty, execution limits and resources
+before the owner decides the next scientific direction.
