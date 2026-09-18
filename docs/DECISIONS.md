@@ -1,3 +1,20 @@
+# 2026-09-18 UTC — complete the current pilot and move toward ACL/ICML
+
+The owner ended the ICLR submission sprint and requested a careful progress
+summary before moving to the existing long-term branch after this round. The
+frozen four-arm public-math experiment continues within the original nightly
+boundaries. Future cost planning is no longer waived because of the abstract.
+No automatic optional training, seed, benchmark, hardware change, submission or
+branch integration is introduced. The current worktree remains the coordinator
+until its finite experiment, verification and normal shutdown are reconciled.
+
+[The stage review](../reports/public_math_pilot_v1/LONG_TERM_TRANSITION_20260918_ZH.md)
+separates arithmetic decision-supervision findings, the completed secondary GSM
+result, incomplete primary MATH, and the old LT001 acquisition-allocation proposal.
+Its proposals are not launched work. Exposure history, negative results, shared
+spending and E015 recovery obligations transfer with the project. The existing
+long-term branch was inspected read-only and was not edited or merged.
+
 # Current closeout — E038/E039 complete; provider off; paused
 
 The owner-authorized G-single/G-paired phase completed from E031 step32:

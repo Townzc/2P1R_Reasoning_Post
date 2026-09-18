@@ -1,3 +1,21 @@
+# 2026-09-18 — stage review and ACL/ICML transition planning
+
+Codex followed the owner’s change from an ICLR submission sprint to longer-term
+ACL/ICML research. It inspected the running dual-GPU evaluation with the existing
+read-only status tool, worker logs/receipts, cgroup events, disk, telemetry and
+checkpoint metadata. All12 retained scientific components are present with sizes
+and manifest hashes matching the prior full server rehash; the binaries were not
+rehash-read again. No new worker, model call, retry, source or scientific setting
+was introduced. The scheduled nightly boundary remains in force.
+
+The stage review uses saved arithmetic/public-math reports and a read-only look
+at the existing long-term branch. It separates completed GSM from incomplete
+MATH/dev, labels future controls and replications as proposals, carries both
+known failures and non-bitwise replay, and preserves all shared exposure/cost
+history. Documentation links, counts and retained manifest identities were checked.
+The other worktree was not edited/merged. No subagent, payment, external message,
+submission or new experiment was used. Final experimental closeout remains due.
+
 # 2026-09-16 — E038/E039 completed, independently audited and closed
 
 Codex executed the owner's finite post-E037 G-single/G-paired training plan from

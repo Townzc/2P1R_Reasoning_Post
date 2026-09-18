@@ -1,3 +1,19 @@
+# Current direction — finish this pilot, then transition to ACL/ICML research
+
+The research target is now longer-term ACL/ICML work. The ICLR abstract rush
+no longer motivates new compute or relaxed cost planning. Complete the existing
+frozen public-math queue, preserving its nightly cutoffs and all failures; no new
+arm, seed, model or benchmark follows automatically. The owner plans to move to
+`codex/icml-acl-2027` after this round. Do not switch or edit that worktree here.
+
+Read [LONG_TERM_TRANSITION_20260918_ZH.md](../reports/public_math_pilot_v1/LONG_TERM_TRANSITION_20260918_ZH.md) for the stage review,
+current evidence limits and proposed long-term decisions. At 2026-09-18 03:30 UTC,
+13,363/31,203 logical outputs were saved and 18/54 runs scored; both original GPU
+workers and the CPU scorer were alive with no new failure. GSM is complete;
+primary MATH and trained dev remain incomplete. Use fresh read-only status before
+acting. All historical data exposure, artifact obligations and cost records carry
+across branches. This stage review is not the final experimental closeout.
+
 # Current status — two A800 workers evaluating in tmux
 
 The owner reopened the same persistent instance with two A80080GB GPUs and

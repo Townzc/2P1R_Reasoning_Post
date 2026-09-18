@@ -1,3 +1,24 @@
+# Latest direction and live evidence — 2026-09-18 03:30 UTC
+
+The owner now targets longer-term ACL/ICML research and plans to move to the
+existing `codex/icml-acl-2027` branch after the current round. Read the
+[stage review and transition requirements](LONG_TERM_TRANSITION_20260918_ZH.md)
+and [bounded read-only evidence](LONG_TERM_TRANSITION_PROGRESS_20260918.json).
+The finite queue, scientific settings and tonight’s shutdown deadlines are
+unchanged; the ICLR abstract rush is no longer a reason to add compute.
+
+Saved coverage is13,363/31,203 (GSM6,595, MATH6,256, Base-dev512);18/54 runs
+are scored. Both original GPU workers, coordinator and CPU scorer remain alive
+with no new failure. Four final128-step checkpoints remain committed;12 retained
+scientific files match their prior fully hashed identities and sizes. The latest
+check did not rehash106GB of binaries. This is not a final output reconciliation.
+
+After full evaluation, publish complete results, resource/failure accounting and
+a final handoff supplement, verify normal provider shutdown, pause the heartbeat
+and wait for the owner. If tonight is incomplete, preserve exact missing coverage
+and stop at the existing boundary; no overnight restart. Do not switch, merge or
+edit the other worktree. The older timestamped snapshots below remain historical.
+
 # Continue the live dual-A800 public-math evaluation
 
 Latest monitoring at2026-09-18 01:49UTC: both original GPU workers/scorer are alive,

@@ -1,3 +1,11 @@
+# Direction amendment — 2026-09-18 UTC
+
+Research now targets longer-term ACL/ICML work. The existing finite public-math
+scientific contract and nightly shutdown remain unchanged. The previous ICLR
+abstract urgency does not authorize further spending, scientific extensions or
+overnight execution. Read [the transition review](../reports/public_math_pilot_v1/LONG_TERM_TRANSITION_20260918_ZH.md).
+Complete and reconcile this pilot, then wait for the owner’s next direction.
+
 # Current status — two A800 workers evaluating in tmux
 
 The owner reopened the same persistent instance with two A80080GB GPUs and
