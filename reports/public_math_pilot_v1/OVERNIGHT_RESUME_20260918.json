@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "status": "old_workers_finish_current_runs_then_verified_bounded_resume_queued",
-  "observed_at_utc": "2026-09-18T06:12:38.095265+00:00",
+  "status": "overnight_continuation_verified_running",
+  "observed_at_utc": "2026-09-18T07:14:36.475322+00:00",
   "authorization_amendment_commit": "72d88aa0",
   "training_committed_updates": 512,
   "physical_completed_training_records": 544,
-  "saved_logical_outputs": 19619,
+  "saved_logical_outputs": 21619,
   "logical_target": 31203,
   "physical_generation_cap": 31331,
-  "physical_generation_records_live": 20235,
-  "completed_scored_runs": 30,
-  "disk_free_bytes": 88357920768,
-  "cgroup_current_bytes": 8075100160,
+  "physical_generation_records_live": 22235,
+  "completed_scored_runs": 34,
+  "disk_free_bytes": 88328679424,
+  "cgroup_current_bytes": 6312161280,
   "gpu_utilization_percent": [
-    98,
+    100,
     98
   ],
   "gpu_source": "abfff696f68cdd8aa9b32dd410330ee5424d5c80",
@@ -35,8 +35,8 @@
   "remaining_cost_projection_provider_cny": 126.61,
   "maximum_additional_spending_budget_cny": 200,
   "remaining_wall_time_estimate_hours": [
-    6,
-    7
+    5,
+    6
   ],
   "estimate_is_not_guarantee": true,
   "known_lost_generations": 128,
@@ -46,5 +46,72 @@
   "completed_outputs_regenerated": 0,
   "final_reconciliation_complete": false,
   "phase_complete": false,
-  "provider_off": false
+  "provider_off": false,
+  "queued_snapshot": {
+    "observed_at_utc": "2026-09-18T06:12:38.095265+00:00",
+    "saved_logical_outputs": 19619,
+    "completed_scored_runs": 30,
+    "physical_generation_records_live": 20235
+  },
+  "recent_telemetry": {
+    "errors": {
+      "main/parallel_evaluation/attempt_336cdfe4880b41c7b8c08255d9a1b94d/worker_0.log": [],
+      "main/parallel_evaluation/attempt_336cdfe4880b41c7b8c08255d9a1b94d/worker_1.log": [],
+      "overnight_transition_20260918/evaluate_launch03.log": [],
+      "overnight_transition_20260918/cpu_launch03.log": [],
+      "overnight_transition_20260918/telemetry_launch03.log": []
+    },
+    "new_telemetry_samples": 76,
+    "mean_gpu_utilization": [
+      97.65789473684211,
+      97.85526315789474
+    ],
+    "peak_device_mib": [
+      79467.0,
+      79467.0
+    ],
+    "pause_marker_exists": false,
+    "current_source_inventory_sha256": "94c8d213bac2abd68e5ce82aa13ae80e1678199f5ccbf5af78e7457eca5d9f04"
+  },
+  "durable_boundary": {
+    "observed_at_utc": "2026-09-18T06:24:53.962906+00:00",
+    "saved_logical_outputs": 20107,
+    "physical_generation_records": 20235,
+    "logical_remaining": 11096,
+    "uncommitted_reservations": [],
+    "ledger_stable_during_check": true,
+    "ledger_sha256": "bb7ba931a1d47549bbf4a120a9e5cc9e7ab3daf0dd7263008f3bbb8773f39bf3",
+    "formal_updates": 512,
+    "physical_completed_training_records": 544,
+    "retained_component_bytes": 106270841556,
+    "retention_check": "Presence/sizes/manifest identities; prior full rehash remains 00:23 UTC.",
+    "scored_runs": 32,
+    "retained_components": 12,
+    "evidence_sha256": "a9594e954ccad86004256757490f08e78aa4a9cf366bc09cdc5e27f317f08be1",
+    "audit_result": "saved_prefix_verified_before_deadline_only_resume"
+  },
+  "old_evaluator_pause": {
+    "worker_exit_codes": [
+      0,
+      0
+    ],
+    "worker_status": [
+      "paused",
+      "paused"
+    ],
+    "coordinator_status": "incomplete",
+    "coordinator_process_exit_code": 1,
+    "coordinator_process_seconds": 20696,
+    "reason": "intentional complete-run pause to extend deadlines; not a scientific failure"
+  },
+  "resume_at_utc": "2026-09-18T06:25:04.575411+00:00",
+  "old_cpu_scorer": {
+    "exit_code": 0,
+    "elapsed_seconds": 22192,
+    "reason": "old declared deadline reached normally"
+  },
+  "new_cpu_scorer_at_utc": "2026-09-18T06:49:36.901410+00:00",
+  "active_transition_failures": [],
+  "live_inflight_outputs_not_lost": 488,
+  "estimate_note": "As of07:14UTC,22 MATH batches plus4096 trained-dev outputs remain. MATH batching measured; dev duration still uses the Base-dev proxy. No in-flight credit."
 }

@@ -1,3 +1,16 @@
+# 2026-09-18 — overnight continuation verified
+
+The scheduled check verified both actual resumed GPU workers, their unchanged
+source/contract, the single resumed CPU scorer and telemetry. The static06:24
+boundary independently reconciles20,107 saved outputs,32 scored runs and zero
+uncommitted reservations. A fresh07:15 live audit binds21,619 saved outputs and
+preserves512 committed/544 physical update records,128 original lost generations,
+and12 retained component identities/sizes. This is not another full106GB binary
+rehash or final completion. No new failures, source changes or model launches
+were introduced by this check. A finite local read-only boundary collector was
+prepared to preserve compact evidence before the existing provider failsafe;
+it changes no server file, worker, science or shutdown setting.
+
 # 2026-09-18 — owner-authorized overnight deadline extension
 
 Codex verified and changed the provider failsafe through its visible UI, retaining

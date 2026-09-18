@@ -1,10 +1,12 @@
 # Latest override — finish this round overnight, then shut down
 
-At06:12UTC,19,619/31,203 outputs were saved and both original GPUs were98%
-busy. The verified finite transition controllers wait for complete-run receipts
-and static reconciliation before extending the unchanged evaluator deadlines.
-See [the operational record](OVERNIGHT_RESUME_20260918.json). This is queued
-continuation, not a claim of final completion or provider shutdown.
+At07:14UTC,21,619/31,203 outputs were saved and34/54 runs scored; bothGPU
+workers and the singleCPU scorer are verified alive. The06:24 durable pause
+preserved20,107 outputs with zero uncommitted reservations; deadline-only resume
+started06:25 with unchanged source/contracts. Both oldworkers exited0/paused;
+the coordinator's incomplete/exit1 is the intentional pause, not a newfailure.
+See [the verified operational record](OVERNIGHT_RESUME_20260918.json). Primary
+MATH and traineddev remain incomplete; do not claim final results or shutdown.
 
 The owner now authorizes overnight completion of the existing finite queue and
 requires a runtime/cost estimate before every future experiment. This supersedes
