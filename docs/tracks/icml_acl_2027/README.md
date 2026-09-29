@@ -1,3 +1,12 @@
+# Current research screening — September 29, 2026
+
+LT002 is complete and its instance is OFF. The [DATE-LM novelty audit](DATE_LM_NOVELTY_AUDIT_20260929.md)
+withdrew the earlier answer-only proposal. A [six-family literature and asset
+rescreen](DATA_AUDIT_RESCREEN_20260929.md) retains one conditional data-curation /
+AI-origin measurement question; no new direction or experiment is admitted.
+Known calibration theory, available benchmark labels and possible empirical
+contributions are explicitly separated. The records below preserve older plans.
+
 # Resumption note — 2026-09-28
 
 The LT001 design below is preserved as a historical, unexecuted acquisition study.

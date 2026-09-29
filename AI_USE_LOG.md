@@ -1,3 +1,16 @@
+## 2026-09-29 — six-family data-audit rescreen
+
+At the owner's request, examined recent primary papers, experimental sections,
+limitations and official releases across data availability, AI-text provenance,
+coauthorship, distillation, text reuse and GEO. Three read-only research agents
+helped identify direct overlaps and asset gaps. Locally retained hashes for small
+source/documentation files and public metadata; no large dataset or model download.
+Kept one conditional curation/measurement audit question, explicitly distinguishing
+it from known quantification and calibration results. No novelty guarantee or
+execution authorization. Updated private decision/meeting notes and the public
+research index; preserved the unrelated unrun analysis draft and all old results.
+No model inference, training, paid call, server action or external message.
+
 ## 2026-09-29 — DATE-LM novelty audit and recommendation correction
 
 At the owner's request, reviewed core experimental sections and appendices of
