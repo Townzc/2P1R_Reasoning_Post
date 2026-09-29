@@ -1,3 +1,15 @@
+# Concrete post-training proposals — September 29, 2026
+
+The [new design memo](POSTTRAINING_PROPOSALS_20260929.md) specifies scientific
+questions, discriminating controls, course provenance and asset limits. Q2
+(verifier correction and the net value of weak-supervision history) is the first
+conditional discussion candidate; revised Q1 tests a narrow data-history by
+LoRA-scale interaction. Neither is an admitted experiment or confirmed novelty.
+A new AutoNPO collision excludes generic rollback-with-guidance novelty. The
+Q2 screen must include future continuation; a null at correction time alone does
+not exclude a later history effect. [Reading and source receipts](POSTTRAINING_PROPOSAL_SOURCES_20260929.json)
+record the evidence. Earlier reviews below remain dated records.
+
 # Post-training data questions — September 29, 2026
 
 The [deep review](POSTTRAINING_DEEP_REVIEW_20260929.md) withdraws the original

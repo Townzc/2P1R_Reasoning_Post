@@ -1,3 +1,19 @@
+## 2026-09-29 — concrete post-training designs and course provenance
+
+The lead and three research agents refined the two conditional questions into
+falsifiable designs, reread course provenance and inspected close primary work.
+Revised Q1 uses a data-history by function-preserving scalar-factor intervention,
+with independent history replication and instruction-learning checks. Q2 separates
+net history value, missed stronger-supervision learning and optimizer carryover.
+Identified AutoNPO as actual training rollback with future guidance, narrowing
+possible novelty. Corrected an overly restrictive screening rule: unchanged
+pre-correction scores do not exclude different subsequent learning. Reviewed
+asset/state persistence and measurement constraints; no runtime estimate or
+experiment admission is claimed. Independently verified three new compact source
+snapshots and reviewed the synthesis. No training, inference, benchmark/program
+execution, new label, paid service, server action or external message. Preserved
+all previous outcomes and the unrelated unrun follow-up draft.
+
 ## 2026-09-29 — deep literature and identification review of the two questions
 
 Three research agents and the lead read primary methods/appendices and inspected

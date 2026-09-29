@@ -1,0 +1,504 @@
+{
+  "date": "2026-09-29",
+  "scope": "Primary-source reading and falsifiable design; no experiment or paid execution.",
+  "interpretation": "Sources constrain proposals; absence of an exact match is not a novelty guarantee. Repeated URLs reflect separate reviews, not distinct papers. Reused readings and current reading depth are recorded per entry.",
+  "entries": [
+    {
+      "id": "data_repetition",
+      "title": "Data Repetition Beats Data Scaling in Long-CoT Supervised Fine-Tuning",
+      "url": "https://arxiv.org/html/2602.11149v2",
+      "version": "arXiv v2",
+      "read_depth": "Read main methods and results through section 4; Appendix C termination analysis and fixed-step/token-accuracy table. Re-read in this task.",
+      "evidence_boundary": "Independent runs and own schedules; token accuracy is teacher-forced diagnostic, not established causal mechanism.",
+      "asset_or_secondary_primary_url": "https://github.com/dkopi/data-repetition/tree/fcb45d8b07bed1ef54538618c0c5a1e41808fd5d",
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "wrap",
+      "title": "Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling",
+      "url": "https://arxiv.org/html/2401.16380v1",
+      "version": "arXiv v1",
+      "read_depth": "Sections 3, 5, 6 and evaluation table controls; earlier read plus targeted revisit.",
+      "evidence_boundary": "Rephrasing/style and quality are established; does not isolate repeated-target nuisance-surface mechanism.",
+      "asset_or_secondary_primary_url": null,
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "fine_until",
+      "title": "Fine Until Fine-Tuned: Repeated Solutions Make Reasoning Fragile",
+      "url": "https://arxiv.org/html/2609.33559v1",
+      "version": "arXiv v1, 2026-09-27",
+      "read_depth": "Read main sections 2-8, Appendices K, M, N; official records/metadata inspected. Not every appendix proof independently verified.",
+      "evidence_boundary": "Direct D/P exposure-matched collision; fresh optimizer but same trained adapter; mechanism explicitly unresolved section 8.",
+      "asset_or_secondary_primary_url": "https://github.com/ely2ba/reasoning-durability/tree/6f0d7b413f7211d9dbdeb810273dd237d1465588",
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "lora_plus",
+      "title": "LoRA+: Efficient Low Rank Adaptation of Large Models",
+      "url": "https://arxiv.org/html/2402.12354v2",
+      "version": "arXiv v2",
+      "read_depth": "Read sections 3-4 role-of-factors and feature-learning analysis; no independent proof verification.",
+      "evidence_boundary": "Factor-specific learning rates/scale asymmetry are existing optimization science.",
+      "asset_or_secondary_primary_url": null,
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "lora_rite",
+      "title": "LoRA Done RITE: Robust Invariant Transformation Equilibration for LoRA Optimization",
+      "url": "https://arxiv.org/html/2410.20625v2",
+      "version": "arXiv v2, 2025-07-16; ICLR 2025 proceedings also located",
+      "read_depth": "Read sections 2-3 including scalar invariance derivation and algorithm 1; skimmed task table/setup.",
+      "evidence_boundary": "Adam/SGD gauge dependence and invariant optimizer already explicit. Theoretical convergence uses stated simplifying assumptions.",
+      "asset_or_secondary_primary_url": null,
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "lora_ga",
+      "title": "LoRA-GA: Low-Rank Adaptation with Gradient Approximation",
+      "url": "https://arxiv.org/html/2407.05000v2",
+      "version": "arXiv v2",
+      "read_depth": "Read section 3 gradient objective, scale stability and initialization algorithm.",
+      "evidence_boundary": "Function-preserving initial effective weights do not guarantee identical first-step dynamics.",
+      "asset_or_secondary_primary_url": "https://github.com/Outsider565/LoRA-GA",
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "slao",
+      "title": "Merge before Forget: A Single LoRA Continual Learning via Continual Merging",
+      "url": "https://arxiv.org/html/2512.23017v1",
+      "version": "arXiv v1, 2025-12-28; ICLR 2026 proceedings verified",
+      "read_depth": "Read sections 3-5, factor asymmetry/initialization/merging construction and benchmark/baseline table. Not appendices proofs.",
+      "evidence_boundary": "Continual adapter initialization and forgetting are established; its QR initialization is not our claimed function-preserving gauge control.",
+      "asset_or_secondary_primary_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/0dedca10992d34035c9a9776254cfa8c-Abstract-Conference.html",
+      "role": "Prior deep review carried forward; this turn refines design, not a fresh claim of exhaustive search.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "course",
+      "url": "https://www.sewonmin.com/courses/cs294_288/",
+      "read_depth": "Current syllabus read this turn.",
+      "version": "Retrieved 2026-09-29; page not commit-pinned.",
+      "relevance": "September 10 Scaling Data-Constrained Language Models; September 24 Rephrasing the Web. September 22 context. This is our derived question, not teacher-endorsed Topic 1 supply forecasting.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "repo_readme",
+      "url": "https://raw.githubusercontent.com/ely2ba/reasoning-durability/6f0d7b413f7211d9dbdeb810273dd237d1465588/README.md",
+      "version": "6f0d7b413f7211d9dbdeb810273dd237d1465588",
+      "read_depth": "Read authored summary, layout, reproduction commands and access statements. No commands executed.",
+      "relevance": "Compact outputs can reproduce published tables; Tinker execution is paid; adapters request-only.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "main_phase",
+      "url": "https://raw.githubusercontent.com/ely2ba/reasoning-durability/6f0d7b413f7211d9dbdeb810273dd237d1465588/records/main-phase.md",
+      "version": "same repo pin",
+      "read_depth": "Public authored record inspected; not independently recomputed results.",
+      "relevance": "Fresh-solution history and exact existing protocol provenance.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "revision_record",
+      "url": "https://raw.githubusercontent.com/ely2ba/reasoning-durability/6f0d7b413f7211d9dbdeb810273dd237d1465588/records/revision.md",
+      "version": "same repo pin",
+      "read_depth": "Read RS realistic stage, RP replay, SD paired-history description and shared evaluation specification this turn.",
+      "relevance": "Original ordinary No Robots epoch at 1e-4, batch 32, fresh optimizer; published fixed forced-evaluation protocol. SD does not prove usable weight pairs are accessible.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "outputs_schema",
+      "url": "https://raw.githubusercontent.com/ely2ba/reasoning-durability/6f0d7b413f7211d9dbdeb810273dd237d1465588/outputs/README.md",
+      "version": "same repo pin",
+      "read_depth": "Complete schema read this turn; no CSV benchmark aggregation or re-scoring.",
+      "relevance": "math_samples, depth_texts, train_log, math_p_samples can support later CPU baseline/dose review; none supplies factors/gradients.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "no_robots_card",
+      "url": "https://huggingface.co/datasets/HuggingFaceH4/no_robots/blob/main/README.md",
+      "version": "Main card retrieved 2026-09-29; exact dataset revision remains to pin before use.",
+      "read_depth": "Read schema, split counts and evaluation recommendations. Did not fetch data rows.",
+      "relevance": "Existing 9500 train/500 test examples and human responses enable reference NLL without paid judges. NLL is not product-quality evaluation; overlap with converted training IDs must be audited.",
+      "review_scope": "Q1"
+    },
+    {
+      "id": "prime",
+      "title": "Proxy Reward Internalization and Mechanistic Exploitation: A Learned Precursor to Reward Hacking and Its Generalization",
+      "url": "https://arxiv.org/html/2606.09711v1",
+      "metadata_url": "https://arxiv.org/abs/2606.09711",
+      "status": "arXiv preprint; no conference venue verified",
+      "version_read": "v1",
+      "sections_read": [
+        "3",
+        "4.1",
+        "4.3",
+        "4.5"
+      ],
+      "collision": "Direct gold-switch and re-exposure history experiment",
+      "asset_limit": "No experiment repository/full-state checkpoint release link located in inspected HTML",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "systematic_error",
+      "title": "Delay, Plateau, or Collapse: Evaluating the Impact of Systematic Verification Error on RLVR",
+      "url": "https://arxiv.org/html/2605.02909v2",
+      "metadata_url": "https://arxiv.org/abs/2605.02909",
+      "code_url": "https://github.com/eth-sri/llm-verifier-noise",
+      "status": "COLM 2026 per arXiv comments and author repository; proceedings page not independently located",
+      "version_read": "v1 and v2; v2 revised 2026-08-17",
+      "sections_read": [
+        "3",
+        "4.1-4.3",
+        "4.6",
+        "A.2",
+        "v1 B.3",
+        "v2 B.7"
+      ],
+      "collision": "Systematic error effects; oracle/noisy alternation already included",
+      "asset_limit": "Repository inspected as code availability, not downloaded checkpoints or reproduced results",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "natural_suite",
+      "title": "When the Reward Suite Is Leaky: A Preregistered Causal Contrast of Natural Verifier False Positives in RLVR",
+      "url": "https://arxiv.org/html/2607.11022v1",
+      "metadata_url": "https://arxiv.org/abs/2607.11022",
+      "code_url": "https://github.com/toffee-desuwa/rlvr-leaky-suite",
+      "status": "arXiv preprint; no conference venue verified",
+      "version_read": "v1",
+      "sections_read": [
+        "2",
+        "3.1-3.6",
+        "4.1",
+        "4.4-4.7",
+        "6",
+        "7",
+        "E"
+      ],
+      "collision": "Direct natural-test setting; no substantial aggregate harm and no clear exploitation growth within measured regime",
+      "asset_limit": "Finite reviewed-program labels do not certify fresh generations; extra-only reward is not official union scoring. Earlier local code audit, not repeated here, reports model-only saving and no full-state release.",
+      "prior_local_audit_commit": "9b6c86abeb4b837418b009d5354f81b43a28f84b",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "unlearning_support",
+      "title": "An Empirical Study of Reward Specification and Benchmark Reliability in GRPO-based LLM Unlearning",
+      "url": "https://arxiv.org/html/2608.17804v1",
+      "code_url": "https://github.com/rubenbalbastre/grpo-llm-unlearning",
+      "status": "arXiv preprint; no conference venue verified",
+      "version_read": "v1",
+      "sections_read": [
+        "3",
+        "4.1-4.3",
+        "5.1",
+        "5.4-5.5",
+        "6",
+        "D.3.2"
+      ],
+      "collision": "Policy-support warm-up factor and active-group diagnostics already explicit",
+      "asset_limit": "Reward-aligned warm-up and judge-dependent behavioral labels; not a code-recovery asset",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "gradient_starvation",
+      "title": "Gradient Starvation in Binary-Reward GRPO: Why Group-Mean Centering Fails and Why the Simplest Fix Works",
+      "url": "https://arxiv.org/html/2605.07689v1",
+      "status": "arXiv preprint; no conference venue verified",
+      "version_read": "v1",
+      "sections_read": [
+        "3.1-3.3",
+        "4.1-4.3",
+        "4.6",
+        "5"
+      ],
+      "collision": "Task-heterogeneous degeneracy, fixed-reference advantage, and matched larger-group control",
+      "limits": "Theory unclipped on-policy without KL; empirical cross-dataset transfer limited; not a repaired-verifier rollback comparison",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "primacy",
+      "title": "The Primacy Bias in Deep Reinforcement Learning",
+      "url": "https://proceedings.mlr.press/v162/nikishin22a/nikishin22a.pdf",
+      "metadata_url": "https://proceedings.mlr.press/v162/nikishin22a.html",
+      "status": "ICML 2022, official PMLR proceedings",
+      "sections_read": [
+        "3.1",
+        "3.2",
+        "4"
+      ],
+      "collision": "Data adequacy versus ability to learn from collected data distinguished before LLM RL",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "plasticity_injection",
+      "title": "Deep Reinforcement Learning with Plasticity Injection",
+      "url": "https://papers.nips.cc/paper_files/paper/2023/file/75101364dc3aa7772d27528ea504472b-Paper-Conference.pdf",
+      "metadata_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/75101364dc3aa7772d27528ea504472b-Abstract-Conference.html",
+      "status": "NeurIPS 2023 Main Conference, not ICML 2023",
+      "sections_read": [
+        "3",
+        "4",
+        "5.1-5.2"
+      ],
+      "collision": "Function-preserving plasticity diagnostic designed to separate exploration confound",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "optimizer_reset",
+      "title": "Resetting the Optimizer in Deep RL: An Empirical Study",
+      "url": "https://arxiv.org/html/2306.17833v2",
+      "metadata_url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/e4bf5c3245fd92a4554a16af9803b757-Abstract-Conference.html",
+      "status": "NeurIPS 2023 Main Conference",
+      "version_read": "v2",
+      "sections_read": [
+        "2",
+        "3"
+      ],
+      "collision": "Optimizer moment history is an established changing-objective confound",
+      "provenance": "Deep-read in previous Q2 review; reused rather than claimed newly read in full",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "course_2026",
+      "title": "CS 294-288: Data-Centric LLMs, Fall 2026",
+      "url": "https://www.sewonmin.com/courses/cs294_288/",
+      "status": "Official course syllabus, tentative",
+      "sections_read": [
+        "09/22 options and readings",
+        "overview"
+      ],
+      "finding": "Option B names Spurious Rewards and Reasoning or Memorization; an intellectual origin, not exact instructor-proposed question nor proof the option was taught",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "spurious_course_reading",
+      "title": "Spurious Rewards: Rethinking Training Signals in RLVR",
+      "url": "https://arxiv.org/abs/2506.10947",
+      "status": "Course-linked arXiv metadata; venue not independently checked this turn",
+      "sections_read": [
+        "metadata"
+      ],
+      "usage": "Course provenance only; no new empirical claim drawn from abstract",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "contamination_course_reading",
+      "title": "Reasoning or Memorization? Unreliable Results of Reinforcement Learning Due to Data Contamination",
+      "url": "https://arxiv.org/abs/2507.10532",
+      "status": "Course-linked arXiv metadata; venue not independently checked this turn",
+      "sections_read": [
+        "metadata"
+      ],
+      "usage": "Course provenance only; not evidence about optimal reward-repair rollback",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "autonpo",
+      "title": "Near-Future Policy Optimization",
+      "url": "https://arxiv.org/html/2604.20733v1",
+      "metadata_url": "https://arxiv.org/abs/2604.20733",
+      "status": "arXiv preprint, v1 April 22 2026; no conference venue verified",
+      "sections_read": [
+        "2",
+        "3.1",
+        "3.2",
+        "3.3",
+        "4.1",
+        "4.2",
+        "Algorithm 1"
+      ],
+      "finding": "Actual training rollback at Algorithm 1 line 25: load weights and dataloader state at earlier checkpoint, replay with verified trajectories from later checkpoint on mistake-pool prompts. Adaptive rollback guidance already exists. Optimizer/scheduler restoration not specified in inspected algorithm. Not natural verifier repair; no clean-history vs rollback equal-future-budget contrast located.",
+      "caution": "Table 1 GRPO=60.25, base=57.88; abstract uses 57.88 baseline. Do not repeat it as GRPO. No theorem uniqueness claims endorsed.",
+      "asset_check": "No checkpoints, repo or large assets downloaded; primary HTML read only",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "revisql",
+      "title": "ReViSQL: Achieving Human-Level Text-to-SQL",
+      "url": "https://arxiv.org/html/2603.20004v1",
+      "metadata_url": "https://arxiv.org/abs/2603.20004",
+      "repository_url": "https://github.com/uiuc-kang-lab/ReViSQL",
+      "status": "arXiv preprint v1 March 20 2026; PVLDB template placeholders do not establish publication",
+      "sections_read": [
+        "3 excerpts",
+        "4.1",
+        "4.2 excerpts",
+        "6.5"
+      ],
+      "finding": "Existing-data expert correction and original-vs-verified RL comparison; original has 9k instances, verified about 2.5k, so not matched-item causal contrast. Changes questions, external knowledge, SQL and grading. Verified validation also changes checkpoint selection. 30B-A3B / 235B-A22B systems do not certify small-model feasibility.",
+      "usage": "Tight collision/alternative-asset caution only; not a newly proposed project; no data/model downloaded",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "natural_suite_erratum",
+      "title": "Suite operationalization erratum",
+      "url": "https://github.com/toffee-desuwa/rlvr-leaky-suite/blob/9b6c86abeb4b837418b009d5354f81b43a28f84b/ERRATUM_20260711_suite_operationalization.md",
+      "status": "Pinned author repository documentation",
+      "sections_read": [
+        "document"
+      ],
+      "finding": "Original hardened condition is extra tests only. Official base-and-extra is a different intervention. Test failures are not automatically semantic incorrectness.",
+      "review_scope": "Q2"
+    },
+    {
+      "id": "COURSE_SCHEDULE",
+      "url": "https://www.sewonmin.com/courses/cs294_288/",
+      "read": "Entire actual 2026 schedule; especially Sep 8, Sep 10, Sep 22, Sep 24",
+      "version": "Live page accessed 2026-09-29; explicitly tentative",
+      "evidence": "Q1/Q2 theme mappings; Sep22 has Option A/B on page, not evidence which was taught",
+      "limits": "Not approval of our specific proposals",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "COURSE_PROJECT",
+      "url": "https://www.sewonmin.com/courses/cs294_288/project/",
+      "read": "Project expectations/checkpoints; midpoint presentation content",
+      "version": "Live page accessed 2026-09-29",
+      "evidence": "Explain gap and informative feasibility results, not necessarily propose a method",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "SPURIOUS_REWARDS",
+      "url": "https://arxiv.org/html/2506.10947v2",
+      "version": "2506.10947v2, 2026-02-25",
+      "read": "Sections1–4; introduction summary of Section5 interventions; abstract/version metadata",
+      "status": "arXiv version; venue not verified in this subtask",
+      "evidence": "Analytical spurious rewards not proposed capability method; model dependence; clipping/prior behavior mechanisms",
+      "course_link": "Actual syllabus Sep22 OptionB",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "REASONING_OR_MEMORIZATION",
+      "url": "https://arxiv.org/html/2507.10532v3",
+      "version": "2507.10532v3, 2025-12-17",
+      "read": "Sections3 and4; RandomCalculation construction/protocol; contamination and prompting interpretation",
+      "status": "arXiv comments say AAAI2026; official proceedings not separately checked here",
+      "evidence": "Differentiate valid supervision conclusions from benchmark/prompt confounds; existing clean arithmetic protocol",
+      "limits": "Does not establish that every code benchmark is clean or prove specific training membership",
+      "course_link": "Actual syllabus Sep22 OptionB",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "SCALING_DATA_CONSTRAINED",
+      "url": "https://arxiv.org/abs/2305.16264",
+      "version": "Landing page resolves v5, 2025-06-28",
+      "read": "Course link, abstract, version metadata; not a new full-paper audit in this turn",
+      "evidence": "Explicit data repetition/compute budget topic",
+      "course_link": "Sep10 prerequisite",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "WRAP",
+      "url": "https://arxiv.org/abs/2401.16380",
+      "version": "v1, 2024-01-29",
+      "read": "Course link, abstract; previous project audit of method separate",
+      "evidence": "Synthetic paraphrasing and data efficiency connection",
+      "course_link": "Sep24 main reading",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "LORA_RITE",
+      "url": "https://arxiv.org/html/2410.20625v2",
+      "version": "2410.20625v2",
+      "read": "Sections2.1–2.3,3.1; scalar/general transform definitions and optimizer argument",
+      "status": "Version fixed; venue not rechecked",
+      "evidence": "Function-preserving scaling and failure of optimizer scalar invariance are established",
+      "limits": "Not a course reading; does not itself test repeated-data history interaction",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "FINE_UNTIL_FINETUNED",
+      "url": "https://arxiv.org/html/2609.33559v1",
+      "version": "v1, 2026-09-27",
+      "read": "Earlier independent full relevant review: Sections2–6 and AppsM/N, reused without downloading again",
+      "status": "arXiv preprint",
+      "evidence": "Existing same-problem fixed/fresh solutions and later fragility; not our new broadquestion",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "PRIME",
+      "url": "https://arxiv.org/html/2606.09711v1",
+      "version": "v1",
+      "read": "Earlier independent Section4.3 review reused",
+      "status": "arXiv preprint",
+      "evidence": "Reward switch, correction, reexposure already done",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "GRADIENT_STARVATION",
+      "url": "https://arxiv.org/html/2605.07689v1",
+      "version": "v1",
+      "read": "Earlier independent Sections3.1–3.3,4.3 review reused",
+      "status": "arXiv preprint",
+      "evidence": "Support scarcity/heterogeneity/rescue cannot be newclaim",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "LEAKY_SUITE",
+      "url": "https://arxiv.org/html/2607.11022v1",
+      "version": "v1",
+      "read": "Earlier independent Sections3–4.7 and7 + author code review reused",
+      "status": "arXiv preprint",
+      "evidence": "Negative natural-leak findings; imperfect semanticlabels; modelonlycheckpoints",
+      "code_pin": "9b6c86abeb4b837418b009d5354f81b43a28f84b",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "AUTONPO_PARALLEL_REVIEW",
+      "url": "https://arxiv.org/abs/2604.20733v1",
+      "version": "v1",
+      "read": "Not independently read by this subtask; parent relayed Q2 literature-agent primary verification",
+      "status": "Treat as primary-paper lead with section details in parallel audit",
+      "evidence": "Parent says actual checkpoint rollback plus guidance/adaptive timing already implemented; novelty warning retained",
+      "limits": "Do not cite this entry as an independent fulltext reading receipt",
+      "review_scope": "course_review"
+    },
+    {
+      "id": "Q1_ASSET_REVIEW",
+      "url": "https://github.com/ely2ba/reasoning-durability/tree/6f0d7b413f7211d9dbdeb810273dd237d1465588",
+      "pin": "6f0d7b413f7211d9dbdeb810273dd237d1465588",
+      "read": "Asset conclusion reused from public deep-review audit; no new request/download",
+      "evidence": "No weight binaries in inspected tree; retained states on request and Tinker scripts",
+      "limits": "Local continuation capability remains unverified",
+      "review_scope": "course_review"
+    }
+  ],
+  "root_verified_source_receipts": [
+    {
+      "url": "https://www.sewonmin.com/courses/cs294_288/",
+      "snapshot_name": "course.html",
+      "bytes": 25179,
+      "sha256": "d7f823b82bff29d80ccbfdfba59b2414c9d4d8499b04c69e388a7d3552831713",
+      "retrieved_utc": "2026-09-29T20:26:52.285701+00:00"
+    },
+    {
+      "url": "https://www.sewonmin.com/courses/cs294_288/project/",
+      "snapshot_name": "project.html",
+      "bytes": 12699,
+      "sha256": "6597919ca911f18958bd2919af6d24331a50a6bc6c9c022fd95ac8e2bb7804af",
+      "retrieved_utc": "2026-09-29T20:26:52.295562+00:00"
+    },
+    {
+      "url": "https://arxiv.org/html/2604.20733v1",
+      "snapshot_name": "npo_v1.html",
+      "bytes": 211556,
+      "sha256": "4da938e376d3b5aab3243752c9a41a684f18b95870303ccf6e696f17339b3f5e",
+      "retrieved_utc": "2026-09-29T20:26:52.379980+00:00"
+    }
+  ],
+  "related_prior_manifest": "POSTTRAINING_DEEP_SOURCES_20260929.json"
+}
