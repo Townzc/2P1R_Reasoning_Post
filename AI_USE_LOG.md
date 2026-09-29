@@ -1,3 +1,17 @@
+## 2026-09-29 — red-team novelty audit of the first two industrial candidates
+
+Reviewed classical and recent primary literature with three research agents after
+the owner challenged novelty. Withdrew the current proxy-shortlist recommendation
+and the generic tool-filtering novelty claim. Recorded exact overlap and limits,
+including selection-identification confounding and accepted-only nonidentification.
+Read pinned Turnstile author code and the public release tree; distinguished logging
+capability from availability of historical logs. Independently checked a two-state
+analytic counterexample to the stated CausalSynth v1 feedback guarantee; this is
+algebraic evidence, not a model experiment or an admitted new topic. Preserved
+source hashes and updated public/private decision records. No training, inference,
+benchmark-data experiment, new annotation, paid service, server action or external
+correspondence. Existing results and the unrelated unrun draft remain unchanged.
+
 ## 2026-09-29 — industrial relevance and additional course-based ideas
 
 Re-read the syllabus and supplied topic scope after the owner added industrial

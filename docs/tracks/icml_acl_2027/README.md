@@ -1,12 +1,14 @@
 # Current research screening — September 29, 2026
 
-The [industry- and course-aligned review](INDUSTRIAL_COURSE_IDEAS_20260929.md)
-adds a conditional low-cost question about selective data-recipe elimination under
-uncertain task preferences. Synthetic tool-data curation is a relevant platform
-with unresolved novelty/raw-pool gaps; enterprise RAG curation is lower priority.
-No main project or experiment is admitted. [Selected source receipts](INDUSTRIAL_COURSE_SOURCES_20260929.json)
-record the latest checks. The earlier [distillation/text audit](DISTILLATION_TEXT_AUDIT_DEEP_REVIEW_20260929.md)
-remains valid background. [DATE-LM was withdrawn](DATE_LM_NOVELTY_AUDIT_20260929.md).
+The [deeper novelty audit](INDUSTRIAL_IDEAS_NOVELTY_AUDIT_20260929.md) withdraws
+the current proxy-recipe shortlist proposal and the broad synthetic-tool-filtering
+novelty claim. It records direct precedents, identification limits, pinned code
+checks and an algebraic counterexample to a related preprint's stated guarantee.
+The latter is a bounded theoretical finding, not an admitted research project.
+[Source checks](INDUSTRIAL_NOVELTY_SOURCES_20260929.json) accompany the audit.
+The [earlier industrial screening](INDUSTRIAL_COURSE_IDEAS_20260929.md) remains
+historical context; its I1 priority is superseded. No new direction or experiment
+is admitted. Earlier distillation/text-audit records remain available.
 LT002 is closed and its instance is OFF. Older plans below remain historical.
 
 # Resumption note — 2026-09-28

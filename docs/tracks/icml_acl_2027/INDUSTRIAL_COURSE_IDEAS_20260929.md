@@ -1,5 +1,9 @@
 # Course-aligned research with an industrial decision
 
+**Superseded later on September 29:** the [deeper novelty audit](INDUSTRIAL_IDEAS_NOVELTY_AUDIT_20260929.md)
+withdraws I1 as an original-project recommendation and I2's broad novelty claim.
+The priorities below are preserved as screening history, not the current decision.
+
 Date: 2026-09-29. Status: additional literature/asset screening, no experiments.
 The new criterion is relevance to an identifiable industrial workflow, alongside
 scientific value, existing evaluation assets and a <=1,000 A100 GPU-hour ceiling.
