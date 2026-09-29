@@ -1,13 +1,13 @@
 # Current research screening — September 29, 2026
 
-LT002 is complete and its instance is OFF. The [deep review of distillation and
-AI-text auditing](DISTILLATION_TEXT_AUDIT_DEEP_REVIEW_20260929.md) prioritizes further
-distillation investigation, with two conditional questions and explicit overlap,
-null-control, asset and compute gates. New SCOUT results rule out generic post-SFT
-and teacher-switch proposals. The earlier curation/measurement question remains a
-backup; no main method or experiment is admitted. The [source registry](DISTILLATION_TEXT_AUDIT_SOURCES_20260929.json)
-records inspected public artifacts. [DATE-LM was withdrawn](DATE_LM_NOVELTY_AUDIT_20260929.md).
-The records below preserve older plans.
+The [industry- and course-aligned review](INDUSTRIAL_COURSE_IDEAS_20260929.md)
+adds a conditional low-cost question about selective data-recipe elimination under
+uncertain task preferences. Synthetic tool-data curation is a relevant platform
+with unresolved novelty/raw-pool gaps; enterprise RAG curation is lower priority.
+No main project or experiment is admitted. [Selected source receipts](INDUSTRIAL_COURSE_SOURCES_20260929.json)
+record the latest checks. The earlier [distillation/text audit](DISTILLATION_TEXT_AUDIT_DEEP_REVIEW_20260929.md)
+remains valid background. [DATE-LM was withdrawn](DATE_LM_NOVELTY_AUDIT_20260929.md).
+LT002 is closed and its instance is OFF. Older plans below remain historical.
 
 # Resumption note — 2026-09-28
 

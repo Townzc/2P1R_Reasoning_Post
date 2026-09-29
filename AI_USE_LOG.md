@@ -1,3 +1,16 @@
+## 2026-09-29 — industrial relevance and additional course-based ideas
+
+Re-read the syllabus and supplied topic scope after the owner added industrial
+relevance as an explicit selection criterion. Three read-only research agents
+checked synthetic tool-data curation, proxy-guided data decisions and enterprise
+RAG/provenance against current primary papers and released assets. Recorded one
+conditional offline candidate, direct prior-work exclusions and causal/asset gaps;
+distinguished commercial workflow evidence from proof that a proposed idea works.
+Retained small public source files with hashes. No training, inference, benchmark
+analysis, new annotation, paid call, server action or external correspondence.
+Updated the public evidence memo and private Chinese discussion/handoff records;
+all earlier experiment results and the unrelated unrun draft remain unchanged.
+
 ## 2026-09-29 — distillation and AI-text audit deep review
 
 At the owner's request, continued primary-paper, appendix and public-asset review
