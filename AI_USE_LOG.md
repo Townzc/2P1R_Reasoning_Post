@@ -1,3 +1,16 @@
+# LT002 server execution — 2026-09-29 UTC
+
+Following owner startup, Codex verified the one-A800 hardware, current price,
+source/package identity,58 Linux CPU checks, original endpoint/output hashes,
+real tokenizer/base identity and frozen CPU scorer. It froze two deterministic
+mask controls without new annotations, deployed unchanged published source and
+started the finite GPU queue plus concurrent CPU scorer in detached sessions.
+A platform shutdown timer and hard process deadlines were verified. A byte-verified
+public model cache was relocated between existing disks to meet disk admission;
+scientific files were preserved. An incomplete redundant input upload was stopped;
+the smaller source package reuses the original verified frozen release. No new
+comparative scientific result is claimed at startup. No correspondence was sent.
+
 # LT002 publication recovery — 2026-09-28
 
 The owner completed the terminal GitHub authentication flow. The assistant verified

@@ -1,3 +1,22 @@
+# Current next session — LT002 running, 2026-09-29 UTC
+
+The owner started one A80080GB. The bounded GPU trainer/evaluator and concurrent
+CPU scorer are now running from published execution source c11097671c7767114f1f3a23bcaeb9426abced5b.
+All58 Linux CPU tests, frozen mask checks, historical artifact admission, real
+base/tokenizer identity and original scorer reuse passed before model execution.
+The GPU/CPU workers are detached and guarded by absolute deadlines. Never rerun
+preparation, duplicate workers or silently retry ambiguous physical reservations.
+Scientific source and the fixed256-update/4096-new-generation design are unchanged.
+No new comparative result is available yet. Current operator/PID/progress details
+are in the private LT002 handoff; inspect fresh state before action.
+
+September29 UTC deadlines: model12:00, hardGPU12:02, CPU12:06, verified provider
+timer12:14. Conservative power-on04:15; observed rateCNY7.98/hour; eight-hour
+compute capCNY63.84 excludes storage. Complete early and shut down promptly;
+confirm provider OFF before treating billing as stopped. Preserve negative results,
+raw outputs, all historical records and both new final full recoveries. No next
+phase or restart follows automatically. Earlier preparation sections are history.
+
 # Current next session — LT002 preparation, 2026-09-28
 
 Resume in the assigned long-term branch. The sprint's final complete evidence is
