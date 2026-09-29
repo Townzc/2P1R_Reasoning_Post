@@ -9,9 +9,11 @@ independent experiment or a demonstrated decoding mechanism.
 The new implementation prepares two mask controls and same-question dev decoding
 comparisons. [Protocol](../experiments/supervision_controls_v1/PROTOCOL.md) and
 [CPU results](supervision_controls_cpu_20260928/RESULTS.md). No scientific GPU
-run, server startup or model call occurred. Publication currently needs restored
-repository authentication. Local tests and source review do not establish live
-artifact availability or GPU feasibility.
+run, server startup or model call occurred. Execution source `c11097671c7767114f1f3a23bcaeb9426abced5b`
+is published and independently read back from the assigned remote branch; its
+portable archive passes hash/source checks. [Publication receipt](supervision_controls_cpu_20260928/PUBLICATION.json).
+Owner startup and live artifact/resource admission remain pending. Local tests
+and source review do not establish live artifact availability or GPU feasibility.
 
 # Final closeout — public math complete; provider off; awaiting owner
 

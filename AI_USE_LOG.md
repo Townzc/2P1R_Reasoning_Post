@@ -1,3 +1,12 @@
+# LT002 publication recovery — 2026-09-28
+
+The owner completed the terminal GitHub authentication flow. The assistant verified
+repository push permission, pushed only the assigned long-term branch without force,
+and independently read back execution commit c11097671c7767114f1f3a23bcaeb9426abced5b
+and its tree. The unchanged portable archive passed hash and extracted-source checks.
+No GPU job, server startup or external correspondence occurred. Live resource and
+artifact admission remain pending; prior authentication failures are not scientific results.
+
 ## 2026-09-28 — LT002 evidence integration and experiment preparation
 
 Codex integrated the completed sprint history into the assigned long-term branch,

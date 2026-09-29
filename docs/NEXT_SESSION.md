@@ -6,13 +6,16 @@ Read [LT002 protocol](../experiments/supervision_controls_v1/PROTOCOL.md),
 [deployment sequence](../experiments/supervision_controls_v1/README.md) and the
 [post-hoc CPU result](../reports/supervision_controls_cpu_20260928/RESULTS.md).
 
-Current real blocker: authenticated publication is unavailable. Restore the
-repository write connection and publish the local milestone before any server
-model process. Keep the original server off while preparing source; the owner
-controls startup. At startup verify live retained artifacts/rate/balance/resource
-headroom, then freeze masks, pass artifact/Linux admission and execute only the
-finite registered queue under provider shutdown supervision. No server contact,
-new training, new annotations or new generation has occurred in LT002.
+Source publication is complete: execution commit
+`c11097671c7767114f1f3a23bcaeb9426abced5b` is verified on the assigned remote branch.
+The unchanged portable archive passed its hash and clean-extraction source guard.
+See [publication receipt](../reports/supervision_controls_cpu_20260928/PUBLICATION.json).
+The owner controls startup. The next dependency is the original one-A80080GB
+instance and live retained artifacts/rate/balance/resource headroom. Freeze masks,
+pass artifact/Linux admission and execute only the finite registered queue under
+provider shutdown supervision. No server contact, new training, new annotations
+or new generation has occurred in LT002. The source archive stays bound to the
+execution commit above; subsequent documentation receipts do not change it.
 
 Keep the original four final128 checkpoints, mask annotations, raw dev outputs,
 all old failure/resource ledgers and E015's unique weights. The historical
