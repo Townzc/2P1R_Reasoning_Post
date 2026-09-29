@@ -1,3 +1,15 @@
+# Post-training data questions — September 29, 2026
+
+The [current discussion memo](POSTTRAINING_QUESTIONS_20260929.md) prioritizes
+familiar reasoning/code SFT and imperfect RLVR supervision, with OPD data as a
+reserve. It provides two concrete causal questions, direct prior-art boundaries,
+existing asset checks and conditional stop/budget plans. These are discussion
+candidates, not confirmed novel projects or authorized experiments. The earlier
+provenance/audit shortlist is deprioritized. [Source receipts](POSTTRAINING_SOURCES_20260929.json)
+record retained primary snapshots and code checks. LT002 remains closed/OFF.
+
+## Earlier screening records
+
 # Current research screening — September 29, 2026
 
 The [deeper novelty audit](INDUSTRIAL_IDEAS_NOVELTY_AUDIT_20260929.md) withdraws

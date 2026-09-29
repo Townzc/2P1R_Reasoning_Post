@@ -1,3 +1,18 @@
+## 2026-09-29 — familiar post-training data questions and collision checks
+
+Conducted primary-paper and small public-source research with three read-only
+research agents. Updated the search priority toward reasoning/code SFT, RLVR
+supervision quality and OPD data following the owner’s steering. Recorded two
+conditional discussion questions, a weaker OPD reserve, direct prior-art exclusions,
+identification limits and proposed budget ceilings. Neither question is represented
+as confirmed novelty or an admitted experiment. Checked the updated repetition
+paper including its termination-conditioned appendix; inspected the code-verifier
+repository tree and selected source files, finding no published weight binaries
+and model-only checkpoint saving. Hash-verified retained public snapshots. No model
+inference, training, benchmark run, new annotation, large asset download, paid call,
+server action or external correspondence occurred. Preserved LT002 results and the
+unrelated unrun follow-up draft. Private discussion wording remains draft-only.
+
 ## 2026-09-29 — red-team novelty audit of the first two industrial candidates
 
 Reviewed classical and recent primary literature with three research agents after
