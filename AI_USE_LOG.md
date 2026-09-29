@@ -1,3 +1,20 @@
+## 2026-09-29 — deep literature and identification review of the two questions
+
+Three research agents and the lead read primary methods/appendices and inspected
+small public source assets. A September 27 direct prior prompted withdrawal of
+the original repeated-target Q1 recommendation. A narrower adapter-geometry
+diagnostic remains unadmitted, with explicit LoRA optimization precedents. Q2
+remains a conditional natural-verifier recovery decision; generic reward history,
+support starvation and reset claims are already established. Specified distinct
+operational, historical and mechanism estimands, mandatory optimizer controls,
+label limitations and non-estimated resource requirements. Verified the new
+paper's complete Git tree and request-only training-state manifest; retained
+and hashed compact source snapshots. Reviewed the synthesis independently and
+preserved the earlier cards as superseded records. No model inference, training,
+benchmark execution, program-solution execution, new label, paid API, server,
+weight download or external correspondence. Existing results and the unrelated
+unrun follow-up draft remain unchanged.
+
 ## 2026-09-29 — familiar post-training data questions and collision checks
 
 Conducted primary-paper and small public-source research with three read-only

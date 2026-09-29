@@ -1,12 +1,15 @@
 # Post-training data questions — September 29, 2026
 
-The [current discussion memo](POSTTRAINING_QUESTIONS_20260929.md) prioritizes
-familiar reasoning/code SFT and imperfect RLVR supervision, with OPD data as a
-reserve. It provides two concrete causal questions, direct prior-art boundaries,
-existing asset checks and conditional stop/budget plans. These are discussion
-candidates, not confirmed novel projects or authorized experiments. The earlier
-provenance/audit shortlist is deprioritized. [Source receipts](POSTTRAINING_SOURCES_20260929.json)
-record retained primary snapshots and code checks. LT002 remains closed/OFF.
+The [deep review](POSTTRAINING_DEEP_REVIEW_20260929.md) withdraws the original
+stable-versus-varied-target Q1 recommendation after identifying a direct September
+27 paper. Corrected-verifier continuation/rollback (Q2) remains a conditional
+discussion question, with mandatory state/dose controls and unresolved natural
+harm and measurement gates. Neither is admitted to experiment execution.
+[Deep-review sources](POSTTRAINING_DEEP_SOURCES_20260929.json) distinguish full
+method reads, narrower inspections and retained source receipts. The
+[initial shortlist](POSTTRAINING_QUESTIONS_20260929.md) and
+[earlier receipts](POSTTRAINING_SOURCES_20260929.json) remain historical records.
+No new GPU, server or benchmark work occurred. LT002 remains closed/OFF.
 
 ## Earlier screening records
 

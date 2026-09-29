@@ -2,6 +2,12 @@
 
 Date: September 29, 2026. Literature and small public-source inspection only.
 
+**Superseded by [the deeper review](POSTTRAINING_DEEP_REVIEW_20260929.md):**
+Q1's original main-project recommendation is withdrawn after a direct September
+27 overlap was found. Q2 remains a conditional discussion question; optimizer
+reset is a required control, not an optional post-hoc addition. The original
+reasoning below is retained as a dated record.
+
 ## Decision
 
 Prioritize data-constrained reasoning/code SFT and the effects of imperfect RLVR
