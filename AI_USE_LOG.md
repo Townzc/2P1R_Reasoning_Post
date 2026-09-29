@@ -1,3 +1,12 @@
+# LT002 training verification — 2026-09-29 05:03UTC
+
+Codex independently reconciled256 physical update reservations/completed records,
+128 durable updates and1,800,417 supervised tokens per control, exact frozen dose,
+no training retries, and both final model/optimizer-RNG component hashes. The
+read-only audit added zero model/judge calls and preserved all files. The existing
+GPU and CPU workers continue the unchanged development evaluation; no new accuracy
+or mechanism claim is made from training completion or partial generation.
+
 # LT002 server execution — 2026-09-29 UTC
 
 Following owner startup, Codex verified the one-A800 hardware, current price,

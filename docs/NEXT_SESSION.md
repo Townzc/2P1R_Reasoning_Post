@@ -1,7 +1,11 @@
 # Current next session — LT002 running, 2026-09-29 UTC
 
-The owner started one A80080GB. The bounded GPU trainer/evaluator and concurrent
-CPU scorer are now running from published execution source c11097671c7767114f1f3a23bcaeb9426abced5b.
+Both control arms completed128 updates each and their final recovery components
+passed independent hash/dose verification. See the LT002 training milestone in
+reports/supervision_controls_v1/TRAINING_COMPLETE_AUDIT.json (relative to repository root).
+The bounded GPU evaluator and concurrent CPU scorer continue from published
+execution source c11097671c7767114f1f3a23bcaeb9426abced5b. No new comparative result
+is available yet; never repeat the completed training or launch duplicate workers.
 All58 Linux CPU tests, frozen mask checks, historical artifact admission, real
 base/tokenizer identity and original scorer reuse passed before model execution.
 The GPU/CPU workers are detached and guarded by absolute deadlines. Never rerun
