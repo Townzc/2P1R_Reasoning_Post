@@ -1,0 +1,43 @@
+{
+  "status": "passed_cpu_only",
+  "observed_at_utc": "2026-09-29T03:31:23.351005+00:00",
+  "tests": 58,
+  "command": "python -m unittest tests.test_supervision_controls tests.test_supervision_controls_runtime tests.test_public_math_losses tests.test_public_math_runtime tests.test_public_math_checkpoints -q",
+  "new_phase_tests": 19,
+  "inherited_tests": 39,
+  "validated": [
+    "mask eligibility/counts and exact joint-cell counts",
+    "difficulty ties and forced overlap",
+    "same per-answer weight mass and weight multiset",
+    "full128-step tiny CPU training with verified checkpoint and no completed replay",
+    "ambiguous uncommitted updates stop before model load",
+    "physical caps and duplicate reservations",
+    "original-component path/hash guards",
+    "archive full-source-closure checks",
+    "all-question unresolved score bounds"
+  ],
+  "pretrained_model_loaded": false,
+  "gpu_calls": 0,
+  "server_contact": false,
+  "not_verified": [
+    "retained remote artifact availability",
+    "GPU feasibility of the new phase",
+    "current provider state/rate/balance",
+    "new scientific outcomes"
+  ],
+  "python_source_sha256": {
+    "runner.py": "36529a8dbe39a130d87d003bf2007c86a52677095494bd997f3ce889a086d151",
+    "io.py": "ed71d3e9f6f537dae3ded50ad5e15b895bbb90cf59afe539c9e505c5869e9474",
+    "__init__.py": "e99d7d55b6d56f364578a11fb3435ab9689b936fc893ef749b9df01ea8db57dd",
+    "analyze_existing.py": "a251f04b70a7077ba1211b81afb89b621cba640e323f84f99e156a51b17dfba6",
+    "train.py": "df82d8ffee84caa4111441ee64121efd270c2664b5b6271b61e5c07ea0f74a8d",
+    "masks.py": "34a4a9d7d6b005ed098bbbd4ae6112bae5c7efcb6d4661c454262fc45ba252cc",
+    "freeze.py": "c04bc4c78283b41b6442ab56053c6375501ebeeb42e23b5ad4e004e4a39fc3f3",
+    "analyze.py": "9888c2873730fc2314eb1ef0f7e8900a1261724db750bcd250dce9381f473f4a"
+  },
+  "test_source_sha256": {
+    "test_supervision_controls.py": "8cc9fc805c0ef5fe6e0ee3e7d9cd5f7e874bca05f77808a60b745d194cffbf63",
+    "test_supervision_controls_runtime.py": "e96683195c5d9e525873594ecc6922e617909da3069d2fec1ccfbce1875045ea"
+  },
+  "test_output_sha256": "3f50d157e86826163aeebf7b8f56e063c300629ccd8d5b2d14affc85628842a1"
+}

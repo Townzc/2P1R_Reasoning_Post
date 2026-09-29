@@ -1,3 +1,14 @@
+# Long-term resumption — LT002, 2026-09-28
+
+The completed sprint through `cb9b6b40` is now incorporated into this long-term
+worktree, preserving the separate [LT001 acquisition design](docs/tracks/icml_acl_2027/README.md).
+The [new post-hoc CPU audit](reports/supervision_controls_cpu_20260928/RESULTS.md)
+shows substantial differences in eight-sample correctness patterns; it does not
+identify their cause. The [bounded next experiment](experiments/supervision_controls_v1/PROTOCOL.md)
+separates token-selection controls from same-question decoding effects.
+Implementation and local CPU checks precede publication, retained-artifact
+verification and owner startup. New GPU training/generation counts remain zero.
+
 # Final closeout — public math complete; provider off; awaiting owner
 
 All31,203 logical outputs and54 scored runs are complete and independently

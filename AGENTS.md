@@ -1,3 +1,20 @@
+# Long-term research resumed — 2026-09-28
+
+The owner resumed research and requested informative experiments before October1.
+The long-term branch incorporates the completed sprint through cb9b6b40. Read
+experiments/supervision_controls_v1/PROTOCOL.md and reports/supervision_controls_cpu_20260928/RESULTS.md.
+The implemented next finite phase is two mask controls (256 updates total) and
+4,096 development generations, reusing verified original masks/endpoints/greedy
+outputs. No new GPU experiment has run. The old LT001 acquisition design remains
+separate; old E017-only status and financial balances are historical.
+
+Publish and verify source before model execution; the owner retains server startup.
+An approximately4.5–7h one-A800 phase and hard8h/CNY64 cap have been presented;
+these are estimates, not observed timing, billed cost, available funds or a new
+CNY3,000 allowance. Verify live resources and explicit finite deadlines at startup.
+Keep previous outputs and public-test exposure immutable. Personal meeting notes
+and correspondence stay private. All older current-state sections below are history.
+
 # Final closeout — public math complete; provider off; awaiting owner
 
 All31,203 logical outputs and54 scored runs are complete and independently

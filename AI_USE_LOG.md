@@ -1,3 +1,17 @@
+## 2026-09-28 — LT002 evidence integration and experiment preparation
+
+Codex integrated the completed sprint history into the assigned long-term branch,
+resolved seven historical status-document conflicts in favor of the final sprint
+status while retaining LT001 plans/history, and computed a post-hoc score-pattern
+audit using already-observed outputs. It prepared deterministic random/matched
+mask controls, a finite training/evaluation/scoring queue, resource estimates and
+private discussion questions. No subagents, external messages, server startup,
+model inference, paid API or new GPU experiment occurred. Local CPU tests use
+synthetic fixtures and inherited audited modules; they do not establish GPU or
+live-artifact readiness. Publication is pending restored repository authentication.
+Ultra was recommended for design and Max for execution verification; no model
+setting change was made or claimed.
+
 # 2026-09-18 — completed public benchmark result, dev still running
 
 Codex inspected actual dual workers/scorer, receipts, telemetry, cgroup memory,

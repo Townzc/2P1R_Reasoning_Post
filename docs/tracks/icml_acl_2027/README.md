@@ -1,3 +1,11 @@
+# Resumption note — 2026-09-28
+
+The LT001 design below is preserved as a historical, unexecuted acquisition study.
+Its E017 status and resource balance are obsolete. Current work is
+[LT002 supervision controls](../../../experiments/supervision_controls_v1/PROTOCOL.md),
+using the completed Sept18 sprint as evidence. The two research questions remain
+distinct; a branch change does not reset data exposure, outcomes or expenditure.
+
 # ICML / ACL 2027 research development
 
 Date: 2026-09-11. Milestone LT001: **offline research design completed; experiments proposed, not authorized or run**. January 10 is an internal manuscript target. Venue choice follows the evidence and verified official dates.

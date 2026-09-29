@@ -1,0 +1,302 @@
+{
+  "schema": 1,
+  "analysis": "post_hoc_observed_evidence",
+  "source_sha256": "011afce7c6dc4cf175db92d046d15be4f08959135a57e77167e048ed0e36f1bb",
+  "original_training_seed": 17,
+  "independent_new_seeds": 0,
+  "new_model_calls": 0,
+  "original_experiment": "public_math_pilot_v1",
+  "methods": {
+    "Base": {
+      "questions": 500,
+      "outputs": 4000,
+      "unresolved_outputs": 10,
+      "unresolved_questions": 3,
+      "any_correct": {
+        "lower": 391,
+        "upper": 393,
+        "denominator": 500
+      },
+      "all_eight_correct": {
+        "lower": 2,
+        "upper": 3,
+        "denominator": 500
+      },
+      "zero_correct": {
+        "lower": 107,
+        "upper": 109,
+        "denominator": 500
+      },
+      "histogram_known_correct_counts": {
+        "0": 109,
+        "1": 75,
+        "2": 72,
+        "3": 77,
+        "4": 69,
+        "5": 46,
+        "6": 38,
+        "7": 12,
+        "8": 2
+      },
+      "count_pairs_histogram": {
+        "correct=0,unresolved=0": 107,
+        "correct=0,unresolved=1": 1,
+        "correct=0,unresolved=8": 1,
+        "correct=1,unresolved=0": 75,
+        "correct=2,unresolved=0": 71,
+        "correct=2,unresolved=1": 1,
+        "correct=3,unresolved=0": 77,
+        "correct=4,unresolved=0": 69,
+        "correct=5,unresolved=0": 46,
+        "correct=6,unresolved=0": 38,
+        "correct=7,unresolved=0": 12,
+        "correct=8,unresolved=0": 2
+      },
+      "mean_accuracy_lower": 0.321,
+      "mean_accuracy_upper": 0.3235,
+      "draw_score_sha256": [
+        "433847e38b97d0ec7835f08014f08642efdd918a6409a76d429a0b107a99f8c5",
+        "88d4336a8732a3b37ad089434037ad1b421c74c13bd0391047c68b48c2391d7a",
+        "6ca1347e12619bebb4c5f2d3ff473bcd0ee3b2ab7aa3ab2ac6d692346b742acd",
+        "fefe1e4ee8d7c73577a2ea9fd7a986bea1585556041b6d69a43f15d7e68a468f",
+        "e7cde913530e1291fca3a1d2203b23ba3d2d6326eb91822c28617acc0df9203f",
+        "0b42d7cf7d40c5b4ec018aeaa56a8aad91d85ff146a5d77bfb0f9f5fe52d9a3b",
+        "d5a48ae47703a990b11698697ac803665ea6aeec8ae76a1b4a3f3b41d48a1ee4",
+        "4b53e9ecb8782d46393e1e62d711d1fe3ae8722c15c13a5f42b34d41b17f604e"
+      ]
+    },
+    "SFT": {
+      "questions": 500,
+      "outputs": 4000,
+      "unresolved_outputs": 8,
+      "unresolved_questions": 1,
+      "any_correct": {
+        "lower": 372,
+        "upper": 373,
+        "denominator": 500
+      },
+      "all_eight_correct": {
+        "lower": 47,
+        "upper": 48,
+        "denominator": 500
+      },
+      "zero_correct": {
+        "lower": 127,
+        "upper": 128,
+        "denominator": 500
+      },
+      "histogram_known_correct_counts": {
+        "0": 128,
+        "1": 60,
+        "2": 56,
+        "3": 33,
+        "4": 39,
+        "5": 32,
+        "6": 56,
+        "7": 49,
+        "8": 47
+      },
+      "count_pairs_histogram": {
+        "correct=0,unresolved=0": 127,
+        "correct=0,unresolved=8": 1,
+        "correct=1,unresolved=0": 60,
+        "correct=2,unresolved=0": 56,
+        "correct=3,unresolved=0": 33,
+        "correct=4,unresolved=0": 39,
+        "correct=5,unresolved=0": 32,
+        "correct=6,unresolved=0": 56,
+        "correct=7,unresolved=0": 49,
+        "correct=8,unresolved=0": 47
+      },
+      "mean_accuracy_lower": 0.4105,
+      "mean_accuracy_upper": 0.4125,
+      "draw_score_sha256": [
+        "1ab51f4b41c8cc5949b8eae066edd1c8fa007e632322c150556f34c426316857",
+        "83bd1cd3daa85d3b23fd79c38c863682ea1276ede4fd343fa76e9bbbd70c6f87",
+        "d558b3a8d7e2b238b8d00312368be17713bf37d5651bd39f6149d0b9fd786e8a",
+        "9d56d01e045e588244cdd1a6d0f91fb43df2e77748e87593fc6acf83ea1dca77",
+        "77d01f670ae5e70c86cabbf04944fb1ca1270cafb631aac629d6adacf4116e9b",
+        "2ff7037e753a5dd01f07bee1cb26d0696824e5e0fcdfb7631da494bb19247c7c",
+        "8a096fe1d09799d1d94c16062488ecf51947afd391466cf23c16cbad02f34ba1",
+        "c6f58aebbb3ae4f2d8b69fdc7950bb876bd5b03ee1a60937658e65e85ec6060e"
+      ]
+    },
+    "DFT": {
+      "questions": 500,
+      "outputs": 4000,
+      "unresolved_outputs": 11,
+      "unresolved_questions": 2,
+      "any_correct": {
+        "lower": 396,
+        "upper": 398,
+        "denominator": 500
+      },
+      "all_eight_correct": {
+        "lower": 207,
+        "upper": 208,
+        "denominator": 500
+      },
+      "zero_correct": {
+        "lower": 102,
+        "upper": 104,
+        "denominator": 500
+      },
+      "histogram_known_correct_counts": {
+        "0": 104,
+        "1": 41,
+        "2": 25,
+        "3": 22,
+        "4": 26,
+        "5": 20,
+        "6": 30,
+        "7": 25,
+        "8": 207
+      },
+      "count_pairs_histogram": {
+        "correct=0,unresolved=0": 102,
+        "correct=0,unresolved=3": 1,
+        "correct=0,unresolved=8": 1,
+        "correct=1,unresolved=0": 41,
+        "correct=2,unresolved=0": 25,
+        "correct=3,unresolved=0": 22,
+        "correct=4,unresolved=0": 26,
+        "correct=5,unresolved=0": 20,
+        "correct=6,unresolved=0": 30,
+        "correct=7,unresolved=0": 25,
+        "correct=8,unresolved=0": 207
+      },
+      "mean_accuracy_lower": 0.593,
+      "mean_accuracy_upper": 0.59575,
+      "draw_score_sha256": [
+        "d4b8880c4b42758184273a87432354d20a3b1ec14e41b7e7cfd9dd1b6048a318",
+        "59e7ad54333eb941d65179a8f88a24ebf1f420c46c8f39886b61c09a988622f5",
+        "0fb5a4887f133b97f54c015991e3f0b86d3b46a64ac72e94a80040fa73777107",
+        "bf780c07e6f27d766838c5427d9b07c735a4deb45f5cfeeb34eda5fcc5e8e92a",
+        "c201ad8027ac24dfb428725dbc2585bae7065e0482f3cd1f7d1348bb9a79993e",
+        "51584922c7bce7d34ec5cb941583d73de545a17abc75efdf60fbd9ee955c533f",
+        "26e3fd45f728aa82dfe8004bef0e9908ab835aae01d47e6aaf27440a6ac683f6",
+        "37f29ee155c718bd6749df188cc8901c97cf5d65a7cd7d8e3adc45ddd3db5a74"
+      ]
+    },
+    "TrimSFT": {
+      "questions": 500,
+      "outputs": 4000,
+      "unresolved_outputs": 10,
+      "unresolved_questions": 2,
+      "any_correct": {
+        "lower": 386,
+        "upper": 387,
+        "denominator": 500
+      },
+      "all_eight_correct": {
+        "lower": 201,
+        "upper": 202,
+        "denominator": 500
+      },
+      "zero_correct": {
+        "lower": 113,
+        "upper": 114,
+        "denominator": 500
+      },
+      "histogram_known_correct_counts": {
+        "0": 114,
+        "1": 43,
+        "2": 17,
+        "3": 22,
+        "4": 17,
+        "5": 17,
+        "6": 25,
+        "7": 44,
+        "8": 201
+      },
+      "count_pairs_histogram": {
+        "correct=0,unresolved=0": 113,
+        "correct=0,unresolved=8": 1,
+        "correct=1,unresolved=0": 42,
+        "correct=1,unresolved=2": 1,
+        "correct=2,unresolved=0": 17,
+        "correct=3,unresolved=0": 22,
+        "correct=4,unresolved=0": 17,
+        "correct=5,unresolved=0": 17,
+        "correct=6,unresolved=0": 25,
+        "correct=7,unresolved=0": 44,
+        "correct=8,unresolved=0": 201
+      },
+      "mean_accuracy_lower": 0.5905,
+      "mean_accuracy_upper": 0.593,
+      "draw_score_sha256": [
+        "01b564bf98932773508ff30faf6ee5b6be1e45aa7cb5dcd74bd183b9721a2949",
+        "ec728e41c17897367030ca6b3a1398e8dd35e63abc6c717593edfd27695a4fd4",
+        "63ab46cf94ba7c988af185254c39c731b9e7819d513b1f764868f25ac884f34c",
+        "88397d8560e012e71d1be70e0d259d2d0d240e7ff48fa4ffd6305c412d2ce0e3",
+        "07fa4d8fc20f5e1855b51646bebb58b4b64820510ac133785411825bb08680a7",
+        "340c1fd1fb6d701c8cbb9cf82331436d693b518f6e42adc83376e3b0e3d9ee68",
+        "dd0a07892fac583bc8bf213ffd4afe2ad910b2071dea40f9141e16ddd1fe8966",
+        "f896dbfd9e317f815c2c3098fbba40b8ac01e805ddbd2f9683a49f7b4566fa41"
+      ]
+    },
+    "QDW_v0": {
+      "questions": 500,
+      "outputs": 4000,
+      "unresolved_outputs": 8,
+      "unresolved_questions": 1,
+      "any_correct": {
+        "lower": 370,
+        "upper": 371,
+        "denominator": 500
+      },
+      "all_eight_correct": {
+        "lower": 52,
+        "upper": 53,
+        "denominator": 500
+      },
+      "zero_correct": {
+        "lower": 129,
+        "upper": 130,
+        "denominator": 500
+      },
+      "histogram_known_correct_counts": {
+        "0": 130,
+        "1": 70,
+        "2": 34,
+        "3": 35,
+        "4": 35,
+        "5": 33,
+        "6": 54,
+        "7": 57,
+        "8": 52
+      },
+      "count_pairs_histogram": {
+        "correct=0,unresolved=0": 129,
+        "correct=0,unresolved=8": 1,
+        "correct=1,unresolved=0": 70,
+        "correct=2,unresolved=0": 34,
+        "correct=3,unresolved=0": 35,
+        "correct=4,unresolved=0": 35,
+        "correct=5,unresolved=0": 33,
+        "correct=6,unresolved=0": 54,
+        "correct=7,unresolved=0": 57,
+        "correct=8,unresolved=0": 52
+      },
+      "mean_accuracy_lower": 0.42175,
+      "mean_accuracy_upper": 0.42375,
+      "draw_score_sha256": [
+        "03a079a6dc620e124f7f1f5bb9884fad56112f36df4e91ac3e80090219c7d925",
+        "b8c938a7674a42831672de7e8f2b6913d06dbc674218cd02257f9fc7417336ba",
+        "0c00b6b9c1d22139d260e91258b94fe9c74e2fbcb8684d0ce3ee92597fbeaf7a",
+        "4ffa21a06d6688753581c54015345b532ca9647fa7a3355d6dc129ac4589a53c",
+        "ff57987160991a127a5f40ab1b410b41b917b954e23c2093e73e4da73652d5e1",
+        "9aeabb293173f2949a6844f06c42cd38ffe5dc2192b3d19a7d90aabe5efac1a8",
+        "4c238e77f1487f2826aa41018eeaec6785719b00eee867b8abad30e75e00c4f8",
+        "c1dc5d7c8862a36ad4dfd7f6ecd9955497718bd59fd4ba5b94616ffd749cf0cb"
+      ]
+    }
+  },
+  "limitations": [
+    "Descriptive post-hoc analysis of observed tests, not a new confirmatory result.",
+    "All-eight-correct measures this finite set of eight samples, not general determinism or correctness of every reasoning step.",
+    "Task and decoding are confounded in the historical GSM8K-greedy versus MATH-sampled comparison.",
+    "One training seed; the same examples cannot become an untouched confirmation set.",
+    "Unknown scores retain all-question bounds; no difficult question was dropped."
+  ]
+}

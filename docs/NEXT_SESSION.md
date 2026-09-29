@@ -1,3 +1,25 @@
+# Current next session — LT002 preparation, 2026-09-28
+
+Resume in the assigned long-term branch. The sprint's final complete evidence is
+incorporated through cb9b6b40; do not execute any legacy paused/resume queue below.
+Read [LT002 protocol](../experiments/supervision_controls_v1/PROTOCOL.md),
+[deployment sequence](../experiments/supervision_controls_v1/README.md) and the
+[post-hoc CPU result](../reports/supervision_controls_cpu_20260928/RESULTS.md).
+
+Current real blocker: authenticated publication is unavailable. Restore the
+repository write connection and publish the local milestone before any server
+model process. Keep the original server off while preparing source; the owner
+controls startup. At startup verify live retained artifacts/rate/balance/resource
+headroom, then freeze masks, pass artifact/Linux admission and execute only the
+finite registered queue under provider shutdown supervision. No server contact,
+new training, new annotations or new generation has occurred in LT002.
+
+Keep the original four final128 checkpoints, mask annotations, raw dev outputs,
+all old failure/resource ledgers and E015's unique weights. The historical
+retention notice suggested an October3 release boundary; recheck actual state.
+Never merge the old 7200-second receipt balance into a new phase allowance or
+assume the CNY3,000 ceiling equals remaining account funds.
+
 # Final closeout — public math complete; provider off; awaiting owner
 
 All31,203 logical outputs and54 scored runs are complete and independently

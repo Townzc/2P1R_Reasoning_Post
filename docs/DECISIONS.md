@@ -1,3 +1,14 @@
+## LT002 — resume from completed evidence and separate confounded comparisons
+
+Incorporate the completed sprint through cb9b6b40 into the assigned long-term
+branch. Preserve LT001 as a distinct acquisition proposal and all historical
+negative results. Prior GSM-greedy/MATH-sampled rankings mix task and decoding;
+new diagnostics use the same512 observed development questions. New random and
+joint position/difficulty controls preserve each answer's selection count,
+eligibility and normalized weight mass. Matching permits original positions and
+reports forced overlap; non-significance is not equivalence. No test-score tuning.
+See [the finite protocol](../experiments/supervision_controls_v1/PROTOCOL.md).
+
 # Final closeout — public math complete; provider off; awaiting owner
 
 All31,203 logical outputs and54 scored runs are complete and independently

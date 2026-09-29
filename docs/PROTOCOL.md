@@ -1,3 +1,12 @@
+## LT002 — bounded exploratory supervision controls, 2026-09-28
+
+The owner requested continuation toward an October1 research discussion.
+[LT002](../experiments/supervision_controls_v1/PROTOCOL.md) defines two new mask
+controls and a same-question development decoding diagnostic, with fixed counts,
+source-bound reuse, estimates and stop rules. It does not amend any original
+pilot result or authorize replay of missing artifacts. Three-seed confirmation,
+new test data, CFT and model scaling remain separate future protocols.
+
 # Final closeout — public math complete; provider off; awaiting owner
 
 All31,203 logical outputs and54 scored runs are complete and independently

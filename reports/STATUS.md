@@ -1,3 +1,18 @@
+# Current long-term status — LT002, 2026-09-28
+
+The sprint's complete Sept18 history is integrated. Local post-hoc CPU analysis
+reconciles all five models'500×8 MATH scores to the immutable final report,
+including unresolved bounds. All-eight-correct counts are SFT47–48, DFT207–208,
+TrimSFT201–202 and QDW52–53 out of500. This is descriptive evidence, not a new
+independent experiment or a demonstrated decoding mechanism.
+
+The new implementation prepares two mask controls and same-question dev decoding
+comparisons. [Protocol](../experiments/supervision_controls_v1/PROTOCOL.md) and
+[CPU results](supervision_controls_cpu_20260928/RESULTS.md). No scientific GPU
+run, server startup or model call occurred. Publication currently needs restored
+repository authentication. Local tests and source review do not establish live
+artifact availability or GPU feasibility.
+
 # Final closeout — public math complete; provider off; awaiting owner
 
 All31,203 logical outputs and54 scored runs are complete and independently

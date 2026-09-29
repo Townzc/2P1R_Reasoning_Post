@@ -1,3 +1,16 @@
+## 2026-09-28 — LT002 long-term resumption and CPU reanalysis
+
+The complete sprint through Sept18 is incorporated. A post-hoc all-question audit
+finds many more eight-of-eight-correct MATH questions under DFT/TrimSFT than QDW,
+while pass@8 gaps are smaller. This motivates checking decoding effects under
+fixed development questions; it is not a newly established mechanism.
+
+Prepared immutable mask controls, training/generation/scoring code and finite
+resource estimates. Existing implementation and data remain unchanged. No new
+model calls or paid compute. Repository authentication must be restored for source
+publication; server startup stays with the owner. See the LT002 protocol and CPU
+report. Personal research-discussion notes are kept outside tracked files.
+
 ## 2026-09-16 — E037 goal diagnostic complete
 
 Four frozen endpoints:2112 outputs and192 local contexts, no new training.
