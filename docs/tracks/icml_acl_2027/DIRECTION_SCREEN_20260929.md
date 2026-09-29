@@ -1,5 +1,10 @@
 # Research direction screen — September 29, 2026
 
+**Superseded priority:** the subsequent [novelty audit](DATE_LM_NOVELTY_AUDIT_20260929.md)
+found direct prior answer-only controls and extensive related work. Do not advance
+the proposed DATE-LM question as a new main project or launch its GPU pilot. The
+shortlist below preserves the earlier provisional screen, not a current selection.
+
 Status: literature and asset review, not an experiment protocol or a novelty claim.
 LT002 is complete; its results and execution source remain unchanged. No new model
 call, training run, benchmark result or server startup occurred during this review.

@@ -1,3 +1,16 @@
+## 2026-09-29 — DATE-LM novelty audit and recommendation correction
+
+At the owner's request, reviewed core experimental sections and appendices of
+seven close papers, two conceptual background papers, and fixed-version DATE-LM
+data/evaluation code. Three read-only research agents examined historical work,
+recent work and label semantics; primary-source checks confirmed direct prior
+answer-matching controls. Independently hash-verified small public data/source
+files and checked label-set relations without running author scoring code.
+Published the evidence and corrected the earlier priority recommendation: the
+answer-only candidate is not established as a new project. No new model inference,
+training, GPU/server action, paid call or external correspondence occurred.
+The unrelated unrun LT002 post-hoc draft and all frozen results remain unchanged.
+
 ## 2026-09-29 — benchmark-based direction screening
 
 Reviewed public literature and artifact availability for data-attribution, AI-text
