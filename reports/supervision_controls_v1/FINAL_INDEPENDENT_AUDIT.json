@@ -1,0 +1,169 @@
+{
+  "component_hashes_reverified": true,
+  "contract_sha256": "60e4931811a755ed9dd14aa6c026d376992cf323a99f12ac4dea18dad59fb0a5",
+  "counts": {
+    "generation": 4096,
+    "optimizer_update": 256
+  },
+  "endpoints": {
+    "position_difficulty": {
+      "checkpoint_id": "slot_000128_f81802bd11804a8eb64f6d40631f5add",
+      "components": {
+        "model": {
+          "bytes": 7108460553,
+          "sha256": "e6eb6e6f526aab212728f547bc6f14a4ec6e7fecaf065a0fcec0432cb04e2958"
+        },
+        "training": {
+          "bytes": 12350907747,
+          "sha256": "4dcdf2fdc4f1df0d0f78c7b350e7d4ca8746db751b0cd4f9cc46a817f212394c"
+        }
+      },
+      "manifest_sha256": "602898fb012b77cdc1afd13ea2a58db83b55d0bedff7f92c63581a692afefcc5",
+      "step": 128,
+      "supervised_tokens": 1800417
+    },
+    "random": {
+      "checkpoint_id": "slot_000128_025259c0759047cf9886e10d1c48ad91",
+      "components": {
+        "model": {
+          "bytes": 7108460553,
+          "sha256": "bbf804e5bc7125a3ad9541b9ce6524b763a27347b41d38fa1d77200acf289983"
+        },
+        "training": {
+          "bytes": 12350907747,
+          "sha256": "0f8fd5a1e702a48427c3fcc7b57fa3ffd66b3cf9db4c189fd510c9174794dc51"
+        }
+      },
+      "manifest_sha256": "85d854e4827e0a442da0d6ed7c1ef025880a8acdf593dc5b52a07f1857c8bf8e",
+      "step": 128,
+      "supervised_tokens": 1800417
+    }
+  },
+  "full_question_denominator": 512,
+  "large_recoveries_independently_exported": false,
+  "model_or_judge_calls_in_audit": 0,
+  "new_annotations": 0,
+  "new_scored_outputs": 4096,
+  "process_receipts": {
+    "cpu": {
+      "elapsed_seconds": 12499,
+      "end_unix": 1790668715,
+      "exit_code": 0,
+      "kind": "cpu",
+      "start_unix": 1790656216
+    },
+    "gpu": {
+      "elapsed_seconds": 12497,
+      "end_unix": 1790668713,
+      "exit_code": 0,
+      "kind": "gpu",
+      "start_unix": 1790656216
+    }
+  },
+  "result_sha256": "ce647ec6a198610c1f4c599613631a42fc6489334b4e4abe348454cc8bc70108",
+  "retries": 0,
+  "reused_scored_outputs": 2048,
+  "runs": {
+    "DFT-greedy": {
+      "correct": 210,
+      "outputs": 512,
+      "raw_complete_sha256": "cf8028f98e9c48ca272b808bead58bdf61485533a501f02c730a0ee1f8dd829c",
+      "reused": true,
+      "score_sha256": "a59834ce4f9573bec6247dd44848a34c2a045326e7d4345aaf4bd19f50a891d6",
+      "unresolved": 0
+    },
+    "DFT-sampled": {
+      "correct": 216,
+      "outputs": 512,
+      "raw_complete_sha256": "60c1891e7a5016cffba3b2da89fcf8ee1920ee927bf299f684f0b5edebaa1ae4",
+      "reused": false,
+      "score_sha256": "00758a663913b1a9793b91e6669e17aeee6b0c52621c60986d208db63250edcf",
+      "unresolved": 0
+    },
+    "QDW_v0-greedy": {
+      "correct": 239,
+      "outputs": 512,
+      "raw_complete_sha256": "af383cd54a27534d7927e96db91dd3d61e3342be1e7faa120e5c9584ced77ff6",
+      "reused": true,
+      "score_sha256": "4dfc31d62d894d1079553c8a62ea031f380d08de42000604721101d124a68568",
+      "unresolved": 0
+    },
+    "QDW_v0-sampled": {
+      "correct": 169,
+      "outputs": 512,
+      "raw_complete_sha256": "ab68c8b873a34dd2d6702ad637abd983bdbcc75475d0f0a0d90ab13269565d28",
+      "reused": false,
+      "score_sha256": "97a7a723c3ab4a0c4cb98aa3f7323fccb1dd53cdbd485c759d005f66f0386c1a",
+      "unresolved": 0
+    },
+    "SFT-greedy": {
+      "correct": 227,
+      "outputs": 512,
+      "raw_complete_sha256": "9802a1c3727f4550f680feb0c492220e50197cb1648bb8088be1578d1a5838bd",
+      "reused": true,
+      "score_sha256": "a277aa14924268f3c9613459c36d3434edc0c7555090405997e665891978e3e2",
+      "unresolved": 0
+    },
+    "SFT-sampled": {
+      "correct": 156,
+      "outputs": 512,
+      "raw_complete_sha256": "fc3b00eec600e03be00e6a6dabf9787fe6ffe1d8912dabac5eb1ff66155f6859",
+      "reused": false,
+      "score_sha256": "b99c7646932b16815401b74342c91a292fa86b218935b3f3fdcb21147c358187",
+      "unresolved": 0
+    },
+    "TrimSFT-greedy": {
+      "correct": 201,
+      "outputs": 512,
+      "raw_complete_sha256": "8b078ec64c25e445c00875c19865da1cf26b420a8bfe76bfbe2983383baa2e50",
+      "reused": true,
+      "score_sha256": "767a27b772c19af58af4a6009d32d241acd786c68a7f40ffc395be5a453db00b",
+      "unresolved": 0
+    },
+    "TrimSFT-sampled": {
+      "correct": 218,
+      "outputs": 512,
+      "raw_complete_sha256": "a98350637f18a69a1dfd3c82dd40763c9a647969683299245ad7992ca0d134f9",
+      "reused": false,
+      "score_sha256": "d62d255812392d588e33fc1160de9fa565a8d0eb197388e444847ec2ddbb3131",
+      "unresolved": 0
+    },
+    "position_difficulty-greedy": {
+      "correct": 215,
+      "outputs": 512,
+      "raw_complete_sha256": "609f4aa011bc52e94a488b239ed789051855d8dbf0b612599222c758a5ad7194",
+      "reused": false,
+      "score_sha256": "005d6754b02a96eb365fa1d572815e4d65968a0c24b835a9f732489b726c51df",
+      "unresolved": 0
+    },
+    "position_difficulty-sampled": {
+      "correct": 145,
+      "outputs": 512,
+      "raw_complete_sha256": "168972f980cd3c1cd3b8751bba03b6602992621f8dc30fbe82c41ba836320020",
+      "reused": false,
+      "score_sha256": "d7cc7f3199547da032dace42922de0b83bb49d6e29778ac2c0e5dbaaa8aff47a",
+      "unresolved": 0
+    },
+    "random-greedy": {
+      "correct": 225,
+      "outputs": 512,
+      "raw_complete_sha256": "49e725912aa048b00a318f1b969c7972e4ec571600391658c2f31be7f2bd21df",
+      "reused": false,
+      "score_sha256": "907062524dd56dcc636a1458d954ceb82fa7b1c7becbab4137d2d77fe13ca285",
+      "unresolved": 0
+    },
+    "random-sampled": {
+      "correct": 162,
+      "outputs": 512,
+      "raw_complete_sha256": "05a222b7ce32e190ee4b4b270eedb972345a08f73f66b32c59177de938cb7d68",
+      "reused": false,
+      "score_sha256": "0f43dcec2c171ea02959631135cdacb627f437813720703ff1b4bdca72a446d8",
+      "unresolved": 0
+    }
+  },
+  "source_commit": "c11097671c7767114f1f3a23bcaeb9426abced5b",
+  "status": "complete_independently_reconciled",
+  "uncommitted_generations": 0,
+  "uncommitted_updates": 0,
+  "verified_at_utc": "2026-09-29T08:06:54.485341+00:00"
+}

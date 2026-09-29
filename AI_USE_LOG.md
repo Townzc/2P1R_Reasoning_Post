@@ -1,3 +1,20 @@
+# LT002 final closeout and local analysis — 2026-09-29 UTC
+
+Codex reconciled all 256 new updates, 4,096 new generations and 6,144 total scores, retained
+historical reuse and failures, rehashed both endpoint components, and independently
+verified 15,724 compact files. Normal provider shutdown was visibly confirmed and
+the temporary timer cleared. No new annotations, public-test calls, seed, model
+retry, additional arm or message was introduced. Full recovery binaries remain on
+the stopped server; their independent export is not claimed. A local archive
+verification compatibility error was corrected without another scientific run or
+transfer. Local bootstrap recomputation exactly reproduced the frozen report.
+
+The report states inconclusive QDW-versus-random evidence, the positive conditional
+QDW-versus-matched greedy contrast, decoding-dependent rankings, and one-seed/
+already-observed-dev limits. A separate post-hoc summary of existing weight-mass
+and clipping logs is descriptive, not a mechanism test. Follow-up preparation and
+discussion questions remain open to later evidence. No source setting was altered.
+
 # LT002 training verification — 2026-09-29 05:03UTC
 
 Codex independently reconciled256 physical update reservations/completed records,

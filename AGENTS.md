@@ -1,3 +1,25 @@
+# LT002 complete — provider OFF, 2026-09-29 UTC
+
+The finite phase is fully reconciled: two 128-update controls, 4,096 new dev answers,
+2,048 reused greedy answers, zero new model retries or uncommitted work. All 12 score
+runs and both final recovery component hashes were verified. Compact evidence is
+independently retained; large recovery binaries remain on the stopped server.
+
+QDW greedy dev accuracy is 46.68%, random 43.95%, matched 41.99%. The QDW-minus-random
+97.5% question interval includes zero; QDW-minus-matched is +4.69 pp [+0.98, +8.40].
+Under T=1 sampling, QDW 33.01% trails DFT 42.19% and TrimSFT 42.58% on the same
+questions. This is one-seed observed-dev evidence, not independent confirmation,
+general superiority or semantic causality. Prior negative benchmark results stand.
+
+Provider OFF was confirmed no later than 08:10:38 UTC; temporary timer cleared.
+Conservative powered-window proxy 3h55m38s / CNY31.34 excludes storage and is not an
+invoice. Preserve the stopped volume and all historical checkpoints/failure ledgers.
+Continue local interpretation and prepare a distinct follow-up with advance scope,
+runtime/cost/stop estimates. Do not replay LT002, restart automatically, or treat
+historical instructions below as a live queue. Questions remain provisional.
+
+Read [LT002 results](reports/supervision_controls_v1/RESULTS.md). All previous current-state sections below are dated history.
+
 # Long-term research resumed — 2026-09-28
 
 The owner resumed research and requested informative experiments before October1.

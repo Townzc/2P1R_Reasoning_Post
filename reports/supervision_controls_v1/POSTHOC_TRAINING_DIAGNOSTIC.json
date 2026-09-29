@@ -1,0 +1,60 @@
+{
+  "arms": {
+    "DFT": {
+      "clipped_updates": 0,
+      "first_batch_raw_ce": 0.48158735634052297,
+      "last_batch_raw_ce": 1.8098891202898322,
+      "median_preclip_gradient_norm": 0.21970058232545853,
+      "median_weight_mass_per_supervised_token": 0.8526154927835207,
+      "updates": 128
+    },
+    "QDW_v0": {
+      "clipped_updates": 15,
+      "first_batch_raw_ce": 0.48158735634052297,
+      "last_batch_raw_ce": 0.46996035395685315,
+      "median_preclip_gradient_norm": 0.8375823199748993,
+      "median_weight_mass_per_supervised_token": 1.0,
+      "updates": 128
+    },
+    "SFT": {
+      "clipped_updates": 4,
+      "first_batch_raw_ce": 0.48158735634052297,
+      "last_batch_raw_ce": 0.45029719799314594,
+      "median_preclip_gradient_norm": 0.4817343056201935,
+      "median_weight_mass_per_supervised_token": 1.0,
+      "updates": 128
+    },
+    "TrimSFT": {
+      "clipped_updates": 0,
+      "first_batch_raw_ce": 0.48158735634052297,
+      "last_batch_raw_ce": 2.5253703854827263,
+      "median_preclip_gradient_norm": 0.1830999255180359,
+      "median_weight_mass_per_supervised_token": 0.011594417798276973,
+      "updates": 128
+    },
+    "position_difficulty": {
+      "clipped_updates": 11,
+      "first_batch_raw_ce": 0.48158735634052297,
+      "last_batch_raw_ce": 0.457362725184514,
+      "median_preclip_gradient_norm": 0.7784485816955566,
+      "median_weight_mass_per_supervised_token": 1.0,
+      "updates": 128
+    },
+    "random": {
+      "clipped_updates": 4,
+      "first_batch_raw_ce": 0.48158735634052297,
+      "last_batch_raw_ce": 0.4567817232386786,
+      "median_preclip_gradient_norm": 0.6071416139602661,
+      "median_weight_mass_per_supervised_token": 1.0,
+      "updates": 128
+    }
+  },
+  "created_at_utc": "2026-09-29T08:15:31.335278+00:00",
+  "limits": [
+    "Gradient norms are not AdamW parameter-update magnitudes.",
+    "First and last raw CE use different training batches; they are not a fixed-evaluation learning curve.",
+    "Loss-weight normalization was not randomized in this phase. These traces do not identify the cause of decoding sensitivity."
+  ],
+  "model_or_judge_calls": 0,
+  "status": "posthoc_descriptive_existing_training_records_only"
+}

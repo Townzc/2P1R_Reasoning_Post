@@ -1,3 +1,8 @@
+# Final status — LT002 complete
+
+See [the complete report](RESULTS.md). Provider OFF and compact export are verified.
+The training milestone below is a preserved historical snapshot.
+
 # LT002: training complete, development evaluation running
 
 As of2026-09-29 05:03UTC, both frozen supervision controls completed128 updates
