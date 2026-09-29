@@ -1,3 +1,14 @@
+## 2026-09-29 — benchmark-based direction screening
+
+Reviewed public literature and artifact availability for data-attribution, AI-text
+calibration and distillation-audit candidates. Three read-only research agents
+helped inspect primary sources and identify overlaps with existing work. Recorded
+provisional priorities and explicit novelty/evaluation limitations in
+`docs/tracks/icml_acl_2027/DIRECTION_SCREEN_20260929.md`. Only small source artifacts
+were inspected privately; no author reproduction script or model was executed.
+No new training, inference, benchmark score, paid service, server action or external
+message. LT002 results, ledgers and execution source remain unchanged.
+
 # LT002 final closeout and local analysis — 2026-09-29 UTC
 
 Codex reconciled all 256 new updates, 4,096 new generations and 6,144 total scores, retained
