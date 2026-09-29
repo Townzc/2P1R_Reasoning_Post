@@ -1,0 +1,1885 @@
+[
+  {
+    "evaluation": "C0_calibration",
+    "expected_questions": 48,
+    "expected_records": 48,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 147093,
+      "file": "C0_calibration.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "81a69fff373993ffae33cc3cd888c2ed985ef3c8b680b0b893bdd83ea2d73efb",
+      "valid_json_records": 48
+    },
+    "historical_reuse": true,
+    "primary_metrics": {
+      "completed_fraction": 0.7291666666666666,
+      "completed_generations": 35,
+      "correct_generations": 31,
+      "failures": {
+        "none": 31,
+        "parse": 3,
+        "stop_length_cap": 13,
+        "wrong_answer_or_resources": 1
+      },
+      "generations": 48,
+      "independent_questions": 48,
+      "parse_fraction": 0.6875,
+      "parsed_generations": 33,
+      "pass_at_1": 0.6458333333333334,
+      "questions": 48,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 47,
+        "violated": 1
+      },
+      "retained_length_quantiles": {
+        "max": 512.0,
+        "min": 41.0,
+        "p25": 61.0,
+        "p50": 63.0,
+        "p75": 512.0,
+        "p95": 512.0
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "length_cap": 13,
+        "native_eos": 32,
+        "new_problem_boundary": 3
+      },
+      "task_types": {
+        "compute": 32,
+        "construct": 16
+      },
+      "traces": {
+        "inconsistent": 2,
+        "unverifiable": 46
+      }
+    },
+    "scored_records": 48,
+    "stale_summary": false,
+    "state": "C0",
+    "status": "completed",
+    "view": "calibration"
+  },
+  {
+    "evaluation": "C0_probes",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 1451195,
+      "file": "C0_probes.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "62efc1184e1378bd6f8bbfcab5dabea08342889964fe19030cc2fe90cc234d34",
+      "valid_json_records": 384
+    },
+    "historical_reuse": true,
+    "primary_metrics": {
+      "completed_fraction": 0.9427083333333334,
+      "completed_generations": 362,
+      "correct_generations": 199,
+      "failures": {
+        "none": 199,
+        "parse": 140,
+        "stop_length_cap": 22,
+        "wrong_answer_or_resources": 23
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.5989583333333334,
+      "parsed_generations": 230,
+      "pass_at_1": 0.5182291666666666,
+      "pass_at_4": 0.90625,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 384
+      },
+      "retained_length_quantiles": {
+        "max": 512.0,
+        "min": 2.0,
+        "p25": 49.0,
+        "p50": 68.0,
+        "p75": 106.5,
+        "p95": 512.0
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "length_cap": 22,
+        "native_eos": 281,
+        "new_problem_boundary": 81
+      },
+      "task_types": {
+        "compute": 384
+      },
+      "traces": {
+        "inconsistent": 24,
+        "unverifiable": 360
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "C0",
+    "status": "completed",
+    "view": "probes"
+  },
+  {
+    "evaluation": "C0_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 584412,
+      "file": "C0_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "82496e07620754e2e84015151188c77e1b5946974acd597afe5d97adbfd3022b",
+      "valid_json_records": 96
+    },
+    "historical_reuse": true,
+    "primary_metrics": {
+      "completed_fraction": 0.25,
+      "completed_generations": 24,
+      "correct_generations": 0,
+      "failures": {
+        "parse": 20,
+        "stop_length_cap": 72,
+        "wrong_answer_or_resources": 4
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.0625,
+      "parsed_generations": 6,
+      "pass_at_1": 0.0,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 90,
+        "violated": 6
+      },
+      "retained_length_quantiles": {
+        "max": 512.0,
+        "min": 25.0,
+        "p25": 406.0,
+        "p50": 512.0,
+        "p75": 512.0,
+        "p95": 512.0
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "length_cap": 72,
+        "native_eos": 4,
+        "new_problem_boundary": 20
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 6,
+        "unverifiable": 90
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "C0",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "evaluation": "calibration_calibration",
+    "expected_questions": 48,
+    "expected_records": 48,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 72427,
+      "file": "calibration_calibration.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "fe3a43bc042340c2e5bc4018a718262a3f7b106e72c0ff8cca12f9d47c215851",
+      "valid_json_records": 48
+    },
+    "historical_reuse": true,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 48,
+      "correct_generations": 33,
+      "failures": {
+        "none": 33,
+        "parse": 4,
+        "wrong_answer_or_resources": 11
+      },
+      "generations": 48,
+      "independent_questions": 48,
+      "parse_fraction": 0.9166666666666666,
+      "parsed_generations": 44,
+      "pass_at_1": 0.6875,
+      "questions": 48,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 4,
+        "satisfied": 41,
+        "violated": 3
+      },
+      "retained_length_quantiles": {
+        "max": 120.0,
+        "min": 33.0,
+        "p25": 40.0,
+        "p50": 42.0,
+        "p75": 64.25,
+        "p95": 93.89999999999999
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 48
+      },
+      "task_types": {
+        "compute": 32,
+        "construct": 16
+      },
+      "traces": {
+        "inconsistent": 13,
+        "unverifiable": 3,
+        "verified": 32
+      }
+    },
+    "scored_records": 48,
+    "stale_summary": false,
+    "state": "calibration",
+    "status": "completed",
+    "view": "calibration"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "C_probes",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 442093,
+      "file": "C_probes.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "463fc311aaf20788b1c266795f1f4bd551f2dbe5ce21dc780ba8a40f27291f9e",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 381,
+      "failures": {
+        "none": 381,
+        "wrong_answer_or_resources": 3
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 1.0,
+      "parsed_generations": 384,
+      "pass_at_1": 0.9921875,
+      "pass_at_4": 1.0,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 381,
+        "violated": 3
+      },
+      "retained_length_quantiles": {
+        "max": 46.0,
+        "min": 20.0,
+        "p25": 24.0,
+        "p50": 38.5,
+        "p75": 41.0,
+        "p95": 43.69999999999993
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 384
+      },
+      "task_types": {
+        "compute": 384
+      },
+      "traces": {
+        "inconsistent": 3,
+        "verified": 381
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "C",
+    "status": "completed",
+    "view": "probes"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "B_probes",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 441990,
+      "file": "B_probes.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "7e861206b0006bdef01df4a65c4210317cded654c13712fac5d990ae46c37586",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 382,
+      "failures": {
+        "none": 382,
+        "wrong_answer_or_resources": 2
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 1.0,
+      "parsed_generations": 384,
+      "pass_at_1": 0.9947916666666666,
+      "pass_at_4": 1.0,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 382,
+        "violated": 2
+      },
+      "retained_length_quantiles": {
+        "max": 46.0,
+        "min": 20.0,
+        "p25": 24.0,
+        "p50": 38.5,
+        "p75": 41.0,
+        "p95": 43.69999999999993
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 384
+      },
+      "task_types": {
+        "compute": 384
+      },
+      "traces": {
+        "inconsistent": 2,
+        "verified": 382
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "B",
+    "status": "completed",
+    "view": "probes"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 24,
+    "evaluation": "C-S_midpoint",
+    "expected_questions": 24,
+    "expected_records": 24,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 49663,
+      "file": "C-S_midpoint.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "dfb16a8a0039318960e73e4404f0b1d5c4c9cc06c782187bd4e55df9f316592a",
+      "valid_json_records": 24
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 24,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 24,
+      "correct_generations": 5,
+      "failures": {
+        "none": 5,
+        "parse": 2,
+        "wrong_answer_or_resources": 17
+      },
+      "generations": 24,
+      "independent_questions": 24,
+      "parse_fraction": 0.9166666666666666,
+      "parsed_generations": 22,
+      "pass_at_1": 0.20833333333333334,
+      "questions": 24,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 2,
+        "satisfied": 11,
+        "violated": 11
+      },
+      "retained_length_quantiles": {
+        "max": 120.0,
+        "min": 60.0,
+        "p25": 63.75,
+        "p50": 68.5,
+        "p75": 82.0,
+        "p95": 111.14999999999996
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 24
+      },
+      "task_types": {
+        "construct": 24
+      },
+      "traces": {
+        "inconsistent": 19,
+        "verified": 5
+      }
+    },
+    "scored_records": 24,
+    "stale_summary": false,
+    "state": "C-S",
+    "status": "completed",
+    "view": "midpoint"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 24,
+    "evaluation": "C-P_midpoint",
+    "expected_questions": 24,
+    "expected_records": 24,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 47008,
+      "file": "C-P_midpoint.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "1ded261360fb8396c748c67149ecf874067ff7d41cac8c8c8fdc22b26732d0be",
+      "valid_json_records": 24
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 24,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 24,
+      "correct_generations": 1,
+      "failures": {
+        "none": 1,
+        "wrong_answer_or_resources": 23
+      },
+      "generations": 24,
+      "independent_questions": 24,
+      "parse_fraction": 1.0,
+      "parsed_generations": 24,
+      "pass_at_1": 0.041666666666666664,
+      "questions": 24,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 12,
+        "violated": 12
+      },
+      "retained_length_quantiles": {
+        "max": 106.0,
+        "min": 61.0,
+        "p25": 65.75,
+        "p50": 80.5,
+        "p75": 83.0,
+        "p95": 87.85
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 24
+      },
+      "task_types": {
+        "construct": 24
+      },
+      "traces": {
+        "inconsistent": 23,
+        "verified": 1
+      }
+    },
+    "scored_records": 24,
+    "stale_summary": false,
+    "state": "C-P",
+    "status": "completed",
+    "view": "midpoint"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 24,
+    "evaluation": "B-S_midpoint",
+    "expected_questions": 24,
+    "expected_records": 24,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 48990,
+      "file": "B-S_midpoint.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "c5d15ee75a3aff34cb726db66db5d9f81d3c9715d25cbc3e0a30c815d957138a",
+      "valid_json_records": 24
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 24,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 24,
+      "correct_generations": 4,
+      "failures": {
+        "none": 4,
+        "parse": 2,
+        "wrong_answer_or_resources": 18
+      },
+      "generations": 24,
+      "independent_questions": 24,
+      "parse_fraction": 0.9166666666666666,
+      "parsed_generations": 22,
+      "pass_at_1": 0.16666666666666666,
+      "questions": 24,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 2,
+        "satisfied": 11,
+        "violated": 11
+      },
+      "retained_length_quantiles": {
+        "max": 135.0,
+        "min": 60.0,
+        "p25": 64.5,
+        "p50": 69.5,
+        "p75": 82.25,
+        "p95": 111.14999999999996
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 24
+      },
+      "task_types": {
+        "construct": 24
+      },
+      "traces": {
+        "inconsistent": 20,
+        "verified": 4
+      }
+    },
+    "scored_records": 24,
+    "stale_summary": false,
+    "state": "B-S",
+    "status": "completed",
+    "view": "midpoint"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 24,
+    "evaluation": "B-P_midpoint",
+    "expected_questions": 24,
+    "expected_records": 24,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 48803,
+      "file": "B-P_midpoint.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "dcd879aacb35d524a75e760ff9e4eb037a0ac369da4ad169285392b2712ba262",
+      "valid_json_records": 24
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 24,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 24,
+      "correct_generations": 3,
+      "failures": {
+        "none": 3,
+        "wrong_answer_or_resources": 21
+      },
+      "generations": 24,
+      "independent_questions": 24,
+      "parse_fraction": 1.0,
+      "parsed_generations": 24,
+      "pass_at_1": 0.125,
+      "questions": 24,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 15,
+        "violated": 9
+      },
+      "retained_length_quantiles": {
+        "max": 146.0,
+        "min": 60.0,
+        "p25": 64.0,
+        "p50": 67.5,
+        "p75": 81.25,
+        "p95": 85.85
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 24
+      },
+      "task_types": {
+        "construct": 24
+      },
+      "traces": {
+        "inconsistent": 21,
+        "verified": 3
+      }
+    },
+    "scored_records": 24,
+    "stale_summary": false,
+    "state": "B-P",
+    "status": "completed",
+    "view": "midpoint"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "C_discovery_sampled",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 595643,
+      "file": "C_discovery_sampled.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "5edd9fd05518ecb93f0a6e39e7d59d48bdb52cfb0cd4ca58734c863aa8c05ca5",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 1,
+      "failures": {
+        "none": 1,
+        "parse": 232,
+        "wrong_answer_or_resources": 151
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.3958333333333333,
+      "parsed_generations": 152,
+      "pass_at_1": 0.0026041666666666665,
+      "pass_at_4": 0.010416666666666666,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 232,
+        "satisfied": 54,
+        "violated": 98
+      },
+      "retained_length_quantiles": {
+        "max": 138.0,
+        "min": 18.0,
+        "p25": 40.0,
+        "p50": 47.0,
+        "p75": 52.0,
+        "p95": 70.0
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 384
+      },
+      "task_types": {
+        "construct": 384
+      },
+      "traces": {
+        "inconsistent": 352,
+        "unverifiable": 32
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "C",
+    "status": "completed",
+    "view": "discovery_sampled"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "C_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 142149,
+      "file": "C_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "d8a6f8a0e886b7980178592ef3dfddbdc40050e05b0b638b29d776ca6213c02f",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 0,
+      "failures": {
+        "parse": 75,
+        "wrong_answer_or_resources": 21
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.21875,
+      "parsed_generations": 21,
+      "pass_at_1": 0.0,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 75,
+        "satisfied": 2,
+        "violated": 19
+      },
+      "retained_length_quantiles": {
+        "max": 70.0,
+        "min": 32.0,
+        "p25": 45.75,
+        "p50": 49.0,
+        "p75": 52.0,
+        "p95": 64.25
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 95,
+        "unverifiable": 1
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "C",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "B_discovery_sampled",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 591440,
+      "file": "B_discovery_sampled.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "13fa416a52101713308fa4877c3b65f39c8d34f37bdcd7b55f5137f639c9a169",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 0,
+      "failures": {
+        "parse": 259,
+        "wrong_answer_or_resources": 125
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.3255208333333333,
+      "parsed_generations": 125,
+      "pass_at_1": 0.0,
+      "pass_at_4": 0.0,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 259,
+        "satisfied": 40,
+        "violated": 85
+      },
+      "retained_length_quantiles": {
+        "max": 98.0,
+        "min": 21.0,
+        "p25": 41.75,
+        "p50": 48.0,
+        "p75": 53.0,
+        "p95": 68.84999999999997
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 384
+      },
+      "task_types": {
+        "construct": 384
+      },
+      "traces": {
+        "inconsistent": 359,
+        "unverifiable": 25
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "B",
+    "status": "completed",
+    "view": "discovery_sampled"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "B_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 142697,
+      "file": "B_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "564ac60317756cabd99afdcf5b10125c2e92302bcbbf5ab9f17c046bbda7e3dc",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 0,
+      "failures": {
+        "parse": 69,
+        "wrong_answer_or_resources": 27
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.28125,
+      "parsed_generations": 27,
+      "pass_at_1": 0.0,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 69,
+        "satisfied": 2,
+        "violated": 25
+      },
+      "retained_length_quantiles": {
+        "max": 70.0,
+        "min": 32.0,
+        "p25": 42.0,
+        "p50": 49.0,
+        "p75": 51.0,
+        "p95": 64.5
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 95,
+        "unverifiable": 1
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "B",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "C-S_discovery_sampled",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 862222,
+      "file": "C-S_discovery_sampled.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "fc783125f1e978219b0ed8fcbeeaaaa246c75f811b610b0e3f63cfb99b75c10c",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 0.9947916666666666,
+      "completed_generations": 382,
+      "correct_generations": 29,
+      "failures": {
+        "none": 29,
+        "parse": 12,
+        "stop_length_cap": 2,
+        "wrong_answer_or_resources": 341
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.9635416666666666,
+      "parsed_generations": 370,
+      "pass_at_1": 0.07552083333333333,
+      "pass_at_4": 0.15625,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 14,
+        "satisfied": 208,
+        "violated": 162
+      },
+      "retained_length_quantiles": {
+        "max": 512.0,
+        "min": 44.0,
+        "p25": 65.0,
+        "p50": 74.0,
+        "p75": 93.0,
+        "p95": 124.0
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "length_cap": 2,
+        "native_eos": 382
+      },
+      "task_types": {
+        "construct": 384
+      },
+      "traces": {
+        "inconsistent": 354,
+        "unverifiable": 1,
+        "verified": 29
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "C-S",
+    "status": "completed",
+    "view": "discovery_sampled"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "C-S_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 198897,
+      "file": "C-S_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "4c41456365d255138a58a011ee866a595382d3d613474e517fa908e7402f5361",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 8,
+      "failures": {
+        "none": 8,
+        "parse": 1,
+        "wrong_answer_or_resources": 87
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.9895833333333334,
+      "parsed_generations": 95,
+      "pass_at_1": 0.08333333333333333,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 1,
+        "satisfied": 57,
+        "violated": 38
+      },
+      "retained_length_quantiles": {
+        "max": 207.0,
+        "min": 59.0,
+        "p25": 64.75,
+        "p50": 70.0,
+        "p75": 90.25,
+        "p95": 117.75
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 88,
+        "verified": 8
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "C-S",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "C-P_discovery_sampled",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 732506,
+      "file": "C-P_discovery_sampled.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "be40931c363787f9c6c3fc6822dfb99156672b86327728dae03e8ecda24e8b9b",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 26,
+      "failures": {
+        "none": 26,
+        "parse": 10,
+        "wrong_answer_or_resources": 348
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.9739583333333334,
+      "parsed_generations": 374,
+      "pass_at_1": 0.06770833333333333,
+      "pass_at_4": 0.20833333333333334,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 10,
+        "satisfied": 273,
+        "violated": 101
+      },
+      "retained_length_quantiles": {
+        "max": 189.0,
+        "min": 47.0,
+        "p25": 64.0,
+        "p50": 66.0,
+        "p75": 78.0,
+        "p95": 95.84999999999997
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 384
+      },
+      "task_types": {
+        "construct": 384
+      },
+      "traces": {
+        "inconsistent": 358,
+        "unverifiable": 1,
+        "verified": 25
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "C-P",
+    "status": "completed",
+    "view": "discovery_sampled"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "C-P_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 175063,
+      "file": "C-P_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "c1dc71b8c2c9afbaccf8510bf77471170b58b2c65de7f9a95e5843d4b6231f57",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 13,
+      "failures": {
+        "none": 13,
+        "parse": 1,
+        "wrong_answer_or_resources": 82
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.9895833333333334,
+      "parsed_generations": 95,
+      "pass_at_1": 0.13541666666666666,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 1,
+        "satisfied": 78,
+        "violated": 17
+      },
+      "retained_length_quantiles": {
+        "max": 106.0,
+        "min": 57.0,
+        "p25": 63.0,
+        "p50": 65.0,
+        "p75": 69.25,
+        "p95": 85.25
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 83,
+        "verified": 13
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "C-P",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "B-S_discovery_sampled",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 770118,
+      "file": "B-S_discovery_sampled.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "0bdc76ea80288a6e3bea992a7aee44390837b31cb9193225574f2255dec6af62",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 36,
+      "failures": {
+        "none": 36,
+        "parse": 11,
+        "wrong_answer_or_resources": 337
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.9713541666666666,
+      "parsed_generations": 373,
+      "pass_at_1": 0.09375,
+      "pass_at_4": 0.14583333333333334,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 11,
+        "satisfied": 241,
+        "violated": 132
+      },
+      "retained_length_quantiles": {
+        "max": 186.0,
+        "min": 44.0,
+        "p25": 64.0,
+        "p50": 67.0,
+        "p75": 86.0,
+        "p95": 117.84999999999997
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 383,
+        "new_problem_boundary": 1
+      },
+      "task_types": {
+        "construct": 384
+      },
+      "traces": {
+        "inconsistent": 346,
+        "unverifiable": 2,
+        "verified": 36
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "B-S",
+    "status": "completed",
+    "view": "discovery_sampled"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "B-S_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 196873,
+      "file": "B-S_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "d8bbf4c73ba3156b52a56b59f827193361144b2a231d6a9175ded5b876176b53",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 10,
+      "failures": {
+        "none": 10,
+        "parse": 1,
+        "wrong_answer_or_resources": 85
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.9895833333333334,
+      "parsed_generations": 95,
+      "pass_at_1": 0.10416666666666667,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 1,
+        "satisfied": 63,
+        "violated": 32
+      },
+      "retained_length_quantiles": {
+        "max": 145.0,
+        "min": 58.0,
+        "p25": 63.0,
+        "p50": 68.0,
+        "p75": 91.25,
+        "p95": 116.0
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 86,
+        "verified": 10
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "B-S",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 384,
+    "evaluation": "B-P_discovery_sampled",
+    "expected_questions": 96,
+    "expected_records": 384,
+    "expected_samples_per_question": 4,
+    "file_inventory": {
+      "bytes": 736240,
+      "file": "B-P_discovery_sampled.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "3ba88bff09891f0fceb0019031a4ce68b94efff2a21bebac9c3dad7924b4adca",
+      "valid_json_records": 384
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 384,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 384,
+      "correct_generations": 16,
+      "failures": {
+        "none": 16,
+        "parse": 23,
+        "wrong_answer_or_resources": 345
+      },
+      "generations": 384,
+      "independent_questions": 96,
+      "parse_fraction": 0.9401041666666666,
+      "parsed_generations": 361,
+      "pass_at_1": 0.041666666666666664,
+      "pass_at_4": 0.15625,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 23,
+        "satisfied": 276,
+        "violated": 85
+      },
+      "retained_length_quantiles": {
+        "max": 168.0,
+        "min": 57.0,
+        "p25": 63.0,
+        "p50": 66.0,
+        "p75": 73.25,
+        "p95": 94.69999999999993
+      },
+      "samples_per_question": 4,
+      "stop_reasons": {
+        "native_eos": 384
+      },
+      "task_types": {
+        "construct": 384
+      },
+      "traces": {
+        "inconsistent": 365,
+        "unverifiable": 4,
+        "verified": 15
+      }
+    },
+    "scored_records": 384,
+    "stale_summary": false,
+    "state": "B-P",
+    "status": "completed",
+    "view": "discovery_sampled"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "B-P_discovery_greedy",
+    "expected_questions": 96,
+    "expected_records": 96,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 176238,
+      "file": "B-P_discovery_greedy.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "9b37b6e00f1205bb82566ac38777ea6bcef74ee2304914e231b7a64514a05a93",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 17,
+      "failures": {
+        "none": 17,
+        "parse": 3,
+        "wrong_answer_or_resources": 76
+      },
+      "generations": 96,
+      "independent_questions": 96,
+      "parse_fraction": 0.96875,
+      "parsed_generations": 93,
+      "pass_at_1": 0.17708333333333334,
+      "questions": 96,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 3,
+        "satisfied": 79,
+        "violated": 14
+      },
+      "retained_length_quantiles": {
+        "max": 102.0,
+        "min": 57.0,
+        "p25": 63.0,
+        "p50": 65.0,
+        "p75": 69.0,
+        "p95": 86.25
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "construct": 96
+      },
+      "traces": {
+        "inconsistent": 78,
+        "unverifiable": 1,
+        "verified": 17
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "B-P",
+    "status": "completed",
+    "view": "discovery_greedy"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "C-S_sentinel",
+    "expected_questions": 48,
+    "expected_records": 96,
+    "expected_samples_per_question": 2,
+    "file_inventory": {
+      "bytes": 124496,
+      "file": "C-S_sentinel.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "4205476b3e28948911cc660f6274d46ec0fc11c81b22eedf8a90de970452e18f",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 94,
+      "failures": {
+        "none": 94,
+        "wrong_answer_or_resources": 2
+      },
+      "generations": 96,
+      "independent_questions": 48,
+      "parse_fraction": 1.0,
+      "parsed_generations": 96,
+      "pass_at_1": 0.9791666666666666,
+      "questions": 48,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 40,
+        "satisfied": 54,
+        "violated": 2
+      },
+      "retained_length_quantiles": {
+        "max": 80.0,
+        "min": 19.0,
+        "p25": 27.0,
+        "p50": 40.0,
+        "p75": 42.0,
+        "p95": 61.0
+      },
+      "samples_per_question": 2,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "compute": 96
+      },
+      "traces": {
+        "inconsistent": 2,
+        "unverifiable": 40,
+        "verified": 54
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "C-S",
+    "status": "completed",
+    "view": "sentinel"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "C-P_sentinel",
+    "expected_questions": 48,
+    "expected_records": 96,
+    "expected_samples_per_question": 2,
+    "file_inventory": {
+      "bytes": 114501,
+      "file": "C-P_sentinel.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "916a5543488a62021c5f73c2a03919e81a27ac2815168d4a9f3eeb63147432ad",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 94,
+      "failures": {
+        "none": 94,
+        "wrong_answer_or_resources": 2
+      },
+      "generations": 96,
+      "independent_questions": 48,
+      "parse_fraction": 1.0,
+      "parsed_generations": 96,
+      "pass_at_1": 0.9791666666666666,
+      "questions": 48,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 26,
+        "satisfied": 68,
+        "violated": 2
+      },
+      "retained_length_quantiles": {
+        "max": 47.0,
+        "min": 19.0,
+        "p25": 23.0,
+        "p50": 39.0,
+        "p75": 42.0,
+        "p95": 46.0
+      },
+      "samples_per_question": 2,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "compute": 96
+      },
+      "traces": {
+        "inconsistent": 2,
+        "unverifiable": 26,
+        "verified": 68
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "C-P",
+    "status": "completed",
+    "view": "sentinel"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "B-S_sentinel",
+    "expected_questions": 48,
+    "expected_records": 96,
+    "expected_samples_per_question": 2,
+    "file_inventory": {
+      "bytes": 116860,
+      "file": "B-S_sentinel.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "9a437cd9bb617d1e9986b023a5ad7095ac5180ed7c1d6e2cb8abc30889ba8e47",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 94,
+      "failures": {
+        "none": 94,
+        "wrong_answer_or_resources": 2
+      },
+      "generations": 96,
+      "independent_questions": 48,
+      "parse_fraction": 1.0,
+      "parsed_generations": 96,
+      "pass_at_1": 0.9791666666666666,
+      "questions": 48,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 26,
+        "satisfied": 68,
+        "violated": 2
+      },
+      "retained_length_quantiles": {
+        "max": 60.0,
+        "min": 19.0,
+        "p25": 26.0,
+        "p50": 39.0,
+        "p75": 42.0,
+        "p95": 49.75
+      },
+      "samples_per_question": 2,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "compute": 96
+      },
+      "traces": {
+        "inconsistent": 2,
+        "unverifiable": 26,
+        "verified": 68
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "B-S",
+    "status": "completed",
+    "view": "sentinel"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 96,
+    "evaluation": "B-P_sentinel",
+    "expected_questions": 48,
+    "expected_records": 96,
+    "expected_samples_per_question": 2,
+    "file_inventory": {
+      "bytes": 116461,
+      "file": "B-P_sentinel.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "19c867f32fd74624d3202c15a5d210966e638d0828d84f0ecc3abffefb2e31a5",
+      "valid_json_records": 96
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 96,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 96,
+      "correct_generations": 95,
+      "failures": {
+        "none": 95,
+        "wrong_answer_or_resources": 1
+      },
+      "generations": 96,
+      "independent_questions": 48,
+      "parse_fraction": 1.0,
+      "parsed_generations": 96,
+      "pass_at_1": 0.9895833333333334,
+      "questions": 48,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "NA": 28,
+        "satisfied": 67,
+        "violated": 1
+      },
+      "retained_length_quantiles": {
+        "max": 49.0,
+        "min": 19.0,
+        "p25": 23.0,
+        "p50": 39.0,
+        "p75": 42.0,
+        "p95": 46.0
+      },
+      "samples_per_question": 2,
+      "stop_reasons": {
+        "native_eos": 96
+      },
+      "task_types": {
+        "compute": 96
+      },
+      "traces": {
+        "inconsistent": 1,
+        "unverifiable": 28,
+        "verified": 67
+      }
+    },
+    "scored_records": 96,
+    "stale_summary": false,
+    "state": "B-P",
+    "status": "completed",
+    "view": "sentinel"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 16,
+    "evaluation": "C-S_train_diagnostic",
+    "expected_questions": 16,
+    "expected_records": 16,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 32864,
+      "file": "C-S_train_diagnostic.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "3da0bf61fab13663533e4bc1cabb4a4e4070a1ff67b6eac727a7bfbf330effb2",
+      "valid_json_records": 16
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 16,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 16,
+      "correct_generations": 8,
+      "failures": {
+        "none": 8,
+        "wrong_answer_or_resources": 8
+      },
+      "generations": 16,
+      "independent_questions": 16,
+      "parse_fraction": 1.0,
+      "parsed_generations": 16,
+      "pass_at_1": 0.5,
+      "questions": 16,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 12,
+        "violated": 4
+      },
+      "retained_length_quantiles": {
+        "max": 158.0,
+        "min": 60.0,
+        "p25": 62.5,
+        "p50": 65.0,
+        "p75": 70.0,
+        "p95": 107.0
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 16
+      },
+      "task_types": {
+        "construct": 16
+      },
+      "traces": {
+        "inconsistent": 8,
+        "verified": 8
+      }
+    },
+    "scored_records": 16,
+    "stale_summary": false,
+    "state": "C-S",
+    "status": "completed",
+    "view": "train_diagnostic"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 16,
+    "evaluation": "C-P_train_diagnostic",
+    "expected_questions": 16,
+    "expected_records": 16,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 29566,
+      "file": "C-P_train_diagnostic.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "53acfe18a7dadd1446d6a949bf1434760071d2cdad2543ce6260e890967189b4",
+      "valid_json_records": 16
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 16,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 16,
+      "correct_generations": 3,
+      "failures": {
+        "none": 3,
+        "wrong_answer_or_resources": 13
+      },
+      "generations": 16,
+      "independent_questions": 16,
+      "parse_fraction": 1.0,
+      "parsed_generations": 16,
+      "pass_at_1": 0.1875,
+      "questions": 16,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 12,
+        "violated": 4
+      },
+      "retained_length_quantiles": {
+        "max": 88.0,
+        "min": 59.0,
+        "p25": 62.75,
+        "p50": 65.0,
+        "p75": 73.25,
+        "p95": 88.0
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 16
+      },
+      "task_types": {
+        "construct": 16
+      },
+      "traces": {
+        "inconsistent": 13,
+        "verified": 3
+      }
+    },
+    "scored_records": 16,
+    "stale_summary": false,
+    "state": "C-P",
+    "status": "completed",
+    "view": "train_diagnostic"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 16,
+    "evaluation": "B-S_train_diagnostic",
+    "expected_questions": 16,
+    "expected_records": 16,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 29098,
+      "file": "B-S_train_diagnostic.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "23aebf407dcf960fc163b7254c43ce58c2110df405e4afc838b0ad9d0b3f34ac",
+      "valid_json_records": 16
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 16,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 16,
+      "correct_generations": 10,
+      "failures": {
+        "none": 10,
+        "wrong_answer_or_resources": 6
+      },
+      "generations": 16,
+      "independent_questions": 16,
+      "parse_fraction": 1.0,
+      "parsed_generations": 16,
+      "pass_at_1": 0.625,
+      "questions": 16,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 14,
+        "violated": 2
+      },
+      "retained_length_quantiles": {
+        "max": 100.0,
+        "min": 60.0,
+        "p25": 62.0,
+        "p50": 64.5,
+        "p75": 66.0,
+        "p95": 82.75
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 16
+      },
+      "task_types": {
+        "construct": 16
+      },
+      "traces": {
+        "inconsistent": 6,
+        "verified": 10
+      }
+    },
+    "scored_records": 16,
+    "stale_summary": false,
+    "state": "B-S",
+    "status": "completed",
+    "view": "train_diagnostic"
+  },
+  {
+    "derived_views_stale": false,
+    "durable_raw_records": 16,
+    "evaluation": "B-P_train_diagnostic",
+    "expected_questions": 16,
+    "expected_records": 16,
+    "expected_samples_per_question": 1,
+    "file_inventory": {
+      "bytes": 29713,
+      "file": "B-P_train_diagnostic.jsonl",
+      "invalid_json_lines": [],
+      "sha256": "520ed6c3c06fd095b0a73f42424d796ede1c171e9f85cd893251acd3a777cef0",
+      "valid_json_records": 16
+    },
+    "historical_reuse": false,
+    "immutable_scored_records": 16,
+    "primary_metrics": {
+      "completed_fraction": 1.0,
+      "completed_generations": 16,
+      "correct_generations": 4,
+      "failures": {
+        "none": 4,
+        "wrong_answer_or_resources": 12
+      },
+      "generations": 16,
+      "independent_questions": 16,
+      "parse_fraction": 1.0,
+      "parsed_generations": 16,
+      "pass_at_1": 0.25,
+      "questions": 16,
+      "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+      "resource_rule_status": {
+        "satisfied": 13,
+        "violated": 3
+      },
+      "retained_length_quantiles": {
+        "max": 93.0,
+        "min": 59.0,
+        "p25": 62.75,
+        "p50": 65.5,
+        "p75": 70.0,
+        "p95": 88.5
+      },
+      "samples_per_question": 1,
+      "stop_reasons": {
+        "native_eos": 16
+      },
+      "task_types": {
+        "construct": 16
+      },
+      "traces": {
+        "inconsistent": 12,
+        "verified": 4
+      }
+    },
+    "scored_records": 16,
+    "stale_summary": false,
+    "state": "B-P",
+    "status": "completed",
+    "view": "train_diagnostic"
+  }
+]

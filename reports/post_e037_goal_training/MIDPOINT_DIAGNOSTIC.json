@@ -1,0 +1,626 @@
+{
+  "scope": "Frozen 12-group H subset at step128; descriptive only, never a stopping or checkpoint-selection rule.",
+  "selected_endpoint_step": 256,
+  "views": [
+    {
+      "checkpoint_step": 128,
+      "decoding": "greedy",
+      "evaluation": "G-single_midpoint_H_greedy",
+      "expected_records": 24,
+      "generations": 24,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 12,
+          "families": 12,
+          "family_ci": [
+            0.0,
+            0.25
+          ],
+          "group_ci": [
+            0.0,
+            0.25
+          ],
+          "groups": 12,
+          "mean": 0.08333333333333333,
+          "numerator": 1,
+          "raw_fraction": 0.08333333333333333
+        },
+        "by_correct_operator": {
+          "*": {
+            "correct": 0,
+            "outputs": 6,
+            "questions": 6
+          },
+          "+": {
+            "correct": 5,
+            "outputs": 6,
+            "questions": 6
+          },
+          "-": {
+            "correct": 0,
+            "outputs": 6,
+            "questions": 6
+          },
+          "/": {
+            "correct": 4,
+            "outputs": 6,
+            "questions": 6
+          }
+        },
+        "completed": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 15,
+            "true": 9
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "group_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "groups": 12,
+          "mean": 0.375,
+          "numerator": 9,
+          "raw_fraction": 0.375
+        },
+        "correct_operator_switch": {
+          "denominator": 12,
+          "families": 12,
+          "family_ci": [
+            0.0,
+            0.25
+          ],
+          "group_ci": [
+            0.0,
+            0.25
+          ],
+          "groups": 12,
+          "mean": 0.08333333333333333,
+          "numerator": 1,
+          "raw_fraction": 0.08333333333333333
+        },
+        "error_category_note": "Mutually exclusive; incomplete stops precede parse categorization. Raw parsed=false may include those stops.",
+        "failures": {
+          "none": 9,
+          "wrong_answer_or_resources": 15
+        },
+        "family_group_counts": {
+          "00eacfd2221c0c6e4f173e4e0d269a24aabfe3bee6aaefa6c7d91e0789ec9ad8": 1,
+          "18267c4bccb72f0e8b2d93c336299e8d85fccf1192b777b517d9e44eedd61ef2": 1,
+          "32f452f872b688f19e2f5e049ef0fdc666d63c61c0b9dcd7c7de688d6f1a8710": 1,
+          "383828c477b508b0670075a068ce3178da9f6c29fb531ab6e34c43d189be199d": 1,
+          "3c0941fd7b2b22e235e2ace8e8d76ae0867dbaa6e9dc39477d5b7debf8cbd9cc": 1,
+          "6f3b666685c01428e47d8535617076c340b34438df1fe2c49a38ec7126e9dd78": 1,
+          "7044dd765c25c735ba5400904896832e897778faa130507fd241269ae825f316": 1,
+          "a313f55dc044589f63455d60f2972e258fa75dd562d74ea1de2d6b2cbecdbe85": 1,
+          "b3e5ba7fe12427aa42d88ad42eb595cb0349793aca0ea68536db8dbd0bc20e66": 1,
+          "b817180a43788535de7f895a13a80b69a0a3ead1858a6211ea4c8c9fdc28ba0f": 1,
+          "e723a52fb5347167530486f5066e88246e22291548e09b58bbf12e24f1f4c62b": 1,
+          "e8b2f80e480af117cc733c21a746e3cd01e9128b610a2353ea2adaee01cc3b2d": 1
+        },
+        "free_correct": {
+          "counts": {
+            "false": 15,
+            "true": 9
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "group_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "groups": 12,
+          "mean": 0.375,
+          "numerator": 9,
+          "raw_fraction": 0.375
+        },
+        "generations": 24,
+        "groups": 12,
+        "interface_error_categories": {
+          "strict_correct": 9,
+          "template_followed_wrong_hole_operator": 15
+        },
+        "interface_error_category_denominator": 24,
+        "intermediate_arithmetic": {
+          "consistent": 24
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 15,
+            "true": 9
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "group_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "groups": 12,
+          "mean": 0.375,
+          "numerator": 9,
+          "raw_fraction": 0.375
+        },
+        "pairing_note": "Sample index pairs independent requests; bootstrap unit is the number group.",
+        "parsed": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        },
+        "reaches_target": {
+          "counts": {
+            "false": 15,
+            "true": 9
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "group_ci": [
+            0.20833333333333334,
+            0.5416666666666666
+          ],
+          "groups": 12,
+          "mean": 0.375,
+          "numerator": 9,
+          "raw_fraction": 0.375
+        },
+        "resource_target_categories": {
+          "both_satisfied": 9,
+          "resource_correct_target_wrong": 15
+        },
+        "retained_length_quantiles": {
+          "max": 68.0,
+          "min": 60.0,
+          "p25": 63.5,
+          "p50": 66.0,
+          "p75": 67.0,
+          "p95": 67.85
+        },
+        "same_ordered_expression_failure": {
+          "assessable_pairs": 12,
+          "definition": "Both answers have the same ordered AST, ignoring spaces/outer parentheses. Non-parsed pairs are unassessable, not evidence of a successful target switch.",
+          "denominator": 12,
+          "families": 12,
+          "family_ci": [
+            0.5,
+            1.0
+          ],
+          "group_ci": [
+            0.5,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 0.75,
+          "numerator": 9,
+          "raw_fraction": 0.75
+        },
+        "samples_per_target": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        },
+        "stop_reasons": {
+          "native_eos": 24
+        },
+        "targets": 24,
+        "unconstrained_correct_off_template": {
+          "counts": {
+            "false": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.0,
+            0.0
+          ],
+          "group_ci": [
+            0.0,
+            0.0
+          ],
+          "groups": 12,
+          "mean": 0.0,
+          "numerator": 0,
+          "raw_fraction": 0.0
+        },
+        "uses_input_multiset": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        }
+      },
+      "questions": 24,
+      "samples": 1,
+      "sampling": false,
+      "state": "G-single",
+      "status": "measured",
+      "view": "midpoint12"
+    },
+    {
+      "checkpoint_step": 128,
+      "decoding": "greedy",
+      "evaluation": "G-paired_midpoint_H_greedy",
+      "expected_records": 24,
+      "generations": 24,
+      "interface": "H",
+      "metrics": {
+        "both_targets_correct": {
+          "denominator": 12,
+          "families": 12,
+          "family_ci": [
+            0.0,
+            0.25
+          ],
+          "group_ci": [
+            0.0,
+            0.25
+          ],
+          "groups": 12,
+          "mean": 0.08333333333333333,
+          "numerator": 1,
+          "raw_fraction": 0.08333333333333333
+        },
+        "by_correct_operator": {
+          "*": {
+            "correct": 1,
+            "outputs": 6,
+            "questions": 6
+          },
+          "+": {
+            "correct": 3,
+            "outputs": 6,
+            "questions": 6
+          },
+          "-": {
+            "correct": 0,
+            "outputs": 6,
+            "questions": 6
+          },
+          "/": {
+            "correct": 6,
+            "outputs": 6,
+            "questions": 6
+          }
+        },
+        "completed": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        },
+        "correct": {
+          "counts": {
+            "false": 14,
+            "true": 10
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "group_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "groups": 12,
+          "mean": 0.4166666666666667,
+          "numerator": 10,
+          "raw_fraction": 0.4166666666666667
+        },
+        "correct_operator_switch": {
+          "denominator": 12,
+          "families": 12,
+          "family_ci": [
+            0.0,
+            0.25
+          ],
+          "group_ci": [
+            0.0,
+            0.25
+          ],
+          "groups": 12,
+          "mean": 0.08333333333333333,
+          "numerator": 1,
+          "raw_fraction": 0.08333333333333333
+        },
+        "error_category_note": "Mutually exclusive; incomplete stops precede parse categorization. Raw parsed=false may include those stops.",
+        "failures": {
+          "none": 10,
+          "wrong_answer_or_resources": 14
+        },
+        "family_group_counts": {
+          "00eacfd2221c0c6e4f173e4e0d269a24aabfe3bee6aaefa6c7d91e0789ec9ad8": 1,
+          "18267c4bccb72f0e8b2d93c336299e8d85fccf1192b777b517d9e44eedd61ef2": 1,
+          "32f452f872b688f19e2f5e049ef0fdc666d63c61c0b9dcd7c7de688d6f1a8710": 1,
+          "383828c477b508b0670075a068ce3178da9f6c29fb531ab6e34c43d189be199d": 1,
+          "3c0941fd7b2b22e235e2ace8e8d76ae0867dbaa6e9dc39477d5b7debf8cbd9cc": 1,
+          "6f3b666685c01428e47d8535617076c340b34438df1fe2c49a38ec7126e9dd78": 1,
+          "7044dd765c25c735ba5400904896832e897778faa130507fd241269ae825f316": 1,
+          "a313f55dc044589f63455d60f2972e258fa75dd562d74ea1de2d6b2cbecdbe85": 1,
+          "b3e5ba7fe12427aa42d88ad42eb595cb0349793aca0ea68536db8dbd0bc20e66": 1,
+          "b817180a43788535de7f895a13a80b69a0a3ead1858a6211ea4c8c9fdc28ba0f": 1,
+          "e723a52fb5347167530486f5066e88246e22291548e09b58bbf12e24f1f4c62b": 1,
+          "e8b2f80e480af117cc733c21a746e3cd01e9128b610a2353ea2adaee01cc3b2d": 1
+        },
+        "free_correct": {
+          "counts": {
+            "false": 14,
+            "true": 10
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "group_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "groups": 12,
+          "mean": 0.4166666666666667,
+          "numerator": 10,
+          "raw_fraction": 0.4166666666666667
+        },
+        "generations": 24,
+        "groups": 12,
+        "interface_error_categories": {
+          "strict_correct": 10,
+          "template_followed_wrong_hole_operator": 14
+        },
+        "interface_error_category_denominator": 24,
+        "intermediate_arithmetic": {
+          "consistent": 24
+        },
+        "operator_correct": {
+          "counts": {
+            "false": 14,
+            "true": 10
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "group_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "groups": 12,
+          "mean": 0.4166666666666667,
+          "numerator": 10,
+          "raw_fraction": 0.4166666666666667
+        },
+        "pairing_note": "Sample index pairs independent requests; bootstrap unit is the number group.",
+        "parsed": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        },
+        "reaches_target": {
+          "counts": {
+            "false": 14,
+            "true": 10
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "group_ci": [
+            0.25,
+            0.5833333333333334
+          ],
+          "groups": 12,
+          "mean": 0.4166666666666667,
+          "numerator": 10,
+          "raw_fraction": 0.4166666666666667
+        },
+        "resource_target_categories": {
+          "both_satisfied": 10,
+          "resource_correct_target_wrong": 14
+        },
+        "retained_length_quantiles": {
+          "max": 68.0,
+          "min": 60.0,
+          "p25": 63.5,
+          "p50": 66.0,
+          "p75": 67.0,
+          "p95": 67.85
+        },
+        "same_ordered_expression_failure": {
+          "assessable_pairs": 12,
+          "definition": "Both answers have the same ordered AST, ignoring spaces/outer parentheses. Non-parsed pairs are unassessable, not evidence of a successful target switch.",
+          "denominator": 12,
+          "families": 12,
+          "family_ci": [
+            0.5,
+            1.0
+          ],
+          "group_ci": [
+            0.5,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 0.75,
+          "numerator": 9,
+          "raw_fraction": 0.75
+        },
+        "samples_per_target": 1,
+        "scaffold_followed": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        },
+        "stop_reasons": {
+          "native_eos": 24
+        },
+        "targets": 24,
+        "unconstrained_correct_off_template": {
+          "counts": {
+            "false": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            0.0,
+            0.0
+          ],
+          "group_ci": [
+            0.0,
+            0.0
+          ],
+          "groups": 12,
+          "mean": 0.0,
+          "numerator": 0,
+          "raw_fraction": 0.0
+        },
+        "uses_input_multiset": {
+          "counts": {
+            "true": 24
+          },
+          "denominator": 24,
+          "families": 12,
+          "family_ci": [
+            1.0,
+            1.0
+          ],
+          "group_ci": [
+            1.0,
+            1.0
+          ],
+          "groups": 12,
+          "mean": 1.0,
+          "numerator": 24,
+          "raw_fraction": 1.0
+        }
+      },
+      "questions": 24,
+      "samples": 1,
+      "sampling": false,
+      "state": "G-paired",
+      "status": "measured",
+      "view": "midpoint12"
+    }
+  ]
+}

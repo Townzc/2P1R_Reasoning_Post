@@ -1,0 +1,638 @@
+{
+  "accounting": {
+    "actual_charged": 4784,
+    "cap": 4864,
+    "charged_without_exported_raw_or_fault": 0,
+    "historical_actual": 592,
+    "historical_fault": 16,
+    "historical_unique": 576,
+    "new_durable_outputs": 4192,
+    "new_explicit_fault": 0,
+    "planned_complete_without_new_fault": 4784,
+    "remaining": 80,
+    "unresolved_request_keys": []
+  },
+  "artifact_bindings_sha256": {
+    ".local/resume_export/raw/generation_ledger.json": "51fbdc7f2a2d85df15b244dce6de1a27fc9abef5b536b4760910712c66b381e2",
+    ".local/resume_export/raw/run_manifest.json": "649d0b28a78a82527c4e9b251d216acea101024eee45b925a6428d6f3458159a",
+    ".local/resume_export/raw/run_manifest_final.json": "f955d8f03e04b7fbc03c6550d33fd8367cd77e01bb657bfe4fa7d95cd05c3f2a",
+    ".local/v2_export_r2/raw/checkpoint_C0/checkpoint_identity.json": "d506c885ebb203897ea24ac62434316b8acb0b11dd8706e39ca372adcfcb4ed3",
+    "experiments/thursday_probe/data_r1/manifest.json": "8649f98dcbcf85ba937ec7d2f5f9a39a1f59a39edcb02efbcd866f92f70e07ab",
+    "experiments/thursday_probe_v2/release_r2/manifest.json": "05b06ca9b8e260ce57002716193df2970025fbf1e16f58c98716db2a1a8fc556",
+    "experiments/thursday_probe_v2/release_resume_r1/manifest.json": "1435cf011cb0f3224f97f08d7713707bd8c745cc4e80ba3daf1d1b184fd9221b"
+  },
+  "completed_evaluations": 26,
+  "completed_training_updates": 1088,
+  "errors": [],
+  "evaluations": [
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "f3ab3aa63973ca83d9f49a0bba1d4fe9a8836360daac4cee99d9ab7b84878646",
+      "model_hash": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e",
+      "name": "C_probes",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "336df169fb12b7be0e17afc47c0bca286dcc13a58c86c77ea2bbfd10141976b6",
+      "model_hash": "a9da4924d39ccfe9fdf06a2add9903f660e962955163f3c6b7e263e475cf099a",
+      "name": "B_probes",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 24,
+      "manifest_sha256": "630491bc0a3f332be780fbf8be8dd3cb41f2b222efc176db9354c1a9fe98d637",
+      "model_hash": "3db3a243875b8589bccdf39d034b24e1b702ba640b123aaebf3c3e70d8f59b01",
+      "name": "C-S_midpoint",
+      "pending_score_batches": [],
+      "planned_generations": 24,
+      "published_raw_batches": 3,
+      "published_records": 24,
+      "raw_batches": 3,
+      "scored_records": 24,
+      "status": "completed",
+      "summary_records": 24
+    },
+    {
+      "durable_raw_records": 24,
+      "manifest_sha256": "e215ecbdb838f6a10c9296e7021bf534182abe9bb070bafcf558f823b9f21ccb",
+      "model_hash": "0d16f37c5c954fd0e38a619f99aa4d3c236373301c31d6b9c439d1d403c5f2b1",
+      "name": "C-P_midpoint",
+      "pending_score_batches": [],
+      "planned_generations": 24,
+      "published_raw_batches": 3,
+      "published_records": 24,
+      "raw_batches": 3,
+      "scored_records": 24,
+      "status": "completed",
+      "summary_records": 24
+    },
+    {
+      "durable_raw_records": 24,
+      "manifest_sha256": "4c937f17710487ac797ef80e72e9fa057d9ff3799b6654602743848bb8323fc8",
+      "model_hash": "f8d516fabf3b09395fbd7c9f8280fe4b0599d4158c27c12f951293677bb3902c",
+      "name": "B-S_midpoint",
+      "pending_score_batches": [],
+      "planned_generations": 24,
+      "published_raw_batches": 3,
+      "published_records": 24,
+      "raw_batches": 3,
+      "scored_records": 24,
+      "status": "completed",
+      "summary_records": 24
+    },
+    {
+      "durable_raw_records": 24,
+      "manifest_sha256": "683b153dd9164cb0350fd2df1e7331c41e95840d80674b6c3b2287ba4132974a",
+      "model_hash": "3f81174634c271bc4450de9efd574f2ee316aa41a0328c74b79872c0f3f27a86",
+      "name": "B-P_midpoint",
+      "pending_score_batches": [],
+      "planned_generations": 24,
+      "published_raw_batches": 3,
+      "published_records": 24,
+      "raw_batches": 3,
+      "scored_records": 24,
+      "status": "completed",
+      "summary_records": 24
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "8309c125c04f728b9263d4965773a01f911a29ad66c1974af1b32598886fc61d",
+      "model_hash": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e",
+      "name": "C_discovery_sampled",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "735bc7872cf5fe67c18528d29c3faf1838e88ce71302566893660b13a4cc5ed2",
+      "model_hash": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e",
+      "name": "C_discovery_greedy",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "443641937bd183b29291f0fe811bee1af19dbf7a1dfb55c3ff828093d119a6e5",
+      "model_hash": "a9da4924d39ccfe9fdf06a2add9903f660e962955163f3c6b7e263e475cf099a",
+      "name": "B_discovery_sampled",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "5b440b953c4a5029ca842c5546e3ec6e01b4bbcde4125cabd677abe21f6de1cc",
+      "model_hash": "a9da4924d39ccfe9fdf06a2add9903f660e962955163f3c6b7e263e475cf099a",
+      "name": "B_discovery_greedy",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "474ecc9f054926827d6ab2988857b5f800864997b804046740785da94f705865",
+      "model_hash": "431060a22ef6d1a9c2682e39e9267a0f566ec0b9ee476e4fde14ceef5d1dbdcb",
+      "name": "C-S_discovery_sampled",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "43bcd5d25c0141d61a50c787318334733e18e3af46bf14b7ba1842c30a33a71c",
+      "model_hash": "431060a22ef6d1a9c2682e39e9267a0f566ec0b9ee476e4fde14ceef5d1dbdcb",
+      "name": "C-S_discovery_greedy",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "3384a981db7f2f67051f423a6079bbf1d550c4a0c90dfe88fb32ddd7f43096ad",
+      "model_hash": "3db883e74438fe4ee9adbceb777646a45a4241e002783f81ab04a98bb402946b",
+      "name": "C-P_discovery_sampled",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "c337579e1f11953fafe8c97356f2a4a16be2bdfbd5f4259b6eb8e264edd69703",
+      "model_hash": "3db883e74438fe4ee9adbceb777646a45a4241e002783f81ab04a98bb402946b",
+      "name": "C-P_discovery_greedy",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "20d233b9d9f00833a8838b29eb1fbf871c9a2bb1b9671ab6e86f2694857bbb69",
+      "model_hash": "9c30d2a2211aa7992078f0268b5fa80cbd81b1da801c0e93fb024c98e61238d3",
+      "name": "B-S_discovery_sampled",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "6b71a64e8e715618bd070220ebda7170ff006c4f1ddeed271b314aa7062a1ff9",
+      "model_hash": "9c30d2a2211aa7992078f0268b5fa80cbd81b1da801c0e93fb024c98e61238d3",
+      "name": "B-S_discovery_greedy",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 384,
+      "manifest_sha256": "f55e0218980a1222b2a66cb9bf4ba1ea716cb31fcf530340107f0f45336d69a5",
+      "model_hash": "740a1f1bdef8d70184b645949dcf9a913768a08cf4aa71dcf0b42e711bec4a49",
+      "name": "B-P_discovery_sampled",
+      "pending_score_batches": [],
+      "planned_generations": 384,
+      "published_raw_batches": 48,
+      "published_records": 384,
+      "raw_batches": 48,
+      "scored_records": 384,
+      "status": "completed",
+      "summary_records": 384
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "027c09a79790ed7b01d73539677395afac04a545f077c023ff39261810ebd4a8",
+      "model_hash": "740a1f1bdef8d70184b645949dcf9a913768a08cf4aa71dcf0b42e711bec4a49",
+      "name": "B-P_discovery_greedy",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "8c8c3bf369b82901c33489eeb0748dd580fb209eb875e66bae01716bbd486fe4",
+      "model_hash": "431060a22ef6d1a9c2682e39e9267a0f566ec0b9ee476e4fde14ceef5d1dbdcb",
+      "name": "C-S_sentinel",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "29ba7921c787c512bf904c64808a12184613156797a6d4cb6cf3ae4fc6edd189",
+      "model_hash": "3db883e74438fe4ee9adbceb777646a45a4241e002783f81ab04a98bb402946b",
+      "name": "C-P_sentinel",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "50dcc73a647dbf19237d11154997df7453b11ef456c9fd6ded52cf841add3e3a",
+      "model_hash": "9c30d2a2211aa7992078f0268b5fa80cbd81b1da801c0e93fb024c98e61238d3",
+      "name": "B-S_sentinel",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 96,
+      "manifest_sha256": "c9e7e7428ed7e634a8aacafa5d66f458b6ed9ab2d932c31a0d51d6d3e13f48ea",
+      "model_hash": "740a1f1bdef8d70184b645949dcf9a913768a08cf4aa71dcf0b42e711bec4a49",
+      "name": "B-P_sentinel",
+      "pending_score_batches": [],
+      "planned_generations": 96,
+      "published_raw_batches": 12,
+      "published_records": 96,
+      "raw_batches": 12,
+      "scored_records": 96,
+      "status": "completed",
+      "summary_records": 96
+    },
+    {
+      "durable_raw_records": 16,
+      "manifest_sha256": "8726eaaf5a1740eb9bb5001e41de07c6e606032fc3bc857cb813e6d6cf86c527",
+      "model_hash": "431060a22ef6d1a9c2682e39e9267a0f566ec0b9ee476e4fde14ceef5d1dbdcb",
+      "name": "C-S_train_diagnostic",
+      "pending_score_batches": [],
+      "planned_generations": 16,
+      "published_raw_batches": 2,
+      "published_records": 16,
+      "raw_batches": 2,
+      "scored_records": 16,
+      "status": "completed",
+      "summary_records": 16
+    },
+    {
+      "durable_raw_records": 16,
+      "manifest_sha256": "44cab1daa88f4dbc91a091fb51f8109eeaf30728074c41ca83f6a4009f7a7a76",
+      "model_hash": "3db883e74438fe4ee9adbceb777646a45a4241e002783f81ab04a98bb402946b",
+      "name": "C-P_train_diagnostic",
+      "pending_score_batches": [],
+      "planned_generations": 16,
+      "published_raw_batches": 2,
+      "published_records": 16,
+      "raw_batches": 2,
+      "scored_records": 16,
+      "status": "completed",
+      "summary_records": 16
+    },
+    {
+      "durable_raw_records": 16,
+      "manifest_sha256": "8df3d9fb4edf40a6fa506c189cfbb125d37bf68fda3fbf1b26083a4471729c2a",
+      "model_hash": "9c30d2a2211aa7992078f0268b5fa80cbd81b1da801c0e93fb024c98e61238d3",
+      "name": "B-S_train_diagnostic",
+      "pending_score_batches": [],
+      "planned_generations": 16,
+      "published_raw_batches": 2,
+      "published_records": 16,
+      "raw_batches": 2,
+      "scored_records": 16,
+      "status": "completed",
+      "summary_records": 16
+    },
+    {
+      "durable_raw_records": 16,
+      "manifest_sha256": "23e301b7fcc7d98d53e7f559e3d5e0e4b4c52e3f4d08bd511eb81e268f061d84",
+      "model_hash": "740a1f1bdef8d70184b645949dcf9a913768a08cf4aa71dcf0b42e711bec4a49",
+      "name": "B-P_train_diagnostic",
+      "pending_score_batches": [],
+      "planned_generations": 16,
+      "published_raw_batches": 2,
+      "published_records": 16,
+      "raw_batches": 2,
+      "scored_records": 16,
+      "status": "completed",
+      "summary_records": 16
+    }
+  ],
+  "execution_source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+  "expected_checkpoint_directories": 20,
+  "expected_latest_pointers": 6,
+  "export_transport_verification": {
+    "bytes": 2900439829,
+    "files": 3515,
+    "manifest_sha256": "939dd5f8bc43e482909c9b64e5446241da26e10d995b8190680f94848b70f32d",
+    "status": "verified"
+  },
+  "latest_recovery_pointers": 6,
+  "missing": [],
+  "new_committed_generation_batches": 524,
+  "private_verification_result_sha256": "ef2be2816945b5872cddfc4a7f5194c850ab17a601ee105c90f2af2b16d8f9fb",
+  "run_dir": ".local/resume_export/raw",
+  "schema": "resume_public_independent_cpu_verification_v1",
+  "scope": "CPU tensor/hash, ancestry, frozen schedules/dose/LR, AdamW cursor/moments, saved RNG structure/chain, request/raw/scored identities. Tokenizer/math replay and transport export SHA receipts are separate; no claim of recomputing gradients or CUDA sampling.",
+  "separate_audit_scope": "Tokenizer replay and mathematical rescoring are performed by the offline analyzer. This artifact checks CPU tensors, artifact hashes, ancestry, frozen schedules/dose/LR, saved optimizer/RNG states, and model-bound request/raw/scored consistency. Saved CUDA RNG bytes and continuity are inspected on CPU; no gradients or CUDA sampling are recomputed.",
+  "status": "complete",
+  "total_processed_nonpadding_tokens": 1943692,
+  "total_supervised_tokens": 1094936,
+  "training": [
+    {
+      "data": "prep_control",
+      "discarded_physical_updates": [],
+      "experiment_id": "E031",
+      "final_or_current_adapter": {
+        "parameters": 18464768,
+        "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+      },
+      "optimizer": {
+        "absolute_step": 32,
+        "learning_rate": 1e-05,
+        "parameter_states": 392
+      },
+      "parent": "C0",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
+      },
+      "planned_updates": 32,
+      "processed_tokens": 30608,
+      "recovery_sha256": "1638acff856c098347b36d3fef7ff6eb76c4ba64b69124f97514d072f70dff37",
+      "rng": {
+        "cuda_bytes": [
+          16
+        ],
+        "cuda_devices": 1,
+        "sha256": "a00ccd7e2f9460a41f1afc09a02478c128d90622b0ed7939fcd09b809c253f40",
+        "torch_bytes": 5056
+      },
+      "run_id": "thu_v2_e031_r1",
+      "state": "C",
+      "status": "completed",
+      "supervised_tokens": 16278,
+      "updates": 32
+    },
+    {
+      "data": "prep_bridge",
+      "discarded_physical_updates": [],
+      "experiment_id": "E032",
+      "final_or_current_adapter": {
+        "parameters": 18464768,
+        "sha256": "a9da4924d39ccfe9fdf06a2add9903f660e962955163f3c6b7e263e475cf099a"
+      },
+      "optimizer": {
+        "absolute_step": 32,
+        "learning_rate": 1e-05,
+        "parameter_states": 392
+      },
+      "parent": "C0",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
+      },
+      "planned_updates": 32,
+      "processed_tokens": 30172,
+      "recovery_sha256": "a7b2f2cde98bebf50060ab7a057ca215ea2433c5b2d3f068117e54e75e50bdc6",
+      "rng": {
+        "cuda_bytes": [
+          16
+        ],
+        "cuda_devices": 1,
+        "sha256": "a00ccd7e2f9460a41f1afc09a02478c128d90622b0ed7939fcd09b809c253f40",
+        "torch_bytes": 5056
+      },
+      "run_id": "thu_v2_e032_r1",
+      "state": "B",
+      "status": "completed",
+      "supervised_tokens": 15842,
+      "updates": 32
+    },
+    {
+      "data": "surface",
+      "discarded_physical_updates": [],
+      "experiment_id": "E033",
+      "final_or_current_adapter": {
+        "parameters": 18464768,
+        "sha256": "431060a22ef6d1a9c2682e39e9267a0f566ec0b9ee476e4fde14ceef5d1dbdcb"
+      },
+      "optimizer": {
+        "absolute_step": 256,
+        "learning_rate": 1e-05,
+        "parameter_states": 392
+      },
+      "parent": "C",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+      },
+      "planned_updates": 256,
+      "processed_tokens": 470768,
+      "recovery_sha256": "1ad166c69da044dbe8fbd5b8e79f2052263eda16bf350ddd6e069a5582fdc79a",
+      "rng": {
+        "cuda_bytes": [
+          16
+        ],
+        "cuda_devices": 1,
+        "sha256": "a00ccd7e2f9460a41f1afc09a02478c128d90622b0ed7939fcd09b809c253f40",
+        "torch_bytes": 5056
+      },
+      "run_id": "thu_v2_e033_r1",
+      "state": "C-S",
+      "status": "completed",
+      "supervised_tokens": 265744,
+      "updates": 256
+    },
+    {
+      "data": "paths",
+      "discarded_physical_updates": [],
+      "experiment_id": "E034",
+      "final_or_current_adapter": {
+        "parameters": 18464768,
+        "sha256": "3db883e74438fe4ee9adbceb777646a45a4241e002783f81ab04a98bb402946b"
+      },
+      "optimizer": {
+        "absolute_step": 256,
+        "learning_rate": 1e-05,
+        "parameter_states": 392
+      },
+      "parent": "C",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+      },
+      "planned_updates": 256,
+      "processed_tokens": 470688,
+      "recovery_sha256": "10da1cbbbbe59cb1ea7736b47d090817630762053812baa4fcfed6491b091da5",
+      "rng": {
+        "cuda_bytes": [
+          16
+        ],
+        "cuda_devices": 1,
+        "sha256": "a00ccd7e2f9460a41f1afc09a02478c128d90622b0ed7939fcd09b809c253f40",
+        "torch_bytes": 5056
+      },
+      "run_id": "thu_v2_e034_r1",
+      "state": "C-P",
+      "status": "completed",
+      "supervised_tokens": 265664,
+      "updates": 256
+    },
+    {
+      "data": "surface",
+      "discarded_physical_updates": [],
+      "experiment_id": "E035",
+      "final_or_current_adapter": {
+        "parameters": 18464768,
+        "sha256": "9c30d2a2211aa7992078f0268b5fa80cbd81b1da801c0e93fb024c98e61238d3"
+      },
+      "optimizer": {
+        "absolute_step": 256,
+        "learning_rate": 1e-05,
+        "parameter_states": 392
+      },
+      "parent": "B",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "a9da4924d39ccfe9fdf06a2add9903f660e962955163f3c6b7e263e475cf099a"
+      },
+      "planned_updates": 256,
+      "processed_tokens": 470768,
+      "recovery_sha256": "cce6d103f70b77904870ec6e96a8ca650ea9931245d21248fde52964227e9e8c",
+      "rng": {
+        "cuda_bytes": [
+          16
+        ],
+        "cuda_devices": 1,
+        "sha256": "a00ccd7e2f9460a41f1afc09a02478c128d90622b0ed7939fcd09b809c253f40",
+        "torch_bytes": 5056
+      },
+      "run_id": "thu_v2_e035_r1",
+      "state": "B-S",
+      "status": "completed",
+      "supervised_tokens": 265744,
+      "updates": 256
+    },
+    {
+      "data": "paths",
+      "discarded_physical_updates": [],
+      "experiment_id": "E036",
+      "final_or_current_adapter": {
+        "parameters": 18464768,
+        "sha256": "740a1f1bdef8d70184b645949dcf9a913768a08cf4aa71dcf0b42e711bec4a49"
+      },
+      "optimizer": {
+        "absolute_step": 256,
+        "learning_rate": 1e-05,
+        "parameter_states": 392
+      },
+      "parent": "B",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "a9da4924d39ccfe9fdf06a2add9903f660e962955163f3c6b7e263e475cf099a"
+      },
+      "planned_updates": 256,
+      "processed_tokens": 470688,
+      "recovery_sha256": "c2698a17a66163be775c0ab30d4520320228fd8be931b932d108612f9cf47ac1",
+      "rng": {
+        "cuda_bytes": [
+          16
+        ],
+        "cuda_devices": 1,
+        "sha256": "a00ccd7e2f9460a41f1afc09a02478c128d90622b0ed7939fcd09b809c253f40",
+        "torch_bytes": 5056
+      },
+      "run_id": "thu_v2_e036_r1",
+      "state": "B-P",
+      "status": "completed",
+      "supervised_tokens": 265664,
+      "updates": 256
+    }
+  ],
+  "unique_new_request_ids": 4192,
+  "verified_at_utc": "2026-09-16T23:02:43.432801+00:00",
+  "verified_checkpoint_directories": 20,
+  "verifier": {
+    "autoregressive_generations": 0,
+    "cpu_only": true,
+    "cuda_sampling_replayed": false,
+    "gradients_recomputed": false,
+    "model_instantiated": false,
+    "source_path": "experiments/thursday_probe_v2/resume_verify.py",
+    "source_sha256": "a88dd26e3a16b0d05d1b1f5ed3ab8df172432335586cf92236fe2bc3942a7fd6"
+  },
+  "worker_status": "completed"
+}

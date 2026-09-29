@@ -1,0 +1,66 @@
+{
+  "files_sha256": {
+    "C.jsonl": "07bad7574af6ea420be6baa205fa8a0d5436a67058c0e714c59895e260319e82",
+    "DATA_AUDIT.json": "73da38b737b0b519ec44acad6c7418fa9752a977e48c3030e880c29256d49055",
+    "F.jsonl": "2ca5d43bf0723e9f199248875fa1d54ce56cd62d06955c638f08b9de8e3ad4bf",
+    "H.jsonl": "d0364043b8f05203749746a19af68973f5eaae1ee3a59fd6802f2b7b326cdc92",
+    "LEAKAGE_AUDIT.json": "ea954ef713edf6d1aa5d544d2da20097e23bc5e2e42bfdb5fff29c9482f2c1ba",
+    "TRAIN_TARGET_SUPPORT_AUDIT.json": "6583825098f86fa39798a09b472d2497e98bf7390a9c6d31a6c9c5aa7a2ef02b",
+    "groups.jsonl": "6b64f3ffb83040883f738078d785333597f0f9efd98beff29d66e2422d103d55",
+    "operator_contexts.jsonl": "a0eb61c7c71a222ee8ef2ce59a78166be4cc9c0de5793803754367d8898064b7"
+  },
+  "group_count": 24,
+  "interface_rows": {
+    "C": 48,
+    "F": 48,
+    "H": 48
+  },
+  "limits": "Numerical-instance separation only, no structural OOD or pretraining contamination claim; exploratory24 paired groups.",
+  "new_model_calls": 0,
+  "new_training": false,
+  "operator_boundary_retokenized": 48,
+  "operator_contexts": 48,
+  "operator_contexts_available": 48,
+  "prior_artifacts_modified": false,
+  "seed": 20260917,
+  "source_files_sha256": {
+    "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+    "experiments/post_e036_goal_probe/data.py": "201297255a68442323906c0202b307551d600a6218fd78f55905baec55c3a5ca",
+    "scripts/audit_family_matching.py": "7c780d0ce3d63679b8779c636083c8df8dd757336b6fca7069ab064789a75d66",
+    "src/countdown_smoke.py": "2249e313c60090958d5ddfe474dc44f2dff6337dbccc79a6ee48498254531058",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "split": "exploratory_development",
+  "status": "FROZEN_BEFORE_MODEL_OUTPUTS_CPU_ONLY",
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  }
+}

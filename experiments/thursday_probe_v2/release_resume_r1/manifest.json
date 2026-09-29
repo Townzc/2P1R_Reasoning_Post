@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-09-16T21:31:10.348573+00:00",
+  "endpoint_generations": 64,
+  "files_sha256": {
+    "evaluation_queue.json": "89907b13239a55df4bf4821d579a346d5428956f4d7b49de2e66ee40a1eb9fde",
+    "reference_A.jsonl": "267e5525335bc33b49885d63e7e7ff272d9f680f7af8e0e5920b411e569c865b",
+    "reference_B.jsonl": "a3a007190e4e97d801d4933a96d484440ee1c3aec4f502f236ab1d04006b05cb",
+    "selection.json": "bd46065ed39850bb54ea1f2dbe5354ed8cb0830fd0426369a1965d215ba7b9e0",
+    "train_diagnostic.jsonl": "e597230f9bed378fc1e6874bf69580e1001afa20e155f784eda9a273b38c5b24"
+  },
+  "generation_accounting": {
+    "additional_diagnostic": 64,
+    "historical_attempts": 592,
+    "original_remaining": 4128,
+    "planned_cumulative": 4784,
+    "planned_new": 4192,
+    "remaining_fault_reserve": 80,
+    "unchanged_cap": 4864
+  },
+  "model_calls": 0,
+  "original_release_manifest_sha256": "05b06ca9b8e260ce57002716193df2970025fbf1e16f58c98716db2a1a8fc556",
+  "primary_scorer_modified": false,
+  "reference_nll": {
+    "autoregressive_generations": 0,
+    "families": [
+      "A",
+      "B"
+    ],
+    "note": "Optional bounded teacher-forced measurement must charge actual runtime; reference availability is not a result.",
+    "references_per_family": 16,
+    "status": "not_measured"
+  },
+  "reserved_confirmation_or_test_contents_read": false,
+  "selected_questions": 16,
+  "selection_ids_sha256": "aebd0d322edc95eabc4d9c450b81a54a50e2ef090310a7eaa9030921c5d476d7",
+  "source_files_sha256": {
+    "experiments/thursday_probe/data_r1/assignment.json": "67d82a04e27aa4cb46d5837b318c8e4298b6e16200905cd84ce79bf554f69b69",
+    "experiments/thursday_probe/data_r1/manifest.json": "8649f98dcbcf85ba937ec7d2f5f9a39a1f59a39edcb02efbcd866f92f70e07ab",
+    "experiments/thursday_probe/data_r1/train_problems.jsonl": "4c9f9d19e73a54f970070f8e41cec275f1f682b2f283f1bc1f887f40ed07bea8",
+    "experiments/thursday_probe_v2/release_r2/manifest.json": "05b06ca9b8e260ce57002716193df2970025fbf1e16f58c98716db2a1a8fc556",
+    "experiments/thursday_probe_v2/release_r2/reference_identity_labels.jsonl": "d5a8a3ef14d435579ac1bacbf1f2005115ebc338a8a1309d21b74b2826b48702",
+    "experiments/thursday_probe_v2/release_r2/registrations.json": "2a82044f398831b4c0be6ecae160e89a17efdfa4c48dc19a537be476d06b59b5"
+  },
+  "status": "frozen_cpu_only_before_main_training",
+  "training_modified": false
+}

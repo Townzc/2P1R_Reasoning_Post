@@ -1,0 +1,62 @@
+# Final closeout — public math complete; provider off; awaiting owner
+
+All31,203 logical outputs and54 scored runs are complete and independently
+reconciled. Four arms each committed128 updates;544 physical completed training
+records and31,331 physical generation attempts preserve32 lost updates and128
+lost attempts. QDW's primary MATH result is negative versus DFT and TrimSFT;
+QDW versus SFT is inconclusive. GSM/dev gains do not establish broad superiority.
+
+Provider OFF was confirmed2026-09-18 11:26UTC (04:26PDT); the temporary timer
+was cleared, heartbeat paused and finite local observer cancelled. Final128
+model/optimizer/RNG artifacts remain on the stopped server; planned step64
+pruning is independently receipt-verified. Never restart or repeat this round.
+
+Read [the final report](FINAL_EXECUTION_SUMMARY_ZH.md) and the adjacent FINAL_HANDOFF_ACL_ICML_20260918.md.
+Future experiments require the owner's direction and advance runtime/GPU-hour/
+cost/stop estimates. The long-term branch was not changed. All older current-state
+sections below are dated historical snapshots superseded by this final closeout.
+
+# 公共数学 Pilot v1：CPU 准备结果与执行阻断
+
+本轮没有完成四臂实验，也没有开始 GPU 预检。完成的是公开模型/数据身份核验、CPU 实现与数据冻结审核，以及服务器资源实测。所有模型生成、标注前向、正式和非正式 optimizer updates 均为 0。E044–E047 只是已登记的待运行实验，不能报告为已训练模型，更不能给出准确率、方法差或置信区间。
+
+服务器已在 **2026-09-17 19:40:40 UTC** 由平台确认关机，临时关机定时器已清除；没有释放实例或删除历史独有权重。此次已开机窗口约 **34 分 48 秒**，按实查 ¥7.98/小时计算约 **¥4.63**，这是整段开机费用估算，不是账单。旧实验 28 条进程收据、22,408 秒累计记录均未改变。本轮没有虚构新的模型进程收据。
+
+## 实际完成的工作
+
+- 独立下载并校验 Qwen/Qwen2.5-Math-1.5B Base，固定模型及 tokenizer revision。服务器上的 3,087,467,144 字节权重与本地官方源副本 SHA256 完全一致。
+- 对 NuminaMath-CoT 全部 859,494 条训练记录先做题干身份扫描，结合完整 MATH test、MATH-500、GSM8K test、Minerva 题干执行 exact/MinHash 候选/精确 Jaccard/传递分组与污染排除。Minerva 不生成、不读取答案用于筛选。
+- 实现 SFT、DFT、TrimSFT、QDW-v0 的损失与梯度合同，统一整次 optimizer update 的监督 token 分母；实现完整题干/空题干的严格响应 token 对齐。
+- 实现纯文本 Qwen prompt/抽取/符号裁判封装，禁用工具执行及额外生成轮次；模型答错、空预测与基础设施/参考合同故障分开记账。
+- 实现跨系统盘/数据盘的完整 FP32 模型 + Adam + scheduler/RNG 恢复状态管理、写入后核验、原子指针和受验证回执限制的清理。
+- 编写最多五步的 GPU 工程预检、固定 32 题 profile、真实最长参考压力检查、共享预留账本和源码/输入校验门禁。**这些 GPU 路径尚未实机验证。正式四臂训练/完整评测调度器仍未实现。**
+- 核查 DFT/TrimSFT/CFT 的方法合同，并分别保存论文成绩参照表和 CFT 待复现合同。论文表不是本轮实验结果。
+
+最终训练集4096题、开发集512题、未来池20000题已冻结，训练/开发组交集为0；污染连通组排除了503条原始Numina记录。最终训练输入最长1969 tokens，最长监督响应1822 tokens，无截断。71项CPU测试全部通过；GPU预检仍未运行。数据 manifest SHA256 为 `f7c67a1c523c3ec5dfbd1ae63506a9ce91dd03683643dcf3b7a72c70b16fa370`，详细回执见 [CPU数据准备审计](../../experiments/public_math_pilot_v1/CPU_DATA_PREPARATION_AUDIT.md)、[独立审核](INDEPENDENT_CPU_AUDIT.md) 和 [71项测试回执](CPU_TEST_RECEIPT.json)。所有早期资格不合格候选均保留，未用于模型调用。近重复检索是近似方法；通过这些检查不等于证明无语义污染。
+
+## 为什么没有启动模型
+
+第一，CPU 合同审核遇到了实际问题，需要先修复，不能边跑边修改冻结数据。图片资格初稿遗漏了部分依赖未提供配图的自然语言题干；规则修复采用共同资格标准，不根据模型输出筛题。完成这项审核时，原一小时预检窗口已不足以稳妥容纳完整预检及要求的 15 分钟保存、导出、关机预留，因此关闭实例并转为本地处理。
+
+第二，当前正式网格的完整备份资源门槛没有通过。每臂 FP32 参数约 6.17 GB，Adam 两组 FP32 moments 约 12.35 GB；四个终态合计至少 **74.10 GB（69.01 GiB）**，尚未计日志与序列化额外开销。步数64权重即使按方案仅临时保存，也不改变这四个终态的最低原始 tensor 字节数。
+
+实测单路 SSH 下载约 **2.94 MiB/s**；同服务器另一条 HTTPS 并行下载路径更慢。按当前未压缩保存方式，仅导出四份终态就约 **6.67 小时**；乘方案要求的 1.3 安全系数后约 **8.67 小时**，还要加训练、标注、31,203 次生成、checkpoint I/O 和关机时间。这已超出当时可用资源包络。该估算针对实测路径与原始字节格式，不证明所有压缩或传输路线都不可行。
+
+仅安全备份、本次已用准备时间和15分钟关机预留合计就约9.50小时、¥75.81，仍不含GPU训练、标注和生成。原计划 12 小时上限扣除安全备份时间、15 分钟关机预留和本次准备时间后，只剩约 **2.50 小时**容纳全部其余工作。由于 GPU 吞吐没有测得，不能声称 12 小时/¥120 一定够，也不能编造整轮精确报价。磁盘本身可用两卷与逐臂独立备份确认后清理来管理，当前主要阻断并非单纯“删掉旧日志”就能解决。
+
+第三，完整 MATH-500 评分合同存在一题边界。零基索引97的官方参考答案 `\text{east}` 被原版 Qwen 单位归一化处理成空串。我们保留完整500题、原始答案和故障标记，不删题、不将其计错，也不允许空预测等于空参考时误判正确。该题暂记 `unresolved_reference`，因此不能宣称已有完整 resolved 的500题成绩。需要在模型结果产生前统一确定一个公开的评分修订合同。
+
+## 下一步完整顺序
+
+1. 先在本地确定所有状态共同适用的评分修订，增加方向词、单位、空输出等回归测试，并明确其相对原版 Qwen 的偏离；不针对模型成绩改裁判。
+2. 在本地补完正式四臂训练、动态64/唯一正式128端点、恢复、全量生成与统计调度。保留当前冻结数据和强基线公式；先做无模型的中断/重复预留/完整分母检查，再发布执行源码。
+3. 设计并实测更快的独立导出路线或无损压缩；保存状态量与恢复精度保持相同。没测得有效传输速度和压缩率前，不把它算作预算已解决。
+4. 一次性确认整轮可用资金、累计时限与导出安排，再启动已准备好的有限预检。原预检一小时已消耗约2088秒，不能在下一次开机时自动清零；按原上限最多剩约1512秒，其中仍须预留关机/导出。扩大预检或主阶段边界应由你调整规划。
+5. 预检须真实测得四种损失的训练吞吐、最长实际参考显存、完整 Adam/RNG 保存恢复、32题生成和 mask 前向速度，之后用统一公式核算整轮需求；预检通过不等于正式网格已获资源准入。
+6. 只有完整资源门槛通过后，再按原固定计划运行512次正式更新、8192次标注前向、31203次生成，保存全部终态，完成共同评分与配对 bootstrap，独立备份校验后关机。
+
+网络波动方面，已准备的启动方式为服务器端 `nohup + setsid + timeout`，配合持久预留账本、不可覆盖输出和 checkpoint 恢复。SSH 断连不会主动杀掉 detached worker；恢复时必须先核对服务器进程、receipt 与账本，不能直接重复启动。目前没有后台训练进程，也没有自动重启任务。
+
+本轮结论是：**CPU 准备取得进展，但尚无方法效果证据。** 不应从这次停机推断 QDW、DFT 或 TrimSFT 的性能；停止依据是资格/评分合同与资源条件。
+
+准备代码和冻结数据已推送，源码提交为 `fbe3b7ea769d18e5759110eba03ecd626dde662c`。源码门禁在本地验证通过；没有部署到服务器或运行模型。详见 [发布回执](SOURCE_PUBLICATION.json)。

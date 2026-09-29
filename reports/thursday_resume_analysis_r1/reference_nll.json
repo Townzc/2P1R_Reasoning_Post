@@ -1,0 +1,139 @@
+{
+  "note": "Teacher-forced forward measurements have zero autoregressive generations but nonzero runtime included in the rental/process ledger. Recorded forward_seconds is reported as separately measured runtime; absent timing remains NA, never an assumed zero. This time is already included in process/rental charges and must not be added to them again.",
+  "reference_definition": {
+    "aggregation": "Response-token-weighted NLL over 16 references per family; not a mean of question-level NLLs.",
+    "anchor_mapping": "Surface trains the assigned anchor family only: each reference-family aggregate contains eight anchor and eight non-anchor questions. Paths trains both program families, but reference rendering 0 can differ from the trained rendering. The aggregates do not isolate seen text, unseen paths, or anchor-specific NLL.",
+    "family_namespace": "A/B denotes reference program families, not prep states C/B.",
+    "rendering_id": 0
+  },
+  "results": [
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "d792bd1d6c2bc3cd6d87c35c0c981a37c8fc838e6df5f7aa284699251f54318a",
+      "family": "A",
+      "metrics": {
+        "forward_seconds": 0.6332345083355904,
+        "nll": 0.1131953855180787,
+        "reference_count": 16,
+        "response_loss_sum": 115.7988793849945,
+        "supervised_tokens": 1023
+      },
+      "reference_rows_sha256": "267e5525335bc33b49885d63e7e7ff272d9f680f7af8e0e5920b411e569c865b",
+      "separately_measured_runtime_seconds": 0.6332345083355904,
+      "state": "C-S",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "7beb26b16ce7151fc3f55ab237271ff45028ab14d8a811751583df16f804c236",
+      "family": "B",
+      "metrics": {
+        "forward_seconds": 0.6392351053655148,
+        "nll": 0.08030118413087799,
+        "reference_count": 16,
+        "response_loss_sum": 82.30871373414993,
+        "supervised_tokens": 1025
+      },
+      "reference_rows_sha256": "a3a007190e4e97d801d4933a96d484440ee1c3aec4f502f236ab1d04006b05cb",
+      "separately_measured_runtime_seconds": 0.6392351053655148,
+      "state": "C-S",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "e1ca8fcc25c5626fb749a9e32b812d139c58a7b342fc61deb724f388f1f72f1c",
+      "family": "A",
+      "metrics": {
+        "forward_seconds": 0.6299924626946449,
+        "nll": 0.07449150528259874,
+        "reference_count": 16,
+        "response_loss_sum": 76.20480990409851,
+        "supervised_tokens": 1023
+      },
+      "reference_rows_sha256": "267e5525335bc33b49885d63e7e7ff272d9f680f7af8e0e5920b411e569c865b",
+      "separately_measured_runtime_seconds": 0.6299924626946449,
+      "state": "C-P",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "af0ef14b17b627c68a8926d5763615165a53f81e2b8bd2f00bb1071e51181b6b",
+      "family": "B",
+      "metrics": {
+        "forward_seconds": 0.6363176740705967,
+        "nll": 0.06392524009797632,
+        "reference_count": 16,
+        "response_loss_sum": 65.52337110042572,
+        "supervised_tokens": 1025
+      },
+      "reference_rows_sha256": "a3a007190e4e97d801d4933a96d484440ee1c3aec4f502f236ab1d04006b05cb",
+      "separately_measured_runtime_seconds": 0.6363176740705967,
+      "state": "C-P",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "17395c189d00c1052076c2d853719ac0eb0b5f80d5bb103f18c4386064b99983",
+      "family": "A",
+      "metrics": {
+        "forward_seconds": 0.6284644678235054,
+        "nll": 0.11531155194471775,
+        "reference_count": 16,
+        "response_loss_sum": 117.96371763944626,
+        "supervised_tokens": 1023
+      },
+      "reference_rows_sha256": "267e5525335bc33b49885d63e7e7ff272d9f680f7af8e0e5920b411e569c865b",
+      "separately_measured_runtime_seconds": 0.6284644678235054,
+      "state": "B-S",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "a9b2752fc61737bf3630ac1b1201e4cb21c57dea2ef7fa49d9cb73ca958e55bc",
+      "family": "B",
+      "metrics": {
+        "forward_seconds": 0.62933000177145,
+        "nll": 0.09041375352115166,
+        "reference_count": 16,
+        "response_loss_sum": 92.67409735918045,
+        "supervised_tokens": 1025
+      },
+      "reference_rows_sha256": "a3a007190e4e97d801d4933a96d484440ee1c3aec4f502f236ab1d04006b05cb",
+      "separately_measured_runtime_seconds": 0.62933000177145,
+      "state": "B-S",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "154ee3cdedc068b2281ecb9a0cc6ae6c92d780405331b2f1e0e7e01b9f2798e0",
+      "family": "A",
+      "metrics": {
+        "forward_seconds": 0.6254217959940434,
+        "nll": 0.07473719889117826,
+        "reference_count": 16,
+        "response_loss_sum": 76.45615446567535,
+        "supervised_tokens": 1023
+      },
+      "reference_rows_sha256": "267e5525335bc33b49885d63e7e7ff272d9f680f7af8e0e5920b411e569c865b",
+      "separately_measured_runtime_seconds": 0.6254217959940434,
+      "state": "B-P",
+      "status": "measured"
+    },
+    {
+      "additional_autoregressive_generations": 0,
+      "artifact_sha256": "e277ed777ff318d67d012fe7071d70f909e568e761a65393c7dc1df0771d8ccd",
+      "family": "B",
+      "metrics": {
+        "forward_seconds": 0.6362143494188786,
+        "nll": 0.06292257716016071,
+        "reference_count": 16,
+        "response_loss_sum": 64.49564158916473,
+        "supervised_tokens": 1025
+      },
+      "reference_rows_sha256": "a3a007190e4e97d801d4933a96d484440ee1c3aec4f502f236ab1d04006b05cb",
+      "separately_measured_runtime_seconds": 0.6362143494188786,
+      "state": "B-P",
+      "status": "measured"
+    }
+  ]
+}

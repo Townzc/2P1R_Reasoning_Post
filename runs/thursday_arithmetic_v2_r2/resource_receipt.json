@@ -1,0 +1,43 @@
+{
+  "charged_seconds": 1065,
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=15s",
+    "7890s",
+    "PINNED_RUNTIME",
+    "-m",
+    "experiments.thursday_probe_v2.queue",
+    "worker",
+    "--snapshot",
+    "PINNED_MODEL_SNAPSHOT"
+  ],
+  "continuation": {
+    "cancelled_uninvoked_reservation": 368,
+    "charged_seconds": 478,
+    "completed_reused_generations": 48,
+    "fault_generations": 16,
+    "generation_accounting": "The synchronous generator returned batch2 before audit stopped at row12. Exactly16 probe outputs were attempted;48 completed calibration outputs are reused byte-for-byte. Remaining368 reserved probe outputs were never invoked. Replay the entire probe evaluation from its unchanged fixed seed; charge16 duplicates to the fault reserve.",
+    "incomplete_saved_records": 12,
+    "power_on_at_utc": "2026-09-16T20:11:00+00:00",
+    "previous_attempt": "runs/thursday_arithmetic_v2_r1",
+    "previous_export_manifest_sha256": "6165dc9c93fe42b3a256554ca7fefc965a53662e214bb260b6969e6d67e7eba4",
+    "reason": "Operator SIGTERM for repeated tokenizer metadata lookup inside per-token audit; no training started. The old generic timeout traceback is preserved and is not evidence that the8400s cap elapsed.",
+    "reused_adapter": {
+      "parameters": 18464768,
+      "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
+    },
+    "total_previous_attempted_generations": 64
+  },
+  "exit_code": 1,
+  "finished_at_utc": "2026-09-16T20:51:58.551651+00:00",
+  "guard_seconds": 15,
+  "historical_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
+  "historical_ledger_unchanged": true,
+  "new_phase_allowance_seconds": 8415,
+  "process_cap_seconds": 7890,
+  "run_id": "thursday_arithmetic_v2_r2",
+  "started_at_utc": "2026-09-16T20:34:14.508564+00:00",
+  "status": "failed",
+  "wall_seconds": 1064.0421040914953
+}

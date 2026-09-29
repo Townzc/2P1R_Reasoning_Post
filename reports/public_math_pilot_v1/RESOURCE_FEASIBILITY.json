@@ -1,0 +1,159 @@
+{
+  "admission": {
+    "complete_phase_gap_pending_measured_preflight": true,
+    "formal_grid_admitted": false,
+    "known_transfer_only_gap_hours_at_8_5h": 0.16970242284657625,
+    "no_automatic_recharge_expansion_or_additional_instance": true,
+    "no_benchmark_reduction": true,
+    "reason": "Formal grid was not admitted. No GPU preflight ran, so complete-phase throughput and total time are unknown. The four terminal-state raw transfer alone, with the protocol 1.3 factor, exceeded the approximately 8.5-hour usable envelope observed during feasibility assessment."
+  },
+  "authorized_preflight_cap": {
+    "first_limit_wins": true,
+    "includes_preparation_idle_export_shutdown": true,
+    "powered_seconds": 3600,
+    "rental_cny": 10,
+    "window_closed_without_gpu_preflight": true
+  },
+  "checkpoint_helper_cpu_validation": {
+    "gpu_equivalence_not_claimed": true,
+    "passed": 16,
+    "scope": "tiny CPU serialization/atomic pointer/exact 4 versus 2+2 optimizer-scheduler-RNG continuation/path bounds/ACK and engineering-only cleanup",
+    "tests": 16
+  },
+  "current_effective_time_envelope": {
+    "already_elapsed_time_must_be_subtracted": true,
+    "hours_approximate_upper_bound": 8.5,
+    "scope": "Historical feasibility snapshot before confirmed shutdown; not a claim of presently active resources.",
+    "source": "operator-confirmed currently usable resource envelope; no account balance disclosed"
+  },
+  "current_verified_rate_cny_per_hour": 7.98,
+  "formal_optimizer_updates": 0,
+  "full_pilot_completed": false,
+  "generation_outputs_executed": 0,
+  "gpu_throughput": {
+    "measured_checkpoint_io_seconds": null,
+    "measured_generation_seconds": null,
+    "measured_mask_sequence_seconds": null,
+    "measured_optimizer_update_seconds": null,
+    "status": "unknown_gpu_throughput"
+  },
+  "gpu_worker_process_calls": 0,
+  "mask_sequence_forwards_executed": 0,
+  "measured_downloads": {
+    "https_16_parallel_ranges": {
+      "mib_per_second": 1.6969853182722938,
+      "seconds": 37.713938542001415
+    },
+    "not_a_guaranteed_future_rate": true,
+    "provided_by": "operator live same-instance transfer probes",
+    "ssh": {
+      "mib_per_second": 2.943370364713526,
+      "seconds": 21.743780792
+    },
+    "test_payload_bytes": 67108864
+  },
+  "minimum_terminal_binary_backup": {
+    "arms": 4,
+    "duplicate_inference_weights": false,
+    "excludes": [
+      "serialization overhead",
+      "optimizer step scalars",
+      "RNG and scheduler metadata",
+      "raw generation records",
+      "logs",
+      "source and frozen data"
+    ],
+    "fp32_adam_moments_bytes_per_arm": 12349714432,
+    "fp32_weights_bytes_per_arm": 6174857216,
+    "includes_step64_weights": false,
+    "minimum_complete_state_bytes_per_arm": 18524571648,
+    "total_bytes": 74098286592,
+    "total_gib": 69.00940704345703
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-Math-1.5B",
+    "parameters": 1543714304,
+    "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2"
+  },
+  "model_calls": 0,
+  "nonformal_optimizer_updates": 0,
+  "one_shot_complete_phase_planning": {
+    "actual_used_setup_evidence": "COST_AND_CLOSEOUT.json: factual powered window with zero GPU worker/model calls.",
+    "actual_used_setup_seconds": 2087.554989,
+    "admission_rule": "Evaluate the full expression once using factual measurements and all remaining work; compare cumulatively with both authorized powered-time and monetary limits. Do not omit benchmarks or seek repeated per-arm exceptions.",
+    "complete_phase_rental_proxy_cny": null,
+    "compression_or_faster_export": "Potential improvements require representative actual full-state compression ratios, compression/decompression time, integrity checks and end-to-end durable throughput measurements. No saving is assumed; neither has resolved the current admission gap.",
+    "formula_seconds": "T = used_setup + 1.3 * (T_train_512_measured_updates + T_mask_8192_sequences + T_generate_31203_outputs + T_checkpoint_IO + T_backup) + 900",
+    "gpu_work_seconds": null,
+    "hypothetical_12h_remainder_scope": "Approximately 3.08 hours before subtracting already-used setup, for all other work after the 1.3 factor. Whether it suffices is unknown because no GPU preflight ran.",
+    "hypothetical_12h_window_after_safe_raw_backup_and_900s_hours": 3.0802975771534236,
+    "hypothetical_12h_window_after_used_setup_safe_raw_backup_and_900s_hours": 2.50042119132009,
+    "terms": {
+      "900": "Minimum export/shutdown contingency reserve, additional to explicitly modeled backup work.",
+      "T_backup": "Complete deduplicated terminal backup and required raw artifacts using measured end-to-end durable transfer rates; raw terminal-only lower proxy available.",
+      "T_checkpoint_IO": "All save, round-trip verification, hash, load and cleanup time, excluding network backup counted separately; unknown.",
+      "T_generate_31203_outputs": "All 31203 declared outputs projected from measured length-bucket decode rates and actual settings; unknown.",
+      "T_mask_8192_sequences": "4096 full/blank pairs projected from measured sequence lengths and GPU throughput; unknown.",
+      "T_train_512_measured_updates": "Four arms x128 updates projected from actual per-arm, length-aware GPU measurements; unknown.",
+      "used_setup": "Actual powered setup/idle time already spent, including unsuccessful preparation; use factual rental ledger."
+    },
+    "total_time_seconds": null
+  },
+  "phase": "public_math_pilot_v1",
+  "preflight_execution_status": "preflight_not_run",
+  "proposed_main_cap_not_admission": {
+    "including_preflight_cny": 120,
+    "including_preflight_seconds": 43200
+  },
+  "provider_closeout": {
+    "confirmed_off_at_utc": "2026-09-17T19:40:40.554989+00:00",
+    "evidence_public_record": "COST_AND_CLOSEOUT.json",
+    "evidence_source": "operator confirmed provider OFF; no deployment or model/GPU worker execution",
+    "provider_shutdown_confirmed": true,
+    "reason": "Final CPU missing-image corrections completed too late to run a bounded preflight and preserve the required 15-minute export/shutdown reserve.",
+    "timer_cleared_confirmed_at_utc": "2026-09-17T19:42:29.001539+00:00"
+  },
+  "schema": 1,
+  "scientific_results_available": false,
+  "scientific_scope_planned": {
+    "formal_updates": 512,
+    "generation_outputs": 31203,
+    "mask_sequence_forwards": 8192,
+    "optional_E048_E049_not_admitted": true
+  },
+  "source_deployed_to_server": false,
+  "starting_disk_available_bytes": {
+    "data": 40179576832,
+    "system_overlay": 31979679744,
+    "total": 72159256576
+  },
+  "status": "preflight_not_run",
+  "step64_retention": {
+    "before_deletion": "complete independent local backup ACK or verified same-arm step128; never delete active latest recovery",
+    "midpoint_evaluation_must_be_complete": true,
+    "retain": [
+      "step64 hashes",
+      "training dynamics",
+      "all step64 dev outputs and scoring records"
+    ],
+    "weights_may_be_temporary": true
+  },
+  "transfer_only_lower_proxy": {
+    "channel": "SSH measured sample rate",
+    "excluded_work": [
+      "all setup and already-powered idle time",
+      "512 formal optimizer updates",
+      "8192 mask sequence forwards",
+      "31203 generation outputs",
+      "checkpoint save/hash/load",
+      "shutdown actions"
+    ],
+    "hours": 6.669001863728136,
+    "hours_with_factor": 8.669702422846576,
+    "is_invoice": false,
+    "powered_window_cost_proxy_cny_with_factor": 69.18422533431568,
+    "required_safety_factor": 1.3,
+    "seconds": 24008.406709421288,
+    "seconds_with_factor": 31210.928722247674
+  }
+}

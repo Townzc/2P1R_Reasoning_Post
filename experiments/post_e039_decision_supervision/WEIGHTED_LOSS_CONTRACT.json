@@ -1,0 +1,49 @@
+{
+  "status": "CPU_weight_contract_verified_not_model_outcome",
+  "decision_multiplier": 5,
+  "H_formula": "Li * (5 if mask else 1) / (Li + 4*Ki)",
+  "denominator": "raw supervised H+F tokens",
+  "F_weights": 1,
+  "prompt_padding_weight": 0,
+  "gradient_norm_or_direction_equality_claimed": false,
+  "checks": {
+    "single": {
+      "rows": 1024,
+      "H_rows": 512,
+      "F_rows": 512,
+      "raw_supervised_tokens": 132584,
+      "D_weight_mass": 132584.0,
+      "processed_tokens": 282532,
+      "every_H_span_valid": true,
+      "all_F_U_D_weights_identical": true,
+      "EOS_normally_supervised_not_upweighted": true,
+      "encoded_augmented_sha256": "00547d9eb33c6a0fe637b8228e4d755e14cef7eed3b3b277afc6c602fd536e78"
+    },
+    "paired": {
+      "rows": 1024,
+      "H_rows": 512,
+      "F_rows": 512,
+      "raw_supervised_tokens": 132614,
+      "D_weight_mass": 132614.0,
+      "processed_tokens": 282560,
+      "every_H_span_valid": true,
+      "all_F_U_D_weights_identical": true,
+      "EOS_normally_supervised_not_upweighted": true,
+      "encoded_augmented_sha256": "cb48eb3118b9e044263d1535226695f5e0cb4f249e2595e114c75196006de396"
+    }
+  },
+  "tests": [
+    "actual causal-shift gradient positions",
+    "EOS/prompt/padding",
+    "U exact old CE parity",
+    "D interrupted recovery adapter/optimizer/RNG parity",
+    "per-row mass",
+    "microbatch denominator equivalence"
+  ],
+  "source_files_sha256": {
+    "experiments/post_e039_decision_supervision/runtime.py": "8a564f6e07b87525f171442b2cff834d7fcdc9477f049a8a2db2ff9b5c92fb7c",
+    "experiments/post_e039_decision_supervision/decision_spans.py": "eaf3ede9d645cb4c80972d88e77e1e10b6ba90e374c5ff151fa99c32a11806c5",
+    "tests/test_decision_supervision_runtime.py": "7bc5558dc3eec5108c71d81a1d058622a21e64c80c4e96faa254877ccaaa8fd2"
+  },
+  "release_manifest_sha256": "ecd1e12dc792f36c9969354fde9764fce8811b2f39e39e0878238d6e2f7b5a5c"
+}

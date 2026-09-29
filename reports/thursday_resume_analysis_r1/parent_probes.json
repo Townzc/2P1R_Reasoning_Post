@@ -1,0 +1,436 @@
+{
+  "manipulation_contrast": {
+    "D": -0.0078125,
+    "D_stratified_paired_question_ci": [
+      -0.0234375,
+      0.0
+    ],
+    "delta_control": {
+      "cluster_ci": null,
+      "clusters": 1,
+      "mean": 0.0078125,
+      "question_ci": [
+        0.0,
+        0.0234375
+      ],
+      "questions": 32
+    },
+    "delta_target": {
+      "cluster_ci": null,
+      "clusters": 1,
+      "mean": 0.0,
+      "question_ci": [
+        0.0,
+        0.0
+      ],
+      "questions": 32
+    },
+    "descriptive_only": true,
+    "limitation": "Four draws per question are not independent questions; one template per compute category prevents a template-population interval.",
+    "score_used_as_run_gate": false
+  },
+  "table": [
+    {
+      "category": "atomic",
+      "metrics": {
+        "completed_fraction": 0.921875,
+        "completed_generations": 118,
+        "correct_generations": 57,
+        "failures": {
+          "none": 57,
+          "parse": 58,
+          "stop_length_cap": 10,
+          "wrong_answer_or_resources": 3
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 0.484375,
+        "parsed_generations": 62,
+        "pass_at_1": 0.4453125,
+        "pass_at_4": 0.75,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "NA": 128
+        },
+        "retained_length_quantiles": {
+          "max": 512.0,
+          "min": 17.0,
+          "p25": 43.0,
+          "p50": 67.5,
+          "p75": 121.25,
+          "p95": 512.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "length_cap": 10,
+          "native_eos": 89,
+          "new_problem_boundary": 29
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "inconsistent": 3,
+          "unverifiable": 125
+        }
+      },
+      "state": "C0",
+      "status": "measured"
+    },
+    {
+      "category": "target",
+      "metrics": {
+        "completed_fraction": 0.96875,
+        "completed_generations": 124,
+        "correct_generations": 75,
+        "failures": {
+          "none": 75,
+          "parse": 39,
+          "stop_length_cap": 4,
+          "wrong_answer_or_resources": 10
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 0.6796875,
+        "parsed_generations": 87,
+        "pass_at_1": 0.5859375,
+        "pass_at_4": 0.96875,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "NA": 128
+        },
+        "retained_length_quantiles": {
+          "max": 512.0,
+          "min": 2.0,
+          "p25": 54.0,
+          "p50": 65.0,
+          "p75": 92.5,
+          "p95": 230.8999999999996
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "length_cap": 4,
+          "native_eos": 93,
+          "new_problem_boundary": 31
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "inconsistent": 10,
+          "unverifiable": 118
+        }
+      },
+      "state": "C0",
+      "status": "measured"
+    },
+    {
+      "category": "control",
+      "metrics": {
+        "completed_fraction": 0.9375,
+        "completed_generations": 120,
+        "correct_generations": 67,
+        "failures": {
+          "none": 67,
+          "parse": 43,
+          "stop_length_cap": 8,
+          "wrong_answer_or_resources": 10
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 0.6328125,
+        "parsed_generations": 81,
+        "pass_at_1": 0.5234375,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "NA": 128
+        },
+        "retained_length_quantiles": {
+          "max": 512.0,
+          "min": 2.0,
+          "p25": 56.0,
+          "p50": 71.0,
+          "p75": 109.25,
+          "p95": 512.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "length_cap": 8,
+          "native_eos": 99,
+          "new_problem_boundary": 21
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "inconsistent": 11,
+          "unverifiable": 117
+        }
+      },
+      "state": "C0",
+      "status": "measured"
+    },
+    {
+      "category": "atomic",
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 128,
+        "correct_generations": 128,
+        "failures": {
+          "none": 128
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 1.0,
+        "parsed_generations": 128,
+        "pass_at_1": 1.0,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 128
+        },
+        "retained_length_quantiles": {
+          "max": 28.0,
+          "min": 20.0,
+          "p25": 21.0,
+          "p50": 22.0,
+          "p75": 24.0,
+          "p95": 28.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "native_eos": 128
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "verified": 128
+        }
+      },
+      "state": "C",
+      "status": "measured"
+    },
+    {
+      "category": "target",
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 128,
+        "correct_generations": 128,
+        "failures": {
+          "none": 128
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 1.0,
+        "parsed_generations": 128,
+        "pass_at_1": 1.0,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 128
+        },
+        "retained_length_quantiles": {
+          "max": 41.0,
+          "min": 33.0,
+          "p25": 38.0,
+          "p50": 39.0,
+          "p75": 40.0,
+          "p95": 40.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "native_eos": 128
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "verified": 128
+        }
+      },
+      "state": "C",
+      "status": "measured"
+    },
+    {
+      "category": "control",
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 128,
+        "correct_generations": 125,
+        "failures": {
+          "none": 125,
+          "wrong_answer_or_resources": 3
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 1.0,
+        "parsed_generations": 128,
+        "pass_at_1": 0.9765625,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 125,
+          "violated": 3
+        },
+        "retained_length_quantiles": {
+          "max": 46.0,
+          "min": 36.0,
+          "p25": 41.0,
+          "p50": 42.0,
+          "p75": 42.0,
+          "p95": 46.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "native_eos": 128
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "inconsistent": 3,
+          "verified": 125
+        }
+      },
+      "state": "C",
+      "status": "measured"
+    },
+    {
+      "category": "atomic",
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 128,
+        "correct_generations": 128,
+        "failures": {
+          "none": 128
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 1.0,
+        "parsed_generations": 128,
+        "pass_at_1": 1.0,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 128
+        },
+        "retained_length_quantiles": {
+          "max": 28.0,
+          "min": 20.0,
+          "p25": 21.0,
+          "p50": 22.0,
+          "p75": 24.0,
+          "p95": 28.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "native_eos": 128
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "verified": 128
+        }
+      },
+      "state": "B",
+      "status": "measured"
+    },
+    {
+      "category": "target",
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 128,
+        "correct_generations": 128,
+        "failures": {
+          "none": 128
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 1.0,
+        "parsed_generations": 128,
+        "pass_at_1": 1.0,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 128
+        },
+        "retained_length_quantiles": {
+          "max": 41.0,
+          "min": 33.0,
+          "p25": 38.0,
+          "p50": 39.0,
+          "p75": 40.0,
+          "p95": 40.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "native_eos": 128
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "verified": 128
+        }
+      },
+      "state": "B",
+      "status": "measured"
+    },
+    {
+      "category": "control",
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 128,
+        "correct_generations": 126,
+        "failures": {
+          "none": 126,
+          "wrong_answer_or_resources": 2
+        },
+        "generations": 128,
+        "independent_questions": 32,
+        "parse_fraction": 1.0,
+        "parsed_generations": 128,
+        "pass_at_1": 0.984375,
+        "pass_at_4": 1.0,
+        "questions": 32,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 126,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 46.0,
+          "min": 36.0,
+          "p25": 41.0,
+          "p50": 42.0,
+          "p75": 42.0,
+          "p95": 46.0
+        },
+        "samples_per_question": 4,
+        "stop_reasons": {
+          "native_eos": 128
+        },
+        "task_types": {
+          "compute": 128
+        },
+        "traces": {
+          "inconsistent": 2,
+          "verified": 126
+        }
+      },
+      "state": "B",
+      "status": "measured"
+    }
+  ]
+}

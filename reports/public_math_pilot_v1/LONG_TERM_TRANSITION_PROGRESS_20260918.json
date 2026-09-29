@@ -1,0 +1,304 @@
+{
+  "status": "running_partial_not_closeout",
+  "observed_at_utc": "2026-09-18T03:30:00.076386+00:00",
+  "scientific_target": "Complete the frozen public-math pilot, then review the ACL/ICML long-term direction; no new experiment authorized.",
+  "evaluator_source_commit": "abfff696f68cdd8aa9b32dd410330ee5424d5c80",
+  "training": {
+    "SFT": {
+      "committed_step": 128,
+      "physical_completed_update_records": 128,
+      "manifest_sha256": "fe879b76cd1ff9e92b51899e6cac67b984ebd71e2fbc061d7128ff5005e17faa"
+    },
+    "DFT": {
+      "committed_step": 128,
+      "physical_completed_update_records": 128,
+      "manifest_sha256": "d5ed5585d241f33e2585fe0d1fdc451a266fb71777b2de75227ac5b4b55d8fe7"
+    },
+    "TrimSFT": {
+      "committed_step": 128,
+      "physical_completed_update_records": 160,
+      "manifest_sha256": "6c58f3979fc8151efdc1d3a9fece2628bff0802d1499f1aa4303c69d178f5966"
+    },
+    "QDW_v0": {
+      "committed_step": 128,
+      "physical_completed_update_records": 128,
+      "manifest_sha256": "521cf05abafa01456a75241fb6f793fcab8d7babadcccc7a03ed1022e328d0b2"
+    }
+  },
+  "formal_updates": 512,
+  "physical_completed_training_records": 544,
+  "coverage": {
+    "logical_target": 31203,
+    "logical_saved": 13363,
+    "logical_remaining": 17840,
+    "MATH500": {
+      "target": 20000,
+      "saved": 6256
+    },
+    "GSM8K": {
+      "target": 6595,
+      "saved": 6595
+    },
+    "dev": {
+      "target": 4608,
+      "saved": 512
+    },
+    "completed_scored_runs": 18,
+    "scored_run_target": 54
+  },
+  "generation_by_run": {
+    "Base-GSM8K": {
+      "complete": true,
+      "saved_batch_outputs": 1319
+    },
+    "Base-MATH500-draw0": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "Base-MATH500-draw1": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "Base-MATH500-draw2": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "Base-dev": {
+      "complete": true,
+      "saved_batch_outputs": 480
+    },
+    "DFT-GSM8K": {
+      "complete": true,
+      "saved_batch_outputs": 1319
+    },
+    "DFT-MATH500-draw0": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "DFT-MATH500-draw1": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "DFT-MATH500-draw2": {
+      "complete": false,
+      "saved_batch_outputs": 0
+    },
+    "QDW_v0-GSM8K": {
+      "complete": true,
+      "saved_batch_outputs": 1319
+    },
+    "QDW_v0-MATH500-draw0": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "QDW_v0-MATH500-draw1": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "SFT-GSM8K": {
+      "complete": true,
+      "saved_batch_outputs": 1319
+    },
+    "SFT-MATH500-draw0": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "SFT-MATH500-draw1": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "SFT-MATH500-draw2": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "TrimSFT-GSM8K": {
+      "complete": true,
+      "saved_batch_outputs": 1319
+    },
+    "TrimSFT-MATH500-draw0": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "TrimSFT-MATH500-draw1": {
+      "complete": true,
+      "saved_batch_outputs": 500
+    },
+    "TrimSFT-MATH500-draw2": {
+      "complete": false,
+      "saved_batch_outputs": 256
+    }
+  },
+  "base_dev_reused_outputs": 32,
+  "live_physical_accounting": {
+    "physical_generation_reservations": 13991,
+    "known_old_lost_attempts": 128,
+    "inflight_difference": 500,
+    "non_atomic_live_snapshot": true,
+    "physical_generation_cap": 31331
+  },
+  "resources": {
+    "disk_free_bytes": 88450621440,
+    "cgroup_current_bytes": 7339573248,
+    "cgroup_limit_bytes": 257698037760,
+    "cgroup_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+    "recent_gpu_mean_utilization": [
+      97.77777777777777,
+      98.75555555555556
+    ],
+    "recent_mean_sample_count": 90,
+    "telemetry_interval_seconds": 20,
+    "dual_gpu_peak_used_mib": {
+      "0": 80607.0,
+      "1": 80687.0
+    },
+    "math_completed_batches": 25,
+    "math_batch_seconds": {
+      "min": 330.9140350930393,
+      "mean": 748.4027396702767,
+      "max": 777.9467095583677
+    }
+  },
+  "health": {
+    "both_original_workers_alive": true,
+    "coordinator_alive": true,
+    "scorer_alive": true,
+    "new_exit_receipts": [],
+    "targeted_error_log_matches": {
+      "main/parallel_evaluation/attempt_b9105611db9d4f5c956fa6b5155622fa/worker_0.log": [],
+      "main/parallel_evaluation/attempt_b9105611db9d4f5c956fa6b5155622fa/worker_1.log": [],
+      "dual_evaluate_attempt01.log": [],
+      "analyze_attempt03_dual.log": []
+    }
+  },
+  "artifact_presence": {
+    "observed_at_utc": "2026-09-18T03:33:45.467160+00:00",
+    "status": "all_12_components_present_sizes_and_manifest_identities_match_prior_full_hash",
+    "full_binary_rehash_this_check": false,
+    "prior_full_hash_at_utc": "2026-09-18T00:23:25.859434+00:00",
+    "files": [
+      {
+        "arm": "SFT",
+        "step": 128,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "b911294876f47ba9c5663905832b1d9d675c6fd65c8eedb64f1b087f74a1a68f"
+      },
+      {
+        "arm": "SFT",
+        "step": 128,
+        "component": "training",
+        "bytes": 12350711075,
+        "sha256": "e65ca77daafb8fe4588ce431f880e9c95673418972b677a3c9d91b8e5b59eefb"
+      },
+      {
+        "arm": "SFT",
+        "step": 64,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "3121f8975f99be4f9590fbb7e016085319ff3b680dd342e5ed0171a43b92b228"
+      },
+      {
+        "arm": "DFT",
+        "step": 128,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "50745399f6d10c2ea30380e835a7c83274bb33530627d4d3f9e4c32829e1586e"
+      },
+      {
+        "arm": "DFT",
+        "step": 128,
+        "component": "training",
+        "bytes": 12350711075,
+        "sha256": "0dab797425e64760964b3e2b324e10f11504f97e36c12b53a0f189193a5b32b7"
+      },
+      {
+        "arm": "DFT",
+        "step": 64,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "10580092ac8d84272e2541dc5209d5aca05bc1b174f47cf33273718b6e7c42a2"
+      },
+      {
+        "arm": "TrimSFT",
+        "step": 128,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "3d5da28685625be42c2a17c325c082b5cec9b6312c787294fe788a2c513b13c8"
+      },
+      {
+        "arm": "TrimSFT",
+        "step": 128,
+        "component": "training",
+        "bytes": 12350833379,
+        "sha256": "82e4d940ef99838202c0943f7001684befaa9432b2300d97d5a7a3406fc2ce3d"
+      },
+      {
+        "arm": "TrimSFT",
+        "step": 64,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "91da4b1567f3d5e47e34d534e172f52c49bdf2f5f364a25b1065961d236e3f6e"
+      },
+      {
+        "arm": "QDW_v0",
+        "step": 128,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "3d2b96012c18db36aa3c661c808dad21cd794bc8caa91f7eaa07022d205fe5ae"
+      },
+      {
+        "arm": "QDW_v0",
+        "step": 128,
+        "component": "training",
+        "bytes": 12350901603,
+        "sha256": "709795428af4c5d58dd72048bb44fbef55111fcca9087820f8461227061be851"
+      },
+      {
+        "arm": "QDW_v0",
+        "step": 64,
+        "component": "model",
+        "bytes": 7108460553,
+        "sha256": "ab36e534a89c5536342ad970c61d14f59e8f858d0a1c1cf51a8c34b0967c9057"
+      }
+    ],
+    "arms": {
+      "SFT": {
+        "step": 128,
+        "retained_manifest_records": 4
+      },
+      "DFT": {
+        "step": 128,
+        "retained_manifest_records": 4
+      },
+      "TrimSFT": {
+        "step": 128,
+        "retained_manifest_records": 4
+      },
+      "QDW_v0": {
+        "step": 128,
+        "retained_manifest_records": 4
+      }
+    },
+    "total_bytes": 106270841556
+  },
+  "completion_files": {
+    "PREPARATION_COMPLETE.json": true,
+    "TRAINING_COMPLETE.json": true,
+    "EVALUATION_COMPLETE.json": false,
+    "analysis/SCORING_COMPLETE.json": false
+  },
+  "deadlines_utc": {
+    "model": "2026-09-18T06:35:00Z",
+    "hard_GPU": "2026-09-18T06:45:00Z",
+    "CPU": "2026-09-18T06:50:00Z",
+    "provider_timer": "2026-09-18T06:58:00Z"
+  },
+  "new_model_calls_by_this_audit": 0,
+  "limitations": [
+    "MATH and trained-dev incomplete.",
+    "Single training seed; question bootstrap excludes seed uncertainty.",
+    "Original 128 lost GSM attempts and 32 lost TrimSFT updates remain charged.",
+    "TrimSFT recovery is not bitwise GPU replay; cause unisolated.",
+    "No full binary rehash in this check; prior full hash verified at 00:23 UTC."
+  ]
+}

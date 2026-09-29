@@ -1,24 +1,277 @@
-## LT001 — 2026-09-11: test acquisition constraints before claiming a new allocation principle
+# Final closeout — public math complete; provider off; awaiting owner
 
-Choose the long-term primary question as a prospective test of whether measured
-acquisition yield changes a useful breadth/depth recommendation on new pools
-and a held-out allocation scale. The shortest-path paper and MathQA extension
-directly overlap the generic P/K question; its pinned source also uses known
-solution capacities. Keep cache scenarios separate from measured generation.
-A small teacher cannot price the strong teacher's cached training outcomes.
+All31,203 logical outputs and54 scored runs are complete and independently
+reconciled. Four arms each committed128 updates;544 physical completed training
+records and31,331 physical generation attempts preserve32 lost updates and128
+lost attempts. QDW's primary MATH result is negative versus DFT and TrimSFT;
+QDW versus SFT is inconclusive. GSM/dev gains do not establish broad superiority.
 
-Prepare PF/SF/fixed-mix protocols and independent validation, preserving all
-zero/incomplete-K parents, common SFT dose and evaluation, and separate pool/
-training/question uncertainty. Twelve proposed confirmation endpoints test
-resource-constrained policy performance; stronger causal cost attribution
-requires a separately reviewed within-pool control. No grid or acquisition
-stage is authorized by this plan. Shared finances/exposure history do not reset.
+Provider OFF was confirmed2026-09-18 11:26UTC (04:26PDT); the temporary timer
+was cleared, heartbeat paused and finite local observer cancelled. Final128
+model/optimizer/RNG artifacts remain on the stopped server; planned step64
+pruning is independently receipt-verified. Never restart or repeat this round.
 
-The course core targets November 8 completion, before November presentations;
-December 14 is the final report and January 10 an internal manuscript target.
-ICLR continuation depends on submission/acceptance and actual content overlap.
-See [design package](tracks/icml_acl_2027/README.md). All prior decisions remain
-historical evidence; E017 authorization does not need to be requested again.
+Read [the final report](../reports/public_math_pilot_v1/FINAL_EXECUTION_SUMMARY_ZH.md) and the adjacent FINAL_HANDOFF_ACL_ICML_20260918.md.
+Future experiments require the owner's direction and advance runtime/GPU-hour/
+cost/stop estimates. The long-term branch was not changed. All older current-state
+sections below are dated historical snapshots superseded by this final closeout.
+
+# Latest override — finish this round overnight, then shut down
+
+The owner now authorizes overnight completion of the existing finite queue and
+requires a runtime/cost estimate before every future experiment. This supersedes
+all older midnight/no-overnight instructions below. New UTC deadlines on
+2026-09-18: model13:35, GPU13:45, CPU13:50, provider13:58 (06:58 PDT).
+Finish early and shut down promptly; no new science or automatic next direction.
+See [the overnight amendment](../reports/public_math_pilot_v1/OVERNIGHT_COMPLETION_AMENDMENT_20260918.md) for the budget, safe deadline transition,
+record retention and future pre-experiment estimation requirements.
+
+# 2026-09-18 UTC — complete the current pilot and move toward ACL/ICML
+
+The owner ended the ICLR submission sprint and requested a careful progress
+summary before moving to the existing long-term branch after this round. The
+frozen four-arm public-math experiment continues within the original nightly
+boundaries. Future cost planning is no longer waived because of the abstract.
+No automatic optional training, seed, benchmark, hardware change, submission or
+branch integration is introduced. The current worktree remains the coordinator
+until its finite experiment, verification and normal shutdown are reconciled.
+
+[The stage review](../reports/public_math_pilot_v1/LONG_TERM_TRANSITION_20260918_ZH.md)
+separates arithmetic decision-supervision findings, the completed secondary GSM
+result, incomplete primary MATH, and the old LT001 acquisition-allocation proposal.
+Its proposals are not launched work. Exposure history, negative results, shared
+spending and E015 recovery obligations transfer with the project. The existing
+long-term branch was inspected read-only and was not edited or merged.
+
+# Current closeout — E038/E039 complete; provider off; paused
+
+The owner-authorized G-single/G-paired phase completed from E031 step32:
+256 updates per arm, 3,344 unique generations, zero fault repeats, 288 operator
+contexts and 4,096 reference forwards. Execution source is
+801ef1279a2a817f754f856d9191725eebb1121a; E030 is not an ancestor.
+
+The two primary paired-minus-single outcomes show no observed recipe advantage.
+Counts below are ordered G-single versus G-paired.
+H greedy both-target success is 12/48 versus 10/48 (−4.17pp, 95% group interval
+[−16.67,+8.33]); F sampled pass@1 is 14/384 versus 13/384 (−0.26pp,
+[−2.60,+2.34]). Shared training repairs most H interface failures, but conditional
+choice/free construction remain weak. One seed and 48 exploratory number groups
+do not establish equivalence, a population effect, structural OOD or a mechanism.
+
+All 3,422 inventoried files plus the export manifest are independently preserved,
+including four adapters and two latest optimizer/RNG states. Compact public data
+has 3,409 byte-exact files including the manifest; six binaries and eight machine
+metadata files remain private with original identities. Independent audits cover
+154 executed sources, 512 updates and all token/stop/math/generation contracts.
+40,473,429,556 bytes of verified historical duplicates were removed; final free
+space is 39.59 GiB. Preserve E015 unique weights: its independent full backup is
+still incomplete. Do not release/delete the instance volume.
+
+Provider off confirmed 2026-09-17 04:54:39 UTC; temporary timer cleared04:55:16.
+Whole powered window85m39s, CNY11.39145 proxy at7.98/hour, not an invoice.
+One new process receipt3018s; combined27 receipts/17623s. Older generation and
+process ledgers remain immutable. No further GPU/model work is authorized.
+
+Read reports/post_e037_goal_training/EXECUTION_SUMMARY_ZH.md, RESULTS.md,
+C_INTERFACE_ERROR_AUDIT.md, SEWON_BRIEF.md and COST_AND_CLOSEOUT.json. Next-step
+training-example/critical-token diagnostics are proposals only. The task is
+complete and paused for owner planning. Earlier current/preparation/proposal-only
+statements below are historical and superseded by this closeout.
+
+# Historical closeout — E037 complete; provider off
+
+E037 finished the owner-authorized post-E036 goal diagnostic:2112 unique outputs,
+192 operator contexts/768 candidate scores, zero new training. All2124 exported
+files and complete CPU token/stop/score audits passed. Provider off2026-09-17
+02:47:37UTC; timer cleared. Whole window41m37.491s/CNY5.5361 proxy, not invoice.
+One new receipt1149s; combined26/14605, historical4784/4864 unchanged.
+
+F/H sampled correct counts are5/33,8/41,6/43,8/42 per192 (C-S,C-P,B-S,B-P).
+C greedy43/45/44/47 per48. H paired-target sampled success is2/2/2/1 per96
+paired draws nested within24 groups. D_goal is directionally positive in all
+four states, but local both-target unique argmax only0/1/0/1 per24: do not claim
+no target sensitivity, reliable conditional choice, or a pure search mechanism.
+Read reports/post_e036_goal_probe/RESULTS.md, INTERFACE_ERROR_AUDIT.md and
+TRAIN_SUPPORT_LINEAGE_CORRECTION.md. The frozen preparation support-union label
+incorrectly included non-ancestor E030; canonical report uses768 rows/512 groups.
+Frozen original data/source remains preserved; no result or question was changed.
+
+Task is complete and paused for owner planning. Conditional G-single/G-paired
+training is a proposal only; no new GPU task, sweep or automatic continuation.
+Preserve E015 unique weights; its older independent full backup is still incomplete.
+Earlier phase instructions and results below remain historical.
+
+# Historical closeout — E031–E036 complete; server off
+
+The owner-authorized E031–E036 queue is complete: two32-update parents and
+four256-update endpoints (1,088 updates), all4,192 new generations, and the
+optional A/B-reference NLL forwards. Independent local verification covers
+all20 adapter checkpoints,6 optimizer/RNG recoveries and4,192 unique new requests;
+30/30 combined historical/new evaluation views pass tokenizer/math replay.
+There are4,768 unique completed outputs and4,784 actual generations, preserving
+the original16 fault attempts;80 of the4,864 cap remain unused.
+
+Discovery sampled pass@1 for C-S/C-P/B-S/B-P is29/384,26/384,36/384,16/384;
+pass@4 is15/96,20/96,14/96,15/96; greedy is8/96,13/96,10/96,17/96.
+Interactions are−4.43pp,−4.17pp,+2.08pp, respectively; all full/nondegenerate
+question/template interaction intervals include zero and exclude training-seed uncertainty.
+C and B both reach128/128 target/atomic compute scores; target-specific readiness
+is not demonstrated. Training16 greedy is8/16,3/16,10/16,4/16 despite lower Paths
+reference NLL. This is a one-seed restricted discovery result, not equivalence,
+a general Paths benefit/harm, or a pure skill/routing mechanism.
+
+Provider shutdown confirmed23:02:11UTC; temporary timer cleared. Conservative
+whole-window proxy1h38m11s at7.98CNY/h isCNY13.06, not an invoice. All3,515
+inventoried files (2,900,439,829bytes) are independently SHA-verified; final disk
+free2.885GiB. One new receipt charges4,541s, bringing the total to25/13,456;
+old24/8,915 and E030 stay unchanged. E015 unique full weights remain protected.
+
+The task is now paused for the owner’s next plan. The proposed bounded
+one-hole target-conditioned completion study is a proposal only. No next GPU
+job, repeat, LR sweep, n8, RL, alternative model or reserved-test run is queued.
+
+Read [full results](../reports/ARITHMETIC_E031_E036_RESULTS.md),
+[discussion draft](../experiments/thursday_probe_v2/THURSDAY_BRIEF_resume_r1.md),
+and [actual cost/export closeout](../experiments/thursday_probe_v2/COST_REPORT_resume_r1.json).
+
+---
+
+The following entries are historical and do not authorize a new run.
+
+# Post-E030 continuation authorized — September16,2026
+
+The owner requested execution of the new resume plan. E031–E036 will continue
+with unchanged scientific recipes and next-segment/batch resource admission.
+Carry592 actual generations;4192 new fixed requests lead to4784 within4864.
+The finite package is cumulative8 powered-on hours/CNY65, first limit wins;
+no outcome-based cell selection or repeated E030. Read
+[resume amendment](../experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md).
+Execution source and recovery checks are being published before new model work.
+Earlier closeouts below remain historical evidence.
+
+---
+
+## D035 — 2026-09-16: preserve partial arithmetic results and resource failure
+
+The finite window ended after E030 and base measurements, before either prep
+parent or any factorial child. E030 used the exact32 updates/23,856 supervised
+tokens; fit correctness23/32 ->25/32, check8/16 ->8/16. Separate task types:
+construction0/16 ->1/16 (fit0/8 ->1/8; check0/8 ->0/8), computation31/32 ->32/32.
+Native EOS32/48 ->48/48, caps13 ->0, parsed33/48 ->44/48. Reference NLL fell,
+but free construction learning/generalization is not established. C0 discovery
+was0/96 correct with72 caps; these failures remain in the denominator.
+
+The outcome-independent resource estimate was23,059s for the remaining queue,
+versus6,827s remaining in the registered window. It applies the slowest base
+throughput to all later models, then adds a1.5 multiplier and420s; this is a
+conservative forecast, not measured evidence that the grid takes6.4h. The
+three-hour planning window/estimator was inadequate for admission; the owner
+was not missing authorization and disk space did not cause the stop. No
+accuracy, probe significance, NLL or retention criterion selected the stop.
+
+Two attempts charged478+1065=1543 process seconds. The first was manually
+stopped before training for tokenizer metadata overhead; the published repair
+reproduced all12 persisted fault records except duration.48 completed baseline
+records were reused. There are576 unique completed results,592 actual attempts,
+12 saved fault records and4 unpersisted fault records (never reconstructed).
+All576 completed prediction records and66 raw batch records covering528 newly generated outputs pass independent audit.
+All64 export-inventory entries (about522MB), including every new full adapter
+and recovery state, are independently SHA-verified; two final manifests are
+separately retained and hashed. Provider shutdown confirmed20:54:07UTC, timer
+cleared, final data-disk free5.60GiB.43m07s powered-window proxy at7.98CNY/h is
+aboutCNY5.73, not an invoice. Combined24 receipts/8915 charged seconds; original
+21-receipt ledger remains unchanged. E018 remains failed and E015 is preserved.
+
+Next planning adjustment, not an active queue: reuse completed E030/C0
+measurements, keep the same release/recipe/seeds and remaining E031–E036.
+Prepare an outcome-independent staged runtime plan: measure both already
+registered prep parents and their existing evaluations first, then size a
+bounded complete four-cell phase using relevant trained-model throughput.
+Reordering evaluations requires a published engineering amendment and seed/RNG
+identity checks; scores still cannot determine cell inclusion. Do not simply
+raise the timer based on the6.4h worst-case forecast, tune LR on these outcomes,
+replay E030 or use its adapter as a prep parent. Preserve592 historical attempts
+against the4864 phase generation cap; remaining fixed work is4128 generations
+and1088 updates. No new phase allowance, server startup, optional expansion or
+paid API is scheduled; the owner will adjust the plan.
+
+## D034 — 2026-09-16: authorize separate arithmetic factorial after E018
+
+The owner explicitly requested execution of the post-E018 revision. Preserve
+E018's failed34/39 retention result and all old source/data/receipts; its noisy
+text-task threshold no longer gates the new arithmetic protocol. Start all new
+states from the original base/identical initial LoRA, never the E018 adapter.
+The finite E030–E036 queue uses uniform5e-5 peak LR, one32-update arithmetic
+calibration, two32-update prep parents and four256-update main children. Probe
+significance, score improvement and Paths benefit affect interpretation, not
+cell selection. Only hard implementation/resource errors stop execution.
+
+The existing primary subtraction-to-multiplication data are retained. CPU audit
+freezes202/54 train and79/17 discovery nondegenerate/degenerate supports, keeps
+8.98% fine-structure TV and2.75% prep token residual. Evaluation is4704 fixed new
+generations including96 C0 greedy, bounded by4864. Optional prefixes/n=8 remain
+off. Publish the complete CPU-tested source before owner startup; bound the whole
+rental and preserve every new adapter/recovery state before provider shutdown.
+See [protocol v2](../experiments/thursday_probe_v2/PROTOCOL_AMENDMENT_v2.md).
+No new model result, server call, old ledger reset, extra machine or delegate
+occurred in offline preparation. E015 preservation remains open.
+
+## D033 — 2026-09-16: execute finite Thursday plan; stop at E018 retention failure
+
+The owner's explicit execution request supersedes prior review-only status for
+this bounded phase. Register C021 and E018, preserving the historical ledger.
+Retain the exact253 training anchors despite a disclosed material reference
+error found in the fixed32 quality sample; use this corpus only for engineering
+optimization and retention, not certified reasoning-path claims. Preserve all
+source bytes; no correction, filtering or backfill.
+
+E018 completes its exact dose and160 free generations. Its net observed-dev
+improvement (+12 correct) does not cancel5 lost successes:34/39 retention fails
+the prespecified90% screen. Stop before preps/main/fallback. Do not relabel an
+operational failure as a statistical proof of universal harm. All160 raw streams
+are independently checked; complete adapter and compact outputs are retained.
+Provider shutdown is confirmed. Charge371 seconds to a separate915-second phase;
+the old7001/7200 remains immutable. No unused allowance creates a pending queue.
+[Evidence and next-decision alternatives](../experiments/thursday_probe/THURSDAY_BRIEF.md).
+
+## D032 — 2026-09-15: accept E017 completion calibration; preserve prior failures
+
+The owner explicitly resumed the sprint and supplied a new A800 connection.
+Execute only the prepublished E017 release after64 Linux passes, matching model/
+software, exact20-entry ledger and provider shutdown backstop. The one64-parent
+run passes its fixed completion screen:49 parsed,39 task-correct,one cap,zero
+invalid/false-EOS records. All retained prefixes match E016; the13 additional
+task-correct counts are a completion-contract difference, not learned accuracy.
+
+Independent export, local/server audits,21-receipt reconciliation and provider
+shutdown are complete. Preserve all old records; charge80 seconds, leaving199.
+No automatic E018 or new phase allowance. Review P006 B/C against this actual
+ledger and finish a verified release before requesting further startup. The
+scientific question and ICLR submission readiness remain unresolved.
+[Result and limitations](../reports/REAL_MATH_E017_RESULTS.md).
+
+## ICLR planning note — 2026-09-11: retain a narrow question and explicit quality exits
+
+Prepare an offline September11–25 sprint, with genuine-abstract review on
+September17 and complete-paper review on September22. Current evidence supports
+engineering and evaluation prerequisites, not a real-data allocation advantage
+or a novel contribution. Direct prior work includes the Shortest Path question/
+answer comparison and MathQA study; P/K, accounting, or model-size changes alone
+cannot resolve novelty. See the [claim inventory](tracks/iclr_2027/CLAIMS_AND_EVIDENCE.md).
+
+The review-only scientific minimum retains Repeat/Solutions/Breadth and defers
+Mixed, second-task/model and acquisition-cost expansion. P006's small LoRA dose
+does not establish feasibility at C017's6.79-times larger supervision; an explicit
+larger-dose retention gate is part of the proposed review. No frozen recipe,
+score, data, source, receipt, allowance or reserved-data status changes here.
+
+E017's accepted one-run scope remains in force. Its frozen main-publication
+guard requires the existing published execution snapshot, not a research-branch
+tip; document source routing without changing the guard or rewriting refs.
+Reuse prior passed CPU evidence and leave the two Linux watchdog checks for
+startup. E018 and the later scientific/test phases remain separate decisions.
+If either quality gate fails, retain all evidence and continue research.
+[Plan and review packet](tracks/iclr_2027/README.md).
 
 ## D031 — 2026-09-10: execute only the prepared E017 completion calibration
 
@@ -691,3 +944,6 @@ Cached accepted outputs cannot establish generation costs, and a different
 small teacher cannot price them. This review changes no frozen protocol or
 resource allowance. See the
 [dataset evidence review](../reports/DATASET_SELECTION_EVIDENCE_20260910.md).
+
+
+2026-09-17 public-math finite phase: execute the owner-supplied plan subject to its complete-phase resource gate. Register E044–E047, fresh base/full parameters, no inherited adapters. Engineering-only preflight source is separately frozen. Raw recovery export at measured SSH throughput prevents main admission; do not reduce the benchmark or omit recoveries. Preserve MATH-500 official empty-normalization reference as unresolved, without modifying upstream rules or denominators.

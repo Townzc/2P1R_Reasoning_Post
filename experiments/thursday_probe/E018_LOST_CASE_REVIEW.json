@@ -1,0 +1,48 @@
+{
+  "scope": "All five observed-development lost cases, no selection among losses",
+  "review": "Manual check of question, original and final completion, plus exact arithmetic",
+  "all_five_final_outputs_parsed_and_native_eos": true,
+  "score_relabeling": false,
+  "rows": [
+    {
+      "problem_id": "gsm8k/train/06190",
+      "correct_answer": "62",
+      "adapter_answer": "2",
+      "category": "quantity_scope",
+      "evidence": "Omits31 days and reports only8.5-6.5.",
+      "correct_calculation": "(8.5-6.5)*31=62"
+    },
+    {
+      "problem_id": "gsm8k/train/00262",
+      "correct_answer": "3",
+      "adapter_answer": "1",
+      "category": "capacity_vs_current_and_inconsistent_division",
+      "evidence": "Uses current8 instead of full12 for Jill capacity, then divides8 by8 despite deriving16.",
+      "correct_calculation": "(2*12)/(12-4)=3"
+    },
+    {
+      "problem_id": "gsm8k/train/04122",
+      "correct_answer": "32",
+      "adapter_answer": "16",
+      "category": "ignored_processing_rate",
+      "evidence": "Replaces2 minutes per picture with1 minute.",
+      "correct_calculation": "960*2/60=32"
+    },
+    {
+      "problem_id": "gsm8k/train/02419",
+      "correct_answer": "10",
+      "adapter_answer": "2",
+      "category": "wrong_quantity_relationship",
+      "evidence": "Subtracts cubs140 from mother210 rather than adding total demand.",
+      "correct_calculation": "(210+4*35)/7/5=10"
+    },
+    {
+      "problem_id": "gsm8k/train/04355",
+      "correct_answer": "40",
+      "adapter_answer": "20",
+      "category": "arithmetic_sum_and_sign",
+      "evidence": "Claims80+60+110+140=330 instead of390, then boxes20 after deriving-20.",
+      "correct_calculation": "80+60+110+140-350=40"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "closed": true,
+  "generation_attempts": 4784,
+  "historical_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
+  "historical_ledger_unchanged": true,
+  "phase": "thursday_arithmetic_resume_r1",
+  "phase_charged_seconds": 4541,
+  "prior_charged_seconds": 8915,
+  "prior_receipts": 24,
+  "provider_shutdown_confirmed": true,
+  "raw_export_preserved_unchanged": true,
+  "raw_phase_ledger_sha256": "a9f80ae794219607c82e84a6c1cef1708cf4cade957af1e14a826179ca789a02",
+  "receipts": [
+    {
+      "attempt": 1,
+      "charged_seconds": 4541,
+      "command": [
+        "timeout",
+        "--signal=TERM",
+        "--kill-after=15s",
+        "7200s",
+        "PINNED_RUNTIME",
+        "-m",
+        "experiments.thursday_probe_v2.resume_queue",
+        "--worker",
+        "--snapshot",
+        "PINNED_MODEL_SNAPSHOT",
+        "--initial-checkpoint",
+        "PRESERVED_C0_CHECKPOINT"
+      ],
+      "exit_code": 0,
+      "failure": null,
+      "finished_at_utc": "2026-09-16T23:00:32.286553+00:00",
+      "generation_attempts_after": 4784,
+      "guard_seconds": 15,
+      "historical_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
+      "historical_ledger_unchanged": true,
+      "process_cap_seconds": 7200,
+      "run_id": "thursday_arithmetic_resume_r1",
+      "source_commit": "2379c90351bdb4ffa247f5b4c6c0fe6301e718d7",
+      "started_at_utc": "2026-09-16T21:44:51.366857+00:00",
+      "status": "completed",
+      "wall_seconds": 4540.916583754122,
+      "worker_exit_code": 0
+    }
+  ],
+  "reservations": 0,
+  "status": "completed_provider_shutdown_verified",
+  "total_charged_seconds_across_phases": 13456,
+  "total_receipts_across_phases": 25
+}

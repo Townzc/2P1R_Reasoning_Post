@@ -1,0 +1,151 @@
+{
+  "F_per_update": 8,
+  "H_per_update": 8,
+  "effective_batch_size": 16,
+  "epochs": 2,
+  "formal_endpoint": 128,
+  "lambda_multiplier": 5.0,
+  "learning_rates_sha256": "bef94c65a8a38ec50ea82602db705c446229920435dcf83e76e5f06c33926fa3",
+  "maximum_forward_sequence_equivalents": 16384,
+  "maximum_generations": 5000,
+  "microbatch": 1,
+  "optimizer_recipe": "AdamW(.9,.999,1e-8,weight_decay0,foreachFalse), clip1; FP32 parameters/BF16 autocast/SDPA/TF32off",
+  "parents": {
+    "paired": {
+      "checkpoint_identity_sha256": "1220828d601e87cb3f5937b49004be69fc41e173281df8f14f50740f568da55c",
+      "original_checkpoint128_identity_sha256": "14f4ee8afb7df5ceeb70c2cff97ac20692ffc9e9331ae6fcacb8648073f7169d",
+      "original_training_identity_sha256": "4903d26455a8870fe3775314d4e0212c73c0ad64303593587e83689fc16a02a3",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+      },
+      "parent_checkpoint_step": 256,
+      "parent_experiment_id": "E039",
+      "run_id": "goal_train_e039_r1",
+      "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e039_r1/run_manifest_final.json",
+      "source_manifest_sha256": "4b0495c89b7abb74bc851862302c49da01a3066a160b99fb376a828ea368274a"
+    },
+    "single": {
+      "checkpoint_identity_sha256": "c464bd4265ef80b877abe3a57e34325760f45c7b16c22a5b98aa2d9b3a6ee857",
+      "original_checkpoint128_identity_sha256": "2c9757707a6be303c53520405524cf3b4dbf7ab61a42c0a3fd1b1ca6a295b11e",
+      "original_training_identity_sha256": "f8e5db29413de344b2784d94d828c36e03c0cd480d77737bd809aa38a9c2e75b",
+      "parent_adapter": {
+        "parameters": 18464768,
+        "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+      },
+      "parent_checkpoint_step": 256,
+      "parent_experiment_id": "E038",
+      "run_id": "goal_train_e038_r1",
+      "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e038_r1/run_manifest_final.json",
+      "source_manifest_sha256": "85004a9d6fae95def4db31f44a307c0604c7fefa6f7cd5b83e76664e7239f795"
+    }
+  },
+  "phase": "post_e039_decision_supervision_v1",
+  "planned_generations": 4736,
+  "prior_training_data_sha256": {
+    "paired": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+    "single": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9"
+  },
+  "rental_cost_cny_cap": 40,
+  "roles": [
+    {
+      "data": "single",
+      "objective": "ordinary_response_CE",
+      "optimizer_reset": true,
+      "parent": {
+        "checkpoint_identity_sha256": "c464bd4265ef80b877abe3a57e34325760f45c7b16c22a5b98aa2d9b3a6ee857",
+        "original_checkpoint128_identity_sha256": "2c9757707a6be303c53520405524cf3b4dbf7ab61a42c0a3fd1b1ca6a295b11e",
+        "original_training_identity_sha256": "f8e5db29413de344b2784d94d828c36e03c0cd480d77737bd809aa38a9c2e75b",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "parent_checkpoint_step": 256,
+        "parent_experiment_id": "E038",
+        "run_id": "goal_train_e038_r1",
+        "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e038_r1/run_manifest_final.json",
+        "source_manifest_sha256": "85004a9d6fae95def4db31f44a307c0604c7fefa6f7cd5b83e76664e7239f795"
+      },
+      "role": "S-U",
+      "scheduler_reset": true,
+      "updates": 128
+    },
+    {
+      "data": "single",
+      "objective": "first_decision_span_weighted_CE",
+      "optimizer_reset": true,
+      "parent": {
+        "checkpoint_identity_sha256": "c464bd4265ef80b877abe3a57e34325760f45c7b16c22a5b98aa2d9b3a6ee857",
+        "original_checkpoint128_identity_sha256": "2c9757707a6be303c53520405524cf3b4dbf7ab61a42c0a3fd1b1ca6a295b11e",
+        "original_training_identity_sha256": "f8e5db29413de344b2784d94d828c36e03c0cd480d77737bd809aa38a9c2e75b",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "parent_checkpoint_step": 256,
+        "parent_experiment_id": "E038",
+        "run_id": "goal_train_e038_r1",
+        "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e038_r1/run_manifest_final.json",
+        "source_manifest_sha256": "85004a9d6fae95def4db31f44a307c0604c7fefa6f7cd5b83e76664e7239f795"
+      },
+      "role": "S-D",
+      "scheduler_reset": true,
+      "updates": 128
+    },
+    {
+      "data": "paired",
+      "objective": "ordinary_response_CE",
+      "optimizer_reset": true,
+      "parent": {
+        "checkpoint_identity_sha256": "1220828d601e87cb3f5937b49004be69fc41e173281df8f14f50740f568da55c",
+        "original_checkpoint128_identity_sha256": "14f4ee8afb7df5ceeb70c2cff97ac20692ffc9e9331ae6fcacb8648073f7169d",
+        "original_training_identity_sha256": "4903d26455a8870fe3775314d4e0212c73c0ad64303593587e83689fc16a02a3",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "parent_checkpoint_step": 256,
+        "parent_experiment_id": "E039",
+        "run_id": "goal_train_e039_r1",
+        "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e039_r1/run_manifest_final.json",
+        "source_manifest_sha256": "4b0495c89b7abb74bc851862302c49da01a3066a160b99fb376a828ea368274a"
+      },
+      "role": "P-U",
+      "scheduler_reset": true,
+      "updates": 128
+    },
+    {
+      "data": "paired",
+      "objective": "first_decision_span_weighted_CE",
+      "optimizer_reset": true,
+      "parent": {
+        "checkpoint_identity_sha256": "1220828d601e87cb3f5937b49004be69fc41e173281df8f14f50740f568da55c",
+        "original_checkpoint128_identity_sha256": "14f4ee8afb7df5ceeb70c2cff97ac20692ffc9e9331ae6fcacb8648073f7169d",
+        "original_training_identity_sha256": "4903d26455a8870fe3775314d4e0212c73c0ad64303593587e83689fc16a02a3",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "parent_checkpoint_step": 256,
+        "parent_experiment_id": "E039",
+        "run_id": "goal_train_e039_r1",
+        "source_manifest": "runs/post_e037_goal_training_v1/goal_train_e039_r1/run_manifest_final.json",
+        "source_manifest_sha256": "4b0495c89b7abb74bc851862302c49da01a3066a160b99fb376a828ea368274a"
+      },
+      "role": "P-D",
+      "scheduler_reset": true,
+      "updates": 128
+    }
+  ],
+  "schedules_sha256": {
+    "paired": "ea96b14a411dabac324c917dfcc9ea4f58dc1feb058f87dc51551f5cc09c986a",
+    "single": "ea96b14a411dabac324c917dfcc9ea4f58dc1feb058f87dc51551f5cc09c986a"
+  },
+  "scientific_checkpoint_steps": [
+    64,
+    128
+  ],
+  "source_training_rows_unchanged": true,
+  "training_seed": 17,
+  "whole_powered_seconds_cap": 14400
+}

@@ -1,0 +1,11 @@
+# Owner amendment: retain artifacts on the experiment server
+
+The owner explicitly directed that the public math pilot should run on the server without downloading model/recovery artifacts to the Mac, with an abstract deadline the following day. This overrides the former mandatory independent-Mac-backup admission condition for this phase. No new machine, manuscript submission, spending-limit increase, or benchmark reduction follows from the amendment.
+
+Retain scientific model weights, full final optimizer/scheduler/RNG states, generation records, identities and checksums on the server. Perform local server integrity and load/recovery verification. Do not delete terminal scientific states merely because their local checksum passed; server verification is not an independent backup. No Mac transfer is queued or required. Old scientific records and unique E015 state remain protected.
+
+The historical RESOURCE_FEASIBILITY and closeout reports document the former transfer plan; their A800-priced 74GB download projection is no longer a current execution-admission blocker. Recalculate future costs using actual GPU work, local checkpoint I/O, storage and shutdown only. Preserve elapsed rental accounting rather than resetting prior allowances. If a hard cap remains insufficient, report that actual bound without restoring the superseded backup gate.
+
+Current Qwen2.5-Math-1.5B full-parameter recipe has 1,543,714,304 parameters. FP32 parameters plus FP32 gradients plus two FP32 Adam moment tensors require approximately24,699,428,864bytes (23.003GiB), before activations, logits/loss temporaries, CUDA workspaces and allocator reserve. A80080GB is expected to accommodate this recipe with microbatch2, length2048 and gradient checkpointing, but actual GPU peak memory remains unmeasured. Run the frozen longest-reference preflight before promising a measured peak. Four arms run sequentially, not as four simultaneously resident trainable models.
+
+The current SSH endpoint returned connection refused when checked after this amendment. Do not infer disk expansion or GPU availability from the request; check both upon the next reachable session. GPU preflight and formal runs have still not executed. The known MATH500 unresolved reference remains explicit; it must not silently turn into a wrong score or a reduced benchmark denominator.

@@ -1,25 +1,43 @@
-## 2026-09-11 — LT001: a falsifiable long-term acquisition study
+## 2026-09-16 — E037 goal diagnostic complete
 
-**Question.** Does measured acquisition yield change an allocation recommendation
-at fixed SFT dose, and does it transfer to independent problem pools and scale?
+Four frozen endpoints:2112 outputs and192 local contexts, no new training.
+Supplied skeleton improves sampled accuracy by14.6–19.3pp, but strict both-target
+completion is only1–2/96 paired draws per model. Positive local target-log-odds
+shifts coexist with0–1/24 both-target unique argmaxes. Interface copying and wrong
+operator choice both matter. The trace audit distinguishes correct local equations
+from faithful evaluation of the supplied program. Read the E037 results and
+explicit training-support lineage correction; no automatic G-single/G-paired run.
+Provider off02:47:37UTC, whole-windowCNY5.5361 proxy, full output backup verified.
 
-**Evidence.** A primary-paper audit confirms direct question/answer-budget
-overlap, including MathQA, and a pinned author-code check identifies an
-inventory-informed sampler. Existing cache attrition cannot recover original
-generation failures or prices. All E015/E016 failures and E017's not-run state
-remain part of the baseline; no new model results were created.
+## 2026-09-16 — complete E031–E036; readiness interaction remains unestablished
 
-**Design.** Specify PF/SF/fixed-mix with capped attempts, retained zero-yield
-parents, a common information contract and matched scientific SFT dose. The
-proposed independent block uses two pools and two paired optimizer seeds;
-question, training and acquisition uncertainty remain separate. Stronger causal
-cost wording needs a within-pool control beyond the minimal policy block.
+**Question and motivation.** Does the Paths-versus-Surface benefit change with
+target versus control computational preparation? The prior whole-queue forecast
+prevented admission after E030, so the owner authorized next-saveable-unit
+admission and64fixed training diagnostics while preserving the scientific recipe.
 
-**Decision.** Complete the course core by November 8 and use January for the
-manuscript. Reuse compatible sprint results, preserve the shared finances and
-exposure history, and prepare each new compute stage concretely for review.
-See [the full study package](tracks/icml_acl_2027/README.md). This milestone is
-offline literature/design and analytic precision planning only.
+**Design.** Original C0→two32-update parents→four256-update children; shared96
+question discovery set with4samples and separategreedy; post-training sentinel,
+fixed24midpoint and16training diagnostics. Same base/LoRA,seed17,LR5e-5,data and
+scorer. Total1088updates/4192newgenerations; no score selected whether a cell ran.
+
+**Result.** Sampledpass@1 CS/CP/BS/BP=29/384,26/384,36/384,16/384;pass@4=15/96,
+20/96,14/96,15/96;greedy=8/96,13/96,10/96,17/96. Full interactions−4.43/−4.17/
++2.08pp have intervals crossingzero. Both parents already get128/128 on target
+and atomic compute probes. Train16=8/16,3/16,10/16,4/16 despite lower Paths
+referenceNLL. Many outputs use correct resources but miss the target.
+
+**Analysis.** The intended selective readiness difference was not demonstrated;
+metric signs disagree, and nondegenerate greedy interaction iszero. Neither
+nonsignificance nor low scores show equivalence. One seed, structure/token
+residuals and stratifiedtrain16 constrain interpretation. Complete results expose
+an answer-fit/free-construction gap but do not identify a neural mechanism.
+
+**Decision.** Preserve this complete discovery result. Propose a bounded paired
+goal-conditioned one-hole completion diagnostic before another training grid;
+freeze counterfactual targets and scoring under a new protocol. No extension
+started. Provideroff23:02:11UTC, fullbackupverified, CNY13.06whole-windowproxy,
+25receipts/13456processseconds. [Result](../reports/ARITHMETIC_E031_E036_RESULTS.md).
 
 ## 2026-09-10 — E017 ready to measure the proposed stopping contract
 

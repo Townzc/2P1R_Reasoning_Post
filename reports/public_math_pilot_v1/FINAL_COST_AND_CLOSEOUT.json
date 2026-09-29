@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "phase": "public_math_pilot_v1",
+  "status": "complete",
+  "provider_state": "off_confirmed",
+  "provider_off_observed_at_utc": "2026-09-18T11:26:40.298979+00:00",
+  "provider_off_evidence_sha256": "44155742f9a874f968f38c7ebb20e3dcb536ad6d61c26643ac8ca45a85aab5f0",
+  "timer_cleared": true,
+  "heartbeat_paused": true,
+  "finite_local_observer_cancelled": true,
+  "instance_deleted": false,
+  "volume_deleted": false,
+  "new_direction_started": false,
+  "source": {
+    "training": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+    "evaluation_scheduler": "abfff696f68cdd8aa9b32dd410330ee5424d5c80",
+    "scorer": "c87ce060c3146f77f2f5f9e9dd0e96b2bb25a1a4"
+  },
+  "dose": {
+    "committed_updates": 512,
+    "physical_completed_training_records": 544,
+    "nonformal_updates": 5,
+    "annotation_forwards": 8192,
+    "logical_outputs": 31203,
+    "physical_generation_attempts": 31331,
+    "lost_generation_attempts": 128,
+    "lost_uncommitted_training_updates": 32,
+    "uncommitted_reservations": 0,
+    "completed_scored_runs": 54
+  },
+  "resources": {
+    "training_process_seconds": 3714,
+    "training_physical_update_seconds": 2250.172778110951,
+    "training_wall_first_start_to_final_end_seconds": 4670,
+    "preparation_process_seconds": 2521,
+    "engineering_preflight_process_seconds": 306,
+    "dual_coordinator_seconds": 37894,
+    "dual_worker_seconds": 74938.8627846241,
+    "dual_worker_gpu_hours": 20.816350773506695,
+    "committed_generation_batch_seconds_by_dataset": {
+      "MATH": 60652.41198254377,
+      "GSM": 6229.699443865567,
+      "dev": 14295.234845954925
+    },
+    "generation_batch_timing_excludes": "Original lost128 attempts and preflight-reused32 Base-dev outputs; batch wall includes token generation and batch bookkeeping, not GPU-kernel time.",
+    "cpu_scorer_process_lifetimes_seconds": [
+      10561,
+      22192,
+      15610
+    ],
+    "cpu_lifetimes_include_waiting": true,
+    "training_peak_allocated_bytes": 34137061376,
+    "measured_preflight_peak_gib": 33.41,
+    "dual_peak_device_used_mib": {
+      "0": 80607.0,
+      "1": 80927.0
+    },
+    "single_phase_peak_device_used_mib": 81009.0,
+    "host_cgroup_limit_bytes": 257698037760,
+    "host_cgroup_at_final_snapshot_bytes": 13394591744,
+    "host_cgroup_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+    "final_disk_free_bytes": 116600651776,
+    "terminal_recovery_components": 8,
+    "terminal_recovery_bytes": 77836999344,
+    "authorized_step64_pruned_bytes": 28433842212,
+    "telemetry_stream_hashes": {
+      "resource_telemetry_attempt01.jsonl": {
+        "rows": 915,
+        "sha256": "708ee1982ce80a1ef5703b82a1fa5bcabbf36129cea4d86ed763e32362d57af6"
+      },
+      "resource_telemetry_attempt02_dual.jsonl": {
+        "rows": 1106,
+        "sha256": "f42b1c25f4484370bcdd7188fc6368bdd5119b4cd3fb9a7d0afd28e3031da28b"
+      },
+      "resource_telemetry_attempt03_overnight.jsonl": {
+        "rows": 777,
+        "sha256": "d39750c9296a68f89ab453a2206f53bda6d6baa648c6298e8363eb574cd20a87"
+      }
+    }
+  },
+  "cost": {
+    "is_invoice": false,
+    "owner_quote_cny_per_card_hour": 8,
+    "overnight_budget_cny": 200,
+    "overnight_observed_start_utc": "2026-09-18T06:02:00+00:00",
+    "overnight_to_off_hours": 5.411194160833333,
+    "overnight_cost_proxy_range_cny": [
+      86.3626588069,
+      86.57910657333333
+    ],
+    "dual_observed_from_utc": "2026-09-18T00:39:43+00:00",
+    "dual_observed_through_off_hours": 10.782583049722222,
+    "dual_observed_cost_proxy_range_cny": [
+      172.09002547356667,
+      172.52132879555555
+    ],
+    "dual_power_on_precedes_observed_start": true,
+    "complete_powered_invoice_unavailable": true,
+    "exclusions": [
+      "Earlier single-card setup/training/evaluation rental",
+      "Earlier CPU-only preparation shutdown recorded in COST_AND_CLOSEOUT.json",
+      "Data-disk/storage and other provider fees"
+    ],
+    "historical_cost_record_preserved": "COST_AND_CLOSEOUT.json"
+  },
+  "failures": {
+    "gsm128_cuda_oom_preserved": true,
+    "trim_checkpoint_cache_failure_preserved": true,
+    "trim_gpu_replay_bitwise_equivalent": false,
+    "private_final_readonly_collection_timeouts": 2,
+    "collection_timeouts_added_model_calls": 0
+  },
+  "independent_audit": "FINAL_INDEPENDENT_AUDIT.json",
+  "result": "FINAL_RESULTS.json"
+}

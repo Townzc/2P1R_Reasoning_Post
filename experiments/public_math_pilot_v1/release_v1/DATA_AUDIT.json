@@ -1,0 +1,150 @@
+{
+  "all_question_nodes_including_benchmarks": 820892,
+  "benchmark_excluded_components": 85,
+  "benchmark_excluded_rows": 503,
+  "dedup_limitations": "Fixed MinHash candidates then exact Jaccard; approximate retrieval is not exhaustive pairwise or semantic deduplication.",
+  "dev_answer_parse_routes": {
+    "last_boxed_substring": 494,
+    "last_number_fallback": 18
+  },
+  "dev_input_lengths": {
+    "count": 512,
+    "max": 1518,
+    "mean": 540.1796875,
+    "min": 98,
+    "quantiles_0_25_50_75_100": [
+      98.0,
+      331.0,
+      485.0,
+      683.25,
+      1518.0
+    ]
+  },
+  "dev_questions": 512,
+  "dev_source_counts": {
+    "amc_aime": 4,
+    "aops_forum": 18,
+    "cn_k12": 179,
+    "gsm8k": 3,
+    "math": 3,
+    "olympiads": 88,
+    "orca_math": 94,
+    "synthetic_amc": 42,
+    "synthetic_math": 81
+  },
+  "future_train_pool_questions": 20000,
+  "group_representative": "canonical question of minimum original global Numina row_id",
+  "image_exclusion_regex": "!\\[[^\\]]*\\]\\s*\\(|<\\s*img\\b|<\\s*image\\b|\\\\includegraphics\\b|\\[asy\\]|\\[(?:image|diagram|figure)(?:\\s+\\d+)?\\]|(?:image|diagram|figure)\\s+(?:is\\s+)?(?:not\\s+(?:provided|shown)|missing)",
+  "independent_missing_visual_adjudications": {
+    "2a3ba485a1ee7823093a0ed38d97a8f7b36aba8b2ceda6095bedebe3cea3bc6b": {
+      "evidence": "Two intersecting infinite lines do not specify which bounded region is shaded; bounding axes/markings are absent.",
+      "source_row_id": 239535
+    },
+    "731d788912e42838e70dfe42d5e0b4257d8577bbe289137a8f7b87fd5ff4f99a": {
+      "evidence": "O/E/F positions and the shaded boundary are not supplied.",
+      "source_row_id": 505088
+    },
+    "7df2a28c509815f7e2c072d672d576c0471bb83ba37186780495558a78730917": {
+      "evidence": "The semicircle orientation and shaded set relative to the rectangle are not supplied.",
+      "source_row_id": 282532
+    }
+  },
+  "intersection_audit": {
+    "dev_train_groups": 0,
+    "pilot_unique_groups": 4096,
+    "selected_benchmark_components": 0
+  },
+  "known_unresolved_reference_count": 1,
+  "known_unresolved_references": [
+    {
+      "dataset": "math500",
+      "normalization_empty": true,
+      "problem_id": "math500-test-0097",
+      "raw_reference": "\\text{east}",
+      "reference": "",
+      "reference_normalization_status": "empty_under_upstream",
+      "reference_status": "unresolved_reference",
+      "source_row_index": 97
+    }
+  ],
+  "lazy_selection_proof": "All question components are fixed first; groups ordered by seeded hash of minimum-source-row canonical question; each group's first qualified row_id reference is deterministic. Later unvisited groups cannot replace any chosen dev or train prefix. Global reference-qualified pool size remains unknown.",
+  "minerva_scope": "question-only identity/context exclusion; answers neither projected nor published; no generation",
+  "near_duplicate": {
+    "accepted_edges": 62060,
+    "all_candidates": 989909,
+    "rejected_candidates": 927849
+  },
+  "numina_connected_components": 775342,
+  "numina_exact_unique_questions": 814345,
+  "pilot_input_lengths": {
+    "count": 4096,
+    "max": 1969,
+    "mean": 558.143310546875,
+    "min": 91,
+    "quantiles_0_25_50_75_100": [
+      91.0,
+      337.0,
+      488.0,
+      705.0,
+      1969.0
+    ]
+  },
+  "pilot_questions": 4096,
+  "pilot_response_lengths": {
+    "count": 4096,
+    "max": 1822,
+    "mean": 439.554931640625,
+    "min": 17,
+    "quantiles_0_25_50_75_100": [
+      17.0,
+      237.75,
+      371.0,
+      565.0,
+      1822.0
+    ]
+  },
+  "pilot_source_counts": {
+    "amc_aime": 15,
+    "aops_forum": 163,
+    "cn_k12": 1427,
+    "gsm8k": 13,
+    "math": 30,
+    "olympiads": 779,
+    "orca_math": 651,
+    "synthetic_amc": 317,
+    "synthetic_math": 701
+  },
+  "question_only_image_reference_regex": "\\b(?:in|from|using|see|refer\\s+to|referring\\s+to)\\s+(?:(?:the|this|that|a|an|given|adjoining|attached|accompanying|following|new)\\s+){0,3}(?:diagram|figure|picture)\\b|\\b(?:diagram|figure|picture|image|graph)\\s+(?:(?:is|are|shown|displayed|given|illustrated)\\s+){0,3}(?:below|above)\\b|\\b(?:diagram|figure|picture)\\s+(?:shows|shown|depicts|depicted|numbered)\\b|\\b(?:following|accompanying|given|attached)\\s+(?:diagram|figure|picture|image)\\b|\\b(?:formed|constructed|made)\\s+(?:the|this|following|shown)\\s+(?:figure|diagram|picture)\\b|\\[(?:include|insert|attach)[^\\]\\n]{0,100}\\b(?:figure|diagram|picture|image)\\b|如图|如下图|图中",
+  "question_visual_reference_scope": "Conservative external-visual-reference rule; not every excluded reference is proven indispensable. Generic math image/figure, books, tables, and fully defined shaded sets are not excluded merely by those words.",
+  "reference_selection": "minimum original row_id passing common text/length eligibility; no model or mask-success filtering",
+  "rejection_counts_by_scope_as_recorded": {
+    "bad_encoding": 1,
+    "benchmark_connected_component": 503,
+    "complete_sequence_over_2048": 30,
+    "independently_adjudicated_missing_visual_definition": 3,
+    "question_refers_to_unprovided_image": 224,
+    "unprovided_image_marker": 240
+  },
+  "schema": "public_math_data_summary_v1",
+  "scoring_readiness": "blocked_by_known_unresolved_reference",
+  "selection_prefix": {
+    "eligibility_scope": "ordered_prefix_sufficient_for_exact_requested_selection",
+    "groups_scanned": 20949,
+    "last_scanned_sort_key": "06f80f0087a3ffafcb7bcbd20327e0f96b7551482ce55fdc08d37e3cdce4376d",
+    "qualified_pool_size_globally": null,
+    "suffix_eligibility_scanned": false
+  },
+  "source_train_rows": 859494,
+  "tokenization": {
+    "actual_context_limit": 4096,
+    "assistant_end_id": 151645,
+    "extra_eos_tokens": 0,
+    "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "response_encoding": "separate_then_concatenate_shared_full_and_blank",
+    "tokenizer_advertised_limit": 131072
+  },
+  "training_references_truncated": false,
+  "unexcluded_components_before_reference_eligibility": 775257,
+  "visual_review_limitations": "Known literal/reference cues plus three independently reviewed question hashes; not a guarantee that every implicit visual dependency in the source is detected. No solutions, correctness scores, or model outputs informed the three question-only adjudications.",
+  "wall_seconds_cpu": 58.25850525003625
+}

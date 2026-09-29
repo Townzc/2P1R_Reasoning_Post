@@ -1,0 +1,934 @@
+{
+  "interpretation": "Any legal correct construction is accepted. These fixed 16 training questions do not estimate whole-training accuracy, literal memorization, unseen generalization, or an exact train-discovery generalization gap.",
+  "sampling_scope": {
+    "population_questions": 256,
+    "selected_questions": 16,
+    "selection_sha256": "bd46065ed39850bb54ea1f2dbe5354ed8cb0830fd0426369a1965d215ba7b9e0",
+    "strata": [
+      {
+        "anchor_family": "A",
+        "final_selected_count": 4,
+        "support": 25,
+        "target_label": "target_degenerate"
+      },
+      {
+        "anchor_family": "A",
+        "final_selected_count": 4,
+        "support": 103,
+        "target_label": "target_nondegenerate"
+      },
+      {
+        "anchor_family": "B",
+        "final_selected_count": 4,
+        "support": 29,
+        "target_label": "target_degenerate"
+      },
+      {
+        "anchor_family": "B",
+        "final_selected_count": 4,
+        "support": 99,
+        "target_label": "target_nondegenerate"
+      }
+    ],
+    "target_label_basis": "Existing family B target-edge labels, irrespective of anchor; family A has no target edge and is not labeled nondegenerate.",
+    "weighting": "Unweighted selected-question diagnostic. Equal stratum allocation oversamples target-degenerate questions: 8/16 selected versus 54/256 in the training population; no population reweighting is applied."
+  },
+  "table": [
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 16,
+        "correct_generations": 8,
+        "failures": {
+          "none": 8,
+          "wrong_answer_or_resources": 8
+        },
+        "generations": 16,
+        "independent_questions": 16,
+        "parse_fraction": 1.0,
+        "parsed_generations": 16,
+        "pass_at_1": 0.5,
+        "questions": 16,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 12,
+          "violated": 4
+        },
+        "retained_length_quantiles": {
+          "max": 158.0,
+          "min": 60.0,
+          "p25": 62.5,
+          "p50": 65.0,
+          "p75": 70.0,
+          "p95": 107.0
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "task_types": {
+          "construct": 16
+        },
+        "traces": {
+          "inconsistent": 8,
+          "verified": 8
+        }
+      },
+      "registered_questions": 16,
+      "state": "C-S",
+      "status": "measured",
+      "subgroup": "full"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 2,
+        "failures": {
+          "none": 2,
+          "wrong_answer_or_resources": 6
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.25,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 5,
+          "violated": 3
+        },
+        "retained_length_quantiles": {
+          "max": 158.0,
+          "min": 61.0,
+          "p25": 64.75,
+          "p50": 67.0,
+          "p75": 81.75,
+          "p95": 134.19999999999996
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 6,
+          "verified": 2
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-S",
+      "status": "measured",
+      "subgroup": "A"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 6,
+        "failures": {
+          "none": 6,
+          "wrong_answer_or_resources": 2
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.75,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 7,
+          "violated": 1
+        },
+        "retained_length_quantiles": {
+          "max": 73.0,
+          "min": 60.0,
+          "p25": 60.75,
+          "p50": 64.0,
+          "p75": 65.25,
+          "p95": 70.55
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 2,
+          "verified": 6
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-S",
+      "status": "measured",
+      "subgroup": "B"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 5,
+        "failures": {
+          "none": 5,
+          "wrong_answer_or_resources": 3
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.625,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 8
+        },
+        "retained_length_quantiles": {
+          "max": 69.0,
+          "min": 60.0,
+          "p25": 61.0,
+          "p50": 64.5,
+          "p75": 65.0,
+          "p95": 67.6
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 3,
+          "verified": 5
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-S",
+      "status": "measured",
+      "subgroup": "target_degenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 3,
+        "failures": {
+          "none": 3,
+          "wrong_answer_or_resources": 5
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.375,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 4,
+          "violated": 4
+        },
+        "retained_length_quantiles": {
+          "max": 158.0,
+          "min": 60.0,
+          "p25": 64.5,
+          "p50": 69.5,
+          "p75": 81.75,
+          "p95": 134.19999999999996
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 5,
+          "verified": 3
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-S",
+      "status": "measured",
+      "subgroup": "target_nondegenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 16,
+        "correct_generations": 3,
+        "failures": {
+          "none": 3,
+          "wrong_answer_or_resources": 13
+        },
+        "generations": 16,
+        "independent_questions": 16,
+        "parse_fraction": 1.0,
+        "parsed_generations": 16,
+        "pass_at_1": 0.1875,
+        "questions": 16,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 12,
+          "violated": 4
+        },
+        "retained_length_quantiles": {
+          "max": 88.0,
+          "min": 59.0,
+          "p25": 62.75,
+          "p50": 65.0,
+          "p75": 73.25,
+          "p95": 88.0
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "task_types": {
+          "construct": 16
+        },
+        "traces": {
+          "inconsistent": 13,
+          "verified": 3
+        }
+      },
+      "registered_questions": 16,
+      "state": "C-P",
+      "status": "measured",
+      "subgroup": "full"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 2,
+        "failures": {
+          "none": 2,
+          "wrong_answer_or_resources": 6
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.25,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 88.0,
+          "min": 62.0,
+          "p25": 62.75,
+          "p50": 64.5,
+          "p75": 86.0,
+          "p95": 87.3
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 6,
+          "verified": 2
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-P",
+      "status": "measured",
+      "subgroup": "A"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 1,
+        "failures": {
+          "none": 1,
+          "wrong_answer_or_resources": 7
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.125,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 88.0,
+          "min": 59.0,
+          "p25": 62.25,
+          "p50": 65.5,
+          "p75": 66.75,
+          "p95": 81.35
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 7,
+          "verified": 1
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-P",
+      "status": "measured",
+      "subgroup": "B"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 3,
+        "failures": {
+          "none": 3,
+          "wrong_answer_or_resources": 5
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.375,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 86.0,
+          "min": 60.0,
+          "p25": 62.75,
+          "p50": 65.0,
+          "p75": 73.25,
+          "p95": 86.0
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 5,
+          "verified": 3
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-P",
+      "status": "measured",
+      "subgroup": "target_degenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 0,
+        "failures": {
+          "wrong_answer_or_resources": 8
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.0,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 88.0,
+          "min": 59.0,
+          "p25": 62.75,
+          "p50": 65.0,
+          "p75": 71.5,
+          "p95": 88.0
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 8
+        }
+      },
+      "registered_questions": 8,
+      "state": "C-P",
+      "status": "measured",
+      "subgroup": "target_nondegenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 16,
+        "correct_generations": 10,
+        "failures": {
+          "none": 10,
+          "wrong_answer_or_resources": 6
+        },
+        "generations": 16,
+        "independent_questions": 16,
+        "parse_fraction": 1.0,
+        "parsed_generations": 16,
+        "pass_at_1": 0.625,
+        "questions": 16,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 14,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 100.0,
+          "min": 60.0,
+          "p25": 62.0,
+          "p50": 64.5,
+          "p75": 66.0,
+          "p95": 82.75
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "task_types": {
+          "construct": 16
+        },
+        "traces": {
+          "inconsistent": 6,
+          "verified": 10
+        }
+      },
+      "registered_questions": 16,
+      "state": "B-S",
+      "status": "measured",
+      "subgroup": "full"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 4,
+        "failures": {
+          "none": 4,
+          "wrong_answer_or_resources": 4
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.5,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 7,
+          "violated": 1
+        },
+        "retained_length_quantiles": {
+          "max": 100.0,
+          "min": 62.0,
+          "p25": 62.75,
+          "p50": 64.5,
+          "p75": 66.0,
+          "p95": 88.09999999999998
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 4,
+          "verified": 4
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-S",
+      "status": "measured",
+      "subgroup": "A"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 6,
+        "failures": {
+          "none": 6,
+          "wrong_answer_or_resources": 2
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.75,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 7,
+          "violated": 1
+        },
+        "retained_length_quantiles": {
+          "max": 77.0,
+          "min": 60.0,
+          "p25": 61.75,
+          "p50": 64.0,
+          "p75": 65.25,
+          "p95": 73.14999999999999
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 2,
+          "verified": 6
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-S",
+      "status": "measured",
+      "subgroup": "B"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 6,
+        "failures": {
+          "none": 6,
+          "wrong_answer_or_resources": 2
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.75,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 8
+        },
+        "retained_length_quantiles": {
+          "max": 66.0,
+          "min": 61.0,
+          "p25": 62.0,
+          "p50": 64.5,
+          "p75": 65.0,
+          "p95": 65.65
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 2,
+          "verified": 6
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-S",
+      "status": "measured",
+      "subgroup": "target_degenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 4,
+        "failures": {
+          "none": 4,
+          "wrong_answer_or_resources": 4
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.5,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 100.0,
+          "min": 60.0,
+          "p25": 62.75,
+          "p50": 64.5,
+          "p75": 68.75,
+          "p95": 91.94999999999999
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 4,
+          "verified": 4
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-S",
+      "status": "measured",
+      "subgroup": "target_nondegenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 16,
+        "correct_generations": 4,
+        "failures": {
+          "none": 4,
+          "wrong_answer_or_resources": 12
+        },
+        "generations": 16,
+        "independent_questions": 16,
+        "parse_fraction": 1.0,
+        "parsed_generations": 16,
+        "pass_at_1": 0.25,
+        "questions": 16,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 13,
+          "violated": 3
+        },
+        "retained_length_quantiles": {
+          "max": 93.0,
+          "min": 59.0,
+          "p25": 62.75,
+          "p50": 65.5,
+          "p75": 70.0,
+          "p95": 88.5
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "task_types": {
+          "construct": 16
+        },
+        "traces": {
+          "inconsistent": 12,
+          "verified": 4
+        }
+      },
+      "registered_questions": 16,
+      "state": "B-P",
+      "status": "measured",
+      "subgroup": "full"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 3,
+        "failures": {
+          "none": 3,
+          "wrong_answer_or_resources": 5
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.375,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 7,
+          "violated": 1
+        },
+        "retained_length_quantiles": {
+          "max": 87.0,
+          "min": 62.0,
+          "p25": 62.0,
+          "p50": 64.0,
+          "p75": 69.75,
+          "p95": 84.89999999999999
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 5,
+          "verified": 3
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-P",
+      "status": "measured",
+      "subgroup": "A"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 1,
+        "failures": {
+          "none": 1,
+          "wrong_answer_or_resources": 7
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.125,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 93.0,
+          "min": 59.0,
+          "p25": 65.0,
+          "p50": 66.0,
+          "p75": 70.0,
+          "p95": 85.99999999999999
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 7,
+          "verified": 1
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-P",
+      "status": "measured",
+      "subgroup": "B"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 3,
+        "failures": {
+          "none": 3,
+          "wrong_answer_or_resources": 5
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.375,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 6,
+          "violated": 2
+        },
+        "retained_length_quantiles": {
+          "max": 87.0,
+          "min": 62.0,
+          "p25": 65.0,
+          "p50": 67.0,
+          "p75": 75.0,
+          "p95": 84.89999999999999
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 5,
+          "verified": 3
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-P",
+      "status": "measured",
+      "subgroup": "target_degenerate"
+    },
+    {
+      "metrics": {
+        "completed_fraction": 1.0,
+        "completed_generations": 8,
+        "correct_generations": 1,
+        "failures": {
+          "none": 1,
+          "wrong_answer_or_resources": 7
+        },
+        "generations": 8,
+        "independent_questions": 8,
+        "parse_fraction": 1.0,
+        "parsed_generations": 8,
+        "pass_at_1": 0.125,
+        "questions": 8,
+        "resource_rule_definition": "Construction: exact final-expression input multiset; compute: connected resource derivation from the supplied expression inputs. Unknown is NA.",
+        "resource_rule_status": {
+          "satisfied": 7,
+          "violated": 1
+        },
+        "retained_length_quantiles": {
+          "max": 93.0,
+          "min": 59.0,
+          "p25": 62.0,
+          "p50": 64.5,
+          "p75": 66.0,
+          "p95": 83.54999999999998
+        },
+        "samples_per_question": 1,
+        "stop_reasons": {
+          "native_eos": 8
+        },
+        "task_types": {
+          "construct": 8
+        },
+        "traces": {
+          "inconsistent": 7,
+          "verified": 1
+        }
+      },
+      "registered_questions": 8,
+      "state": "B-P",
+      "status": "measured",
+      "subgroup": "target_nondegenerate"
+    }
+  ]
+}

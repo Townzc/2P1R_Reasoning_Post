@@ -1,0 +1,168 @@
+{
+  "accuracy_used_as_admission_gate": false,
+  "after": {
+    "completed_fraction": 1.0,
+    "failures": {
+      "none": 33,
+      "parse": 4,
+      "wrong_answer_or_resources": 11
+    },
+    "generations": 48,
+    "parse_fraction": 0.9166666666666666,
+    "pass_at_1": 0.6875,
+    "questions": 48,
+    "stop_reasons": {
+      "native_eos": 48
+    },
+    "trace_status": {
+      "inconsistent": 13,
+      "not_certified": 32,
+      "unverifiable": 3
+    }
+  },
+  "before": {
+    "completed_fraction": 0.7291666666666666,
+    "failures": {
+      "none": 31,
+      "parse": 3,
+      "stop_length_cap": 13,
+      "wrong_answer_or_resources": 1
+    },
+    "generations": 48,
+    "parse_fraction": 0.6875,
+    "pass_at_1": 0.6458333333333334,
+    "questions": 48,
+    "stop_reasons": {
+      "length_cap": 13,
+      "native_eos": 32,
+      "new_problem_boundary": 3
+    },
+    "trace_status": {
+      "inconsistent": 1,
+      "not_certified": 32,
+      "unverifiable": 15
+    }
+  },
+  "check_reference_nll_after": {
+    "nll": 0.13477926240080879,
+    "reference_count": 16,
+    "response_loss_sum": 113.21458041667938,
+    "supervised_tokens": 840
+  },
+  "check_reference_nll_before": {
+    "nll": 0.6598246960412888,
+    "reference_count": 16,
+    "response_loss_sum": 554.2527446746826,
+    "supervised_tokens": 840
+  },
+  "final_adapter": {
+    "parameters": 18464768,
+    "sha256": "5f07f098782227f84684fd0c2de1dba7e3db5ba39b8c62ae69eb80b7e2214b15"
+  },
+  "fit_check": {
+    "check": {
+      "after": {
+        "completed_fraction": 1.0,
+        "failures": {
+          "none": 8,
+          "parse": 2,
+          "wrong_answer_or_resources": 6
+        },
+        "generations": 16,
+        "parse_fraction": 0.875,
+        "pass_at_1": 0.5,
+        "questions": 16,
+        "stop_reasons": {
+          "native_eos": 16
+        },
+        "trace_status": {
+          "inconsistent": 7,
+          "not_certified": 8,
+          "unverifiable": 1
+        }
+      },
+      "before": {
+        "completed_fraction": 0.5,
+        "failures": {
+          "none": 8,
+          "stop_length_cap": 8
+        },
+        "generations": 16,
+        "parse_fraction": 0.5625,
+        "pass_at_1": 0.5,
+        "questions": 16,
+        "stop_reasons": {
+          "length_cap": 8,
+          "native_eos": 8
+        },
+        "trace_status": {
+          "inconsistent": 1,
+          "not_certified": 8,
+          "unverifiable": 7
+        }
+      }
+    },
+    "fit": {
+      "after": {
+        "completed_fraction": 1.0,
+        "failures": {
+          "none": 25,
+          "parse": 2,
+          "wrong_answer_or_resources": 5
+        },
+        "generations": 32,
+        "parse_fraction": 0.9375,
+        "pass_at_1": 0.78125,
+        "questions": 32,
+        "stop_reasons": {
+          "native_eos": 32
+        },
+        "trace_status": {
+          "inconsistent": 6,
+          "not_certified": 24,
+          "unverifiable": 2
+        }
+      },
+      "before": {
+        "completed_fraction": 0.84375,
+        "failures": {
+          "none": 23,
+          "parse": 3,
+          "stop_length_cap": 5,
+          "wrong_answer_or_resources": 1
+        },
+        "generations": 32,
+        "parse_fraction": 0.75,
+        "pass_at_1": 0.71875,
+        "questions": 32,
+        "stop_reasons": {
+          "length_cap": 5,
+          "native_eos": 24,
+          "new_problem_boundary": 3
+        },
+        "trace_status": {
+          "not_certified": 24,
+          "unverifiable": 8
+        }
+      }
+    }
+  },
+  "initial_adapter": {
+    "parameters": 18464768,
+    "sha256": "e93d954e27a0996330492e59b642d6bd50cdb2981d81ccf0622bae3e705796c2"
+  },
+  "learning_warning": null,
+  "reference_nll_after": {
+    "nll": 0.057627081511246125,
+    "reference_count": 32,
+    "response_loss_sum": 85.92197853326797,
+    "supervised_tokens": 1491
+  },
+  "reference_nll_before": {
+    "nll": 0.6363542353363344,
+    "reference_count": 32,
+    "response_loss_sum": 948.8041648864746,
+    "supervised_tokens": 1491
+  },
+  "status": "completed"
+}

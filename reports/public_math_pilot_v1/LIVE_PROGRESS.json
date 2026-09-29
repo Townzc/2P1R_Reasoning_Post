@@ -1,0 +1,235 @@
+{
+  "training": {
+    "SFT": {
+      "completed_update_records": 128,
+      "largest_completed_step": 128,
+      "latest_committed_step": 128,
+      "peak_allocated_bytes": 34132935680,
+      "mean_update_seconds": 6.147876319068018,
+      "attempts": [
+        {
+          "attempt": "a6090a1cfcc448f5b5e453e44bd6ce02",
+          "started_at_utc": "2026-09-17T21:37:37.720105+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 128,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "SFT",
+            "initial_step": 0,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
+    },
+    "DFT": {
+      "completed_update_records": 128,
+      "largest_completed_step": 128,
+      "latest_committed_step": 128,
+      "peak_allocated_bytes": 34130915328,
+      "mean_update_seconds": 3.4946048833080567,
+      "attempts": [
+        {
+          "attempt": "313f107b19bf4eea9ffb96fac7ec16b3",
+          "started_at_utc": "2026-09-17T21:56:01.519295+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 128,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "DFT",
+            "initial_step": 0,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
+    },
+    "TrimSFT": {
+      "completed_update_records": 160,
+      "largest_completed_step": 128,
+      "latest_committed_step": 128,
+      "peak_allocated_bytes": 34130915328,
+      "mean_update_seconds": 3.5414924759184943,
+      "attempts": [
+        {
+          "attempt": "c073d306a74c400785fad48a14e1dad4",
+          "started_at_utc": "2026-09-17T22:08:47.450520+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 64,
+          "last_completed_step": 64,
+          "end": null
+        },
+        {
+          "attempt": "d049ee0b6f6849c085097c9a54029501",
+          "started_at_utc": "2026-09-17T22:30:38.340240+00:00",
+          "initial_checkpoint": "slot_000032_82201bae6085451790c98851cad98627",
+          "completed_records": 96,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "TrimSFT",
+            "initial_step": 32,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
+    },
+    "QDW_v0": {
+      "completed_update_records": 128,
+      "largest_completed_step": 128,
+      "latest_committed_step": 128,
+      "peak_allocated_bytes": 34137061376,
+      "mean_update_seconds": 3.5101280317176133,
+      "attempts": [
+        {
+          "attempt": "e04304af893140b7b50b544d0202f7c8",
+          "started_at_utc": "2026-09-17T22:41:15.887505+00:00",
+          "initial_checkpoint": null,
+          "completed_records": 128,
+          "last_completed_step": 128,
+          "end": {
+            "arm": "QDW_v0",
+            "initial_step": 0,
+            "source_commit": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+            "status": "complete",
+            "step": 128,
+            "token_step": 1800417
+          }
+        }
+      ]
+    }
+  },
+  "sources": {
+    "preflight": "0f66e8ceb9138be52d3d51169944486d75c1ea94",
+    "preparation": "e1aa912b10c37f846e7993f16c30a8a5d07b20d3",
+    "training": "afc9c407fb526c4110d344b4e7501742c24c27f7",
+    "failed_evaluation": "c9239c86bc929eea8dc40d33a3666f2d387704b9",
+    "current_evaluation": "abfff696f68cdd8aa9b32dd410330ee5424d5c80",
+    "scoring": "c87ce060c3146f77f2f5f9e9dd0e96b2bb25a1a4",
+    "cache_maintenance": "eb49f902c1e690f4b3e2f89cd921465e99cb5a75",
+    "original_scientific_evaluation": "c833d732a7e5b7ecf7589a41ea30f2fb7068a6d9"
+  },
+  "training_recovery": {
+    "status": "completed_final_endpoints_verified",
+    "failure": "checkpoint_admission_included_clean_file_cache",
+    "failed_process_seconds": 2180,
+    "restored_TrimSFT_step": 32,
+    "committed_step64_recovery_verified": true,
+    "gpu_trajectory_bitwise_equivalent": false,
+    "comparison": "GPU_RECOVERY_COMPARISON.json",
+    "cache_measurement": "HOST_CACHE_RECOVERY_MEASURED.json",
+    "original_failure_and_all_update_records_preserved": true,
+    "recomputed_step_range_inclusive": [
+      33,
+      64
+    ],
+    "successful_process_seconds": 1534
+  },
+  "maintenance_receipt": "MAINTENANCE_PAUSE.json",
+  "dual_gpu_resume_receipt": "DUAL_GPU_RESUME.json",
+  "observed_at_utc": "2026-09-18T11:25:23.213505+00:00",
+  "status": "complete_provider_off_waiting_for_owner",
+  "training_complete": true,
+  "actual_formal_updates": 512,
+  "actual_physical_completed_training_records": 544,
+  "nonformal_discarded_updates": 5,
+  "annotation_forwards": 8192,
+  "base_dev_complete_outputs": 512,
+  "saved_public_outputs": 26595,
+  "total_saved_logical_outputs": 31203,
+  "remaining_logical_outputs": 0,
+  "current_generation_physical_reservations": 31331,
+  "uncommitted_generation_reservations": 0,
+  "failed_physical_generations": 128,
+  "lost_uncommitted_training_updates": 32,
+  "generation_saved_by_run": {
+    "Base-dev": 512,
+    "Base-GSM8K": 1319,
+    "SFT-GSM8K": 1319,
+    "DFT-GSM8K": 1319,
+    "TrimSFT-GSM8K": 1319,
+    "QDW_v0-GSM8K": 1319,
+    "Base-MATH500-draw0": 500,
+    "SFT-MATH500-draw0": 500,
+    "DFT-MATH500-draw0": 500,
+    "TrimSFT-MATH500-draw0": 500,
+    "QDW_v0-MATH500-draw0": 500,
+    "Base-MATH500-draw1": 500,
+    "SFT-MATH500-draw1": 500,
+    "DFT-MATH500-draw1": 500,
+    "TrimSFT-MATH500-draw1": 500,
+    "QDW_v0-MATH500-draw1": 500,
+    "Base-MATH500-draw2": 500,
+    "SFT-MATH500-draw2": 500,
+    "DFT-MATH500-draw2": 500,
+    "TrimSFT-MATH500-draw2": 500,
+    "QDW_v0-MATH500-draw2": 500,
+    "Base-MATH500-draw3": 500,
+    "SFT-MATH500-draw3": 500,
+    "DFT-MATH500-draw3": 500,
+    "TrimSFT-MATH500-draw3": 500,
+    "QDW_v0-MATH500-draw3": 500,
+    "Base-MATH500-draw4": 500,
+    "SFT-MATH500-draw4": 500,
+    "DFT-MATH500-draw4": 500,
+    "TrimSFT-MATH500-draw4": 500,
+    "QDW_v0-MATH500-draw4": 500,
+    "Base-MATH500-draw5": 500,
+    "SFT-MATH500-draw5": 500,
+    "DFT-MATH500-draw5": 500,
+    "TrimSFT-MATH500-draw5": 500,
+    "QDW_v0-MATH500-draw5": 500,
+    "Base-MATH500-draw6": 500,
+    "SFT-MATH500-draw6": 500,
+    "DFT-MATH500-draw6": 500,
+    "TrimSFT-MATH500-draw6": 500,
+    "QDW_v0-MATH500-draw6": 500,
+    "Base-MATH500-draw7": 500,
+    "SFT-MATH500-draw7": 500,
+    "DFT-MATH500-draw7": 500,
+    "TrimSFT-MATH500-draw7": 500,
+    "QDW_v0-MATH500-draw7": 500,
+    "SFT-step64-dev": 512,
+    "SFT-step128-dev": 512,
+    "DFT-step64-dev": 512,
+    "DFT-step128-dev": 512,
+    "TrimSFT-step64-dev": 512,
+    "TrimSFT-step128-dev": 512,
+    "QDW_v0-step64-dev": 512,
+    "QDW_v0-step128-dev": 512
+  },
+  "completed_scored_runs": 54,
+  "completed_MATH_draw_runs": 40,
+  "gsm_all_five_complete": true,
+  "dev_complete": true,
+  "full_public_results_available": true,
+  "public_result_scope": "full_final_phase_including_dev_and_47_explicitly_unresolved_MATH_judgments",
+  "current_evaluation": "finished",
+  "provider_off_confirmed": true,
+  "provider_off_observed_at_utc": "2026-09-18T11:26:40.298979+00:00",
+  "heartbeat_status": "PAUSED",
+  "provider_timer_status": "cleared_after_verified_shutdown",
+  "disk_free_bytes": 116600651776,
+  "final_terminal_components_retained_on_server": 8,
+  "final_terminal_component_bytes": 77836999344,
+  "authorized_step64_pruned_bytes": 28433842212,
+  "dual_gpu_device_peaks_mib": {
+    "0": 80607.0,
+    "1": 80927.0
+  },
+  "telemetry_peak_device_used_mib": 81009.0,
+  "cgroup_memory_limit_bytes": 257698037760,
+  "cgroup_current_bytes": 13394591744,
+  "new_failure_detected": false,
+  "final_results": "FINAL_RESULTS.json",
+  "final_audit": "FINAL_INDEPENDENT_AUDIT.json",
+  "final_closeout": "FINAL_COST_AND_CLOSEOUT.json",
+  "overlapping_process_seconds_are_not_rental_hours": true,
+  "live_snapshot_is_not_an_atomic_reservation_closeout": false
+}

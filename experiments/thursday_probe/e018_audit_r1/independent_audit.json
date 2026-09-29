@@ -1,0 +1,68 @@
+{
+  "adapter_backup_complete": true,
+  "adapter_correct": 51,
+  "after_nll": 0.2671101816405483,
+  "base_correct": 39,
+  "base_tokens_identical_to_E017": 64,
+  "before_nll": 0.4937708440352282,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 17020,
+  "both_correct": 34,
+  "checked_at_utc": "2026-09-16T18:39:16.264102+00:00",
+  "checkpoint_bytes": 73917577,
+  "checks": {
+    "adapter_changed": true,
+    "base_unchanged": true,
+    "base_usability": true,
+    "complete_dose": true,
+    "final_usability": true,
+    "net_loss": true,
+    "nll_reduction": true,
+    "retention": false
+  },
+  "gained": 17,
+  "interpretation": "Descriptive observed-development calibration with one known erroneous training reference; no fresh confirmation, general capability retention or treatment effect.",
+  "lost": 5,
+  "nll_reduction_fraction": 0.45904019067296076,
+  "paired_accuracy_difference": 0.1875,
+  "paired_accuracy_difference_CI95": [
+    0.046875,
+    0.328125
+  ],
+  "passed": false,
+  "phase": "E018",
+  "raw_streams_independently_audited": 160,
+  "receipt": {
+    "charged_seconds": 371,
+    "command": [
+      "timeout",
+      "--signal=TERM",
+      "--kill-after=15s",
+      "900s",
+      "/root/autodl-tmp/cs294-runtime/train/bin/python",
+      "-m",
+      "experiments.thursday_probe.e018",
+      "worker",
+      "--snapshot",
+      "PINNED_MODEL_SNAPSHOT"
+    ],
+    "exit_code": 0,
+    "finished_at_utc": "2026-09-16T18:36:44.678243+00:00",
+    "guard_seconds": 15,
+    "new_phase_allowance_seconds": 915,
+    "old_ledger_sha256": "48541b40ec441c1c5d5870d7c198c00a5e567ef7bc3804e03ccc1d61a63fda8e",
+    "old_ledger_unchanged": true,
+    "process_cap_seconds": 900,
+    "run_id": "gsm8k_lora_e018_r1",
+    "started_at_utc": "2026-09-16T18:30:29.895375+00:00",
+    "status": "completed",
+    "wall_seconds": 370.8340142816305
+  },
+  "retained_fraction": 0.8717948717948718,
+  "retained_fraction_CI95": [
+    0.7575757575757576,
+    0.9722222222222222
+  ],
+  "train_decode_correct": 26,
+  "undefined_zero_baseline_bootstraps": 0
+}

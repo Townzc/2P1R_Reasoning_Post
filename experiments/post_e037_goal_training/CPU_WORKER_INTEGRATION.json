@@ -1,0 +1,106 @@
+{
+  "actual_real_tokenizer_and_frozen_dose_validated": true,
+  "checked_at_utc": "2026-09-17T03:53:31.117231+00:00",
+  "computation": "NO_REAL_MODEL",
+  "executed": [
+    "Actual queue.worker first execution and completed second-process-style resume.",
+    "Frozen release manifest verification; all real1024 rows per arm encoded using the pinned tokenizer.",
+    "Real validate_encoded checks exact encoded row hashes, source supervision/processing counts and shared H/F macro slots.",
+    "Real worker NLL intent/result identity, reference_progress, training final manifests, summary publication and cumulative generation ledger.",
+    "Real analyze.checkpoint_models reads E031 plus arm step128/256 identities and final training records."
+  ],
+  "first_run": {
+    "analysis_checkpoint_models": 5,
+    "mock_calls": {
+      "new_generation_events": 21,
+      "new_operator_states": 3,
+      "nll": 8,
+      "train_segments": 32
+    },
+    "real_encoded_reference_input_tokens": 565092,
+    "registered_views": 21,
+    "simulated_generation_reservations": 3344,
+    "simulated_operator_contexts": 288,
+    "simulated_reference_forward_calls": 4096,
+    "simulated_training_updates": 512
+  },
+  "gpu_or_server_access": false,
+  "limitations": [
+    "Does not validate numerical gradients, optimizer-state recovery, real likelihoods or real model outputs.",
+    "Does not replay token/stop/scorer or immutable target-substream journals; those are separately tested in test_post_e037_analysis.py.",
+    "Covers completed worker resume, not every mid-compute fault boundary.",
+    "Does not validate CUDA allocation, provider state, actual disk capacity, source deployment or rental cost.",
+    "Mock timings and mock scientific scores are not reported as measurements. No real output/report folders were modified."
+  ],
+  "mocked": [
+    "Base/LoRA model objects, adapter loading and parameter digests: no weights read.",
+    "Training segments: deterministic synthetic histories use actual released macro slots and encoded token counts.",
+    "Generation/operator/NLL calculations and results: placeholders; simulated counts are not scientific observations.",
+    "Published-source guard: fixed fake commit; temporary parent checkpoint bytes/identities."
+  ],
+  "real_generations": 0,
+  "real_model_calls": 0,
+  "real_model_training_updates": 0,
+  "release_manifest_sha256": "ca97959cac646eb709d428bede41e6aacc35ee7362b5fe01ddfa95e28d2e5536",
+  "reproducible_command": "GOAL_TRAINING_TEST_TOKENIZER=/path/to/pinned/local/tokenizer python -m unittest tests.test_goal_training_worker_integration -v",
+  "resume": {
+    "additional_mock_calls": {
+      "new_generation_events": 0,
+      "new_operator_states": 0,
+      "nll": 0,
+      "train_segments": 0
+    },
+    "generation_reservations_unchanged": true,
+    "pending_reference_intents": 0,
+    "reference_totals_unchanged": true,
+    "training_updates_unchanged": true
+  },
+  "source_files_sha256": {
+    "experiments/post_e036_goal_probe/scoring.py": "fbb20a72ec9fcac3ea4dd476e1c2bb050913a22198490216ec19ad52760694a1",
+    "experiments/post_e037_goal_training/analyze.py": "48601b4e52664afddddedb41dbb876514d69be35f188fe1f037934bdece51fb2",
+    "experiments/post_e037_goal_training/data.py": "5cbf0e187505b0391c2a5bc2de99eb9e0899eb33b6b66957cf6d972700690fa6",
+    "experiments/post_e037_goal_training/generation.py": "14d6836f6f86120719fbb02c9c5c21a26dd3385c75f40fda64a0ce3537f9d6e6",
+    "experiments/post_e037_goal_training/launcher.py": "a815b1c0f47251ebe860bd69de94605b3894f88b5eb38278e4f9eade75ae0153",
+    "experiments/post_e037_goal_training/operator_forward.py": "25f7ae2ceb65fceaca3e602bd9e68919ffa528714569dd780612534f1cee8934",
+    "experiments/post_e037_goal_training/queue.py": "2e38ba5ae1092abc14cea20501347392652038d6d00cbb3fba742899ce47d0af",
+    "experiments/post_e037_goal_training/registration.json": "d8e56bc781d6d2a7a1106dfcff624d514e8d7825209506866fec45f529e9964b",
+    "experiments/post_e037_goal_training/training.py": "8593b99c87e1b5e57541bc0b8bcb1677c1995f7487af89f56b64994e1e1af55b",
+    "experiments/thursday_probe/common.py": "0f4b923d0811d648c807940f5aff76c4c1195312ad8c59d4876b549516d5e50e",
+    "scripts/audit_family_matching.py": "7c780d0ce3d63679b8779c636083c8df8dd757336b6fca7069ab064789a75d66",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e",
+    "tests/test_goal_training_worker_integration.py": "a2eb537b1335a3593bd957b02540b151277521e8ad5cf963aad1f4e632b69ae1"
+  },
+  "status": "FULL_WORKER_AND_RESUME_CPU_MOCK_PASS",
+  "test_requires": "Pinned local tokenizer; torch/transformers/numpy installed for CPU-only orchestration. Test skips explicitly if tokenizer environment variable is unset.",
+  "tokenizer": {
+    "files": {
+      "config.json": {
+        "bytes": 684,
+        "git_blob_sha1": "169d606d5cf502a5628a52381586679a6d0caaab",
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "git_blob_sha1": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "repo_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  }
+}

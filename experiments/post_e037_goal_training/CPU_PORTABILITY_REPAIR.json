@@ -1,0 +1,26 @@
+{
+  "status": "PRE_MODEL_LINUX_PORTABILITY_REPAIR",
+  "initial_source_commit": "121f6eb5dbf6151502a3d6ec65c09ebe710af0fe",
+  "new_model_calls_before_repair": 0,
+  "training_updates_before_repair": 0,
+  "lr_different_zero_based_indices": [
+    192,
+    197,
+    201
+  ],
+  "lr_maximum_absolute_recomputed_difference": 3.3881317890172014e-21,
+  "repair": "Only recomputation validation permits <=2 ULPs; execution still reads the identical released256-value vector. Length/nonfinite/nonpositive/material drift rejected.",
+  "data_release_sha256": "ca97959cac646eb709d428bede41e6aacc35ee7362b5fe01ddfa95e28d2e5536",
+  "phase_forward_token_reporting_fix": "Use existing progress reference_forward_input_tokens in ledger, no extra computation.",
+  "targeted_cpu_tests_passed": 43,
+  "latest_executable_sha256": {
+    "experiments/post_e037_goal_training/queue.py": "fcccae8df9edee9cac2b5300833e6fb3e172609e09606d9587df9748e4177864",
+    "experiments/post_e037_goal_training/operator_forward.py": "25f7ae2ceb65fceaca3e602bd9e68919ffa528714569dd780612534f1cee8934",
+    "experiments/post_e037_goal_training/generation.py": "14d6836f6f86120719fbb02c9c5c21a26dd3385c75f40fda64a0ce3537f9d6e6",
+    "experiments/post_e037_goal_training/launcher.py": "7196c7f39316b8384f2b7dab81c5da1fe8c8e7b0e0514e6c7c15a761dd04d084",
+    "experiments/post_e037_goal_training/training.py": "8593b99c87e1b5e57541bc0b8bcb1677c1995f7487af89f56b64994e1e1af55b",
+    "experiments/post_e037_goal_training/data.py": "5cbf0e187505b0391c2a5bc2de99eb9e0899eb33b6b66957cf6d972700690fa6",
+    "experiments/post_e037_goal_training/analyze.py": "48601b4e52664afddddedb41dbb876514d69be35f188fe1f037934bdece51fb2"
+  },
+  "previous_integration_evidence_retained": true
+}

@@ -1,0 +1,143 @@
+{
+  "E031_C_greedy/goal_train_v1_eval_g006_t1_C/0": {
+    "category": "parenthesis_grouping_changed",
+    "evidence_quotes": [
+      "Step 1: 9 - 1 = 8.",
+      "Step 2: 8 - 39 = -31."
+    ],
+    "inferred_program": "(((9 - 1) - 39) + 40)",
+    "review_note": "The original inner subtraction is1-39; displayed left-to-right9-1 then minus39 changes grouping. All displayed equalities are exact.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "E031_C_greedy/goal_train_v1_eval_g007_t0_C/0": {
+    "category": "local_arithmetic_error",
+    "evidence_quotes": [
+      "Step 1: 5 + (27 - 12) = 19."
+    ],
+    "inferred_program": null,
+    "review_note": "5+(27-12)=20, so the displayed19 is an explicit false equality. Do not infer an omitted input or latent program from this alone.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "E031_C_greedy/goal_train_v1_eval_g007_t1_C/0": {
+    "category": "parenthesis_grouping_changed",
+    "evidence_quotes": [
+      "Step 1: 5 - 27 = -22.",
+      "Step 2: -22 - 12 = -34."
+    ],
+    "inferred_program": "(((5 - 27) - 12) + 38)",
+    "review_note": "Original5-(27-12)=-10; trace instead computes(5-27)-12=-34. All displayed local equations are exact.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "E031_C_greedy/goal_train_v1_eval_g016_t0_C/0": {
+    "category": "local_arithmetic_error",
+    "evidence_quotes": [
+      "Step 1: 20 + (33 - 1) = 32."
+    ],
+    "inferred_program": null,
+    "review_note": "20+(33-1)=52, not32. Returning the inner32 is compatible with dropping20, but the displayed equation explicitly retains20; the warranted category is false local arithmetic.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "E031_C_greedy/goal_train_v1_eval_g016_t1_C/0": {
+    "category": "local_arithmetic_error",
+    "evidence_quotes": [
+      "Step 1: 20 + (33 - 1) = 32."
+    ],
+    "inferred_program": null,
+    "review_note": "Same explicit false equality:20+(33-1)=52, not32. No separate claim about the internal cause.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "E031_C_greedy/goal_train_v1_eval_g037_t1_C/0": {
+    "category": "local_arithmetic_error",
+    "evidence_quotes": [
+      "Step 1: 39 / 9 = 4.",
+      "Step 2: 4 / 3 = 4/3.",
+      "Step 3: 4/3 * 6 = 24/3 = 8."
+    ],
+    "inferred_program": null,
+    "overlapping_observation": "Changed division grouping plus false local arithmetic; final chained equality is true but unsupported by the conservative parser.",
+    "review_note": "39/9=13/3, not4. The trace also begins with39/9 then divides by3, unlike the original39/(9/3). The final chained equality4/3*6=24/3=8 is mathematically true but outside the conservative one-equality parser. Primary category remains the explicit false first equation.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "E031_C_greedy/goal_train_v1_eval_g042_t0_C/0": {
+    "category": "local_arithmetic_error",
+    "evidence_quotes": [
+      "Step 1: 40 + (5 - 15) = 20."
+    ],
+    "inferred_program": null,
+    "review_note": "40+(5-15)=30, not20. The displayed second division is true for the wrong intermediate.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "G-paired_C_greedy/goal_train_v1_eval_g034_t0_C/0": {
+    "category": "other_program_or_order_change",
+    "descriptive_subcategory": "added_operation_and_reused_input_literal",
+    "evidence_quotes": [
+      "Step 1: 21 - 21 = 0.",
+      "Step 2: 28 - 0 = 28."
+    ],
+    "inferred_program": "(20 - (9 - (28 - (21 - 21))))",
+    "intermediate_provenance_ambiguous": false,
+    "review_note": "The trace adds21-21 as a new innermost step, then uses28-0. This connected displayed program reuses21 and changes the original program; it gives39, not18. This is not merely a subtraction reversal or a single literal substitution.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "G-paired_C_greedy/goal_train_v1_eval_g036_t0_C/0": {
+    "category": "subtraction_operands_reversed",
+    "evidence_quotes": [
+      "Step 1: 23 - 20 = 3."
+    ],
+    "inferred_program": "(34 + (24 - (23 - 20)))",
+    "review_note": "The supplied20-23 is reversed to23-20, yielding55 instead of61. All three local equations are true.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "G-single_C_greedy/goal_train_v1_eval_g013_t1_C/0": {
+    "category": "subtraction_operands_reversed",
+    "evidence_quotes": [
+      "Step 1: 31 - 34 = -3."
+    ],
+    "inferred_program": "((18 + (31 - 34)) + 9)",
+    "review_note": "The supplied34-31 is reversed to31-34. The connected displayed program gives24 exactly, but the original gives30.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "G-single_C_greedy/goal_train_v1_eval_g032_t1_C/0": {
+    "category": "other_program_or_order_change",
+    "descriptive_subcategory": "extra_subtraction_after_correct_result",
+    "evidence_quotes": [
+      "Step 3: 34 - 2 = 32.",
+      "Step 4: 32 - 2 = 30."
+    ],
+    "inferred_program": "((34 - (4 - (3 - 1))) - 2)",
+    "intermediate_provenance_ambiguous": true,
+    "review_note": "The first three steps correctly compute the supplied expression to32. Step4 adds an unsupported subtraction of2, producing30. Both steps1 and2 produced2, so which earlier value was reused is ambiguous. The inferred program transcribes the displayed extra scalar2 without claiming its provenance.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "G-single_C_greedy/goal_train_v1_eval_g034_t0_C/0": {
+    "category": "input_literal_substituted",
+    "evidence_quotes": [
+      "Step 1: 21 - 21 = 0."
+    ],
+    "inferred_program": "(20 - (9 - (21 - 21)))",
+    "review_note": "The innermost28-21 becomes21-21;28 is replaced by a second21 in the displayed connected computation. It evaluates to11 rather than the original18.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  },
+  "G-single_C_greedy/goal_train_v1_eval_g036_t0_C/0": {
+    "category": "subtraction_operands_reversed",
+    "evidence_quotes": [
+      "Step 1: 23 - 20 = 3."
+    ],
+    "inferred_program": "(34 + (24 - (23 - 20)))",
+    "review_note": "The supplied20-23 is reversed to23-20, yielding55 instead of61. All three local equations are true.",
+    "review_scope": "Every stored C failure, without additional model inference; expressions checked with exact Fraction arithmetic.",
+    "reviewer": "independent_assistant_manual_trace_review"
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "interpretation": "Both arms share F source rows and slots. H references differ by recipe; NLL is diagnostic only.",
+  "runs": [
+    {
+      "final_manifest": {
+        "budget": {
+          "encoded_rows_sha256": "bc0cdb40afac7c0e69ed5152ae70b260cc01031f8c458adb029318c544d18bae",
+          "processed_nonpadding_tokens": 565064,
+          "supervised_response_tokens": 265168
+        },
+        "checkpoint": "runs/post_e037_goal_training_v1/goal_train_e038_r1/checkpoint_256",
+        "checkpoint0_is_parent_reference": true,
+        "completed_updates": 256,
+        "data": "single",
+        "data_sha256": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+        "experiment_id": "E038",
+        "final_adapter": {
+          "parameters": 18464768,
+          "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+        },
+        "finished_at_utc": "2026-09-17T04:19:34.112996+00:00",
+        "frozen_base_unchanged": true,
+        "identity": {
+          "base": {
+            "parameters": 1543714304,
+            "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+          },
+          "data_sha256": "b45b94d97d90c769377e6d26447e02622a9726959138cc184550593d5ba480c9",
+          "parent": {
+            "parameters": 18464768,
+            "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+          },
+          "run_id": "goal_train_e038_r1",
+          "source_commit": "801ef1279a2a817f754f856d9191725eebb1121a"
+        },
+        "optimizer_reset": true,
+        "parent": "E031",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+        },
+        "recoverable_state": {
+          "bytes": 222114933,
+          "created_at_utc": "2026-09-17T04:18:42.854325+00:00",
+          "file": "rolling_step_000256_44f5f997308d40baaed7c9c125cc1c5e.pt",
+          "fingerprint": "24c10b54b4a10624d643569eba21026b303163a51d2255de74f424e6d5153e84",
+          "sha256": "5d3856c0181e94d7af821cdb39204bc7b1336858e9dafb73a014ab2592bd39e3",
+          "step": 256
+        },
+        "reference_nll_after": {
+          "F": {
+            "forward_calls": 512,
+            "forward_seconds": 19.449845153838396,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.07913149706581957,
+            "reference_count": 512,
+            "response_loss_sum": 2628.5900695323944,
+            "supervised_tokens": 33218
+          },
+          "H": {
+            "forward_calls": 512,
+            "forward_seconds": 19.705650866031647,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+              },
+              "encoded_rows_sha256": "440d59126cf98b809d498c9e87743c37959ff34fc9d88ea7ffb42617ca807201"
+            },
+            "input_tokens": 82420,
+            "nll": 0.020388015098912603,
+            "reference_count": 512,
+            "response_loss_sum": 674.3132113814354,
+            "supervised_tokens": 33074
+          }
+        },
+        "reference_nll_before": {
+          "F": {
+            "forward_calls": 512,
+            "forward_seconds": 19.73574313148856,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.7324039900896457,
+            "reference_count": 512,
+            "response_loss_sum": 24328.99574279785,
+            "supervised_tokens": 33218
+          },
+          "H": {
+            "forward_calls": 512,
+            "forward_seconds": 19.767604865133762,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "440d59126cf98b809d498c9e87743c37959ff34fc9d88ea7ffb42617ca807201"
+            },
+            "input_tokens": 82420,
+            "nll": 0.4457071677022425,
+            "reference_count": 512,
+            "response_loss_sum": 14741.31886458397,
+            "supervised_tokens": 33074
+          }
+        },
+        "run_id": "goal_train_e038_r1",
+        "scheduler_reset": true,
+        "seed": 17,
+        "source_commit": "801ef1279a2a817f754f856d9191725eebb1121a",
+        "started_at_utc": "2026-09-17T04:08:13.627659+00:00",
+        "state": "G-single",
+        "status": "completed",
+        "updates": 256
+      },
+      "reference_nll": {
+        "F": {
+          "after": {
+            "forward_calls": 512,
+            "forward_seconds": 19.449845153838396,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.07913149706581957,
+            "reference_count": 512,
+            "response_loss_sum": 2628.5900695323944,
+            "supervised_tokens": 33218
+          },
+          "before": {
+            "forward_calls": 512,
+            "forward_seconds": 19.73574313148856,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.7324039900896457,
+            "reference_count": 512,
+            "response_loss_sum": 24328.99574279785,
+            "supervised_tokens": 33218
+          }
+        },
+        "H": {
+          "after": {
+            "forward_calls": 512,
+            "forward_seconds": 19.705650866031647,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "92da3a11e65e0de78012b6ab38d117554faa929f700dd95ed3f2df3c611fc5ae"
+              },
+              "encoded_rows_sha256": "440d59126cf98b809d498c9e87743c37959ff34fc9d88ea7ffb42617ca807201"
+            },
+            "input_tokens": 82420,
+            "nll": 0.020388015098912603,
+            "reference_count": 512,
+            "response_loss_sum": 674.3132113814354,
+            "supervised_tokens": 33074
+          },
+          "before": {
+            "forward_calls": 512,
+            "forward_seconds": 19.767604865133762,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "440d59126cf98b809d498c9e87743c37959ff34fc9d88ea7ffb42617ca807201"
+            },
+            "input_tokens": 82420,
+            "nll": 0.4457071677022425,
+            "reference_count": 512,
+            "response_loss_sum": 14741.31886458397,
+            "supervised_tokens": 33074
+          }
+        }
+      },
+      "reference_scope": "Reference CE on that arm's training H512 and identical F512. H references differ across recipes; these are not matched held-out targets. NLL diagnoses fit and is not a success criterion. Before/after likelihoods include the complete supervised response and EOS; measured forward_seconds is retained.",
+      "state": "G-single",
+      "status": "completed"
+    },
+    {
+      "final_manifest": {
+        "budget": {
+          "encoded_rows_sha256": "be9c6a4eabfeee527badd9e3e0c307b6253d06b49ac5136cd0b6f6d1b213b946",
+          "processed_nonpadding_tokens": 565120,
+          "supervised_response_tokens": 265228
+        },
+        "checkpoint": "runs/post_e037_goal_training_v1/goal_train_e039_r1/checkpoint_256",
+        "checkpoint0_is_parent_reference": true,
+        "completed_updates": 256,
+        "data": "paired",
+        "data_sha256": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+        "experiment_id": "E039",
+        "final_adapter": {
+          "parameters": 18464768,
+          "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+        },
+        "finished_at_utc": "2026-09-17T04:30:56.907779+00:00",
+        "frozen_base_unchanged": true,
+        "identity": {
+          "base": {
+            "parameters": 1543714304,
+            "sha256": "0fe3fc99f6a3895a6896bf62fdd42853481646a93b45aa167e1084fa116ae142"
+          },
+          "data_sha256": "f84116cfb2e9e066c265fdcfafcba5df1f6bc681045871cd50f5963551540e79",
+          "parent": {
+            "parameters": 18464768,
+            "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+          },
+          "run_id": "goal_train_e039_r1",
+          "source_commit": "801ef1279a2a817f754f856d9191725eebb1121a"
+        },
+        "optimizer_reset": true,
+        "parent": "E031",
+        "parent_adapter": {
+          "parameters": 18464768,
+          "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+        },
+        "recoverable_state": {
+          "bytes": 222114933,
+          "created_at_utc": "2026-09-17T04:30:07.906185+00:00",
+          "file": "rolling_step_000256_4b46c26cb6c14b4a8564da15d6c5b051.pt",
+          "fingerprint": "cd8c7a1fee9384ff9e7246d81d9ddb5217f128794509422b5b122657a3f4cfb2",
+          "sha256": "ae4848c0592c28d56c911d1e44e6e84237094273012fd870c96c7f8e5853ad5b",
+          "step": 256
+        },
+        "reference_nll_after": {
+          "F": {
+            "forward_calls": 512,
+            "forward_seconds": 19.824021372944117,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.07959596658142006,
+            "reference_count": 512,
+            "response_loss_sum": 2644.0188179016113,
+            "supervised_tokens": 33218
+          },
+          "H": {
+            "forward_calls": 512,
+            "forward_seconds": 20.105511512607336,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+              },
+              "encoded_rows_sha256": "6b64dce6db7256026049579894dd344e7085526b19db1083c90bc5e0973ea0fc"
+            },
+            "input_tokens": 82434,
+            "nll": 0.02481052070966877,
+            "reference_count": 512,
+            "response_loss_sum": 820.9553197622299,
+            "supervised_tokens": 33089
+          }
+        },
+        "reference_nll_before": {
+          "F": {
+            "forward_calls": 512,
+            "forward_seconds": 19.538851104676723,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.7324039900896457,
+            "reference_count": 512,
+            "response_loss_sum": 24328.99574279785,
+            "supervised_tokens": 33218
+          },
+          "H": {
+            "forward_calls": 512,
+            "forward_seconds": 19.943997088819742,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "6b64dce6db7256026049579894dd344e7085526b19db1083c90bc5e0973ea0fc"
+            },
+            "input_tokens": 82434,
+            "nll": 0.44602198105615826,
+            "reference_count": 512,
+            "response_loss_sum": 14758.421331167221,
+            "supervised_tokens": 33089
+          }
+        },
+        "run_id": "goal_train_e039_r1",
+        "scheduler_reset": true,
+        "seed": 17,
+        "source_commit": "801ef1279a2a817f754f856d9191725eebb1121a",
+        "started_at_utc": "2026-09-17T04:19:34.358934+00:00",
+        "state": "G-paired",
+        "status": "completed",
+        "updates": 256
+      },
+      "reference_nll": {
+        "F": {
+          "after": {
+            "forward_calls": 512,
+            "forward_seconds": 19.824021372944117,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.07959596658142006,
+            "reference_count": 512,
+            "response_loss_sum": 2644.0188179016113,
+            "supervised_tokens": 33218
+          },
+          "before": {
+            "forward_calls": 512,
+            "forward_seconds": 19.538851104676723,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "d91a058e68c4ef7b21bb165034aa99bc6da7918e564dd4c53e4d8fc8e7cadec1"
+            },
+            "input_tokens": 58846,
+            "nll": 0.7324039900896457,
+            "reference_count": 512,
+            "response_loss_sum": 24328.99574279785,
+            "supervised_tokens": 33218
+          }
+        },
+        "H": {
+          "after": {
+            "forward_calls": 512,
+            "forward_seconds": 20.105511512607336,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "a97f622c76c5817f8f283aa2f0034e19d438e8dd0bbb91026d443f3ba2f23bba"
+              },
+              "encoded_rows_sha256": "6b64dce6db7256026049579894dd344e7085526b19db1083c90bc5e0973ea0fc"
+            },
+            "input_tokens": 82434,
+            "nll": 0.02481052070966877,
+            "reference_count": 512,
+            "response_loss_sum": 820.9553197622299,
+            "supervised_tokens": 33089
+          },
+          "before": {
+            "forward_calls": 512,
+            "forward_seconds": 19.943997088819742,
+            "identity": {
+              "adapter": {
+                "parameters": 18464768,
+                "sha256": "0936c1682d6df767fbc91a54deba6de1ff558dfd5e8182ae8b3c0d32a892074e"
+              },
+              "encoded_rows_sha256": "6b64dce6db7256026049579894dd344e7085526b19db1083c90bc5e0973ea0fc"
+            },
+            "input_tokens": 82434,
+            "nll": 0.44602198105615826,
+            "reference_count": 512,
+            "response_loss_sum": 14758.421331167221,
+            "supervised_tokens": 33089
+          }
+        }
+      },
+      "reference_scope": "Reference CE on that arm's training H512 and identical F512. H references differ across recipes; these are not matched held-out targets. NLL diagnoses fit and is not a success criterion. Before/after likelihoods include the complete supervised response and EOS; measured forward_seconds is retained.",
+      "state": "G-paired",
+      "status": "completed"
+    }
+  ]
+}

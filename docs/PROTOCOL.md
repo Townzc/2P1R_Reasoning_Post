@@ -1,12 +1,307 @@
-## LT001 — long-term design proposal, 2026-09-11
+# Final closeout — public math complete; provider off; awaiting owner
 
-The [acquisition and independent-validation design](tracks/icml_acl_2027/README.md)
-is prospective and does not amend any frozen experiment, scorer or allowance.
-The common usable scientific SFT/evaluation release must be supplied by the
-sprint after actual completion/learning/retention evidence. The four-point
-allocation proposal remains unexecuted. No reserved development/test contents,
-new model predictions or compute servers were accessed for this milestone.
-The sprint alone coordinates the existing E017 window and canonical ledger.
+All31,203 logical outputs and54 scored runs are complete and independently
+reconciled. Four arms each committed128 updates;544 physical completed training
+records and31,331 physical generation attempts preserve32 lost updates and128
+lost attempts. QDW's primary MATH result is negative versus DFT and TrimSFT;
+QDW versus SFT is inconclusive. GSM/dev gains do not establish broad superiority.
+
+Provider OFF was confirmed2026-09-18 11:26UTC (04:26PDT); the temporary timer
+was cleared, heartbeat paused and finite local observer cancelled. Final128
+model/optimizer/RNG artifacts remain on the stopped server; planned step64
+pruning is independently receipt-verified. Never restart or repeat this round.
+
+Read [the final report](../reports/public_math_pilot_v1/FINAL_EXECUTION_SUMMARY_ZH.md) and the adjacent FINAL_HANDOFF_ACL_ICML_20260918.md.
+Future experiments require the owner's direction and advance runtime/GPU-hour/
+cost/stop estimates. The long-term branch was not changed. All older current-state
+sections below are dated historical snapshots superseded by this final closeout.
+
+# Latest override — finish this round overnight, then shut down
+
+The owner now authorizes overnight completion of the existing finite queue and
+requires a runtime/cost estimate before every future experiment. This supersedes
+all older midnight/no-overnight instructions below. New UTC deadlines on
+2026-09-18: model13:35, GPU13:45, CPU13:50, provider13:58 (06:58 PDT).
+Finish early and shut down promptly; no new science or automatic next direction.
+See [the overnight amendment](../reports/public_math_pilot_v1/OVERNIGHT_COMPLETION_AMENDMENT_20260918.md) for the budget, safe deadline transition,
+record retention and future pre-experiment estimation requirements.
+
+# Direction amendment — 2026-09-18 UTC
+
+Research now targets longer-term ACL/ICML work. The existing finite public-math
+scientific contract and nightly shutdown remain unchanged. The previous ICLR
+abstract urgency does not authorize further spending, scientific extensions or
+overnight execution. Read [the transition review](../reports/public_math_pilot_v1/LONG_TERM_TRANSITION_20260918_ZH.md).
+Complete and reconcile this pilot, then wait for the owner’s next direction.
+
+# Current status — two A800 workers evaluating in tmux
+
+The owner reopened the same persistent instance with two A80080GB GPUs and
+requested prompt, efficient use. The published scheduler abfff696 is deployed;
+both independent workers are generating under detached tmux. The unchanged CPU
+scorer runs concurrently. All four128-update training arms remain complete.
+No training, preparation or completed generation is repeated.
+
+Read reports/public_math_pilot_v1/DUAL_GPU_RESUME.json, LIVE_EXECUTION.md and
+NEXT_SESSION.md. The hardware transition preserved4533 logical outputs with
+zero uncommitted reservations; the01:49UTC snapshot records9363 saved outputs, including all five complete
+GSM8K states. Primary MATH average@8/pass@8 and trained dev remain pending. The original128 failed generations,32 lost training updates and
+non-bitwise GPU replay limitation remain. Linux parallel checks10/10 passed,
+including original-contract equality and GNU-timeout inherited lock verification.
+
+The heartbeat is active. Nightly model/hard-GPU/CPU deadlines remain06:35/06:45/
+06:50UTC; the provider23:58PDT timer was reconfirmed after the upgrade. No new
+arm, seed or model is authorized. Inspect real workers before any resume action;
+do not duplicate them. Earlier current-state sections below are historical.
+
+# Measured engineering preflight complete; formal preparation executing next
+
+The replacement A800 completed five discarded engineering updates,64 reusable
+annotation forwards and32 reusable Base-dev generations. Full FP32 model,
+optimizer and RNG roundtrip passed. Training peak was33.41GiB on the longest
+profile;16-way dev generation produced31,215 tokens in123.42seconds.
+See reports/public_math_pilot_v1/PREFLIGHT_MEASURED.json. These are engineering
+measurements, not public benchmark scores. No formal updates yet.
+
+The finite preparation runtime now adds immutable per-batch output/RNG journals,
+full4096 mask freeze and the predeclared64 technical audit. Large artifacts stay
+on the195GiB server. Tonight's work stops for saving by23:45PDT and the instance
+must be off by00:00PDT. Owner cost/retention amendments supersede old blockers;
+historical reports below describe earlier states, not the current execution.
+
+# Current execution — owner reopened daytime public-math experiments
+
+The owner has opened the replacement A800, expanded its data disk to195GiB,
+and requested immediate execution with cost deprioritized until tomorrow's
+abstract deadline. Use experiments/public_math_pilot_v1/DAYTIME_EXECUTION_AMENDMENT.md.
+Mandatory Mac downloads and the old monetary/transfer admission blockers are
+superseded. Scientific scope and historical accounting remain intact. Run finite
+detached jobs, preserve server recovery state, and pause for the owner’s nighttime
+schedule. Engineering preflight precedes the frozen four-arm experiment.
+
+# Latest owner override — retain artifacts on server; no Mac export gate
+
+The owner removed mandatory Mac downloads for the public math pilot. Keep full
+scientific artifacts on the server and verify them there. Read
+experiments/public_math_pilot_v1/SERVER_RETENTION_AMENDMENT.md and the current
+reports/public_math_pilot_v1/NEXT_SESSION.md before using historical resource
+reports. The former A800-priced backup-transfer blocker is superseded; actual
+GPU runtime, disk availability, scoring boundaries and elapsed caps still need
+verification. Latest SSH check returned connection refused; no new job started.
+
+# Current status — public math CPU preparation; provider off; no model run
+
+The owner-requested public math pilot has not produced training or evaluation
+results. CPU implementation/data audit and official asset checks are recorded in
+reports/public_math_pilot_v1/EXECUTION_SUMMARY_ZH.md. E044–E047 and Base are
+registered but unrun. Formal and nonformal optimizer updates, generations and
+annotation forwards are all zero; the formal phase orchestrator is still pending.
+
+CPU qualification corrections consumed the preparation window. The GPU preflight
+was not launched; no measured GPU throughput or full-model recovery is claimed.
+The four-arm raw recovery export also exceeds current effective resources after
+the required safety factor, and one official MATH-500 reference normalizes to
+empty. These are resource/contract limits, not model-performance gates.
+
+Provider off was confirmed 2026-09-17 19:40:40 UTC; the temporary timer was cleared.
+Whole powered-window cost is approximately CNY4.63, not an invoice. No automatic
+restart or optional run is queued. Preserve the stopped instance and all old
+unique checkpoints, especially E015. Historical results and process ledgers below
+remain unchanged. Next startup requires ready source and complete resource review;
+previously consumed phase time does not reset across sessions.
+
+# Current closeout — E040–E043 complete; provider off; paused
+
+The owner-authorized decision-supervision phase is complete. E040/S-U and
+E041/S-D start from E038 step256; E042/P-U and E043/P-D start from E039 step256.
+Each completed 128 additional updates with an independent optimizer reset:
+512 updates, 4,736 unique generations and 7,552 diagnostic sequence forwards.
+The latter include 704 candidate contexts/2,816 candidate scores and 6,848
+reference decompositions. Execution source is
+2bb39fbdf5bf83bb471e436804e1b968262ff530. Stage A consistency passed before
+training; no accuracy gate, extra generation or automatic continuation was used.
+
+On the fresh 48 exploratory number groups, H greedy both-target success is
+13/48 for S-U versus 20/48 for S-D, and 16/48 for P-U versus 24/48 for P-D.
+These are D-minus-U comparisons within each recipe, not parent-to-child gains.
+F sampled pass@1 differences remain unclear. This one-training-seed result does
+not establish a pure mechanism, broad transfer, structural OOD or equivalence;
+the two recipes are not two independent seeds. Earlier E038/E039 findings remain
+unchanged on their original evaluation pool.
+
+All 19,265 inventoried files plus the export manifest are independently preserved,
+including eight scientific adapters and four latest optimizer/RNG states.
+Independent training verification confirms every 128-step dose/LR/mask identity,
+unchanged F weights, normalized H scalar weight mass and zero uncommitted updates.
+Explicit exporter ACK/prune receipts cover 30 obsolete rolling recovery files,
+6,218,016,984 bytes; this excludes earlier historical cleanup.
+
+Provider off confirmed 2026-09-17 07:58:23 UTC; the temporary timer was cleared.
+The whole powered-window proxy is CNY16.2778 at CNY7.98/hour, not an invoice.
+One new process receipt charges 4,785 seconds; combined totals are 28 receipts /
+22,408 seconds. All prior process and generation ledgers remain immutable.
+Preserve E015 unique weights: its independent full backup remains incomplete.
+Do not release/delete the instance volume.
+
+Read [the final execution summary](../reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md),
+[results](../reports/post_e039_decision_supervision/RESULTS.md) and [cost/closeout evidence](../reports/post_e039_decision_supervision/COST_AND_CLOSEOUT.json).
+The task is complete and paused for the owner's adjustments. No new experiment,
+GPU/model call, sweep or automatic restart is queued or authorized. Preparation
+and earlier current-state statements below are historical snapshots superseded
+by this closeout.
+
+# Historical authorization — Post-E039 preparation
+
+The owner requested the finite Stage A + four-arm continuation plan on the existing
+A800. E040/S-U, E041/S-D, E042/P-U and E043/P-D are registered from E038/E039
+step256:128 additional updates each, unchanged original H/F rows, ordinary CE
+versus first semantic decision weighting. New generation cap5000, forward cap16384,
+whole powered cap4hours/CNY40. Follow experiments/post_e039_decision_supervision/PROTOCOL.md.
+No new scientific outputs yet. Historical outcomes and ledgers remain unchanged;
+the current owner's authorization supersedes the previous pause for this phase.
+
+# Historical closeout — E038/E039 complete; provider off; paused
+
+The owner-authorized G-single/G-paired phase completed from E031 step32:
+256 updates per arm, 3,344 unique generations, zero fault repeats, 288 operator
+contexts and 4,096 reference forwards. Execution source is
+801ef1279a2a817f754f856d9191725eebb1121a; E030 is not an ancestor.
+
+The two primary paired-minus-single outcomes show no observed recipe advantage.
+Counts below are ordered G-single versus G-paired.
+H greedy both-target success is 12/48 versus 10/48 (−4.17pp, 95% group interval
+[−16.67,+8.33]); F sampled pass@1 is 14/384 versus 13/384 (−0.26pp,
+[−2.60,+2.34]). Shared training repairs most H interface failures, but conditional
+choice/free construction remain weak. One seed and 48 exploratory number groups
+do not establish equivalence, a population effect, structural OOD or a mechanism.
+
+All 3,422 inventoried files plus the export manifest are independently preserved,
+including four adapters and two latest optimizer/RNG states. Compact public data
+has 3,409 byte-exact files including the manifest; six binaries and eight machine
+metadata files remain private with original identities. Independent audits cover
+154 executed sources, 512 updates and all token/stop/math/generation contracts.
+40,473,429,556 bytes of verified historical duplicates were removed; final free
+space is 39.59 GiB. Preserve E015 unique weights: its independent full backup is
+still incomplete. Do not release/delete the instance volume.
+
+Provider off confirmed 2026-09-17 04:54:39 UTC; temporary timer cleared04:55:16.
+Whole powered window85m39s, CNY11.39145 proxy at7.98/hour, not an invoice.
+One new process receipt3018s; combined27 receipts/17623s. Older generation and
+process ledgers remain immutable. No further GPU/model work is authorized.
+
+Read reports/post_e037_goal_training/EXECUTION_SUMMARY_ZH.md, RESULTS.md,
+C_INTERFACE_ERROR_AUDIT.md, SEWON_BRIEF.md and COST_AND_CLOSEOUT.json. Next-step
+training-example/critical-token diagnostics are proposals only. The task is
+complete and paused for owner planning. Earlier current/preparation/proposal-only
+statements below are historical and superseded by this closeout.
+
+# Historical closeout — E037 complete; provider off
+
+E037 finished the owner-authorized post-E036 goal diagnostic:2112 unique outputs,
+192 operator contexts/768 candidate scores, zero new training. All2124 exported
+files and complete CPU token/stop/score audits passed. Provider off2026-09-17
+02:47:37UTC; timer cleared. Whole window41m37.491s/CNY5.5361 proxy, not invoice.
+One new receipt1149s; combined26/14605, historical4784/4864 unchanged.
+
+F/H sampled correct counts are5/33,8/41,6/43,8/42 per192 (C-S,C-P,B-S,B-P).
+C greedy43/45/44/47 per48. H paired-target sampled success is2/2/2/1 per96
+paired draws nested within24 groups. D_goal is directionally positive in all
+four states, but local both-target unique argmax only0/1/0/1 per24: do not claim
+no target sensitivity, reliable conditional choice, or a pure search mechanism.
+Read reports/post_e036_goal_probe/RESULTS.md, INTERFACE_ERROR_AUDIT.md and
+TRAIN_SUPPORT_LINEAGE_CORRECTION.md. The frozen preparation support-union label
+incorrectly included non-ancestor E030; canonical report uses768 rows/512 groups.
+Frozen original data/source remains preserved; no result or question was changed.
+
+Task is complete and paused for owner planning. Conditional G-single/G-paired
+training is a proposal only; no new GPU task, sweep or automatic continuation.
+Preserve E015 unique weights; its older independent full backup is still incomplete.
+Earlier phase instructions and results below remain historical.
+
+# Historical closeout — E031–E036 complete; server off
+
+The owner-authorized E031–E036 queue is complete: two32-update parents and
+four256-update endpoints (1,088 updates), all4,192 new generations, and the
+optional A/B-reference NLL forwards. Independent local verification covers
+all20 adapter checkpoints,6 optimizer/RNG recoveries and4,192 unique new requests;
+30/30 combined historical/new evaluation views pass tokenizer/math replay.
+There are4,768 unique completed outputs and4,784 actual generations, preserving
+the original16 fault attempts;80 of the4,864 cap remain unused.
+
+Discovery sampled pass@1 for C-S/C-P/B-S/B-P is29/384,26/384,36/384,16/384;
+pass@4 is15/96,20/96,14/96,15/96; greedy is8/96,13/96,10/96,17/96.
+Interactions are−4.43pp,−4.17pp,+2.08pp, respectively; all full/nondegenerate
+question/template interaction intervals include zero and exclude training-seed uncertainty.
+C and B both reach128/128 target/atomic compute scores; target-specific readiness
+is not demonstrated. Training16 greedy is8/16,3/16,10/16,4/16 despite lower Paths
+reference NLL. This is a one-seed restricted discovery result, not equivalence,
+a general Paths benefit/harm, or a pure skill/routing mechanism.
+
+Provider shutdown confirmed23:02:11UTC; temporary timer cleared. Conservative
+whole-window proxy1h38m11s at7.98CNY/h isCNY13.06, not an invoice. All3,515
+inventoried files (2,900,439,829bytes) are independently SHA-verified; final disk
+free2.885GiB. One new receipt charges4,541s, bringing the total to25/13,456;
+old24/8,915 and E030 stay unchanged. E015 unique full weights remain protected.
+
+The task is now paused for the owner’s next plan. The proposed bounded
+one-hole target-conditioned completion study is a proposal only. No next GPU
+job, repeat, LR sweep, n8, RL, alternative model or reserved-test run is queued.
+
+Read [full results](../reports/ARITHMETIC_E031_E036_RESULTS.md),
+[discussion draft](../experiments/thursday_probe_v2/THURSDAY_BRIEF_resume_r1.md),
+and [actual cost/export closeout](../experiments/thursday_probe_v2/COST_REPORT_resume_r1.json).
+
+---
+
+The following entries are historical and do not authorize a new run.
+
+# Post-E030 continuation authorized — September16,2026
+
+The owner requested execution of the new resume plan. E031–E036 will continue
+with unchanged scientific recipes and next-segment/batch resource admission.
+Carry592 actual generations;4192 new fixed requests lead to4784 within4864.
+The finite package is cumulative8 powered-on hours/CNY65, first limit wins;
+no outcome-based cell selection or repeated E030. Read
+[resume amendment](../experiments/thursday_probe_v2/RESUME_AMENDMENT_r1.md).
+Execution source and recovery checks are being published before new model work.
+Earlier closeouts below remain historical evidence.
+
+---
+
+## Arithmetic protocol v2 — actual partial closeout
+
+The finite window ended after E030 and base measurements, before either prep
+parent or any factorial child. E030 used the exact32 updates/23,856 supervised
+tokens; fit correctness23/32 ->25/32, check8/16 ->8/16. Separate task types:
+construction0/16 ->1/16 (fit0/8 ->1/8; check0/8 ->0/8), computation31/32 ->32/32.
+Native EOS32/48 ->48/48, caps13 ->0, parsed33/48 ->44/48. Reference NLL fell,
+but free construction learning/generalization is not established. C0 discovery
+was0/96 correct with72 caps; these failures remain in the denominator.
+
+The outcome-independent resource estimate was23,059s for the remaining queue,
+versus6,827s remaining in the registered window. It applies the slowest base
+throughput to all later models, then adds a1.5 multiplier and420s; this is a
+conservative forecast, not measured evidence that the grid takes6.4h. The
+three-hour planning window/estimator was inadequate for admission; the owner
+was not missing authorization and disk space did not cause the stop. No
+accuracy, probe significance, NLL or retention criterion selected the stop.
+
+Two attempts charged478+1065=1543 process seconds. The first was manually
+stopped before training for tokenizer metadata overhead; the published repair
+reproduced all12 persisted fault records except duration.48 completed baseline
+records were reused. There are576 unique completed results,592 actual attempts,
+12 saved fault records and4 unpersisted fault records (never reconstructed).
+All576 completed prediction records and66 raw batch records covering528 newly generated outputs pass independent audit.
+All64 export-inventory entries (about522MB), including every new full adapter
+and recovery state, are independently SHA-verified; two final manifests are
+separately retained and hashed. Provider shutdown confirmed20:54:07UTC, timer
+cleared, final data-disk free5.60GiB.43m07s powered-window proxy at7.98CNY/h is
+aboutCNY5.73, not an invoice. Combined24 receipts/8915 charged seconds; original
+21-receipt ledger remains unchanged. E018 remains failed and E015 is preserved.
+
+Read [current status](../experiments/thursday_probe_v2/CURRENT_STATUS.md), [Thursday brief](../experiments/thursday_probe_v2/THURSDAY_BRIEF_v2.md), and [actual resource closeout](../experiments/thursday_probe_v2/COST_REPORT_v2.json). Earlier entries below are historical.
+
+---
 
 ## E017 authorized extension — 2026-09-10 UTC
 

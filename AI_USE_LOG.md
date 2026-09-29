@@ -1,20 +1,185 @@
-# 2026-09-11 — LT001 long-term literature and research design
+# 2026-09-18 — completed public benchmark result, dev still running
 
-Codex read the shared protocol/evidence, checked five close primary papers,
-inspected a pinned PathGeneralization author-code release without executing it,
-and verified course/venue pages. It drafted a falsifiable acquisition study,
-three explicit policies, independent-pool/seed validation, precision calculations
-and semester deliverables. The inspection does not establish full reproduction
-or novelty. All new statistics are analytic planning scenarios, not model data.
+Codex inspected actual dual workers/scorer, receipts, telemetry, cgroup memory,
+disk and saved coverage without changing the queue. A read-only audit bound all
+26,595 public outputs to scores and retained all original failures. Independent
+pure-Python aggregation reconstructed the five500-by8 MATH matrices and five1319
+GSM arrays, verifying correctness/unresolved counts, full denominators, average
+and pass bounds, and paired mean-difference bounds. Published bootstrap intervals
+were preserved from the frozen scorer rather than recomputed here.
 
-The task used the configured default model/settings without an asserted mode
-switch or delegation. No server/model call, reserved development/test content,
-new prediction, unchanged test rerun, budget reservation or external message
-was made. Literature source files remain an ignored local reading cache; public
-records contain citations, code hashes and scientific design only. Existing
-E017 authorization, E016 failures, C020's post-hoc status, shared receipts and
-the incomplete independent E015 weights backup remain unchanged. Future phases
-require concrete review; no implementation or GPU readiness is claimed here.
+QDW's negative primary MATH result and inconclusive QDW–SFT comparison are stated
+explicitly. All47 unresolved MATH judgments are retained:40 official-empty-reference
+outputs and7 CPU timeouts after the allowed retry. No rescore/model call, altered
+setting, added seed or outcome-based stop was introduced. Development evaluation
+and final closeout continue; this benchmark milestone is not full completion.
+
+# 2026-09-18 — overnight continuation verified
+
+The scheduled check verified both actual resumed GPU workers, their unchanged
+source/contract, the single resumed CPU scorer and telemetry. The static06:24
+boundary independently reconciles20,107 saved outputs,32 scored runs and zero
+uncommitted reservations. A fresh07:15 live audit binds21,619 saved outputs and
+preserves512 committed/544 physical update records,128 original lost generations,
+and12 retained component identities/sizes. This is not another full106GB binary
+rehash or final completion. No new failures, source changes or model launches
+were introduced by this check. A finite local read-only boundary collector was
+prepared to preserve compact evidence before the existing provider failsafe;
+it changes no server file, worker, science or shutdown setting.
+
+# 2026-09-18 — owner-authorized overnight deadline extension
+
+Codex verified and changed the provider failsafe through its visible UI, retaining
+the same persistent two-A800 instance. It requested the existing evaluator's
+complete-run pause to change execution deadlines safely, preserving all scientific
+contracts and historical records. The obsolete local read-only midnight observer
+was cancelled. The native heartbeat instructions now reflect overnight completion.
+No new scientific arm, training run, model or payment is authorized. The amendment
+separates expected rental time/cost from measured process time and makes the owner's
+future pre-experiment estimation preference explicit. The actual drained boundary
+and resumed attempt will be recorded after verification.
+
+# 2026-09-18 — stage review and ACL/ICML transition planning
+
+Codex followed the owner’s change from an ICLR submission sprint to longer-term
+ACL/ICML research. It inspected the running dual-GPU evaluation with the existing
+read-only status tool, worker logs/receipts, cgroup events, disk, telemetry and
+checkpoint metadata. All12 retained scientific components are present with sizes
+and manifest hashes matching the prior full server rehash; the binaries were not
+rehash-read again. No new worker, model call, retry, source or scientific setting
+was introduced. The scheduled nightly boundary remains in force.
+
+The stage review uses saved arithmetic/public-math reports and a read-only look
+at the existing long-term branch. It separates completed GSM from incomplete
+MATH/dev, labels future controls and replications as proposals, carries both
+known failures and non-bitwise replay, and preserves all shared exposure/cost
+history. Documentation links, counts and retained manifest identities were checked.
+The other worktree was not edited/merged. No subagent, payment, external message,
+submission or new experiment was used. Final experimental closeout remains due.
+
+# 2026-09-16 — E038/E039 completed, independently audited and closed
+
+Codex executed the owner's finite post-E037 G-single/G-paired training plan from
+E031. Both256-update arms and all3344 registered generations completed once;
+no score-based stop, checkpoint selection or extra model work.45 Linux checks
+passed before model calls, after a CPU-only1ULP LR-validation repair; the executed
+frozen schedule was unchanged. Source801ef1279a2a817f754f856d9191725eebb1121a
+was published before execution. Independent CPU audits verified154 source files,
+512 updates, optimizer/RNG states, token/stop/math contracts and288 operator
+contexts. Paired bootstrap primary intervals were independently recomputed.
+All13 C failures were manually annotated and all288 C scores replayed.
+
+Full backup hashes cover3422 inventoried files plus the manifest, four scientific
+adapters and two latest recovery states.40,473,429,556 bytes of historical
+duplicates were deleted only after independent backup/file-set/SHA verification;
+E015 unique weights remain protected. Backup transport faults did not create model
+retries. Provider off and timer clearing were confirmed; whole-window cost proxy
+is11.39145CNY, not an invoice. One3018s receipt brings totals to27/17623s.
+
+Public compact files preserve original bytes. Six binaries and eight PEFT
+machine-path metadata files remain private, with exact omissions documented.
+One public core-manifest input key was normalized to a relative path without
+changing its digest or any core result. Public generation-audit metadata omits
+one private provider instance ID and records the original private report SHA;
+scientific evidence is unchanged. Supplemental report wording and the result
+plot were reviewed; main comparisons show no observed paired-recipe advantage.
+The present task ends paused. Proposed task-learning diagnostics were not run.
+No external messages were sent.
+
+# 2026-09-16 — E037 completed and independently verified
+
+Codex executed the owner-requested finite frozen-endpoint diagnostic; no new
+training or external messages. Four agents split data, scoring/statistics,
+resource-accounting review, and integration.30 targeted tests passed both locally
+and on Linux. All2112 actual generations and192 local forwards were exported;
+2124 files/50,011,905 bytes independently hash-verified before provider shutdown.
+CPU audits replayed prompts, token/stop contracts, math and ordered templates;
+local probability arithmetic and candidate token spans were checked without
+rerunning model inference. Supplemental1152 H/C scores exactly revalidated.
+
+A reviewer caught a preparation-audit lineage-label error: the non-ancestor E030
+calibration-fit rows were wrongly included in endpoint support unions. The frozen
+original was preserved and an explicit source-bound correction supplies768 rows/
+512 groups. Core measurements and leakage exclusions did not change. A separate
+post-run one-line analyzer fix normalizes public source paths; all8 core analysis
+artifacts were verified byte-identical after rerun. The new plot was visually
+checked. Costs use verified live7.98/h and conservative whole-power timestamps,
+not a claimed invoice. User will decide the proposed next data intervention.
+
+# 2026-09-16 — E037 frozen goal diagnostic preparation
+
+Owner explicitly requested the post-E036 handoff. Codex prepared outcome-blind
+paired goals, target-support audit, ordered-AST scoring, local operator probability
+scoring, independent finite resource accounting, and new CPU checks. Separate
+agents reviewed data/scoring/runtime. No correspondence sent; no new training.
+
+# 2026-09-16 — complete E031–E036 execution and independent closeout
+
+Following the owner’s explicit resume instruction, Codex executed the published
+2379c90 queue on the existing single A800. No scientific recipe/seed/endpoint or
+scorer changed. Six runs,1088updates and4192newoutputs completed without new
+fault duplication. Codex incrementally exported and SHA-verified full adapters,
+optimizer/RNG recoveries and raw records, confirmed provider shutdown, cancelled
+the temporary timer, then performed CPU-only analysis and publication.
+
+Three bounded subagents independently reviewed recovery, request/tensor/dose
+consistency, accounting/export history, and interpretation. Offline reviewers
+caught and fixed physical-JSONL-line handling, stale partial-summary SHA binding,
+and NLL-runtime reporting before final publication; none changed model outputs.
+The final verifier/analyzer suite has19 passes; all30combined views and4768unique
+outputs were replayed through the frozen tokenizer/stop/math contracts. No
+training gradients or CUDA sampling were recomputed. The scientific plot was
+rendered and visually inspected. A separate CPU training-contract audit documents
+serialization and target masks without model forward calls.
+
+The interpretation reports all metrics, parent-probe ceiling, wide paired
+interaction intervals, nondegenerate strata, and NLL/free-generation divergence.
+The next target-conditioned completion study is a proposal only. The discussion
+brief is a local draft for the owner; no external message was sent. No reserved
+confirmation/official test, extra machine, recharge, paid storage, RL, n8 or new
+model was used. Private credentials/endpoints and machine-specific paths stay
+outside the public repository.
+
+# 2026-09-16 — owner-authorized post-E030 continuation preparation
+
+Codex and three bounded subagents implemented independent training and batch
+recovery, CPU diagnostics and a cumulative resource launcher. Tiny CPU fixtures
+check uninterrupted versus resumed tensors/RNG, raw-output crash recovery,
+parent optimizer reset and immutable dose/request identities. The owner's
+new document authorizes the six previously registered runs and64 fixed training
+diagnostic outputs. Source is published before new pretrained-model execution.
+The existing provider instance was already powered on by the owner; setup idle
+time counts in the cumulative rental ledger. No external messages are sent.
+
+# 2026-09-16 — owner-authorized post-E018 arithmetic protocol preparation
+
+Codex implemented the finite v2 queue and independent analysis without delegated
+agents or pretrained-model calls. CPU work verified exact old data/dose hashes,
+local target degeneracy, fixed calibration/sentinel/midpoint selections and
+adapter branching/recovery on tiny randomly initialized fixtures. A first ID
+allocator error was caught before execution; its immutable CPU release is kept
+and the corrected release reserves E030–E036. E018 historical failure, old data,
+source and ledgers remain unchanged. New scientific claims await actual output.
+No external message, recharge, extra machine or reserved-test access occurred.
+
+# 2026-09-15 — E017 execution, independent closeout and sprint resumption
+
+After the owner explicitly resumed work and supplied a new server connection,
+Codex staged the unchanged published E017 snapshot on the cloned A800, preserving
+existing outputs. All64 Linux checks passed before the single64-parent base-only
+run. No training, teacher, new checkpoint, reserved development, official test,
+retry, delegated agent or external correspondence occurred.
+
+Codex exported and hashed18 compact/auxiliary files and the21-entry ledger,
+confirmed provider shutdown, and cancelled the temporary provider backstop.
+Local and server raw-prefix audits agree byte for byte. A new CPU-only summary
+checks all64 historical prefixes and all21 receipts; initial summary-script
+interpreter/schema errors were corrected before publication and did not affect
+experimental execution or records. All104 frozen dependencies remain unchanged.
+Original scores/failures remain immutable; E017 is a completion calibration,
+not a training benefit or independent held-out finding. The updated packet
+keeps E018 method/resource review and a verified release as separate prerequisites.
+Private credentials, endpoints and recovery paths are excluded from publication.
 
 # 2026-09-10 — E017 frozen release and clean-checkout readiness
 
@@ -920,3 +1085,229 @@ This is post-hoc analysis of observed development data; no server contact,
 pretrained model call, delegation, new allowance or external message occurred.
 Publication precedes the immutable audit run. Follow-up literature reads focus
 on capability preservation and evaluation extraction, not a new model grid.
+
+## 2026-09-11 — ICLR sprint scope, evidence and budget planning
+
+Codex prepared an offline sprint plan, claim-to-evidence inventory, manuscript
+outline, E017 source-routing supplement, and concrete conditional method/resource
+review. It read the retained protocol/results and primary sources for ICLR dates
+and the five closest works, including the direct Shortest Path questions-versus-
+answers comparison and MathQA study. It calculated planning estimates from
+existing timing JSON; no new runtime or performance measurement was inferred.
+The draft explicitly leaves novelty and scientific outcomes unresolved.
+
+The existing E017 main-publication guard was inspected without modifying it.
+The plan retains the published execution snapshot and prior passed CPU evidence;
+no unchanged test suite was replayed. Documentation checks cover links, arithmetic,
+frozen-dependency preservation and private-material exclusion. All changes are
+research documentation and estimate artifacts, not model/runner changes.
+
+No research-model call, compute-server contact, GPU process, reserved-development
+or final-test access, new allowance, live-ledger mutation or submission occurred.
+Historical scores, failures and the incomplete E015 weights recovery remain
+explicit. The configured default assistant settings were retained; no Max/Ultra
+setting change was asserted and no additional agents were used.
+
+## 2026-09-16 — Thursday execution preparation
+
+The owner explicitly requested execution of the finite September15 plan. Codex
+prepared a disjoint arithmetic release and reconstructed the fixed253 GSM8K
+anchors, preserving all original source bytes, masks and64-update dose. The fixed
+32-row manual review identifies one material speed/time inversion, two wording
+flags and one decimal-notation issue. The documented disposition retains the
+original corpus for engineering-only optimization/retention calibration, with no
+reasoning-quality claim, correction, filtering or backfill. New arithmetic labels
+are independently exact-verified. Six data and two tiny-random-model LoRA tests
+pass. No extra agent or external message was used. The owner started an A800;
+read-only hardware and provider-price checks precede the separately bounded run.
+Historical21 receipts and E015 unique weights remain unchanged.
+
+## 2026-09-16 — E018 bounded execution and stopped queue
+
+Codex ran the published E018 release once on the owner-started A800. Its fixed
+retention criterion failed despite net observed-dev improvement, so no further
+model run was launched. Codex independently audited160 raw streams, matched64
+base streams to E017, reviewed all five lost cases, verified18 exported files
+and the complete adapter, and obtained provider-confirmed shutdown. The phase
+charged371 model-process seconds without changing the historical ledger.
+
+All reported tables and two charts derive from retained artifacts. The report
+separates operational failure, descriptive bootstrap uncertainty, source-label
+defects and untested arithmetic hypotheses. CPU-only alternate candidate pools
+remain uncalibrated. New tests total11 focused passes locally (8 data/LoRA checks
+also passed on Linux); no unchanged historical suite was rerun.114 frozen E018
+source files and four data manifests were hash-verified. Report spacing was
+polished after generation without changing numeric results. No delegation,
+external correspondence, reserved test, paid teacher API or automatic retry.
+
+### 2026-09-16 v2 engineering repair
+The first v2 attempt was manually stopped before SFT after a repeated tokenizer-vocabulary lookup caused CPU delays during generation audit. All output was independently preserved. A bounded subagent implemented and tested a metadata-cache-equivalent generator with durable raw batch journaling; the primary agent implemented continuation accounting and independent replay caching. Same release, recipe, seed and whole-window limit;478 prior seconds and16 partial probe outputs remain charged. The complete48-row calibration is reused with hash and independent token/score checks. Source is published before continuation.
+
+### 2026-09-16 v2 independent analysis tooling
+While the published930bd49 continuation ran, a bounded subagent added an offline partial-phase audit with four passing tests. It verifies complete evaluation identities, token/stop/prompt/score replay, raw batch tensors, calibration paired transitions and separate reuse/fault accounting; it refuses to invent factorial results. The primary agent integrated the same batch-journal check into complete analysis and gave the report builder an explicit run-directory argument. These are offline analysis changes; the running GPU source and fixed queue remain930bd49. A server-side read-only comparison confirmed all12 persisted interrupted probe records equal the repaired replay in every field except measured batch_seconds; the missing4 fault records remain unavailable.
+
+### 2026-09-16 arithmetic v2 actual closeout
+Owner-started existing A800; published fixed source and Linux checks preceded model execution. Attempt r1 stopped before training for metadata overhead and was completely exported. Repair930bd49 reused48 audited calibration records and charged all16 interrupted probe attempts plus478 seconds. Continuation r2 completed E030 and four base/calibration evaluations, then stopped at the registered conservative runtime forecast. No prep/main cell ran. Independent analysis verified576 complete results and66 raw batches covering528 newly generated outputs;4 fault outputs remain unavailable. All64 manifest-inventoried files and full new adapters/recovery state were independently preserved; normal provider shutdown confirmed20:54:07UTC and timer cleared. A bounded review agent independently checked arithmetic/accounting and the task-stratified interpretation; no external messages were sent. Reports state partial completion, base construction failure, NLL/format gains without construction generalization, resource-planning limitations, and no automatic continuation.
+
+## Post-E037 paired-target implementation
+
+The assistant interpreted the owner-supplied execution plan, registered E038/E039,
+prepared isolated data/runtime/analysis code and independent CPU checks, and
+audited unused server checkpoints against independent backups before deletion.
+No external messages or claims of novelty. New results remain pending.
+
+## Post-E039 decision-supervision preparation
+
+The owner authorized Stage A and four fixed 128-update continuations from E038/E039.
+Codex read and hash-checked the handoff, registered E040–E043, froze original
+training rows and a fresh 48-group evaluation, and implemented separate generation,
+forward and whole-powered-window ledgers. Three bounded agents independently
+prepared data/span audits, loss/runtime/observer checks and CPU analysis. All 38
+focused CPU tests passed with the pinned tokenizer; no scientific model calls
+had occurred at this milestone. Tests cover inherited CE parity, weighted causal
+gradients, exact interrupted recovery, real cached generation alignment, durable
+queue replay and joint paired bootstrap. The pipeline uses passive observation
+for the Stage A consistency gate and has no outcome-based accuracy gate.
+Source is published before server scientific execution; no external messages.
+
+## 2026-09-17 — E040–E043 completed, independently audited and closed
+
+Codex executed the owner's finite Stage A plus four-arm decision-supervision
+plan from the exact E038/E039 step256 parents. The source
+2bb39fbdf5bf83bb471e436804e1b968262ff530 was published before execution.
+Stage A passive same-prefix greedy/logit consistency passed before training.
+All four independent 128-update runs, 4,736 unique generations and 7,552
+diagnostic sequence forwards completed, without additional model retries or
+outcome-based stopping. Candidate scoring comprises 704 contexts/2,816 scores;
+6,848 reference decomposition records are separate from autoregressive outputs.
+A descriptive launch-field erratum preserves the original frozen metadata.
+
+Independent CPU audit verified all 19,265 inventory files plus the manifest,
+eight scientific adapters, four complete optimizer/RNG recoveries, exact source
+and parent identities, every row/LR/token/mask dose, unchanged F weights and the
+per-response normalized H weighting formula. All 512 scientific updates match
+immutable journals, with zero uncommitted or interrupted work. Fixed-output CPU
+analysis checks the scientific outcomes without new model calls. H both-goal
+success is S-U13/48 versus S-D20/48 and P-U16/48 versus P-D24/48; F sampled
+transfer differences remain unclear. One seed and two recipes do not identify
+a mechanism or establish broad generalization; earlier results remain intact.
+
+Provider shutdown was confirmed at 2026-09-17 07:58:23 UTC and the temporary
+timer was cleared. Whole powered-window cost is CNY16.2778 proxy, not an invoice.
+One 4,785-second process receipt brings the cumulative ledger to 28 receipts /
+22,408 seconds, preserving every prior receipt. Explicit verified exporter
+ACK/prune records account for 30 obsolete rolling files / 6,218,016,984 bytes;
+older cleanup is not counted again. E015 unique full weights remain protected.
+
+The current status documents and registry were updated after verification;
+scientific execution source, raw records and old conclusions were not changed.
+The final account is reports/post_e039_decision_supervision/EXECUTION_SUMMARY_ZH.md.
+The phase is complete and paused for owner adjustments; no new experiment was
+selected or launched, and no external message was sent.
+
+
+2026-09-17: Codex implemented the owner-requested public math pilot CPU data/loss/tokenization/scoring/recovery modules and a bounded engineering preflight. Independent agents reviewed scientific contracts and persistence. No formal training/evaluation is claimed; main admission requires complete resource feasibility. Existing history is retained. Model assets are independently hash-verified, no paid model APIs or external messages used.
+
+The server was stopped before model execution: platform off confirmed2026-09-17 19:40:40UTC and timer cleared. Whole startup/preparation/transfer window2087.554989seconds yields CNY4.6274 proxy at7.98/hour, not invoice. Zero new model calls, optimizer updates, annotation forwards or generations. Data preparation uncovered missing-image eligibility cases and one official MATH500 empty-reference normalization boundary, retained explicitly. The raw terminal backup transport estimate fails current complete-phase admission. CPU tests do not validate real GPU recovery or throughput.
+
+
+Owner retention amendment: no model/recovery downloads to the Mac; continue on-server with local verification and retained full scientific state. Recorded SERVER_RETENTION_AMENDMENT.md and superseded the expensive-export admission condition, while preserving historical evidence and elapsed budgets. A read-only SSH probe returned connection refused; no model process started. A800 memory discussion distinguishes the calculated23GiB training-state floor from unmeasured activation/temporary peaks.
+
+2026-09-17 expanded-server window: executed the published engineering preflight successfully (5 nonformal updates,64 annotation forwards,32 dev outputs). Added deterministic durable generation with saved per-batch RNG and ambiguous-call retry refusal, preparation identity checks, full mask freeze and fixed64 character-span audit.76 CPU tests pass including interrupted sampled-stream equivalence and immutable output corruption rejection. No optional arm or external submission.
+
+Added the finite four-arm training loop with32-step rolling recovery,64/128 scientific models, committed checkpoint ancestry and exact dose/LR validation. A real tiny dropout model/AdamW test verifies bit-identical final weights, optimizer and RNG after pausing at37 and restoring. Source is published before server execution; no additional GPU engineering updates.
+
+Added full fixed-budget inference, deterministic post-batch RNG recovery, and isolated CPU judging with explicit unresolved-score bounds and whole-question bootstrap. The queue contains exactly31,203 outputs and no optional states.82 CPU tests cover sampling continuation, full training-state continuation, budget/roster identity, official scoring and unknown-denominator preservation. Server annotation ledger reached exactly8,192 unique forwards;64 fixed technical examples passed,5 using the predeclared zero-mask fallback.
+
+Owner explicitly requested overlapping evaluation and training to use the server efficiently. Replaced only two waiting serial launchers (no model work killed, no formal update yet), introduced separate trainer/generator locks and measured-memory admission. Mask/data/loss/dose/seed/benchmark contracts remain fixed. CPU scoring remains on its isolated environment; parallel process durations are not additive billed GPU time.
+
+Before any public-benchmark model calls, increased the queued evaluator to128-way GSM and256-way MATH across all five states, leaving16-way dev unchanged. Confirmed installed Qwen2 generation supports last-position-only logits. Memory gates remain32GiB for GSM and increase to64GiB for MATH, which runs after training. All82 CPU tests pass. Base-dev completed512 outputs while SFT reached64 updates; observed overlap used about71GiB and reached100% GPU utilization. These observations are throughput/resource evidence, not public benchmark scores.
+
+The first128-way Base GSM batch subsequently failed with CUDA OOM after257seconds, before any public output was saved; training continued uninterrupted. The training process had grown to51.15GiB reserved memory, exceeding the standalone engineering reservation estimate. Preserved the full failure evidence and original128 physical reservations. Reduced all five GSM states to64-way and implemented a narrowly scoped, evidence-bound one-time infrastructure retry under the original plan's retry allowance. Scientific outputs remain31,203; the physical cap is31,331 including the128 lost attempts. Further failures are not automatically retried.
+
+All85 CPU checks passed before the recovery source was published/deployed. Observed DFT caches subsequently approached70GiB despite active-allocation peaks near32GiB. Canceled only the replacement evaluator's waiting admission process (456seconds, zero model calls or reservations) and queued the identical source after all four training arms; CPU scoring remains concurrent. Added bounded read-only resource telemetry and a15-minute native follow-up for completion and the already-authorized nightly shutdown. Large artifacts remain on-server. The current registry/handoff distinguishes ongoing work from older zero-model startup reports.
+
+The trainer later stopped at TrimSFT64 before checkpoint admission because its strict cgroup headroom calculation included about67GiB of clean file cache. SFT/DFT128 and TrimSFT32 remain verified. Added a separate bounded CPU cache-maintenance helper that advises only committed owned checkpoint files, without changing the frozen trainer, its48GiB gate or file bytes.88 CPU tests pass. Resume requires one documented replay of32 uncommitted updates from the exact saved optimizer/RNG:512 final scientific updates,544 physical completed-update records including the32 lost work. The owner requested a full training/evaluation report before deciding the next direction; no optional follow-on is queued.
+
+The owned-file cache helper reduced measured cgroup usage from73.25GB to1.73GB
+without modifying or deleting checkpoint bytes. Exact-source recovery committed
+TrimSFT64 and96; the latest snapshot records128 computed steps, with its final
+save pending. A passive audit of all32 recomputed updates confirms identical
+rows/LR/token dose/source, but not a bitwise-identical CUDA trajectory. Scalars
+match through48 and diverge later, with max absolute CE/loss/gradient differences
+0.0374005/0.000245364/0.0200737; cause not isolated. Published the comparison and
+explicit final-report limitation. This audit adds zero model calls; no public
+score was available when the durable recovery point was chosen. Historical failed
+updates and process receipts remain preserved. The CPU test result is88 checks;
+no tests were repeated for this documentation-only milestone.
+
+All four public-math arms subsequently completed128 updates with verified final
+recoveries; the recovered trainer exited0 after1534seconds. The first64 formal
+GSM outputs completed in155.304seconds. The owner emphasized disconnection
+resilience: verified existing setsid workers have no controlling terminal and
+server-backed logs; installed tmux and added four read-only log windows without
+restarting a model worker. The owner asked about additional hardware and clarified
+an in-place change to two A800s. Prepared an optional scheduler over disjoint whole
+runs, retaining original model/evaluation code, all requests, one-visible-device
+RNG topology, shared exclusion and reservation locks, and per-worker deadlines.
+All98 CPU checks pass; the two-GPU scheduler has not generated anything or changed
+current execution. Hardware changes and maintenance timing remain for owner choice.
+
+The owner then requested shutdown for the same-instance GPU configuration change.
+A bounded maintenance helper, using the original immutable evaluation sources,
+verified saved-batch identities/RNG and the physical ledger while briefly stopping
+the evaluator. It resumed an in-flight batch, then captured a durable boundary and
+terminated with4021 public outputs saved and zero unmatched reservations. Five
+reconciliation checks passed; no new model call, failed generation or replay was
+introduced. The actual operator source is preserved as maintenance_pause.py.
+Independent server-only verification rehashed12 model/training files totaling
+106270841556 bytes and checked all512 final update histories. Completed CPU scores
+were preserved; no large file was downloaded. Provider off was visibly confirmed
+by2026-09-18 00:26:11UTC, and the existing heartbeat was paused. The optional
+published two-GPU scheduler awaits owner startup. Partial GSM results are retained
+without changing the remaining frozen evaluation or selecting a scientific follow-on.
+
+The owner reopened the same instance with two A80080GB GPUs and requested prompt
+utilization. Verified device identities, persistent source/data/checkpoint manifests,
+unchanged Torch2.8.0+cu128/Transformers4.56.2 and original evaluation contract.
+The previously published abfff696 scheduling source was independently inventoried
+and deployed; all10 parallel tests and an actual GNU-timeout descriptor-inheritance
+check passed on Linux, with zero qualification model calls. Both GPU workers and
+the unchanged CPU scorer now run in detached tmux, with bounded deadlines and
+separate logs/receipts. Saved generation/RNG streams are resumed; no completed
+outputs or training are rerun. Corrected a local SSH socket-path length and an
+empty tmux shell invocation before model startup; empty setup logs are retained.
+The first successful dual telemetry shows both cards around90–97% utilization.
+Reconfirmed the existing23:58PDT provider timer and reactivated the existing
+heartbeat without changing its configured cadence. Large artifacts remain on
+server; existing failure records and the TrimSFT numerical replay limitation remain.
+
+Heartbeat monitoring at2026-09-18 01:49UTC found both original dual-GPU workers
+and CPU scorer healthy, with all five GSM8K states complete and9363 logical
+outputs saved. Collected only compact score/timing/telemetry records and checked
+all five1319-question score arrays against counts and denominators. Published the
+GSM milestone as secondary/descriptive evidence, including paired intervals and
+single-seed/TrimSFT-recovery limitations. Primary MATH metrics remain incomplete.
+Actual MATH batch times331–778seconds supersede the prior optimistic engineering
+ETA: remaining MATH alone is roughly7–8 dual-GPU hours, before dev and closeout.
+No worker was restarted, no extra output requested, no queue/setting changed and
+no new failure found. Existing nightly deadlines and provider shutdown remain.
+
+## 2026-09-18 — full public-math closeout
+
+Read-only final auditing bound all31,203 raw outputs to frozen references/scores,
+reconciled54 completed scored runs,512 committed updates/544 physical records
+and31,331 generation attempts with zero uncommitted reservations. Independently
+recomputed benchmark/dev aggregates and paired mean bounds; bootstrap intervals
+remain those of the unchanged scorer. Preserved primary-negative MATH findings,
+all47 unresolved judgments, historical faults and non-bitwise GPU replay limits.
+Verified8 terminal128 recovery components against manifests and4 exact planned
+step64 deletion receipts; no new model/scoring calls or binary download. Two
+55-second read-only collection timeouts were retained; unchanged audit succeeded
+in32.57seconds and final report copies agreed.
+
+After essential collection, used normal provider shutdown and verified the exact
+instance OFF at11:26UTC, cleared its temporary timer, paused the existing heartbeat
+and cancelled the identity-checked finite local observer. Published full results,
+resource/cost proxies and owner-decision handoff locally after shutdown. No new
+experiment, subagent, external message, payment or long-term branch change.

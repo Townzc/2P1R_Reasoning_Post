@@ -1,0 +1,26 @@
+{"evaluation": "C0_calibration.jsonl", "generated": 48, "reserved": 48}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/queue.py", line 258, in <module>
+    elif args.action=='worker':worker(args.snapshot)
+                               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/queue.py", line 109, in worker
+    bcal=ev('C0','calibration');ev('C0','probes');ev('C0','discovery_greedy')
+                                ^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/queue.py", line 93, in ev
+    records=evaluate(model,tokenizer,inputs[key],OUT/(name+'.jsonl'),budget,event,deadline)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/runtime.py", line 50, in evaluate
+    records=frozen_generate(model,tokenizer,rows,path,budget,samples=event['samples'],
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe/arithmetic_eval.py", line 93, in generate
+    set(tokenizer.all_special_ids)|{t for t in tokens if t>=len(tokenizer)})
+                                                            ^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/cs294-runtime/train/lib/python3.12/site-packages/transformers/tokenization_utils_fast.py", line 291, in __len__
+    return self._tokenizer.get_vocab_size(with_added_tokens=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/thursday_probe_20260916/experiments/thursday_probe_v2/queue.py", line 86, in termination
+    def termination(*args):raise TimeoutError('Finite v2 process cap reached')
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Finite v2 process cap reached

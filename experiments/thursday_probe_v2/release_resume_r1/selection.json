@@ -1,0 +1,130 @@
+{
+  "algorithm": "Four per stratum, ordered by SHA256 compact sorted-key JSON [purpose/anchor/label, assignment_seed, problem_id], ID tie-break. If a stratum has fewer than four, select its full support and fill remaining places using lexicographically sorted unselected problem IDs. Output preserves stratum order then fallback ID order.",
+  "assignment_seed": 2026091602,
+  "fallback_selected_ids": [],
+  "interpretation": "Fixed small training diagnostic; accepts any legal correct program; not whole-training accuracy, literal memorization, or unseen generalization.",
+  "model_results_used": false,
+  "population_questions": 256,
+  "purpose": "post_e030_train_diagnostic_v1",
+  "selected_ids": [
+    "thu/91234c3de69617c76dba",
+    "thu/91d82630734dbce80c8c",
+    "thu/5bde05e49d93c8f520e8",
+    "thu/7bfba0b2471de38cc57f",
+    "thu/6d42155846f123ac9310",
+    "thu/fb11e534c4c96dae8488",
+    "thu/db0fcecf09a0bcee6a81",
+    "thu/64152d4aa670fb54aecb",
+    "thu/c840fd76d413473179ae",
+    "thu/a9a386561e1ab0e86570",
+    "thu/abd120b5957c45f27efb",
+    "thu/3524ec3429c63d6dbdef",
+    "thu/41f2e309e7398502001b",
+    "thu/9c45419306744578e797",
+    "thu/244a6b53cda3d2285a79",
+    "thu/5dfeaf20564b1d17f78f"
+  ],
+  "selected_ids_sha256": "aebd0d322edc95eabc4d9c450b81a54a50e2ef090310a7eaa9030921c5d476d7",
+  "selected_questions": 16,
+  "strata": [
+    {
+      "anchor_family": "A",
+      "final_selected_count": 4,
+      "final_selected_ids": [
+        "thu/91234c3de69617c76dba",
+        "thu/91d82630734dbce80c8c",
+        "thu/5bde05e49d93c8f520e8",
+        "thu/7bfba0b2471de38cc57f"
+      ],
+      "initial_selected_ids": [
+        "thu/91234c3de69617c76dba",
+        "thu/91d82630734dbce80c8c",
+        "thu/5bde05e49d93c8f520e8",
+        "thu/7bfba0b2471de38cc57f"
+      ],
+      "requested": 4,
+      "shortage": 0,
+      "support": 25,
+      "target_label": "target_degenerate"
+    },
+    {
+      "anchor_family": "A",
+      "final_selected_count": 4,
+      "final_selected_ids": [
+        "thu/6d42155846f123ac9310",
+        "thu/fb11e534c4c96dae8488",
+        "thu/db0fcecf09a0bcee6a81",
+        "thu/64152d4aa670fb54aecb"
+      ],
+      "initial_selected_ids": [
+        "thu/6d42155846f123ac9310",
+        "thu/fb11e534c4c96dae8488",
+        "thu/db0fcecf09a0bcee6a81",
+        "thu/64152d4aa670fb54aecb"
+      ],
+      "requested": 4,
+      "shortage": 0,
+      "support": 103,
+      "target_label": "target_nondegenerate"
+    },
+    {
+      "anchor_family": "B",
+      "final_selected_count": 4,
+      "final_selected_ids": [
+        "thu/c840fd76d413473179ae",
+        "thu/a9a386561e1ab0e86570",
+        "thu/abd120b5957c45f27efb",
+        "thu/3524ec3429c63d6dbdef"
+      ],
+      "initial_selected_ids": [
+        "thu/c840fd76d413473179ae",
+        "thu/a9a386561e1ab0e86570",
+        "thu/abd120b5957c45f27efb",
+        "thu/3524ec3429c63d6dbdef"
+      ],
+      "requested": 4,
+      "shortage": 0,
+      "support": 29,
+      "target_label": "target_degenerate"
+    },
+    {
+      "anchor_family": "B",
+      "final_selected_count": 4,
+      "final_selected_ids": [
+        "thu/41f2e309e7398502001b",
+        "thu/9c45419306744578e797",
+        "thu/244a6b53cda3d2285a79",
+        "thu/5dfeaf20564b1d17f78f"
+      ],
+      "initial_selected_ids": [
+        "thu/41f2e309e7398502001b",
+        "thu/9c45419306744578e797",
+        "thu/244a6b53cda3d2285a79",
+        "thu/5dfeaf20564b1d17f78f"
+      ],
+      "requested": 4,
+      "shortage": 0,
+      "support": 99,
+      "target_label": "target_nondegenerate"
+    }
+  ],
+  "strata_order": [
+    [
+      "A",
+      "target_degenerate"
+    ],
+    [
+      "A",
+      "target_nondegenerate"
+    ],
+    [
+      "B",
+      "target_degenerate"
+    ],
+    [
+      "B",
+      "target_nondegenerate"
+    ]
+  ],
+  "target_label_basis": "Existing family B target-edge labels, irrespective of anchor; family A has no target edge and is not labeled nondegenerate."
+}
