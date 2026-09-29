@@ -1,3 +1,16 @@
+## 2026-09-29 — distillation and AI-text audit deep review
+
+At the owner's request, continued primary-paper, appendix and public-asset review
+with three read-only research agents. Identified recent direct coverage of generic
+post-training/source-switch proposals; narrowed two conditional distillation audit
+questions and retained a curation-measurement backup. Checked official repository
+revisions, public metadata and selected small source files; separately flagged
+third-party model selection/spliced trajectories, benchmark-label gaps and unverified
+releases. Added an English evidence/decision record and source hashes; updated the
+private Chinese decision and meeting notes. No new scientific result, trained model,
+inference, large weight download, paid call, server action or external message.
+Existing LT002 records and the unrelated unrun analysis draft remain unchanged.
+
 ## 2026-09-29 — six-family data-audit rescreen
 
 At the owner's request, examined recent primary papers, experimental sections,

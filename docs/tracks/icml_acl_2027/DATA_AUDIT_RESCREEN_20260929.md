@@ -1,3 +1,7 @@
+> Update: [the subsequent distillation/text-audit deep review](DISTILLATION_TEXT_AUDIT_DEEP_REVIEW_20260929.md)
+> changes the exploration priority and adds newly checked direct overlaps. This
+> rescreen remains a historical record; its candidate is not an admitted project.
+
 # Data-audit direction rescreen — September 29, 2026
 
 Status: literature and asset audit, **not a selected research contribution or an

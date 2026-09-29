@@ -1,11 +1,13 @@
 # Current research screening — September 29, 2026
 
-LT002 is complete and its instance is OFF. The [DATE-LM novelty audit](DATE_LM_NOVELTY_AUDIT_20260929.md)
-withdrew the earlier answer-only proposal. A [six-family literature and asset
-rescreen](DATA_AUDIT_RESCREEN_20260929.md) retains one conditional data-curation /
-AI-origin measurement question; no new direction or experiment is admitted.
-Known calibration theory, available benchmark labels and possible empirical
-contributions are explicitly separated. The records below preserve older plans.
+LT002 is complete and its instance is OFF. The [deep review of distillation and
+AI-text auditing](DISTILLATION_TEXT_AUDIT_DEEP_REVIEW_20260929.md) prioritizes further
+distillation investigation, with two conditional questions and explicit overlap,
+null-control, asset and compute gates. New SCOUT results rule out generic post-SFT
+and teacher-switch proposals. The earlier curation/measurement question remains a
+backup; no main method or experiment is admitted. The [source registry](DISTILLATION_TEXT_AUDIT_SOURCES_20260929.json)
+records inspected public artifacts. [DATE-LM was withdrawn](DATE_LM_NOVELTY_AUDIT_20260929.md).
+The records below preserve older plans.
 
 # Resumption note — 2026-09-28
 
