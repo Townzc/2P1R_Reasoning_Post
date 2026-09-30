@@ -1,3 +1,23 @@
+## September30 suite diagnostic failed; available evaluations prepared
+
+The suite-watchdog CPU gate failed in35.37s: the normally exited checker marked
+test18 failed after17 passes, disagreeing with the earlier34-test passing prefix.
+The original per-test limits were unchanged; this illustrates timing-sensitive
+verdicts and is not accepted as a stable repair. The failed diagnostic is retained,
+and its suite-recovery opt-in will NOT be enabled for model evaluation.
+
+Prepared only three untouched evaluations of already complete R, W_prefix and
+W_future states (3072 outputs), using the existing initialization repair. A new
+explicit evaluation-only option preserves unknown scores and continues later
+samples. Training still rejects unknown rewards, and actual scorer transport
+failures still abort.56 authored CPU checks pass, including retained-unknown and
+strict-training tests; an initial missing test import was fixed. No unknown is
+relabelled as success or failure, and missing C/R_future contrasts remain missing.
+No training restart/replay or new seed/arm has been authorized. Evaluation remains
+inside the original fixed deadlines. After collecting this authorized feasible
+subset, close the finite run as incomplete because exact training recovery lacks
+required rollout metadata; this is not a completed full scientific screen.
+
 ## September30 R scoring failure and suite-watchdog repair preparation
 
 R_future failed after25 committed updates/416 returned outputs; its exception

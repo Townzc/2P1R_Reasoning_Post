@@ -113,7 +113,7 @@ def extract_code(text):
     return (blocks[-1] if blocks else text).strip()
 
 
-def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons):
+def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons,*,allow_unresolved=False):
     if not(len(texts)==len(token_ids)==len(tasks)==len(finish_reasons)==len(batch.intent()['tasks'])):
         raise ProfileError('scoring batch shape mismatch')
     if tasks!=batch.intent()['tasks']: raise ProfileError('scoring task order mismatch')
@@ -130,7 +130,10 @@ def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons):
                     300 if getattr(args,'recover_initialization_timeout',False) else spec.SCORER_TIMEOUT_SECONDS)
                 value=receive(conn,request_limit,time.monotonic()+remaining(args))
                 base,extra=(SuiteVerdict(**value[k]) for k in ['base','extra'])
-                rewards.append(float(reward_from_verdicts(base,extra,mode)))
+                if allow_unresolved and any(v.status not in (VerdictStatus.PASS,VerdictStatus.FAIL) for v in (base,extra)):
+                    rewards.append(None)
+                else:
+                    rewards.append(float(reward_from_verdicts(base,extra,mode)))
             except BaseException as exc:
                 fatal=exc
                 if base.status==VerdictStatus.MISSING:
@@ -374,7 +377,7 @@ def evaluation_worker(args,plan):
     llm=LLM(model=str(source),tokenizer=str(source),dtype='bfloat16',trust_remote_code=False,
             tensor_parallel_size=1,gpu_memory_utilization=0.3,max_model_len=maxlen,
             max_num_seqs=32,max_num_batched_tokens=4096,seed=0)
-    config_identity=identity_hash(plan['evaluation']);completed=0;started=time.monotonic()
+    config_identity=identity_hash(plan['evaluation']);completed=0;unresolved=0;started=time.monotonic()
     for start in range(0,len(selected),spec.EVAL_TASKS_PER_BATCH):
         remaining(args);disk_gate(args.out)
         ts=selected[start:start+spec.EVAL_TASKS_PER_BATCH];tasks=[t for t in ts for _ in range(spec.EVAL_SAMPLES)]
@@ -395,13 +398,17 @@ def evaluation_worker(args,plan):
             for x in sorted(result.outputs,key=lambda v:v.index):
                 texts.append(x.text);ids.append(list(x.token_ids));reasons.append(x.finish_reason or 'unknown_backend_finish')
         durable_json(batch.directory/'raw_generations.json',{'texts':texts,'completion_ids':ids,'task_id':tasks,'state':state_name})
-        score_batch(args,batch,texts,ids,tasks,conn,'union',reasons)
+        verdicts=score_batch(args,batch,texts,ids,tasks,conn,'union',reasons,
+            allow_unresolved=getattr(args,'retain_evaluation_unknowns',False))
+        unresolved+=sum(v is None for v in verdicts)
         completed+=len(tasks)
         durable_json(batch.directory/'generation_complete.json',{'samples':len(tasks),'completed_total':completed,'elapsed_seconds':time.monotonic()-started})
     if completed!=spec.EVAL_IDS*spec.EVAL_SAMPLES: raise ProfileError('evaluation incomplete')
     stop_scorer(args,conn,scorer)
     durable_json(out/'evaluation_complete.json',{'state':state_name,'plan_sha256':args.plan_identity,
-        'completions':completed,'elapsed_seconds':time.monotonic()-started,'development_only':True})
+        'completions':completed,'elapsed_seconds':time.monotonic()-started,'development_only':True,
+        'unresolved_dual_scores':unresolved,'all_dual_verdicts_known':unresolved==0,
+        'unknowns_retained':getattr(args,'retain_evaluation_unknowns',False)})
 
 
 def parse(argv=None):
@@ -413,6 +420,7 @@ def parse(argv=None):
     p.add_argument('--execute-screen',action='store_true')
     p.add_argument('--recover-initialization-timeout',action='store_true')
     p.add_argument('--recover-suite-watchdog',action='store_true')
+    p.add_argument('--retain-evaluation-unknowns',action='store_true')
     p.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS)
     p.add_argument('--phase',help=argparse.SUPPRESS)
     p.add_argument('--worker-deadline-epoch',type=float,help=argparse.SUPPRESS)

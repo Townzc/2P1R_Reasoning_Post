@@ -222,6 +222,34 @@ class ReconciliationTests(unittest.TestCase):
         self.assertFalse(an.descriptive_decision(contrasts)['scientific_confirmation'])
 
 
+class EvaluationUnknownTests(unittest.TestCase):
+    def test_unknown_evaluation_is_retained_and_later_samples_still_scored(self):
+        with tempfile.TemporaryDirectory() as d:
+            batch=reserve_batch(Path(d)/'batches',run_id='fixture',phase_id='eval_R',batch_index=0,
+                tasks=['Mbpp/1','Mbpp/2'],config_sha256='a'*64,policy_sha256='b'*64)
+            args=argparse.Namespace(worker_deadline_epoch=time.time()+100)
+            replies=[{'base':{'status':'pass'},'extra':{'status':'timeout'}},
+                     {'base':{'status':'pass'},'extra':{'status':'pass'}}]
+            with mock.patch.object(sr,'receive',side_effect=replies):
+                scores=sr.score_batch(args,batch,['a','b'],[[1],[2]],['Mbpp/1','Mbpp/2'],mock.Mock(),'union',['eos']*2,allow_unresolved=True)
+            self.assertEqual(scores,[None,1.0])
+            rows=sr.read_records(batch.directory/'batch.jsonl')
+            self.assertEqual(rows[1]['extra']['status'],'timeout')
+            self.assertEqual(rows[2]['base']['status'],'pass')
+
+    def test_training_still_rejects_unknown_reward(self):
+        with tempfile.TemporaryDirectory() as d:
+            batch=reserve_batch(Path(d)/'batches',run_id='fixture',phase_id='R_future',batch_index=0,
+                tasks=['Mbpp/1','Mbpp/2'],config_sha256='a'*64,policy_sha256='b'*64)
+            args=argparse.Namespace(worker_deadline_epoch=time.time()+100)
+            with mock.patch.object(sr,'receive',return_value={'base':{'status':'pass'},'extra':{'status':'timeout'}}):
+                with self.assertRaises(ProfileError):
+                    sr.score_batch(args,batch,['a','b'],[[1],[2]],['Mbpp/1','Mbpp/2'],mock.Mock(),'union',['eos']*2)
+            rows=sr.read_records(batch.directory/'batch.jsonl')
+            self.assertEqual(rows[1]['extra']['status'],'timeout')
+            self.assertEqual(rows[2]['base']['status'],'missing')
+
+
 class ParentTests(unittest.TestCase):
     def test_disk_gate_and_shared_deadline(self):
         with mock.patch.object(sr.shutil,'disk_usage',return_value=argparse.Namespace(free=2*1024**3)):

@@ -32,3 +32,19 @@ importance correction, or claim an exact resume. W_prefix/W_future are complete;
 three original state evaluations remain possible without replay. R_future and
 C comparisons remain unavailable unless an explicitly approved repair can finish
 them within the original budget. No new restart is authorized by this source.
+
+## Gate outcome and admitted fallback
+
+The prepared suite watchdog gate FAILED after35.37s. The new execution failed
+test18, whereas the earlier run passed its first34 tests. This timing-sensitive
+change does not establish a stable diagnostic, and the suite-recovery opt-in
+is not admitted for the remaining model work. Preserve both observations.
+
+Only eval_R, eval_W_prefix and eval_W_future remain runnable without repeating
+training or evaluating an unplanned partial checkpoint. An explicit evaluation
+option retains unresolved verdicts instead of aborting all later samples; the
+training reward contract remains strict. Every planned output is kept, unknown
+counts are reported, and point estimates requiring complete labels cannot be
+claimed when that gate fails. Scorer process/transport failures still abort.
+No scientific reward, test oracle, sample seed or planned state is added. The
+original 09:24:41UTC worker/09:47UTC provider deadlines remain unchanged.
