@@ -60,6 +60,16 @@ class PlanTests(unittest.TestCase):
         self.assertNotEqual(sp.eval_seed('Mbpp/1'),sp.eval_seed('Mbpp/2'))
         self.assertTrue(0<=sp.eval_seed('Mbpp/1')<2**31)
 
+    def test_repaired_plan_preserves_scientific_dose_and_old_plan(self):
+        old=sp.make_plan(split_fixture());new=sp.make_plan(split_fixture(),first_failure=True)
+        self.assertEqual(old['dose'],new['dose'])
+        self.assertEqual(old['schedules'],new['schedules'])
+        self.assertNotEqual(old['run_id'],new['run_id'])
+        self.assertEqual(new['limits']['worker_seconds'],10800)
+        sp.validate_plan(old,split_fixture());sp.validate_plan(new,split_fixture())
+        new['scoring_policy']='invented'
+        with self.assertRaises(ContractError):sp.validate_plan(new,split_fixture())
+
 
 class ScoringTests(unittest.TestCase):
     def setUp(self):
@@ -92,6 +102,16 @@ class ScoringTests(unittest.TestCase):
         self.gt['plus_time']=[];check=mock.Mock(return_value=('pass',[True]))
         pair=sc.score_pair(self.p,self.gt,'authored fixture only',check)
         self.assertEqual(pair['extra']['status'],'scorer_error');check.assert_called_once()
+
+    def test_first_failure_can_be_partial_but_pass_cannot(self):
+        self.p['plus_input']=[[2],[3]];self.gt['plus']=[2,3];self.gt['plus_time']=[.01,.01]
+        check=mock.Mock(side_effect=[('fail',[False]),('fail',[False])])
+        pair=sc.score_pair(self.p,self.gt,'authored',check,fast_check=True)
+        self.assertEqual(reward_from_verdicts(*(SuiteVerdict(**pair[k]) for k in ['base','extra']),'union'),0)
+        self.assertTrue(all(c.kwargs['fast_check'] for c in check.call_args_list))
+        for result in [('pass',[True]),('timeout',[False])]:
+            pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('pass',[True]),result]),fast_check=True)
+            with self.assertRaises(ContractError):reward_from_verdicts(*(SuiteVerdict(**pair[k]) for k in ['base','extra']),'union')
 
 
 class ReconciliationTests(unittest.TestCase):

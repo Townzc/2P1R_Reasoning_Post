@@ -1,3 +1,24 @@
+# Latest owner correction: complete the experiment before provider shutdown
+
+The owner objected to repeated shutdowns after routine faults and explicitly
+requested finishing one complete experiment first. This supersedes earlier
+shutdown-on-any-error and no-repair rules. Handle recoverable engineering issues
+within the same powered session, preserve failures/actual dose and never replay
+uncertain work. Keep the ORIGINAL09:47UTC September30 provider deadline and
+four-hour/CNY31.92 compute ceiling measured from05:47UTC, including all attempts.
+Do not use this correction to add research arms, seeds, annotations or spending.
+
+Read experiments/q2_supervision_migration/SCREEN_REPAIR_20260930.md. The first
+attempt is closed with5 committed updates/96 outputs and no final checkpoint.
+Repair: first failure per suite for a binary reward; unresolved timeouts stay
+unknown.47 authored checks pass. CPU-only Linux regression on the96 saved outputs
+(cap180s;90 prior known verdict pairs must match) is required before model work.
+A distinct v2 plan retains the same scientific640-update/16,384-output queue with
+three-hour parent cap. Restore only the same previously authorized single A800;
+no new rental, configuration, installation or budget extension. Old attempt data
+must remain unchanged. Private v2 handoff will be .local/q2_screen_v2_20260930/.
+Previous current-state entries below are history where inconsistent.
+
 # Q2 W/C/R screen prepared after owner continuation request — provider OFF
 
 September 30 UTC: the owner requested continued experiments and a concrete

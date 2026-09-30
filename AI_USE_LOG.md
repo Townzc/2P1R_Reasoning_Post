@@ -1,3 +1,28 @@
+## 2026-09-30 UTC — first screen timeout and owner-corrected recovery policy
+
+The first screen used the published d33cbbfa source, verified existing inputs,
+current single-A800 price/identity and a normal provider timer. It completed378
+canonical references, five updates and96 training generations. An extra-suite
+TIMEOUT stopped batch six; no later phase or final checkpoint ran.102 signed
+records and all96 backend/sample joins were independently reconciled.170 compact
+files were copied/verified; the792.8MB reference cache was rehashed and retained.
+The agent shut down prematurely after this recoverable fault; the owner objected
+and directed completion of the full experiment before shutdown. That correction
+now governs recovery within the unchanged time/spend cap. Both earlier heartbeats
+were paused during the first closeout; no automatic model replay occurred.
+
+The lead inspected saved code without executing it locally and the pinned
+EvalPlus loop. fast_check=False continues after established failure. A harmless
+four-case control-flow probe with substituted OS/time guards confirmed matching
+binary outcomes and earlier stopping with fast_check=True. Its first execution
+had a missing List type annotation import, corrected locally before the passing
+probe; no model/benchmark code was executed by that probe. The original runtime
+mode remains supported; a distinct v2 plan opts into first-failure scoring and a
+three-hour parent limit.47 authored CPU checks pass. The new Linux-only CPU gate
+will verify96 saved outputs, including90 already known verdict pairs, before
+restarting the same scientific experiment. Its post-run scores do not relabel
+the failed attempt. Source publication precedes execution; no extra arm or seed.
+
 ## 2026-09-30 UTC — finite W/C/R scientific screen prepared
 
 Following the owner's request to continue experiments and prepare a concrete

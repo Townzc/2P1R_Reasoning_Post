@@ -9,7 +9,7 @@ from .contracts import SuiteVerdict, VerdictStatus
 from .gpu_profile import ProfileError, durable_json, sha256
 
 
-def score_pair(problem, reference, code, checker):
+def score_pair(problem, reference, code, checker, *, fast_check=False):
     result={}
     for label,suite in [('base','base'),('extra','plus')]:
         try:
@@ -22,7 +22,7 @@ def score_pair(problem, reference, code, checker):
                 result[label]={'status':'pass','detail':json.dumps({'test_count':0,'tests_observed':0,'vacuous_empty_extra':True})}
                 continue
             status,details=checker('mbpp',code,inputs,problem['entry_point'],expected=expected,
-                                   atol=problem['atol'],ref_time=timings,fast_check=False)
+                                   atol=problem['atol'],ref_time=timings,fast_check=fast_check)
             if status not in ('pass','fail','timeout'):
                 raise ProfileError('unknown evaluator outcome')
             if status=='pass' and (len(details)!=len(inputs) or not all(details)):
@@ -52,7 +52,7 @@ def load_references(root):
     return gt,manifest
 
 
-def scoring_process(conn,data_path,data_sha,reference_root,selected):
+def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=False):
     try:
         os.environ['CUDA_VISIBLE_DEVICES']=''
         problems=load_problems(data_path,data_sha);refs,manifest=load_references(reference_root)
@@ -66,7 +66,7 @@ def scoring_process(conn,data_path,data_sha,reference_root,selected):
             if request is None: return
             task,code=request
             if task not in selected: raise ProfileError('task outside phase')
-            conn.send(score_pair(problems[task],refs[task],code,untrusted_check))
+            conn.send(score_pair(problems[task],refs[task],code,untrusted_check,fast_check=fast_check))
     except BaseException as exc:
         try: conn.send({'fatal':repr(exc)})
         except (EOFError,BrokenPipeError): pass

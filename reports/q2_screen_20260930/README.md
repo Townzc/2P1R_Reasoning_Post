@@ -1,3 +1,15 @@
+# Latest: first attempt retained; scoring repair prepared
+
+The first attempt stopped after five updates and96 saved training outputs, before
+any scientific comparison. The owner requested completing the full experiment
+before shutting down and fixing routine faults within the same powered session.
+A bounded CPU regression on all96 saved outputs will precede the repaired screen.
+No extra scientific arm or seed is introduced; the original failed attempt stays
+in the accounting. See [first attempt](FIRST_ATTEMPT.md) and
+[repair amendment](../../experiments/q2_supervision_migration/SCREEN_REPAIR_20260930.md).
+
+The preparation snapshot below is historical.
+
 # Q2 short scientific screen — prepared, not executed
 
 September30 UTC. The owner requested continued experiments and a concrete

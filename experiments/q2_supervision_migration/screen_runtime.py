@@ -94,7 +94,7 @@ def validate_environment(args,plan):
 def start_scorer(args,selected):
     ctx=mp.get_context('spawn');conn,other=ctx.Pipe()
     proc=ctx.Process(target=scoring_process,args=(other,args.data_json,args.data_sha256,
-        str(Path(args.out)/'references'),selected),daemon=False)
+        str(Path(args.out)/'references'),selected,args.scoring_fast_check),daemon=False)
     proc.start();other.close()
     ready=receive(conn,min(180,remaining(args)),time.monotonic()+remaining(args))
     if not ready.get('ready'): raise ProfileError('scorer did not initialize')
@@ -392,6 +392,7 @@ def main(argv=None):
     split=pinned_json(args.split_json,args.split_sha256)
     plan=spec.validate_plan(pinned_json(args.plan_json,args.plan_sha256),split)
     args.plan_identity=identity_hash(plan)
+    args.scoring_fast_check=plan.get('scoring_policy')=='first_failure_per_suite'
     if args._worker:
         if os.environ.get('Q2_PROFILE_PARENT_PID')!=str(os.getppid()): raise ProfileError('worker must have owned parent')
         if not args.worker_deadline_epoch or args.worker_deadline_epoch>args.provider_deadline_epoch-600:
@@ -410,13 +411,14 @@ def main(argv=None):
         os._exit(0)
     if args.phase or args.worker_deadline_epoch: raise ProfileError('phases/deadlines are parent controlled')
     now=time.time()
-    if not math.isfinite(args.provider_deadline_epoch) or not spec.WORKER_CAP_SECONDS+600<=args.provider_deadline_epoch-now<=spec.POWERED_CAP_SECONDS:
+    worker_cap=plan['limits']['worker_seconds']
+    if not math.isfinite(args.provider_deadline_epoch) or not worker_cap+600<=args.provider_deadline_epoch-now<=spec.POWERED_CAP_SECONDS:
         raise ProfileError('admission needs full shared worker cap and shutdown reserve within four-hour window')
     out=Path(args.out).resolve();out.mkdir(parents=True,exist_ok=False);args.out=str(out)
     disk=disk_gate(out,initial=True)
     gpu_pids=subprocess.check_output(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader'],text=True).strip()
     if gpu_pids: raise ProfileError('GPU already has workers; refusing duplicate/unrelated work')
-    args.worker_deadline_epoch=now+spec.WORKER_CAP_SECONDS
+    args.worker_deadline_epoch=now+worker_cap
     versions=validate_environment(args,plan)
     initial_identity=verify_model(args.model_path,args.model_manifest,time.monotonic()+remaining(args))
     durable_json(out/'screen_intent.json',{'plan':plan,'plan_sha256':args.plan_identity,'source_commit':args.source_commit,

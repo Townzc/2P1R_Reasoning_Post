@@ -71,7 +71,7 @@ def sampler_indices(ids, schedule):
     return result
 
 
-def make_plan(split):
+def make_plan(split, *, first_failure=False):
     train, evaluation = validate_split(split)
     schedules = {stage: prompt_schedule(train, stage) for stage in ['prefix', 'future']}
     plan = {
@@ -111,11 +111,18 @@ def make_plan(split):
         'reference_semantics': 'EvalPlus0.3.1 MBPP+v0.2.0; empty extra suite passes vacuously; union means base AND extra',
         'original_profile_weights_used': False,
     }
+    if first_failure:
+        plan['run_id'] += '_v2'
+        plan['scoring_policy'] = 'first_failure_per_suite'
+        plan['limits']['worker_seconds'] = 10800
+        plan['prior_attempt'] = {'source_commit': 'd33cbbfa145dbd114937191f7ede7d2a510cde3a',
+                                 'committed_updates': 5, 'training_completions': 96,
+                                 'status': 'closed_scorer_timeout; retained_not_relabelled'}
     return plan
 
 
 def validate_plan(plan, split):
-    if plan != make_plan(split):
+    if plan != make_plan(split, first_failure=plan.get('scoring_policy')=='first_failure_per_suite'):
         raise ContractError('plan differs from frozen screen; no adaptive arm/dose/task changes')
     return plan
 
@@ -128,7 +135,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--split',type=Path,default=Path(__file__).parent/'assets/split.json')
     p.add_argument('--out',type=Path,required=True)
+    p.add_argument('--first-failure',action='store_true')
     a=p.parse_args();a.out.parent.mkdir(parents=True,exist_ok=True)
-    durable_json(a.out,make_plan(json.loads(a.split.read_text())))
+    durable_json(a.out,make_plan(json.loads(a.split.read_text()),first_failure=a.first_failure))
 
 if __name__=='__main__': main()
