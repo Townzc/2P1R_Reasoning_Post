@@ -1,3 +1,13 @@
+## September30 R baseline evaluation independently preserved
+
+Eval_R completed1024 outputs in32 sealed batches, with0 unresolved dual verdicts.
+All1222 compact files were retrieved and independently hashed. The separate local
+inspector verified original model identity, planned task order/request seeds and
+sampling, backend/raw/signed-sample equality, no attempted or committed training,
+no missing return, and successful worker receipt. This is a completed measurement
+stage, not a full scientific comparison. The same existing parent moved to W_prefix
+evaluation. No retry, added seed/arm, score amendment or timer extension occurred.
+
 ## September30 available-state evaluation milestone and local analysis preparation
 
 Published25f3ebfe source verified on server;57 Linux authored checks passed.

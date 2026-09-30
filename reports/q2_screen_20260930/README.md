@@ -1,3 +1,16 @@
+# Latest: R baseline evaluation complete; W evaluations continue
+
+At September30 08:47UTC, all1024 R baseline outputs and their32 batch ledgers
+passed independent local identity/hash checks. All dual verdicts are known;
+1222 compact evidence files were retrieved and verified. Input model lineage,
+frozen task order, sampling settings and request seeds match the plan. The worker
+exited successfully after998.13s. [Verification receipt](EVAL_R_MILESTONE.json).
+
+The original queue has moved to W_prefix evaluation, followed by W_future.
+Training is unchanged; C_future/R_future remain unavailable, so all three primary
+matched-future contrasts are missing. Descriptive interpretation follows completion
+and verified provider shutdown. Earlier dated snapshots below are historical.
+
 # Latest: available-state evaluations running; full comparison incomplete
 
 At September30 08:31UTC, the repaired evaluation engine had produced128 signed,
