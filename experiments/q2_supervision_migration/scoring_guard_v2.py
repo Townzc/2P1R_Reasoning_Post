@@ -106,7 +106,7 @@ def _pinned_evaluator():
 
 
 def _exception_event(exc, scope, index, input_hashes, evaluator_file, assertion_lines,
-                     timeout_type, elapsed_seconds):
+                     timeout_type, elapsed_seconds, *, prior_test_exception=None):
     frames = []
     frame_count = 0
     candidate_frame = False
@@ -125,6 +125,7 @@ def _exception_event(exc, scope, index, input_hashes, evaluator_file, assertion_
             del frames[4]
         tb = tb.tb_next
     is_timeout = isinstance(exc, timeout_type)
+    propagated_test = scope == "outer" and exc is prior_test_exception
     classification = "harness_or_unattributed_exception"
     if scope == "test":
         if is_timeout and candidate_frame:
@@ -136,9 +137,11 @@ def _exception_event(exc, scope, index, input_hashes, evaluator_file, assertion_
               and frames[-1]["line"] in assertion_lines):
             classification = "oracle_assertion"
     elif scope == "outer":
-        # Test exceptions propagate into the outer handler too. Admission uses the
-        # test event whenever any test observation exists, so this is not init proof.
-        if is_timeout and candidate_frame:
+        # The same exception is observed again after the inner handler re-raises.
+        # This is propagation, not a second failure or initialization evidence.
+        if propagated_test:
+            classification = "propagated_test_exception"
+        elif is_timeout and candidate_frame:
             classification = "candidate_initialization_timeout"
         elif candidate_frame:
             classification = "candidate_initialization_exception"
@@ -147,6 +150,7 @@ def _exception_event(exc, scope, index, input_hashes, evaluator_file, assertion_
     return {"scope": scope, "test_index": index if scope == "test" else None,
             "input_sha256": input_hashes[index] if scope == "test" and 0 <= index < len(input_hashes) else None,
             "exception_type": type(exc).__name__, "classification": classification,
+            "propagated_from_test": propagated_test,
             "traceback": frames, "traceback_frame_count": frame_count,
             "traceback_truncated": frame_count > len(frames),
             "elapsed_seconds_at_exception": elapsed_seconds,
@@ -194,11 +198,16 @@ def _worker(problem, code, inputs, expected, limits, input_hashes, initializatio
     started = time.monotonic()
     ev, utils, compiled, assertions, _ = _pinned_evaluator()
     events = []
+    prior_test_exception = None
 
     def observe(exc, scope, index):
+        nonlocal prior_test_exception
         try:
             events.append(_exception_event(exc, scope, index, input_hashes, ev.__file__,
-                                          assertions, utils.TimeoutException, time.monotonic() - started))
+                assertions, utils.TimeoutException, time.monotonic() - started,
+                prior_test_exception=prior_test_exception))
+            if scope == "test":
+                prior_test_exception = exc
             payload = json.dumps(events, sort_keys=True, allow_nan=False).encode()
             if len(payload) > len(event_storage):
                 raise ValueError("exception metadata exceeds bounded storage")

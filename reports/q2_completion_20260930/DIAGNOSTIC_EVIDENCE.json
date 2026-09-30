@@ -1,0 +1,674 @@
+{
+  "execution_source_commit": "34a3afab08ea8610f320c73828fc5acdb221ea41",
+  "saved_failure": {
+    "code_sha256": "2adc025a223428c047c534b8db32e6f3b06d54f26ca75e948b675b5e8632f0c7",
+    "diagnosis": {
+      "admission_reason": "contradictory_or_incomplete_previous_prefix",
+      "child_exitcode": 0,
+      "child_still_alive": false,
+      "code_sha256": "c68d7f49d595310462e7d4bcc5c95dc08c5f7d9db1abd0fa15552dfabf6e5ef7",
+      "elapsed_seconds": 15.010497275739908,
+      "exception_events": [
+        {
+          "classification": "candidate_test_timeout",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 14.9504862613976,
+          "exception_type": "TimeoutException",
+          "input_sha256": "39fa1a8bcf52c65b006df8db321df588d3699f72eb376e85ee0d1a7cbde635e8",
+          "per_test_elapsed_measured": false,
+          "scope": "test",
+          "test_index": 9,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 154,
+              "origin": "evaluator"
+            },
+            {
+              "function": "sum_average",
+              "line": 9,
+              "origin": "candidate"
+            },
+            {
+              "function": "signal_handler",
+              "line": 45,
+              "origin": "other"
+            }
+          ],
+          "traceback_frame_count": 3,
+          "traceback_truncated": false
+        },
+        {
+          "classification": "candidate_initialization_timeout",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 14.9506744928658,
+          "exception_type": "TimeoutException",
+          "input_sha256": null,
+          "per_test_elapsed_measured": false,
+          "scope": "outer",
+          "test_index": null,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 154,
+              "origin": "evaluator"
+            },
+            {
+              "function": "sum_average",
+              "line": 9,
+              "origin": "candidate"
+            },
+            {
+              "function": "signal_handler",
+              "line": 45,
+              "origin": "other"
+            }
+          ],
+          "traceback_frame_count": 3,
+          "traceback_truncated": false
+        }
+      ],
+      "fast_check": true,
+      "historical_records_changed": false,
+      "initialization_budget_seconds": 61.0,
+      "input_hash_serialization": "pickle_protocol_4_frozen_before_execution",
+      "observed": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "observer_error": false,
+      "orchestration_allowance_seconds": 2.0,
+      "original_details": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_status": "timeout",
+      "outer_cap_seconds": 180.0,
+      "per_test_limits_seconds": [
+        1.0,
+        5.025964736938477,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        5.004417419433594,
+        1.0,
+        1.0,
+        5.012398719787598,
+        1.0,
+        1.0,
+        1.0,
+        5.009612083435059,
+        1.0,
+        5.037189483642578,
+        5.03441047668457,
+        1.0,
+        5.030006408691406,
+        5.046050071716309,
+        5.078184127807617,
+        5.015155792236328,
+        1.0,
+        5.014100074768066,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        5.0156660079956055,
+        1.0,
+        5.0287885665893555,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        5.021733283996582,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        5.009377479553223,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        5.014467239379883,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "per_test_limits_unchanged": true,
+      "prefix_consistent": false,
+      "provenance": {
+        "candidate_call_body_changed": false,
+        "candidate_tracing": false,
+        "exception_observers": 2,
+        "instrumented_ast_sha256": "4d55552a2c6a4975a4dae17cb180d55280df4a8c6d6132d1bafbd03ec2f307a5",
+        "pinned_distribution": "evalplus==0.3.1",
+        "unsafe_execute_source_sha256": "070691c7905272daca1ea40789ca8b3d5bd572be841ab594c8ddfab5cbb401aa",
+        "upstream_file_sha256": {
+          "config": "dc14b4400cbf05d5bcab5b94d785f046cca22b0dbc10bc9756f8356dc42f18e3",
+          "eval": "76857b678cddca08dcaf54d7927b9a77826715cf657654ca5baf6c2b267f4c34",
+          "utils": "0aec25f437dbc7637219ba749ba71921670e71cd2e70b1cc23988896c0754bb1"
+        },
+        "upstream_modules": {
+          "config": "evalplus.config",
+          "eval": "evalplus.eval",
+          "utils": "evalplus.eval.utils"
+        }
+      },
+      "status": "timeout",
+      "suite": "extra",
+      "task_watchdog_budget_seconds": 180.0,
+      "termination_grace_seconds": 0.4,
+      "upstream_status": "fail",
+      "verified_suite_verdict": null
+    },
+    "diagnostic_only": true,
+    "historical_result_changed": false,
+    "old": {
+      "detail": "{\"tests_observed\": 34, \"test_count\": 88, \"test_passes_observed\": 34, \"initialization_timeout_diagnosis\": {\"confirmed_candidate_initialization_timeout\": false, \"confirmed_candidate_initialization_failure\": false, \"initialization_exception_type\": \"\", \"initialization_budget_seconds\": 61.0, \"upstream_status\": null, \"child_exitcode\": -15, \"observed\": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], \"original_status\": \"timeout\", \"original_tests_observed\": 34}, \"inner_fail_attribution\": \"EvalPlus internal FAIL can conflate candidate and inner exceptions\"}",
+      "status": "timeout"
+    },
+    "sample_id": "8d0658bbeeed6ab9cb8819c51678e276be91c899ae44300bf38bf1c3cc6526c9"
+  },
+  "exact_test_identity": {
+    "cached_reference_seconds": 1.2530996799468994,
+    "configured_test_limit_seconds": 5.012398719787598,
+    "exception_type": "TimeoutException",
+    "input": [
+      100000001
+    ],
+    "input_sha256": "39fa1a8bcf52c65b006df8db321df588d3699f72eb376e85ee0d1a7cbde635e8",
+    "new_candidate_execution": false,
+    "task_id": "Mbpp/599",
+    "zero_based_test_index": 9
+  },
+  "authored_controls": {
+    "valid": {
+      "admission_reason": "complete_original_suite",
+      "child_exitcode": 0,
+      "child_still_alive": false,
+      "code_sha256": "6ddc3eba7f2ea371a8e3dd023f0b82254f9056c0722972853993fc237c28baf9",
+      "elapsed_seconds": 0.07050639390945435,
+      "exception_events": [],
+      "fast_check": true,
+      "historical_records_changed": false,
+      "initialization_budget_seconds": 2.0,
+      "input_hash_serialization": "pickle_protocol_4_frozen_before_execution",
+      "observed": [
+        1
+      ],
+      "observer_error": false,
+      "orchestration_allowance_seconds": 2.0,
+      "original_details": [],
+      "original_status": "timeout",
+      "outer_cap_seconds": 180.0,
+      "per_test_limits_seconds": [
+        1.0
+      ],
+      "per_test_limits_unchanged": true,
+      "prefix_consistent": true,
+      "provenance": {
+        "candidate_call_body_changed": false,
+        "candidate_tracing": false,
+        "exception_observers": 2,
+        "instrumented_ast_sha256": "4d55552a2c6a4975a4dae17cb180d55280df4a8c6d6132d1bafbd03ec2f307a5",
+        "pinned_distribution": "evalplus==0.3.1",
+        "unsafe_execute_source_sha256": "070691c7905272daca1ea40789ca8b3d5bd572be841ab594c8ddfab5cbb401aa",
+        "upstream_file_sha256": {
+          "config": "dc14b4400cbf05d5bcab5b94d785f046cca22b0dbc10bc9756f8356dc42f18e3",
+          "eval": "76857b678cddca08dcaf54d7927b9a77826715cf657654ca5baf6c2b267f4c34",
+          "utils": "0aec25f437dbc7637219ba749ba71921670e71cd2e70b1cc23988896c0754bb1"
+        },
+        "upstream_modules": {
+          "config": "evalplus.config",
+          "eval": "evalplus.eval",
+          "utils": "evalplus.eval.utils"
+        }
+      },
+      "status": "pass",
+      "suite": "base",
+      "task_watchdog_budget_seconds": 5.0,
+      "termination_grace_seconds": 0.4,
+      "upstream_status": "pass",
+      "verified_suite_verdict": "pass"
+    },
+    "wrong": {
+      "admission_reason": "oracle_assertion",
+      "child_exitcode": 0,
+      "child_still_alive": false,
+      "code_sha256": "ce3c7267f050de4521376295da726b5875345eb3f68763c5895bb6a5db0ede51",
+      "elapsed_seconds": 0.07084924355149269,
+      "exception_events": [
+        {
+          "classification": "oracle_assertion",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 0.013487983494997025,
+          "exception_type": "AssertionError",
+          "input_sha256": "4161bccd029bec6dfae5cc2e6620fc7864b70ff481c3a1117f9926854a9b1974",
+          "per_test_elapsed_measured": false,
+          "scope": "test",
+          "test_index": 0,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 203,
+              "origin": "evaluator"
+            }
+          ],
+          "traceback_frame_count": 1,
+          "traceback_truncated": false
+        },
+        {
+          "classification": "harness_or_unattributed_exception",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 0.013652365654706955,
+          "exception_type": "AssertionError",
+          "input_sha256": null,
+          "per_test_elapsed_measured": false,
+          "scope": "outer",
+          "test_index": null,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 203,
+              "origin": "evaluator"
+            }
+          ],
+          "traceback_frame_count": 1,
+          "traceback_truncated": false
+        }
+      ],
+      "fast_check": true,
+      "historical_records_changed": false,
+      "initialization_budget_seconds": 2.0,
+      "input_hash_serialization": "pickle_protocol_4_frozen_before_execution",
+      "observed": [
+        0
+      ],
+      "observer_error": false,
+      "orchestration_allowance_seconds": 2.0,
+      "original_details": [],
+      "original_status": "timeout",
+      "outer_cap_seconds": 180.0,
+      "per_test_limits_seconds": [
+        1.0
+      ],
+      "per_test_limits_unchanged": true,
+      "prefix_consistent": true,
+      "provenance": {
+        "candidate_call_body_changed": false,
+        "candidate_tracing": false,
+        "exception_observers": 2,
+        "instrumented_ast_sha256": "4d55552a2c6a4975a4dae17cb180d55280df4a8c6d6132d1bafbd03ec2f307a5",
+        "pinned_distribution": "evalplus==0.3.1",
+        "unsafe_execute_source_sha256": "070691c7905272daca1ea40789ca8b3d5bd572be841ab594c8ddfab5cbb401aa",
+        "upstream_file_sha256": {
+          "config": "dc14b4400cbf05d5bcab5b94d785f046cca22b0dbc10bc9756f8356dc42f18e3",
+          "eval": "76857b678cddca08dcaf54d7927b9a77826715cf657654ca5baf6c2b267f4c34",
+          "utils": "0aec25f437dbc7637219ba749ba71921670e71cd2e70b1cc23988896c0754bb1"
+        },
+        "upstream_modules": {
+          "config": "evalplus.config",
+          "eval": "evalplus.eval",
+          "utils": "evalplus.eval.utils"
+        }
+      },
+      "status": "fail",
+      "suite": "base",
+      "task_watchdog_budget_seconds": 5.0,
+      "termination_grace_seconds": 0.4,
+      "upstream_status": "fail",
+      "verified_suite_verdict": "fail"
+    },
+    "syntax": {
+      "admission_reason": "candidate_syntax_error",
+      "child_exitcode": 0,
+      "child_still_alive": false,
+      "code_sha256": "915b35ac579ac84960b64a89f610a15e08d21b1f4ae5ca92ee20db4c425d590e",
+      "elapsed_seconds": 0.07230722904205322,
+      "exception_events": [
+        {
+          "classification": "candidate_syntax_error",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 0.013030201196670532,
+          "exception_type": "SyntaxError",
+          "input_sha256": null,
+          "per_test_elapsed_measured": false,
+          "scope": "outer",
+          "test_index": null,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 147,
+              "origin": "evaluator"
+            },
+            {
+              "function": "timed_exec",
+              "line": 213,
+              "origin": "other"
+            }
+          ],
+          "traceback_frame_count": 2,
+          "traceback_truncated": false
+        }
+      ],
+      "fast_check": true,
+      "historical_records_changed": false,
+      "initialization_budget_seconds": 2.0,
+      "input_hash_serialization": "pickle_protocol_4_frozen_before_execution",
+      "observed": [],
+      "observer_error": false,
+      "orchestration_allowance_seconds": 2.0,
+      "original_details": [],
+      "original_status": "timeout",
+      "outer_cap_seconds": 180.0,
+      "per_test_limits_seconds": [
+        1.0
+      ],
+      "per_test_limits_unchanged": true,
+      "prefix_consistent": true,
+      "provenance": {
+        "candidate_call_body_changed": false,
+        "candidate_tracing": false,
+        "exception_observers": 2,
+        "instrumented_ast_sha256": "4d55552a2c6a4975a4dae17cb180d55280df4a8c6d6132d1bafbd03ec2f307a5",
+        "pinned_distribution": "evalplus==0.3.1",
+        "unsafe_execute_source_sha256": "070691c7905272daca1ea40789ca8b3d5bd572be841ab594c8ddfab5cbb401aa",
+        "upstream_file_sha256": {
+          "config": "dc14b4400cbf05d5bcab5b94d785f046cca22b0dbc10bc9756f8356dc42f18e3",
+          "eval": "76857b678cddca08dcaf54d7927b9a77826715cf657654ca5baf6c2b267f4c34",
+          "utils": "0aec25f437dbc7637219ba749ba71921670e71cd2e70b1cc23988896c0754bb1"
+        },
+        "upstream_modules": {
+          "config": "evalplus.config",
+          "eval": "evalplus.eval",
+          "utils": "evalplus.eval.utils"
+        }
+      },
+      "status": "fail",
+      "suite": "base",
+      "task_watchdog_budget_seconds": 5.0,
+      "termination_grace_seconds": 0.4,
+      "upstream_status": "fail",
+      "verified_suite_verdict": "fail"
+    },
+    "init": {
+      "admission_reason": "candidate_initialization_exception",
+      "child_exitcode": 0,
+      "child_still_alive": false,
+      "code_sha256": "e29fea8d1a1a140412a136fcaf79a25f455906f8b2fa19298eb7f0b80dbe20a3",
+      "elapsed_seconds": 0.0720655620098114,
+      "exception_events": [
+        {
+          "classification": "candidate_initialization_exception",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 0.012821022421121597,
+          "exception_type": "ValueError",
+          "input_sha256": null,
+          "per_test_elapsed_measured": false,
+          "scope": "outer",
+          "test_index": null,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 147,
+              "origin": "evaluator"
+            },
+            {
+              "function": "timed_exec",
+              "line": 213,
+              "origin": "other"
+            },
+            {
+              "function": "<module>",
+              "line": 1,
+              "origin": "candidate"
+            }
+          ],
+          "traceback_frame_count": 3,
+          "traceback_truncated": false
+        }
+      ],
+      "fast_check": true,
+      "historical_records_changed": false,
+      "initialization_budget_seconds": 2.0,
+      "input_hash_serialization": "pickle_protocol_4_frozen_before_execution",
+      "observed": [],
+      "observer_error": false,
+      "orchestration_allowance_seconds": 2.0,
+      "original_details": [],
+      "original_status": "timeout",
+      "outer_cap_seconds": 180.0,
+      "per_test_limits_seconds": [
+        1.0
+      ],
+      "per_test_limits_unchanged": true,
+      "prefix_consistent": true,
+      "provenance": {
+        "candidate_call_body_changed": false,
+        "candidate_tracing": false,
+        "exception_observers": 2,
+        "instrumented_ast_sha256": "4d55552a2c6a4975a4dae17cb180d55280df4a8c6d6132d1bafbd03ec2f307a5",
+        "pinned_distribution": "evalplus==0.3.1",
+        "unsafe_execute_source_sha256": "070691c7905272daca1ea40789ca8b3d5bd572be841ab594c8ddfab5cbb401aa",
+        "upstream_file_sha256": {
+          "config": "dc14b4400cbf05d5bcab5b94d785f046cca22b0dbc10bc9756f8356dc42f18e3",
+          "eval": "76857b678cddca08dcaf54d7927b9a77826715cf657654ca5baf6c2b267f4c34",
+          "utils": "0aec25f437dbc7637219ba749ba71921670e71cd2e70b1cc23988896c0754bb1"
+        },
+        "upstream_modules": {
+          "config": "evalplus.config",
+          "eval": "evalplus.eval",
+          "utils": "evalplus.eval.utils"
+        }
+      },
+      "status": "fail",
+      "suite": "base",
+      "task_watchdog_budget_seconds": 5.0,
+      "termination_grace_seconds": 0.4,
+      "upstream_status": "fail",
+      "verified_suite_verdict": "fail"
+    },
+    "test_timeout": {
+      "admission_reason": "candidate_test_timeout",
+      "child_exitcode": 0,
+      "child_still_alive": false,
+      "code_sha256": "5bebbb2de756c008044b46ef143383d56717f6bf4ac49270e47b495a3ca14380",
+      "elapsed_seconds": 1.0682200975716114,
+      "exception_events": [
+        {
+          "classification": "candidate_test_timeout",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 1.009833887219429,
+          "exception_type": "TimeoutException",
+          "input_sha256": "4161bccd029bec6dfae5cc2e6620fc7864b70ff481c3a1117f9926854a9b1974",
+          "per_test_elapsed_measured": false,
+          "scope": "test",
+          "test_index": 0,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 154,
+              "origin": "evaluator"
+            },
+            {
+              "function": "fixture",
+              "line": 2,
+              "origin": "candidate"
+            },
+            {
+              "function": "signal_handler",
+              "line": 45,
+              "origin": "other"
+            }
+          ],
+          "traceback_frame_count": 3,
+          "traceback_truncated": false
+        },
+        {
+          "classification": "candidate_initialization_timeout",
+          "elapsed_origin": "diagnostic_worker_start",
+          "elapsed_seconds_at_exception": 1.0100288428366184,
+          "exception_type": "TimeoutException",
+          "input_sha256": null,
+          "per_test_elapsed_measured": false,
+          "scope": "outer",
+          "test_index": null,
+          "traceback": [
+            {
+              "function": "unsafe_execute",
+              "line": 154,
+              "origin": "evaluator"
+            },
+            {
+              "function": "fixture",
+              "line": 2,
+              "origin": "candidate"
+            },
+            {
+              "function": "signal_handler",
+              "line": 45,
+              "origin": "other"
+            }
+          ],
+          "traceback_frame_count": 3,
+          "traceback_truncated": false
+        }
+      ],
+      "fast_check": true,
+      "historical_records_changed": false,
+      "initialization_budget_seconds": 2.0,
+      "input_hash_serialization": "pickle_protocol_4_frozen_before_execution",
+      "observed": [
+        0
+      ],
+      "observer_error": false,
+      "orchestration_allowance_seconds": 2.0,
+      "original_details": [],
+      "original_status": "timeout",
+      "outer_cap_seconds": 180.0,
+      "per_test_limits_seconds": [
+        1.0
+      ],
+      "per_test_limits_unchanged": true,
+      "prefix_consistent": true,
+      "provenance": {
+        "candidate_call_body_changed": false,
+        "candidate_tracing": false,
+        "exception_observers": 2,
+        "instrumented_ast_sha256": "4d55552a2c6a4975a4dae17cb180d55280df4a8c6d6132d1bafbd03ec2f307a5",
+        "pinned_distribution": "evalplus==0.3.1",
+        "unsafe_execute_source_sha256": "070691c7905272daca1ea40789ca8b3d5bd572be841ab594c8ddfab5cbb401aa",
+        "upstream_file_sha256": {
+          "config": "dc14b4400cbf05d5bcab5b94d785f046cca22b0dbc10bc9756f8356dc42f18e3",
+          "eval": "76857b678cddca08dcaf54d7927b9a77826715cf657654ca5baf6c2b267f4c34",
+          "utils": "0aec25f437dbc7637219ba749ba71921670e71cd2e70b1cc23988896c0754bb1"
+        },
+        "upstream_modules": {
+          "config": "evalplus.config",
+          "eval": "evalplus.eval",
+          "utils": "evalplus.eval.utils"
+        }
+      },
+      "status": "fail",
+      "suite": "base",
+      "task_watchdog_budget_seconds": 5.0,
+      "termination_grace_seconds": 0.4,
+      "upstream_status": "fail",
+      "verified_suite_verdict": "fail"
+    }
+  },
+  "cpu_receipt": {
+    "status": "failed",
+    "returncode": 1,
+    "elapsed_seconds": 22.19933583959937,
+    "scientific_result": false
+  },
+  "first_contradiction_stopped_gate": true,
+  "remaining_repeats_not_executed": 2,
+  "C260_repeats_executed": 0,
+  "original96_rechecks_executed": 0,
+  "W_sentinel_rechecks_executed": 0,
+  "historical_labels_changed": false,
+  "new_model_outputs": 0,
+  "new_optimizer_updates": 0
+}

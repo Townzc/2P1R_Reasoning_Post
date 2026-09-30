@@ -155,6 +155,44 @@ class InstrumentationTests(unittest.TestCase):
         self.assertEqual(good["classification"], "oracle_assertion")
         self.assertEqual(bad["classification"], "harness_or_unattributed_exception")
 
+    def test_propagated_test_timeout_is_not_an_initialization_failure(self):
+        namespace = {"FixtureException": TimeoutError}
+        exec(compile("def authored():\n    raise FixtureException('authored')\n", "<string>", "exec"), namespace)
+        events = []
+        original_exception = None
+        try:
+            try:
+                namespace["authored"]()
+            except TimeoutError as exc:
+                original_exception = exc
+                events.append(sg._exception_event(exc, "test", 2, ["a", "b", "frozen"],
+                    "evaluator.py", set(), TimeoutError, .1))
+                raise
+        except TimeoutError as exc:
+            events.append(sg._exception_event(exc, "outer", -1, [], "evaluator.py", set(),
+                TimeoutError, .2, prior_test_exception=original_exception))
+        self.assertEqual(events[0]["classification"], "candidate_test_timeout")
+        self.assertEqual(events[1]["classification"], "propagated_test_exception")
+        self.assertTrue(events[1]["propagated_from_test"])
+        # Correcting this duplicate-event label must not change admission. The
+        # matching-prefix case is a test failure; the conflicting-prefix case is unknown.
+        old_events = [events[0], {**events[1], "classification": "candidate_initialization_timeout"}]
+        for prefix in ([True, True], [True, True, True]):
+            kwargs = dict(original_details=prefix, observed=[1, 1, 0], upstream_status="fail")
+            self.assertEqual(admit(exception_events=events, **kwargs),
+                             admit(exception_events=old_events, **kwargs))
+
+    def test_unrelated_initialization_exception_is_not_marked_propagation(self):
+        namespace = {"FixtureException": TimeoutError}
+        exec(compile("def authored():\n    raise FixtureException('authored')\n", "<string>", "exec"), namespace)
+        try:
+            namespace["authored"]()
+        except TimeoutError as exc:
+            event = sg._exception_event(exc, "outer", -1, [], "evaluator.py", set(), TimeoutError,
+                                        .1, prior_test_exception=TimeoutError("different instance"))
+        self.assertEqual(event["classification"], "candidate_initialization_timeout")
+        self.assertFalse(event["propagated_from_test"])
+
     def test_limits_and_prefix_validated_before_importing_evaluator(self):
         problem = dict(plus_input=[[1]], base_input=[[1]], entry_point="fixture", atol=0)
         with mock.patch.object(sg.platform, "system", return_value="Linux"), \

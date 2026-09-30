@@ -1,3 +1,20 @@
+# Q2 paused — final completion gate failed, provider OFF
+
+September30,11:48:23UTC. The owner-approved last completion was stopped
+before any new model output/update because the same saved R599 candidate failed
+a per-test timeout inside its previously passing34-test prefix.111unit checks
+and5Linuxauthored controls passed, but actual saved-candidate reward comparability
+did not. Remaining regression fixtures were not run after the contradiction.
+No384-update queue was admitted. Allthree primary comparisons remain missing.
+
+[Diagnosis and closed-run decision](reports/q2_completion_20260930/RESULTS.md).
+No automatic startup, retry, scoring relaxation or new science. Respect the
+owner's instruction to pause if this final repair/completion remains unsuccessful.
+All21 compact artifacts and the old3checkpoint file sets were verified before
+normalOFF; timer cleared. Existing scores/failures remain unchanged. No claim of
+hypothesis falsification or live-GPU recovery validation. Earlier dated entries
+below are history.
+
 # Current authorization — one final Q2 control completion, September30 2026
 
 The owner explicitly approved designing and running the proposed missing-control

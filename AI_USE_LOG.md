@@ -1870,3 +1870,30 @@ inventories, a no-retry serial parent and a Linux saved-output comparability gat
 Local authored CPU checks pass; no new candidate execution or model output during
 this preparation. Linux gate and scientific completion remain unverified until
 explicit runtime receipts exist. Historical failure records remain unchanged.
+
+## 2026-09-30: final Q2 admission failed; direction paused and instance OFF
+
+Published34a3afab before the authorized startup. All111 authored unit checks passed
+on both local and pinned Linux environments, and five authored Linux attribution
+controls passed. The first exact saved R599 diagnostic contradicted its old
+34-test passing prefix: nine passes then a candidate-loop TimeoutException on
+input100000001 at the unchanged configured per-test allowance5.012398719787598s.
+The guard retained unknown and failed admission. No further saved fixtures or
+new training/evaluation/model generation ran; this does not verify full scoring
+comparability or live-GPU recovery. The outer event's duplicate propagated test
+exception was mislabeled initialization timeout; audit identified it explicitly,
+without rewriting the original record or changing the rejection decision.
+
+Collected/hash-verified21 compact records and independently rehashed all37 files
+in old W_prefix/W_future/R25 checkpoint sets. GPU and owned CPU workers were empty.
+Normal provider OFF confirmed by11:48:23UTC, temporary timer cleared, volume kept.
+Conservative11:41..11:48:23 powered window gives0.98198CNY compute upper proxy,
+not an invoice and excluding storage. User stop condition now pauses Q2; q2 and
+LT002 automations remain PAUSED. Published honest evidence and incomplete-comparison
+status; no external message, label relaxation, model retry or new direction begun.
+
+Post-closeout correction: distinguish the same test exception propagated into the
+outer handler from a genuine initialization failure. Two authored tests verify
+metadata identity and unchanged admission decisions;113 local Q2 checks pass.
+Original source34a3afab Linux diagnostics and immutable records are unchanged.
+No remote diagnostic, candidate, model or restored server session was run again.
