@@ -1856,3 +1856,17 @@ instance OFF at11:26UTC, cleared its temporary timer, paused the existing heartb
 and cancelled the identity-checked finite local observer. Published full results,
 resource/cost proxies and owner-decision handoff locally after shutdown. No new
 experiment, subagent, external message, payment or long-term branch change.
+
+## 2026-09-30: owner-approved final Q2 completion repair preparation
+
+The owner authorized one finite missing-control completion and autonomous startup
+of the same existing instance, with normal shutdown afterward and pausing Q2 if
+completion still fails. Prepared a3-hour/CNY23.94 cap,384 updates/6144 training+
+3072 evaluation outputs, reusing completed W states. Two bounded code/audit helpers
+reviewed evaluator attribution and checkpoint/rollout evidence. Added timeout-only
+exception attribution with preserved per-test semantics and mandatory prefix
+agreement, raw token/logprob journaling before decoding, stable checkpoint hash
+inventories, a no-retry serial parent and a Linux saved-output comparability gate.
+Local authored CPU checks pass; no new candidate execution or model output during
+this preparation. Linux gate and scientific completion remain unverified until
+explicit runtime receipts exist. Historical failure records remain unchanged.

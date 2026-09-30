@@ -1,3 +1,25 @@
+# Current authorization — one final Q2 control completion, September30 2026
+
+The owner explicitly approved designing and running the proposed missing-control
+completion, fixing scoring/recovery against saved failures first, and starting
+the same existing single-GPU instance if necessary. Normal shutdown after the
+finite run and a provider fallback are required. This supersedes historical
+no-startup / C-repeat-awaiting-reply entries below, not the closed run's budget.
+
+Only a passed saved-output comparability gate admits fresh C_prefix128,
+C_future128 and R_future128, plus their three original128x8 evaluations:
+384 updates,6144 training and3072 evaluation outputs. Reuse old W/evaluation
+states. One new3-hour/CNY23.94 powered cap at verified7.98/hour, storage excluded;
+all setup/diagnosis/repair/collection count. Preserve600s shutdown reserve.
+No additional seed, model, arm, dose search, rental, deletion or external message.
+If the gate or completion still fails, pause this direction and preserve evidence.
+The old failed suite-watchdog remains forbidden. Exact cross-process vLLM resume
+is not established: recover saved scoring inside the live callback only; never
+regenerate an uncertain batch. The root and two bounded CPU/code audit helpers
+may prepare this repair. Read COMPLETION_REPAIR_20260930.md and the private
+.local/q2_completion_20260930/ACTIVE_HANDOFF.md for live status. Earlier entries
+below are preserved history. Server remains OFF during local preparation.
+
 # Q2 finite run closed — provider OFF, September 30, 2026
 
 Available evaluations are complete: R46.48%, W_prefix49.22%, W_future49.02%

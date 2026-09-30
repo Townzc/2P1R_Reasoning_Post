@@ -9,7 +9,7 @@ from .contracts import SuiteVerdict, VerdictStatus
 from .gpu_profile import ProfileError, durable_json, sha256
 
 
-def score_pair(problem, reference, code, checker, *, fast_check=False, recover_initialization=False, recover_suite_watchdog=False):
+def score_pair(problem, reference, code, checker, *, fast_check=False, recover_initialization=False, recover_suite_watchdog=False, guarded_scoring_v2=False):
     result={}
     for label,suite in [('base','base'),('extra','plus')]:
         try:
@@ -24,7 +24,15 @@ def score_pair(problem, reference, code, checker, *, fast_check=False, recover_i
             status,details=checker('mbpp',code,inputs,problem['entry_point'],expected=expected,
                                    atol=problem['atol'],ref_time=timings,fast_check=fast_check)
             recovery=None
-            if status=='timeout' and (recover_initialization or recover_suite_watchdog):
+            if status=='timeout' and guarded_scoring_v2:
+                if not fast_check or recover_suite_watchdog:
+                    raise ProfileError('guarded scoring requires frozen first-failure semantics')
+                from .scoring_guard_v2 import diagnose_timeout
+                recovery=diagnose_timeout(problem,code,expected,timings,suite=label,
+                    original_details=list(details),original_status=status)
+                if recovery.get('verified_suite_verdict') in ('pass','fail'):
+                    status,details=recovery['verified_suite_verdict'],recovery['observed']
+            elif status=='timeout' and (recover_initialization or recover_suite_watchdog):
                 from .initialization_guard import diagnose_initialization_timeout
                 recovery=diagnose_initialization_timeout('mbpp',code,inputs,problem['entry_point'],
                     expected,problem['atol'],timings,fast_check,complete_suite=recover_suite_watchdog)
@@ -65,7 +73,7 @@ def load_references(root):
     return gt,manifest
 
 
-def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=False,recover_initialization=False, recover_suite_watchdog=False):
+def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=False,recover_initialization=False, recover_suite_watchdog=False,guarded_scoring_v2=False):
     try:
         os.environ['CUDA_VISIBLE_DEVICES']=''
         problems=load_problems(data_path,data_sha);refs,manifest=load_references(reference_root)
@@ -81,7 +89,7 @@ def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=F
             if task not in selected: raise ProfileError('task outside phase')
             conn.send(score_pair(problems[task],refs[task],code,untrusted_check,
                 fast_check=fast_check,recover_initialization=recover_initialization,
-                recover_suite_watchdog=recover_suite_watchdog))
+                recover_suite_watchdog=recover_suite_watchdog,guarded_scoring_v2=guarded_scoring_v2))
     except BaseException as exc:
         try: conn.send({'fatal':repr(exc)})
         except (EOFError,BrokenPipeError): pass

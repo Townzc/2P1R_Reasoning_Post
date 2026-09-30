@@ -96,7 +96,7 @@ def start_scorer(args,selected):
     proc=ctx.Process(target=scoring_process,args=(other,args.data_json,args.data_sha256,
         str(Path(args.out)/'references'),selected,args.scoring_fast_check,
         getattr(args,'recover_initialization_timeout',False),
-        getattr(args,'recover_suite_watchdog',False)),daemon=False)
+        getattr(args,'recover_suite_watchdog',False),getattr(args,'guarded_scoring_v2',False)),daemon=False)
     proc.start();other.close()
     ready=receive(conn,min(180,remaining(args)),time.monotonic()+remaining(args))
     if not ready.get('ready'): raise ProfileError('scorer did not initialize')
@@ -126,7 +126,7 @@ def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons,*,allo
         if fatal is None:
             try:
                 conn.send((task,code))
-                request_limit=(600 if getattr(args,'recover_suite_watchdog',False) else
+                request_limit=(600 if (getattr(args,'recover_suite_watchdog',False) or getattr(args,'guarded_scoring_v2',False)) else
                     300 if getattr(args,'recover_initialization_timeout',False) else spec.SCORER_TIMEOUT_SECONDS)
                 value=receive(conn,request_limit,time.monotonic()+remaining(args))
                 base,extra=(SuiteVerdict(**value[k]) for k in ['base','extra'])
@@ -200,8 +200,10 @@ def train_worker(args,plan):
         config.save_steps=32
         config.save_total_limit=None
         durable_json(out/'execution_repair.json',{
-            'policy':'diagnose_only_unknown_candidate_initialization_timeout',
-            'known_verdicts_unchanged':True,'scorer_request_cap_seconds':300,
+            'policy':'attributed_timeout_guard_v2' if args.guarded_scoring_v2 else 'diagnose_only_unknown_candidate_initialization_timeout',
+            'execution_attempt':args.execution_attempt,'known_verdicts_unchanged':True,
+            'scorer_request_cap_seconds':600 if args.guarded_scoring_v2 else 300,
+            'raw_backend_logprobs_before_decode':args.durable_rollout_evidence,
             'periodic_checkpoint_steps':32,'checkpoint_deletion':False,
             'exact_resume_including_vllm_rng_verified':False})
     config_identity=identity_hash({'training':plan['training_config'],'maxlen':maxlen,'phase':phase,
@@ -209,7 +211,7 @@ def train_worker(args,plan):
     allfiles={str(p.relative_to(source)):p for p in source.rglob('*') if p.is_file()}
     tokenizer_files={k:v for k,v in allfiles.items() if 'token' in k or k in ['vocab.json','merges.txt','chat_template.jinja']}
     policy_files={k:v for k,v in allfiles.items() if k not in tokenizer_files}
-    fork=build_fresh_fork_manifest(run_id=plan['run_id'],phase_id=args.phase,policy_files=policy_files,
+    fork=build_fresh_fork_manifest(run_id=args.execution_run_id,phase_id=args.phase,policy_files=policy_files,
         tokenizer_files=tokenizer_files,phase_config={'phase':phase,'training':plan['training_config'],'vllm_engine_seed':0},
         phase_seed=phase['trainer_seed'],prompt_schedule_sha256=plan['schedule_sha256'][phase['schedule']])
     reserve_fork(out/'fork',fork)
@@ -240,6 +242,12 @@ def train_worker(args,plan):
             if epoch!=0: raise ProfileError('unexpected extra training epoch')
 
     class Callback(TrainerCallback):
+        def on_save(self,a,s,c,**kwargs):
+            if args.durable_rollout_evidence:
+                from .rollout_recovery import checkpoint_inventory
+                step=int(s.global_step)
+                inventory=checkpoint_inventory(out/'trainer'/f'checkpoint-{step}',out,committed_updates=step)
+                durable_json(out/f'checkpoint_inventory_{step:04d}.json',inventory)
         def on_train_begin(self,a,s,c,model=None,optimizer=None,**kwargs):
             inner=getattr(optimizer,'optimizer',optimizer)
             if type(inner).__name__!='Adafactor' or len(inner.state)!=0 or s.global_step!=0 or not all(p.requires_grad for p in model.parameters()):
@@ -273,8 +281,12 @@ def train_worker(args,plan):
         def _get_train_sampler(self,dataset=None): return FixedSampler()
         def _generate_single_turn(self,prompt_ids,images,multimodal_fields):
             result=super()._generate_single_turn(prompt_ids,images,multimodal_fields)
-            ids,_=result
+            ids,sampled_logprobs=result
             if state['active'] is None: raise ProfileError('unreserved generation')
+            if args.durable_rollout_evidence:
+                from .rollout_recovery import journal_backend_rollout
+                journal_backend_rollout(state['active'],prompt_ids,ids,sampled_logprobs,
+                    committed_updates=int(self.state.global_step),last_loaded_step=int(self._last_loaded_step))
             record_generation_return(state['active'],prompt_ids,ids,
                 self.processing_class.batch_decode(ids,skip_special_tokens=True),
                 self.processing_class.batch_decode(ids,skip_special_tokens=False))
@@ -285,7 +297,7 @@ def train_worker(args,plan):
             if i>=phase['updates'] or self.state.global_step!=i: raise ProfileError('extra generation or replay')
             tasks=[x['task_id'] for x in inputs]
             if tasks!=schedule[i]: raise ProfileError('prompt schedule differs from frozen paired schedule')
-            state['active']=reserve_batch(out/'batches',run_id=plan['run_id'],phase_id=args.phase,
+            state['active']=reserve_batch(out/'batches',run_id=args.execution_run_id,phase_id=args.phase,
                 batch_index=i,tasks=tasks,config_sha256=config_identity,
                 policy_sha256=identity_hash({'source':source_identity,'phase':args.phase,'committed_updates':i}))
             t=time.monotonic();result=super()._generate_and_score_completions(inputs)
@@ -322,6 +334,10 @@ def train_worker(args,plan):
                     raise ProfileError('cannot snapshot uncertain optimizer commit')
                 checkpoint=out/'trainer'/f'checkpoint-{step}'
                 if not checkpoint.exists():trainer._save_checkpoint(trainer.model,None)
+                if args.durable_rollout_evidence:
+                    from .rollout_recovery import checkpoint_inventory
+                    inventory=checkpoint_inventory(checkpoint,out,committed_updates=step)
+                    durable_json(out/'failure_checkpoint_inventory.json',inventory)
                 durable_json(out/'failure_checkpoint.json',{
                     'committed_updates':step,'path':str(checkpoint),
                     'pending_batch_must_not_be_replayed':True,
@@ -381,7 +397,7 @@ def evaluation_worker(args,plan):
     for start in range(0,len(selected),spec.EVAL_TASKS_PER_BATCH):
         remaining(args);disk_gate(args.out)
         ts=selected[start:start+spec.EVAL_TASKS_PER_BATCH];tasks=[t for t in ts for _ in range(spec.EVAL_SAMPLES)]
-        batch=reserve_batch(out/'batches',run_id=plan['run_id'],phase_id=args.phase,
+        batch=reserve_batch(out/'batches',run_id=args.execution_run_id,phase_id=args.phase,
             batch_index=start//spec.EVAL_TASKS_PER_BATCH,tasks=tasks,config_sha256=config_identity,policy_sha256=source_identity)
         params=[SamplingParams(n=8,temperature=1.0,top_p=1.0,top_k=-1,max_tokens=640,seed=spec.eval_seed(t)) for t in ts]
         results=llm.generate([{'prompt_token_ids':prompt_ids[t]} for t in ts],sampling_params=params,use_tqdm=False)
@@ -421,6 +437,9 @@ def parse(argv=None):
     p.add_argument('--recover-initialization-timeout',action='store_true')
     p.add_argument('--recover-suite-watchdog',action='store_true')
     p.add_argument('--retain-evaluation-unknowns',action='store_true')
+    p.add_argument('--guarded-scoring-v2',action='store_true')
+    p.add_argument('--durable-rollout-evidence',action='store_true')
+    p.add_argument('--execution-attempt',default='')
     p.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS)
     p.add_argument('--phase',help=argparse.SUPPRESS)
     p.add_argument('--worker-deadline-epoch',type=float,help=argparse.SUPPRESS)
@@ -434,6 +453,13 @@ def main(argv=None):
     split=pinned_json(args.split_json,args.split_sha256)
     plan=spec.validate_plan(pinned_json(args.plan_json,args.plan_sha256),split)
     args.plan_identity=identity_hash(plan)
+    if args.execution_attempt and args.execution_attempt!='controls_completion_1':
+        raise ProfileError('unapproved execution attempt')
+    if args.execution_attempt and not (args._worker and args.guarded_scoring_v2 and args.durable_rollout_evidence and args.recover_initialization_timeout):
+        raise ProfileError('completion must use its bounded parent and all evidence guards')
+    if args.guarded_scoring_v2 and args.recover_suite_watchdog:
+        raise ProfileError('old failed suite watchdog cannot be combined with guarded scoring')
+    args.execution_run_id=plan['run_id']+('__'+args.execution_attempt if args.execution_attempt else '')
     args.scoring_fast_check=plan.get('scoring_policy')=='first_failure_per_suite'
     if args._worker:
         if os.environ.get('Q2_PROFILE_PARENT_PID')!=str(os.getppid()): raise ProfileError('worker must have owned parent')
