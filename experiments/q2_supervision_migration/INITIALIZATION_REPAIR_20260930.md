@@ -41,3 +41,15 @@ a confirmed committed step. This preserves evidence but does not claim exact
 vLLM RNG resume or permission to replay an in-flight batch. Scientific models,
 task split, schedules, sampling seeds, update count per phase and reward truth
 table remain unchanged. The completed W model and failed C evidence are retained.
+
+The revised Linux gate passed in6.97s. The saved candidate raised MemoryError
+inside its initialization code; it did not reach a test. The valid authored
+control passed, and invalid syntax was not misattributed as an initialization
+timeout/resource failure. Diagnostics generated no new model output.
+
+A separate continuation parent admits only previously untouched W_future,
+R_future and four existing state evaluations. It verifies and reuses W_prefix
+and the original reference cache, and inherits both exact original deadlines.
+It does not count this incomplete W/R subset as a completed W/C/R screen. The
+failed C prefix and first-attempt overhead stay separate; repeating C requires
+the pending owner dose decision.53 authored checks pass for this preparation.

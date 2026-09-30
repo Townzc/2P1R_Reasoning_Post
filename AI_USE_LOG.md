@@ -1,3 +1,16 @@
+## September30 Q2 untouched W/R continuation prepared
+
+The revised saved-candidate Linux gate completed in6.97s: MemoryError was
+observed in the generated initialization code frame, with upstream FAIL and
+normal child exit. Both authored negative controls behaved as intended. The
+first failed diagnostic remains unchanged. No new model output came from these
+diagnostics. The owner was asked about repeating the lost C prefix because the
+frozen-dose instruction forbids extra updates; no amendment has been assumed.
+A bounded continuation is prepared for only untouched W_future/R_future and
+their four planned state evaluations, reusing verified W and reference cache.
+Original worker/provider deadlines are inherited, never restarted.53 authored
+checks passed. C comparisons remain missing unless separately authorized.
+
 ## September30 Q2 initialization diagnostic refinement
 
 The first bounded Linux diagnostic failed its attribution gate: upstream FAIL
