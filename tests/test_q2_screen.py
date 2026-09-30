@@ -123,10 +123,20 @@ class ScoringTests(unittest.TestCase):
                 self.assertEqual(json.loads(pair['base']['detail'])['initialization_timeout_diagnosis']['original_status'],'timeout')
                 guard.assert_called_once()
 
+    def test_suite_repair_requires_completed_observed_verdict(self):
+        target='experiments.q2_supervision_migration.initialization_guard.diagnose_initialization_timeout'
+        for verdict,observed,expected in [('pass',[True],'pass'),('fail',[False],'fail'),(None,[True],'timeout')]:
+            with mock.patch(target,return_value={'verified_suite_verdict':verdict,'observed':observed,'confirmed_candidate_initialization_failure':False}):
+                pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('timeout',[]),('fail',[False])]),fast_check=True,recover_suite_watchdog=True)
+                self.assertEqual(pair['base']['status'],expected)
+        with mock.patch(target,return_value={'verified_suite_verdict':'pass','observed':[],'confirmed_candidate_initialization_failure':False}):
+            pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('timeout',[]),('fail',[False])]),fast_check=True,recover_suite_watchdog=True)
+            self.assertEqual(pair['base']['status'],'scorer_error')
+
     def test_known_verdicts_are_never_reexecuted_by_timeout_repair(self):
         target='experiments.q2_supervision_migration.initialization_guard.diagnose_initialization_timeout'
         with mock.patch(target) as guard:
-            pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('pass',[True]),('fail',[False])]),fast_check=True,recover_initialization=True)
+            pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('pass',[True]),('fail',[False])]),fast_check=True,recover_initialization=True,recover_suite_watchdog=True)
             self.assertEqual([pair[k]['status'] for k in ['base','extra']],['pass','fail'])
             guard.assert_not_called()
 

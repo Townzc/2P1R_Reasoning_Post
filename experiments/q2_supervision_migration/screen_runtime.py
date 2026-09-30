@@ -95,7 +95,8 @@ def start_scorer(args,selected):
     ctx=mp.get_context('spawn');conn,other=ctx.Pipe()
     proc=ctx.Process(target=scoring_process,args=(other,args.data_json,args.data_sha256,
         str(Path(args.out)/'references'),selected,args.scoring_fast_check,
-        getattr(args,'recover_initialization_timeout',False)),daemon=False)
+        getattr(args,'recover_initialization_timeout',False),
+        getattr(args,'recover_suite_watchdog',False)),daemon=False)
     proc.start();other.close()
     ready=receive(conn,min(180,remaining(args)),time.monotonic()+remaining(args))
     if not ready.get('ready'): raise ProfileError('scorer did not initialize')
@@ -125,7 +126,8 @@ def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons):
         if fatal is None:
             try:
                 conn.send((task,code))
-                request_limit=300 if getattr(args,'recover_initialization_timeout',False) else spec.SCORER_TIMEOUT_SECONDS
+                request_limit=(600 if getattr(args,'recover_suite_watchdog',False) else
+                    300 if getattr(args,'recover_initialization_timeout',False) else spec.SCORER_TIMEOUT_SECONDS)
                 value=receive(conn,request_limit,time.monotonic()+remaining(args))
                 base,extra=(SuiteVerdict(**value[k]) for k in ['base','extra'])
                 rewards.append(float(reward_from_verdicts(base,extra,mode)))
@@ -410,6 +412,7 @@ def parse(argv=None):
     p.add_argument('--provider-deadline-epoch',type=float,required=True)
     p.add_argument('--execute-screen',action='store_true')
     p.add_argument('--recover-initialization-timeout',action='store_true')
+    p.add_argument('--recover-suite-watchdog',action='store_true')
     p.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS)
     p.add_argument('--phase',help=argparse.SUPPRESS)
     p.add_argument('--worker-deadline-epoch',type=float,help=argparse.SUPPRESS)

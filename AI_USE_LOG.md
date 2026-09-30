@@ -1,3 +1,21 @@
+## September30 R scoring failure and suite-watchdog repair preparation
+
+R_future failed after25 committed updates/416 returned outputs; its exception
+handler saved a15-file checkpoint atstep25 and no pre-update26 exists. Eight
+samples in the final batch are dual-known, sample8 has base PASS/extra TIMEOUT,
+and seven remain missing. Actual worker inspection confirmed all experiment
+processes exited. The failed extra suite had34 passing tests before its outer
+watchdog; canonical timings/large inputs explain why total-suite time can exceed
+60s without an individual test failure. An initial read-only metadata inspection
+used the wrong canonical-code key; corrected without executing candidate code.
+
+Prepared an explicit outer-watchdog diagnostic while retaining every per-test
+limit and oracle, known verdicts and historical unknowns.54 authored checks pass;
+the210s Linux saved-sample gate remains required. No new model work has run.
+Auditing also found missing saved sampling log-probabilities for the failed batch;
+checkpoint existence alone does not establish exact training recovery. No R/C
+replay is assumed authorized. Same powered session and original deadlines remain.
+
 ## September30 W continuation completed; R continuation active
 
 Read-only audit verified W_future128 contiguous finite-gradient updates,128

@@ -4,7 +4,9 @@ Use the pinned upstream evaluator and its existing task wall-time allowance.
 The additional timer covers exec(code), which upstream leaves outside per-test
 timers. Attribution requires a TimeoutException or an exception with a candidate
 code frame during initialization, upstream FAIL, and normal child exit. Failures
-outside candidate initialization remain unresolved.
+outside candidate initialization remain unresolved by default. The explicit suite
+watchdog diagnostic retains every per-test limit and oracle, but allows up to
+180 seconds to finish a suite that outlives the original whole-task watchdog.
 """
 from __future__ import annotations
 import builtins
@@ -41,11 +43,12 @@ def _worker(dataset, entry_point, code, inputs, expected, limits, atol, fast,
 
 
 def diagnose_initialization_timeout(dataset, code, inputs, entry_point, expected,
-                                   atol, ref_time, fast_check=True):
+                                   atol, ref_time, fast_check=True, *, complete_suite=False):
     import evalplus.eval as ev
     from evalplus.config import DEFAULT_MIN_TIME_LIMIT, DEFAULT_GT_TIME_LIMIT_FACTOR
     limits = [max(DEFAULT_MIN_TIME_LIMIT, DEFAULT_GT_TIME_LIMIT_FACTOR*t) for t in ref_time]
     budget = min(60.0, sum(limits)) + 1.0
+    task_budget=min(180.0, sum(limits)+1.0) if complete_suite else budget
     stat=mp.Value('i', ev._UNKNOWN); progress=mp.Value('i',0)
     details=mp.Array('b',[False]*len(inputs)); timed_out=mp.Value('b',0)
     init_error=mp.Value('b',0);init_exception=mp.Array('c',128)
@@ -53,13 +56,20 @@ def diagnose_initialization_timeout(dataset, code, inputs, entry_point, expected
         limits,atol,fast_check,stat,details,progress,timed_out,init_error,init_exception))
     p.start()
     try:
-        p.join(timeout=budget+1.0)
+        p.join(timeout=task_budget+1.0)
     finally:
         if p.is_alive():p.terminate();p.join(timeout=.2)
         if p.is_alive():p.kill();p.join(timeout=.2)
     observed=list(details[:progress.value])
     confirmed=bool(init_error.value) and stat.value==ev._FAILED and p.exitcode==0
-    return {'confirmed_candidate_initialization_timeout':confirmed and bool(timed_out.value),
+    verified=None
+    if complete_suite and p.exitcode==0:
+        if stat.value==ev._SUCCESS and len(observed)==len(inputs) and all(observed):verified='pass'
+        elif stat.value==ev._FAILED and any(not x for x in observed):verified='fail'
+    return {'verified_suite_verdict':verified,
+            'task_watchdog_budget_seconds':task_budget,
+            'per_test_limits_unchanged':True,
+            'confirmed_candidate_initialization_timeout':confirmed and bool(timed_out.value),
             'confirmed_candidate_initialization_failure':confirmed,
             'initialization_exception_type':init_exception.value.decode('ascii'),
             'initialization_budget_seconds':budget,
