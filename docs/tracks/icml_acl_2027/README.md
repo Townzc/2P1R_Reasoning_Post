@@ -1,3 +1,14 @@
+# Q2 offline feasibility diagnostic and first GPU profile — September 29, 2026
+
+[The new results](../../../reports/q2_feasibility_20260929/RESULTS.md) show that
+switching the reward rule changes 8.82% of the author's 32,000 saved training
+rewards and centered-reward signs in 26.63% of their groups. These are exploratory
+replay counts, not new training or evidence for a future-history effect.
+[The prepared profile](../../../experiments/q2_supervision_migration/PROFILE_PROTOCOL.md)
+contains two updates, 32 new completions and a fresh-process weight reload only.
+Local checks pass; GPU compatibility, throughput and memory are unmeasured.
+The owner retains server startup. No automatic W/C/R grid or fallback follows.
+
 # Q2 reading list and smaller initial experiment — September 29, 2026
 
 The owner selected Q2 for continued preparation and conditional small experiments.

@@ -1,0 +1,530 @@
+{
+  "analysis": "exploratory deterministic replay of rewards on published base-trained rollouts",
+  "source_model": "Qwen2.5-Coder-1.5B-Instruct",
+  "source_commit": "9b6c86abeb4b837418b009d5354f81b43a28f84b",
+  "new_model_generations": 0,
+  "new_optimizer_updates": 0,
+  "new_candidate_program_executions": 0,
+  "seed_results": [
+    {
+      "seed": 0,
+      "sha256": "684a38a58aa6c0027089fb33bc1e7d530bf2a72177fe0ea20c7bbf87ca610618",
+      "checks": {
+        "roll_records": 6400,
+        "extra_records": 3725,
+        "base_pass_extra_complete": true
+      },
+      "windows": {
+        "0:64": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 128,
+          "base_pass": 576,
+          "union_pass": 490,
+          "reward_flips": 86,
+          "flip_fraction_all": 0.083984375,
+          "flip_fraction_base_pass": 0.14930555555555555,
+          "tasks_with_flip": 38,
+          "top10_tasks_share_of_flips": 0.5813953488372093,
+          "groups_reward_vector_changed": 38,
+          "groups_centered_reward_sign_changed": 37,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 19,
+            "all_pass -> all_fail": 1,
+            "all_pass -> all_pass": 13,
+            "all_pass -> mixed": 3,
+            "mixed -> all_fail": 10,
+            "mixed -> mixed": 82
+          }
+        },
+        "64:128": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 126,
+          "base_pass": 600,
+          "union_pass": 509,
+          "reward_flips": 91,
+          "flip_fraction_all": 0.0888671875,
+          "flip_fraction_base_pass": 0.15166666666666667,
+          "tasks_with_flip": 37,
+          "top10_tasks_share_of_flips": 0.5494505494505495,
+          "groups_reward_vector_changed": 37,
+          "groups_centered_reward_sign_changed": 36,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 16,
+            "all_pass -> all_fail": 1,
+            "all_pass -> all_pass": 18,
+            "all_pass -> mixed": 4,
+            "mixed -> all_fail": 15,
+            "mixed -> mixed": 74
+          }
+        },
+        "128:400": {
+          "rollouts": 4352,
+          "groups": 544,
+          "tasks": 250,
+          "base_pass": 2549,
+          "union_pass": 2164,
+          "reward_flips": 385,
+          "flip_fraction_all": 0.08846507352941177,
+          "flip_fraction_base_pass": 0.1510396233817183,
+          "tasks_with_flip": 87,
+          "top10_tasks_share_of_flips": 0.35844155844155845,
+          "groups_reward_vector_changed": 145,
+          "groups_centered_reward_sign_changed": 142,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 72,
+            "all_pass -> all_fail": 3,
+            "all_pass -> all_pass": 75,
+            "all_pass -> mixed": 18,
+            "mixed -> all_fail": 56,
+            "mixed -> mixed": 320
+          }
+        },
+        "0:400": {
+          "rollouts": 6400,
+          "groups": 800,
+          "tasks": 250,
+          "base_pass": 3725,
+          "union_pass": 3163,
+          "reward_flips": 562,
+          "flip_fraction_all": 0.0878125,
+          "flip_fraction_base_pass": 0.1508724832214765,
+          "tasks_with_flip": 103,
+          "top10_tasks_share_of_flips": 0.3540925266903915,
+          "groups_reward_vector_changed": 220,
+          "groups_centered_reward_sign_changed": 215,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 107,
+            "all_pass -> all_fail": 5,
+            "all_pass -> all_pass": 106,
+            "all_pass -> mixed": 25,
+            "mixed -> all_fail": 81,
+            "mixed -> mixed": 476
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "sha256": "5dc6f713e2cfef2572ef29fc281a3c4ee8ca7327944b520a9bc875db394a15a7",
+      "checks": {
+        "roll_records": 6400,
+        "extra_records": 3759,
+        "base_pass_extra_complete": true
+      },
+      "windows": {
+        "0:64": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 128,
+          "base_pass": 564,
+          "union_pass": 493,
+          "reward_flips": 71,
+          "flip_fraction_all": 0.0693359375,
+          "flip_fraction_base_pass": 0.12588652482269502,
+          "tasks_with_flip": 32,
+          "top10_tasks_share_of_flips": 0.5492957746478874,
+          "groups_reward_vector_changed": 32,
+          "groups_centered_reward_sign_changed": 32,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 17,
+            "all_pass -> all_pass": 15,
+            "all_pass -> mixed": 4,
+            "mixed -> all_fail": 12,
+            "mixed -> mixed": 80
+          }
+        },
+        "64:128": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 125,
+          "base_pass": 621,
+          "union_pass": 520,
+          "reward_flips": 101,
+          "flip_fraction_all": 0.0986328125,
+          "flip_fraction_base_pass": 0.16264090177133655,
+          "tasks_with_flip": 32,
+          "top10_tasks_share_of_flips": 0.5742574257425742,
+          "groups_reward_vector_changed": 33,
+          "groups_centered_reward_sign_changed": 33,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 17,
+            "all_pass -> all_pass": 16,
+            "all_pass -> mixed": 5,
+            "mixed -> all_fail": 13,
+            "mixed -> mixed": 77
+          }
+        },
+        "128:400": {
+          "rollouts": 4352,
+          "groups": 544,
+          "tasks": 250,
+          "base_pass": 2574,
+          "union_pass": 2183,
+          "reward_flips": 391,
+          "flip_fraction_all": 0.08984375,
+          "flip_fraction_base_pass": 0.1519036519036519,
+          "tasks_with_flip": 80,
+          "top10_tasks_share_of_flips": 0.35038363171355497,
+          "groups_reward_vector_changed": 137,
+          "groups_centered_reward_sign_changed": 135,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 72,
+            "all_pass -> all_fail": 2,
+            "all_pass -> all_pass": 82,
+            "all_pass -> mixed": 18,
+            "mixed -> all_fail": 54,
+            "mixed -> mixed": 316
+          }
+        },
+        "0:400": {
+          "rollouts": 6400,
+          "groups": 800,
+          "tasks": 250,
+          "base_pass": 3759,
+          "union_pass": 3196,
+          "reward_flips": 563,
+          "flip_fraction_all": 0.08796875,
+          "flip_fraction_base_pass": 0.14977387603085926,
+          "tasks_with_flip": 91,
+          "top10_tasks_share_of_flips": 0.33570159857904086,
+          "groups_reward_vector_changed": 202,
+          "groups_centered_reward_sign_changed": 200,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 106,
+            "all_pass -> all_fail": 2,
+            "all_pass -> all_pass": 113,
+            "all_pass -> mixed": 27,
+            "mixed -> all_fail": 79,
+            "mixed -> mixed": 473
+          }
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "sha256": "e48c16d01058f79bd15f66c94d13c3cd803f85253b9b003bae37863cc44b6c2f",
+      "checks": {
+        "roll_records": 6400,
+        "extra_records": 3807,
+        "base_pass_extra_complete": true
+      },
+      "windows": {
+        "0:64": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 128,
+          "base_pass": 581,
+          "union_pass": 482,
+          "reward_flips": 99,
+          "flip_fraction_all": 0.0966796875,
+          "flip_fraction_base_pass": 0.1703958691910499,
+          "tasks_with_flip": 32,
+          "top10_tasks_share_of_flips": 0.5353535353535354,
+          "groups_reward_vector_changed": 32,
+          "groups_centered_reward_sign_changed": 32,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 19,
+            "all_pass -> all_pass": 16,
+            "all_pass -> mixed": 2,
+            "mixed -> all_fail": 12,
+            "mixed -> mixed": 79
+          }
+        },
+        "64:128": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 126,
+          "base_pass": 589,
+          "union_pass": 508,
+          "reward_flips": 81,
+          "flip_fraction_all": 0.0791015625,
+          "flip_fraction_base_pass": 0.13752122241086587,
+          "tasks_with_flip": 34,
+          "top10_tasks_share_of_flips": 0.6172839506172839,
+          "groups_reward_vector_changed": 34,
+          "groups_centered_reward_sign_changed": 33,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 23,
+            "all_pass -> all_fail": 1,
+            "all_pass -> all_pass": 17,
+            "all_pass -> mixed": 8,
+            "mixed -> all_fail": 9,
+            "mixed -> mixed": 70
+          }
+        },
+        "128:400": {
+          "rollouts": 4352,
+          "groups": 544,
+          "tasks": 250,
+          "base_pass": 2637,
+          "union_pass": 2249,
+          "reward_flips": 388,
+          "flip_fraction_all": 0.08915441176470588,
+          "flip_fraction_base_pass": 0.14713689799014032,
+          "tasks_with_flip": 93,
+          "top10_tasks_share_of_flips": 0.33505154639175255,
+          "groups_reward_vector_changed": 152,
+          "groups_centered_reward_sign_changed": 150,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 72,
+            "all_pass -> all_fail": 2,
+            "all_pass -> all_pass": 88,
+            "all_pass -> mixed": 20,
+            "mixed -> all_fail": 56,
+            "mixed -> mixed": 306
+          }
+        },
+        "0:400": {
+          "rollouts": 6400,
+          "groups": 800,
+          "tasks": 250,
+          "base_pass": 3807,
+          "union_pass": 3239,
+          "reward_flips": 568,
+          "flip_fraction_all": 0.08875,
+          "flip_fraction_base_pass": 0.14919884423430524,
+          "tasks_with_flip": 104,
+          "top10_tasks_share_of_flips": 0.33098591549295775,
+          "groups_reward_vector_changed": 218,
+          "groups_centered_reward_sign_changed": 215,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 114,
+            "all_pass -> all_fail": 3,
+            "all_pass -> all_pass": 121,
+            "all_pass -> mixed": 30,
+            "mixed -> all_fail": 77,
+            "mixed -> mixed": 455
+          }
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "sha256": "1fa8083f798ee805c2d543f62a6b69350281f5874dab1c914a4602c55006577c",
+      "checks": {
+        "roll_records": 6400,
+        "extra_records": 3732,
+        "base_pass_extra_complete": true
+      },
+      "windows": {
+        "0:64": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 128,
+          "base_pass": 560,
+          "union_pass": 462,
+          "reward_flips": 98,
+          "flip_fraction_all": 0.095703125,
+          "flip_fraction_base_pass": 0.175,
+          "tasks_with_flip": 39,
+          "top10_tasks_share_of_flips": 0.4897959183673469,
+          "groups_reward_vector_changed": 39,
+          "groups_centered_reward_sign_changed": 39,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 24,
+            "all_pass -> all_pass": 16,
+            "all_pass -> mixed": 5,
+            "mixed -> all_fail": 15,
+            "mixed -> mixed": 68
+          }
+        },
+        "64:128": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 123,
+          "base_pass": 618,
+          "union_pass": 551,
+          "reward_flips": 67,
+          "flip_fraction_all": 0.0654296875,
+          "flip_fraction_base_pass": 0.10841423948220065,
+          "tasks_with_flip": 31,
+          "top10_tasks_share_of_flips": 0.5970149253731343,
+          "groups_reward_vector_changed": 33,
+          "groups_centered_reward_sign_changed": 33,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 13,
+            "all_pass -> all_pass": 19,
+            "all_pass -> mixed": 3,
+            "mixed -> all_fail": 13,
+            "mixed -> mixed": 80
+          }
+        },
+        "128:400": {
+          "rollouts": 4352,
+          "groups": 544,
+          "tasks": 250,
+          "base_pass": 2554,
+          "union_pass": 2171,
+          "reward_flips": 383,
+          "flip_fraction_all": 0.08800551470588236,
+          "flip_fraction_base_pass": 0.1499608457321848,
+          "tasks_with_flip": 83,
+          "top10_tasks_share_of_flips": 0.38903394255874674,
+          "groups_reward_vector_changed": 140,
+          "groups_centered_reward_sign_changed": 135,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 88,
+            "all_pass -> all_fail": 5,
+            "all_pass -> all_pass": 78,
+            "all_pass -> mixed": 26,
+            "mixed -> all_fail": 45,
+            "mixed -> mixed": 302
+          }
+        },
+        "0:400": {
+          "rollouts": 6400,
+          "groups": 800,
+          "tasks": 250,
+          "base_pass": 3732,
+          "union_pass": 3184,
+          "reward_flips": 548,
+          "flip_fraction_all": 0.085625,
+          "flip_fraction_base_pass": 0.14683815648445875,
+          "tasks_with_flip": 98,
+          "top10_tasks_share_of_flips": 0.3521897810218978,
+          "groups_reward_vector_changed": 212,
+          "groups_centered_reward_sign_changed": 207,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 125,
+            "all_pass -> all_fail": 5,
+            "all_pass -> all_pass": 113,
+            "all_pass -> mixed": 34,
+            "mixed -> all_fail": 73,
+            "mixed -> mixed": 450
+          }
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "sha256": "40de3a305c10dbefdb801a400e3e5f821e80f6d34da12a60e64e219f745ce35f",
+      "checks": {
+        "roll_records": 6400,
+        "extra_records": 3788,
+        "base_pass_extra_complete": true
+      },
+      "windows": {
+        "0:64": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 128,
+          "base_pass": 609,
+          "union_pass": 539,
+          "reward_flips": 70,
+          "flip_fraction_all": 0.068359375,
+          "flip_fraction_base_pass": 0.11494252873563218,
+          "tasks_with_flip": 32,
+          "top10_tasks_share_of_flips": 0.5428571428571428,
+          "groups_reward_vector_changed": 32,
+          "groups_centered_reward_sign_changed": 32,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 15,
+            "all_pass -> all_pass": 18,
+            "all_pass -> mixed": 8,
+            "mixed -> all_fail": 9,
+            "mixed -> mixed": 78
+          }
+        },
+        "64:128": {
+          "rollouts": 1024,
+          "groups": 128,
+          "tasks": 125,
+          "base_pass": 558,
+          "union_pass": 462,
+          "reward_flips": 96,
+          "flip_fraction_all": 0.09375,
+          "flip_fraction_base_pass": 0.17204301075268819,
+          "tasks_with_flip": 36,
+          "top10_tasks_share_of_flips": 0.5625,
+          "groups_reward_vector_changed": 37,
+          "groups_centered_reward_sign_changed": 37,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 18,
+            "all_pass -> all_pass": 18,
+            "all_pass -> mixed": 6,
+            "mixed -> all_fail": 15,
+            "mixed -> mixed": 71
+          }
+        },
+        "128:400": {
+          "rollouts": 4352,
+          "groups": 544,
+          "tasks": 250,
+          "base_pass": 2621,
+          "union_pass": 2207,
+          "reward_flips": 414,
+          "flip_fraction_all": 0.09512867647058823,
+          "flip_fraction_base_pass": 0.15795497901564287,
+          "tasks_with_flip": 96,
+          "top10_tasks_share_of_flips": 0.34782608695652173,
+          "groups_reward_vector_changed": 162,
+          "groups_centered_reward_sign_changed": 159,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 68,
+            "all_pass -> all_fail": 3,
+            "all_pass -> all_pass": 93,
+            "all_pass -> mixed": 16,
+            "mixed -> all_fail": 57,
+            "mixed -> mixed": 307
+          }
+        },
+        "0:400": {
+          "rollouts": 6400,
+          "groups": 800,
+          "tasks": 250,
+          "base_pass": 3788,
+          "union_pass": 3208,
+          "reward_flips": 580,
+          "flip_fraction_all": 0.090625,
+          "flip_fraction_base_pass": 0.15311510031678988,
+          "tasks_with_flip": 103,
+          "top10_tasks_share_of_flips": 0.3293103448275862,
+          "groups_reward_vector_changed": 231,
+          "groups_centered_reward_sign_changed": 228,
+          "group_transition_counts": {
+            "all_fail -> all_fail": 101,
+            "all_pass -> all_fail": 3,
+            "all_pass -> all_pass": 129,
+            "all_pass -> mixed": 30,
+            "mixed -> all_fail": 81,
+            "mixed -> mixed": 456
+          }
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "rollouts": 32000,
+    "groups": 4000,
+    "tasks": 250,
+    "base_pass": 18811,
+    "union_pass": 15990,
+    "reward_flips": 2821,
+    "flip_fraction_all": 0.08815625,
+    "flip_fraction_base_pass": 0.14996544574982723,
+    "tasks_with_flip": 158,
+    "top10_tasks_share_of_flips": 0.3293158454448777,
+    "groups_reward_vector_changed": 1083,
+    "groups_centered_reward_sign_changed": 1065,
+    "group_transition_counts": {
+      "all_fail -> all_fail": 553,
+      "all_pass -> all_fail": 18,
+      "all_pass -> all_pass": 582,
+      "all_pass -> mixed": 146,
+      "mixed -> all_fail": 391,
+      "mixed -> mixed": 2310
+    }
+  },
+  "limits": [
+    "No stricter-policy rollouts or new training are simulated.",
+    "Base and extra verdicts are author-reported, not independently re-executed.",
+    "Suite rejection is not semantic ground truth.",
+    "Centered-reward signs are not parameter gradients or an effect estimate.",
+    "No rollout-iid inferential intervals; five runs and repeated tasks are dependent.",
+    "Training tasks only; no new held-out benchmark exposure.",
+    "Source logs truncate code; do not use these copies as exact-code rerun artifacts."
+  ],
+  "split_sha256": "1953d2bad95a2be59d0b3ae769ce120180e5f1e5a76f1694c171b7afa3cc97c0"
+}

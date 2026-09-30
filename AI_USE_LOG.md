@@ -1,3 +1,19 @@
+## 2026-09-29 — Q2 offline experiment and bounded GPU profile preparation
+
+The owner requested small experiments promptly and authorized a fallback agent.
+The lead reanalyzed five public base-reward Qwen training logs (32,000 previously
+generated completions), and a second implementation independently matched all
+88 checked counts/windows/transitions. This is a fixed-output reward-switch
+replay, not new model training, benchmark execution or semantic verification.
+Agents implemented/tested the scoring/evidence contracts and finite two-update
+profile, resolved a 227-package Linux hash lock, and rejected a weak nearby
+fallback after primary-paper review. The lead verified source hashes, official
+data IDs/schema, authored CPU checks and actual owned-process timeout behavior.
+No GPU package installation, model inference, dataset program execution, server
+action or external message occurred. Small package metadata builds did run.
+The first proposed GPU powered window is capped at one hour; actual host/price
+and owner startup remain pending. No scientific grid or automatic retry follows.
+
 ## 2026-09-29 — Q2 bibliography and offline readiness refinement
 
 The owner chose Q2 for further preparation and requested all relevant references

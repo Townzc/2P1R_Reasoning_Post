@@ -1,3 +1,21 @@
+# Q2 offline feasibility complete — first GPU profile prepared, not run
+
+September29: owner requested small experiments and authorized fallback agents.
+Read reports/q2_feasibility_20260929/RESULTS.md and
+experiments/q2_supervision_migration/PROFILE_PROTOCOL.md. A fixed-output replay
+of32,000 public training completions found8.82% reward changes, independently
+verified; this is not new training or a semantic correctness result.
+The prepared GPU profile is exactly2 updates/32completions plus a fresh-process
+weight/tokenizer reload, no heldout scoring or automatic scientific continuation.
+It requires one80GB LinuxGPU, Python3.11/glibc>=2.35/R580+ for the CUDA13 lock.
+Owner retains server startup; inspect actual host/price/workers before action.
+Present proposed60minute whole-powered cap (historical CNY7.98/h only conditional),
+30minute combined worker cap and provider timer before running. Stop/no retry
+on failure; preserve artifacts and normally shut down with providerOFF verified.
+Do not restart LT002, its paused heartbeat, or any historical queue below.
+Future W/C/R dose and cost depend on measured profile;1000A100h is shared ceiling.
+External correspondence remains draft-only. Publish source before model work.
+
 # LT002 complete — provider OFF, 2026-09-29 UTC
 
 The finite phase is fully reconciled: two 128-update controls, 4,096 new dev answers,

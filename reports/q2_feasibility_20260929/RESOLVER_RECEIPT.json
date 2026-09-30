@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-29",
+  "status": "metadata_resolution_succeeded_runtime_unverified",
+  "uv_version": "0.12.17 (635500036 2026-09-18 aarch64-apple-darwin)",
+  "target_python": "3.11",
+  "metadata_build_interpreter": "3.12.14 (local; no download)",
+  "platform": "x86_64-manylinux_2_35",
+  "index": "https://pypi.org/simple",
+  "command": "uv pip compile experiments/q2_supervision_migration/requirements-profile.in --python-version 3.11 --python-platform x86_64-manylinux_2_35 --only-binary :all: --no-binary wget --no-binary tempdir --no-binary stop-sequencer --no-python-downloads --cache-dir CACHE_DIR --default-index https://pypi.org/simple --exclude-newer 2026-09-30T00:00:00Z --generate-hashes --emit-index-url --output-file experiments/q2_supervision_migration/requirements-profile-linux-py311.lock.txt",
+  "exit_code": 0,
+  "resolved_packages": 227,
+  "inputs": {
+    "path": "experiments/q2_supervision_migration/requirements-profile.in",
+    "sha256": "16748c64a78373a2cbbe4603bfeb9b28ce6059326682b9c694cb6d7ea417f5de"
+  },
+  "output": {
+    "path": "experiments/q2_supervision_migration/requirements-profile-linux-py311.lock.txt",
+    "sha256": "40e5f05f2e8e4c59b895fb3bb5fddb11d18d5b7ac0d118013c5f5bc2d86b7302",
+    "bytes": 419418,
+    "distribution_hashes_included": true,
+    "resolver_original_sha256": "247fb7fd247a8e777c7a1c149c773c9a1027d73dc8fa7de4690674396e612554",
+    "sanitization": "Only the generated header cache-directory argument is replaced by CACHE_DIR; all package pins and hashes unchanged."
+  },
+  "log": {
+    "sha256": "6196f0925ce0a947541a98d61b2e754c2b0d2dcf10381404b2e7496353341e08",
+    "retention": "Retained privately; hash is for original log."
+  },
+  "small_sdist_metadata_exceptions": [
+    "wget==3.2",
+    "tempdir==0.7.1",
+    "stop-sequencer==1.2.3"
+  ],
+  "gpu_packages_installed": false,
+  "model_weights_downloaded": false,
+  "benchmark_executed": false,
+  "server_accessed": false,
+  "isolated_build_tooling": "setuptools84.0.0 in assigned uv cache; used only for small source metadata",
+  "cache_bytes": 50237258,
+  "largest_cache_file_bytes": 4346792,
+  "previous_attempt_logs": [
+    "resolver_cli_conflict.log",
+    "resolver_wheel_only_failure.log",
+    "resolver_wget_exception.log",
+    "resolver_wget_tempdir.log",
+    "resolver_small_sdist.log",
+    "resolver_manylinux_2_35.log"
+  ],
+  "runtime_requirements": [
+    "Linuxx86_64 glibc>=2.35",
+    "Python3.11",
+    "CUDA13-compatible supported driver; R580 branch minimum minor compatibility",
+    "one 80GB GPU, actual kernel/backend/import/VRAM smoke still required"
+  ]
+}

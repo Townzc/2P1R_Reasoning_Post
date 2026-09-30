@@ -1,0 +1,473 @@
+{
+  "method": "Independent direct integer arithmetic; no import of root analyzer; no solution execution",
+  "split_sha256": "1953d2bad95a2be59d0b3ae769ce120180e5f1e5a76f1694c171b7afa3cc97c0",
+  "grouping": "uid last component is within-call output index; split each call into contiguous 8-output groups. Check one task per group. first64 means gstep in 0..63.",
+  "seeds": [
+    {
+      "seed": 0,
+      "source_sha256": "684a38a58aa6c0027089fb33bc1e7d530bf2a72177fe0ea20c7bbf87ca610618",
+      "rolls": 6400,
+      "patches": 3725,
+      "missing_required_patch": 0,
+      "orphan_patches": 0,
+      "duplicate_keys": 0,
+      "all_tasks_training_only": true,
+      "unique_tasks": 250,
+      "windows": {
+        "64": {
+          "counts": {
+            "base_pass": 576,
+            "union_pass": 490,
+            "reward_flips_1_to_0": 86,
+            "centered_sign_changes": 146,
+            "strict_positive_negative_flips": 42,
+            "groups_with_any_sign_change": 37,
+            "groups_with_any_reward_change": 38,
+            "groups": 128,
+            "samples": 1024
+          },
+          "reward_flip_fraction": 0.083984375,
+          "centered_sign_change_fraction": 0.142578125,
+          "group_transitions": {
+            "all_fail->all_fail": 19,
+            "all_pass->all_fail": 1,
+            "all_pass->all_pass": 13,
+            "all_pass->mixed": 3,
+            "mixed->all_fail": 10,
+            "mixed->mixed": 82
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 249,
+            "-1->0": 47,
+            "0->-1": 3,
+            "0->0": 264,
+            "0->1": 21,
+            "1->-1": 42,
+            "1->0": 33,
+            "1->1": 365
+          }
+        },
+        "400": {
+          "counts": {
+            "base_pass": 3725,
+            "union_pass": 3163,
+            "reward_flips_1_to_0": 562,
+            "centered_sign_changes": 1051,
+            "strict_positive_negative_flips": 203,
+            "groups_with_any_sign_change": 215,
+            "groups_with_any_reward_change": 220,
+            "groups": 800,
+            "samples": 6400
+          },
+          "reward_flip_fraction": 0.0878125,
+          "centered_sign_change_fraction": 0.16421875,
+          "group_transitions": {
+            "all_fail->all_fail": 107,
+            "all_pass->all_fail": 5,
+            "all_pass->all_pass": 106,
+            "all_pass->mixed": 25,
+            "mixed->all_fail": 81,
+            "mixed->mixed": 476
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 1437,
+            "-1->0": 382,
+            "0->-1": 53,
+            "0->0": 1744,
+            "0->1": 147,
+            "1->-1": 203,
+            "1->0": 266,
+            "1->1": 2168
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "source_sha256": "5dc6f713e2cfef2572ef29fc281a3c4ee8ca7327944b520a9bc875db394a15a7",
+      "rolls": 6400,
+      "patches": 3759,
+      "missing_required_patch": 0,
+      "orphan_patches": 0,
+      "duplicate_keys": 0,
+      "all_tasks_training_only": true,
+      "unique_tasks": 250,
+      "windows": {
+        "64": {
+          "counts": {
+            "base_pass": 564,
+            "union_pass": 493,
+            "reward_flips_1_to_0": 71,
+            "centered_sign_changes": 163,
+            "strict_positive_negative_flips": 35,
+            "groups_with_any_sign_change": 32,
+            "groups_with_any_reward_change": 32,
+            "groups": 128,
+            "samples": 1024
+          },
+          "reward_flip_fraction": 0.0693359375,
+          "centered_sign_change_fraction": 0.1591796875,
+          "group_transitions": {
+            "all_fail->all_fail": 17,
+            "all_pass->all_pass": 15,
+            "all_pass->mixed": 4,
+            "mixed->all_fail": 12,
+            "mixed->mixed": 80
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 252,
+            "-1->0": 72,
+            "0->-1": 12,
+            "0->0": 256,
+            "0->1": 20,
+            "1->-1": 35,
+            "1->0": 24,
+            "1->1": 353
+          }
+        },
+        "400": {
+          "counts": {
+            "base_pass": 3759,
+            "union_pass": 3196,
+            "reward_flips_1_to_0": 563,
+            "centered_sign_changes": 1041,
+            "strict_positive_negative_flips": 193,
+            "groups_with_any_sign_change": 200,
+            "groups_with_any_reward_change": 202,
+            "groups": 800,
+            "samples": 6400
+          },
+          "reward_flip_fraction": 0.08796875,
+          "centered_sign_change_fraction": 0.16265625,
+          "group_transitions": {
+            "all_fail->all_fail": 106,
+            "all_pass->all_fail": 2,
+            "all_pass->all_pass": 113,
+            "all_pass->mixed": 27,
+            "mixed->all_fail": 79,
+            "mixed->mixed": 473
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 1430,
+            "-1->0": 363,
+            "0->-1": 85,
+            "0->0": 1768,
+            "0->1": 131,
+            "1->-1": 193,
+            "1->0": 269,
+            "1->1": 2161
+          }
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "source_sha256": "e48c16d01058f79bd15f66c94d13c3cd803f85253b9b003bae37863cc44b6c2f",
+      "rolls": 6400,
+      "patches": 3807,
+      "missing_required_patch": 0,
+      "orphan_patches": 0,
+      "duplicate_keys": 0,
+      "all_tasks_training_only": true,
+      "unique_tasks": 250,
+      "windows": {
+        "64": {
+          "counts": {
+            "base_pass": 581,
+            "union_pass": 482,
+            "reward_flips_1_to_0": 99,
+            "centered_sign_changes": 158,
+            "strict_positive_negative_flips": 46,
+            "groups_with_any_sign_change": 32,
+            "groups_with_any_reward_change": 32,
+            "groups": 128,
+            "samples": 1024
+          },
+          "reward_flip_fraction": 0.0966796875,
+          "centered_sign_change_fraction": 0.154296875,
+          "group_transitions": {
+            "all_fail->all_fail": 19,
+            "all_pass->all_pass": 16,
+            "all_pass->mixed": 2,
+            "mixed->all_fail": 12,
+            "mixed->mixed": 79
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 242,
+            "-1->0": 49,
+            "0->-1": 6,
+            "0->0": 280,
+            "0->1": 10,
+            "1->-1": 46,
+            "1->0": 47,
+            "1->1": 344
+          }
+        },
+        "400": {
+          "counts": {
+            "base_pass": 3807,
+            "union_pass": 3239,
+            "reward_flips_1_to_0": 568,
+            "centered_sign_changes": 1071,
+            "strict_positive_negative_flips": 215,
+            "groups_with_any_sign_change": 215,
+            "groups_with_any_reward_change": 218,
+            "groups": 800,
+            "samples": 6400
+          },
+          "reward_flip_fraction": 0.08875,
+          "centered_sign_change_fraction": 0.16734375,
+          "group_transitions": {
+            "all_fail->all_fail": 114,
+            "all_pass->all_fail": 3,
+            "all_pass->all_pass": 121,
+            "all_pass->mixed": 30,
+            "mixed->all_fail": 77,
+            "mixed->mixed": 455
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 1324,
+            "-1->0": 357,
+            "0->-1": 70,
+            "0->0": 1904,
+            "0->1": 170,
+            "1->-1": 215,
+            "1->0": 259,
+            "1->1": 2101
+          }
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "source_sha256": "1fa8083f798ee805c2d543f62a6b69350281f5874dab1c914a4602c55006577c",
+      "rolls": 6400,
+      "patches": 3732,
+      "missing_required_patch": 0,
+      "orphan_patches": 0,
+      "duplicate_keys": 0,
+      "all_tasks_training_only": true,
+      "unique_tasks": 250,
+      "windows": {
+        "64": {
+          "counts": {
+            "base_pass": 560,
+            "union_pass": 462,
+            "reward_flips_1_to_0": 98,
+            "centered_sign_changes": 197,
+            "strict_positive_negative_flips": 37,
+            "groups_with_any_sign_change": 39,
+            "groups_with_any_reward_change": 39,
+            "groups": 128,
+            "samples": 1024
+          },
+          "reward_flip_fraction": 0.095703125,
+          "centered_sign_change_fraction": 0.1923828125,
+          "group_transitions": {
+            "all_fail->all_fail": 24,
+            "all_pass->all_pass": 16,
+            "all_pass->mixed": 5,
+            "mixed->all_fail": 15,
+            "mixed->mixed": 68
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 201,
+            "-1->0": 71,
+            "0->-1": 12,
+            "0->0": 320,
+            "0->1": 28,
+            "1->-1": 37,
+            "1->0": 49,
+            "1->1": 306
+          }
+        },
+        "400": {
+          "counts": {
+            "base_pass": 3732,
+            "union_pass": 3184,
+            "reward_flips_1_to_0": 548,
+            "centered_sign_changes": 1047,
+            "strict_positive_negative_flips": 191,
+            "groups_with_any_sign_change": 207,
+            "groups_with_any_reward_change": 212,
+            "groups": 800,
+            "samples": 6400
+          },
+          "reward_flip_fraction": 0.085625,
+          "centered_sign_change_fraction": 0.16359375,
+          "group_transitions": {
+            "all_fail->all_fail": 125,
+            "all_pass->all_fail": 5,
+            "all_pass->all_pass": 113,
+            "all_pass->mixed": 34,
+            "mixed->all_fail": 73,
+            "mixed->mixed": 450
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 1323,
+            "-1->0": 345,
+            "0->-1": 78,
+            "0->0": 1944,
+            "0->1": 194,
+            "1->-1": 191,
+            "1->0": 239,
+            "1->1": 2086
+          }
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "source_sha256": "40de3a305c10dbefdb801a400e3e5f821e80f6d34da12a60e64e219f745ce35f",
+      "rolls": 6400,
+      "patches": 3788,
+      "missing_required_patch": 0,
+      "orphan_patches": 0,
+      "duplicate_keys": 0,
+      "all_tasks_training_only": true,
+      "unique_tasks": 250,
+      "windows": {
+        "64": {
+          "counts": {
+            "base_pass": 609,
+            "union_pass": 539,
+            "reward_flips_1_to_0": 70,
+            "centered_sign_changes": 165,
+            "strict_positive_negative_flips": 29,
+            "groups_with_any_sign_change": 32,
+            "groups_with_any_reward_change": 32,
+            "groups": 128,
+            "samples": 1024
+          },
+          "reward_flip_fraction": 0.068359375,
+          "centered_sign_change_fraction": 0.1611328125,
+          "group_transitions": {
+            "all_fail->all_fail": 15,
+            "all_pass->all_pass": 18,
+            "all_pass->mixed": 8,
+            "mixed->all_fail": 9,
+            "mixed->mixed": 78
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 247,
+            "-1->0": 48,
+            "0->-1": 17,
+            "0->0": 264,
+            "0->1": 47,
+            "1->-1": 29,
+            "1->0": 24,
+            "1->1": 348
+          }
+        },
+        "400": {
+          "counts": {
+            "base_pass": 3788,
+            "union_pass": 3208,
+            "reward_flips_1_to_0": 580,
+            "centered_sign_changes": 1114,
+            "strict_positive_negative_flips": 226,
+            "groups_with_any_sign_change": 228,
+            "groups_with_any_reward_change": 231,
+            "groups": 800,
+            "samples": 6400
+          },
+          "reward_flip_fraction": 0.090625,
+          "centered_sign_change_fraction": 0.1740625,
+          "group_transitions": {
+            "all_fail->all_fail": 101,
+            "all_pass->all_fail": 3,
+            "all_pass->all_pass": 129,
+            "all_pass->mixed": 30,
+            "mixed->all_fail": 81,
+            "mixed->mixed": 456
+          },
+          "sample_sign_transitions": {
+            "-1->-1": 1432,
+            "-1->0": 372,
+            "0->-1": 54,
+            "0->0": 1864,
+            "0->1": 186,
+            "1->-1": 226,
+            "1->0": 276,
+            "1->1": 1990
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Fixed logged W-policy candidates, not counterfactual union-trained policies or model recovery",
+    "Base-fail union is logically false; extra-only verdict is generally unobserved for these rows",
+    "Logged Boolean verdicts have no complete infrastructure-error channel; treated as logged outcomes only",
+    "Centered reward sign is not an observed optimizer step, gradient vector, or performance effect",
+    "No raw code re-execution, model call, or semantic label inference"
+  ],
+  "pooled": {
+    "64": {
+      "counts": {
+        "base_pass": 2890,
+        "union_pass": 2466,
+        "reward_flips_1_to_0": 424,
+        "centered_sign_changes": 829,
+        "strict_positive_negative_flips": 189,
+        "groups_with_any_sign_change": 172,
+        "groups_with_any_reward_change": 173,
+        "groups": 640,
+        "samples": 5120
+      },
+      "reward_flip_fraction": 0.0828125,
+      "centered_sign_change_fraction": 0.1619140625,
+      "group_transitions": {
+        "all_fail->all_fail": 94,
+        "all_pass->all_fail": 1,
+        "all_pass->all_pass": 78,
+        "all_pass->mixed": 22,
+        "mixed->all_fail": 58,
+        "mixed->mixed": 387
+      },
+      "sample_sign_transitions": {
+        "-1->-1": 1191,
+        "-1->0": 287,
+        "0->-1": 50,
+        "0->0": 1384,
+        "0->1": 126,
+        "1->-1": 189,
+        "1->0": 177,
+        "1->1": 1716
+      }
+    },
+    "400": {
+      "counts": {
+        "base_pass": 18811,
+        "union_pass": 15990,
+        "reward_flips_1_to_0": 2821,
+        "centered_sign_changes": 5324,
+        "strict_positive_negative_flips": 1028,
+        "groups_with_any_sign_change": 1065,
+        "groups_with_any_reward_change": 1083,
+        "groups": 4000,
+        "samples": 32000
+      },
+      "reward_flip_fraction": 0.08815625,
+      "centered_sign_change_fraction": 0.166375,
+      "group_transitions": {
+        "all_fail->all_fail": 553,
+        "all_pass->all_fail": 18,
+        "all_pass->all_pass": 582,
+        "all_pass->mixed": 146,
+        "mixed->all_fail": 391,
+        "mixed->mixed": 2310
+      },
+      "sample_sign_transitions": {
+        "-1->-1": 6946,
+        "-1->0": 1819,
+        "0->-1": 340,
+        "0->0": 9224,
+        "0->1": 828,
+        "1->-1": 1028,
+        "1->0": 1309,
+        "1->1": 10506
+      }
+    }
+  }
+}

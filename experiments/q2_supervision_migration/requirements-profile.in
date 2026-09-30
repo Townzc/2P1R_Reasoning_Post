@@ -1,0 +1,21 @@
+# Q2 metadata-resolved profile candidate: Linux x86_64, glibc>=2.35,
+# Python 3.11, one 80GB GPU; default PyPI CUDA13 stack needs a host driver gate.
+# Upstream recipe: toffee-desuwa/rlvr-leaky-suite
+# 9b6c86abeb4b837418b009d5354f81b43a28f84b/requirements_grid_pinned.txt
+# Full-model GRPO with Adafactor; no PEFT/LoRA. No GPU fit claim is made here.
+# Remove unused xformers==0.0.29.post2: it requires torch==2.6.0,
+# incompatible with the upstream torch==2.11.0 and vllm==0.23.0.
+# torchaudio, torchvision, ninja are selected transitively by vLLM.
+# Keep the author's other core/data package pins for the first profile.
+accelerate==1.14.0
+datasets==5.0.0
+evalplus==0.3.1
+huggingface_hub==0.36.2
+numpy==2.2.6
+safetensors==0.8.0
+scipy==1.17.1
+tokenizers==0.22.2
+torch==2.11.0
+transformers==4.56.2
+trl==1.7.0
+vllm==0.23.0
