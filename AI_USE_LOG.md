@@ -1,3 +1,19 @@
+## September30 available-state evaluation milestone and local analysis preparation
+
+Published25f3ebfe source verified on server;57 Linux authored checks passed.
+The single evaluation queue is active and128 signed outputs were independently
+reconciled at08:31UTC. Failed R training remains25updates/416outputs; its complete
+15-file exception checkpoint and656 compact phase files were independently
+verified. Closed diagnostic/startup records25files also retrieved/hash verified.
+No generation/update was repeated. Total TRAIN dose386updates/6224outputs includes
+all failed overhead; the three main matched-future contrasts remain unavailable.
+
+Prepared model-free analysis that preserves the full planned denominator,
+reports logical unknown/unobserved bounds, distinguishes known union failure
+from an unknown other suite, and does not invent confidence intervals.63 authored
+checks pass. No live partial efficacy analysis is used to change the queue;
+full result interpretation/publication follows verified provider shutdown.
+
 ## September30 evaluation engine startup repair
 
 The first evaluation parent exited before any generation intent or returned

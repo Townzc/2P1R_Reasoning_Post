@@ -1,0 +1,83 @@
+{
+  "utc": "2026-09-30T08:31:36Z",
+  "status": "three_available_evaluations_running_full_screen_incomplete",
+  "execution_source": "25f3ebfeff8b7748ed8ff9a5c4b8d8d70d40c50e",
+  "training": {
+    "first_failed_attempt": {
+      "updates": 5,
+      "outputs": 96
+    },
+    "W_prefix": {
+      "updates": 128,
+      "outputs": 2048,
+      "complete": true
+    },
+    "C_prefix": {
+      "updates": 100,
+      "outputs": 1616,
+      "complete": false,
+      "checkpoint_available": false
+    },
+    "W_future": {
+      "updates": 128,
+      "outputs": 2048,
+      "complete": true
+    },
+    "R_future": {
+      "updates": 25,
+      "outputs": 416,
+      "complete": false,
+      "checkpoint_available": true,
+      "exact_resume_verified": false
+    },
+    "total_committed_updates": 386,
+    "total_saved_outputs": 6224
+  },
+  "evaluation_queue": [
+    "R",
+    "W_prefix",
+    "W_future"
+  ],
+  "evaluation_planned_outputs": 3072,
+  "evaluation_signed_outputs_verified_at_snapshot": 128,
+  "all_primary_contrasts_available": false,
+  "unavailable_contrasts": [
+    "W_future-R_future",
+    "W_future-C_future",
+    "C_future-R_future"
+  ],
+  "unknown_evaluation_scores": "retained explicitly; never imputed or dropped",
+  "suite_watchdog_repair_admitted": false,
+  "cpu_checks_passed_for_execution": 57,
+  "original_worker_deadline_epoch": 1790760281.036037,
+  "provider_deadline_epoch": 1790761620.0,
+  "automatic_training_replay": false,
+  "scientific_result": false,
+  "R25_checkpoint_verification": {
+    "trainer_global_step": 25,
+    "save_returned_confirmed": true,
+    "stable_file_hashes_recorded": true,
+    "safetensors_extent_valid": true,
+    "exact_resume_tested": false,
+    "model": {
+      "bytes": 3087467144,
+      "sha256": "45e513ac19b2108c9299ad103352dd0f93acd9eac018f11a7c801e1996c32003"
+    }
+  },
+  "R_failed_phase_collection": {
+    "phase": "R_future",
+    "files_verified": 656,
+    "archive_bytes": 467104,
+    "archive_sha256": "59f1f0bdf91b36c547fcde3429dd31d6f461d6f155948e9fe51a0ff6c5c52b5f",
+    "utc": "2026-09-30T08:15:54Z",
+    "large_weights_in_place": true
+  },
+  "closed_repairs_collection": {
+    "verified_files": 25,
+    "archive_bytes": 12785,
+    "archive_sha256": "50ce7a02872bd34fdeab0769d989eda81c207b2e1c9299c7041f935f1d1cd7cc",
+    "utc": "2026-09-30T08:30:35Z",
+    "new_model_generations": 0,
+    "new_updates": 0
+  }
+}

@@ -57,7 +57,7 @@ def descriptive_decision(contrasts):
             'scientific_confirmation':False,'new_compute_automatically_authorized':False}
 
 
-def inspect_phase(root,plan,name,evaluation=False):
+def inspect_phase(root,plan,name,evaluation=False,*,allow_evaluation_unknowns=False):
     p=Path(root)/name
     expected=([ [t for t in plan['eval_ids'][i:i+4] for _ in range(8)] for i in range(0,128,4)] if evaluation else
               plan['schedules'][next(x['schedule'] for x in plan['training_phases'] if x['name']==name)])
@@ -171,8 +171,12 @@ def inspect_phase(root,plan,name,evaluation=False):
             raise ContractError('completed phase lacks exact batches')
         if returned!=sum(map(len,expected)) or len(phasesamples)!=returned:
             raise ContractError('completed phase lacks exact returned/scored samples')
-        if any(k not in ['pass/pass','pass/fail','fail/pass','fail/fail'] for k in statuses):
-            raise ContractError('completed phase contains unresolved scoring')
+        unresolved=sum(n for k,n in statuses.items() if k not in ['pass/pass','pass/fail','fail/pass','fail/fail'])
+        if unresolved:
+            if not (evaluation and allow_evaluation_unknowns and receipt.get('unknowns_retained')
+                    and receipt.get('unresolved_dual_scores')==unresolved
+                    and receipt.get('all_dual_verdicts_known') is False):
+                raise ContractError('completed phase contains unresolved scoring')
         if not evaluation:
             if ambiguous_updates or len(updates)!=spec.PREFIX_UPDATES or receipt['training_completions']!=returned or receipt['committed_updates']!=len(updates):
                 raise ContractError('completed phase optimizer count differs')

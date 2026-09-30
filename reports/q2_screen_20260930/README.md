@@ -1,3 +1,28 @@
+# Latest: available-state evaluations running; full comparison incomplete
+
+At September30 08:31UTC, the repaired evaluation engine had produced128 signed,
+independently verified outputs. The queue contains only the three originally
+planned available states: R, W_prefix and W_future,1024 outputs each. The first
+startup failed before any generation; the environment repair discovered the
+already installed build tools. No model/backend/seed was changed.57 authored CPU
+checks passed locally and on Linux. [Milestone receipt](AVAILABLE_EVALUATIONS_MILESTONE.json).
+
+Both W phases completed128 updates/2048 outputs each. R_future subsequently
+failed after25 updates/416 outputs; its15-file exception checkpoint is verified,
+but missing sampled probabilities and unverified sampler RNG recovery prevent an
+exact continuation. C_prefix remains failed at100 updates/1616 outputs without
+weights. Including the first5-update/96-output failure, actual training dose is
+386 committed updates and6224 saved outputs. All failed records are retained.
+
+The attempted suite-watchdog diagnostic disagreed with previously passing tests
+and is **not enabled**. Remaining evaluations retain unresolved suite scores as
+unknown. W/R, W/C and C/R matched-future contrasts are all unavailable; descriptive
+scores of the three existing states cannot replace these controls. This is not a
+completed scientific screen or evidence for/against its hypothesis. No automatic
+C/R training replay is authorized. Original deadlines and compute cap remain.
+
+Earlier dated entries below are historical.
+
 # Latest: W training complete, R training running; evaluation pending
 
 At September30 08:00UTC, W_prefix and W_future have each completed128 updates
