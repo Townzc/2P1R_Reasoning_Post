@@ -68,6 +68,15 @@ if finished early. Never use a shutdown helper that also clears Trash.
 
 ## Prepare and launch after owner startup
 
+September30 UTC cleanup amendment: the owner requested deletion of unused server
+data and started the single-A800 host. Completed math-run optimizer/RNG states
+were pruned with independent identity checks; final weights/scientific records
+remain. Data free space is92.04GiB, so the original >=40GiB floor now passes.
+The previously proposed lower post-install gate is unnecessary and not adopted.
+All246 frozen Q2 files were rehashed after cleanup; no model work was done by
+cleanup. Continue only the originally authorized finite engineering profile after
+fresh hardware/worker/price/timer admission, with no source or dose change.
+
 September 30 UTC no-card closeout amendment: the owner-started resource preparation
 completed with all 246 frozen inputs independently verified and the unchanged
 runtime installed offline. All 228 runtime/build versions and three lightweight

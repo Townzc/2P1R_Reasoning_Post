@@ -1,3 +1,5 @@
+> 2026-09-30 存储更新：按用户清理要求，已删除本轮终点的优化器／调度器／RNG 续训状态。最终模型、原始输出、评分和科学记录保留；不再支持原样断点续训。下文与原审计是清理前的历史状态。见[清理回执](../storage_cleanup_20260930/RECEIPT.json)。
+
 # LT002 — complete supervision controls and decoding diagnostic
 
 QDW's advantage over random weighting remains inconclusive on the primary greedy

@@ -1,3 +1,16 @@
+## 2026-09-30 UTC — owner-authorized disk cleanup
+
+The lead inspected the current single-A800 host, idle processes, open file handles
+and actual filesystem usage. After the owner explicitly requested unused-data
+removal, the lead matched/rehashed twelve terminal checkpoint components against
+prior independent audits, retained all six final models, and removed only the six
+obsolete training-state files plus six orphan transfer partials. Each deletion has
+an intent and fsynced per-file receipt; all Q2 inputs were fully rehashed afterward.
+Observed reclaimed space was69.59GiB. Original scientific records, failures and
+metrics remain; loss of exact optimizer/RNG resume is explicitly recorded. Compact
+cleanup evidence was independently copied. No model/program/training executed as
+part of cleanup. The original40GiB disk floor now passes without a reduced gate.
+
 ## 2026-09-30 UTC — verified no-card preparation and normal shutdown
 
 Under the owner's no-card startup/save-time instruction, the lead inspected the

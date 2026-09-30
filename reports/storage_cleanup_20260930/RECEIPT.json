@@ -1,0 +1,122 @@
+{
+  "date_utc": "2026-09-30",
+  "status": "owner_requested_cleanup_complete",
+  "delete_authorization": "Owner explicitly requested removal of unused server files and records after startup.",
+  "before": {
+    "total": 161061273600,
+    "used": 136966639616,
+    "free": 24094633984
+  },
+  "after": {
+    "total": 161061273600,
+    "used": 62239870976,
+    "free": 98821402624
+  },
+  "reclaimed_allocated_bytes_observed": 74726768640,
+  "deleted_files": 12,
+  "deleted_logical_bytes": 74726778194,
+  "training_states_removed": [
+    {
+      "family": "math",
+      "arm": "DFT",
+      "step": 128,
+      "bytes": 12350711075,
+      "sha256": "0dab797425e64760964b3e2b324e10f11504f97e36c12b53a0f189193a5b32b7"
+    },
+    {
+      "family": "math",
+      "arm": "QDW_v0",
+      "step": 128,
+      "bytes": 12350901603,
+      "sha256": "709795428af4c5d58dd72048bb44fbef55111fcca9087820f8461227061be851"
+    },
+    {
+      "family": "math",
+      "arm": "SFT",
+      "step": 128,
+      "bytes": 12350711075,
+      "sha256": "e65ca77daafb8fe4588ce431f880e9c95673418972b677a3c9d91b8e5b59eefb"
+    },
+    {
+      "family": "math",
+      "arm": "TrimSFT",
+      "step": 128,
+      "bytes": 12350833379,
+      "sha256": "82e4d940ef99838202c0943f7001684befaa9432b2300d97d5a7a3406fc2ce3d"
+    },
+    {
+      "family": "controls",
+      "arm": "position_difficulty",
+      "step": 128,
+      "bytes": 12350907747,
+      "sha256": "4dcdf2fdc4f1df0d0f78c7b350e7d4ca8746db751b0cd4f9cc46a817f212394c"
+    },
+    {
+      "family": "controls",
+      "arm": "random",
+      "step": 128,
+      "bytes": 12350907747,
+      "sha256": "0f8fd5a1e702a48427c3fcc7b57fa3ffd66b3cf9db4c189fd510c9174794dc51"
+    }
+  ],
+  "final_models_retained": [
+    {
+      "family": "math",
+      "arm": "DFT",
+      "step": 128,
+      "bytes": 7108460553,
+      "sha256": "50745399f6d10c2ea30380e835a7c83274bb33530627d4d3f9e4c32829e1586e"
+    },
+    {
+      "family": "math",
+      "arm": "QDW_v0",
+      "step": 128,
+      "bytes": 7108460553,
+      "sha256": "3d2b96012c18db36aa3c661c808dad21cd794bc8caa91f7eaa07022d205fe5ae"
+    },
+    {
+      "family": "math",
+      "arm": "SFT",
+      "step": 128,
+      "bytes": 7108460553,
+      "sha256": "b911294876f47ba9c5663905832b1d9d675c6fd65c8eedb64f1b087f74a1a68f"
+    },
+    {
+      "family": "math",
+      "arm": "TrimSFT",
+      "step": 128,
+      "bytes": 7108460553,
+      "sha256": "3d5da28685625be42c2a17c325c082b5cec9b6312c787294fe788a2c513b13c8"
+    },
+    {
+      "family": "controls",
+      "arm": "position_difficulty",
+      "step": 128,
+      "bytes": 7108460553,
+      "sha256": "e6eb6e6f526aab212728f547bc6f14a4ec6e7fecaf065a0fcec0432cb04e2958"
+    },
+    {
+      "family": "controls",
+      "arm": "random",
+      "step": 128,
+      "bytes": 7108460553,
+      "sha256": "bbf804e5bc7125a3ad9541b9ce6524b763a27347b41d38fa1d77200acf289983"
+    }
+  ],
+  "orphan_partials_deleted": {
+    "count": 6,
+    "bytes": 621805568,
+    "complete_bundle_inodes_excluded": true
+  },
+  "verification": {
+    "all12_checkpoint_components_rehashed_before_delete": true,
+    "final_model_inodes_sizes_mtimes_unchanged_after": true,
+    "all246_q2_inputs_rehashed_after": true,
+    "compact_cleanup_records_independently_copied": 7,
+    "no_open_candidate_file_handles_before_delete": true,
+    "no_gpu_compute_process_before_delete": true
+  },
+  "retention_limit": "Exact optimizer/scheduler/RNG resumption of the six closed math runs is no longer available. Final model weights, original manifests, raw outputs, scores, failed outcomes and scientific logs are retained.",
+  "scientific_results_deleted": false,
+  "new_model_work_in_cleanup": 0
+}

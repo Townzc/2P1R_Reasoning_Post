@@ -1,3 +1,21 @@
+# Owner cleanup completed; original Q2 GPU profile follows after admission
+
+September30 UTC: the owner explicitly requested unused server-data cleanup and
+started the same one-A800 instance. This supersedes older blanket no-deletion
+retention instructions only for this recorded cleanup. Six closed math training.pt
+optimizer/scheduler/RNG files and six orphan transfer partials were hash-audited
+and removed. All six final model weights, scientific outputs/metrics/logs and
+negative/failed results remain. Exact training-state resumption is no longer
+available for those six old runs. Read reports/storage_cleanup_20260930/RESULTS.md.
+
+Data free space is now92.04GiB; the original >=40GiB Q2 admission floor passes.
+The proposed reduced-disk amendment is unnecessary and was not adopted. All246
+Q2 inputs were rehashed; installed environment is retained. The already authorized
+2-update/32-completion engineering profile may follow after current hardware,
+price, timer and worker checks, with unchanged source bba38900778bfb373f2659fde115073c91b2ee24.
+No scientific W/C/R grid, extra seed or automatic retry. The owner remains in
+control of startup. Earlier retention and proposed low-disk gate notes are history.
+
 # No-card preparation complete — provider OFF
 
 September 30 UTC: all 246 frozen files (7,513,836,508 bytes) were independently
