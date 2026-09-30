@@ -9,7 +9,7 @@ from .contracts import SuiteVerdict, VerdictStatus
 from .gpu_profile import ProfileError, durable_json, sha256
 
 
-def score_pair(problem, reference, code, checker, *, fast_check=False):
+def score_pair(problem, reference, code, checker, *, fast_check=False, recover_initialization=False):
     result={}
     for label,suite in [('base','base'),('extra','plus')]:
         try:
@@ -23,12 +23,22 @@ def score_pair(problem, reference, code, checker, *, fast_check=False):
                 continue
             status,details=checker('mbpp',code,inputs,problem['entry_point'],expected=expected,
                                    atol=problem['atol'],ref_time=timings,fast_check=fast_check)
+            recovery=None
+            if status=='timeout' and recover_initialization:
+                from .initialization_guard import diagnose_initialization_timeout
+                recovery=diagnose_initialization_timeout('mbpp',code,inputs,problem['entry_point'],
+                    expected,problem['atol'],timings,fast_check)
+                recovery['original_status']='timeout'
+                recovery['original_tests_observed']=len(details)
+                if recovery['confirmed_candidate_initialization_timeout']:
+                    status,details='fail',recovery['observed']
             if status not in ('pass','fail','timeout'):
                 raise ProfileError('unknown evaluator outcome')
             if status=='pass' and (len(details)!=len(inputs) or not all(details)):
                 raise ProfileError('incomplete PASS is a scorer error')
             result[label]={'status':status,'detail':json.dumps({'tests_observed':len(details),
                 'test_count':len(inputs),'test_passes_observed':sum(bool(x) for x in details),
+                'initialization_timeout_diagnosis':recovery,
                 'inner_fail_attribution':'EvalPlus internal FAIL can conflate candidate and inner exceptions'})}
         except BaseException as exc:
             result[label]={'status':'scorer_error','detail':repr(exc)}
@@ -52,7 +62,7 @@ def load_references(root):
     return gt,manifest
 
 
-def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=False):
+def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=False,recover_initialization=False):
     try:
         os.environ['CUDA_VISIBLE_DEVICES']=''
         problems=load_problems(data_path,data_sha);refs,manifest=load_references(reference_root)
@@ -66,7 +76,8 @@ def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=F
             if request is None: return
             task,code=request
             if task not in selected: raise ProfileError('task outside phase')
-            conn.send(score_pair(problems[task],refs[task],code,untrusted_check,fast_check=fast_check))
+            conn.send(score_pair(problems[task],refs[task],code,untrusted_check,
+                fast_check=fast_check,recover_initialization=recover_initialization))
     except BaseException as exc:
         try: conn.send({'fatal':repr(exc)})
         except (EOFError,BrokenPipeError): pass

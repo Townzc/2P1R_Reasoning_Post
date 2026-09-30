@@ -1,3 +1,18 @@
+## September30 Q2 second scoring fault and preparation of initialization repair
+
+The assistant observed W_prefix complete128updates/2048outputs and independently
+hashed all11 exported model/tokenizer files. C_prefix then failed at batch100
+with100 committed updates and no recoverable policy checkpoint. A generated
+module-level self-test timed out outside EvalPlus per-test guards. This is an
+engineering failure, not hypothesis evidence. No provider shutdown or new model
+worker was issued. The prepared opt-in repair diagnoses only unknown TIMEOUTs
+with a candidate-initialization timer; known PASS/FAIL results remain unchanged.
+It records original timeouts, retains unknown attribution, extends only the CPU
+request cap within unchanged phase/absolute deadlines, and adds retained32-step
+Trainer checkpoints plus exception snapshots.49 authored checks passed; the
+45-second Linux saved-candidate diagnostic was still pending at publication.
+Any repeat of lost C updates needs an explicit dose decision; W must be reused.
+
 ## 2026-09-30 UTC — first screen timeout and owner-corrected recovery policy
 
 The first screen used the published d33cbbfa source, verified existing inputs,

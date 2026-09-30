@@ -94,7 +94,8 @@ def validate_environment(args,plan):
 def start_scorer(args,selected):
     ctx=mp.get_context('spawn');conn,other=ctx.Pipe()
     proc=ctx.Process(target=scoring_process,args=(other,args.data_json,args.data_sha256,
-        str(Path(args.out)/'references'),selected,args.scoring_fast_check),daemon=False)
+        str(Path(args.out)/'references'),selected,args.scoring_fast_check,
+        getattr(args,'recover_initialization_timeout',False)),daemon=False)
     proc.start();other.close()
     ready=receive(conn,min(180,remaining(args)),time.monotonic()+remaining(args))
     if not ready.get('ready'): raise ProfileError('scorer did not initialize')
@@ -124,7 +125,8 @@ def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons):
         if fatal is None:
             try:
                 conn.send((task,code))
-                value=receive(conn,spec.SCORER_TIMEOUT_SECONDS,time.monotonic()+remaining(args))
+                request_limit=300 if getattr(args,'recover_initialization_timeout',False) else spec.SCORER_TIMEOUT_SECONDS
+                value=receive(conn,request_limit,time.monotonic()+remaining(args))
                 base,extra=(SuiteVerdict(**value[k]) for k in ['base','extra'])
                 rewards.append(float(reward_from_verdicts(base,extra,mode)))
             except BaseException as exc:
@@ -187,6 +189,16 @@ def train_worker(args,plan):
     config=GRPOConfig(output_dir=str(out/'trainer'),seed=phase['trainer_seed'],**plan['training_config'],
         model_init_kwargs={'dtype':'bfloat16','local_files_only':True,'trust_remote_code':False,'attn_implementation':'sdpa'},
         vllm_max_model_length=maxlen)
+    if args.recover_initialization_timeout:
+        from transformers.trainer_utils import SaveStrategy
+        config.save_strategy=SaveStrategy.STEPS
+        config.save_steps=32
+        config.save_total_limit=None
+        durable_json(out/'execution_repair.json',{
+            'policy':'diagnose_only_unknown_candidate_initialization_timeout',
+            'known_verdicts_unchanged':True,'scorer_request_cap_seconds':300,
+            'periodic_checkpoint_steps':32,'checkpoint_deletion':False,
+            'exact_resume_including_vllm_rng_verified':False})
     config_identity=identity_hash({'training':plan['training_config'],'maxlen':maxlen,'phase':phase,
                                    'schedule_sha256':plan['schedule_sha256'][phase['schedule']]})
     allfiles={str(p.relative_to(source)):p for p in source.rglob('*') if p.is_file()}
@@ -293,7 +305,24 @@ def train_worker(args,plan):
         durable_json(out/'source_reload_check.json',{'passed':ok,'max_abs_logit_difference':float((actual-probe['logits']).abs().max()),
                     'scope':'one_TRAIN_prompt_last_token_fresh_model_not_optimizer_resume'})
         if not ok: raise ProfileError('fork reload mismatch')
-    trainer.train(resume_from_checkpoint=False)
+    try:
+        trainer.train(resume_from_checkpoint=False)
+    except BaseException:
+        if args.recover_initialization_timeout:
+            try:
+                remaining(args);disk_gate(args.out)
+                step=int(trainer.state.global_step)
+                if step!=state['steps'] or (step and not (out/f'update_{step:04d}.json').exists()):
+                    raise ProfileError('cannot snapshot uncertain optimizer commit')
+                checkpoint=out/'trainer'/f'checkpoint-{step}'
+                if not checkpoint.exists():trainer._save_checkpoint(trainer.model,None)
+                durable_json(out/'failure_checkpoint.json',{
+                    'committed_updates':step,'path':str(checkpoint),
+                    'pending_batch_must_not_be_replayed':True,
+                    'exact_resume_including_vllm_rng_verified':False})
+            except BaseException as save_error:
+                durable_json(out/'failure_checkpoint_error.json',{'error':repr(save_error)})
+        raise
     if state['steps']!=phase['updates'] or state['batches']!=phase['updates']:
         raise ProfileError('phase incomplete')
     remaining(args);disk_gate(args.out)
@@ -379,6 +408,7 @@ def parse(argv=None):
     p.add_argument('--source-commit',required=True)
     p.add_argument('--provider-deadline-epoch',type=float,required=True)
     p.add_argument('--execute-screen',action='store_true')
+    p.add_argument('--recover-initialization-timeout',action='store_true')
     p.add_argument('--_worker',action='store_true',help=argparse.SUPPRESS)
     p.add_argument('--phase',help=argparse.SUPPRESS)
     p.add_argument('--worker-deadline-epoch',type=float,help=argparse.SUPPRESS)

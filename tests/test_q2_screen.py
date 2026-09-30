@@ -113,6 +113,23 @@ class ScoringTests(unittest.TestCase):
             pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('pass',[True]),result]),fast_check=True)
             with self.assertRaises(ContractError):reward_from_verdicts(*(SuiteVerdict(**pair[k]) for k in ['base','extra']),'union')
 
+    def test_timeout_recovery_needs_explicit_candidate_attribution(self):
+        target='experiments.q2_supervision_migration.initialization_guard.diagnose_initialization_timeout'
+        for confirmed,expected in [(True,'fail'),(False,'timeout')]:
+            with mock.patch(target,return_value={'confirmed_candidate_initialization_timeout':confirmed,'observed':[]}) as guard:
+                check=mock.Mock(side_effect=[('timeout',[]),('fail',[False])])
+                pair=sc.score_pair(self.p,self.gt,'authored',check,fast_check=True,recover_initialization=True)
+                self.assertEqual(pair['base']['status'],expected)
+                self.assertEqual(json.loads(pair['base']['detail'])['initialization_timeout_diagnosis']['original_status'],'timeout')
+                guard.assert_called_once()
+
+    def test_known_verdicts_are_never_reexecuted_by_timeout_repair(self):
+        target='experiments.q2_supervision_migration.initialization_guard.diagnose_initialization_timeout'
+        with mock.patch(target) as guard:
+            pair=sc.score_pair(self.p,self.gt,'authored',mock.Mock(side_effect=[('pass',[True]),('fail',[False])]),fast_check=True,recover_initialization=True)
+            self.assertEqual([pair[k]['status'] for k in ['base','extra']],['pass','fail'])
+            guard.assert_not_called()
+
 
 class ReconciliationTests(unittest.TestCase):
     def setUp(self):
