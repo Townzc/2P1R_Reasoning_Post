@@ -1,0 +1,624 @@
+{
+  "states": {
+    "R": {
+      "inspection": {
+        "phase": "eval_R",
+        "finished": true,
+        "reserved_completions": 1024,
+        "saved_raw_completions": 1024,
+        "saved_backend_completions": 1024,
+        "reserved_without_backend_return": 0,
+        "signed_samples": 1024,
+        "sealed_batches": 32,
+        "completed_generation_batches": 32,
+        "committed_updates": 0,
+        "pre_update_receipts": 0,
+        "optimizer_steps_with_uncertain_commit": [],
+        "base_extra_counts": {
+          "fail/fail": 457,
+          "pass/fail": 86,
+          "pass/pass": 476,
+          "fail/pass": 5
+        },
+        "base_pass_extra_fail": 86,
+        "group_types": {
+          "base:mixed": 96,
+          "union:all_fail": 32,
+          "base:all_pass": 14,
+          "union:all_pass": 11,
+          "union:mixed": 85,
+          "base:all_fail": 18
+        },
+        "completion_tokens_total": 120068,
+        "completion_tokens_max": 640,
+        "completion_at_cap": 1
+      },
+      "scores": {
+        "base": 54.8828125,
+        "extra": 46.97265625,
+        "union": 46.484375,
+        "pass_at_8": 75.0
+      },
+      "bounds": {
+        "planned_completions": 1024,
+        "recorded_completions": 1024,
+        "recorded_dual_unknown": 0,
+        "metrics": {
+          "base": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 462,
+              "pass": 562,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              54.8828125,
+              54.8828125
+            ]
+          },
+          "extra": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 543,
+              "pass": 481,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              46.97265625,
+              46.97265625
+            ]
+          },
+          "union": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 548,
+              "pass": 476,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              46.484375,
+              46.484375
+            ]
+          },
+          "pass_at_8": {
+            "denominator": 128,
+            "counts": {
+              "pass": 96,
+              "fail": 32
+            },
+            "percent_bounds": [
+              75.0,
+              75.0
+            ]
+          }
+        },
+        "bound_scope": "logical empirical bounds from unknown/unobserved slots; not a confidence interval",
+        "training_replicates": 1,
+        "scientific_confirmation": false
+      }
+    },
+    "W_prefix": {
+      "inspection": {
+        "phase": "eval_W_prefix",
+        "finished": true,
+        "reserved_completions": 1024,
+        "saved_raw_completions": 1024,
+        "saved_backend_completions": 1024,
+        "reserved_without_backend_return": 0,
+        "signed_samples": 1024,
+        "sealed_batches": 32,
+        "completed_generation_batches": 32,
+        "committed_updates": 0,
+        "pre_update_receipts": 0,
+        "optimizer_steps_with_uncertain_commit": [],
+        "base_extra_counts": {
+          "fail/fail": 427,
+          "pass/pass": 504,
+          "pass/fail": 89,
+          "fail/pass": 4
+        },
+        "base_pass_extra_fail": 89,
+        "group_types": {
+          "base:mixed": 82,
+          "union:mixed": 77,
+          "base:all_pass": 25,
+          "union:all_pass": 20,
+          "base:all_fail": 21,
+          "union:all_fail": 31
+        },
+        "completion_tokens_total": 99840,
+        "completion_tokens_max": 582,
+        "completion_at_cap": 0
+      },
+      "scores": {
+        "base": 57.91015625,
+        "extra": 49.609375,
+        "union": 49.21875,
+        "pass_at_8": 75.78125
+      },
+      "bounds": {
+        "planned_completions": 1024,
+        "recorded_completions": 1024,
+        "recorded_dual_unknown": 0,
+        "metrics": {
+          "base": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 431,
+              "pass": 593,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              57.91015625,
+              57.91015625
+            ]
+          },
+          "extra": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 516,
+              "pass": 508,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              49.609375,
+              49.609375
+            ]
+          },
+          "union": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 520,
+              "pass": 504,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              49.21875,
+              49.21875
+            ]
+          },
+          "pass_at_8": {
+            "denominator": 128,
+            "counts": {
+              "pass": 97,
+              "fail": 31
+            },
+            "percent_bounds": [
+              75.78125,
+              75.78125
+            ]
+          }
+        },
+        "bound_scope": "logical empirical bounds from unknown/unobserved slots; not a confidence interval",
+        "training_replicates": 1,
+        "scientific_confirmation": false
+      }
+    },
+    "W_future": {
+      "inspection": {
+        "phase": "eval_W_future",
+        "finished": true,
+        "reserved_completions": 1024,
+        "saved_raw_completions": 1024,
+        "saved_backend_completions": 1024,
+        "reserved_without_backend_return": 0,
+        "signed_samples": 1024,
+        "sealed_batches": 32,
+        "completed_generation_batches": 32,
+        "committed_updates": 0,
+        "pre_update_receipts": 0,
+        "optimizer_steps_with_uncertain_commit": [],
+        "base_extra_counts": {
+          "pass/pass": 502,
+          "fail/fail": 422,
+          "pass/fail": 91,
+          "fail/pass": 9
+        },
+        "base_pass_extra_fail": 91,
+        "group_types": {
+          "base:all_pass": 27,
+          "union:all_pass": 22,
+          "base:mixed": 81,
+          "union:mixed": 74,
+          "union:all_fail": 32,
+          "base:all_fail": 20
+        },
+        "completion_tokens_total": 100160,
+        "completion_tokens_max": 505,
+        "completion_at_cap": 0
+      },
+      "scores": {
+        "base": 57.91015625,
+        "extra": 49.90234375,
+        "union": 49.0234375,
+        "pass_at_8": 75.0
+      },
+      "bounds": {
+        "planned_completions": 1024,
+        "recorded_completions": 1024,
+        "recorded_dual_unknown": 0,
+        "metrics": {
+          "base": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 431,
+              "pass": 593,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              57.91015625,
+              57.91015625
+            ]
+          },
+          "extra": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 513,
+              "pass": 511,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              49.90234375,
+              49.90234375
+            ]
+          },
+          "union": {
+            "denominator": 1024,
+            "counts": {
+              "fail": 522,
+              "pass": 502,
+              "unobserved": 0
+            },
+            "percent_bounds": [
+              49.0234375,
+              49.0234375
+            ]
+          },
+          "pass_at_8": {
+            "denominator": 128,
+            "counts": {
+              "pass": 96,
+              "fail": 32
+            },
+            "percent_bounds": [
+              75.0,
+              75.0
+            ]
+          }
+        },
+        "bound_scope": "logical empirical bounds from unknown/unobserved slots; not a confidence interval",
+        "training_replicates": 1,
+        "scientific_confirmation": false
+      }
+    }
+  },
+  "descriptive_contrasts": {
+    "W_prefix_minus_R": {
+      "base": {
+        "difference_pp": 3.02734375,
+        "conditional_question_bootstrap_95pp": [
+          1.07421875,
+          5.078125
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "extra": {
+        "difference_pp": 2.63671875,
+        "conditional_question_bootstrap_95pp": [
+          0.78125,
+          4.58984375
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "union": {
+        "difference_pp": 2.734375,
+        "conditional_question_bootstrap_95pp": [
+          0.78125,
+          4.78515625
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "pass_at_8": {
+        "difference_pp": 0.78125,
+        "conditional_question_bootstrap_95pp": [
+          -2.34375,
+          3.90625
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      }
+    },
+    "W_future_minus_R": {
+      "base": {
+        "difference_pp": 3.02734375,
+        "conditional_question_bootstrap_95pp": [
+          0.68359375,
+          5.2734375
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "extra": {
+        "difference_pp": 2.9296875,
+        "conditional_question_bootstrap_95pp": [
+          0.9765625,
+          4.98046875
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "union": {
+        "difference_pp": 2.5390625,
+        "conditional_question_bootstrap_95pp": [
+          0.1953125,
+          4.8828125
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "pass_at_8": {
+        "difference_pp": 0.0,
+        "conditional_question_bootstrap_95pp": [
+          -3.90625,
+          3.90625
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      }
+    },
+    "W_future_minus_W_prefix": {
+      "base": {
+        "difference_pp": 0.0,
+        "conditional_question_bootstrap_95pp": [
+          -1.953125,
+          1.953125
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "extra": {
+        "difference_pp": 0.29296875,
+        "conditional_question_bootstrap_95pp": [
+          -1.3671875,
+          1.953125
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "union": {
+        "difference_pp": -0.1953125,
+        "conditional_question_bootstrap_95pp": [
+          -2.1484375,
+          1.66015625
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      },
+      "pass_at_8": {
+        "difference_pp": -0.78125,
+        "conditional_question_bootstrap_95pp": [
+          -3.90625,
+          1.5625
+        ],
+        "question_count": 128,
+        "resamples": 5000,
+        "scope": "conditional on these trained models; not uncertainty across training seeds"
+      }
+    }
+  },
+  "primary_matched_future_contrasts": {
+    "W/R": null,
+    "W/C": null,
+    "C/R": null
+  },
+  "full_screen_complete": false,
+  "experiment": "Q2 supervision-history screen; available-state descriptive results",
+  "model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "model_revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "plan_sha256": "351b33126af0b2457377a24ebb6618923e627f362cc8e06cfb69f390ae93806f",
+  "evaluation_execution_source": "25f3ebfeff8b7748ed8ff9a5c4b8d8d70d40c50e",
+  "training_phases": {
+    "W_prefix": {
+      "phase": "W_prefix",
+      "finished": true,
+      "reserved_completions": 2048,
+      "saved_raw_completions": 2048,
+      "saved_backend_completions": 2048,
+      "reserved_without_backend_return": 0,
+      "signed_samples": 2048,
+      "sealed_batches": 128,
+      "completed_generation_batches": 128,
+      "committed_updates": 128,
+      "pre_update_receipts": 128,
+      "optimizer_steps_with_uncertain_commit": [],
+      "base_extra_counts": {
+        "fail/fail": 860,
+        "pass/fail": 162,
+        "pass/pass": 1016,
+        "fail/pass": 10
+      },
+      "base_pass_extra_fail": 162,
+      "group_types": {
+        "base:all_fail": 40,
+        "union:all_fail": 61,
+        "base:mixed": 169,
+        "union:mixed": 158,
+        "base:all_pass": 47,
+        "union:all_pass": 37
+      },
+      "completion_tokens_total": 214128,
+      "completion_tokens_max": 640,
+      "completion_at_cap": 1,
+      "groups_with_changed_nonconstant_reward_vector": 61
+    },
+    "C_prefix": {
+      "phase": "C_prefix",
+      "finished": false,
+      "reserved_completions": 1616,
+      "saved_raw_completions": 1616,
+      "saved_backend_completions": 1616,
+      "reserved_without_backend_return": 0,
+      "signed_samples": 1616,
+      "sealed_batches": 101,
+      "completed_generation_batches": 100,
+      "committed_updates": 100,
+      "pre_update_receipts": 100,
+      "optimizer_steps_with_uncertain_commit": [],
+      "base_extra_counts": {
+        "pass/pass": 819,
+        "fail/fail": 658,
+        "pass/fail": 117,
+        "fail/pass": 8,
+        "timeout/fail": 1,
+        "missing/missing": 13
+      },
+      "base_pass_extra_fail": 117,
+      "group_types": {
+        "base:mixed": 138,
+        "union:mixed": 125,
+        "base:all_pass": 32,
+        "union:all_pass": 25,
+        "base:all_fail": 30,
+        "union:all_fail": 50
+      },
+      "completion_tokens_total": 174358,
+      "completion_tokens_max": 640,
+      "completion_at_cap": 2
+    },
+    "W_future": {
+      "phase": "W_future",
+      "finished": true,
+      "reserved_completions": 2048,
+      "saved_raw_completions": 2048,
+      "saved_backend_completions": 2048,
+      "reserved_without_backend_return": 0,
+      "signed_samples": 2048,
+      "sealed_batches": 128,
+      "completed_generation_batches": 128,
+      "committed_updates": 128,
+      "pre_update_receipts": 128,
+      "optimizer_steps_with_uncertain_commit": [],
+      "base_extra_counts": {
+        "pass/pass": 1083,
+        "fail/fail": 785,
+        "pass/fail": 173,
+        "fail/pass": 7
+      },
+      "base_pass_extra_fail": 173,
+      "group_types": {
+        "base:mixed": 169,
+        "union:mixed": 155,
+        "union:all_fail": 60,
+        "base:all_fail": 34,
+        "base:all_pass": 53,
+        "union:all_pass": 41
+      },
+      "completion_tokens_total": 201940,
+      "completion_tokens_max": 577,
+      "completion_at_cap": 0,
+      "groups_with_changed_nonconstant_reward_vector": 63
+    },
+    "R_future": {
+      "phase": "R_future",
+      "finished": false,
+      "reserved_completions": 416,
+      "saved_raw_completions": 416,
+      "saved_backend_completions": 416,
+      "reserved_without_backend_return": 0,
+      "signed_samples": 416,
+      "sealed_batches": 26,
+      "completed_generation_batches": 25,
+      "committed_updates": 25,
+      "pre_update_receipts": 25,
+      "optimizer_steps_with_uncertain_commit": [],
+      "base_extra_counts": {
+        "pass/pass": 227,
+        "fail/fail": 151,
+        "pass/fail": 28,
+        "fail/pass": 2,
+        "pass/timeout": 1,
+        "missing/missing": 7
+      },
+      "base_pass_extra_fail": 28,
+      "group_types": {
+        "base:all_pass": 12,
+        "union:all_pass": 10,
+        "base:mixed": 32,
+        "union:mixed": 33,
+        "base:all_fail": 7,
+        "union:all_fail": 8
+      },
+      "completion_tokens_total": 44482,
+      "completion_tokens_max": 425,
+      "completion_at_cap": 0
+    }
+  },
+  "first_attempt": {
+    "independent_signed_record_checks": 102,
+    "raw_backend_sample_joins": 96,
+    "committed_updates": 5,
+    "uncertain_commits": 0,
+    "reserved_without_backend_return": 0,
+    "training_generations": 96,
+    "training_generations_in_updated_batches": 80,
+    "training_generations_in_aborted_batch": 16,
+    "dual_pass_fail_verdicts": 90,
+    "extra_timeout": 1,
+    "unscored_after_failure": 5,
+    "base_extra_counts": {
+      "pass/pass": 38,
+      "fail/fail": 44,
+      "fail/timeout": 1,
+      "missing/missing": 5,
+      "pass/fail": 8
+    },
+    "failure": {
+      "batch_index": 5,
+      "failed_sample": 10,
+      "task_id": "Mbpp/239"
+    },
+    "heldout_model_generations": 0,
+    "new_final_model_exports": 0,
+    "no_replay": true
+  },
+  "training_replicates": 1,
+  "train_outputs_including_failures": 6224,
+  "committed_updates_including_failures": 386,
+  "evaluation_outputs": 3072,
+  "all_saved_outputs_including_failures": 9296,
+  "missing_states": [
+    "C_prefix128",
+    "C_future128",
+    "R_future128"
+  ],
+  "evaluation_unresolved_dual_scores": 0,
+  "no_scientific_failure_or_success_established": true,
+  "raw_evaluation_export": {
+    "path": "EVALUATION_SAMPLES.jsonl.gz",
+    "sha256": "fe801fe883fc15d10aa5b3bd5a5220bba70025b9d6057cf4a365b4be647fafc2",
+    "bytes": 960637,
+    "record_count": 3072,
+    "original_signed_sample_records_preserved": true
+  },
+  "limitations": [
+    "one paired training replicate; question intervals do not quantify training randomness",
+    "observed development split; no contamination-free claim",
+    "base AND extra test pass is operational success, not semantic truth",
+    "EvalPlus inner FAIL attribution may combine candidate and inner infrastructure exceptions",
+    "scoring failures and all attempted doses retained; missing controls cannot be replaced by original R"
+  ]
+}

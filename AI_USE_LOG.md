@@ -1,3 +1,23 @@
+## September30 final Q2 analysis and provider shutdown
+
+Final W_future evaluation completed1024 outputs/32 sealed batches with zero
+unknowns. All three state collections1222files each were independently checked,
+including task/seed/sampling/checkpoint lineage and backend/raw/signed equality.
+37finalparent/checkpoint records were collected; both W final exports and R25
+were independently rehashed. Actual GPU and owned CPU workers were empty.
+Normal provider shutdown/OFF was observed, then the expired timer was cleared.
+No Trash-clearing helper, deletion, replay, extra model work or external message.
+
+AfterOFF, model-free analysis produced the46.48/49.22/49.02% union table and
+conditional question intervals. All primary matched-future comparisons remain
+missing. Published raw signed evaluation records and a reproduction script;
+retained all386 updates/6224 training outputs including three aborted batches.
+Private analysis requests during final evaluation did not alter the frozen queue.
+A read-only closeout collector had a Python string-escaping syntax error before
+execution; corrected without model work. A local publication import-path error
+likewise occurred before output writes, then was corrected. No research data
+were overwritten. The proposed missing-control completion remains unapproved.
+
 ## September30 W-prefix evaluation independently preserved
 
 Eval_W_prefix completed1024 outputs/32 batches,0unknown dual scores and successful

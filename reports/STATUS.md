@@ -1,3 +1,22 @@
+# Q2 finite run closed — provider OFF, September 30, 2026
+
+Available evaluations are complete: R46.48%, W_prefix49.22%, W_future49.02%
+under base AND extra tests, each1024 outputs with zero unknown scores. These
+are descriptive one-replicate results. C_prefix/R_future training failed, so
+W/R, W/C and C/R matched-future contrasts remain unavailable; the full scientific
+screen is incomplete. Do not claim irreversible damage, equivalence or success.
+
+All386 committed updates/6224 training outputs, including failed attempts, and
+3072 evaluation outputs are reconciled and preserved. Final W_prefix/W_future
+and failed R25 checkpoint file sets were independently rehashed before normal
+provider OFF, confirmed by09:14:30UTC. The temporary timer was cleared afterward;
+large weights remain on the stopped volume. Conservative window3h27m30s/CNY27.60
+excludes storage and is not an invoice. No automatic restart or next experiment.
+
+Read [the complete result](q2_screen_20260930/RESULTS.md) and its conditional next-screen proposal.
+The proposed384-update/9216-output control completion is not approved or launched;
+scoring comparability must first be established. Prior dated entries are history.
+
 # LT002 complete — provider OFF, 2026-09-29 UTC
 
 The finite phase is fully reconciled: two 128-update controls, 4,096 new dev answers,
