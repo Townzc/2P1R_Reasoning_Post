@@ -1,3 +1,41 @@
+# Q2 W/C/R screen prepared after owner continuation request — provider OFF
+
+September 30 UTC: the owner requested continued experiments and a concrete
+proposal before Thursday, with a pivot if warranted. The finite screen below
+supersedes the historical profile-only scope. Source, plan, scoring and analysis
+are ready for the original owner-started single A800. All 45 authored CPU checks
+passed, including 19 new screen checks. No new model or benchmark program ran.
+
+Read experiments/q2_supervision_migration/SCREEN_PROTOCOL_20260930.md and
+reports/q2_screen_20260930/README.md. The queue is exactly two 128-update prefixes
+and three 128-update future phases: 640 updates / 10,240 training completions.
+Six states × 128 evaluation tasks × eight samples add 6,144 evaluation completions.
+One paired training replicate uses the original pinned model and all 250 TRAIN
+tasks. Do not use engineering-profile weights as the baseline or add a seed,
+arm, deletion or retry. Prefixes share one schedule; future phases share another.
+Each phase has a fresh optimizer. Report W/R, W/C and C/R together. Publish and
+verify source before model work. Reconcile actual workers and receipts before
+acting; backend returns and uncertain optimizer commits must not be replayed.
+
+Rough estimate: 2–3 powered hours. Hard powered cap: four hours. The last verified
+rate, CNY7.98/hour, implies a CNY31.92 compute cap excluding storage; recheck the
+live rate. The parent has a shared 13,200-second limit and needs at least 600
+seconds of shutdown reserve. Reference preparation is capped at 600 seconds,
+each training phase at 2,700 and each evaluation at 1,800; the shared limit wins.
+Verify the provider's normal power-on+4h shutdown timer before launching. Inputs
+and runtime are resident; no installation or rental. Require 40 GiB data free
+at admission, retaining 10 GiB data / 3 GiB system during execution. Collect and
+verify evidence, then shut down promptly through the normal provider control.
+Never use the Trash-clearing helper. The owner retains startup; server is OFF.
+
+The pilot's 3pp/1pp thresholds guide project priority, not scientific proof.
+Wide or null single-replicate evidence is unresolved, not falsification. No
+backup has passed its novelty and readiness audit; no automatic pivot training.
+Preserve failures and negative results, shared budget accounting and draft-only
+external messages. The current private pointer is
+.local/q2_screen_20260930/ACTIVE_HANDOFF.md. LT002 and its heartbeat remain closed
+and paused. Everything below is dated history where inconsistent.
+
 # Q2 engineering profile complete — provider OFF, September 30 UTC
 
 The original two-update/32-completion profile passed on the owner-started single

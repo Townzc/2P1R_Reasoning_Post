@@ -1,3 +1,28 @@
+## 2026-09-30 UTC — finite W/C/R scientific screen prepared
+
+Following the owner's request to continue experiments and prepare a concrete
+Thursday discussion, the lead implemented a frozen one-replicate128/128 W/C/R
+screen, an outcome-independent paired prompt schedule, reused immutable batch
+contracts, shared/phase process deadlines, fresh optimizer forks, standalone
+fixed-seed evaluation and local reconciliation/conditional question intervals.
+The engineering profile code is unchanged. A pure scoring adapter explicitly
+handles the official empty extra suite while retaining EvalPlus inner-FAIL
+attribution limits. Outer scorer errors/timeouts abort rather than become reward.
+No new model, dataset program, server startup, package installation or paid action
+ran during this preparation. All 45 CPU fixture checks passed, including 19 new
+screen checks. Reconciliation also preserves backend returns before scoring and
+marks pre-step receipts without post-step receipts as uncertain commits. The new
+full GPU/evaluation path remains unexecuted. Scope:640 updates,10,240 training and6,144 evaluation outputs;
+rough2–3h expected,4h powered hardcap/31.92CNY at the last verified rate.
+
+The lead rechecked the two closest original paper abstracts and inspected exact
+cached upstream TRL/vLLM/EvalPlus source for sampler/scorer/API semantics. Under
+the owner's existing fallback-agent authorization, one previously used agent
+performed a bounded read-only backup audit. It found no admitted replacement;
+the private record preserves the closest-work and asset objections. No new
+training project or external message was created. Source publication precedes
+any owner-started execution. Earlier failed setup and negative evidence stand.
+
 ## 2026-09-30 UTC — original finite Q2 GPU profile completed
 
 After the authorized cleanup restored92.03GiB free space, the lead reused the

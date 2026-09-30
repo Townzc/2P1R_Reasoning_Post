@@ -1,0 +1,36 @@
+{
+  "prepared_utc": "2026-09-30T05:34:04.528320+00:00",
+  "status": "prepared_not_executed_provider_off",
+  "prior_engineering_pass_commit": "3309cce3dc4d609c402a932237e7127fd75079d2",
+  "plan_file_sha256": "96183d9a147428b1e97db996a10202176953daa9f9781ff990e97640e893a458",
+  "dose": {
+    "canonical_reference_tasks": 378,
+    "evaluation_completions": 6144,
+    "final_checkpoints": 5,
+    "optimizer_updates": 640,
+    "training_completions": 10240
+  },
+  "new_model_work_this_preparation": 0,
+  "authored_cpu_tests_total": 45,
+  "new_screen_tests": 19,
+  "new_screen_tests_rerun_after_shared_and_phase_deadline_patch": 16,
+  "test_model_or_benchmark_executions": 0,
+  "estimated_powered_hours": [
+    2,
+    3
+  ],
+  "estimate_basis": "two-step profile only; full task/evaluation throughput unmeasured",
+  "hard_powered_hours": 4,
+  "shared_worker_seconds": 13200,
+  "conditional_hourly_cny": 7.98,
+  "compute_cap_cny": 31.92,
+  "storage_excluded": true,
+  "requires_live_price_and_provider_timer_verification": true,
+  "server_startup_by_owner": true,
+  "automatic_retry_or_pivot_training": false,
+  "prior_failure_evidence_retained": true,
+  "final_check_utc": "2026-09-30T05:43:40.905668+00:00",
+  "final_cpu_test_command": "python3 -m unittest discover -s tests -p 'test_q2*.py' -v",
+  "final_cpu_test_seconds": 0.152,
+  "failure_accounting": "Backend outputs counted before scoring; pre-step without post-step remains uncertain and must not be replayed."
+}
