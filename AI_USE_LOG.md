@@ -1,3 +1,20 @@
+## 2026-09-29 — Q2 bibliography and offline readiness refinement
+
+The owner chose Q2 for further preparation and requested all relevant references
+in reading order. The lead and three research agents consolidated primary-paper
+records, distinguished prior section reads from metadata-only supporting sources,
+and audited the scientific comparison and small public implementation files.
+Reduced the initial study to three fresh-optimizer continuations; a stronger-
+supervision history is mandatory to distinguish general extra-training costs.
+Clarified that official test union is supervision migration, not semantic truth,
+and that old optimizer restoration is not required for a fresh scientific fork.
+Verified 250/128 disjoint task-ID lists and three Git blob identities without
+running benchmark code; read existing published summaries without representing
+them as new recovery results. Independently checked a package-metadata conflict.
+Preserved prior proposals as dated records, added readiness gaps and a prioritized
+bibliography, and reviewed the revision. No models, training, program-solution
+execution, annotation, installation, server, paid API or external message.
+
 ## 2026-09-29 — concrete post-training designs and course provenance
 
 The lead and three research agents refined the two conditional questions into

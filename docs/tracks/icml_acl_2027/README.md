@@ -1,3 +1,16 @@
+# Q2 reading list and smaller initial experiment — September 29, 2026
+
+The owner selected Q2 for continued preparation and conditional small experiments.
+The [prioritized bibliography](Q2_READING_LIST_20260929.md) records the papers used
+in that decision. The [readiness review](Q2_READINESS_20260929.md) narrows the
+first scientific comparison to weak-history, stronger-history and pre-history
+weights under a common fresh continuation. The stronger-history control is
+mandatory for a supervision-specific interpretation; optimizer retention is a
+later question. This supersedes the previous four-branch minimum for the initial
+question. Public assets and scoring/runtime gaps are documented. No experiment,
+installation or server action occurred; server startup is not yet needed.
+[Source and static checks](Q2_READINESS_SOURCES_20260929.json) accompany the review.
+
 # Concrete post-training proposals — September 29, 2026
 
 The [new design memo](POSTTRAINING_PROPOSALS_20260929.md) specifies scientific
