@@ -3,6 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from experiments.q2_supervision_migration import screen_continue as sc
+from experiments.q2_supervision_migration import screen_evaluate_available as ea
 from experiments.q2_supervision_migration.gpu_profile import ProfileError
 
 class ContinuationTests(unittest.TestCase):
@@ -22,5 +23,20 @@ class ContinuationTests(unittest.TestCase):
             with self.assertRaisesRegex(ProfileError,'already attempted'):sc.validate_old(root,'a')
     def test_no_c_retry_in_queue(self):
         self.assertEqual(sc.PHASES,('W_future','R_future','eval_R','eval_W_prefix','eval_W_future','eval_R_future'))
+
+    def test_engine_repair_rejects_any_generation_intent_or_later_phase(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);phase=root/'eval_R';phase.mkdir()
+            (root/'evaluation_intent.json').write_text(json.dumps({'plan_sha256':'a','worker_deadline_epoch':1300,'provider_deadline_epoch':2000,'source_commit':'old'}))
+            (root/'evaluation_failure.json').write_text(json.dumps({'phase':'eval_R'}))
+            for name,data in [('process_launcher_receipt.json',{'returncode':1,'pid':999999991}),('process_worker_start.json',{'parent_pid':999999992}),('worker_failure.json',{'error':'Engine core initialization failed'}),('input_receipt.json',{})]:
+                (phase/name).write_text(json.dumps(data))
+            for name in ['process.stdout.log','process.stderr.log']:(phase/name).write_text('')
+            self.assertEqual(ea.verify_pre_generation_failure(root,'a',1300,2000)['verified_new_generations'],0)
+            with self.assertRaises(ProfileError):ea.verify_pre_generation_failure(root,'a',1301,2000)
+            (phase/'batches').mkdir()
+            with self.assertRaisesRegex(ProfileError,'may have been attempted'):ea.verify_pre_generation_failure(root,'a',1300,2000)
+            (root/'eval_W_prefix').mkdir()
+            with self.assertRaisesRegex(ProfileError,'later evaluation'):ea.verify_pre_generation_failure(root,'a',1300,2000)
 
 if __name__=='__main__':unittest.main()

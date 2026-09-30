@@ -1,3 +1,20 @@
+# Q2 available-state evaluation recovery — September30 08:30UTC
+
+W_prefix/W_future are complete128-step phases; R_future stopped at25 updates
+with an exception checkpoint, and C_prefix stopped at100 without a checkpoint.
+Exact training recovery is unavailable; no C/R replay is approved. All three
+primary W/R, W/C and C/R contrasts remain missing. Only the original eval_R,
+eval_W_prefix and eval_W_future (3072 outputs,0 updates) are currently feasible.
+The first evaluation engine failed before ANY generation intent because installed
+Ninja was absent from PATH. Preserve that zero-generation failure. A narrow
+published repair permits startup only after independently proving no attempted
+samples/live prior workers; unchanged original deadlines and sample seeds apply.
+Read the private v2 handoff and available-evaluation records for current status.
+The attempted suite-watchdog repair FAILED its consistency gate and must remain
+disabled; unresolved evaluation scores are retained explicitly. Keep the server
+in this session for authorized feasible work, collect/verify it, then normal OFF.
+This remains an incomplete scientific screen, never a successful full comparison.
+
 # Q2 W training complete; R training active — September30 08:00UTC
 
 W_future128updates/2048outputs completed successfully and all batch ledgers,

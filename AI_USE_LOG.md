@@ -1,3 +1,16 @@
+## September30 evaluation engine startup repair
+
+The first evaluation parent exited before any generation intent or returned
+sample. The installed Ninja executable was absent from SSH's minimal PATH.
+Actual GPU/process inspection found no remaining experiment workers. All six
+phase artifacts and original receipts are preserved. Prepared a narrow admission
+check that rejects any batch directory, later state, changed deadline or live
+parent; no completed or ambiguous work can be replayed. The parent adds only
+existing virtualenv/CUDA build-tool directories to PATH, without installation,
+backend replacement or scientific changes. All57 authored CPU checks pass.
+The three original available state evaluations remain3072 planned outputs and
+zero training updates, with unknown scores retained and missing controls explicit.
+
 ## September30 suite diagnostic failed; available evaluations prepared
 
 The suite-watchdog CPU gate failed in35.37s: the normally exited checker marked
