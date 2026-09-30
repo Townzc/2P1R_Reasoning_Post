@@ -1,3 +1,16 @@
+# Q2 W/R continuation running — September30 07:35UTC
+
+The published d27c6fb9 execution is running only untouched W_future/R_future and
+four original state evaluations, reusing completed W_prefix and references.
+Saved-candidate initialization repair passed on Linux;53 authored tests passed.
+W_future20 committed updates/320 outputs and exact probe-logit reload were
+independently verified. The prior C-prefix100-update failure has no checkpoint;
+owner dose amendment for repeating C is pending, not approved. No C replay.
+5859 compact prior-v2 files were collected and independently hash verified.
+Read the private v2 handoff and continuation monitor before any action. Original
+09:24:41 worker /09:47 provider limits and completion-first policy still apply.
+Earlier state entries below are history; no scientific result yet.
+
 # Q2 current repair — September30 07:26UTC
 
 W_prefix completed128updates with a verified final checkpoint. C_prefix failed

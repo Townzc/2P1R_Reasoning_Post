@@ -1,3 +1,16 @@
+## September30 Q2 W/R continuation launched and verified
+
+Published source d27c6fb9 passed53 authored checks on Linux after all29 transfer
+files were independently verified. The parent reused the original W checkpoint
+and reference cache under inherited deadlines. W_future20 contiguous committed
+updates/320 outputs were independently checked, with finite pre-gradients and
+0.0 source probe-logit difference. No C phase was replayed; owner decision is
+pending.5859 closed-v2 compact evidence files were collected and individually
+hash verified. An initial read-only diagnostic collector tried to decode a
+binary archive; the corrected collector excluded archives and preserved all
+original diagnostic records. No model retry, dose change, deletion or shutdown.
+Periodic checkpoint code is active; its first runtime save is still pending.
+
 ## September30 Q2 untouched W/R continuation prepared
 
 The revised saved-candidate Linux gate completed in6.97s: MemoryError was
