@@ -12,6 +12,15 @@ inspected actual processes, normally shut down the instance and verified provide
 OFF, then cleared the timer. No historical state was deleted; no automatic server
 retry or external correspondence occurred. Local offline preparation follows.
 
+After shutdown, the lead downloaded the pinned seven-file model locally and an
+agent prepared a hash-checked Linux artifact-selection/download helper. The lead
+reviewed and ran a bounded four-worker download, then independently rehashed all
+246 transfer files (7,513,836,508bytes), including232 dependency/interpreter/build
+artifacts. The original227 runtime pins and three sdists were retained. Explicit
+build tooling was frozen and archive layouts inspected without executing Linux
+binaries. There was no package installation, model/benchmark execution or new
+server action. Offline Linux installation and all GPU behavior remain untested.
+
 ## 2026-09-29 — Q2 offline experiment and bounded GPU profile preparation
 
 The owner requested small experiments promptly and authorized a fallback agent.

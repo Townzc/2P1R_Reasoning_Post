@@ -12,6 +12,14 @@ Read reports/q2_feasibility_20260929/RESULTS.md. Prepare pinned resources locall
 before requesting another owner startup; no automatic retry, alternate stack or
 W/C/R experiment is queued. Preserve the failed attempt and original profile.
 
+Post-shutdown local preparation now has246 independently verified transfer files,
+7,513,836,508bytes: unchanged227 runtime artifacts plus pinned Python/uv/build tools,
+model/data/source. Read the offline-install amendment in PROFILE_PROTOCOL.md.
+This is downloaded-input readiness, not verified Linux installation or GPU fit.
+Another owner startup is required; do not reconnect/restart automatically. Keep
+the60minute whole-powered cap and>=35minute worker-admission reserve; check actual
+7.5GB transfer speed before committing the remaining window to setup/model work.
+
 # Q2 offline feasibility complete — first GPU profile prepared, not run (history)
 
 September29: owner requested small experiments and authorized fallback agents.

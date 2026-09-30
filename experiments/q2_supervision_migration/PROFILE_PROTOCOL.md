@@ -68,17 +68,57 @@ if finished early. Never use a shutdown helper that also clears Trash.
 
 ## Prepare and launch after owner startup
 
-Use a new workspace/environment and the published source commit. Resolve/verify
-package hashes from `requirements-profile-linux-py311.lock.txt`; installation
-is still untested on hardware. Stage pinned data and model in a NEW directory:
+September30 UTC setup amendment: the first owner-started setup failed on the
+initial pinned model config download, before any model worker. It is closed with
+providerOFF and preserved evidence. For a separately owner-started attempt, use
+the independently verified local offline bundle rather than assuming the server
+can reach model/package origins. It contains the unchanged227 runtime artifacts,
+the original3 source-only sdists, explicit build tools, uv0.12.17, CPython3.11.16
+Linux standalone, the frozen model/data/split and the published source archive.
+There are246 transfer files totaling7,513,836,508bytes (about7GiB). Do not transfer
+duplicate `.partial` hardlinks or unselected caches. Verify every SHA remotely.
+
+The60min powered cap and>=35min worker-admission reserve are unchanged. Transfer
+and setup must therefore fit in at most25min; a20min transfer alone would need
+about6.26MB/s before allowing setup overhead. This is a requirement calculation,
+not a measured upload rate. Stop if actual transfer/setup cannot meet the window.
+No automatic startup, retry, new stack or scientific continuation is authorized.
+
+After checking the bundle manifest, extract the official Linux standalone Python
+into a NEW runtime directory and the uv executable from the verified wheel's
+`uv-0.12.17.data/scripts/uv` member. Create an isolated Python3.11 venv. Bootstrap
+only the explicit build tools (setuptools81.0.0 and packaging26.3 match the main
+lock; wheel0.46.3 is a separately recorded build helper), then install the original
+runtime lock with build isolation disabled to prevent hidden network build
+dependencies. The intended installer invocations are below; actual new paths
+must replace the placeholders, and TMPDIR belongs on the data filesystem:
+
+```sh
+UV_BINARY pip install --python NEW_VENV/bin/python --offline --no-index \
+  --find-links BUNDLE/build_wheelhouse --require-hashes \
+  -r BUNDLE/build-tools.lock.txt --no-cache --link-mode copy
+UV_BINARY pip install --python NEW_VENV/bin/python --offline --no-index \
+  --find-links BUNDLE/wheelhouse --require-hashes --no-build-isolation \
+  --only-binary :all: --no-binary wget --no-binary tempdir \
+  --no-binary stop-sequencer -r BUNDLE/runtime.lock.txt --no-cache --link-mode copy
+```
+
+The archive layouts and all input hashes were checked locally. Linux extraction,
+installation/build, shared-library imports and GPU execution are still untested.
+Do not interpret a complete download as a successful engineering profile.
+
+Use a new workspace/environment and the published execution source commit.
+The next attempt receives the verified offline model/data rather than repeating
+the failed online staging. For provenance, the original staging command was:
 
 ```sh
 python -m experiments.q2_supervision_migration.stage_profile_assets --out PROFILE_ASSETS --include-model --seconds 600
 ```
 
-The 3.1GB model download happens only with `--include-model`. A partial asset is
-retained; no automatic retry or deletion follows. Then, with the actual new
-absolute paths and the frozen SHA values from `assets/data_manifest.json`:
+The earlier3.1GB model download was gated by `--include-model`; its failure and
+partial remain retained with no automatic retry or deletion. After the new
+offline bundle and environment pass admission, use the actual new absolute paths
+and frozen SHA values from `assets/data_manifest.json`:
 
 ```sh
 python -m experiments.q2_supervision_migration.gpu_profile \

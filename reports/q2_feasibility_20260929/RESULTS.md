@@ -33,6 +33,17 @@ The [compact setup receipt](SETUP_ATTEMPT_20260930.json) and
 [path-redacted original asset error](SETUP_ASSET_FAILURE_20260930.log) preserve
 this failed attempt separately from the earlier exploratory replay.
 
+Local preparation after shutdown completed: all seven model files and232
+dependency/interpreter/bootstrap artifacts were downloaded and independently
+hash-verified, together with the frozen data, split, locks and source archive.
+The transfer manifest covers246 files totaling7,513,836,508bytes. All227 runtime
+artifacts match the original public lock; the three source-only packages retain
+their original sdist hashes. The separately pinned build tools do not change the
+training recipe. See [the compact preparation receipt](OFFLINE_BUNDLE_20260930.json).
+No package was installed locally and no model/program was executed. This removes
+the need to fetch those inputs from the server; Linux installation and GPU runtime
+remain unverified. The one-hour powered limit and original profile are unchanged.
+
 ## September 29 offline milestone (historical)
 
 September 29, 2026. **There is a measurable supervision change to investigate;
