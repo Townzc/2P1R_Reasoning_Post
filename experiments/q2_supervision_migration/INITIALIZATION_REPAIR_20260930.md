@@ -19,14 +19,18 @@ only, diagnose the same saved candidate with the pinned upstream evaluator and a
 additional timer around its exec(code) initialization. The timer uses the existing
 nominal task allowance min(60,sum(per-test limits))+1 seconds. The original
 watchdog additionally has one second of process/cleanup reserve. All oracles,
-per-test guards and candidate code are retained. Only an observed initialization
-TimeoutException, upstream FAIL, and a normal diagnostic-child exit establishes
-candidate failure. Other outcomes remain unknown. The original TIMEOUT remains
+per-test guards and candidate code are retained. Only an exception observed inside initialization (a TimeoutException or a
+traceback containing the candidate code frame), upstream FAIL, and a normal
+diagnostic-child exit establishes candidate failure. The exception type is
+recorded; failures outside initialization remain unresolved. Other outcomes remain unknown. The original TIMEOUT remains
 in the new diagnostic detail; old ledgers are never changed.
 
 Such CPU diagnosis is not a new rollout or optimizer update. A bounded45-second
 Linux preflight exercises the exact saved timeout and two authored negative
 controls; it must pass before repaired model work.49 authored CPU checks pass.
+The first Linux gate returned FAIL without observing TimeoutException and was
+retained as a failed diagnostic. The next version records candidate exception
+type and stack attribution rather than assuming timeout was the cause.
 The original per-request120-second limit can be too short for two original suite
 watchdogs plus two diagnostic watchdogs. Opt-in workers record a300-second request
 cap while retaining all original phase and absolute deadlines.

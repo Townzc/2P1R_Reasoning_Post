@@ -38,12 +38,12 @@ def worker(a):
     result=diagnose_initialization_timeout('mbpp',code,p['base_input'],p['entry_point'],gt['base'],p['atol'],gt['base_time'])
     durable_json(Path(a.out)/'saved_candidate_diagnosis.json',{'sample_id':s['sample_id'],
         'old_base':s['base'],'old_extra':s['extra'],'diagnosis':result,'historical_records_changed':False})
-    if not result['confirmed_candidate_initialization_timeout']:raise ProfileError('candidate initialization attribution not confirmed')
+    if not result['confirmed_candidate_initialization_failure']:raise ProfileError('candidate initialization attribution not confirmed')
     controls=[]
     for code in ['def fixture(x):\n    return x','this is invalid syntax !']:
         control=diagnose_initialization_timeout('mbpp',code,[[1]],'fixture',[1],0,[.01])
         controls.append(control)
-        if control['confirmed_candidate_initialization_timeout']:raise ProfileError('false timeout attribution in authored control')
+        if control['confirmed_candidate_initialization_failure']:raise ProfileError('false candidate attribution in authored control')
     durable_json(Path(a.out)/'preflight_complete.json',{'saved_timeout_attributed':1,
         'authored_negative_controls':controls,'new_generations':0,'optimizer_updates':0,
         'scope':'CPU diagnosis only; not permission to replay the 100 lost C updates'})

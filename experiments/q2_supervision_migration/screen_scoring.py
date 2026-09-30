@@ -30,7 +30,7 @@ def score_pair(problem, reference, code, checker, *, fast_check=False, recover_i
                     expected,problem['atol'],timings,fast_check)
                 recovery['original_status']='timeout'
                 recovery['original_tests_observed']=len(details)
-                if recovery['confirmed_candidate_initialization_timeout']:
+                if recovery.get('confirmed_candidate_initialization_failure',False):
                     status,details='fail',recovery['observed']
             if status not in ('pass','fail','timeout'):
                 raise ProfileError('unknown evaluator outcome')

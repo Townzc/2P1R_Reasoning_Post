@@ -312,7 +312,8 @@ def train_worker(args,plan):
             try:
                 remaining(args);disk_gate(args.out)
                 step=int(trainer.state.global_step)
-                if step!=state['steps'] or (step and not (out/f'update_{step:04d}.json').exists()):
+                if (step!=state['steps'] or (step and not (out/f'update_{step:04d}.json').exists())
+                    or (out/f'pre_update_{step+1:04d}.json').exists()):
                     raise ProfileError('cannot snapshot uncertain optimizer commit')
                 checkpoint=out/'trainer'/f'checkpoint-{step}'
                 if not checkpoint.exists():trainer._save_checkpoint(trainer.model,None)

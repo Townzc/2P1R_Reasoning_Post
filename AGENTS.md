@@ -1,3 +1,13 @@
+# Q2 current repair — September30 07:26UTC
+
+W_prefix completed128updates with a verified final checkpoint. C_prefix failed
+after100 committed updates; its next16 outputs are retained, but no C policy
+checkpoint exists. No model worker is currently active. Read the private v2
+ACTIVE_HANDOFF and INITIALIZATION_REPAIR_20260930.md before proceeding. Ordinary
+repairs stay in the same powered session. Reuse W; do not replay C without an
+explicit dose amendment. Unstarted W/R futures and their evaluations are still
+authorized. The original09:24:41 worker and09:47 provider deadlines remain.
+
 # Latest owner correction: complete the experiment before provider shutdown
 
 The owner objected to repeated shutdowns after routine faults and explicitly

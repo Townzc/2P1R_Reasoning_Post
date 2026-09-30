@@ -116,7 +116,7 @@ class ScoringTests(unittest.TestCase):
     def test_timeout_recovery_needs_explicit_candidate_attribution(self):
         target='experiments.q2_supervision_migration.initialization_guard.diagnose_initialization_timeout'
         for confirmed,expected in [(True,'fail'),(False,'timeout')]:
-            with mock.patch(target,return_value={'confirmed_candidate_initialization_timeout':confirmed,'observed':[]}) as guard:
+            with mock.patch(target,return_value={'confirmed_candidate_initialization_failure':confirmed,'confirmed_candidate_initialization_timeout':False,'observed':[]}) as guard:
                 check=mock.Mock(side_effect=[('timeout',[]),('fail',[False])])
                 pair=sc.score_pair(self.p,self.gt,'authored',check,fast_check=True,recover_initialization=True)
                 self.assertEqual(pair['base']['status'],expected)

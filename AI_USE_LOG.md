@@ -1,3 +1,13 @@
+## September30 Q2 initialization diagnostic refinement
+
+The first bounded Linux diagnostic failed its attribution gate: upstream FAIL
+with no observed TimeoutException. No model worker followed. The next prepared
+version records exception type and requires a candidate traceback frame or an
+initialization TimeoutException, plus normal child exit/upstream FAIL. It does
+not convert unobserved infrastructure failures. Exception checkpointing also
+rejects any pending pre-update receipt. Existing failed evidence is unchanged.
+The revised Linux diagnostic remains required before model work.
+
 ## September30 Q2 second scoring fault and preparation of initialization repair
 
 The assistant observed W_prefix complete128updates/2048outputs and independently
