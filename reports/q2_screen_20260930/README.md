@@ -1,3 +1,16 @@
+# Latest: baseline and W-prefix evaluations complete; final state running
+
+At September30 09:02UTC, R and W_prefix each have1024 completed outputs and no
+unknown dual verdicts. Both phases'1222 compact files were retrieved and verified.
+W_prefix additionally passed independent checkpoint-lineage, planned roster/seed,
+sampling and backend-to-ledger checks; its worker exited0 after807.55s.
+[W-prefix verification](EVAL_W_PREFIX_MILESTONE.json).
+
+The same queue is running the last original W_future evaluation. No training is
+repeated, and C/R_future controls remain missing. Finish and preserve this finite
+available-state queue, verify provider OFF, then interpret descriptive results.
+All original time/cost limits remain. Earlier dated entries below are historical.
+
 # Latest: R baseline evaluation complete; W evaluations continue
 
 At September30 08:47UTC, all1024 R baseline outputs and their32 batch ledgers

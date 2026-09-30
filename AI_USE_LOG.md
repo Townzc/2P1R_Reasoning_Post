@@ -1,3 +1,13 @@
+## September30 W-prefix evaluation independently preserved
+
+Eval_W_prefix completed1024 outputs/32 batches,0unknown dual scores and successful
+worker exit in807.55s. All1222compactfiles retrieved and independently hashed;
+separate local ledger validation checked frozen task roster/seeds/sampling,
+backend/raw/signed equality and128stepcheckpoint lineage. No new training or
+replayed output occurred. The existing parent moved to the final W_future
+original evaluation with the earlier absolute work deadline. Interpretation and
+full local publication follow provider shutdown; missing controls stay missing.
+
 ## September30 R baseline evaluation independently preserved
 
 Eval_R completed1024 outputs in32 sealed batches, with0 unresolved dual verdicts.
