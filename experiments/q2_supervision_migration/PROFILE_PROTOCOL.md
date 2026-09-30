@@ -68,6 +68,28 @@ if finished early. Never use a shutdown helper that also clears Trash.
 
 ## Prepare and launch after owner startup
 
+September30 UTC second-setup amendment: the owner-started offline-transfer
+attempt also closed before installation/model execution. Measured upload was
+0.314MB/s, so the admission watchdog stopped it and normal provider OFF was
+verified. Preserve both failed attempts. Download completeness did not establish
+server-readiness; do not request a further GPU startup based on it alone.
+
+Next staging uses provider file storage while the GPU is OFF. The prepared tar
+contains exactly the frozen manifest and selected inputs; its SHA256 is
+`1a078d763becc9a4653c2e1916692468ce877fd2e4417ff7508e2b1211c0d3eb`.
+Browser upload is pending at this amendment. Require completed remote visibility
+and subsequent server SHA verification, not just a selected/uploading file.
+
+Proposed owner-started no-card preparation is capped at30minutes (CNY0.05 at the
+documented0.1/hour, conditional on the live quote). Only resource staging/hash
+checks, the same locked installation and lightweight version/import checks are
+allowed; no model load, candidate/reference execution or training. Record actual
+0.5CPU/2GBRAM limits, disk availability and mount before setup. Stop on failure
+or insufficient resources; retain partials and shut down normally. Its low-memory
+installation remains untested. Only a verified environment can justify a new
+GPU profile request, still bounded by the original60min powered/1800s worker
+limits. There is no automatic startup or scientific continuation.
+
 September30 UTC setup amendment: the first owner-started setup failed on the
 initial pinned model config download, before any model worker. It is closed with
 providerOFF and preserved evidence. For a separately owner-started attempt, use
@@ -102,6 +124,18 @@ UV_BINARY pip install --python NEW_VENV/bin/python --offline --no-index \
   --only-binary :all: --no-binary wget --no-binary tempdir \
   --no-binary stop-sequencer -r BUNDLE/runtime.lock.txt --no-cache --link-mode copy
 ```
+
+For no-card preparation, serialize work with `UV_CONCURRENT_INSTALLS=1`,
+`UV_CONCURRENT_BUILDS=1`, and `UV_CONCURRENT_DOWNLOADS=1`; pass
+`--no-python-downloads` and do not enable bytecode compilation. These names/flags
+were inspected in the available uv CLI, not measured in the target Linux runtime.
+The selected runtime wheel contents total9,964,859,795bytes (9.28GiB,72,545entries).
+Reserve12GiB on the system filesystem for the new venv and24–26GiB available on
+the data filesystem for the bundle, temporary unpacking and future outputs.
+Leave the7.514GB tar in file storage and stream its extraction rather than copy
+another archive to the data filesystem. Hash in chunks. These are conservative
+planning reserves, not observed install disk/RAM peaks; fail closed at the live
+limits and preserve logs. Set executable permission on the extracted uv binary.
 
 The archive layouts and all input hashes were checked locally. Linux extraction,
 installation/build, shared-library imports and GPU execution are still untested.

@@ -1,4 +1,37 @@
-# Q2 offline feasibility results and first GPU setup attempt
+# Q2 offline feasibility and two failed setup attempts
+
+## Second setup: transfer admission failed; no model work
+
+The second owner-started attempt verified the same idle one-A800 hardware and
+set a normal provider timer. The frozen7,513,836,508-byte bundle was transferred
+once, with an admission watchdog reserving installation and at least35minutes
+for the profile. After60.14s, observed accepted throughput was0.314MB/s; estimated
+remaining transfer was23,880s (about6.6h). The watchdog stopped the transfer.
+The preserved BrokenPipe is a consequence of this intentional stop. Remote
+inventory found23 fully matching files and one partial; no automatic replay or
+deletion followed. No environment installation, model generation, optimizer
+update, reference/candidate execution or checkpoint occurred.
+
+Normal provider OFF was verified by02:01:30UTC and the temporary timer cleared.
+Conservative power-on01:55:30UTC gives360s / CNY0.798 at7.98/hour. Across both
+failed attempts the powered upper-bound proxies total1,034s (0.2872A800 hours)
+and CNY2.292, excluding storage; neither figure is a bill or A100 equivalence.
+See [the second setup receipt](TRANSFER_ATTEMPT_20260930.json).
+
+The preparation error was treating locally downloaded assets as practical server
+readiness before measuring the upstream path. Future setup must avoid paid GPU
+waiting: stage inputs in [provider file storage](https://www.autodl.com/docs/fs/)
+while OFF, then use owner-started [no-card mode](https://www.autodl.com/docs/save_money/)
+for bounded hash verification and installation. Provider documentation describes
+20GB free file storage and no-card mode at CNY0.1/hour with0.5CPU/2GBRAM; live
+conditions must still be checked. These small CPU/RAM resources may constrain
+installation; offline install and GPU execution remain unverified.
+
+A7,514,327,040-byte archive of the original manifest-selected inputs was created
+and locally hashed. Its browser upload has started while the GPU is OFF, but
+completion and server-side hashes are **not yet verified**. Keep this readiness
+state distinct from the local bundle's completed hashes. There is still no
+scientific Q2 result or measured cost for the proposed W/C/R study.
 
 ## September 30 UTC: setup stopped before model work
 

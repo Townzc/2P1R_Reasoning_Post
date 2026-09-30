@@ -1,3 +1,23 @@
+## 2026-09-30 UTC — second Q2 setup stopped at upload admission
+
+After another owner startup, the lead verified the idle single A800, driver,
+RAM/disks and current price and set a normal shutdown timer. One measured stream
+of the frozen246-file bundle was stopped after60.14s at0.314MB/s because estimated
+transfer time exceeded the remaining powered window. Read-only reconciliation
+preserved23 complete files, one partial and their inventory. The intentional
+stop caused the recorded BrokenPipe; it is not an additional unexplained failure.
+No new environment installation, model worker, update, generation or benchmark
+program executed. Normal provider OFF was verified and its temporary timer
+cleared; the conservative compute proxy is CNY0.798 excluding storage.
+
+After shutdown, official documentation was checked for GPU-OFF file storage and
+no-card setup. Same-region free file storage was initialized, and the lead
+created/hashed a7.514GB tar containing only manifest-selected public inputs and
+started its browser upload. Completion and remote SHA verification are pending;
+no GPU restart follows automatically. An agent audited low-memory offline setup without server access: selected wheel
+contents total9.28GiB, and serialized install controls were checked in the locally
+available uv CLI. This is archive/CLI inspection, not target-Linux installation. No historical file deletion or external message occurred.
+
 ## 2026-09-30 UTC — Q2 setup failure and verified shutdown
 
 After owner startup, the lead verified the single A800 identity, idle workers,

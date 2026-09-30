@@ -1,3 +1,25 @@
+# Q2 second setup attempt closed — provider OFF; upload pending
+
+September30 UTC: the owner-started second profile attempt stopped at transfer
+admission, before installation/model work. Measured upload was0.314MB/s; the
+remaining offline bundle would take about6.6h, outside the unchanged60min powered
+cap. The transfer was terminated,23 complete files and1 partial were inventoried
+and preserved, and actual worker/GPU inspection found no remaining owned work.
+Normal provider OFF was verified by02:01:30UTC; temporary timer cleared. This
+attempt's conservative360s powered bound is CNY0.798 at7.98/hour, excluding
+storage, not an invoice. Zero new installs, updates, generations or programs.
+
+Read reports/q2_feasibility_20260929/RESULTS.md and TRANSFER_ATTEMPT_20260930.json.
+The locally verified7.514GB tar is now being uploaded through the provider's
+same-region file storage while the GPU remains OFF. Upload is NOT complete or
+remotely hash-verified at this record. Keep the active browser upload; do not
+submit duplicates or infer completion from the local archive. Before any further
+GPU startup, stage/verify resources and attempt setup in owner-started no-card
+mode with an explicit short cap. Its2GB RAM may constrain installation; success
+is unverified. No model work is allowed in that preparation. Owner retains
+startup; no automatic rental, restart, alternative stack or scientific grid.
+The original2-update/32-completion profile and failed-attempt accounting stand.
+
 # Q2 first setup attempt closed — provider OFF, September 30 UTC
 
 The owner started the finite one-A800 profile, but asset staging failed before

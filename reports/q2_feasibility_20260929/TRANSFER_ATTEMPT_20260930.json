@@ -1,0 +1,61 @@
+{
+  "source_commit": "bba38900778bfb373f2659fde115073c91b2ee24",
+  "attempt": 2,
+  "status": "transfer_admission_failed_before_install_or_profile",
+  "bundle_payload_bytes": 7513836508,
+  "transfer": {
+    "bytes": 18874368,
+    "start_unix": 1790733527.021476,
+    "deadline_unix": 1790734440.0,
+    "elapsed_seconds": 60.13938283920288,
+    "average_MBps": 0.31385697510758004,
+    "estimated_remaining_seconds": 23880.1834416169,
+    "stop_reason": "transfer cannot fit before reserved installation/model window",
+    "error": "BrokenPipeError(32, 'Broken pipe')",
+    "end_unix": 1790733587.1608589
+  },
+  "error_interpretation": "BrokenPipe followed intentional admission-stop termination; not an independent transfer failure",
+  "remote_reconciliation": {
+    "complete_manifest_files": 23,
+    "incomplete_manifest_files": 1,
+    "remote_file_bytes": 19419945,
+    "inventory_sha256": "e4f6ca376c88e6758f0972ae1e5b158c8b6cd0247d507c30145788e291ae7d3c",
+    "partial_preserved": true
+  },
+  "closeout": {
+    "provider_status": "OFF",
+    "off_verified_no_later_than_utc": "2026-09-30T02:01:30Z",
+    "power_on_conservative_utc": "2026-09-30T01:55:30Z",
+    "provider_timer_utc": "2026-09-30T02:55:00Z",
+    "timer_cleared": true,
+    "whole_powered_upper_bound_seconds": 360,
+    "hourly_cny": 7.98,
+    "compute_proxy_cny": 0.798,
+    "storage_excluded": true,
+    "not_invoice": true,
+    "failure": "transfer_rate_failed_admission",
+    "installed_new_environment": false,
+    "new_model_generations": 0,
+    "new_optimizer_updates": 0,
+    "reference_or_candidate_executions": 0,
+    "profile_worker_launched": false,
+    "retry": false,
+    "deletion_or_release": false
+  },
+  "scientific_result": false,
+  "automatic_retry": false,
+  "next_preparation": "GPU-OFF file-storage upload; owner-started no-card setup proposed before any further GPU startup",
+  "archive": {
+    "file": "q2-offline-bba38900-20260930.tar",
+    "bytes": 7514327040,
+    "sha256": "1a078d763becc9a4653c2e1916692468ce877fd2e4417ff7508e2b1211c0d3eb",
+    "bundle_manifest_sha256": "6b8f4f95e39791e650646a65ac040bc2b05ff4ed0286407846bb80986feab20f"
+  },
+  "archive_remote_verified": false,
+  "limitations": [
+    "No package install/import measurement",
+    "No model throughput or scientific result",
+    "Cost proxy excludes storage and is not an invoice",
+    "Browser upload started separately after GPU shutdown; completion is not claimed"
+  ]
+}
