@@ -1,4 +1,43 @@
-# Q2 offline feasibility and two failed setup attempts
+# Q2 offline feasibility and verified no-card preparation
+
+## September 30: server inputs and offline installation are ready
+
+The owner started no-card mode to avoid GPU time spent waiting for resources.
+The actual limits were 0.5 CPU core and 2 GiB RAM. All **246 frozen files,
+7,513,836,508 bytes**, passed an independent server-side SHA256 check, including
+the seven model files, data/split, locks and original published source archive.
+The model directory contains exactly the seven expected files.
+
+One serialized offline installation took **282.7 seconds**. Python 3.11.16 and
+uv 0.12.17 passed identity checks. The unchanged 227-package runtime plus the
+additional build helper matched all 228 expected installed versions. Lightweight
+packaging/numpy/safetensors imports passed; no OOM or OOM-kill event was observed.
+After installation, 22.44 GiB remained on the data filesystem and 14.46 GiB on
+the system filesystem. **GPU imports, model loading, kernels, training and the
+fresh-process reload remain untested.** This is preparation, not a scientific result.
+
+Transfer problems are retained in the [preparation receipt](NOCARD_PREPARATION_20260930.json):
+slow direct PyPI transport, a stopped deadline-bound mirror transfer, an undersized
+mirror-index cap and a missing manifest in an operator deployment. Each was
+reconciled before an explicit correction; completed artifacts were rehashed and
+reused, with original versions and full-file hashes unchanged. A proposed NAS-chunk
+recovery never ran because its plan transfer timed out. The final verified inputs
+came from the staged files and exact-file downloads. The old browser archive
+upload was stopped at about 55% only after full server verification; its incomplete
+cache and all historical evidence were preserved.
+
+All 1,547 compact evidence files were copied and independently checked before
+normal provider shutdown. **Provider OFF was verified by 04:24:42 UTC**, and the
+temporary shutdown timer was cleared. The conservative 03:39:00–04:24:42 window
+is 2,742 seconds, about CNY0.0762 at the documented no-card rate, excluding storage;
+this is a cost proxy, not an invoice. Large inputs and the installed runtime remain
+on the stopped instance. No automatic GPU startup or new scientific arm follows.
+
+The next finite step remains two updates / 32 training completions plus the
+fresh-process reload. Its disk admission must be reconciled with the now-resident
+inputs/runtime before requesting startup; a proposed reserve and owned-worker
+monitor are documented privately, not yet implemented or measured. The original
+60-minute GPU powered-window and 1,800-second worker limits stand.
 
 ## Second setup: transfer admission failed; no model work
 

@@ -1,3 +1,28 @@
+## 2026-09-30 UTC — verified no-card preparation and normal shutdown
+
+Under the owner's no-card startup/save-time instruction, the lead inspected the
+actual host, existing workers and resources, measured transport, and used exact
+frozen files through the official provider HF/GitHub proxy and a SHA-matched TUNA
+mirror. An agent prepared/reviewed bounded transfer, installation and verification
+operators without server access. The lead retained the slow-transfer stop,
+deadline stop, metadata-index limit failure, manifest-deployment error and an
+unexecuted NAS-recovery attempt. Explicit corrections changed transport/helper
+handling only; no package version, scientific source or full-file hash changed.
+The initially proposed 30-minute preparation window was explicitly amended to
+60 minutes under the latest owner direction, announced and protected by a verified
+normal provider timer. No GPU was started.
+
+The lead independently rehashed all 246 inputs, performed one serialized offline
+installation, compared all 228 runtime/build versions, and ran only three lightweight
+imports. GPU/model imports, generations, optimizer updates and benchmark programs
+remained zero. The redundant browser upload was stopped after server verification,
+without clearing its cache. All 1,547 collected evidence files were independently
+checked, actual owned workers were absent, and normal provider OFF was verified
+by 04:24:42 UTC before clearing the temporary timer. Historical files were not
+deleted. An agent also audited the exact profile's disk writes and prepared a
+private conditional next-startup draft; its proposed disk monitor is not implemented.
+No external message, alternate stack, GPU restart or scientific continuation occurred.
+
 ## 2026-09-30 UTC — second Q2 setup stopped at upload admission
 
 After another owner startup, the lead verified the idle single A800, driver,

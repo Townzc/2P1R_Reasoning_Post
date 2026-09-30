@@ -1,0 +1,143 @@
+{
+  "schema": "q2_nocard_preparation_closeout_v1",
+  "date_utc": "2026-09-30",
+  "status": "frozen_inputs_verified_and_offline_install_complete_provider_off",
+  "execution_source_commit": "bba38900778bfb373f2659fde115073c91b2ee24",
+  "scope": "resource transfer, hash verification and offline installation only",
+  "resources": {
+    "mode": "no_card",
+    "cpu_quota_cores": 0.5,
+    "memory_limit_bytes": 2147483648
+  },
+  "inputs": {
+    "files": 246,
+    "bytes": 7513836508,
+    "manifest_sha256": "6b8f4f95e39791e650646a65ac040bc2b05ff4ed0286407846bb80986feab20f",
+    "model_files": 7,
+    "model_directory_exact": true,
+    "all_independently_rehashed": true,
+    "anchors": {
+      "artifact_plan.json": {
+        "bytes": 329946,
+        "sha256": "703ae6b615a4db42af807594c21098f0c40128befcc941630e5129f85fda0b43"
+      },
+      "assets/model_manifest.json": {
+        "bytes": 2149,
+        "sha256": "b73c34c088938242f034f9fca650cee6caca016c27970105848cceb254090d8f"
+      },
+      "build-tools.lock.txt": {
+        "bytes": 361,
+        "sha256": "0aabb7f9673729983d76aa5f8f460e56e9a80070eb5dfb868c446246f670b02f"
+      },
+      "runtime.lock.txt": {
+        "bytes": 419418,
+        "sha256": "40e5f05f2e8e4c59b895fb3bb5fddb11d18d5b7ac0d118013c5f5bc2d86b7302"
+      },
+      "source.tar": {
+        "bytes": 512000,
+        "sha256": "6fea9972ecac36e334b3ae0f550f218e2217bc172614b6e0fda9da7fc3d6be30"
+      }
+    }
+  },
+  "installation": {
+    "python": "3.11.16",
+    "uv": "0.12.17",
+    "runtime_packages": 227,
+    "unique_runtime_and_build_packages": 228,
+    "all_expected_versions_matched": true,
+    "versions": {
+      "torch": "2.11.0",
+      "vllm": "0.23.0",
+      "transformers": "4.56.2",
+      "trl": "1.7.0",
+      "evalplus": "0.3.1",
+      "accelerate": "1.14.0",
+      "datasets": "5.0.0"
+    },
+    "offline_require_hashes": true,
+    "runtime_lock_unchanged": true,
+    "lightweight_imports_passed": [
+      "packaging",
+      "numpy",
+      "safetensors"
+    ],
+    "installation_seconds": 282.724,
+    "gpu_imports_verified": false,
+    "model_load_verified": false,
+    "oom_events": 0,
+    "oom_kills": 0,
+    "system_free_bytes": 15529914368,
+    "data_free_bytes": 24096464896
+  },
+  "transport_history": [
+    {
+      "event": "probe_nonlogin_python_not_on_path",
+      "outcome": "no_probe_executed; corrected to known absolute interpreter"
+    },
+    {
+      "event": "direct_pypi_sustained_transfer_slow",
+      "outcome": "owned process explicitly stopped; 99 completed files retained"
+    },
+    {
+      "event": "exact_file_tuna_mirror",
+      "outcome": "original filename, bytes and SHA retained; provider and mirror provenance preserved"
+    },
+    {
+      "event": "initial_mirror_deadline",
+      "outcome": "exit124; completed files and partials preserved"
+    },
+    {
+      "event": "range_continuation_index_size_limit",
+      "outcome": "exit1 because pydantic-core simple index exceeded helper3MiB cap; no hash mismatch"
+    },
+    {
+      "event": "index_limit_repair",
+      "outcome": "fixed32MiB metadata cap; versions, full-file SHA and finite deadline unchanged"
+    },
+    {
+      "event": "manifest_deployment_omission",
+      "outcome": "index32 helper exited before download because standalone bundle manifest missing; original manifest verified and linked; old log retained"
+    },
+    {
+      "event": "explicit_corrected_transport",
+      "outcome": "232/232 dependency artifacts complete, exit0"
+    },
+    {
+      "event": "nas_chunk_recovery_plan_transfer_timeout",
+      "outcome": "recovery never executed; no uploaded chunks were used as inputs"
+    },
+    {
+      "event": "redundant_browser_upload",
+      "outcome": "stopped at approximately55.05percent after server independently verified all246 inputs; archive upload did not complete; cache retained"
+    }
+  ],
+  "model_work": {
+    "new_optimizer_updates": 0,
+    "new_model_generations": 0,
+    "new_dataset_program_executions": 0,
+    "scientific_profile_complete": false
+  },
+  "compact_evidence": {
+    "files": 1547,
+    "archive_bytes": 1641206,
+    "archive_sha256": "1db2c90bb04466be6616a5372c57797e9bf8c3f18cce06018d6b6c0ea96c93ae",
+    "all_per_file_sha_match": true,
+    "retention": "private independent copy; large inputs/runtime retained on stopped instance"
+  },
+  "shutdown": {
+    "provider_status": "OFF",
+    "normal_shutdown": true,
+    "off_observed_no_later_than_utc": "2026-09-30T04:24:42Z",
+    "temporary_timer_cleared_verified": true,
+    "conservative_power_on_utc": "2026-09-30T03:39:00Z",
+    "actual_power_on_utc": "2026-09-30T03:39:37Z",
+    "conservative_powered_seconds": 2742,
+    "documented_nocard_hourly_cny": 0.1,
+    "compute_proxy_cny": 0.07616666666666667,
+    "storage_excluded": true,
+    "invoice_verified": false,
+    "historical_data_deleted": false,
+    "gpu_started": false
+  },
+  "remaining": "GPU imports, kernel compatibility, model fit, two-update/32-completion profile and fresh-process reload remain untested; owner retains startup."
+}

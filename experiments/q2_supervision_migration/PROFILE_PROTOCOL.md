@@ -68,6 +68,23 @@ if finished early. Never use a shutdown helper that also clears Trash.
 
 ## Prepare and launch after owner startup
 
+September 30 UTC no-card closeout amendment: the owner-started resource preparation
+completed with all 246 frozen inputs independently verified and the unchanged
+runtime installed offline. All 228 runtime/build versions and three lightweight
+imports passed. The announced no-card cap was amended from the earlier proposed
+30 minutes to 60 minutes under the owner's save-time direction; a verified normal
+provider timer bounded it. Actual conservative duration was 2,742 seconds, followed
+by verified provider OFF. The original GPU 60-minute/1,800-second bounds are unchanged.
+See `reports/q2_feasibility_20260929/NOCARD_PREPARATION_20260930.json`.
+The browser archive upload is no longer a prerequisite: it was stopped after direct
+server input verification, and its partial cache was preserved. Reuse the verified
+resident inputs and runtime on the next owner startup; do not repeat downloads or
+installation. GPU imports/model execution remain unverified. Reconcile the original
+broad disk reserve against actual post-install free space before GPU admission;
+any revised incremental reserve/owned-worker monitor must be explicit and ready
+before launch. No new model dose, alternative stack or automatic startup is authorized.
+Earlier preparation amendments below are dated history where superseded.
+
 September30 UTC second-setup amendment: the owner-started offline-transfer
 attempt also closed before installation/model execution. Measured upload was
 0.314MB/s, so the admission watchdog stopped it and normal provider OFF was

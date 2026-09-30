@@ -1,3 +1,28 @@
+# No-card preparation complete — provider OFF
+
+September 30 UTC: all 246 frozen files (7,513,836,508 bytes) were independently
+verified on the same owner-started no-card instance. One serialized offline
+installation completed in 282.7 seconds. All 227 runtime packages and the extra
+build helper passed the 228-package metadata comparison; packaging/numpy/safetensors
+imports passed. No GPU imports, model loads, updates, generations or dataset
+programs ran. The original experimental source remains bba38900778bfb373f2659fde115073c91b2ee24.
+
+Normal provider OFF was verified by 04:24:42 UTC and the temporary timer cleared.
+The conservative 2,742-second no-card window costs about CNY0.0762 at the documented
+0.1/hour, excluding storage; this is not an invoice. All 1,547 compact evidence
+files were copied and independently verified. Large inputs/runtime and historical
+failures remain on the stopped server. The redundant browser upload was stopped
+only after all server inputs passed; that archive itself never finished uploading.
+
+Read reports/q2_feasibility_20260929/NOCARD_PREPARATION_20260930.json and RESULTS.md.
+Private operational paths/next-profile draft are in .local/q2_nocard_20260930/.
+No automatic startup, alternative recipe or scientific grid is queued. GPU
+compatibility and the original two-update/32-completion profile remain untested.
+Before the next owner startup, reconcile post-install disk admission and prepare
+its owned-worker disk monitor; the private amendment is a proposal, not an already
+implemented monitor. The remaining free space was 22.44 GiB data / 14.46 GiB system.
+All previous current-state sections below are dated history.
+
 # Q2 second setup attempt closed — provider OFF; upload pending
 
 September30 UTC: the owner-started second profile attempt stopped at transfer
