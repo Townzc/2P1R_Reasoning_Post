@@ -1,3 +1,14 @@
+## September30 W continuation completed; R continuation active
+
+Read-only audit verified W_future128 contiguous finite-gradient updates,128
+sealed ledgers and2048 backend-linked training outputs. Worker exited0 in1461.94s.
+Independently rehashed all11 final model/tokenizer files and15 terminal Trainer
+files; model hashes agree between terminal checkpoint and export. Retrieved and
+individually verified3213 compact evidence files. Parent proceeded to untouched
+R_future; six updates were verified at07:57:51UTC. No C replay or heldout result.
+Published this engineering/training milestone with preserved failed-attempt dose,
+C missingness, inherited deadlines and no efficacy claim. Exact resume is untested.
+
 ## September30 Q2 W/R continuation launched and verified
 
 Published source d27c6fb9 passed53 authored checks on Linux after all29 transfer

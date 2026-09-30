@@ -1,3 +1,21 @@
+# Latest: W training complete, R training running; evaluation pending
+
+At September30 08:00UTC, W_prefix and W_future have each completed128 updates
+and2,048 training outputs. All W_future batch ledgers and update receipts were
+independently reconciled; its11 final export files match their manifest, and its
+15-file terminal Trainer checkpoint contains identical model weights.3,213
+compact W_future evidence files were retrieved and individually hash verified.
+This is a training milestone, not evidence of efficacy. R_future is running;
+no heldout evaluation has completed. See [milestone receipt](W_FUTURE_MILESTONE.json).
+
+Preserved failures: first attempt5updates/96outputs; C_prefix100updates/1,616
+outputs without a recoverable policy checkpoint. The initialization-scoring
+repair passed its saved-candidate CPU gate; original unknowns remain unchanged.
+Only untouched W/R phases are continuing, using execution source d27c6fb9.
+Repeating C needs the pending owner dose decision; C comparisons remain missing.
+The original09:24:41UTC worker /09:47UTC provider deadlines and cost cap stand.
+All earlier snapshots below are historical.
+
 # Latest: first attempt retained; scoring repair prepared
 
 The first attempt stopped after five updates and96 saved training outputs, before

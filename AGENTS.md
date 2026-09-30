@@ -1,3 +1,15 @@
+# Q2 W training complete; R training active — September30 08:00UTC
+
+W_future128updates/2048outputs completed successfully and all batch ledgers,
+finite-gradient commits,11 final export files and15 terminal Trainer files were
+independently checked. Terminal weights equal final export.3213 compact files
+retrieved/hash verified. Published execution source remains d27c6fb9. Same parent
+continues R_future; no evaluation yet. See reports/q2_screen_20260930/README.md
+and current private handoff. C replay remains unapproved/pending; preserve its
+100 committed updates/1616 outputs and lack of checkpoint. No efficacy conclusion
+or completed full W/C/R screen. Original deadlines/cap and completion-first
+shutdown policy remain; do not duplicate the active queue.
+
 # Q2 W/R continuation running — September30 07:35UTC
 
 The published d27c6fb9 execution is running only untouched W_future/R_future and
