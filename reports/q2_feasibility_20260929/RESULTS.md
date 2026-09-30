@@ -1,4 +1,39 @@
-# Q2 offline feasibility results and prepared first GPU profile
+# Q2 offline feasibility results and first GPU setup attempt
+
+## September 30 UTC: setup stopped before model work
+
+The owner started one A800 80GB instance for the prepared finite engineering
+profile. Hardware admission passed (driver 580.126.09, glibc 2.35, 120 GiB host
+RAM, idle GPU). A normal provider shutdown timer bounded the powered window.
+The execution source was published at
+`bba38900778bfb373f2659fde115073c91b2ee24` before transfer.
+
+Asset staging verified the official dataset and split, then failed fetching the
+first pinned Hugging Face model configuration with `Network is unreachable`.
+The parallel uv bootstrap was terminated immediately. This is one asset/network
+failure and one cancelled bootstrap, not two independent package failures.
+Python 3.11, the locked GPU environment and the profile worker were never
+started. There were **zero model generations, zero optimizer updates, zero
+reference/candidate program executions and no new checkpoint**. No automatic
+retry or alternative stack ran. This failure does not test the scientific idea.
+
+All 24 inventoried source/setup/data/evidence files were independently copied
+and SHA256-verified. The final process inspection found no owned setup/model
+workers and no GPU compute applications. Normal provider OFF was observed by
+01:38:14 UTC; the temporary timer was subsequently cleared. With conservative
+power-on at 01:27:00 UTC, the powered-window bound is 674 seconds (0.1873 A800
+device-hours), or CNY1.494 at the verified CNY7.98/hour. This is a wall-clock cost
+proxy, not an invoice; storage is excluded. Historical volumes remain intact.
+
+Next preparation is local: assemble and hash-check the pinned model and Linux
+dependency artifacts before another owner-started attempt. Network reachability,
+Python-package resolution and a successful model runtime are distinct checks.
+No new scientific result or throughput/cost estimate for W/C/R is available.
+The [compact setup receipt](SETUP_ATTEMPT_20260930.json) and
+[path-redacted original asset error](SETUP_ASSET_FAILURE_20260930.log) preserve
+this failed attempt separately from the earlier exploratory replay.
+
+## September 29 offline milestone (historical)
 
 September 29, 2026. **There is a measurable supervision change to investigate;
 there is not yet a new training result or evidence that weak history harms future

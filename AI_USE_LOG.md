@@ -1,3 +1,17 @@
+## 2026-09-30 UTC — Q2 setup failure and verified shutdown
+
+After owner startup, the lead verified the single A800 identity, idle workers,
+driver, memory, free disk and displayed rate. A read-only agent estimated locked
+artifact sizes. The published source was transferred; a provider normal-shutdown
+timer bounded the powered window. The first Hugging Face config download failed
+with a network-unreachable error, so the parallel official-PyPI uv bootstrap was
+terminated. No locked GPU installation, model worker, model generation, optimizer
+update, benchmark reference/candidate execution or checkpoint followed. The lead
+collected and SHA256-verified all24 inventoried evidence/source/data files,
+inspected actual processes, normally shut down the instance and verified provider
+OFF, then cleared the timer. No historical state was deleted; no automatic server
+retry or external correspondence occurred. Local offline preparation follows.
+
 ## 2026-09-29 — Q2 offline experiment and bounded GPU profile preparation
 
 The owner requested small experiments promptly and authorized a fallback agent.

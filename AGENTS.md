@@ -1,4 +1,18 @@
-# Q2 offline feasibility complete — first GPU profile prepared, not run
+# Q2 first setup attempt closed — provider OFF, September 30 UTC
+
+The owner started the finite one-A800 profile, but asset staging failed before
+model work: the pinned Hugging Face config was unreachable. Parallel uv bootstrap
+was cancelled; no Python3.11/GPU environment or profile worker started. New model
+generations, optimizer updates and benchmark program executions are all zero.
+All24 source/setup/evidence files were copied and hash-verified. Provider normal
+OFF was observed by01:38:14UTC and the temporary timer cleared. Conservative
+674-second powered bound gives CNY1.494 at verified7.98/hour, excluding storage;
+this is not an invoice. Historical server state was not deleted or released.
+Read reports/q2_feasibility_20260929/RESULTS.md. Prepare pinned resources locally
+before requesting another owner startup; no automatic retry, alternate stack or
+W/C/R experiment is queued. Preserve the failed attempt and original profile.
+
+# Q2 offline feasibility complete — first GPU profile prepared, not run (history)
 
 September29: owner requested small experiments and authorized fallback agents.
 Read reports/q2_feasibility_20260929/RESULTS.md and

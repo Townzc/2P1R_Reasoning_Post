@@ -1,0 +1,64 @@
+{
+  "source_commit": "bba38900778bfb373f2659fde115073c91b2ee24",
+  "source_archive_sha256": "6fea9972ecac36e334b3ae0f550f218e2217bc172614b6e0fda9da7fc3d6be30",
+  "status": "setup_failed_before_profile",
+  "phases": [
+    {
+      "name": "asset_staging",
+      "start_unix": 1790732171.137312,
+      "returncode": 1,
+      "end_unix": 1790732198.6437519
+    },
+    {
+      "name": "bootstrap_uv",
+      "start_unix": 1790732171.1367173,
+      "terminated": "shared_failure_or_deadline",
+      "returncode": -15,
+      "end_unix": 1790732199.1590912
+    }
+  ],
+  "model_worker_launched": false,
+  "python311_installed": false,
+  "locked_gpu_environment_installed": false,
+  "new_model_generations": 0,
+  "new_optimizer_updates": 0,
+  "new_reference_or_candidate_executions": 0,
+  "final_checkpoint_created": false,
+  "failure_category": "model_asset_network_unreachable",
+  "parallel_bootstrap": "cancelled_on_asset_failure_not_independent_resolver_failure",
+  "retry": false,
+  "verified_evidence_files": 24,
+  "collected_archive_sha256": "766679349b0317be1ff11b0ee4d595b8ad30cc199a5022f4b1112a73e2afaa8b",
+  "hardware": {
+    "model": "A800-SXM4-80GB",
+    "count": 1,
+    "driver": "580.126.09",
+    "glibc": "2.35",
+    "host_memory_limit_bytes": 128849018880
+  },
+  "closeout": {
+    "provider_status": "OFF",
+    "provider_off_observed_no_later_than_utc": "2026-09-30T01:38:14Z",
+    "timer_cleared_observed_no_later_than_utc": "2026-09-30T01:39:30Z",
+    "power_on_conservative_utc": "2026-09-30T01:27:00Z",
+    "powered_seconds_upper_bound": 674,
+    "hourly_cny": 7.98,
+    "compute_cost_proxy_cny": 1.4940333333333335,
+    "not_invoice": true,
+    "storage_excluded": true,
+    "normal_provider_shutdown": true,
+    "deletion_or_release": false,
+    "new_model_updates": 0,
+    "new_model_generations": 0,
+    "reference_program_executions": 0,
+    "profile_worker_launched": false,
+    "automatic_retry": false
+  },
+  "scientific_result": false,
+  "server_process_snapshot": "no owned setup/profile workers; no GPU compute applications",
+  "limits": [
+    "No import/runtime/throughput result",
+    "Cost proxy excludes storage and is not an invoice",
+    "No automatic repeat or scientific grid"
+  ]
+}
