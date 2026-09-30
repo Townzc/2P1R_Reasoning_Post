@@ -1,3 +1,28 @@
+# Q2 engineering profile complete — provider OFF, September 30 UTC
+
+The original two-update/32-completion profile passed on the owner-started single
+A800. Two complete signed batches, both finite-gradient updates, all 11 exported
+model/tokenizer files and a fresh-process reload were independently verified.
+Reload last-token logit difference was0.0 for one TRAIN prompt; this does not
+verify optimizer/RNG recovery or a scientific hypothesis. No heldout scoring,
+extra seed, scientific W/C/R arm or automatic retry ran. 85 compact evidence files
+are verified locally; large final weights remain on the stopped server.
+
+Normal provider OFF was verified by05:02:38UTC and its timer cleared. This
+cleanup+profile powered-window upper bound is998s/CNY2.2123 excludingstorage,
+not an invoice. Final data usage40.59%, about89.11GiB free. Cleanup removed exactly
+six old training-state files and six orphan partials (69.59GiB); all six old final
+models and scientific/failed records remain. Exact old optimizer/RNG resume is
+no longer available. The original40GiB gate passed without a lower-floor amendment.
+
+Read reports/q2_feasibility_20260929/RESULTS.md and
+ENGINEERING_PROFILE_20260930.json in that directory. Actual source was published
+bba38900778bfb373f2659fde115073c91b2ee24. Owner retains server startup; no next
+science is automatically authorized by engineering success. Specify finite dose,
+comparisons, cost/stop bounds before a new screen. LT002 remains closed and its
+heartbeat paused; never replay old active instructions. Private closeout pointer:
+.local/q2_profile3_20260930/ACTIVE_HANDOFF.md. Earlier states below are history.
+
 # Owner cleanup completed; original Q2 GPU profile follows after admission
 
 September30 UTC: the owner explicitly requested unused server-data cleanup and
@@ -8,7 +33,7 @@ and removed. All six final model weights, scientific outputs/metrics/logs and
 negative/failed results remain. Exact training-state resumption is no longer
 available for those six old runs. Read reports/storage_cleanup_20260930/RESULTS.md.
 
-Data free space is now92.04GiB; the original >=40GiB Q2 admission floor passes.
+Data free space is now92.03GiB; the original >=40GiB Q2 admission floor passes.
 The proposed reduced-disk amendment is unnecessary and was not adopted. All246
 Q2 inputs were rehashed; installed environment is retained. The already authorized
 2-update/32-completion engineering profile may follow after current hardware,

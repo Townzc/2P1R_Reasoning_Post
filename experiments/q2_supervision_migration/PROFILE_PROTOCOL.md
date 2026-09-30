@@ -1,5 +1,19 @@
 # Q2 first engineering profile (not the three-branch scientific screen)
 
+## Execution outcome — September 30 UTC
+
+The unchanged original source completed exactly two updates/32 TRAIN completions
+and one fresh-process model/tokenizer reload. Both workers exited0 in a combined
+103.92s. All batches, update receipts, compact outputs and final-model hashes were
+independently reconciled. Provider OFF verified by05:02:38UTC; timer cleared.
+See reports/q2_feasibility_20260929/ENGINEERING_PROFILE_20260930.json and RESULTS.md.
+The engineering-only gate passes; W/C/R science and optimizer resume remain untested.
+This window also included owner-authorized storage cleanup; data free space rose
+to92.03GiB before the profile and remained about89.11GiB after it. The original
+40GiB admission floor passed; the proposed lower-floor amendment was not used.
+The protocol and prior preparation amendments below are dated historical plans,
+not instructions to repeat this completed profile or restart the server.
+
 2026-09-29. The owner requested prompt small-experiment feasibility work and
 allowed an agent to audit a fallback. The main idea remains supervision history
 under a base-to-union code-test migration. No new GPU work is claimed here.
@@ -71,7 +85,7 @@ if finished early. Never use a shutdown helper that also clears Trash.
 September30 UTC cleanup amendment: the owner requested deletion of unused server
 data and started the single-A800 host. Completed math-run optimizer/RNG states
 were pruned with independent identity checks; final weights/scientific records
-remain. Data free space is92.04GiB, so the original >=40GiB floor now passes.
+remain. Data free space is92.03GiB, so the original >=40GiB floor now passes.
 The previously proposed lower post-install gate is unnecessary and not adopted.
 All246 frozen Q2 files were rehashed after cleanup; no model work was done by
 cleanup. Continue only the originally authorized finite engineering profile after

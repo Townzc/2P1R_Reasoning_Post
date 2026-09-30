@@ -1,3 +1,28 @@
+## 2026-09-30 UTC — original finite Q2 GPU profile completed
+
+After the authorized cleanup restored92.03GiB free space, the lead reused the
+fully rehashed frozen inputs and already installed environment. Current hardware,
+price, idle workers and a normal provider timer were verified. The unchanged
+published source ran exactly two updates and32 TRAIN completions, then exported
+and reloaded model/tokenizer in a fresh process. Both launchers exited0; gradients
+were finite and the fixed-prompt logit difference was0.0. No heldout scoring,
+scientific branch, extra seed or model retry ran. No subagent was used this turn.
+
+The lead independently verified34 signed batch/sample records, joined every
+saved raw/token/verdict record, checked both update commits, and rehashed all11
+exported model files plus the probe/reference artifacts. All85 compact files were
+copied and verified; large weights remain on-server. One read-only inventory used
+an unavailable PATH python3 and was corrected to the pinned absolute interpreter;
+this produced no model work. Actual GPU/CPU worker inspection showed no work
+remaining before normal shutdown. Provider OFF was verified by05:02:38UTC, timer
+cleared. Conservative998s powered proxy CNY2.2123 includes cleanup/collection and
+excludesstorage; it is not an invoice. Earlier failed setup costs remain recorded.
+
+Only local analysis and reporting followed. The profile proves engineering
+execution of this small dose, not the Q2 scientific hypothesis, optimizer resume
+or a measured full-study budget. No new scientific continuation or external
+message was sent. Old LT002 remains closed with its heartbeat paused.
+
 ## 2026-09-30 UTC — owner-authorized disk cleanup
 
 The lead inspected the current single-A800 host, idle processes, open file handles

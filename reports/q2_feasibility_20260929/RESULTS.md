@@ -1,4 +1,61 @@
-# Q2 offline feasibility and verified no-card preparation
+# Q2 feasibility: two-update GPU profile passed; provider OFF
+
+## September 30 UTC: engineering profile completed
+
+The original published source `bba38900778bfb373f2659fde115073c91b2ee24` ran
+unchanged on the owner-started single A800 80GB, after the separately authorized
+[storage cleanup](../storage_cleanup_20260930/RESULTS.md). The original >=40 GiB
+admission floor passed; the proposed reduced disk floor was not adopted. All
+246 frozen inputs were rehashed, and the installed locked environment was reused.
+
+| Verified item | Observed result |
+| --- | --- |
+| Training dose | Exactly 2 full-model union-reward updates and 32 completions |
+| Sampled data | 4 TRAIN tasks, 8 completions each; 8 TRAIN reference tasks prepared |
+| Batch accounting | 2 sealed batches; all 34 signed intent/sample records verified; no ambiguous work |
+| Finite gradients | Both pre-update checks passed, 338 gradient tensors each |
+| Train + fresh reload launchers | 95.52 + 8.40 = 103.92 seconds, both exit 0 |
+| PyTorch training allocator peak | 33.90 GiB allocated / 35.56 GiB reserved |
+| Fresh-process model/tokenizer reload | Passed; maximum last-token logit difference 0.0 on one TRAIN prompt |
+| Held-out evaluation | None |
+
+Allocator measurements are scoped to the training worker and exclude other
+allocators; they are not the full-card peak. The two batch generation/scoring
+intervals were 10.38 and 7.88 seconds. Four groups had union-pass counts of 6/8,
+7/8, 4/8 and 4/8. All 32 had matching base/extra verdicts: 21 pass/pass and
+11 fail/fail. **These are training observations, not benchmark accuracy or a
+scientific comparison.** In particular, no base-pass/extra-fail completion occurred
+in this tiny profile. No conclusion about history harm, recovery, novelty or
+expected W/C/R effect follows from it.
+
+The complete model/tokenizer export contains 11 files. Every file, including the
+3,087,467,144-byte weight file, was independently rehashed against its manifest.
+Probe and reference-cache hashes also matched. All 85 compact evidence files
+were copied locally and independently verified; large weights remain on the
+server. This verifies a fresh-optimizer weight fork, not optimizer/RNG/sampler
+resume. The reload check covers one TRAIN prompt, not a general equivalence proof.
+The saved generation lengths are 19–520 tokens, below the 640 cap; the TRL reward
+hook did not expose individual finish reasons. The known EvalPlus inner-FAIL
+exception ambiguity remains a limitation. Full logs, verdicts and prior failures
+are retained in the private evidence bundle.
+
+No owned workers remained and the GPU reported 0 MiB before shutdown. Normal
+**provider OFF was verified by 05:02:38 UTC**, and the temporary timer was cleared.
+The conservative 04:46:00–05:02:38 powered window is 998 seconds (0.2772 A800
+hours), including cleanup and collection. At the verified CNY7.98/hour it is a
+**CNY2.2123 compute upper-bound proxy**, excluding storage, not an invoice or an
+A100-equivalent measure. The final provider data-disk display was 40.59%, with
+about 89.11 GiB free before the small evidence archive. Earlier setup failures
+and their costs remain recorded below; no allowance is reset.
+
+The engineering gate now passes. The next scientific step remains a separately
+specified, costed W/C/R screen with identical future union supervision and fresh
+optimizers. This profile does not establish a sufficient history dose or a
+reliable full-study duration. No scientific grid, new seed, automatic restart or
+extra evaluation is queued. See the [compact result and checkpoint audit](ENGINEERING_PROFILE_20260930.json).
+
+All earlier sections below are dated history; current readiness and server state
+are given above.
 
 ## September 30: server inputs and offline installation are ready
 
