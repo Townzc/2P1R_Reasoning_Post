@@ -30,7 +30,7 @@ class CompletionPlanTests(unittest.TestCase):
                                              'eval_C_prefix', 'eval_C_future', 'eval_R_future'])
         self.assertEqual(execution['dose'], {'optimizer_updates': 384, 'training_completions': 6144,
             'evaluation_completions': 3072, 'total_completions': 9216, 'final_checkpoints': 3})
-        self.assertEqual(execution['execution_run_id'], scientific['run_id'] + '__controls_completion_1')
+        self.assertEqual(execution['execution_run_id'], scientific['run_id'] + '__controls_completion_2')
         self.assertFalse(execution['cross_process_resume'])
         self.assertFalse(execution['automatic_retry'])
 
@@ -167,11 +167,11 @@ class CompletionAdmissionTests(unittest.TestCase):
     def test_runtime_flags_forbid_worker_mode_replay_and_old_suite_repair(self):
         flags = argparse.Namespace(execute_screen=True, recover_initialization_timeout=True,
             retain_evaluation_unknowns=True, guarded_scoring_v2=True, durable_rollout_evidence=True,
-            execution_attempt='controls_completion_1', recover_suite_watchdog=False,
+            execution_attempt='controls_completion_2', recover_suite_watchdog=False,
             _worker=False, phase=None, worker_deadline_epoch=None)
         parent.verify_flags(flags)
         for key, value in [('recover_suite_watchdog', True), ('_worker', True), ('phase', 'W_prefix'),
-                           ('worker_deadline_epoch', 5), ('execution_attempt', 'controls_completion_2'),
+                           ('worker_deadline_epoch', 5), ('execution_attempt', 'controls_completion_unauthorized'),
                            ('guarded_scoring_v2', False), ('durable_rollout_evidence', False)]:
             changed = copy.copy(flags)
             setattr(changed, key, value)

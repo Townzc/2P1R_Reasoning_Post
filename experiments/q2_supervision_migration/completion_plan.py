@@ -11,7 +11,7 @@ from . import screen_plan as screen
 from .contracts import identity_hash
 from .gpu_profile import ProfileError
 
-ATTEMPT = 'controls_completion_1'
+ATTEMPT = 'controls_completion_2'
 PHASES = ('C_prefix', 'C_future', 'R_future', 'eval_C_prefix', 'eval_C_future', 'eval_R_future')
 POWERED_CAP_SECONDS = 10800
 SHUTDOWN_RESERVE_SECONDS = 600

@@ -112,11 +112,19 @@ class CheckpointInventoryTests(unittest.TestCase):
     def test_file_changed_during_hashing_is_rejected(self):
         original = rr.hashlib.sha256
         target = self.cp / 'model.safetensors'
+        original_model = target.read_bytes()
+        mutated = False
         class MutatingDigest:
             def __init__(self): self.inner = original()
             def update(self, data):
+                nonlocal mutated
                 self.inner.update(data)
-                target.write_bytes(b'concurrent save changed this file')
+                # Mutate once while the model itself is hashed, not earlier
+                # while commit receipts are hashed. Do not depend on filesystem
+                # timestamp granularity for repeated identical writes.
+                if not mutated and data == original_model:
+                    target.write_bytes(original_model + b' concurrent change')
+                    mutated = True
             def hexdigest(self): return self.inner.hexdigest()
         with mock.patch.object(rr.hashlib, 'sha256', side_effect=MutatingDigest):
             with self.assertRaisesRegex(ProfileError, 'changed'):

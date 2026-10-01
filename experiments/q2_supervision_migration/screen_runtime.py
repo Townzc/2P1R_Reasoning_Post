@@ -453,7 +453,8 @@ def main(argv=None):
     split=pinned_json(args.split_json,args.split_sha256)
     plan=spec.validate_plan(pinned_json(args.plan_json,args.plan_sha256),split)
     args.plan_identity=identity_hash(plan)
-    if args.execution_attempt and args.execution_attempt!='controls_completion_1':
+    from .completion_plan import ATTEMPT
+    if args.execution_attempt and args.execution_attempt!=ATTEMPT:
         raise ProfileError('unapproved execution attempt')
     if args.execution_attempt and not (args._worker and args.guarded_scoring_v2 and args.durable_rollout_evidence and args.recover_initialization_timeout):
         raise ProfileError('completion must use its bounded parent and all evidence guards')
