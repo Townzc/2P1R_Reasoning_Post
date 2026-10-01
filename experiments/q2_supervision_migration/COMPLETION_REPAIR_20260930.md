@@ -44,12 +44,63 @@ Local replay of five saved guard metadata records verifies the classification
 change: three complete PASS records stay PASS; two attributable candidate FAILs
 previously censored by the prefix rule are now FAIL with warnings. The three/two
 outcome disagreement remains unresolved. This replay did not execute candidate
-code or change any historical reward. Full Linux scoring validation is pending;
-local unit tests do not establish that the runtime timing problem is fixed.
+code or change any historical reward. The fixed Linux validation below is now complete; neither the local tests nor
+this finite sample establishes universal runtime stability.
 
 Any server diagnostic must preserve the original instance and fixed session
 cost/deadline bounds; do not renew a closed budget or extend time silently. This
 engineering amendment alone does not admit model training.
+
+## Completed Linux validation, October 1
+
+Execution source: `d347a3c8ab4360666925a810dbd58174d1fbb14b`.
+160 authored checks passed locally and on the original Linux runtime, including
+real fork, SIGALRM and killed-child timing-record preservation. The collect-all
+preflight finished in 373.04 seconds with 140/140 items and no blockers:
+
+| Check | Observed result |
+|---|---|
+| Previously known paired rewards | 90/90 unchanged |
+| All old saved outputs | 96/96 resolved |
+| Known W sentinels | 32/32 unchanged |
+| Exact saved R599 failure | FAIL in all 3 fixed diagnoses; prefix warnings retained |
+| Exact saved C260 failure | FAIL in all 3 fixed diagnoses |
+| Authored controls and inventory | Passed |
+
+The three R599 diagnoses agreed on binary FAIL but ended after 10, 14 and 7
+observed tests, respectively. Binary agreement is not stable per-test timing.
+
+The separate eight-cell timing probe finished in 167.74 seconds. Seven executions
+hit an attributable per-test timeout near 5 seconds; measured CPU and wall time
+were nearly equal. One original-scorer execution was cut off after 34 passing
+tests at its approximately 62-second outer bound, with its next test incomplete.
+There were no recorder failures. This supports the distinction between a current
+attributable failure and outer censoring. It does not establish the cause of every
+historical disagreement: previous PASS records remain, and the measurement wrapper
+changes execution. Nothing was repeatedly run until a desired verdict appeared.
+
+The machine summary's `reward_semantics_unchanged` means the configured test/oracle,
+per-test limits and reward rule were retained and the finite known-score checks
+matched. It is not proof that every timing-sensitive program has identical scores
+across workers or days. The admission policy intentionally changed: historical
+prefix agreement no longer overrides a current attributable outcome. The separate
+timing probe cannot supply rewards or authorize model work.
+
+All 430 compact artifacts were collected and hash-verified; all 37 files in the
+three old checkpoint sets were independently rehashed. No owned CPU/GPU workers
+remained. The same instance was normally shut down, provider OFF verified, and the
+old fallback cleared only afterward. Zero training updates and zero model outputs
+were added. See [compact closeout](../../reports/q2_engineering_repair_20261001/CLOSEOUT.json),
+[regression summary](../../reports/q2_engineering_repair_20261001/DIAGNOSTIC_SUMMARY.json)
+and [timing observations](../../reports/q2_engineering_repair_20261001/TIMING_PROBE_SUMMARY.json).
+
+The next scientific step remains the already specified fresh C_prefix128,
+C_future128 and R_future128 with their three evaluations, reusing old W. It is
+not an exact resume of C100/R25. The prior 103–123 minute estimate does not fit
+the remaining original October 1 window with collection reserve, so this CPU
+repair did not start that queue or renew its budget. The new diagnostic gate
+passed, but live-model completion and cross-process RNG recovery remain untested.
+No conclusion about the hypothesis follows from this engineering success.
 
 ---
 

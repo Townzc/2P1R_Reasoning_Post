@@ -1912,3 +1912,19 @@ claimed. Independently rehashed 60 saved compact artifacts and classified five
 saved metadata records without executing candidates: three PASS, two attributed
 FAIL, still inconsistent across executions. No historical scores were rewritten.
 Local tests passed; actual isolated Linux timing validation remains pending.
+
+## 2026-10-01: saved-output Linux repair validation closed
+
+Executed published source d347a3c8 on the same original instance within its
+unchanged October1 cap. All160 authored Linux tests and all140 diagnostic items
+completed; known90/90 pairs and32/32 W sentinels matched; old96/96 outputs resolved.
+R599/C260 each had3 fixed attributable FAILs, with historical prefix warnings
+preserved. Eight timing-probe cells retained7 per-test timeouts and1 outer-censor;
+near-equal CPU/wall does not prove all historical disagreements resolved.
+No new training or model generation. Collected/hash-verified430 compact files and
+independently rehashed37 checkpoint files, with no owned workers remaining.
+Normal provider OFF verified by 2026-10-01T22:21:09.767098+00:00; timer cleared after OFF.
+Engineering reopen compute proxy CNY2.032,
+not a provider invoice, storage excluded; original budget not reset. Gate passed
+on this finite set only; cross-process vLLM resume remains unverified. Private
+bilingual Office Hour briefs updated; no external message sent.

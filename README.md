@@ -1,19 +1,19 @@
-# October 1: scoring engineering reopened; no new model dose
+# October 1: scoring repair validated on saved fixtures; provider OFF
 
-The owner requested engineering repair before judging the research direction.
-Single diagnostic failures must not prevent collection of other independent
-checks. Historical prefix conflicts are warnings, not replacements for current
-attributable verdicts. Keep uncertain scores explicit and preserve hard resource,
-transport, artifact-identity and optimizer-commit boundaries.
+160 authored checks passed locally and on the original Linux runtime. The complete
+140-item saved-output preflight passed: all 90 known score pairs and 32 W sentinels
+matched, all 96 old outputs resolved, and the two failure fixtures each produced
+three attributable FAILs. Historical prefix conflicts remain visible warnings.
+This is finite engineering evidence, not universal runtime equivalence or a new
+scientific result. The eight-cell timing probe retained seven per-test failures
+and one outer-censored execution; earlier contradictory outcomes are preserved.
 
-The repair separates diagnostic completion from model admission, collects all
-saved-output checks within the shared deadline, and inspects the remaining batch
-when a healthy scorer returns UNKNOWN. A separate fixed CPU timing probe records
-wall/CPU/signal/resource observations; its outputs never become rewards. Local
-checks and saved-metadata replay are complete; real Linux validation is pending.
-No new training, model generations or benchmark scores have been produced.
-See experiments/q2_supervision_migration/COMPLETION_REPAIR_20260930.md for the
-October 1 amendment. Earlier dated state entries below remain history.
+All 430 compact artifacts and 37 old checkpoint files were verified before normal
+provider OFF. Zero new model outputs/updates. W/R, W/C and C/R remain missing.
+The original October 1 budget/deadline was not extended. Cross-process vLLM resume
+is still unverified; no automatic replay or server restart follows this record.
+See experiments/q2_supervision_migration/COMPLETION_REPAIR_20260930.md and
+reports/q2_engineering_repair_20261001/CLOSEOUT.json. Earlier entries are history.
 
 # Q2 paused — final completion gate failed, provider OFF
 
