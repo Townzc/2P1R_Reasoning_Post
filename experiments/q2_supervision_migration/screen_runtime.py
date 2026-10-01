@@ -100,6 +100,10 @@ def start_scorer(args,selected):
     proc.start();other.close()
     ready=receive(conn,min(180,remaining(args)),time.monotonic()+remaining(args))
     if not ready.get('ready'): raise ProfileError('scorer did not initialize')
+    if getattr(args,'guarded_scoring_v2',False):
+        if (ready.get('cpu_placement') or {}).get('allowed_after') != [0]:
+            raise ProfileError('guarded scorer lacks frozen CPU placement')
+        durable_json(Path(args.out)/args.phase/'scoring_cpu_placement.json',ready['cpu_placement'])
     return conn,proc,ready['prompts']
 
 

@@ -76,12 +76,18 @@ def load_references(root):
 def scoring_process(conn,data_path,data_sha,reference_root,selected,fast_check=False,recover_initialization=False, recover_suite_watchdog=False,guarded_scoring_v2=False):
     try:
         os.environ['CUDA_VISIBLE_DEVICES']=''
+        if guarded_scoring_v2:
+            from .scoring_cpu import pin_scoring_cpu
+            cpu_placement = pin_scoring_cpu()
+        else:
+            cpu_placement = None
         problems=load_problems(data_path,data_sha);refs,manifest=load_references(reference_root)
         if manifest['data_sha256']!=data_sha: raise ProfileError('reference data identity mismatch')
         if not set(selected)<=set(problems) or not set(selected)<=set(refs):
             raise ProfileError('missing frozen reference task')
         from evalplus.eval import untrusted_check
-        conn.send({'ready':True,'prompts':{k:problems[k]['prompt'] for k in selected}})
+        conn.send({'ready':True,'prompts':{k:problems[k]['prompt'] for k in selected},
+                   'cpu_placement':cpu_placement})
         while True:
             request=conn.recv()
             if request is None: return

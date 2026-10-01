@@ -38,6 +38,8 @@ def saved_sample(phase, batch_index, index):
 
 def worker(a):
     os.environ['CUDA_VISIBLE_DEVICES']=''
+    from .scoring_cpu import pin_scoring_cpu
+    durable_json(Path(a.out)/'scoring_cpu_placement.json',pin_scoring_cpu())
     from .scoring_guard_v2 import diagnose_timeout
     from evalplus.eval import untrusted_check
     out=Path(a.out);problems=load_problems(a.data_json,a.data_sha256)
