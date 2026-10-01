@@ -247,7 +247,8 @@ class EvaluationUnknownTests(unittest.TestCase):
                     sr.score_batch(args,batch,['a','b'],[[1],[2]],['Mbpp/1','Mbpp/2'],mock.Mock(),'union',['eos']*2)
             rows=sr.read_records(batch.directory/'batch.jsonl')
             self.assertEqual(rows[1]['extra']['status'],'timeout')
-            self.assertEqual(rows[2]['base']['status'],'missing')
+            self.assertEqual(rows[2]['base']['status'],'pass')
+            self.assertEqual(rows[2]['extra']['status'],'timeout')
 
 
 class ParentTests(unittest.TestCase):

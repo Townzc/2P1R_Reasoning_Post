@@ -5,7 +5,10 @@ EvalPlus test body, per-test timers, oracle and memory guard. Only its two
 exception handlers gain observations, made *after* an exception has occurred.
 There is no tracing or timing instrumentation inside a candidate call. A bounded
 outer watchdog and the existing initialization timer are separate safety limits;
-exhaustion or contradictory observations remain unknown, never reward zero.
+exhaustion or invalid current observations remain unknown, never reward zero.
+Historical passing-prefix conflicts are reported separately from the current
+execution verdict. They do not erase an attributable current candidate failure;
+the comparison gate still evaluates repeat stability and known reward agreement.
 
 Diagnostic verdicts do not edit historical records or authorize training/replay.
 """
@@ -159,20 +162,35 @@ def _exception_event(exc, scope, index, input_hashes, evaluator_file, assertion_
 
 def admit_diagnosis(*, original_details, observed, test_count, upstream_status,
                     child_exitcode, exception_events, observer_error=False):
-    """Pure fail-closed admission; useful for tests without executing any candidate."""
+    """Classify one execution; keep historical consistency as separate evidence.
+
+    A previous outer timeout is not a known PASS label. Reproducing its entire
+    passing prefix is therefore not necessary to attribute a new, observed FAIL.
+    This does not authorize training, choose among repetitions or relabel history.
+    """
     original = list(original_details)
     observations = list(observed)
     valid_bits = all(type(x) in (bool, int) and x in (0, 1) for x in original + observations)
-    prefix_consistent = bool(valid_bits and len(original) <= len(observations) <= test_count
-                             and observations[:len(original)] == original and all(original))
+    valid_observations = bool(type(test_count) is int and test_count > 0 and valid_bits
+                              and len(original) <= test_count and all(original)
+                              and len(observations) <= test_count)
+    overlap = min(len(original), len(observations))
+    prefix_conflict = bool(valid_observations and observations[:overlap] != original[:overlap])
+    prefix_consistent = bool(valid_observations and len(original) <= len(observations)
+                             and not prefix_conflict)
     result = {"verified_suite_verdict": None, "status": "timeout",
-              "prefix_consistent": prefix_consistent, "admission_reason": "unresolved"}
+              "prefix_consistent": prefix_consistent,
+              "historical_prefix_conflict": prefix_conflict,
+              "historical_prefix_complete": len(observations) >= len(original),
+              "historical_consistency_is_admission_requirement": False,
+              "historical_records_changed": False,
+              "admission_reason": "unresolved"}
     if observer_error:
         result["admission_reason"] = "observer_failed"
     elif child_exitcode != 0:
         result["admission_reason"] = "child_did_not_exit_normally"
-    elif not prefix_consistent:
-        result["admission_reason"] = "contradictory_or_incomplete_previous_prefix"
+    elif not valid_observations:
+        result["admission_reason"] = "invalid_current_or_historical_observations"
     elif upstream_status == "pass" and len(observations) == test_count and all(observations) and not exception_events:
         result.update(verified_suite_verdict="pass", status="pass", admission_reason="complete_original_suite")
     elif upstream_status == "fail":
@@ -182,7 +200,7 @@ def admit_diagnosis(*, original_details, observed, test_count, upstream_status,
             and tests[0].get("input_sha256")
             and tests[0].get("classification") in _ATTRIBUTABLE_TEST):
             result.update(verified_suite_verdict="fail", status="fail", admission_reason=tests[0]["classification"])
-        elif (not observations and not original and not tests and len(exception_events) == 1
+        elif (not observations and not tests and len(exception_events) == 1
               and exception_events[0].get("scope") == "outer"
               and exception_events[0].get("classification") in _ATTRIBUTABLE_INIT):
             result.update(verified_suite_verdict="fail", status="fail", admission_reason=exception_events[0]["classification"])

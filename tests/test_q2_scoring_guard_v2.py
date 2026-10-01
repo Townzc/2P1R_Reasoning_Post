@@ -27,12 +27,34 @@ class AdmissionTests(unittest.TestCase):
             with self.subTest(changed=changed):
                 self.assertIsNone(admit(**changed)["verified_suite_verdict"])
 
-    def test_recovered_failure_before_original_pass_prefix_is_unknown(self):
+    def test_attributed_failure_before_old_prefix_keeps_verdict_and_warning(self):
         event = dict(scope="test", test_index=1, input_sha256="frozen",
                      classification="candidate_test_timeout")
         result = admit(observed=[1, 0], upstream_status="fail", exception_events=[event])
         self.assertFalse(result["prefix_consistent"])
+        self.assertTrue(result["historical_prefix_conflict"])
+        self.assertEqual(result["verified_suite_verdict"], "fail")
+        self.assertFalse(result["historical_records_changed"])
+
+    def test_prefix_warning_does_not_resolve_incomplete_or_unattributed_run(self):
+        for events in ([], [dict(scope="test", test_index=1, input_sha256="frozen",
+                                classification="harness_or_unattributed_exception")]):
+            result = admit(observed=[1, 0], upstream_status="fail", exception_events=events)
+            self.assertTrue(result["historical_prefix_conflict"])
+            self.assertIsNone(result["verified_suite_verdict"])
+        result = admit(observed=[1], upstream_status=None)
+        self.assertFalse(result["prefix_consistent"])
+        self.assertFalse(result["historical_prefix_conflict"])
         self.assertIsNone(result["verified_suite_verdict"])
+
+    def test_invalid_history_or_current_bits_cannot_be_promoted(self):
+        event = dict(scope="test", test_index=1, input_sha256="frozen",
+                     classification="candidate_test_timeout")
+        for changed in (dict(original_details=[1, 0]), dict(original_details=[1]*4),
+                        dict(test_count=0), dict(test_count=True), dict(observed=[1, "0"])):
+            args = dict(observed=[1, 0], upstream_status="fail", exception_events=[event])
+            args.update(changed)
+            self.assertIsNone(admit(**args)["verified_suite_verdict"])
 
     def test_attributable_failure_after_prefix(self):
         for classification in sg._ATTRIBUTABLE_TEST:
@@ -48,11 +70,13 @@ class AdmissionTests(unittest.TestCase):
                 self.assertIsNone(admit(observed=[1, 1, 0], upstream_status="fail",
                                         exception_events=events)["verified_suite_verdict"])
 
-    def test_initialization_failure_requires_no_previous_or_current_tests(self):
+    def test_initialization_failure_requires_no_current_tests(self):
         event = dict(scope="outer", classification="candidate_initialization_exception")
         args = dict(observed=[], upstream_status="fail", exception_events=[event])
         self.assertEqual(admit(original_details=[], **args)["verified_suite_verdict"], "fail")
-        self.assertIsNone(admit(**args)["verified_suite_verdict"])
+        diagnosed = admit(**args)
+        self.assertEqual(diagnosed["verified_suite_verdict"], "fail")
+        self.assertFalse(diagnosed["prefix_consistent"])
         self.assertIsNone(admit(original_details=[], observed=[0], upstream_status="fail",
                                 exception_events=[event])["verified_suite_verdict"])
 

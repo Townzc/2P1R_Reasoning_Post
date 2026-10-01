@@ -54,7 +54,9 @@ def verify_gate(gate_dir, expected_sha256, source_commit, plan_identity):
     complete = pinned_json(gate / 'preflight_complete.json', expected_sha256)
     receipt_path = gate / 'cpu_launcher_receipt.json'
     receipt = json.loads(receipt_path.read_text())
-    if (complete.get('passed') is not True or complete.get('reward_semantics_unchanged') is not True or
+    if (complete.get('schema') != 2 or complete.get('diagnostics_completed') is not True or
+            complete.get('model_admitted') is not True or complete.get('blockers') != [] or
+            complete.get('passed') is not True or complete.get('reward_semantics_unchanged') is not True or
             complete.get('source_commit') != source_commit or complete.get('plan_sha256') != plan_identity or
             type(complete.get('new_generations')) is not int or complete['new_generations'] != 0 or
             type(complete.get('optimizer_updates')) is not int or complete['optimizer_updates'] != 0 or

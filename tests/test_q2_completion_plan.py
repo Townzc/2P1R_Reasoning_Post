@@ -84,7 +84,8 @@ class CompletionAdmissionTests(unittest.TestCase):
         self.commit = 'a' * 40
 
     def gate(self, **changes):
-        body = {'passed': True, 'reward_semantics_unchanged': True,
+        body = {'schema': 2, 'diagnostics_completed': True, 'model_admitted': True,
+                'blockers': [], 'passed': True, 'reward_semantics_unchanged': True,
                 'source_commit': self.commit, 'plan_sha256': self.identity,
                 'new_generations': 0, 'optimizer_updates': 0,
                 'original_saved_outputs': 96, 'previous_known_pairs': 90, 'matched_pairs': 90,
@@ -102,7 +103,8 @@ class CompletionAdmissionTests(unittest.TestCase):
 
     def test_gate_requires_pinned_success_and_same_source_plan_semantics(self):
         self.assertTrue(parent.verify_gate(self.root, self.gate(), self.commit, self.identity)['passed'])
-        for update in [{'passed': False}, {'reward_semantics_unchanged': False}, {'source_commit': 'b' * 40},
+        for update in [{'schema': 1}, {'diagnostics_completed': False}, {'model_admitted': False},
+                       {'blockers': ['unresolved']}, {'passed': False}, {'reward_semantics_unchanged': False}, {'source_commit': 'b' * 40},
                        {'plan_sha256': 'b' * 64}, {'new_generations': 1}, {'optimizer_updates': False}]:
             with self.assertRaises(ProfileError):
                 parent.verify_gate(self.root, self.gate(**update), self.commit, self.identity)

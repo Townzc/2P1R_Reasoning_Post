@@ -1,3 +1,58 @@
+# October 1 engineering amendment: collect evidence before deciding
+
+The owner reopened engineering work after review found an unnecessarily strong
+passing-prefix gate and premature diagnostic exits. This amendment supersedes
+the historical prefix-matching and first-item-exit rules below; it does not
+change test inputs/oracles, individual test timers, reward formulas or the
+scientific training/evaluation queue. Historical outputs remain immutable.
+
+- Classify each current execution from its observed outcome and exception
+  attribution. A saved outer-timeout prefix is not a known whole-suite PASS.
+  Preserve prefix conflicts as metadata warnings. Killed, incomplete or
+  unattributed executions remain UNKNOWN; they cannot produce reward zero.
+- Run five authored controls, all 96 saved outputs, 32 known W sentinels and
+  fixed three repeats of both failure fixtures. Collect per-item intent/result
+  records despite isolated failures. The 1,200-second shared hard limit remains;
+  the parent reports partial coverage if its worker is interrupted. No item is
+  retried and no passing repetition is selected.
+- `diagnostic_summary.json` records `diagnostics_completed` independently of
+  `model_admitted`. A schema-2 `preflight_complete.json` is emitted only with
+  full known-reward agreement, all unknown fixtures resolved consistently and
+  exact coverage. The model parent requires both flags and an empty blocker
+  list, bound to the same published source and reference identities.
+- In live scoring, a complete UNKNOWN reply leaves the channel usable. Inspect
+  the rest of that already generated batch before rejecting incomplete training
+  rewards. Save request identity and raw reply before parsing. On transport or
+  protocol failure, close the connection; never assign a late reply to the next
+  sample. This does not implement automatic scorer restart or regenerate output.
+- Periodic/confirmed-failure checkpoint preservation remains in place. Exact
+  cross-process vLLM continuation is still unverified; old C100/R25 cannot be
+  declared resumed merely because a partial checkpoint exists.
+
+`timing_probe` independently crosses original/guarded scoring with direct and
+fixture-first process histories, two fixed observations per combination. Every
+cell starts a fresh interpreter; eight cells have a 210-second individual and
+1,800-second total maximum, also bounded by an absolute deadline. A failed cell
+is recorded and other predeclared cells may continue. The probe observes timer
+boundaries, process CPU/wall times, signal state, CPU placement and visible
+resource quotas. Its measurement wrapper changes the observation path: results
+are diagnostic only, cannot admit training, and do not prove uninstrumented
+reward equivalence. No-card mode's previously observed 0.5-CPU allocation is not
+a substitute for the original host's timed scoring environment.
+
+Local replay of five saved guard metadata records verifies the classification
+change: three complete PASS records stay PASS; two attributable candidate FAILs
+previously censored by the prefix rule are now FAIL with warnings. The three/two
+outcome disagreement remains unresolved. This replay did not execute candidate
+code or change any historical reward. Full Linux scoring validation is pending;
+local unit tests do not establish that the runtime timing problem is fixed.
+
+Any server diagnostic must preserve the original instance and fixed session
+cost/deadline bounds; do not renew a closed budget or extend time silently. This
+engineering amendment alone does not admit model training.
+
+---
+
 # Final finite control completion: frozen repair and admission
 
 September30,2026. The owner explicitly authorized startup if necessary and a final

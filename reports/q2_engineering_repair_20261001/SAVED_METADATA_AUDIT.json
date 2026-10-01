@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "scope": "offline classification of saved exception metadata only; no candidate execution or reward relabelling",
+  "verified_immutable_files": 60,
+  "guard_source_sha256": "63f6709e535096582a221f4cdc66d7c76ba2fbc9d14169c6a4290b43958a13b7",
+  "cases": [
+    {
+      "record": "q2-completion-20261001-v2/timing_audit/guard_0.json",
+      "record_sha256": "fc782b7e7deed59df82b9170c33d4aafa8eeedb64c716b473ea5f080a0c0312f",
+      "previous_verified_verdict": "pass",
+      "new_metadata_classification": {
+        "verified_suite_verdict": "pass",
+        "status": "pass",
+        "prefix_consistent": true,
+        "historical_prefix_conflict": false,
+        "historical_prefix_complete": true,
+        "historical_consistency_is_admission_requirement": false,
+        "historical_records_changed": false,
+        "admission_reason": "complete_original_suite"
+      },
+      "observed_tests": 88
+    },
+    {
+      "record": "q2-completion-20261001-v2/timing_audit/guard_1.json",
+      "record_sha256": "c3c9444abe0d344c05474e8e7a795b056080127e3bc751e0d5c7414c3f4331a0",
+      "previous_verified_verdict": "pass",
+      "new_metadata_classification": {
+        "verified_suite_verdict": "pass",
+        "status": "pass",
+        "prefix_consistent": true,
+        "historical_prefix_conflict": false,
+        "historical_prefix_complete": true,
+        "historical_consistency_is_admission_requirement": false,
+        "historical_records_changed": false,
+        "admission_reason": "complete_original_suite"
+      },
+      "observed_tests": 88
+    },
+    {
+      "record": "q2-completion-20261001-v2/timing_audit/guard_2.json",
+      "record_sha256": "b20b1bd0d7f5e72687fd3c2d33b631337ad0147d36b35d2199d6245d919156c7",
+      "previous_verified_verdict": "pass",
+      "new_metadata_classification": {
+        "verified_suite_verdict": "pass",
+        "status": "pass",
+        "prefix_consistent": true,
+        "historical_prefix_conflict": false,
+        "historical_prefix_complete": true,
+        "historical_consistency_is_admission_requirement": false,
+        "historical_records_changed": false,
+        "admission_reason": "complete_original_suite"
+      },
+      "observed_tests": 88
+    },
+    {
+      "record": "q2-completion-20261001-v2/diagnostic/R599_0.json",
+      "record_sha256": "cf76e16ad927f12a4f45d61c08174240a9e17c53217b3308b13b8935c68f843d",
+      "previous_verified_verdict": null,
+      "new_metadata_classification": {
+        "verified_suite_verdict": "fail",
+        "status": "fail",
+        "prefix_consistent": false,
+        "historical_prefix_conflict": true,
+        "historical_prefix_complete": false,
+        "historical_consistency_is_admission_requirement": false,
+        "historical_records_changed": false,
+        "admission_reason": "candidate_test_timeout"
+      },
+      "observed_tests": 10
+    },
+    {
+      "record": "q2-completion-20261001-v3/diagnostic/R599_0.json",
+      "record_sha256": "0a312bc34006b294fc80eda0a43ae4475cbe298cde37c756edb42a86200045a5",
+      "previous_verified_verdict": null,
+      "new_metadata_classification": {
+        "verified_suite_verdict": "fail",
+        "status": "fail",
+        "prefix_consistent": false,
+        "historical_prefix_conflict": true,
+        "historical_prefix_complete": false,
+        "historical_consistency_is_admission_requirement": false,
+        "historical_records_changed": false,
+        "admission_reason": "candidate_test_timeout"
+      },
+      "observed_tests": 10
+    }
+  ],
+  "actual_verdicts_disagree": true,
+  "model_admitted": false,
+  "new_generations": 0,
+  "optimizer_updates": 0,
+  "historical_records_changed": false,
+  "linux_runtime_validation": "pending"
+}

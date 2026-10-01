@@ -1897,3 +1897,18 @@ outer handler from a genuine initialization failure. Two authored tests verify
 metadata identity and unchanged admission decisions;113 local Q2 checks pass.
 Original source34a3afab Linux diagnostics and immutable records are unchanged.
 No remote diagnostic, candidate, model or restored server session was run again.
+
+## 2026-10-01: collect-all scoring engineering repair
+
+The owner asked to repair engineering before judging Q2. Three bounded code/audit
+helpers reviewed collect-all diagnostics, timing telemetry and batch recovery.
+Replaced the historical-prefix veto with a separately preserved warning while
+retaining attributable current verdicts. Added complete diagnostic collection,
+parent-side partial reports and explicit model-admission flags, healthy-channel
+batch continuation after UNKNOWN, and request/raw-reply journals. A separate
+fixed timing probe has no reward or training authority. Checkpoint and ambiguous
+optimizer boundaries remain; no exact vLLM resume or automatic scorer restart is
+claimed. Independently rehashed 60 saved compact artifacts and classified five
+saved metadata records without executing candidates: three PASS, two attributed
+FAIL, still inconsistent across executions. No historical scores were rewritten.
+Local tests passed; actual isolated Linux timing validation remains pending.

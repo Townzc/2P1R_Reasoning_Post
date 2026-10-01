@@ -1,3 +1,20 @@
+# October 1: scoring engineering reopened; no new model dose
+
+The owner requested engineering repair before judging the research direction.
+Single diagnostic failures must not prevent collection of other independent
+checks. Historical prefix conflicts are warnings, not replacements for current
+attributable verdicts. Keep uncertain scores explicit and preserve hard resource,
+transport, artifact-identity and optimizer-commit boundaries.
+
+The repair separates diagnostic completion from model admission, collects all
+saved-output checks within the shared deadline, and inspects the remaining batch
+when a healthy scorer returns UNKNOWN. A separate fixed CPU timing probe records
+wall/CPU/signal/resource observations; its outputs never become rewards. Local
+checks and saved-metadata replay are complete; real Linux validation is pending.
+No new training, model generations or benchmark scores have been produced.
+See experiments/q2_supervision_migration/COMPLETION_REPAIR_20260930.md for the
+October 1 amendment. Earlier dated state entries below remain history.
+
 # October 1 completion closed — provider OFF, Q2 paused
 
 The owner-authorized same-instance completion did not pass saved-program scoring

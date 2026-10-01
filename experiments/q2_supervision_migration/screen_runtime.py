@@ -118,35 +118,86 @@ def extract_code(text):
 
 
 def score_batch(args,batch,texts,token_ids,tasks,conn,mode,finish_reasons,*,allow_unresolved=False):
-    if not(len(texts)==len(token_ids)==len(tasks)==len(finish_reasons)==len(batch.intent()['tasks'])):
+    """Score every saved sample while the serialized scorer channel is healthy.
+
+    A complete UNKNOWN reply does not desynchronize the channel: retain it and
+    inspect the rest of the batch. Transport/protocol faults close the channel;
+    no later request may consume a late response. No retry or generation occurs
+    here, and incomplete training rewards never authorize an optimizer update.
+    """
+    intent=batch.intent()
+    if not(len(texts)==len(token_ids)==len(tasks)==len(finish_reasons)==len(intent['tasks'])):
         raise ProfileError('scoring batch shape mismatch')
-    if tasks!=batch.intent()['tasks']: raise ProfileError('scoring task order mismatch')
+    if tasks!=intent['tasks']: raise ProfileError('scoring task order mismatch')
     codes=[extract_code(t) for t in texts]
     durable_json(batch.directory/'scoring_inputs.json',{'codes':codes,'reward_mode':mode,
         'code_sha256':[identity_hash({'code':x}) for x in codes]})
     rewards=[];fatal=None
     for i,(text,ids,task,code,reason) in enumerate(zip(texts,token_ids,tasks,codes,finish_reasons)):
-        base=extra=SuiteVerdict(VerdictStatus.MISSING,'not scored after earlier batch failure')
+        base=extra=SuiteVerdict(VerdictStatus.MISSING,'not scored after scorer channel or hard-stop failure')
+        reward=None
         if fatal is None:
             try:
+                remaining(args)
+                request={'schema':1,'kind':'serialized_scoring_request',
+                    'intent_sha256':batch.intent_sha256,'sample_index':i,'task_id':task,
+                    'sample_id':identity_hash({'intent':batch.intent_sha256,'sample_index':i}),
+                    'code_sha256':identity_hash({'code':code}),'reward_mode':mode}
+                request['request_id']=identity_hash(request)
+                durable_json(batch.directory/f'scoring_request_{i:08d}.json',request)
+                reply_saved=False
+
+                def save_reply(value):
+                    nonlocal reply_saved
+                    if reply_saved:
+                        raise ProfileError('more than one reply for a serialized scoring request')
+                    # Capture before receive() interprets a fatal/malformed reply.
+                    # This is a client-side one-in-flight binding, not a scorer
+                    # echo or independent proof of candidate execution identity.
+                    from .rollout_recovery import _json_evidence
+                    durable_json(batch.directory/f'scoring_reply_{i:08d}.json',{
+                        'schema':1,'request_id':request['request_id'],
+                        'binding':'one_serialized_request_on_unfailed_connection',
+                        'scorer_request_identity_echoed':False,'raw_reply':_json_evidence(value)})
+                    reply_saved=True
+
+                class JournaledConnection:
+                    def poll(self,timeout): return conn.poll(timeout)
+                    def recv(self):
+                        value=conn.recv()
+                        save_reply(value)
+                        return value
+
                 conn.send((task,code))
                 request_limit=(600 if (getattr(args,'recover_suite_watchdog',False) or getattr(args,'guarded_scoring_v2',False)) else
                     300 if getattr(args,'recover_initialization_timeout',False) else spec.SCORER_TIMEOUT_SECONDS)
-                value=receive(conn,request_limit,time.monotonic()+remaining(args))
+                value=receive(JournaledConnection(),request_limit,time.monotonic()+remaining(args))
+                # Also capture replies from an injected authored test receiver.
+                if not reply_saved: save_reply(value)
+                remaining(args)
+                if not isinstance(value,dict) or set(value)!={'base','extra'}:
+                    raise ProfileError('malformed dual-suite scoring reply')
                 base,extra=(SuiteVerdict(**value[k]) for k in ['base','extra'])
-                if allow_unresolved and any(v.status not in (VerdictStatus.PASS,VerdictStatus.FAIL) for v in (base,extra)):
-                    rewards.append(None)
-                else:
-                    rewards.append(float(reward_from_verdicts(base,extra,mode)))
+                if all(v.status in (VerdictStatus.PASS,VerdictStatus.FAIL) for v in (base,extra)):
+                    reward=float(reward_from_verdicts(base,extra,mode))
             except BaseException as exc:
                 fatal=exc
+                # Never send or receive again after a transport/protocol error.
+                # In particular, a late timed-out reply cannot score task i+1.
+                try: conn.close()
+                except Exception: pass
                 if base.status==VerdictStatus.MISSING:
                     base=SuiteVerdict(VerdictStatus.TIMEOUT if isinstance(exc,TimeoutError)
                                      else VerdictStatus.SCORER_ERROR,repr(exc))
+        rewards.append(reward)
         record_sample(batch,sample_index=i,completion_text=text,completion_token_ids=ids,
                       base=base,extra=extra,finish_reason=reason)
     seal_batch(batch)
-    if fatal is not None: raise ProfileError('unresolved scoring; saved batch cannot authorize update') from fatal
+    if fatal is not None:
+        if isinstance(fatal,(KeyboardInterrupt,SystemExit,TimeoutError)): raise fatal
+        raise ProfileError('scorer channel failed; saved batch cannot authorize update') from fatal
+    if not allow_unresolved and any(value is None for value in rewards):
+        raise ProfileError('unresolved scoring after complete batch inspection; update forbidden')
     return rewards
 
 
