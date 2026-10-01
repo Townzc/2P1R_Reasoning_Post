@@ -1,3 +1,13 @@
+# October 1 completion closed — provider OFF, Q2 paused
+
+The owner-authorized same-instance completion did not pass saved-program scoring
+admission, including a fixed-CPU0 diagnostic. No new model work occurred. All60
+compact artifacts and37 prior checkpoint files were verified; normal provider
+OFF confirmed. W/R,W/C,C/R remain missing. Preserve all failures; do not select
+passing replays or relax limits to fill the table. No automatic new run.
+Read reports/q2_completion_20261001/RESULTS.md and the private Oct1 handoff.
+Earlier dated authorization entries below are now history.
+
 # October 1: owner-authorized missing-control completion in progress
 
 The owner explicitly requested completing R_future/C_future and started the same

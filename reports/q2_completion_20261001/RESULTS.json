@@ -1,0 +1,167 @@
+{
+  "closed_utc": "2026-10-01T21:21:34.929054+00:00",
+  "provider_OFF_verified": true,
+  "conservative_power_on_utc": "2026-10-01T20:54:00Z",
+  "cost_proxy_cny_upper_bound_at_record": 3.67,
+  "cost_is_invoice": false,
+  "storage_excluded": true,
+  "model_queue_admitted": false,
+  "new_training_updates": 0,
+  "new_training_outputs": 0,
+  "new_evaluation_outputs": 0,
+  "new_checkpoints": 0,
+  "previous_dose_unchanged": {
+    "updates": 386,
+    "training_outputs": 6224,
+    "evaluation_outputs": 3072
+  },
+  "compact_files_verified": 60,
+  "prior_checkpoint_sets_verified": 3,
+  "prior_checkpoint_files_verified": 37,
+  "source_commits": {
+    "initial_audit": "01b4a309363db81e14f599cb5e406980c3cfc916",
+    "fixed_cpu_gate": "ab1404f484e6abcfe960cbae5853b6a4d8e1b0ea"
+  },
+  "full_old96_and_W32_regression_ran": false,
+  "scientific_hypothesis_test_completed": false,
+  "paired_audit": [
+    {
+      "repeat": 0,
+      "upstream_status": "fail",
+      "upstream_observed": 14,
+      "upstream_elapsed_seconds": 20.039305351674557,
+      "guard_upstream_status": "pass",
+      "guard_admitted_verdict": "pass",
+      "guard_observed": 88,
+      "guard_elapsed_seconds": 79.3104811348021,
+      "code_sha256": "c68d7f49d595310462e7d4bcc5c95dc08c5f7d9db1abd0fa15552dfabf6e5ef7"
+    },
+    {
+      "repeat": 1,
+      "upstream_status": "timeout",
+      "upstream_observed": 34,
+      "upstream_elapsed_seconds": 62.18882603943348,
+      "guard_upstream_status": "pass",
+      "guard_admitted_verdict": "pass",
+      "guard_observed": 88,
+      "guard_elapsed_seconds": 78.6556445248425,
+      "code_sha256": "c68d7f49d595310462e7d4bcc5c95dc08c5f7d9db1abd0fa15552dfabf6e5ef7"
+    },
+    {
+      "repeat": 2,
+      "upstream_status": "timeout",
+      "upstream_observed": 34,
+      "upstream_elapsed_seconds": 62.190513994544744,
+      "guard_upstream_status": "pass",
+      "guard_admitted_verdict": "pass",
+      "guard_observed": 88,
+      "guard_elapsed_seconds": 79.0922138877213,
+      "code_sha256": "c68d7f49d595310462e7d4bcc5c95dc08c5f7d9db1abd0fa15552dfabf6e5ef7"
+    }
+  ],
+  "failed_admission": [
+    {
+      "setting": "fresh_unpinned",
+      "observed": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "admission_reason": "contradictory_or_incomplete_previous_prefix",
+      "raw_evaluator_status": "fail",
+      "elapsed_seconds": 15.048630129545927,
+      "exception": {
+        "classification": "candidate_test_timeout",
+        "elapsed_origin": "diagnostic_worker_start",
+        "elapsed_seconds_at_exception": 14.988934367895126,
+        "exception_type": "TimeoutException",
+        "input_sha256": "39fa1a8bcf52c65b006df8db321df588d3699f72eb376e85ee0d1a7cbde635e8",
+        "per_test_elapsed_measured": false,
+        "propagated_from_test": false,
+        "scope": "test",
+        "test_index": 9,
+        "traceback": [
+          {
+            "function": "unsafe_execute",
+            "line": 154,
+            "origin": "evaluator"
+          },
+          {
+            "function": "sum_average",
+            "line": 9,
+            "origin": "candidate"
+          },
+          {
+            "function": "signal_handler",
+            "line": 45,
+            "origin": "other"
+          }
+        ],
+        "traceback_frame_count": 3,
+        "traceback_truncated": false
+      },
+      "configured_failed_test_limit_seconds": 5.012398719787598,
+      "code_sha256": "c68d7f49d595310462e7d4bcc5c95dc08c5f7d9db1abd0fa15552dfabf6e5ef7"
+    },
+    {
+      "setting": "fixed_cpu_0",
+      "observed": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "admission_reason": "contradictory_or_incomplete_previous_prefix",
+      "raw_evaluator_status": "fail",
+      "elapsed_seconds": 15.02737621217966,
+      "exception": {
+        "classification": "candidate_test_timeout",
+        "elapsed_origin": "diagnostic_worker_start",
+        "elapsed_seconds_at_exception": 14.974310956895351,
+        "exception_type": "TimeoutException",
+        "input_sha256": "39fa1a8bcf52c65b006df8db321df588d3699f72eb376e85ee0d1a7cbde635e8",
+        "per_test_elapsed_measured": false,
+        "propagated_from_test": false,
+        "scope": "test",
+        "test_index": 9,
+        "traceback": [
+          {
+            "function": "unsafe_execute",
+            "line": 154,
+            "origin": "evaluator"
+          },
+          {
+            "function": "sum_average",
+            "line": 9,
+            "origin": "candidate"
+          },
+          {
+            "function": "signal_handler",
+            "line": 45,
+            "origin": "other"
+          }
+        ],
+        "traceback_frame_count": 3,
+        "traceback_truncated": false
+      },
+      "configured_failed_test_limit_seconds": 5.012398719787598,
+      "code_sha256": "c68d7f49d595310462e7d4bcc5c95dc08c5f7d9db1abd0fa15552dfabf6e5ef7"
+    }
+  ],
+  "provider_OFF_verified_by_utc": "2026-10-01T21:21:34.929054+00:00",
+  "temporary_timer_cleared": true,
+  "q2_automation_status": "PAUSED"
+}
