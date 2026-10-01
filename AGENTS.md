@@ -1,3 +1,17 @@
+# October 1: owner-authorized missing-control completion in progress
+
+The owner explicitly requested completing R_future/C_future and started the same
+single A800. This supersedes the historical pause below. First investigate the
+saved scoring discrepancy; do not change rewards or erase prior unknown results.
+Only fresh C_prefix128, C_future128, R_future128 and their three1024-output
+evaluations are in scope:384updates/9216outputs, reusing old W. No other arms,
+seeds or replay of ambiguous work. Same3h/CNY23.94 cap, conservativepower-on
+20:54UTC October1, modeldeadline23:44UTC, providerfallback23:54UTC verified.
+No subagents or external messages. Ordinary engineering faults stay in this
+powered session. Read .local/q2_completion_20261001/ACTIVE_HANDOFF.md.
+
+Earlier entries are history.
+
 # Q2 paused — final completion gate failed, provider OFF
 
 September30,11:48:23UTC. The owner-approved last completion was stopped
