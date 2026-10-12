@@ -29,6 +29,8 @@ OPTIONS = dict(image=image, cpu=(1.0, 1.0), memory=(1024, 1024), timeout=120,
 def write_once(plan, source_hash, attempt_id):
     import sys
     import os
+    # Serialized function globals cannot contain an unhydrated Dict handle.
+    claims = modal.Dict.from_name("sft-allocation-midpoint-claims-v1", create_if_missing=True)
     sys.path.insert(0, "/opt/midpoint")
     from guard import RunGuard, GuardError, canonical_json, identity_hash
     guard = RunGuard(claims, plan)
@@ -83,6 +85,7 @@ def write_once(plan, source_hash, attempt_id):
 @app.function(**OPTIONS)
 def read_independently(plan, source_hash):
     import sys
+    claims = modal.Dict.from_name("sft-allocation-midpoint-claims-v1", create_if_missing=True)
     sys.path.insert(0, "/opt/midpoint")
     from guard import RunGuard, identity_hash
     guard = RunGuard(claims, plan)

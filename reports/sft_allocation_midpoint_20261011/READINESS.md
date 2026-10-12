@@ -57,3 +57,13 @@ Public sources suffice; no AutoDL startup is needed. GitHub alone lacks cached f
 The cross-source dev alias shows why original record IDs alone are inadequate. Exclude the known alias from the proposed new endpoint and disclose limits of the remaining431 questions. Do not label them pretraining-clean or definitely unseen by all prior research.
 
 Next: verify CPU cloud persistence/atomic admission; build and validate the new training/checkpoint harness, run the bounded32-example overfit/throughput/recovery profile, then freeze and review the exact main recipe before eight comparative runs. The teacher pilot stays separate from historical bank pricing. No automatic old-run restart or main-grid launch follows this preparation record.
+
+## Initial CPU platform attempt
+
+The first cloud app failed during function serialization after image build,
+before the local entrypoint or any remote function input. No fixture/model work
+occurred; provider reported stopped with zero tasks, zero containers and no Dict
+objects. [Failure receipt](MODAL_STARTUP_FAILURE.json) is retained. The narrow fix
+constructs the Dict handle inside the serialized function. The original $2
+reservation and immutable15-minute deadline are unchanged. Provider charges, if
+any for startup/image work, remain unknown until billing reconciliation.

@@ -1,3 +1,12 @@
+## October11 Modal CPU startup repair
+
+The first CPU-only app built its image but failed before the local entrypoint
+or remote function input: a serialized function captured an unhydrated Dict
+handle. Provider app stopped with zero tasks; no containers or Dict objects
+remained. No fixture/model work occurred. Move the handle construction inside
+the remote function, preserving the original two-dollar reservation and absolute
+15-minute window. Publish the narrow fix before another admitted attempt.
+
 ## October11 allocation midpoint planning and CPU reconstruction
 
 AI assistance read28 user-supplied course/research notes at a fixed Git revision,
