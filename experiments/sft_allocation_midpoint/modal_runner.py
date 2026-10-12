@@ -73,6 +73,10 @@ def run_gpu(plan,config,release):
             gates=Path('/evidence')/config['profile_campaign']
             if not read(gates/'profile/result.json')['engineering_fit_gate'] or not read(gates/'resume/result.json')['recovery_gate']:
                 raise ValueError('Engineering admission gates not passed')
+            independent=read(gates/'audit.json')
+            for name in ('profile','resume'):
+                if independent[name]['manifest_sha256']!=sha(gates/name/'artifact_manifest.json'):
+                    raise ValueError('Independent engineering verification differs')
             result=runtime.main_train(assets,out,journal,identity,config['arm'],config['seed'])
         elif kind=='base':
             model,tok=runtime.new_model(assets/'model',17,adapt=False)
@@ -115,7 +119,10 @@ def audit(plan,config,release):
     admission=guard.admit(dict(run_id='audit',config_sha256=digest(config),source_sha256=digest(release['source_files']),
         data_sha256=config['input_sha256']),attempt_id=uuid.uuid4().hex,now_epoch=time.time(),max_runtime_seconds=840)
     volume.reload();root=Path('/evidence')/plan['campaign_id'];results={}
-    for name in ('profile','resume'):
+    names=config.get('audit_runs',['profile','resume'])
+    allowed={'profile','resume','base'} | {f'{a}_{s}' for a in ('repeat','solutions','mixed','breadth') for s in (17,23)}
+    if not names or len(names)!=len(set(names)) or set(names)-allowed:raise ValueError('Unapproved audit targets')
+    for name in names:
         directory=root/name;files=read(directory/'artifact_manifest.json');verify(directory,files)
         results[name]=dict(files_verified=len(files),manifest_sha256=sha(directory/'artifact_manifest.json'),
             checkpoints={str(p.parent.name):read(p) for p in directory.glob('checkpoint_*/manifest.json')},
