@@ -144,3 +144,37 @@ def main(plan_json:str,config_json:str,receipt_dir:str):
         claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
         prefix='midpoint/'+plan['campaign_id']+'/'
         dump(out/'admission_ledger.json',{k:v for k,v in claims.items() if k.startswith(prefix)})
+
+
+@app.local_entrypoint()
+def grid(plan_json:str,queue_json:str,receipt_dir:str):
+    """Four paired-seed conditions, at most two concurrent jobs; stop after a failed pair."""
+    from experiments.sft_allocation_midpoint.common import sha,dump
+    plan=json.loads(Path(plan_json).read_text());queue=json.loads(Path(queue_json).read_text());out=Path(receipt_dir)
+    expected=[(arm,seed) for arm in ('repeat','solutions','breadth','mixed') for seed in (17,23)]
+    if [(c.get('arm'),c.get('seed')) for c in queue]!=expected or any(c['kind']!='main' for c in queue):
+        raise ValueError('Exactly the approved eight-run queue is required')
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/codex/icml-acl-2027'],cwd=ROOT,text=True).split()[0]
+    if commit!=remote:raise ValueError('Publish first')
+    for name in SOURCE_FILES:
+        if subprocess.check_output(['git','show','HEAD:'+name],cwd=ROOT)!=(ROOT/name).read_bytes():
+            raise ValueError('Execution source differs: '+name)
+    release=dict(commit=commit,source_files={name:sha(ROOT/name) for name in SOURCE_FILES})
+    out.mkdir(parents=True,exist_ok=False);dump(out/'intent.json',dict(plan=plan,queue=queue,release=release))
+    completed=[]
+    try:
+        for start in range(0,8,2):
+            results=list(run_gpu.starmap([(plan,c,release) for c in queue[start:start+2]],return_exceptions=True))
+            failed=False
+            for config,result in zip(queue[start:start+2],results):
+                if isinstance(result,BaseException):
+                    failed=True;dump(out/(config['run_id']+'_failure.json'),{'error':repr(result)})
+                else:
+                    dump(out/(config['run_id']+'_result.json'),result);completed.append(config['run_id'])
+            if failed:raise RuntimeError('A main pair failed; future inputs remain unattempted, reconcile first')
+        dump(out/'completed.json',dict(run_ids=completed,status='all_eight_completed'))
+    finally:
+        claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
+        prefix='midpoint/'+plan['campaign_id']+'/'
+        dump(out/'admission_ledger.json',{k:v for k,v in claims.items() if k.startswith(prefix)})
