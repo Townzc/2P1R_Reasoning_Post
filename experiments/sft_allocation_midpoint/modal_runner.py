@@ -106,30 +106,37 @@ def math_cost_cents(seconds):
     return math.ceil(seconds*2.942784/36)+25
 
 
-@app.function(image=image,cpu=(2,2),memory=(8192,8192),timeout=900,startup_timeout=300,
+@app.function(image=image,cpu=(2,2),memory=(8192,8192),timeout=3600,startup_timeout=300,
               retries=0,max_containers=1,min_containers=0,buffer_containers=0,scaledown_window=2,
               single_use_containers=True,serialized=True,include_source=False,volumes={'/evidence':volume})
 def audit(plan,config,release):
-    import sys,uuid
+    import sys,uuid,threading,os
     sys.path.insert(0,'/workspace')
     from experiments.sft_allocation_midpoint.common import read,verify,digest,sha,dump
     from experiments.sft_allocation_midpoint.guard import RunGuard
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
     guard=RunGuard(claims,plan);guard.register(now_epoch=time.time())
+    seconds=config['max_seconds']
+    if not 60<=seconds<=3300:raise ValueError('Invalid bounded CPU audit duration')
     admission=guard.admit(dict(run_id='audit',config_sha256=digest(config),source_sha256=digest(release['source_files']),
-        data_sha256=config['input_sha256']),attempt_id=uuid.uuid4().hex,now_epoch=time.time(),max_runtime_seconds=840)
-    volume.reload();root=Path('/evidence')/plan['campaign_id'];results={}
-    names=config.get('audit_runs',['profile','resume'])
-    allowed={'profile','resume','base'} | {f'{a}_{s}' for a in ('repeat','solutions','mixed','breadth') for s in (17,23)}
-    if not names or len(names)!=len(set(names)) or set(names)-allowed:raise ValueError('Unapproved audit targets')
-    for name in names:
-        directory=root/name;files=read(directory/'artifact_manifest.json');verify(directory,files)
-        results[name]=dict(files_verified=len(files),manifest_sha256=sha(directory/'artifact_manifest.json'),
-            checkpoints={str(p.parent.name):read(p) for p in directory.glob('checkpoint_*/manifest.json')},
-            result=read(directory/'result.json'))
-    dump(root/'audit.json',results);volume.commit()
-    receipt=guard.finish(admission,status='completed',evidence_sha256=digest(results),actual_cost_cents=100,finished_epoch=time.time())
-    return dict(results=results,receipt=receipt)
+        data_sha256=config['input_sha256']),attempt_id=uuid.uuid4().hex,now_epoch=time.time(),max_runtime_seconds=seconds)
+    timer=threading.Timer(seconds,lambda:os._exit(124));timer.daemon=True;timer.start()
+    try:
+        volume.reload();root=Path('/evidence')/plan['campaign_id'];results={}
+        names=config.get('audit_runs',['profile','resume'])
+        allowed={'profile','resume','base'} | {f'{a}_{s}' for a in ('repeat','solutions','mixed','breadth') for s in (17,23)}
+        if not names or len(names)!=len(set(names)) or set(names)-allowed:raise ValueError('Unapproved audit targets')
+        for name in names:
+            guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=100)
+            directory=root/name;files=read(directory/'artifact_manifest.json');verify(directory,files)
+            results[name]=dict(files_verified=len(files),manifest_sha256=sha(directory/'artifact_manifest.json'),
+                checkpoints={str(p.parent.name):read(p) for p in directory.glob('checkpoint_*/manifest.json')},
+                result=read(directory/'result.json'))
+            dump(root/f'audit_progress_{name}.json',results[name]);volume.commit()
+        dump(root/'audit.json',results);volume.commit()
+        receipt=guard.finish(admission,status='completed',evidence_sha256=digest(results),actual_cost_cents=100,finished_epoch=time.time())
+        return dict(results=results,receipt=receipt)
+    finally:timer.cancel()
 
 
 @app.local_entrypoint()
@@ -185,3 +192,84 @@ def grid(plan_json:str,queue_json:str,receipt_dir:str):
         claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
         prefix='midpoint/'+plan['campaign_id']+'/'
         dump(out/'admission_ledger.json',{k:v for k,v in claims.items() if k.startswith(prefix)})
+
+
+@app.function(image=image,cpu=(1,1),memory=(1024,1024),timeout=40000,startup_timeout=300,
+              retries=0,max_containers=1,min_containers=0,buffer_containers=0,scaledown_window=2,
+              single_use_containers=True,serialized=True,include_source=False,volumes={'/evidence':volume})
+def controller(plan,queue,base_config,audit_config,release):
+    """Finite cloud parent survives a disconnected laptop; every child owns one claim."""
+    import sys,uuid,os,threading,traceback
+    sys.path.insert(0,'/workspace')
+    from experiments.sft_allocation_midpoint.common import dump,digest,manifest,sha
+    from experiments.sft_allocation_midpoint.guard import RunGuard
+    expected=[(a,s) for a in ('repeat','solutions','breadth','mixed') for s in (17,23)]
+    if [(c['arm'],c['seed']) for c in queue]!=expected or any(c['kind']!='main' for c in queue):
+        raise ValueError('Only the exact eight-run scientific queue is permitted')
+    if base_config['run_id']!='base' or base_config['kind']!='base' or audit_config['audit_runs']!=[c['run_id'] for c in queue]+['base']:
+        raise ValueError('Base/audit queue mismatch')
+    for name,value in release['source_files'].items():
+        if sha(Path('/workspace')/name)!=value:raise ValueError('Controller image differs from published source')
+    claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
+    guard=RunGuard(claims,plan);guard.register(now_epoch=time.time())
+    admission=guard.admit(dict(run_id='controller',config_sha256=digest([queue,base_config,audit_config]),
+        source_sha256=digest(release['source_files']),data_sha256=queue[0]['input_sha256']),
+        attempt_id=uuid.uuid4().hex,now_epoch=time.time(),max_runtime_seconds=39000)
+    timer=threading.Timer(39000,lambda:os._exit(124));timer.daemon=True;timer.start()
+    out=Path('/evidence')/plan['campaign_id']/'controller'
+    try:
+        volume.reload();out.mkdir(parents=True,exist_ok=False)
+        dump(out/'intent.json',dict(plan=plan,queue=queue,base_config=base_config,audit_config=audit_config,release=release));volume.commit()
+        completed=[]
+        for start in range(0,8,2):
+            guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=100)
+            results=list(run_gpu.starmap([(plan,c,release) for c in queue[start:start+2]],return_exceptions=True))
+            volume.reload();failed=False
+            for config,result in zip(queue[start:start+2],results):
+                if isinstance(result,BaseException):
+                    failed=True;dump(out/(config['run_id']+'_failure.json'),dict(error=repr(result)))
+                else:
+                    dump(out/(config['run_id']+'_result.json'),result);completed.append(config['run_id'])
+            volume.commit()
+            if failed:raise RuntimeError('One pair failed; later inputs remain unattempted. Reconcile, never replay.')
+        guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=100)
+        base=run_gpu.remote(plan,base_config,release)
+        volume.reload();dump(out/'base_result.json',base);volume.commit()
+        checked=audit.remote(plan,audit_config,release)
+        volume.reload();dump(out/'audit_result.json',checked)
+        result=dict(status='completed',main_runs=completed,base_completed=True,independent_audit_completed=True,
+                    controller_reserved_usd=1,provider_invoice_usd=None)
+        dump(out/'completed.json',result);volume.commit()
+        guard.finish(admission,status='completed',evidence_sha256=digest(manifest(out)),actual_cost_cents=100,finished_epoch=time.time())
+        return result
+    except BaseException as exc:
+        if out.exists():
+            dump(out/'failure.json',dict(error=repr(exc),traceback=traceback.format_exc()));volume.commit()
+            guard.finish(admission,status='failed',evidence_sha256=digest(manifest(out)),actual_cost_cents=100,finished_epoch=time.time())
+        raise
+    finally:timer.cancel()
+
+
+@app.local_entrypoint()
+def submit(plan_json:str,queue_json:str,base_json:str,audit_json:str,receipt_dir:str):
+    """Use modal run --detach ...::submit, then inspect the actual cloud claims."""
+    import sys
+    from experiments.sft_allocation_midpoint.common import sha,dump
+    if '--detach' not in sys.argv:raise ValueError('Detached app is required for the finite cloud controller')
+    plan=json.loads(Path(plan_json).read_text());queue=json.loads(Path(queue_json).read_text())
+    base=json.loads(Path(base_json).read_text());audit_config=json.loads(Path(audit_json).read_text())
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/codex/icml-acl-2027'],cwd=ROOT,text=True).split()[0]
+    if commit!=remote:raise ValueError('Publish first')
+    for name in SOURCE_FILES:
+        if subprocess.check_output(['git','show','HEAD:'+name],cwd=ROOT)!=(ROOT/name).read_bytes():
+            raise ValueError('Published source differs: '+name)
+    release=dict(commit=commit,source_files={name:sha(ROOT/name) for name in SOURCE_FILES})
+    claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
+    if any(claims.get('midpoint/'+plan['campaign_id']+'/claim/'+name) is not None for name in plan['slots']):
+        raise ValueError('A campaign input is already claimed; reconcile rather than resubmit')
+    out=Path(receipt_dir);out.mkdir(parents=True,exist_ok=False)
+    dump(out/'intent.json',dict(plan=plan,queue=queue,base_config=base,audit_config=audit_config,release=release))
+    call=controller.spawn(plan,queue,base,audit_config,release)
+    dump(out/'submitted.json',dict(call_id=call.object_id,submitted_epoch=time.time(),campaign=plan['campaign_id']))
+    print(json.dumps({'finite_controller_submitted':True,'call_id':call.object_id}),flush=True)

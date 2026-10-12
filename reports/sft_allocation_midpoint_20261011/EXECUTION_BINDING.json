@@ -1,0 +1,71 @@
+{
+  "scientific_admission_sha256": "cd60cc1a6536dbc724d66ad2701be718dd048e0b1dc2662eeb8a121b2b81cc7b",
+  "scientific_queue_unchanged": true,
+  "scientific_work_started": false,
+  "plan": {
+    "campaign_id": "mp-grid-20261012-r1",
+    "created_epoch": 1791781121.824946,
+    "deadline_epoch": 1791864000.0,
+    "total_cap_cents": 7800,
+    "stage_caps_cents": {
+      "training": 7200,
+      "evaluation": 600
+    },
+    "slots": {
+      "repeat_17": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "repeat_23": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "solutions_17": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "solutions_23": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "breadth_17": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "breadth_23": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "mixed_17": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "mixed_23": {
+        "stage": "training",
+        "reserved_cents": 900
+      },
+      "base": {
+        "stage": "evaluation",
+        "reserved_cents": 400
+      },
+      "audit": {
+        "stage": "evaluation",
+        "reserved_cents": 100
+      },
+      "controller": {
+        "stage": "evaluation",
+        "reserved_cents": 100
+      }
+    }
+  },
+  "change": "Add a single finite CPU cloud controller so a sleeping/disconnected laptop cannot abandon future pairs. Supersedes the unsubmitted local-driver plan; all scientific configurations and the absolute deadline are unchanged.",
+  "controller_timeout_seconds": 39000,
+  "controller_cpu_cores": 1,
+  "controller_memory_mib": 1024,
+  "extra_reserved_usd": 1,
+  "total_current_reserved_usd": 91.5,
+  "provider_invoice_usd": null,
+  "cpu_full_grid_audit_max_seconds": 3300,
+  "cpu_audit_explanation": "Full eight-run checkpoint audit may read over15GB. Fixed CPU-only3300s bound fits its existing one-dollar slot. Earlier engineering audit retained its original840s and already completed.",
+  "release_behavior": "Detached ephemeral app, zero GPU minimums, two children at most, stop on failed pair without replay, base/audit after eight completions, finite CPU parent exits. No deployment or continuously warm GPU endpoint."
+}
