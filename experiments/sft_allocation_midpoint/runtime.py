@@ -37,14 +37,14 @@ def seed_all(seed):
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
 
 
-def environment():
+def environment(expected_gpu="A100"):
     import torch,subprocess
     actual={name:importlib.metadata.version(name) for name in VERSIONS}
     if actual!=VERSIONS:raise ValueError('Pinned software versions differ: '+repr(actual))
     if not torch.cuda.is_available() or torch.cuda.device_count()!=1:raise ValueError('One CUDA GPU required')
     name=torch.cuda.get_device_name(0)
-    if 'A100' not in name or torch.cuda.get_device_properties(0).total_memory<75*1024**3:
-        raise ValueError('Requested A100-80GB was not provided')
+    if expected_gpu not in ('A100','H100') or expected_gpu not in name or torch.cuda.get_device_properties(0).total_memory<75*1024**3:
+        raise ValueError('Requested '+expected_gpu+'-80GB was not provided')
     torch.set_num_threads(4);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
     torch.backends.cudnn.benchmark=False;torch.use_deterministic_algorithms(True)
     return dict(versions=actual,gpu=name,cuda=torch.version.cuda,
@@ -156,14 +156,16 @@ def train(model,tok,optimizer,encoded,schedule,rates,out,journal,identity,*,star
     return history,targets,processed
 
 
-def evaluate(model,tok,rows,out,name,journal):
+def evaluate(model,tok,rows,out,name,journal,*,config=None):
     """Save backend outputs before scoring; audit first-stop semantics separately."""
     import torch
     from transformers import GenerationConfig,StoppingCriteriaList
     from analyses.e017_stopping import TaskBoundaryStop,prediction
     from analyses.e017_audit import audit_predictions
     folder=Path(out)/name;folder.mkdir(exist_ok=False);predictions=[];model.eval()
-    cfg=EVAL
+    cfg=EVAL if config is None else config
+    if cfg not in (EVAL,dict(max_new_tokens=512,max_length=2048,eval_batch_size=16)):
+        raise ValueError('Unapproved deterministic evaluation contract')
     settings=GenerationConfig(do_sample=False,num_beams=1,max_new_tokens=cfg['max_new_tokens'],
                               eos_token_id=tok.eos_token_id,pad_token_id=tok.eos_token_id,use_cache=True)
     for start in range(0,len(rows),cfg['eval_batch_size']):

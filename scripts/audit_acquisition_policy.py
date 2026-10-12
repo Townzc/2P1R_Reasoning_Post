@@ -136,6 +136,10 @@ def audit(args):
     assert result['stop_reason'] in ('wallet_cannot_reserve_next_bounded_action','pool_exhausted','finite_batch_limit')
     if result['stop_reason']=='pool_exhausted':assert cursor==len(ids) and not active
     if result['stop_reason']=='finite_batch_limit':assert len(names)==cfg['max_batches']
+    if result['stop_reason']=='wallet_cannot_reserve_next_bounded_action':
+        room=min(16-len(active),len(ids)-cursor)
+        assert not any(len(active)+n>0 and spent+n*price+charge(cfg['max_action_seconds']*10**9,rate)<=cap
+                       for n in range(room+1))
     # Data quality screening is the fixed final-answer/stop contract, not proof of reasoning.
     return dict(schema='local_acquisition_policy_audit_v1',campaign=args.campaign,run_id=run_id,
         outputs_independently_rescored=len(records),manifest_digest=digest(files),new_model_calls=0,

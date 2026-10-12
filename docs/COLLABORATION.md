@@ -24,12 +24,12 @@ Previously authorized engineering continues within its frozen limits.
 
 1. P007 main is fully verified and closed. Review the
    [main packet](../reports/p007_audit/main_v1/REVIEW_REQUEST.md).
-2. P007A is the authorized finite same-teacher cost pilot,128×8,one H100,
-   15USD reservation,October13 01UTC absolute cutoff. Assets passed; GPU submission
-   is recorded in the live private handoff. Do not submit another copy.
-3. P007B is prepared: breadth/depth under common acquisition caps and two explicit
-   problem-price scenarios, with independently matched student training. Freeze
-   numerical caps after P007A verification and before any P007B outcome.
+2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
+   apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
+3. P007B four numerical wallets are frozen; the zero-price breadth/depth pair
+   is running from80434781, actual H100/first batches verified. See
+   [admission](../reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
+   Student slots remain gated on all four audited acquired corpora/exact plans.
 4. Other audit work packages are proposals, not admitted jobs. Their scientific
    value will be weighed against the core cost-allocation question and time left.
 
