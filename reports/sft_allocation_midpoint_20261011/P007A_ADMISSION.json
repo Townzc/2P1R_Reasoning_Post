@@ -1,0 +1,93 @@
+{
+  "schema": "p007a_finite_admission_v1",
+  "admitted_utc": "2026-10-12T19:10:27.791790+00:00",
+  "status": "admitted_not_submitted",
+  "campaign_id": "mp-teacher-cost-20261012-r1",
+  "plan": {
+    "campaign_id": "mp-teacher-cost-20261012-r1",
+    "created_epoch": 1791829841.9204822,
+    "deadline_epoch": 1791853200.0,
+    "slots": {
+      "assets": {
+        "reserved_cents": 100,
+        "stage": "engineering"
+      },
+      "pilot": {
+        "reserved_cents": 1400,
+        "stage": "acquisition"
+      }
+    },
+    "stage_caps_cents": {
+      "acquisition": 1400,
+      "engineering": 100
+    },
+    "total_cap_cents": 1500
+  },
+  "config": {
+    "run_id": "pilot",
+    "sampling": {
+      "do_sample": true,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "top_k": 0,
+      "max_new_tokens": 1024,
+      "num_return_sequences": 1,
+      "repetition_penalty": 1.0,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643
+    },
+    "teacher_revision": "aafeb0fc6f22cbf0eaeed126eff8be45b0360a35",
+    "max_seconds": 5400,
+    "input_sha256": "1cd16aa01f16feeabccb91d85e340675bf640fb6b894d0d38d03bda7938caa7e",
+    "main_gate": {
+      "terminal": {
+        "actual_cost_cents": 100,
+        "attempt_id": "9c7d6ac9ec8b4ce9b00279715333dceb",
+        "claim_sha256": "49049897bdf5ebe39510c59fc85866df71956bd4080b95e812d7ef81ae694147",
+        "evidence_sha256": "2ca7f8d1632c87744216384b75694e56f6447a64c296e829dc896a287e7f7d19",
+        "finished_epoch": 1791831831.8035216,
+        "run_id": "audit",
+        "status": "completed"
+      },
+      "local_closeout_sha256": "78a4b81f73ad8af5e31c462587a510a3a6cc92e496e7f64473a2a80c1f50922e"
+    }
+  },
+  "plan_digest": "fde2905133b37c8276cd83b1514b7b8c5540b1e6b9461046c05788ac1fdd9fe6",
+  "config_digest": "cd7ac5c34a8395d6be01a9177c76fe94d4051bbc525df62c1a2bfea7725f844a",
+  "main_closeout_sha256": "78a4b81f73ad8af5e31c462587a510a3a6cc92e496e7f64473a2a80c1f50922e",
+  "existing_campaign_keys": {},
+  "active_containers_before_admission": [],
+  "pilot_max_outputs": 1024,
+  "student_updates": 0,
+  "teacher": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+  "gpu": "H100!",
+  "reserved_usd": 15,
+  "prior_conservative_reservations_usd": 133.5,
+  "combined_conservative_reservations_usd": 148.5,
+  "total_budget_usd": 500,
+  "protected_usd": 50,
+  "spending_ceiling_usd": 450,
+  "last_provider_meter": {
+    "metered_cost": "27.76043680",
+    "billed_cost": "0E-8",
+    "adjustments": {
+      "network_egress_allowance": "-0.00059627",
+      "reservation_adjustment": "-0E-8",
+      "credits": "-27.73000000",
+      "free_storage": "-0.02984052",
+      "plan_cost": "0E-8"
+    },
+    "metered_cost_breakdown": {
+      "ephemeral_apps": "27.72842721",
+      "llm_tokens": "0E-8",
+      "volumes": "0.02984052"
+    }
+  },
+  "provider_meter_is_final_invoice": false,
+  "code_base_commit": "32810c43bd510cca6e3242ccd02a556577233427",
+  "automatic_retry_allowed": false,
+  "stop_rule": "Complete fixed tape or finite time/failure; preserve all attempted/unknown work."
+}

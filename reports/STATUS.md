@@ -1,3 +1,8 @@
+# October12 19:10UTC — P007 fully closed; same-teacher pilot admitted
+
+All eight trajectories and base passed independent local scoring/state checks and the final cloud CPU audit. Main2,048 updates/4,194,304 targets,5,791 saved outputs;8 unknown middle diagnostics preserved,formal endpoints complete. All seven main apps STOPPED/zero containers. Meter27.76043680USD is delayed usage,not invoice/balance. [Verified closeout](sft_allocation_midpoint_20261011/MAIN_CLOSEOUT_20261012.json).
+P007A admitted after that gate:128×8 maximum,one H100,15USD reserve,October13 01UTC cutoff,0studentupdates. Not yet submitted at this record. Owner's500USD/50protected instruction applies; P007B awaits cost calibration. Earlier dated states are historical.
+
 # October12 18:24UTC — four-arm results verified; base/audit remain
 
 Repeat309/307,Solutions354/355,Breadth350/352,Mixed348/351,all out of431.

@@ -1,7 +1,7 @@
 # P007A: metered same-teacher supply pilot
 
 Internal execution protocol, October12 2026; not presentation/report prose.
-Status: prepared; GPU admission requires complete P007 main/base/audit verification.
+Status: admitted October12 19:10UTC after complete P007 main/base/audit verification. See P007A_ADMISSION.json; no model work yet at admission.
 The owner approved direct execution after that gate and prioritizes speed within
 500USD total with at least50USD protected. The earlier350/100 split is superseded.
 The original main campaign deadline is unchanged.

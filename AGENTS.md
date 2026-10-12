@@ -1,3 +1,7 @@
+# October12 19:10UTC — main verified closed, P007A finite admission
+
+Main/base/final CPU audit are completed and independently verified; seven main apps stopped with zero containers. Never repeat main work. P007A_ADMISSION.json binds the1024-output/0studentupdate H100 teacher pilot to that closeout,15USD reserve andOct13 01UTC cutoff. No prior claims at admission. Read current private handoff for actual submission state; do not equate admission with execution. P007B remains prepared pending verified calibration. Latest500USD total/50protected controls. Preserve old failures/unknowns. No subagents, external sending, AutoDL or AI slides. Earlier states below are history.
+
 # Latest owner authorization — October12 cost follow-up
 
 After full main verification, execute the same-teacher cost/supply pilot directly, counting failures, duplicates and setup. Design a genuine equal-acquisition-budget breadth/depth comparison. Speed is prioritized; select an appropriate Modal GPU. Total500USD with at least50USD protected supersedes the earlier internal350/100 split. Each new finite phase still requires frozen question/design/dose/cost/deadline and published source; no blanket unbounded grid. Original main Oct13 04UTC deadline unchanged. No subagents, external sending, AutoDL or course-slide generation. Notify main verified completion before lengthy analysis. Earlier dated states are history.
