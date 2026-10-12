@@ -1988,3 +1988,6 @@ Read-only provider/ledger/Volume inspection confirmed bothRepeat training endpoi
 
 
 2026-10-12 06:33UTC — P007 heartbeat: independently exported867 files for each completed Repeat run including terminal256 full state; locally re-scored all1342 saved outputs and reconciled batch/terminal ledgers. Repeat endpoints309/431 and307/431; Solutions64/64 updates live, no duplicate submissions or new model calls. Recorded development-only limits, observed-curve fluctuation, evaluation-dominated runtime, and provider metering reconciliation from8.48 to8.42USD. Scientific queue and budgets unchanged.
+
+
+2026-10-12 morning — Queued P007 heartbeat actually serviced15:05UTC; recorded the monitoring gap. Diagnosed provider GPU preemption, preserved128 committed updates and8 ambiguous diagnostic outputs, independently verified five completed endpoints and the failed parent fullstate/rawoutputs. Prepared bounded stateful continuation without replay and migration only of untouched Mixed/base/audit;44 CPU tests passed. Same scientific dose and deadline; total conservative reservation124.50USD. Partial results and limitations retained; no external messages or subagents.

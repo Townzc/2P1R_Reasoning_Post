@@ -1,0 +1,444 @@
+{
+  "checked_utc": "2026-10-12T15:20:13.987465+00:00",
+  "limits": [
+    "Question intervals condition on trained models and one procurement draw, not seed/draw uncertainty.",
+    "Breadth vs Solutions is incomplete, and overlap with zero is not equivalence.",
+    "Development only; contamination not excluded; bank acquisition cost unknown.",
+    "Stateful continuation decision concerns infrastructure failure, not selection of favorable outcomes."
+  ],
+  "missing": [
+    "breadth_17 terminal256",
+    "mixed_17",
+    "mixed_23",
+    "base",
+    "independent_final_CPU_audit"
+  ],
+  "primary_contrasts_partial": [
+    {
+      "available_seeds": [
+        17,
+        23
+      ],
+      "complete_prespecified_pair": true,
+      "conditional_question_interval_pp": [
+        7.192575406032482,
+        14.385150812064964
+      ],
+      "contrast": "solutions minus repeat",
+      "mean_difference_pp": 10.788863109048725,
+      "per_seed": {
+        "17": {
+          "conditional_question_interval_pp": [
+            6.0324825986078885,
+            14.849187935034802
+          ],
+          "difference_pp": 10.440835266821345,
+          "gained": 74,
+          "lost": 29
+        },
+        "23": {
+          "conditional_question_interval_pp": [
+            6.2645011600928076,
+            16.009280742459396
+          ],
+          "difference_pp": 11.1368909512761,
+          "gained": 84,
+          "lost": 36
+        }
+      }
+    },
+    {
+      "available_seeds": [
+        23
+      ],
+      "complete_prespecified_pair": false,
+      "conditional_question_interval_pp": [
+        -4.408352668213457,
+        3.0162412993039442
+      ],
+      "contrast": "breadth minus solutions",
+      "mean_difference_pp": -0.6960556844547563,
+      "per_seed": {
+        "23": {
+          "conditional_question_interval_pp": [
+            -4.408352668213457,
+            3.0162412993039442
+          ],
+          "difference_pp": -0.6960556844547563,
+          "gained": 32,
+          "lost": 35
+        }
+      }
+    }
+  ],
+  "status": "partial_grid_after_gpu_preemption",
+  "table": {
+    "breadth_23": {
+      "accuracy": 0.8167053364269141,
+      "correct": 352,
+      "local_raw_and_checkpoint_audit": {
+        "checked_utc": "2026-10-12T15:09:45.677703+00:00",
+        "checkpoint_step": 256,
+        "checkpoint_targets": 524288,
+        "claims_modified": false,
+        "evaluations": {
+          "endpoint431": {
+            "correct": 352,
+            "n": 431,
+            "parsed": 428,
+            "stop_reasons": {
+              "length_cap": 2,
+              "native_eos": 429
+            }
+          },
+          "observed80_step128": {
+            "correct": 64,
+            "n": 80,
+            "parsed": 79,
+            "stop_reasons": {
+              "length_cap": 1,
+              "native_eos": 79
+            }
+          },
+          "observed80_step256": {
+            "correct": 67,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step64": {
+            "correct": 59,
+            "n": 80,
+            "parsed": 79,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          }
+        },
+        "export": {
+          "bytes": 229709641,
+          "campaign": "mp-grid-20261012-r2",
+          "files_verified": 867,
+          "finished_epoch": 1791817773.944111,
+          "full_checkpoint_steps": [
+            256
+          ],
+          "manifest_sha256": "72b875e8122a932e03881a0d373287c6f2ecf722e0f8924dda9b7d1ed30173c5",
+          "remote_files_unchanged": true,
+          "run": "breadth_23",
+          "schema": "independent_local_export_v1"
+        },
+        "new_model_calls": 0,
+        "run": "breadth_23",
+        "schema": "independent_local_fullstate_raw_audit_v1",
+        "scientific_config_changed": false,
+        "state_sha256": "a18596a7481b9964e5ad7d5deaa610e111c6d69735bc448164ae14f4ba80ec58",
+        "terminal_receipt": {
+          "actual_cost_cents": 900,
+          "attempt_id": "f87caaf2e6b24cc4adc3073bd19abb52",
+          "claim_sha256": "fd524b02ac4e45a5359dd1a02757a1f41b4c29a98a2d692726425df419c18be3",
+          "evidence_sha256": "eebe2384c14f9ba25cc722dedac3e0a292f52905dd3ea693c4a68549eb7d929e",
+          "finished_epoch": 1791792260.8125772,
+          "run_id": "breadth_23",
+          "status": "completed"
+        }
+      },
+      "n": 431
+    },
+    "repeat_17": {
+      "accuracy": 0.7169373549883991,
+      "correct": 309,
+      "local_raw_and_checkpoint_audit": {
+        "checked_utc": "2026-10-12T06:33:13.607781+00:00",
+        "checkpoint_step": 256,
+        "checkpoint_targets": 524288,
+        "claims_modified": false,
+        "evaluations": {
+          "endpoint431": {
+            "correct": 309,
+            "n": 431,
+            "parsed": 426,
+            "stop_reasons": {
+              "length_cap": 1,
+              "native_eos": 429,
+              "new_problem_boundary": 1
+            }
+          },
+          "observed80_step128": {
+            "correct": 60,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step256": {
+            "correct": 57,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step64": {
+            "correct": 63,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          }
+        },
+        "export": {
+          "bytes": 229266681,
+          "campaign": "mp-grid-20261012-r2",
+          "files_verified": 867,
+          "finished_epoch": 1791786750.727457,
+          "full_checkpoint_steps": [
+            256
+          ],
+          "manifest_sha256": "58cf3613e0f4bcab51a6498fc3592ef42fdb2f22050b3621f1b303e6ca0acc0b",
+          "remote_files_unchanged": true,
+          "run": "repeat_17",
+          "schema": "independent_local_export_v1"
+        },
+        "new_model_calls": 0,
+        "run": "repeat_17",
+        "schema": "independent_local_fullstate_raw_audit_v1",
+        "scientific_config_changed": false,
+        "state_sha256": "baa954366a988f53b441b9341981011b78ad31775edc41a3ab510f2e5a991e6b",
+        "terminal_receipt": {
+          "actual_cost_cents": 900,
+          "attempt_id": "0386f37cf7e04a38923964807c57ca6f",
+          "claim_sha256": "3960ebbb2f42594e9211e33e50eeba83ff5d8a2bede95f0244266267857acb04",
+          "evidence_sha256": "785bbf6b8ef47990889c52595c39358e3cbe55c896f6e6848d691c5e4a222201",
+          "finished_epoch": 1791786201.8325808,
+          "run_id": "repeat_17",
+          "status": "completed"
+        }
+      },
+      "n": 431
+    },
+    "repeat_23": {
+      "accuracy": 0.7122969837587007,
+      "correct": 307,
+      "local_raw_and_checkpoint_audit": {
+        "checked_utc": "2026-10-12T06:33:14.707056+00:00",
+        "checkpoint_step": 256,
+        "checkpoint_targets": 524288,
+        "claims_modified": false,
+        "evaluations": {
+          "endpoint431": {
+            "correct": 307,
+            "n": 431,
+            "parsed": 427,
+            "stop_reasons": {
+              "length_cap": 3,
+              "native_eos": 428
+            }
+          },
+          "observed80_step128": {
+            "correct": 61,
+            "n": 80,
+            "parsed": 78,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step256": {
+            "correct": 64,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step64": {
+            "correct": 65,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          }
+        },
+        "export": {
+          "bytes": 229468645,
+          "campaign": "mp-grid-20261012-r2",
+          "files_verified": 867,
+          "finished_epoch": 1791786754.41537,
+          "full_checkpoint_steps": [
+            256
+          ],
+          "manifest_sha256": "d4125b769d8f89269ccc02f3916db329429686dbfa3917adebb558fdcde1d31b",
+          "remote_files_unchanged": true,
+          "run": "repeat_23",
+          "schema": "independent_local_export_v1"
+        },
+        "new_model_calls": 0,
+        "run": "repeat_23",
+        "schema": "independent_local_fullstate_raw_audit_v1",
+        "scientific_config_changed": false,
+        "state_sha256": "975403df2ecdf1fdb638f3c048190435b766474d7d72c5a959e96802e331a555",
+        "terminal_receipt": {
+          "actual_cost_cents": 900,
+          "attempt_id": "29a5ed807a534204a4c6b631de433a2e",
+          "claim_sha256": "19d28095a3a03c8bd77454bd3f58d62640e25ff11bab6e84f183ed6326c72511",
+          "evidence_sha256": "b56c8f49be70c1e0831be5b7f802de1015c8458ab9f9062bfc259da13393d59e",
+          "finished_epoch": 1791786309.4239237,
+          "run_id": "repeat_23",
+          "status": "completed"
+        }
+      },
+      "n": 431
+    },
+    "solutions_17": {
+      "accuracy": 0.8213457076566125,
+      "correct": 354,
+      "local_raw_and_checkpoint_audit": {
+        "checked_utc": "2026-10-12T15:09:43.308881+00:00",
+        "checkpoint_step": 256,
+        "checkpoint_targets": 524288,
+        "claims_modified": false,
+        "evaluations": {
+          "endpoint431": {
+            "correct": 354,
+            "n": 431,
+            "parsed": 427,
+            "stop_reasons": {
+              "length_cap": 2,
+              "native_eos": 429
+            }
+          },
+          "observed80_step128": {
+            "correct": 62,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step256": {
+            "correct": 69,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step64": {
+            "correct": 70,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          }
+        },
+        "export": {
+          "bytes": 229640974,
+          "campaign": "mp-grid-20261012-r2",
+          "files_verified": 867,
+          "finished_epoch": 1791817767.713811,
+          "full_checkpoint_steps": [
+            256
+          ],
+          "manifest_sha256": "4cf115118a5f8e011b64f2d5a17e28ffe12cffe968b460acc465f9c93747a6df",
+          "remote_files_unchanged": true,
+          "run": "solutions_17",
+          "schema": "independent_local_export_v1"
+        },
+        "new_model_calls": 0,
+        "run": "solutions_17",
+        "schema": "independent_local_fullstate_raw_audit_v1",
+        "scientific_config_changed": false,
+        "state_sha256": "fdb0f820e203c9323f70e52d68a697dbe6e026b5fdabcd38cde40638ce1cef1c",
+        "terminal_receipt": {
+          "actual_cost_cents": 900,
+          "attempt_id": "1563120201f64b1c9b793fe373fc6ae7",
+          "claim_sha256": "f74be9443b44ea6ad17ac8fe9c532d83a95775c0f80f88f9eafc617389a940f3",
+          "evidence_sha256": "96e15299f9dcd454bf5cbdc978f2b911012aa935dc582fb9dd3c109f9ed50afa",
+          "finished_epoch": 1791789128.212685,
+          "run_id": "solutions_17",
+          "status": "completed"
+        }
+      },
+      "n": 431
+    },
+    "solutions_23": {
+      "accuracy": 0.8236658932714617,
+      "correct": 355,
+      "local_raw_and_checkpoint_audit": {
+        "checked_utc": "2026-10-12T15:09:44.462942+00:00",
+        "checkpoint_step": 256,
+        "checkpoint_targets": 524288,
+        "claims_modified": false,
+        "evaluations": {
+          "endpoint431": {
+            "correct": 355,
+            "n": 431,
+            "parsed": 426,
+            "stop_reasons": {
+              "length_cap": 3,
+              "native_eos": 428
+            }
+          },
+          "observed80_step128": {
+            "correct": 65,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step256": {
+            "correct": 69,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          },
+          "observed80_step64": {
+            "correct": 65,
+            "n": 80,
+            "parsed": 80,
+            "stop_reasons": {
+              "native_eos": 80
+            }
+          }
+        },
+        "export": {
+          "bytes": 229574428,
+          "campaign": "mp-grid-20261012-r2",
+          "files_verified": 867,
+          "finished_epoch": 1791817774.42341,
+          "full_checkpoint_steps": [
+            256
+          ],
+          "manifest_sha256": "b0286868da26df58824e74b16efb6120b90aee613183d87cd837443efd6654cb",
+          "remote_files_unchanged": true,
+          "run": "solutions_23",
+          "schema": "independent_local_export_v1"
+        },
+        "new_model_calls": 0,
+        "run": "solutions_23",
+        "schema": "independent_local_fullstate_raw_audit_v1",
+        "scientific_config_changed": false,
+        "state_sha256": "c551938963de96ebbffc79ad140423215fd2f624073e80e3b933b0d371bda370",
+        "terminal_receipt": {
+          "actual_cost_cents": 900,
+          "attempt_id": "a19acc39e2d04b45912e0b3686eeace6",
+          "claim_sha256": "471643a96b3a31866bd8cb7df7b61b899781106ceb360fece54f7d0ebd824c07",
+          "evidence_sha256": "83357a8c421e27a8e8dc9e23c3d7be1daa742966e7fd4b490c8276ea3ecb4685",
+          "finished_epoch": 1791789012.7342005,
+          "run_id": "solutions_23",
+          "status": "completed"
+        }
+      },
+      "n": 431
+    }
+  }
+}

@@ -1,3 +1,7 @@
+# Current P007 finite stateful completion — October12 morning
+
+Under the owner’s overnight execution/repair authorization, mp-completion-20261012-r1 may perform only the reconciled remaining original work. Read STATEFUL_COMPLETION_BINDING.json and the private ACTIVE_HANDOFF. Oldr2 is terminal failed/STOPPED: Breadth17 checkpoint128 is complete, zero ambiguous updates,8 unknown diagnostic outputs must never be replayed. One child restores that full state and runs only updates129–256, never-attempted diagnostic suffix24, observed80 at256, endpoint431. Mixed17/23 and base/audit migrate only because their old slots were never attempted. No fresh replacement, new seed/arm or dose. Same Oct13 04UTC deadline, at most2GPUs,124.50USD total conservative reservations,350/100/50 split.44 CPU tests and local parent verification passed. Publish source then submit once; once any claim/dispatch exists do not repeat.
+
 # Current authorization — October11 overnight P007
 
 The owner explicitly delegated tonight's experiment monitoring, analysis against the original plan/hypotheses, and scientifically justified bounded next experiments. Stable-state checks every30minutes. Preserve at least$50 of the$500; retain the stricter$350 presentation ceiling,$100 report allocation,$50 reserve. Follow-up science requires a written frozen hypothesis/design/dose/cost/absolute deadline and published source, not another user approval within this scope. No subagents or external messages; oldQ2/LT002 andAutoDL remain closed.

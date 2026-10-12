@@ -10,7 +10,7 @@ SOURCE_FILES=[
     'src/sft_data.py','src/real_math_audit.py',
     'analyses/completion_contract.py','analyses/gsm8k_answer_audit.py',
     'analyses/e017_stopping.py','analyses/e017_audit.py',
-    *['experiments/sft_allocation_midpoint/'+n for n in ('guard.py','common.py','checkpoint.py','runtime.py','dispatch.py','monitor.py','modal_runner.py')],
+    *['experiments/sft_allocation_midpoint/'+n for n in ('guard.py','common.py','checkpoint.py','runtime.py','dispatch.py','monitor.py','completion.py','modal_runner.py')],
     'requirements.txt','configs/models.lock.json']
 app=modal.App('sft-allocation-midpoint-models')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
@@ -61,7 +61,8 @@ def run_gpu(plan,config,release):
         assets=Path('/evidence')/config['asset_campaign']/'assets'
         if sha(assets/'inputs/manifest.json')!=config['input_sha256']:raise ValueError('Input release differs')
         verify(assets,read(assets/'result.json')['files'])
-        dump(out/'environment.json',runtime.environment());volume.commit()
+        environment=runtime.environment()
+        dump(out/'environment.json',environment);volume.commit()
         recorder=GPURecorder(out);recorder.start()
         identity=dict(config=config,source_commit=release['commit'],source_sha256=digest(release['source_files']))
         journal=runtime.Journal(out,'midpoint/'+plan['campaign_id']+'/'+config['run_id'],claims,volume.commit,check)
@@ -81,6 +82,19 @@ def run_gpu(plan,config,release):
                 if independent[name]['manifest_sha256']!=sha(gates/name/'artifact_manifest.json'):
                     raise ValueError('Independent engineering verification differs')
             result=runtime.main_train(assets,out,journal,identity,config['arm'],config['seed'])
+        elif kind=='continue_main':
+            from experiments.sft_allocation_midpoint.completion import continue_main
+            recovery=config['recovery']
+            parent_prefix='midpoint/'+recovery['parent_campaign']+'/'
+            if (config['run_id']!='breadth_17_resume' or config['arm']!='breadth' or config['seed']!=17 or
+                    claims.get(parent_prefix+'terminal/breadth_17')!=recovery['parent_terminal'] or
+                    recovery['parent_terminal']['status']!='failed' or
+                    recovery['parent_terminal']['evidence_sha256']!=recovery['failure_manifest_digest'] or
+                    claims.get(parent_prefix+'terminal/controller')!=recovery['controller_terminal'] or
+                    recovery['controller_terminal']['status']!='failed'):
+                raise ValueError('Stateful continuation does not match failed parent')
+            parent=Path('/evidence')/recovery['parent_campaign']/'breadth_17'
+            result=continue_main(assets,parent,out,journal,config,environment)
         elif kind=='base':
             model,tok=runtime.new_model(assets/'model',17,adapt=False)
             result=dict(status='completed',committed_updates=0,physical_generated_outputs=431,
@@ -133,11 +147,26 @@ def audit(plan,config,release):
         if not names or len(names)!=len(set(names)) or set(names)-allowed:raise ValueError('Unapproved audit targets')
         for name in names:
             guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=100)
-            directory=root/name;files=read(directory/'artifact_manifest.json');verify(directory,files)
+            source=config.get('audit_sources',{}).get(name,[plan['campaign_id'],name])
+            if (len(source)!=2 or any('/' in x or '..' in x for x in source) or
+                    source[1] not in allowed|{'breadth_17_resume'}):raise ValueError('Unsafe audit source')
+            directory=Path('/evidence')/source[0]/source[1]
+            files=read(directory/'artifact_manifest.json');verify(directory,files)
             results[name]=dict(files_verified=len(files),manifest_sha256=sha(directory/'artifact_manifest.json'),
+                source=source,
                 checkpoints={str(p.parent.name):read(p) for p in directory.glob('checkpoint_*/manifest.json')},
                 result=read(directory/'result.json'))
             dump(root/f'audit_progress_{name}.json',results[name]);volume.commit()
+        if 'parent_failure' in config:
+            parent=config['parent_failure']
+            if parent['run']!='breadth_17' or '/' in parent['campaign'] or '..' in parent['campaign']:
+                raise ValueError('Unexpected failure audit source')
+            directory=Path('/evidence')/parent['campaign']/parent['run']
+            files=read(directory/'failure_manifest.json')
+            if digest(files)!=parent['manifest_digest']:raise ValueError('Failure audit binding changed')
+            verify(directory,files)
+            results['_failed_parent_breadth17']=dict(files_verified=len(files),manifest_digest=digest(files),
+                source=[parent['campaign'],parent['run']],status='failed_preserved')
         dump(root/'audit.json',results);volume.commit()
         receipt=guard.finish(admission,status='completed',evidence_sha256=digest(results),actual_cost_cents=100,finished_epoch=time.time())
         return dict(results=results,receipt=receipt)
@@ -209,16 +238,19 @@ def controller(plan,queue,base_config,audit_config,release,binding=None):
     from experiments.sft_allocation_midpoint.common import dump,digest,manifest,sha
     from experiments.sft_allocation_midpoint.guard import RunGuard
     from experiments.sft_allocation_midpoint.dispatch import spawn_once,wait_existing,validate_replacement
+    from experiments.sft_allocation_midpoint.completion import validate_completion
+    remaining=binding is not None and binding.get('schema')=='remaining_work_v1'
     expected=[(a,s) for a in ('repeat','solutions','breadth','mixed') for s in (17,23)]
-    if [(c['arm'],c['seed']) for c in queue]!=expected or any(c['kind']!='main' for c in queue):
+    if not remaining and ([(c['arm'],c['seed']) for c in queue]!=expected or any(c['kind']!='main' for c in queue)):
         raise ValueError('Only the exact eight-run scientific queue is permitted')
-    if base_config['run_id']!='base' or base_config['kind']!='base' or audit_config['audit_runs']!=[c['run_id'] for c in queue]+['base']:
+    if not remaining and (base_config['run_id']!='base' or base_config['kind']!='base' or audit_config['audit_runs']!=[c['run_id'] for c in queue]+['base']):
         raise ValueError('Base/audit queue mismatch')
     for name,value in release['source_files'].items():
         if sha(Path('/workspace')/name)!=value:raise ValueError('Controller image differs from published source')
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
     guard=RunGuard(claims,plan);guard.register(now_epoch=time.time())
-    if binding is not None:validate_replacement(claims,plan,binding)
+    if remaining:validate_completion(claims,plan,binding,queue,base_config,audit_config)
+    elif binding is not None:validate_replacement(claims,plan,binding)
     reserve=plan['slots']['controller']['reserved_cents']
     if reserve<300:raise ValueError('Nonpreemptible CPU controller requires a three-dollar reservation')
     admission=guard.admit(dict(run_id='controller',config_sha256=digest([queue,base_config,audit_config,binding]),
@@ -242,7 +274,7 @@ def controller(plan,queue,base_config,audit_config,release,binding=None):
                 return terminal is not None and terminal['status']!='completed'
             return wait_existing(call,check,failed)
         completed=[]
-        for start in range(0,8,2):
+        for start in range(0,len(queue),2):
             check()
             pair=queue[start:start+2]
             calls=[spawn(c,run_gpu) for c in pair]
@@ -294,8 +326,12 @@ def submit(plan_json:str,queue_json:str,base_json:str,audit_json:str,receipt_dir
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
     binding=json.loads(Path(amendment_json).read_text()) if amendment_json else None
     if binding is not None:
-        from experiments.sft_allocation_midpoint.dispatch import validate_replacement
-        validate_replacement(claims,plan,binding)
+        if binding.get('schema')=='remaining_work_v1':
+            from experiments.sft_allocation_midpoint.completion import validate_completion
+            validate_completion(claims,plan,binding,queue,base,audit_config)
+        else:
+            from experiments.sft_allocation_midpoint.dispatch import validate_replacement
+            validate_replacement(claims,plan,binding)
     if any(claims.get('midpoint/'+plan['campaign_id']+'/claim/'+name) is not None for name in plan['slots']):
         raise ValueError('A campaign input is already claimed; reconcile rather than resubmit')
     out=Path(receipt_dir);out.mkdir(parents=True,exist_ok=False)

@@ -1,0 +1,90 @@
+{
+  "recorded_utc": "2026-10-12T15:22:31.467321+00:00",
+  "binding": {
+    "additional_outputs": 2308,
+    "additional_targets": 1310787,
+    "additional_updates": 640,
+    "authorization": "Owner delegated bounded repairs and completing the frozen study. Manually reconciled stateful continuation of unattempted updates, not fresh replacement or replay.",
+    "campaign": "mp-completion-20261012-r1",
+    "configs_sha256": "d27db3e8608b9ea0cef2ac48adf9e9bf0df0cee70cf88f5992c489d0b1314f4d",
+    "deadline_epoch": 1791864000.0,
+    "fresh_replacement": false,
+    "new_reservation_usd": 35,
+    "no_ambiguous_replay": true,
+    "old_app_stopped": true,
+    "old_consumed_reservation_usd": 57,
+    "old_containers": 0,
+    "old_unattempted_reservation_retired_usd": 23,
+    "old_unattempted_slots_retired": [
+      "mixed_17",
+      "mixed_23",
+      "base",
+      "audit"
+    ],
+    "original_training_total_unchanged": true,
+    "parent_campaign": "mp-grid-20261012-r2",
+    "parent_terminals": {
+      "breadth_17": {
+        "actual_cost_cents": 900,
+        "attempt_id": "b5d1d520bd3f4169b22be7e3ac83e569",
+        "claim_sha256": "2c553347ec35388ca3deccef16a46e480dfcba4ada084cc7f6bfce249a4e9e9b",
+        "evidence_sha256": "dc2255700c50c4dfad2a7f9c2d79ea597b733c9242c4acfd1ba7daadbcbfab06",
+        "finished_epoch": 1791790433.3130183,
+        "run_id": "breadth_17",
+        "status": "failed"
+      },
+      "controller": {
+        "actual_cost_cents": 300,
+        "attempt_id": "8a630eb63c154b1bb4aa8905dee3331f",
+        "claim_sha256": "fc8e774ff5eba9b64c96379b97d62620c478b64419185a8da3cfbaedf4bb3236",
+        "evidence_sha256": "487b3920c9b8ca05bf451917c8234d980a6234bdf5e79d42a85e528e26c668fe",
+        "finished_epoch": 1791792265.2172549,
+        "run_id": "controller",
+        "status": "failed"
+      }
+    },
+    "plan_sha256": "91c01c3daf89311182c4889a128ebff8468d3749646b3b5000d6b2da4d66d2ba",
+    "schema": "remaining_work_v1",
+    "total_reservation_with_all_prior_usd": 124.5,
+    "unknown_diagnostic_outputs_retained": 8
+  },
+  "parent_local_audit": {
+    "checked_utc": "2026-10-12T15:21:22.840026+00:00",
+    "committed_updates": 128,
+    "attempted_updates": 128,
+    "targets": 262077,
+    "saved_outputs_verified": 128,
+    "unknown_attempted_outputs": 8,
+    "no_unknown_training_update": true,
+    "checkpoint": {
+      "bytes": 222117365,
+      "file": "state.pt",
+      "identity_sha256": "83d9b669effca808e709099fea4708717c888a798acafd407344f1e92e6a24a7",
+      "processed_tokens": 368838,
+      "schema": "complete_lora_v1",
+      "sha256": "b34ec982c53a856b586e02784004c22416dad51c566e415eac27f16c493b3e8d",
+      "step": 128,
+      "supervised_tokens": 262077
+    },
+    "failure_manifest_digest": "dc2255700c50c4dfad2a7f9c2d79ea597b733c9242c4acfd1ba7daadbcbfab06",
+    "remaining_original_updates": 128,
+    "remaining_targets": 262211,
+    "remaining_never_attempted_outputs": 535,
+    "new_model_calls": 0
+  },
+  "provider_lifecycle": {
+    "lifecycle": {
+      "appState": "APP_STATE_STOPPED",
+      "createdAt": 1791783448.152843,
+      "createdBy": "tangzhice",
+      "stoppedAt": 1791792266.25503
+    }
+  },
+  "failure": "Provider GPU preemption at 2026-10-12 07:33:55UTC; controller waited for unaffected Breadth23 then stopped at08:04UTC.",
+  "monitoring_gap": "Last successful prior check was06:33UTC. This queued heartbeat was actually serviced around15:05UTC, despite07:15UTC message timestamp. No claim of uninterrupted30-minute monitoring.",
+  "validation": "44 CPU tests passed, including full optimizer/RNG roundtrip, training continuation starting at129, and exclusion of the8 ambiguous diagnostic outputs. Saved128-output parent audit and full checkpoint hash passed.",
+  "numerical_scope": "Exact restored state is checked before any new model work; GPU variant recorded. No bit-exact counterfactual claim across GPU variants/drivers.",
+  "new_scientific_arm": false,
+  "fresh_replacement": false,
+  "failure_retained": true
+}
