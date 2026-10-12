@@ -1981,3 +1981,7 @@ Engineering completed and independently verified:256 overfit updates,224 model o
 
 ## October11 overnight P007 monitoring/reliability repair
 Owner delegated overnight analysis and finite follow-up decisions with a50USD reserve. Assistant reconciled provider controller preemption, two cancelled children and279 committed/281 attempted updates plus240 observed outputs; independently downloaded703 artifacts and two full states. Added nonpreemptible CPU orchestration, immutable spawn receipts and passive GPU metrics, with37 CPU tests. Prepared an explicit one-time replacement binding and conservative112.50USD reservation while preserving original failed evidence. No external message or extra agent. Scientific runtime/loss/scoring unchanged; replacement admission is fresh-base, not a claim of exact lost-state recovery.
+
+
+## P007 heartbeat October12 06:02UTC
+Read-only provider/ledger/Volume inspection confirmed bothRepeat training endpoints256/524288 and ongoingevaluation. Savedtargetedfinalrecords,checkpointmanifests,passiveGPU samplesandbilling. No modelcall, retry, extraagent orconfigurationchange.

@@ -60,3 +60,7 @@ Authenticated Modal CLI billing now succeeds for the actual experiment workspace
 
 ### Replacement admission observed,05:40UTC
 Published repair d8c75ae3 was submitted exactly once as mp-grid-20261012-r2. The controller and two independently spawned A10080PCIe jobs are real and progressing:32/31 committed updates at05:40:33UTC; published release and reconciliation binding match the remote intent. Initialupdate receipts andcheckpoint32 manifests were retrieved. REPLACEMENT_STARTED.json records the provider app and meter3.32059585USD (credits offsetbilled0,reportinglag). Earlypointutilization samples0–30% andrough12GiB VRAM do not establish sustained efficiency; retain60-second samples forphaseanalysis. Automation p007 is ACTIVE every30minutes with theowner's overnight follow-up authorization andbudgetreserve. No endpoint431 resultyet.
+
+
+### First pair completed training,06:02UTC
+Both Repeat17/23 committed all256 updates and exactly524288 supervision targets; finalupdate intents/completions agree and bothcheckpoint256 manifests were collected. Training-after evaluation is stilllive; no endpoint resultorallocationconclusion isreported. The fixedqueue/configs remainunchanged. Authenticatedmeter5.42059585USD,credits offset billed0; reportinglag and112.50USD reservation remainexplicit. Passive60-secondGPU samples remainaround24–28% mean acrossmixedstages,not a timeintegrated utilizationmeasure. Finalfullstate/export/localscoring checks will followcompletedresults.
