@@ -9,6 +9,8 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
+import sys
 import time
 from experiments.sft_allocation_midpoint.common import dump,sha
 
@@ -29,8 +31,10 @@ def export(campaign,run,out,steps,bounded_large_files=False):
         if Path(name).is_absolute() or '..' in Path(name).parts:raise ValueError('Unsafe artifact path')
         p=out/name;p.parent.mkdir(parents=True,exist_ok=True)
         if bounded_large_files and record['bytes'] >= 32*1024*1024:
-            from scripts.midpoint_range_transfer import download_large
-            download_large('sft-allocation-midpoint-v1',prefix+name,p,record)
+            # Isolate the SDK async client from this process's synchronous transfer loop.
+            subprocess.run([sys.executable,'-m','scripts.midpoint_range_transfer',
+                '--volume','sft-allocation-midpoint-v1','--remote',prefix+name,
+                '--target',str(p),'--spec-json',json.dumps(record)],check=True,timeout=270)
         else:
             with p.open('xb') as f:
                 for block in volume.read_file(prefix+name):f.write(block)

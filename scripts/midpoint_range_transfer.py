@@ -37,7 +37,10 @@ def assemble(parts, target, spec):
         raise ValueError('Published local copy differs')
 
 
-def download_large(volume_name, remote, target, spec, seconds=240):
+def download_large(volume_name, remote, target, spec, seconds=240, transport_tag=""):
+    import re
+    if transport_tag and not re.fullmatch(r"[a-zA-Z0-9_-]+", transport_tag):
+        raise ValueError("Invalid transport attempt tag")
     import aiohttp
     from modal.volume import _Volume, _raise_on_block_response_error, _read_block_body
     from modal_proto import api_pb2
@@ -45,7 +48,7 @@ def download_large(volume_name, remote, target, spec, seconds=240):
     target = Path(target)
     if target.exists():
         raise FileExistsError(target.name)
-    parts = target.with_name(target.name + '.parts')
+    parts = target.with_name(target.name + '.parts' + ('_' + transport_tag if transport_tag else ''))
     parts.mkdir(exist_ok=False)
     records = []
     started = time.time()
@@ -98,3 +101,13 @@ def download_large(volume_name, remote, target, spec, seconds=240):
         receipt['finished_epoch'] = time.time()
         dump(parts/'transport_receipt.json', receipt)
 
+
+
+if __name__ == '__main__':
+    import argparse, json
+    p=argparse.ArgumentParser()
+    p.add_argument('--volume',required=True);p.add_argument('--remote',required=True)
+    p.add_argument('--target',required=True);p.add_argument('--spec-json',required=True)
+    p.add_argument('--transport-tag',default='')
+    a=p.parse_args()
+    download_large(a.volume,a.remote,a.target,json.loads(a.spec_json),transport_tag=a.transport_tag)
