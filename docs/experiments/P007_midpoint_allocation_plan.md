@@ -15,6 +15,72 @@ Two evidence tracks remain separate:
 
 The longer-term contribution candidate is a validated decision about near-optimal allocations and the conditions that change them. Neither a P/R sweep, a price equation, difficulty weighting, nor small-pilot extrapolation is individually a novelty claim.
 
+### October12 planning update: from inventory contrasts to an acquisition decision
+
+This is a research design discussion after six verified endpoints, not an
+admitted additional queue or a course-report draft. Complete Mixed17/23, base
+and the independent audit before choosing the single bounded follow-up. The
+original four-arm recipe, endpoint and deadline are unchanged.
+
+Additional answers currently outperform exact repetition on the same parents;
+greater parent count does not show a clear advantage over additional answers at
+this training dose. This does not establish equivalence, contradict all breadth
+findings, or identify structural diversity as the cause. The low-budget
+Mathematics result in Generating More also allows a small breadth/depth difference.
+Verified source sections are in the midpoint directory's
+LITERATURE_RECHECK_20261012.json. Do not claim to have disproved prior work.
+
+**Change the estimand.** Compare performance of acquisition policies under a
+common acquisition spending cap, controlling student targets and updates
+separately. Do not also force equal retained pair counts: with positive problem
+price, equal pairs and equal dollars would already fix P in the simple linear
+cost model. Record unused budget from indivisible actions instead of refilling it.
+
+Separate obtaining a problem and its checking reference, every teacher attempt,
+verification/deduplication, and setup overhead. Failed or duplicate responses
+consume resources; zero-supply parents remain in the acquisition denominator.
+If the problem purchase includes a usable demonstration, avoid charging for its
+first solution twice. Public benchmark access does not establish a human-curation
+price: include zero problem price and explicitly labeled nonzero scenarios.
+Measured generation costs, allocations of shared overhead, provider invoices and
+hypothetical prices stay separate.
+
+The smallest useful bridge is the proposed same-teacher acquisition pilot:
+128 preselected parents, at most eight attempts each, no student training. Measure
+first/second/fourth distinct usable-answer supply, failures, duplicates and
+censored cost-to-acceptance. This cannot price the OpenMathInstruct-2 inventory
+or prove an optimal allocation. Model revision, sampling, scoring/duplicate
+contracts, cost and absolute stop limits still need an immutable execution
+record. Do not switch teachers because supply is disappointing.
+
+Subsequent **cost-matched validation**, currently unsubmitted, must train on data
+from the same metered process. Use a new pre-availability parent draw, fixed order
+and finite sampling limits. Compare breadth (seek one usable answer before
+acquiring the next parent), depth (seek up to four), and an intermediate policy
+only if it tests a specific hypothesis. All retain zero-supply parents and stop
+at the same spending cap. P, usable R and N are then outcomes. Retain a replay
+control where it answers the marginal-content question, without multiplying
+every cell merely to enlarge the grid.
+
+Freeze a small price/budget scenario grid before new student outcomes. Learn any
+decision rule from pilot data only and include the pilot cost in end-to-end
+savings claims. Validate on another procurement draw and a price or budget not
+used to select the rule; training seeds and procurement draws are different
+replication axes. Logged-attempt replay is a cost-accounting simulation, not proof
+that counterfactual batch runtimes equal a prorated share of the full-bank bill.
+A simple comparative rule is enough initially; a new adaptive algorithm or
+scaling-law fit is not required.
+
+The falsifiable target is a repeatable region where a recommendation yields a
+useful cost/performance tradeoff, or a reliable statement that policies cannot
+yet be distinguished. Report all-question paired differences, resource usage
+and sensitivity to unknown problem price. The current 431-question experiment
+cannot certify a one-point noninferiority margin or a dollar-optimal frontier.
+Broader recommendations need fresh evaluation and procurement replication.
+Difficulty-aware sampling and finite retries already have DART predecessors;
+novelty must lie in validated decisions and boundary conditions, not these
+ingredients alone.
+
 ## Closest prior work and the remaining test
 
 | Primary source | Established precedent relevant here | Consequence for this project |

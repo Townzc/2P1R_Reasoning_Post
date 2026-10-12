@@ -1,0 +1,95 @@
+{
+  "schema": "midpoint_primary_source_check_v1",
+  "checked_utc": "2026-10-12T16:44:53.914532+00:00",
+  "purpose": "Research source audit, not presentation slides or a course-report draft.",
+  "sources": [
+    {
+      "title": "When Does Generating More Help?",
+      "url": "https://arxiv.org/html/2607.01727v1",
+      "sections": [
+        "4",
+        "5.2",
+        "6.1",
+        "6.2"
+      ],
+      "verified_facts": [
+        "The baseline samples until 32 correct responses per question; smaller r uses the first r.",
+        "Source expansion versus response sampling is compared within equal q*r example-count buckets.",
+        "Students use equal epochs; repeated configurations have three training seeds.",
+        "In Mathematics, larger question pools match smaller pools at low budget and outperform at higher budget."
+      ],
+      "implication": "Our small-budget non-difference does not refute this paper. Equal accepted inventory is distinct from finite acquisition cost including failed attempts."
+    },
+    {
+      "title": "OpenMathInstruct-2",
+      "url": "https://arxiv.org/html/2410.01560v2",
+      "sections": [
+        "2.2.4",
+        "Figure 6"
+      ],
+      "verified_facts": [
+        "256K pairs are held fixed while unique questions range from 1K to 6.5K.",
+        "The MATH validation result improves with greater question count."
+      ],
+      "implication": "Direct P/R precedent at much larger average R; not a universal R=1 recommendation."
+    },
+    {
+      "title": "X-Coder",
+      "url": "https://arxiv.org/html/2601.06953v3",
+      "sections": [
+        "4.2",
+        "Figure 3",
+        "6"
+      ],
+      "verified_facts": [
+        "The controlled 64K-example comparison includes 64K*1, 16K*4, and 8K*8.",
+        "The paper reports an advantage for greater task count.",
+        "The paper does discuss verification and data-construction costs."
+      ],
+      "implication": "Low-R allocation is already studied; do not claim cost was entirely omitted or generalize our GSM8K result to code."
+    },
+    {
+      "title": "DART-Math",
+      "url": "https://arxiv.org/html/2407.13690v2",
+      "sections": [
+        "3.2",
+        "4.3"
+      ],
+      "verified_facts": [
+        "Difficulty-aware generation and one-response coverage are explicit prior work.",
+        "Its synthesis-cost analysis varies maximum raw attempts and reports unmet response quotas.",
+        "It explicitly discusses potentially trading coverage attainment against generation cost."
+      ],
+      "implication": "Failed-attempt and difficult-parent costs are not new observations by themselves; purchasing new parents is a separate intervention."
+    },
+    {
+      "title": "Data Repetition Beats Data Scaling in Long-CoT SFT",
+      "url": "https://arxiv.org/html/2602.11149v2",
+      "sections": [
+        "2.1",
+        "2.2",
+        "2.3"
+      ],
+      "verified_facts": [
+        "The experimental budget is optimizer updates, with batch size one.",
+        "The grid varies unique examples and repetition epochs, with independent runs and full warmup schedules.",
+        "Termination is reported with accuracy and pass rate."
+      ],
+      "implication": "Retain exact replay and termination diagnostics. Our same-parent extra-answer result is not a direct replication of its long-CoT setting."
+    },
+    {
+      "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+      "url": "https://arxiv.org/html/2604.15306v1",
+      "sections": [
+        "4.1"
+      ],
+      "verified_facts": [
+        "Question/answer allocation is studied under fixed numbers of training records.",
+        "More distinct start/end pairs improve transfer on disjoint maps in the reported setup."
+      ],
+      "implication": "The general problem is not new; the controlled graph result need not dictate a low-dose pretrained math result."
+    }
+  ],
+  "novelty_status": "No claim of exhaustive coverage or established novelty. A new empirical contribution requires a validated acquisition decision beyond re-running P/R grids.",
+  "new_model_calls": 0
+}
