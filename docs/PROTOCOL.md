@@ -1,3 +1,13 @@
+# October 11 preparation for the SFT allocation midpoint
+
+[P007](experiments/P007_midpoint_allocation_plan.md) is the current reviewable
+proposal: released-bank breadth/multiple-answer/repeat diagnostics plus a separate
+metered acquisition pilot. It is not a frozen or admitted main grid. Its data
+preparation and bounded platform checks do not reopen historical scientific
+queues. Freeze common recipe, evaluation identities and resource limits after
+engineering measurements and before comparative execution. Earlier protocols
+below preserve their original experimental scope and evidence.
+
 ## LT002 — bounded exploratory supervision controls, 2026-09-28
 
 The owner requested continuation toward an October1 research discussion.

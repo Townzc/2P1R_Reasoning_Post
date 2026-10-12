@@ -1,3 +1,14 @@
+# October 11: SFT allocation midpoint preparation
+
+The current project returns to problem/answer acquisition allocation for the
+October15 midpoint. [P007](docs/experiments/P007_midpoint_allocation_plan.md) contains
+the short/long-horizon proposal and $500 staged Modal envelope.
+[CPU preparation](reports/sft_allocation_midpoint_20261011/READINESS.md) reconstructed
+the pinned bank, verified eight full-response schedules and found one cross-ID
+development exposure. New26 CPU checks pass; no new model work has occurred.
+Modal authentication is established; cloud/platform checks are separate from
+main-grid admission. Prior Q2/LT002 closeouts below remain historical and closed.
+
 # October 1: scoring repair validated on saved fixtures; provider OFF
 
 160 authored checks passed locally and on the original Linux runtime. The complete

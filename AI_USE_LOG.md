@@ -1,3 +1,19 @@
+## October11 allocation midpoint planning and CPU reconstruction
+
+AI assistance read28 user-supplied course/research notes at a fixed Git revision,
+checked primary-source claims and official rubric/template/Modal documentation,
+and prepared a cost-bounded scientific proposal. Parallel assistants separately
+audited literature, course/platform requirements and data/implementation. The
+owner completed the official SDK authorization; no credential entered the source.
+
+Restored public parent/candidate records and recomputed decisions/tokens; all eight
+whole-response schedules match. A cross-source question-text check identified an
+additional previously used development parent. Implemented CPU inventory assembly,
+immutable run admission and a CPU-only Modal round-trip fixture;26 CPU tests pass.
+These checks are engineering/provenance evidence, not new scientific model results
+or human process annotations. Main-grid recipe remains proposed; no cloud job or
+GPU run preceded source publication. Old failures and unrelated files are retained.
+
 ## September30 final Q2 analysis and provider shutdown
 
 Final W_future evaluation completed1024 outputs/32 sealed batches with zero

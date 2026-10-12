@@ -1,3 +1,21 @@
+# October 11 — recover allocation data and prepare the midpoint
+
+Return to SFT data acquisition allocation under the new $500 Modal envelope.
+Read all28 supplied notes at pinned revision; retain the distinction between
+fixed released inventory, student exposure and a true metered acquisition policy.
+Generating More is an additional direct predecessor, including extrapolation.
+No novelty claim based only on P/R or a small-pilot fit survives this review.
+
+Prepare [P007](experiments/P007_midpoint_allocation_plan.md), preserving C017's
+pre-availability parent draw and missing-answer denominator. Reconstructed
+parents/candidates match historical bytes and independent token checks pass.
+Exact whole-answer schedules need no partial-label workaround. A normalized
+question alias reduces candidate unmentioned dev from432 to431; retain the
+remaining exposure uncertainty. Use a new runner rather than old hard-coded
+launchers. The CPU admission guard and tests do not establish GPU resume.
+No GPU or scientific grid has been started; ordinary code/preparation milestones
+are published before a finite CPU platform check. See the new readiness record.
+
 ## LT002 — resume from completed evidence and separate confounded comparisons
 
 Incorporate the completed sprint through cb9b6b40 into the assigned long-term

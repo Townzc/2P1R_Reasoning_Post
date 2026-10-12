@@ -1,3 +1,16 @@
+# October 11 — allocation midpoint preparation
+
+Current work: [P007](../docs/experiments/P007_midpoint_allocation_plan.md).
+Completed: full reading of28 supplied notes; rubric/template/pricing checks;
+byte-exact public-data reconstruction; independent token/schedule audit;26 new
+CPU correctness checks; Modal SDK authentication.
+Prepared: CPU-only cloud admission/Volume round-trip test with a $2 reservation
+inside the $20 engineering envelope. Pending: actual platform check, new trainer,
+GPU profile/recovery validation and main-grid review. New model outputs/updates:0.
+Scientific results, optimum ratios, actual acquisition prices and Modal throughput
+remain unmeasured. [Evidence and next steps](sft_allocation_midpoint_20261011/READINESS.md).
+Earlier result/closeout sections remain unchanged historical records.
+
 # October 1: scoring repair validated on saved fixtures; provider OFF
 
 160 authored checks passed locally and on the original Linux runtime. The complete
