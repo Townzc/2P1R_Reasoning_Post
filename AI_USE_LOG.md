@@ -1967,3 +1967,5 @@ bilingual Office Hour briefs updated; no external message sent.
 ## October11 midpoint execution preparation
 
 AI-assisted implementation of immutable input release, fixed 80/431 development rosters, and CPU-only locked weight acquisition. The owner approved conditional four-arm execution. No new scientific outcome; external communications remain drafts only.
+
+Implemented the finite Modal model runner, raw-before-score output receipts, immutable full LoRA checkpoints and a separate cross-container resume probe. 72 targeted CPU tests pass, including next-update exact restoration and token-normalized gradients. GPU behavior is not yet established; no outcome claims made. Asset download hashes match the model lock and its app is provider-stopped with zero active containers.
