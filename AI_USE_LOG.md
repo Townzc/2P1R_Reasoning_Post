@@ -2018,3 +2018,7 @@ The assistant collected and independently verified Mixed17's867 files/full termi
 
 ### October12 17:55UTC — training completion and budget status
 Assistant performed read-only provider/ledger checks, independently matched the saved Mixed23 final-update receipt to its checkpoint256 manifest, and generated a deterministic partial result/cost record from existing envelopes. All eight training trajectories are complete; only seven endpoints are independently verified, and final evaluation/base/audit remain pending. No new model task, generation, update, arm, seed or reservation was added. The acquisition-cost gap and proposed bounded pilot were discussed as research planning; no slides, submitted report text or external message was generated or sent.
+
+
+### 2026-10-12 — P007 cost-pilot preparation and transport hardening
+Assistant read immutable experiment receipts, official teacher metadata and authenticated Modal rates; recorded the owner's latest450USD spending/50USD reserve authorization. Prepared a bounded read-only range transfer with six CPU checks, preserving failed copies and requiring full-file SHA before publishing a new local copy. No new scientific model calls, slides, external messages or subagents in this preparation. Human owns scientific interpretation and course deliverables.

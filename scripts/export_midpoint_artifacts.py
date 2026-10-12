@@ -13,7 +13,7 @@ import time
 from experiments.sft_allocation_midpoint.common import dump,sha
 
 
-def export(campaign,run,out,steps):
+def export(campaign,run,out,steps,bounded_large_files=False):
     import modal
     if not all(re.fullmatch(r'[A-Za-z0-9_.-]+',s) for s in (campaign,run)):
         raise ValueError('Unsafe run path')
@@ -28,8 +28,12 @@ def export(campaign,run,out,steps):
         name,record=pair
         if Path(name).is_absolute() or '..' in Path(name).parts:raise ValueError('Unsafe artifact path')
         p=out/name;p.parent.mkdir(parents=True,exist_ok=True)
-        with p.open('xb') as f:
-            for block in volume.read_file(prefix+name):f.write(block)
+        if bounded_large_files and record['bytes'] >= 32*1024*1024:
+            from scripts.midpoint_range_transfer import download_large
+            download_large('sft-allocation-midpoint-v1',prefix+name,p,record)
+        else:
+            with p.open('xb') as f:
+                for block in volume.read_file(prefix+name):f.write(block)
         if p.stat().st_size!=record['bytes'] or sha(p)!=record['sha256']:
             raise ValueError('Local bytes differ: '+name)
         return name
@@ -44,4 +48,5 @@ def export(campaign,run,out,steps):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--campaign',required=True);p.add_argument('--run',required=True)
     p.add_argument('--out',required=True);p.add_argument('--checkpoint-steps',default='256')
-    a=p.parse_args();print(json.dumps(export(a.campaign,a.run,a.out,[int(s) for s in a.checkpoint_steps.split(',') if s])))
+    p.add_argument('--bounded-large-files',action='store_true')
+    a=p.parse_args();print(json.dumps(export(a.campaign,a.run,a.out,[int(s) for s in a.checkpoint_steps.split(',') if s],a.bounded_large_files)))

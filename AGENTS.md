@@ -1,3 +1,7 @@
+# Latest owner authorization — October12 cost follow-up
+
+After full main verification, execute the same-teacher cost/supply pilot directly, counting failures, duplicates and setup. Design a genuine equal-acquisition-budget breadth/depth comparison. Speed is prioritized; select an appropriate Modal GPU. Total500USD with at least50USD protected supersedes the earlier internal350/100 split. Each new finite phase still requires frozen question/design/dose/cost/deadline and published source; no blanket unbounded grid. Original main Oct13 04UTC deadline unchanged. No subagents, external sending, AutoDL or course-slide generation. Notify main verified completion before lengthy analysis. Earlier dated states are history.
+
 # Current P007 tail — October12 17:55UTC
 
 Read the private ACTIVE_HANDOFF and public ALL_TRAINING_COMPLETE_20261012.json.
