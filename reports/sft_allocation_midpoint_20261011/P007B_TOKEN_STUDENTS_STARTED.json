@@ -1,0 +1,131 @@
+{
+  "billing": {
+    "not_invoice_or_balance": true,
+    "protected_usd": 50,
+    "reservation_usd": 366.5,
+    "spend_ceiling_usd": 450,
+    "summary": {
+      "adjustments": {
+        "credits": "-44.44000000",
+        "free_storage": "-0.02984052",
+        "network_egress_allowance": "-0.00100051",
+        "plan_cost": "0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "billed_cost": "0E-8",
+      "metered_cost": "44.47084103",
+      "metered_cost_breakdown": {
+        "ephemeral_apps": "44.43675014",
+        "llm_tokens": "0E-8",
+        "volumes": "0.02984052"
+      }
+    },
+    "utc": "2026-10-12T22:21:54.195640+00:00"
+  },
+  "campaign": "mp-policy-token-20261012-r1",
+  "deadline_utc": "2026-10-14T02:00:00Z",
+  "endpoint_outputs_per_student": 1319,
+  "exactly_two_actual_gpu_workers": true,
+  "external_review": "v1prefix/dataPASS, codePASS-WITH-NOTES; v2interpretation additions and allnewoutcomes pending",
+  "first_pair": [
+    "breadth_p0_s17",
+    "depth_p0_s17"
+  ],
+  "input_manifest_sha256": "85efe5023fab411a8f952992c0fd8b9879d313fa1fa0d6ff7abfe310f24db4e7",
+  "new_teacher_outputs": 0,
+  "next_pair": [
+    "breadth_p4_s17",
+    "depth_p4_s17"
+  ],
+  "prior_pilots_verified_sha256": "fd87e4a2a2532e5c060480b451b79016469b182c237c007342936e322e9b3de6",
+  "remaining_six_unclaimed_at_snapshot": true,
+  "running": {
+    "breadth_p0_s17": {
+      "app": "ap-pQqa2w80AkGLTv52dsBWss",
+      "config_sha256": "cfe5e26316970d9bb10a8a60d601ff4aaf1672589e9ba6a9d5e79d65a679d9fe",
+      "container": "ta-01M4S36C05XTZBW36K26M9YM5R",
+      "cuda": "12.8",
+      "first_update": {
+        "cumulative_processed": 2515,
+        "cumulative_targets": 2115,
+        "gradient_norm": 0.31311044096946716,
+        "indices": [
+          334,
+          229,
+          30,
+          363,
+          48,
+          178,
+          312
+        ],
+        "loss": 0.1639661513885426,
+        "lr": 6.25e-06,
+        "peak_allocated_bytes": 11546680832,
+        "processed_tokens": 2515,
+        "seconds": 2.5529536519999994,
+        "step": 1,
+        "supervised_tokens": 2115
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "latest_observed_update": 6,
+      "snapshot_utc": "2026-10-12T22:21:05.193593+00:00",
+      "software": {
+        "accelerate": "1.10.1",
+        "numpy": "2.3.2",
+        "peft": "0.17.1",
+        "safetensors": "0.6.2",
+        "tokenizers": "0.22.1",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.56.2"
+      },
+      "source": "05be5032db9af07cb3480319f34560ca04260d26",
+      "startup_proof_sha256": "b2f752a7bed88b412e30c47f7e3ed355a927289ac59adbdba0886dd286649b2b"
+    },
+    "depth_p0_s17": {
+      "app": "ap-LcyohLZ79ueU6fzpeGUGtj",
+      "config_sha256": "c2380dd09d36d6692ca9513ef0a0ced65b3bf6b33b4e10bdd116b62df223925f",
+      "container": "ta-01M4S36BHBWJQN9S744NH710CR",
+      "cuda": "12.8",
+      "first_update": {
+        "cumulative_processed": 2454,
+        "cumulative_targets": 1962,
+        "gradient_norm": 0.30293020606040955,
+        "indices": [
+          44,
+          203,
+          69,
+          5,
+          363,
+          423,
+          33
+        ],
+        "loss": 0.12848577003595663,
+        "lr": 6.25e-06,
+        "peak_allocated_bytes": 12263326720,
+        "processed_tokens": 2454,
+        "seconds": 3.6081603499999986,
+        "step": 1,
+        "supervised_tokens": 1962
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "latest_observed_update": 13,
+      "snapshot_utc": "2026-10-12T22:21:05.193593+00:00",
+      "software": {
+        "accelerate": "1.10.1",
+        "numpy": "2.3.2",
+        "peft": "0.17.1",
+        "safetensors": "0.6.2",
+        "tokenizers": "0.22.1",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.56.2"
+      },
+      "source": "05be5032db9af07cb3480319f34560ca04260d26",
+      "startup_proof_sha256": "7700f0a8a8d47d9fd8fba21f7871edb70de19a834453945b4571f8d9a39f95fc"
+    }
+  },
+  "schema": "p007b_token_students_first_pair_verified_v1",
+  "science_results_available": false,
+  "targets_per_student": 524287,
+  "updates_per_student": 256,
+  "utc": "2026-10-12T22:23:05.880772+00:00"
+}
