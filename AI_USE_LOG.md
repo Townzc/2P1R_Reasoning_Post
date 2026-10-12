@@ -2002,3 +2002,7 @@ The assistant retrieved and hashed the actual state-restoration proof and first 
 
 ### P007 training milestone check, 2026-10-12 15:49UTC
 The assistant read real provider containers and immutable unit receipts, archived the full active ledger, and reconciled all128 resumed updates with the parent dose and terminal checkpoint manifest. It distinguished training completion from pending evaluation/full-state export and recorded the18.21043670USD lagging meter. No model invocation, retry, new scientific dose or configuration change occurred.
+
+
+### P007 independent resumed-output audit and primary contrasts, 2026-10-12 16:28UTC
+The assistant implemented a reusable local-only auditor for regular, base and stateful-continued exports. It validated the existing Repeat17 fixture, then checked all535 newly saved resumed outputs, raw stops/scores, all128 new updates and the complete terminal state against the retained failed parent. It preserved unsuccessful local read/transport attempts and partial files, repaired only missing transfer bytes, and accepted the copy only after the immutable full-file hash matched. The provider had already released the completed GPU. It computed the two prespecified primary contrasts for six verified trajectories using the frozen paired-question bootstrap; Mixed/base/audit remain pending, so no next experiment was selected. It reported the actual lagging workspace meter separately from reservations. No model generation, training, new cloud dispatch, deletion or external message occurred in this audit work.
