@@ -1,3 +1,13 @@
+## October11 CPU cloud preflight verified and closed
+
+Published initialization repair completed the original bounded CPU check. Two
+ready writer attempts produced one admitted writer and one rejected duplicate;
+independent read plus local export hashes agree. Archived immutable admission
+records and verified provider stopped/zero-container state. No GPU/model work;
+$2 reserved conservatively, actual billing unknown. Data/guard local checks remain
+26 passed. Scientific protocol and real-model recovery still require their own
+validation; no old experiment or main grid was launched.
+
 ## October11 Modal CPU startup repair
 
 The first CPU-only app built its image but failed before the local entrypoint

@@ -6,8 +6,9 @@ the short/long-horizon proposal and $500 staged Modal envelope.
 [CPU preparation](reports/sft_allocation_midpoint_20261011/READINESS.md) reconstructed
 the pinned bank, verified eight full-response schedules and found one cross-ID
 development exposure. New26 CPU checks pass; no new model work has occurred.
-Modal authentication is established; cloud/platform checks are separate from
-main-grid admission. Prior Q2/LT002 closeouts below remain historical and closed.
+Modal authentication and the finite CPU persistence/admission check are complete;
+provider apps are stopped with zero containers. GPU profile/recovery and main-grid
+admission remain pending. Prior Q2/LT002 closeouts below remain historical and closed.
 
 # October 1: scoring repair validated on saved fixtures; provider OFF
 

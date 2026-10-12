@@ -19,7 +19,7 @@ The new Modal environment needs durable output and duplicate-work protection. Ol
 | Four allocations × two schedules | All eight match archived hashes, expose every selected pair, contain256 updates and524,288 supervised targets with complete responses/EOS. |
 | Exposure review | 28,544 tracked run artifacts plus614 tracked JSONL files;81 conservatively exposed/mentioned dev parents,431 unmentioned candidates. No guarantee about semantic aliases or private/remote-only history. |
 | New CPU correctness tests | 26 passed:17 admission/reconciliation checks and9 frozen-inventory reconstruction checks. |
-| Modal definition import | CPU preflight module imports under Python3.12/Modal1.6.1 without making a remote call. |
+| Modal CPU cloud check | Two ready writers contend; exactly one is admitted. Independent read and local export hashes match. Provider apps stopped and active containers are zero. |
 
 The dataset counts include both the historical GSM8K and MATH audit records; the proposed new training uses GSM8K only. A source-data audit is not a teacher-generation measurement or a model result. Independent token verification does not certify proof validity.
 
@@ -56,7 +56,7 @@ Public sources suffice; no AutoDL startup is needed. GitHub alone lacks cached f
 
 The cross-source dev alias shows why original record IDs alone are inadequate. Exclude the known alias from the proposed new endpoint and disclose limits of the remaining431 questions. Do not label them pretraining-clean or definitely unseen by all prior research.
 
-Next: verify CPU cloud persistence/atomic admission; build and validate the new training/checkpoint harness, run the bounded32-example overfit/throughput/recovery profile, then freeze and review the exact main recipe before eight comparative runs. The teacher pilot stays separate from historical bank pricing. No automatic old-run restart or main-grid launch follows this preparation record.
+Next: build and validate the new training/checkpoint harness, run the bounded32-example overfit/throughput/recovery profile, then freeze and review the exact main recipe before eight comparative runs. The teacher pilot stays separate from historical bank pricing. No automatic old-run restart or main-grid launch follows this preparation record.
 
 ## Initial CPU platform attempt
 
@@ -67,3 +67,14 @@ objects. [Failure receipt](MODAL_STARTUP_FAILURE.json) is retained. The narrow f
 constructs the Dict handle inside the serialized function. The original $2
 reservation and immutable15-minute deadline are unchanged. Provider charges, if
 any for startup/image work, remain unknown until billing reconciliation.
+
+## CPU platform closeout
+
+The corrected published source completed the original finite CPU plan. Both
+writers reached the readiness gate, one obtained the claim, and the other was
+rejected against the matching immutable claim. A separate reader and an
+independently downloaded local file agree on SHA-256. Full intent/claim/attempt/
+terminal records were collected before Dict expiry. Both cloud apps are stopped
+and active containers are zero. [Verified compact result](MODAL_CPU_PREFLIGHT.json).
+No GPU/model work occurred. The $2 reservation is not billed spend; actual provider
+charges remain unverified. Real-model resume and training throughput remain pending.
