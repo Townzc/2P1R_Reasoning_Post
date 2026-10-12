@@ -1,0 +1,56 @@
+"""All eight fixed-tariff students; no selection, dispatch, or missing-cell fill."""
+import argparse
+from pathlib import Path
+from experiments.sft_allocation_midpoint.common import read,dump,sha,digest
+from experiments.sft_allocation_acquisition.token_contract import TARGETS
+from scripts.summarize_acquisition_students import contrasts,CELLS,SEEDS
+from src.sft_data import read_jsonl
+
+
+def analyze(root):
+    root=Path(root)
+    spec=read('reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENT_ADMISSION.json')
+    inputs=root/'student_preparation_r2/inputs'
+    if sha(inputs/'manifest.json')!=spec['input_sha256']:raise ValueError('Frozen inputs changed')
+    ids=sorted(x['problem_id'] for x in read_jsonl(inputs/'gsm8k_test1319.jsonl'))
+    if len(ids)!=1319 or len(set(ids))!=1319:raise ValueError('Incomplete standard benchmark')
+    predictions={};sources={};table=[]
+    for cell in CELLS:
+        row=dict(cell=cell,tariff_procurement=spec['selection'][cell],seeds={})
+        for seed in SEEDS:
+            run=f'{cell}_s{seed}';receipt=root/'students'/(run+'_run_r1')/'result.json'
+            envelope=read(receipt);r=envelope['result']
+            ap=root/'student_exports'/run/'LOCAL_ORACLE_AUDIT.json';audit=read(ap)
+            if (envelope['receipt']['status']!='completed' or r['status']!='completed'
+                    or r['cell']!=cell or r['seed']!=seed or r['supervised_tokens']!=TARGETS
+                    or r['committed_updates']!=256 or r['physical_generated_outputs']!=1319
+                    or audit['campaign']!=spec['campaign_id'] or audit['run_id']!=run
+                    or audit['input_sha256']!=spec['input_sha256']
+                    or audit['artifact_digest']!=digest(envelope['artifact_manifest'])
+                    or audit['artifact_digest']!=envelope['receipt']['evidence_sha256']
+                    or audit['outputs_independently_rescored']!=1319
+                    or audit['supervised_tokens_verified']!=TARGETS):
+                raise ValueError('Incomplete or mismatched student: '+run)
+            qc=r['endpoint']['question_correct']
+            if (sorted(qc)!=ids or any(type(x) is not bool for x in qc.values())
+                    or sum(qc.values())!=audit['correct'] or sum(qc.values())!=r['endpoint']['correct']):
+                raise ValueError('Unknown or inconsistent endpoint')
+            predictions[run]=qc;sources[run]=dict(receipt_sha256=sha(receipt),local_audit_sha256=sha(ap))
+            row['seeds'][str(seed)]=dict(correct=sum(qc.values()),n=1319,accuracy=sum(qc.values())/1319,
+                parsed=r['endpoint']['parsed'],stop_reasons=r['endpoint']['stop_reasons'],
+                train_seconds=r['train_seconds'],wall_seconds=r['wall_seconds'],
+                runtime_rate_estimate_usd=r['runtime_rate_estimate_usd'])
+        row['mean_accuracy']=sum(x['accuracy'] for x in row['seeds'].values())/2;table.append(row)
+    return dict(schema='p007b_token_tariff_results_v1',table=table,sources=sources,
+        contrasts=contrasts(predictions),updates=2048,supervised_targets=8*TARGETS,endpoint_outputs=10552,
+        tariff=spec['inputs_manifest']['tariff'],limitations=spec['limitations']+[
+            'Report both within-price contrasts alongside the interaction; an interaction alone is not a winner.',
+            'Non-significance is not equivalence. Final-answer correctness is not verified reasoning quality.',
+            'Unused wallets differ; this is a common budget cap, not exactly equal realized spending.'],
+        bootstrap=dict(replicates=10000,seed=20261013,unit='shared paired question across eight fixed models',
+            interpretation='Conditional on observed models/trace pools; not seed or procurement uncertainty.'),
+        original_two_time_priced_students='Retained separately as operational pilots, not pooled into this comparison.')
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--out',required=True)
+    a=p.parse_args();dump(a.out,analyze(a.root))

@@ -1,6 +1,6 @@
 # C-B1 成本口径复核与有限修订建议
 
-2026-10-12，Codex。来源为 Claude 在审计提交 [`f02e214b`](https://github.com/Townzc/2P1R_Reasoning_Post/blob/f02e214ba73550dfab4165b4f7fcb96431163b6e/audit/claude/20261012/REPORT.md) 对执行分支 `044fb6d4` 的独立报告。当前状态：**候选方案完成 CPU 检查，未批准新 GPU 执行**。当前两个正常学生继续完整评测，剩余原六项先等待计价选择。
+2026-10-12，Codex。来源为 Claude 在审计提交 [`f02e214b`](https://github.com/Townzc/2P1R_Reasoning_Post/blob/f02e214ba73550dfab4165b4f7fcb96431163b6e/audit/claude/20261012/REPORT.md) 对执行分支 `044fb6d4` 的独立报告。当前状态：**研究者已明确批准统一 token 计价修订**。当前两个正常学生继续完整评测并保留为先导，剩余原六项已对账撤销。[冻结新方案](../experiments/P007B_token_tariff_revision.md)记录精确定价、共同剂量、预算与限制。下文保留提出候选时的证据与理由。
 
 ## 审计结论的范围
 
