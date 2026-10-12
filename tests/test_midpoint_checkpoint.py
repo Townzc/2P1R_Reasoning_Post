@@ -8,7 +8,7 @@ import unittest
 import numpy as np
 import torch
 from experiments.sft_allocation_midpoint import checkpoint as ck
-from experiments.sft_allocation_midpoint.runtime import gradients,lrs
+from experiments.sft_allocation_midpoint.runtime import gradients,lrs,frozen_main_lrs
 from src.sft_data import collate,shifted_loss_sum
 
 
@@ -61,6 +61,12 @@ class LossTests(unittest.TestCase):
     def test_frozen_lr_endpoints(self):
         vector=lrs();self.assertEqual(len(vector),256);self.assertAlmostEqual(vector[15],1e-4)
         self.assertAlmostEqual(vector[-1],1e-5);self.assertTrue(all(v>0 for v in vector))
+    def test_scientific_lr_uses_exact_admitted_values(self):
+        import math
+        vector=lrs();vector[100]=math.nextafter(vector[100],float('inf'))
+        self.assertEqual(frozen_main_lrs({'config':{'lrs':vector}}),vector)
+        vector[100]*=2
+        with self.assertRaises(ValueError):frozen_main_lrs({'config':{'lrs':vector}})
 
 
 if __name__=='__main__':unittest.main()

@@ -22,6 +22,16 @@ def lrs():
             for i in range(256)]
 
 
+def frozen_main_lrs(identity):
+    """Use the exact admitted vector; do not regenerate floats on another host."""
+    vector=identity['config']['lrs']
+    if (not isinstance(vector,list) or len(vector)!=256 or
+        any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in vector) or
+        any(not math.isclose(x,y,rel_tol=1e-14,abs_tol=1e-20) for x,y in zip(vector,lrs()))):
+        raise ValueError('Admitted LR vector differs from the fixed common recipe')
+    return list(vector)
+
+
 def seed_all(seed):
     import torch,numpy as np
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed)
@@ -256,7 +266,7 @@ def main_train(assets,out,journal,identity,arm,seed):
     if budget['optimizer_updates']!=256 or budget['supervised_response_tokens']!=524288 or budget['padding_tokens']!=0:
         raise ValueError('Main dose differs from frozen exact contract')
     observed=read_jsonl(inputs/'observed80.jsonl');endpoint=read_jsonl(inputs/'endpoint431.jsonl')
-    rates=lrs();dump(Path(out)/'recipe.json',dict(identity=identity,arm=arm,seed=seed,lrs=rates,eval=EVAL,budget=budget))
+    rates=frozen_main_lrs(identity);dump(Path(out)/'recipe.json',dict(identity=identity,arm=arm,seed=seed,lrs=rates,eval=EVAL,budget=budget))
     before=nll(model,encoded[:32],tok,journal.check)
     curve={}
     def callback(step,model):curve[str(step)]=evaluate(model,tok,observed,out,f'observed80_step{step}',journal)
