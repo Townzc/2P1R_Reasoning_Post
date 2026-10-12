@@ -1994,3 +1994,7 @@ Read-only provider/ledger/Volume inspection confirmed bothRepeat training endpoi
 
 
 2026-10-12 15:30UTC — Diagnosed own zero-work continuation admission defect (JSON string/int exposure keys). Real saved1013-row budget fixture passes full JSON-normalized equality;45 tests pass. Preserved four failure files/terminal and zero scientific dose. Prepared one separately reserved9USD single-call repair while the independent Mixed17 continues; cumulative reservation133.50USD, original deadline unchanged. No failed-claim reset or repeated model batch.
+
+
+### P007 restoration evidence, 2026-10-12 15:40UTC
+The assistant retrieved and hashed the actual state-restoration proof and first new optimizer receipt, confirmed the interrupted diagnostic retains eight unknowns without replay, and recorded partial progress separately from terminal results. It saved authenticated Modal billing (17.34043670USD metered, not final invoice) and the unchanged133.50USD conservative reservation. This follow-up made no new model calls or dispatches; both already-started workers remain finite. Remaining Mixed23/base/audit will require terminal/claim reconciliation before one-time dispatch.

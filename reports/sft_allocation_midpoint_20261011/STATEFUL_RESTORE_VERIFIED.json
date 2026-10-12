@@ -1,0 +1,91 @@
+{
+  "checked_utc": "2026-10-12T15:40:31.885417+00:00",
+  "status": "stateful continuation actually restored and progressed; main study remains incomplete",
+  "execution_source": "9e9a52e9d2323d129202b4518d82edcf9fb64be4",
+  "campaign": "mp-breadth-resume-20261012-r2",
+  "restoration": {
+    "child_gpu": "NVIDIA A100-SXM4-80GB",
+    "counterfactual_bit_exact_claim": false,
+    "full_state_equal": true,
+    "new_optimizer_updates_for_verification": 0,
+    "parent_gpu": "NVIDIA A100-SXM4-80GB",
+    "parent_state_sha256": "b34ec982c53a856b586e02784004c22416dad51c566e415eac27f16c493b3e8d"
+  },
+  "first_new_committed_update": {
+    "step": 129,
+    "indices": [
+      455,
+      700,
+      430,
+      395,
+      254,
+      763,
+      706,
+      886,
+      744,
+      902,
+      947,
+      948,
+      852,
+      85,
+      905
+    ],
+    "lr": 5.911757283985312e-05,
+    "supervised_tokens": 2138,
+    "processed_tokens": 2952,
+    "loss": 0.3131045367363126,
+    "gradient_norm": 0.4029640257358551,
+    "seconds": 4.831579863000002,
+    "cumulative_targets": 264215,
+    "cumulative_processed": 371790,
+    "peak_allocated_bytes": 11664122880
+  },
+  "interrupted_observed80_diagnostic": {
+    "interpretation": "Interrupted diagnostic: 8 attempted outputs unknown; never regenerated. Not used to choose checkpoint.",
+    "known_correct": 56,
+    "known_n": 72,
+    "n": 80,
+    "unknown_n": 8
+  },
+  "startup_files_sha256": {
+    "restore_verification.json": "871a965f2f9e46284148b27d1ffc428f6546814b034cc28b5aa7ff4d246aea5d",
+    "environment.json": "37ca6b06a457a214f2356aa30bdff585e9f9a049d6fbe3d2362b2f1dd5d6e1b6",
+    "intent.json": "99b34c37b51a985eb5db132f4d08037d757f5610095616126aa42dad644c1cbb",
+    "observed80_step128_reconciled.json": "26d3a1a5512bc8883cd470b4ce8a7576495a129830690fe71a2b698ade7ad8f8"
+  },
+  "concurrent_original_work": {
+    "campaign": "mp-completion-20261012-r1",
+    "run": "mixed_17",
+    "verified_minimum_committed_updates": 64,
+    "at_utc": "2026-10-12T15:37:15.624509+00:00"
+  },
+  "not_dispatched": [
+    "mixed_23",
+    "base431",
+    "independent_cpu_audit"
+  ],
+  "financial": {
+    "provider_summary_file": "billing_summary_20261012T154035Z.json",
+    "metered_usd": "17.34043670",
+    "billed_usd": "0E-8",
+    "adjustments": {
+      "network_egress_allowance": "-0.00059617",
+      "free_storage": "-0.02984052",
+      "plan_cost": "0E-8",
+      "reservation_adjustment": "-0E-8",
+      "credits": "-17.31000000"
+    },
+    "conservative_reserved_usd": 133.5,
+    "presentation_ceiling_usd": 350,
+    "report_allocation_usd": 100,
+    "protected_reserve_usd": 50,
+    "interpretation": "Lagging workspace meter, not final invoice or remaining-credit balance. Reservations include failed attempts and are not spending."
+  },
+  "scientific_limits": [
+    "No replay of the eight unknown attempted diagnostic outputs.",
+    "No completed Breadth17 endpoint yet.",
+    "Restored full-state equality does not prove a bit-exact uninterrupted counterfactual.",
+    "No extra model, arm, seed or scientific dose."
+  ],
+  "next": "Wait for both finite workers and original controller to terminate, reconcile their records, then dispatch the already-frozen unclaimed Mixed23/base/audit tail once each under the original plan and deadline."
+}
