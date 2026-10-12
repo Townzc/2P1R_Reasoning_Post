@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-12T23:14:21.650555+00:00",
+  "cpu_tests": {
+    "command": "PYTHONPATH=. python -m unittest tests.test_token_endpoint_reporting tests.test_acquisition_summary tests.test_token_tariff",
+    "failed": 0,
+    "passed": 11
+  },
+  "external_report_sha256": "227ca0c147c61634e9547ca95809b4620803dabda8f0218eee362b93bad87c13",
+  "external_review_of_this_followup": "pending",
+  "frozen_inputs_unchanged": true,
+  "new_teacher_or_student_calls": 0,
+  "no_scientific_contract_amendment": true,
+  "public_plan_reproduction_without_site_packages": {
+    "all_eight_admitted_plan_digests_match": true,
+    "command": "PYTHONPATH=. python -S -m scripts.reproduce_token_schedules --packet reports/p007_audit/token_tariff_v2 --out <new-empty-output-dir>",
+    "exit_code": 0,
+    "targets": 524287
+  },
+  "reviewed_external_commit": "730e7d06885bf853fb9fcb1afac2aef83d5fc7d1",
+  "running_scientific_bundle_sha256": "5ed055071fb143829a02f47afa2d5839245e2e853571f24217e65c5fc310313c",
+  "running_scientific_bundle_unchanged": true,
+  "source_files": {
+    "scripts/audit_token_student.py": "b235e51df53e1146184da639860de3f6455e6b94b90d9d0a4cc83206c151d2c3",
+    "scripts/plan_real_math_scale.py": "b6aa2a38a0204618add921672573ddf11e5a20e47b812c51a05d13db038fb7ad",
+    "scripts/summarize_token_students.py": "d9cb0ac94533d57ed0720acb5f586788bf5a6e55374058db4894edd72afb5aa1",
+    "tests/test_token_endpoint_reporting.py": "822ba75e507e620d78733dcdfa701dbdc06977688693b7f8b9c3b2c7e4cbf60d"
+  }
+}

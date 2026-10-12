@@ -50,13 +50,22 @@ def analyze(root):
             if (sorted(qc)!=ids or any(type(x) is not bool for x in qc.values())
                     or sum(qc.values())!=audit['correct'] or sum(qc.values())!=r['endpoint']['correct']):
                 raise ValueError('Unknown or inconsistent endpoint')
+            stops=audit['endpoint_stop_diagnostics']
+            if (stops['n']!=1319 or stops['stop_reasons']!=r['endpoint']['stop_reasons']
+                    or stops['length_cap_outputs']!=r['endpoint']['stop_reasons'].get('length_cap',0)
+                    or stops['length_cap_scored_incorrect']!=stops['length_cap_outputs']):
+                raise ValueError('Independently checked truncation counts differ')
             predictions[run]=qc;sources[run]=dict(receipt_sha256=sha(receipt),local_audit_sha256=sha(ap))
             row['seeds'][str(seed)]=dict(correct=sum(qc.values()),n=1319,accuracy=sum(qc.values())/1319,
                 parsed=r['endpoint']['parsed'],stop_reasons=r['endpoint']['stop_reasons'],
+                truncated_outputs=stops['length_cap_outputs'],truncation_fraction=stops['length_cap_outputs']/1319,
                 train_seconds=r['train_seconds'],wall_seconds=r['wall_seconds'],
                 runtime_rate_estimate_usd=r['runtime_rate_estimate_usd'],
                 training_exposure=exposure_summary(train_rows,read(inputs/f'{cell}_seed{seed}.json')))
-        row['mean_accuracy']=sum(x['accuracy'] for x in row['seeds'].values())/2;table.append(row)
+        row['mean_accuracy']=sum(x['accuracy'] for x in row['seeds'].values())/2
+        row['truncated_outputs_across_seeds']=sum(x['truncated_outputs'] for x in row['seeds'].values())
+        row['truncation_fraction_across_seeds']=row['truncated_outputs_across_seeds']/2638
+        table.append(row)
     return dict(schema='p007b_token_tariff_results_v1',table=table,sources=sources,
         contrasts=contrasts(predictions),updates=2048,supervised_targets=8*TARGETS,endpoint_outputs=10552,
         tariff=spec['inputs_manifest']['tariff'],
@@ -66,6 +75,7 @@ def analyze(root):
             'Unspent caps6.14%,6.88%,12.26%,10.90% all exceed the original5% exact-spend qualification; this is a common-cap comparison.',
             'Report both within-price contrasts alongside the interaction; an interaction alone is not a winner.',
             'Non-significance is not equivalence. Final-answer correctness is not verified reasoning quality.',
+            'Length-capped outputs count as incorrect under the unchanged512-token evaluation rule; report every cell and seed truncation count without removing them from the denominator.',
             'Unused wallets differ; this is a common budget cap, not exactly equal realized spending.'],
         bootstrap=dict(replicates=10000,seed=20261013,unit='shared paired question across eight fixed models',
             interpretation='Conditional on observed models/trace pools; not seed or procurement uncertainty.'),

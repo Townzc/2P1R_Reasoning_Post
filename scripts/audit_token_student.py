@@ -13,6 +13,20 @@ from experiments.sft_allocation_acquisition.token_contract import TARGETS
 
 EVAL=dict(max_new_tokens=512,max_length=2048,eval_batch_size=16)
 
+def endpoint_stop_diagnostics(records,summary):
+    """Count all outputs, retaining capped outputs under the frozen wrong rule."""
+    if not records or len(records)!=summary['n']:
+        raise ValueError('Stop-report denominator differs from complete endpoint')
+    reasons=dict(Counter(r['stop']['stop_reason'] for r in records))
+    if reasons!=summary['stop_reasons']:
+        raise ValueError('Endpoint stop counts differ from saved scored records')
+    capped=[r for r in records if r['stop']['stop_reason']=='length_cap']
+    if any(r['task_score']['task_answer_correct'] is not False for r in capped):
+        raise ValueError('Length-capped output violates frozen incorrect-score rule')
+    return dict(n=len(records),stop_reasons=reasons,length_cap_outputs=len(capped),
+                length_cap_fraction=len(capped)/len(records),
+                length_cap_scored_incorrect=len(capped))
+
 def audit(args):
     from transformers import AutoTokenizer
     root=Path(args.export_dir);inputs=Path(args.inputs);envelope=read(args.receipt);ledger=read(args.ledger)
@@ -82,12 +96,14 @@ def audit(args):
     assert len(qc)==1319 and all(type(v) is bool for v in qc.values())
     summary=read(root/'endpoint1319/summary.json')
     assert summary==result['endpoint'] and summary['question_correct']==qc and summary['correct']==sum(qc.values())
+    stop_diagnostics=endpoint_stop_diagnostics(saved,summary)
     assert result['physical_generated_outputs']==len(saved)==1319
     return dict(schema='p007b_token_tariff_independent_student_audit_v1',checked_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
         campaign=args.campaign,run_id=run,cell=cfg['cell'],seed=cfg['seed'],updates_verified=256,
         supervised_tokens_verified=targets,outputs_independently_rescored=1319,correct=sum(qc.values()),
         artifact_digest=digest(files),state_sha256=sha(root/'checkpoint_0256/state.pt'),
-        input_sha256=cfg['input_sha256'],new_model_calls=0,external_claude_review='pending')
+        input_sha256=cfg['input_sha256'],endpoint_stop_diagnostics=stop_diagnostics,
+        new_model_calls=0,external_claude_review='pending')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()

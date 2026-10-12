@@ -11,7 +11,6 @@ import json
 from pathlib import Path
 import random
 
-from scripts.prepare_real_math_audit import write_json, write_jsonl
 from src.sft_data import read_jsonl
 
 
@@ -67,6 +66,10 @@ def whole_response_schedule(lengths, budget, updates, seed):
 
 
 def main():
+    # The schedule functions need only the standard library. Parquet tooling
+    # belongs to the data-preparation CLI, not public schedule reproduction.
+    from scripts.prepare_real_math_audit import write_json, write_jsonl
+
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--parents', required=True)
     p.add_argument('--decisions', required=True)
