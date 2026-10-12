@@ -9,6 +9,8 @@ from scripts.audit_midpoint_local import verify_selected
 from src.sft_data import read_jsonl,encode_row,budget_report,prefix
 from analyses.e017_audit import audit_predictions
 
+from experiments.sft_allocation_acquisition.token_contract import TARGETS
+
 EVAL=dict(max_new_tokens=512,max_length=2048,eval_batch_size=16)
 
 def audit(args):
@@ -37,13 +39,13 @@ def audit(args):
     import json
     budget=budget_report(encoded,schedule,1)
     assert json.loads(json.dumps(budget))==plan['budget']==result['budget']
-    assert budget['supervised_response_tokens']==524287 and budget['optimizer_updates']==256
+    assert budget['supervised_response_tokens']==TARGETS and budget['optimizer_updates']==256
     counts=Counter(i for batch in schedule for i in batch)
     assert set(counts)==set(range(len(train_rows))) and max(counts.values())-min(counts.values())<=1
     recipe=read(root/'recipe.json');assert recipe['identity']['config']==cfg and recipe['eval']==EVAL
     state=ck.load(root/'checkpoint_0256',recipe['identity'])
     assert state['step']==state['cursor']==result['committed_updates']==256
-    assert state['supervised_tokens']==result['supervised_tokens']==524287
+    assert state['supervised_tokens']==result['supervised_tokens']==TARGETS
     assert state['schedule']==schedule and state['lrs']==recipe['lrs']==cfg['lrs']
     intents={p.stem:read(p) for p in (root/'intents').glob('*.json')}
     done={p.stem:read(p) for p in (root/'completed').glob('*.json')}
@@ -61,7 +63,7 @@ def audit(args):
         assert intents[name]==item and all(done[name][k]==v for k,v in item.items())
         targets+=item['supervised_tokens'];processed+=item['processed_tokens']
         assert done[name]['cumulative_targets']==targets and done[name]['cumulative_processed']==processed
-    assert targets==524287 and processed==state['processed_tokens']==result['processed_tokens']
+    assert targets==TARGETS and processed==state['processed_tokens']==result['processed_tokens']
     rows=read_jsonl(inputs/'gsm8k_test1319.jsonl');assert len(rows)==1319
     saved=[]
     for start in range(0,1319,16):

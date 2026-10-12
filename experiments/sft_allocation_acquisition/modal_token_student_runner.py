@@ -16,7 +16,8 @@ SOURCES=['src/sft_data.py','src/real_math_audit.py','analyses/completion_contrac
     *['experiments/sft_allocation_acquisition/'+n for n in ('token_contract.py','policy_contract.py','token_student_runtime.py','modal_token_student_runner.py')],
     'requirements.txt','configs/models.lock.json',
     'reports/sft_allocation_midpoint_20261011/P007B_TOKEN_RETIREMENT.json',
-    'reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENT_ADMISSION.json']
+    'reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENT_ADMISSION.json',
+    'reports/sft_allocation_midpoint_20261011/P007B_TOKEN_INTERPRETATION.json']
 app=modal.App('sft-allocation-token-tariff-students')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
 image=(modal.Image.debian_slim(python_version='3.12')

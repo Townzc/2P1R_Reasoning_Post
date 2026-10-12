@@ -43,4 +43,10 @@ New campaign`mp-policy-token-20261012-r1`; at most2GPU total; no controller or a
 
 Original unattempted six student reservations$108 plus old audit$3 are retired; new eight$144 plus final audit$3 yield net+$36. Cumulative conservative reservation$366.50 is **not an invoice**. $500 total, maximum$450 spending and at least$50 protected. Original hard deadline **2026-10-14 02:00UTC / Tuesday October13 19:00PDT** is unchanged. H100 each≤10800s, CPU audit≤3300s, or earlier shared deadline. No permanent deployment; completed workers exit; evidence Volume is retained.
 
-External Claude review of this new protocol is pending. Local checks are not Claude approval. Review the exact admission/source version, tariff counts and price-interaction claims independently.
+Claude rounds2–3 independently reproduced prefix selection (PASS) and reviewed student/summary code (PASS-WITH-NOTES). The findings and limits are recorded in [the disposition](../audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md). Outcome verification and new v2 additions remain externally pending. Local checks are not Claude approval.
+
+## Pre-dispatch interpretation amendment (October12)
+
+All four unused-cap fractions exceed the original5% threshold for an exact-spend claim. Full16 saved-trace action reservation is an explicit constraint of this revision; unlike the earlier time-policy proposal, there is no smaller last batch. Report common caps and actual token-tariff spending together.
+
+Fixing524287 targets produces unequal complete-answer exposure: p0 breadth approximately4.46, p0 depth3.97, p4 breadth20.75, p4 depth8.00. These are part of the fixed-training-budget policy outcome, not controlled away. The summary reports exact per-seed exposure distributions. No isolated diversity/repetition causal claim is supported. See the immutable [interpretation binding](../../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_INTERPRETATION.json). The already-admitted data, seeds, updates, targets and budget remain unchanged.

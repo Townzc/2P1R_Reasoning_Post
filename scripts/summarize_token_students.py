@@ -1,10 +1,24 @@
 """All eight fixed-tariff students; no selection, dispatch, or missing-cell fill."""
 import argparse
+from collections import Counter
 from pathlib import Path
 from experiments.sft_allocation_midpoint.common import read,dump,sha,digest
 from experiments.sft_allocation_acquisition.token_contract import TARGETS
 from scripts.summarize_acquisition_students import contrasts,CELLS,SEEDS
 from src.sft_data import read_jsonl
+
+
+def exposure_summary(rows,plan):
+    counts=Counter(i for batch in plan['updates'] for i in batch)
+    if set(counts)!=set(range(len(rows))):raise ValueError('Missing or foreign training row')
+    single=sum(row['source']['n_supervised'] for row in rows)
+    targets=sum(rows[i]['source']['n_supervised']*n for i,n in counts.items())
+    if targets!=TARGETS or len(plan['updates'])!=256:raise ValueError('Exposure dose differs')
+    return dict(unique_answers=len(rows),presentations=sum(counts.values()),
+        min_per_answer=min(counts.values()),max_per_answer=max(counts.values()),
+        mean_per_answer=sum(counts.values())/len(rows),one_pass_supervised_tokens=single,
+        token_weighted_exposure=targets/single,
+        histogram={str(n):sum(v==n for v in counts.values()) for n in sorted(set(counts.values()))})
 
 
 def analyze(root):
@@ -17,6 +31,7 @@ def analyze(root):
     predictions={};sources={};table=[]
     for cell in CELLS:
         row=dict(cell=cell,tariff_procurement=spec['selection'][cell],seeds={})
+        train_rows=read_jsonl(inputs/f'{cell}_train.jsonl')
         for seed in SEEDS:
             run=f'{cell}_s{seed}';receipt=root/'students'/(run+'_run_r1')/'result.json'
             envelope=read(receipt);r=envelope['result']
@@ -39,11 +54,16 @@ def analyze(root):
             row['seeds'][str(seed)]=dict(correct=sum(qc.values()),n=1319,accuracy=sum(qc.values())/1319,
                 parsed=r['endpoint']['parsed'],stop_reasons=r['endpoint']['stop_reasons'],
                 train_seconds=r['train_seconds'],wall_seconds=r['wall_seconds'],
-                runtime_rate_estimate_usd=r['runtime_rate_estimate_usd'])
+                runtime_rate_estimate_usd=r['runtime_rate_estimate_usd'],
+                training_exposure=exposure_summary(train_rows,read(inputs/f'{cell}_seed{seed}.json')))
         row['mean_accuracy']=sum(x['accuracy'] for x in row['seeds'].values())/2;table.append(row)
     return dict(schema='p007b_token_tariff_results_v1',table=table,sources=sources,
         contrasts=contrasts(predictions),updates=2048,supervised_targets=8*TARGETS,endpoint_outputs=10552,
-        tariff=spec['inputs_manifest']['tariff'],limitations=spec['limitations']+[
+        tariff=spec['inputs_manifest']['tariff'],
+        interpretation=read('reports/sft_allocation_midpoint_20261011/P007B_TOKEN_INTERPRETATION.json'),
+        limitations=spec['limitations']+[
+            'Fixed524287 supervised targets and256updates include unequal repetition: approximately4.46/3.97/20.75/8.00 mean presentations for p0breadth/p0depth/p4breadth/p4depth. No isolated reasoning-diversity or repetition-damage causal claim.',
+            'Unspent caps6.14%,6.88%,12.26%,10.90% all exceed the original5% exact-spend qualification; this is a common-cap comparison.',
             'Report both within-price contrasts alongside the interaction; an interaction alone is not a winner.',
             'Non-significance is not equivalence. Final-answer correctness is not verified reasoning quality.',
             'Unused wallets differ; this is a common budget cap, not exactly equal realized spending.'],

@@ -47,7 +47,7 @@ def preflight_inputs(inputs,tok,identity):
             plan=read(inputs/f'{cell}_seed{seed}.json')
             budget=budget_report(encoded,plan['updates'],1)
             if (json.loads(json.dumps(budget,allow_nan=False))!=plan['budget'] or budget['optimizer_updates']!=256 or
-                    budget['supervised_response_tokens']!=524287 or budget['padding_tokens']!=0):
+                    budget['supervised_response_tokens']!=TARGETS or budget['padding_tokens']!=0):
                 raise ValueError('One or more cell budgets differ; no one-sided repair')
             from collections import Counter
             count=Counter(i for batch in plan['updates'] for i in batch)
@@ -79,7 +79,7 @@ def run(base_assets,inputs,out,journal,identity):
     ck.save(out,ck.snapshot(model,opt,identity,0,0,0,rates,schedule),journal.commit)
     history,targets,processed=rt.train(model,tok,opt,encoded,schedule,rates,out,journal,identity,
                                      save_steps=set(range(32,257,32)))
-    if targets!=524287 or len(history)!=256:raise ValueError('Student dose differs')
+    if targets!=TARGETS or len(history)!=256:raise ValueError('Student dose differs')
     endpoint_result=rt.evaluate(model,tok,endpoint,out,'endpoint1319',journal,config=EVAL)
     return dict(status='completed',cell=cell,seed=seed,committed_updates=256,supervised_tokens=targets,
         processed_tokens=processed,physical_generated_outputs=1319,endpoint=endpoint_result,

@@ -1,0 +1,43 @@
+{
+  "commands": {
+    "original_candidate": "PYTHONPATH=. python scripts/reproduce_token_candidate.py --policy-root PRESERVED_POLICY_ROOT --pilot-export PRESERVED_PILOT_EXPORT --out NEW_CANDIDATE.json",
+    "prefix": "PYTHONPATH=. python scripts/audit_token_prefix_packet.py --root reports/p007_audit/token_tariff_v2",
+    "schedules": "PYTHONPATH=. python scripts/reproduce_token_schedules.py --packet reports/p007_audit/token_tariff_v2 --out NEW_EMPTY_DIR",
+    "source_note": "Original candidate needs full preserved audited exports; public lengths packet suffices to rebuild all8schedule JSONs exactly. No teacher/student calls."
+  },
+  "external_review": "v1 prefix/dataPASS and studentcodePASS-WITH-NOTES; v2 additions pending",
+  "files": {
+    "breadth_p0_trace.json": {
+      "bytes": 257291,
+      "sha256": "c5e2f89cdb288829e6f54b954b8a003b9e851b825d591c211fe2a83ab8064675"
+    },
+    "breadth_p4_trace.json": {
+      "bytes": 136229,
+      "sha256": "9b085aac7443da0f958a27e7c5e7c59a8786501852032f8758d00e147bc5c786"
+    },
+    "depth_p0_trace.json": {
+      "bytes": 348275,
+      "sha256": "c259f3fe402195e5a0ce5e9c9d1f9b4880889b908253923217e7506f3d694b2e"
+    },
+    "depth_p4_trace.json": {
+      "bytes": 234571,
+      "sha256": "2f9e949e8ec9d6ef5f596be6a0e495766c7fc7dbaafadf3cf5a6eb5febe9e229"
+    },
+    "exposures.json": {
+      "bytes": 2560,
+      "sha256": "40a7166b2cc44885ca22aa47f1a4e4bc6691473610190e1e28ff7c75df982f65"
+    },
+    "prefix_simulation.json": {
+      "bytes": 198248,
+      "sha256": "e1ab97a988446cedb92de65b3b3558667dc041c1bf1b5deb35d33f36c7fb19ae"
+    },
+    "training_lengths.json": {
+      "bytes": 342720,
+      "sha256": "30faf7813c01a96dc230dc32e495dd30503543fd61a5a7d473ce40bd2b2c6170"
+    }
+  },
+  "new_model_calls": 0,
+  "prior_packet_digest": "6ffde9876bce7ecccafc9a24069d3d51fba72208f15703970f61de4796cc2bef",
+  "schema": "p007b_token_audit_packet_v2",
+  "source_input_manifest_sha256": "85efe5023fab411a8f952992c0fd8b9879d313fa1fa0d6ff7abfe310f24db4e7"
+}
