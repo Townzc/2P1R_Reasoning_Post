@@ -2014,3 +2014,7 @@ The assistant read the saved, independently audited endpoint records and impleme
 
 ### P007 Mixed17 closeout and Mixed23 one-time dispatch, October12 2026
 The assistant collected and independently verified Mixed17's867 files/full terminal state and671 raw outputs, preserved an interrupted local download and repaired only immutable transport ranges, verified the expected failed CPU controller's eight files and provider release, checked all remaining slots were unclaimed, and submitted only the original Mixed23 slot once. The first real update and identical local/worker intents were retained. It recorded22.42USD lagging metering separately from133.50USD reservations and updated the private handoff. No new arm, seed, teacher, dose, controller, subagent, deletion or external message was introduced.
+
+
+### October12 17:55UTC — training completion and budget status
+Assistant performed read-only provider/ledger checks, independently matched the saved Mixed23 final-update receipt to its checkpoint256 manifest, and generated a deterministic partial result/cost record from existing envelopes. All eight training trajectories are complete; only seven endpoints are independently verified, and final evaluation/base/audit remain pending. No new model task, generation, update, arm, seed or reservation was added. The acquisition-cost gap and proposed bounded pilot were discussed as research planning; no slides, submitted report text or external message was generated or sent.

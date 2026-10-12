@@ -1,8 +1,8 @@
-# October12: seven allocation trajectories verified; last training run active
+# October12: all eight training trajectories complete; final evaluation active
 
 P007 has verified both Repeat, Solutions and Breadth seeds plus Mixed17.
-The final Mixed23 run has started once; base431 and independent CPU audit follow.
-See [current progress](reports/sft_allocation_midpoint_20261011/MIXED_TAIL_PROGRESS_20261012.json)
+Mixed23 has completed256 updates/524288 targets and is evaluating; base431 and independent CPU audit follow.
+See [current progress](reports/sft_allocation_midpoint_20261011/ALL_TRAINING_COMPLETE_20261012.json)
 and the [research protocol](docs/experiments/P007_midpoint_allocation_plan.md).
 The preliminary extra-answer gain is not a dollar-optimal allocation result.
 Earlier dated records below remain history.

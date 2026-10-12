@@ -1,9 +1,9 @@
-# October12 16:52UTC — P007 tail active
+# October12 17:55UTC — P007 training complete; evaluation tail active
 
 Seven ofeight main trajectories independently verified, including Mixed17=348/431.
-Mixed23 actually started once on its original frozen slot. Base431 and independent
+Mixed23 completed all256 updates/524288 targets; its endpoint evaluation is active. Base431 and independent
 CPU audit remain unattempted. Previous completion/resume apps are stopped.
-[Verified progress and budget](sft_allocation_midpoint_20261011/MIXED_TAIL_PROGRESS_20261012.json).
+[Verified progress and budget](sft_allocation_midpoint_20261011/ALL_TRAINING_COMPLETE_20261012.json).
 No new follow-up admitted; existing dose, deadline and protected reserve unchanged.
 Earlier entries are historical.
 

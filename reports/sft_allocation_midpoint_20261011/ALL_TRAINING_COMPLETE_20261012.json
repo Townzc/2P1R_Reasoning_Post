@@ -1,0 +1,113 @@
+{
+  "schema": "midpoint_all_training_complete_v1",
+  "checked_utc": "2026-10-12T17:54:54.224313+00:00",
+  "status": "Eight training trajectories complete; seven endpoints independently verified; mixed23 endpoint and base/audit pending",
+  "main_committed_updates": 2048,
+  "main_supervised_targets": 4194304,
+  "verified_endpoint_runs": {
+    "repeat_17": {
+      "correct": 309,
+      "n": 431,
+      "accuracy": 0.7169373549883991,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "b721295eaae2c24ab7086bce211a358084ec1d51428fc5f2aa36d985523b2ec9"
+    },
+    "repeat_23": {
+      "correct": 307,
+      "n": 431,
+      "accuracy": 0.7122969837587007,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "e862d3184dff93dbae57e4745e8bb3115d514930e1c39fbdbae1e05a1692e16e"
+    },
+    "solutions_17": {
+      "correct": 354,
+      "n": 431,
+      "accuracy": 0.8213457076566125,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "55a0c91c1cb0c0377a013d83d137e9269cb333646f814f51756dc64207d66dae"
+    },
+    "solutions_23": {
+      "correct": 355,
+      "n": 431,
+      "accuracy": 0.8236658932714617,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "fd2081ae9ce5b60072639e55e3bd56881bff7615f2987a743cdfa61c752e68a0"
+    },
+    "breadth_23": {
+      "correct": 352,
+      "n": 431,
+      "accuracy": 0.8167053364269141,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "6c14633a1ec9df85e6a6069d191955377af2ced37e2508c97a8f0ef0d2bd5719"
+    },
+    "breadth_17": {
+      "correct": 350,
+      "n": 431,
+      "accuracy": 0.8120649651972158,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "1e46e1ae31e5e7d9e1a4c439710d5eee4ba81d66c97fc67963d23bf12afea083"
+    },
+    "mixed_17": {
+      "correct": 348,
+      "n": 431,
+      "accuracy": 0.8074245939675174,
+      "endpoint_independently_verified": true,
+      "envelope_sha256": "ba0c1b21c41d2a13e363a23d560b9702a89865323143074edaf88795e4d433ad"
+    }
+  },
+  "mixed23": {
+    "training_updates": 256,
+    "supervised_targets": 524288,
+    "checkpoint_manifest": {
+      "bytes": 222117365,
+      "file": "state.pt",
+      "identity_sha256": "1fef9ab40f91767ff49efaac33a241cf9d3ead2cfd646997f6791f728e647d2c",
+      "processed_tokens": 742075,
+      "schema": "complete_lora_v1",
+      "sha256": "0c5235c7d43215bba9cea46c974faa9fac5f1780d2044a86d0e2f4d7ce6e4f6e",
+      "step": 256,
+      "supervised_tokens": 524288
+    },
+    "full_state_independent_local_verification": false,
+    "endpoint_status": "running",
+    "saved_output_lower_bound_from_live_log": 224,
+    "endpoint_denominator": 431
+  },
+  "remaining_original_work": [
+    "mixed23 final evaluation and independent artifact verification",
+    "base431",
+    "independent CPU audit and complete local result reconciliation"
+  ],
+  "financial_snapshot": {
+    "queried_utc": "2026-10-12T17:52:00.995666+00:00",
+    "metered_workspace_usd": 25.5004368,
+    "billed_usd": 0.0,
+    "credits_adjustment_usd": -25.47,
+    "final_invoice_verified": false,
+    "credit_balance_verified": false,
+    "conservative_cumulative_reservation_usd": 133.5,
+    "presentation_ceiling_usd": 350,
+    "protected_reserve_usd": 50
+  },
+  "scientific_interpretation_scope": {
+    "fixed": "student supervised targets and optimizer updates",
+    "not_fixed_or_measured": "historical bank acquisition spending",
+    "procurement_draws": 1,
+    "training_seeds": [
+      17,
+      23
+    ],
+    "no_equivalence_or_dollar_optimality_claim": true
+  },
+  "next_experiment_priority": {
+    "decision_target": "Compare same-source acquisition policies under equal spending caps, with student training separately fixed.",
+    "first_bounded_bridge": "After complete grid verification, freeze and admit the planned 128-parent, at-most-eight-attempt same-teacher cost/supply pilot.",
+    "maximum_pilot_generations": 1024,
+    "pilot_student_updates": 0,
+    "pilot_source_must_not_price_historical_bank": true,
+    "cost_matched_student_validation_still_required": true,
+    "followup_admitted": false
+  },
+  "earlier_failure_and_engineering_dose_excluded_from_main_totals_but_retained": true,
+  "scientific_recipe_changed": false
+}

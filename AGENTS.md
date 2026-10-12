@@ -1,10 +1,10 @@
-# Current P007 tail — October12 16:52UTC
+# Current P007 tail — October12 17:55UTC
 
-Read the private ACTIVE_HANDOFF and public MIXED_TAIL_PROGRESS_20261012.json.
+Read the private ACTIVE_HANDOFF and public ALL_TRAINING_COMPLETE_20261012.json.
 Mixed17 is independently verified348/431 with fullstate/rawscores; both priorapps
 are stopped and their controller evidence is preserved. Mixed23 has now been
 submitted EXACTLY ONCE through existing::main using its frozen original slot,
-sourcebdd59787, with an actual first update. Never repeat that submission.
+sourcebdd59787, and completed256 updates/524288 targets. Its endpoint remains active; never repeat that submission.
 Base/audit remain unclaimed and must follow sequentially after terminal/resource
 verification, with correct multi-campaign provenance. No newcontroller/reservation.
 Main deadlineOct13 04UTC,133.50USD reservations and350/100/50 split unchanged.
