@@ -58,10 +58,13 @@ rescored and both apps stopped with zero containers.
 
 P007B numerical admission is frozen: breadth/depth×problem-price0/4m,
 equal1.091289088USD scenario caps, actual active-time wallets, same teacher.
-Student targets/updates remain separately matched;8 student slots await four
-audited acquired datasets. [Admission and calibration amendment](reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
+Zero-price procurement is verified: breadth437 usable answers over437 problems,
+depth650 over171;1,280 attempts including188 invalid and5 valid duplicates.
+The positive-price pair is active on two H100s. These are supply results, not
+student accuracy. Student targets/updates remain separately matched;8 student
+slots await four audited acquired datasets. [Admission and calibration amendment](reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
 
-Latest workspace meter: **28.76084103USD at October12 19:29UTC**, including
+Latest workspace meter: **31.02084103USD at October12 19:57UTC**, including
 engineering and failed work. This is delayed usage, not a final invoice or
 remaining-credit balance. Total conservative reservations323.50USD, distinct
 from spend;500USD total with at least50USD protected.

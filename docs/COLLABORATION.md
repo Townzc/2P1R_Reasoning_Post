@@ -26,8 +26,9 @@ Previously authorized engineering continues within its frozen limits.
    [main packet](../reports/p007_audit/main_v1/REVIEW_REQUEST.md).
 2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
    apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
-3. P007B four numerical wallets are frozen; the zero-price breadth/depth pair
-   is running from80434781, actual H100/first batches verified. See
+3. P007B zero-price acquisitions are verified and closed:437 usable answers
+   over437 problems versus650 over171. The positive-price pair is running on
+   two H100s from68ee7a6a with unchanged acquisition source bytes. See
    [admission](../reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
    Student slots remain gated on all four audited acquired corpora/exact plans.
 4. Other audit work packages are proposals, not admitted jobs. Their scientific
