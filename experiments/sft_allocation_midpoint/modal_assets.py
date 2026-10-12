@@ -91,3 +91,29 @@ def main(plan_json:str,inputs_dir:str,receipt_dir:str):
     dump(out/'intent.json',dict(plan=plan,source=source,commit=commit,input_sha256=sha(inputs/'manifest.json')))
     result=fetch.remote(plan,digest(source),json.loads((ROOT/'configs/models.lock.json').read_text())['main'],payload,sha(inputs/'manifest.json'))
     dump(out/'result.json',result)
+
+
+@app.local_entrypoint()
+def teacher(plan_json:str,inputs_dir:str,receipt_dir:str):
+    """Separate pinned teacher acquisition assets, never replaces the student."""
+    from experiments.sft_allocation_midpoint.common import sha,dump,digest
+    plan=json.loads(Path(plan_json).read_text());inputs=Path(inputs_dir);out=Path(receipt_dir)
+    if plan['slots'].get('assets')!={'stage':'engineering','reserved_cents':100}:
+        raise ValueError('Exact one-dollar CPU reservation required')
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/codex/icml-acl-2027'],cwd=ROOT,text=True).split()[0]
+    files=['experiments/sft_allocation_midpoint/'+name for name in ('guard.py','common.py','modal_assets.py')]
+    files+=['configs/acquisition_teacher.lock.json']
+    if commit!=remote:raise ValueError('Publish first')
+    for name in files:
+        if subprocess.check_output(['git','show','HEAD:'+name],cwd=ROOT)!=(ROOT/name).read_bytes():
+            raise ValueError('Published source differs')
+    source={name:sha(ROOT/name) for name in files}
+    lock=json.loads((ROOT/'configs/acquisition_teacher.lock.json').read_text())
+    if (lock['repo_id']!='Qwen/Qwen2.5-Math-1.5B-Instruct' or
+        lock['revision']!='aafeb0fc6f22cbf0eaeed126eff8be45b0360a35'):
+        raise ValueError('Unapproved teacher')
+    out.mkdir(parents=True,exist_ok=False)
+    dump(out/'intent.json',dict(plan=plan,source=source,commit=commit,input_sha256=sha(inputs/'manifest.json')))
+    result=fetch.remote(plan,digest(source),lock,{p.name:p.read_bytes() for p in inputs.iterdir() if p.is_file()},sha(inputs/'manifest.json'))
+    dump(out/'result.json',result)

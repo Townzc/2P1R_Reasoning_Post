@@ -1,3 +1,13 @@
+# October12: all four two-seed arms independently verified
+
+Repeat309/307,Solutions354/355,Breadth350/352,Mixed348/351,all out of431.
+All terminal states and5,360 known main outputs independently verified;8 interrupted
+intermediate diagnostic attempts remain unknown. Base431 is running once; independent
+CPU audit follows. This is not yet full campaign closeout. The owner approved a
+same-teacher cost pilot after that gate; latest budget500USD with50USD protected.
+See [four-arm results](reports/sft_allocation_midpoint_20261011/FOUR_ARM_RESULTS_20261012.json).
+Earlier dated states below are historical.
+
 # October12: all eight training trajectories complete; final evaluation active
 
 P007 has verified both Repeat, Solutions and Breadth seeds plus Mixed17.

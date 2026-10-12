@@ -2022,3 +2022,7 @@ Assistant performed read-only provider/ledger checks, independently matched the 
 
 ### 2026-10-12 — P007 cost-pilot preparation and transport hardening
 Assistant read immutable experiment receipts, official teacher metadata and authenticated Modal rates; recorded the owner's latest450USD spending/50USD reserve authorization. Prepared a bounded read-only range transfer with six CPU checks, preserving failed copies and requiring full-file SHA before publishing a new local copy. No new scientific model calls, slides, external messages or subagents in this preparation. Human owns scientific interpretation and course deliverables.
+
+
+### 2026-10-12 — P007 main results and bounded teacher pilot design
+Assistant independently reconstructed Mixed23 raw scoring/state/dose, combined eight immutable run envelopes, and started only the original unattempted base slot after release checks. Prepared P007A fixed teacher/source/input and attempt/cost contracts,8 meaningful CPU checks, local re-scoring code and a15USD proposed reserve. Prepared P007B policy/price interaction with actual spending-cap accounting and stated limits, not a claim of executed or dollar-optimal results. Retrieved primary-paper sections for literature comparison. No slides or graded prose generated; external communications remain drafts only.

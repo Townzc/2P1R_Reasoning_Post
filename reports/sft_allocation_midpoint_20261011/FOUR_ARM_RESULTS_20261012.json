@@ -1,0 +1,220 @@
+{
+  "bootstrap": {
+    "interpretation": "Conditional on these trained models and the one procurement draw; not training-seed or procurement uncertainty.",
+    "replicates": 10000,
+    "seed": 20261013,
+    "unit": "paired question; same resample across seeds"
+  },
+  "committed_updates": 2048,
+  "limitations": [
+    "Development, not pretraining-clean or fresh confirmation.",
+    "Uncertainty spanning zero is not equivalence.",
+    "Distinct answer text does not certify different reasoning strategies.",
+    "Historical bank acquisition prices are unknown; no dollar-optimal policy follows from this table."
+  ],
+  "primary_contrasts": [
+    {
+      "conditional_question_interval_pp": [
+        7.192575406032482,
+        14.385150812064964
+      ],
+      "contrast": "solutions minus repeat",
+      "mean_difference_pp": 10.788863109048725,
+      "per_seed": {
+        "17": {
+          "difference_pp": 10.440835266821345,
+          "gained": 74,
+          "lost": 29,
+          "question_bootstrap_interval_pp": [
+            6.0324825986078885,
+            14.849187935034802
+          ]
+        },
+        "23": {
+          "difference_pp": 11.1368909512761,
+          "gained": 84,
+          "lost": 36,
+          "question_bootstrap_interval_pp": [
+            6.2645011600928076,
+            16.009280742459396
+          ]
+        }
+      }
+    },
+    {
+      "conditional_question_interval_pp": [
+        -3.7122969837587005,
+        2.2041763341067284
+      ],
+      "contrast": "breadth minus solutions",
+      "mean_difference_pp": -0.8120649651972157,
+      "per_seed": {
+        "17": {
+          "difference_pp": -0.9280742459396751,
+          "gained": 36,
+          "lost": 40,
+          "question_bootstrap_interval_pp": [
+            -4.872389791183294,
+            3.0162412993039442
+          ]
+        },
+        "23": {
+          "difference_pp": -0.6960556844547563,
+          "gained": 32,
+          "lost": 35,
+          "question_bootstrap_interval_pp": [
+            -4.408352668213457,
+            3.0162412993039442
+          ]
+        }
+      }
+    }
+  ],
+  "procurement_draws": 1,
+  "schema": "midpoint_development_grid_v1",
+  "source_files": {
+    "breadth_17_result.json": "1e46e1ae31e5e7d9e1a4c439710d5eee4ba81d66c97fc67963d23bf12afea083",
+    "breadth_23_result.json": "6c14633a1ec9df85e6a6069d191955377af2ced37e2508c97a8f0ef0d2bd5719",
+    "mixed_17_result.json": "ba0c1b21c41d2a13e363a23d560b9702a89865323143074edaf88795e4d433ad",
+    "mixed_23_result.json": "a1cf0dc7a2ddb61d4d27d26e537fbfa61874a0e7a291e00af3f502973bf20b0c",
+    "repeat_17_result.json": "b721295eaae2c24ab7086bce211a358084ec1d51428fc5f2aa36d985523b2ec9",
+    "repeat_23_result.json": "e862d3184dff93dbae57e4745e8bb3115d514930e1c39fbdbae1e05a1692e16e",
+    "solutions_17_result.json": "55a0c91c1cb0c0377a013d83d137e9269cb333646f814f51756dc64207d66dae",
+    "solutions_23_result.json": "fd2081ae9ce5b60072639e55e3bd56881bff7615f2987a743cdfa61c752e68a0"
+  },
+  "supervised_tokens": 4194304,
+  "table": [
+    {
+      "arm": "repeat",
+      "mean_accuracy": 0.7146171693735499,
+      "seeds": {
+        "17": {
+          "accuracy": 0.7169373549883991,
+          "correct": 309,
+          "n": 431,
+          "parsed": 426,
+          "runtime_rate_estimate_usd": 2.21502013547802,
+          "stop_reasons": {
+            "length_cap": 1,
+            "native_eos": 429,
+            "new_problem_boundary": 1
+          },
+          "train_seconds": 718.3396874880004,
+          "wall_seconds": 2709.703626871109
+        },
+        "23": {
+          "accuracy": 0.7122969837587007,
+          "correct": 307,
+          "n": 431,
+          "parsed": 427,
+          "runtime_rate_estimate_usd": 2.3015066581206893,
+          "stop_reasons": {
+            "length_cap": 3,
+            "native_eos": 428
+          },
+          "train_seconds": 739.5040780640005,
+          "wall_seconds": 2815.505301952362
+        }
+      }
+    },
+    {
+      "arm": "solutions",
+      "mean_accuracy": 0.8225058004640371,
+      "seeds": {
+        "17": {
+          "accuracy": 0.8213457076566125,
+          "correct": 354,
+          "n": 431,
+          "parsed": 427,
+          "runtime_rate_estimate_usd": 2.2953558782869723,
+          "stop_reasons": {
+            "length_cap": 2,
+            "native_eos": 429
+          },
+          "train_seconds": 737.9737834699972,
+          "wall_seconds": 2807.9808604717255
+        },
+        "23": {
+          "accuracy": 0.8236658932714617,
+          "correct": 355,
+          "n": 431,
+          "parsed": 426,
+          "runtime_rate_estimate_usd": 2.199625603729706,
+          "stop_reasons": {
+            "length_cap": 3,
+            "native_eos": 428
+          },
+          "train_seconds": 714.2139821510003,
+          "wall_seconds": 2690.871013402939
+        }
+      }
+    },
+    {
+      "arm": "mixed",
+      "mean_accuracy": 0.8109048723897911,
+      "seeds": {
+        "17": {
+          "accuracy": 0.8074245939675174,
+          "correct": 348,
+          "n": 431,
+          "parsed": 430,
+          "runtime_rate_estimate_usd": 3.8607001094044877,
+          "stop_reasons": {
+            "native_eos": 431
+          },
+          "train_seconds": 1121.798040959002,
+          "wall_seconds": 4722.915570020676
+        },
+        "23": {
+          "accuracy": 0.814385150812065,
+          "correct": 351,
+          "n": 431,
+          "parsed": 427,
+          "runtime_rate_estimate_usd": 4.008817628997116,
+          "stop_reasons": {
+            "length_cap": 2,
+            "native_eos": 429
+          },
+          "train_seconds": 1182.343026932998,
+          "wall_seconds": 4904.112378120422
+        }
+      }
+    },
+    {
+      "arm": "breadth",
+      "mean_accuracy": 0.814385150812065,
+      "seeds": {
+        "17": {
+          "accuracy": 0.8120649651972158,
+          "correct": 350,
+          "n": 431,
+          "parsed": 428,
+          "runtime_rate_estimate_usd": 2.0765164752321623,
+          "stop_reasons": {
+            "length_cap": 1,
+            "native_eos": 430
+          },
+          "train_seconds": 967.6117331199998,
+          "wall_seconds": 2540.2677526474
+        },
+        "23": {
+          "accuracy": 0.8167053364269141,
+          "correct": 352,
+          "n": 431,
+          "parsed": 428,
+          "runtime_rate_estimate_usd": 2.547464997781105,
+          "stop_reasons": {
+            "length_cap": 2,
+            "native_eos": 429
+          },
+          "train_seconds": 611.2588472849988,
+          "wall_seconds": 3116.39385843277
+        }
+      }
+    }
+  ],
+  "training_seeds": [
+    17,
+    23
+  ]
+}
