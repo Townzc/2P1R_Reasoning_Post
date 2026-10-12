@@ -101,8 +101,9 @@ policy contrast as a pure structural-diversity effect.
 Primary student outcome: terminal greedy exact-answer accuracy on a frozen
 held-out roster, same decoder/inference cap for every cell. The431 main dev
 questions can support fast exploratory continuity but are already observed; they
-cannot supply a fresh confirmation claim. Freeze a separate standard GSM8K test
-roster before new P007B outcomes and use it only at the chosen final terminal
+cannot supply a fresh confirmation claim. The separate standard GSM8K roster is
+now all1,319 official test questions, frozen before new P007B outcomes; use it only
+at the chosen final terminal
 recipe. Historical exposure audit on October12 found that the September public-
 math study evaluated all1,319 official GSM8K test questions. Consequently this is
 an existing, research-team-observed standard benchmark, not a pristine or newly
@@ -111,6 +112,16 @@ P007B test-driven tuning; it cannot establish fresh researcher-level confirmatio
 The new procurement pool is fresh with respect to this study, which is a separate
 claim. Do not invent a benchmark or conceal the previous test exposure. Unknown
 model pretraining contamination remains a limitation even on this split.
+Prepared roster SHA256:
+`ea61d5f11ee2b0605cfd031f840621aa7ee7015be5750d0eeb8ac3a9c7ebd9a1`;
+raw official test file:
+`3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14`.
+All1,319 question/reference byte pairs agree with the pinned source; their1,319
+groups have zero overlap with the1,024 fresh procurement groups. This is a
+source/group check, not a guarantee of semantic or pretraining independence.
+There have been zero new P007B test generations. Eight complete endpoints would
+require10,552 generations; avoid adding a second development endpoint or choosing
+checkpoints from this test. The exact execution limits remain unadmitted.
 Compute inference resources and compare correctness under a common inference
 contract; sampled pass@k is not required for the midpoint minimum.
 

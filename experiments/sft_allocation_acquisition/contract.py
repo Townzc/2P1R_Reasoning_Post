@@ -48,13 +48,15 @@ def completion(ids):
                 truncated=False, token_count=pos+1)
 
 
-def assess(parent, text, stop, seen):
+def assess(parent, text, stop, seen, usable_seen):
     verdict = score(parent, text, stop['eos'], stop['truncated'])
     key = hashlib.sha256(normalized(text).encode()).hexdigest()
     duplicate = seen.get(key)
-    usable = bool(verdict['clean_correct'] and duplicate is None)
+    usable_duplicate = usable_seen.get(key)
+    usable = bool(verdict['clean_correct'] and usable_duplicate is None)
     # All normalized text duplicates are linked, even unsuccessful ones.
     return dict(score=verdict, normalized_text_sha256=key, duplicate_of=duplicate,
+                usable_duplicate_of=usable_duplicate,
                 usable=usable, duplicate_definition='NFC_whitespace_exact_within_parent',
                 distinct_reasoning_strategy_certified=False)
 
@@ -79,7 +81,7 @@ def summarize(parents, records):
     return dict(parents=len(parents), recorded_outputs=len(records), usable=sum(r['usable'] for r in records),
         duplicates=sum(r['duplicate_of'] is not None for r in records),
         wrong_or_unusable=sum(not r['score']['clean_correct'] for r in records),
-        rejected_valid_duplicates=sum(r['score']['clean_correct'] and r['duplicate_of'] is not None for r in records),
+        rejected_valid_duplicates=sum(r['score']['clean_correct'] and r['usable_duplicate_of'] is not None for r in records),
         duplicate_any_text_count_overlaps_invalid_count=True,
         stop_counts=dict(Counter('eos' if r['stop']['eos'] else 'length' for r in records)),
         parse_counts=dict(Counter(r['score']['status'] for r in records)), supply=supply,

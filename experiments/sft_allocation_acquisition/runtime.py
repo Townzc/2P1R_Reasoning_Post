@@ -45,7 +45,7 @@ def run(assets,out,journal):
                                           tokens=lengths[p]) for p,v in prompts.items()})
     load_seconds=time.monotonic()-started
     journal.commit()
-    seen=defaultdict(dict);records=[];timings=[]
+    seen=defaultdict(dict);usable_seen=defaultdict(dict);records=[];timings=[]
     for batch in batches:
         journal.check()
         name=batch['batch_id'];items=batch['items'];rows=[lookup[i['problem_id']] for i in items]
@@ -67,11 +67,13 @@ def run(assets,out,journal):
         tick=time.monotonic();scored=[]
         for parent,item,tokens in zip(rows,items,returned):
             stop=completion(tokens[width:]);text=tok.decode(stop['text_token_ids'],skip_special_tokens=False)
-            judgement=assess(parent,text,stop,seen[parent['id']])
+            judgement=assess(parent,text,stop,seen[parent['id']],usable_seen[parent['id']])
             result=dict(**item,text=text,stop=stop,**judgement,prompt_tokens=lengths[parent['id']],
                 batch_id=name,batch_size=len(items),allocated_generation_seconds=seconds/len(items),
                 allocation_is_batch_share_not_independent_marginal_cost=True)
             seen[parent['id']].setdefault(judgement['normalized_text_sha256'],item['candidate_id'])
+            if judgement['usable']:
+                usable_seen[parent['id']].setdefault(judgement['normalized_text_sha256'],item['candidate_id'])
             scored.append(result)
         score_seconds=time.monotonic()-tick
         scorefile=out/'scored'/f'{name}.json';dump(scorefile,scored)

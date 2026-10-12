@@ -2031,3 +2031,5 @@ Deterministic Matplotlib3.10.6 plotting produced an inspected PNG/SVG from verif
 
 
 October12: composed base local verification and prepared the final main closeout proof. Started only the original CPU audit slot after confirming zero prior attempts and base resource release. Prepared P007B integer wallet and bounded procurement state with14 CPU checks, no new model calls; corrected test-exposure wording from the historical1,319-question GSM8K evaluation. No slides, assignment prose, external messages or extra scientific queue created.
+
+October12 pre-generation review: separated all-text duplicate diagnostics from duplicate-of-eligible-answer rejection so a failed capped attempt cannot block a later first complete answer. Added regression before any teacher call; scoring remains unchanged. Prepared full1,319-question standard evaluation roster with byte/group checks and explicit September exposure; no model execution or generated slides.

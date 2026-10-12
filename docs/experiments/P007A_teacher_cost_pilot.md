@@ -43,7 +43,12 @@ with the reference scalar, terminate at native EOS, not hit the token cap, and
 not introduce a new-problem boundary. All explicit marked claims must agree.
 This checks the final answer, not the reasoning chain. Duplicate detection is
 within-parent NFC plus whitespace normalization of the entire answer; distinct
-text does not certify distinct reasoning strategies. Duplicates and all other
+text does not certify distinct reasoning strategies. Track matches to any prior
+attempt, but reject a valid duplicate only if an earlier eligible answer with
+that normalized text was accepted. An earlier ineligible length-capped attempt
+must not block the first later complete usable answer. This edge case was fixed
+and regression-tested before any teacher call; raw answer correctness and stop
+requirements are unchanged. Duplicates and all other
 rejections are retained and consume cost. EOS/pad processing is explicitly tested.
 
 ## Persistence, money and shutdown

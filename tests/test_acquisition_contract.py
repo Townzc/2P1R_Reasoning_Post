@@ -15,29 +15,40 @@ class AcquisitionContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):completion([1,151645,2])
     def test_length_capped_correct_is_not_usable(self):
         s=completion([1]*1024)
-        r=assess({'answer':'42'},r'\boxed{42}',s,{})
+        r=assess({'answer':'42'},r'\boxed{42}',s,{},{})
         self.assertTrue(r['score']['answer_correct']);self.assertFalse(r['usable'])
     def test_duplicate_has_cost_bearing_record(self):
-        s=completion([1,151645]);r=assess({'answer':'42'},r'\boxed{42}',s,{})
+        s=completion([1,151645]);r=assess({'answer':'42'},r'\boxed{42}',s,{},{})
         self.assertTrue(r['usable'])
-        second=assess({'answer':'42'},'  '+r'\boxed{42}'+'  ',s,{r['normalized_text_sha256']:'p::1'})
+        second=assess({'answer':'42'},'  '+r'\boxed{42}'+'  ',s,{r['normalized_text_sha256']:'p::1'},{r['normalized_text_sha256']:'p::1'})
         self.assertFalse(second['usable']);self.assertEqual(second['duplicate_of'],'p::1')
     def test_wrong_conflict_and_no_gold_search(self):
         s=completion([1,151645])
         for text in [r'\boxed{43}',r'\boxed{42} and \boxed{43}','42']:
-            self.assertFalse(assess({'answer':'42'},text,s,{})['usable'])
+            self.assertFalse(assess({'answer':'42'},text,s,{},{})['usable'])
     def test_empty_parent_stays_censored(self):
         r=summarize([{'id':'a'},{'id':'b'}],[])
         self.assertEqual(r['parents'],2);self.assertEqual(r['supply'][0]['right_censored_k'],[1,2,4])
     def test_invalid_duplicates_are_not_double_charged_or_double_counted_as_usable(self):
-        parents=[{'id':'p','answer':'42'}];seen={};records=[]
+        parents=[{'id':'p','answer':'42'}];seen={};usable_seen={};records=[]
         for n,text in enumerate([r'\boxed{43}',r'\boxed{43}',r'\boxed{42}',r'\boxed{42}'],1):
-            stop=completion([1,151645]);v=assess(parents[0],text,stop,seen)
+            stop=completion([1,151645]);v=assess(parents[0],text,stop,seen,usable_seen)
             cid=f'p::{n}';seen.setdefault(v['normalized_text_sha256'],cid)
+            if v['usable']:usable_seen.setdefault(v['normalized_text_sha256'],cid)
             records.append(dict(problem_id='p',candidate_id=cid,attempt=n,stop=stop,**v))
         r=summarize(parents,records)
         self.assertEqual((r['recorded_outputs'],r['usable'],r['wrong_or_unusable'],r['rejected_valid_duplicates']),(4,1,2,1))
         self.assertEqual(r['duplicates'],2)
+
+    def test_ineligible_prior_text_does_not_block_first_complete_usable_answer(self):
+        parent={'id':'p','answer':'42'}
+        first=assess(parent,r'\boxed{42}',completion([1]*1024),{},{})
+        self.assertFalse(first['usable'])
+        seen={first['normalized_text_sha256']:'p::1'}
+        second=assess(parent,r'\boxed{42}',completion([1,151645]),seen,{})
+        self.assertTrue(second['usable'])
+        self.assertEqual(second['duplicate_of'],'p::1')
+        self.assertIsNone(second['usable_duplicate_of'])
 
     def test_reference_not_in_prompt(self):
         from experiments.sft_allocation_acquisition.contract import messages

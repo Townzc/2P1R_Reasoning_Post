@@ -22,7 +22,7 @@ def audit(args):
     batches=roster(parents);assert batches==read(inputs/'batches.json')
     lookup={r['id']:r for r in parents}
     tok=AutoTokenizer.from_pretrained(args.tokenizer,local_files_only=True,padding_side='left');tok.pad_token_id=151643
-    seen=defaultdict(dict);records=[];generation=checking=0
+    seen=defaultdict(dict);usable_seen=defaultdict(dict);records=[];generation=checking=0
     all_units={b['batch_id'] for b in batches}
     assert {x.stem for x in (root/'intents').glob('*.json')}==all_units
     assert {x.stem for x in (root/'completed').glob('*.json')}==all_units
@@ -41,11 +41,13 @@ def audit(args):
         for item,tokens,saved,prompt_ids,mask in zip(items,raw['batch_output_ids'],scored,packed['input_ids'],packed['attention_mask']):
             assert tokens[:width]==prompt_ids
             stop=completion(tokens[width:]);text=tok.decode(stop['text_token_ids'],skip_special_tokens=False)
-            value=assess(lookup[item['problem_id']],text,stop,seen[item['problem_id']])
+            value=assess(lookup[item['problem_id']],text,stop,seen[item['problem_id']],usable_seen[item['problem_id']])
             expected=dict(**item,text=text,stop=stop,**value,prompt_tokens=sum(mask),batch_id=name,batch_size=len(items),
                 allocated_generation_seconds=raw['generation_seconds']/len(items),allocation_is_batch_share_not_independent_marginal_cost=True)
             assert saved==expected
             seen[item['problem_id']].setdefault(value['normalized_text_sha256'],item['candidate_id'])
+            if value['usable']:
+                usable_seen[item['problem_id']].setdefault(value['normalized_text_sha256'],item['candidate_id'])
             records.append(saved)
         assert done['candidate_ids']==[x['candidate_id'] for x in scored]
         assert done['generation_seconds']==raw['generation_seconds']
