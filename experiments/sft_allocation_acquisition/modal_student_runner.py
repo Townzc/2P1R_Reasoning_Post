@@ -99,6 +99,62 @@ def student(plan,config,release):
     finally:timer.cancel()
 
 
+@app.function(image=image,cpu=(2,2),memory=(8192,8192),timeout=3400,startup_timeout=300,
+    retries=0,max_containers=1,min_containers=0,buffer_containers=0,scaledown_window=2,
+    single_use_containers=True,serialized=True,include_source=False,volumes={'/evidence':volume})
+def audit_cloud(plan,config,release):
+    import os,uuid,threading,traceback
+    sys.path.insert(0,'/workspace')
+    from experiments.sft_allocation_midpoint.common import dump,read,verify,sha,digest,manifest
+    from experiments.sft_allocation_midpoint.guard import RunGuard
+    from experiments.sft_allocation_midpoint import checkpoint as ck
+    spec=read('/workspace/reports/sft_allocation_midpoint_20261011/P007B_STUDENT_ADMISSION.json')
+    if (config['run_id']!='audit' or digest(config)!=spec['config_sha256']['audit'] or
+            digest(plan)!=spec['plan_sha256'] or config['max_seconds']!=3300):
+        raise ValueError('Unadmitted final audit')
+    claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
+    expected={f'{c}_s{s}' for c in ('breadth_p0','depth_p0','breadth_p4','depth_p4') for s in (17,23)}
+    if set(config['student_runs'])!=expected:raise ValueError('Audit roster differs')
+    for name in expected:
+        terminal=claims.get('midpoint/'+plan['campaign_id']+'/terminal/'+name)
+        if not terminal or terminal['status']!='completed':raise ValueError('Student not finished; do not dispatch audit yet')
+    for name,value in release['source_files'].items():
+        if sha(Path('/workspace')/name)!=value:raise ValueError('Source differs')
+    guard=RunGuard(claims,plan);guard.register(now_epoch=time.time())
+    admission=guard.admit(dict(run_id='audit',config_sha256=digest(config),data_sha256=config['input_sha256'],
+        source_sha256=digest(release['source_files'])),attempt_id=uuid.uuid4().hex,
+        now_epoch=time.time(),max_runtime_seconds=3360)
+    timer=threading.Timer(3300,lambda:os._exit(124));timer.daemon=True;timer.start()
+    base=Path('/evidence')/plan['campaign_id'];out=base/'audit'
+    try:
+        volume.reload();out.mkdir(exist_ok=False)
+        dump(out/'intent.json',dict(plan=plan,config=config,release=release));results={}
+        for name in ['breadth_p0','depth_p0','breadth_p4','depth_p4']+sorted(expected):
+            guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=300)
+            folder=base/name;files=read(folder/'artifact_manifest.json')
+            terminal=claims.get('midpoint/'+plan['campaign_id']+'/terminal/'+name)
+            if not terminal or terminal['status']!='completed' or digest(files)!=terminal['evidence_sha256']:
+                raise ValueError('Result/terminal binding differs')
+            verify(folder,files);checkpoints={}
+            for path in sorted(folder.glob('checkpoint_*')):
+                state=ck.load(path);checkpoints[path.name]=read(path/'manifest.json');del state
+            results[name]=dict(files_verified=len(files),manifest_digest=digest(files),terminal=terminal,
+                               checkpoints=checkpoints,result=read(folder/'result.json'))
+            dump(out/(name+'.json'),results[name]);volume.commit()
+        dump(out/'result.json',results);volume.commit();files=manifest(out)
+        dump(out/'artifact_manifest.json',files);volume.commit()
+        receipt=guard.finish(admission,status='completed',evidence_sha256=digest(files),actual_cost_cents=300,finished_epoch=time.time())
+        return dict(result=results,artifact_manifest=files,receipt=receipt)
+    except BaseException as exc:
+        if out.exists():
+            dump(out/'failure.json',dict(error_type=type(exc).__name__,error=str(exc),traceback=traceback.format_exc(),
+                rule='Retain prior results and partial audit. No repeated model work.'))
+            volume.commit();files=manifest(out);dump(out/'failure_manifest.json',files);volume.commit()
+            guard.finish(admission,status='failed',evidence_sha256=digest(files),actual_cost_cents=300,finished_epoch=time.time())
+        raise
+    finally:timer.cancel()
+
+
 @app.local_entrypoint()
 def main(plan_json:str,config_json:str,receipt_dir:str):
     from experiments.sft_allocation_midpoint.common import dump,sha,digest
@@ -119,4 +175,5 @@ def main(plan_json:str,config_json:str,receipt_dir:str):
     out=Path(receipt_dir);out.mkdir(parents=True,exist_ok=False)
     release=dict(commit=commit,source_files={n:sha(ROOT/n) for n in SOURCES})
     dump(out/'intent.json',dict(plan=plan,config=config,release=release,admission_containers=containers))
-    result=student.remote(plan,config,release);dump(out/'result.json',result)
+    result=(audit_cloud if config['run_id']=='audit' else student).remote(plan,config,release)
+    dump(out/'result.json',result)
