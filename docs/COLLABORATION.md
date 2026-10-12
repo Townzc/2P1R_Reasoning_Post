@@ -27,8 +27,10 @@ Previously authorized engineering continues within its frozen limits.
 2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
    apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
 3. P007B zero-price acquisitions are verified and closed:437 usable answers
-   over437 problems versus650 over171. The positive-price pair is running on
-   two H100s from68ee7a6a with unchanged acquisition source bytes. See
+   over437 problems versus650 over171. The positive-price pair has
+   the depth cell verified and breadth interrupted after192 known outputs. An
+   explicit continuation of only unattempted work is prepared; its reconstructed
+   cost must remain visible to reviewers. See
    [admission](../reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
    Student slots remain gated on all four audited acquired corpora/exact plans.
 4. Other audit work packages are proposals, not admitted jobs. Their scientific
@@ -79,3 +81,5 @@ Credentials, workspace authorization links, private correspondence and large
 checkpoint binaries stay out of Git. Public packets state which raw artifacts
 are retained outside Git and what cannot be independently verified from the
 compact packet alone. Missing data never silently become negative answers.
+
+Shareable process guide: [AI-assisted research workflow (Chinese)](RESEARCH_WORKFLOW_ZH.md).

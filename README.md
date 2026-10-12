@@ -60,8 +60,10 @@ P007B numerical admission is frozen: breadth/depth×problem-price0/4m,
 equal1.091289088USD scenario caps, actual active-time wallets, same teacher.
 Zero-price procurement is verified: breadth437 usable answers over437 problems,
 depth650 over171;1,280 attempts including188 invalid and5 valid duplicates.
-The positive-price pair is active on two H100s. These are supply results, not
-student accuracy. Student targets/updates remain separately matched;8 student
+The positive-price depth cell is verified (449 usable). Breadth hit its action
+watchdog after192 saved outputs; an explicit known-prefix continuation is being
+prepared, with conservative reconstructed cost and no output replay. These are
+supply results, not student accuracy. Student targets/updates remain separately matched;8 student
 slots await four audited acquired datasets. [Admission and calibration amendment](reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
 
 Latest workspace meter: **31.02084103USD at October12 19:57UTC**, including
