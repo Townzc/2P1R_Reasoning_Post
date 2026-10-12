@@ -1963,3 +1963,7 @@ Engineering reopen compute proxy CNY2.032,
 not a provider invoice, storage excluded; original budget not reset. Gate passed
 on this finite set only; cross-process vLLM resume remains unverified. Private
 bilingual Office Hour briefs updated; no external message sent.
+
+## October11 midpoint execution preparation
+
+AI-assisted implementation of immutable input release, fixed 80/431 development rosters, and CPU-only locked weight acquisition. The owner approved conditional four-arm execution. No new scientific outcome; external communications remain drafts only.

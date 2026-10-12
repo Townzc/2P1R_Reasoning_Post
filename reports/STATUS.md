@@ -1,3 +1,7 @@
+## October11 midpoint continuation
+
+Owner approved P007 engineering pilot followed by the four-arm paired-seed study if engineering passes; first results target October13 evening. New finite Modal work is within the existing $500 envelope. Prior Q2/LT002 remain closed. No scientific outcome measured yet.
+
 # October 11 — allocation midpoint preparation
 
 Current work: [P007](../docs/experiments/P007_midpoint_allocation_plan.md).

@@ -1,6 +1,6 @@
 # P007 — SFT data allocation for the October 15 midpoint
 
-**Work date:** October 11, 2026, America/Los_Angeles. **Status:** reviewable proposal and CPU preparation; no new scientific result or GPU queue admitted. **Hypothesis timing:** before new outcomes.
+**Work date:** October 11, 2026, America/Los_Angeles. **Status:** owner approved the engineering pilot and conditional four-arm/two-seed study on October11; actual GPU admission still requires the finite engineering checks below. **Hypothesis timing:** before new outcomes.
 
 ## Question and motivation
 
@@ -150,4 +150,4 @@ The report uses the unmodified [COLM2026 template](https://github.com/COLM-org/T
 
 Completed preparation:28 supplied reading-note files were retrieved, hash-verified and read in full at one pinned Git commit; separate primary-paper spot checks are recorded in the private review. This is not28 newly completed original-paper replications or full-paper reads. Official rubric/template/pricing were checked. CPU reconstruction recovered21,292 original parents and15,837 candidate records byte-exactly; an independent verifier re-enumerated1,746,600 released rows and re-tokenized15,308 accepted responses. Eight complete-answer schedules match their archived hashes and budgets. See the [readiness record](../../reports/sft_allocation_midpoint_20261011/READINESS.md). No new model effect, optimal allocation, acquisition price or GPU runtime has been measured in this plan.
 
-For every run, use the repository experiment record format: motivation; competing explanations; frozen plan and estimate; immutable actual dose/output/cost; failures; interpretation; next decision. Preserve oldQ2/LT002 closeouts. The initial main-grid review concerns the four-arm proposal, fixed adaptation method, endpoint and paired seeds; engineering/data preparation can proceed independently. Later policy/price/teacher changes require an explicit scientific amendment rather than being hidden inside a repair.
+For every run, use the repository experiment record format: motivation; competing explanations; frozen plan and estimate; immutable actual dose/output/cost; failures; interpretation; next decision. Preserve oldQ2/LT002 closeouts. The owner accepted the four-arm proposal, fixed adaptation method, endpoint and paired seeds on October11. The same grid proceeds after the engineering checks without another permission loop. Later policy/price/teacher changes require an explicit scientific amendment rather than being hidden inside a repair.

@@ -1,3 +1,7 @@
+# Current authorization — October11 midpoint
+
+The owner approved P007: run the finite model engineering pilot, then the four allocation arms with seeds17/23 if it passes. Target first results Tuesday October13 evening. The $500 Modal ceiling and P007 stage caps apply, including failures; old rental/queue permissions below are historical. Publish source before execution, keep data/compute accounting separate, record failures and reflections, verify artifacts and scale to zero when finished. No new external messages; drafts only.
+
 # October 1: scoring repair validated on saved fixtures; provider OFF
 
 160 authored checks passed locally and on the original Linux runtime. The complete
