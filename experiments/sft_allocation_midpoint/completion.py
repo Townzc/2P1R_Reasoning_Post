@@ -1,6 +1,12 @@
 """Explicit remaining-work admission and stateful continuation; never replay a batch."""
 from pathlib import Path
+import json
 from .common import read, digest, sha, verify, dump
+
+
+def same_serialized_budget(actual, saved):
+    """Compare all fields after the same JSON boundary used by recipe.json."""
+    return json.loads(json.dumps(actual,allow_nan=False)) == saved
 
 
 def validate_completion(store, plan, binding, queue, base, audit):
@@ -94,7 +100,7 @@ def continue_main(assets, parent, out, journal, config, environment):
         raise ValueError('Recovery schedule changed')
     model,tok=rt.new_model(Path(assets)/'model',17);opt=rt.optimizer_for(model);encoded=rt.encode(rows,tok)
     budget=rt.budget_report(encoded,schedule,1)
-    if budget!=recipe['budget']:raise ValueError('Retokenization changed the frozen budget')
+    if not same_serialized_budget(budget,recipe['budget']):raise ValueError('Retokenization changed the frozen budget')
     ck.restore(model,opt,state)
     restored=ck.snapshot(model,opt,state['identity'],128,state['supervised_tokens'],state['processed_tokens'],state['lrs'],schedule)
     if not ck.same(state,restored):raise ValueError('Restored full state differs before any new model work')

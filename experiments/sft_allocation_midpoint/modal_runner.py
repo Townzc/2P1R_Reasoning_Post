@@ -94,6 +94,17 @@ def run_gpu(plan,config,release):
                     recovery['controller_terminal']['status']!='failed'):
                 raise ValueError('Stateful continuation does not match failed parent')
             parent=Path('/evidence')/recovery['parent_campaign']/'breadth_17'
+            if 'zero_work_attempt' in recovery:
+                zero=recovery['zero_work_attempt'];old_prefix='midpoint/'+zero['campaign']+'/'
+                zroot=Path('/evidence')/zero['campaign']/'breadth_17_resume'
+                zfiles=read(zroot/'failure_manifest.json')
+                if (claims.get(old_prefix+'terminal/breadth_17_resume')!=zero['terminal'] or
+                        zero['terminal']['status']!='failed' or digest(zfiles)!=zero['terminal']['evidence_sha256'] or
+                        any(n.startswith(('intents/','completed/','checkpoint_','observed80_','endpoint431')) for n in zfiles) or
+                        any(claims.get(old_prefix+'breadth_17_resume/unit/'+n) is not None for n in
+                            ('update_0129','observed80_step128_remaining_batch_0000'))):
+                    raise ValueError('Failed preflight may have attempted work; refuse replay')
+                verify(zroot,zfiles)
             result=continue_main(assets,parent,out,journal,config,environment)
         elif kind=='base':
             model,tok=runtime.new_model(assets/'model',17,adapt=False)
@@ -339,3 +350,33 @@ def submit(plan_json:str,queue_json:str,base_json:str,audit_json:str,receipt_dir
     call=controller.spawn(plan,queue,base,audit_config,release,binding)
     dump(out/'submitted.json',dict(call_id=call.object_id,submitted_epoch=time.time(),campaign=plan['campaign_id']))
     print(json.dumps({'finite_controller_submitted':True,'call_id':call.object_id}),flush=True)
+
+
+@app.local_entrypoint()
+def submit_one(plan_json:str,config_json:str,receipt_dir:str):
+    """One manually reconciled zero-work preflight repair; no controller or retry."""
+    import sys
+    from experiments.sft_allocation_midpoint.common import read,sha,dump,digest
+    from experiments.sft_allocation_midpoint.dispatch import spawn_once
+    if '--detach' not in sys.argv:raise ValueError('Use one detached finite call')
+    plan=read(plan_json);config=read(config_json)
+    if (set(plan['slots'])!={'breadth_17_resume'} or config['kind']!='continue_main' or
+            config['run_id']!='breadth_17_resume' or 'zero_work_attempt' not in config['recovery']):
+        raise ValueError('Only the reviewed zero-work resume repair is admitted')
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/codex/icml-acl-2027'],cwd=ROOT,text=True).split()[0]
+    if commit!=remote:raise ValueError('Publish before execution')
+    for name in SOURCE_FILES:
+        if subprocess.check_output(['git','show','HEAD:'+name],cwd=ROOT)!=(ROOT/name).read_bytes():
+            raise ValueError('Execution source is not published')
+    release=dict(commit=commit,source_files={name:sha(ROOT/name) for name in SOURCE_FILES})
+    claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
+    if claims.get('midpoint/'+plan['campaign_id']+'/claim/'+config['run_id']) is not None:
+        raise ValueError('Already claimed; no repeat')
+    out=Path(receipt_dir);out.mkdir(parents=True,exist_ok=False)
+    dump(out/'intent.json',dict(plan=plan,config=config,release=release))
+    call=spawn_once(claims,'midpoint/'+plan['campaign_id']+'/dispatch/'+config['run_id'],run_gpu,
+        (plan,config,release),dict(run_id=config['run_id'],config_sha256=digest(config)),
+        lambda suffix,record:dump(out/('dispatch_'+suffix+'.json'),record))
+    dump(out/'submitted.json',dict(call_id=call.object_id,campaign=plan['campaign_id'],submitted_epoch=time.time()))
+    print(json.dumps({'single_finite_call_submitted':call.object_id}),flush=True)

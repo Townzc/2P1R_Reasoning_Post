@@ -1991,3 +1991,6 @@ Read-only provider/ledger/Volume inspection confirmed bothRepeat training endpoi
 
 
 2026-10-12 morning — Queued P007 heartbeat actually serviced15:05UTC; recorded the monitoring gap. Diagnosed provider GPU preemption, preserved128 committed updates and8 ambiguous diagnostic outputs, independently verified five completed endpoints and the failed parent fullstate/rawoutputs. Prepared bounded stateful continuation without replay and migration only of untouched Mixed/base/audit;44 CPU tests passed. Same scientific dose and deadline; total conservative reservation124.50USD. Partial results and limitations retained; no external messages or subagents.
+
+
+2026-10-12 15:30UTC — Diagnosed own zero-work continuation admission defect (JSON string/int exposure keys). Real saved1013-row budget fixture passes full JSON-normalized equality;45 tests pass. Preserved four failure files/terminal and zero scientific dose. Prepared one separately reserved9USD single-call repair while the independent Mixed17 continues; cumulative reservation133.50USD, original deadline unchanged. No failed-claim reset or repeated model batch.

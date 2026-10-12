@@ -5,9 +5,17 @@ from unittest.mock import patch
 from contextlib import ExitStack
 from pathlib import Path
 from experiments.sft_allocation_midpoint.common import dump,digest,manifest
-from experiments.sft_allocation_midpoint.completion import inspect_parent,validate_completion,continue_main
+from experiments.sft_allocation_midpoint.completion import inspect_parent,validate_completion,continue_main,same_serialized_budget
 
 class CompletionTests(unittest.TestCase):
+    def test_saved_json_exposure_keys_preserve_values_but_change_key_types(self):
+        import json
+        actual={'row_exposures':{1:3,10:4,2:3},'optimizer_updates':256,'per_update':[{'supervised_tokens':7}]}
+        saved=json.loads(json.dumps(actual))
+        self.assertNotEqual(actual,saved)
+        self.assertTrue(same_serialized_budget(actual,saved))
+        saved['row_exposures']['10']=5
+        self.assertFalse(same_serialized_budget(actual,saved))
     def files(self,p):
         for i in range(1,129):
             row={'step':i,'supervised_tokens':2,'processed_tokens':3}
