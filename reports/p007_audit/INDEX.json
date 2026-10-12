@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v1",
-  "as_of_utc": "2026-10-12T19:20:52.776799+00:00",
+  "as_of_utc": "2026-10-12T19:36:30.001207+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -10,15 +10,18 @@
     "external_review": "pending"
   },
   "pilot": {
-    "status": "running_first_batch_verified",
-    "evidence": "reports/sft_allocation_midpoint_20261011/P007A_STARTED.json",
+    "status": "completed_verified_resources_released",
+    "evidence": "reports/sft_allocation_midpoint_20261011/P007A_RESULTS_20261012.json",
     "source_commit": "f4d5b233608b10623d1fc03eb8a0156f1d5d7f4c",
     "maximum_outputs": 1024,
-    "reservation_usd": 15
+    "reservation_usd": 15,
+    "packet": "reports/p007_audit/pilot_v1",
+    "external_review": "pending"
   },
   "cost_comparison": {
-    "status": "prepared_not_admitted",
-    "design": "docs/experiments/P007B_cost_matched_policy_design.md"
+    "status": "numerically_admitted_not_yet_dispatched",
+    "design": "docs/experiments/P007B_cost_matched_policy_design.md",
+    "admission": "reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json"
   },
   "additional_wp_queue": "proposed_not_admitted",
   "total_budget_usd": 500,

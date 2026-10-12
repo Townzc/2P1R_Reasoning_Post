@@ -1,3 +1,7 @@
+# October12 19:35UTC — pilot verified, cost comparison numerically admitted
+
+P007A completed1,024 outputs/959 usable; all independently rescored, both apps stopped. Do not rerun it. Read P007A_RESULTS_20261012.json and P007B_ADMISSION.json. P007B freezes four actual procurement wallets after verified calibration, common2048m cap (explicit pre-output amendment from prepared1024m),40s bounded action, max2,048outputs/cell. Student8 slots reserved but gated on four audited corpora and exact256/524288 schedules.175USD new reservation/cumulative323.50,450maximum spend/50protected,Oct14 02UTC cutoff. Use current handoff for actual claims; admission is not dispatch. No subagents, external sending, AutoDL or AI slides. Earlier records below are historical.
+
 # October12 19:10UTC — main verified closed, P007A finite admission
 
 Main/base/final CPU audit are completed and independently verified; seven main apps stopped with zero containers. Never repeat main work. P007A_ADMISSION.json binds the1024-output/0studentupdate H100 teacher pilot to that closeout,15USD reserve andOct13 01UTC cutoff. No prior claims at admission. Read current private handoff for actual submission state; do not equate admission with execution. P007B remains prepared pending verified calibration. Latest500USD total/50protected controls. Preserve old failures/unknowns. No subagents, external sending, AutoDL or AI slides. Earlier states below are history.

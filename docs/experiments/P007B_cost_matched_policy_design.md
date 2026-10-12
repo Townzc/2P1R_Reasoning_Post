@@ -1,9 +1,9 @@
 # P007B: test the procurement decision under equal acquisition caps
 
-Internal experiment design, October12 2026. Prepared, not dispatched. P007A must
-finish and pass independent verification first. The exact numerical wallet caps
-and execution ledger are frozen afterward using the calibration rule below,
-before any P007B student outcome. TuesdayOct13 evening is the evidence target;
+Internal experiment design, October12 2026. P007A has completed and passed
+independent verification. P007B numerical acquisition admission is now frozen in
+P007B_ADMISSION.json before any P007B teacher or student output. Student slots
+are reserved, with execution still gated on all four audited acquired datasets. TuesdayOct13 evening is the evidence target;
 proposed hard closeout October14 02:00UTC (Tuesday19:00PDT). No main deadline changes.
 
 ## What the existing evidence does and does not say
@@ -37,7 +37,8 @@ Four procurement cells: breadth/depth × problem-price scenarios0 and4m.
 Here m is a frozen calibration unit computed from the complete P007A generation
 and checker time × the same GPU/host rate, divided by1024 attempts. It includes
 wrong and duplicate attempts; it is not cost per accepted response. Both policies
-receive an acquisition cap B=1024m at each price. If the pilot indicates that the
+receive an acquisition cap B=2048m at each price (the prepared1024m cap was
+amended before P007B execution; see the calibration amendment below). If the pilot indicates that the
 finite size/time gate is infeasible, amend this design explicitly before any
 student output rather than silently tuning B or the prices to get a winner.
 The positive problem price is a stated scenario, not a measured human price.
@@ -152,3 +153,43 @@ Primary references:
 - [OpenMathInstruct-2](https://arxiv.org/abs/2410.01560)
 - [When Does Generating More Help?](https://arxiv.org/abs/2607.01727)
 - [DART-Math](https://arxiv.org/abs/2407.13690)
+
+
+## Calibrated execution amendment — October12 before P007B outputs
+
+P007A verified1,024 physical attempts,446.675535056 generation seconds and
+0.247970081 checker seconds. At4.3952USD/H100+host-hour, upward-rounded
+m=532,856 nanodollars. Every cell therefore has B=1.091289088USD of scenario
+acquisition budget, with problem price0 or0.002131424USD. These prices establish
+a relative-cost experiment; they are not empirical human-curation prices.
+
+Observed inter-intent intervals including durable recording peaked at24.5574s.
+A40s per-action watchdog admits finite headroom, without assuming future calls
+must be as fast. The original1024m wallet would reserve8.95% for its final
+indivisible action. The common cap is explicitly doubled to2048m before any B
+outcome, reducing this reservation to4.475%. No policy-specific budget tuning.
+Largest affordable ordered purchases fill at most16 slots; a final smaller
+purchase is allowed. Stop rather than issue an unbounded or unaffordable batch.
+The same40s bound applies to both policies; if it fires, preserve known returns
+and ambiguous requests, admit no replay, and reconcile before student admission.
+
+Per cell: at most128 batches/2,048 physical outputs,1,024 unique parents,8 tries
+per parent,1,800 GPU worker seconds. Four cells permit at most8,192 outputs;
+wallet/time/pool stops usually bind earlier. Acquisition seed2026101201 is fixed
+for all cells, with batch index offset; differing adaptive rosters do not imply
+identical counterfactual random draws. Same revision, sampling, masks and scoring
+as P007A. Raw returns, scoring, completion and settlement persistence are charged
+inside active time. Final envelope hashing/export are separately counted closing
+overhead, and model load is separate setup; all-in accounting must include both.
+
+Student slots reserve8×18USD for up to10,800s each onH100, not permission to
+start before all four datasets are independently audited and exact full-answer
+schedules exist. Common final test decoder512 tokens/2048 context, batch16,
+terminal-only1,319 questions. This differs from main's A100/batch8 execution;
+within-B contrasts have the common contract, cross-experiment shifts cannot be
+attributed solely to the data. The eight endpoint requests total10,552.
+Four acquisition slots7USD each plus students144USD and independent audit3USD
+reserve175USD, bringing all historical conservative reservations to323.50USD,
+below the450USD spending ceiling with50USD protected. Reservations are not bills.
+Maximum2 concurrent GPUs; fixed deadlineOctober14 02UTC. No new teacher, extra
+training seed or post-result search.

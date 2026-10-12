@@ -1,0 +1,91 @@
+{
+  "absolute_deadline_utc": "2026-10-14T02:00:00Z",
+  "acquisition_config_sha256": {
+    "breadth_p0": "d783373ae0a4e09394745de8fded45d3538ae0ce99cd6317395b159497a65341",
+    "breadth_p4": "56aa41cc2066caf4fb5d959f3f4e1dc3b453bb77087ce70d9674eaef0ba239e7",
+    "depth_p0": "32777cdc1352cc784e414db667bcc7810f692224da9d4a466d41e9bae647287b",
+    "depth_p4": "5105752232c37752e4b1ca678bce5ae798ce8c4e5123de48f320605bfd125a07"
+  },
+  "amendment": {
+    "caveat": "Observed latency does not guarantee future latency; finite watchdog enforces bound. Report slack, pool/candidate censoring and failures.",
+    "no_P007B_student_or_teacher_outcomes_seen": true,
+    "observed_max_inter_intent_seconds": 24.557429790496826,
+    "previous_cap_multiple_m": 1024,
+    "reason": "40s bounded batch reservation would occupy 8.95% of pilot-calibrated original cap; double common cap before any new output to reduce it to 4.48%."
+  },
+  "calibration": {
+    "checker_seconds": 0.24797008099992013,
+    "generation_seconds": 446.6755350559996,
+    "hourly_nanodollars": 4395200000,
+    "includes_all_wrong_and_duplicate_attempts": true,
+    "m_nanodollars": 532856,
+    "physical_attempts": 1024,
+    "pilot_local_audit_sha256": "d10a0558f21bf0bcf22c4a0032f36874c6debf854d5540e1e0d20a6a952200e7"
+  },
+  "campaign_id": "mp-policy-cost-20261012-r1",
+  "created_utc": "2026-10-12T19:34:08.924953+00:00",
+  "external_claude_review": "pending",
+  "financial_envelope": {
+    "acquisition": 28,
+    "audit": 3,
+    "max_spend_usd": 450,
+    "meter_checked_utc": "2026-10-12T19:29:13.818875+00:00",
+    "metered_at_prior_check": "28.76084103",
+    "new_reservation_usd": 175,
+    "prior_conservative_reservations_usd": 148.5,
+    "protected_usd": 50,
+    "reservations_are_not_invoices": true,
+    "students": 144,
+    "total_conservative_reservations_usd": 323.5,
+    "total_credit_budget_usd": 500
+  },
+  "inputs": {
+    "fresh_parents.jsonl": "245ac80547482728791f16cb8fd74b767fe3e97fddaf13fd3a92a42845e154c5",
+    "gsm8k_test1319.jsonl": "ea61d5f11ee2b0605cfd031f840621aa7ee7015be5750d0eeb8ac3a9c7ebd9a1",
+    "manifest.json": "28f3fb2ff638f14f000d79e05fb087d837649ce0118d4450db1e56bc1d6d795e"
+  },
+  "interpretation": "One procurement draw; cap comparison under explicit hypothetical prices, not global dollar optimum; test researcher exposure disclosed.",
+  "max_gpus": 2,
+  "plan_sha256": "91e01a8d8445b09f70a3a973c42f7201dfe38c37d7b044cb973fe9086639229b",
+  "schema": "p007b_finite_admission_v1",
+  "scientific_wallet": {
+    "cap_multiple_m": 2048,
+    "cap_nanodollars": 1091289088,
+    "closure_metadata_outside_wallet": "After final active_end; counted in all-in actual runtime/cost",
+    "max_action_seconds": 40,
+    "max_candidates_all_four_cells": 8192,
+    "max_candidates_per_cell": 2048,
+    "max_parents_per_cell": 1024,
+    "maximum_action_reservation_fraction": 0.04475033841811859,
+    "problem_price_multiples": [
+      0,
+      4
+    ],
+    "problem_prices": "Hypothetical scenario, not measured human price",
+    "slots": 16,
+    "unknowns": "Never replay; unresolved output blocks student admission until reconciliation"
+  },
+  "status": "frozen_before_first_P007B_output",
+  "student_design": {
+    "cells": [
+      "breadth_p0",
+      "depth_p0",
+      "breadth_p4",
+      "depth_p4"
+    ],
+    "decoder": "Same fixed512-token greedy /2048context, batch16 common across all eight B runs; no 431dev endpoint",
+    "endpoint_questions": 1319,
+    "gpu": "H10080GB",
+    "inference_change_from_main": "H100 with batch16 vs main A100 batch8; compare B cells with each other, not attribute main-vs-B changes solely to data",
+    "max_runtime_seconds": 10800,
+    "seeds": [
+      17,
+      23
+    ],
+    "stage_status": "Slots reserved; execution requires all four acquisition audits and exact whole-answer schedules before any student run",
+    "supervised_targets_per_run": 524288,
+    "terminal_only": true,
+    "total_endpoint_outputs": 10552,
+    "updates_per_run": 256
+  }
+}

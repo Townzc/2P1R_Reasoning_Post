@@ -50,17 +50,21 @@ cloud verification results.
 
 ## Current next step and limits
 
-P007A measures first/second/fourth usable-answer supply from one pinned teacher:
-128 frozen problems, at most8 attempts each, at most1,024 outputs, zero student
-training. It has its own finite15USD reservation and October13 01UTC cutoff.
-P007B is a prepared breadth/depth×problem-price comparison using the same newly
-metered source, with student targets/updates separately matched. Its numerical
-wallets and execution admission await the verified pilot.
+P007A is complete:1,024 physical attempts,959 usable answers,59 invalid answers
+and6 rejected valid duplicates; all costs retained. At least1/2/4 usable answers
+were available for125/123/122 of128 parents. All1,024 outputs were independently
+rescored and both apps stopped with zero containers.
+[Verified pilot](reports/sft_allocation_midpoint_20261011/P007A_RESULTS_20261012.json).
 
-Latest complete-main workspace meter: **27.76043680USD at October12 19:06UTC**,
-including engineering and failed work. This is delayed usage, not a final invoice,
-per-arm acquisition cost or remaining-credit balance. Owner budget500USD with
-at least50USD protected; unissued future credits are not part of admission.
+P007B numerical admission is frozen: breadth/depth×problem-price0/4m,
+equal1.091289088USD scenario caps, actual active-time wallets, same teacher.
+Student targets/updates remain separately matched;8 student slots await four
+audited acquired datasets. [Admission and calibration amendment](reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
+
+Latest workspace meter: **28.76084103USD at October12 19:29UTC**, including
+engineering and failed work. This is delayed usage, not a final invoice or
+remaining-credit balance. Total conservative reservations323.50USD, distinct
+from spend;500USD total with at least50USD protected.
 
 The old bank cannot be priced with the new teacher's pilot. Development accuracy
 does not establish uncontaminated generalization. The official GSM8K test was
