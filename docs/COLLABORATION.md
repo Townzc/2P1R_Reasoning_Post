@@ -26,7 +26,7 @@ Previously authorized engineering continues within its frozen limits.
    [main packet](../reports/p007_audit/main_v1/REVIEW_REQUEST.md).
 2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
    apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
-3. P007B all four acquired corpora passed independent local oracles; all apps stopped. The full [procurement packet](../reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) preserves the one-sided interruption and reconstructed cost. All eight complete-answer student plans passed together; execution is next. Review the source mapping rather than assuming the failed original breadth cell completed.
+3. P007B all four acquired corpora passed independent local oracles; all apps stopped. The full [procurement packet](../reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) preserves the one-sided interruption and reconstructed cost. All eight complete-answer student plans passed together. The first breadth/depth pair is now actually training on two H100s; six students remain admitted but unsubmitted. Review the source mapping rather than assuming the failed original breadth cell completed.
 4. Other audit work packages are proposals, not admitted jobs. Their scientific
    value will be weighed against the core cost-allocation question and time left.
 

@@ -1,0 +1,255 @@
+{
+  "checked_utc": "2026-10-12T20:45:46.685968+00:00",
+  "dispatch_order": {
+    "pairs": [
+      [
+        "breadth_p0_s17",
+        "depth_p0_s17"
+      ],
+      [
+        "breadth_p4_s17",
+        "depth_p4_s17"
+      ],
+      [
+        "breadth_p0_s23",
+        "depth_p0_s23"
+      ],
+      [
+        "breadth_p4_s23",
+        "depth_p4_s23"
+      ]
+    ],
+    "rule": "One submission per slot; no second pair while two workers are active; no automatic replay; fixed order without inspecting accuracy."
+  },
+  "input_manifest_sha256": "d687f54dab20c3b2d828679725b5a8663b84d05b3cc80620e79ad1f7fb0471bb",
+  "input_readback_verified": {
+    "files": {
+      "breadth_p0_seed17.json": {
+        "bytes": 141793,
+        "sha256": "9c4d04f2ec57335bf71d8959dbd6f007843483d24ca4fe8e74983953dc4d3f79"
+      },
+      "breadth_p0_seed23.json": {
+        "bytes": 141774,
+        "sha256": "7f711c968d550352c65379b313cd49f03016938bbc92465d43ce596adba56317"
+      },
+      "breadth_p0_train.jsonl": {
+        "bytes": 745714,
+        "sha256": "d29e3450f4e64410e5bbb40c40d020a7ac4fa1d9332b363d79b42efd849dab9e"
+      },
+      "breadth_p4_seed17.json": {
+        "bytes": 92428,
+        "sha256": "baa918a3955f340665df3ecb95fde368aa7c74e2de0441743f3598a14f91b625"
+      },
+      "breadth_p4_seed23.json": {
+        "bytes": 92458,
+        "sha256": "fc15ec85f73053deeac976b07642555310105d5d5e0684d3042be6860f039641"
+      },
+      "breadth_p4_train.jsonl": {
+        "bytes": 365028,
+        "sha256": "4048a1237df83b92e694970620ba588595dde15b78151611fe96099c2f6f793a"
+      },
+      "depth_p0_seed17.json": {
+        "bytes": 175654,
+        "sha256": "1e23e30138767831e2f25250a1132227487f020fc57386dab5c68661ff40763f"
+      },
+      "depth_p0_seed23.json": {
+        "bytes": 175662,
+        "sha256": "4695fe62e04ccdb8a95aac3406fc9842b988bd21e0744bfb392aa76ff9c0aaaa"
+      },
+      "depth_p0_train.jsonl": {
+        "bytes": 1092974,
+        "sha256": "1ec17471b2a8ca7d8c92682f63ce5e96d50a33eb87fe34fc42ea94f11c6ffc81"
+      },
+      "depth_p4_seed17.json": {
+        "bytes": 135205,
+        "sha256": "625a834d6f2d35c272ef40eeb8374a0a4ca4bbf88d75e10004d922a9fbbb76df"
+      },
+      "depth_p4_seed23.json": {
+        "bytes": 135250,
+        "sha256": "7213dffeb9542fbe5d3069b9951c9d0cd578e8431acd63b4b3b91a45794c46e6"
+      },
+      "depth_p4_train.jsonl": {
+        "bytes": 755096,
+        "sha256": "9d5582e76f5554b6ccf93c2f065ec569815c3dc391125ce9fe4262db1e5fc256"
+      },
+      "gsm8k_test1319.jsonl": {
+        "bytes": 871475,
+        "sha256": "ea61d5f11ee2b0605cfd031f840621aa7ee7015be5750d0eeb8ac3a9c7ebd9a1"
+      },
+      "manifest.json": {
+        "bytes": 4631,
+        "sha256": "d687f54dab20c3b2d828679725b5a8663b84d05b3cc80620e79ad1f7fb0471bb"
+      }
+    },
+    "remote": "/mp-policy-cost-20261012-r1/student_inputs",
+    "status": "independent_readback_verified",
+    "utc": "2026-10-12T20:42:41.430169+00:00"
+  },
+  "new_reservation_usd": 0,
+  "remaining_runs": "six admitted but not dispatched",
+  "runs": {
+    "breadth_p0_s17": {
+      "config_sha256": "6da6ee2be9e1557142c575de124aa3eff3b76fbfc73a9d104c9d2d294fbdaf92",
+      "containers": [
+        {
+          "app_id": "ap-YNgwPnDvZAcVQi4mC8srNY",
+          "app_name": "sft-allocation-cost-matched-students",
+          "container_id": "ta-01M4RXPD9X3SJNNFK05BV652CR",
+          "start_time": "2026-10-12 13:43:35-07:00"
+        }
+      ],
+      "environment": {
+        "cuda": "12.8",
+        "deterministic_algorithms": true,
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "gpu_total_memory": 85009367040,
+        "nvidia_smi": "Mon Oct 12 20:43:51 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          On  |   00000000:33:00.0 Off |                    0 |\n| N/A   43C    P0             73W /  700W |       4MiB /  81559MiB |      0%      Default |\n|                                         |                        |             Disabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+        "versions": {
+          "accelerate": "1.10.1",
+          "numpy": "2.3.2",
+          "peft": "0.17.1",
+          "safetensors": "0.6.2",
+          "tokenizers": "0.22.1",
+          "torch": "2.8.0+cu128",
+          "transformers": "4.56.2"
+        }
+      },
+      "first_update": {
+        "cumulative_processed": 2498,
+        "cumulative_targets": 2104,
+        "gradient_norm": 0.2962290048599243,
+        "indices": [
+          358,
+          336,
+          30,
+          176,
+          48,
+          114
+        ],
+        "loss": 0.15314883424302017,
+        "lr": 6.25e-06,
+        "peak_allocated_bytes": 12324169216,
+        "processed_tokens": 2498,
+        "seconds": 2.6695300499999988,
+        "step": 1,
+        "supervised_tokens": 2104
+      },
+      "observed_update": {
+        "cumulative_processed": 45173,
+        "cumulative_targets": 36940,
+        "gradient_norm": 0.29053935408592224,
+        "indices": [
+          215,
+          162,
+          50,
+          152,
+          309,
+          244,
+          185,
+          378
+        ],
+        "loss": 0.08928364124781546,
+        "lr": 9.998457962390008e-05,
+        "peak_allocated_bytes": 13108128768,
+        "processed_tokens": 2554,
+        "seconds": 2.087983280000003,
+        "step": 18,
+        "supervised_tokens": 2091
+      },
+      "provider": [
+        {
+          "app_id": "ap-YNgwPnDvZAcVQi4mC8srNY",
+          "created_at": "2026-10-12 13:42:48-07:00",
+          "description": "sft-allocation-cost-matched-students",
+          "state": "ephemeral (detached)",
+          "stopped_at": null,
+          "tasks": "1"
+        }
+      ],
+      "source": "55be82e7cbfc1fa3b6415eac7fc35e54b5838ba8",
+      "startup_verification_sha256": "3083a27fde1929c59ea925567a1a3b76d2f8b344f97a3ff1296ccce401718eea"
+    },
+    "depth_p0_s17": {
+      "config_sha256": "1cfe9a14e248d31410c2602ef4825e438cafcc8207aa8c92166120ca7790e89e",
+      "containers": [
+        {
+          "app_id": "ap-DDSMbbTFDnhEFgjlK1p48e",
+          "app_name": "sft-allocation-cost-matched-students",
+          "container_id": "ta-01M4RXQR23VTE05PZVHW87GQVR",
+          "start_time": "2026-10-12 13:44:19-07:00"
+        }
+      ],
+      "environment": {
+        "cuda": "12.8",
+        "deterministic_algorithms": true,
+        "gpu": "NVIDIA H100 80GB HBM3",
+        "gpu_total_memory": 85017624576,
+        "nvidia_smi": "Mon Oct 12 20:44:31 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          On  |   00000003:00:04.0 Off |                    0 |\n| N/A   36C    P0             75W /  700W |       4MiB /  81559MiB |      0%      Default |\n|                                         |                        |             Disabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+        "versions": {
+          "accelerate": "1.10.1",
+          "numpy": "2.3.2",
+          "peft": "0.17.1",
+          "safetensors": "0.6.2",
+          "tokenizers": "0.22.1",
+          "torch": "2.8.0+cu128",
+          "transformers": "4.56.2"
+        }
+      },
+      "first_update": {
+        "cumulative_processed": 2245,
+        "cumulative_targets": 1981,
+        "gradient_norm": 0.3571208715438843,
+        "indices": [
+          558,
+          176,
+          114,
+          337,
+          30
+        ],
+        "loss": 0.17981659312972753,
+        "lr": 6.25e-06,
+        "peak_allocated_bytes": 12296560128,
+        "processed_tokens": 2245,
+        "seconds": 2.5284702319999965,
+        "step": 1,
+        "supervised_tokens": 1981
+      },
+      "observed_update": {
+        "cumulative_processed": 45252,
+        "cumulative_targets": 36890,
+        "gradient_norm": 0.2859845459461212,
+        "indices": [
+          345,
+          583,
+          632,
+          332,
+          409,
+          512,
+          359,
+          100
+        ],
+        "loss": 0.1292229381489502,
+        "lr": 9.998457962390008e-05,
+        "peak_allocated_bytes": 12396796928,
+        "processed_tokens": 2633,
+        "seconds": 1.8503080979999993,
+        "step": 18,
+        "supervised_tokens": 2179
+      },
+      "provider": [
+        {
+          "app_id": "ap-DDSMbbTFDnhEFgjlK1p48e",
+          "created_at": "2026-10-12 13:44:01-07:00",
+          "description": "sft-allocation-cost-matched-students",
+          "state": "ephemeral (detached)",
+          "stopped_at": null,
+          "tasks": "1"
+        }
+      ],
+      "source": "55be82e7cbfc1fa3b6415eac7fc35e54b5838ba8",
+      "startup_verification_sha256": "3124f88e3212316f61eaf1af914bf860ff059ad4945f001bb4ff5c6872bf0e4c"
+    }
+  },
+  "schema": "p007b_students_started_v1",
+  "scientific_results_available": false
+}
