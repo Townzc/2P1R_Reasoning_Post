@@ -1,0 +1,143 @@
+{
+  "billing": {
+    "not_invoice_or_balance": true,
+    "protected_usd": 50,
+    "reservation_usd": 366.5,
+    "spend_ceiling_usd": 450,
+    "summary": {
+      "adjustments": {
+        "credits": "-54.26000000",
+        "free_storage": "-0.02984052",
+        "network_egress_allowance": "-0.00100051",
+        "plan_cost": "0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "billed_cost": "0E-8",
+      "metered_cost": "54.29084103",
+      "metered_cost_breakdown": {
+        "ephemeral_apps": "54.25838249",
+        "llm_tokens": "0E-8",
+        "volumes": "0.02984052"
+      }
+    },
+    "utc": "2026-10-12T23:30:41.816824+00:00"
+  },
+  "campaign": "mp-policy-token-20261012-r1",
+  "depth_minus_breadth_pp": -0.9855951478392722,
+  "external_claude_review": "pending for this outcome packet",
+  "full_states_verified": 2,
+  "limits": [
+    "One training seed and one saved teacher trace per cell; descriptive result only.",
+    "The positive-price pair and seed23 have not completed; no price interaction or robust winner claim.",
+    "Common hypothetical token cap211257, not equal realized spending or real API dollars; p0 unused6.14%/6.88%.",
+    "All length-capped outputs remain incorrect in the fixed1319 denominator.",
+    "Fixed supervised targets and updates include unequal repetition; not an isolated diversity mechanism.",
+    "Official test was researcher-observed in September; not a fresh uncontaminated benchmark.",
+    "Original time-priced operational pilots are retained separately and not pooled."
+  ],
+  "models": {
+    "breadth": {
+      "accuracy": 0.730098559514784,
+      "artifact_digest": "335313e12e455583434247e81ca21cb33283ce4b875b0a3fbaab0950a3222db4",
+      "containers": 0,
+      "correct": 963,
+      "n": 1319,
+      "problem_price": 0,
+      "procurement": {
+        "acquired": 420,
+        "attempts": 512,
+        "batches": 32,
+        "cap": 211257,
+        "charge": 198280.0,
+        "covered": 408,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.061427550329693215,
+        "usable": 408
+      },
+      "provider_stopped": true,
+      "run_id": "breadth_p0_s17",
+      "runtime_rate_estimate_usd": 4.830248430231625,
+      "seed": 17,
+      "state_sha256": "d4e8be43ad244c1dbe6a175657bc5027df74ce4754e86977d3288ba4b7dcdcb8",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03335860500379075,
+        "length_cap_outputs": 44,
+        "length_cap_scored_incorrect": 44,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 44,
+          "native_eos": 1275
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 402.1935571340011,
+      "updates": 256,
+      "wall_seconds": 3956.33744430542
+    },
+    "depth": {
+      "accuracy": 0.7202426080363912,
+      "artifact_digest": "c6b06fe1fba8cf63a20f805ff2b6a30cc1a48d904d62e37436183d2bfcbe64c4",
+      "containers": 0,
+      "correct": 950,
+      "n": 1319,
+      "problem_price": 0,
+      "procurement": {
+        "acquired": 135,
+        "attempts": 528,
+        "batches": 33,
+        "cap": 211257,
+        "charge": 196716.0,
+        "covered": 128,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.06883085530893651,
+        "usable": 474
+      },
+      "provider_stopped": true,
+      "run_id": "depth_p0_s17",
+      "runtime_rate_estimate_usd": 5.197301287407345,
+      "seed": 17,
+      "state_sha256": "a504f113a47af95ddab8a5c117bb1a4a96b9093f3173eed8b57c272d10642dd0",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03411675511751327,
+        "length_cap_outputs": 45,
+        "length_cap_scored_incorrect": 45,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 45,
+          "native_eos": 1274
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 438.6678008699995,
+      "updates": 256,
+      "wall_seconds": 4256.9813940525055
+    }
+  },
+  "paired_disagreements": {
+    "breadth_only": 116,
+    "depth_only": 103
+  },
+  "price_interaction_available": false,
+  "raw_outputs_independently_rescored": 2638,
+  "remaining_frozen_runs": 6,
+  "role": "Corrected uniform-token tariff, price0, seed17 only; partial frozen eight-run queue",
+  "schema": "p007b_token_first_pair_closeout_v1",
+  "sources": {
+    "breadth": {
+      "envelope_sha256": "d98f3be3bd44e13fa8b036b6842d985fc4a82757ee966a811dd92410993e418d",
+      "oracle_sha256": "e65c9a770e80cd0aeb5fa82aa998c9da40a48dcc7c4b2a7717f18459b36e7433",
+      "provider_sha256": "9628202f185b103b67eb15c74012a08f08978ac1a37191f1018b69e618dc9f05",
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26"
+    },
+    "depth": {
+      "envelope_sha256": "72bdeb109dc4267a2aa286007585c6857bf294be7111e1b9bb792efa5093aee8",
+      "oracle_sha256": "5c4ffe4ece60ac884bd226180adeb1278be227a433b7dee9161f927eddb483bd",
+      "provider_sha256": "5b546bddc36160a61abe59395b9a1a2939ba0d29840ee2d79f3f5a9abea3937b",
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26"
+    }
+  },
+  "supervised_targets_verified": 1048574,
+  "unknown_endpoint_outputs": 0,
+  "updates_verified": 512,
+  "utc": "2026-10-12T23:33:44.670476+00:00"
+}

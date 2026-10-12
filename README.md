@@ -61,9 +61,18 @@ All four procurement cells are now verified and released: low-price breadth437 u
 
 The original time-priced students are independently verified and closed: breadth953/1319 (72.25%), depth969/1319 (73.46%), one training seed. They remain operational pilots; six untouched original students and their audit are retired. These two scores do not identify a problem-price interaction. [Pilot closeout](reports/sft_allocation_midpoint_20261011/P007B_OPERATIONAL_PILOTS_CLOSED.json).
 
-After Claude C-B1, the owner approved a [fixed-token-tariff revision](docs/experiments/P007B_token_tariff_revision.md). Eight new finite students use saved teacher prefixes, one hypothetical tariff and524287 common targets over256 updates. All eight CPU plans passed; no new teacher output. At23:09UTC October12, the first two remain in final evaluation; six remain unstarted. [Stage evidence](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_TRAINED.json) and [new student admission](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENT_ADMISSION.json). Claude round4 independently reproduced v2plans/exposure and original-pilot outcomes (PASS within stated scope); the eight new outcomes and subsequent reporting-only changes remain externally pending. Unequal unused caps and repeated exposure prevent claims of equal actual spending or an isolated diversity mechanism.
+After Claude C-B1, the owner approved a [fixed-token-tariff revision](docs/experiments/P007B_token_tariff_revision.md). Eight new finite students use saved teacher prefixes, one hypothetical tariff and524287 common targets over256 updates. **The first corrected pair is fully verified:**
 
-Latest workspace meter: **51.83084103USD at October12 23:09UTC**, including engineering and failed work. Delayed usage is not a final invoice or credit balance. Conservative reservations366.50USD are distinct from spend;500USD total, maximum450USD spend, with at least50USD protected.
+| Price0, seed17 | Correct /1319 | Accuracy | Length-capped, retained incorrect |
+|---|---:|---:|---:|
+| Breadth |963|73.01%|44|
+| Depth |950|72.02%|45|
+
+Depth−Breadth is−0.99pp in this single seed/trace comparison. This is not a robust winner or a price interaction. Both GPU apps stopped, all2,638 raw outputs were independently rescored, and both complete terminal states/doses were verified. [Outcome evidence](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_RESULTS.json) and [new Claude packet](reports/p007_audit/token_p0_seed17_v1/REVIEW_REQUEST.md). The next frozen pair is price4m at seed17; both prices at seed23 follow. No data, dose or evaluation change was made in response to these scores.
+
+Claude round4 reproduced v2plans/exposure and the separate original-pilot outcomes. Round5 independently rescored3,088 teacher attempts with PASS-WITH-NOTES; two percentage-parser differences lie outside the corrected token prefix and do not affect these eight datasets. New corrected outcomes remain external-review pending. Unequal unused caps and repeated exposure prevent claims of equal actual spending or an isolated diversity mechanism.
+
+Latest workspace meter: **54.29084103USD at October12 23:30UTC**, including engineering and failed work. Delayed usage is not a final invoice or credit balance. Conservative reservations366.50USD are distinct from spend;500USD total, maximum450USD spend, with at least50USD protected.
 
 The old bank cannot be priced with the new teacher's pilot. Development accuracy
 does not establish uncontaminated generalization. The official GSM8K test was
