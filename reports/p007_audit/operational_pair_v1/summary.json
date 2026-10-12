@@ -1,0 +1,78 @@
+{
+  "all2638_outputs_independently_rescored": true,
+  "all512_updates_1048576_targets_verified": true,
+  "billing": {
+    "not_invoice_or_balance": true,
+    "protected_usd": 50,
+    "reservation_usd": 366.5,
+    "spend_ceiling_usd": 450,
+    "summary": {
+      "adjustments": {
+        "credits": "-44.61000000",
+        "free_storage": "-0.02984052",
+        "network_egress_allowance": "-0.00100051",
+        "plan_cost": "0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "billed_cost": "0E-8",
+      "metered_cost": "44.64084103",
+      "metered_cost_breakdown": {
+        "ephemeral_apps": "44.60737419",
+        "llm_tokens": "0E-8",
+        "volumes": "0.02984052"
+      }
+    },
+    "utc": "2026-10-12T22:14:13.793605+00:00"
+  },
+  "campaign": "mp-policy-cost-20261012-r1",
+  "depth_minus_breadth_pp": 1.2130401819560273,
+  "external_claude_review": "pending",
+  "limits": [
+    "One student seed, one procurement draw; descriptive comparison, not a population conclusion.",
+    "Only p0 completed under original time pricing; cannot test a price interaction.",
+    "Known throughput/cost-meaning confound; do not pool with corrected-token students.",
+    "Final-answer correctness is not verified reasoning quality; officialtest previously researcher-observed."
+  ],
+  "models": {
+    "breadth": {
+      "accuracy": 0.7225170583775588,
+      "artifact_digest": "df66f6439e2d4341400d47a77abb9a39bb6e374ee058400419fff231750c77c2",
+      "containers": 0,
+      "correct": 953,
+      "n": 1319,
+      "provider_stopped": true,
+      "run_id": "breadth_p0_s17",
+      "runtime_rate_estimate_usd": 6.538447521981239,
+      "state_sha256": "e55944810ae5b18cb9b2378c0fe7f2efadc809a193ade2b35985700f9bd16bf2",
+      "supervised_targets": 524288,
+      "train_seconds": 463.8059628140006,
+      "updates": 256,
+      "wall_seconds": 5355.4812223911285
+    },
+    "depth": {
+      "accuracy": 0.734647460197119,
+      "artifact_digest": "dfeed7f5736ce770b5b3b2f8b8fed00acbdf14ece77eafeaba3fb7ae1dc767aa",
+      "containers": 0,
+      "correct": 969,
+      "n": 1319,
+      "provider_stopped": true,
+      "run_id": "depth_p0_s17",
+      "runtime_rate_estimate_usd": 5.047436397941378,
+      "state_sha256": "2667840dfbb291729b7cb51fbc011f38ca3b0e08947be68f619b4543ae684a1f",
+      "supervised_targets": 524288,
+      "train_seconds": 430.45178725900024,
+      "updates": 256,
+      "wall_seconds": 4134.230756521225
+    }
+  },
+  "new_pilot_gate_sha256": "fd87e4a2a2532e5c060480b451b79016469b182c237c007342936e322e9b3de6",
+  "paired_disagreements": {
+    "breadth_only": 100,
+    "depth_only": 116
+  },
+  "role": "Original time-priced operational pilots; distinct from admitted token-tariff eight",
+  "schema": "p007b_operational_pilots_closeout_v1",
+  "source_commit": "55be82e7cbfc1fa3b6415eac7fc35e54b5838ba8",
+  "tariff_students_not_yet_dispatched": true,
+  "utc": "2026-10-12T22:17:16.651930+00:00"
+}
