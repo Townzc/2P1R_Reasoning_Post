@@ -3,7 +3,7 @@
 October12 2026. Source: owner-supplied collaboration document and the existing
 [Claude audit comment](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6130876644).
 This records methodological review, not a claim of Claude approval of our new
-packet. External packet review remains pending.
+packet. This original disposition predates the external packet audit. The newer version-specific verdicts and C-B1 response are recorded in [the October12 cost review](P007_COST_METRIC_REVIEW_20261012.md).
 
 | ID | Disposition | Evidence / action |
 |---|---|---|

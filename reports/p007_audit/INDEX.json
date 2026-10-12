@@ -1,13 +1,14 @@
 {
   "schema": "p007_collaboration_index_v1",
-  "as_of_utc": "2026-10-12T20:46:40.035678+00:00",
+  "as_of_utc": "2026-10-12T21:20:02.712361+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
     "status": "completed_verified_resources_released",
     "packet": "reports/p007_audit/main_v1",
     "manifest_sha256": "ca17892ccef7056c7b8057ab6620fa2aff4deea16ace799f08ba65f14ae0df0b",
-    "external_review": "pending"
+    "external_review": "PASS-WITH-NOTES at audited snapshot044fb6d4",
+    "review_report": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/f02e214ba73550dfab4165b4f7fcb96431163b6e/audit/claude/20261012/REPORT.md"
   },
   "pilot": {
     "status": "completed_verified_resources_released",
@@ -16,22 +17,26 @@
     "maximum_outputs": 1024,
     "reservation_usd": 15,
     "packet": "reports/p007_audit/pilot_v1",
-    "external_review": "pending"
+    "external_review": "PASS for compact counts/censoring/prefix costs; raw teacher scoring not externally checked"
   },
   "cost_comparison": {
-    "status": "four_acquisitions_verified_first_two_students_training",
+    "status": "first_two_trained_evaluating_six_unstarted_on_cost_metric_hold",
     "design": "docs/experiments/P007B_cost_matched_policy_design.md",
     "admission": "reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json",
     "evidence": "reports/sft_allocation_midpoint_20261011/P007B_PROCUREMENT_CLOSEOUT.json",
     "acquisition_packet": "reports/p007_audit/policy_all_v1",
-    "external_review": "pending",
+    "external_review": "p0 bookkeepingPASS / cost interpretationFAIL C-B1; p4 and students not externally audited",
     "recovery": "reports/sft_allocation_midpoint_20261011/P007B_RECOVERY_ADMISSION.json",
     "student_admission": "reports/sft_allocation_midpoint_20261011/P007B_STUDENT_ADMISSION.json",
-    "student_progress": "reports/sft_allocation_midpoint_20261011/P007B_STUDENTS_STARTED.json"
+    "student_progress": "reports/sft_allocation_midpoint_20261011/P007B_STUDENTS_STARTED.json",
+    "cost_review": "docs/audit/P007_COST_METRIC_REVIEW_20261012.md",
+    "proposed_revision": "reports/p007_audit/cost_metric_review_v1",
+    "revision_admitted": false
   },
   "additional_wp_queue": "proposed_not_admitted",
   "total_budget_usd": 500,
   "protected_usd": 50,
   "owner_content_target": "2026-10-13 evening America/Los_Angeles",
-  "external_posting": "owner_sends_drafts_only"
+  "external_posting": "owner_sends_drafts_only",
+  "workboard": "docs/WORKBOARD.md"
 }

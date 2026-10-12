@@ -6,6 +6,7 @@ This is a living research record, not presentation or assignment prose.
 
 ## Start here
 
+- [Shared workboard / 工作总表](docs/WORKBOARD.md)
 - [Current execution and audit handoff](docs/COLLABORATION.md)
 - [Recomputable main audit packet](reports/p007_audit/main_v1/REVIEW_REQUEST.md)
 - [Verified results and closeout](reports/sft_allocation_midpoint_20261011/MAIN_CLOSEOUT_20261012.json)
@@ -44,9 +45,7 @@ or other data differences. Two seeds do not establish population seed robustness
 All eight terminal states,5,791 saved main/base outputs and final independent CPU
 checks passed; eight interrupted middle diagnostic attempts remain unknown.
 Formal endpoints are complete. Failed attempts and engineering work are separately
-preserved. All main apps stopped and their containers exited. External Claude
-review of the new evidence packet is **pending**, distinct from these local and
-cloud verification results.
+preserved. All main apps stopped and their containers exited. Claude reviewed the fixed main packet with **PASS-WITH-NOTES**: primary trained-model scores agree; base is sensitive to parsing. Scope and unresolved findings are in the [audit disposition](docs/audit/P007_COST_METRIC_REVIEW_20261012.md).
 
 ## Current next step and limits
 
@@ -60,7 +59,7 @@ P007B numerical admission is frozen: breadth/depth×problem-price0/4m,
 equal1.091289088USD scenario caps, actual active-time wallets, same teacher.
 All four procurement cells are now verified and released: low-price breadth437 usable answers over437 problems versus depth650 over171; high-price breadth215 over215 versus depth449 over117. All2,064 outputs were rescored. The high-price breadth cell retains an interrupted192-output prefix and a conservatively reconstructed charge; the continuation generated only96 new outputs. This asymmetric interruption limits a clean price-effect claim. These are supply results, not student accuracy.
 
-All eight full-answer student plans passed:256 updates/524,288 supervised targets each, two seeds and one1,319-question terminal evaluation. The first breadth/depth pair is actually training on two H100s; both first updates and at least18 saved updates were verified. No student accuracy is available yet. [Procurement audit packet](reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) and [student admission](reports/sft_allocation_midpoint_20261011/P007B_STUDENT_ADMISSION.json).
+All eight full-answer student plans passed:256 updates/524,288 supervised targets each, two seeds and one1,319-question terminal evaluation. The first breadth/depth pair has completed256 training updates and is evaluating1,319 questions. No final student accuracy is available. The remaining six unstarted runs are on hold after Claude C-B1: time-based cost is entangled with throughput/overhead. A [fixed-token-tariff revision](docs/audit/P007_COST_METRIC_REVIEW_20261012.md) passed CPU feasibility checks but awaits the owner's choice. [Procurement audit packet](reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) and [student admission](reports/sft_allocation_midpoint_20261011/P007B_STUDENT_ADMISSION.json).
 
 Latest workspace meter: **32.22084103USD at October12 about20:40UTC**, including engineering and failed work. Delayed usage is not a final invoice or credit balance. Conservative reservations330.50USD are distinct from spend;500USD total with at least50USD protected.
 
