@@ -47,10 +47,10 @@ def student(plan,config,release):
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
     volume.reload()
     for cell,gate in config['acquisition_gates'].items():
-        terminal=claims.get('midpoint/'+plan['campaign_id']+'/terminal/'+cell)
+        terminal=claims.get('midpoint/'+gate['campaign']+'/terminal/'+gate['run_id'])
         if terminal!=gate['terminal'] or terminal['status']!='completed' or len(gate['local_audit_sha256'])!=64:
             raise ValueError('All acquisition audits must precede student training')
-        directory=Path('/evidence')/plan['campaign_id']/cell
+        directory=Path('/evidence')/gate['campaign']/gate['run_id']
         if digest(read(directory/'artifact_manifest.json'))!=terminal['evidence_sha256']:
             raise ValueError('Acquisition evidence changed')
     if set(config['acquisition_gates'])!={'breadth_p0','depth_p0','breadth_p4','depth_p4'}:
@@ -131,14 +131,16 @@ def audit_cloud(plan,config,release):
         dump(out/'intent.json',dict(plan=plan,config=config,release=release));results={}
         for name in ['breadth_p0','depth_p0','breadth_p4','depth_p4']+sorted(expected):
             guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=300)
-            folder=base/name;files=read(folder/'artifact_manifest.json')
-            terminal=claims.get('midpoint/'+plan['campaign_id']+'/terminal/'+name)
+            source_campaign=(spec['inputs_manifest']['acquisition_audits'][name]['campaign']
+                             if name in spec['inputs_manifest']['acquisition_audits'] else plan['campaign_id'])
+            folder=Path('/evidence')/source_campaign/name;files=read(folder/'artifact_manifest.json')
+            terminal=claims.get('midpoint/'+source_campaign+'/terminal/'+name)
             if not terminal or terminal['status']!='completed' or digest(files)!=terminal['evidence_sha256']:
                 raise ValueError('Result/terminal binding differs')
             verify(folder,files);checkpoints={}
             for path in sorted(folder.glob('checkpoint_*')):
                 state=ck.load(path);checkpoints[path.name]=read(path/'manifest.json');del state
-            results[name]=dict(files_verified=len(files),manifest_digest=digest(files),terminal=terminal,
+            results[name]=dict(source_campaign=source_campaign,files_verified=len(files),manifest_digest=digest(files),terminal=terminal,
                                checkpoints=checkpoints,result=read(folder/'result.json'))
             dump(out/(name+'.json'),results[name]);volume.commit()
         dump(out/'result.json',results);volume.commit();files=manifest(out)

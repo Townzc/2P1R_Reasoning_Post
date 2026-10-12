@@ -58,18 +58,11 @@ rescored and both apps stopped with zero containers.
 
 P007B numerical admission is frozen: breadth/depth×problem-price0/4m,
 equal1.091289088USD scenario caps, actual active-time wallets, same teacher.
-Zero-price procurement is verified: breadth437 usable answers over437 problems,
-depth650 over171;1,280 attempts including188 invalid and5 valid duplicates.
-The positive-price depth cell is verified (449 usable). Breadth hit its action
-watchdog after192 saved outputs; an explicit known-prefix continuation is being
-prepared, with conservative reconstructed cost and no output replay. These are
-supply results, not student accuracy. Student targets/updates remain separately matched;8 student
-slots await four audited acquired datasets. [Admission and calibration amendment](reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
+All four procurement cells are now verified and released: low-price breadth437 usable answers over437 problems versus depth650 over171; high-price breadth215 over215 versus depth449 over117. All2,064 outputs were rescored. The high-price breadth cell retains an interrupted192-output prefix and a conservatively reconstructed charge; the continuation generated only96 new outputs. This asymmetric interruption limits a clean price-effect claim. These are supply results, not student accuracy.
 
-Latest workspace meter: **31.02084103USD at October12 19:57UTC**, including
-engineering and failed work. This is delayed usage, not a final invoice or
-remaining-credit balance. Total conservative reservations323.50USD, distinct
-from spend;500USD total with at least50USD protected.
+All eight full-answer student plans passed:256 updates/524,288 supervised targets each, two seeds and one1,319-question terminal evaluation. [Procurement audit packet](reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) and [student admission](reports/sft_allocation_midpoint_20261011/P007B_STUDENT_ADMISSION.json).
+
+Latest workspace meter: **32.22084103USD at October12 about20:40UTC**, including engineering and failed work. Delayed usage is not a final invoice or credit balance. Conservative reservations330.50USD are distinct from spend;500USD total with at least50USD protected.
 
 The old bank cannot be priced with the new teacher's pilot. Development accuracy
 does not establish uncontaminated generalization. The official GSM8K test was

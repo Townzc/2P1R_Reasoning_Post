@@ -60,17 +60,28 @@ def analyze(root):
     if len(ids) != 1319 or len(set(ids)) != 1319:
         raise ValueError('The complete standard benchmark is required')
     predictions, sources, tables = {}, {}, []
+    acquisition_sources = read(root / 'ACQUISITION_SOURCES.json')
     for cell in CELLS:
-        audit = read(root / 'exports' / cell / 'LOCAL_ORACLE_AUDIT.json')
-        acquisition = read(root / 'exports' / cell / 'result.json')
-        envelope = read(root / (cell + '_run_r1') / 'result.json')
-        if (audit['unknown'] != 0 or audit['manifest_digest'] != envelope['receipt']['evidence_sha256']
+        acq_root = Path(acquisition_sources[cell]['export'])
+        audit = read(acq_root / 'LOCAL_ORACLE_AUDIT.json')
+        acquisition = read(acq_root / 'result.json')
+        envelope = read(acquisition_sources[cell]['receipt'])
+        if (audit != spec['acquisition_summaries'][cell] or audit['unknown'] != 0 or audit['manifest_digest'] != envelope['receipt']['evidence_sha256']
                 or acquisition != envelope['result'] or envelope['receipt']['status'] != 'completed'):
             raise ValueError('Acquisition verification differs')
         row = dict(cell=cell, acquisition=audit,
             parents_with_usable=acquisition['acquired_problems'] - acquisition['zero_usable_parents'],
             setup_and_closing_seconds=acquisition['wall_seconds'] - acquisition['active_ns'] / 1e9,
             acquisition_runtime_rate_estimate_usd=acquisition['runtime_rate_estimate_usd'], seeds={})
+        if audit.get('recovery'):
+            parent = read(acq_root / 'prefix_verification.json')
+            measured_continuation_seconds = (acquisition['active_ns'] -
+                (parent['charged_end_ns'] - parent['original_active_start_ns'])) / 1e9
+            row.update(setup_and_closing_seconds=None, acquisition_runtime_rate_estimate_usd=None,
+                continuation_setup_and_closing_seconds=acquisition['wall_seconds'] - measured_continuation_seconds,
+                continuation_runtime_rate_estimate_usd=acquisition['runtime_rate_estimate_usd'],
+                original_all_in_runtime_unknown=True,
+                cost_note='Original failure and blocked provider replacement remain in platform costs; continuation receipt is not the total all-in cost.')
         for seed in SEEDS:
             run = f'{cell}_s{seed}'
             receipt = root / 'students' / (run + '_run_r1') / 'result.json'
@@ -104,6 +115,7 @@ def analyze(root):
         bootstrap=dict(replicates=10000, seed=20261013, unit='paired question, shared across all eight students',
                        interpretation='Conditional on these models and one procurement draw, not seed or procurement uncertainty.'),
         limitations=['Hypothetical problem prices and a common acquisition cap, not exactly equal spend or a universal optimum.',
+            'Positive-price breadth includes an interrupted prefix with conservative reconstructed cost; failure asymmetry limits clean price causality.',
             'Report unused wallets, failures, duplicates, startup/closing and pilot costs; platform meter is separate.',
             'Previously observed official benchmark; model pretraining contamination not ruled out.',
             'Two student seeds on one acquisition draw do not establish procurement robustness.',

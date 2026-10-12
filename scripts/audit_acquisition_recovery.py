@@ -53,6 +53,10 @@ def audit(args):
         for row in history[pid]:
             records.append(row);seen[pid].setdefault(row['normalized_text_sha256'],row['candidate_id'])
             if row['usable']:eligible_seen[pid].setdefault(row['normalized_text_sha256'],row['candidate_id'])
+    parent_done=[read(p) for p in sorted((root/'parent/completed').glob('*.json'))]
+    assert len(parent_done)==12
+    parent_generation_ns=sum(r['generation_ns'] for r in parent_done)
+    parent_checker_ns=sum(r['checker_ns'] for r in parent_done)
     last_clock=parent['charged_end_ns'];generation_ns=checker_ns=0;maximum_action_ns=0
     for i,name in enumerate(names,start=12):
         sent=read(root/'intents'/f'{name}.json');done=read(root/'completed'/f'{name}.json')
@@ -135,7 +139,8 @@ def audit(args):
         batches=len(names)+12,new_batches=len(names),new_physical_outputs=len(records)-192,
         recovery=True,parent_charge_reconstructed=True,parent_charge_nanodollars=parent['charged_spent_nanodollars'],
         parent_original_active_duration_unknown=True,acquired=cursor,usable=result['usable'],zero_usable_parents=result['zero_usable_parents'],
-        generation_ns=generation_ns,checker_ns=checker_ns,maximum_action_ns=maximum_action_ns,
+        generation_ns=parent_generation_ns+generation_ns,checker_ns=parent_checker_ns+checker_ns,
+        new_generation_ns=generation_ns,new_checker_ns=checker_ns,maximum_new_action_ns=maximum_action_ns,
         active_ns=end-start,cap_nanodollars=cap,spent_nanodollars=spent,
         unspent_fraction=result['unspent_fraction'],stop_reason=result['stop_reason'],
         failures=sum(not r['score']['clean_correct'] for r in records),

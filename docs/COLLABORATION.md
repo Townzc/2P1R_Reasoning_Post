@@ -26,13 +26,7 @@ Previously authorized engineering continues within its frozen limits.
    [main packet](../reports/p007_audit/main_v1/REVIEW_REQUEST.md).
 2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
    apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
-3. P007B zero-price acquisitions are verified and closed:437 usable answers
-   over437 problems versus650 over171. The positive-price pair has
-   the depth cell verified and breadth interrupted after192 known outputs. An
-   explicit continuation of only unattempted work is prepared; its reconstructed
-   cost must remain visible to reviewers. See
-   [admission](../reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json).
-   Student slots remain gated on all four audited acquired corpora/exact plans.
+3. P007B all four acquired corpora passed independent local oracles; all apps stopped. The full [procurement packet](../reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) preserves the one-sided interruption and reconstructed cost. All eight complete-answer student plans passed together; execution is next. Review the source mapping rather than assuming the failed original breadth cell completed.
 4. Other audit work packages are proposals, not admitted jobs. Their scientific
    value will be weighed against the core cost-allocation question and time left.
 
