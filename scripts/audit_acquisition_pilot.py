@@ -3,7 +3,7 @@ import argparse,json
 from pathlib import Path
 from collections import defaultdict
 from experiments.sft_allocation_midpoint.common import read,sha,digest,verify,dump
-from experiments.sft_allocation_acquisition.contract import roster,completion,assess,summarize,SAMPLING,messages
+from experiments.sft_allocation_acquisition.contract import roster,completion,assess,summarize,SAMPLING,messages,REVISION
 
 
 def audit(args):
@@ -17,6 +17,9 @@ def audit(args):
     assert read(root/'LOCAL_VERIFICATION.json')['files_verified']==len(files)
     result=read(root/'result.json');assert result==envelope['result']
     intent=read(root/'intent.json');assert sha(inputs/'manifest.json')==intent['config']['input_sha256']
+    assert result['status']=='completed'
+    assert result['model_revision']==intent['config']['teacher_revision']==REVISION
+    assert intent['config']['sampling']==SAMPLING
     verify(inputs,read(inputs/'manifest.json')['files'])
     parents=[json.loads(x) for x in (inputs/'parents.jsonl').read_text().splitlines()]
     batches=roster(parents);assert batches==read(inputs/'batches.json')
@@ -24,6 +27,8 @@ def audit(args):
     tok=AutoTokenizer.from_pretrained(args.tokenizer,local_files_only=True,padding_side='left');tok.pad_token_id=151643
     seen=defaultdict(dict);usable_seen=defaultdict(dict);records=[];generation=checking=0
     all_units={b['batch_id'] for b in batches}
+    assert {k.removeprefix(prefix+'pilot/unit/') for k in ledger if k.startswith(prefix+'pilot/unit/')}==all_units
+    assert {k.removeprefix(prefix+'pilot/done/') for k in ledger if k.startswith(prefix+'pilot/done/')}==all_units
     assert {x.stem for x in (root/'intents').glob('*.json')}==all_units
     assert {x.stem for x in (root/'completed').glob('*.json')}==all_units
     for b in batches:
