@@ -11,7 +11,7 @@
 | P007B 按真实时间计费的采购 | Codex | 四格本地核验完成；Claude 对零题价格记账 **PASS**、成本解释 **FAIL** | C-B1 已复现，不能将速度差直接归因于题价 |
 | 首批两项学生 | Codex | 各256步训练完成，完整1,319题评测进行中；尚无最终准确率 | 完成后核验全部输出和检查点，再释放资源 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
-| 统一 token 计价修订 | Codex 设计；研究者决策 | **研究者已批准；八个 CPU 计划及前缀核验通过** | 见[冻结方案](experiments/P007B_token_tariff_revision.md)；当前两项收尾后开始新对照 |
+| 统一 token 计价修订 | Codex 设计；研究者决策 | **研究者已批准；八个 CPU 计划及前缀核验通过** | 见[冻结方案](experiments/P007B_token_tariff_revision.md)；输入20文件已上传并逐一读回核验；当前两项收尾后开始新对照 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到固定版本审计及36–38号笔记链接 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -37,6 +37,8 @@
 | 2026.10.12 约14:21（收录） | 研究者（本聊天） | 明确选择“采用统一 token 计价”；原两项保留先导，改跑八项同口径比较 | 已批准，不再重复申请同一授权 |
 | 2026.10.12 14:25 | Codex（实时对账） | 六项原学生及旧审计无任何claim/intent/unit，记录退休；已有两项继续运行 | [退休绑定](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_RETIREMENT.json) |
 | 2026.10.12 14:26–14:29（准备） | Codex | 四格保存轨迹前缀复算，八个524287-target计划通过；补齐输入长度元数据，保留CPU失败检查记录，无新GPU工作 | [新方案](experiments/P007B_token_tariff_revision.md)、[执行准入](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENT_ADMISSION.json)；Claude尚未审计此新版本 |
+
+| 2026.10.12 14:33–14:35 | Codex | 新方案普通推送6c127d66；20个输入文件19.27MB独立读回SHA全通过，28项测试与3类真实输入破坏检查通过 | [准备就绪](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_READY.json)；新GPU尚未提交，等待原两项正常收尾 |
 
 ## 维护规则
 
