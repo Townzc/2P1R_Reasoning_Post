@@ -102,9 +102,15 @@ Primary student outcome: terminal greedy exact-answer accuracy on a frozen
 held-out roster, same decoder/inference cap for every cell. The431 main dev
 questions can support fast exploratory continuity but are already observed; they
 cannot supply a fresh confirmation claim. Freeze a separate standard GSM8K test
-roster for confirmation before new outcomes and use it only at the chosen final
-terminal recipe. No invented benchmark or test-driven hyperparameter adjustment.
-Unknown model pretraining contamination remains a limitation even on this split.
+roster before new P007B outcomes and use it only at the chosen final terminal
+recipe. Historical exposure audit on October12 found that the September public-
+math study evaluated all1,319 official GSM8K test questions. Consequently this is
+an existing, research-team-observed standard benchmark, not a pristine or newly
+unseen test set. It can evaluate a locked new acquisition comparison without
+P007B test-driven tuning; it cannot establish fresh researcher-level confirmation.
+The new procurement pool is fresh with respect to this study, which is a separate
+claim. Do not invent a benchmark or conceal the previous test exposure. Unknown
+model pretraining contamination remains a limitation even on this split.
 Compute inference resources and compare correctness under a common inference
 contract; sampled pass@k is not required for the midpoint minimum.
 
