@@ -10,7 +10,7 @@ SOURCE_FILES=[
     'src/sft_data.py','src/real_math_audit.py',
     'analyses/completion_contract.py','analyses/gsm8k_answer_audit.py',
     'analyses/e017_stopping.py','analyses/e017_audit.py',
-    *['experiments/sft_allocation_midpoint/'+n for n in ('guard.py','common.py','checkpoint.py','runtime.py','modal_runner.py')],
+    *['experiments/sft_allocation_midpoint/'+n for n in ('guard.py','common.py','checkpoint.py','runtime.py','dispatch.py','monitor.py','modal_runner.py')],
     'requirements.txt','configs/models.lock.json']
 app=modal.App('sft-allocation-midpoint-models')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
@@ -33,6 +33,7 @@ def run_gpu(plan,config,release):
     from experiments.sft_allocation_midpoint.common import dump,digest,sha,manifest,verify,read
     from experiments.sft_allocation_midpoint.guard import RunGuard
     from experiments.sft_allocation_midpoint import runtime
+    from experiments.sft_allocation_midpoint.monitor import GPURecorder
     # Construct lazy network handles inside the worker, not in serialized globals.
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
     for name,expected in release['source_files'].items():
@@ -52,6 +53,7 @@ def run_gpu(plan,config,release):
     def check():
         if time.time()>stop_at-30:raise TimeoutError('Finite work deadline; preserve closeout time')
         guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=reserve)
+    recorder=None
     try:
         volume.reload();out.mkdir(parents=True,exist_ok=False)
         dump(out/'intent.json',dict(config=config,release=release,plan=plan,started_epoch=started,
@@ -60,6 +62,7 @@ def run_gpu(plan,config,release):
         if sha(assets/'inputs/manifest.json')!=config['input_sha256']:raise ValueError('Input release differs')
         verify(assets,read(assets/'result.json')['files'])
         dump(out/'environment.json',runtime.environment());volume.commit()
+        recorder=GPURecorder(out);recorder.start()
         identity=dict(config=config,source_commit=release['commit'],source_sha256=digest(release['source_files']))
         journal=runtime.Journal(out,'midpoint/'+plan['campaign_id']+'/'+config['run_id'],claims,volume.commit,check)
         kind=config['kind']
@@ -85,12 +88,14 @@ def run_gpu(plan,config,release):
         else:raise ValueError('Unapproved kind')
         result.update(wall_seconds=time.time()-started,reserved_cost_usd=reserve/100,provider_invoice_usd=None,
                       runtime_rate_estimate_usd=(time.time()-started)*2.942784/3600)
+        recorder.stop();recorder=None
         dump(out/'result.json',result);volume.commit()
         files=manifest(out);dump(out/'artifact_manifest.json',files);volume.commit()
         receipt=guard.finish(admission,status='completed',evidence_sha256=digest(files),
                              actual_cost_cents=reserve,finished_epoch=time.time())
         return dict(result=result,artifact_manifest=files,receipt=receipt)
     except BaseException as exc:
+        if recorder is not None:recorder.stop();recorder=None
         if out.exists():
             failure=dict(status='failed',error=repr(exc),traceback=traceback.format_exc(),wall_seconds=time.time()-started,
                          instruction='Preserve completed, attempted and ambiguous work. Reconcile before any continuation.')
@@ -196,13 +201,14 @@ def grid(plan_json:str,queue_json:str,receipt_dir:str):
 
 @app.function(image=image,cpu=(1,1),memory=(1024,1024),timeout=40000,startup_timeout=300,
               retries=0,max_containers=1,min_containers=0,buffer_containers=0,scaledown_window=2,
-              single_use_containers=True,serialized=True,include_source=False,volumes={'/evidence':volume})
-def controller(plan,queue,base_config,audit_config,release):
+              nonpreemptible=True,single_use_containers=True,serialized=True,include_source=False,volumes={'/evidence':volume})
+def controller(plan,queue,base_config,audit_config,release,binding=None):
     """Finite cloud parent survives a disconnected laptop; every child owns one claim."""
     import sys,uuid,os,threading,traceback
     sys.path.insert(0,'/workspace')
     from experiments.sft_allocation_midpoint.common import dump,digest,manifest,sha
     from experiments.sft_allocation_midpoint.guard import RunGuard
+    from experiments.sft_allocation_midpoint.dispatch import spawn_once,wait_existing,validate_replacement
     expected=[(a,s) for a in ('repeat','solutions','breadth','mixed') for s in (17,23)]
     if [(c['arm'],c['seed']) for c in queue]!=expected or any(c['kind']!='main' for c in queue):
         raise ValueError('Only the exact eight-run scientific queue is permitted')
@@ -212,18 +218,38 @@ def controller(plan,queue,base_config,audit_config,release):
         if sha(Path('/workspace')/name)!=value:raise ValueError('Controller image differs from published source')
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
     guard=RunGuard(claims,plan);guard.register(now_epoch=time.time())
-    admission=guard.admit(dict(run_id='controller',config_sha256=digest([queue,base_config,audit_config]),
+    if binding is not None:validate_replacement(claims,plan,binding)
+    reserve=plan['slots']['controller']['reserved_cents']
+    if reserve<300:raise ValueError('Nonpreemptible CPU controller requires a three-dollar reservation')
+    admission=guard.admit(dict(run_id='controller',config_sha256=digest([queue,base_config,audit_config,binding]),
         source_sha256=digest(release['source_files']),data_sha256=queue[0]['input_sha256']),
         attempt_id=uuid.uuid4().hex,now_epoch=time.time(),max_runtime_seconds=39000)
     timer=threading.Timer(39000,lambda:os._exit(124));timer.daemon=True;timer.start()
     out=Path('/evidence')/plan['campaign_id']/'controller'
     try:
         volume.reload();out.mkdir(parents=True,exist_ok=False)
-        dump(out/'intent.json',dict(plan=plan,queue=queue,base_config=base_config,audit_config=audit_config,release=release));volume.commit()
+        dump(out/'intent.json',dict(plan=plan,queue=queue,base_config=base_config,audit_config=audit_config,release=release,binding=binding));volume.commit()
+        def check():guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=reserve)
+        def spawn(config,function):
+            name=config['run_id']
+            def persist(suffix,record):
+                dump(out/'dispatch'/f'{name}_{suffix}.json',record);volume.commit()
+            return spawn_once(claims,'midpoint/'+plan['campaign_id']+'/dispatch/'+name,
+                function,(plan,config,release),dict(run_id=name,config_sha256=digest(config)),persist)
+        def wait(call,config):
+            def failed():
+                terminal=claims.get('midpoint/'+plan['campaign_id']+'/terminal/'+config['run_id'])
+                return terminal is not None and terminal['status']!='completed'
+            return wait_existing(call,check,failed)
         completed=[]
         for start in range(0,8,2):
-            guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=100)
-            results=list(run_gpu.starmap([(plan,c,release) for c in queue[start:start+2]],return_exceptions=True))
+            check()
+            pair=queue[start:start+2]
+            calls=[spawn(c,run_gpu) for c in pair]
+            results=[]
+            for call,config in zip(calls,pair):
+                try:results.append(wait(call,config))
+                except Exception as exc:results.append(exc)
             volume.reload();failed=False
             for config,result in zip(queue[start:start+2],results):
                 if isinstance(result,BaseException):
@@ -232,26 +258,26 @@ def controller(plan,queue,base_config,audit_config,release):
                     dump(out/(config['run_id']+'_result.json'),result);completed.append(config['run_id'])
             volume.commit()
             if failed:raise RuntimeError('One pair failed; later inputs remain unattempted. Reconcile, never replay.')
-        guard.check_active(admission,now_epoch=time.time(),spent_cents=0,next_cost_cents=100)
-        base=run_gpu.remote(plan,base_config,release)
+        check()
+        base=wait(spawn(base_config,run_gpu),base_config)
         volume.reload();dump(out/'base_result.json',base);volume.commit()
-        checked=audit.remote(plan,audit_config,release)
+        checked=wait(spawn(audit_config,audit),audit_config)
         volume.reload();dump(out/'audit_result.json',checked)
         result=dict(status='completed',main_runs=completed,base_completed=True,independent_audit_completed=True,
-                    controller_reserved_usd=1,provider_invoice_usd=None)
+                    controller_reserved_usd=reserve/100,provider_invoice_usd=None)
         dump(out/'completed.json',result);volume.commit()
-        guard.finish(admission,status='completed',evidence_sha256=digest(manifest(out)),actual_cost_cents=100,finished_epoch=time.time())
+        guard.finish(admission,status='completed',evidence_sha256=digest(manifest(out)),actual_cost_cents=reserve,finished_epoch=time.time())
         return result
     except BaseException as exc:
         if out.exists():
             dump(out/'failure.json',dict(error=repr(exc),traceback=traceback.format_exc()));volume.commit()
-            guard.finish(admission,status='failed',evidence_sha256=digest(manifest(out)),actual_cost_cents=100,finished_epoch=time.time())
+            guard.finish(admission,status='failed',evidence_sha256=digest(manifest(out)),actual_cost_cents=reserve,finished_epoch=time.time())
         raise
     finally:timer.cancel()
 
 
 @app.local_entrypoint()
-def submit(plan_json:str,queue_json:str,base_json:str,audit_json:str,receipt_dir:str):
+def submit(plan_json:str,queue_json:str,base_json:str,audit_json:str,receipt_dir:str,amendment_json:str=''):
     """Use modal run --detach ...::submit, then inspect the actual cloud claims."""
     import sys
     from experiments.sft_allocation_midpoint.common import sha,dump
@@ -266,10 +292,14 @@ def submit(plan_json:str,queue_json:str,base_json:str,audit_json:str,receipt_dir
             raise ValueError('Published source differs: '+name)
     release=dict(commit=commit,source_files={name:sha(ROOT/name) for name in SOURCE_FILES})
     claims=modal.Dict.from_name('sft-allocation-midpoint-claims-v1',create_if_missing=False)
+    binding=json.loads(Path(amendment_json).read_text()) if amendment_json else None
+    if binding is not None:
+        from experiments.sft_allocation_midpoint.dispatch import validate_replacement
+        validate_replacement(claims,plan,binding)
     if any(claims.get('midpoint/'+plan['campaign_id']+'/claim/'+name) is not None for name in plan['slots']):
         raise ValueError('A campaign input is already claimed; reconcile rather than resubmit')
     out=Path(receipt_dir);out.mkdir(parents=True,exist_ok=False)
-    dump(out/'intent.json',dict(plan=plan,queue=queue,base_config=base,audit_config=audit_config,release=release))
-    call=controller.spawn(plan,queue,base,audit_config,release)
+    dump(out/'intent.json',dict(plan=plan,queue=queue,base_config=base,audit_config=audit_config,release=release,binding=binding))
+    call=controller.spawn(plan,queue,base,audit_config,release,binding)
     dump(out/'submitted.json',dict(call_id=call.object_id,submitted_epoch=time.time(),campaign=plan['campaign_id']))
     print(json.dumps({'finite_controller_submitted':True,'call_id':call.object_id}),flush=True)

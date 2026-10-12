@@ -1,3 +1,9 @@
+# Current authorization — October11 overnight P007
+
+The owner explicitly delegated tonight's experiment monitoring, analysis against the original plan/hypotheses, and scientifically justified bounded next experiments. Stable-state checks every30minutes. Preserve at least$50 of the$500; retain the stricter$350 presentation ceiling,$100 report allocation,$50 reserve. Follow-up science requires a written frozen hypothesis/design/dose/cost/absolute deadline and published source, not another user approval within this scope. No subagents or external messages; oldQ2/LT002 andAutoDL remain closed.
+
+The first main CPU controller was preempted and its two mapped GPU children cancelled. Preserve the failed279 completed/281 attempted updates and240 observed outputs; no endpoint result existed. A manually reconciled one-time fresh replacement per failed Repeat run, plus the six never-started conditions/base/audit, is bound in PREEMPTION_RECONCILIATION.json. New campaign mp-grid-20261012-r2; same scientific configs and original Oct13 04UTC deadline. No claimed worker may be restarted; no hidden or automatic repeat beyond this explicit replacement. Read the current private handoff before action. Main conservative reservation including failed work and engineering112.50USD. Every new attempt is separately counted. Earlier dated instructions are preserved as history.
+
 # Current authorization — October11 midpoint
 
 The owner approved P007: run the finite model engineering pilot, then the four allocation arms with seeds17/23 if it passes. Target first results Tuesday October13 evening. The $500 Modal ceiling and P007 stage caps apply, including failures; old rental/queue permissions below are historical. Publish source before execution, keep data/compute accounting separate, record failures and reflections, verify artifacts and scale to zero when finished. No new external messages; drafts only.

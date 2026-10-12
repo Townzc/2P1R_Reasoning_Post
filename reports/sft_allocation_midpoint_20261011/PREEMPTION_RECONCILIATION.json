@@ -1,0 +1,135 @@
+{
+  "schema": "preemption_replacement_v1",
+  "recorded_utc": "2026-10-12T05:33:17.989618+00:00",
+  "parent_campaign": "mp-grid-20261012-r1",
+  "replacement_campaign": "mp-grid-20261012-r2",
+  "provider_event": "CPU controller preempted; mapped children then cancelled",
+  "old_app_stopped": true,
+  "old_containers": 0,
+  "old_runs": {
+    "repeat_17": {
+      "committed_updates": 200,
+      "attempted_updates": 201,
+      "committed_targets": 409637,
+      "attempted_targets": 411673,
+      "uncommitted_intents": {
+        "update_0201": {
+          "step": 201,
+          "indices": [
+            128,
+            206,
+            223,
+            179,
+            142,
+            138,
+            181,
+            17,
+            131,
+            225,
+            180,
+            149,
+            139
+          ],
+          "lr": 2.1167208663446025e-05,
+          "supervised_tokens": 2036,
+          "processed_tokens": 2895
+        }
+      },
+      "saved_generated_outputs": 160,
+      "final_checkpoint": 192,
+      "terminal": {
+        "actual_cost_cents": 900,
+        "attempt_id": "6cf1c43340054636874b5196ca4d7976",
+        "claim_sha256": "4db43046aafc11f63d01e389b0acd69c3dc1bedbf79ef684e9b488a25af956e7",
+        "evidence_sha256": "847924eb769692ead54bc8291886de7713ea40774a791d729c45d1f4f07a1264",
+        "finished_epoch": 1791782680.0019827,
+        "run_id": "repeat_17",
+        "status": "failed"
+      },
+      "failure_manifest_sha256": "847924eb769692ead54bc8291886de7713ea40774a791d729c45d1f4f07a1264"
+    },
+    "repeat_23": {
+      "committed_updates": 79,
+      "attempted_updates": 80,
+      "committed_targets": 161780,
+      "attempted_targets": 163795,
+      "uncommitted_intents": {
+        "update_0080": {
+          "step": 80,
+          "indices": [
+            240,
+            111,
+            167,
+            181,
+            81,
+            241,
+            177,
+            199,
+            162,
+            2
+          ],
+          "lr": 8.511087728614862e-05,
+          "supervised_tokens": 2015,
+          "processed_tokens": 2737
+        }
+      },
+      "saved_generated_outputs": 80,
+      "final_checkpoint": 64,
+      "terminal": {
+        "actual_cost_cents": 900,
+        "attempt_id": "d177071200244fa88b08d4e0b8895529",
+        "claim_sha256": "7c95dce3ed0a570aed4e27b20eecf40f33c318474b085ea8c8a38447d0f4cc83",
+        "evidence_sha256": "93a3244da95192d42e79fc14eea9d02a7cab24404823bbe0754830b20d7a2b05",
+        "finished_epoch": 1791782667.5015318,
+        "run_id": "repeat_23",
+        "status": "failed"
+      },
+      "failure_manifest_sha256": "93a3244da95192d42e79fc14eea9d02a7cab24404823bbe0754830b20d7a2b05"
+    }
+  },
+  "old_controller_terminal": {
+    "actual_cost_cents": 100,
+    "attempt_id": "14f5acc7d15b4afbbff0e03573db918b",
+    "claim_sha256": "9558bc6eedaa30be56c61161d6eb75d0661d4f62c9e5d668df4f4e4a5c8b36b6",
+    "evidence_sha256": "194fc5ca60c899a1f4e930e6f54ae2b9e4dbec6eb81c01f666207dc7548ece43",
+    "finished_epoch": 1791782482.3366456,
+    "run_id": "controller",
+    "status": "failed"
+  },
+  "fresh_replacement_runs": [
+    "repeat_17",
+    "repeat_23"
+  ],
+  "previously_unattempted_runs": [
+    "solutions_17",
+    "solutions_23",
+    "breadth_17",
+    "breadth_23",
+    "mixed_17",
+    "mixed_23",
+    "base",
+    "audit"
+  ],
+  "original_endpoint_outputs": 0,
+  "old_claims_retained": true,
+  "replacement_is_not_exact_resume": true,
+  "replacement_count_cap_per_failed_run": 1,
+  "approval_basis": "Owner explicitly delegated overnight execution, justified follow-up experiments and budget planning after the prior heartbeat; this is one manually reconciled infrastructure replacement, not automatic retry.",
+  "scientific_configuration_change": false,
+  "old_unused_reservations_retired_usd": 59,
+  "old_claimed_reservations_retained_usd": 19,
+  "new_campaign_reservation_usd": 80,
+  "prior_preparation_engineering_usd": 13.5,
+  "total_conservative_reservation_usd": 112.5,
+  "presentation_cap_usd": 350,
+  "total_credit_ceiling_usd": 500,
+  "minimum_unallocated_reserve_usd": 50,
+  "deadline_epoch": 1791864000.0,
+  "cpu_controller_nonpreemptible": true,
+  "dispatch": "individually spawned jobs with immutable call IDs; no cancelling map iterator",
+  "numerical_runtime_unchanged_files": [
+    "runtime.py",
+    "checkpoint.py"
+  ],
+  "future_gpu_preemption": "still possible; no automatic claim reuse or ambiguous continuation"
+}

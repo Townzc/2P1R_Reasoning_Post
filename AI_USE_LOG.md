@@ -1977,3 +1977,7 @@ Engineering completed and independently verified:256 overfit updates,224 model o
 - October12UTC: verified actual detached P007 controller and initial GPU workers after publishing27a319b2; archived atomic claims/update receipts and provider state. Recorded PCIe/SXM variants without claiming exact runtime comparability. Updated finite follow-up and handoff; no new scientific dose or replay.
 
 - October11 22:16PDT: answered owner status request using real provider/ledger records, transferred and reconciled80 interim predictions, and retrieved authenticated Modal billing. Kept workspace metering, credits, cash billing, reservations and unknown balance distinct; no scientific adaptation or new model work.
+
+
+## October11 overnight P007 monitoring/reliability repair
+Owner delegated overnight analysis and finite follow-up decisions with a50USD reserve. Assistant reconciled provider controller preemption, two cancelled children and279 committed/281 attempted updates plus240 observed outputs; independently downloaded703 artifacts and two full states. Added nonpreemptible CPU orchestration, immutable spawn receipts and passive GPU metrics, with37 CPU tests. Prepared an explicit one-time replacement binding and conservative112.50USD reservation while preserving original failed evidence. No external message or extra agent. Scientific runtime/loss/scoring unchanged; replacement admission is fresh-base, not a claim of exact lost-state recovery.
