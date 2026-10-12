@@ -1,3 +1,12 @@
+# October12: seven allocation trajectories verified; last training run active
+
+P007 has verified both Repeat, Solutions and Breadth seeds plus Mixed17.
+The final Mixed23 run has started once; base431 and independent CPU audit follow.
+See [current progress](reports/sft_allocation_midpoint_20261011/MIXED_TAIL_PROGRESS_20261012.json)
+and the [research protocol](docs/experiments/P007_midpoint_allocation_plan.md).
+The preliminary extra-answer gain is not a dollar-optimal allocation result.
+Earlier dated records below remain history.
+
 # October 11: SFT allocation midpoint preparation
 
 The current project returns to problem/answer acquisition allocation for the

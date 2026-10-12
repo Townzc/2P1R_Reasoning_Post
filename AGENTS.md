@@ -1,3 +1,18 @@
+# Current P007 tail — October12 16:52UTC
+
+Read the private ACTIVE_HANDOFF and public MIXED_TAIL_PROGRESS_20261012.json.
+Mixed17 is independently verified348/431 with fullstate/rawscores; both priorapps
+are stopped and their controller evidence is preserved. Mixed23 has now been
+submitted EXACTLY ONCE through existing::main using its frozen original slot,
+sourcebdd59787, with an actual first update. Never repeat that submission.
+Base/audit remain unclaimed and must follow sequentially after terminal/resource
+verification, with correct multi-campaign provenance. No newcontroller/reservation.
+Main deadlineOct13 04UTC,133.50USD reservations and350/100/50 split unchanged.
+Notify owner immediately when the full verified grid finishes before lengthy
+analysis. Preserve Tuesday-evening result/content target and course AI-slide ban.
+No follow-up admitted yet; after main closeout freeze one justified bounded pilot.
+Earlier dated entries below preserve historical states.
+
 # Current P007 recovery status — October12 15:40UTC
 
 Read ZERO_WORK_PREFLIGHT_REPAIR.json, STATEFUL_RESTORE_VERIFIED.json and the current private handoff before acting. The first continuation failed before any update/generation because of a JSON key-type comparison bug; retain its failed claim and reservation. Source9e9a52e9 fixes only whole-report serialization equality. A separately reconciled single call mp-breadth-resume-20261012-r2 has now restored the original Breadth17 state128 exactly and committed update129. The original completion campaign still runs Mixed17 independently; its CPU parent will collect it and terminate failed. Never duplicate either worker or controller. Only after both workers and the old parent terminate and are reconciled may the already-frozen unclaimed Mixed23/base/audit tail run once each using the existing plan. No extra scientific dose or new queue. Conservative cumulative reservation133.50USD; unchanged October13 04UTC deadline and350/100/50 split. Earlier entries are dated history.

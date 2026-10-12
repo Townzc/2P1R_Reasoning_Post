@@ -2010,3 +2010,7 @@ The assistant implemented a reusable local-only auditor for regular, base and st
 
 ### P007 local prediction decomposition and literature recheck, October12 2026
 The assistant read the saved, independently audited endpoint records and implemented a local-only descriptive decomposition of parsing/termination strata, without changing primary denominators or making model calls. It rechecked six closest primary sources, documented the difference between fixed inventory and fixed acquisition cost, and revised the internal research protocol discussion. No new scientific run, policy search, subagent or external message was created. The course AI policy was checked; data/code/source checking are distinct from student-authored presentation interpretation and report prose.
+
+
+### P007 Mixed17 closeout and Mixed23 one-time dispatch, October12 2026
+The assistant collected and independently verified Mixed17's867 files/full terminal state and671 raw outputs, preserved an interrupted local download and repaired only immutable transport ranges, verified the expected failed CPU controller's eight files and provider release, checked all remaining slots were unclaimed, and submitted only the original Mixed23 slot once. The first real update and identical local/worker intents were retained. It recorded22.42USD lagging metering separately from133.50USD reservations and updated the private handoff. No new arm, seed, teacher, dose, controller, subagent, deletion or external message was introduced.
