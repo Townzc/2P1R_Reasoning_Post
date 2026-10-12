@@ -28,10 +28,10 @@ Current status and dated actions: [shared workboard](WORKBOARD.md).
    [main packet](../reports/p007_audit/main_v1/REVIEW_REQUEST.md).
 2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
    apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
-3. P007B all four acquired corpora passed independent local oracles; all apps stopped. The full [procurement packet](../reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) preserves the one-sided interruption and reconstructed cost. All eight complete-answer student plans passed together. The first breadth/depth pair finished training and is evaluating. Six unstarted students are held while the owner selects the primary cost definition after Claude C-B1. Review the source mapping rather than assuming the failed original breadth cell completed.
-See [C-B1 reproduction and proposed revision](audit/P007_COST_METRIC_REVIEW_20261012.md). Main has external PASS-WITH-NOTES and pilot compact counts PASS at the audited snapshot; p0 accountingPASS/cost interpretationFAIL. New p4/student evidence is not externally approved.
+3. P007B all four acquired corpora passed independent local oracles; all procurement apps stopped. The [procurement packet](../reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) preserves the one-sided interruption and reconstructed charge. The two original time-priced students are independently closed: breadth953/1319 and depth969/1319, single seed only. [Operational-pilot packet](../reports/p007_audit/operational_pair_v1/manifest.json). The other six original students and old audit are explicitly retired, not waiting for dispatch.
+4. The owner approved [uniform-token-tariff correction](experiments/P007B_token_tariff_revision.md). Eight new students use saved teacher prefixes, two problem prices and two training seeds. At22:43UTC October12 the first two have committed256 updates/524287 targets and are evaluating; the next pair starts only after both fully verify and release. [Current phase evidence](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_TRAINED.json). Claude's fixed reports cover v1prefix/dataPASS and codePASS-WITH-NOTES; v2 additions and new outcomes remain externally pending. The [disposition](audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md) records unused-cap and repetition limits. No new teacher calls or added exposure-control arms.
 
-4. Other audit work packages are proposals, not admitted jobs. Their scientific
+5. Other audit work packages are proposals, not admitted jobs. Their scientific
    value will be weighed against the core cost-allocation question and time left.
 
 Owner's current target remains TuesdayOctober13 evening, with Wednesday for
