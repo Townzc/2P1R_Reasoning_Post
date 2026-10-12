@@ -1998,3 +1998,7 @@ Read-only provider/ledger/Volume inspection confirmed bothRepeat training endpoi
 
 ### P007 restoration evidence, 2026-10-12 15:40UTC
 The assistant retrieved and hashed the actual state-restoration proof and first new optimizer receipt, confirmed the interrupted diagnostic retains eight unknowns without replay, and recorded partial progress separately from terminal results. It saved authenticated Modal billing (17.34043670USD metered, not final invoice) and the unchanged133.50USD conservative reservation. This follow-up made no new model calls or dispatches; both already-started workers remain finite. Remaining Mixed23/base/audit will require terminal/claim reconciliation before one-time dispatch.
+
+
+### P007 training milestone check, 2026-10-12 15:49UTC
+The assistant read real provider containers and immutable unit receipts, archived the full active ledger, and reconciled all128 resumed updates with the parent dose and terminal checkpoint manifest. It distinguished training completion from pending evaluation/full-state export and recorded the18.21043670USD lagging meter. No model invocation, retry, new scientific dose or configuration change occurred.

@@ -103,3 +103,9 @@ The repaired single-call worker loaded the original Breadth17 checkpoint128 and 
 The previously unattempted24 diagnostic outputs finished; the reconciled step128 diagnostic has72 known/8 unknown,56 known correct. The eight interrupted outputs stay unknown and were never regenerated. Mixed17 independently reached64 committed updates. Mixed23/base/audit remain unattempted; the failed original completion parent must first collect Mixed17 and terminate before its remaining slots are individually dispatched. STATEFUL_RESTORE_VERIFIED.json records source, startup hashes and receipts. The original absolute deadline and all scientific dose constraints remain.
 
 The authenticated October meter now reports17.34043670USD, credits−17.31 and billed0 after allowances; reporting can lag. Conservative cumulative reservations remain133.50USD, distinct from metered usage, within350 presentation/100 report/50 protected reserve. No new budget is reserved for the already-admitted tail.
+
+
+### Breadth17 training completion verified, October12 15:49UTC
+The resumed worker has committed exactly128 new updates/262211 targets, bringing the original trajectory to256/524288. The immutable final-update receipt and persisted checkpoint256 manifest agree. The checkpoint full state has not yet been locally exported; collect and independently verify it after final evaluation. Eight interrupted step128 diagnostic outputs remain unknown. Mixed17 reached128 updates/262044 targets. Five other terminal endpoints remain the only fully evaluated, locally verified scientific results; Mixed23/base/audit remain unattempted. Both current GPU workers are active with no new failure.
+
+The latest authenticated workspace meter is18.21043670USD, offset by credits/allowances to billed0, with reporting delay possible. Conservative reservations remain133.50USD; no new work or funds were added during this status check. See BREADTH_TRAINING_COMPLETE.json.
