@@ -33,3 +33,9 @@ After the eight runs, the cloud queue performs the base reference and independen
 ## Main queue started
 
 At 2026-10-12T05:08:18.100065+00:00 the detached finite controller and first pair were independently visible in provider/atomic-ledger records. The first scientific update is saved in MAIN_STARTED.json. Other arms remain queued and are not yet results. The two workers are NVIDIA A10080GB PCIe and SXM4 variants; their environment records are preserved, and runtime is not an exact hardware-controlled comparison. The controller and first pair are the only active main tasks; no duplicate queue was launched.
+
+## First observed diagnostic and live billing — October11 22:16PDT
+
+Repeat seed17 reached105/256 updates and seed23 reached64/256 in the05:16:19UTC provider/ledger snapshot; laterarms remain unclaimed, no failure terminal. Repeat17 step64 scored63/80 (initialbase49/80) on the previously observed development set. All10 raw/scored batch hashes and80 unique scored records were recovered and reconciled to immutable completion receipts. The server independent prefix oracle passed; a full local oracle rescore is still pending. This is an intermediate learning diagnostic, not an allocation comparison; no checkpoint or recipe changes follow.
+
+Authenticated Modal CLI billing now succeeds for the actual experiment workspace. Its October summary atabout22:15PDT reports metered1.96059585USD, credits−1.96000000, egressallowance−0.00059585, andbilled0USD. Ongoing metering maylag and this is not a final invoice or a credit-balance lookup. The hourly detail covers completedintervals and does not include the currentpartialhour. Current twoGPU+host+controller nominal rate is5.9457USD/hour; the original91.50USD finite reservation is retained. Private rawsummary/detail/rate snapshots preserved; INTERIM_20261011_2216PDT.json records the verified distinctions.
