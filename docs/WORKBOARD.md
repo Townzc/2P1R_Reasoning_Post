@@ -85,6 +85,10 @@
 
 | 2026.10.12 21:01（最后多解核验完成） | Codex | 高价seed23多解949/1319、60截断；861文件/完整state/256更新/524287targets和全部raw重评分通过，GPU已释放。只读修复复用28文件/13分块，保留原失败与完成回执 | [第七项关闭证据](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FINAL_DEPTH_CLOSED.json)；最后多题仍评测，价格交互和CPU总审计待全八项 |
 
+| 2026.10.12 21:07（最后多题收尾开始） | Codex | 最后高价seed23多题返回全部1,319条结果，开始独立收回完整账本、原始输出与checkpoint256 | 原GPU正常退出；全部学生不再生成新输出，最终分数仍待本地oracle与CPU总审计 |
+
+| 2026.10.12 21:14（最后传输对账／第十一轮处理） | Codex | Claude独立预审确认多解949/1319与完整state；采用差值区间主图、准确率0–100%辅助图。最后多题下载同类超时，33完整文件/3分块有效，准备只补828文件/24分块 | [修复边界](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_BREADTH_EXPORT_RECOVERY_20261013.json)、[第十一轮范围](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND11_REVIEWED.json)；GPU全部释放，0新增科学剂量 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。

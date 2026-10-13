@@ -51,7 +51,8 @@ def figures(summary_path, closeout_path, out):
     import matplotlib.pyplot as plt
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10,
                          'axes.spines.top': False, 'axes.spines.right': False,
-                         'svg.fonttype': 'none'})
+                         'svg.fonttype': 'none',
+                         'svg.hashsalt': 'p007b-token-policy-figures-v1'})
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     outputs = []
@@ -59,14 +60,15 @@ def figures(summary_path, closeout_path, out):
     def save(fig, name):
         for extension in ('png', 'svg'):
             path = out / f'{name}.{extension}'
-            fig.savefig(path, dpi=180, facecolor='white')
+            metadata = ({'Date': None, 'Creator': 'P007B research figure generator'}
+                        if extension == 'svg' else
+                        {'Software': 'P007B research figure generator'})
+            fig.savefig(path, dpi=180, facecolor='white', metadata=metadata)
             outputs.append(path)
         plt.close(fig)
 
     colors = {'breadth': '#176B9B', 'depth': '#C65C21'}
     fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.8), sharey=True)
-    all_values = [100 * r['accuracy'] for c in cells.values() for r in c['seeds'].values()]
-    low, high = min(all_values) - 2.5, max(all_values) + 2.5
     for ax, seed in zip(axes, (17, 23)):
         for policy, title in (('breadth', 'More problems'), ('depth', 'More solutions')):
             records = [cells[f'{policy}_p{price}']['seeds'][str(seed)] for price in (0, 4)]
@@ -81,7 +83,7 @@ def figures(summary_path, closeout_path, out):
         ax.set_title(f'Training seed {seed}')
         ax.set_xticks([0, 1], ['Problem price 0', 'Problem price 4m'])
         ax.set_xlim(-.18, 1.18)
-        ax.set_ylim(low, high)
+        ax.set_ylim(0, 100)
         ax.grid(axis='y', alpha=.2)
     axes[0].set_ylabel('Greedy exact-answer accuracy (%)')
     axes[1].legend(loc='upper right', frameon=False)
@@ -128,6 +130,9 @@ def figures(summary_path, closeout_path, out):
     provenance = dict(schema='p007b_verified_deterministic_figures_v1',
         summary_sha256=sha(summary_path), closeout_sha256=sha(closeout_path),
         generator_sha256=sha(__file__), figures={p.name: sha(p) for p in outputs},
+        matplotlib_version=matplotlib.__version__,
+        primary_figure='policy_gaps_and_price_interaction',
+        accuracy_axis_limits_percent=[0, 100],
         new_model_calls=0, new_bootstrap_computations=0,
         slides_generated=False, primary_scoring_unchanged=True)
     (out / 'PROVENANCE.json').write_text(json.dumps(provenance, indent=2) + '\n')

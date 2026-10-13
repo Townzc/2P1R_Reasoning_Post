@@ -419,3 +419,9 @@ Claude round10 fixed81be9a28 accepts the round9 disposition and follow-up packet
 ## 2026-10-13T04:01:04.730318+00:00 — seventh student fully verified, final breadth pending
 
 The bounded read-only recovery reused28 complete files and13 verified ranges, fetched the14 missing ranges and remaining compact files, and all861 selected files/full state independently matched. The wrapper then failed trying to overwrite its exclusive-create EXECUTION intent; that intent and error remain, a separate COMPLETION record binds the helper output and independent all-file SHA inventory. No recovery/helper/export was repeated. Local oracle53218 passed: depth_p4_s23=949/1319,60 caps incorrect,256updates/524287targets, stateSHAbda34bceb0eb6dfd4d3606efb8b8b8bc16c713fbe9b0b26574452b94e53a1a6a. Seventh student is fully closed; last breadth still evaluates, so no partial price-interaction estimate is reported. Final CPU audit remains unattempted.
+
+## 2026-10-13T04:14:19.917779+00:00 — final breadth model completed; transport continuation prepared
+
+The final breadth GPU stopped21:06:10PDT; original CLI74640 and collector40964 completed, all GPU containers exited. Read-only export24469 failed on the same20second VolumeGetFile2 range timeout with secondary client teardown, full stderr saved. Immutable completed terminal/manifest/provider and33 valid files/3 valid ranges were reconciled;0 mismatches,828 files/24 ranges missing. Reuse the unchanged published383916fc helper once with600s outer bound, preserving originals, no automatic retry/remote writes/model work. Last raw-score oracle and CPUaudit remain pending.
+
+Claude round11 fixede8ef6ee0 pre-reviews depth949/1319/60caps andfullstatePASS, recoveryPASS. ChartP11-1 accepted with a full0–100percent accuracy axis and contrast intervals as primary figure; P11-2 aggregate interval awaits actual full summary, retaining the already frozen shared-question method. New chart code remains unrendered.
