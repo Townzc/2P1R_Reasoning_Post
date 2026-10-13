@@ -12,16 +12,17 @@
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
 | 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v3.1 | 研究者已授权；Codex工程；Claude G0 | **准备完毕，G0待审，尚无新模型调用**；核心20学生/90单位不变，Phase0仅1024教师输出+8更新/16题+4卡I/O | [统一协议](experiments/P008_v3_1_protocol.md)；固定源码G0通过后启动有限Phase0 |
+| P008 v3.1 | Codex工程；Claude审计；研究者决定范围/时限 | **D1完成本地核验和G1审计；D2原时限失败，3992返回全部保全且0unknown**；0运行GPU，0学生调用 | [当前状态](../reports/p008_20261013/STATUS_0546.json)；D2有限续跑时限或D1单采购范围问题待研究者回复；不自动扩时/改组 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
-预算：总额$500，保护至少$50；保守预留$369.50不是花费。实际最新可用workspace延迟计量为$87.20111458（10月12日23:17:18PDT），billed0，非最终发票或余额。所有有限实验和CPU核验已关闭；中期核验数据、确定性图表和局限清单已在10月12日晚齐备，早于10月13日21:00PDT要求。最终slides和个人解释由研究者完成，周三练习；长期扩展中期后另定。
+预算：总额$500，支出上限$450，保护至少$50。P008预留$237.68／上限$250；拟议附加$12尚未准入。最新平台延迟计量$114.10153151（UTC12:45:12），billed0，不是发票/余额。旧P007B数据、图表和局限清单已齐备；P008未完成部分必须如实pending，周二19PDT计算硬停、21PDT材料冻结不变。
 
 ## 时间线（追加记录，保留更正历史）
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 05:46（本阶段收尾） | Codex；Claude b4a0e5e7 | D1全7420raw/8wallet本地和外部G1通过；D2失败父3992raw、146批、1756文件保全并独立重放，0未知、0待结算动作；纯前缀复原8测试和真实库存检查通过，未调用新模型 | [D1](../reports/p008_20261013/pool_d1_v1/README.md)、[D2](../reports/p008_20261013/pool_d2_reconciliation_v1/REVIEW_REQUEST.md)、[审计更正](../reports/p008_20261013/d1_review_disposition_v1/DISPOSITION.md)；owner时限/范围问题待答 |
 | 2026.10.12 12:08 | Codex | 原四组八条训练与 base 完成核验，主任务资源释放 | [主实验收尾](../reports/sft_allocation_midpoint_20261011/MAIN_CLOSEOUT_20261012.json) |
 | 2026.10.12 12:11 | Claude（GitHub 交付） | 提交 F1–F5 方法学意见；其中“排除3pp差异”和种子差异措辞随后更正 | [原评论](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6130876644)、[处理记录](audit/P007_REVIEW_DISPOSITION_20261012.md) |
 | 2026.10.12 12:37 | Codex（发布） | 发布教师先导核验与四格成本采购冻结方案 | [80434781](https://github.com/Townzc/2P1R_Reasoning_Post/commit/80434781) |
