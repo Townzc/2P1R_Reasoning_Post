@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T13:04:47.180593+00:00",
+  "as_of_utc": "2026-10-13T13:34:29.814448+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -473,7 +473,7 @@
       "packet": "reports/p008_20261013/pool_d2_reconciliation_v1",
       "manifest": "reports/p008_20261013/pool_d2_reconciliation_v1/MANIFEST.json",
       "manifest_sha256": "c58fd8b219e935f5e99cf3a54c0fa79d6269acfbeec16491fa5a7b900b6c295c",
-      "external_review": "pending",
+      "external_review": "PASS failed-parent prefix only; no completed pool or G1",
       "requested_utc": "2026-10-13T12:38:17.338489+00:00",
       "blocking_for": "Any conditional D2 remaining-only child; no current admission",
       "questions": [
@@ -482,7 +482,10 @@
       ],
       "response_timeout_minutes": 15,
       "timeout_action": "No silence-as-approval; child cannot launch past full original deadline window",
-      "numeric_admission": false
+      "numeric_admission": false,
+      "review_commit": "82b3d69a57a14e7016ad34720a539a1f6c516a62",
+      "report": "audit/claude/20261013v/D2_PREFIX_AND_DECISION.md",
+      "disposition": "reports/p008_20261013/d2_review_followup_v1/DISPOSITION.md"
     },
     {
       "request_id": "p008-d2-continuation-core-preflight-r1",
@@ -490,7 +493,7 @@
       "packet": "reports/p008_20261013/pool_continuation_core_v1",
       "manifest": "reports/p008_20261013/pool_continuation_core_v1/MANIFEST.json",
       "manifest_sha256": "150454afb873826dfe2b296083d5520b64ce304823e82be2ae20637fb4fedcb3",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES code only",
       "requested_utc": "2026-10-13T13:04:47.180234+00:00",
       "blocking_for": "Use of prepared core in a future separately admitted child; not an owner scope/time or runtime admission",
       "questions": [
@@ -500,7 +503,10 @@
       ],
       "response_timeout_minutes": 30,
       "timeout_action": "No silence-as-approval; no model calls until all actual approvals and gates",
-      "numeric_admission": false
+      "numeric_admission": false,
+      "review_commit": "39caf811b48cad76dd46a0e8189156c8389e600c",
+      "report": "audit/claude/20261013w/D2_CONTINUATION_CORE.md",
+      "disposition": "reports/p008_20261013/d2_review_followup_v1/DISPOSITION.md"
     }
   ],
   "p008_v31": {
@@ -528,7 +534,7 @@
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "original_full_window_expired_core_prepared_not_admitted",
-    "latest_engineering_packet": "reports/p008_20261013/pool_continuation_core_v1",
+    "latest_engineering_packet": "reports/p008_20261013/d2_review_followup_v1",
     "student_runtime_code_review": "PASS-WITH-NOTES c206f0dc only",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
@@ -536,6 +542,8 @@
     "pool_d2_status": "3992known_returns_0unknown_failedprefix_reconciled_not_completed",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
     "owner_scope_or_deadline_question": "pending_no_new_GPU",
-    "active_gpu_tasks": 0
+    "active_gpu_tasks": 0,
+    "pool_d2_external_review": "PASS failed prefix only, not G1",
+    "continuation_core_external_review": "PASS-WITH-NOTES code only"
   }
 }
