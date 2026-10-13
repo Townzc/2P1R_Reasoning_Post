@@ -1,3 +1,5 @@
+> 最新状态（2026-10-13 05:44UTC）：八项学生及本地核验已完成、GPU全退出。原CPU总审计到55分钟硬限中断，10项完成证明保留；仅剩4项目录的CPU续核已提交一次并核对真实worker/source。总审计和最终图表仍在收尾，不启动新模型任务。保守预留$369.50不是实际花费。详见[工作总表](docs/WORKBOARD.md)。
+
 # Problems, Paths, or Repeats?
 
 **Current research:** allocating data-acquisition budgets for reasoning SFT.

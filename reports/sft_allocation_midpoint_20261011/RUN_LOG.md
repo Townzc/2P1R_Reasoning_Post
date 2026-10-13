@@ -469,3 +469,8 @@ Original CLI85817 exit1 reports runner124 at3300s followed by provider replaceme
 ## 2026-10-13T05:37:25.654499+00:00 — original CPU audit reconciled; finite continuation admitted, not dispatched
 
 Recovered10completed label proofs/full original ledger/provider; remaining4 are depth_p4_s17/s23 and the two old pilots. Original timer124 and blocked provider restart retained; old claim/terminal never reset. Local reconciliation attempt1 rejected legitimate4.13–9.99MB acquisition JSONs at an overly-small4MB guard after6small downloads. Attempt2 reused6files/fullledger, read only5missing objects under12MB limit, preserved original failure and completed with exact source/terminal/manifest binding. Original20sciencebytes unchanged. New CPU-only continuation has2threads/2cores/8GiB,3300s bound/original absolute deadline/no retries; carry10 completed proofs and fully read remaining4 only. Explicit new$3reservation yields369.50conservative total, not invoice;450ceiling/50protected. Source/helper8CPUcontract tests passed. Claude13d7cb2d0d accepts runtime report; backend-equivalence suggestion deferred post-midpoint, unconfirmed$2700not included in budget.
+
+
+## 2026-10-13 05:44UTC — finite CPU continuation verified
+
+The separately admitted continuation was submitted once and its actual CPU container, immutable claim, binding and published source bytes now match. Ten completed parent label proofs are carried; only four remaining labels receive full verification. Original timeout and blocked replacement remain failures. No GPU/model work; budget reservation369.50USD, not actual spending. Final result synthesis remains gated on the combined audit closeout.
