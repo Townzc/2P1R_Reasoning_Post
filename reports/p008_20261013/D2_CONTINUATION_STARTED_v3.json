@@ -1,0 +1,70 @@
+{
+  "schema": "p008_continuation_startup_record_v1",
+  "recorded_utc": "2026-10-13T18:38:36.015098+00:00",
+  "verified_utc": "2026-10-13T18:33:23.916812+00:00",
+  "status": "actual_worker_started_first_batch_verified_not_final_G1",
+  "campaign": "p008-d2-continuation-20261013-r1",
+  "run_id": "pool_d2_remaining",
+  "source_commit": "f4cd1bf1fbf8289233af079fb0b58e8008ac11ab",
+  "app_id": "ap-r5L7e7JGADGAAjk2bzqRmY",
+  "container_id": "ta-01M4V8HVPJCR0VTBR00698B2PR",
+  "call_id": "fc-01M4V8HV97DJ6EZYZEMRHA11YP",
+  "worker_started_utc": "2026-10-13T18:31:49.070693+00:00",
+  "worker_hard_deadline_utc": "2026-10-13T20:31:49.070693+00:00",
+  "owner_absolute_deadline_utc": "2026-10-13T21:00:00Z",
+  "first_new_raw_outputs_verified": 28,
+  "parent_known_outputs_preserved": 3992,
+  "first_batch_index": 146,
+  "first_new_ids_disjoint_parent_cache": true,
+  "first_depth_wallet_cache_hit_count": 4,
+  "first_depth_wallet_new_count": 12,
+  "fresh_guard_keys": 11,
+  "probe": {
+    "charged_to_this_worker": true,
+    "complete_keys_per_check": 11,
+    "passed": true,
+    "policy": {
+      "baseline_guard_seconds": 1.4153,
+      "baseline_round_seconds": 41.11433974999545,
+      "guard_calls_per_round": 4,
+      "measured_runtime_upper_bound": false,
+      "no_favourable_host_resampling": true,
+      "read_timeout_seconds": 15,
+      "readers": 8,
+      "remaining_rounds_proxy": 136,
+      "safety_factor": 1.2,
+      "samples": 3,
+      "startup_closing_allowance_seconds": 300
+    },
+    "pre_model": true,
+    "predicted_seconds": 7069.860247199257,
+    "proxy_not_upper_bound": true,
+    "read_samples_seconds": [
+      0.08671733599999953,
+      0.137792009,
+      0.07024792800000057
+    ],
+    "remaining_seconds": 7156.671625614166,
+    "worker_elapsed_seconds": 13.328385353088379
+  },
+  "hardware": {
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "cuda": "12.8",
+    "versions": {
+      "numpy": "2.2.6",
+      "tokenizers": "0.22.1",
+      "torch": "2.8.0",
+      "transformers": "4.56.2",
+      "vllm": "0.11.0"
+    }
+  },
+  "startup_evidence_sha256": "21660c43c79ee7b0dd58c9ee3ae632ec140b36e4ec2951afc535623eb7cdfdf4",
+  "verification_itself_new_model_calls": 0,
+  "runtime_review": "reports/p008_20261013/D2_RUNTIME_V3_ACCEPTED.json",
+  "stage_reservation_usd": 249.68,
+  "reservation_is_spend": false,
+  "remaining_student_numeric_G1_and_N2": false,
+  "external_review": "pending_startup_only",
+  "student_workspace_identity_matches_owner": true,
+  "student_h100_quota_known": false
+}

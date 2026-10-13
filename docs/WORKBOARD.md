@@ -12,7 +12,7 @@
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
 | 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v3.1 | Codex工程；Claude审计；研究者 | D1完整/G1；D2父失败前缀完整，child镜像构建后spawn前窗口拒绝、0科学调用 | [真实状态](../reports/p008_20261013/D2_PRESPAWN_WINDOW_FAILURE.json)；14PDT已获直接批准、v3待审；8卡owner已批，代码/配额/G1/N2尚未准入 |
+| P008 v3.1 | Codex工程；Claude审计；研究者 | D1完整/G1；D2失败父保留，唯一续跑已实际启动，首批28个新输出通过核验 | [启动证据](../reports/p008_20261013/D2_CONTINUATION_STARTED_v3.json)；8卡授权及代码审计已过，owner工作区ID与实验CLI匹配；配额、共同计划/G1/N2仍待完成 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 11:31:49（实际worker开始）/11:33（启动核验）/11:36（工作区核对） | Codex；owner提供ID | 原输入复用、0重传；唯一child实际H100运行，batch146的28个新raw/ID/source/probe/原缓存不相交核验通过。工作区ID与CLI完全一致，配额数仍未知 | [启动证据](../reports/p008_20261013/D2_CONTINUATION_STARTED_v3.json)；实际worker最晚13:31:49PDT停止，早于owner14PDT；不是最终G1。无学生/base/CPU调用 |
 | 2026.10.13 11:11–11:12（评论交付）/11:26（读取） | Claude；Codex | D2确切14PDT v3获PASS，31源/7200秒/7份已核验输入不变；学生8卡代码仅PASS-WITH-NOTES，真实配额仍未确认 | [v3审计接受](../reports/p008_20261013/D2_RUNTIME_V3_ACCEPTED.json)；开始唯一续跑的输入复用与实际准入检查。全局19PDT不据转述改变 |
 | 2026.10.13 11:17（本地准备开始） | Codex | 等待D2 v3确切审计期间，准备最终CPU核验的失败父／完成子文件验证器；不改31个child源文件 | 10项新模拟检查通过（初次1项夹具错误已修并留证）；原child源未变。仅验证器准备，完整CPU入口/准入尚未就绪 |
 | 2026.10.13 11:05（owner直接答复收录）/11:08（准备） | 研究者；Codex | 明确批准D2截止14PDT；仅改截止、plan摘要和确切owner绑定，7200秒/$12/全局19PDT不变。旧调用spawn前拒绝；7文件复用，0新上传/调用。6项新CPU检查通过 | [v3确切时间规格待审](../reports/p008_20261013/d2_continuation_admission_v3/REVIEW_REQUEST.md)，最晚11:48:20PDT派发；不再重复问同一授权 |

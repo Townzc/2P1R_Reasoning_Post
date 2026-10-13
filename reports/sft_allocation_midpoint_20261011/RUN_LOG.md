@@ -671,3 +671,8 @@ Owner explicitly approved D2 cutoff14PDT. Only exact deadline and owner binding 
 
 
 2026-10-13T18:27:24.524392+00:00 — Read Claude fixedff2c1d2a: exact childv3@4ae602a9 PASS;8GPU@da4a404f code-only PASS-WITH-NOTES.29 reviewer tests include6new+15prior+8prior; Codex does not rerun them. Real acceptance/report hashes saved, source bytes verified. Reuse7existing input readback; fresh provider/noattempt/full7900window next. E8-1 quota still absent; E8-2 relayed global deadline change not adopted without direct owner evidence. No new child call yet.
+
+
+### Oct13 11:31–11:38 PDT — actual D2 continuation startup and workspace identity
+
+Motivation: continue only the admitted unattempted suffix and resolve the owner's quota lookup without changing accounts or exposing private identifiers. Execution: accepted exact v3 review, reused seven verified inputs (zero uploads), dispatched the original CLI once; independent startup check verified the actual H100/CUDA/source/spec, paid pre-model probe and batch146's28 new outputs disjoint from the3992 preserved parent outputs. Depth's4 cached outputs were reused and charged, not regenerated. Result: one actual child active; worker hard deadline13:31:49PDT is earlier than owner's14PDT absolute deadline. No final G1 or student/base/CPU admission is claimed. TokenInfoGet workspace-only projection confirms the owner-provided ID exactly matches the experimental CLI workspace; account/token identifiers remain private. Quota remains unknown because the available Chrome session exposes a different workspace. Reflection: distinguish account identity, documented quota, code review and numerical admission; none substitutes for another. No closed model/oracle/checks were rerun.
