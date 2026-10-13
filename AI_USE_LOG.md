@@ -2322,3 +2322,8 @@ D1 collector28973/export63771/oracle99752/publisher DONE. D2 collector77411 DONE
 
 
 - 2026-10-13T12:53:18.228024+00:00 Codex: corrected private handoff and monitor state from running pools to D1 completed/G1 accepted and D2 failed/prefix reconciled. Recorded expiration of the original conditional repair full-window launch boundary and the unanswered owner scope/time choice. No new model call, no claim clearing, no changes to frozen scientific results.
+
+
+### P008 continuation core preparation — 2026-10-13T13:04:16.338745+00:00
+
+Prepared remaining-only core and exact failed-prefix binding while awaiting owner scope/deadline decision. Twelve synthetic CPU checks pass, including no parent replay, cumulative attempt cap, incomplete-return preservation, and AST-identical procurement/generation loop. Actual3992/146batch/1190193token reconstruction binding passed; old oracle was not rerun. First test harness produced3 local-counter errors; harness corrected with failed log retained. Original frozen sources, labels, limits and live recipes unchanged. No new GPU, upload, admission or budget. New code packet awaits scoped Claude review; worker/admission/full-lineage oracle remain separate required work.

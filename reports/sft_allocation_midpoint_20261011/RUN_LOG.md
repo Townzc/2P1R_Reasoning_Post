@@ -604,3 +604,8 @@ D1 collector28973/export63771/oracle99752/publisher DONE. D2 collector77411 DONE
 ### P008 conditional repair window — 2026-10-13T12:53:18.228024+00:00
 
 At the actual 12:51UTC check, the original D2 child full-window launch boundary (12:48:20UTC for 7200 worker +700 seconds before15UTC) had passed. No child model call or admission exists. The owner question about extending that child deadline or explicitly reducing to D1-only remains unanswered. D1 G1 and all D2 failed-prefix evidence are preserved; do not convert an elapsed window into approval. Project19PDT compute /21PDT material deadlines remain fixed.
+
+
+### P008 continuation core preparation — 2026-10-13T13:04:16.338303+00:00
+
+Prepared remaining-only core and exact failed-prefix binding while awaiting owner scope/deadline decision. Twelve synthetic CPU checks pass, including no parent replay, cumulative attempt cap, incomplete-return preservation, and AST-identical procurement/generation loop. Actual3992/146batch/1190193token reconstruction binding passed; old oracle was not rerun. First test harness produced3 local-counter errors; harness corrected with failed log retained. Original frozen sources, labels, limits and live recipes unchanged. No new GPU, upload, admission or budget. New code packet awaits scoped Claude review; worker/admission/full-lineage oracle remain separate required work.
