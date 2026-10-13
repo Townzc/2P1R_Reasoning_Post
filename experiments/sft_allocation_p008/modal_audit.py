@@ -33,7 +33,7 @@ def work(binding,release):
  sys.path.insert(0,'/workspace')
  from experiments.sft_allocation_midpoint.common import read,dump,sha,digest,verify,manifest
  from experiments.sft_allocation_midpoint.guard import RunGuard
- from experiments.sft_allocation_p008.audit_binding import validate,validate_label
+ from experiments.sft_allocation_p008.audit_binding import validate,validate_label,check_soft_deadline
  from experiments.sft_allocation_p008.audit_bundle import verify_packed_run
  from experiments.sft_allocation_p008.evidence_bundle import pack
  import torch
@@ -57,7 +57,7 @@ def work(binding,release):
  timer=threading.Timer(max(1,stop-time.time()),lambda:os._exit(124));timer.daemon=True;timer.start()
  out=Path('/evidence')/plan['campaign_id']/'audit'
  def check():
-  if time.time()>=stop-30:raise TimeoutError('Original finite CPU deadline')
+  check_soft_deadline(time.time(),stop)
  try:
   out.mkdir(parents=True,exist_ok=False)
   dump(out/'intent.json',dict(binding=binding,release=release,started_epoch=started));dump(out/'admission.json',spec);volume.commit()

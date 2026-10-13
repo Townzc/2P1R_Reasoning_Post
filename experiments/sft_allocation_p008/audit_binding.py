@@ -3,6 +3,18 @@ import re
 from experiments.sft_allocation_midpoint.common import digest
 from .contract import DEADLINE_EPOCH
 
+SOFT_MARGIN_SECONDS = 120
+
+
+def check_soft_deadline(now,stop):
+    """Leave time for partial-proof/failure persistence; never extend hard stop.
+
+    A blocking filesystem or torch operation can still reach the hard timer.
+    Such a run is interrupted, not falsely reported as a recorded soft failure.
+    """
+    if now>=stop-SOFT_MARGIN_SECONDS:
+        raise TimeoutError('Original finite CPU deadline')
+
 
 def validate(binding,spec,release):
     plan=binding['plan'];cfg=binding['config']

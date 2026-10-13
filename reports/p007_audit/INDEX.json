@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T10:07:46.895712+00:00",
+  "as_of_utc": "2026-10-13T10:27:54.895378+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -243,8 +243,8 @@
       "packet": "reports/p008_20261013/student_runtime_preflight_v1",
       "manifest": "reports/p008_20261013/student_runtime_preflight_v1/MANIFEST.json",
       "manifest_sha256": "0f9b694bf58af110eda1e66cbd60a55048f1e76ce4be321f085fc8572854c698",
-      "external_review": "pending",
-      "blocking_for": "Future P008 student dispatch; code-only review cannot admit any model before exact-input G1",
+      "external_review": "PASS-WITH-NOTES",
+      "blocking_for": null,
       "questions": [
         "Student-only successor keeps original pool runtime/admission immutable and HF scientific recipe unchanged?",
         "Exact joint-input/report/plan/draw and live pool terminal gates and full runtime+startup deadline check?",
@@ -254,7 +254,12 @@
       "owner_authorized": true,
       "numeric_student_inputs_pending": true,
       "response_timeout_minutes": 45,
-      "timeout_action": "hold unreviewed dispatch; no silence approval"
+      "timeout_action": "hold unreviewed dispatch; no silence approval",
+      "review_commit": "54d1803dde98294b7e5a050745609fa11747f856",
+      "review_report": "audit/claude/20261013p/STUDENT_AND_CPU_PREFLIGHT.md",
+      "reviewed_commit": "f944723ee58e99483a5c5c4e7f41485a2d9fde9f",
+      "disposition": "reports/p008_20261013/preflight_review_54d1803d_v1/DISPOSITION.json",
+      "scope": "Code only at original fixed target; numeric inputs/admission and later changed CPU code not covered"
     },
     {
       "request_id": "p008-final-cpu-code-preflight-r1",
@@ -262,8 +267,8 @@
       "packet": "reports/p008_20261013/cpu_audit_preflight_v1",
       "manifest": "reports/p008_20261013/cpu_audit_preflight_v1/MANIFEST.json",
       "manifest_sha256": "d0f46a1300ee8413656f8133d272da4aad06ce7e0b3ef3dacb5154f33ea47fac",
-      "external_review": "pending",
-      "blocking_for": "Only future final CPU integrity audit; does not block current teacher pools or replace student G1",
+      "external_review": "PASS-WITH-NOTES",
+      "blocking_for": null,
       "questions": [
         "Exact21-label original-terminal/local-oracle/source/config binding and no changed retained roster?",
         "Immutable packed-byte/fullstate scope stated accurately, including both1024/2048 checkpoints, finite optimizer/RNG/dose and prior raw oracle binding?",
@@ -273,7 +278,12 @@
       "owner_authorized": true,
       "numeric_audit_inputs_pending": true,
       "response_timeout_minutes": 45,
-      "timeout_action": "Hold unreviewed final CPU dispatch; no silence approval"
+      "timeout_action": "Hold unreviewed final CPU dispatch; no silence approval",
+      "review_commit": "54d1803dde98294b7e5a050745609fa11747f856",
+      "review_report": "audit/claude/20261013p/STUDENT_AND_CPU_PREFLIGHT.md",
+      "reviewed_commit": "33f964bbeda4d67de8caac72691a8dd7f01ff4f0",
+      "disposition": "reports/p008_20261013/preflight_review_54d1803d_v1/DISPOSITION.json",
+      "scope": "Code only at original fixed target; numeric inputs/admission and later changed CPU code not covered"
     }
   ],
   "p008_v31": {

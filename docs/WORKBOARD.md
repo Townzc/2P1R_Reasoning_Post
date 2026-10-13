@@ -142,6 +142,9 @@
 
 | 2026.10.13 03:07（实际读取） | Codex | 同两池实际provider/claim仍正常、无terminal；Papers与Claude无新交付。收尾CPU代码固定33f964bb已推送，INDEX独立请求只阻塞未来CPU审计，学生G1要求不变 | [状态](../reports/p008_20261013/MAIN_PREPARATION_STATUS_0308.json)；0学生调用/0额外预算 |
 
+| 2026.10.13 03:11（Claude交付）/03:21（读取） | Claude；Codex | 学生f944723e/CPU33f964bb代码均PASS-WITH-NOTES；开始逐条处理S1派发边界、S2软截止、S3读取工期。仅代码范围，G1尚待真实池结果 | [固定54d1803d报告](https://github.com/Townzc/2P1R_Reasoning_Post/blob/54d1803dde98294b7e5a050745609fa11747f856/audit/claude/20261013p/STUDENT_AND_CPU_PREFLIGHT.md) |
+| 2026.10.13 03:27（独立处理完成） | Codex | 将单项最晚入口与留2小时收尾的排程目标分开；CPU软截止120秒/按实际读写阶段计时，26项检查通过；大文件速率只作情景估算。原两池继续、0学生调用；延迟计量$96.88 | [处理与时间表](../reports/p008_20261013/preflight_review_54d1803d_v1/README.md)、[待审CPU修订](../reports/p008_20261013/cpu_audit_margin_v2/REVIEW_REQUEST.md) |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。

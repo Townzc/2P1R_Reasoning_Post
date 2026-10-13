@@ -1,7 +1,7 @@
 import copy,unittest
 from experiments.sft_allocation_midpoint.common import digest
 from experiments.sft_allocation_p008.contract import run_roster,DEADLINE_EPOCH
-from experiments.sft_allocation_p008.audit_binding import validate,validate_label
+from experiments.sft_allocation_p008.audit_binding import validate,validate_label,check_soft_deadline,SOFT_MARGIN_SECONDS
 
 
 def fixture():
@@ -31,6 +31,11 @@ def rebind(binding,spec,release):
 
 
 class AuditBindingTest(unittest.TestCase):
+    def test_soft_deadline_retains_120_seconds(self):
+        self.assertEqual(SOFT_MARGIN_SECONDS,120)
+        self.assertIsNone(check_soft_deadline(3179.99,3300))
+        for now in (3180,3299,3300):
+            with self.assertRaises(TimeoutError):check_soft_deadline(now,3300)
     def test_complete_finite_roster(self):
         b,s,r,labels=fixture();self.assertEqual(len(validate(b,s,r)),21)
         for name,label in labels.items():self.assertEqual(validate_label(b,name,label),label)

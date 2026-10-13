@@ -1,0 +1,9 @@
+# Fixed preflight review and independent disposition
+
+Claude54d1803d reviewed studentf944723e and CPU33f964bb code only. Student code is accepted within that scope; actual G1 and common numeric plans remain pending. Seven torch-dependent cases were unavailable in Claude’s environment; this does not replace Codex’s recorded complete-environment checks.
+
+The last legal student entry times are rejection boundaries, not safe whole-campaign scheduling targets. Retain the original two-hour closeout planning buffer and D1 main+base → D2 main → bridges priority. No outcome-based decision, shortened dose, or endpoint change.
+
+CPU26-state size is approximately5.775GB from eight existing terminal manifests. Phase0 measured only small shared-I/O/barrier work, not cold full-state bandwidth. The attached2/5/10MiB/s scenarios are assumptions. Final numeric admission must use all real21 envelopes and exact packed/state byte counts; no guarantee is inferred from the small probe. New timing fields measure actual future copies, unpacking, and state validation in the already budgeted audit, without a separate cloud benchmark.
+
+If a soft timeout occurs, retain immutable units and each saved proof. If the hard timer or provider interruption prevents a terminal, record interrupted_without_terminal. First confirm original app stopped and zero containers; read original ledger/proofs/envelope/manifest and independently verify the completed-label partition. Do not rerun original audit or clear its claim. A distinct remaining-only CPU continuation may be prepared only after reconciliation, with explicit source/binding/budget/deadline admission and all original failure costs retained. It is not currently admitted and does not expand the250stage/450project ceiling or19PDT cutoff. Incomplete final verification stays pending at the material freeze.

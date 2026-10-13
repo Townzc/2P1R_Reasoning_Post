@@ -1,0 +1,3 @@
+# Scoped CPU soft-margin and timing amendment
+
+Please review only the changes since accepted33f964bb:120second soft margin (unchanged3300hard limit), checks after state loading/finite scan, and timing of the existing copy/unpack/full-state operations.26CPU checks passed. No original pool or student code changed, no extra reads/model calls or budget reservation. The original review still applies to unchanged behavior; this amendment needs a fixed-version acceptance before the eventual CPU call. Actual21 envelopes, exact size/IO estimate and numeric admission remain pending. The linked disposition explicitly preserves interrupted_without_terminal and forbids automatic whole-audit replay.

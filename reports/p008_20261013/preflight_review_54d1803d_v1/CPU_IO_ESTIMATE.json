@@ -1,0 +1,44 @@
+{
+  "assumed_local_validation_and_metadata_seconds": 600,
+  "assumed_packed_bytes_not_measured": 2147483648,
+  "estimated_state_count": 26,
+  "latest_start_if_full4000second_entry_window": "2026-10-13T17:53:20-07:00",
+  "limitations": [
+    "Phase0 timings include shared I/O barrier/writes/waits and small warm-cache reads; not sustained cold large-state throughput",
+    "P007B original3300second audit carried10/14 with many original-file metadata reads; it is not a bandwidth measurement",
+    "Packed archive sizes and long-run state sizes will be replaced with actual21 envelopes before CPU admission",
+    "Rates2/5/10MiB/s and600second CPU allowance are planning scenarios, not measured guarantees"
+  ],
+  "new_model_calls": 0,
+  "phase0_observed": {
+    "blob_bytes": 8388608,
+    "io_probe_a_whole_worker_seconds": 11.647783517837524,
+    "io_probe_b_whole_worker_seconds": 12.460954666137695,
+    "reads_per_worker": 4
+  },
+  "prior_terminal_state_max_bytes": 222114805,
+  "required_aggregate_mib_per_second_under_assumptions": 2.9284708547961804,
+  "reservation_usd": 5,
+  "scenarios": {
+    "10": {
+      "aggregate_mib_per_second": 10,
+      "state_seconds": 550.7454805374146,
+      "total_seconds": 1355.5454805374145,
+      "under_3180_soft_seconds": true
+    },
+    "2": {
+      "aggregate_mib_per_second": 2,
+      "state_seconds": 2753.7274026870728,
+      "total_seconds": 4377.727402687073,
+      "under_3180_soft_seconds": false
+    },
+    "5": {
+      "aggregate_mib_per_second": 5,
+      "state_seconds": 1101.490961074829,
+      "total_seconds": 2111.090961074829,
+      "under_3180_soft_seconds": true
+    }
+  },
+  "state_bytes_proxy": 5774984930,
+  "utc": "2026-10-13T10:27:54.895378+00:00"
+}
