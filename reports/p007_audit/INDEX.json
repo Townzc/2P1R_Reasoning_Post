@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T22:31:44.064777+00:00",
+  "as_of_utc": "2026-10-13T22:44:44.324873+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -846,6 +846,27 @@
       "external_review": "pending",
       "created_utc": "2026-10-13T22:27:23.841526+00:00",
       "scope": "new fixed packet only; no implied runtime acceptance"
+    },
+    {
+      "request_id": "p008-final-cpu-replacements-code-r1",
+      "target_commit": "63fee8e640f52a93e0ac8e3e8687794698a4215a",
+      "packet": "reports/p008_20261013/final_cpu_replacements_preflight_v1",
+      "manifest": "reports/p008_20261013/final_cpu_replacements_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "656ba68b544f798f06e1f07155c6a5818c6dcc66ff301a5f4d93afdc454be2c8",
+      "external_review": "pending",
+      "blocking": true,
+      "blocking_for": "Only future final CPU code; not current replacement workers or separate T8 numerical gate",
+      "scope": "p008_cpu_replacement_integrity_code",
+      "source_files": 17,
+      "created_utc": "2026-10-13T22:44:44.324873+00:00",
+      "new_cloud_calls": 0,
+      "actual_inputs_frozen": false,
+      "questions": [
+        "Exact24physical/21logical provenance, three original failed sources retained, true owner-approved independent replacements",
+        "Frozen LR/plan bytes and logical/physical state identity; full256/1024/2048 state integrity including optimizer/RNG/dose",
+        "Original5USD/3300worker/full4000window/two readers/no retries and original-volume evidence retained",
+        "Code PASS not actual-byte numeric PASS; prepared helper controls; all four campaign ledgers"
+      ]
     }
   ],
   "p008_v31": {
