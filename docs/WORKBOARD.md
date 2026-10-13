@@ -158,6 +158,9 @@
 
 | 2026.10.13 04:31（代码准备与核验） | Codex | 未来学生16步块记账31项CPU检查通过，原训练主体AST一致；明示禁用延迟≤16步和部分块不可重放。修正审计3/8算术，N2仍开放；原两池源未改 | [修订待审](../reports/p008_20261013/student_block_journal_v1/REVIEW_REQUEST.md)；无模型调用/预算增加 |
 
+| 2026.10.13 04:34（Claude交付）/04:52（读取） | Claude；Codex复核 | block16代码限定PASS-WITH-NOTES，N2未关；更正3/8超限算术已接受。新提T1/base先行的时间门，不看分数 | [固定审计](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4d4fc7b77a07613cebe9a2e0a9350acbb10e88c2/audit/claude/20261013s/BLOCK_JOURNAL.md) |
+| 2026.10.13 04:58（数值规则准备） | Codex | 对齐255个间隔、纳入最终打包与检查点上界代理，8项CPU测试通过；所有既定T1和base完整耗时的最大值决定T8，实测仍缺失、不造准入 | [规则待审](../reports/p008_20261013/t1_first_timing_policy_v1/REVIEW_REQUEST.md)；原两池正常工作、无学生/补做调用 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。
