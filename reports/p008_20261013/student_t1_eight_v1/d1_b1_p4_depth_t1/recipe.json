@@ -1,0 +1,4857 @@
+{
+  "budget": {
+    "cross_condition_token_matching_claimed": false,
+    "eos_supervised": true,
+    "normalization": "sum_shifted_response_cross_entropy / update_response_token_count",
+    "optimizer_updates": 256,
+    "packing": false,
+    "padding_tokens": 0,
+    "path_exposures": {
+      "[\"gsm8k/train/00027\", \"d1::gsm8k/train/00027::1\"]": 8,
+      "[\"gsm8k/train/00027\", \"d1::gsm8k/train/00027::2\"]": 7,
+      "[\"gsm8k/train/00027\", \"d1::gsm8k/train/00027::3\"]": 7,
+      "[\"gsm8k/train/00027\", \"d1::gsm8k/train/00027::4\"]": 7,
+      "[\"gsm8k/train/00125\", \"d1::gsm8k/train/00125::1\"]": 7,
+      "[\"gsm8k/train/00125\", \"d1::gsm8k/train/00125::3\"]": 7,
+      "[\"gsm8k/train/00177\", \"d1::gsm8k/train/00177::1\"]": 7,
+      "[\"gsm8k/train/00177\", \"d1::gsm8k/train/00177::2\"]": 7,
+      "[\"gsm8k/train/00177\", \"d1::gsm8k/train/00177::3\"]": 7,
+      "[\"gsm8k/train/00177\", \"d1::gsm8k/train/00177::4\"]": 7,
+      "[\"gsm8k/train/00239\", \"d1::gsm8k/train/00239::1\"]": 7,
+      "[\"gsm8k/train/00239\", \"d1::gsm8k/train/00239::2\"]": 7,
+      "[\"gsm8k/train/00239\", \"d1::gsm8k/train/00239::3\"]": 7,
+      "[\"gsm8k/train/00239\", \"d1::gsm8k/train/00239::4\"]": 7,
+      "[\"gsm8k/train/00315\", \"d1::gsm8k/train/00315::1\"]": 8,
+      "[\"gsm8k/train/00315\", \"d1::gsm8k/train/00315::2\"]": 7,
+      "[\"gsm8k/train/00315\", \"d1::gsm8k/train/00315::3\"]": 8,
+      "[\"gsm8k/train/00328\", \"d1::gsm8k/train/00328::1\"]": 7,
+      "[\"gsm8k/train/00328\", \"d1::gsm8k/train/00328::2\"]": 7,
+      "[\"gsm8k/train/00328\", \"d1::gsm8k/train/00328::3\"]": 8,
+      "[\"gsm8k/train/00328\", \"d1::gsm8k/train/00328::4\"]": 7,
+      "[\"gsm8k/train/00350\", \"d1::gsm8k/train/00350::1\"]": 7,
+      "[\"gsm8k/train/00350\", \"d1::gsm8k/train/00350::2\"]": 7,
+      "[\"gsm8k/train/00350\", \"d1::gsm8k/train/00350::3\"]": 7,
+      "[\"gsm8k/train/00350\", \"d1::gsm8k/train/00350::4\"]": 7,
+      "[\"gsm8k/train/00553\", \"d1::gsm8k/train/00553::1\"]": 7,
+      "[\"gsm8k/train/00553\", \"d1::gsm8k/train/00553::2\"]": 7,
+      "[\"gsm8k/train/00553\", \"d1::gsm8k/train/00553::3\"]": 8,
+      "[\"gsm8k/train/00553\", \"d1::gsm8k/train/00553::4\"]": 7,
+      "[\"gsm8k/train/00814\", \"d1::gsm8k/train/00814::1\"]": 7,
+      "[\"gsm8k/train/00814\", \"d1::gsm8k/train/00814::2\"]": 8,
+      "[\"gsm8k/train/00814\", \"d1::gsm8k/train/00814::3\"]": 8,
+      "[\"gsm8k/train/00903\", \"d1::gsm8k/train/00903::1\"]": 7,
+      "[\"gsm8k/train/00903\", \"d1::gsm8k/train/00903::2\"]": 7,
+      "[\"gsm8k/train/00903\", \"d1::gsm8k/train/00903::3\"]": 7,
+      "[\"gsm8k/train/00903\", \"d1::gsm8k/train/00903::4\"]": 8,
+      "[\"gsm8k/train/00976\", \"d1::gsm8k/train/00976::1\"]": 8,
+      "[\"gsm8k/train/00976\", \"d1::gsm8k/train/00976::2\"]": 7,
+      "[\"gsm8k/train/00976\", \"d1::gsm8k/train/00976::3\"]": 7,
+      "[\"gsm8k/train/00976\", \"d1::gsm8k/train/00976::4\"]": 8,
+      "[\"gsm8k/train/01058\", \"d1::gsm8k/train/01058::1\"]": 8,
+      "[\"gsm8k/train/01058\", \"d1::gsm8k/train/01058::2\"]": 7,
+      "[\"gsm8k/train/01058\", \"d1::gsm8k/train/01058::3\"]": 7,
+      "[\"gsm8k/train/01058\", \"d1::gsm8k/train/01058::4\"]": 7,
+      "[\"gsm8k/train/01059\", \"d1::gsm8k/train/01059::1\"]": 7,
+      "[\"gsm8k/train/01059\", \"d1::gsm8k/train/01059::2\"]": 7,
+      "[\"gsm8k/train/01059\", \"d1::gsm8k/train/01059::3\"]": 8,
+      "[\"gsm8k/train/01059\", \"d1::gsm8k/train/01059::4\"]": 7,
+      "[\"gsm8k/train/01113\", \"d1::gsm8k/train/01113::1\"]": 7,
+      "[\"gsm8k/train/01113\", \"d1::gsm8k/train/01113::2\"]": 7,
+      "[\"gsm8k/train/01113\", \"d1::gsm8k/train/01113::3\"]": 7,
+      "[\"gsm8k/train/01113\", \"d1::gsm8k/train/01113::4\"]": 7,
+      "[\"gsm8k/train/01160\", \"d1::gsm8k/train/01160::1\"]": 7,
+      "[\"gsm8k/train/01160\", \"d1::gsm8k/train/01160::2\"]": 7,
+      "[\"gsm8k/train/01160\", \"d1::gsm8k/train/01160::3\"]": 7,
+      "[\"gsm8k/train/01160\", \"d1::gsm8k/train/01160::4\"]": 8,
+      "[\"gsm8k/train/01695\", \"d1::gsm8k/train/01695::1\"]": 8,
+      "[\"gsm8k/train/01695\", \"d1::gsm8k/train/01695::2\"]": 7,
+      "[\"gsm8k/train/01695\", \"d1::gsm8k/train/01695::3\"]": 7,
+      "[\"gsm8k/train/01695\", \"d1::gsm8k/train/01695::4\"]": 7,
+      "[\"gsm8k/train/01966\", \"d1::gsm8k/train/01966::1\"]": 8,
+      "[\"gsm8k/train/01966\", \"d1::gsm8k/train/01966::2\"]": 7,
+      "[\"gsm8k/train/01966\", \"d1::gsm8k/train/01966::3\"]": 7,
+      "[\"gsm8k/train/01966\", \"d1::gsm8k/train/01966::4\"]": 7,
+      "[\"gsm8k/train/02095\", \"d1::gsm8k/train/02095::1\"]": 7,
+      "[\"gsm8k/train/02095\", \"d1::gsm8k/train/02095::2\"]": 7,
+      "[\"gsm8k/train/02095\", \"d1::gsm8k/train/02095::3\"]": 8,
+      "[\"gsm8k/train/02095\", \"d1::gsm8k/train/02095::4\"]": 7,
+      "[\"gsm8k/train/02129\", \"d1::gsm8k/train/02129::1\"]": 7,
+      "[\"gsm8k/train/02129\", \"d1::gsm8k/train/02129::3\"]": 7,
+      "[\"gsm8k/train/02129\", \"d1::gsm8k/train/02129::4\"]": 7,
+      "[\"gsm8k/train/02129\", \"d1::gsm8k/train/02129::5\"]": 7,
+      "[\"gsm8k/train/02225\", \"d1::gsm8k/train/02225::1\"]": 8,
+      "[\"gsm8k/train/02225\", \"d1::gsm8k/train/02225::2\"]": 7,
+      "[\"gsm8k/train/02225\", \"d1::gsm8k/train/02225::3\"]": 7,
+      "[\"gsm8k/train/02225\", \"d1::gsm8k/train/02225::4\"]": 7,
+      "[\"gsm8k/train/02421\", \"d1::gsm8k/train/02421::1\"]": 8,
+      "[\"gsm8k/train/02421\", \"d1::gsm8k/train/02421::2\"]": 7,
+      "[\"gsm8k/train/02421\", \"d1::gsm8k/train/02421::3\"]": 7,
+      "[\"gsm8k/train/02421\", \"d1::gsm8k/train/02421::4\"]": 7,
+      "[\"gsm8k/train/02638\", \"d1::gsm8k/train/02638::1\"]": 7,
+      "[\"gsm8k/train/02657\", \"d1::gsm8k/train/02657::1\"]": 7,
+      "[\"gsm8k/train/02657\", \"d1::gsm8k/train/02657::2\"]": 7,
+      "[\"gsm8k/train/02657\", \"d1::gsm8k/train/02657::3\"]": 7,
+      "[\"gsm8k/train/02657\", \"d1::gsm8k/train/02657::4\"]": 7,
+      "[\"gsm8k/train/02778\", \"d1::gsm8k/train/02778::1\"]": 8,
+      "[\"gsm8k/train/02778\", \"d1::gsm8k/train/02778::2\"]": 7,
+      "[\"gsm8k/train/02778\", \"d1::gsm8k/train/02778::3\"]": 8,
+      "[\"gsm8k/train/02778\", \"d1::gsm8k/train/02778::4\"]": 8,
+      "[\"gsm8k/train/02941\", \"d1::gsm8k/train/02941::1\"]": 8,
+      "[\"gsm8k/train/02941\", \"d1::gsm8k/train/02941::2\"]": 8,
+      "[\"gsm8k/train/02941\", \"d1::gsm8k/train/02941::3\"]": 7,
+      "[\"gsm8k/train/02941\", \"d1::gsm8k/train/02941::4\"]": 7,
+      "[\"gsm8k/train/03110\", \"d1::gsm8k/train/03110::1\"]": 7,
+      "[\"gsm8k/train/03110\", \"d1::gsm8k/train/03110::2\"]": 8,
+      "[\"gsm8k/train/03110\", \"d1::gsm8k/train/03110::4\"]": 8,
+      "[\"gsm8k/train/03110\", \"d1::gsm8k/train/03110::5\"]": 7,
+      "[\"gsm8k/train/03200\", \"d1::gsm8k/train/03200::1\"]": 7,
+      "[\"gsm8k/train/03200\", \"d1::gsm8k/train/03200::2\"]": 7,
+      "[\"gsm8k/train/03200\", \"d1::gsm8k/train/03200::4\"]": 7,
+      "[\"gsm8k/train/03200\", \"d1::gsm8k/train/03200::5\"]": 7,
+      "[\"gsm8k/train/03298\", \"d1::gsm8k/train/03298::1\"]": 8,
+      "[\"gsm8k/train/03298\", \"d1::gsm8k/train/03298::2\"]": 7,
+      "[\"gsm8k/train/03298\", \"d1::gsm8k/train/03298::3\"]": 7,
+      "[\"gsm8k/train/03298\", \"d1::gsm8k/train/03298::4\"]": 7,
+      "[\"gsm8k/train/03380\", \"d1::gsm8k/train/03380::1\"]": 8,
+      "[\"gsm8k/train/03380\", \"d1::gsm8k/train/03380::2\"]": 7,
+      "[\"gsm8k/train/03380\", \"d1::gsm8k/train/03380::3\"]": 7,
+      "[\"gsm8k/train/03380\", \"d1::gsm8k/train/03380::4\"]": 7,
+      "[\"gsm8k/train/03395\", \"d1::gsm8k/train/03395::1\"]": 7,
+      "[\"gsm8k/train/03395\", \"d1::gsm8k/train/03395::2\"]": 8,
+      "[\"gsm8k/train/03395\", \"d1::gsm8k/train/03395::3\"]": 7,
+      "[\"gsm8k/train/03395\", \"d1::gsm8k/train/03395::4\"]": 7,
+      "[\"gsm8k/train/03431\", \"d1::gsm8k/train/03431::1\"]": 7,
+      "[\"gsm8k/train/03431\", \"d1::gsm8k/train/03431::2\"]": 7,
+      "[\"gsm8k/train/03431\", \"d1::gsm8k/train/03431::3\"]": 7,
+      "[\"gsm8k/train/03431\", \"d1::gsm8k/train/03431::4\"]": 8,
+      "[\"gsm8k/train/03542\", \"d1::gsm8k/train/03542::1\"]": 7,
+      "[\"gsm8k/train/03542\", \"d1::gsm8k/train/03542::2\"]": 7,
+      "[\"gsm8k/train/03542\", \"d1::gsm8k/train/03542::3\"]": 7,
+      "[\"gsm8k/train/03542\", \"d1::gsm8k/train/03542::4\"]": 7,
+      "[\"gsm8k/train/03827\", \"d1::gsm8k/train/03827::1\"]": 8,
+      "[\"gsm8k/train/03827\", \"d1::gsm8k/train/03827::2\"]": 7,
+      "[\"gsm8k/train/03827\", \"d1::gsm8k/train/03827::3\"]": 7,
+      "[\"gsm8k/train/03827\", \"d1::gsm8k/train/03827::4\"]": 7,
+      "[\"gsm8k/train/03845\", \"d1::gsm8k/train/03845::1\"]": 7,
+      "[\"gsm8k/train/03845\", \"d1::gsm8k/train/03845::2\"]": 7,
+      "[\"gsm8k/train/03845\", \"d1::gsm8k/train/03845::3\"]": 7,
+      "[\"gsm8k/train/03845\", \"d1::gsm8k/train/03845::4\"]": 7,
+      "[\"gsm8k/train/03984\", \"d1::gsm8k/train/03984::1\"]": 8,
+      "[\"gsm8k/train/03984\", \"d1::gsm8k/train/03984::2\"]": 8,
+      "[\"gsm8k/train/03984\", \"d1::gsm8k/train/03984::3\"]": 8,
+      "[\"gsm8k/train/03984\", \"d1::gsm8k/train/03984::4\"]": 7,
+      "[\"gsm8k/train/04565\", \"d1::gsm8k/train/04565::1\"]": 7,
+      "[\"gsm8k/train/04565\", \"d1::gsm8k/train/04565::2\"]": 8,
+      "[\"gsm8k/train/04565\", \"d1::gsm8k/train/04565::3\"]": 8,
+      "[\"gsm8k/train/04565\", \"d1::gsm8k/train/04565::4\"]": 7,
+      "[\"gsm8k/train/04734\", \"d1::gsm8k/train/04734::1\"]": 8,
+      "[\"gsm8k/train/04734\", \"d1::gsm8k/train/04734::2\"]": 8,
+      "[\"gsm8k/train/04734\", \"d1::gsm8k/train/04734::3\"]": 8,
+      "[\"gsm8k/train/04734\", \"d1::gsm8k/train/04734::4\"]": 7,
+      "[\"gsm8k/train/04847\", \"d1::gsm8k/train/04847::1\"]": 7,
+      "[\"gsm8k/train/04847\", \"d1::gsm8k/train/04847::2\"]": 7,
+      "[\"gsm8k/train/04847\", \"d1::gsm8k/train/04847::3\"]": 8,
+      "[\"gsm8k/train/04847\", \"d1::gsm8k/train/04847::4\"]": 7,
+      "[\"gsm8k/train/05043\", \"d1::gsm8k/train/05043::1\"]": 8,
+      "[\"gsm8k/train/05043\", \"d1::gsm8k/train/05043::2\"]": 7,
+      "[\"gsm8k/train/05043\", \"d1::gsm8k/train/05043::3\"]": 7,
+      "[\"gsm8k/train/05043\", \"d1::gsm8k/train/05043::4\"]": 7,
+      "[\"gsm8k/train/05125\", \"d1::gsm8k/train/05125::1\"]": 7,
+      "[\"gsm8k/train/05125\", \"d1::gsm8k/train/05125::2\"]": 7,
+      "[\"gsm8k/train/05125\", \"d1::gsm8k/train/05125::3\"]": 7,
+      "[\"gsm8k/train/05125\", \"d1::gsm8k/train/05125::4\"]": 7,
+      "[\"gsm8k/train/05163\", \"d1::gsm8k/train/05163::1\"]": 7,
+      "[\"gsm8k/train/05163\", \"d1::gsm8k/train/05163::2\"]": 7,
+      "[\"gsm8k/train/05163\", \"d1::gsm8k/train/05163::3\"]": 7,
+      "[\"gsm8k/train/05163\", \"d1::gsm8k/train/05163::4\"]": 8,
+      "[\"gsm8k/train/05714\", \"d1::gsm8k/train/05714::1\"]": 7,
+      "[\"gsm8k/train/05714\", \"d1::gsm8k/train/05714::2\"]": 7,
+      "[\"gsm8k/train/05714\", \"d1::gsm8k/train/05714::3\"]": 7,
+      "[\"gsm8k/train/05717\", \"d1::gsm8k/train/05717::1\"]": 8,
+      "[\"gsm8k/train/05717\", \"d1::gsm8k/train/05717::2\"]": 7,
+      "[\"gsm8k/train/05717\", \"d1::gsm8k/train/05717::3\"]": 7,
+      "[\"gsm8k/train/05717\", \"d1::gsm8k/train/05717::4\"]": 7,
+      "[\"gsm8k/train/05791\", \"d1::gsm8k/train/05791::1\"]": 8,
+      "[\"gsm8k/train/05791\", \"d1::gsm8k/train/05791::2\"]": 7,
+      "[\"gsm8k/train/05791\", \"d1::gsm8k/train/05791::3\"]": 7,
+      "[\"gsm8k/train/05791\", \"d1::gsm8k/train/05791::4\"]": 7,
+      "[\"gsm8k/train/05795\", \"d1::gsm8k/train/05795::1\"]": 7,
+      "[\"gsm8k/train/05795\", \"d1::gsm8k/train/05795::2\"]": 7,
+      "[\"gsm8k/train/05795\", \"d1::gsm8k/train/05795::3\"]": 7,
+      "[\"gsm8k/train/05795\", \"d1::gsm8k/train/05795::4\"]": 8,
+      "[\"gsm8k/train/05806\", \"d1::gsm8k/train/05806::1\"]": 7,
+      "[\"gsm8k/train/05806\", \"d1::gsm8k/train/05806::2\"]": 7,
+      "[\"gsm8k/train/05806\", \"d1::gsm8k/train/05806::3\"]": 7,
+      "[\"gsm8k/train/05806\", \"d1::gsm8k/train/05806::4\"]": 8,
+      "[\"gsm8k/train/05974\", \"d1::gsm8k/train/05974::1\"]": 7,
+      "[\"gsm8k/train/05974\", \"d1::gsm8k/train/05974::2\"]": 7,
+      "[\"gsm8k/train/05974\", \"d1::gsm8k/train/05974::3\"]": 8,
+      "[\"gsm8k/train/05974\", \"d1::gsm8k/train/05974::4\"]": 7,
+      "[\"gsm8k/train/06090\", \"d1::gsm8k/train/06090::1\"]": 7,
+      "[\"gsm8k/train/06090\", \"d1::gsm8k/train/06090::2\"]": 7,
+      "[\"gsm8k/train/06090\", \"d1::gsm8k/train/06090::3\"]": 7,
+      "[\"gsm8k/train/06090\", \"d1::gsm8k/train/06090::4\"]": 7,
+      "[\"gsm8k/train/06160\", \"d1::gsm8k/train/06160::1\"]": 7,
+      "[\"gsm8k/train/06160\", \"d1::gsm8k/train/06160::2\"]": 7,
+      "[\"gsm8k/train/06160\", \"d1::gsm8k/train/06160::3\"]": 7,
+      "[\"gsm8k/train/06160\", \"d1::gsm8k/train/06160::4\"]": 7,
+      "[\"gsm8k/train/06242\", \"d1::gsm8k/train/06242::3\"]": 7,
+      "[\"gsm8k/train/06242\", \"d1::gsm8k/train/06242::4\"]": 8,
+      "[\"gsm8k/train/06242\", \"d1::gsm8k/train/06242::5\"]": 7,
+      "[\"gsm8k/train/06242\", \"d1::gsm8k/train/06242::7\"]": 8,
+      "[\"gsm8k/train/06251\", \"d1::gsm8k/train/06251::1\"]": 7,
+      "[\"gsm8k/train/06251\", \"d1::gsm8k/train/06251::2\"]": 7,
+      "[\"gsm8k/train/06251\", \"d1::gsm8k/train/06251::3\"]": 7,
+      "[\"gsm8k/train/06251\", \"d1::gsm8k/train/06251::4\"]": 8,
+      "[\"gsm8k/train/06327\", \"d1::gsm8k/train/06327::1\"]": 8,
+      "[\"gsm8k/train/06327\", \"d1::gsm8k/train/06327::2\"]": 7,
+      "[\"gsm8k/train/06327\", \"d1::gsm8k/train/06327::4\"]": 7,
+      "[\"gsm8k/train/06327\", \"d1::gsm8k/train/06327::5\"]": 7,
+      "[\"gsm8k/train/06404\", \"d1::gsm8k/train/06404::1\"]": 7,
+      "[\"gsm8k/train/06404\", \"d1::gsm8k/train/06404::2\"]": 7,
+      "[\"gsm8k/train/06404\", \"d1::gsm8k/train/06404::3\"]": 7,
+      "[\"gsm8k/train/06404\", \"d1::gsm8k/train/06404::4\"]": 8,
+      "[\"gsm8k/train/06605\", \"d1::gsm8k/train/06605::1\"]": 8,
+      "[\"gsm8k/train/06605\", \"d1::gsm8k/train/06605::2\"]": 7,
+      "[\"gsm8k/train/06605\", \"d1::gsm8k/train/06605::3\"]": 7,
+      "[\"gsm8k/train/06605\", \"d1::gsm8k/train/06605::4\"]": 8,
+      "[\"gsm8k/train/06615\", \"d1::gsm8k/train/06615::1\"]": 8,
+      "[\"gsm8k/train/06615\", \"d1::gsm8k/train/06615::2\"]": 8,
+      "[\"gsm8k/train/06615\", \"d1::gsm8k/train/06615::3\"]": 7,
+      "[\"gsm8k/train/06615\", \"d1::gsm8k/train/06615::4\"]": 8,
+      "[\"gsm8k/train/06655\", \"d1::gsm8k/train/06655::1\"]": 7,
+      "[\"gsm8k/train/06655\", \"d1::gsm8k/train/06655::2\"]": 7,
+      "[\"gsm8k/train/06655\", \"d1::gsm8k/train/06655::3\"]": 7,
+      "[\"gsm8k/train/06655\", \"d1::gsm8k/train/06655::4\"]": 8,
+      "[\"gsm8k/train/07027\", \"d1::gsm8k/train/07027::1\"]": 7,
+      "[\"gsm8k/train/07027\", \"d1::gsm8k/train/07027::2\"]": 8,
+      "[\"gsm8k/train/07027\", \"d1::gsm8k/train/07027::3\"]": 7,
+      "[\"gsm8k/train/07027\", \"d1::gsm8k/train/07027::4\"]": 8,
+      "[\"gsm8k/train/07033\", \"d1::gsm8k/train/07033::1\"]": 7,
+      "[\"gsm8k/train/07033\", \"d1::gsm8k/train/07033::2\"]": 7,
+      "[\"gsm8k/train/07033\", \"d1::gsm8k/train/07033::3\"]": 7,
+      "[\"gsm8k/train/07033\", \"d1::gsm8k/train/07033::4\"]": 7,
+      "[\"gsm8k/train/07045\", \"d1::gsm8k/train/07045::1\"]": 7,
+      "[\"gsm8k/train/07045\", \"d1::gsm8k/train/07045::2\"]": 7,
+      "[\"gsm8k/train/07045\", \"d1::gsm8k/train/07045::3\"]": 7,
+      "[\"gsm8k/train/07045\", \"d1::gsm8k/train/07045::4\"]": 7,
+      "[\"gsm8k/train/07163\", \"d1::gsm8k/train/07163::1\"]": 7,
+      "[\"gsm8k/train/07163\", \"d1::gsm8k/train/07163::2\"]": 8,
+      "[\"gsm8k/train/07163\", \"d1::gsm8k/train/07163::3\"]": 7,
+      "[\"gsm8k/train/07163\", \"d1::gsm8k/train/07163::4\"]": 7,
+      "[\"gsm8k/train/07263\", \"d1::gsm8k/train/07263::1\"]": 7,
+      "[\"gsm8k/train/07263\", \"d1::gsm8k/train/07263::2\"]": 8,
+      "[\"gsm8k/train/07263\", \"d1::gsm8k/train/07263::3\"]": 7,
+      "[\"gsm8k/train/07263\", \"d1::gsm8k/train/07263::4\"]": 7,
+      "[\"gsm8k/train/07349\", \"d1::gsm8k/train/07349::1\"]": 7,
+      "[\"gsm8k/train/07349\", \"d1::gsm8k/train/07349::2\"]": 8,
+      "[\"gsm8k/train/07349\", \"d1::gsm8k/train/07349::3\"]": 8,
+      "[\"gsm8k/train/07349\", \"d1::gsm8k/train/07349::4\"]": 8
+    },
+    "per_update": [
+      {
+        "processed_tokens": 2490,
+        "supervised_tokens": 1994
+      },
+      {
+        "processed_tokens": 2434,
+        "supervised_tokens": 2010
+      },
+      {
+        "processed_tokens": 2733,
+        "supervised_tokens": 2196
+      },
+      {
+        "processed_tokens": 2377,
+        "supervised_tokens": 1887
+      },
+      {
+        "processed_tokens": 2436,
+        "supervised_tokens": 2074
+      },
+      {
+        "processed_tokens": 2704,
+        "supervised_tokens": 2184
+      },
+      {
+        "processed_tokens": 2180,
+        "supervised_tokens": 1839
+      },
+      {
+        "processed_tokens": 2820,
+        "supervised_tokens": 2244
+      },
+      {
+        "processed_tokens": 2352,
+        "supervised_tokens": 2001
+      },
+      {
+        "processed_tokens": 2520,
+        "supervised_tokens": 2066
+      },
+      {
+        "processed_tokens": 2530,
+        "supervised_tokens": 2138
+      },
+      {
+        "processed_tokens": 2473,
+        "supervised_tokens": 2043
+      },
+      {
+        "processed_tokens": 2342,
+        "supervised_tokens": 1930
+      },
+      {
+        "processed_tokens": 2620,
+        "supervised_tokens": 2134
+      },
+      {
+        "processed_tokens": 2328,
+        "supervised_tokens": 1969
+      },
+      {
+        "processed_tokens": 2497,
+        "supervised_tokens": 1967
+      },
+      {
+        "processed_tokens": 2500,
+        "supervised_tokens": 2092
+      },
+      {
+        "processed_tokens": 2675,
+        "supervised_tokens": 2158
+      },
+      {
+        "processed_tokens": 2592,
+        "supervised_tokens": 2074
+      },
+      {
+        "processed_tokens": 2283,
+        "supervised_tokens": 1887
+      },
+      {
+        "processed_tokens": 2569,
+        "supervised_tokens": 2140
+      },
+      {
+        "processed_tokens": 2457,
+        "supervised_tokens": 2019
+      },
+      {
+        "processed_tokens": 2465,
+        "supervised_tokens": 2025
+      },
+      {
+        "processed_tokens": 2477,
+        "supervised_tokens": 2004
+      },
+      {
+        "processed_tokens": 2730,
+        "supervised_tokens": 2219
+      },
+      {
+        "processed_tokens": 2515,
+        "supervised_tokens": 2006
+      },
+      {
+        "processed_tokens": 2252,
+        "supervised_tokens": 1883
+      },
+      {
+        "processed_tokens": 2507,
+        "supervised_tokens": 2069
+      },
+      {
+        "processed_tokens": 2466,
+        "supervised_tokens": 2071
+      },
+      {
+        "processed_tokens": 2713,
+        "supervised_tokens": 2211
+      },
+      {
+        "processed_tokens": 2440,
+        "supervised_tokens": 2013
+      },
+      {
+        "processed_tokens": 2285,
+        "supervised_tokens": 1875
+      },
+      {
+        "processed_tokens": 2679,
+        "supervised_tokens": 2245
+      },
+      {
+        "processed_tokens": 2306,
+        "supervised_tokens": 1977
+      },
+      {
+        "processed_tokens": 2329,
+        "supervised_tokens": 1882
+      },
+      {
+        "processed_tokens": 2710,
+        "supervised_tokens": 2145
+      },
+      {
+        "processed_tokens": 2754,
+        "supervised_tokens": 2244
+      },
+      {
+        "processed_tokens": 2226,
+        "supervised_tokens": 1780
+      },
+      {
+        "processed_tokens": 2501,
+        "supervised_tokens": 2075
+      },
+      {
+        "processed_tokens": 2784,
+        "supervised_tokens": 2262
+      },
+      {
+        "processed_tokens": 2109,
+        "supervised_tokens": 1774
+      },
+      {
+        "processed_tokens": 2593,
+        "supervised_tokens": 2172
+      },
+      {
+        "processed_tokens": 2717,
+        "supervised_tokens": 2292
+      },
+      {
+        "processed_tokens": 1993,
+        "supervised_tokens": 1690
+      },
+      {
+        "processed_tokens": 2597,
+        "supervised_tokens": 2129
+      },
+      {
+        "processed_tokens": 2309,
+        "supervised_tokens": 1993
+      },
+      {
+        "processed_tokens": 2447,
+        "supervised_tokens": 2062
+      },
+      {
+        "processed_tokens": 2813,
+        "supervised_tokens": 2300
+      },
+      {
+        "processed_tokens": 2113,
+        "supervised_tokens": 1767
+      },
+      {
+        "processed_tokens": 2806,
+        "supervised_tokens": 2229
+      },
+      {
+        "processed_tokens": 2449,
+        "supervised_tokens": 2039
+      },
+      {
+        "processed_tokens": 2546,
+        "supervised_tokens": 2057
+      },
+      {
+        "processed_tokens": 2346,
+        "supervised_tokens": 1880
+      },
+      {
+        "processed_tokens": 2516,
+        "supervised_tokens": 2028
+      },
+      {
+        "processed_tokens": 2761,
+        "supervised_tokens": 2293
+      },
+      {
+        "processed_tokens": 2164,
+        "supervised_tokens": 1823
+      },
+      {
+        "processed_tokens": 2470,
+        "supervised_tokens": 2063
+      },
+      {
+        "processed_tokens": 2474,
+        "supervised_tokens": 2036
+      },
+      {
+        "processed_tokens": 2556,
+        "supervised_tokens": 2121
+      },
+      {
+        "processed_tokens": 2336,
+        "supervised_tokens": 1977
+      },
+      {
+        "processed_tokens": 2862,
+        "supervised_tokens": 2296
+      },
+      {
+        "processed_tokens": 2438,
+        "supervised_tokens": 1991
+      },
+      {
+        "processed_tokens": 2270,
+        "supervised_tokens": 1883
+      },
+      {
+        "processed_tokens": 2688,
+        "supervised_tokens": 2183
+      },
+      {
+        "processed_tokens": 2563,
+        "supervised_tokens": 2034
+      },
+      {
+        "processed_tokens": 2579,
+        "supervised_tokens": 2184
+      },
+      {
+        "processed_tokens": 2183,
+        "supervised_tokens": 1784
+      },
+      {
+        "processed_tokens": 2688,
+        "supervised_tokens": 2211
+      },
+      {
+        "processed_tokens": 2299,
+        "supervised_tokens": 1943
+      },
+      {
+        "processed_tokens": 2625,
+        "supervised_tokens": 2176
+      },
+      {
+        "processed_tokens": 2409,
+        "supervised_tokens": 1947
+      },
+      {
+        "processed_tokens": 2701,
+        "supervised_tokens": 2145
+      },
+      {
+        "processed_tokens": 2516,
+        "supervised_tokens": 2057
+      },
+      {
+        "processed_tokens": 2442,
+        "supervised_tokens": 2012
+      },
+      {
+        "processed_tokens": 2497,
+        "supervised_tokens": 2043
+      },
+      {
+        "processed_tokens": 2357,
+        "supervised_tokens": 1924
+      },
+      {
+        "processed_tokens": 2566,
+        "supervised_tokens": 2051
+      },
+      {
+        "processed_tokens": 2598,
+        "supervised_tokens": 2177
+      },
+      {
+        "processed_tokens": 2261,
+        "supervised_tokens": 1852
+      },
+      {
+        "processed_tokens": 2824,
+        "supervised_tokens": 2370
+      },
+      {
+        "processed_tokens": 2055,
+        "supervised_tokens": 1702
+      },
+      {
+        "processed_tokens": 2758,
+        "supervised_tokens": 2316
+      },
+      {
+        "processed_tokens": 2509,
+        "supervised_tokens": 2105
+      },
+      {
+        "processed_tokens": 2380,
+        "supervised_tokens": 2022
+      },
+      {
+        "processed_tokens": 2474,
+        "supervised_tokens": 2012
+      },
+      {
+        "processed_tokens": 2279,
+        "supervised_tokens": 1759
+      },
+      {
+        "processed_tokens": 2839,
+        "supervised_tokens": 2210
+      },
+      {
+        "processed_tokens": 2491,
+        "supervised_tokens": 2022
+      },
+      {
+        "processed_tokens": 2625,
+        "supervised_tokens": 2155
+      },
+      {
+        "processed_tokens": 2320,
+        "supervised_tokens": 1879
+      },
+      {
+        "processed_tokens": 2732,
+        "supervised_tokens": 2186
+      },
+      {
+        "processed_tokens": 2292,
+        "supervised_tokens": 1875
+      },
+      {
+        "processed_tokens": 2629,
+        "supervised_tokens": 2159
+      },
+      {
+        "processed_tokens": 2709,
+        "supervised_tokens": 2248
+      },
+      {
+        "processed_tokens": 2497,
+        "supervised_tokens": 2013
+      },
+      {
+        "processed_tokens": 2474,
+        "supervised_tokens": 2096
+      },
+      {
+        "processed_tokens": 2376,
+        "supervised_tokens": 2034
+      },
+      {
+        "processed_tokens": 2280,
+        "supervised_tokens": 1889
+      },
+      {
+        "processed_tokens": 2558,
+        "supervised_tokens": 2002
+      },
+      {
+        "processed_tokens": 2406,
+        "supervised_tokens": 2030
+      },
+      {
+        "processed_tokens": 2869,
+        "supervised_tokens": 2278
+      },
+      {
+        "processed_tokens": 2128,
+        "supervised_tokens": 1778
+      },
+      {
+        "processed_tokens": 2556,
+        "supervised_tokens": 2138
+      },
+      {
+        "processed_tokens": 2458,
+        "supervised_tokens": 1952
+      },
+      {
+        "processed_tokens": 2427,
+        "supervised_tokens": 2056
+      },
+      {
+        "processed_tokens": 2841,
+        "supervised_tokens": 2285
+      },
+      {
+        "processed_tokens": 2239,
+        "supervised_tokens": 1850
+      },
+      {
+        "processed_tokens": 2679,
+        "supervised_tokens": 2100
+      },
+      {
+        "processed_tokens": 2398,
+        "supervised_tokens": 2040
+      },
+      {
+        "processed_tokens": 2702,
+        "supervised_tokens": 2252
+      },
+      {
+        "processed_tokens": 2448,
+        "supervised_tokens": 2045
+      },
+      {
+        "processed_tokens": 2248,
+        "supervised_tokens": 1901
+      },
+      {
+        "processed_tokens": 2317,
+        "supervised_tokens": 1922
+      },
+      {
+        "processed_tokens": 2757,
+        "supervised_tokens": 2195
+      },
+      {
+        "processed_tokens": 2421,
+        "supervised_tokens": 1920
+      },
+      {
+        "processed_tokens": 2449,
+        "supervised_tokens": 2063
+      },
+      {
+        "processed_tokens": 2703,
+        "supervised_tokens": 2229
+      },
+      {
+        "processed_tokens": 2361,
+        "supervised_tokens": 1935
+      },
+      {
+        "processed_tokens": 2514,
+        "supervised_tokens": 2034
+      },
+      {
+        "processed_tokens": 2463,
+        "supervised_tokens": 2084
+      },
+      {
+        "processed_tokens": 2337,
+        "supervised_tokens": 1989
+      },
+      {
+        "processed_tokens": 2502,
+        "supervised_tokens": 2068
+      },
+      {
+        "processed_tokens": 2294,
+        "supervised_tokens": 1930
+      },
+      {
+        "processed_tokens": 2726,
+        "supervised_tokens": 2307
+      },
+      {
+        "processed_tokens": 2217,
+        "supervised_tokens": 1831
+      },
+      {
+        "processed_tokens": 2643,
+        "supervised_tokens": 2181
+      },
+      {
+        "processed_tokens": 2484,
+        "supervised_tokens": 1971
+      },
+      {
+        "processed_tokens": 2550,
+        "supervised_tokens": 2136
+      },
+      {
+        "processed_tokens": 2372,
+        "supervised_tokens": 1949
+      },
+      {
+        "processed_tokens": 2569,
+        "supervised_tokens": 2095
+      },
+      {
+        "processed_tokens": 2650,
+        "supervised_tokens": 2183
+      },
+      {
+        "processed_tokens": 2185,
+        "supervised_tokens": 1864
+      },
+      {
+        "processed_tokens": 2574,
+        "supervised_tokens": 2159
+      },
+      {
+        "processed_tokens": 2431,
+        "supervised_tokens": 1955
+      },
+      {
+        "processed_tokens": 2355,
+        "supervised_tokens": 1903
+      },
+      {
+        "processed_tokens": 2617,
+        "supervised_tokens": 2198
+      },
+      {
+        "processed_tokens": 2490,
+        "supervised_tokens": 2028
+      },
+      {
+        "processed_tokens": 2426,
+        "supervised_tokens": 2049
+      },
+      {
+        "processed_tokens": 2515,
+        "supervised_tokens": 2065
+      },
+      {
+        "processed_tokens": 2649,
+        "supervised_tokens": 2113
+      },
+      {
+        "processed_tokens": 2229,
+        "supervised_tokens": 1860
+      },
+      {
+        "processed_tokens": 2708,
+        "supervised_tokens": 2242
+      },
+      {
+        "processed_tokens": 2542,
+        "supervised_tokens": 2111
+      },
+      {
+        "processed_tokens": 2141,
+        "supervised_tokens": 1834
+      },
+      {
+        "processed_tokens": 2683,
+        "supervised_tokens": 2088
+      },
+      {
+        "processed_tokens": 2514,
+        "supervised_tokens": 1986
+      },
+      {
+        "processed_tokens": 2412,
+        "supervised_tokens": 2054
+      },
+      {
+        "processed_tokens": 2538,
+        "supervised_tokens": 2067
+      },
+      {
+        "processed_tokens": 2861,
+        "supervised_tokens": 2266
+      },
+      {
+        "processed_tokens": 2208,
+        "supervised_tokens": 1804
+      },
+      {
+        "processed_tokens": 2581,
+        "supervised_tokens": 2172
+      },
+      {
+        "processed_tokens": 2659,
+        "supervised_tokens": 2168
+      },
+      {
+        "processed_tokens": 2375,
+        "supervised_tokens": 1967
+      },
+      {
+        "processed_tokens": 2263,
+        "supervised_tokens": 1855
+      },
+      {
+        "processed_tokens": 2798,
+        "supervised_tokens": 2311
+      },
+      {
+        "processed_tokens": 2219,
+        "supervised_tokens": 1858
+      },
+      {
+        "processed_tokens": 2866,
+        "supervised_tokens": 2313
+      },
+      {
+        "processed_tokens": 2460,
+        "supervised_tokens": 1970
+      },
+      {
+        "processed_tokens": 2484,
+        "supervised_tokens": 2027
+      },
+      {
+        "processed_tokens": 2477,
+        "supervised_tokens": 2014
+      },
+      {
+        "processed_tokens": 2198,
+        "supervised_tokens": 1827
+      },
+      {
+        "processed_tokens": 2546,
+        "supervised_tokens": 2153
+      },
+      {
+        "processed_tokens": 2308,
+        "supervised_tokens": 1918
+      },
+      {
+        "processed_tokens": 2721,
+        "supervised_tokens": 2231
+      },
+      {
+        "processed_tokens": 2368,
+        "supervised_tokens": 1986
+      },
+      {
+        "processed_tokens": 2614,
+        "supervised_tokens": 2176
+      },
+      {
+        "processed_tokens": 2375,
+        "supervised_tokens": 1935
+      },
+      {
+        "processed_tokens": 2533,
+        "supervised_tokens": 2051
+      },
+      {
+        "processed_tokens": 2540,
+        "supervised_tokens": 2159
+      },
+      {
+        "processed_tokens": 2398,
+        "supervised_tokens": 2004
+      },
+      {
+        "processed_tokens": 2339,
+        "supervised_tokens": 1917
+      },
+      {
+        "processed_tokens": 2651,
+        "supervised_tokens": 2143
+      },
+      {
+        "processed_tokens": 2545,
+        "supervised_tokens": 2092
+      },
+      {
+        "processed_tokens": 2377,
+        "supervised_tokens": 1879
+      },
+      {
+        "processed_tokens": 2667,
+        "supervised_tokens": 2156
+      },
+      {
+        "processed_tokens": 2372,
+        "supervised_tokens": 2018
+      },
+      {
+        "processed_tokens": 2680,
+        "supervised_tokens": 2165
+      },
+      {
+        "processed_tokens": 2258,
+        "supervised_tokens": 1923
+      },
+      {
+        "processed_tokens": 2573,
+        "supervised_tokens": 2074
+      },
+      {
+        "processed_tokens": 2627,
+        "supervised_tokens": 2197
+      },
+      {
+        "processed_tokens": 2422,
+        "supervised_tokens": 1953
+      },
+      {
+        "processed_tokens": 2598,
+        "supervised_tokens": 2156
+      },
+      {
+        "processed_tokens": 2140,
+        "supervised_tokens": 1818
+      },
+      {
+        "processed_tokens": 2561,
+        "supervised_tokens": 2012
+      },
+      {
+        "processed_tokens": 2658,
+        "supervised_tokens": 2318
+      },
+      {
+        "processed_tokens": 2436,
+        "supervised_tokens": 2120
+      },
+      {
+        "processed_tokens": 2237,
+        "supervised_tokens": 1875
+      },
+      {
+        "processed_tokens": 2548,
+        "supervised_tokens": 2128
+      },
+      {
+        "processed_tokens": 2447,
+        "supervised_tokens": 2016
+      },
+      {
+        "processed_tokens": 2563,
+        "supervised_tokens": 2054
+      },
+      {
+        "processed_tokens": 2309,
+        "supervised_tokens": 1853
+      },
+      {
+        "processed_tokens": 2584,
+        "supervised_tokens": 2115
+      },
+      {
+        "processed_tokens": 2468,
+        "supervised_tokens": 2025
+      },
+      {
+        "processed_tokens": 2536,
+        "supervised_tokens": 2101
+      },
+      {
+        "processed_tokens": 2686,
+        "supervised_tokens": 2189
+      },
+      {
+        "processed_tokens": 2474,
+        "supervised_tokens": 1985
+      },
+      {
+        "processed_tokens": 2420,
+        "supervised_tokens": 2032
+      },
+      {
+        "processed_tokens": 2552,
+        "supervised_tokens": 1960
+      },
+      {
+        "processed_tokens": 2475,
+        "supervised_tokens": 1975
+      },
+      {
+        "processed_tokens": 2589,
+        "supervised_tokens": 2238
+      },
+      {
+        "processed_tokens": 2489,
+        "supervised_tokens": 2078
+      },
+      {
+        "processed_tokens": 2210,
+        "supervised_tokens": 1811
+      },
+      {
+        "processed_tokens": 2869,
+        "supervised_tokens": 2387
+      },
+      {
+        "processed_tokens": 2206,
+        "supervised_tokens": 1821
+      },
+      {
+        "processed_tokens": 2613,
+        "supervised_tokens": 2181
+      },
+      {
+        "processed_tokens": 2316,
+        "supervised_tokens": 1874
+      },
+      {
+        "processed_tokens": 2613,
+        "supervised_tokens": 2127
+      },
+      {
+        "processed_tokens": 2668,
+        "supervised_tokens": 2146
+      },
+      {
+        "processed_tokens": 2510,
+        "supervised_tokens": 2028
+      },
+      {
+        "processed_tokens": 2305,
+        "supervised_tokens": 1935
+      },
+      {
+        "processed_tokens": 2236,
+        "supervised_tokens": 1841
+      },
+      {
+        "processed_tokens": 2935,
+        "supervised_tokens": 2403
+      },
+      {
+        "processed_tokens": 2556,
+        "supervised_tokens": 2072
+      },
+      {
+        "processed_tokens": 2439,
+        "supervised_tokens": 2116
+      },
+      {
+        "processed_tokens": 2028,
+        "supervised_tokens": 1671
+      },
+      {
+        "processed_tokens": 2752,
+        "supervised_tokens": 2261
+      },
+      {
+        "processed_tokens": 2524,
+        "supervised_tokens": 2070
+      },
+      {
+        "processed_tokens": 2543,
+        "supervised_tokens": 2125
+      },
+      {
+        "processed_tokens": 2295,
+        "supervised_tokens": 1906
+      },
+      {
+        "processed_tokens": 2357,
+        "supervised_tokens": 1923
+      },
+      {
+        "processed_tokens": 2635,
+        "supervised_tokens": 2218
+      },
+      {
+        "processed_tokens": 2449,
+        "supervised_tokens": 1984
+      },
+      {
+        "processed_tokens": 2607,
+        "supervised_tokens": 2154
+      },
+      {
+        "processed_tokens": 2533,
+        "supervised_tokens": 2003
+      },
+      {
+        "processed_tokens": 2468,
+        "supervised_tokens": 2088
+      },
+      {
+        "processed_tokens": 2449,
+        "supervised_tokens": 1968
+      },
+      {
+        "processed_tokens": 2199,
+        "supervised_tokens": 1836
+      },
+      {
+        "processed_tokens": 2802,
+        "supervised_tokens": 2331
+      },
+      {
+        "processed_tokens": 2286,
+        "supervised_tokens": 2009
+      },
+      {
+        "processed_tokens": 2450,
+        "supervised_tokens": 2027
+      },
+      {
+        "processed_tokens": 2661,
+        "supervised_tokens": 2165
+      },
+      {
+        "processed_tokens": 2412,
+        "supervised_tokens": 2072
+      },
+      {
+        "processed_tokens": 2449,
+        "supervised_tokens": 2058
+      },
+      {
+        "processed_tokens": 2217,
+        "supervised_tokens": 1904
+      },
+      {
+        "processed_tokens": 2477,
+        "supervised_tokens": 2032
+      },
+      {
+        "processed_tokens": 2333,
+        "supervised_tokens": 1893
+      },
+      {
+        "processed_tokens": 2535,
+        "supervised_tokens": 2119
+      },
+      {
+        "processed_tokens": 2478,
+        "supervised_tokens": 2124
+      },
+      {
+        "processed_tokens": 2548,
+        "supervised_tokens": 2050
+      },
+      {
+        "processed_tokens": 2689,
+        "supervised_tokens": 2200
+      },
+      {
+        "processed_tokens": 2603,
+        "supervised_tokens": 2153
+      },
+      {
+        "processed_tokens": 2295,
+        "supervised_tokens": 1876
+      },
+      {
+        "processed_tokens": 2444,
+        "supervised_tokens": 2032
+      },
+      {
+        "processed_tokens": 2490,
+        "supervised_tokens": 1972
+      },
+      {
+        "processed_tokens": 2436,
+        "supervised_tokens": 2001
+      },
+      {
+        "processed_tokens": 2677,
+        "supervised_tokens": 2192
+      },
+      {
+        "processed_tokens": 2438,
+        "supervised_tokens": 2107
+      },
+      {
+        "processed_tokens": 2250,
+        "supervised_tokens": 1864
+      },
+      {
+        "processed_tokens": 2483,
+        "supervised_tokens": 1929
+      },
+      {
+        "processed_tokens": 2624,
+        "supervised_tokens": 2140
+      },
+      {
+        "processed_tokens": 2703,
+        "supervised_tokens": 2237
+      },
+      {
+        "processed_tokens": 2226,
+        "supervised_tokens": 1798
+      },
+      {
+        "processed_tokens": 2802,
+        "supervised_tokens": 2257
+      },
+      {
+        "processed_tokens": 2442,
+        "supervised_tokens": 2078
+      },
+      {
+        "processed_tokens": 2528,
+        "supervised_tokens": 2058
+      },
+      {
+        "processed_tokens": 2281,
+        "supervised_tokens": 1923
+      }
+    ],
+    "presentations": 1744,
+    "problem_exposures": {
+      "gsm8k/train/00027": 29,
+      "gsm8k/train/00125": 14,
+      "gsm8k/train/00177": 28,
+      "gsm8k/train/00239": 28,
+      "gsm8k/train/00315": 23,
+      "gsm8k/train/00328": 29,
+      "gsm8k/train/00350": 28,
+      "gsm8k/train/00553": 29,
+      "gsm8k/train/00814": 23,
+      "gsm8k/train/00903": 29,
+      "gsm8k/train/00976": 30,
+      "gsm8k/train/01058": 29,
+      "gsm8k/train/01059": 29,
+      "gsm8k/train/01113": 28,
+      "gsm8k/train/01160": 29,
+      "gsm8k/train/01695": 29,
+      "gsm8k/train/01966": 29,
+      "gsm8k/train/02095": 29,
+      "gsm8k/train/02129": 28,
+      "gsm8k/train/02225": 29,
+      "gsm8k/train/02421": 29,
+      "gsm8k/train/02638": 7,
+      "gsm8k/train/02657": 28,
+      "gsm8k/train/02778": 31,
+      "gsm8k/train/02941": 30,
+      "gsm8k/train/03110": 30,
+      "gsm8k/train/03200": 28,
+      "gsm8k/train/03298": 29,
+      "gsm8k/train/03380": 29,
+      "gsm8k/train/03395": 29,
+      "gsm8k/train/03431": 29,
+      "gsm8k/train/03542": 28,
+      "gsm8k/train/03827": 29,
+      "gsm8k/train/03845": 28,
+      "gsm8k/train/03984": 31,
+      "gsm8k/train/04565": 30,
+      "gsm8k/train/04734": 31,
+      "gsm8k/train/04847": 29,
+      "gsm8k/train/05043": 29,
+      "gsm8k/train/05125": 28,
+      "gsm8k/train/05163": 29,
+      "gsm8k/train/05714": 21,
+      "gsm8k/train/05717": 29,
+      "gsm8k/train/05791": 29,
+      "gsm8k/train/05795": 29,
+      "gsm8k/train/05806": 29,
+      "gsm8k/train/05974": 29,
+      "gsm8k/train/06090": 28,
+      "gsm8k/train/06160": 28,
+      "gsm8k/train/06242": 30,
+      "gsm8k/train/06251": 29,
+      "gsm8k/train/06327": 29,
+      "gsm8k/train/06404": 29,
+      "gsm8k/train/06605": 30,
+      "gsm8k/train/06615": 31,
+      "gsm8k/train/06655": 29,
+      "gsm8k/train/07027": 30,
+      "gsm8k/train/07033": 28,
+      "gsm8k/train/07045": 28,
+      "gsm8k/train/07163": 29,
+      "gsm8k/train/07263": 29,
+      "gsm8k/train/07349": 31
+    },
+    "processed_nonpadding_tokens": 637053,
+    "row_exposures": {
+      "0": 8,
+      "1": 7,
+      "2": 7,
+      "3": 8,
+      "4": 7,
+      "5": 7,
+      "6": 7,
+      "7": 8,
+      "8": 8,
+      "9": 7,
+      "10": 7,
+      "11": 7,
+      "12": 7,
+      "13": 7,
+      "14": 7,
+      "15": 7,
+      "16": 7,
+      "17": 7,
+      "18": 8,
+      "19": 7,
+      "20": 7,
+      "21": 8,
+      "22": 8,
+      "23": 7,
+      "24": 7,
+      "25": 7,
+      "26": 8,
+      "27": 7,
+      "28": 7,
+      "29": 7,
+      "30": 7,
+      "31": 7,
+      "32": 7,
+      "33": 7,
+      "34": 8,
+      "35": 7,
+      "36": 7,
+      "37": 7,
+      "38": 7,
+      "39": 7,
+      "40": 7,
+      "41": 8,
+      "42": 8,
+      "43": 7,
+      "44": 7,
+      "45": 8,
+      "46": 8,
+      "47": 8,
+      "48": 8,
+      "49": 7,
+      "50": 7,
+      "51": 7,
+      "52": 7,
+      "53": 7,
+      "54": 7,
+      "55": 8,
+      "56": 7,
+      "57": 8,
+      "58": 7,
+      "59": 8,
+      "60": 8,
+      "61": 7,
+      "62": 7,
+      "63": 7,
+      "64": 7,
+      "65": 8,
+      "66": 7,
+      "67": 8,
+      "68": 7,
+      "69": 7,
+      "70": 7,
+      "71": 7,
+      "72": 8,
+      "73": 7,
+      "74": 7,
+      "75": 7,
+      "76": 8,
+      "77": 7,
+      "78": 7,
+      "79": 7,
+      "80": 8,
+      "81": 7,
+      "82": 8,
+      "83": 8,
+      "84": 7,
+      "85": 7,
+      "86": 7,
+      "87": 8,
+      "88": 7,
+      "89": 7,
+      "90": 7,
+      "91": 8,
+      "92": 7,
+      "93": 7,
+      "94": 7,
+      "95": 7,
+      "96": 8,
+      "97": 8,
+      "98": 7,
+      "99": 8,
+      "100": 8,
+      "101": 7,
+      "102": 7,
+      "103": 7,
+      "104": 7,
+      "105": 7,
+      "106": 7,
+      "107": 7,
+      "108": 7,
+      "109": 7,
+      "110": 7,
+      "111": 7,
+      "112": 8,
+      "113": 7,
+      "114": 7,
+      "115": 8,
+      "116": 8,
+      "117": 8,
+      "118": 7,
+      "119": 7,
+      "120": 8,
+      "121": 7,
+      "122": 7,
+      "123": 7,
+      "124": 7,
+      "125": 7,
+      "126": 7,
+      "127": 7,
+      "128": 7,
+      "129": 7,
+      "130": 8,
+      "131": 7,
+      "132": 7,
+      "133": 7,
+      "134": 7,
+      "135": 7,
+      "136": 7,
+      "137": 7,
+      "138": 7,
+      "139": 8,
+      "140": 8,
+      "141": 7,
+      "142": 7,
+      "143": 7,
+      "144": 8,
+      "145": 7,
+      "146": 7,
+      "147": 7,
+      "148": 7,
+      "149": 7,
+      "150": 7,
+      "151": 8,
+      "152": 7,
+      "153": 7,
+      "154": 7,
+      "155": 8,
+      "156": 8,
+      "157": 8,
+      "158": 8,
+      "159": 7,
+      "160": 8,
+      "161": 7,
+      "162": 7,
+      "163": 7,
+      "164": 8,
+      "165": 8,
+      "166": 8,
+      "167": 7,
+      "168": 7,
+      "169": 7,
+      "170": 7,
+      "171": 7,
+      "172": 8,
+      "173": 7,
+      "174": 7,
+      "175": 7,
+      "176": 7,
+      "177": 7,
+      "178": 7,
+      "179": 7,
+      "180": 7,
+      "181": 7,
+      "182": 7,
+      "183": 7,
+      "184": 7,
+      "185": 7,
+      "186": 8,
+      "187": 7,
+      "188": 8,
+      "189": 7,
+      "190": 7,
+      "191": 7,
+      "192": 7,
+      "193": 7,
+      "194": 8,
+      "195": 7,
+      "196": 7,
+      "197": 8,
+      "198": 7,
+      "199": 7,
+      "200": 7,
+      "201": 7,
+      "202": 7,
+      "203": 7,
+      "204": 7,
+      "205": 7,
+      "206": 7,
+      "207": 8,
+      "208": 7,
+      "209": 8,
+      "210": 7,
+      "211": 7,
+      "212": 8,
+      "213": 7,
+      "214": 7,
+      "215": 7,
+      "216": 7,
+      "217": 8,
+      "218": 7,
+      "219": 7,
+      "220": 7,
+      "221": 7,
+      "222": 7,
+      "223": 7,
+      "224": 7,
+      "225": 7,
+      "226": 7,
+      "227": 8,
+      "228": 7,
+      "229": 7,
+      "230": 7,
+      "231": 7,
+      "232": 8,
+      "233": 8,
+      "234": 8,
+      "235": 7,
+      "236": 8,
+      "237": 7,
+      "238": 7,
+      "239": 7
+    },
+    "supervised_response_tokens": 524287,
+    "text_exposures": {
+      "[\"gsm8k/train/00027\", \"1d660980e0c449703ceee852cd9461b407990b1901f88454488851475390c58c\"]": 7,
+      "[\"gsm8k/train/00027\", \"5f4598485f7fbcdf6533080d040c4bf41898f601aa4d64fe9e3a95a7a40ac1df\"]": 8,
+      "[\"gsm8k/train/00027\", \"af5d96d5a61ed89897c7d81e24faa688e83abfa5b8b47be0a8e294bff2a2e96d\"]": 7,
+      "[\"gsm8k/train/00027\", \"ec1fcab3cca3f77c28313898049eb55f3758181a16cdfdb7535ae47faff8cf84\"]": 7,
+      "[\"gsm8k/train/00125\", \"d04eeebcbf108fc792c6dded72db1e24849c471011a38ebbc527c21849617265\"]": 7,
+      "[\"gsm8k/train/00125\", \"f49819ece30ea2297f6b58fed20f6f4ab1ebfa2e097e3b25778f070f9a109ff4\"]": 7,
+      "[\"gsm8k/train/00177\", \"2bb005b1a5dfb3a5c0c2dafb264cc6aedb980186e9355f14ef4fd2082b36791d\"]": 7,
+      "[\"gsm8k/train/00177\", \"5b6bd863678cd6eaca90ea33af4f9e730fa3ac6a3c62c80beca3e6b26361df58\"]": 7,
+      "[\"gsm8k/train/00177\", \"aa758ed4a3be9c7033b15552dadccdf025f93730ba26080ad51c8f0d401c312b\"]": 7,
+      "[\"gsm8k/train/00177\", \"ae95f334a1e79b2f4dfe8ef2959000cf0afd6b76e835f46d24d4cf3519742bf3\"]": 7,
+      "[\"gsm8k/train/00239\", \"254c879216733ccc63e9141320b061f6b04198e12248001934334972e2604db8\"]": 7,
+      "[\"gsm8k/train/00239\", \"52a5798222855cc5f21e550c239308f30e820c909ccb86eb204dc58a41c0b809\"]": 7,
+      "[\"gsm8k/train/00239\", \"ba435f4f7df544e2d6bbea2c5ddfda8c59403a59c9088e75bcbd55a33a84d3f7\"]": 7,
+      "[\"gsm8k/train/00239\", \"bc2fabc6e700b72a68813158bf7d411239550a5bd265eaf41c8ee973651c7da3\"]": 7,
+      "[\"gsm8k/train/00315\", \"a4f1db3f40c0a7c1af5b6c04ec8c415b34f9654b74bec8f1ae26d989aec84960\"]": 8,
+      "[\"gsm8k/train/00315\", \"b5f5c07edc10cbdabc34d6f8258ca7cabaf247a6d6cf079edc86a9a381b0856f\"]": 7,
+      "[\"gsm8k/train/00315\", \"d9adfa7fe5ba108b3cf23b1baf7861fda1b5f243b1f1e5ef92895b9e8d130cbe\"]": 8,
+      "[\"gsm8k/train/00328\", \"0171ebce0aba1d14c717b47831854d3d2423c312f88d20dd90259b31406a1b77\"]": 7,
+      "[\"gsm8k/train/00328\", \"248fba54eb109d0bb5fa60a388a75c2bc14e6ac5b9702a961974ff67b3c8346c\"]": 8,
+      "[\"gsm8k/train/00328\", \"24fc203a783e05c0432e7d11478b4d87796239e0dfc809584de199ab77b9e877\"]": 7,
+      "[\"gsm8k/train/00328\", \"e1e926957583db5e0fb838c34a257c844a6dfc89045361b888ce3d5396860f9d\"]": 7,
+      "[\"gsm8k/train/00350\", \"01d665a354d6ab8abfba75a755b91bdaa3e8060ebcdcf0e6133bbf30ac6cce75\"]": 7,
+      "[\"gsm8k/train/00350\", \"bd36de33ff8fd98816e22dfbc6269fbcbe56958283e99a6af8715f9b354b1cba\"]": 7,
+      "[\"gsm8k/train/00350\", \"d2022e4b959ed047e40c0208ddd72b489b3cbd0d5020003cdc28f05ab7cde559\"]": 7,
+      "[\"gsm8k/train/00350\", \"eb53022f9082d06f41e5793b31966452c1f2a43beceb4b5e723f690ab8962a11\"]": 7,
+      "[\"gsm8k/train/00553\", \"2c9e973089a86cc226f957921158352e5323cc39a7f661b97da82643a82b7fa2\"]": 7,
+      "[\"gsm8k/train/00553\", \"8b099257ed7708d8397b8b7d4bb966cc703932e7f7d95aa002596725fdb45e69\"]": 7,
+      "[\"gsm8k/train/00553\", \"b12d7e39c40b047fae90774c85dadba2f0e688db655c4aa22441db00b6db96e7\"]": 8,
+      "[\"gsm8k/train/00553\", \"e13ad9355da6027c29d0b323e368b447982c53fc01a911308a7739eabea0dacf\"]": 7,
+      "[\"gsm8k/train/00814\", \"0fea04438e79e780c5c54c50eb696a42d51922e1b579752c93759aaab658ed60\"]": 8,
+      "[\"gsm8k/train/00814\", \"7c2abb2e8fd5b60da0a61dc85bea4c54f48a7ebec13898d38f17d768c9c52284\"]": 7,
+      "[\"gsm8k/train/00814\", \"9775ce50de2f394a937c2a969de897e3e93adcbfeebf19398ee285c1a814a36d\"]": 8,
+      "[\"gsm8k/train/00903\", \"2af5ecb3198b73f24cc6ba65aa2a5c717018f5e5ada1077497a615e6c6a6838e\"]": 7,
+      "[\"gsm8k/train/00903\", \"ccfe6e8a5d0941d6cecb3a21e14aee59091b9b69bfd17737d47f6d6387866830\"]": 7,
+      "[\"gsm8k/train/00903\", \"cdf9f60ff786d7b4d20ec07a8412ef087bacc237881cb778da6966b31f322ece\"]": 7,
+      "[\"gsm8k/train/00903\", \"cfdb4a1d31f35d1f8155cbbb179c958bd3c4374dd39689650ec2e4719abfaffc\"]": 8,
+      "[\"gsm8k/train/00976\", \"16d348ac5e2cf7443d9584cb1da557eeaad189494815ccf71bf0ffeab966941b\"]": 8,
+      "[\"gsm8k/train/00976\", \"1f138f153b8ec121549cf9b526b9e0c1dd07f63b697d4602cf85ce0f285a3848\"]": 7,
+      "[\"gsm8k/train/00976\", \"4f0d69e118841d69d09f93309437c88eee789e2b9b156a8ffd2d6469b59ed057\"]": 7,
+      "[\"gsm8k/train/00976\", \"7549652ac631b6077d74f3e5b3fccf5806861d26c796e1b0cb17ed013875a982\"]": 8,
+      "[\"gsm8k/train/01058\", \"417580426c4cf70b0718353e564361ed348935105c068800699bf12d90b9f40c\"]": 7,
+      "[\"gsm8k/train/01058\", \"4a4ef05210a072e2193ad7dbd740e8122c989dd56b0b9e11372c8aae7144ecdb\"]": 8,
+      "[\"gsm8k/train/01058\", \"78ddae78e6352ebec54d5371a5265a75192cf9608e03c42a7ebb4abd78d2f44c\"]": 7,
+      "[\"gsm8k/train/01058\", \"cd8447dbe14207ff04b607a7fc3d1c7bae12e9686510437512c42e34fbc22308\"]": 7,
+      "[\"gsm8k/train/01059\", \"0482529a32c7d43673ad6ba0676ad12c03694d2b5a4f52aa04a968b172f530a7\"]": 8,
+      "[\"gsm8k/train/01059\", \"0b72dc9adb3082b7247341cdbe828a1563da5fa64593255d2fde30ea99ba9537\"]": 7,
+      "[\"gsm8k/train/01059\", \"7b9cd1542dcca8620daf86de6dcd977ae05a6d8c434775267c79ec601ffd319f\"]": 7,
+      "[\"gsm8k/train/01059\", \"ae78afe39d23e84b8968ed107357e52831f452d18f05044ea5429cc8e8f3ca96\"]": 7,
+      "[\"gsm8k/train/01113\", \"0c327a83ca75692088189792f2e945636f0d3e3ad35d30f2bdc38f751de93ab1\"]": 7,
+      "[\"gsm8k/train/01113\", \"cf2675e58c10733ddcaeff3997f57048ddb37bf1f2a97737b0deb08f25cedc9f\"]": 7,
+      "[\"gsm8k/train/01113\", \"d0bdaf43a1daafe9970a033027a08d5755da6b567253233e547e76527287feaf\"]": 7,
+      "[\"gsm8k/train/01113\", \"fd5fdff57c8aafc67e2f2e5ffc8d493fd68030554f8f014afb0bfd4b42426989\"]": 7,
+      "[\"gsm8k/train/01160\", \"2caf8117ad131cb489e2a664a9b423af599390aa3ed834a8441a830962512adf\"]": 7,
+      "[\"gsm8k/train/01160\", \"7fbba30dc50c414fcfc5c1bf8d0ebe7d2ad11a3ad3707d8104a0d02f49d9615b\"]": 7,
+      "[\"gsm8k/train/01160\", \"b8ca838b4bd273b2e6c3ea877a2442f551cace82cd67b4eab15740d87e19b38f\"]": 8,
+      "[\"gsm8k/train/01160\", \"d065af626a1a14b95bb656e6d0416de28b66a7d3c626781475ba9100bfec1581\"]": 7,
+      "[\"gsm8k/train/01695\", \"608c79cd925d09bf66e772693ea816ca53794d055a9925ae3a66c25dac72d9eb\"]": 7,
+      "[\"gsm8k/train/01695\", \"98c14540039865d65efa4aa171d8ffba216101a4616be8caefd2cab8258e6fc5\"]": 7,
+      "[\"gsm8k/train/01695\", \"e7c341a9af95ac1c8f0e1cc52a7c3afd7ba42c07245a4d79a3e2f55ab0de9885\"]": 7,
+      "[\"gsm8k/train/01695\", \"e9013e6e616308db5c453613505e235ae140d06b810892600fb27e37b8ef2b40\"]": 8,
+      "[\"gsm8k/train/01966\", \"3e6b244e2819bb4cfb6e6c614ef010484cdc9653512984d33e0fb14e0e7a737e\"]": 7,
+      "[\"gsm8k/train/01966\", \"951eab1f181f7ed3026ef5d266b73c4abf7915a42c75b6bd66562175d5a988c5\"]": 7,
+      "[\"gsm8k/train/01966\", \"c2ad66cfbea1e18004a47db5b29848346994c3f347e8881641334cff571a449f\"]": 7,
+      "[\"gsm8k/train/01966\", \"e19596ed508e114ccff47530ae08ed7bb6e54bd888c627c8084c395973c9476b\"]": 8,
+      "[\"gsm8k/train/02095\", \"a13d8f4ef68ae22e56455b7ac703934a43855feff509e18e8fa27d2e7e5da321\"]": 8,
+      "[\"gsm8k/train/02095\", \"a6b99ce1809ec9d46fe127b9e0d27d352d8108b7d51a4a902890f98a3f335610\"]": 7,
+      "[\"gsm8k/train/02095\", \"d23c5135dc4683d9ead95e27b3ac3dc1b1cfb785426978ab359f6e111bee5fc0\"]": 7,
+      "[\"gsm8k/train/02095\", \"f6697495c8e957d4555457bcc1286916d1077da063ad27f2fd577a1da9cd306f\"]": 7,
+      "[\"gsm8k/train/02129\", \"71dd9f5436543001fbf1488c085017f717c769c96844bd83bbacd5ae83719ce8\"]": 7,
+      "[\"gsm8k/train/02129\", \"7c10c3fce99a802cc352d833a986e48f106e181917583c2dbadb502902ac6a28\"]": 7,
+      "[\"gsm8k/train/02129\", \"cb94e7004abdb019595b279ffca5fbda82319b91110d1c17ceca03ca61d06575\"]": 7,
+      "[\"gsm8k/train/02129\", \"d130a7232b81706220e98028d5d7c1346818d5076fc060b7a45c21c2e77d43dd\"]": 7,
+      "[\"gsm8k/train/02225\", \"212a35d067b598dfafa0710f15bd5cac50ebce894cbe9c29d701ba3290902cd9\"]": 7,
+      "[\"gsm8k/train/02225\", \"73d820a47caa772401019202579e8d9ac2258962a94e2ef8d572a4ee7f6c1edb\"]": 7,
+      "[\"gsm8k/train/02225\", \"bbeb413f3c5ed1392ebbbde18c8533897351797aa9d5ab712a012cae5fd24e60\"]": 7,
+      "[\"gsm8k/train/02225\", \"df3b642365057aea792999a22327ddf9f407434272cc550139b3c731aa903e46\"]": 8,
+      "[\"gsm8k/train/02421\", \"05729909f1a55f0ec7e92ee412f4589315764e33855d222da5a81ffae7949173\"]": 7,
+      "[\"gsm8k/train/02421\", \"52281f239d51cd4c3ff65fca59efec48971724c5ac6573b93cc0446de33c4392\"]": 8,
+      "[\"gsm8k/train/02421\", \"9bd09ce4c9c1a6fd761e03d4b1751a293ccadf572157a0a5b39aed0e7ddfde01\"]": 7,
+      "[\"gsm8k/train/02421\", \"cc4e15ae9163933d4f4803c6607b16cbb327ebe50fe33b04b4474cae132173c1\"]": 7,
+      "[\"gsm8k/train/02638\", \"6c376c47df55445731038d168b2f1049606b04b4822536ee64e8de76348452e5\"]": 7,
+      "[\"gsm8k/train/02657\", \"4d862b15bd05b4f3f4dfb79fb6ecb862c3398a9d0fd6b77315042df06244ea0e\"]": 7,
+      "[\"gsm8k/train/02657\", \"9a03f602db85f4f1d00445442aefbc574d45f6075c823b7fec62a0499197a59a\"]": 7,
+      "[\"gsm8k/train/02657\", \"cfc1652337ffb2103c22fcda304c85417fca3e318828bc8d96562826fe1dbfb9\"]": 7,
+      "[\"gsm8k/train/02657\", \"d820e989f4c18196bcd12546ea1a22a612b52d18326d8a4a9382a5bff7871b3f\"]": 7,
+      "[\"gsm8k/train/02778\", \"7155b451c9f0305e64bf37310ba98d2a3da6ad025c46fda16280f37b40c90965\"]": 8,
+      "[\"gsm8k/train/02778\", \"73575704e6e479394c5a7487f5efb6464623ad729279bc1be20e83adc0e41ac3\"]": 8,
+      "[\"gsm8k/train/02778\", \"91aa3367fbec40e3759815a522c92ed2313fd13b3e21ae8f9cc9fa606d9e32c7\"]": 7,
+      "[\"gsm8k/train/02778\", \"efb7528d0cac64450e66c823b4fabc2d8ac27bf75dc0aa6ad31597f3c0367467\"]": 8,
+      "[\"gsm8k/train/02941\", \"5a7818d1239c2d0e187f6b453bbd2220b1125b2cc6fe65eeea2e76e542567788\"]": 7,
+      "[\"gsm8k/train/02941\", \"9a0471a3b4cecf3bd9342a8feb7f2e9b825ab742e04214de610960504b8b4b37\"]": 7,
+      "[\"gsm8k/train/02941\", \"c93b4bd024248fdf519a7f0e177cda161160fedc32b0b3a3a4514bfca7165c6b\"]": 8,
+      "[\"gsm8k/train/02941\", \"d6c143a5314b00aa3a32a8379a8edbf7f7328e9c5ead9dd316ceb29bb35474a8\"]": 8,
+      "[\"gsm8k/train/03110\", \"2cfca56ea87c8bc38c2ca850259d69ec24098ca7154b16fd68974a37974a1f23\"]": 7,
+      "[\"gsm8k/train/03110\", \"510e0bde372f3b6f7babfd500fb2ca43302144cdfe989c8bd0bdc43be817bfac\"]": 8,
+      "[\"gsm8k/train/03110\", \"777546d028b6c9d5389ee993aac1efeb923c75673d2e9172a9b45f595443e05a\"]": 8,
+      "[\"gsm8k/train/03110\", \"8389b2391e506d04c652b72f164925639f7fc6e9297f41ca0ac2dc2aee6f056f\"]": 7,
+      "[\"gsm8k/train/03200\", \"02ff31110cb4210a47ed39ad618c5364198b5fcaecea1575fb64ad8ec47ef3b7\"]": 7,
+      "[\"gsm8k/train/03200\", \"6a67fba168ba62a3eeaf341dac620b2608b3a75476b6c5eea9e4bc0c0b41132f\"]": 7,
+      "[\"gsm8k/train/03200\", \"bff65bf523f3931a4c89f3661cda5643f0cacf0ce33f4ba35131c579e92e2df1\"]": 7,
+      "[\"gsm8k/train/03200\", \"c7d8bc21ac9869e760fa93140d670766ad3b29aa73fecbdfea00fbc95c05aaf5\"]": 7,
+      "[\"gsm8k/train/03298\", \"33d33c1f77b74984d7b29ad3fc2cd9b29579ea2a31e64a66926990e15b46afe1\"]": 7,
+      "[\"gsm8k/train/03298\", \"3dde1dab54dbf57d016ad23d90e1ecebbfa54a70765b2062f0c0f47bf8a2af34\"]": 7,
+      "[\"gsm8k/train/03298\", \"7aa8e2e0dd8179511b50cb6524ddb786c6ad80dcc84861cd868c55481f9406a5\"]": 7,
+      "[\"gsm8k/train/03298\", \"ac65d336bea7924cf85ec2d8eb4ebe9279a3866b6cde11b86bfee08f66e9f178\"]": 8,
+      "[\"gsm8k/train/03380\", \"130e050d15855cc08e3699645e36532666bf4a84daeed31b7d9b33dd101f8386\"]": 8,
+      "[\"gsm8k/train/03380\", \"563ef5371765e880981f30f25fc107a0e28b4170d2974069e39b3760210a51b7\"]": 7,
+      "[\"gsm8k/train/03380\", \"93e2021d64dc6dcba971dfa8be3a4973d025749e1794f95c2f9a0c1cbed71a73\"]": 7,
+      "[\"gsm8k/train/03380\", \"b90ea4eac5a3f1cf4c0edf5d084f2b17909b0144b36306cf3b972935a6ef0b89\"]": 7,
+      "[\"gsm8k/train/03395\", \"48beb1031584b95a73e8aa7473bbb6eaa80fd86510ad1774a65954c4e96dbb7c\"]": 7,
+      "[\"gsm8k/train/03395\", \"82d01c751a7785973df59aeac89a80aa91bceed0f248540818ab5e35e7c363a7\"]": 7,
+      "[\"gsm8k/train/03395\", \"89d3bb20393459df9841e5ac4c762de7bd2216768a8b367e608a5d5326eeaa31\"]": 8,
+      "[\"gsm8k/train/03395\", \"ac64d46f21e7209d75f1a0243ca79b950a7d4dca6c124e7d315e4c12eb8445b9\"]": 7,
+      "[\"gsm8k/train/03431\", \"380a47bd61f3ab27e93b08f93494de3d19bf0db2c13efa4f5cacf2871d6b2816\"]": 8,
+      "[\"gsm8k/train/03431\", \"3d571fa23327862d79804775c65ccdaf55a6f25869460395b4586ed3b20f5de1\"]": 7,
+      "[\"gsm8k/train/03431\", \"66156e996b0b3bb3f8776da00da14e11916c29683ee6e7f4470031ea48f75846\"]": 7,
+      "[\"gsm8k/train/03431\", \"8d4bfee615751cd4e5d86dba3f4b7cedc20c666b6a2d4dc0ad910aa8a6e966eb\"]": 7,
+      "[\"gsm8k/train/03542\", \"3a522e39d82cc52b321ddec227c8d43e70e5021c446939f7ef88477697a85388\"]": 7,
+      "[\"gsm8k/train/03542\", \"6b1658ae686306c8e6490dab61b09e7a96e3c06c84d24b3d4170e4a87ce44512\"]": 7,
+      "[\"gsm8k/train/03542\", \"af9b5fae7553327fd7910d5d11a85766e6c9a94286d8c8486ad753e4ca614737\"]": 7,
+      "[\"gsm8k/train/03542\", \"c2ad45c929e2c2f45fa82b3f4f845f61e7751838ea4b10e2100ffc1f3c744d7a\"]": 7,
+      "[\"gsm8k/train/03827\", \"081d9a59995a57c70660a31d130c6de30d9e3729e121126c7f3b5595f6bb3d84\"]": 7,
+      "[\"gsm8k/train/03827\", \"358cf7b758732c3ee28458b35a360764f97abe4f63029659fbbf64107636812f\"]": 8,
+      "[\"gsm8k/train/03827\", \"58b17a06048231b72ce123a0f174cdba909a11eab282fdda7a1fa2e44540a5a2\"]": 7,
+      "[\"gsm8k/train/03827\", \"e736a134ae61ca18a92dd75d96af11b1078ddafd368922498f0bc850da4f379b\"]": 7,
+      "[\"gsm8k/train/03845\", \"694c51e5e5b422b0059b2064a2870fe6da903fc00d9bd41d78aeba4e2dd0fce3\"]": 7,
+      "[\"gsm8k/train/03845\", \"8ad6450e0485c52545e226c7fe5bb137be555bb548c960d1f35e09ed7534d87e\"]": 7,
+      "[\"gsm8k/train/03845\", \"98a48e8935ef8f8621e4ee2d6c7eded97632c7cd8488955b1276b5e21980b206\"]": 7,
+      "[\"gsm8k/train/03845\", \"beb2201de5a35a3898bc6623a9269e41f048abaa91f18fafc459604749187d56\"]": 7,
+      "[\"gsm8k/train/03984\", \"244f4940dbeb201cef68cb191f0c75caa3c1b2c0f1d438ef7576c6d58061bc6b\"]": 8,
+      "[\"gsm8k/train/03984\", \"2b5ed94bf26c49e3f2abf59409cea7a942489f9c6d99a950e60cc9e6691efde4\"]": 8,
+      "[\"gsm8k/train/03984\", \"9e40e2962d234941a0083c0ed4044b4105c144ade6efa7e59a1cd80ceba635e4\"]": 7,
+      "[\"gsm8k/train/03984\", \"cdc0e3c199b8cc74dfa8da7bad35cab3e6184b330c670bfc0d527d4cf1c1c99b\"]": 8,
+      "[\"gsm8k/train/04565\", \"7a4f3dd4ef9753cbf9ec9f6c7c916f12f388d6e74d519a52671179c070dc07a0\"]": 7,
+      "[\"gsm8k/train/04565\", \"88e300bfcb111c9f6801384f23841fbb0327841c8b76c9c4e2c3c1984848836a\"]": 8,
+      "[\"gsm8k/train/04565\", \"bd761494e8973218f8857c9abdc80d2e7063d365556755bb36a9d9747fc64cd7\"]": 8,
+      "[\"gsm8k/train/04565\", \"c019277c67a39a560a685c3ded987f326bf41175b866b1110ccdfa71cb434b4f\"]": 7,
+      "[\"gsm8k/train/04734\", \"43e7a14dcaa40386649c773fbb29961c3751752dc6802d5d2b59f35fe755dd8f\"]": 8,
+      "[\"gsm8k/train/04734\", \"7e4b9772692482e6e1b1fff04ba5cf92ce41f0e939f680896a3fedef189280c8\"]": 8,
+      "[\"gsm8k/train/04734\", \"aa52230e02d64bdbdb09b00d409847f23833c7c542aae7638080d32df02e3276\"]": 7,
+      "[\"gsm8k/train/04734\", \"cc26ff08f7e2effbab0cd48a402de9c13a960103aea43dfd0e7b1028fa63f314\"]": 8,
+      "[\"gsm8k/train/04847\", \"1a88efa2e36c80288824b7df5cbe951b5732e130d8cbc088f7c82d91cabb78b5\"]": 8,
+      "[\"gsm8k/train/04847\", \"270541a382ae901655d653bffbe42fdbdf013d672fab8e17ae782f5ff30f4f25\"]": 7,
+      "[\"gsm8k/train/04847\", \"3eb82494427281936dd45417ef7e30f7d7fab2bff7d207720e392ef10cee828a\"]": 7,
+      "[\"gsm8k/train/04847\", \"61b13fc5503badfbf27dd8517041f8212e769006c2099ef2cd00a9e3fe82a674\"]": 7,
+      "[\"gsm8k/train/05043\", \"7ac63a5a66dfae25e4e83ccf8a0a3ab708685cbd86c5da67480b909034db1e4c\"]": 7,
+      "[\"gsm8k/train/05043\", \"ad3268626657658f55d5126ca8878796f8d79ec171cf433d1e14c1563b16df8e\"]": 8,
+      "[\"gsm8k/train/05043\", \"d98cd4e3414945b375d3bde11884468be99dfe571426edbb55df3aee0e87b004\"]": 7,
+      "[\"gsm8k/train/05043\", \"dc66a474367f238be6b1f218b8bf4f4a1d3b7a00679ba961e92e57fdd3b8dbb7\"]": 7,
+      "[\"gsm8k/train/05125\", \"0583e464f16e8f9c823503f2c4e850174ee73496696e208b1f3c23c4a09288da\"]": 7,
+      "[\"gsm8k/train/05125\", \"100914163f39a698fe2e5e0c4c32e50e5e753fc4e2332fdd6cd40089fef96be5\"]": 7,
+      "[\"gsm8k/train/05125\", \"2c3f976fc71fa3cd9b78a5a1df4fc59255edc180f44f1f63c7b904bd1746eebf\"]": 7,
+      "[\"gsm8k/train/05125\", \"552981a89b446bee457ec51a1e2bcc0386002626465760285d57f06a155c2f23\"]": 7,
+      "[\"gsm8k/train/05163\", \"09c4772b874cb96edeb0bf85f32d9718d0d3fe19cd05d92aef4b4540d921b0b6\"]": 7,
+      "[\"gsm8k/train/05163\", \"56658f817ef900d6ca9e8aede47f8190b41ee1563520d114555989b1fc7ce07c\"]": 7,
+      "[\"gsm8k/train/05163\", \"f03e73315d92d43724912975721d026d6ef06fe8dfee03f14579b4da41f17f8a\"]": 7,
+      "[\"gsm8k/train/05163\", \"f122bdf0b3e9b802fa984e987b31272833f2450503502b2ec52721eb9435c834\"]": 8,
+      "[\"gsm8k/train/05714\", \"23acceae7389224287edcdd95d5137a4b75facb71dccce059c6bc2cad6542e3f\"]": 7,
+      "[\"gsm8k/train/05714\", \"6bdc976200f500f51aaafe95da5089b36857c589c656b7a53e91a66f1b004660\"]": 7,
+      "[\"gsm8k/train/05714\", \"9ba7f3de23b8c2c6bdbcd714d11ce15a7b65875d1e51c7bd0033a49e05d60ac2\"]": 7,
+      "[\"gsm8k/train/05717\", \"15d6575a50dd6616899044206292d393ae38cdc9be1b5cec68ad801bdc90beb3\"]": 7,
+      "[\"gsm8k/train/05717\", \"5375f82e91205f4ec1e51e18119d9af0d49894c9caa37d86792bd0ffa7579299\"]": 8,
+      "[\"gsm8k/train/05717\", \"64bcc7e1270f7bdfae1a111141f7d3f0bafcd19184be5851e265cc1e77cb94ad\"]": 7,
+      "[\"gsm8k/train/05717\", \"dbb00fddb998cf66f6a57485779fd9e23765b257f5eced83b13a5198a0f9d9c4\"]": 7,
+      "[\"gsm8k/train/05791\", \"457fa2987fdd2c3948b2bfc7e8beacfdcd7bd327bbc3b0a49b7b72a0a88c234f\"]": 8,
+      "[\"gsm8k/train/05791\", \"84b19b20d89b896efc5a1f386cb72fc9f4a5d4fbc045d2ef864c1563a4a8fdd1\"]": 7,
+      "[\"gsm8k/train/05791\", \"c08a4b6753255187d77799eafa8b60c853d409f183f6ac5a8b4d4eb179b16ad8\"]": 7,
+      "[\"gsm8k/train/05791\", \"e2100226a838183eec9dbbb0002c2fdc8227f62a07ac5897aa8c9193e46e7763\"]": 7,
+      "[\"gsm8k/train/05795\", \"0c374b07f454252c54586cc809a5ec94f296fa59e73092b24af7a649e113b408\"]": 7,
+      "[\"gsm8k/train/05795\", \"8b13b58d0a1513707d287b00d376d42c9fe6c86a3106811c6416e072705c28ee\"]": 8,
+      "[\"gsm8k/train/05795\", \"b65af37582894a01b7d55376208c03bd39f0498c4a391a6970c0610c0afc7fea\"]": 7,
+      "[\"gsm8k/train/05795\", \"dd9fe47cd536137e0e0024fe0824280ab6b51c076410614e5132d79cd125ad4e\"]": 7,
+      "[\"gsm8k/train/05806\", \"36036cb3ae314057ce0412a2bf53b3d57430529eb90fe7dddae61c58c7b5216b\"]": 7,
+      "[\"gsm8k/train/05806\", \"47889dde4fde2468c90c7c02e8710de22601a3ffc139d24cccc66e9d85a115b8\"]": 8,
+      "[\"gsm8k/train/05806\", \"b61b2c0e316a479349d803ed45f6af34909e7d2bee1033d083072ff38a66aa9d\"]": 7,
+      "[\"gsm8k/train/05806\", \"e815ad6f1bd1d699c9f09fe766b2b1a962ab7a9ad6badc3b23ff1a17f8b0efb9\"]": 7,
+      "[\"gsm8k/train/05974\", \"3bab6ccd48e3e5006190b68ef38a9ee8d5516cb65163e6123866ee1b094cdfc8\"]": 7,
+      "[\"gsm8k/train/05974\", \"778605bb28fdc1726094a78486ad9c570b3d00ddabf0d7cecfb6c93ef7221d96\"]": 7,
+      "[\"gsm8k/train/05974\", \"98f5111a2ea2985adf08ce154db5b64aaf9b9da437929853c89dabb0670e30cc\"]": 7,
+      "[\"gsm8k/train/05974\", \"d8096aa64ed6d66a3d734dec816a279d71d84c96001ee9495f8e6dd0c974d0ca\"]": 8,
+      "[\"gsm8k/train/06090\", \"5c22eb1cf55a1e08e3b08305c791774b5a6b30ea7196ef8604c7cadd47f12ba7\"]": 7,
+      "[\"gsm8k/train/06090\", \"98dd8ae1c50c9a0c1a55e86bff11b2f3d9cb65ca10fb7f8564a48070cadd0a72\"]": 7,
+      "[\"gsm8k/train/06090\", \"a0c39aca7d4b9e4cbc4dead850423cf3fff739b96fe6aeaed48446633e742143\"]": 7,
+      "[\"gsm8k/train/06090\", \"d67cc7ea570e1cb3e4a6caadc91c716391ae709b6431729a27841197a44dca03\"]": 7,
+      "[\"gsm8k/train/06160\", \"27f938fe633b9d3975d7d2d88b00ab7271db490700e24f77d55c234a234a613e\"]": 7,
+      "[\"gsm8k/train/06160\", \"7bbe497d3187b9e9f86c836eef1854de9eb051867065b6b96a0a5969c31c1841\"]": 7,
+      "[\"gsm8k/train/06160\", \"e3553cfcaf4a795e180f681065f818da05cc2f46f0d38ed9b88205c7c50bf86f\"]": 7,
+      "[\"gsm8k/train/06160\", \"ff6b4a004dde79da6bb49a037d76eb9a2db1bb59ae49baaf7c8a343c9599305e\"]": 7,
+      "[\"gsm8k/train/06242\", \"80ec87fd85d1117c65b44e113e50c632b6d80471ef5558b351736256515571a7\"]": 7,
+      "[\"gsm8k/train/06242\", \"a6d590b124dd884c66f3d6b3483c40a9d2b1924a0ea09aea88c50160d3fb7077\"]": 8,
+      "[\"gsm8k/train/06242\", \"a9151753bd8afedf2c90d2c39bc1de899a921574e1eafa7857989d33191f850a\"]": 8,
+      "[\"gsm8k/train/06242\", \"b07a1e3dbc2017cf6659f4d58f16179d93bb1a57607a93c348991c12bb0562cf\"]": 7,
+      "[\"gsm8k/train/06251\", \"1ea557617afe9242306af021516b432cfcf1c8b847a110bc2a0c108553521526\"]": 7,
+      "[\"gsm8k/train/06251\", \"ce0e29781c1c03ed11f80d7ffab8ea0ae633a1bdb15ff6df034ea5f359a5e937\"]": 8,
+      "[\"gsm8k/train/06251\", \"dc62d3f5e038433a0ada12468c8512be92d328ebb30236f1bf9c745b7001ba7c\"]": 7,
+      "[\"gsm8k/train/06251\", \"f2f14daa008fadd6d2f4ad30e7c51e70407cbbee4d944e8e210c651331104c92\"]": 7,
+      "[\"gsm8k/train/06327\", \"401834c3188180af36caeac28888ad6b48334ae06df3b37e1121832f1b64f4b8\"]": 8,
+      "[\"gsm8k/train/06327\", \"42096e27b2f26da171eb0d2d209283f03c22177641d918dc1d7257e0054b06b0\"]": 7,
+      "[\"gsm8k/train/06327\", \"739d3b00d4f852ec9eddd7c862e9c169ae2262f8094cf5b8e51dd52c83cac920\"]": 7,
+      "[\"gsm8k/train/06327\", \"d4d44269a46863e4b4c484dc365a3c70abf2a6929f1262e1d3a43c3f26dbfa3f\"]": 7,
+      "[\"gsm8k/train/06404\", \"13f12a8b846ded6737e95fd9269fb72a9af3937c22f9aa530f30a79abdf5df80\"]": 8,
+      "[\"gsm8k/train/06404\", \"46914ccfdcc96265186ebf6f7443b460bb9364ed05ad0709c5c2b9ef9beead16\"]": 7,
+      "[\"gsm8k/train/06404\", \"b0b5203c8f59872f1dd6b74c73b276376dbf0e36128afa1989ea89042e153f00\"]": 7,
+      "[\"gsm8k/train/06404\", \"bb37c4c577eac441a832eaa047477aa8acfe4525be8bec334ad92fb1c0cc5ee6\"]": 7,
+      "[\"gsm8k/train/06605\", \"2498fd5298e93fd90d21bb7d7ad2ff911385a281da6ebef16ef2f6f7f8698dd5\"]": 7,
+      "[\"gsm8k/train/06605\", \"47519aa8d29c537e81b1c3600b460c8c1c2681560e2cd52638c1b3525a7f7bbe\"]": 8,
+      "[\"gsm8k/train/06605\", \"ad77d262637d60d1c945f042401ecfc2246a4d0a83d83ab1849a5101dff6125c\"]": 7,
+      "[\"gsm8k/train/06605\", \"e5a1e962e6186b6fcdea4ba700d8d935580c5141943894faeda789c83e911605\"]": 8,
+      "[\"gsm8k/train/06615\", \"0b6332fa5927d6f21e32eeb472ed703ee9e377a13fea0776d97485e4945c161c\"]": 8,
+      "[\"gsm8k/train/06615\", \"1768dd1eee5e8b98e562af4e5903d6fe20a2d8d8c4fb8f65a4ee910965d4b87d\"]": 8,
+      "[\"gsm8k/train/06615\", \"c38ea0cfd3cb688cf5c3e8e82e1bc85917c0052225d26881507a63e422101c72\"]": 7,
+      "[\"gsm8k/train/06615\", \"c86c876407275cfbdcc7dfa42dabf4c63617e7e119a0a0b221782a153403734b\"]": 8,
+      "[\"gsm8k/train/06655\", \"2b4fc7971d3e0b498d022a0d7dd3dcc4c713ab33dbe22f5d74a9eecf066ea185\"]": 8,
+      "[\"gsm8k/train/06655\", \"3a3ca6e08fb532ca89381e5e7c7dfefbad952a24010677bd0d28ee302a02bc2d\"]": 7,
+      "[\"gsm8k/train/06655\", \"7fb901dee61704f120bb852899d77c9a940c5b5d5327e0051bebf1fc52a4f7b7\"]": 7,
+      "[\"gsm8k/train/06655\", \"90c965b4ec5bd64caedb442ba8972479400d302903bb8d1ab57d0dfae78c1863\"]": 7,
+      "[\"gsm8k/train/07027\", \"322b410f3f2557f57a2f66bd089e49fb16829715fff44a184d17f03c677d5bb7\"]": 8,
+      "[\"gsm8k/train/07027\", \"480f7b627b56cfbb33204a557c5b09baee0bd584af5134e0b9d5a41c53e31e2c\"]": 7,
+      "[\"gsm8k/train/07027\", \"6b17dd81fbc07bb778ef801596d2167a6215fdc96807efad72ead0db6437d44c\"]": 8,
+      "[\"gsm8k/train/07027\", \"6da0ba9f8a11ccae180df92811d1aaf4de80a07904b259e199f6d6c261a9a1d8\"]": 7,
+      "[\"gsm8k/train/07033\", \"158c6423be321021d6c62a0ff1d5029441d71a4959970bc1737ff53de726556b\"]": 7,
+      "[\"gsm8k/train/07033\", \"61755abc4da34e467da2f69aad8bc613157a7b81823b3c83abee1c2bf0d6d0a0\"]": 7,
+      "[\"gsm8k/train/07033\", \"a351811dc14e5407ad5b0aed7a37be2216b9c29fc4f8e1ec651cb064ff190f7b\"]": 7,
+      "[\"gsm8k/train/07033\", \"cb50dfcccf0ce155d5a478904aeddc70d2733efec118a98f66c0802983a44d67\"]": 7,
+      "[\"gsm8k/train/07045\", \"38bbd158548f737eda3bc8bca7cdaf063400d6b89ae72ae3a983a53c45305551\"]": 7,
+      "[\"gsm8k/train/07045\", \"97669f9730ec3bef80ccad2eed6808856b421ed25dede09918d24b5cfd68fda0\"]": 7,
+      "[\"gsm8k/train/07045\", \"9ad824d866af6780109f37827388e5a1bc13aebd259f6bba6267be47eb6a5b5c\"]": 7,
+      "[\"gsm8k/train/07045\", \"e8fb2a5cf67041708d18b9cde7f139633261004bdeae4b76feab847743fbeccc\"]": 7,
+      "[\"gsm8k/train/07163\", \"4b8ebba7cecf66e143fec3ae7cce834370673723edbb65862bcf27a81280d21a\"]": 7,
+      "[\"gsm8k/train/07163\", \"7e928039a5734efb60fe0921d7a0b6bb3063fe7303543b0f37122c9ef392803c\"]": 7,
+      "[\"gsm8k/train/07163\", \"a3333b02b1f60fa3657e9beb5cd61cdf557be3ad53fa7848bd2ba7e27e03342e\"]": 8,
+      "[\"gsm8k/train/07163\", \"d2b5880f381cc897689c666c1e3ea360433386f61714e8d5cc2cb065970e4feb\"]": 7,
+      "[\"gsm8k/train/07263\", \"578b62ad4d9f94595af45d67c34e74892b785d257f42c2c092619f0a7f6eec5d\"]": 7,
+      "[\"gsm8k/train/07263\", \"8828aecd9b5b806ad782d3dc45288c267f3a479ee7fa0d05315df7365c78c85d\"]": 7,
+      "[\"gsm8k/train/07263\", \"9dcab289353ba10319a8cd1b3f29a491ff5d2d0f0168fdc092c95fa5d81f3b79\"]": 8,
+      "[\"gsm8k/train/07263\", \"fd5528dcb0cef21a040ba2be84dcf0df814eb4c785bb6f1d8dbb1157ea879752\"]": 7,
+      "[\"gsm8k/train/07349\", \"0137a516bf02efddda7a318625ddf55089c56258105147fb5c537d9fab8e057b\"]": 8,
+      "[\"gsm8k/train/07349\", \"3fc7beb173da7319b88582abab44b8f7189ce0a0aadf91de38107ebb50a9d0b5\"]": 7,
+      "[\"gsm8k/train/07349\", \"b345f836d9655f7c2e405a55dd1d00400aae5c6259f16f1d39e4695d0a806d40\"]": 8,
+      "[\"gsm8k/train/07349\", \"dcf409ba584799c318d965d8a14bd0aa40c041fe2a6fd505a13e1407309ec1d9\"]": 8
+    }
+  },
+  "eval": {
+    "eval_batch_size": 16,
+    "max_length": 2048,
+    "max_new_tokens": 512
+  },
+  "identity": {
+    "config": {
+      "budget_multiple": 1,
+      "draw": 1,
+      "endpoint_outputs": 1319,
+      "input_directory": "student_inputs",
+      "input_sha256": "dae1bd27ae469f5b8c32af68146f8447717af5ef4f6299b36f8ddf2bcbf8ee24",
+      "max_seconds": 6001,
+      "plan_file": "d1_b1_p4_depth_t1_plan.json",
+      "policy": "depth",
+      "price": 4,
+      "role": "main",
+      "rows_file": "d1_b1_p4_depth.jsonl",
+      "run_id": "d1_b1_p4_depth_t1",
+      "seed": 17,
+      "targets": 524287,
+      "training_multiple": 1,
+      "updates": 256
+    },
+    "source_commit": "efeb63801320a7ee2c10a04a5d2ab6bf91dfcd67",
+    "source_sha256": "929cc22fceb3793c126d5a944c6f444b9003dd5a357832f84edcb755960ecc0b"
+  },
+  "lrs": [
+    6.25e-06,
+    1.25e-05,
+    1.8750000000000002e-05,
+    2.5e-05,
+    3.125e-05,
+    3.7500000000000003e-05,
+    4.375e-05,
+    5e-05,
+    5.6250000000000005e-05,
+    6.25e-05,
+    6.875e-05,
+    7.500000000000001e-05,
+    8.125000000000001e-05,
+    8.75e-05,
+    9.375e-05,
+    0.0001,
+    9.999614474083032e-05,
+    9.998457962390008e-05,
+    9.996530663083254e-05,
+    9.993832906395582e-05,
+    9.990365154573716e-05,
+    9.986128001799077e-05,
+    9.981122174085977e-05,
+    9.97534852915723e-05,
+    9.96880805629717e-05,
+    9.961501876182148e-05,
+    9.953431240688516e-05,
+    9.94459753267812e-05,
+    9.935002265761351e-05,
+    9.924647084037796e-05,
+    9.913533761814537e-05,
+    9.901664203302126e-05,
+    9.889040442288306e-05,
+    9.875664641789545e-05,
+    9.861539093680396e-05,
+    9.846666218300807e-05,
+    9.831048564041413e-05,
+    9.814688806906869e-05,
+    9.797589750057341e-05,
+    9.779754323328192e-05,
+    9.761185582727977e-05,
+    9.741886709914804e-05,
+    9.72186101165118e-05,
+    9.701111919237408e-05,
+    9.679642987923659e-05,
+    9.657457896300791e-05,
+    9.634560445670043e-05,
+    9.610954559391703e-05,
+    9.586644282212866e-05,
+    9.561633779574374e-05,
+    9.535927336897098e-05,
+    9.509529358847655e-05,
+    9.482444368583689e-05,
+    9.454677006978844e-05,
+    9.426232031827588e-05,
+    9.397114317029975e-05,
+    9.367328851756538e-05,
+    9.336880739593416e-05,
+    9.30577519766788e-05,
+    9.274017555754408e-05,
+    9.241613255361455e-05,
+    9.208567848799071e-05,
+    9.174886998227555e-05,
+    9.140576474687264e-05,
+    9.105642157109774e-05,
+    9.070090031310558e-05,
+    9.033926188963352e-05,
+    8.99715682655637e-05,
+    8.959788244330569e-05,
+    8.92182684520014e-05,
+    8.883279133655399e-05,
+    8.844151714648274e-05,
+    8.804451292460585e-05,
+    8.764184669555294e-05,
+    8.723358745410944e-05,
+    8.681980515339465e-05,
+    8.640057069287562e-05,
+    8.597595590621893e-05,
+    8.554603354898238e-05,
+    8.511087728614862e-05,
+    8.467056167950311e-05,
+    8.422516217485827e-05,
+    8.377475508912632e-05,
+    8.331941759724268e-05,
+    8.285922771894253e-05,
+    8.239426430539243e-05,
+    8.192460702567966e-05,
+    8.14503363531613e-05,
+    8.097153355167552e-05,
+    8.048828066161747e-05,
+    8.00006604858821e-05,
+    7.950875657567621e-05,
+    7.901265321620253e-05,
+    7.85124354122177e-05,
+    7.800818887346734e-05,
+    7.75e-05,
+    7.698795586736298e-05,
+    7.647214421168239e-05,
+    7.595265341463001e-05,
+    7.542957248827961e-05,
+    7.490299105985507e-05,
+    7.437299935637329e-05,
+    7.383968818918426e-05,
+    7.330314893841101e-05,
+    7.276347353729203e-05,
+    7.222075445642905e-05,
+    7.167508468794263e-05,
+    7.112655772953852e-05,
+    7.057526756848719e-05,
+    7.00213086655197e-05,
+    6.946477593864228e-05,
+    6.890576474687264e-05,
+    6.83443708739007e-05,
+    6.778069051167653e-05,
+    6.721482024392835e-05,
+    6.664685702961344e-05,
+    6.607689818630469e-05,
+    6.550504137351576e-05,
+    6.493138457596757e-05,
+    6.435602608679916e-05,
+    6.377906449072579e-05,
+    6.320059864714664e-05,
+    6.262072767320612e-05,
+    6.20395509268104e-05,
+    6.14571679896031e-05,
+    6.0873678649902325e-05,
+    6.0289182885602704e-05,
+    5.9703780847044414e-05,
+    5.911757283985312e-05,
+    5.853065930775303e-05,
+    5.794314081535644e-05,
+    5.735511803093247e-05,
+    5.676669170915809e-05,
+    5.617796267385429e-05,
+    5.558903180071051e-05,
+    5.500000000000001e-05,
+    5.44109681992895e-05,
+    5.3822037326145715e-05,
+    5.3233308290841914e-05,
+    5.264488196906754e-05,
+    5.205685918464357e-05,
+    5.146934069224699e-05,
+    5.08824271601469e-05,
+    5.0296219152955604e-05,
+    4.9710817114397314e-05,
+    4.912632135009769e-05,
+    4.854283201039693e-05,
+    4.796044907318961e-05,
+    4.7379272326793895e-05,
+    4.6799401352853374e-05,
+    4.6220935509274235e-05,
+    4.564397391320083e-05,
+    4.506861542403245e-05,
+    4.449495862648426e-05,
+    4.392310181369531e-05,
+    4.335314297038657e-05,
+    4.278517975607166e-05,
+    4.221930948832348e-05,
+    4.16556291260993e-05,
+    4.109423525312737e-05,
+    4.053522406135774e-05,
+    3.997869133448031e-05,
+    3.942473243151282e-05,
+    3.887344227046149e-05,
+    3.832491531205738e-05,
+    3.777924554357096e-05,
+    3.723652646270798e-05,
+    3.6696851061589e-05,
+    3.616031181081573e-05,
+    3.562700064362673e-05,
+    3.5097008940144956e-05,
+    3.45704275117204e-05,
+    3.404734658536999e-05,
+    3.3527855788317624e-05,
+    3.301204413263703e-05,
+    3.250000000000001e-05,
+    3.1991811126532666e-05,
+    3.1487564587782306e-05,
+    3.0987346783797485e-05,
+    3.04912434243238e-05,
+    2.9999339514117912e-05,
+    2.9511719338382516e-05,
+    2.9028466448324478e-05,
+    2.8549663646838717e-05,
+    2.8075392974320346e-05,
+    2.7605735694607574e-05,
+    2.7140772281057485e-05,
+    2.6680582402757323e-05,
+    2.6225244910873693e-05,
+    2.5774837825141744e-05,
+    2.5329438320496917e-05,
+    2.4889122713851394e-05,
+    2.4453966451017614e-05,
+    2.4024044093781068e-05,
+    2.3599429307124405e-05,
+    2.3180194846605367e-05,
+    2.276641254589056e-05,
+    2.2358153304447053e-05,
+    2.195548707539416e-05,
+    2.155848285351727e-05,
+    2.1167208663446025e-05,
+    2.0781731547998614e-05,
+    2.0402117556694324e-05,
+    2.0028431734436313e-05,
+    1.9660738110366472e-05,
+    1.9299099686894413e-05,
+    1.8943578428902274e-05,
+    1.859423525312737e-05,
+    1.825113001772445e-05,
+    1.7914321512009305e-05,
+    1.7583867446385475e-05,
+    1.7259824442455923e-05,
+    1.694224802332121e-05,
+    1.663119260406585e-05,
+    1.632671148243463e-05,
+    1.602885682970026e-05,
+    1.5737679681724126e-05,
+    1.5453229930211565e-05,
+    1.5175556314163121e-05,
+    1.490470641152345e-05,
+    1.464072663102903e-05,
+    1.4383662204256283e-05,
+    1.4133557177871351e-05,
+    1.3890454406082956e-05,
+    1.3654395543299572e-05,
+    1.3425421036992098e-05,
+    1.320357012076341e-05,
+    1.2988880807625922e-05,
+    1.2781389883488215e-05,
+    1.2581132900851977e-05,
+    1.238814417272025e-05,
+    1.2202456766718093e-05,
+    1.2024102499426607e-05,
+    1.1853111930931319e-05,
+    1.1689514359585873e-05,
+    1.1533337816991927e-05,
+    1.1384609063196058e-05,
+    1.1243353582104556e-05,
+    1.1109595577116931e-05,
+    1.0983357966978745e-05,
+    1.0864662381854632e-05,
+    1.0753529159622048e-05,
+    1.0649977342386503e-05,
+    1.0554024673218807e-05,
+    1.0465687593114845e-05,
+    1.0384981238178534e-05,
+    1.0311919437028318e-05,
+    1.0246514708427697e-05,
+    1.0188778259140226e-05,
+    1.0138719982009242e-05,
+    1.0096348454262845e-05,
+    1.0061670936044179e-05,
+    1.003469336916747e-05,
+    1.0015420376099924e-05,
+    1.0003855259169686e-05,
+    1e-05
+  ],
+  "row_exposures": [
+    8,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    8,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    8,
+    8,
+    8,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    7,
+    8,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    8,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    7,
+    8,
+    7,
+    7,
+    7
+  ],
+  "row_path_ids": [
+    "d1::gsm8k/train/06605::1",
+    "d1::gsm8k/train/06605::2",
+    "d1::gsm8k/train/06605::3",
+    "d1::gsm8k/train/06605::4",
+    "d1::gsm8k/train/03431::1",
+    "d1::gsm8k/train/03431::2",
+    "d1::gsm8k/train/03431::3",
+    "d1::gsm8k/train/03431::4",
+    "d1::gsm8k/train/01058::1",
+    "d1::gsm8k/train/01058::2",
+    "d1::gsm8k/train/01058::3",
+    "d1::gsm8k/train/01058::4",
+    "d1::gsm8k/train/03845::1",
+    "d1::gsm8k/train/03845::2",
+    "d1::gsm8k/train/03845::3",
+    "d1::gsm8k/train/03845::4",
+    "d1::gsm8k/train/05974::1",
+    "d1::gsm8k/train/05974::2",
+    "d1::gsm8k/train/05974::3",
+    "d1::gsm8k/train/05974::4",
+    "d1::gsm8k/train/03110::1",
+    "d1::gsm8k/train/03110::2",
+    "d1::gsm8k/train/03110::4",
+    "d1::gsm8k/train/03110::5",
+    "d1::gsm8k/train/00328::1",
+    "d1::gsm8k/train/00328::2",
+    "d1::gsm8k/train/00328::3",
+    "d1::gsm8k/train/00328::4",
+    "d1::gsm8k/train/00177::1",
+    "d1::gsm8k/train/00177::2",
+    "d1::gsm8k/train/00177::3",
+    "d1::gsm8k/train/00177::4",
+    "d1::gsm8k/train/04847::1",
+    "d1::gsm8k/train/04847::2",
+    "d1::gsm8k/train/04847::3",
+    "d1::gsm8k/train/04847::4",
+    "d1::gsm8k/train/02129::1",
+    "d1::gsm8k/train/02129::3",
+    "d1::gsm8k/train/02129::4",
+    "d1::gsm8k/train/02129::5",
+    "d1::gsm8k/train/04565::1",
+    "d1::gsm8k/train/04565::2",
+    "d1::gsm8k/train/04565::3",
+    "d1::gsm8k/train/04565::4",
+    "d1::gsm8k/train/07349::1",
+    "d1::gsm8k/train/07349::2",
+    "d1::gsm8k/train/07349::3",
+    "d1::gsm8k/train/07349::4",
+    "d1::gsm8k/train/00027::1",
+    "d1::gsm8k/train/00027::2",
+    "d1::gsm8k/train/00027::3",
+    "d1::gsm8k/train/00027::4",
+    "d1::gsm8k/train/06251::1",
+    "d1::gsm8k/train/06251::2",
+    "d1::gsm8k/train/06251::3",
+    "d1::gsm8k/train/06251::4",
+    "d1::gsm8k/train/07027::1",
+    "d1::gsm8k/train/07027::2",
+    "d1::gsm8k/train/07027::3",
+    "d1::gsm8k/train/07027::4",
+    "d1::gsm8k/train/03298::1",
+    "d1::gsm8k/train/03298::2",
+    "d1::gsm8k/train/03298::3",
+    "d1::gsm8k/train/03298::4",
+    "d1::gsm8k/train/06242::3",
+    "d1::gsm8k/train/06242::4",
+    "d1::gsm8k/train/06242::5",
+    "d1::gsm8k/train/06242::7",
+    "d1::gsm8k/train/05125::1",
+    "d1::gsm8k/train/05125::2",
+    "d1::gsm8k/train/05125::3",
+    "d1::gsm8k/train/05125::4",
+    "d1::gsm8k/train/03827::1",
+    "d1::gsm8k/train/03827::2",
+    "d1::gsm8k/train/03827::3",
+    "d1::gsm8k/train/03827::4",
+    "d1::gsm8k/train/02225::1",
+    "d1::gsm8k/train/02225::2",
+    "d1::gsm8k/train/02225::3",
+    "d1::gsm8k/train/02225::4",
+    "d1::gsm8k/train/02778::1",
+    "d1::gsm8k/train/02778::2",
+    "d1::gsm8k/train/02778::3",
+    "d1::gsm8k/train/02778::4",
+    "d1::gsm8k/train/05795::1",
+    "d1::gsm8k/train/05795::2",
+    "d1::gsm8k/train/05795::3",
+    "d1::gsm8k/train/05795::4",
+    "d1::gsm8k/train/05163::1",
+    "d1::gsm8k/train/05163::2",
+    "d1::gsm8k/train/05163::3",
+    "d1::gsm8k/train/05163::4",
+    "d1::gsm8k/train/07045::1",
+    "d1::gsm8k/train/07045::2",
+    "d1::gsm8k/train/07045::3",
+    "d1::gsm8k/train/07045::4",
+    "d1::gsm8k/train/06615::1",
+    "d1::gsm8k/train/06615::2",
+    "d1::gsm8k/train/06615::3",
+    "d1::gsm8k/train/06615::4",
+    "d1::gsm8k/train/01695::1",
+    "d1::gsm8k/train/01695::2",
+    "d1::gsm8k/train/01695::3",
+    "d1::gsm8k/train/01695::4",
+    "d1::gsm8k/train/03542::1",
+    "d1::gsm8k/train/03542::2",
+    "d1::gsm8k/train/03542::3",
+    "d1::gsm8k/train/03542::4",
+    "d1::gsm8k/train/07033::1",
+    "d1::gsm8k/train/07033::2",
+    "d1::gsm8k/train/07033::3",
+    "d1::gsm8k/train/07033::4",
+    "d1::gsm8k/train/00976::1",
+    "d1::gsm8k/train/00976::2",
+    "d1::gsm8k/train/00976::3",
+    "d1::gsm8k/train/00976::4",
+    "d1::gsm8k/train/02941::1",
+    "d1::gsm8k/train/02941::2",
+    "d1::gsm8k/train/02941::3",
+    "d1::gsm8k/train/02941::4",
+    "d1::gsm8k/train/03380::1",
+    "d1::gsm8k/train/03380::2",
+    "d1::gsm8k/train/03380::3",
+    "d1::gsm8k/train/03380::4",
+    "d1::gsm8k/train/06090::1",
+    "d1::gsm8k/train/06090::2",
+    "d1::gsm8k/train/06090::3",
+    "d1::gsm8k/train/06090::4",
+    "d1::gsm8k/train/02095::1",
+    "d1::gsm8k/train/02095::2",
+    "d1::gsm8k/train/02095::3",
+    "d1::gsm8k/train/02095::4",
+    "d1::gsm8k/train/03200::1",
+    "d1::gsm8k/train/03200::2",
+    "d1::gsm8k/train/03200::4",
+    "d1::gsm8k/train/03200::5",
+    "d1::gsm8k/train/06404::1",
+    "d1::gsm8k/train/06404::2",
+    "d1::gsm8k/train/06404::3",
+    "d1::gsm8k/train/06404::4",
+    "d1::gsm8k/train/05717::1",
+    "d1::gsm8k/train/05717::2",
+    "d1::gsm8k/train/05717::3",
+    "d1::gsm8k/train/05717::4",
+    "d1::gsm8k/train/06327::1",
+    "d1::gsm8k/train/06327::2",
+    "d1::gsm8k/train/06327::4",
+    "d1::gsm8k/train/06327::5",
+    "d1::gsm8k/train/05806::1",
+    "d1::gsm8k/train/05806::2",
+    "d1::gsm8k/train/05806::3",
+    "d1::gsm8k/train/05806::4",
+    "d1::gsm8k/train/06655::1",
+    "d1::gsm8k/train/06655::2",
+    "d1::gsm8k/train/06655::3",
+    "d1::gsm8k/train/06655::4",
+    "d1::gsm8k/train/03984::1",
+    "d1::gsm8k/train/03984::2",
+    "d1::gsm8k/train/03984::3",
+    "d1::gsm8k/train/03984::4",
+    "d1::gsm8k/train/02421::1",
+    "d1::gsm8k/train/02421::2",
+    "d1::gsm8k/train/02421::3",
+    "d1::gsm8k/train/02421::4",
+    "d1::gsm8k/train/04734::1",
+    "d1::gsm8k/train/04734::2",
+    "d1::gsm8k/train/04734::3",
+    "d1::gsm8k/train/04734::4",
+    "d1::gsm8k/train/00350::1",
+    "d1::gsm8k/train/00350::2",
+    "d1::gsm8k/train/00350::3",
+    "d1::gsm8k/train/00350::4",
+    "d1::gsm8k/train/01966::1",
+    "d1::gsm8k/train/01966::2",
+    "d1::gsm8k/train/01966::3",
+    "d1::gsm8k/train/01966::4",
+    "d1::gsm8k/train/00239::1",
+    "d1::gsm8k/train/00239::2",
+    "d1::gsm8k/train/00239::3",
+    "d1::gsm8k/train/00239::4",
+    "d1::gsm8k/train/02657::1",
+    "d1::gsm8k/train/02657::2",
+    "d1::gsm8k/train/02657::3",
+    "d1::gsm8k/train/02657::4",
+    "d1::gsm8k/train/01059::1",
+    "d1::gsm8k/train/01059::2",
+    "d1::gsm8k/train/01059::3",
+    "d1::gsm8k/train/01059::4",
+    "d1::gsm8k/train/05043::1",
+    "d1::gsm8k/train/05043::2",
+    "d1::gsm8k/train/05043::3",
+    "d1::gsm8k/train/05043::4",
+    "d1::gsm8k/train/00553::1",
+    "d1::gsm8k/train/00553::2",
+    "d1::gsm8k/train/00553::3",
+    "d1::gsm8k/train/00553::4",
+    "d1::gsm8k/train/03395::1",
+    "d1::gsm8k/train/03395::2",
+    "d1::gsm8k/train/03395::3",
+    "d1::gsm8k/train/03395::4",
+    "d1::gsm8k/train/01113::1",
+    "d1::gsm8k/train/01113::2",
+    "d1::gsm8k/train/01113::3",
+    "d1::gsm8k/train/01113::4",
+    "d1::gsm8k/train/00903::1",
+    "d1::gsm8k/train/00903::2",
+    "d1::gsm8k/train/00903::3",
+    "d1::gsm8k/train/00903::4",
+    "d1::gsm8k/train/07163::1",
+    "d1::gsm8k/train/07163::2",
+    "d1::gsm8k/train/07163::3",
+    "d1::gsm8k/train/07163::4",
+    "d1::gsm8k/train/05791::1",
+    "d1::gsm8k/train/05791::2",
+    "d1::gsm8k/train/05791::3",
+    "d1::gsm8k/train/05791::4",
+    "d1::gsm8k/train/07263::1",
+    "d1::gsm8k/train/07263::2",
+    "d1::gsm8k/train/07263::3",
+    "d1::gsm8k/train/07263::4",
+    "d1::gsm8k/train/06160::1",
+    "d1::gsm8k/train/06160::2",
+    "d1::gsm8k/train/06160::3",
+    "d1::gsm8k/train/06160::4",
+    "d1::gsm8k/train/01160::1",
+    "d1::gsm8k/train/01160::2",
+    "d1::gsm8k/train/01160::3",
+    "d1::gsm8k/train/01160::4",
+    "d1::gsm8k/train/05714::1",
+    "d1::gsm8k/train/05714::2",
+    "d1::gsm8k/train/05714::3",
+    "d1::gsm8k/train/00814::1",
+    "d1::gsm8k/train/00814::2",
+    "d1::gsm8k/train/00814::3",
+    "d1::gsm8k/train/00315::1",
+    "d1::gsm8k/train/00315::2",
+    "d1::gsm8k/train/00315::3",
+    "d1::gsm8k/train/00125::1",
+    "d1::gsm8k/train/00125::3",
+    "d1::gsm8k/train/02638::1"
+  ],
+  "schedule": [
+    [
+      22,
+      94,
+      193,
+      81,
+      98,
+      206,
+      200,
+      169
+    ],
+    [
+      5,
+      152,
+      27,
+      204,
+      41,
+      60,
+      108
+    ],
+    [
+      49,
+      236,
+      230,
+      18,
+      52,
+      224,
+      148
+    ],
+    [
+      9,
+      223,
+      92,
+      106,
+      119,
+      35,
+      14
+    ],
+    [
+      164,
+      160,
+      217,
+      201,
+      169,
+      152
+    ],
+    [
+      97,
+      174,
+      62,
+      127,
+      41,
+      124,
+      179,
+      20
+    ],
+    [
+      124,
+      73,
+      94,
+      60,
+      70,
+      194,
+      45
+    ],
+    [
+      21,
+      102,
+      48,
+      131,
+      150,
+      186,
+      193,
+      122
+    ],
+    [
+      128,
+      164,
+      157,
+      217,
+      74,
+      203
+    ],
+    [
+      159,
+      69,
+      57,
+      186,
+      123,
+      65,
+      21
+    ],
+    [
+      196,
+      188,
+      107,
+      59,
+      8,
+      161
+    ],
+    [
+      227,
+      221,
+      68,
+      52,
+      151,
+      239,
+      198
+    ],
+    [
+      19,
+      60,
+      54,
+      110,
+      173,
+      142
+    ],
+    [
+      75,
+      185,
+      14,
+      207,
+      1,
+      56,
+      76
+    ],
+    [
+      117,
+      19,
+      198,
+      32,
+      152,
+      46,
+      235
+    ],
+    [
+      229,
+      16,
+      232,
+      151,
+      153,
+      73,
+      48
+    ],
+    [
+      132,
+      122,
+      141,
+      235,
+      102,
+      90,
+      35
+    ],
+    [
+      84,
+      45,
+      224,
+      212,
+      208,
+      200,
+      6
+    ],
+    [
+      147,
+      101,
+      70,
+      175,
+      34,
+      233,
+      174
+    ],
+    [
+      152,
+      198,
+      137,
+      163,
+      182,
+      168,
+      85
+    ],
+    [
+      210,
+      100,
+      202,
+      74,
+      120,
+      130,
+      82
+    ],
+    [
+      47,
+      97,
+      202,
+      68,
+      208,
+      59,
+      152
+    ],
+    [
+      133,
+      235,
+      14,
+      168,
+      157,
+      19,
+      12
+    ],
+    [
+      67,
+      91,
+      76,
+      204,
+      4,
+      34,
+      174
+    ],
+    [
+      22,
+      139,
+      149,
+      88,
+      71,
+      53,
+      119
+    ],
+    [
+      151,
+      14,
+      9,
+      61,
+      187,
+      48,
+      4
+    ],
+    [
+      99,
+      112,
+      199,
+      227,
+      195,
+      172
+    ],
+    [
+      80,
+      183,
+      186,
+      154,
+      93,
+      166,
+      114,
+      171
+    ],
+    [
+      50,
+      166,
+      53,
+      16,
+      52,
+      67
+    ],
+    [
+      25,
+      178,
+      180,
+      102,
+      36,
+      127,
+      236,
+      149
+    ],
+    [
+      50,
+      34,
+      38,
+      61,
+      139,
+      82,
+      180
+    ],
+    [
+      28,
+      100,
+      87,
+      47,
+      205,
+      77,
+      133
+    ],
+    [
+      224,
+      207,
+      207,
+      49,
+      72,
+      30,
+      76
+    ],
+    [
+      162,
+      127,
+      230,
+      238,
+      145,
+      185
+    ],
+    [
+      220,
+      153,
+      98,
+      51,
+      150,
+      119,
+      68
+    ],
+    [
+      57,
+      3,
+      210,
+      176,
+      83,
+      31,
+      56
+    ],
+    [
+      233,
+      144,
+      113,
+      100,
+      214,
+      175,
+      126,
+      145
+    ],
+    [
+      31,
+      100,
+      186,
+      233,
+      230,
+      200
+    ],
+    [
+      177,
+      8,
+      227,
+      165,
+      226,
+      194,
+      236
+    ],
+    [
+      177,
+      81,
+      5,
+      35,
+      131,
+      167,
+      139,
+      35
+    ],
+    [
+      36,
+      164,
+      83,
+      202,
+      99,
+      127
+    ],
+    [
+      163,
+      127,
+      183,
+      77,
+      100,
+      28,
+      202,
+      206
+    ],
+    [
+      64,
+      92,
+      56,
+      75,
+      60,
+      44,
+      55
+    ],
+    [
+      75,
+      195,
+      185,
+      18,
+      131,
+      121
+    ],
+    [
+      139,
+      234,
+      213,
+      194,
+      100,
+      101,
+      225
+    ],
+    [
+      27,
+      217,
+      196,
+      160,
+      178
+    ],
+    [
+      184,
+      182,
+      114,
+      123,
+      72,
+      51,
+      97
+    ],
+    [
+      159,
+      231,
+      237,
+      8,
+      70,
+      118,
+      16,
+      142,
+      4
+    ],
+    [
+      115,
+      185,
+      116,
+      200,
+      166,
+      39
+    ],
+    [
+      22,
+      71,
+      149,
+      105,
+      120,
+      46,
+      36,
+      83
+    ],
+    [
+      129,
+      52,
+      149,
+      162,
+      63,
+      5
+    ],
+    [
+      205,
+      224,
+      93,
+      238,
+      120,
+      13,
+      0
+    ],
+    [
+      218,
+      80,
+      118,
+      58,
+      156,
+      109,
+      103
+    ],
+    [
+      39,
+      105,
+      130,
+      232,
+      169,
+      26,
+      16
+    ],
+    [
+      162,
+      17,
+      41,
+      215,
+      230,
+      86,
+      201
+    ],
+    [
+      144,
+      206,
+      89,
+      54,
+      132,
+      85
+    ],
+    [
+      239,
+      190,
+      150,
+      212,
+      111,
+      162
+    ],
+    [
+      115,
+      44,
+      216,
+      110,
+      223,
+      224,
+      199
+    ],
+    [
+      88,
+      45,
+      10,
+      82,
+      203,
+      219,
+      173
+    ],
+    [
+      142,
+      147,
+      180,
+      66,
+      96,
+      171,
+      176
+    ],
+    [
+      57,
+      118,
+      96,
+      153,
+      175,
+      20,
+      46,
+      190
+    ],
+    [
+      6,
+      165,
+      153,
+      149,
+      198,
+      204,
+      201
+    ],
+    [
+      119,
+      95,
+      78,
+      176,
+      6,
+      182
+    ],
+    [
+      76,
+      128,
+      62,
+      34,
+      95,
+      104,
+      140,
+      43
+    ],
+    [
+      22,
+      40,
+      225,
+      121,
+      8,
+      109,
+      141,
+      152
+    ],
+    [
+      113,
+      5,
+      189,
+      42,
+      195,
+      156,
+      202
+    ],
+    [
+      170,
+      139,
+      122,
+      71,
+      98,
+      175
+    ],
+    [
+      140,
+      150,
+      205,
+      3,
+      203,
+      218,
+      190
+    ],
+    [
+      83,
+      157,
+      196,
+      137,
+      179,
+      17
+    ],
+    [
+      53,
+      58,
+      99,
+      211,
+      25,
+      220
+    ],
+    [
+      25,
+      12,
+      94,
+      214,
+      7,
+      34
+    ],
+    [
+      239,
+      15,
+      86,
+      89,
+      108,
+      140,
+      199,
+      230
+    ],
+    [
+      95,
+      54,
+      138,
+      90,
+      227,
+      56
+    ],
+    [
+      208,
+      74,
+      87,
+      41,
+      80,
+      166,
+      144
+    ],
+    [
+      234,
+      30,
+      231,
+      212,
+      0,
+      97
+    ],
+    [
+      47,
+      52,
+      209,
+      47,
+      142,
+      170,
+      147
+    ],
+    [
+      21,
+      159,
+      130,
+      39,
+      83,
+      193,
+      89,
+      42
+    ],
+    [
+      194,
+      126,
+      201,
+      181,
+      120,
+      232,
+      163,
+      159
+    ],
+    [
+      129,
+      0,
+      26,
+      206,
+      155,
+      172
+    ],
+    [
+      61,
+      196,
+      222,
+      82,
+      130,
+      133,
+      221,
+      107
+    ],
+    [
+      197,
+      30,
+      113,
+      214,
+      210
+    ],
+    [
+      234,
+      87,
+      50,
+      236,
+      74,
+      165,
+      189
+    ],
+    [
+      167,
+      25,
+      15,
+      45,
+      222,
+      52
+    ],
+    [
+      161,
+      124,
+      177,
+      188,
+      33,
+      165
+    ],
+    [
+      115,
+      224,
+      92,
+      32,
+      213,
+      19,
+      165
+    ],
+    [
+      111,
+      223,
+      229,
+      138,
+      228,
+      38
+    ],
+    [
+      172,
+      90,
+      105,
+      20,
+      110,
+      106,
+      164
+    ],
+    [
+      2,
+      224,
+      116,
+      193,
+      123,
+      164,
+      95
+    ],
+    [
+      239,
+      99,
+      79,
+      93,
+      175,
+      214,
+      116
+    ],
+    [
+      167,
+      232,
+      103,
+      60,
+      2,
+      120
+    ],
+    [
+      137,
+      48,
+      164,
+      7,
+      110,
+      87,
+      136
+    ],
+    [
+      91,
+      27,
+      125,
+      156,
+      206,
+      7,
+      99
+    ],
+    [
+      77,
+      7,
+      59,
+      37,
+      25,
+      104
+    ],
+    [
+      222,
+      100,
+      180,
+      203,
+      195,
+      10,
+      214,
+      136
+    ],
+    [
+      49,
+      185,
+      232,
+      141,
+      151,
+      158,
+      66
+    ],
+    [
+      32,
+      138,
+      75,
+      197,
+      67,
+      208
+    ],
+    [
+      147,
+      89,
+      184,
+      27,
+      159,
+      26
+    ],
+    [
+      67,
+      107,
+      156,
+      62,
+      51,
+      96
+    ],
+    [
+      228,
+      135,
+      104,
+      16,
+      1,
+      4,
+      110
+    ],
+    [
+      115,
+      181,
+      129,
+      26,
+      65,
+      178,
+      212
+    ],
+    [
+      106,
+      213,
+      58,
+      3,
+      89,
+      64,
+      87,
+      75
+    ],
+    [
+      64,
+      33,
+      63,
+      79,
+      187,
+      95
+    ],
+    [
+      31,
+      238,
+      19,
+      60,
+      236,
+      21,
+      131
+    ],
+    [
+      150,
+      24,
+      38,
+      227,
+      14,
+      32,
+      130
+    ],
+    [
+      188,
+      226,
+      10,
+      96,
+      81,
+      62,
+      11
+    ],
+    [
+      186,
+      41,
+      29,
+      84,
+      33,
+      239,
+      229,
+      173
+    ],
+    [
+      190,
+      158,
+      201,
+      30,
+      98,
+      13
+    ],
+    [
+      84,
+      2,
+      13,
+      37,
+      209,
+      178,
+      61
+    ],
+    [
+      40,
+      72,
+      128,
+      158,
+      226,
+      216
+    ],
+    [
+      11,
+      70,
+      237,
+      7,
+      225,
+      68,
+      140,
+      53
+    ],
+    [
+      154,
+      206,
+      50,
+      74,
+      76,
+      131,
+      25
+    ],
+    [
+      48,
+      100,
+      129,
+      162,
+      81,
+      134
+    ],
+    [
+      21,
+      128,
+      28,
+      78,
+      66,
+      156
+    ],
+    [
+      36,
+      55,
+      94,
+      169,
+      159,
+      38,
+      208
+    ],
+    [
+      111,
+      42,
+      90,
+      209,
+      236,
+      14,
+      203
+    ],
+    [
+      129,
+      148,
+      114,
+      203,
+      234,
+      181,
+      28
+    ],
+    [
+      101,
+      143,
+      80,
+      198,
+      40,
+      91,
+      143,
+      177
+    ],
+    [
+      199,
+      157,
+      193,
+      88,
+      135,
+      171,
+      175
+    ],
+    [
+      38,
+      37,
+      115,
+      71,
+      32,
+      173,
+      97
+    ],
+    [
+      108,
+      235,
+      139,
+      187,
+      64,
+      192,
+      65
+    ],
+    [
+      18,
+      135,
+      229,
+      122,
+      238,
+      188
+    ],
+    [
+      16,
+      117,
+      25,
+      233,
+      211,
+      183,
+      187
+    ],
+    [
+      40,
+      155,
+      219,
+      204,
+      194,
+      42,
+      11
+    ],
+    [
+      4,
+      63,
+      132,
+      125,
+      10,
+      23,
+      160
+    ],
+    [
+      89,
+      63,
+      167,
+      126,
+      37,
+      213
+    ],
+    [
+      55,
+      104,
+      96,
+      9,
+      34,
+      69,
+      36
+    ],
+    [
+      138,
+      173,
+      214,
+      12,
+      151,
+      30
+    ],
+    [
+      66,
+      190,
+      162,
+      228,
+      173,
+      73
+    ],
+    [
+      197,
+      125,
+      207,
+      70,
+      215,
+      109,
+      51
+    ],
+    [
+      141,
+      157,
+      121,
+      189,
+      5,
+      0,
+      196
+    ],
+    [
+      66,
+      28,
+      72,
+      87,
+      219,
+      104,
+      164
+    ],
+    [
+      86,
+      161,
+      78,
+      215,
+      207
+    ],
+    [
+      126,
+      15,
+      145,
+      117,
+      7,
+      120,
+      188
+    ],
+    [
+      191,
+      103,
+      84,
+      226,
+      239,
+      23,
+      40
+    ],
+    [
+      84,
+      20,
+      160,
+      148,
+      119,
+      31
+    ],
+    [
+      167,
+      195,
+      106,
+      121,
+      76,
+      98,
+      133
+    ],
+    [
+      218,
+      91,
+      223,
+      223,
+      114,
+      41,
+      56
+    ],
+    [
+      147,
+      212,
+      31,
+      85,
+      43,
+      123
+    ],
+    [
+      6,
+      211,
+      216,
+      107,
+      37
+    ],
+    [
+      58,
+      43,
+      109,
+      191,
+      177,
+      171,
+      186,
+      77
+    ],
+    [
+      27,
+      189,
+      148,
+      223,
+      113,
+      204
+    ],
+    [
+      50,
+      186,
+      223,
+      117,
+      56,
+      70,
+      112,
+      144
+    ],
+    [
+      189,
+      116,
+      102,
+      142,
+      138,
+      39,
+      194
+    ],
+    [
+      218,
+      161,
+      0,
+      216
+    ],
+    [
+      1,
+      233,
+      171,
+      79,
+      222,
+      63,
+      154,
+      20
+    ],
+    [
+      105,
+      58,
+      123,
+      35,
+      67,
+      13,
+      0
+    ],
+    [
+      55,
+      157,
+      133,
+      136,
+      196,
+      76
+    ],
+    [
+      7,
+      1,
+      24,
+      69,
+      168,
+      37,
+      68
+    ],
+    [
+      200,
+      111,
+      45,
+      13,
+      229,
+      104,
+      82,
+      95
+    ],
+    [
+      55,
+      144,
+      231,
+      85,
+      169,
+      157
+    ],
+    [
+      137,
+      95,
+      123,
+      40,
+      142,
+      114,
+      82
+    ],
+    [
+      234,
+      48,
+      120,
+      102,
+      58,
+      158,
+      222
+    ],
+    [
+      239,
+      225,
+      71,
+      13,
+      138,
+      159,
+      71
+    ],
+    [
+      226,
+      64,
+      42,
+      99,
+      47,
+      4,
+      43
+    ],
+    [
+      197,
+      136,
+      79,
+      32,
+      110,
+      38,
+      139
+    ],
+    [
+      83,
+      90,
+      172,
+      220,
+      216
+    ],
+    [
+      116,
+      11,
+      102,
+      21,
+      192,
+      4,
+      227,
+      217
+    ],
+    [
+      198,
+      94,
+      117,
+      85,
+      44,
+      2,
+      49
+    ],
+    [
+      192,
+      232,
+      23,
+      181,
+      179,
+      122,
+      8
+    ],
+    [
+      146,
+      113,
+      2,
+      154,
+      154,
+      233,
+      57
+    ],
+    [
+      181,
+      217,
+      160,
+      47,
+      3,
+      171
+    ],
+    [
+      216,
+      156,
+      29,
+      227,
+      236,
+      79
+    ],
+    [
+      9,
+      199,
+      8,
+      20,
+      205,
+      64,
+      18
+    ],
+    [
+      55,
+      124,
+      68,
+      86,
+      23,
+      97,
+      97,
+      65
+    ],
+    [
+      96,
+      134,
+      74,
+      228,
+      8,
+      45,
+      193
+    ],
+    [
+      119,
+      143,
+      191,
+      135,
+      230,
+      91,
+      166
+    ],
+    [
+      101,
+      137,
+      75,
+      3,
+      136,
+      227
+    ],
+    [
+      158,
+      209,
+      38,
+      234,
+      192,
+      85,
+      33
+    ],
+    [
+      83,
+      145,
+      26,
+      174,
+      188,
+      179
+    ],
+    [
+      22,
+      78,
+      139,
+      122,
+      237,
+      128
+    ],
+    [
+      167,
+      112,
+      87,
+      99,
+      155,
+      115,
+      215
+    ],
+    [
+      29,
+      0,
+      202,
+      69,
+      226,
+      58,
+      105
+    ],
+    [
+      54,
+      228,
+      17,
+      10,
+      174,
+      88
+    ],
+    [
+      80,
+      35,
+      101,
+      86,
+      168,
+      127,
+      116,
+      229
+    ],
+    [
+      211,
+      191,
+      53,
+      178,
+      57,
+      210
+    ],
+    [
+      97,
+      161,
+      72,
+      44,
+      132,
+      209
+    ],
+    [
+      22,
+      117,
+      188,
+      86,
+      36,
+      198,
+      15
+    ],
+    [
+      126,
+      78,
+      31,
+      166,
+      234,
+      18
+    ],
+    [
+      96,
+      48,
+      20,
+      146,
+      177,
+      63,
+      84
+    ],
+    [
+      212,
+      170,
+      225,
+      128,
+      9,
+      61,
+      182,
+      112
+    ],
+    [
+      116,
+      215,
+      73,
+      221,
+      210,
+      163,
+      168
+    ],
+    [
+      191,
+      116,
+      2,
+      222,
+      33,
+      191,
+      61
+    ],
+    [
+      65,
+      98,
+      144,
+      41,
+      155,
+      73,
+      126
+    ],
+    [
+      3,
+      136,
+      141,
+      5,
+      91,
+      29,
+      150
+    ],
+    [
+      160,
+      82,
+      145,
+      54,
+      158,
+      157
+    ],
+    [
+      147,
+      231,
+      143,
+      218,
+      160
+    ],
+    [
+      114,
+      235,
+      220,
+      170,
+      158,
+      138
+    ],
+    [
+      155,
+      217,
+      176,
+      29,
+      24,
+      15
+    ],
+    [
+      63,
+      176,
+      141,
+      146,
+      87,
+      150,
+      10
+    ],
+    [
+      220,
+      23,
+      106,
+      92,
+      193,
+      9,
+      77
+    ],
+    [
+      44,
+      209,
+      122,
+      155,
+      152,
+      47,
+      48
+    ],
+    [
+      225,
+      65,
+      148,
+      166,
+      60,
+      163,
+      151
+    ],
+    [
+      98,
+      238,
+      104,
+      19,
+      44,
+      229,
+      73
+    ],
+    [
+      232,
+      81,
+      238,
+      214,
+      23,
+      134,
+      135
+    ],
+    [
+      33,
+      130,
+      238,
+      9,
+      102,
+      50,
+      200,
+      233
+    ],
+    [
+      103,
+      178,
+      237,
+      179,
+      181,
+      142,
+      166,
+      90
+    ],
+    [
+      14,
+      112,
+      67,
+      183,
+      188,
+      17,
+      176
+    ],
+    [
+      6,
+      91,
+      174,
+      233,
+      226,
+      111,
+      59
+    ],
+    [
+      133,
+      209,
+      189,
+      111,
+      75,
+      168,
+      228
+    ],
+    [
+      162,
+      219,
+      204,
+      217,
+      204,
+      17
+    ],
+    [
+      146,
+      140,
+      46,
+      195,
+      235,
+      49,
+      49
+    ],
+    [
+      184,
+      206,
+      81,
+      56,
+      220,
+      129,
+      143
+    ],
+    [
+      24,
+      72,
+      199,
+      43,
+      109,
+      15,
+      172
+    ],
+    [
+      194,
+      88,
+      54,
+      151,
+      185,
+      131
+    ],
+    [
+      167,
+      59,
+      107,
+      180,
+      190,
+      146,
+      187
+    ],
+    [
+      154,
+      36,
+      171,
+      221,
+      30,
+      80,
+      156
+    ],
+    [
+      209,
+      59,
+      121,
+      169,
+      136,
+      123,
+      145
+    ],
+    [
+      3,
+      172,
+      103,
+      46,
+      42,
+      205,
+      105
+    ],
+    [
+      103,
+      153,
+      30,
+      29,
+      66,
+      107,
+      213
+    ],
+    [
+      118,
+      210,
+      53,
+      114,
+      77,
+      237
+    ],
+    [
+      41,
+      117,
+      124,
+      12,
+      83,
+      57,
+      16
+    ],
+    [
+      54,
+      62,
+      40,
+      129,
+      69,
+      101,
+      88,
+      180,
+      149
+    ],
+    [
+      187,
+      27,
+      84,
+      194,
+      231,
+      175,
+      158
+    ],
+    [
+      163,
+      121,
+      46,
+      43,
+      24,
+      197
+    ],
+    [
+      94,
+      26,
+      222,
+      135,
+      21
+    ],
+    [
+      27,
+      80,
+      93,
+      170,
+      35,
+      196,
+      145,
+      149
+    ],
+    [
+      124,
+      82,
+      42,
+      212,
+      151,
+      185,
+      105
+    ],
+    [
+      59,
+      78,
+      124,
+      45,
+      108,
+      143,
+      24
+    ],
+    [
+      76,
+      118,
+      39,
+      70,
+      165,
+      237,
+      155
+    ],
+    [
+      12,
+      208,
+      180,
+      106,
+      125,
+      234,
+      182
+    ],
+    [
+      52,
+      201,
+      190,
+      219,
+      73,
+      176,
+      126
+    ],
+    [
+      184,
+      221,
+      39,
+      46,
+      92,
+      101,
+      201
+    ],
+    [
+      183,
+      80,
+      103,
+      44,
+      197,
+      93,
+      169,
+      79
+    ],
+    [
+      22,
+      21,
+      108,
+      78,
+      118,
+      90,
+      115
+    ],
+    [
+      160,
+      197,
+      109,
+      33,
+      231,
+      66
+    ],
+    [
+      34,
+      208,
+      192,
+      12,
+      132,
+      45,
+      2
+    ],
+    [
+      217,
+      134,
+      26,
+      232,
+      230
+    ],
+    [
+      212,
+      94,
+      156,
+      57,
+      192,
+      69,
+      112,
+      125
+    ],
+    [
+      67,
+      146,
+      113,
+      197,
+      191,
+      119
+    ],
+    [
+      236,
+      128,
+      7,
+      165,
+      34,
+      120,
+      112
+    ],
+    [
+      220,
+      68,
+      130,
+      6,
+      183,
+      50,
+      65,
+      107
+    ],
+    [
+      81,
+      144,
+      47,
+      137,
+      43,
+      134,
+      17
+    ],
+    [
+      144,
+      163,
+      219,
+      184,
+      179,
+      93
+    ],
+    [
+      11,
+      153,
+      135,
+      72,
+      60,
+      93
+    ],
+    [
+      133,
+      59,
+      147,
+      210,
+      37,
+      148
+    ],
+    [
+      231,
+      168,
+      18,
+      137,
+      51,
+      55
+    ],
+    [
+      213,
+      207,
+      53,
+      18,
+      237,
+      192,
+      92
+    ],
+    [
+      8,
+      74,
+      24,
+      132,
+      69,
+      207,
+      108
+    ],
+    [
+      99,
+      19,
+      178,
+      211,
+      143,
+      32,
+      12
+    ],
+    [
+      115,
+      112,
+      195,
+      130,
+      225,
+      182,
+      85,
+      89,
+      164
+    ],
+    [
+      177,
+      1,
+      153,
+      189,
+      127,
+      31,
+      161
+    ],
+    [
+      140,
+      71,
+      18,
+      62,
+      46,
+      181,
+      1,
+      155
+    ],
+    [
+      146,
+      179,
+      215,
+      134,
+      51,
+      5
+    ],
+    [
+      172,
+      3,
+      207,
+      215,
+      23,
+      91
+    ],
+    [
+      113,
+      29,
+      174,
+      211,
+      205,
+      125,
+      183
+    ],
+    [
+      148,
+      88,
+      184,
+      92,
+      186,
+      200,
+      55
+    ],
+    [
+      57,
+      65,
+      203,
+      17,
+      96,
+      235
+    ],
+    [
+      170,
+      140,
+      11,
+      28,
+      72,
+      77,
+      118
+    ],
+    [
+      213,
+      15,
+      228,
+      141,
+      111,
+      49,
+      140
+    ],
+    [
+      211,
+      110,
+      221,
+      13,
+      62,
+      132,
+      26
+    ],
+    [
+      202,
+      67,
+      108,
+      187,
+      219,
+      173,
+      79
+    ],
+    [
+      218,
+      28,
+      64,
+      170,
+      6,
+      106
+    ],
+    [
+      0,
+      221,
+      117,
+      172,
+      121,
+      182,
+      109,
+      184
+    ],
+    [
+      1,
+      216,
+      39,
+      161,
+      61
+    ],
+    [
+      218,
+      125,
+      22,
+      134,
+      51,
+      86,
+      42
+    ],
+    [
+      165,
+      10,
+      205,
+      199,
+      154,
+      11,
+      131
+    ]
+  ],
+  "zero_exposure_answers": 0
+}
