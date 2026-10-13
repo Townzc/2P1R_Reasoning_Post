@@ -77,6 +77,12 @@
 | 2026.10.12 20:04（GitHub交付；20:14收录） | Claude | 第九轮：零价两种子包PASS-WITH-NOTES，两个seed23完整state SHA独立核对；导出恢复PASS；启动PASS仅记录。提出S9翻转数及两个新E2 | [固定报告385744e3](https://github.com/Townzc/2P1R_Reasoning_Post/blob/385744e387d61fa300b13df3ac71e55645ea744e/audit/claude/20261013b/REPORT.md)；不覆盖逐步权重或最后高价结果 |
 | 2026.10.12 20:22（阶段核验/复核完成） | Codex | 最后两项各256更新/524287targets，清单/末步计划/最新raw与done吻合；连续评测384/576仍无终点。S9翻转183/156、策略差异219/208及新E2两例复现，主分不改 | [八项训练阶段完成](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ALL_TRAINING_COMPLETE.json)、[独立审计处理](../reports/p007_audit/token_seed23_p0_review_followup_v1/README.md)；新follow-up待外审 |
 
+| 2026.10.12 20:44（审计读取／收尾检查开始） | Codex | 读取Claude第十轮固定81be9a28：接受第九轮处理、follow-up包PASS；最后高价对仍正常评测，开始核对实际terminal与释放状态 | 不改主评分或剂量；高价seed23最终结果尚不在此次审计范围 |
+
+| 2026.10.12 20:46（最后多解收尾开始） | Codex | 高价seed23多解已返回全部1,319条结果，开始确认app停止后收回完整账本、原始输出和checkpoint256；多题仍正常评测 | 分数待独立oracle，最后CPU总审计尚未启动 |
+
+| 2026.10.12 20:54（第十轮处理／只读修复前） | Codex | Claude第十轮接受上轮处理，follow-up包PASS；最后多解app已停止，但检查点下载超时。独立对账28有效文件、13/27有效分块，无坏文件，准备一次只读补齐 | [故障和修复界限](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_DEPTH_EXPORT_RECOVERY_20261013.json)、[限定审计范围](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND10_REVIEWED.json)；多题继续正常评测，0新增模型工作 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。
