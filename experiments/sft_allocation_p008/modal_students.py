@@ -9,7 +9,7 @@ from pathlib import Path
 import json,subprocess,sys
 import modal
 ROOT=Path(__file__).resolve().parents[2]
-SOURCES=['experiments/sft_allocation_acquisition/policy_contract.py', 'analyses/completion_contract.py', 'analyses/e017_audit.py', 'analyses/e017_stopping.py', 'analyses/gsm8k_answer_audit.py', 'configs/models.lock.json', 'experiments/sft_allocation_acquisition/contract.py', 'experiments/sft_allocation_midpoint/checkpoint.py', 'experiments/sft_allocation_midpoint/common.py', 'experiments/sft_allocation_midpoint/guard.py', 'experiments/sft_allocation_midpoint/monitor.py', 'experiments/sft_allocation_midpoint/runtime.py', 'experiments/sft_allocation_p008/contract.py', 'experiments/sft_allocation_p008/evidence_bundle.py', 'experiments/sft_allocation_p008/main_binding.py', 'experiments/sft_allocation_p008/modal_students.py', 'experiments/sft_allocation_p008/student_binding.py', 'experiments/sft_allocation_p008/pool_runtime.py', 'experiments/sft_allocation_p008/procurement.py', 'experiments/sft_allocation_p008/requirements_teacher.txt', 'experiments/sft_allocation_p008/student_runtime.py', 'requirements.txt', 'src/real_math_audit.py', 'src/sft_data.py']
+SOURCES=['experiments/sft_allocation_p008/parallel_guard.py', 'experiments/sft_allocation_acquisition/policy_contract.py', 'analyses/completion_contract.py', 'analyses/e017_audit.py', 'analyses/e017_stopping.py', 'analyses/gsm8k_answer_audit.py', 'configs/models.lock.json', 'experiments/sft_allocation_acquisition/contract.py', 'experiments/sft_allocation_midpoint/checkpoint.py', 'experiments/sft_allocation_midpoint/common.py', 'experiments/sft_allocation_midpoint/guard.py', 'experiments/sft_allocation_midpoint/monitor.py', 'experiments/sft_allocation_midpoint/runtime.py', 'experiments/sft_allocation_p008/contract.py', 'experiments/sft_allocation_p008/evidence_bundle.py', 'experiments/sft_allocation_p008/main_binding.py', 'experiments/sft_allocation_p008/modal_students.py', 'experiments/sft_allocation_p008/student_binding.py', 'experiments/sft_allocation_p008/pool_runtime.py', 'experiments/sft_allocation_p008/procurement.py', 'experiments/sft_allocation_p008/requirements_teacher.txt', 'experiments/sft_allocation_p008/student_runtime.py', 'requirements.txt', 'src/real_math_audit.py', 'src/sft_data.py']
 SPEC='reports/p008_20261013/student_admission_v1/ADMISSION.json'
 app=modal.App('p008-finite-students')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
@@ -28,6 +28,7 @@ def work(plan,config,release,expected_roles):
  sys.path.insert(0,'/workspace')
  from experiments.sft_allocation_midpoint.common import read,dump,sha,digest,verify,manifest
  from experiments.sft_allocation_midpoint.guard import RunGuard
+ from experiments.sft_allocation_p008.parallel_guard import ParallelActiveCheck
  from experiments.sft_allocation_midpoint.runtime import Journal,environment
  from experiments.sft_allocation_midpoint.monitor import GPURecorder
  from experiments.sft_allocation_p008.student_binding import validate_student_binding
@@ -48,9 +49,11 @@ def work(plan,config,release,expected_roles):
  start=time.time();stop=min(start+config['max_seconds'],plan['deadline_epoch']-30)
  timer=threading.Timer(max(1,stop-time.time()),lambda:os._exit(124));timer.daemon=True;timer.start()
  reserve=plan['slots'][run]['reserved_cents'];out=Path('/evidence')/plan['campaign_id']/run;recorder=None
+ active_check=ParallelActiveCheck(guard)
  def check():
   if time.time()>stop-30:raise TimeoutError('Finite P008 deadline')
-  guard.check_active(admitted,now_epoch=time.time(),spent_cents=0,next_cost_cents=reserve)
+  active_check.check_active(admitted,spent_cents=0,next_cost_cents=reserve)
+  if time.time()>stop-30:raise TimeoutError('Finite P008 deadline after guard reads')
  try:
   volume.reload();out.mkdir(parents=True,exist_ok=False)
   dump(out/'intent.json',dict(plan=plan,config=config,release=release,started_epoch=start,reserved_cents=reserve));dump(out/'admission.json',spec);volume.commit()
@@ -69,6 +72,7 @@ def work(plan,config,release,expected_roles):
   recorder.stop();recorder=None
   result.update(wall_seconds=time.time()-start,reserved_cost_usd=reserve/100,provider_invoice_usd=None,
     runtime_rate_estimate_usd=(time.time()-start)*4.393584/3600)
+  dump(out/'guard_read_metrics.json',active_check.metrics)
   dump(out/'result.json',result);volume.commit();pack(out);volume.commit()
   files=manifest(out);dump(out/'artifact_manifest.json',files);volume.commit()
   receipt=guard.finish(admitted,status='completed',evidence_sha256=digest(files),actual_cost_cents=reserve,finished_epoch=time.time())
@@ -76,12 +80,14 @@ def work(plan,config,release,expected_roles):
  except BaseException as exc:
   if recorder:recorder.stop();recorder=None
   if out.exists():
+   dump(out/'guard_read_metrics.json',active_check.metrics)
    dump(out/'failure.json',dict(error_type=type(exc).__name__,error=str(exc),traceback=traceback.format_exc(),wall_seconds=time.time()-start,
     rule='Preserve every unit, raw return and unknown. No automatic retry or claim reset.'))
    volume.commit();files=manifest(out);dump(out/'failure_manifest.json',files);volume.commit()
    guard.finish(admitted,status='failed',evidence_sha256=digest(files),actual_cost_cents=reserve,finished_epoch=time.time())
   raise
- finally:timer.cancel()
+ finally:
+  active_check.close();timer.cancel()
 
 
 @app.function(image=hf,gpu='H100!',cpu=(4,4),memory=(32768,32768),timeout=10900,startup_timeout=600,

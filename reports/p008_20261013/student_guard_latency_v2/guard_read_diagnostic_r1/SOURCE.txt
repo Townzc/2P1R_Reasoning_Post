@@ -1,0 +1,14 @@
+import modal,time,json,signal,hashlib
+from concurrent.futures import ThreadPoolExecutor
+signal.alarm(30)
+d=modal.Dict.from_name("sft-allocation-midpoint-claims-v1",create_if_missing=False)
+p="midpoint/p008-main-20261013-r1/"
+run=__RUN__
+plan=d.get(p+"campaign");claim=d.get(p+"claim/"+run)
+keys=[p+"campaign",p+"claim/"+run,p+"attempt/"+run+"/"+claim["attempt_id"],p+"terminal/"+run]+[p+"reconciliation/"+name for name in plan["slots"]]
+tick=time.monotonic();a={k:d.get(k) for k in keys};sequential=time.monotonic()-tick
+tick=time.monotonic()
+with ThreadPoolExecutor(max_workers=8) as pool:b=dict(zip(keys,pool.map(d.get,keys)))
+parallel=time.monotonic()-tick
+print(json.dumps(dict(run=run,reads=len(keys),sequential_seconds=sequential,parallel8_seconds=parallel,same_records=a==b,
+ source_scope="Read-only existing guard keys, no model or ledger mutation",new_model_calls=0)))

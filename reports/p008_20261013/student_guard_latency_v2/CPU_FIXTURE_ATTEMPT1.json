@@ -1,0 +1,6 @@
+{
+  "recorded_utc": "2026-10-13T10:40:29.952753+00:00",
+  "tests": 35,
+  "failures": 2,
+  "cause": "CPU test incorrectly assumed RunGuard.check_active rereads intent. Existing validator checks campaign, claim, attempt, terminal and reconciliation; admission binds intent before claim. Narrow malformed-record fixture to actual active-check records. No live source or model work changed."
+}

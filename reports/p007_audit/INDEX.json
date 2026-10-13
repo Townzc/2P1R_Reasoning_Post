@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T10:27:54.895378+00:00",
+  "as_of_utc": "2026-10-13T10:31:29.671321+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -284,6 +284,24 @@
       "reviewed_commit": "33f964bbeda4d67de8caac72691a8dd7f01ff4f0",
       "disposition": "reports/p008_20261013/preflight_review_54d1803d_v1/DISPOSITION.json",
       "scope": "Code only at original fixed target; numeric inputs/admission and later changed CPU code not covered"
+    },
+    {
+      "request_id": "p008-final-cpu-margin-amendment-r2",
+      "target_commit": "391dedbfae9b5816a90cadc733727712861680a0",
+      "packet": "reports/p008_20261013/cpu_audit_margin_v2",
+      "manifest": "reports/p008_20261013/cpu_audit_margin_v2/MANIFEST.json",
+      "manifest_sha256": "88dfae55bc0062a036feff29b4f1e47e1d348fc061f782af2b2b5c11fa9f34b9",
+      "external_review": "pending",
+      "blocking_for": "Future final CPU only; current pools/student G1 unaffected",
+      "questions": [
+        "120second soft margin while3300hard limit unchanged, honest hard interruption semantics?",
+        "Additional timing and after-load/finite checks preserve exact packed/state verification and do not add model/data work?"
+      ],
+      "scope": "Only differences since CPU33f964bb reviewed by54d1803d; final21label numeric admission still absent",
+      "requested_utc": "2026-10-13T10:31:29.671321+00:00",
+      "owner_authorized": true,
+      "response_timeout_minutes": 45,
+      "timeout_action": "Hold future CPU dispatch; silence is not approval"
     }
   ],
   "p008_v31": {
