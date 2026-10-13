@@ -1,0 +1,7 @@
+{
+  "error": "Finite P008 deadline",
+  "error_type": "TimeoutError",
+  "rule": "Preserve every unit, raw return and unknown. No automatic retry or claim reset.",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/experiments/sft_allocation_p008/modal_main.py\", line 78, in work\n    result=execute(config,inputs,assets,out,journal)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/sft_allocation_p008/pool_runtime.py\", line 43, in run\n    journal.check();active=[]\n    ^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/sft_allocation_p008/modal_main.py\", line 54, in check\n    if time.time()>stop-30:raise TimeoutError('Finite P008 deadline')\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: Finite P008 deadline\n",
+  "wall_seconds": 10770.077117681503
+}

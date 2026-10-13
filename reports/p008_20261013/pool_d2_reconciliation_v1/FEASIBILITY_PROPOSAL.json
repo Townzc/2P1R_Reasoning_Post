@@ -1,0 +1,168 @@
+{
+  "utc": "2026-10-13T12:36:28.323246+00:00",
+  "status": "PROPOSAL_NOT_ADMISSION",
+  "remaining_wallets": {
+    "d2_b8_p0_breadth": {
+      "remaining_units": 773010.0,
+      "recent20_mean_charge": 6356.0,
+      "estimated_rounds": 122
+    },
+    "d2_b8_p0_depth": {
+      "remaining_units": 800320.0,
+      "recent20_mean_charge": 5897.7,
+      "estimated_rounds": 136
+    }
+  },
+  "normalized_rounds": [
+    {
+      "round": 126,
+      "observed_seconds": 65.0,
+      "original_checks": 5,
+      "normalized_seconds": 35.11433974999545
+    },
+    {
+      "round": 127,
+      "observed_seconds": 67.0,
+      "original_checks": 5,
+      "normalized_seconds": 37.11433974999545
+    },
+    {
+      "round": 128,
+      "observed_seconds": 67.0,
+      "original_checks": 5,
+      "normalized_seconds": 37.11433974999545
+    },
+    {
+      "round": 129,
+      "observed_seconds": 65.0,
+      "original_checks": 5,
+      "normalized_seconds": 35.11433974999545
+    },
+    {
+      "round": 130,
+      "observed_seconds": 65.0,
+      "original_checks": 5,
+      "normalized_seconds": 35.11433974999545
+    },
+    {
+      "round": 131,
+      "observed_seconds": 71.0,
+      "original_checks": 5,
+      "normalized_seconds": 41.11433974999545
+    },
+    {
+      "round": 132,
+      "observed_seconds": 64.0,
+      "original_checks": 5,
+      "normalized_seconds": 34.11433974999545
+    },
+    {
+      "round": 133,
+      "observed_seconds": 63.0,
+      "original_checks": 5,
+      "normalized_seconds": 33.11433974999545
+    },
+    {
+      "round": 134,
+      "observed_seconds": 63.0,
+      "original_checks": 5,
+      "normalized_seconds": 33.11433974999545
+    },
+    {
+      "round": 135,
+      "observed_seconds": 60.0,
+      "original_checks": 5,
+      "normalized_seconds": 30.11433974999545
+    },
+    {
+      "round": 136,
+      "observed_seconds": 66.0,
+      "original_checks": 5,
+      "normalized_seconds": 36.11433974999545
+    },
+    {
+      "round": 137,
+      "observed_seconds": 62.0,
+      "original_checks": 5,
+      "normalized_seconds": 32.11433974999545
+    },
+    {
+      "round": 138,
+      "observed_seconds": 61.0,
+      "original_checks": 5,
+      "normalized_seconds": 31.11433974999545
+    },
+    {
+      "round": 139,
+      "observed_seconds": 65.0,
+      "original_checks": 5,
+      "normalized_seconds": 35.11433974999545
+    },
+    {
+      "round": 140,
+      "observed_seconds": 65.0,
+      "original_checks": 5,
+      "normalized_seconds": 35.11433974999545
+    },
+    {
+      "round": 141,
+      "observed_seconds": 69.0,
+      "original_checks": 5,
+      "normalized_seconds": 39.11433974999545
+    },
+    {
+      "round": 142,
+      "observed_seconds": 59.0,
+      "original_checks": 4,
+      "normalized_seconds": 36.22370869199585
+    },
+    {
+      "round": 143,
+      "observed_seconds": 63.0,
+      "original_checks": 4,
+      "normalized_seconds": 40.22370869199585
+    },
+    {
+      "round": 144,
+      "observed_seconds": 56.0,
+      "original_checks": 4,
+      "normalized_seconds": 33.22370869199585
+    },
+    {
+      "round": 145,
+      "observed_seconds": 59.0,
+      "original_checks": 4,
+      "normalized_seconds": 36.22370869199585
+    }
+  ],
+  "existing_readonly_measurement": {
+    "run": "pool_d2",
+    "reads": 26,
+    "sequential_seconds": 7.109368942000401,
+    "parallel8_seconds": 1.4152961149993644,
+    "same_records": true,
+    "source_scope": "Read-only existing guard keys, no model or ledger mutation",
+    "new_model_calls": 0
+  },
+  "measurement_source_sha256": "77736d61481bc258ccbffddbee7ac6ce0032c47a03dd6a649ed486120e89a0a2",
+  "compute_same_teacher_backend": true,
+  "proposed_change": "Accepted ParallelActiveCheck with same original Journal begins/atomic writes; no blockjournal for teacher",
+  "estimated_remaining_rounds": 136,
+  "max_normalized_seconds": 41.11433974999545,
+  "worker_setup_closing_allowance_seconds": 300,
+  "margin": 1.2,
+  "prediction_seconds": 7069.860247199257,
+  "worker_cap_seconds": 7200,
+  "child_absolute_deadline_utc": "2026-10-13T15:00:00Z",
+  "required_pre_dispatch_window_seconds": 7900,
+  "latest_dispatch_utc": "2026-10-13T12:48:20Z",
+  "additional_reservation_usd_if_admitted": 12,
+  "total_reservation_if_admitted_usd": 249.68,
+  "admitted": false,
+  "limitations": [
+    "Remaining rounds estimated from recent costs, not known final round count.",
+    "Subtracting old single read measurement and adding parallel measurement is a proxy, not measured child throughput.",
+    "New host and future output lengths may differ;20percent margin is not a guarantee.",
+    "No reduction of original scientific wallet caps/attempt bound; late or unreviewed child remains pending."
+  ]
+}

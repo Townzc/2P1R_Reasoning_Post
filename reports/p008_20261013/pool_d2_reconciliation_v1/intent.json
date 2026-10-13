@@ -1,0 +1,260 @@
+{
+  "config": {
+    "draw": 2,
+    "high_multiple": 8,
+    "input_directory": "pool_inputs",
+    "input_sha256": "ef48e7d27a9c60a970891f4c0a8f6a61d4f4188f6ddbf1e05006e4be5fb67b52",
+    "max_physical_attempts": 16384,
+    "max_seconds": 10800,
+    "role": "pool",
+    "run_id": "pool_d2"
+  },
+  "plan": {
+    "campaign_id": "p008-main-20261013-r1",
+    "created_epoch": 1791882536,
+    "deadline_epoch": 1791943200,
+    "slots": {
+      "audit": {
+        "reserved_cents": 500,
+        "stage": "main"
+      },
+      "base": {
+        "reserved_cents": 756,
+        "stage": "main"
+      },
+      "d1_b1_p0_breadth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d1_b1_p0_depth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d1_b1_p4_breadth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d1_b1_p4_depth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d1_b8_p0_breadth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d1_b8_p0_breadth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d1_b8_p0_depth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d1_b8_p0_depth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d1_b8_p4_breadth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d1_b8_p4_depth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d2_b1_p0_breadth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d2_b1_p0_depth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d2_b1_p4_breadth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d2_b1_p4_depth_t1": {
+        "reserved_cents": 818,
+        "stage": "main"
+      },
+      "d2_b8_p0_breadth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d2_b8_p0_depth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d2_b8_p4_breadth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "d2_b8_p4_depth_t8": {
+        "reserved_cents": 1253,
+        "stage": "main"
+      },
+      "pool_d1": {
+        "reserved_cents": 1404,
+        "stage": "main"
+      },
+      "pool_d2": {
+        "reserved_cents": 1404,
+        "stage": "main"
+      }
+    },
+    "stage_caps_cents": {
+      "main": 23500
+    },
+    "total_cap_cents": 23500
+  },
+  "release": {
+    "commit": "8bef6411ce082057e094aab56b7aaba22081ff8f",
+    "gates": {
+      "phase0": {
+        "four_gpu_verified": true,
+        "oracle_passed": true,
+        "oracle_sha256": "91f124807e200aa2bbf798a97272d51e897aed24f9058a73f87ea604ba40c493",
+        "provider_released": true
+      },
+      "required_terminals": [
+        {
+          "campaign": "p008-phase0-20261013-r1",
+          "run_id": "teacher_calibration",
+          "terminal": {
+            "actual_cost_cents": 600,
+            "attempt_id": "c5805125e2164c7ebd8f2fa9bdde1e19",
+            "claim_sha256": "a71db97b88c753621e78a3f58b31b78ce556e9bf8a7a967b2e391ad0a7fd2386",
+            "evidence_sha256": "0fe1dfaee436f50059777cc85be5118227200fb4302386359bc39ece4077ced4",
+            "finished_epoch": 1791881756.443357,
+            "run_id": "teacher_calibration",
+            "status": "completed"
+          }
+        },
+        {
+          "campaign": "p008-phase0-20261013-r1",
+          "run_id": "student_smoke",
+          "terminal": {
+            "actual_cost_cents": 400,
+            "attempt_id": "f6a619bc7ea04bf9b758f95b4783cb01",
+            "claim_sha256": "d3176339791c02e90edd9ae0e6eeff5611e1c0a5a7fab8d7d97de0f17866a9e6",
+            "evidence_sha256": "2aa38f2dc5f4984b215c74d82d4d29a341c965ef0a563f7d4686f75c9133d750",
+            "finished_epoch": 1791881456.3710463,
+            "run_id": "student_smoke",
+            "status": "completed"
+          }
+        },
+        {
+          "campaign": "p008-phase0-20261013-r1",
+          "run_id": "io_probe_a",
+          "terminal": {
+            "actual_cost_cents": 150,
+            "attempt_id": "f48fd2e16fec4946b579417ffeb3e5b0",
+            "claim_sha256": "9da1d6f158abfe41058cf45f1b8446487a3c095ed8d2fcc2940047ebe4154ff9",
+            "evidence_sha256": "63b90940425a3dbb95af56819ba911af142dd5d159176860fcd5b969c3bb01f3",
+            "finished_epoch": 1791881405.560574,
+            "run_id": "io_probe_a",
+            "status": "completed"
+          }
+        },
+        {
+          "campaign": "p008-phase0-20261013-r1",
+          "run_id": "io_probe_b",
+          "terminal": {
+            "actual_cost_cents": 150,
+            "attempt_id": "a89d9560409f488caa33ae12bfbb7580",
+            "claim_sha256": "afc2922b5c9a684de9e48e96dad68a3e9c1226a0c970f3ec70317de62c49cb1f",
+            "evidence_sha256": "d6b7caf17821fa459a6723e3f45abf13fd7de150a5bd9dca508ff0fd85f0db5b",
+            "finished_epoch": 1791881409.17115,
+            "run_id": "io_probe_b",
+            "status": "completed"
+          }
+        }
+      ],
+      "runtime_review": {
+        "accepted_utc": "2026-10-13T09:20:18.850172+00:00",
+        "admitted_runs": [
+          "pool_d1",
+          "pool_d2"
+        ],
+        "review_commit": "02de4924acf33eba99ff0da1e671ab3ae1928f5f",
+        "review_report": "audit/claude/20261013o/G0_MAIN_NUMERIC.md",
+        "review_report_sha256": "b44f7aea16cb5c354b2a6d5b208bbde8456c6b74546f585a0b9220aefb69616d",
+        "reviewed_commit": "82e1fafdc145f0c45834f2c000e495f09cd68e83",
+        "scope": "main-runtime",
+        "source_files": {
+          "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+          "analyses/e017_audit.py": "9747952267e026ba7153fdebfa0e1bb8b009a536f236d521ca102d3b00490b8e",
+          "analyses/e017_stopping.py": "96c8df6aa6b928f32120a0dd619d3ad25a6aeb06d958c43abf0f01ad2f0e7fb0",
+          "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+          "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+          "experiments/sft_allocation_acquisition/contract.py": "30e5971269b74f921cd2732a78b75f3bb016d0556ba9097bf8c4aea3d3be5d9a",
+          "experiments/sft_allocation_acquisition/policy_contract.py": "c6df9c2c13556c5fbde8d7fcdfc00521d88b496ce5879b91f5aa347b6bc67ef9",
+          "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+          "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+          "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+          "experiments/sft_allocation_midpoint/monitor.py": "6c8c534a2a7bad8f45524517b8875b522362c95615454f96fbbf166ad3882081",
+          "experiments/sft_allocation_midpoint/runtime.py": "97c1c1b84acd8c9bf84cae423e1f6c73ca4a9a73049aa030045c0309868743bb",
+          "experiments/sft_allocation_p008/contract.py": "796542678703603c75a37e7ce722e49f788e3b6f2b8646e816f1af26e510aef8",
+          "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+          "experiments/sft_allocation_p008/main_binding.py": "ae8d85356088477dd971d87c68d48906b82de10edbdc164032b9c0c6f1f53b90",
+          "experiments/sft_allocation_p008/modal_main.py": "01d89a983358146d8300ab50beb78a836619e2cfe93a4222a25c2b6024b7b66e",
+          "experiments/sft_allocation_p008/pool_runtime.py": "c566a9a3ab35601f15b861425ef45a6e4a3a851e8ed60c9881fbe65ea922af0b",
+          "experiments/sft_allocation_p008/procurement.py": "9f15cb9443eabc6ef30c95e3ddc9adb4bdee8bde7814e2cfd3be117f4176efc4",
+          "experiments/sft_allocation_p008/requirements_teacher.txt": "95c4f31a6249df55dda6e7f6c60a4b684f62dcd93d739194c102b7c733f696e2",
+          "experiments/sft_allocation_p008/student_runtime.py": "d053bfdac4c1f5bd614874d2f1f85597b1ce3bb223abbe599a149152734a6364",
+          "requirements.txt": "973d7d8c0faf8d4dfa2d4026146c47ae288ce423ac3c11b4d9d9667cbfeec952",
+          "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+          "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+        },
+        "spec_sha256": "83b568ec3bd603f1d7cef896ed87666446eb16c3fbb1ee7d3864e85b42c99069",
+        "students_admitted": false,
+        "verdict": "PASS-WITH-NOTES"
+      },
+      "upload": {
+        "files": {
+          "eligible_parents.jsonl": {
+            "bytes": 4194856,
+            "sha256": "c795593c108820e2820374e96f79a40ee9520d013029d38f8e7aea94f5059ec0"
+          },
+          "manifest.json": {
+            "bytes": 336,
+            "sha256": "ef48e7d27a9c60a970891f4c0a8f6a61d4f4188f6ddbf1e05006e4be5fb67b52"
+          }
+        },
+        "input_sha256": "ef48e7d27a9c60a970891f4c0a8f6a61d4f4188f6ddbf1e05006e4be5fb67b52",
+        "passed": true,
+        "remote": "/p008-main-20261013-r1/pool_inputs",
+        "utc": "2026-10-13T09:20:46.820565+00:00"
+      }
+    },
+    "source_files": {
+      "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+      "analyses/e017_audit.py": "9747952267e026ba7153fdebfa0e1bb8b009a536f236d521ca102d3b00490b8e",
+      "analyses/e017_stopping.py": "96c8df6aa6b928f32120a0dd619d3ad25a6aeb06d958c43abf0f01ad2f0e7fb0",
+      "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+      "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+      "experiments/sft_allocation_acquisition/contract.py": "30e5971269b74f921cd2732a78b75f3bb016d0556ba9097bf8c4aea3d3be5d9a",
+      "experiments/sft_allocation_acquisition/policy_contract.py": "c6df9c2c13556c5fbde8d7fcdfc00521d88b496ce5879b91f5aa347b6bc67ef9",
+      "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+      "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+      "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+      "experiments/sft_allocation_midpoint/monitor.py": "6c8c534a2a7bad8f45524517b8875b522362c95615454f96fbbf166ad3882081",
+      "experiments/sft_allocation_midpoint/runtime.py": "97c1c1b84acd8c9bf84cae423e1f6c73ca4a9a73049aa030045c0309868743bb",
+      "experiments/sft_allocation_p008/contract.py": "796542678703603c75a37e7ce722e49f788e3b6f2b8646e816f1af26e510aef8",
+      "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+      "experiments/sft_allocation_p008/main_binding.py": "ae8d85356088477dd971d87c68d48906b82de10edbdc164032b9c0c6f1f53b90",
+      "experiments/sft_allocation_p008/modal_main.py": "01d89a983358146d8300ab50beb78a836619e2cfe93a4222a25c2b6024b7b66e",
+      "experiments/sft_allocation_p008/pool_runtime.py": "c566a9a3ab35601f15b861425ef45a6e4a3a851e8ed60c9881fbe65ea922af0b",
+      "experiments/sft_allocation_p008/procurement.py": "9f15cb9443eabc6ef30c95e3ddc9adb4bdee8bde7814e2cfd3be117f4176efc4",
+      "experiments/sft_allocation_p008/requirements_teacher.txt": "95c4f31a6249df55dda6e7f6c60a4b684f62dcd93d739194c102b7c733f696e2",
+      "experiments/sft_allocation_p008/student_runtime.py": "d053bfdac4c1f5bd614874d2f1f85597b1ce3bb223abbe599a149152734a6364",
+      "requirements.txt": "973d7d8c0faf8d4dfa2d4026146c47ae288ce423ac3c11b4d9d9667cbfeec952",
+      "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+      "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+    },
+    "spec_sha256": "83b568ec3bd603f1d7cef896ed87666446eb16c3fbb1ee7d3864e85b42c99069"
+  },
+  "reserved_cents": 1404,
+  "started_epoch": 1791883492.2781048
+}
