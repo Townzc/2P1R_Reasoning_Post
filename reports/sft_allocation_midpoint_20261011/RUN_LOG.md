@@ -355,3 +355,8 @@ Result: price0 breadth963/depth950 and price4m breadth927/depth952, each of1,319
 Reflection: point estimates show the hypothesized change in relative ranking, but all three conditional intervals cross zero. One training seed and one teacher trace per cell do not establish a robust preference or a clean causal price effect. Unequal realized spending under a commoncap and unequal repetition are retained parts of the design. The next required evidence is the already admitted seed23 pair at each price, not selective rescoring or a new tuned arm. The original schedule proceeds unchanged after fresh zero-worker/empty-slot and published-source checks.
 
 Workspace delayed meter at18:14PDT is67.36084103USD,billed0,creditadjustment−67.33; not invoice or balance. Reservation366.50,450ceiling/50protected and October13 19PDT deadline unchanged. All remaining four students and CPUaudit are already reserved.
+
+
+## Second seed, price0 startup — 2026-10-13T01:22:35.566679+00:00
+
+Published90ba8859; fresh checks verified released prior pair, empty new slots/remote work paths, prior full ledger with no new-slot keys, original input manifest locally and remotely, and unchanged scientific source bytes. Each admitted price0seed23 student submitted exactly once through NEWrunner main--detach, no CPUcontroller. Actual H10080GBHBM3/CUDA12.8/torch2.8.0+cu128/source/config/firstupdate verified; snapshot breadth3/depth11 committed updates, no terminal outcomes. Last price4mseed23 pair and final audit remain untouched. [Startup record](P007B_TOKEN_SECOND_SEED_STARTED.json). Existing18USD slots,366.50totalreservation/450ceiling/50protected, two-GPU ceiling and October13 19PDT deadline unchanged. No automatic retries, extra arms, teacher output or protocol changes.
