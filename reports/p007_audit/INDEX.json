@@ -791,8 +791,8 @@
       "packet": "reports/p008_20261013/student_lr_replacement_admission_v1",
       "manifest": "reports/p008_20261013/student_lr_replacement_admission_v1/MANIFEST.json",
       "manifest_sha256": "60ef72160880f80567c19df7b12f17421f7c066223405f82916db9dbda5e19ed",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "blocking": true,
       "blocking_for": "Only two directly authorized independent zero-update replacement slots. Eight original T1 continue. T8 N2 remains separate and OPEN.",
       "source_files": 34,
@@ -806,11 +806,16 @@
         "Shared original dispatch lock and both-queue pending/unmatched capacity<=8, actual completed-host walls and original provider checks",
         "Project-wide billing/reservation reconciliation and corrected450-of500 ceiling/protection; no invoice claim",
         "Retained original timing roster+bothfailed attempts+exact2replacements; numerical N2 and future24source/21logical CPU remain separate"
-      ]
+      ],
+      "review_commit": "35172ba98f58b67c11533d4bc100d67aff3680a4",
+      "review_report": "audit/claude/20261013af/REPLACEMENT_RUNTIME.md",
+      "review_report_sha256": "7b945691a099e25b706d252134d23b7644a6c20f5f8959c39a99e0a3c3fd4915",
+      "review_read_utc": "2026-10-13T22:04:20.690832+00:00",
+      "scope": "Exactly two replacement slots; runtime prereqs required; not T8 or final CPU"
     }
   ],
   "p008_v31": {
-    "status": "eight_original_T1_cloud_workers_active_after_local_DNS_disconnect; authorized_two_replacement_runtime_prepared",
+    "status": "seven_original_T1_completed_four_local_oracles_closed; two_replacements_exact_runtime_PASS_not_dispatched",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.04,
     "phase0_cap_usd": 15,

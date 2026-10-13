@@ -1,0 +1,7 @@
+# Prepared frozen-input binding for the future final CPU audit
+
+The old CPU audit recomputes cosine learning rates via `contract.lrs` and assumes a logical config is always the physical config. Both assumptions must be adapted before the new 24-source final audit runs: host libm equality caused the two preserved pre-training failures, and independent replacements have distinct physical identities.
+
+This new pure helper checks the exact pre-result student admission, original manifest and per-student schedule JSON bytes, the logical/physical config, saved recipe, and full-state trajectory. It uses the original frozen learning-rate vector without recomputing cosine. Ten new CPU fixtures pass using public original input files; two newly exported original student recipes bind to those frozen plans. Initial nine checks passed, then fixtures were made independent of the private input directory, and an additional contradictory recipe-LR fixture was added. These are engineering checks only, not a repetition of old raw/model oracles.
+
+No cloud CPU call, upload or admission follows this helper. It is not yet integrated into a new final CPU entrypoint. The complete 24-physical/21-logical failure/replacement lineage, actual artifact bytes, numerical I/O gate and scoped review remain required. Existing active 32-source students and pending 34-source replacements were not changed. The original 5-dollar / 3,300-worker-second CPU slot remains unchanged.
