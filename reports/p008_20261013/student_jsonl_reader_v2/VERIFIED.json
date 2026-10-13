@@ -1,0 +1,27 @@
+{
+  "cause": "str.splitlines treats literal U2028 inside valid JSON strings as record breaks",
+  "correction": "Read physical newline-delimited JSON records; leave original bytes and data unchanged",
+  "failed_session": 94897,
+  "failure_before_any_model": true,
+  "failure_before_output_directory": true,
+  "failure_log_sha256": "57daf8794ed470fe97b09772173ad5b2769d5502bd8cf139327597a3e0498d65",
+  "fixture_checks": [
+    {
+      "marker": "'\\u2028'",
+      "passed": true
+    },
+    {
+      "marker": "'\\u2029'",
+      "passed": true
+    },
+    {
+      "marker": "'\\r'",
+      "passed": true
+    }
+  ],
+  "new_model_calls": 0,
+  "new_source_sha256": "6805e65eda17e087cd9ad670de23c4e91ee8b00d982ca7d4000b682038d2a405",
+  "old_reader_preserved": true,
+  "physical_parent_rows": 6973,
+  "utc": "2026-10-13T19:10:48.940759+00:00"
+}

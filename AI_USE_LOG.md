@@ -2401,3 +2401,6 @@ Owner supplied matching workspace Resource limits image (totalGPU10/current1) an
 ### Oct13 12:01–12:09 PDT — D2 complete local merged G1
 
 The original once-only D2 continuation completed with actualSTOPPED/0containers. Collector79410, bundleexport25016 and independentmergedoracle42614 each ran once and passed.1036 child files match originalSHA; all3992 parent+3424 child=7416 raw outputs and2210122 returned tokens independently decoded, and all8 virtual wallets replayed. Originalfailed parent remainsfailed. Published immutablepool_d2_merged_v1 for a new exactG1 review; prior core/worker/failed-prefixPASS is not substituted. No student scores/calls, no extra teacher/retry/budget. Both full localdraw oracles now permit the once-only all-draw whole-answer plan builder, which has begun; its numerical/source G1 and N2 still required. Separately, finalCPU13-source code now handles all22 physical sources and the owner-authorized student successor;23 new scope checks passed, no actualCPU inputs or call.
+
+
+Oct13 12:12PDT: corrected local prepared JSONL reader after zero-output94897 failure. Cause: using text.splitlines despite known UnicodeJSON issue; existing runtime reader already correct. Three targetedfixtures/6973records checked; no repeatedmodel/oracle or data/scoring change. Futurepreparedbuilders should reuse physicalJSONL reader.
