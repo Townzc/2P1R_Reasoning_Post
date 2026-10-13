@@ -10,12 +10,14 @@ from experiments.sft_allocation_p008.evidence_bundle import unpack
 
 
 def export(args):
-    import modal
     if not all(re.fullmatch(r'[A-Za-z0-9_.-]+',v) for v in (args.campaign,args.run)):raise ValueError('Unsafe remote path')
+    import modal
     out=Path(args.out);out.mkdir(parents=True,exist_ok=False)
     env=read(args.receipt);files=env['artifact_manifest'];terminal=env['receipt']
     if terminal['status']!='completed' or digest(files)!=terminal['evidence_sha256']:
         raise ValueError('Completed immutable envelope required')
+    from experiments.sft_allocation_p008.evidence_bundle import safe_name
+    for name in files:safe_name(name)
     v=modal.Volume.from_name(args.volume,create_if_missing=False);remote=f'/{args.campaign}/{args.run}'
     # Fetch metadata then the single compact object and terminal state binaries.
     transfer=out/'transfer';transfer.mkdir();needed=['compact_manifest.json','bundle_receipt.json','compact_evidence.tar.gz']

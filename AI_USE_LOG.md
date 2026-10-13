@@ -2241,3 +2241,8 @@ Read fullClaude6978423c scopedPASS at610fde47, all19sourceSHA match. Actual repo
 ## 2026-10-13T08:51:04.214292+00:00 — Phase0 first submission / main source preflight
 
 SinglePhase0 CLI76047/appap-Op16Qdg3mwTSoeudTDNUbo initialized after accepted6978423c/19-source proof and7-file5,803,684-byte readback. Imagesbuilding; no claim of actual1024outputs or4GPU yet. Main c9f80579 code includes finite one-slot dispatch, source/spec/runtime/draw gates, startup-inclusive reservations and safe compact transport;9newCPUgatechecks passed, exportercompiledonly. Numericmainplan/inputsnotadmitted, externalreviewpending. SeparatePhase0source19unchanged.
+
+
+## 2026-10-13T09:12:30.049340+00:00 — verified Phase0; frozen engineering fallback pending numeric review
+
+Phase0 teacher1024/954usable/296801outputtokens, smoke8updates921targets/16outputs,4UUID5.9737s overlap. Allindependentoracles/exportstateSHA/providerSTOPPED0passed; originalCLI76047/collector3753/exports10753,86078,58629,88577/oracle99643done. Fullrawteacherpacket published forreview, no repeat. Workspace meter87.92150519/billed0delayed. Mainpreflight1179ece0PASS-WITH-NOTES; M1fourGPUsalreadyverified, M2roundlatency/late16batch allowance incorporated, groupedonlymetadataVolumecommit, M3forensic1024stateadded. No vLLMconfigurationchange. Frozenresult-blindbranch18/74:16maincells+2highB/lowTbridges, full20forecast206.67/20:20failsprior200/18gate;18forecast184.80/17:59passes assumingstart<=03PDT. No fullBTinteractionclaim. Hardreservations237.68inclusivePhase0within250;allmaincallsstill0,numericreviewpending.

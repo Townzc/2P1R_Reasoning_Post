@@ -44,8 +44,9 @@ def run(config,inputs,assets,out,journal):
         for w in wallets:
             p=w.propose()
             if p is None:continue
-            name=w.name+'_'+p['batch'];journal.begin(name,p);journal.commit();w.begin(p);active.append(w)
+            name=w.name+'_'+p['batch'];journal.begin(name,p);w.begin(p);active.append(w)
         if not active:break
+        journal.commit()  # Publish every wallet intent together BEFORE any cache read/generation.
         missing=pending_union(active,cache)
         if attempted+len(missing)>config['max_physical_attempts']:
             dump(out/'supply_censored.json',dict(attempted=attempted,missing=len(missing),reason='physical_attempt_cap',

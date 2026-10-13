@@ -1,0 +1,121 @@
+{
+  "artifact_manifest": {
+    "concurrency.json": {
+      "bytes": 3698,
+      "sha256": "f1329dea38efc5c8ca19da2ee98fc8f58319705a415d7a08266125086b6054c3"
+    },
+    "intent.json": {
+      "bytes": 6172,
+      "sha256": "db5a7b352325d9d79e928ce0a366e8fa770e9de809eb6a4980a4c124c08a4d15"
+    },
+    "io_probe.bin": {
+      "bytes": 8388608,
+      "sha256": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea"
+    },
+    "result.json": {
+      "bytes": 4091,
+      "sha256": "6dc4bd9b189989bf8466f0f66b99df6076ed1926f632f039074d0ff25f6a33e6"
+    }
+  },
+  "receipt": {
+    "actual_cost_cents": 150,
+    "attempt_id": "a89d9560409f488caa33ae12bfbb7580",
+    "claim_sha256": "afc2922b5c9a684de9e48e96dad68a3e9c1226a0c970f3ec70317de62c49cb1f",
+    "evidence_sha256": "d6b7caf17821fa459a6723e3f45abf13fd7de150a5bd9dca508ff0fd85f0db5b",
+    "finished_epoch": 1791881409.17115,
+    "run_id": "io_probe_b",
+    "status": "completed"
+  },
+  "result": {
+    "concurrency": {
+      "acks": {
+        "io_probe_a": {
+          "epoch": 1791881399.8589418,
+          "read_sha256": {
+            "io_probe_a": "0ca1b797d7498ddc0e7bc6cee24caeeb68cf3c13ce6026f3d66c4d77ef81af67",
+            "io_probe_b": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea",
+            "student_smoke": "0bc9b2ab8f4aa5e214dad4232035af1b8a6e68133d62369744bfb2bacec29eae",
+            "teacher_calibration": "8dc76f5212b2726c579a13168e0f65d3c7b93a997248fc3f7551006417b4229f"
+          },
+          "role": "io_probe_a"
+        },
+        "io_probe_b": {
+          "epoch": 1791881399.8355927,
+          "read_sha256": {
+            "io_probe_a": "0ca1b797d7498ddc0e7bc6cee24caeeb68cf3c13ce6026f3d66c4d77ef81af67",
+            "io_probe_b": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea",
+            "student_smoke": "0bc9b2ab8f4aa5e214dad4232035af1b8a6e68133d62369744bfb2bacec29eae",
+            "teacher_calibration": "8dc76f5212b2726c579a13168e0f65d3c7b93a997248fc3f7551006417b4229f"
+          },
+          "role": "io_probe_b"
+        },
+        "student_smoke": {
+          "epoch": 1791881401.1715956,
+          "read_sha256": {
+            "io_probe_a": "0ca1b797d7498ddc0e7bc6cee24caeeb68cf3c13ce6026f3d66c4d77ef81af67",
+            "io_probe_b": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea",
+            "student_smoke": "0bc9b2ab8f4aa5e214dad4232035af1b8a6e68133d62369744bfb2bacec29eae",
+            "teacher_calibration": "8dc76f5212b2726c579a13168e0f65d3c7b93a997248fc3f7551006417b4229f"
+          },
+          "role": "student_smoke"
+        },
+        "teacher_calibration": {
+          "epoch": 1791881399.903268,
+          "read_sha256": {
+            "io_probe_a": "0ca1b797d7498ddc0e7bc6cee24caeeb68cf3c13ce6026f3d66c4d77ef81af67",
+            "io_probe_b": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea",
+            "student_smoke": "0bc9b2ab8f4aa5e214dad4232035af1b8a6e68133d62369744bfb2bacec29eae",
+            "teacher_calibration": "8dc76f5212b2726c579a13168e0f65d3c7b93a997248fc3f7551006417b4229f"
+          },
+          "role": "teacher_calibration"
+        }
+      },
+      "gpu": "NVIDIA H100 80GB HBM3, 81559 MiB, GPU-22749301-6c53-9412-316c-19bc2358c3c8\n",
+      "interval": [
+        1791881395.6214566,
+        1791881403.8842082
+      ],
+      "ready": {
+        "io_probe_a": {
+          "epoch": 1791881393.8938324,
+          "gpu": "NVIDIA H100 80GB HBM3, 81559 MiB, GPU-9dae3223-723c-22ba-030e-ed3abdaf7f12\n",
+          "role": "io_probe_a",
+          "sha256": "0ca1b797d7498ddc0e7bc6cee24caeeb68cf3c13ce6026f3d66c4d77ef81af67"
+        },
+        "io_probe_b": {
+          "epoch": 1791881397.4196608,
+          "gpu": "NVIDIA H100 80GB HBM3, 81559 MiB, GPU-22749301-6c53-9412-316c-19bc2358c3c8\n",
+          "role": "io_probe_b",
+          "sha256": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea"
+        },
+        "student_smoke": {
+          "epoch": 1791881394.2884197,
+          "gpu": "NVIDIA H100 80GB HBM3, 81559 MiB, GPU-d9347189-b886-1696-ab9c-cbebabf29277\n",
+          "role": "student_smoke",
+          "sha256": "0bc9b2ab8f4aa5e214dad4232035af1b8a6e68133d62369744bfb2bacec29eae"
+        },
+        "teacher_calibration": {
+          "epoch": 1791881393.844278,
+          "gpu": "NVIDIA H100 80GB HBM3, 81559 MiB, GPU-0c22625d-2d73-e4dd-2ce0-40234e767ba4\n",
+          "role": "teacher_calibration",
+          "sha256": "8dc76f5212b2726c579a13168e0f65d3c7b93a997248fc3f7551006417b4229f"
+        }
+      },
+      "reason": null,
+      "status": "four_gpu_verified",
+      "verified": {
+        "io_probe_a": "0ca1b797d7498ddc0e7bc6cee24caeeb68cf3c13ce6026f3d66c4d77ef81af67",
+        "io_probe_b": "2d4fb860da5ec41e14648d410bb29bb9b46c3ac52bcb002dde641710907efaea",
+        "student_smoke": "0bc9b2ab8f4aa5e214dad4232035af1b8a6e68133d62369744bfb2bacec29eae",
+        "teacher_calibration": "8dc76f5212b2726c579a13168e0f65d3c7b93a997248fc3f7551006417b4229f"
+      }
+    },
+    "engineering_only": true,
+    "outputs": 0,
+    "provider_invoice_usd": null,
+    "reserved_cents": 150,
+    "runtime_rate_estimate_usd": 0.015213442843331232,
+    "updates": 0,
+    "wall_seconds": 12.460954666137695
+  }
+}

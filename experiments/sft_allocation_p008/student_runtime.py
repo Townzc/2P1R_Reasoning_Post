@@ -59,7 +59,8 @@ def run(assets,inputs,out,journal,identity):
     dump(out/'recipe.json',dict(identity=identity,budget=budget,schedule=plan['updates'],lrs=plan['lrs'],
         row_path_ids=plan['row_path_ids'],row_exposures=plan['row_exposures'],zero_exposure_answers=plan['zero_exposure_answers'],eval=EVAL))
     optimizer=rt.optimizer_for(model)
-    history,targets,processed=rt.train(model,tok,optimizer,encoded,plan['updates'],plan['lrs'],out,journal,identity,save_steps=(config['updates'],))
+    forensic_steps=(1024,2048) if config['updates']==2048 else (config['updates'],)
+    history,targets,processed=rt.train(model,tok,optimizer,encoded,plan['updates'],plan['lrs'],out,journal,identity,save_steps=forensic_steps)
     if len(history)!=config['updates'] or targets!=config['targets']:raise ValueError('Realized dose differs')
     evaluation=rt.evaluate(model,tok,evaluation_rows,out,'endpoint1319',journal,config=EVAL)
     return dict(role=role,run_id=config['run_id'],updates=len(history),targets=targets,processed_tokens=processed,

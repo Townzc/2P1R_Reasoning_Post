@@ -115,7 +115,9 @@ def student_work(plan,config,release):
 def main(plan_json:str,config_json:str,gates_json:str,receipt_dir:str):
  from experiments.sft_allocation_midpoint.common import read,dump,sha,digest
  from experiments.sft_allocation_p008.main_binding import validate_binding
+ import time
  plan=read(plan_json);cfg=read(config_json);gates=read(gates_json);spec=read(ROOT/SPEC);run=cfg['run_id']
+ if cfg['role']=='pool' and time.time()>spec['start_no_later_epoch']:raise ValueError('Frozen forecast start window expired; hold for result-blind reconciliation')
  commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
  remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/codex/icml-acl-2027'],cwd=ROOT,text=True).split()[0]
  if commit!=remote:raise ValueError('Ordinary publication required')
