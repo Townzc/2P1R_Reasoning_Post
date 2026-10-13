@@ -526,6 +526,24 @@
       "response_timeout_minutes": 15,
       "timeout_action": "No silence-as-approval. Latest possible full-window dispatch17:48:20UTC; otherwise preserve pending and original global19PDT hardstop.",
       "numeric_admission": "Requested for exact child spec only; no launch until actual scoped review/readback/live admission"
+    },
+    {
+      "request_id": "p008-student-parent-child-lineage-code-r1",
+      "target_commit": "8f31b0ca58a55d3ec3089fa8086c6f180903b2f6",
+      "packet": "reports/p008_20261013/student_parent_child_lineage_v1",
+      "manifest": "reports/p008_20261013/student_parent_child_lineage_v1/MANIFEST.json",
+      "manifest_sha256": "cee3a79cd894c0466bc0ddfb021577ec2eee2fc0e8b00b6e228a4058a0a13264",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T17:00:45.891455+00:00",
+      "blocking_for": "Future students only; does not block or admit D2 child worker. Exact numeric G1 still required.",
+      "questions": [
+        "True original D1 completed, original D2 failed and child completed claims/terminals are retained without synthesizing a completed parent?",
+        "All-draw oracle/common target/input/source/G1 requirements remain intact for students and base?",
+        "Scientific execution/block journal and full raw/student oracle remain unchanged;13 synthetic checks are correctly scoped?"
+      ],
+      "numeric_admission": false,
+      "response_timeout_minutes": 30,
+      "timeout_action": "No silence-as-approval; actual merged D2/G1/N2 remain required"
     }
   ],
   "p008_v31": {
@@ -549,7 +567,7 @@
     "hard_reservation_including_phase0_usd": 249.68,
     "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json",
     "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
-    "student_runtime_review_request": "p008-student-block-journal-r3",
+    "student_runtime_review_request": "p008-student-parent-child-lineage-code-r1",
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "owner_authorized_20UTC_worker_prepared_exact_runtime_review_pending",
