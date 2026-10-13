@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 06:42:43（评论），06:57（原文回执读取） | Claude；Codex收录核对 | Claude接受下一动作4缓存+12未生成、公式括号、工期上限不等于ETA三项更正；接受在已准入worker内做计费的加载前测量。无新增科学审计或运行准入 | [原评论](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6146926321)、[范围记录](../reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json)；原owner问题待答，0新增模型调用 |
 | 2026.10.13 05:57（准备开始） | Codex | 在等待范围/子任务时限选择期间，准备只处理D2未尝试部分的运行核心与父子证据核验；原池和既有学生源码保持冻结 | 仅本地代码及CPU夹具；不创建准入、不上传或调用云模型 |
 | 2026.10.13 06:34（新审计处理） | Claude 82b3d69a／39caf811；Codex复核 | D2失败前缀PASS、续跑核心code-only PASS-WITH-NOTES；说明20测试运行命令，独立确认下一depth动作有4缓存+12未生成，修正公式括号；按既定时限核算39.44 GPU小时的上限包络，明确不是ETA或失败概率 | [审计处理](../reports/p008_20261013/d2_review_followup_v1/DISPOSITION.md)；没有新任务准入，联合T/子截止仍待owner选择 |
 | 2026.10.13 06:04（准备完成） | Codex | D2续跑核心12项CPU检查通过；实际3992答案前缀绑定一致；原生成循环和虚拟钱包计费保持不变，失败父记录与新增量分开 | [代码待审](../reports/p008_20261013/pool_continuation_core_v1/REVIEW_REQUEST.md)；尚无child云入口/准入/调用，时限或范围选择仍待答；初次3项测试夹具错误已留证修正 |

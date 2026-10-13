@@ -617,3 +617,8 @@ Read fixed Claude82b3d69a (failed D2 prefix PASS) and39caf811 (core code-only PA
 
 
 Billing snapshot actual13:33:27UTC: workspace meter114.22183710/billed0, creditsadjustment−114.07. Ephemeral-app component114.07019139 is unchanged; stored-volume meter is0.15014611. This delayed snapshot is not an invoice or balance. No new model call/reservation.
+
+
+### P008 reviewer acknowledgement — 2026-10-13T13:57:54.216276+00:00
+
+Checked new Claude issue13 comment6146926321 (actual event13:42:43UTC): reviewer accepts the three corrections in d2_review_followup_v1@d9f9087e and the billed pre-model W2 probe clarification. Saved the exact comment and digest, and linked the limited acknowledgement in INDEX/WORKBOARD. This closes the stated review wording disagreements; it is not a complete D2 G1, runtime admission, or owner scope/deadline decision. No new model call, budget reservation, test, collector, export or scientific oracle. Original failed parent and all existing evidence remain preserved. The original permission question is still unanswered; no elapsed-time approval.

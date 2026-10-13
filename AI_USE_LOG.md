@@ -2332,3 +2332,8 @@ Prepared remaining-only core and exact failed-prefix binding while awaiting owne
 ### P008 external prefix/core reviews — 2026-10-13T13:34:29.814448+00:00
 
 Read fixed Claude82b3d69a (failed D2 prefix PASS) and39caf811 (core code-only PASS-WITH-NOTES). Retain failed parent and separate runtime/admission scopes. New read-only check shows next depth proposal has4 cached/12 missing while no action is pending; corrected report shorthand and formula parentheses. Frozen18-student+base worker caps sum141982s/39.44GPU-hours, not an ETA or measured failure probability. Documented reproducible20-test invocation without rerunning completed checks. Local report builder initially referenced intentionally absent student configs; empty attempt/error retained, corrected to frozen admission slot limits. No new model, upload, reservation, source change or student plan. W1–W4 future-worker requirements accepted in principle with full-overhead/pre-model/billed-probe clarifications; owner time/scope decision remains pending.
+
+
+### P008 reviewer acknowledgement — 2026-10-13T13:57:54.216276+00:00
+
+Checked new Claude issue13 comment6146926321 (actual event13:42:43UTC): reviewer accepts the three corrections in d2_review_followup_v1@d9f9087e and the billed pre-model W2 probe clarification. Saved the exact comment and digest, and linked the limited acknowledgement in INDEX/WORKBOARD. This closes the stated review wording disagreements; it is not a complete D2 G1, runtime admission, or owner scope/deadline decision. No new model call, budget reservation, test, collector, export or scientific oracle. Original failed parent and all existing evidence remain preserved. The original permission question is still unanswered; no elapsed-time approval.
