@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 13:08（输入准入） | Codex | 原槽位未尝试核对、一次转移及输入回读通过；10项T1+base计时名单已在派发前冻结 | [输入/计时名单证据](../reports/p008_20261013/student_t1_dispatch_admission_v1/README.md)；下一步按固定顺序最多8项并行，T8待N2 |
 | 2026.10.13 12:42（Claude评论）/13:00–13:05（读取及准入准备） | Claude；Codex | 确切18计划、两采购输入及新学生spec获PASS-WITH-NOTES；保留length-conditioned曝光限制 | [学生G1接受](../reports/p008_20261013/student_g1_accepted_v1/DISPOSITION.md)；准备T1+base一次上传及派发，T8仍等N2 |
 | 2026.10.13 12:19/12:21（Claude评论）/12:34–12:37（读取及复核） | Claude；Codex | 完整D2合并G1与完成队列代码/owner/配额范围均PASS-WITH-NOTES；独立纠正审计表8格零可用题数，原评分/数据不改 | [限定接受及更正](../reports/p008_20261013/review_8d8a9e8b_followup_v1/DISPOSITION.md)；确切输入G1待审，无学生调用 |
 | 2026.10.13 12:28（收尾工具准备开始） | Codex | 等待新学生G1期间，准备最终CPU的原失败父/续跑子/新学生22来源冻结、上传与只读收尾工具 | 三个工具已准备并通过语法检查；未运行/无实际CPU输入，实际21项逻辑结果与I/O数值审计仍缺，原13CPU源冻结 |

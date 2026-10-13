@@ -2416,3 +2416,6 @@ Oct13 12:15PDT: addressed prepared-builder schema mismatch with explicit copy-on
 
 
 2026-10-13T20:01:37.595824+00:00 — Accepted full Claude4a8bace0 exact-input G1 at0be9e6e0 after fixed report/source/spec hash verification. All18 schedules and16 inventories covered; prior pool/code reviews retained and oldD1 pool acceptance preserved. T1+base numerical gate is now genuine; T8 still waits actual N2. No old raw oracle/tests/models repeated. Next: once-only immutable slot transfer/input upload/readback, then accepted finite T1/base dispatch. Length-conditioned extra exposure and q0 bridges remain limitations.
+
+
+2026-10-13T20:08:43.459889+00:00 — Original uploader94306 completed old-slot absence, immutable transfer and upload, then failed in readback on platform ServiceError. One read-only reconciliation67167 retained that failure, verified unchanged full remote inventory and each file SHA with zero uploads or models. Frozen all10T1+base timing roster and predetermined dispatch order before any endpoint. No repeated upload/model/old checks. Max8 capacity includes pending and unmatched containers; T8 remains N2-blocked.

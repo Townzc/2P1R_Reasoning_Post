@@ -1,0 +1,3 @@
+# Finite T1/base dispatch admission
+
+Both draws passed exact input G1. All ten originally planned T1 students plus the single base are frozen in the timing roster before any dispatch. No failed or slow admitted host may be removed. The eight T8 jobs require a later actual-timing N2 review. The original upload and slot transfer occurred once. Its subsequent readback hit a platform ServiceError, preserved in the original log; a separate read-only reconciliation checked the unchanged complete remote inventory and persisted each original file SHA, with zero uploads or model calls; per-worker limits, scientific dose and total reservation are unchanged. The order is fixed without endpoint outcomes; at most eight queued or active workers count against capacity.
