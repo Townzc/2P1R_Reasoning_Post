@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T09:39:26.775276+00:00",
+  "as_of_utc": "2026-10-13T10:07:46.895712+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -255,6 +255,25 @@
       "numeric_student_inputs_pending": true,
       "response_timeout_minutes": 45,
       "timeout_action": "hold unreviewed dispatch; no silence approval"
+    },
+    {
+      "request_id": "p008-final-cpu-code-preflight-r1",
+      "target_commit": "33f964bbeda4d67de8caac72691a8dd7f01ff4f0",
+      "packet": "reports/p008_20261013/cpu_audit_preflight_v1",
+      "manifest": "reports/p008_20261013/cpu_audit_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "d0f46a1300ee8413656f8133d272da4aad06ce7e0b3ef3dacb5154f33ea47fac",
+      "external_review": "pending",
+      "blocking_for": "Only future final CPU integrity audit; does not block current teacher pools or replace student G1",
+      "questions": [
+        "Exact21-label original-terminal/local-oracle/source/config binding and no changed retained roster?",
+        "Immutable packed-byte/fullstate scope stated accurately, including both1024/2048 checkpoints, finite optimizer/RNG/dose and prior raw oracle binding?",
+        "Single-use finite CPU, no replay, actual model resource release, original5USDslot/deadline and full4000second entry window?"
+      ],
+      "requested_utc": "2026-10-13T10:07:46.895712+00:00",
+      "owner_authorized": true,
+      "numeric_audit_inputs_pending": true,
+      "response_timeout_minutes": 45,
+      "timeout_action": "Hold unreviewed final CPU dispatch; no silence approval"
     }
   ],
   "p008_v31": {
