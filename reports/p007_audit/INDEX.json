@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T12:04:48.147791+00:00",
+  "as_of_utc": "2026-10-13T12:25:46.302159+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -407,7 +407,7 @@
       "packet": "reports/p008_20261013/t1_first_timing_policy_v1",
       "manifest": "reports/p008_20261013/t1_first_timing_policy_v1/MANIFEST.json",
       "manifest_sha256": "0a3b48cdba6d1a4c926ac45e6c852d35c144045eb8d64c97359cd072e2d6918f",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES C1/C2 corrections required before use",
       "requested_utc": "2026-10-13T12:03:00.864114+00:00",
       "blocking_for": "Outcome-blind T1/base-first order and future T8 numerical timing acceptance; original active pools unaffected",
       "scope": "Timing criterion only; no actual T1 samples, pool G1, student admission, or T8 numerical PASS exists",
@@ -418,7 +418,28 @@
       ],
       "owner_authorized": true,
       "response_timeout_minutes": 45,
-      "timeout_action": "Hold dependent action; silence is not approval"
+      "timeout_action": "Hold dependent action; silence is not approval",
+      "review_commit": "7265c55876f7ecd9469587b2523df4df520a7e5a",
+      "report": "audit/claude/20261013t/T1_FIRST_TIMING_POLICY.md",
+      "disposition": "reports/p008_20261013/t1_first_timing_policy_v2/REVIEW_REQUEST.md",
+      "numeric_admission": false
+    },
+    {
+      "request_id": "p008-t1-first-timing-policy-r2",
+      "target_commit": "e34f9c1815b1b3bdec74eef3e5d410bb1b8bb229",
+      "packet": "reports/p008_20261013/t1_first_timing_policy_v2",
+      "manifest": "reports/p008_20261013/t1_first_timing_policy_v2/MANIFEST.json",
+      "manifest_sha256": "b846a1e9204a8c75e27609ffebd82eb1e5e5804e57bee1eb27224f4947a801ee",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T12:25:46.302048+00:00",
+      "blocking_for": "Use of corrected timing policy, never overrides actual G1/joint-plan/student or T8 numerical gates",
+      "questions": [
+        "C1 immutable G1-draw roster plus monotonic additions excludes no failed/slow admitted T1 and does not waive all-pool/joint-plan prerequisites?",
+        "C2 max(token-scaled compute, per-update-scaled compute),10CPUchecks and original caps/margins preserved?"
+      ],
+      "response_timeout_minutes": 45,
+      "timeout_action": "No silence-as-approval; hold dependent action",
+      "numeric_admission": false
     }
   ],
   "p008_v31": {
@@ -446,8 +467,8 @@
     "student_numeric_admission": false,
     "N2_status": "OPEN",
     "conditional_repair_status": "blueprint_reviewed_no_child_admission",
-    "latest_engineering_packet": "reports/p008_20261013/t1_first_timing_policy_v1",
+    "latest_engineering_packet": "reports/p008_20261013/t1_first_timing_policy_v2",
     "student_runtime_code_review": "PASS-WITH-NOTES c206f0dc only",
-    "timing_policy_review_request": "p008-t1-first-timing-policy-r1"
+    "timing_policy_review_request": "p008-t1-first-timing-policy-r2"
   }
 }
