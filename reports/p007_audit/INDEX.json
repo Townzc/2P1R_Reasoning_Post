@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T23:43:13.219456+00:00",
+  "as_of_utc": "2026-10-13T23:49:19.223534+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -905,8 +905,8 @@
       "packet": "reports/p008_20261013/t8_actual_timing_proposal_v1",
       "manifest": "reports/p008_20261013/t8_actual_timing_proposal_v1/MANIFEST.json",
       "manifest_sha256": "199c4f27f3bbb6d194ea877574f4ae84a6568214b6d5b87af6a1328aea873122",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "FAIL",
+      "status": "reviewed",
       "blocking": true,
       "blocking_for": "BLOCKS all8T8 numericaladmission; currentcriterionFAIL",
       "questions": [
@@ -914,7 +914,12 @@
         "Confirm9550.77764–9551.68345>9530 for all8, preserveN2false andzeroT8calls",
         "Check exact34source/ab49spec/proposaldigest/physicalmapping andretainedfailedattempts; no host/outcome selection"
       ],
-      "created_utc": "2026-10-13T23:43:13.219456+00:00"
+      "created_utc": "2026-10-13T23:43:13.219456+00:00",
+      "review_commit": "b5c0a754c40e6b5e2037d3e134fb355105ccbe74",
+      "review_report": "audit/claude/20261013ah/N2_AND_CAP.md",
+      "review_report_sha256": "c89c0a5c6b6e573fa8e62430c54566207da9067009c0e633eac3d329074e4dbe",
+      "review_read_utc": "2026-10-13T23:48:38.574369+00:00",
+      "scope": "Original frozen all8 timing criterion failed; noT8admission"
     },
     {
       "request_id": "p008-t8-cap-amendment-proposal-r1",
@@ -922,8 +927,8 @@
       "packet": "reports/p008_20261013/t8_cap_amendment_proposal_v1",
       "manifest": "reports/p008_20261013/t8_cap_amendment_proposal_v1/MANIFEST.json",
       "manifest_sha256": "a682b23bdb4da5bfd1987ad4a53136d6cb00ee5baa373f07ddc808f1b913868d",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS_arithmetic_only",
+      "status": "reviewed",
       "blocking": false,
       "blocking_for": "PROPOSALONLY; directownerchangedcap/budgetandexactnewsource/specauditrequired",
       "questions": [
@@ -931,7 +936,12 @@
         "Verify1253to1258cents peroriginalslot/8slots+$0.40/proposedstage266.44; no oldreservationsreclaimed",
         "No runtimeadmission: implementationmustbindsupplementaltime/costtounattemptedslotswithoutmodifyingregisteredplansorallowingduplicatedispatch"
       ],
-      "created_utc": "2026-10-13T23:43:13.219456+00:00"
+      "created_utc": "2026-10-13T23:43:13.219456+00:00",
+      "review_commit": "b5c0a754c40e6b5e2037d3e134fb355105ccbe74",
+      "review_report": "audit/claude/20261013ah/N2_AND_CAP.md",
+      "review_report_sha256": "c89c0a5c6b6e573fa8e62430c54566207da9067009c0e633eac3d329074e4dbe",
+      "review_read_utc": "2026-10-13T23:48:38.574369+00:00",
+      "scope": "Arithmetic/proposal only, post-hoc engineering deviation; owner and exact runtime/numeric review stillrequired"
     },
     {
       "request_id": "p008-t1-figure-and-facts-r1",
@@ -989,7 +999,7 @@
     "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
     "student_runtime_review_request": "p008-t8-runtime-n2-preflight-r1",
     "student_numeric_admission": "T1done; all8T8 notadmitted: actualfrozenN2criterionfailed",
-    "N2_status": "FAIL_LOCAL_9550.78_to9551.68_over9530_external_numeric_review_pending",
+    "N2_status": "FAIL_CONFIRMED_by_independent_b5c0a754_all8",
     "conditional_repair_status": "completed_collected_exported_merged_oracle_passed_provider_released",
     "latest_engineering_packet": "reports/p008_20261013/student_frozen_lr_amendment_v1",
     "student_runtime_code_review": "T8codePASS62fb9c5b; numericN2notpassed",
@@ -1062,7 +1072,7 @@
     "student_frozen_lr_calls": 8,
     "student_frozen_lr_startup_verified": 8,
     "failed_replacements": "two_originalfailures_retained_two_independent_replacements_completed",
-    "T8_timing_N2": "Localcriterionfailed_all8_externalreviewpending",
+    "T8_timing_N2": "FAIL_original9530_line; no admission",
     "replacement_owner_record": "reports/p008_20261013/OWNER_STUDENT_LR_REPLACEMENTS.json",
     "student_dispatch_local_refusals": 5,
     "student_dispatch_refusal_worker_calls": 0,
@@ -1080,14 +1090,14 @@
     "original_eight_T1_review_request": "p008-eight-original-t1-outcomes-r1",
     "T8_code_review_request": "p008-t8-runtime-n2-preflight-r1",
     "latest_billing": "reports/p008_20261013/BILLING_UPDATE_1636.json",
-    "last_review_check_utc": "2026-10-13T23:31:15.713067+00:00",
-    "latest_review_commit": "62fb9c5b56ff5f172d67a2a284548fadf0e457b5",
+    "last_review_check_utc": "2026-10-13T23:48:38.574369+00:00",
+    "latest_review_commit": "b5c0a754c40e6b5e2037d3e134fb355105ccbe74",
     "student_completed_physical_calls": 10,
     "student_logical_T1_completed": 10,
     "replacement_results_packet": "reports/p008_20261013/student_t1_replacements_v1",
     "replacement_results_external_review": "pending",
     "T8_calls": 0,
     "T8_numeric_request": "p008-t8-actual-n2-r1",
-    "T8_cap_amendment_status": "proposal_only_owner_and_exactsource_review_pending"
+    "T8_cap_amendment_status": "arithmeticPASS_b5c0a754_directowner_pending_newexactsource_numeric_notprepared"
   }
 }
