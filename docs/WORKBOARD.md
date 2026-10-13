@@ -106,6 +106,7 @@
 | 2026.10.12 23:50（GitHub评论），23:51（开始处理） | Claude提案；研究者请求；Codex | 收到P008 v2和独立评价请求；开始读新笔记、检查目标量/门控/采购重复与成本，保持全部云任务关闭 | [原提案4934d852](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4934d852f375bc79bec99a636edd1fbf8f144604/audit/claude/20261013i/P008_PROPOSAL.md)；提案不是准入 |
 | 2026.10.13 00:05（评审整理） | Codex | 复核功效假设及164训练单位/295456次次评测；提出固定预算主比较+独立采购+正交桥接的11学生示例，尚未准入。v2图已实际查看，主分未改 | [评审](audit/P008_V2_DESIGN_REVIEW_20261013.md)、[算术](../reports/p008_design_review_20261013/CALCULATIONS.json)、[v2图](../reports/sft_allocation_midpoint_20261011/figures_token_v2/accuracy_by_price_and_seed.png)；0模型调用/0外部评论 |
 
+| 2026.10.13 00:08（版本绑定） | Codex | 独立评审/新图发布为7cefa253；INDEX绑定固定commit、manifest和阻塞范围，草拟REVIEW REQUEST由owner发送 | [请求草稿](audit/P008_REVIEW_REQUEST_DRAFT_20261013.md)；没有外部发信或P008执行 |
 
 ## 维护规则
 

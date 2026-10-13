@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T07:05:25.211340+00:00",
+  "as_of_utc": "2026-10-13T07:06:34.395899+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -87,5 +87,36 @@
   "spending_ceiling_usd": 450,
   "latest_reading_record": "reports/p008_design_review_20261013/SOURCE_READ_RECORD.json",
   "automation_p007": "PAUSED after finite closeout",
-  "review_requests": []
+  "review_requests": [
+    {
+      "request_id": "p008-v2-independent-design-review-r1",
+      "target_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
+      "packet": "reports/p008_design_review_20261013",
+      "manifest_sha256": "2aaa998126b197baf6c8a5fef3b3118705d98a35ec35a78de0981ee55c60e5a8",
+      "external_review": "pending",
+      "blocking_for": "future P008 admission only; no active execution",
+      "questions": [
+        "Joint B/T estimand and orthogonal bridge",
+        "Formal-test gate selection bias and safe alternative",
+        "Independent procurement unit and old/new backend comparability",
+        "Output/dose/power arithmetic and reduced design controls"
+      ],
+      "supersedes": null,
+      "reviewed_commit": null
+    },
+    {
+      "request_id": "p007b-figure-v2-display-r1",
+      "target_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
+      "packet": "reports/sft_allocation_midpoint_20261011/figures_token_v2",
+      "manifest_sha256": "68a7ff265b32acdbf3b5e83c4ab627d35ff2fc637484b9bf7e7aaf01f9c7fb6c",
+      "external_review": "pending",
+      "blocking_for": "none; original figure PASS-WITH-NOTES and facts PASS remain available",
+      "questions": [
+        "F15-1 overlapping markers/legend fixed without changing values",
+        "Summary/closeout hashes unchanged and primary forest PNG identical"
+      ],
+      "supersedes": "v1 display only; original retained",
+      "reviewed_commit": null
+    }
+  ]
 }
