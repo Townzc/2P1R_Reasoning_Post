@@ -2413,3 +2413,6 @@ Oct13 12:15PDT: addressed prepared-builder schema mismatch with explicit copy-on
 
 
 2026-10-13T19:38:44.319756+00:00 — Codex read Claude fixed8d8a9e8b and independently checked scope plus original wallet-ID arithmetic/guard metrics. Corrected report-only zero-usable counts and causal/cost wording; did not alter frozen scoring or data. Prepared finalCPU local freeze/proposal/admit/upload/collection helpers without invoking them or any cloud work. No external message, newmodel, oldoracle/test repetition, fabricatedreview or Proattribution. Reflection: distinguish code/quota acceptance, poolG1, exact studentinputG1 and actualtiming; accepted audits can still contain report-table errors.
+
+
+2026-10-13T20:01:37.595824+00:00 — Accepted full Claude4a8bace0 exact-input G1 at0be9e6e0 after fixed report/source/spec hash verification. All18 schedules and16 inventories covered; prior pool/code reviews retained and oldD1 pool acceptance preserved. T1+base numerical gate is now genuine; T8 still waits actual N2. No old raw oracle/tests/models repeated. Next: once-only immutable slot transfer/input upload/readback, then accepted finite T1/base dispatch. Length-conditioned extra exposure and q0 bridges remain limitations.

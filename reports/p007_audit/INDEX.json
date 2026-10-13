@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T19:38:44.319756+00:00",
+  "as_of_utc": "2026-10-13T20:01:37.595824+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -696,8 +696,8 @@
     },
     {
       "request_id": "p008-student-exact-input-g1-r1",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS-WITH-NOTES",
+      "status": "reviewed",
       "target_commit": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
       "packet": "reports/p008_20261013/student_admission_v1",
       "manifest": "reports/p008_20261013/student_admission_v1/MANIFEST.json",
@@ -715,18 +715,23 @@
       "input_manifest_sha256": "dae1bd27ae469f5b8c32af68146f8447717af5ef4f6299b36f8ddf2bcbf8ee24",
       "runtime_source_commit": "121f17b1a2b88748ac9f325344e2d7f20c9e0380",
       "source_files": 30,
-      "numeric_admission": false,
+      "numeric_admission": "T1 and base only; T8 requires actual N2",
       "new_model_calls": 0,
       "input_upload_performed": false,
       "related_review_requests": [
         "p008-student-completion-queue-r1",
         "p008-g1-d2-merged-r1"
       ],
-      "timeout_action": "No silence approval; keep exact unaccepted runs pending without requesting repeated owner authorization."
+      "timeout_action": "No silence approval; keep exact unaccepted runs pending without requesting repeated owner authorization.",
+      "review_commit": "4a8bace07f8e0bb30e12294ad92f2a26d7ff844b",
+      "review_report": "audit/claude/20261013ab/STUDENT_INPUT_G1.md",
+      "review_report_sha256": "ffff275684f860b1dca142b401ce5b59c7f2c9804d09d4fc8decd88ebbb3f659",
+      "review_read_utc": "2026-10-13T20:01:37.595824+00:00",
+      "acceptance_packet": "reports/p008_20261013/student_g1_accepted_v1"
     }
   ],
   "p008_v31": {
-    "status": "two_pools_G1_complete_completion_code_reviewed_exact_student_input_G1_pending",
+    "status": "exact_student_G1_passed_preparing_T1_base_dispatch",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -747,15 +752,15 @@
     "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json",
     "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
     "student_runtime_review_request": "p008-student-completion-queue-r1",
-    "student_numeric_admission": false,
+    "student_numeric_admission": "T1 and base; T8 timing N2 open",
     "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "completed_collected_exported_merged_oracle_passed_provider_released",
     "latest_engineering_packet": "reports/p008_20261013/student_admission_v1",
-    "student_runtime_code_review": "PASS-WITH-NOTES completion121f17b1 only; exact input0be9e6e0 pending",
+    "student_runtime_code_review": "PASS-WITH-NOTES completion121f plus exact0be inputs/spec at4a8bace0",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
-    "pool_d2_status": "complete_local_merged_oracle_passed_externalG1pending_parentfailed_preserved",
+    "pool_d2_status": "complete_local_merged_oracle_and_external_G1_passed_parentfailed_preserved",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
     "owner_scope_or_deadline_question": "answered_direct_student_queue_until_complete_per_slot_caps_unchanged",
     "active_gpu_tasks": 0,
@@ -766,7 +771,7 @@
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
     "owner_student_maximum_gpus": 8,
-    "student_concurrency_amendment": "owner8_and_totalquota10_proof_available_newcompletion_code_review_pending",
+    "student_concurrency_amendment": "owner8_totalquota10_and_completion_code_passed",
     "continuation_runtime_review": "PASS exact_v3_ff2c1d2a",
     "student_workspace_identity_matches_owner": true,
     "student_h100_quota_known": false,
@@ -797,6 +802,7 @@
     "latest_delayed_workspace_meter_usd": 116.2618374,
     "latest_meter_is_invoice_or_balance": false,
     "pool_d2_review_disposition": "reports/p008_20261013/review_8d8a9e8b_followup_v1",
-    "final_cpu_preparation_tools": "reports/p008_20261013/final_cpu_preparation_tools_v1"
+    "final_cpu_preparation_tools": "reports/p008_20261013/final_cpu_preparation_tools_v1",
+    "student_G1_acceptance_packet": "reports/p008_20261013/student_g1_accepted_v1"
   }
 }
