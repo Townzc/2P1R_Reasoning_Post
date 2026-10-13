@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T12:25:46.302159+00:00",
+  "as_of_utc": "2026-10-13T12:28:20.167407+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -440,10 +440,29 @@
       "response_timeout_minutes": 45,
       "timeout_action": "No silence-as-approval; hold dependent action",
       "numeric_admission": false
+    },
+    {
+      "request_id": "p008-g1-d1-pool-r1",
+      "target_commit": "7973161bb3d46dd02a8db088ef11274fdf4d8654",
+      "packet": "reports/p008_20261013/pool_d1_v1",
+      "manifest": "reports/p008_20261013/pool_d1_v1/MANIFEST.json",
+      "manifest_sha256": "82a5ba98c209a97c98770814e26e8f5305897afd0931aa38b9b6da02e8a402fe",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T12:28:20.167279+00:00",
+      "scope": "D1 full7420raw/274physicalbatches and8virtualwallets; code or D1 PASS alone does not admit students",
+      "blocking_for": "D1 numeric G1; joint plans remain dependent on complete reconciled D2",
+      "questions": [
+        "Decode all7420 originalraw tokens, independently score/stop/dedup and preserve frozen E1 parser cases?",
+        "Replay all8wallets with exact proposals before outputaccess, failed/duplicate costs and full virtual cache charges?",
+        "Fullsource/input/terminal/manifest/ledger identity and actual providerSTOPPED0 consistent?"
+      ],
+      "response_timeout_minutes": 45,
+      "timeout_action": "Hold dependent student dispatch; silence is not approval",
+      "numeric_student_admission": false
     }
   ],
   "p008_v31": {
-    "status": "two_original_pools_active_observed_metadata_timing_risk_students_not_admitted",
+    "status": "D1_complete_local_oracle_passed_D2_original_failed_preservation_running",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -466,9 +485,12 @@
     "student_runtime_review_request": "p008-student-block-journal-r3",
     "student_numeric_admission": false,
     "N2_status": "OPEN",
-    "conditional_repair_status": "blueprint_reviewed_no_child_admission",
+    "conditional_repair_status": "blueprint_only_actual_reconciliation_pending",
     "latest_engineering_packet": "reports/p008_20261013/t1_first_timing_policy_v2",
     "student_runtime_code_review": "PASS-WITH-NOTES c206f0dc only",
-    "timing_policy_review_request": "p008-t1-first-timing-policy-r2"
+    "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
+    "pool_d1_review_request": "p008-g1-d1-pool-r1",
+    "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
+    "pool_d2_status": "original_deadline_failed_readonly_preservation_running"
   }
 }
