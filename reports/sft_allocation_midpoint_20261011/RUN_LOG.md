@@ -599,3 +599,8 @@ D1 originalcompleted12:20:18UTC/STOPPED05:20:23PDT, collector28973/export63771/o
 ### 2026-10-13T12:46:36.393169+00:00 — D2 evidence preserved, no ambiguous regeneration
 
 D1 collector28973/export63771/oracle99752/publisher DONE. D2 collector77411 DONE1756files69160513bytes; failed-prefixoracle63080 DONE3992raw146batches1190193tokens,0physicalunknown/0pendingwallets,only2B8p0unfinished. Prefixrestore8CPUtests+actual3992inventory check PASS, no modelcall or workerentry/admission. E3 diagnostic82726 confirmed10rawcorrectboxed/emptyanswer-statement cases and unequalwalletconsumption; primaryunchanged. Correct Claude zero-usable counts to10/3/2/1/88/25/20/14, reserve1404cents notactualinvoice, uniformchecker notproofnondifferentialimpact; reportedfutureheader12:50 notactualreadtime12:38. P008remaining branch blocked; owner asked explicitdeadline orscope change, no reply yet. Billing114.10153151delayed workspace, reserve237.68 unchanged. No new Papers at12:30.
+
+
+### P008 conditional repair window — 2026-10-13T12:53:18.228024+00:00
+
+At the actual 12:51UTC check, the original D2 child full-window launch boundary (12:48:20UTC for 7200 worker +700 seconds before15UTC) had passed. No child model call or admission exists. The owner question about extending that child deadline or explicitly reducing to D1-only remains unanswered. D1 G1 and all D2 failed-prefix evidence are preserved; do not convert an elapsed window into approval. Project19PDT compute /21PDT material deadlines remain fixed.

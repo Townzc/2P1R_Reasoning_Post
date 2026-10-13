@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 05:51（实际检查） | Codex | 原D2续跑需保留7200+700秒完整窗口，最晚05:48:20已过；尚未收到延长子任务截止或改为D1单采购的选择 | 没有新GPU调用，原08PDT子任务截止不擅自改动；19PDT全局硬停与21PDT材料冻结保持 |
 | 2026.10.13 05:46（本阶段收尾） | Codex；Claude b4a0e5e7 | D1全7420raw/8wallet本地和外部G1通过；D2失败父3992raw、146批、1756文件保全并独立重放，0未知、0待结算动作；纯前缀复原8测试和真实库存检查通过，未调用新模型 | [D1](../reports/p008_20261013/pool_d1_v1/README.md)、[D2](../reports/p008_20261013/pool_d2_reconciliation_v1/REVIEW_REQUEST.md)、[审计更正](../reports/p008_20261013/d1_review_disposition_v1/DISPOSITION.md)；owner时限/范围问题待答 |
 | 2026.10.12 12:08 | Codex | 原四组八条训练与 base 完成核验，主任务资源释放 | [主实验收尾](../reports/sft_allocation_midpoint_20261011/MAIN_CLOSEOUT_20261012.json) |
 | 2026.10.12 12:11 | Claude（GitHub 交付） | 提交 F1–F5 方法学意见；其中“排除3pp差异”和种子差异措辞随后更正 | [原评论](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6130876644)、[处理记录](audit/P007_REVIEW_DISPOSITION_20261012.md) |
