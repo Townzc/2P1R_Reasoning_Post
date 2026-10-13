@@ -2383,3 +2383,6 @@ Owner explicitly approved D2 cutoff14PDT. Only exact deadline and owner binding 
 
 
 2026-10-13T18:19:50.771580+00:00 — Prepared failed-parent/child integrity helpers only:10 new synthetic checks passed after one create-only fixture error, original failed log retained. Zero real archives, raw rescoring, cloud calls or changes to child31source. Separate final CPU binding/worker/admission still required; not external PASS. Also moved prepared student publisher mkdir after the existing quota validation to avoid an empty immutable output directory on a missing quota. No actual builder run.
+
+
+2026-10-13T18:27:24.524392+00:00 — Read Claude fixedff2c1d2a: exact childv3@4ae602a9 PASS;8GPU@da4a404f code-only PASS-WITH-NOTES.29 reviewer tests include6new+15prior+8prior; Codex does not rerun them. Real acceptance/report hashes saved, source bytes verified. Reuse7existing input readback; fresh provider/noattempt/full7900window next. E8-1 quota still absent; E8-2 relayed global deadline change not adopted without direct owner evidence. No new child call yet.
