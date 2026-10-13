@@ -96,3 +96,12 @@ The final-pair training-phase review covers **records only**, not the still-pend
 Claude's [fixed reporte8ef6ee0](https://github.com/Townzc/2P1R_Reasoning_Post/blob/e8ef6ee0687ddd330fbc478b7852ef4dbc024d2e/audit/claude/20261013d/REPORT.md), reviewing0c08a331, gives depth_p4_s23 **PASS as a pre-review of the local raw exports**:949/1319,60 caps,full state hash matched,zero per-question disagreements. Recovery handling is PASS. This does not cover the unexported last breadth result or the final eight-model packet. The repeated independent breadth_p4_s17 parser value928 includes knownE2; its frozen primary remains927. No primary score changes.
 
 P11-1 accepted before rendering: the accuracy context figure now uses0–100%, and the contrast-with-interval figure is designated primary. SVG metadata/IDs are fixed and plotting records the rendering version; no figure has yet been produced. The revised chart output itself awaits rendering and external review. P11-2 remains pending the actual final summary: for each question, the frozen contrasts function averages the two observed seeds' policy differences, then resamples question indices jointly across all eight models10,000 times (seed20261013). The resulting interval conditions on those models and traces; it is not a training-seed confidence interval or a resampling of2638 independent seed-question observations. Verify final aggregate numbers when all eight local oracles and the cloud audit pass.
+
+
+## 第十二轮：全部终点审阅与解释更正（2026-10-12 21:58 PDT读取）
+
+固定报告[`514cec51`](https://github.com/Townzc/2P1R_Reasoning_Post/blob/514cec51b7903d0d53be33f861fcd11929b43722/audit/claude/20261013e/REPORT.md)给出八项结果PASS-WITH-NOTES、最后breadth终点PASS及恢复脚本r2 PASS。四个已知E2替代解析差异保留在主分之外；八份终点二进制SHA已由Claude分轮独立核对。
+
+接受F12-1：第七轮S7-2仅是seed17的事后结果。seed23 breadth跨题价变化−0.68pp，高价breadth跨训练seed翻转200题；不以首seed单独下降作为发现，不因果解释为重复损伤。原第七轮记录保留，本段明确更正其解释地位。接受F12-2/3：事实页仍以14-label CPU审计通过为门，逐项披露截断。Claude关闭P11-2的是共享题目平均算法；最终输出文件、CPU回执、实际图表和事实页仍待其新审计。
+
+[Codex逐项处理及独立目标核验](../../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND12_REVIEWED.json)。没有修改模型、数据、剂量或冻结主评分。

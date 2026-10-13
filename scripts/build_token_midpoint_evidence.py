@@ -72,7 +72,7 @@ def build(summary_path, closeout_path, supply_path, figures_path, out):
             lo, hi = v['conditional_question_interval_pp']
             return f'{v[point]:+.2f} [{lo:+.2f}, {hi:+.2f}]'
         lines.append('| '+title+' | '+fmt(x['per_seed']['17'], 'difference_pp')+' | '+fmt(x['per_seed']['23'], 'difference_pp')+' | '+fmt(x, 'mean_difference_pp')+' |')
-    lines += ['', '区间由预先固定的10,000次共享配对题目 bootstrap 计算（seed20261013）。平均的计算先按题目平均两个已观察种子的差值，再对题目重采样；不把2,638个回答当独立题目，也不估计训练种子或采购总体的不确定性。区间跨零不等于策略等效；正交互也不单独证明高价时多解胜出。',
+    lines += ['', '区间由预先固定的10,000次共享配对题目 bootstrap 计算（seed20261013），未做多重比较校正。平均的计算先按题目平均两个已观察种子的差值，再对题目重采样；不把2,638个回答当独立题目，也不估计训练种子或采购总体的不确定性。区间跨零不等于策略等效；正交互也不单独证明高价时多解胜出。',
               '', '## 预算实际买到了什么', '',
               '共同获取上限211,257假设计价单位；prompt/output含EOS均1单位/token。m=373.341796875为先导每次尝试的平均token费用，非每个有效解成本；新题价为0或4m。失败和重复收费。', '',
               '| 题价/策略 | 购题P | 有可用解的题数 | 可用解N | 尝试 | 检查器未通过 | 有效重复拒绝 | 剩余上限 | 每解平均曝光17/23 |',
