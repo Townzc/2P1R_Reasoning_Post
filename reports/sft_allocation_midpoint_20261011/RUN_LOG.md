@@ -425,3 +425,8 @@ The bounded read-only recovery reused28 complete files and13 verified ranges, fe
 The final breadth GPU stopped21:06:10PDT; original CLI74640 and collector40964 completed, all GPU containers exited. Read-only export24469 failed on the same20second VolumeGetFile2 range timeout with secondary client teardown, full stderr saved. Immutable completed terminal/manifest/provider and33 valid files/3 valid ranges were reconciled;0 mismatches,828 files/24 ranges missing. Reuse the unchanged published383916fc helper once with600s outer bound, preserving originals, no automatic retry/remote writes/model work. Last raw-score oracle and CPUaudit remain pending.
 
 Claude round11 fixede8ef6ee0 pre-reviews depth949/1319/60caps andfullstatePASS, recoveryPASS. ChartP11-1 accepted with a full0–100percent accuracy axis and contrast intervals as primary figure; P11-2 aggregate interval awaits actual full summary, retaining the already frozen shared-question method. New chart code remains unrendered.
+
+
+## 2026-10-13T04:21:47.075496+00:00 — last breadth second read-only transport reconciliation
+
+The recovery46607 failed at the20second metadata call after one newly verified block. Original33 full files and3 blocks plus that new block are preserved; independently verified33 files/4 unique blocks,828 missing files/23 missing blocks,0 corrupt. No GPU or model work remains. A bounded transport-only source repair adds validated reuse of previous recovery receipts and metadata90s/ranges360s/outer900s; no automatic retry. One new tagged read-only continuation is prepared after ordinary publication; full-file SHA and raw oracle remain mandatory. No scientific source/input/scoring changes or extra reserve.

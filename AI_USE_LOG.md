@@ -2145,3 +2145,8 @@ Codex read actual workers and immutable update/batch records, verified high-pric
 2026-10-13T04:01:04.730318+00:00: Codex independently verified all recovered files and raw endpoint scores for depth_p4_s23. Preserved the range timeout and post-helper immutable-receipt bookkeeping failure, used a separate completion record, and did not repeat model work or the completed recovery. Seven full local oracles passed; final comparison awaits the eighth and cloud audit.
 
 2026-10-13T04:14:19.917779+00:00: Codex reconciled the final breadth read-only transfer timeout after all GPU work ended; prepared one missing-object continuation with immutable failure evidence. Read scoped Claude round11, preserved primary scores and adopted neutral chart axes before rendering; no new model work, statistical method, external message or slide.
+
+
+## 2026-10-13T04:21:47.075496+00:00 — last breadth second read-only transport reconciliation
+
+The recovery46607 failed at the20second metadata call after one newly verified block. Original33 full files and3 blocks plus that new block are preserved; independently verified33 files/4 unique blocks,828 missing files/23 missing blocks,0 corrupt. No GPU or model work remains. A bounded transport-only source repair adds validated reuse of previous recovery receipts and metadata90s/ranges360s/outer900s; no automatic retry. One new tagged read-only continuation is prepared after ordinary publication; full-file SHA and raw oracle remain mandatory. No scientific source/input/scoring changes or extra reserve.

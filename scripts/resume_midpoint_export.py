@@ -48,16 +48,57 @@ def reusable_ranges(old,remote,spec):
     return result
 
 
-def repair_state(volume_name,remote,target,spec,tag):
+def range_sources(old,additional,remote,spec):
+    """Reuse proven blocks from reconciled attempts, including partial recovery.
+
+    Recovery receipts bind their original receipt. An inherited block needs an
+    already verified source; a newly downloaded block needs its own response SHA.
+    A present but unproven/corrupt block stops the continuation.
+    """
+    old=Path(old)
+    sources={start:(length,old/f'{start:012d}.bin')
+             for start,length in reusable_ranges(old,remote,spec)}
+    expected=dict(ranges(spec['bytes']))
+    for folder in additional:
+        folder=Path(folder);receipt=read(folder/'transport_receipt.json')
+        if (receipt['remote']!=remote or receipt['expected']!=spec or
+            receipt['read_only'] is not True or receipt['scientific_calls']!=0 or
+            receipt['prior_receipt_sha256']!=sha(old/'transport_receipt.json')):
+            raise ValueError('Recovery range receipt identity differs')
+        records={r['start']:r for r in receipt['new_ranges']}
+        if len(records)!=len(receipt['new_ranges']):raise ValueError('Duplicate recovery range')
+        inherited=dict(receipt['reused_ranges'])
+        if len(inherited)!=len(receipt['reused_ranges']):raise ValueError('Duplicate inherited range')
+        for p in folder.glob('*.bin'):
+            if not re.fullmatch(r'\d{12}\.bin',p.name):raise ValueError('Unknown block filename')
+            start=int(p.stem);length=expected.get(start)
+            if length is None or p.stat().st_size!=length:raise ValueError('Recovery block boundary differs')
+            h=sha(p);record=records.get(start)
+            if record:
+                if record['length']!=length or record['status']!='verified_response' or record.get('sha256')!=h:
+                    raise ValueError('Recovery block is not independently verified')
+            elif inherited.get(start)==length and start in sources:
+                if h!=sha(sources[start][1]):raise ValueError('Inherited recovery block differs')
+            else:raise ValueError('Recovery block has no proof')
+            if start in sources and h!=sha(sources[start][1]):raise ValueError('Conflicting proven blocks')
+            sources[start]=(length,p)
+    return sources
+
+
+def repair_state(volume_name,remote,target,spec,tag,additional_parts=None,
+                 metadata_seconds=20,total_seconds=180):
     import aiohttp
     from modal.volume import _Volume,_raise_on_block_response_error,_read_block_body
     from modal_proto import api_pb2
     target=Path(target);old=target.with_name(target.name+'.parts')
     if target.exists():raise FileExistsError(target)
-    verified=reusable_ranges(old,remote,spec)
+    if not (0<metadata_seconds<=90 and metadata_seconds<total_seconds<=360):
+        raise ValueError('Invalid finite transfer bounds')
+    sources=range_sources(old,additional_parts or [],remote,spec)
+    verified=sorted((start,length) for start,(length,_) in sources.items())
     new=target.with_name(target.name+'.parts_'+tag);new.mkdir(exist_ok=False)
     for start,length in verified:
-        source=old/f'{start:012d}.bin';dest=new/source.name
+        source=sources[start][1];dest=new/source.name
         with source.open('rb') as src,dest.open('xb') as dst:shutil.copyfileobj(src,dst)
         if sha(source)!=sha(dest):raise ValueError('Reused range copy differs')
     reused=set(verified);missing=[x for x in ranges(spec['bytes']) if x not in reused]
@@ -68,7 +109,7 @@ def repair_state(volume_name,remote,target,spec,tag):
         async with aiohttp.ClientSession(timeout=timeout) as client:
             for start,length in missing:
                 record=dict(start=start,length=length,status='attempted');records.append(record)
-                response=await asyncio.wait_for(volume.client._stub.VolumeGetFile2(api_pb2.VolumeGetFile2Request(volume_id=volume.object_id,path=remote,start=start,len=length,client_pads_blocks=True)),20)
+                response=await asyncio.wait_for(volume.client._stub.VolumeGetFile2(api_pb2.VolumeGetFile2Request(volume_id=volume.object_id,path=remote,start=start,len=length,client_pads_blocks=True)),metadata_seconds)
                 if response.start!=start or response.len!=length or len(response.get_urls)!=1:
                     raise ValueError('Provider range boundary differs')
                 async with client.get(response.get_urls[0]) as resp:
@@ -77,9 +118,9 @@ def repair_state(volume_name,remote,target,spec,tag):
                 p=new/f'{start:012d}.bin'
                 with p.open('xb') as f:f.write(body.ljust(length,b'\0'))
                 record.update(status='verified_response',sha256=sha(p))
-    receipt=dict(remote=remote,expected=spec,prior_receipt_sha256=sha(old/'transport_receipt.json'),reused_ranges=verified,new_ranges=records,read_only=True,scientific_calls=0,automatic_retries=0,started_epoch=time.time(),complete=False)
+    receipt=dict(remote=remote,expected=spec,prior_receipt_sha256=sha(old/'transport_receipt.json'),additional_receipts={str(p):sha(Path(p)/'transport_receipt.json') for p in additional_parts or []},reused_ranges=verified,new_ranges=records,read_only=True,scientific_calls=0,automatic_retries=0,metadata_seconds=metadata_seconds,total_seconds=total_seconds,started_epoch=time.time(),complete=False)
     try:
-        asyncio.run(asyncio.wait_for(fetch(),180));assemble(new,target,spec);receipt['complete']=True
+        asyncio.run(asyncio.wait_for(fetch(),total_seconds));assemble(new,target,spec);receipt['complete']=True
     except BaseException as error:
         receipt['error_type']=type(error).__name__;raise
     finally:
@@ -106,9 +147,11 @@ def resume(args):
         # Keep the raw asynchronous SDK client isolated from the synchronous
         # Modal client used for manifest/compact reads in this process.
         payload=dict(volume_name='sft-allocation-midpoint-v1',remote=prefix+name,
-                     target=str(root/name),spec=selected[name],tag=args.tag)
+                     target=str(root/name),spec=selected[name],tag=args.tag,
+                     additional_parts=args.reuse_parts,metadata_seconds=args.metadata_seconds,
+                     total_seconds=args.range_seconds)
         subprocess.run([sys.executable,'-m','scripts.resume_midpoint_export',
-                        '--repair-state-json',json.dumps(payload)],check=True,timeout=210)
+                        '--repair-state-json',json.dumps(payload)],check=True,timeout=args.range_seconds+30)
     def fetch(name):
         p=root/name;p.parent.mkdir(parents=True,exist_ok=True)
         with p.open('xb') as f:
@@ -128,6 +171,9 @@ def resume(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--repair-state-json')
+    parser.add_argument('--reuse-parts',action='append',default=[])
+    parser.add_argument('--metadata-seconds',type=int,default=20)
+    parser.add_argument('--range-seconds',type=int,default=180)
     for arg in ('campaign','run','out','receipt','ledger','tag'):parser.add_argument('--'+arg)
     args=parser.parse_args()
     if args.repair_state_json:

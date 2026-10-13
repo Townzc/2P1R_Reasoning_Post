@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from scripts.resume_midpoint_export import inventory,reusable_ranges
+from scripts.resume_midpoint_export import inventory,reusable_ranges,range_sources
 
 
 class ExportRecoveryTests(unittest.TestCase):
@@ -40,6 +40,29 @@ class ExportRecoveryTests(unittest.TestCase):
                 with self.assertRaises(ValueError):reusable_ranges(r,'/different',spec)
                 (r/'000000000000.bin').write_bytes(b'xxxx')
                 with self.assertRaises(ValueError):reusable_ranges(r,'/f',spec)
+
+    def test_partial_recovery_new_and_inherited_blocks_are_reused(self):
+        with tempfile.TemporaryDirectory(dir=Path.cwd()) as tmp:
+            root=Path(tmp);old=root/'old';old.mkdir();spec=self.fixture(old)
+            new=root/'recovery';new.mkdir()
+            (new/'000000000000.bin').write_bytes(b'abcd')
+            (new/'000000000004.bin').write_bytes(b'efgh')
+            receipt=dict(remote='/f',expected=spec,read_only=True,scientific_calls=0,
+                prior_receipt_sha256=hashlib.sha256((old/'transport_receipt.json').read_bytes()).hexdigest(),
+                reused_ranges=[[0,4]],new_ranges=[dict(start=4,length=4,status='verified_response',sha256=hashlib.sha256(b'efgh').hexdigest())])
+            path=new/'transport_receipt.json';path.write_text(json.dumps(receipt))
+            with patch('scripts.resume_midpoint_export.ranges',return_value=[(0,4),(4,4)]):
+                got=range_sources(old,[new],'/f',spec)
+                self.assertEqual(sorted(got),[0,4])
+                self.assertEqual(got[4],(4,new/'000000000004.bin'))
+                receipt['new_ranges'][0]['status']='attempted';path.write_text(json.dumps(receipt))
+                with self.assertRaises(ValueError):range_sources(old,[new],'/f',spec)
+                receipt['new_ranges'][0]['status']='verified_response';path.write_text(json.dumps(receipt))
+                (new/'000000000000.bin').write_bytes(b'xxxx')
+                with self.assertRaises(ValueError):range_sources(old,[new],'/f',spec)
+                (new/'000000000000.bin').write_bytes(b'abcd')
+                receipt['prior_receipt_sha256']='wrong';path.write_text(json.dumps(receipt))
+                with self.assertRaises(ValueError):range_sources(old,[new],'/f',spec)
 
 
 if __name__=='__main__':unittest.main()

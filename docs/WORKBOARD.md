@@ -89,6 +89,8 @@
 
 | 2026.10.12 21:14（最后传输对账／第十一轮处理） | Codex | Claude独立预审确认多解949/1319与完整state；采用差值区间主图、准确率0–100%辅助图。最后多题下载同类超时，33完整文件/3分块有效，准备只补828文件/24分块 | [修复边界](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_BREADTH_EXPORT_RECOVERY_20261013.json)、[第十一轮范围](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND11_REVIEWED.json)；GPU全部释放，0新增科学剂量 |
 
+| 2026.10.12 21:21（第二次传输对账／修复前） | Codex | 首次补齐取得1个新分块后又在20秒元数据请求超时；原失败全部保留，现33完整文件/4有效分块，无坏文件。准备复用两次有效证据，仅补23分块和其余文件；90秒地址请求/360秒分块/900秒整体硬限 | [有界修复](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_BREADTH_EXPORT_RECOVERY_R2_20261013.json)；0模型调用/远端写入，全部GPU已释放 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。
