@@ -1,0 +1,37 @@
+{
+  "schema": "p007b_readonly_export_recovery_admission_v1",
+  "recorded_utc": "2026-10-13T02:32:24.984155+00:00",
+  "campaign": "mp-policy-token-20261012-r1",
+  "run": "depth_p0_s23",
+  "phase": "prepared_before_execution",
+  "cause": "One bounded HTTP checkpoint range timed out during local readonly export; completed GPU task unaffected",
+  "original_export_exit_code": 1,
+  "existing_files_verified": 269,
+  "missing_files": 592,
+  "bad_existing_files": 0,
+  "checkpoint_valid_blocks": 26,
+  "checkpoint_total_blocks": 27,
+  "missing_range_start": 25165824,
+  "missing_range_bytes": 8388608,
+  "checkpoint_bytes": 222114741,
+  "checkpoint_sha256": "496c16db4f2fdff802cd2d2ef5c484ec2d114596407814e781015eef492062db",
+  "recovery": "Reuse verified files and range blocks; download only missing objects; preserve original failure and partial export; bind manifest to original completed terminal and full ledger; verify final complete SHA",
+  "source": "scripts/resume_midpoint_export.py",
+  "checks": {
+    "recovery_tests": 4,
+    "existing_range_transfer_tests": 6,
+    "passed": true
+  },
+  "bounds": {
+    "state_transfer_seconds": 180,
+    "isolated_state_process_seconds": 210,
+    "local_outer_process_seconds": 600,
+    "automatic_retries": 0
+  },
+  "new_model_calls": 0,
+  "remote_writes": 0,
+  "protocol_changes": 0,
+  "budget_reservation_usd": 366.5,
+  "max_total_spend_usd": 450,
+  "protected_usd": 50
+}
