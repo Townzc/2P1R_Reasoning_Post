@@ -1,0 +1,9 @@
+# Future students: actual failed-parent/child lineage (code review only)
+
+The original D2 remains failed. A separately completed remaining-only child plus full merged raw/wallet oracle will establish the completed second draw. This prepared successor binds the exact D1 completed claim/terminal, D2 failed claim/terminal and child completed claim/terminal; both draw oracles, all common targets, acquired inputs and new exact-source/spec G1 remain mandatory. Base also requires this lineage and the all-draw plan gate. No parent terminal is rewritten or synthesized as completed.
+
+This request blocks future students only. It does not block or authorize the separate D2 worker request p008-d2-continuation-runtime-g0-r1. No merged actual D2 oracle, student plans/configs/admission/upload or model call exists yet. Prepared CPU builders have not run. The original18 students/74 units, two procurement draws, seed17, whole-answer planner, normalized LR, block16 journal and frozen HF endpoint are unchanged. Timing N2 remains open. No D1-only fallback or D1-first common target is adopted.
+
+Thirteen new CPU checks passed, including altered status/claim/oracle/rehashed lineage rejection, missing failed-parent dependency, no parent outputs counted as new, retained science/input/G1 gates, and AST identity of the independent student oracle scientific body and execution/block-journal calls. These tests are synthetic binding tests, not actual merged data G1 or weight verification. Original27 student and30 child source bytes remain unchanged; a future student would use this separate28-file successor and new exact review.
+
+Please inspect actual lineage versus fabricated completion; all-source/dependency binding for base and students; unchanged scientific calls and oracle body; and explicit pending status of real data/G1/T8 timing. Final CPU provenance still needs its own adaptation/review before admission.

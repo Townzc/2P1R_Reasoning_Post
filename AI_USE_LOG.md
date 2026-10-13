@@ -2347,3 +2347,6 @@ Actual clock is beyond14:48:20UTC, the latest dispatch preserving7200worker+700 
 ### Authorized D2 child worker candidate — 2026-10-13T16:48:08.544191+00:00
 
 Owner retained both draws and explicitly extended child cutoff to13PDT after the10PDT option no longer fit. Recorded$12 additional reservation/$249.68total, not spending. Implemented a new exact-bound once-only worker with entry-started7200s hard timer, fresh11-key child+parent checks, three billed pre-model read samples, conservative full-round timing proxy, preserved failed-parent provenance and a prepared merged raw-token/wallet oracle. Fifteen new CPU fixtures passed; no old model, oracle or tests repeated. Immutable numerical packet awaits exact external runtime review, upload/readback and fresh provider/window admission. Student/finalCPU lineage adaptation and jointT/N2 remain downstream gates; no cloud work or outcome claim.
+
+
+2026-10-13T17:00:21.044502+00:00 — Prepared separate student parent/child lineage successor and two NOT-RUN CPU builders.13 new synthetic checks passed; original source/science preserved. No cloud changes or fabricated parent completion; actual D2 merged G1/common plans and N2 remain prerequisites. FinalCPU adaptation remains pending.
