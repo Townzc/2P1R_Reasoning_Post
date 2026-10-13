@@ -1,3 +1,5 @@
+P008 最新：base 已完成独立核验 **638/1319**（41条长度上限计错），GPU退出；LR 修订真实审计通过，8项尚未尝试 T1 已各派发一次，首项16更新已核验。两项原失败保持 failed，替代方案待直接预算确认；T8 仍待实际计时N2。材料21PDT冻结、有限学生按授权继续。
+
 # Problems, Paths, or Repeats?
 
 Allocating data-acquisition budgets for reasoning SFT. Working branch: [`codex/icml-acl-2027`](https://github.com/Townzc/2P1R_Reasoning_Post/tree/codex/icml-acl-2027); the default `main` is historical. This repository is a research evidence record, not presentation or assignment prose.
