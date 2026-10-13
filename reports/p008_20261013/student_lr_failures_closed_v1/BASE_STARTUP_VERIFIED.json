@@ -1,0 +1,84 @@
+{
+  "binding": {
+    "config_sha256": "35b84b3dcacc9cbae54c7c3a2cad9e8fe6dfcb5eaf26db7515e87a9e1ec82f56",
+    "data_sha256": "dae1bd27ae469f5b8c32af68146f8447717af5ef4f6299b36f8ddf2bcbf8ee24",
+    "run_id": "base",
+    "source_sha256": "3d87610bff80d1db0b2185f292855bbfdf0f92604d9ac008ac2c5a2ea62b60e9"
+  },
+  "claim": {
+    "attempt_id": "f80115601ea6439ead9d32afbf521c00",
+    "claimed_epoch": 1791922285.4729216,
+    "deadline_epoch": 1791927807.4729216,
+    "intent_sha256": "7a89cdbb918572ad51dfb2278eede443c3f128972d962782fa59dacd27cba2a6",
+    "plan_sha256": "0c0262ee98d9265521234ad960c909c953d3df08ad63520cdb6a4c84fde43c13",
+    "reserved_cents": 756,
+    "run_id": "base",
+    "stage": "main"
+  },
+  "containers": [
+    {
+      "app_id": "ap-e8LbmgmtjlkwhZTcFkMcHL",
+      "app_name": "p008-finite-students-completion",
+      "container_id": "ta-01M4VE7Z7M7S2CWAETF5A5P4ZR",
+      "start_time": "2026-10-13 13:11:19-07:00"
+    }
+  ],
+  "environment": {
+    "cuda": "12.8",
+    "deterministic_algorithms": true,
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "gpu_total_memory": 85009367040,
+    "nvidia_smi": "Tue Oct 13 20:12:25 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA H100 80GB HBM3          On  |   00000000:0B:00.0 Off |                    0 |\n| N/A   31C    P0             68W /  700W |       4MiB /  81559MiB |      0%      Default |\n|                                         |                        |             Disabled |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "versions": {
+      "accelerate": "1.10.1",
+      "numpy": "2.3.2",
+      "peft": "0.17.1",
+      "safetensors": "0.6.2",
+      "tokenizers": "0.22.1",
+      "torch": "2.8.0+cu128",
+      "transformers": "4.56.2"
+    }
+  },
+  "initial_evidence": {
+    "committed_updates": 0,
+    "initial_endpoint_outputs": 16
+  },
+  "new_model_calls": 0,
+  "passed": true,
+  "run_id": "base",
+  "scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+  "source_commit": "4b6f5180b47c90321199457a8808e3ca15b4ca08",
+  "source_files": {
+    "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+    "analyses/e017_audit.py": "9747952267e026ba7153fdebfa0e1bb8b009a536f236d521ca102d3b00490b8e",
+    "analyses/e017_stopping.py": "96c8df6aa6b928f32120a0dd619d3ad25a6aeb06d958c43abf0f01ad2f0e7fb0",
+    "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+    "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+    "experiments/sft_allocation_acquisition/contract.py": "30e5971269b74f921cd2732a78b75f3bb016d0556ba9097bf8c4aea3d3be5d9a",
+    "experiments/sft_allocation_acquisition/policy_contract.py": "c6df9c2c13556c5fbde8d7fcdfc00521d88b496ce5879b91f5aa347b6bc67ef9",
+    "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+    "experiments/sft_allocation_midpoint/monitor.py": "6c8c534a2a7bad8f45524517b8875b522362c95615454f96fbbf166ad3882081",
+    "experiments/sft_allocation_midpoint/runtime.py": "97c1c1b84acd8c9bf84cae423e1f6c73ca4a9a73049aa030045c0309868743bb",
+    "experiments/sft_allocation_p008/block_journal.py": "c86069b02c8f1d401076fa4c5f1b213a173b3d5d8a7c8abf19e4af8114c77088",
+    "experiments/sft_allocation_p008/block_student_runtime.py": "4005ffbf844480d4b8a99cd10566b04c982f3ecb922c325d149a170ab29f9f13",
+    "experiments/sft_allocation_p008/completion_queue.py": "1aeae2e7782ec781397d3271ef8ab2ee040a8681d88e476d81f1abf576b96908",
+    "experiments/sft_allocation_p008/completion_student_binding.py": "f2b7828c53c2eb988c30b656e57ee9acc4d60cb7c04ac612c685faf6d887ded5",
+    "experiments/sft_allocation_p008/contract.py": "796542678703603c75a37e7ce722e49f788e3b6f2b8646e816f1af26e510aef8",
+    "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+    "experiments/sft_allocation_p008/main_binding.py": "ae8d85356088477dd971d87c68d48906b82de10edbdc164032b9c0c6f1f53b90",
+    "experiments/sft_allocation_p008/modal_students_completion.py": "07adfdf97d46eb52a213ba7b80294ad71c0cab8469203a9cb942fd62a53d5852",
+    "experiments/sft_allocation_p008/parallel_guard.py": "84302b6899805354a99ca4b3da9d825dad6e05af6e0dcd4836918e8b52b2f106",
+    "experiments/sft_allocation_p008/pool_lineage.py": "dcbbe26f55e4391cfadd04344c4cd69aa72a08c949c95c40ce4310b86606ea76",
+    "experiments/sft_allocation_p008/pool_runtime.py": "c566a9a3ab35601f15b861425ef45a6e4a3a851e8ed60c9881fbe65ea922af0b",
+    "experiments/sft_allocation_p008/procurement.py": "9f15cb9443eabc6ef30c95e3ddc9adb4bdee8bde7814e2cfd3be117f4176efc4",
+    "experiments/sft_allocation_p008/requirements_teacher.txt": "95c4f31a6249df55dda6e7f6c60a4b684f62dcd93d739194c102b7c733f696e2",
+    "experiments/sft_allocation_p008/student_concurrency.py": "8c006bfc8599baade1c523d3a0b5a3a0703cbe427196668199d9bf5d0a57812b",
+    "experiments/sft_allocation_p008/student_runtime.py": "d053bfdac4c1f5bd614874d2f1f85597b1ce3bb223abbe599a149152734a6364",
+    "requirements.txt": "973d7d8c0faf8d4dfa2d4026146c47ae288ce423ac3c11b4d9d9667cbfeec952",
+    "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "utc": "2026-10-13T20:14:55.084500+00:00"
+}

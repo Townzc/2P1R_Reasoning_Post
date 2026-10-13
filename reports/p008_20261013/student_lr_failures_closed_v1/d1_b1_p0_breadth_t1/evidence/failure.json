@@ -1,0 +1,7 @@
+{
+  "error": "Fixed LR,seed or update count differs",
+  "error_type": "ValueError",
+  "rule": "Preserve every unit, raw return and unknown. No automatic retry or claim reset.",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/experiments/sft_allocation_p008/modal_students_completion.py\", line 76, in work\n    result=execute(assets,inputs,out,journal,identity)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/sft_allocation_p008/block_student_runtime.py\", line 28, in run\n    encoded=rt.encode(rows,tok);plan=read(inputs/config['plan_file']);budget=validate_plan(rows,encoded,plan,config)\n                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/sft_allocation_p008/student_runtime.py\", line 23, in validate_plan\n    raise ValueError('Fixed LR,seed or update count differs')\nValueError: Fixed LR,seed or update count differs\n",
+  "wall_seconds": 22.402924299240112
+}
