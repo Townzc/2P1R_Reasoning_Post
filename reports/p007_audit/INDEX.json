@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T07:21:07.697434+00:00",
+  "as_of_utc": "2026-10-13T08:03:14.018573+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -130,8 +130,8 @@
       "target_commit": "8545c08019759536225969a989416a656a3d48b0",
       "packet": "reports/p008_v3_design_review_20261013",
       "manifest_sha256": "395f0e6a89b732b58ad4362259b8879b31f7dc7f178fedbcf98ecd278468b87c",
-      "external_review": "pending",
-      "blocking_for": "future P008 protocol closure only; no active job and no Phase0 authorization",
+      "external_review": "accepted F1-F5 with N1/N2 and A1-A3; consolidated into v3.1",
+      "blocking_for": null,
       "questions": [
         "Accept shared predeclared student seed across independent teacher/order draws (F1)?",
         "Agree bridge reports conditional effects and interaction; fallback loses full factorial scope (F2/F5)?",
@@ -139,9 +139,42 @@
         "Agree shared candidate cache charges each virtual policy all consumed attempts and reveals no future candidate metadata (F4)?"
       ],
       "supersedes": "p008-v2-independent-design-review-r1",
-      "reviewed_commit": null,
+      "reviewed_commit": "8545c08019759536225969a989416a656a3d48b0",
       "codex_position": "v3 core endorsed; prior11-item preferred alternative withdrawn; no extra arms requested",
-      "owner_state": "awaiting agreed plan before execution"
+      "owner_state": "owner explicitly authorized v3.1 execution after this response",
+      "review_commit": "9547f2eaf19165ed1a4847eaedb759a424c9947d"
+    },
+    {
+      "request_id": "p008-v31-g0-phase0-r1",
+      "target_commit": "f996621d12425bcf3254ef19edca7e01a847f866",
+      "packet": "reports/p008_20261013",
+      "manifest": "reports/p008_20261013/MANIFEST.json",
+      "manifest_sha256": "14967042cd5870d5c1629c9ba234f97871aae63ea51d16195da05de9d280a534",
+      "external_review": "pending",
+      "blocking_for": "all four Phase0 GPU roles; no cloud dispatch before exact source G0 acceptance",
+      "questions": [
+        "A1 fixed256 LR equality and long-horizon monotonicity; independent seed streams and exact design arithmetic?",
+        "Finite1024teacher/8update921target/16devoutput/4GPU phase0, timers,15USD within250,immutableclaims and no replay?",
+        "Accept explicit bridge q=0 exposure and joint pre-outcome common target feasibility tolerance<=0.1%, with acquired/exposed denominators?",
+        "Shared-cache per-policy charges/no future metadata, finite supply, A2 report scope and A3 pipelined gates?"
+      ],
+      "supersedes": "p008-v3-protocol-closure-r1",
+      "reviewed_commit": null,
+      "requested_utc": "2026-10-13T08:03:14.018573+00:00",
+      "response_timeout_minutes": 45,
+      "timeout_action": "hold unreviewed dispatch; continue independent CPU preparation",
+      "owner_authorized": true,
+      "later_main_runtime_review_required": true
     }
-  ]
+  ],
+  "p008_v31": {
+    "status": "owner_authorized_G0_pending_no_cloud_calls",
+    "protocol": "docs/experiments/P008_v3_1_protocol.md",
+    "stage_cap_usd": 250,
+    "phase0_cap_usd": 15,
+    "project_ceiling_usd": 450,
+    "protected_usd": 50,
+    "g0_request_id": "p008-v31-g0-phase0-r1",
+    "target_commit": "f996621d12425bcf3254ef19edca7e01a847f866"
+  }
 }
