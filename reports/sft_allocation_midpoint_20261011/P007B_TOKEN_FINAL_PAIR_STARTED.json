@@ -1,0 +1,146 @@
+{
+  "additional_reservation_usd": 0,
+  "admission_sha256": "2447e0fd043ab591f72049e31f421bce0ed6a27ca7854df9d2715b6361027dc3",
+  "audit_unclaimed": true,
+  "campaign": "mp-policy-token-20261012-r1",
+  "deadline_utc": "2026-10-14T02:00:00Z",
+  "dispatch_sha256": "0e184e9bfc30f37d1a8337725f9a5bcea4eef77b9a16f4e55b4d83de8613abc8",
+  "external_outcome_review": "New seed23 outcomes pending; seed17 and stage reviews stay within their fixed scope",
+  "hardware_limit": "Both H100/CUDA12.8/torch2.8.0+cu128; host driver versions recorded, not claimed cross-host bit-exact",
+  "next_phase": "Final independent CPU audit after both last students pass full local oracle and GPU exit",
+  "no_cpu_controller": true,
+  "prior_pair_verified_sha256": "38d8ef10b266f64dfe0d84573cdf32e31da7b37a37f42bb6ee0f81f6285db2c3",
+  "protected_usd": 50,
+  "remaining_student_runs_unsubmitted": 0,
+  "reservation_usd": 366.5,
+  "runs": {
+    "breadth_p4_s23": {
+      "actual_gpu": "NVIDIA H100 80GB HBM3",
+      "app": "ap-HOK2eHud1hIVqeZsiiyt1l",
+      "config_sha256": "35bd1ebf085dc1a20158dda79c71486cee849f3a59e348f443d555650fd13340",
+      "container": "ta-01M4SHY2QYJBH8H6CTJZZ9JWRR",
+      "cuda": "12.8",
+      "environment_sha256": "c6f2eaa1526eea9b1df76e1abb463153f556c369a0cce5ee59e4d06e8caa77b3",
+      "first_update": {
+        "cumulative_processed": 2190,
+        "cumulative_targets": 1889,
+        "gradient_norm": 0.3478851616382599,
+        "indices": [
+          42,
+          67,
+          74,
+          43,
+          62,
+          47,
+          81
+        ],
+        "loss": 0.13804237876637643,
+        "lr": 6.25e-06,
+        "peak_allocated_bytes": 11635488256,
+        "processed_tokens": 2190,
+        "seconds": 3.898317036999998,
+        "step": 1,
+        "supervised_tokens": 1889
+      },
+      "last_verified_update": {
+        "cumulative_processed": 9878,
+        "cumulative_targets": 8157,
+        "gradient_norm": 0.3175792992115021,
+        "indices": [
+          65,
+          6,
+          50,
+          43,
+          32,
+          73,
+          35
+        ],
+        "loss": 0.15943057076128248,
+        "lr": 2.5e-05,
+        "peak_allocated_bytes": 12047405568,
+        "processed_tokens": 2340,
+        "seconds": 2.153719592999991,
+        "step": 4,
+        "supervised_tokens": 1981
+      },
+      "source": "5c69d32d6ced1eebb2c082290c16be27d26e4d73",
+      "startup_evidence_sha256": "7ab4784b495370bd5fb7b0f0afbe9dcff18653e419e6b85216f4bfac19a5d80f",
+      "versions": {
+        "accelerate": "1.10.1",
+        "numpy": "2.3.2",
+        "peft": "0.17.1",
+        "safetensors": "0.6.2",
+        "tokenizers": "0.22.1",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.56.2"
+      }
+    },
+    "depth_p4_s23": {
+      "actual_gpu": "NVIDIA H100 80GB HBM3",
+      "app": "ap-ad7LZdz4udmf2n9iJsBctK",
+      "config_sha256": "7ae047344be4fbdd4e09d74dfb024673d873630a539c573a6704cebfe0ec3b16",
+      "container": "ta-01M4SHYB60CP9TPY94RH5AR3CR",
+      "cuda": "12.8",
+      "environment_sha256": "e710860ba9884c75441e00ffae5aeea6809b4d115194d144ce23607a2469e812",
+      "first_update": {
+        "cumulative_processed": 2473,
+        "cumulative_targets": 2078,
+        "gradient_norm": 0.2736036479473114,
+        "indices": [
+          157,
+          57,
+          202,
+          146,
+          188,
+          87
+        ],
+        "loss": 0.19893386481012484,
+        "lr": 6.25e-06,
+        "peak_allocated_bytes": 12303553536,
+        "processed_tokens": 2473,
+        "seconds": 2.7188524270000016,
+        "step": 1,
+        "supervised_tokens": 2078
+      },
+      "last_verified_update": {
+        "cumulative_processed": 27276,
+        "cumulative_targets": 22347,
+        "gradient_norm": 0.2460814118385315,
+        "indices": [
+          8,
+          18,
+          167,
+          138,
+          191,
+          60,
+          174
+        ],
+        "loss": 0.1011317681662644,
+        "lr": 6.875e-05,
+        "peak_allocated_bytes": 12714487808,
+        "processed_tokens": 2389,
+        "seconds": 1.5758568450000041,
+        "step": 11,
+        "supervised_tokens": 1896
+      },
+      "source": "5c69d32d6ced1eebb2c082290c16be27d26e4d73",
+      "startup_evidence_sha256": "04b4fc5f7c55a50ad36db81748541779312b613f8d270b384109d1305f24caf4",
+      "versions": {
+        "accelerate": "1.10.1",
+        "numpy": "2.3.2",
+        "peft": "0.17.1",
+        "safetensors": "0.6.2",
+        "tokenizers": "0.22.1",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.56.2"
+      }
+    }
+  },
+  "schema": "p007b_token_final_pair_actual_startup_v1",
+  "scientific_recipe_changed": false,
+  "snapshot_sha256": "64edec275239e266163cecb6501acf637f5f9209d862ec42e172950e5a866263",
+  "source_commit": "5c69d32d6ced1eebb2c082290c16be27d26e4d73",
+  "spend_ceiling_usd": 450,
+  "total_gpu_containers": 2,
+  "utc": "2026-10-13T02:39:45.642627+00:00"
+}
