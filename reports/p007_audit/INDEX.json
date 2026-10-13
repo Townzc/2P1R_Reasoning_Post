@@ -383,7 +383,7 @@
       "packet": "reports/p008_20261013/student_block_journal_v1",
       "manifest": "reports/p008_20261013/student_block_journal_v1/MANIFEST.json",
       "manifest_sha256": "d2bce9a13145415c89319c5f593641a91c1fa71f56d0273c86b9de69a737c683",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES code only",
       "requested_utc": "2026-10-13T11:31:41.389010+00:00",
       "scope": "Code-only 27-source successor and N2 evidence requirements; no student numeric admission",
       "blocking_for": "Future student/base use of new27source; T8 additionally requires exact N2 numerical acceptance",
@@ -395,7 +395,30 @@
       ],
       "owner_authorized": true,
       "response_timeout_minutes": 45,
-      "timeout_action": "Hold dependent source dispatch; silence is not approval"
+      "timeout_action": "Hold dependent source dispatch; silence is not approval",
+      "review_commit": "4d4fc7b77a07613cebe9a2e0a9350acbb10e88c2",
+      "report": "audit/claude/20261013s/BLOCK_JOURNAL.md",
+      "disposition": "reports/p008_20261013/t1_first_timing_policy_v1/REVIEW_REQUEST.md",
+      "numeric_admission": false
+    },
+    {
+      "request_id": "p008-t1-first-timing-policy-r1",
+      "target_commit": "485e741004870e8332cc9a8d3d6ed28152410c67",
+      "packet": "reports/p008_20261013/t1_first_timing_policy_v1",
+      "manifest": "reports/p008_20261013/t1_first_timing_policy_v1/MANIFEST.json",
+      "manifest_sha256": "0a3b48cdba6d1a4c926ac45e6c852d35c144045eb8d64c97359cd072e2d6918f",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T12:03:00.864114+00:00",
+      "blocking_for": "Outcome-blind T1/base-first order and future T8 numerical timing acceptance; original active pools unaffected",
+      "scope": "Timing criterion only; no actual T1 samples, pool G1, student admission, or T8 numerical PASS exists",
+      "questions": [
+        "All10 original T1 students plusbase first, without additional calls or score-based gate?",
+        "Exact255 interval alignment, terminal-inclusive walltime, max host components and explicit checkpoint/setup proxy, allT8 exact processed-token totals with20percent margin under original9560second cap?",
+        "Complete roster and failclosed measurement checks; engineering inequality alone never closesN2 or admits a runtime?"
+      ],
+      "owner_authorized": true,
+      "response_timeout_minutes": 45,
+      "timeout_action": "Hold dependent action; silence is not approval"
     }
   ],
   "p008_v31": {
@@ -423,6 +446,8 @@
     "student_numeric_admission": false,
     "N2_status": "OPEN",
     "conditional_repair_status": "blueprint_reviewed_no_child_admission",
-    "latest_engineering_packet": "reports/p008_20261013/student_block_journal_v1"
+    "latest_engineering_packet": "reports/p008_20261013/t1_first_timing_policy_v1",
+    "student_runtime_code_review": "PASS-WITH-NOTES c206f0dc only",
+    "timing_policy_review_request": "p008-t1-first-timing-policy-r1"
   }
 }
