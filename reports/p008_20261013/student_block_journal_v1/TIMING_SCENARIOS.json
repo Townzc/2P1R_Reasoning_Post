@@ -1,0 +1,86 @@
+{
+  "limitations": [
+    "Old residual per gap includes reads,writes,checkpoint; assigning it once per block is an illustrative proxy, not an independently measured split or guaranteed upper bound.",
+    "Per-step local fsynced JSON writes remain and have not been independently timed on the future hosts; cannot claim all old overhead is amortized.",
+    "Per-host scenarios still exceed the cap; mean alone is not a worst-case guarantee.",
+    "Actual input lengths and common plans are not available yet; neither this table nor code PASS closes G1/N2."
+  ],
+  "mean_with_20percent_seconds": 9469.848698587542,
+  "new_measurement_fields": [
+    "block_boundary_seconds",
+    "block_boundary_calls",
+    "maximum_block_boundary_seconds",
+    "local_step_write_seconds"
+  ],
+  "no_new_model_calibration": true,
+  "rows": [
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 3341.33744430542,
+      "optimizer_8x_seconds": 3217.5484570720087,
+      "point_seconds": 7498.7073090059785,
+      "run": "breadth_p0_s17",
+      "with_20percent_seconds": 8998.448770807174
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 2772.209903240204,
+      "optimizer_8x_seconds": 2777.393184128001,
+      "point_seconds": 6489.424494996754,
+      "run": "breadth_p0_s23",
+      "with_20percent_seconds": 7787.3093939961045
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 4178.0963253974915,
+      "optimizer_8x_seconds": 3911.332532264004,
+      "point_seconds": 9029.250265290044,
+      "run": "breadth_p4_s17",
+      "with_20percent_seconds": 10835.100318348052
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 4415.205446481705,
+      "optimizer_8x_seconds": 4184.217329776001,
+      "point_seconds": 9539.244183886256,
+      "run": "breadth_p4_s23",
+      "with_20percent_seconds": 11447.093020663508
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 3657.9813940525055,
+      "optimizer_8x_seconds": 3509.342406959996,
+      "point_seconds": 8107.14520864105,
+      "run": "depth_p0_s17",
+      "with_20percent_seconds": 9728.57425036926
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 3134.1277639865875,
+      "optimizer_8x_seconds": 3260.2208731199967,
+      "point_seconds": 7334.170044735134,
+      "run": "depth_p0_s23",
+      "with_20percent_seconds": 8801.00405368216
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 3693.169342517853,
+      "optimizer_8x_seconds": 3154.8391889840022,
+      "point_seconds": 7787.8299391304045,
+      "run": "depth_p4_s17",
+      "with_20percent_seconds": 9345.395926956486
+    },
+    {
+      "block_boundary_proxy_seconds": 939.821407628549,
+      "fixed_old_worker_minus_update_stream_seconds": 3300.2081978321075,
+      "optimizer_8x_seconds": 3106.5236061040055,
+      "point_seconds": 7346.553211564662,
+      "run": "depth_p4_s23",
+      "with_20percent_seconds": 8815.863853877594
+    }
+  ],
+  "schema": "p008_block_journal_timing_scenarios_v1",
+  "status": "N2_OPEN_NOT_NUMERIC_ACCEPTANCE",
+  "utc": "2026-10-13T11:31:01.311865+00:00",
+  "worker_cap_seconds": 9560
+}

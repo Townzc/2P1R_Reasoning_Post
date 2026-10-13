@@ -1,10 +1,11 @@
 """Prepared P008 local full-state/dose/raw endpoint oracle, no model execution."""
-import argparse,datetime,json
+import argparse,datetime,json,math
 from pathlib import Path
 from experiments.sft_allocation_midpoint.common import read,dump,sha,digest,verify
 from experiments.sft_allocation_midpoint import checkpoint as ck
 from experiments.sft_allocation_p008.student_runtime import validate_plan,EVAL
 from experiments.sft_allocation_p008.student_binding import validate_student_binding
+from experiments.sft_allocation_p008.block_journal import POLICY,verify_training_blocks
 from src.sft_data import read_jsonl,encode_row,prefix
 from analyses.e017_audit import audit_predictions
 from scripts.audit_token_student import endpoint_stop_diagnostics
@@ -29,14 +30,15 @@ def audit(args):
  tok=AutoTokenizer.from_pretrained(args.tokenizer,local_files_only=True)
  intents={p.stem:read(p) for p in (root/'intents').glob('*.json')};done={p.stem:read(p) for p in (root/'completed').glob('*.json')}
  assert set(intents)==set(done)
- for kind,records in (('unit',intents),('done',done)):
-  prefix_key=base+run+'/'+kind+'/'
-  assert {k[len(prefix_key):] for k in db if k.startswith(prefix_key)}==set(records)
-  assert all(db[prefix_key+k]==v for k,v in records.items())
- expected=set();targets=processed=0;state_hash=None;forensic={}
+ blocks=verify_training_blocks(intents,done,db,base+run+'/',cfg['updates'])
+ metrics=read(root/'block_journal_metrics.json')
+ assert all(metrics[k]==v for k,v in dict(policy=POLICY,completed_blocks=len(blocks),completed_local_updates=cfg['updates'],configured_updates=cfg['updates'],block_boundary_calls=2*len(blocks)).items())
+ assert all(type(metrics[k]) in (int,float) and math.isfinite(metrics[k]) and metrics[k]>=0 for k in ('block_boundary_seconds','local_step_write_seconds','maximum_block_boundary_seconds'))
+ expected=set(blocks);targets=processed=0;state_hash=None;forensic={}
  if cfg['role']!='base':
   rows=read_jsonl(inputs/cfg['rows_file']);encoded=[encode_row(r,tok,2048) for r in rows]
   plan=read(inputs/cfg['plan_file']);budget=validate_plan(rows,encoded,plan,cfg)
+  assert read(root/'training_journal_policy.json')==POLICY
   recipe=read(root/'recipe.json');assert json.loads(json.dumps(budget))==recipe['budget']
   assert recipe['identity']['config']==cfg and recipe['eval']==EVAL
   state_path=root/f"checkpoint_{cfg['updates']:04d}";state=ck.load(state_path,recipe['identity']);state_hash=sha(state_path/'state.pt')
@@ -76,6 +78,7 @@ def audit(args):
  stops=endpoint_stop_diagnostics(saved,summary)
  return dict(passed=True,schema='p008_student_local_oracle_v1',utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
    run_id=run,role=cfg['role'],updates_verified=cfg['updates'],targets_verified=targets,outputs_rescored=1319,
+   training_journal_policy=POLICY,remote_training_blocks=len(blocks),
    correct=sum(qc.values()),state_sha256=state_hash,forensic_checkpoints=forensic,artifact_digest=digest(files),endpoint_stop_diagnostics=stops,
    new_model_calls=0,external_review='pending')
 

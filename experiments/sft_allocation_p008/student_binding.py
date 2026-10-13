@@ -1,12 +1,15 @@
 """P008 future student-only admission; no pool or implicit G1 authorization."""
 from experiments.sft_allocation_midpoint.common import digest
 from .main_binding import validate_binding
+from .block_journal import POLICY
 
 
 def validate_student_binding(plan,cfg,release,spec):
     if cfg['role'] not in ('main','bridge','base'):
         raise ValueError('Student-only entry; pool calls are permanently separate')
     validate_binding(plan,cfg,release,spec)
+    if spec.get('training_journal_policy') != POLICY:
+        raise ValueError('Exact predeclared block journal policy missing')
     gates=release['gates'];joint=gates.get('joint_plan_gate',{})
     if (joint.get('passed') is not True or len(joint.get('sha256',''))!=64
         or joint['sha256']!=spec.get('common_plan_gate_sha256')):

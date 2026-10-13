@@ -6,6 +6,8 @@ from experiments.sft_allocation_p008.student_binding import validate_student_bin
 
 def prepared():
     plan,cfg,release,spec=fixture('main');g=release['gates']
+    from experiments.sft_allocation_p008.block_journal import POLICY
+    spec['training_journal_policy']=POLICY
     spec['common_plan_gate_sha256']=g['joint_plan_gate']['sha256'];spec['pool_admission_sha256']='7'*64
     g['pool_admission_sha256']='7'*64
     g['pool_terminals']=[t for t in g['required_terminals'] if t['campaign']==plan['campaign_id']]

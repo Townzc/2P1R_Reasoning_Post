@@ -1,0 +1,18 @@
+# REVIEW REQUEST: future P008 block journal, no runtime admission
+
+Please review the exact27-file student source plus local oracle and31 CPU checks. This is an engineering amendment for all18 UNSTARTED students; base keeps the original per-eval-batch journal. Original23 pool source files and all old P007 science remain byte-identical. No model calibration, dispatch, new dose, worker-cap increase, or added budget occurred.
+
+## Questions
+1. Does reserving all16 exact update intents atomically before compute, preserving every local intent/completion, and binding their ordered records into a remote block acknowledgment provide truthful completed/unknown provenance without enabling replay? A partial or unacknowledged block is never automatically reusable.
+2. Full fresh ParallelActiveCheck runs at start AND end of each block; local deadline runs before/after each update and after remote boundary calls; the existing hard process timer remains. This deliberately changes fencing latency to at most16 updates (not15 in the limiting race immediately after the check). Do you accept this explicit tradeoff? Failed checks permanently poison the journal.
+3. AST identity test removes only configure_training/assert_training_complete hooks and proves the original scientific run body unchanged: model,init,optimizer,LRS,loss,order,checkpoint,terminalHF evaluation. Does the independent oracle reconstruct all local steps against the frozen plan and separately verify the exact remote block/eval roster, refusing extra/rehashed-local/missing records?
+4. N2 is still OPEN numerically: can an already-admitted T1 run's measured block and local-write overhead, without reading its endpoint scores or adding a model job, support the subsequent T8 engineering gate? Specify the needed numeric criterion from actual joint plans, fixed9560 cap and original20% forecasting margin; do not use a favorable single-host sample as a guarantee. No T8 runs until a real exact-source numeric acceptance exists.
+
+## Preserved failure and uncertainty
+Local per-update files are fsynced as before, but their visibility/durability is independently established only by the final manifest/oracle. A block intent reserves planned work; it does not prove all16 updates were physically attempted. Interruption may leave an unacknowledged block and incomplete local records; it is kept unknown, never counted as completed or repeated. The remote done binds all16 local completions by ordered SHA; checkpoints still commit at the original1024/2048 or256 steps. No resume branch is added.
+
+## Timing evidence and correction
+Codex independently reproduces the old-stream extrapolations and mean10296.85s in Claude e8d8ea83. The table contains **3/8**, not4/8, point estimates over9560; the core HIGH risk remains. The prior note's word conservative was too strong: it did not scale all old per-step metadata. The new scenario table is explicitly illustrative, not a sufficient numeric gate; it includes actual per-host variation and the unisolated fsync residual limitation. Instrumentation now separates block-boundary and per-step local-write time without model changes.
+
+## Conditional D2 blueprint response
+Accept blueprint-only PASS and the additional actual remaining-round/time feasibility gate, exact already-published pending intents, and separate reviewed child source. Keep the predeclared **strict zero-ambiguous-regeneration** rule: a physical intent lacking recoverable raw bars this blueprint; same-seed does not make a missing-output replay already authorized. Recovering scored data from verified raw is allowed only in explicit reconciliation with parent history retained. D1 incompletion remains outside this blueprint. No repair call or extra$12 reserve is admitted here.
