@@ -291,7 +291,7 @@
       "packet": "reports/p008_20261013/cpu_audit_margin_v2",
       "manifest": "reports/p008_20261013/cpu_audit_margin_v2/MANIFEST.json",
       "manifest_sha256": "88dfae55bc0062a036feff29b4f1e47e1d348fc061f782af2b2b5c11fa9f34b9",
-      "external_review": "pending",
+      "external_review": "PASS",
       "blocking_for": "Future final CPU only; current pools/student G1 unaffected",
       "questions": [
         "120second soft margin while3300hard limit unchanged, honest hard interruption semantics?",
@@ -301,7 +301,12 @@
       "requested_utc": "2026-10-13T10:31:29.671321+00:00",
       "owner_authorized": true,
       "response_timeout_minutes": 45,
-      "timeout_action": "Hold future CPU dispatch; silence is not approval"
+      "timeout_action": "Hold future CPU dispatch; silence is not approval",
+      "review_commit": "f7a696b8e4741fb4838a312681030c7215ff2f61",
+      "reviewed_commit": "391dedbfae9b5816a90cadc733727712861680a0",
+      "report": "audit/claude/20261013q/AMENDMENTS_AND_POOL_RISK.md",
+      "disposition": "reports/p008_20261013/preflight_review_f7a696b8_v1/DISPOSITION.md",
+      "numeric_admission": false
     },
     {
       "request_id": "p008-student-activecheck-amendment-r2",
@@ -309,7 +314,7 @@
       "packet": "reports/p008_20261013/student_guard_latency_v2",
       "manifest": "reports/p008_20261013/student_guard_latency_v2/MANIFEST.json",
       "manifest_sha256": "e4149f3d9e35f2ac4f5a8e4ca4fe0d54171e309f2e0c1ec714f08c1ec27a884d",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES",
       "blocking_for": "Any future P008 student/base dispatch using the new25-file source; running pools are unchanged",
       "questions": [
         "Fresh all26-key reads with original validator/planhash, original atomic writes, no cross-check caching; fail-closed on missing key, transport failure, timeout or ownership/fence change?",
@@ -320,7 +325,12 @@
       "requested_utc": "2026-10-13T10:43:38.403188+00:00",
       "owner_authorized": true,
       "response_timeout_minutes": 45,
-      "timeout_action": "Hold future student dispatch using new source; silence is not approval"
+      "timeout_action": "Hold future student dispatch using new source; silence is not approval",
+      "review_commit": "f7a696b8e4741fb4838a312681030c7215ff2f61",
+      "reviewed_commit": "41c26651744c7788773d64e81917480fab2eb467",
+      "report": "audit/claude/20261013q/AMENDMENTS_AND_POOL_RISK.md",
+      "disposition": "reports/p008_20261013/preflight_review_f7a696b8_v1/DISPOSITION.md",
+      "numeric_admission": false
     }
   ],
   "p008_v31": {

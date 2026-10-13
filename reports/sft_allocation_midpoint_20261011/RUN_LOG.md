@@ -563,3 +563,8 @@ Prepared a separate future-student-only fresh parallel read set with original va
 
 
 2026-10-13T10:43:38.403188+00:00 — Publication clock correction: first WORKBOARD draft mistakenly entered03:48PDT for the new code publication; actual source41c26651 was published03:42PDT, corrected with visible provenance. Newstudentcode andCPU amendment requests are separately fixed-target pending. No live execution or science change.
+
+
+## P008 scoped amendment review and N2 timing reconciliation — 2026-10-13T11:02:43.733756+00:00
+
+Actual10:51:36sameoriginaltwo pools active/no terminal; no student/base/CPU dispatch. Claude f7a696b8 accepted391dedbfCPU PASS and41c26651student PASS-WITH-NOTES code-only, N2 open before joint numerical gate. Read-only existing P007B completed-file metadata (no oracle/model replay) shows0.47–4.51s/gap outsideoptimizer compute; cannot isolate or fully credit guard latency. Originalforecasts scaled compute, not training journal overhead. New bounded26-way readonlysample0.790s onD2, matching26records, no model/store mutation; not adopted. Accepted8reader/runtimebytes unchanged. Conservative scenarios kept explicit; no claim of closedN2 or invented schedule probability. Lowbudgettruncation is scope-changing, not silently adopted; continuation may only be considered after stop+reconciliation, no automatic retry or newteacherbudget. Stage unallocatedreservation12.32, suggested13–15cannot blindlyfit. Originalcompute/materialdeadline retained. Prepared finalauditlocalhelper compilationonly; no real21labels/admission yet. Immutable publication succeeded; mutableINDEX initially used create-onlywriter and raisedFileExistsError; resumedonlyINDEX/logtail, preservedprivatefailure.

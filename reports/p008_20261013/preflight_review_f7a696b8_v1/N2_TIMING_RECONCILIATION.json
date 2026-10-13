@@ -1,0 +1,46 @@
+{
+  "existing_worker_cap_seconds": 9560,
+  "limitations": [
+    "Old optimizer seconds exclude journal reads/writes; original residual includes256training checks and83eval checks plus setup/evidence/checkpoint.",
+    "Remote completed-file mtimes are second-resolution, one ordered stream; residual between255gaps includes other writes/checkpoints, so it is not isolated guard RPC time.",
+    "Original forecast scales optimizer compute withT but does not scale the residual; thus repeated training control costs were under-modelled.",
+    "New26reader sample is readonly evidence only, not an adopted source change or a future worst-case guarantee.",
+    "We do not double-count these estimates as actual spending, reduce check cadence, increase worker caps, or dispatch T8 with an unresolved numerical gate."
+  ],
+  "new_model_calls": 0,
+  "old_training_metadata_mean_between255gaps": 417.8819324717498,
+  "original_compute_mean_per_256": 423.7721496626252,
+  "original_residual_mean": 3976.394827564109,
+  "passed": false,
+  "scenarios": {
+    "reviewed8_D1": {
+      "all_T8_read_checks": 2131,
+      "already_frozen_worker_cap_seconds": 9560,
+      "conservative_no_credit_point_seconds": 8438.396146682151,
+      "conservative_no_credit_with_20percent_seconds": 10126.075376018582,
+      "old_training_metadata_cannot_be_fully_credited_as_guard": true,
+      "read_seconds": 0.5029676779995498,
+      "total_new_guard_seconds": 1071.8241218170406
+    },
+    "reviewed8_D2": {
+      "all_T8_read_checks": 2131,
+      "already_frozen_worker_cap_seconds": 9560,
+      "conservative_no_credit_point_seconds": 10382.568045928756,
+      "conservative_no_credit_with_20percent_seconds": 12459.081655114507,
+      "old_training_metadata_cannot_be_fully_credited_as_guard": true,
+      "read_seconds": 1.4152961149993644,
+      "total_new_guard_seconds": 3015.9960210636455
+    },
+    "unadopted26_D2": {
+      "all_T8_read_checks": 2131,
+      "already_frozen_worker_cap_seconds": 9560,
+      "conservative_no_credit_point_seconds": 9049.09598715937,
+      "conservative_no_credit_with_20percent_seconds": 10858.915184591244,
+      "old_training_metadata_cannot_be_fully_credited_as_guard": true,
+      "read_seconds": 0.7895466740001211,
+      "total_new_guard_seconds": 1682.5239622942581
+    }
+  },
+  "status": "N2_OPEN_NOT_A_STUDENT_GATE_PASS",
+  "utc": "2026-10-13T11:01:22.783954+00:00"
+}
