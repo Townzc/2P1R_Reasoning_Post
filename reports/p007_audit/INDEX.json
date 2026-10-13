@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T19:04:26.928552+00:00",
+  "as_of_utc": "2026-10-13T19:10:26.558918+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -632,6 +632,41 @@
       ],
       "new_model_calls": 0,
       "created_utc": "2026-10-13T19:04:26.928552+00:00"
+    },
+    {
+      "request_id": "p008-g1-d2-merged-r1",
+      "external_review": "pending",
+      "status": "pending",
+      "target_commit": "eb398fb1fec5306ab654ffec19e7b96e2005fdad",
+      "packet": "reports/p008_20261013/pool_d2_merged_v1",
+      "manifest": "reports/p008_20261013/pool_d2_merged_v1/MANIFEST.json",
+      "manifest_sha256": "0f5cd20fdcbc6d2240061a70c95267e579e8e1fe4cb5e2a9b7824920fc919899",
+      "blocking": true,
+      "blocking_for": "D2 merged full raw/wallet G1 only, required before any D2 student",
+      "questions": [
+        "Independently rescore all3992 original parent and3424 new child rawtokens/seed/stop/duplicates; original parent remainsfailed?",
+        "All8 complete wallets/cumulative physical and returnedtoken bounds, exact full costs/cache reuse/no foreknowledge; combined7416 outputs not allnew?"
+      ],
+      "created_utc": "2026-10-13T19:10:26.558918+00:00",
+      "new_model_calls": 0
+    },
+    {
+      "request_id": "p008-final-cpu-lineage-code-r1",
+      "external_review": "pending",
+      "status": "pending",
+      "target_commit": "eb398fb1fec5306ab654ffec19e7b96e2005fdad",
+      "packet": "reports/p008_20261013/final_cpu_lineage_code_v1",
+      "manifest": "reports/p008_20261013/final_cpu_lineage_code_v1/MANIFEST.json",
+      "manifest_sha256": "9886a1d1721dae5065f1660a2d1c6b40b643a0130b7c5ce91f747b8181b4f4df",
+      "blocking": true,
+      "blocking_for": "Code only; blocks finalCPU only, not current pool/input work",
+      "questions": [
+        "Exact22 original physical sources for21 logical runs, originalfailed parent and actual new student campaign preserved?",
+        "One transferred original500-cent CPU slot3300s/3500platform/600startup/two readers, true actualbytes numerical gate before invocation?",
+        "OriginalSHA/packedbytes and complete256/1024/2048 state/optimizer/RNG/dose integrity without claiming a new raw rescore?"
+      ],
+      "created_utc": "2026-10-13T19:10:26.558918+00:00",
+      "new_model_calls": 0
     }
   ],
   "p008_v31": {
@@ -664,13 +699,13 @@
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
-    "pool_d2_status": "failed_parent_preserved_child_completed_merged_oracle_pending",
+    "pool_d2_status": "complete_local_merged_oracle_passed_externalG1pending_parentfailed_preserved",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
     "owner_scope_or_deadline_question": "answered_direct14PDT_same7200_12USD",
     "active_gpu_tasks": 0,
     "pool_d2_external_review": "PASS failed prefix only, not G1",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/D2_CONTINUATION_STARTED_v3.json",
+    "current_status": "reports/p008_20261013/D2_MERGED_LOCAL_CLOSED.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -685,6 +720,9 @@
     "student_workspace_total_gpu_quota_known": true,
     "student_workspace_total_gpu_limit": 10,
     "student_quota_scope": "Workspace-wide total10; no separateH100 guarantee observed; runtime max8",
-    "student_quota_evidence": "reports/p008_20261013/STUDENT_GPU_QUOTA_EVIDENCE.json"
+    "student_quota_evidence": "reports/p008_20261013/STUDENT_GPU_QUOTA_EVIDENCE.json",
+    "pool_d2_review_request": "p008-g1-d2-merged-r1",
+    "pool_d2_packet": "reports/p008_20261013/pool_d2_merged_v1",
+    "final_cpu_runtime_review_request": "p008-final-cpu-lineage-code-r1"
   }
 }
