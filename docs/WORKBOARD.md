@@ -11,7 +11,7 @@
 | P007B 按真实时间计费的采购 | Codex | 四格本地核验完成；Claude 对零题价格记账 **PASS**、成本解释 **FAIL** | C-B1 已复现，不能将速度差直接归因于题价 |
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
-| 统一 token 计价修订 | Codex 设计；研究者决策 | **首对完整核验：零题价seed17，多题963/1319（73.01%），多解950/1319（72.02%）；两GPU已释放** | 高题价seed17两张H100已真实训练并核验启动；之后两种题价seed23。新结果[审计包](../reports/p007_audit/token_p0_seed17_v1/REVIEW_REQUEST.md)待Claude；暂不能判断价格交互 |
+| 统一 token 计价修订 | Codex；Claude审计 | **零题价seed17已核验：多题963/1319，多解950/1319；Claude第六轮PASS-WITH-NOTES** | 高题价两项均完成256步，仍评测（阶段已保存240/80条）；结束核验后并列两档并推进seed23。尚无价格交互结果 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到固定版本审计及36–38号笔记链接 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -72,6 +72,10 @@
 | 2026.10.12 16:34（首对完整核验／下一对启动前） | Codex | 新token多题963／多解950，各1,319题；多题暂高0.99pp。1,722文件、512更新／1,048,574 targets和两个完整state全部一致，截断44／45条保留计错，workspace容器0 | [核验结果](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_RESULTS.json)、[Claude审计包](../reports/p007_audit/token_p0_seed17_v1/REVIEW_REQUEST.md)；准备高题价seed17，未据分数修改协议 |
 
 | 2026.10.12 16:38（高题价实际启动核验） | Codex | 高题价多题／多解各提交一次；两张H100、CUDA／torch、发布源码、冻结输入和首更新匹配，快照至少7／3步，0终点；四项seed23仍未尝试 | [启动回执](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_HIGH_PRICE_PAIR_STARTED.json)；source3ee3e359，原预留内执行，最多2GPU。新结果待Claude审计 |
+
+| 2026.10.12 16:46（交付），17:04（读取） | Claude；Codex读取 | 第六轮审计零题价token首对为PASS-WITH-NOTES；R1/L1修复PASS。指出E2空答案陈述导致单条框内正确答案漏判；不建议运行中改评分 | [固定报告2d811a49](https://github.com/Townzc/2P1R_Reasoning_Post/blob/2d811a49db4c800bbd3b0e2d946ca55d693faa74/audit/claude/20261012f/REPORT.md)；高题价／seed23及独立权重审计不在该范围 |
+| 2026.10.12 17:04（核查开始） | Codex | 按用户要求读取真实日志、provider和新版审计；确认两高题价worker正常，均训练256步完成，终点评测尚未完成 | 不提前计算高题价准确率或启动seed23 |
+| 2026.10.12 17:10（阶段／审计复核完成） | Codex | 高题价末步计划、524287targets和checkpoint256清单一致；已保存240/80条评测的末批raw/scored哈希与不可变回执一致。E2原始token单条独立解码复现；首对区间独立重算−0.99pp[−3.18,1.21] | [阶段核验](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_HIGH_PRICE_PAIR_TRAINED.json)、[E2处理](../reports/p007_audit/token_p0_review_followup_v1/README.md)；完整state二进制／全量评分留到收尾，主规则不改 |
 
 ## 维护规则
 

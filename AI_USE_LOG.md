@@ -2117,3 +2117,7 @@ Codex collected each completed student's immutable ledger, readonly861-file expo
 ## 2026-10-12T23:38:44.548586+00:00 — positive-price pair dispatch and startup
 
 Within the researcher's existing eight-run authorization, Codex freshly checked empty nextslots and released previous workers, published the zero-price results, then submitted exactly the frozen price4m seed17 pair. Actual twoH100 environments, source/config/input identity and first updates were verified. No extra budget/dose, teacher output, retries or controller. Remaining four seed23 slots stay unattempted. Workboard updated before and after; all external outcome reviews remain version-specific and pending.
+
+## 2026-10-13T00:10:28.884607+00:00 — high-price phase verification and Claude sixth review
+
+Codex read actual workers and immutable update/batch records, verified high-price training completion and checkpoint manifests while endpoint generation continued. Full states and final raw rescoring remain pending, clearly labeled. Read Claude's fixed sixth report, independently decoded one saved E2 case and reproduced the conditional first-pair bootstrap; preserved frozen963/950 primary scores and all artifacts. Updated workboard and review scope without new model calls, experiments, external messages, subagents or slides. Second-seed dispatch still awaits normal high-price closeout.

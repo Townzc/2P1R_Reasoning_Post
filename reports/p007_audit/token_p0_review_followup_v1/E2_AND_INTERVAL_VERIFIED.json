@@ -1,0 +1,46 @@
+{
+  "bootstrap": {
+    "conditional_question_interval_pp": [
+      -3.184230477634572,
+      1.2130401819560273
+    ],
+    "difference_pp": -0.9855951478392722,
+    "not_training_seed_or_procurement_interval": true,
+    "replicates": 10000,
+    "seed": 20261013,
+    "unit": "paired question, conditional on this one observed seed and two saved acquisition traces"
+  },
+  "case": {
+    "frozen_status": "unresolved_marked_answer",
+    "frozen_task_correct": false,
+    "gold": "30",
+    "marked_claims": [
+      {
+        "kind": "answer_statement",
+        "offset": 1365,
+        "payload": "",
+        "value": null
+      },
+      {
+        "kind": "box",
+        "offset": 1383,
+        "payload": "30",
+        "value": "30"
+      }
+    ],
+    "stop": "native_eos",
+    "suffix": "\nSo, Miss Maria has 30 students.\n\nThe answer is:\n\\[\n\\boxed{30}\n\\]"
+  },
+  "claude_commit": "2d811a49db4c800bbd3b0e2d946ca55d693faa74",
+  "disposition": "Accept E2 limitation, preserve frozen primary rule. A systematic posthoc sensitivity may be reported after all eight finish, using the same supplementary rule for every arm; no partial-score correction or new generation now.",
+  "external_review_scope": "Claude PASS-WITH-NOTES for first token pair and PASS for R1/L1; weights and per-update verification rely on Codex oracle, high-price/seed23 outcomes not reviewed.",
+  "new_model_calls": 0,
+  "problem_id": "gsm8k/test/00465",
+  "raw_ids_independently_decoded": true,
+  "report_sha256": "1ce11b482256f8b09bb5e021f82e36ec2806282cd9751a87f843e845769d6737",
+  "reviewed_packet": "token_p0_seed17_v1",
+  "run": "breadth_p0_s17",
+  "score_unchanged": true,
+  "scored_batch_sha256": "466c4649c24438d7a6855018d2bf7fa31a61a3d6a0375a785b27112e29aac826",
+  "utc": "2026-10-13T00:07:40.213996+00:00"
+}
