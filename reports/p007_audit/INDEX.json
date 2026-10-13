@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T13:04:16.337384+00:00",
+  "as_of_utc": "2026-10-13T13:04:47.180593+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -482,6 +482,24 @@
       ],
       "response_timeout_minutes": 15,
       "timeout_action": "No silence-as-approval; child cannot launch past full original deadline window",
+      "numeric_admission": false
+    },
+    {
+      "request_id": "p008-d2-continuation-core-preflight-r1",
+      "target_commit": "c16ba8c8bd012b0ca348e5aec765a4dd69efe491",
+      "packet": "reports/p008_20261013/pool_continuation_core_v1",
+      "manifest": "reports/p008_20261013/pool_continuation_core_v1/MANIFEST.json",
+      "manifest_sha256": "150454afb873826dfe2b296083d5520b64ce304823e82be2ae20637fb4fedcb3",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T13:04:47.180234+00:00",
+      "blocking_for": "Use of prepared core in a future separately admitted child; not an owner scope/time or runtime admission",
+      "questions": [
+        "Prefix binding rejects changed or unknown parent work and retains failed parent lineage?",
+        "Original generation loop unchanged; no replay of parent candidates; same full wallet charges and cumulative attempt/token caps?",
+        "Twelve CPU fixtures and real-prefix binding are accurately scoped; missing worker/gates/lineage-oracle not described as ready?"
+      ],
+      "response_timeout_minutes": 30,
+      "timeout_action": "No silence-as-approval; no model calls until all actual approvals and gates",
       "numeric_admission": false
     }
   ],
