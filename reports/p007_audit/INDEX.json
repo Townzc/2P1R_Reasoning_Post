@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T10:31:29.671321+00:00",
+  "as_of_utc": "2026-10-13T11:31:41.389010+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -80,12 +80,13 @@
     "review_report": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md"
   },
   "p008": {
-    "status": "v3_core_design_endorsed_by_codex_protocol_details_pending_no_execution",
+    "status": "historical_v3_discussion_superseded_by_p008_v31",
     "proposal_commit": "4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74",
     "packet": "reports/p008_v3_design_review_20261013",
     "manifest_sha256": "395f0e6a89b732b58ad4362259b8879b31f7dc7f178fedbcf98ecd278468b87c",
     "external_review": "Codex response to Claude v3 pending scoped closure",
-    "queued_model_jobs": 0
+    "queued_model_jobs": 0,
+    "current_state_key": "p008_v31"
   },
   "spending_ceiling_usd": 450,
   "latest_reading_record": "reports/p008_design_review_20261013/SOURCE_READ_RECORD.json",
@@ -344,11 +345,15 @@
       ],
       "manifest": "reports/p008_20261013/preflight_review_f7a696b8_v1/MANIFEST.json",
       "manifest_sha256": "5a763d05ad0c8b666b95a5614be1cc01b0dd7da6de9b375604c289c4b8683805",
-      "external_review": "pending",
+      "external_review": "responded; N2 remains OPEN with HIGH scaling risk",
       "requested_utc": "2026-10-13T11:06:29.370009+00:00",
       "response_timeout_minutes": 45,
       "timeout_action": "No silence-as-approval; hold the dependent future action",
-      "scope": "Review only; neither declares a new run admitted nor permits incomplete-pool student dispatch"
+      "scope": "Review only; neither declares a new run admitted nor permits incomplete-pool student dispatch",
+      "review_commit": "e8d8ea838eb92af0c2ab27d7c2a2450e378b2e6b",
+      "report": "audit/claude/20261013r/N2_AND_REPAIR_BLUEPRINT.md",
+      "disposition": "reports/p008_20261013/student_block_journal_v1/REVIEW_REQUEST.md",
+      "numeric_admission": false
     },
     {
       "request_id": "p008-conditional-pool-repair-blueprint-r1",
@@ -362,11 +367,35 @@
       ],
       "manifest": "reports/p008_20261013/conditional_pool_repair_plan_v1/MANIFEST.json",
       "manifest_sha256": "071df421128adde8886dac009b7973d6717e5edaaf58127484b0d287b84182de",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES blueprint only",
       "requested_utc": "2026-10-13T11:06:29.370009+00:00",
       "response_timeout_minutes": 45,
       "timeout_action": "No silence-as-approval; hold the dependent future action",
-      "scope": "Review only; neither declares a new run admitted nor permits incomplete-pool student dispatch"
+      "scope": "Review only; neither declares a new run admitted nor permits incomplete-pool student dispatch",
+      "review_commit": "e8d8ea838eb92af0c2ab27d7c2a2450e378b2e6b",
+      "report": "audit/claude/20261013r/N2_AND_REPAIR_BLUEPRINT.md",
+      "disposition": "reports/p008_20261013/student_block_journal_v1/REVIEW_REQUEST.md",
+      "numeric_admission": false
+    },
+    {
+      "request_id": "p008-student-block-journal-r3",
+      "target_commit": "c206f0dc4198731fac7dda5871c1e78057ea0b98",
+      "packet": "reports/p008_20261013/student_block_journal_v1",
+      "manifest": "reports/p008_20261013/student_block_journal_v1/MANIFEST.json",
+      "manifest_sha256": "d2bce9a13145415c89319c5f593641a91c1fa71f56d0273c86b9de69a737c683",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T11:31:41.389010+00:00",
+      "scope": "Code-only 27-source successor and N2 evidence requirements; no student numeric admission",
+      "blocking_for": "Future student/base use of new27source; T8 additionally requires exact N2 numerical acceptance",
+      "questions": [
+        "Block reservation before compute, local perstep records, exact block acknowledgments, partial failure/no replay and independent oracle?",
+        "Explicit <=16update fencing latency with fresh start/end guards and every-update hard/soft clock checks?",
+        "Scientific run AST unchanged except journal hooks; old pool23bytes untouched?",
+        "Can planned T1 timings, with no extra model job or score-based gate, support a subsequent T8 numeric engineering gate under fixed caps?"
+      ],
+      "owner_authorized": true,
+      "response_timeout_minutes": 45,
+      "timeout_action": "Hold dependent source dispatch; silence is not approval"
     }
   ],
   "p008_v31": {
@@ -389,6 +418,11 @@
     "main_training_units": 74,
     "hard_reservation_including_phase0_usd": 237.68,
     "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json",
-    "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2"
+    "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
+    "student_runtime_review_request": "p008-student-block-journal-r3",
+    "student_numeric_admission": false,
+    "N2_status": "OPEN",
+    "conditional_repair_status": "blueprint_reviewed_no_child_admission",
+    "latest_engineering_packet": "reports/p008_20261013/student_block_journal_v1"
   }
 }
