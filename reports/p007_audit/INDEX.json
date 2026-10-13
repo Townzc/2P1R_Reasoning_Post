@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T12:28:20.167407+00:00",
+  "as_of_utc": "2026-10-13T12:44:09.256441+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -430,7 +430,7 @@
       "packet": "reports/p008_20261013/t1_first_timing_policy_v2",
       "manifest": "reports/p008_20261013/t1_first_timing_policy_v2/MANIFEST.json",
       "manifest_sha256": "b846a1e9204a8c75e27609ffebd82eb1e5e5804e57bee1eb27224f4947a801ee",
-      "external_review": "pending",
+      "external_review": "PASS policy/code only",
       "requested_utc": "2026-10-13T12:25:46.302048+00:00",
       "blocking_for": "Use of corrected timing policy, never overrides actual G1/joint-plan/student or T8 numerical gates",
       "questions": [
@@ -439,7 +439,11 @@
       ],
       "response_timeout_minutes": 45,
       "timeout_action": "No silence-as-approval; hold dependent action",
-      "numeric_admission": false
+      "numeric_admission": false,
+      "review_commit": "b4a0e5e7f43f580d4d7c8eab92ad7b1f6e16d0dc",
+      "report": "audit/claude/20261013u/G1_D1_AND_TIMING_R2.md",
+      "disposition": "reports/p008_20261013/d1_review_disposition_v1/DISPOSITION.md",
+      "numeric_student_admission": false
     },
     {
       "request_id": "p008-g1-d1-pool-r1",
@@ -447,7 +451,7 @@
       "packet": "reports/p008_20261013/pool_d1_v1",
       "manifest": "reports/p008_20261013/pool_d1_v1/MANIFEST.json",
       "manifest_sha256": "82a5ba98c209a97c98770814e26e8f5305897afd0931aa38b9b6da02e8a402fe",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES D1 numeric pool only",
       "requested_utc": "2026-10-13T12:28:20.167279+00:00",
       "scope": "D1 full7420raw/274physicalbatches and8virtualwallets; code or D1 PASS alone does not admit students",
       "blocking_for": "D1 numeric G1; joint plans remain dependent on complete reconciled D2",
@@ -458,7 +462,10 @@
       ],
       "response_timeout_minutes": 45,
       "timeout_action": "Hold dependent student dispatch; silence is not approval",
-      "numeric_student_admission": false
+      "numeric_student_admission": false,
+      "review_commit": "b4a0e5e7f43f580d4d7c8eab92ad7b1f6e16d0dc",
+      "report": "audit/claude/20261013u/G1_D1_AND_TIMING_R2.md",
+      "disposition": "reports/p008_20261013/d1_review_disposition_v1/DISPOSITION.md"
     },
     {
       "request_id": "p008-d2-parent-reconciliation-r1",
@@ -501,13 +508,15 @@
     "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
     "student_runtime_review_request": "p008-student-block-journal-r3",
     "student_numeric_admission": false,
-    "N2_status": "OPEN",
+    "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "blueprint_only_actual_reconciliation_pending",
     "latest_engineering_packet": "reports/p008_20261013/t1_first_timing_policy_v2",
     "student_runtime_code_review": "PASS-WITH-NOTES c206f0dc only",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
-    "pool_d2_status": "original_deadline_failed_readonly_preservation_running"
+    "pool_d2_status": "3992known_returns_0unknown_failedprefix_reconciled_not_completed",
+    "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
+    "owner_scope_or_deadline_question": "pending_no_new_GPU"
   }
 }
