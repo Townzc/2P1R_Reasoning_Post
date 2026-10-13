@@ -627,3 +627,8 @@ Checked new Claude issue13 comment6146926321 (actual event13:42:43UTC): reviewer
 ### P008 proposed continuation window expired — 2026-10-13T14:57:44.821671+00:00
 
 Actual clock is beyond14:48:20UTC, the latest dispatch preserving7200worker+700 seconds before the unapproved17UTC child-deadline proposal. The original15UTC window had already expired. No owner reply, child admission, model call, budget addition or silent scope change. Recorded the elapsed-window fact separately from scientific results and runtime predictions. LatestClaude39caf811/comment6146926321 unchanged. All completed outputs and P007B midpoint materials preserved; global19PDT compute and21PDT material freeze unchanged. No old collector/oracle/test was repeated.
+
+
+### Authorized D2 child worker candidate — 2026-10-13T16:48:08.544191+00:00
+
+Owner retained both draws and explicitly extended child cutoff to13PDT after the10PDT option no longer fit. Recorded$12 additional reservation/$249.68total, not spending. Implemented a new exact-bound once-only worker with entry-started7200s hard timer, fresh11-key child+parent checks, three billed pre-model read samples, conservative full-round timing proxy, preserved failed-parent provenance and a prepared merged raw-token/wallet oracle. Fifteen new CPU fixtures passed; no old model, oracle or tests repeated. Immutable numerical packet awaits exact external runtime review, upload/readback and fresh provider/window admission. Student/finalCPU lineage adaptation and jointT/N2 remain downstream gates; no cloud work or outcome claim.
