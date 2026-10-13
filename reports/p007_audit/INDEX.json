@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T20:50:41.230367+00:00",
+  "as_of_utc": "2026-10-13T21:37:56.069502+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -764,12 +764,32 @@
       "review_read_utc": "2026-10-13T20:42:24.504038+00:00",
       "acceptance_packet": "reports/p008_20261013/student_frozen_lr_accepted_v1",
       "numeric_admission": "Eight never-attempted T1 only; no failed replacement and no T8 N2 acceptance"
+    },
+    {
+      "request_id": "p008-base-outcome-r1",
+      "target_commit": "efeb63801320a7ee2c10a04a5d2ab6bf91dfcd67",
+      "evidence_path": "reports/p008_20261013/base_v1",
+      "status": "reviewed",
+      "external_review": "PASS",
+      "blocking": false,
+      "blocks": "Final base outcome acceptance only; does not block existing admitted students",
+      "requested_utc": "2026-10-13T20:57:59.056134+00:00",
+      "questions": [
+        "Independently rescore all 1319 saved raw base outputs under frozen primary; check638 correct and41 retained caps",
+        "Verify exact original config/source/endpoint order, immutable terminal and actual provider release",
+        "Retain researcher-seen test and final-answer-not-reasoning limitations; no treatment comparison from baseline alone"
+      ],
+      "review_commit": "f5a29c04e0832c3df55bc8061d7ce4ec5f205ecc",
+      "review_report": "audit/claude/20261013ae/REPORT.md",
+      "review_report_sha256": "cdc0f45693d562aa032981f3561820d886d83171277da848f56ddafdea87a401",
+      "review_read_utc": "2026-10-13T21:29:13.876264+00:00",
+      "scope": "Original base endpoint only"
     }
   ],
   "p008_v31": {
-    "status": "base_independently_closed_eight_unattempted_T1_original_calls_dispatched",
+    "status": "eight_original_T1_cloud_workers_active_after_local_DNS_disconnect; authorized_two_replacement_runtime_prepared",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
-    "stage_cap_usd": 250,
+    "stage_cap_usd": 266.04,
     "phase0_cap_usd": 15,
     "project_ceiling_usd": 450,
     "protected_usd": 50,
@@ -849,19 +869,25 @@
     "latest_review_corrections": "reports/p008_20261013/review_7ce25d6a_accepted_v1/CORRECTION_ZERO_USABLE.md",
     "failed_student_preservation_packet": "reports/p008_20261013/student_lr_failures_closed_v1",
     "latest_meter_utc": "2026-10-13T20:28:02Z",
-    "active_gpu": 0,
-    "base_status": "independent_full1319_oracle_STOPPED0",
+    "active_gpu": 8,
+    "base_status": "closed_local_and_external_PASS_638_of1319",
     "failed_student_attempts": [
       "d1_b1_p0_breadth_t1",
       "d1_b1_p0_depth_t1"
     ],
-    "failed_student_replacement": "not_admitted",
+    "failed_student_replacement": "owner_approved266.04; exact34_source_review_pending;0calls",
     "student_frozen_lr_acceptance_packet": "reports/p008_20261013/student_frozen_lr_accepted_v1",
-    "stage_reserved_usd": 249.68,
+    "stage_reserved_usd": 266.04,
     "base_outcome_packet": "reports/p008_20261013/base_v1",
     "student_frozen_lr_calls": 8,
     "student_frozen_lr_startup_verified": 1,
-    "failed_replacements": "concrete2call1636cent_proposal_awaiting_direct_owner",
-    "T8_timing_N2": "OPEN_failures_retained"
+    "failed_replacements": "owner_approved_exactly2_new_calls_source_and_lineage_review_pending",
+    "T8_timing_N2": "OPEN_failures_retained",
+    "replacement_owner_record": "reports/p008_20261013/OWNER_STUDENT_LR_REPLACEMENTS.json",
+    "student_dispatch_local_refusals": 5,
+    "student_dispatch_refusal_worker_calls": 0,
+    "replacement_packet": "reports/p008_20261013/student_lr_replacement_admission_v1",
+    "latest_review_disposition": "reports/p008_20261013/review_f5a29c04_disposition_v1",
+    "latest_meter_usd": 141.0918374
   }
 }

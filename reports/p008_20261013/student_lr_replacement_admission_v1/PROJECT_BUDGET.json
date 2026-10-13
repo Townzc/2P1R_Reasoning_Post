@@ -1,0 +1,52 @@
+{
+  "accounting_note": "Upper double-counted projection retains all workspace meter plus the entire P008 reservation. The overlap-adjusted projection subtracts only positively identified P008 report lines. Neither is a final invoice. All historical closed reservations stay in history; zero is transferred to the new phase.",
+  "authorized_total_funds_usd": 500,
+  "billing_report_sha256": "f3bc85677b239b532341ab48a8a4d7a8c5dc5fe30af3391269d5c0686132dade",
+  "collection_window_utc": [
+    "2026-10-13T21:27:40Z",
+    "2026-10-13T21:33:06Z"
+  ],
+  "complete_report_by_description_usd": {
+    "p008-d2-remaining-only": "2.18358680",
+    "p008-finite-main": "26.13705302",
+    "p008-finite-phase0": "0.57020137",
+    "p008-finite-students-completion": "2.06143132",
+    "p008-finite-students-frozen-lr": "22.11968813",
+    "sft-allocation-cost-matched-acquisition": "3.39818988",
+    "sft-allocation-cost-matched-students": "11.61042146",
+    "sft-allocation-final-audit-continuation": "0.04032669",
+    "sft-allocation-known-prefix-recovery": "0.30033808",
+    "sft-allocation-midpoint-assets": "0.00687959",
+    "sft-allocation-midpoint-cpu-preflight": "0.00009215",
+    "sft-allocation-midpoint-models": "27.44193248",
+    "sft-allocation-teacher-cost-pilot": "0.85463959",
+    "sft-allocation-token-tariff-students": "43.27059905"
+  },
+  "double_counted_meter_plus_full_stage_cents": 40714,
+  "historical_closed_reservations_reused": false,
+  "known_P008_reported_usd": "53.07196064",
+  "meter_is_delayed_not_invoice": true,
+  "overlap_adjusted_full_stage_projection_usd": "354.05987676",
+  "p008_full_reservation_cents": 26604,
+  "project_spending_ceiling_usd": 450,
+  "protected_usd": 50,
+  "residual_workspace_including_unassigned_and_storage_usd": "88.01987676",
+  "reviewer_400_ceiling": "Reviewer subtracts protection twice; direct owner ceiling is450 out of500. Overlap-adjusted projection is also below400; no new authority inferred.",
+  "workspace_meter_plus_full_stage_usd": "407.13183740",
+  "workspace_summary": {
+    "adjustments": {
+      "credits": "-140.94000000",
+      "free_storage": "-0.15014611",
+      "network_egress_allowance": "-0.00169128",
+      "plan_cost": "0E-8",
+      "reservation_adjustment": "-0E-8"
+    },
+    "billed_cost": "0E-8",
+    "metered_cost": "141.09183740",
+    "metered_cost_breakdown": {
+      "ephemeral_apps": "140.93790235",
+      "llm_tokens": "0E-8",
+      "volumes": "0.15014611"
+    }
+  }
+}

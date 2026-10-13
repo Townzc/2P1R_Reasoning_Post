@@ -1,0 +1,7 @@
+# Five local pre-dispatch refusals, zero scientific calls
+
+Seven independently invoked CLI processes finished their image setup at different times. Five reached the nonblocking shared dispatch lock while another dispatcher held it and were refused before any Dict read/admission, canonical dispatch intent or function spawn. Codex verified all five exact provider apps STOPPED/zero containers, absent claim/intent/terminal and canonical receipts, absent remote run directories, the exact source refusal path, and original log hashes. No worker/model call occurred for these five refusals. Build/setup costs and logs remain.
+
+The original five scientifically unattempted slots were then invoked sequentially with fresh run_r2 logs, waiting for each preceding submitted.json before beginning the next. All five now have a first actual submitted call; none is a scientific retry. The three earlier actual workers continued. Maximum actual/pending capacity remains eight. Original run_r1 logs and zero-call proofs are not replaced.
+
+The private read-only collector now resolves the app from canonical dispatch_intent.json rather than assuming a build-only run_r1 log names the scientific app. The private inspector reads the original active CLI log recorded for each slot. Runtime source, claims, scientific inputs and caps are unchanged. Earlier public statements of eight invoked CLIs did not establish eight actual workers; this record resolves that distinction.
