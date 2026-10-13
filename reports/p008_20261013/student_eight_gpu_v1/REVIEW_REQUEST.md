@@ -1,0 +1,11 @@
+# Student concurrency ceiling: direct owner approval, code review only
+
+The owner explicitly confirmed a maximum of eight H100 students in this chat. This new entrypoint is `modal_students_eight::main`; the accepted 28-file lineage entry and all 31 child sources remain byte-identical. The new 30-file bundle requires a real matching-workspace H100 quota proof and direct-owner record bound to the future numeric spec. The quota is currently **unconfirmed**, and no student is admitted.
+
+Review the dispatch guard: one canonical local owner and nonblocking filesystem lock cover capacity reads, immutable dispatch intent, and spawn. Every pending or uncertain submission counts before a claim exists. App identity joins live containers to pending calls without double-counting; unrelated containers consume extra capacity, and multiple containers on one app also count. Eight occupied slots reject the next call. No queued backlog is intentionally submitted. A fresh full runtime + 700-second deadline check runs just before creating the attempt directory.
+
+The worker is AST-identical after normalizing only the binding import. Dose, seed, score, block journal, individual runtime caps, reservations, T1-first roster and N2 timing policy remain unchanged. Provider quotas do not guarantee physical availability; eight-way I/O and runtime have not been measured. T1 actual host measurements, complete merged pools, joint whole-answer plans, source/input G1 and numerical T8 review remain mandatory. Code PASS alone cannot start any slot. The four-GPU Phase0 overlap is not represented as an eight-GPU test.
+
+Ten new offline checks cover disjoint pending/live capacity, duplicate and missing identities, eight-slot rejection, no double-counting, local dispatch lock exclusion, wrong workspace/insufficient quota/owner relay rejection and unchanged scientific worker AST. They are not live eight-GPU measurements. No old models, oracles or previous suites were rerun.
+
+Please audit this exact code amendment independently of D2's expired dispatch window or any proposed new time limit. No new budget, deadline or scientific group is implied. Future final-CPU lineage still needs its own preparation and review.
