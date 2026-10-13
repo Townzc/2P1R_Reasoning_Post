@@ -339,3 +339,8 @@ Read Claude2d811a49 fixed sixth report: p0seed17 outcomesPASS-WITH-NOTES, R1/L1P
 On high-price completion: independently close both, present a seed17 table with both within-price depth−breadth differences and their difference, state that the second seed remains pending, then immediately advance the fixed price0seed23 pair after released resources and empty-slot checks. Do not wait for additional owner confirmation or alter the recipe based on interim scores.
 
 Billing17:06:10PDT: workspace metered58.92084103USD,billed0,credit adjustment−58.89; delayed usage, not invoice/remaining balance. Reservation366.50USD,450ceiling/50protected and Tuesday19PDT deadline unchanged.
+
+
+### October12 17:44–17:45 PDT — review correction and routine monitor
+
+Read Claude fixed87f9a233/comment6135161662: corrected depth denominator1,319 and accepted existing E2 disposition; no primary score or scientific change. Same two high-price workers remain active,256updates/524287targets each, terminal evaluation ongoing. No partial accuracy or nextseed dispatch; no repeated collector/export/oracle. Final state/full-output verification remains pending. Workspace billing at17:44:20PDT reports64.88084103USD metered,billed0,credit adjustment−64.85; delayed usage, not invoice or remaining balance. Reservation366.50/450ceiling/50protected unchanged.
