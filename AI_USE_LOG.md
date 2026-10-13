@@ -2337,3 +2337,8 @@ Read fixed Claude82b3d69a (failed D2 prefix PASS) and39caf811 (core code-only PA
 ### P008 reviewer acknowledgement — 2026-10-13T13:57:54.216276+00:00
 
 Checked new Claude issue13 comment6146926321 (actual event13:42:43UTC): reviewer accepts the three corrections in d2_review_followup_v1@d9f9087e and the billed pre-model W2 probe clarification. Saved the exact comment and digest, and linked the limited acknowledgement in INDEX/WORKBOARD. This closes the stated review wording disagreements; it is not a complete D2 G1, runtime admission, or owner scope/deadline decision. No new model call, budget reservation, test, collector, export or scientific oracle. Original failed parent and all existing evidence remain preserved. The original permission question is still unanswered; no elapsed-time approval.
+
+
+### P008 proposed continuation window expired — 2026-10-13T14:57:44.821671+00:00
+
+Actual clock is beyond14:48:20UTC, the latest dispatch preserving7200worker+700 seconds before the unapproved17UTC child-deadline proposal. The original15UTC window had already expired. No owner reply, child admission, model call, budget addition or silent scope change. Recorded the elapsed-window fact separately from scientific results and runtime predictions. LatestClaude39caf811/comment6146926321 unchanged. All completed outputs and P007B midpoint materials preserved; global19PDT compute and21PDT material freeze unchanged. No old collector/oracle/test was repeated.
