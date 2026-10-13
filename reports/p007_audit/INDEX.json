@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T20:29:56.651238+00:00",
+  "as_of_utc": "2026-10-13T20:43:45.631752+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -736,8 +736,8 @@
     },
     {
       "request_id": "p008-student-frozen-lr-unattempted-r1",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS",
+      "status": "reviewed",
       "target_commit": "c50538143147dc97428f168799c0ecdcaeec2c3a",
       "packet": "reports/p008_20261013/student_frozen_lr_amendment_v1",
       "manifest": "reports/p008_20261013/student_frozen_lr_amendment_v1/MANIFEST.json",
@@ -757,11 +757,17 @@
       "exact_input_target": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
       "failed_student_retry_admitted": false,
       "subsequent_failure_preservation_packet": "reports/p008_20261013/student_lr_failures_closed_v1",
-      "subsequent_failure_preservation_manifest_sha256": "85f5fec91a73e704c80aa6b8c2776e5b0fa6cd78741a31a6ad177efe141029d2"
+      "subsequent_failure_preservation_manifest_sha256": "85f5fec91a73e704c80aa6b8c2776e5b0fa6cd78741a31a6ad177efe141029d2",
+      "review_commit": "18d8f9c46153d49d0879219689e99e9e6d6f4311",
+      "review_report": "audit/claude/20261013ad/FROZEN_LR_AMENDMENT.md",
+      "review_report_sha256": "a4a5063ce793662273ed07c11e3fd1701e6289c32ad548c18e3940c2b06c35c1",
+      "review_read_utc": "2026-10-13T20:42:24.504038+00:00",
+      "acceptance_packet": "reports/p008_20261013/student_frozen_lr_accepted_v1",
+      "numeric_admission": "Eight never-attempted T1 only; no failed replacement and no T8 N2 acceptance"
     }
   ],
   "p008_v31": {
-    "status": "base_active_two_pretraining_failures_remaining_students_held_for_LR_source_review",
+    "status": "base_completed_closeout_active_eight_unattempted_T1_source_accepted",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -842,6 +848,15 @@
     "final_cpu_code_review": "PASS-WITH-NOTES code only; numeric gate absent",
     "latest_review_corrections": "reports/p008_20261013/review_7ce25d6a_accepted_v1/CORRECTION_ZERO_USABLE.md",
     "failed_student_preservation_packet": "reports/p008_20261013/student_lr_failures_closed_v1",
-    "latest_meter_utc": "2026-10-13T20:28:02Z"
+    "latest_meter_utc": "2026-10-13T20:28:02Z",
+    "active_gpu": 0,
+    "base_status": "completed_STOPPED0_independent_closeout_running",
+    "failed_student_attempts": [
+      "d1_b1_p0_breadth_t1",
+      "d1_b1_p0_depth_t1"
+    ],
+    "failed_student_replacement": "not_admitted",
+    "student_frozen_lr_acceptance_packet": "reports/p008_20261013/student_frozen_lr_accepted_v1",
+    "stage_reserved_usd": 249.68
   }
 }
