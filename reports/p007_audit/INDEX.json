@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T08:38:31.075223+00:00",
+  "as_of_utc": "2026-10-13T08:45:07.661888+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -175,8 +175,8 @@
       "packet": "reports/p008_20261013/phase0_barrier_v2",
       "manifest": "reports/p008_20261013/phase0_barrier_v2/MANIFEST.json",
       "manifest_sha256": "69960723382e16f5355aab969cafe93d3443cae5a222b288274993e1f8a3d564",
-      "external_review": "pending",
-      "blocking_for": "amended Phase0 upload and GPU dispatch",
+      "external_review": "PASS",
+      "blocking_for": null,
       "questions": [
         "G0-1(a) timing failure recorded without abort/retry; corrupt data still fails?",
         "Independent oracle differentiates completed engineering from actual four-GPU proof; no silent main admission?"
@@ -186,11 +186,14 @@
       "response_timeout_minutes": 45,
       "expected_review_minutes": 15,
       "timeout_action": "hold dispatch; no silence approval",
-      "owner_authorized": true
+      "owner_authorized": true,
+      "reviewed_commit": "610fde47e0b0d14b1de459e7a627ea7c89072843",
+      "review_commit": "6978423cf04aa943c620a4074e0c34f9a72eb1bb",
+      "review_report": "audit/claude/20261013m/G0_AMENDMENT.md"
     }
   ],
   "p008_v31": {
-    "status": "original_G0_pass_with_notes_scoped_amendment_pending_no_cloud_calls",
+    "status": "Phase0_G0_accepted_preparing_single_upload_dispatch",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,

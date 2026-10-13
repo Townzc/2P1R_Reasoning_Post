@@ -511,3 +511,8 @@ New procurement wallets/prefix replay, prepared finite draw generation, joint ta
 ## 2026-10-13T08:37:48.652168+00:00 — G0 PASS-WITH-NOTES, scoped operational amendment
 
 Claude722735e2 accepted fixedf996621d G0. Adopt readiness/ack timeout as honest concurrency_not_achieved instead of destroying teacher/smoke calls. Corruption still fails; four-way main admission still requires actual overlap/fullacks. No new calls/dose/timer/budget;14CPU tests pass. Exact-source amendment is now offered for review before any upload/dispatch. G0-2 narrowed: length-dependent subset-sum is not uniform sampling or isolated diversity causation. All earlier facts retained. Correction: G0 request published08:03:14UTC, not07:59 as latest private handoff shorthand stated.
+
+
+## 2026-10-13T08:45:07.661888+00:00 — actual G0 amendment PASS / upload-next
+
+Read fullClaude6978423c scopedPASS at610fde47, all19sourceSHA match. Actual report/target/planhash bound in G0_ACCEPTED. Originalreview722735e2 retained. Localpublication script initially used immutable dump on existingINDEX and failed after writing acceptance proof; retained proof and repaired only mutableINDEX/log step, no upload/model work in that failure. No main admission implied. Preparing single immutablePhase0input upload/readback then finite roles once. No newdose or budget.
