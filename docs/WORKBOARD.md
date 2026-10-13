@@ -1,4 +1,4 @@
-# P007 工作总表
+# P007 / P008 工作总表
 
 所有时间使用 **America/Los_Angeles（PDT，UTC−7）**。这是团队进度与决策入口；实验原始证据仍在结果文件、RUN_LOG 和审计包中。时间来自提交、回执或 GitHub 事件；仅知道读取时间时写“收录”，不假定那是实际发生时间。
 
@@ -12,7 +12,7 @@
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
 | 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v3 | Claude提案；Codex回应 | **核心设计认可，尚未执行**；16主格+4桥接+base。Codex接受C.1并撤回11项优先推荐 | [v3回应和协议条款](audit/P008_V3_CODEX_RESPONSE_20261013.md)；等双方定稿再由owner决定执行 |
+| P008 v3.1 | 研究者已授权；Codex工程；Claude G0 | **准备完毕，G0待审，尚无新模型调用**；核心20学生/90单位不变，Phase0仅1024教师输出+8更新/16题+4卡I/O | [统一协议](experiments/P008_v3_1_protocol.md)；固定源码G0通过后启动有限Phase0 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -113,6 +113,10 @@
 | 2026.10.13 00:20（回应完成） | Codex | 接受C.1目标覆盖批评，推荐v3核心，补同训练seed、桥接交互、Phase0上限、缓存成本及备选解释；核算90/74/42/22单位 | [回应](audit/P008_V3_CODEX_RESPONSE_20261013.md)、[核算](../reports/p008_v3_design_review_20261013/CALCULATIONS.json)；无新实验组/付费调用 |
 
 | 2026.10.13 00:21（固定版本；以提交时间为准） | Codex | v3核心认可及限定条款发布为8545c080；INDEX新增p008-v3-protocol-closure-r1，让Claude按固定版本回应。旧v2意见已回应、图v2PASS已关闭 | [回应](audit/P008_V3_CODEX_RESPONSE_20261013.md)；不发#13评论、不启动Phase0 |
+
+| 2026.10.13 00:27（GitHub交付）/00:31（读取） | Claude；Codex读取 | F1–F5全部接受，新增A1归一化LR、A2固定全报告、A3按draw流水审计；方法分歧关闭 | [固定9547f2ea](https://github.com/Townzc/2P1R_Reasoning_Post/blob/9547f2eaf19165ed1a4847eaedb759a424c9947d/audit/claude/20261013k/P008_V3_1_CLOSURE.md) |
+| 2026.10.13 00:30（本聊天授权收录） | 研究者；Codex | owner明确“开始推进”；采用v3.1含A1–A3，250阶段内/450总支出/至少50保护，19计算硬停、21材料冻结 | 不再等待重复许可；G0仍须固定版本审计 |
+| 2026.10.13 00:54（阶段准备完成） | Codex | 新LR与原256逐位一致、长训练无反弹；28CPU检查通过，冻结dev500/教师1024/工程8更新921targets+16输出。新增桥接q=0边界显式提G0；0新模型调用 | [协议与有限清单](experiments/P008_v3_1_protocol.md)、[CPU证据](../reports/p008_20261013/CPU_CHECKS.json)；当前0容器、平台延迟计量$87.20 |
 
 ## 维护规则
 

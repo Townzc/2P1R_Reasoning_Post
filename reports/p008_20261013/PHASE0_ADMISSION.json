@@ -1,0 +1,86 @@
+{
+  "config_sha256": {
+    "io_probe_a": "c375e235949ddeaefa9a0a77e7e759f95f98da30556d576bb7ec5916774a6749",
+    "io_probe_b": "479391a0b6534dad5189b9b3cdf5ec3b0cdaea33ee0114952187866a0f70b228",
+    "student_smoke": "d07cb0cc0d3ecf3cced4512af6fc84e93182143ec8399e4699a8141be285cf5a",
+    "teacher_calibration": "5f11435487f360073ba4b44970f182b3e4da6d559b26e2f85d9e0b8b3c1a0e91"
+  },
+  "configs": {
+    "io_probe_a": {
+      "barrier_seconds": 180,
+      "input_sha256": "75e978e45459747026c0ff51974f7e69a750348d422237f4df6533ba4d2f7b28",
+      "max_outputs": 0,
+      "max_seconds": 600,
+      "max_updates": 0,
+      "probe_bytes": 8388608,
+      "run_id": "io_probe_a"
+    },
+    "io_probe_b": {
+      "barrier_seconds": 180,
+      "input_sha256": "75e978e45459747026c0ff51974f7e69a750348d422237f4df6533ba4d2f7b28",
+      "max_outputs": 0,
+      "max_seconds": 600,
+      "max_updates": 0,
+      "probe_bytes": 8388608,
+      "run_id": "io_probe_b"
+    },
+    "student_smoke": {
+      "barrier_seconds": 180,
+      "input_sha256": "75e978e45459747026c0ff51974f7e69a750348d422237f4df6533ba4d2f7b28",
+      "max_outputs": 16,
+      "max_seconds": 1500,
+      "max_updates": 8,
+      "probe_bytes": 8388608,
+      "run_id": "student_smoke"
+    },
+    "teacher_calibration": {
+      "barrier_seconds": 180,
+      "input_sha256": "75e978e45459747026c0ff51974f7e69a750348d422237f4df6533ba4d2f7b28",
+      "max_outputs": 1024,
+      "max_seconds": 2400,
+      "max_updates": 0,
+      "probe_bytes": 8388608,
+      "run_id": "teacher_calibration"
+    }
+  },
+  "input_sha256": "75e978e45459747026c0ff51974f7e69a750348d422237f4df6533ba4d2f7b28",
+  "maximum_engineering_eval_outputs": 16,
+  "maximum_engineering_updates": 8,
+  "maximum_gpu_concurrency": 4,
+  "maximum_new_teacher_outputs": 1024,
+  "phase0_cap_usd": 15,
+  "plan": {
+    "campaign_id": "p008-phase0-20261013-r1",
+    "created_epoch": 1791876600,
+    "deadline_epoch": 1791943200,
+    "slots": {
+      "io_probe_a": {
+        "reserved_cents": 150,
+        "stage": "phase0"
+      },
+      "io_probe_b": {
+        "reserved_cents": 150,
+        "stage": "phase0"
+      },
+      "student_smoke": {
+        "reserved_cents": 400,
+        "stage": "phase0"
+      },
+      "teacher_calibration": {
+        "reserved_cents": 600,
+        "stage": "phase0"
+      }
+    },
+    "stage_caps_cents": {
+      "phase0": 1500
+    },
+    "total_cap_cents": 1500
+  },
+  "plan_sha256": "aa17cfb3c5e8407f23b06fc40e2a6f3d4707bbfd973b4c61bf3c84dc77f148e0",
+  "project_ceiling_usd": 450,
+  "protected_usd": 50,
+  "schema": "p008_phase0_admission_v1",
+  "stage_after_phase0": "separate exact branch and main input/code bindings required before main dispatch",
+  "stage_cap_usd": 250,
+  "status": "owner_authorized_G0_required_before_dispatch"
+}

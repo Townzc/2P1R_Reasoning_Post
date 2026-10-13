@@ -1,6 +1,6 @@
 # P007 collaboration and current handoff
 
-Updated October13 2026,00:20PDT. Use working branch `codex/icml-acl-2027`; pin the exact commit for review. All finite model work and CPU verification have ended, with zero owned containers. No experiment remains queued.
+Updated October13 2026,01:00PDT. Working branch `codex/icml-acl-2027`. P007 is fully closed. Owner has authorized P008 v3.1 including A1–A3; exact Phase0 G0 is pending, no new cloud/model calls. [Unified protocol](experiments/P008_v3_1_protocol.md) and [G0 packet](../reports/p008_20261013/REVIEW_REQUEST.md) govern the next work.
 
 ## Responsibilities and authority
 
@@ -18,9 +18,9 @@ Recommendations do not authorize new model calls, groups, budgets or deadlines. 
 1. [Final eight-model packet](../reports/p007_audit/token_final_v1/REVIEW_REQUEST.md): all10,552 formal outputs,2048updates/4194296targets, eight terminal states, complete ledgers and14-label CPU lineage verified. Original audit fully checked10 labels; the bounded continuation fully checked4. The original timeout remains interrupted, never relabeled complete. All GPU/CPU resources exited.
 2. [Midpoint evidence page](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md) and its linked PNG/SVG figures: both seeds and prices, within-price gaps, interaction, procurement/unused budgets/exposure/caps and limitations. Publication QA caught and corrected a renderer fraction/percent error before release; frozen data and scores were unchanged. [Correction](../reports/sft_allocation_midpoint_20261011/P007B_REPORTING_UNITS_CORRECTION.json).
 3. Claude [round15](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md) reviews fixed736b3920: final packet/fact page PASS; original charts PASS-WITH-NOTES. [Disposition](audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md) preserves the exact scope. New [v2 chart](../reports/sft_allocation_midpoint_20261011/figures_token_v2/accuracy_by_price_and_seed.png) fixes marker/legend overlap, with unchanged data; its display revision now has PASS at Claude4dfd22f6, reviewing7cefa253.
-4. [P008 v3 response](audit/P008_V3_CODEX_RESPONSE_20261013.md): Codex accepts C.1 and withdraws the11-student alternative as its preferred answer to the larger budget question. The v3 core20students/90units is endorsed; F1–F5 clarify the independent draw, shared training seed, bridge scope, bounded Phase0, cached policy charges and fallback/statistical interpretation. No new jobs or admission. The owner explicitly wants an agreed plan before execution.
+4. [P008 v3 response](audit/P008_V3_CODEX_RESPONSE_20261013.md): Codex accepts C.1 and withdraws the11-student alternative as its preferred answer to the larger budget question. The v3 core20students/90units is endorsed; F1–F5 clarify the independent draw, shared training seed, bridge scope, bounded Phase0, cached policy charges and fallback/statistical interpretation. Claude9547f2ea accepts F1–F5; owner now explicitly authorized v3.1+A1–A3. New G0 review applies to exact Phase0 source, not automatically to later main code.
 
-The previous two review requests are answered: v2 methodology received a substantive response; figures_v2 PASS. New response needs only scoped protocol closure, not re-auditing closed P007 weights or figures. [INDEX](../reports/p007_audit/INDEX.json) records exact versions/status.
+The previous two review requests are answered: v2 methodology received a substantive response; figures_v2 PASS. The v3 response is methodologically closed by9547f2ea. New Phase0 G0 must review the consolidated protocol, exact source/inputs and finite call list; do not re-audit closed P007 artifacts. [INDEX](../reports/p007_audit/INDEX.json) records exact versions/status.
 
 ## Handoff and issue discipline
 
@@ -28,7 +28,7 @@ A handoff contains the question, pinned commit, manifest/entry point, and3–5 r
 
 Use [WORKBOARD](WORKBOARD.md) for current status and stage events, RUN_LOG for execution details, and a single issue per finding or decision. Keep credentials and large private state files out of public packets. Group routine presentation/wording reviews by milestone; address blocking scientific flaws immediately and preferably before an expensive queue. The [shareable workflow](RESEARCH_WORKFLOW_ZH.md) explains the roles.
 
-Budget: total$500, ceiling$450, protected$50. Conservative reservation$369.50; latest meter$87.20111458 at06:17:18UTC is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.
+Budget: total$500, ceiling$450, protected$50. Historical closed-stage reservation$369.50 is not spending. Authorized P008cap$250 inclusive(Phase0$15); latest meter$87.20111458 at06:17:18UTC is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.
 
 ## Reading and event-based review
 
