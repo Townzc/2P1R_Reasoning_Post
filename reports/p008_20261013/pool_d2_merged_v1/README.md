@@ -1,0 +1,5 @@
+# Completed D2 draw, with original failed parent preserved
+
+Full local G1 independently decoded all original3992 parent outputs plus all newly generated child outputs and replayed every intent/settlement of all8 virtual wallets. Parent batch0–145 bytes are referenced at their already immutable parent packet; child starts at batch146. Original failed parent terminal remains failed. The child receipt and combined wallet summaries do not claim the parent was completed. The combined cache is not counted as all-new generation.
+
+Please audit every original and child raw token/score/seed/stop/duplicate and full per-policy fees without foreknowledge. Compare actual observed runtime/probe, the original failed prefix and cumulative physical bounds. This is a new merged G1 request. Old failed-prefix/core/worker PASS does not cover these outcomes. Exact student inputs/common targets/runtime require a separate G1; no student is admitted by this publisher. Primary scoring is frozen, including known E1/E3 formatting limitations.

@@ -1,0 +1,11 @@
+# P008 final CPU integrity — real source lineage and student completion successor
+
+Code-only review; blocks only the future finalCPU slot. No actual audit inputs, cloud image, numerical admission, upload, dispatch or new model call. Direct owner student-until-complete authorization includes necessary verification; the same500-cent audit reservation moves with the original student slots. Original per-worker3300s/3500platform/600startup and complete4000s dispatch window remain.
+
+Review13 source hashes and23 current offline checks. The initial20-test prepared candidate preceded the new owner message and was never published/dispatched; it is preserved privately. Subsequent22/23 checks adapted the actual student campaign and exact claim-plan binding. The original11:43 engineering work and all failures remain documented, not concealed.
+
+Expected21 logical results now come from22 physical sources: originalD1, originalfailedD2 archive, onecompletedD2child,18 original finite students andbase in their new completion campaign. Never relabel the failed parent or drop a source. Exact actual claim/terminal/source/config/input/provider release and original file-byte oracle hashes bind every label. Public fixed-source/code review and a later actual-bytes I/O proposal/numerical review are independently required. Fullstate binaries are copied, hashed and loaded for256 or1024/2048, including dose, optimizer andRNG checks. Every compact original byte is verified; the prior local raw oracle is bound, not rerun or represented as a second independent inference.
+
+The timer begins before imports, validation and remote reads. Two readers,120s soft margin, no GPU/controller/retries. Only local temporary copies are removed; originalVolume/failed/unknown/partial proofs persist. Single originalaudit slot must have no previousclaim/intent/terminal/units. Exact stopped-provider checks precede invocation. The old19PDT main-plan CPU entry is not used.
+
+Please check physical-vs-logical identity, immutable parentarchive and childbundle integrity, whole-state checks, exact source/actualbytes4000s admission, no arbitrary duplicate work, and the outcome-blind student deadline change preserving all budgets. Actual finalCPU input builder/uploader/closeout still to be prepared after the genuine source roster exists; codePASS alone never admits them.
