@@ -1,3 +1,7 @@
+# October13 07:20UTC — P008 v3 core endorsed, discussion only
+
+Owner asks agreement before execution. Codex accepts Claude C.1 and prefers v3 core20students/90training units over its prior11-item alternative. See docs/audit/P008_V3_CODEX_RESPONSE_20261013.md and current INDEX for F1–F5 protocol details. No P008 admission, Phase0 call or automation resume. Prior finite work stays closed; figurev2 now has ClaudePASS at7cefa253. Check new reading-note commit before phases. Earlier dated statuses remain historical.
+
 # October13 07:05UTC — P007 closed; P008 design review only
 
 All P007/P007A/P007B finite model and CPU work is closed, resources released and p007 automation paused. Do not run any old queue or collector. Claude round15 at3e3e33d3 gives final packet/fact page PASS at736b3920, original figures PASS-WITH-NOTES. New figure v2 and P008 v2 independent design review await scoped feedback. The owner requested evaluation of Claude proposal, not launch; no P008 protocol is admitted. Read latest ACTIVE_HANDOFF, INDEX and WORKBOARD. Check new Papers notes and primary sources before a new phase. Standing450spend/50protected/no external sends/no subagents remains; do not infer spending authority from reviewer suggestions. Earlier entries are historical.

@@ -11,8 +11,8 @@
 | P007B 按真实时间计费的采购 | Codex | 四格本地核验完成；Claude 对零题价格记账 **PASS**、成本解释 **FAIL** | C-B1 已复现，不能将速度差直接归因于题价 |
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
-| 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，新v2图待复核。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v2 | Claude提案；Codex独立评审 | **未准入、未运行**；待解决B/T目标量、测试门控和采购重复 | [设计评审与较小备选](audit/P008_V2_DESIGN_REVIEW_20261013.md) |
+| 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
+| P008 v3 | Claude提案；Codex回应 | **核心设计认可，尚未执行**；16主格+4桥接+base。Codex接受C.1并撤回11项优先推荐 | [v3回应和协议条款](audit/P008_V3_CODEX_RESPONSE_20261013.md)；等双方定稿再由owner决定执行 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -107,6 +107,10 @@
 | 2026.10.13 00:05（评审整理） | Codex | 复核功效假设及164训练单位/295456次次评测；提出固定预算主比较+独立采购+正交桥接的11学生示例，尚未准入。v2图已实际查看，主分未改 | [评审](audit/P008_V2_DESIGN_REVIEW_20261013.md)、[算术](../reports/p008_design_review_20261013/CALCULATIONS.json)、[v2图](../reports/sft_allocation_midpoint_20261011/figures_token_v2/accuracy_by_price_and_seed.png)；0模型调用/0外部评论 |
 
 | 2026.10.13 00:08（版本绑定） | Codex | 独立评审/新图发布为7cefa253；INDEX绑定固定commit、manifest和阻塞范围，草拟REVIEW REQUEST由owner发送 | [请求草稿](audit/P008_REVIEW_REQUEST_DRAFT_20261013.md)；没有外部发信或P008执行 |
+
+| 2026.10.13 00:12（GitHub交付），00:14（读取） | Claude；Codex读取 | v3接受B/T、更正门控和采购重复；批评11项不足以回答预算变化，提出20学生/90单位。图v2 PASS | [固定回应4dfd22f6](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md)；不是新实验准入 |
+| 2026.10.13 00:14（评审开始） | Codex | 按owner“定稿后再执行”先核读v3全文与阅读库；Papers仍ea8befd5，无新笔记 | 无模型调用，未恢复p007 |
+| 2026.10.13 00:20（回应完成） | Codex | 接受C.1目标覆盖批评，推荐v3核心，补同训练seed、桥接交互、Phase0上限、缓存成本及备选解释；核算90/74/42/22单位 | [回应](audit/P008_V3_CODEX_RESPONSE_20261013.md)、[核算](../reports/p008_v3_design_review_20261013/CALCULATIONS.json)；无新实验组/付费调用 |
 
 ## 维护规则
 

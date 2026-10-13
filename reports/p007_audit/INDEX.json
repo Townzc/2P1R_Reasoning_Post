@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T07:06:34.395899+00:00",
+  "as_of_utc": "2026-10-13T07:20:10.545306+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -73,15 +73,18 @@
   "figures_v2": {
     "path": "reports/sft_allocation_midpoint_20261011/figures_token_v2",
     "provenance_sha256": "68a7ff265b32acdbf3b5e83c4ab627d35ff2fc637484b9bf7e7aaf01f9c7fb6c",
-    "external_review": "pending",
-    "scope": "display-only F15-1 repair; unchanged scores and primary forest PNG"
+    "external_review": "PASS",
+    "scope": "display-only F15-1 repair; unchanged scores and primary forest PNG",
+    "reviewed_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
+    "review_report_commit": "4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74",
+    "review_report": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md"
   },
   "p008": {
-    "status": "design_review_only_not_admitted",
-    "proposal_commit": "4934d852f375bc79bec99a636edd1fbf8f144604",
-    "packet": "reports/p008_design_review_20261013",
-    "manifest_sha256": "2aaa998126b197baf6c8a5fef3b3118705d98a35ec35a78de0981ee55c60e5a8",
-    "external_review": "pending",
+    "status": "v3_core_design_endorsed_by_codex_protocol_details_pending_no_execution",
+    "proposal_commit": "4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74",
+    "packet": "reports/p008_v3_design_review_20261013",
+    "manifest_sha256": "395f0e6a89b732b58ad4362259b8879b31f7dc7f178fedbcf98ecd278468b87c",
+    "external_review": "Codex response to Claude v3 pending scoped closure",
     "queued_model_jobs": 0
   },
   "spending_ceiling_usd": 450,
@@ -93,8 +96,8 @@
       "target_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
       "packet": "reports/p008_design_review_20261013",
       "manifest_sha256": "2aaa998126b197baf6c8a5fef3b3118705d98a35ec35a78de0981ee55c60e5a8",
-      "external_review": "pending",
-      "blocking_for": "future P008 admission only; no active execution",
+      "external_review": "responded; major v2 criticisms accepted, C.1 challenges reduced alternative",
+      "blocking_for": "superseded by v3 discussion; no active execution",
       "questions": [
         "Joint B/T estimand and orthogonal bridge",
         "Formal-test gate selection bias and safe alternative",
@@ -102,21 +105,25 @@
         "Output/dose/power arithmetic and reduced design controls"
       ],
       "supersedes": null,
-      "reviewed_commit": null
+      "reviewed_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
+      "review_report_commit": "4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74",
+      "review_report": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md"
     },
     {
       "request_id": "p007b-figure-v2-display-r1",
       "target_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
       "packet": "reports/sft_allocation_midpoint_20261011/figures_token_v2",
       "manifest_sha256": "68a7ff265b32acdbf3b5e83c4ab627d35ff2fc637484b9bf7e7aaf01f9c7fb6c",
-      "external_review": "pending",
+      "external_review": "PASS",
       "blocking_for": "none; original figure PASS-WITH-NOTES and facts PASS remain available",
       "questions": [
         "F15-1 overlapping markers/legend fixed without changing values",
         "Summary/closeout hashes unchanged and primary forest PNG identical"
       ],
       "supersedes": "v1 display only; original retained",
-      "reviewed_commit": null
+      "reviewed_commit": "7cefa25386590b7631b838382fffceb8b502c89b",
+      "review_report_commit": "4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74",
+      "review_report": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md"
     }
   ]
 }

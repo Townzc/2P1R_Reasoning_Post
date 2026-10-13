@@ -1,0 +1,107 @@
+{
+  "schema": "p008_v3_review_arithmetic_v1",
+  "execution_admitted": false,
+  "new_model_calls": 0,
+  "input": {
+    "reports/sft_allocation_midpoint_20261011/P007B_TOKEN_RUNTIME_DIAGNOSTICS.json": "caeb693780c625c840c98658d39347274318c06c1696f5c718e7c04c4692cad4"
+  },
+  "variants": [
+    {
+      "name": "full_8x",
+      "draws": 2,
+      "high_budget_multiplier": 8,
+      "main_students": 16,
+      "bridge_students": 4,
+      "total_students": 20,
+      "training_units": 90,
+      "targets_if_T0_524287": 47185830,
+      "updates_if_U0_256": 23040,
+      "primary_student_outputs": 26380,
+      "base_outputs_additional": 1319,
+      "linear_training_gpu_hours": 10.59430374156563,
+      "linear_other_worker_gpu_hours": 22.09108237535616,
+      "complete_BxT_factorial": true
+    },
+    {
+      "name": "drop_lowB_highT_corners",
+      "draws": 2,
+      "high_budget_multiplier": 8,
+      "main_students": 16,
+      "bridge_students": 2,
+      "total_students": 18,
+      "training_units": 74,
+      "targets_if_T0_524287": 38797238,
+      "updates_if_U0_256": 18944,
+      "primary_student_outputs": 23742,
+      "base_outputs_additional": 1319,
+      "linear_training_gpu_hours": 8.710871965287296,
+      "linear_other_worker_gpu_hours": 19.881974137820542,
+      "complete_BxT_factorial": false
+    },
+    {
+      "name": "reduce_to_4x",
+      "draws": 2,
+      "high_budget_multiplier": 4,
+      "main_students": 16,
+      "bridge_students": 2,
+      "total_students": 18,
+      "training_units": 42,
+      "targets_if_T0_524287": 22020054,
+      "updates_if_U0_256": 10752,
+      "primary_student_outputs": 23742,
+      "base_outputs_additional": 1319,
+      "linear_training_gpu_hours": 4.944008412730628,
+      "linear_other_worker_gpu_hours": 19.881974137820542,
+      "complete_BxT_factorial": false
+    },
+    {
+      "name": "one_draw_4x",
+      "draws": 1,
+      "high_budget_multiplier": 4,
+      "main_students": 8,
+      "bridge_students": 2,
+      "total_students": 10,
+      "training_units": 22,
+      "targets_if_T0_524287": 11534314,
+      "updates_if_U0_256": 5632,
+      "primary_student_outputs": 13190,
+      "base_outputs_additional": 1319,
+      "linear_training_gpu_hours": 2.58971869238271,
+      "linear_other_worker_gpu_hours": 11.04554118767808,
+      "complete_BxT_factorial": false
+    }
+  ],
+  "teacher_pool": {
+    "train_total": 7473,
+    "proposed_dev_holdout": 500,
+    "remaining": 6973,
+    "estimated_outputs_per_draw": 14000,
+    "estimated_outputs_two_draws": 28000,
+    "max_completion_tokens_if_28000_attempts_at_1024": 28672000,
+    "linear_breadth_purchase_estimate_at_8x": 3360,
+    "fraction_of_remaining_pool": 0.4818585974472967
+  },
+  "mde_table_reproduction": [
+    {
+      "s_pp": 0.9,
+      "independent_components_example_pp": 3.9818501655999063
+    },
+    {
+      "s_pp": 2,
+      "independent_components_example_pp": 6.394816556643669
+    },
+    {
+      "s_pp": 3,
+      "independent_components_example_pp": 8.952041773535464
+    }
+  ],
+  "caveats": [
+    "Runtime is linear extrapolation from eight P007B runs, not measurement of v3, a cost quote or admission.",
+    "Other worker time is not purely evaluation; estimates omit teacher/base/Phase0/final audit/failure/closing.",
+    "The MDE reproduction assumes two independent budget contrasts per draw and two independent draws with no covariance; shared questions and coupled traces violate this simplification in general.",
+    "If s denotes SD of C rather than of each within-budget contrast, the displayed MDE formula is a different model.",
+    "No universal four-percentage-point detectability boundary follows; two draws are exploratory.",
+    "Procurement totals/coverage are estimates, not output allowances or a guarantee of supply.",
+    "T0 and update scaling shown here are proposed numerical bindings, not frozen runnable plans."
+  ]
+}
