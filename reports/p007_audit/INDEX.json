@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T08:03:14.018573+00:00",
+  "as_of_utc": "2026-10-13T08:38:31.075223+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -150,8 +150,8 @@
       "packet": "reports/p008_20261013",
       "manifest": "reports/p008_20261013/MANIFEST.json",
       "manifest_sha256": "14967042cd5870d5c1629c9ba234f97871aae63ea51d16195da05de9d280a534",
-      "external_review": "pending",
-      "blocking_for": "all four Phase0 GPU roles; no cloud dispatch before exact source G0 acceptance",
+      "external_review": "PASS-WITH-NOTES",
+      "blocking_for": null,
       "questions": [
         "A1 fixed256 LR equality and long-horizon monotonicity; independent seed streams and exact design arithmetic?",
         "Finite1024teacher/8update921target/16devoutput/4GPU phase0, timers,15USD within250,immutableclaims and no replay?",
@@ -159,22 +159,44 @@
         "Shared-cache per-policy charges/no future metadata, finite supply, A2 report scope and A3 pipelined gates?"
       ],
       "supersedes": "p008-v3-protocol-closure-r1",
-      "reviewed_commit": null,
+      "reviewed_commit": "f996621d12425bcf3254ef19edca7e01a847f866",
       "requested_utc": "2026-10-13T08:03:14.018573+00:00",
       "response_timeout_minutes": 45,
       "timeout_action": "hold unreviewed dispatch; continue independent CPU preparation",
       "owner_authorized": true,
-      "later_main_runtime_review_required": true
+      "later_main_runtime_review_required": true,
+      "review_commit": "722735e2a9ead6c03b18509d9ac95f4ce1f3bca2",
+      "review_report": "audit/claude/20261013l/G0_REPORT.md",
+      "disposition": "reports/p008_20261013/phase0_barrier_v2/DISPOSITION.json"
+    },
+    {
+      "request_id": "p008-v31-g0-barrier-r2",
+      "target_commit": "610fde47e0b0d14b1de459e7a627ea7c89072843",
+      "packet": "reports/p008_20261013/phase0_barrier_v2",
+      "manifest": "reports/p008_20261013/phase0_barrier_v2/MANIFEST.json",
+      "manifest_sha256": "69960723382e16f5355aab969cafe93d3443cae5a222b288274993e1f8a3d564",
+      "external_review": "pending",
+      "blocking_for": "amended Phase0 upload and GPU dispatch",
+      "questions": [
+        "G0-1(a) timing failure recorded without abort/retry; corrupt data still fails?",
+        "Independent oracle differentiates completed engineering from actual four-GPU proof; no silent main admission?"
+      ],
+      "supersedes": "p008-v31-g0-phase0-r1 source timing branches only",
+      "requested_utc": "2026-10-13T08:38:31.075223+00:00",
+      "response_timeout_minutes": 45,
+      "expected_review_minutes": 15,
+      "timeout_action": "hold dispatch; no silence approval",
+      "owner_authorized": true
     }
   ],
   "p008_v31": {
-    "status": "owner_authorized_G0_pending_no_cloud_calls",
+    "status": "original_G0_pass_with_notes_scoped_amendment_pending_no_cloud_calls",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
     "project_ceiling_usd": 450,
     "protected_usd": 50,
-    "g0_request_id": "p008-v31-g0-phase0-r1",
-    "target_commit": "f996621d12425bcf3254ef19edca7e01a847f866"
+    "g0_request_id": "p008-v31-g0-barrier-r2",
+    "target_commit": "610fde47e0b0d14b1de459e7a627ea7c89072843"
   }
 }
