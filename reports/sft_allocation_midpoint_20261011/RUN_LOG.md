@@ -648,3 +648,8 @@ Motivation: close the genuine worker/spec review barrier within the owner-approv
 ### Oct13 10:30 PDT — provider-list preflight failure, no remote write
 
 Initial upload70671 rejected before UPLOAD_INTENT because app list includes only running/deployed/recently-stopped entries and now returned[]; containers[]. Exact modal app info for each original ID confirms prior STOPPED timestamps. Preserve upload_r1.log and UPLOAD_PREFLIGHT_FAILURE_PROVIDER. New provider_release validation uses exact IDs and fails on unknown/state/error/anycontainers. Eight new adversarial CPU checks pass; worker work() AST unchanged. v2 immutable ADMISSION only updates source_files; same plan/config/formula/20UTC/7200/$12. Fresh local upload_continuation_v2 prepared but NOTRUN. New exact-source review still required, oldv1PASS not silently applied. Root cause was using a recent-list interface as an enduring exact-identity oracle.
+
+
+### Oct13 10:42 PDT — v2 scoped PASS and direct eight-student-GPU authority
+
+Read fixedClaude376566d1/comment6151377554: exact provider amendment32777f41 PASS, unchanged work AST/numerical scope; 23 reviewer tests are8 new plus15 old, no Codex reruns. New upload67895 inprogress, no childcall yet. Claude comment6151506340 separately relayed owner8GPU choice; Codex requested a concise direct confirmation because this was relayed authority, and owner directly confirmed8H100 in this chat. No other dose/budget/time change. Future concurrency amendment requires actual quota and review; not a blocker or shortcut for current child.

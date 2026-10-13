@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 10:40–10:42（审计读取及owner答复收录） | Claude；研究者；Codex | v2精确provider查询@32777f41获真实PASS，开始唯一prefix上传/读回，尚未child派发。研究者在本聊天另确认学生最多8卡，需配额及代码/数值审计，不改变剂量预算时限 | [v2审计](../reports/p008_20261013/D2_RUNTIME_V2_ACCEPTED.json)、[直接8卡授权](../reports/p008_20261013/OWNER_STUDENT_8GPU.json)；D2派发与并发修订分开 |
 | 2026.10.13 10:28（拒绝）/10:30（精确核查及修订） | Codex | 上传前旧app近期列表已过期为空，检查在任何写入前拒绝；按精确ID确认D1/D2仍stopped/0容器。只替换本地生命周期查询，8新CPU检查通过，worker AST和数值/生成不变 | [v2小修订待审](../reports/p008_20261013/d2_continuation_admission_v2/REVIEW_REQUEST.md)；原失败log保留，0上传/云构建/模型调用，最晚10:48:20不变 |
 | 2026.10.13 10:25–10:28（读取及派发前核对） | Claude；Codex复核 | 新child固定a385fb38已获限定PASS-WITH-NOTES；实际父任务启动至环境13.72秒，支持按未改公式派发一次，真实主机测速仍可拒绝。学生8f31b0ca仅代码PASS，0学生准入 | [真实审计与N1核对](../reports/p008_20261013/d2_runtime_review_acceptance_v1/DISPOSITION.md)；接下来只上传7个新prefix文件并独立读回，最晚10:48:20PDT派发 |
 | 2026.10.13 10:11（准备收尾／实际审计读取10:09） | Codex | 续跑worker固定a385fb38、后续学生证据链固定8f31b0ca均已普通发布并登记独立审计；仍无新Claude结论。上传/运行核验/收尾/失败保全工具已备，0云构建/调用 | [真实待审状态](../reports/p008_20261013/D2_CONTINUATION_REVIEW_PENDING_1710.json)；保留13PDT截止，最晚10:48:20PDT完整窗口派发，无默许准入 |

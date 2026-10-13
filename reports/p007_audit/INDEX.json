@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T17:31:47.222495+00:00",
+  "as_of_utc": "2026-10-13T17:42:52.061312+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -557,7 +557,7 @@
       "packet": "reports/p008_20261013/d2_continuation_admission_v2",
       "manifest": "reports/p008_20261013/d2_continuation_admission_v2/MANIFEST.json",
       "manifest_sha256": "69275e89ea939add20f91db26fcfc96869438a70cf9408e94fc83975e15f3468",
-      "external_review": "pending",
+      "external_review": "PASS",
       "requested_utc": "2026-10-13T17:31:47.222495+00:00",
       "blocking_for": "Only the local provider lookup amendment to already-reviewed single child; latest full-window dispatch17:48:20UTC.",
       "questions": [
@@ -566,11 +566,15 @@
         "Accept v2 exact source/spec for the same one child, without re-reviewing old closed scientific work?"
       ],
       "response_timeout_minutes": 10,
-      "timeout_action": "No silence approval, no deadline extension; latest17:48:20UTC still applies."
+      "timeout_action": "No silence approval, no deadline extension; latest17:48:20UTC still applies.",
+      "review_commit": "376566d1295be66391d64dbbbe23fc09a4718a7c",
+      "review_report": "audit/claude/20261013y/D2_CHILD_V2_PROVIDER.md",
+      "review_report_sha256": "8acf47b1bfc9c4b57c683933570c1ba5504182b72e0864fe15d5c92346bbc792",
+      "review_read_utc": "2026-10-13T17:42:52.061312+00:00"
     }
   ],
   "p008_v31": {
-    "status": "preupload_recent_list_omission_no_writes_exact_id_amendment_pending",
+    "status": "exact_v2_review_accepted_upload_in_progress_no_child_call_yet",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -593,7 +597,7 @@
     "student_runtime_review_request": "p008-student-parent-child-lineage-code-r1",
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
-    "conditional_repair_status": "v1_G0_accepted_v2_local_lookup_amendment_requires_real_review",
+    "conditional_repair_status": "v2_PASS_one_child_after_live_readback_fullwindow",
     "latest_engineering_packet": "reports/p008_20261013/d2_continuation_admission_v2",
     "student_runtime_code_review": "PASS-WITH-NOTES 8f31b0ca code only",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
@@ -605,9 +609,11 @@
     "active_gpu_tasks": 0,
     "pool_d2_external_review": "PASS failed prefix only, not G1",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/d2_runtime_review_acceptance_v1/CHILD_RUNTIME_ACCEPTED.json",
+    "current_status": "reports/p008_20261013/D2_RUNTIME_V2_ACCEPTED.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
-    "continuation_runtime_review_request": "p008-d2-exact-provider-lookup-r2"
+    "continuation_runtime_review_request": "p008-d2-exact-provider-lookup-r2",
+    "owner_student_maximum_gpus": 8,
+    "student_concurrency_amendment": "owner_approved_code_quota_review_pending"
   }
 }
