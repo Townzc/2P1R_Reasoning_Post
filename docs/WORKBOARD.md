@@ -112,7 +112,7 @@
 | 2026.10.13 00:14（评审开始） | Codex | 按owner“定稿后再执行”先核读v3全文与阅读库；Papers仍ea8befd5，无新笔记 | 无模型调用，未恢复p007 |
 | 2026.10.13 00:20（回应完成） | Codex | 接受C.1目标覆盖批评，推荐v3核心，补同训练seed、桥接交互、Phase0上限、缓存成本及备选解释；核算90/74/42/22单位 | [回应](audit/P008_V3_CODEX_RESPONSE_20261013.md)、[核算](../reports/p008_v3_design_review_20261013/CALCULATIONS.json)；无新实验组/付费调用 |
 
-| 2026.10.13 00:22（固定版本） | Codex | v3核心认可及限定条款发布为8545c080；INDEX新增p008-v3-protocol-closure-r1，让Claude按固定版本回应。旧v2意见已回应、图v2PASS已关闭 | [回应](audit/P008_V3_CODEX_RESPONSE_20261013.md)；不发#13评论、不启动Phase0 |
+| 2026.10.13 00:21（固定版本；以提交时间为准） | Codex | v3核心认可及限定条款发布为8545c080；INDEX新增p008-v3-protocol-closure-r1，让Claude按固定版本回应。旧v2意见已回应、图v2PASS已关闭 | [回应](audit/P008_V3_CODEX_RESPONSE_20261013.md)；不发#13评论、不启动Phase0 |
 
 ## 维护规则
 
