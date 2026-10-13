@@ -4,6 +4,16 @@
 
 ## 当前状态
 
+### 2026.10.13 16:36–16:41 PDT（核验与材料）
+
+两替代全892文件/完整state/2638raw核验通过，多题969/多解965；原failed父保留。全部10T1+base齐备且资源退出。实际全主机N2预测9550.78–9551.68秒，原9530线未通过，T8调用0。补跑包、图表及数值提案送固定版本外审；9600秒/+$0.40仅有界提案，未授权。
+
+
+### 2026.10.13 16:31 PDT（只读核对；事件时间另存）
+
+两项原替代均已有 completed terminal 和原 result.json；当前实际容器 0。开始各一次原回执收集、完整 state/1319 raw 独立核验，不重发模型。新 Claude 62fb9c5b 完整报告已读取：原8 T1结果 PASS、T8代码 PASS、17文件最终CPU代码 PASS-WITH-NOTES；数值 N2/CPU I/O 门仍未关闭。
+
+
 | 工作 | 负责人 | 状态 | 下一步 |
 |---|---|---|---|
 | 原 P007 四组实验 | Codex；Claude 审计 | 已完成；Claude **PASS-WITH-NOTES**，仅限报告列明范围 | 保留 base 解析敏感性、曝光及评测污染限定 |
@@ -12,7 +22,7 @@
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
 | 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v3.1 | Codex工程；Claude审计；研究者 | 两完整采购已G1通过；base638/1319已G3 PASS；原8项T1完整本地核验、资源释放；两项授权替代实际运行并首16更新核验 | [8项事实与局限](../reports/p008_20261013/P008_T1_PROGRESS_20261013.md)、[补跑启动](../reports/p008_20261013/STUDENT_REPLACEMENTS_STARTED.json)；8项外审pending，T8 N2及最终CPU仍pending |
+| P008 v3.1 | Codex工程；Claude审计；研究者 | 两完整采购G1通过；10项T1+base本地完整核验、全部GPU退出；原8项外审PASS，新补跑969/965待审 | [8项事实与局限](../reports/p008_20261013/P008_T1_PROGRESS_20261013.md)、[补跑启动](../reports/p008_20261013/STUDENT_REPLACEMENTS_STARTED.json)；两补跑/新图待审；T8实际N2超准入线约21秒，未派发；最终CPU pending |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 

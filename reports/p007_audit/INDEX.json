@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T22:44:44.324873+00:00",
+  "as_of_utc": "2026-10-13T23:33:11.329744+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -826,9 +826,14 @@
       "target_commit": "860aa4cba1e0214c287a6d9bf87be5f74f67b28e",
       "manifest": "reports/p008_20261013/student_t1_eight_v1/MANIFEST.json",
       "manifest_sha256": "69d3097e03a62befc06280429512cd5aee3bfd3af44b25b20a19790460acf527",
-      "external_review": "pending",
+      "external_review": "PASS",
       "created_utc": "2026-10-13T22:27:23.841526+00:00",
-      "scope": "new fixed packet only; no implied runtime acceptance"
+      "scope": "Eight originalT1raw/dose/provenance; no externalbinaryinspection; not replacements or N2",
+      "status": "reviewed",
+      "review_commit": "62fb9c5b56ff5f172d67a2a284548fadf0e457b5",
+      "review_report": "audit/claude/20261013ag/T1_EIGHT_G3.md",
+      "review_report_sha256": "090c16dadc7616ef1378077894bf7284f1d8a8cdd7b12d606d159e98f8e63737",
+      "review_read_utc": "2026-10-13T23:31:32.823175+00:00"
     },
     {
       "request_id": "p008-t8-runtime-n2-preflight-r1",
@@ -843,9 +848,14 @@
       "target_commit": "860aa4cba1e0214c287a6d9bf87be5f74f67b28e",
       "manifest": "reports/p008_20261013/student_t8_runtime_preflight_v1/MANIFEST.json",
       "manifest_sha256": "85a2c7c32f6c9672b8cdbbe41e67ed3d4139400c37801428a38aa2b99ddf7476",
-      "external_review": "pending",
+      "external_review": "PASS",
       "created_utc": "2026-10-13T22:27:23.841526+00:00",
-      "scope": "new fixed packet only; no implied runtime acceptance"
+      "scope": "T8code only; actual allhost numerical N2 stillrequired",
+      "status": "reviewed",
+      "review_commit": "62fb9c5b56ff5f172d67a2a284548fadf0e457b5",
+      "review_report": "audit/claude/20261013ag/T8_RUNTIME_N2_PREFLIGHT.md",
+      "review_report_sha256": "a15ed9cfcc99df42b9cd952c47643e9ce0040db9882021142ea5198f49e0b01c",
+      "review_read_utc": "2026-10-13T23:31:32.823175+00:00"
     },
     {
       "request_id": "p008-final-cpu-replacements-code-r1",
@@ -853,10 +863,10 @@
       "packet": "reports/p008_20261013/final_cpu_replacements_preflight_v1",
       "manifest": "reports/p008_20261013/final_cpu_replacements_preflight_v1/MANIFEST.json",
       "manifest_sha256": "656ba68b544f798f06e1f07155c6a5818c6dcc66ff301a5f4d93afdc454be2c8",
-      "external_review": "pending",
+      "external_review": "PASS-WITH-NOTES",
       "blocking": true,
       "blocking_for": "Only future final CPU code; not current replacement workers or separate T8 numerical gate",
-      "scope": "p008_cpu_replacement_integrity_code",
+      "scope": "17source CPUcode only; actual-byte numeric review stillrequired",
       "source_files": 17,
       "created_utc": "2026-10-13T22:44:44.324873+00:00",
       "new_cloud_calls": 0,
@@ -866,7 +876,12 @@
         "Frozen LR/plan bytes and logical/physical state identity; full256/1024/2048 state integrity including optimizer/RNG/dose",
         "Original5USD/3300worker/full4000window/two readers/no retries and original-volume evidence retained",
         "Code PASS not actual-byte numeric PASS; prepared helper controls; all four campaign ledgers"
-      ]
+      ],
+      "status": "reviewed",
+      "review_commit": "62fb9c5b56ff5f172d67a2a284548fadf0e457b5",
+      "review_report": "audit/claude/20261013ag/FINAL_CPU_REPLACEMENTS_CODE.md",
+      "review_report_sha256": "9bebe03a371a796fb7c67c0f0f58b9652f3cd988559a26e4daee06b87259a58a",
+      "review_read_utc": "2026-10-13T23:31:32.823175+00:00"
     }
   ],
   "p008_v31": {

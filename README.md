@@ -1,4 +1,4 @@
-P008 最新：原8项T1全部完成独立raw/fullstate/剂量核验并释放GPU；[结果事实页](reports/p008_20261013/P008_T1_PROGRESS_20261013.md)已更新，外审待定。两项已批准的独立补跑现在真实训练，原失败保留。T8和最终CPU仍待准入，21PDT材料冻结不变。
+P008 最新：10项T1和base均已完整本地核验、GPU全部退出；[事实与图表](reports/p008_20261013/P008_T1_PROGRESS_20261013.md)已更新。原8项外审PASS，补跑969/965（各/1319）待审。T8实际计时门未通过，尚无T8调用；21PDT材料冻结不变。
 
 # Problems, Paths, or Repeats?
 
@@ -30,7 +30,7 @@ Intervals resample shared questions after averaging the two observed seeds. They
 
 Claude [round15](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md) gives the final packet and factual evidence page **PASS**, and the original figures **PASS-WITH-NOTES**, at fixed commit736b3920. A new v2 accuracy plot fixes overlapping markers/legend without changing results; that display revision is now PASS in [Claude v3 response](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md). [Scope and disposition](docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
 
-**P008:** Both draws and common inputs passed G1. Eight original T1 workers remain active after local DNS disconnect; do not resubmit. The original base is closed and independently reviewed at638/1319. Both zero-update failures stay failed. The [two physical replacement admission](reports/p008_20261013/student_lr_replacement_admission_v1/REVIEW_REQUEST.md) binds direct owner266.04 authority, shared max8 concurrency and original science; exact new runtime review is pending. Per-slot caps and21PDT material freeze remain. The finite student deadline was removed by the owner; N2 and true full-result verification remain required. Workspace usage is delayed, not an invoice.
+**P008:** Both draws/common inputs passed G1. All ten T1 endpoints and base are fully verified locally and released. Eight original outcomes have external PASS; the two authorized replacements scored969/965 of1319 and await external review. Their original zero-update failures remainfailed. All-host T8 forecasts exceed the frozen9,530s criterion by20.78–21.69s; no T8 is admitted. See the factual page for the separate finite-cap proposal. Owner student-until-complete authority preserves finite doses, once-only calls and budget;21PDT materials still freeze.
 
 ## Previous stages, kept separate
 
@@ -50,6 +50,6 @@ P007A yielded1,024 physical attempts:959 usable,59 invalid and6 rejected valid d
 
 ## Cost and delivery
 
-Workspace delayed meter was **$116.26183740 at the October13 19:12–19:13UTC read**, billed$0; final worker costs can lag. This is not a final invoice or credit balance. P008 hard reservations are **$249.68 within$250**, including the authorized$12 continuation. Project spending ceiling$450/protected≥$50 remain unchanged.
+Workspace delayed meter is **$162.31184746 at the October13 23:36UTC read**, billed$0; P008-labeled monthly rows total$74.31044653. This is not an invoice or credit balance. P008 authorized cap/reservation remains **$266.04** including the two independent replacements. Residual workspace metering plus the full P008 reservation is$354.04140093; the$450 project ceiling/protected≥$50 remain. A proposed$0.40 T8 cap revision is not yet authorized or admitted.
 
 Midpoint technical facts, deterministic charts and limitations are ready before the owner's TuesdayOctober13 21:00PDT deadline. Final slide composition, personal interpretation and rehearsal remain the researcher's work under the course policy. Long-term extensions are proposals only and do not change the closed experiment.
