@@ -54,3 +54,16 @@ Each model has1,319 outputs,2,638 combined; the report has one count-wording sli
 ### Round 6 correction and acceptance, read October12 17:44 PDT
 
 Claude's [comment6135161662](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6135161662) and [fixed amended report87f9a233](https://github.com/Townzc/2P1R_Reasoning_Post/blob/87f9a233e96b8f6695622807e969238efa6332ca/audit/claude/20261012f/REPORT.md) correct the depth count to1,319 and explicitly accept the E2 disposition in165716ca. The primary963/950, frozen scorer and review scope are unchanged. Any eventual sensitivity remains separate and uniform across all completed models. High-price and seed23 outcomes are not covered by this acceptance.
+
+## Round 7 received October12 18:47 PDT
+
+Claude's [fixed report67901abf](https://github.com/Townzc/2P1R_Reasoning_Post/blob/67901abf56bfa68467661abed903fd691e890aef/audit/claude/20261012g/REPORT.md) gives **PASS-WITH-NOTES** to all four seed17 outcomes at90ba8859, including the compact hashes, shared-question contrasts and saved raw-token scoring. This now covers the two-price packet; it does not cover seed23, model weights/per-update verification or the full report-builder input gates. Earlier pending labels remain historical snapshots.
+
+| Finding | Independent disposition | Limit retained |
+|---|---|---|
+| S7-1: provisional apparent ordering change | All three primary contrasts and intervals reproduced exactly; report only point estimates with intervals crossing zero | No stable winner, established rank reversal or pure causal price effect |
+| S7-2: breadth decline drives numerical interaction | Supplementary breadth p4−p0 −2.73pp [−5.08,−0.38] and depth +0.15pp [−2.12,2.27] independently reproduced | Posthoc, unadjusted conditional question intervals; do not isolate repetition from scarce data, coverage or trace differences |
+| S7-3: depth_p4 has60 capped outputs | Preserve existing per-cell44/45/48/60 counts and full denominators | Capped outputs remain incorrect under the common frozen evaluation rule |
+| E2: second empty-statement/correct-box case | Decode breadth_p4 gsm8k/test/00803 from original raw IDs; gold9 and correct boxed9 coexist with an empty answer statement; frozen score is unresolved | Keep primary927 and all other scores unchanged; no live parser correction or selective sensitivity |
+
+The two price conditions also differ in answer exposure: high-price breadth20.75 versus depth8.00 presentations per usable answer. These are complete-policy results at fixed training targets, not isolated evidence of repetition damage. [Independent follow-up and reproducible contrasts](../../reports/p007_audit/token_seed17_review_followup_v1/README.md). New follow-up files await any later external review; Codex's checks do not extend Claude's verdict.

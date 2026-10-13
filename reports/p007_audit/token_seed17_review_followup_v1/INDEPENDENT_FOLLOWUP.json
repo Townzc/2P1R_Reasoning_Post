@@ -1,0 +1,111 @@
+{
+  "schema": "p007_token_round7_followup_v1",
+  "checked_utc": "2026-10-13T01:50:00.060297+00:00",
+  "review": {
+    "read_at_utc": "2026-10-13T01:47:36.053798+00:00",
+    "commit": "67901abf56bfa68467661abed903fd691e890aef",
+    "report_path": "audit/claude/20261012g/REPORT.md",
+    "report_sha256": "8897bb472a866bf363e79465f99bf83399ec3886c5238fb6c6f15c59d175fb32",
+    "comment_id": 6136023742,
+    "comment_created_at": "2026-10-13T01:22:56Z",
+    "subject_commit": "90ba8859",
+    "status": "received_independent_followup_pending"
+  },
+  "packet_sha256": "53b047099f8d6989fdf4f86ce20539c66bd28d87ffbc8d5237a59e3ad2235e68",
+  "paired_question_file_sha256": "3d6dd8bd976d7aac612c98d2fec9cd55f4d1851c4604f374173b255c936fd2b0",
+  "bootstrap": {
+    "seed": 20261013,
+    "replicates": 10000,
+    "unit": "same resampled question indices for five contrasts; conditional on fixed four models and traces"
+  },
+  "contrasts": {
+    "p0_depth_minus_breadth": {
+      "difference_pp": -0.9855951478392722,
+      "conditional_question_bootstrap_95_pp": [
+        -3.184230477634572,
+        1.2130401819560273
+      ],
+      "posthoc_supplementary": false
+    },
+    "p4_depth_minus_breadth": {
+      "difference_pp": 1.8953752843062925,
+      "conditional_question_bootstrap_95_pp": [
+        -0.3032600454890068,
+        4.094010614101592
+      ],
+      "posthoc_supplementary": false
+    },
+    "price_interaction_p4_minus_p0": {
+      "difference_pp": 2.8809704321455647,
+      "conditional_question_bootstrap_95_pp": [
+        -0.22744503411675512,
+        5.9893858984078845
+      ],
+      "posthoc_supplementary": false
+    },
+    "supplementary_breadth_p4_minus_p0": {
+      "difference_pp": -2.7293404094010616,
+      "conditional_question_bootstrap_95_pp": [
+        -5.079605761940864,
+        -0.37907505686125853
+      ],
+      "posthoc_supplementary": true
+    },
+    "supplementary_depth_p4_minus_p0": {
+      "difference_pp": 0.1516300227445034,
+      "conditional_question_bootstrap_95_pp": [
+        -2.122820318423048,
+        2.2744503411675514
+      ],
+      "posthoc_supplementary": true
+    }
+  },
+  "case": {
+    "run": "breadth_p4_s17",
+    "problem_id": "gsm8k/test/00803",
+    "gold": "9",
+    "claims": [
+      {
+        "offset": 1156,
+        "kind": "answer_statement",
+        "payload": "",
+        "value": null
+      },
+      {
+        "offset": 1174,
+        "kind": "box",
+        "payload": "9",
+        "value": "9"
+      }
+    ],
+    "stop_reason": "native_eos",
+    "raw_batch_sha256": "a29a83a5233378b943031c2d557be2119b41ad0a3eb0e1d72e9ef27d2a97b532",
+    "scored_batch_sha256": "20ebd5f373926746c6a3b0d72f245e7cf9f073c98e636f2e53aa598df09f0c78",
+    "raw_ids_independently_decoded": true,
+    "primary_correct": false,
+    "primary_unchanged": true
+  },
+  "reporting": {
+    "caps": {
+      "breadth_p0": 44,
+      "depth_p0": 45,
+      "breadth_p4": 48,
+      "depth_p4": 60
+    },
+    "mean_answer_exposure": {
+      "breadth_p0": 4.455882352941177,
+      "depth_p0": 3.970464135021097,
+      "breadth_p4": 20.747252747252748,
+      "depth_p4": 8.004347826086956
+    }
+  },
+  "disposition": [
+    "S7-1: only a provisional change in point-estimate ordering; all primary intervals cross zero, seed23 pending.",
+    "S7-2: supplementary price differences reproduced after review, descriptive and unadjusted for multiple comparisons; they do not isolate data scarcity, repetition, trace draw or price.",
+    "S7-3: retain all per-cell length caps as incorrect; counters were already in primary table.",
+    "E2: high-price breadth formatting false negative reproduced; preserve all primary scores. A uniform all-eight sensitivity, if done, must remain separate after completion.",
+    "Claude scope covers compact seed17 outcomes and saved raw-score recheck, not seed23, weights/per-update audit, or full report-builder input gates."
+  ],
+  "new_model_calls": 0,
+  "live_protocol_unchanged": true
+}
