@@ -137,7 +137,7 @@ def main(binding_json: str, receipt_dir: str):
         raise ValueError('Original worker not confirmed released')
     claims = modal.Dict.from_name('sft-allocation-midpoint-claims-v1', create_if_missing=False)
     prefix = 'midpoint/' + binding['plan']['campaign_id'] + '/'
-    if any(k.startswith(prefix) for k, _ in claims.items()):
+    if any(k.startswith(prefix) for k in claims.keys()):
         raise ValueError('Continuation already has records; never dispatch twice')
     old_prefix = 'midpoint/' + binding['parent']['campaign'] + '/'
     if digest(claims.get(old_prefix + 'claim/audit')) != binding['parent']['claim_sha256']:

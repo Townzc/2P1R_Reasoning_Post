@@ -2179,3 +2179,8 @@ Computed receipts/passive60s GPU sample summaries from the eight completed stude
 ## 2026-10-13T05:22:20.603060+00:00 — conditional CPU audit continuation prepared, not admitted
 
 Original CPU audit remains active under3300s timer; seven completed label proofs seen05:09UTC. Prepared separate CPU-only continuation/helper and8contract tests: reject active/completed parents, changed proof bytes, dropped/replayed labels, rehashed missing checkpoints, foreign terminals, incorrect procurement-recovery mapping and deadline/slot expansion. No published continuation admission exists, no image build/dispatch or additional reservation has occurred. If original task finishes, do not use this path. If it stops incomplete, first preserve real provider/ledger/partial files; only remaining verification reads may proceed under a new bounded explicit slot. Model work is never repeated.
+
+
+## 2026-10-13T05:27:55.360794+00:00 — original CPU audit interrupted by its finite timer
+
+Original CLI85817 exit1 reports runner124 at3300s followed by provider replacement rejected at original atomic claim. Provider stopped22:24:41PDT, zero containers verified. All8student oracles/data/state unchanged. Read-only reconciliation3301/PID61353 is running once, including complete original campaign ledger; do not duplicate or infer final remaining labels from05:09partial snapshot. Conditional continuation remains unsubmitted/unadmitted until reconciliation finishes. Failed and replacement overhead retained.
