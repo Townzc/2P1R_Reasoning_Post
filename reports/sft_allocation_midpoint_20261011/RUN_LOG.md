@@ -689,3 +689,6 @@ The original once-only D2 continuation completed with actualSTOPPED/0containers.
 
 
 Oct13 12:10–12:12PDT: local input builder94897 failed on JSONL Unicode separators before any output directory/input/model work. Preserved fulltrace; v2 physical-line reader restores all6973 original records with three separator fixtures. Runtime/oracle already use correctread_jsonl, untouched. Prepared timingreader also corrected. The failed invocation is not retried as a cloud/model job; new source separately published, then one actual all-draw plan creation.
+
+
+Oct13 12:14–12:16PDT: second localbuilder39991 stopped before outputs on missinggroup_id in frozenP008 parent schema. New copy-only adapter mapsgroup_id=id, retaining original prompt/reference/teacher bytes and original all-usable acceptance/attempt checks. Five CPUchecksPASS; v3 builder separately published, source30 runtime unchanged. Both zero-output local failures retained; no scientific rerun or admission. Billingreport firstCLI validation lacked --for (no remote report); corrected documented --for today/hourly command, oldemptyoutput retained.

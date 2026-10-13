@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/.local/p008_20261013/main_r1/prepare_student_inputs_completion_v2.py", line 48, in <module>
+    rows=training_rows(parents,acquired_ids,records);assert len(rows)==summary['usable_answers']
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/sft_allocation_acquisition/student_contract.py", line 48, in training_rows
+    rows.append(dict(problem_id=pid, group_id=parent['group_id'],
+                                              ~~~~~~^^^^^^^^^^^^
+KeyError: 'group_id'

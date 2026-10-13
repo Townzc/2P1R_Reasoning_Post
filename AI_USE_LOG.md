@@ -2404,3 +2404,6 @@ The original once-only D2 continuation completed with actualSTOPPED/0containers.
 
 
 Oct13 12:12PDT: corrected local prepared JSONL reader after zero-output94897 failure. Cause: using text.splitlines despite known UnicodeJSON issue; existing runtime reader already correct. Three targetedfixtures/6973records checked; no repeatedmodel/oracle or data/scoring change. Futurepreparedbuilders should reuse physicalJSONL reader.
+
+
+Oct13 12:16PDT: addressed prepared-builder schema mismatch with explicit copy-only group identity adapter and5 targetedchecks. Originaldata/runtime/scoring untouched. Record39991 failure rather than silently discarding it. The local preparation contract needed an actual frozen-parent schema test earlier; full numerical G1 remains mandatory.
