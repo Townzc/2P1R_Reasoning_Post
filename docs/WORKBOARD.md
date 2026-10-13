@@ -83,6 +83,8 @@
 
 | 2026.10.12 20:54（第十轮处理／只读修复前） | Codex | Claude第十轮接受上轮处理，follow-up包PASS；最后多解app已停止，但检查点下载超时。独立对账28有效文件、13/27有效分块，无坏文件，准备一次只读补齐 | [故障和修复界限](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_DEPTH_EXPORT_RECOVERY_20261013.json)、[限定审计范围](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND10_REVIEWED.json)；多题继续正常评测，0新增模型工作 |
 
+| 2026.10.12 21:01（最后多解核验完成） | Codex | 高价seed23多解949/1319、60截断；861文件/完整state/256更新/524287targets和全部raw重评分通过，GPU已释放。只读修复复用28文件/13分块，保留原失败与完成回执 | [第七项关闭证据](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FINAL_DEPTH_CLOSED.json)；最后多题仍评测，价格交互和CPU总审计待全八项 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。
