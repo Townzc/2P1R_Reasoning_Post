@@ -516,3 +516,8 @@ Claude722735e2 accepted fixedf996621d G0. Adopt readiness/ack timeout as honest 
 ## 2026-10-13T08:45:07.661888+00:00 — actual G0 amendment PASS / upload-next
 
 Read fullClaude6978423c scopedPASS at610fde47, all19sourceSHA match. Actual report/target/planhash bound in G0_ACCEPTED. Originalreview722735e2 retained. Localpublication script initially used immutable dump on existingINDEX and failed after writing acceptance proof; retained proof and repaired only mutableINDEX/log step, no upload/model work in that failure. No main admission implied. Preparing single immutablePhase0input upload/readback then finite roles once. No newdose or budget.
+
+
+## 2026-10-13T08:51:04.214292+00:00 — Phase0 first submission / main source preflight
+
+SinglePhase0 CLI76047/appap-Op16Qdg3mwTSoeudTDNUbo initialized after accepted6978423c/19-source proof and7-file5,803,684-byte readback. Imagesbuilding; no claim of actual1024outputs or4GPU yet. Main c9f80579 code includes finite one-slot dispatch, source/spec/runtime/draw gates, startup-inclusive reservations and safe compact transport;9newCPUgatechecks passed, exportercompiledonly. Numericmainplan/inputsnotadmitted, externalreviewpending. SeparatePhase0source19unchanged.

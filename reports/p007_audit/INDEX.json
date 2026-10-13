@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T08:45:07.661888+00:00",
+  "as_of_utc": "2026-10-13T08:51:04.214292+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -190,16 +190,36 @@
       "reviewed_commit": "610fde47e0b0d14b1de459e7a627ea7c89072843",
       "review_commit": "6978423cf04aa943c620a4074e0c34f9a72eb1bb",
       "review_report": "audit/claude/20261013m/G0_AMENDMENT.md"
+    },
+    {
+      "request_id": "p008-main-runtime-preflight-r1",
+      "target_commit": "c9f805796df99f24a3f07840d0eb107157302579",
+      "packet": "reports/p008_20261013/main_runtime_review_v1",
+      "manifest": "reports/p008_20261013/main_runtime_review_v1/MANIFEST.json",
+      "manifest_sha256": "c7da70e8178c7432df48f1b57509fb68b1aeb74292b748f2123bf8dc8db51bbc",
+      "external_review": "pending",
+      "blocking_for": "main teacher-pool/student dispatch; NOT the separately approved Phase0",
+      "questions": [
+        "Legal shared-cache generation and full per-policy charging without future output access?",
+        "Dynamic complete-answer schedules/common feasibility and narrow secondary-only parser?",
+        "Bounded main source/spec/draw gates, four occupied slot accounting, no ambiguous replay?",
+        "Independent raw/fullstate oracles and packed transfer maintain verifiability?"
+      ],
+      "scope": "code only; exact numerical branch/plan/inputs need follow-up after Phase0; this request cannot alone admit any main model call",
+      "requested_utc": "2026-10-13T08:51:04.214292+00:00",
+      "owner_authorized": true
     }
   ],
   "p008_v31": {
-    "status": "Phase0_G0_accepted_preparing_single_upload_dispatch",
+    "status": "Phase0_single_submission_image_building_main_code_review_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
     "project_ceiling_usd": 450,
     "protected_usd": 50,
     "g0_request_id": "p008-v31-g0-barrier-r2",
-    "target_commit": "610fde47e0b0d14b1de459e7a627ea7c89072843"
+    "target_commit": "610fde47e0b0d14b1de459e7a627ea7c89072843",
+    "phase0_app": "ap-Op16Qdg3mwTSoeudTDNUbo",
+    "main_runtime_request": "p008-main-runtime-preflight-r1"
   }
 }
