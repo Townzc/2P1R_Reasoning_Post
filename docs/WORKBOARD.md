@@ -129,6 +129,8 @@
 
 | 2026.10.13 02:12（本地核验完成） | Codex | Phase0全核验及资源释放；1024teacher、8更新921targets、16工程输出、4GPU实测；平台延迟计量87.92美元。预设工期门选择18学生/74单位，全部16主比较保留，撤去2个高T桥接，待数值审计 | [先导证据](../reports/p008_20261013/phase0_results_v1/README.md)、[数值计划](../reports/p008_20261013/main_admission_v1/REVIEW_REQUEST.md) |
 
+| 2026.10.13 02:17（Claude交付）/02:19（读取） | Claude；Codex复核 | 主数值G0@82e1fafd PASS-WITH-NOTES，仅准入D1/D2池；认可18/74工程缩减和237.68硬预留。保留Phase0两条百分号primary差异，学生仍需G1 | [接受及处理](../reports/p008_20261013/main_g0_acceptance_v1/ACCEPTANCE.json)；开始新命名空间一次输入上传 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。

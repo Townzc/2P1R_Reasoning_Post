@@ -2246,3 +2246,8 @@ SinglePhase0 CLI76047/appap-Op16Qdg3mwTSoeudTDNUbo initialized after accepted697
 ## 2026-10-13T09:12:30.049340+00:00 — verified Phase0; frozen engineering fallback pending numeric review
 
 Phase0 teacher1024/954usable/296801outputtokens, smoke8updates921targets/16outputs,4UUID5.9737s overlap. Allindependentoracles/exportstateSHA/providerSTOPPED0passed; originalCLI76047/collector3753/exports10753,86078,58629,88577/oracle99643done. Fullrawteacherpacket published forreview, no repeat. Workspace meter87.92150519/billed0delayed. Mainpreflight1179ece0PASS-WITH-NOTES; M1fourGPUsalreadyverified, M2roundlatency/late16batch allowance incorporated, groupedonlymetadataVolumecommit, M3forensic1024stateadded. No vLLMconfigurationchange. Frozenresult-blindbranch18/74:16maincells+2highB/lowTbridges, full20forecast206.67/20:20failsprior200/18gate;18forecast184.80/17:59passes assumingstart<=03PDT. No fullBTinteractionclaim. Hardreservations237.68inclusivePhase0within250;allmaincallsstill0,numericreviewpending.
+
+
+## 2026-10-13T09:20:18.850172+00:00 — true numerical G0 PASS, pools only
+
+ReadfullClaude02de4924 fixed82e1fafd. VerifiedSOURCE_BUNDLE/specdigest and acceptedonlypool_d1/d2, nostudentadmission. N1predeclaredpriority andtimingriskretained;N2nofullJ;N3known2percentageE1cases primary954notchanged toClaude956. Prepareoneimmutablepool-inputupload/readback, theneachoriginalpoolcalloncebefore03PDT. Hardstage237.68reserved within250; no extra modelgroup.

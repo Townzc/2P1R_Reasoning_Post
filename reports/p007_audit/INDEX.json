@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T09:13:31.650871+00:00",
+  "as_of_utc": "2026-10-13T09:20:18.850172+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -219,8 +219,8 @@
       "packet": "reports/p008_20261013/main_admission_v1",
       "manifest": "reports/p008_20261013/main_admission_v1/MANIFEST.json",
       "manifest_sha256": "dd697bfa908890cee90b263ceae805748f3c0a431778f6bce2dc761aa1c393c2",
-      "external_review": "pending",
-      "blocking_for": "pool_d1/d2 upload and first main calls",
+      "external_review": "PASS-WITH-NOTES",
+      "blocking_for": null,
       "questions": [
         "Phase0 complete raw/local/fullstate/resource evidence and4GPUs validated?",
         "Predeclared18/74 fallback / round-aware time model / 237.68hard reservations inclusive Phase0 inside250; scope properly reduced?",
@@ -231,11 +231,15 @@
       "response_timeout_minutes": 45,
       "timeout_action": "hold unreviewed dispatch; no silence approval",
       "owner_authorized": true,
-      "student_dispatch_not_admitted": true
+      "student_dispatch_not_admitted": true,
+      "reviewed_commit": "82e1fafdc145f0c45834f2c000e495f09cd68e83",
+      "review_commit": "02de4924acf33eba99ff0da1e671ab3ae1928f5f",
+      "review_report": "audit/claude/20261013o/G0_MAIN_NUMERIC.md",
+      "scope": "pool_d1/d2 only; no students"
     }
   ],
   "p008_v31": {
-    "status": "Phase0_closed_main_numeric_G0_pending",
+    "status": "numeric_pool_G0_accepted_upload_next_no_main_calls",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
