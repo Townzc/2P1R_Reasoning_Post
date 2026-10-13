@@ -48,6 +48,6 @@ P007A yielded1,024 physical attempts:959 usable,59 invalid and6 rejected valid d
 
 ## Cost and delivery
 
-Workspace delayed meter was **$114.07183710 at October13 18:02UTC**, billed$0; new build/worker costs can lag. This is not a final invoice or credit balance. P008 hard reservations are **$249.68 within$250**, including the authorized$12 continuation. Project spending ceiling$450/protected≥$50 remain unchanged.
+Workspace delayed meter was **$116.26183740 at the October13 19:12–19:13UTC read**, billed$0; final worker costs can lag. This is not a final invoice or credit balance. P008 hard reservations are **$249.68 within$250**, including the authorized$12 continuation. Project spending ceiling$450/protected≥$50 remain unchanged.
 
 Midpoint technical facts, deterministic charts and limitations are ready before the owner's TuesdayOctober13 21:00PDT deadline. Final slide composition, personal interpretation and rehearsal remain the researcher's work under the course policy. Long-term extensions are proposals only and do not change the closed experiment.

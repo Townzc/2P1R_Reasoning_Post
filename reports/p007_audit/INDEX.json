@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T19:10:26.558918+00:00",
+  "as_of_utc": "2026-10-13T19:23:10.463943+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -631,7 +631,18 @@
         "New30source binding retains real G1/jointinputs/N2 and all scientific functions; prepared one-time upload/transfer helpers preserve failures?"
       ],
       "new_model_calls": 0,
-      "created_utc": "2026-10-13T19:04:26.928552+00:00"
+      "created_utc": "2026-10-13T19:04:26.928552+00:00",
+      "related_exact_numeric_request": "p008-student-exact-input-g1-r1",
+      "subsequent_preparation_packets": [
+        {
+          "commit": "3ad43d50c01eda586058686b8fce238f1441a389",
+          "packet": "reports/p008_20261013/student_jsonl_reader_v2"
+        },
+        {
+          "commit": "1a45409fa0fb279484accb441748fcaff2aadfd1",
+          "packet": "reports/p008_20261013/student_parent_schema_v3"
+        }
+      ]
     },
     {
       "request_id": "p008-g1-d2-merged-r1",
@@ -667,10 +678,40 @@
       ],
       "created_utc": "2026-10-13T19:10:26.558918+00:00",
       "new_model_calls": 0
+    },
+    {
+      "request_id": "p008-student-exact-input-g1-r1",
+      "external_review": "pending",
+      "status": "pending",
+      "target_commit": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
+      "packet": "reports/p008_20261013/student_admission_v1",
+      "manifest": "reports/p008_20261013/student_admission_v1/MANIFEST.json",
+      "manifest_sha256": "6fecbb9a0e88d2a4fdcfc04831acefb4e204fa41f4c08fae36343dd44567331e",
+      "blocking": true,
+      "blocking_for": "Exact student source/input/spec numerical G1. Prioritize D1 and base after source/quota/authority review; D2 student acceptance also requires the separate complete merged D2 G1. No T8 before reviewed actual T1 timing.",
+      "questions": [
+        "All18 exact whole-answer plans,19configs,36inputs, both-draw commonT1=524287/T8=4194296, q/q+1 including zero, and no outcome-driven dose/filtering change?",
+        "v3 preparation physicalJSONL reader and copy-only group_id=id adapter preserve original6973 parent records, teacher text, frozen scoring, full-answer acceptance and every input/source/config hash? The two prior local failures created no outputs or model calls.",
+        "Exact new execution plan and separately retained original plan, immutable never-attempted20-slot transfer,24968-cent aggregate reservation, direct until-complete student authority, max8 within total10 quota, and21PDT materials freeze?",
+        "D1 versus D2 scoped numerical acceptances bind the exact spec/source/common plan and real completed D1 plus failed-D2/completed-child lineage; raw D2 G1 and actual N2 timing remain distinct gates?"
+      ],
+      "created_utc": "2026-10-13T19:23:10.463943+00:00",
+      "spec_sha256": "ab49b0a638090f61dfd39e7391c61e4427a47b6ea94acfe6e0de3c4f606b21ee",
+      "input_manifest_sha256": "dae1bd27ae469f5b8c32af68146f8447717af5ef4f6299b36f8ddf2bcbf8ee24",
+      "runtime_source_commit": "121f17b1a2b88748ac9f325344e2d7f20c9e0380",
+      "source_files": 30,
+      "numeric_admission": false,
+      "new_model_calls": 0,
+      "input_upload_performed": false,
+      "related_review_requests": [
+        "p008-student-completion-queue-r1",
+        "p008-g1-d2-merged-r1"
+      ],
+      "timeout_action": "No silence approval; keep exact unaccepted runs pending without requesting repeated owner authorization."
     }
   ],
   "p008_v31": {
-    "status": "D2_child_actual_active_first_batch_verified",
+    "status": "both_draws_locally_complete_joint_student_plans_frozen_external_G1_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -693,19 +734,19 @@
     "student_runtime_review_request": "p008-student-completion-queue-r1",
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
-    "conditional_repair_status": "child_completed_provider_released_local_merged_oracle_pending",
-    "latest_engineering_packet": "reports/p008_20261013/d2_continuation_admission_v3",
+    "conditional_repair_status": "completed_collected_exported_merged_oracle_passed_provider_released",
+    "latest_engineering_packet": "reports/p008_20261013/student_admission_v1",
     "student_runtime_code_review": "completion121f17b1_pending_old30sourcePASS_scope_retained",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
     "pool_d2_status": "complete_local_merged_oracle_passed_externalG1pending_parentfailed_preserved",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
-    "owner_scope_or_deadline_question": "answered_direct14PDT_same7200_12USD",
+    "owner_scope_or_deadline_question": "answered_direct_student_queue_until_complete_per_slot_caps_unchanged",
     "active_gpu_tasks": 0,
-    "pool_d2_external_review": "PASS failed prefix only, not G1",
+    "pool_d2_external_review": "prior failed-prefix PASS; new complete merged G1 pending",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/D2_MERGED_LOCAL_CLOSED.json",
+    "current_status": "reports/p008_20261013/STUDENT_JOINT_PLAN_READY.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -723,6 +764,22 @@
     "student_quota_evidence": "reports/p008_20261013/STUDENT_GPU_QUOTA_EVIDENCE.json",
     "pool_d2_review_request": "p008-g1-d2-merged-r1",
     "pool_d2_packet": "reports/p008_20261013/pool_d2_merged_v1",
-    "final_cpu_runtime_review_request": "p008-final-cpu-lineage-code-r1"
+    "final_cpu_runtime_review_request": "p008-final-cpu-lineage-code-r1",
+    "student_exact_input_review_request": "p008-student-exact-input-g1-r1",
+    "student_exact_input_commit": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
+    "student_exact_input_packet": "reports/p008_20261013/student_admission_v1",
+    "student_common_targets": {
+      "1": 524287,
+      "8": 4194296
+    },
+    "student_input_files": 36,
+    "student_input_bytes": 44387175,
+    "student_input_upload_performed": false,
+    "student_slot_transfer_performed": false,
+    "student_calls": 0,
+    "base_calls": 0,
+    "final_cpu_calls": 0,
+    "latest_delayed_workspace_meter_usd": 116.2618374,
+    "latest_meter_is_invoice_or_balance": false
   }
 }

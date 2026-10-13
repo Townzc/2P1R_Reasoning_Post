@@ -28,7 +28,7 @@ A handoff contains the question, pinned commit, manifest/entry point, and3–5 r
 
 Use [WORKBOARD](WORKBOARD.md) for current status and stage events, RUN_LOG for execution details, and a single issue per finding or decision. Keep credentials and large private state files out of public packets. Group routine presentation/wording reviews by milestone; address blocking scientific flaws immediately and preferably before an expensive queue. The [shareable workflow](RESEARCH_WORKFLOW_ZH.md) explains the roles.
 
-Budget: total$500, ceiling$450, protected$50. Historical closed-stage reservation$369.50 is not spending. Authorized P008cap$250 inclusive(Phase0$15); latest meter$114.22183710 at13:33:27UTC is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.
+Budget: total$500, ceiling$450, protected$50. Historical closed-stage reservation$369.50 is not spending. Authorized P008cap$250 inclusive(Phase0$15); latest meter$116.26183740 at the19:12–19:13UTC read is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.
 
 ## Reading and event-based review
 

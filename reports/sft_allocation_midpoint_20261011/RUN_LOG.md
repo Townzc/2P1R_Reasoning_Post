@@ -695,3 +695,6 @@ Oct13 12:13–12:15PDT: second localbuilder39991 stopped before outputs on missi
 
 
 2026-10-13T19:18:59.571737+00:00 — Actual all-draw common-plan builder24473 completed once,18student/19configs/36input files, targets524287 and4194296 unchanged. Both earlier schema failures occurred beforeoutputcreation and are preserved;v3source included in immutable numericalpacket with exactpreparation dependencies. Runtime30source unchanged, no student upload/handoff/call; true G1/code/N2 review remains. Preparedpublisher now explicitly replaces inherited plan with newexecutionplan, keeps originalplan separately and reports24968cents aggregate reservation includingchild; no contradictoryplan/hash or budget field. Corrected earlier log time range to actual12:13–12:15 rather than12:14–12:16.
+
+
+2026-10-13T19:23:10.463943+00:00 — Registered fixed numericalG1 request p008-student-exact-input-g1-r1 at 0be9e6e050b716c2fe98a7709647a4fbadc2609f with exact all-draw packet and source30 linkage; D1/base acceptance can be reviewed before D2 raw review finishes, without waiving both complete local pools/common plans. Updated stale INDEX activity and quota/deadline wording. Zero new upload, immutable remote transfer or model calls; no existing preparation/oracle repeated.
