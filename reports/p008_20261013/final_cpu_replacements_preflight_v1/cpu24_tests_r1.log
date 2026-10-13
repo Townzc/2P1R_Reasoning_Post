@@ -1,0 +1,38 @@
+test_actual_bytes_must_include_replacements_and_failures (test_p008_cpu_replacements.Admission.test_actual_bytes_must_include_replacements_and_failures) ... ok
+test_cannot_drop_failed_student_even_after_rehash (test_p008_cpu_replacements.Admission.test_cannot_drop_failed_student_even_after_rehash) ... ok
+test_cannot_drop_replacement (test_p008_cpu_replacements.Admission.test_cannot_drop_replacement) ... ok
+test_cannot_relabel_old_failure (test_p008_cpu_replacements.Admission.test_cannot_relabel_old_failure) ... ok
+test_code_review_is_not_numeric_review (test_p008_cpu_replacements.Admission.test_code_review_is_not_numeric_review) ... ok
+test_complete24_retains_three_failed_sources (test_p008_cpu_replacements.Admission.test_complete24_retains_three_failed_sources) ... ERROR
+test_failure_preservation_bytes_cannot_change (test_p008_cpu_replacements.Admission.test_failure_preservation_bytes_cannot_change) ... ok
+test_missing_failure_archive (test_p008_cpu_replacements.Admission.test_missing_failure_archive) ... ok
+test_occupied_provider_cannot_be_omitted (test_p008_cpu_replacements.Admission.test_occupied_provider_cannot_be_omitted) ... ok
+test_old22source_review_does_not_cover_new_runtime (test_p008_cpu_replacements.Admission.test_old22source_review_does_not_cover_new_runtime) ... ok
+test_original_owner_spec_cannot_be_rewritten (test_p008_cpu_replacements.Admission.test_original_owner_spec_cannot_be_rewritten) ... ok
+test_rehashed_changed_physical_config (test_p008_cpu_replacements.Admission.test_rehashed_changed_physical_config) ... ok
+test_replacement_cannot_use_old_campaign (test_p008_cpu_replacements.Admission.test_replacement_cannot_use_old_campaign) ... ok
+test_wrong_replacement_plan_rejected (test_p008_cpu_replacements.Admission.test_wrong_replacement_plan_rejected) ... ok
+test_forensic_and_terminal_fullstates (test_p008_cpu_replacements.FullState.test_forensic_and_terminal_fullstates) ... ok
+test_nonfinite_optimizer_rejected (test_p008_cpu_replacements.FullState.test_nonfinite_optimizer_rejected) ... ok
+test_original_uses_exact_frozen_lr (test_p008_cpu_replacements.FullState.test_original_uses_exact_frozen_lr) ... ok
+test_rehashed_lr_difference_rejected (test_p008_cpu_replacements.FullState.test_rehashed_lr_difference_rejected) ... ok
+test_replacement_keeps_logical_and_physical_identity (test_p008_cpu_replacements.FullState.test_replacement_keeps_logical_and_physical_identity) ... ok
+test_wrong_prefix_dose_rejected (test_p008_cpu_replacements.FullState.test_wrong_prefix_dose_rejected) ... ok
+
+======================================================================
+ERROR: test_complete24_retains_three_failed_sources (test_p008_cpu_replacements.Admission.test_complete24_retains_three_failed_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repo>/tests/test_p008_cpu_replacements.py", line 80, in test_complete24_retains_three_failed_sources
+    self.assertEqual(validate_all_labels(self.b,self.labels),self.labels)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/experiments/sft_allocation_p008/audit_replacement_binding.py", line 214, in validate_all_labels
+    validate_label(binding, name, label)
+  File "<repo>/experiments/sft_allocation_p008/audit_replacement_binding.py", line 147, in validate_label
+    raise ValueError('Exact original zero-update reconciliation and bytes required')
+ValueError: Exact original zero-update reconciliation and bytes required
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.571s
+
+FAILED (errors=1)
