@@ -3,8 +3,8 @@ from pathlib import Path
 import json, subprocess, sys, time
 import modal
 ROOT=Path(__file__).resolve().parents[2]
-SOURCES=['analyses/completion_contract.py', 'analyses/e017_audit.py', 'analyses/e017_stopping.py', 'analyses/gsm8k_answer_audit.py', 'configs/models.lock.json', 'experiments/sft_allocation_acquisition/contract.py', 'experiments/sft_allocation_acquisition/policy_contract.py', 'experiments/sft_allocation_midpoint/checkpoint.py', 'experiments/sft_allocation_midpoint/common.py', 'experiments/sft_allocation_midpoint/guard.py', 'experiments/sft_allocation_midpoint/monitor.py', 'experiments/sft_allocation_midpoint/runtime.py', 'experiments/sft_allocation_p008/continuation_binding.py', 'experiments/sft_allocation_p008/continuation_guard.py', 'experiments/sft_allocation_p008/contract.py', 'experiments/sft_allocation_p008/evidence_bundle.py', 'experiments/sft_allocation_p008/main_binding.py', 'experiments/sft_allocation_p008/modal_main.py', 'experiments/sft_allocation_p008/modal_pool_continuation.py', 'experiments/sft_allocation_p008/parallel_guard.py', 'experiments/sft_allocation_p008/pool_continuation_prefix.py', 'experiments/sft_allocation_p008/pool_continuation_runtime.py', 'experiments/sft_allocation_p008/pool_prefix.py', 'experiments/sft_allocation_p008/pool_runtime.py', 'experiments/sft_allocation_p008/procurement.py', 'experiments/sft_allocation_p008/requirements_teacher.txt', 'experiments/sft_allocation_p008/student_runtime.py', 'requirements.txt', 'src/real_math_audit.py', 'src/sft_data.py']
-SPEC='reports/p008_20261013/d2_continuation_admission_v1/ADMISSION.json'
+SOURCES=['analyses/completion_contract.py', 'analyses/e017_audit.py', 'analyses/e017_stopping.py', 'analyses/gsm8k_answer_audit.py', 'configs/models.lock.json', 'experiments/sft_allocation_acquisition/contract.py', 'experiments/sft_allocation_acquisition/policy_contract.py', 'experiments/sft_allocation_midpoint/checkpoint.py', 'experiments/sft_allocation_midpoint/common.py', 'experiments/sft_allocation_midpoint/guard.py', 'experiments/sft_allocation_midpoint/monitor.py', 'experiments/sft_allocation_midpoint/runtime.py', 'experiments/sft_allocation_p008/continuation_binding.py', 'experiments/sft_allocation_p008/continuation_guard.py', 'experiments/sft_allocation_p008/contract.py', 'experiments/sft_allocation_p008/evidence_bundle.py', 'experiments/sft_allocation_p008/main_binding.py', 'experiments/sft_allocation_p008/modal_main.py', 'experiments/sft_allocation_p008/modal_pool_continuation.py', 'experiments/sft_allocation_p008/parallel_guard.py', 'experiments/sft_allocation_p008/provider_release.py', 'experiments/sft_allocation_p008/pool_continuation_prefix.py', 'experiments/sft_allocation_p008/pool_continuation_runtime.py', 'experiments/sft_allocation_p008/pool_prefix.py', 'experiments/sft_allocation_p008/pool_runtime.py', 'experiments/sft_allocation_p008/procurement.py', 'experiments/sft_allocation_p008/requirements_teacher.txt', 'experiments/sft_allocation_p008/student_runtime.py', 'requirements.txt', 'src/real_math_audit.py', 'src/sft_data.py']
+SPEC='reports/p008_20261013/d2_continuation_admission_v2/ADMISSION.json'
 app=modal.App('p008-d2-remaining-only')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
 image=(modal.Image.debian_slim(python_version='3.12')
@@ -136,12 +136,9 @@ def main(plan_json:str,config_json:str,gates_json:str,receipt_dir:str):
   raise ValueError('Existing remote run directory')
  except NotFoundError:pass
  cli=str(Path(sys.executable).with_name('modal'))
- apps=json.loads(subprocess.check_output([cli,'app','list','--json'],text=True))
+ from experiments.sft_allocation_p008.provider_release import read_stopped_apps
  containers=json.loads(subprocess.check_output([cli,'container','list','--json'],text=True))
- for app_id in spec['original_apps']:
-  rows=[a for a in apps if a['app_id']==app_id]
-  if len(rows)!=1 or rows[0]['state']!='stopped' or any(c['app_id']==app_id for c in containers):raise ValueError('Original provider not stopped')
- if containers:raise ValueError('Require zero other containers for this one-child admission')
+ apps=read_stopped_apps(cli,spec['original_apps'],containers)
  if time.time()+7900>plan['deadline_epoch']:raise ValueError('Window expired during preflight')
  destination.mkdir(parents=True,exist_ok=False)
  dump(destination/'dispatch_intent.json',dict(plan=plan,config=cfg,release=release,provider_before=apps,containers_before=containers,run_id=cfg['run_id']))
