@@ -653,3 +653,10 @@ Initial upload70671 rejected before UPLOAD_INTENT because app list includes only
 ### Oct13 10:42 PDT — v2 scoped PASS and direct eight-student-GPU authority
 
 Read fixedClaude376566d1/comment6151377554: exact provider amendment32777f41 PASS, unchanged work AST/numerical scope; 23 reviewer tests are8 new plus15 old, no Codex reruns. New upload67895 inprogress, no childcall yet. Claude comment6151506340 separately relayed owner8GPU choice; Codex requested a concise direct confirmation because this was relayed authority, and owner directly confirmed8H100 in this chat. No other dose/budget/time change. Future concurrency amendment requires actual quota and review; not a blocker or shortcut for current child.
+
+
+### Oct13 10:48–11:01 PDT — preserved pre-spawn refusal and eight-student code preparation
+
+D2 inputs:7 files43,709,997bytes uploaded/readback once. CLI image build exhausted the complete17:48:20UTC dispatch window; local entrypoint refused before spawn. App stopped10:48:32PDT, independent17:50:16UTC proof:0worker calls/claims/scientific attempts/containers. Build/setup costs retained. New14PDT child deadline proposal remains unanswered; no extension/reissue. Owner directly approved students max8H100. New30-source entry has10 offline tests, old28student/31child bytes unchanged; no numerical admission/G1/N2/quota. Browser workspace mismatches experiment workspace, CLI environment quota is unspecified; cannot claim8H100 capacity. Only code review requested. A reviewer-relayed global deadline extension in comment6151713942 is unadopted, not direct authority. Original19PDTcompute/21PDTmaterials and249.68reservation/250cap remain. No old work rerun.
+
+Reflection: the dispatch forecast omitted sequential upload/readback and per-source image construction overhead. Scientific/probe feasibility is not proof of entrypoint readiness. Initial document-publication check referenced a nonexistent bundle filename and stopped before edits; corrected by comparing the actual original Git bytes, with no model/oracle/test rerun.

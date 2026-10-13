@@ -12,7 +12,7 @@
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
 | 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v3.1 | Codex工程；Claude审计；研究者决定范围/时限 | **D1完成本地核验和G1审计；D2原时限失败，3992返回全部保全且0unknown，失败前缀与续跑核心已分别通过限定范围外审**；0运行GPU，0学生调用 | [当前授权](../reports/p008_20261013/OWNER_D2_CONTINUATION_13PDT.json)；研究者已选保留两次采购、D2截止13PDT；新worker准备并送审，仍0新增云调用 |
+| P008 v3.1 | Codex工程；Claude审计；研究者 | D1完整/G1；D2父失败前缀完整，child镜像构建后spawn前窗口拒绝、0科学调用 | [真实状态](../reports/p008_20261013/D2_PRESPAWN_WINDOW_FAILURE.json)；14PDT提案待答；8卡owner已批，代码/配额/G1/N2尚未准入 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 10:48（拒绝）/10:50（核验）/11:01（8卡准备） | Codex；研究者直接授权 | D2构建后完整窗口不足，spawn前拒绝，0GPU调用/claim/科学尝试；7个输入读回完成。学生最多8卡获直接授权，10项新离线检查通过；实际实验工作区配额未确认，D2改14PDT提案待答 | [拒绝证据](../reports/p008_20261013/D2_PRESPAWN_WINDOW_FAILURE.json)、[8卡代码待审](../reports/p008_20261013/student_eight_gpu_v1/REVIEW_REQUEST.md)；不重复上传、不自动扩时、无学生调用 |
 | 2026.10.13 10:40–10:42（审计读取及owner答复收录） | Claude；研究者；Codex | v2精确provider查询@32777f41获真实PASS，开始唯一prefix上传/读回，尚未child派发。研究者在本聊天另确认学生最多8卡，需配额及代码/数值审计，不改变剂量预算时限 | [v2审计](../reports/p008_20261013/D2_RUNTIME_V2_ACCEPTED.json)、[直接8卡授权](../reports/p008_20261013/OWNER_STUDENT_8GPU.json)；D2派发与并发修订分开 |
 | 2026.10.13 10:28（拒绝）/10:30（精确核查及修订） | Codex | 上传前旧app近期列表已过期为空，检查在任何写入前拒绝；按精确ID确认D1/D2仍stopped/0容器。只替换本地生命周期查询，8新CPU检查通过，worker AST和数值/生成不变 | [v2小修订待审](../reports/p008_20261013/d2_continuation_admission_v2/REVIEW_REQUEST.md)；原失败log保留，0上传/云构建/模型调用，最晚10:48:20不变 |
 | 2026.10.13 10:25–10:28（读取及派发前核对） | Claude；Codex复核 | 新child固定a385fb38已获限定PASS-WITH-NOTES；实际父任务启动至环境13.72秒，支持按未改公式派发一次，真实主机测速仍可拒绝。学生8f31b0ca仅代码PASS，0学生准入 | [真实审计与N1核对](../reports/p008_20261013/d2_runtime_review_acceptance_v1/DISPOSITION.md)；接下来只上传7个新prefix文件并独立读回，最晚10:48:20PDT派发 |

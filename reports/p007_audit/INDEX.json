@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T17:42:52.061312+00:00",
+  "as_of_utc": "2026-10-13T18:01:53.546717+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -571,10 +571,26 @@
       "review_report": "audit/claude/20261013y/D2_CHILD_V2_PROVIDER.md",
       "review_report_sha256": "8acf47b1bfc9c4b57c683933570c1ba5504182b72e0864fe15d5c92346bbc792",
       "review_read_utc": "2026-10-13T17:42:52.061312+00:00"
+    },
+    {
+      "request_id": "p008-student-eight-gpu-code-r1",
+      "target_commit": "da4a404f07f414ce32d02ced204b9bf8eac1d56f",
+      "packet": "reports/p008_20261013/student_eight_gpu_v1",
+      "manifest": "reports/p008_20261013/student_eight_gpu_v1/MANIFEST.json",
+      "manifest_sha256": "4e4f418294d9c97f34dc0521b98d0e0a1dbfa0caad99bc703d21c3f19a26c31f",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T18:01:53.546717+00:00",
+      "blocking_for": "Future students only. Not D2 or a deadline extension. Code PASS cannot replace actual quota or numeric G1/N2.",
+      "questions": [
+        "Eight maximum counts pending calls plus unmatched containers, prevents local dispatch races, and rechecks full window?",
+        "Exact owner/quota/source/spec requirements and original lineage/joint G1/N2/science unchanged?",
+        "No actual quota or eight-way measurement has been claimed?"
+      ],
+      "numeric_admission": false
     }
   ],
   "p008_v31": {
-    "status": "exact_v2_review_accepted_upload_in_progress_no_child_call_yet",
+    "status": "child_pre_spawn_window_refusal_no_gpu_call",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -597,23 +613,23 @@
     "student_runtime_review_request": "p008-student-parent-child-lineage-code-r1",
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
-    "conditional_repair_status": "v2_PASS_one_child_after_live_readback_fullwindow",
+    "conditional_repair_status": "inputs_readback_done_no_spawn_14PDT_proposal_pending",
     "latest_engineering_packet": "reports/p008_20261013/d2_continuation_admission_v2",
-    "student_runtime_code_review": "PASS-WITH-NOTES 8f31b0ca code only",
+    "student_runtime_code_review": "new30source_pending_prior28PASS_retained",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
     "pool_d2_status": "3992known_returns_0unknown_failedprefix_reconciled_not_completed",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
-    "owner_scope_or_deadline_question": "answered_two_draws_child20UTC_7200s_12USD",
+    "owner_scope_or_deadline_question": "14PDT_proposal_unanswered_old13PDT_window_expired",
     "active_gpu_tasks": 0,
     "pool_d2_external_review": "PASS failed prefix only, not G1",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/D2_RUNTIME_V2_ACCEPTED.json",
+    "current_status": "reports/p008_20261013/D2_PRESPAWN_WINDOW_FAILURE.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-exact-provider-lookup-r2",
     "owner_student_maximum_gpus": 8,
-    "student_concurrency_amendment": "owner_approved_code_quota_review_pending"
+    "student_concurrency_amendment": "direct_owner8_10CPUchecks_pending_review_and_quota"
   }
 }
