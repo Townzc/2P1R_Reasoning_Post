@@ -11,7 +11,7 @@
 | P007B 按真实时间计费的采购 | Codex | 四格本地核验完成；Claude 对零题价格记账 **PASS**、成本解释 **FAIL** | C-B1 已复现，不能将速度差直接归因于题价 |
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
-| 统一 token 计价修订 | Codex；Claude审计 | **6/8项完整核验：seed17零价963/950、高价927/952；seed23零价958/958（各/1319），已完成GPU均退出** | 八项训练均结束；最后高价seed23对正常评测，已保存384/576条，随后完整收尾及CPU审计。零题价首种子偏多题、次种子持平，不足以判稳定赢家；seed23零价已获Claude第九轮PASS-WITH-NOTES；最后高价结果仍pending |
+| 统一 token 计价修订 | Codex；Claude审计 | **8/8项本地完整核验：seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319）；GPU全退出** | 已预留CPU总审计实际运行，随后发布全两种子汇总/确定性图表。首种子反转未被第二种子重复；既有Claude审计不自动覆盖最后多题和最终汇总 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到固定版本审计及36–38号笔记链接 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -76,22 +76,15 @@
 | 2026.10.12 20:15（核查进行中） | Codex | 已读取Claude第九轮固定报告；最后两项训练日志已到256更新，正核对清单/末步/最新原始批次；同时复核S9跨种子翻转数和两个新E2案例 | 尚未完成最后评测，不读取部分准确率作结论；不改live评分或计划 |
 | 2026.10.12 20:04（GitHub交付；20:14收录） | Claude | 第九轮：零价两种子包PASS-WITH-NOTES，两个seed23完整state SHA独立核对；导出恢复PASS；启动PASS仅记录。提出S9翻转数及两个新E2 | [固定报告385744e3](https://github.com/Townzc/2P1R_Reasoning_Post/blob/385744e387d61fa300b13df3ac71e55645ea744e/audit/claude/20261013b/REPORT.md)；不覆盖逐步权重或最后高价结果 |
 | 2026.10.12 20:22（阶段核验/复核完成） | Codex | 最后两项各256更新/524287targets，清单/末步计划/最新raw与done吻合；连续评测384/576仍无终点。S9翻转183/156、策略差异219/208及新E2两例复现，主分不改 | [八项训练阶段完成](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ALL_TRAINING_COMPLETE.json)、[独立审计处理](../reports/p007_audit/token_seed23_p0_review_followup_v1/README.md)；新follow-up待外审 |
-
 | 2026.10.12 20:44（审计读取／收尾检查开始） | Codex | 读取Claude第十轮固定81be9a28：接受第九轮处理、follow-up包PASS；最后高价对仍正常评测，开始核对实际terminal与释放状态 | 不改主评分或剂量；高价seed23最终结果尚不在此次审计范围 |
-
 | 2026.10.12 20:46（最后多解收尾开始） | Codex | 高价seed23多解已返回全部1,319条结果，开始确认app停止后收回完整账本、原始输出和checkpoint256；多题仍正常评测 | 分数待独立oracle，最后CPU总审计尚未启动 |
-
 | 2026.10.12 20:54（第十轮处理／只读修复前） | Codex | Claude第十轮接受上轮处理，follow-up包PASS；最后多解app已停止，但检查点下载超时。独立对账28有效文件、13/27有效分块，无坏文件，准备一次只读补齐 | [故障和修复界限](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_DEPTH_EXPORT_RECOVERY_20261013.json)、[限定审计范围](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND10_REVIEWED.json)；多题继续正常评测，0新增模型工作 |
-
 | 2026.10.12 21:01（最后多解核验完成） | Codex | 高价seed23多解949/1319、60截断；861文件/完整state/256更新/524287targets和全部raw重评分通过，GPU已释放。只读修复复用28文件/13分块，保留原失败与完成回执 | [第七项关闭证据](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FINAL_DEPTH_CLOSED.json)；最后多题仍评测，价格交互和CPU总审计待全八项 |
-
 | 2026.10.12 21:07（最后多题收尾开始） | Codex | 最后高价seed23多题返回全部1,319条结果，开始独立收回完整账本、原始输出与checkpoint256 | 原GPU正常退出；全部学生不再生成新输出，最终分数仍待本地oracle与CPU总审计 |
-
 | 2026.10.12 21:14（最后传输对账／第十一轮处理） | Codex | Claude独立预审确认多解949/1319与完整state；采用差值区间主图、准确率0–100%辅助图。最后多题下载同类超时，33完整文件/3分块有效，准备只补828文件/24分块 | [修复边界](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_BREADTH_EXPORT_RECOVERY_20261013.json)、[第十一轮范围](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND11_REVIEWED.json)；GPU全部释放，0新增科学剂量 |
-
 | 2026.10.12 21:21（第二次传输对账／修复前） | Codex | 首次补齐取得1个新分块后又在20秒元数据请求超时；原失败全部保留，现33完整文件/4有效分块，无坏文件。准备复用两次有效证据，仅补23分块和其余文件；90秒地址请求/360秒分块/900秒整体硬限 | [有界修复](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_BREADTH_EXPORT_RECOVERY_R2_20261013.json)；0模型调用/远端写入，全部GPU已释放 |
-
 | 2026.10.12 21:26（八项本地核验完成／CPU总审计前） | Codex | 最后多题949/1319、63截断，多解949/1319、60截断；八项共10,552原始输出、2,048更新/4,194,296targets和8份完整state通过，所有GPU已释放。二种子两档均持平，未重复首种子排名反转 | [八项本地核验](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ALL_LOCAL_ORACLES_CLOSED.json)；只读补齐复用4分块、861文件全SHA通过，原两次传输失败保留；下一步仅已预留CPU总审计 |
+| 2026.10.12 21:30（CPU总审计实际启动） | Codex | fresh gate确认八份oracle通过、GPU退出、audit无任何尝试后，仅一次提交原CPU审计；实际claim/config与唯一CPU容器一致，14份结果目录核验中 | [CPU实际启动](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_STARTED.json)；0 GPU/0新生成，原预留$3内执行，最终通知待原回执、输出和CPU释放核对 |
 
 ## 维护规则
 

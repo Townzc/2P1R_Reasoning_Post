@@ -2157,3 +2157,10 @@ The recovery46607 failed at the20second metadata call after one newly verified b
 Breadth_p4_s23 is949/1319 with63 length caps; the last depth is949/1319 with60 caps. Frozen scoring and full denominators unchanged. Eight students:2048updates4194296targets10552raw outputs and8 full terminal states independently verified; all student apps stopped. The second training seed ties both price levels, so it does not repeat the first seed ranking reversal. The final independent CPU audit remains unattempted; it will only use its existing reserved slot after a fresh no-claim/provider gate.
 
 Read-only breadth continuation22565 exited0 aftersource378d835c: reused33files/4 unique proven blocks, recovered23missing blocks andremainingcompact artifacts;861 selectedfiles245247125bytes all SHA verified. Original failedexport24469 andfailedrecovery46607 retained. Localoracle21714 passed. No newmodel calls, remote writes, score changes or added reserve.
+
+
+## 2026-10-13T04:40:24.450944+00:00 — final CPU audit active; reporting preparation
+
+Audit submitted only once after all8localoracles and freshzero-worker/unattempted gate; actualconfig/claim/source match oneCPUworker andzeroGPU. OriginalCLI85817 retains the eventualresult; no resultcollector/export/finalizer has started. Source20 scientific files unchanged.
+
+Saved-prefix accounting confirms1408 charged attempts,1203usable,203invalid underfrozenchecker,2validduplicates; all technicalreturns known. New diagnostic records selected sourcefilehashes and charged token units, without newmodel calls orscorechanges. Prepared a deterministic midpoint fact-sheet builder gated on all8+CPUcloseout and verifiedfigures; not executed before final audit. It preserves per-seed results, conditional questionintervals, unusedcap/exposure/parser/cost limits and prior-paper scope. WORKBOARD currentstate refreshed and table continuity repaired; no slide generation or external sending.
