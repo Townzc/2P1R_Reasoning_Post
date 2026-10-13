@@ -1,0 +1,7 @@
+# P008 main runtime: prepared code review before numerical admission
+
+Phase0 is separately G0-approved and in its original first submission. This request covers pure-CPU wallet/no-lookahead replay, dynamic student dose/LR, common-plan feasibility, shared-pool raw scoring, narrow secondary-only parser, full-state oracles, compact transport and finite main dispatcher. Main code has NOT run models. Numeric branch/slot timers and immutable inputs await Phase0 and later pool evidence. No reviewer PASS here may substitute for final exact-spec G0-main/G1-D1/G1-D2.
+
+Review goals: (1) each policy pays all consumed failed/duplicate attempts independent of physical cache; cache cannot affect choice before proposal commits; (2) complete-answer q/q+1 including0, all-draw shared target search before any score, normalized LR; (3) secondary parser never changes primary/procurement; (4) finite slot deadline/startup reservation, four-slot uncertain-dispatch accounting, gates tied to source/spec/actual terminals, no automatic replay; (5) packed evidence/full state independently recoverable and raw rescoring possible.
+
+Compilation alone is not an oracle PASS.54previous CPU checks, a subsequent14-check run overlapping10ofthose, and9newmain-binding checks cover their stated modules (not77distinct tests); no synthetic GPU or speed claim. Main deployment file intentionally refers to a not-yet-created numeric ADMISSION; import/dispatch forbidden until it exists, is published and externally reviewed. Source/spec changes after review need scoped follow-up. No #13 message sent.
