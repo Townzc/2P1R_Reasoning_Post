@@ -2380,3 +2380,6 @@ Reflection: the dispatch forecast omitted sequential upload/readback and per-sou
 ### Oct13 11:05–11:08 PDT — direct14PDT authorization and exact v3 preparation
 
 Owner explicitly approved D2 cutoff14PDT. Only exact deadline and owner binding change; preserved pre-spawn refusal has0scientific calls/claims. Original7prefixfiles are reused, no new upload. Six new offline deadline/scope checks passed, worker AST identical to accepted v2. New exact scoped review still required; latest full7900-second dispatch18:48:20UTC. Same$12/249.68, originalglobal19PDT/21materials remain. No old tests, oracles or models rerun.
+
+
+2026-10-13T18:19:50.771580+00:00 — Prepared failed-parent/child integrity helpers only:10 new synthetic checks passed after one create-only fixture error, original failed log retained. Zero real archives, raw rescoring, cloud calls or changes to child31source. Separate final CPU binding/worker/admission still required; not external PASS. Also moved prepared student publisher mkdir after the existing quota validation to avoid an empty immutable output directory on a missing quota. No actual builder run.

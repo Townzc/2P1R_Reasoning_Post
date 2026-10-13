@@ -1,0 +1,29 @@
+test_child_changed_claim_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_child_changed_claim_rejected) ... ok
+test_child_complete_merged_oracle_bound (test_p008_continued_pool_integrity.ContinuedIntegrity.test_child_complete_merged_oracle_bound) ... ok
+test_child_cumulative_as_new_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_child_cumulative_as_new_rejected) ... ok
+test_child_parent_not_redecoded_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_child_parent_not_redecoded_rejected) ... ok
+test_copy_deadline_callback_enforced (test_p008_continued_pool_integrity.ContinuedIntegrity.test_copy_deadline_callback_enforced) ... ok
+test_failed_parent_stays_failed (test_p008_continued_pool_integrity.ContinuedIntegrity.test_failed_parent_stays_failed) ... ok
+test_parent_extra_file_rehashed_archive_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_parent_extra_file_rehashed_archive_rejected) ... ok
+test_parent_modified_original_rehashed_archive_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_parent_modified_original_rehashed_archive_rejected) ... ERROR
+test_parent_relabel_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_parent_relabel_rejected) ... ok
+test_parent_unknown_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_parent_unknown_rejected) ... ok
+
+======================================================================
+ERROR: test_parent_modified_original_rehashed_archive_rejected (test_p008_continued_pool_integrity.ContinuedIntegrity.test_parent_modified_original_rehashed_archive_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p008_continued_pool_integrity.py", line 84, in test_parent_modified_original_rehashed_archive_rejected
+    dump(src/'failure.json', {'error': 'different'})
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmpicutqgc_/parent/failure.json'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.029s
+
+FAILED (errors=1)
