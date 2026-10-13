@@ -42,6 +42,16 @@ class TimingGateTest(unittest.TestCase):
         with self.assertRaises(ValueError):self.run_gate(s,c)
         s,c=fixture();s['a']['optimizer_seconds']=[4]*256
         with self.assertRaises(ValueError):self.run_gate(s,c)
+    def test_shorter_rows_cannot_reduce_fixed_per_update_compute(self):
+        s,c=fixture();c['t8']['processed_tokens']=2560000
+        v=self.run_gate(s,c)['predictions']['t8']
+        self.assertEqual(v['compute_seconds'],2048*1.5)
+        self.assertGreater(v['compute_seconds'],v['compute_token_seconds'])
+    def test_longer_rows_still_pay_token_compute(self):
+        s,c=fixture();c['t8']['processed_tokens']=10240000
+        v=self.run_gate(s,c)['predictions']['t8']
+        self.assertEqual(v['compute_seconds'],v['compute_token_seconds'])
+        self.assertGreater(v['compute_seconds'],v['compute_step_seconds'])
     def test_entire_candidate_roster_required(self):
         s,c=fixture();c['extra']=c['t8']
         with self.assertRaises(ValueError):self.run_gate(s,c)

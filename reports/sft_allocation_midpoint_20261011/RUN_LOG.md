@@ -587,3 +587,7 @@ Claude4d4fc7b7 PASS-WITH-NOTES @c206f0dc accepted27source only; N2 numericalopen
 ### 2026-10-13T12:04:48.147791+00:00 — P008 timing-rule publication verified
 
 Fixed target485e7410 and INDEX a2659c27 pushed normally; packetSHA and original23pool/accepted27student/accepted8CPU source hashes independently match. Eight pureCPU timing tests passed; no new model call or actual timing admission. Fresh billing summary/report12:03UTC: workspace meter111.59150740USD, billed0, delayednotinvoice/balance. Currentpoollimits unchanged, reservation237.68USD. Prepared interrupted-pool preservation helper is localread-only/NOTRUN, requires actualSTOPPED0/failure and retainspartial evidence; not a repair oracle or admission. Selectedprogress11:52 is not fullG1. Nextactualstatus check near12:21; parent12:23/12:24 deadlines notextended.
+
+### 2026-10-13T12:24:40.228972+00:00 — Claude C1/C2 timing policy corrections
+
+Read7265c558 fullreport. Implemented compute=max(exactP*cmax,2048*maxmeanupdatecompute),10CPUchecks passed. Prepared G1-draw roster preserves all prior admitted samples and requires actual pre-dispatch joint-plan proof; no score selection. Clarified that C1 does not waive both complete pool oracles/common plan or authorize incompleteD2/one-draw students. D1 actualcompletedterminal/providerSTOPPED0; readonlycollector28973 inprogress, no oracle yet. D2 originaldeadlineunchanged. No new model job, actual T1 input/preparation, or N2 numericalPASS.

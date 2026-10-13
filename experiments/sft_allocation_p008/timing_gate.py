@@ -6,9 +6,9 @@ required separately before any T8 dispatch. No data exists at preparation time.
 """
 import math
 
-POLICY = dict(schema='p008_t1_first_timing_gate_v1', margin=1.2,
+POLICY = dict(schema='p008_t1_first_timing_gate_v2', margin=1.2,
               soft_margin_seconds=30, mtime_resolution_allowance_seconds=2,
-              calibration='all_already_planned_T1_and_base_no_extra_model_job',
+              calibration='all_T1_in_pre_dispatch_frozen_G1_draw_roster_plus_base',
               selection='componentwise_maximum_not_mean', outcomes_read=False)
 
 
@@ -57,11 +57,13 @@ def estimate(samples, base_wall_seconds, candidates, *, expected_t1, expected_t8
             raise ValueError('Invalid checkpoint/setup gap')
         components[run] = dict(fixed_seconds=fixed,
             compute_seconds_per_processed_token=sum(costs)/sum(tokens),
+            compute_seconds_per_update=sum(costs)/256,
             noncompute_seconds_per_update=noncompute,
             checkpoint_and_setup_gap_proxy_seconds=endgap,
             measured_journal_seconds_per_update=measured)
     F = max(base_wall_seconds, *(x['fixed_seconds'] for x in components.values()))
     c = max(x['compute_seconds_per_processed_token'] for x in components.values())
+    u = max(x['compute_seconds_per_update'] for x in components.values())
     m = max(x['noncompute_seconds_per_update'] for x in components.values())
     K = 2*max(x['checkpoint_and_setup_gap_proxy_seconds'] for x in components.values())
     predictions = {}
@@ -71,12 +73,14 @@ def estimate(samples, base_wall_seconds, candidates, *, expected_t1, expected_t8
         P = cfg['processed_tokens']
         if type(P) is not int or P <= 0:
             raise ValueError('Positive exact joint-plan processed-token total required')
-        point = F+P*c+2048*m+K
-        predictions[run] = dict(point_seconds=point, with_margin_seconds=1.2*point,
+        compute = max(P*c, 2048*u)
+        point = F+compute+2048*m+K
+        predictions[run] = dict(compute_token_seconds=P*c, compute_step_seconds=2048*u,
+            compute_seconds=compute, point_seconds=point, with_margin_seconds=1.2*point,
             allowed_seconds=cfg['max_seconds']-30,
             engineering_criterion_passed=1.2*point <= cfg['max_seconds']-30)
     return dict(policy=POLICY, components=components,
-        maxima=dict(F=F,c=c,m=m,K=K), predictions=predictions,
+        maxima=dict(F=F,c=c,u=u,m=m,K=K), predictions=predictions,
         engineering_criterion_passed=all(x['engineering_criterion_passed'] for x in predictions.values()),
         N2_closed=False, runtime_admission=False, external_numeric_review='required',
         limitations=['Historical T1 host timings are not bounds on future host latency.',

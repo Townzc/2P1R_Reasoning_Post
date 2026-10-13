@@ -172,4 +172,6 @@
 
 共享工作流说明：[RESEARCH_WORKFLOW_ZH.md](RESEARCH_WORKFLOW_ZH.md)。
 
+| 2026.10.13 05:21 PDT | Codex | 开始读取原两池终点/provider及新Claude意见。D1日志报告Appcompleted，先核对原receipt/STOPPED0后独立收尾；D2仍按原12:24UTC时限，不重发。 | 核验中，日志不等于G1 |
+
 | 2026.10.13 05:04 PDT（收尾记录；provider读取04:51） | Codex | 已发布 T1-first 计时规则 @485e7410，INDEX 请求待审；Claude4d4fc7b7 仅通过27源代码。原两池继续，无学生/base/CPU/修复调用；N2仍OPEN。12:03UTC平台延迟计量$111.59150740，非发票/余额；预留$237.68不变。 | [固定证据](../reports/p008_20261013/t1_first_timing_policy_v1/REVIEW_REQUEST.md) |
