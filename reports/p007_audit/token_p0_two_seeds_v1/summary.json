@@ -1,0 +1,301 @@
+{
+  "billing": {
+    "not_invoice_or_balance": true,
+    "summary": {
+      "adjustments": {
+        "credits": "-75.53000000",
+        "free_storage": "-0.02984052",
+        "network_egress_allowance": "-0.00100051",
+        "plan_cost": "0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "billed_cost": "0E-8",
+      "metered_cost": "75.56084103",
+      "metered_cost_breakdown": {
+        "ephemeral_apps": "75.52725793",
+        "llm_tokens": "0E-8",
+        "volumes": "0.02984052"
+      }
+    },
+    "utc": "2026-10-13T02:35:06.969747+00:00"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261013,
+    "unit": "paired questions shared across the four fixed price0 models"
+  },
+  "campaign": "mp-policy-token-20261012-r1",
+  "contrasts": {
+    "17": {
+      "breadth_only": 116,
+      "conditional_question_bootstrap_95_pp": [
+        -3.184230477634572,
+        1.2130401819560273
+      ],
+      "depth_minus_breadth_pp": -0.9855951478392722,
+      "depth_only": 103
+    },
+    "23": {
+      "breadth_only": 104,
+      "conditional_question_bootstrap_95_pp": [
+        -2.122820318423048,
+        2.1986353297952994
+      ],
+      "depth_minus_breadth_pp": 0.0,
+      "depth_only": 104
+    }
+  },
+  "external_review": "New seed23 outcomes and this packet pending; earlier scoped seed17 review does not extend to new outcomes.",
+  "final_cloud_audit": "pending",
+  "full_states_verified": 4,
+  "limits": [
+    "Same per-cell teacher corpus in both seeds: training repeats, not procurement replication.",
+    "Question intervals condition on trained models and data, not seed or procurement confidence.",
+    "The second-seed high-price outcomes are still pending; no completed two-seed price-interaction claim.",
+    "Common hypothetical token cap is not equal realized spending or real API dollars.",
+    "Fixed training targets include unequal repeated exposure; not isolated reasoning diversity or repetition damage.",
+    "All length caps remain incorrect; E2 primary scores unchanged.",
+    "Official test researcher-observed in September; not a fresh uncontaminated test.",
+    "Old time-priced pilots are not pooled; non-significance is not equivalence."
+  ],
+  "models": {
+    "breadth_p0_s17": {
+      "accuracy": 0.730098559514784,
+      "artifact_digest": "335313e12e455583434247e81ca21cb33283ce4b875b0a3fbaab0950a3222db4",
+      "cell": "breadth_p0",
+      "containers": 0,
+      "correct": 963,
+      "n": 1319,
+      "procurement": {
+        "acquired": 420,
+        "attempts": 512,
+        "batches": 32,
+        "cap": 211257,
+        "charge": 198280.0,
+        "covered": 408,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.061427550329693215,
+        "usable": 408
+      },
+      "provider_stopped": true,
+      "runtime_rate_estimate_usd": 4.830248430231625,
+      "seed": 17,
+      "state_sha256": "d4e8be43ad244c1dbe6a175657bc5027df74ce4754e86977d3288ba4b7dcdcb8",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03335860500379075,
+        "length_cap_outputs": 44,
+        "length_cap_scored_incorrect": 44,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 44,
+          "native_eos": 1275
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 402.1935571340011,
+      "training_exposure": {
+        "histogram": {
+          "4": 222,
+          "5": 186
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.455882352941177,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1818,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "updates": 256,
+      "wall_seconds": 3956.33744430542
+    },
+    "breadth_p0_s23": {
+      "accuracy": 0.7263078089461713,
+      "artifact_digest": "33790154450340c812064388ae306fb32b39b98ee8837e836381f609d79999d5",
+      "cell": "breadth_p0",
+      "containers": 0,
+      "correct": 958,
+      "n": 1319,
+      "procurement": {
+        "acquired": 420,
+        "attempts": 512,
+        "batches": 32,
+        "cap": 211257,
+        "charge": 198280.0,
+        "covered": 408,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.061427550329693215,
+        "usable": 408
+      },
+      "provider_stopped": true,
+      "runtime_rate_estimate_usd": 4.258716715888977,
+      "seed": 23,
+      "state_sha256": "45f95707484d4841436fd0c9702f4e701c29dae6b0bfbae3d0396c80fccdccc1",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.037149355572403335,
+        "length_cap_outputs": 49,
+        "length_cap_scored_incorrect": 49,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 49,
+          "native_eos": 1270
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 347.1741480160001,
+      "training_exposure": {
+        "histogram": {
+          "4": 215,
+          "5": 193
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.473039215686274,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1825,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "updates": 256,
+      "wall_seconds": 3488.209903240204
+    },
+    "depth_p0_s17": {
+      "accuracy": 0.7202426080363912,
+      "artifact_digest": "c6b06fe1fba8cf63a20f805ff2b6a30cc1a48d904d62e37436183d2bfcbe64c4",
+      "cell": "depth_p0",
+      "containers": 0,
+      "correct": 950,
+      "n": 1319,
+      "procurement": {
+        "acquired": 135,
+        "attempts": 528,
+        "batches": 33,
+        "cap": 211257,
+        "charge": 196716.0,
+        "covered": 128,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.06883085530893651,
+        "usable": 474
+      },
+      "provider_stopped": true,
+      "runtime_rate_estimate_usd": 5.197301287407345,
+      "seed": 17,
+      "state_sha256": "a504f113a47af95ddab8a5c117bb1a4a96b9093f3173eed8b57c272d10642dd0",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03411675511751327,
+        "length_cap_outputs": 45,
+        "length_cap_scored_incorrect": 45,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 45,
+          "native_eos": 1274
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 438.6678008699995,
+      "training_exposure": {
+        "histogram": {
+          "3": 14,
+          "4": 460
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.970464135021097,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1882,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "updates": 256,
+      "wall_seconds": 4256.9813940525055
+    },
+    "depth_p0_s23": {
+      "accuracy": 0.7263078089461713,
+      "artifact_digest": "3c84b21af4e918ed502f539b9960979f3947cc6a4b1c915b5b9a8d7db7fa6751",
+      "cell": "depth_p0",
+      "containers": 0,
+      "correct": 958,
+      "n": 1319,
+      "procurement": {
+        "acquired": 135,
+        "attempts": 528,
+        "batches": 33,
+        "cap": 211257,
+        "charge": 196716.0,
+        "covered": 128,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.06883085530893651,
+        "usable": 474
+      },
+      "provider_stopped": true,
+      "runtime_rate_estimate_usd": 4.466167545262337,
+      "seed": 23,
+      "state_sha256": "496c16db4f2fdff802cd2d2ef5c484ec2d114596407814e781015eef492062db",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.037149355572403335,
+        "length_cap_outputs": 49,
+        "length_cap_scored_incorrect": 49,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 49,
+          "native_eos": 1270
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 407.5276091399996,
+      "training_exposure": {
+        "histogram": {
+          "3": 16,
+          "4": 458
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.9662447257383966,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1880,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "updates": 256,
+      "wall_seconds": 3658.1277639865875
+    }
+  },
+  "raw_outputs_independently_rescored": 5276,
+  "remaining_frozen_student_runs": 2,
+  "schema": "p007b_token_price0_two_training_seeds_v1",
+  "sources": {
+    "breadth_p0_s17": {
+      "envelope_sha256": "d98f3be3bd44e13fa8b036b6842d985fc4a82757ee966a811dd92410993e418d",
+      "oracle_sha256": "e65c9a770e80cd0aeb5fa82aa998c9da40a48dcc7c4b2a7717f18459b36e7433",
+      "provider_sha256": "9628202f185b103b67eb15c74012a08f08978ac1a37191f1018b69e618dc9f05",
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26"
+    },
+    "breadth_p0_s23": {
+      "envelope_sha256": "4102eace9537b97504341c0fcf07e6fa46c8647730580f9c4acac0c1731506b9",
+      "oracle_sha256": "f32ef0daa18301d905ddde700c1aa5ec33b4c8b8405d128ce79f77ed8bc175b8",
+      "provider_sha256": "f7c34e2efc75fc9d7ec60694e1849ba88f42ab4cb5756c97cb7a48685c56eedd",
+      "source_commit": "90ba88599c462a86ca6eb5c065e31dc99a9f7f61"
+    },
+    "depth_p0_s17": {
+      "envelope_sha256": "72bdeb109dc4267a2aa286007585c6857bf294be7111e1b9bb792efa5093aee8",
+      "oracle_sha256": "5c4ffe4ece60ac884bd226180adeb1278be227a433b7dee9161f927eddb483bd",
+      "provider_sha256": "5b546bddc36160a61abe59395b9a1a2939ba0d29840ee2d79f3f5a9abea3937b",
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26"
+    },
+    "depth_p0_s23": {
+      "envelope_sha256": "aed98bdccc971684a1e46857f07149542ecc9d6ea2b5d86e1ee79549a766a494",
+      "oracle_sha256": "420968df8bf5466d092b34288447a9214aaef780d3e108edcf68c30bea177494",
+      "provider_sha256": "dd7a276cf59bdeea75f73eab45f66555b4fa16e50ee95dbedc47980fa3f62a86",
+      "source_commit": "90ba88599c462a86ca6eb5c065e31dc99a9f7f61"
+    }
+  },
+  "supervised_targets_verified": 2097148,
+  "teacher_traces_per_cell": 1,
+  "training_seeds": [
+    17,
+    23
+  ],
+  "unknown_endpoint_outputs": 0,
+  "updates_verified": 1024,
+  "utc": "2026-10-13T02:35:23.015472+00:00"
+}
