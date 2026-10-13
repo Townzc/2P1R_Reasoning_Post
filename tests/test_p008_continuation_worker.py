@@ -29,7 +29,7 @@ def fixture():
     deps={p+'campaign':original,p+'claim/pool_d2':claim,p+'intent/pool_d2':bound,
           p+'attempt/pool_d2/old_attempt':claim,p+'terminal/pool_d2':terminal,
           p+'terminal/pool_d1':dict(status='completed')}
-    owner=dict(draws_retained=2,remaining_only=True,child_deadline_utc='2026-10-13T20:00:00Z',
+    owner=dict(draws_retained=2,remaining_only=True,child_deadline_utc='2026-10-13T21:00:00Z',
                worker_cap_seconds=7200,additional_reserved_usd=12,P008_total_reserved_usd=249.68,
                code_and_data_review_required_before_run=True)
     spec=dict(plan_sha256=digest(plan),config_sha256=digest(cfg),source_files={'synthetic.py':'c'*64},

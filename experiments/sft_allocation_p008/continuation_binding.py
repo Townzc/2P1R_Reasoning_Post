@@ -8,7 +8,7 @@ from .contract import DEADLINE_EPOCH
 CAMPAIGN = 'p008-d2-continuation-20261013-r1'
 RUN = 'pool_d2_remaining'
 PARENT = 'p008-main-20261013-r1'
-CHILD_DEADLINE = 1791921600  # 2026-10-13 20:00 UTC / 13:00 PDT
+CHILD_DEADLINE = 1791925200  # 2026-10-13 21:00 UTC / 14:00 PDT
 PROBE = dict(samples=3, read_timeout_seconds=15, readers=8,
              remaining_rounds_proxy=136, baseline_round_seconds=41.11433974999545,
              baseline_guard_seconds=1.41530, guard_calls_per_round=4,
@@ -35,7 +35,7 @@ def validate_continuation_binding(plan, cfg, release, spec):
         raise ValueError('Exact source/spec or accounting binding differs')
     owner = spec['owner_authorization']
     if not (owner['draws_retained'] == 2 and owner['remaining_only'] is True
-            and owner['child_deadline_utc'] == '2026-10-13T20:00:00Z'
+            and owner['child_deadline_utc'] == '2026-10-13T21:00:00Z'
             and owner['worker_cap_seconds'] == 7200 and owner['additional_reserved_usd'] == 12
             and owner['P008_total_reserved_usd'] == 249.68
             and owner['code_and_data_review_required_before_run'] is True):
