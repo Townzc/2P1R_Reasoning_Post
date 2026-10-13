@@ -302,10 +302,29 @@
       "owner_authorized": true,
       "response_timeout_minutes": 45,
       "timeout_action": "Hold future CPU dispatch; silence is not approval"
+    },
+    {
+      "request_id": "p008-student-activecheck-amendment-r2",
+      "target_commit": "41c26651744c7788773d64e81917480fab2eb467",
+      "packet": "reports/p008_20261013/student_guard_latency_v2",
+      "manifest": "reports/p008_20261013/student_guard_latency_v2/MANIFEST.json",
+      "manifest_sha256": "e4149f3d9e35f2ac4f5a8e4ca4fe0d54171e309f2e0c1ec714f08c1ec27a884d",
+      "external_review": "pending",
+      "blocking_for": "Any future P008 student/base dispatch using the new25-file source; running pools are unchanged",
+      "questions": [
+        "Fresh all26-key reads with original validator/planhash, original atomic writes, no cross-check caching; fail-closed on missing key, transport failure, timeout or ownership/fence change?",
+        "One15second read-set limit, after-read clock plus original harddeadline, at most8readers; no livepool source edit or model/data change?",
+        "Observed metadata latency invalidates prior optimistic forecast; original caps/deadline retained and no incomplete-pool student admission?"
+      ],
+      "scope": "CODE ONLY successor to f944723e; real G1 perdraw raw/cost and joint numeric/source review still required",
+      "requested_utc": "2026-10-13T10:43:38.403188+00:00",
+      "owner_authorized": true,
+      "response_timeout_minutes": 45,
+      "timeout_action": "Hold future student dispatch using new source; silence is not approval"
     }
   ],
   "p008_v31": {
-    "status": "two_actual_teacher_pools_running_first_batches_verified_students_not_admitted",
+    "status": "two_original_pools_active_observed_metadata_timing_risk_students_not_admitted",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -323,6 +342,7 @@
     "main_students": 18,
     "main_training_units": 74,
     "hard_reservation_including_phase0_usd": 237.68,
-    "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json"
+    "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json",
+    "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2"
   }
 }
