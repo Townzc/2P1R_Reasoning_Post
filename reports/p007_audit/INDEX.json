@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T17:27:39.806014+00:00",
+  "as_of_utc": "2026-10-13T17:31:47.222495+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -550,10 +550,27 @@
       "review_commit": "a32454b5314884723cf64baa9b5fb0f0845a3365",
       "review_packet": "reports/p008_20261013/d2_runtime_review_acceptance_v1",
       "review_read_utc": "2026-10-13T17:27:39.806014+00:00"
+    },
+    {
+      "request_id": "p008-d2-exact-provider-lookup-r2",
+      "target_commit": "32777f41a048c20b0680b73723aa7d685b8cfe56",
+      "packet": "reports/p008_20261013/d2_continuation_admission_v2",
+      "manifest": "reports/p008_20261013/d2_continuation_admission_v2/MANIFEST.json",
+      "manifest_sha256": "69275e89ea939add20f91db26fcfc96869438a70cf9408e94fc83975e15f3468",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T17:31:47.222495+00:00",
+      "blocking_for": "Only the local provider lookup amendment to already-reviewed single child; latest full-window dispatch17:48:20UTC.",
+      "questions": [
+        "Exact-ID AppInfo confirms original stopped state; missing/unknown/foreign/state/API errors or any current container reject?",
+        "work() AST, all numerical scope/probe/limits/generation remain unchanged; only new31source binding/local preflight differs?",
+        "Accept v2 exact source/spec for the same one child, without re-reviewing old closed scientific work?"
+      ],
+      "response_timeout_minutes": 10,
+      "timeout_action": "No silence approval, no deadline extension; latest17:48:20UTC still applies."
     }
   ],
   "p008_v31": {
-    "status": "child_exact_runtime_review_accepted_readback_and_dispatch_pending",
+    "status": "preupload_recent_list_omission_no_writes_exact_id_amendment_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -576,8 +593,8 @@
     "student_runtime_review_request": "p008-student-parent-child-lineage-code-r1",
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
-    "conditional_repair_status": "owner_authorized_20UTC_exact_review_accepted_live_gates_pending",
-    "latest_engineering_packet": "reports/p008_20261013/d2_continuation_admission_v1",
+    "conditional_repair_status": "v1_G0_accepted_v2_local_lookup_amendment_requires_real_review",
+    "latest_engineering_packet": "reports/p008_20261013/d2_continuation_admission_v2",
     "student_runtime_code_review": "PASS-WITH-NOTES 8f31b0ca code only",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
@@ -591,6 +608,6 @@
     "current_status": "reports/p008_20261013/d2_runtime_review_acceptance_v1/CHILD_RUNTIME_ACCEPTED.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
-    "continuation_runtime_review_request": "p008-d2-continuation-runtime-g0-r1"
+    "continuation_runtime_review_request": "p008-d2-exact-provider-lookup-r2"
   }
 }
