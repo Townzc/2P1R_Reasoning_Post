@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T18:01:53.546717+00:00",
+  "as_of_utc": "2026-10-13T18:08:47.889096+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -587,10 +587,27 @@
         "No actual quota or eight-way measurement has been claimed?"
       ],
       "numeric_admission": false
+    },
+    {
+      "request_id": "p008-d2-deadline14pdt-r3",
+      "target_commit": "4ae602a935a93c1daf8388b2b645cee8de4e575d",
+      "packet": "reports/p008_20261013/d2_continuation_admission_v3",
+      "manifest": "reports/p008_20261013/d2_continuation_admission_v3/MANIFEST.json",
+      "manifest_sha256": "4564a69302e83602581dea020574f75f7a4f42a06dbcd0d6d488d0656ca89cee",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T18:08:47.889096+00:00",
+      "blocking_for": "D2 one remaining-only GPU worker. Owner14PDT cutoff explicit; latest18:48:20UTC full-window dispatch.",
+      "questions": [
+        "Exact only20UTC to21UTC deadline/owner/spec-source amendment, unchanged work AST/config/7200/cost/scope?",
+        "Prior CLI refused before spawn; original7inputs readback reused without upload/replay; actual fresh noattempt/window checks remain?"
+      ],
+      "response_timeout_minutes": 15,
+      "timeout_action": "No silence approval and no automatic extension",
+      "numeric_admission": false
     }
   ],
   "p008_v31": {
-    "status": "child_pre_spawn_window_refusal_no_gpu_call",
+    "status": "owner14PDT_approved_exactv3_pending_reuseinputs_no_call",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -613,7 +630,7 @@
     "student_runtime_review_request": "p008-student-parent-child-lineage-code-r1",
     "student_numeric_admission": false,
     "N2_status": "OPEN_actual_T1_timing_absent",
-    "conditional_repair_status": "inputs_readback_done_no_spawn_14PDT_proposal_pending",
+    "conditional_repair_status": "newv3_review_pending_oldprespawnrefusal_preserved",
     "latest_engineering_packet": "reports/p008_20261013/d2_continuation_admission_v2",
     "student_runtime_code_review": "new30source_pending_prior28PASS_retained",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
@@ -621,14 +638,14 @@
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
     "pool_d2_status": "3992known_returns_0unknown_failedprefix_reconciled_not_completed",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
-    "owner_scope_or_deadline_question": "14PDT_proposal_unanswered_old13PDT_window_expired",
+    "owner_scope_or_deadline_question": "answered_direct14PDT_same7200_12USD",
     "active_gpu_tasks": 0,
     "pool_d2_external_review": "PASS failed prefix only, not G1",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/D2_PRESPAWN_WINDOW_FAILURE.json",
+    "current_status": "reports/p008_20261013/d2_continuation_admission_v3/CHANGE_PROOF.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
-    "continuation_runtime_review_request": "p008-d2-exact-provider-lookup-r2",
+    "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
     "owner_student_maximum_gpus": 8,
     "student_concurrency_amendment": "direct_owner8_10CPUchecks_pending_review_and_quota"
   }
