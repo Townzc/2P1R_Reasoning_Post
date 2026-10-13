@@ -1,0 +1,110 @@
+{
+  "schema": "p007_token_round9_followup_v1",
+  "checked_utc": "2026-10-13T03:16:55.237656+00:00",
+  "review": {
+    "read_utc": "2026-10-13T03:14:55.961455+00:00",
+    "commit": "385744e387d61fa300b13df3ac71e55645ea744e",
+    "path": "audit/claude/20261013b/REPORT.md",
+    "report_sha256": "4ae89cafa9d214e92c4405b89e200ffe88eec0f159aebac020ba71ed98aa9b27",
+    "comment_id": 6137276926,
+    "comment_created_utc": "2026-10-13T03:04:29Z",
+    "reviewed_working_commit": "5a9326ff2d19067a04689378b98f7ddd6be48447"
+  },
+  "packet_manifest_sha256": "cb902d5db6697a0478714cb2bb6c6e12701fca7b9ef0f772fa4f16186faf68c8",
+  "paired_file_sha256": "77d110e05bd29be770dba16e3910a5886d04158e9707c4014bb46923265b9b88",
+  "primary_counts": {
+    "breadth_p0_s17": 963,
+    "depth_p0_s17": 950,
+    "breadth_p0_s23": 958,
+    "depth_p0_s23": 958
+  },
+  "contrasts": {
+    "17": {
+      "depth_minus_breadth_pp": -0.9855951478392722,
+      "conditional_question_bootstrap_95_pp": [
+        -3.184230477634572,
+        1.2130401819560273
+      ]
+    },
+    "23": {
+      "depth_minus_breadth_pp": 0.0,
+      "conditional_question_bootstrap_95_pp": [
+        -2.122820318423048,
+        2.1986353297952994
+      ]
+    }
+  },
+  "bootstrap": {
+    "seed": 20261013,
+    "replicates": 10000,
+    "unit": "shared paired questions, conditional on the four trained price0 models"
+  },
+  "prediction_flip_counts": {
+    "breadth_between_seeds": 183,
+    "depth_between_seeds": 156,
+    "within_seed17_between_policies": 219,
+    "within_seed23_between_policies": 208
+  },
+  "new_e2_cases": [
+    {
+      "run": "breadth_p0_s23",
+      "problem_id": "gsm8k/test/00498",
+      "gold": "40",
+      "claims": [
+        {
+          "offset": 1082,
+          "kind": "answer_statement",
+          "payload": "",
+          "value": null
+        },
+        {
+          "offset": 1100,
+          "kind": "box",
+          "payload": "40",
+          "value": "40"
+        }
+      ],
+      "stop_reason": "native_eos",
+      "raw_batch_sha256": "ae3f3266cea59748650e39081bda23362cb0022b5e08f2b6fbcc73498e3baee2",
+      "scored_batch_sha256": "d47ff283a9184b8b5f598d728cfe1685f1f86ec4a07c46e20b1244f575ad654f",
+      "raw_ids_independently_decoded": true,
+      "primary_correct": false,
+      "primary_unchanged": true
+    },
+    {
+      "run": "depth_p0_s23",
+      "problem_id": "gsm8k/test/01169",
+      "gold": "2",
+      "claims": [
+        {
+          "offset": 1039,
+          "kind": "answer_statement",
+          "payload": "",
+          "value": null
+        },
+        {
+          "offset": 1057,
+          "kind": "box",
+          "payload": "2",
+          "value": "2"
+        }
+      ],
+      "stop_reason": "native_eos",
+      "raw_batch_sha256": "fdce290e9d9f1c955640d44521c965fc1d69d4692cf489a1d165f4798126b19f",
+      "scored_batch_sha256": "b0869d4fc335b979a7f55db254854b9248d463d641f46a9b9696d733ad79cdfb",
+      "raw_ids_independently_decoded": true,
+      "primary_correct": false,
+      "primary_unchanged": true
+    }
+  ],
+  "disposition": [
+    "S9-1 accepted: report both realized training seeds; question intervals do not cover seed/procurement uncertainty; two repeats cannot estimate robust population seed variance.",
+    "At price0 the observed differences are -0.9856pp and0.0000pp, both conditional intervals cross zero; neither a stable winner nor equivalence is established.",
+    "Cross-seed flips are descriptive, not an isolated variance component: schedules/order and per-answer exposure can vary by seed.",
+    "E2-b both new cases independently decoded; frozen primary scores unchanged. Uniform sensitivity is deferred until all eight complete, not computed for selected models now.",
+    "C9-1 acknowledged: bounded sparse-block transport has full-file SHA gate; no transport/source change is needed, original failure retained.",
+    "Claude scope now includes independent two seed23 price0 final-state hashes and saved raw-score checks, but not per-step weight trajectories or final high-price outcomes."
+  ],
+  "new_model_calls": 0,
+  "live_protocol_unchanged": true
+}
