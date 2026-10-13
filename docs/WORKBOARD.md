@@ -175,3 +175,7 @@
 | 2026.10.13 05:21 PDT | Codex | 开始读取原两池终点/provider及新Claude意见。D1日志报告Appcompleted，先核对原receipt/STOPPED0后独立收尾；D2仍按原12:24UTC时限，不重发。 | 核验中，日志不等于G1 |
 
 | 2026.10.13 05:04 PDT（收尾记录；provider读取04:51） | Codex | 已发布 T1-first 计时规则 @485e7410，INDEX 请求待审；Claude4d4fc7b7 仅通过27源代码。原两池继续，无学生/base/CPU/修复调用；N2仍OPEN。12:03UTC平台延迟计量$111.59150740，非发票/余额；预留$237.68不变。 | [固定证据](../reports/p008_20261013/t1_first_timing_policy_v1/REVIEW_REQUEST.md) |
+
+### 2026-10-13T12:27:28.597206+00:00 / Oct13 05:27 PDT — D1 local G1 closed, D2 parent failed
+
+D1 originalcompleted12:20:18UTC/STOPPED05:20:23PDT, collector28973/export63771/oracle99752 allDONE:2793filesSHA,7420physicalraw outputs/2200804completiontokens independently decoded/scored/deduplicated, all8wallets legally replayed withfullcost/nopeeking. Publicpool_d1_v1 externalG1pending; no studentadmission. D2 originalfinite-deadline failureterminal12:24:47UTC/STOPPED05:24:52PDT, noownedcontainers12:25. Originalfailure kept; interruptedpreservation77411 inprogress, nochild/retry. Scientific failure/unknown status requires complete reconciliation, notlogcounts. Only localread-only closeout/newpublication,0new modelcalls.

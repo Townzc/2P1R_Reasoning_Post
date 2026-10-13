@@ -2311,3 +2311,7 @@ Fixed target485e7410 and INDEX a2659c27 pushed normally; packetSHA and original2
 ### 2026-10-13T12:24:40.228972+00:00 — Claude C1/C2 timing policy corrections
 
 Read7265c558 fullreport. Implemented compute=max(exactP*cmax,2048*maxmeanupdatecompute),10CPUchecks passed. Prepared G1-draw roster preserves all prior admitted samples and requires actual pre-dispatch joint-plan proof; no score selection. Clarified that C1 does not waive both complete pool oracles/common plan or authorize incompleteD2/one-draw students. D1 actualcompletedterminal/providerSTOPPED0; readonlycollector28973 inprogress, no oracle yet. D2 originaldeadlineunchanged. No new model job, actual T1 input/preparation, or N2 numericalPASS.
+
+### 2026-10-13T12:27:28.597206+00:00 / Oct13 05:27 PDT — D1 local G1 closed, D2 parent failed
+
+D1 originalcompleted12:20:18UTC/STOPPED05:20:23PDT, collector28973/export63771/oracle99752 allDONE:2793filesSHA,7420physicalraw outputs/2200804completiontokens independently decoded/scored/deduplicated, all8wallets legally replayed withfullcost/nopeeking. Publicpool_d1_v1 externalG1pending; no studentadmission. D2 originalfinite-deadline failureterminal12:24:47UTC/STOPPED05:24:52PDT, noownedcontainers12:25. Originalfailure kept; interruptedpreservation77411 inprogress, nochild/retry. Scientific failure/unknown status requires complete reconciliation, notlogcounts. Only localread-only closeout/newpublication,0new modelcalls.
