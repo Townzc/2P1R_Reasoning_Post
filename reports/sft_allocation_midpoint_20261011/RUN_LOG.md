@@ -430,3 +430,10 @@ Claude round11 fixede8ef6ee0 pre-reviews depth949/1319/60caps andfullstatePASS, 
 ## 2026-10-13T04:21:47.075496+00:00 — last breadth second read-only transport reconciliation
 
 The recovery46607 failed at the20second metadata call after one newly verified block. Original33 full files and3 blocks plus that new block are preserved; independently verified33 files/4 unique blocks,828 missing files/23 missing blocks,0 corrupt. No GPU or model work remains. A bounded transport-only source repair adds validated reuse of previous recovery receipts and metadata90s/ranges360s/outer900s; no automatic retry. One new tagged read-only continuation is prepared after ordinary publication; full-file SHA and raw oracle remain mandatory. No scientific source/input/scoring changes or extra reserve.
+
+
+## 2026-10-13T04:26:32.803378+00:00 — all eight local student oracles passed; final CPU gate next
+
+Breadth_p4_s23 is949/1319 with63 length caps; the last depth is949/1319 with60 caps. Frozen scoring and full denominators unchanged. Eight students:2048updates4194296targets10552raw outputs and8 full terminal states independently verified; all student apps stopped. The second training seed ties both price levels, so it does not repeat the first seed ranking reversal. The final independent CPU audit remains unattempted; it will only use its existing reserved slot after a fresh no-claim/provider gate.
+
+Read-only breadth continuation22565 exited0 aftersource378d835c: reused33files/4 unique proven blocks, recovered23missing blocks andremainingcompact artifacts;861 selectedfiles245247125bytes all SHA verified. Original failedexport24469 andfailedrecovery46607 retained. Localoracle21714 passed. No newmodel calls, remote writes, score changes or added reserve.
