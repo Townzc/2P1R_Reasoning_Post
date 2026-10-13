@@ -16,7 +16,7 @@ def audit(root,inputs,receipts,ledger_path,teacher_tokenizer,student_tokenizer):
  sent=read(receipts/'intent.json');plan=sent['plan'];prefix='midpoint/'+plan['campaign_id']+'/'
  tt=AutoTokenizer.from_pretrained(teacher_tokenizer,local_files_only=True)
  st=AutoTokenizer.from_pretrained(student_tokenizer,local_files_only=True)
- intervals={};manifests={}
+ intervals={};manifests={};concurrency_status={}
  for role in PHASE0_ROLES:
   folder=root/role;envelope=read(receipts/(role+'_result.json'));files=envelope['artifact_manifest']
   assert envelope['receipt']==ledger[prefix+'terminal/'+role] and envelope['receipt']['status']=='completed'
@@ -25,12 +25,25 @@ def audit(root,inputs,receipts,ledger_path,teacher_tokenizer,student_tokenizer):
   assert read(folder/'result.json')==envelope['result']
   c=read(folder/'concurrency.json');intervals[role]=c['interval'];manifests[role]=digest(files)
   assert c==envelope['result']['concurrency']
-  assert set(c['ready'])==set(c['acks'])==set(PHASE0_ROLES)
+  assert c['status'] in ('four_gpu_verified','concurrency_not_achieved')
+  concurrency_status[role]=c['status']
+  assert set(c['ready'])==set(PHASE0_ROLES)
+  assert set(c['acks']) in (set(),set(PHASE0_ROLES))
   for peer in PHASE0_ROLES:
-   assert c['ready'][peer]==ledger[prefix+'ready/'+peer] and c['acks'][peer]==ledger[prefix+'ack/'+peer]
-   assert c['verified'][peer]==sha(root/peer/'io_probe.bin')
- overlap=overlap_seconds(intervals);assert overlap>0
- assert len({read(root/r/'concurrency.json')['gpu'].strip().split(',')[-1].strip() for r in PHASE0_ROLES})==4
+   if c['ready'][peer] is not None:assert c['ready'][peer]==ledger[prefix+'ready/'+peer]
+   if c['acks'].get(peer) is not None:assert c['acks'][peer]==ledger[prefix+'ack/'+peer]
+   if peer in c['verified']:assert c['verified'][peer]==sha(root/peer/'io_probe.bin')
+  if c['status']=='four_gpu_verified':
+   assert c['reason'] is None and all(c['ready'].values()) and all(c['acks'].values())
+   assert set(c['acks'])==set(c['verified'])==set(PHASE0_ROLES)
+  elif c['reason']=='readiness_timeout':
+   assert not all(c['ready'].values()) and c['acks']==c['verified']=={}
+  else:
+   assert c['reason']=='ack_timeout' and all(c['ready'].values()) and not all(c['acks'].values())
+   assert set(c['acks'])==set(c['verified'])==set(PHASE0_ROLES)
+ overlap=max(0.,overlap_seconds(intervals))
+ distinct=len({read(root/r/'concurrency.json')['gpu'].strip().split(',')[-1].strip() for r in PHASE0_ROLES})
+ four_gpu_verified=all(v=='four_gpu_verified' for v in concurrency_status.values()) and distinct==4 and overlap>0
  req=read_jsonl(inputs/'calibration_requests.jsonl');records=[];seen=defaultdict(dict);used=defaultdict(dict)
  folder=root/'teacher_calibration';expected_units=set()
  for start in range(0,1024,32):
@@ -80,7 +93,9 @@ def audit(root,inputs,receipts,ledger_path,teacher_tokenizer,student_tokenizer):
   assert not any(k.startswith(prefix+role+'/unit/') for k in ledger)
  return dict(passed=True,teacher_outputs=1024,teacher_usable=sum(r['usable'] for r in records),
    teacher_tokens=sum(r['completion_tokens'] for r in records),smoke_updates=8,smoke_targets=targets,
-   smoke_outputs=16,gpu_overlap_seconds=overlap,manifests=manifests,new_model_calls=0,
+   smoke_outputs=16,gpu_overlap_seconds=overlap,four_gpu_verified=four_gpu_verified,
+   concurrency_status=concurrency_status,main_dispatch_requires_four_gpu_verified=True,
+   manifests=manifests,new_model_calls=0,
    valid_scientific_accuracy_or_equivalence_claim=False,provider_release_must_be_checked_separately=True)
 
 if __name__=='__main__':

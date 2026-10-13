@@ -26,7 +26,10 @@ def gpu_probe(config,out,store,key,volume,check):
         check();observed={r:store.get(key+'/ready/'+r) for r in PHASE0_ROLES}
         if all(observed.values()):break
         time.sleep(2)
-    else:raise TimeoutError('Four real GPU readiness barrier not reached')
+    else:
+        result=dict(status='concurrency_not_achieved',reason='readiness_timeout',
+            gpu=text,interval=[start,time.time()],ready=observed,acks={},verified={})
+        dump(out/'concurrency.json',result);volume.commit();return result
     if len({x['gpu'].strip().split(',')[-1].strip() for x in observed.values()})!=4:
         raise ValueError('Four distinct physical GPU UUIDs required')
     volume.reload();verified={}
@@ -37,13 +40,17 @@ def gpu_probe(config,out,store,key,volume,check):
         verified[r]=record['sha256']
     ack=dict(role=role,epoch=time.time(),read_sha256=verified)
     if not store.put(key+'/ack/'+role,ack,skip_if_exists=True):raise ValueError('Duplicate ack')
+    acks={r:None for r in PHASE0_ROLES}
     while time.time()<deadline:
         check();acks={r:store.get(key+'/ack/'+r) for r in PHASE0_ROLES}
         if all(acks.values()):break
         time.sleep(2)
-    else:raise TimeoutError('Four-way shared I/O acknowledgement missing')
+    else:
+        result=dict(status='concurrency_not_achieved',reason='ack_timeout',
+            gpu=text,interval=[start,time.time()],ready=observed,acks=acks,verified=verified)
+        dump(out/'concurrency.json',result);volume.commit();return result
     # Every role stays alive until all four have read every committed probe.
-    result=dict(gpu=text,interval=[start,time.time()],ready=observed,acks=acks,verified=verified)
+    result=dict(status='four_gpu_verified',reason=None,gpu=text,interval=[start,time.time()],ready=observed,acks=acks,verified=verified)
     dump(out/'concurrency.json',result);volume.commit();return result
 
 

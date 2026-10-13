@@ -506,3 +506,8 @@ Read Claude9547f2ea closure F1–F5/N1–N2/A1–A3; owner explicitly directed e
 ## 2026-10-13T08:19:58.178019+00:00 — CPU main engineering while Phase0 G0 pending
 
 New procurement wallets/prefix replay, prepared finite draw generation, joint target-plan builder, dynamic-horizon student logic, compact evidence transport and narrow all-cell secondary parser prepared.54tests passed(26newbeyondG0). Boundary fixtures reject cached-free procurement, wrongdraw/reordered payments, omitted fees, unknown-as-false, incomplete tapes, infeasible whole-answer doses, one-sided target changes, reboundLR, biased exposures, unsafe archives and result-driven secondary parsing. No main or Phase0 modelcalls/uploads. All19Phase0source bytes exactly unchanged fromf996621d; latest G0 stillpending atlastread08:15UTC. Mainruntime ispreparedonly, lacks final numeric dispatch/source/inputaudits. No newglobal scientific groups.
+
+
+## 2026-10-13T08:37:48.652168+00:00 — G0 PASS-WITH-NOTES, scoped operational amendment
+
+Claude722735e2 accepted fixedf996621d G0. Adopt readiness/ack timeout as honest concurrency_not_achieved instead of destroying teacher/smoke calls. Corruption still fails; four-way main admission still requires actual overlap/fullacks. No new calls/dose/timer/budget;14CPU tests pass. Exact-source amendment is now offered for review before any upload/dispatch. G0-2 narrowed: length-dependent subset-sum is not uniform sampling or isolated diversity causation. All earlier facts retained. Correction: G0 request published08:03:14UTC, not07:59 as latest private handoff shorthand stated.
