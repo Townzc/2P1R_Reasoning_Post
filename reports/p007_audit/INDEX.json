@@ -459,6 +459,23 @@
       "response_timeout_minutes": 45,
       "timeout_action": "Hold dependent student dispatch; silence is not approval",
       "numeric_student_admission": false
+    },
+    {
+      "request_id": "p008-d2-parent-reconciliation-r1",
+      "target_commit": "19bdf37b65e879776f37bbdbb692f5ea0c63dbb5",
+      "packet": "reports/p008_20261013/pool_d2_reconciliation_v1",
+      "manifest": "reports/p008_20261013/pool_d2_reconciliation_v1/MANIFEST.json",
+      "manifest_sha256": "c58fd8b219e935f5e99cf3a54c0fa79d6269acfbeec16491fa5a7b900b6c295c",
+      "external_review": "pending",
+      "requested_utc": "2026-10-13T12:38:17.338489+00:00",
+      "blocking_for": "Any conditional D2 remaining-only child; no current admission",
+      "questions": [
+        "3992 originalphysical attempts/146batches allrawknown, all8walletprefixes andzero pendingintents; only B8p0 two wallets unfinished?",
+        "Remaining136rounds estimated; normalized actualreadtiming7070s proposal with20percentmargin vs7200, fullwindow latest12:48:20UTC. Exact limitations and stop if not ready?"
+      ],
+      "response_timeout_minutes": 15,
+      "timeout_action": "No silence-as-approval; child cannot launch past full original deadline window",
+      "numeric_admission": false
     }
   ],
   "p008_v31": {
