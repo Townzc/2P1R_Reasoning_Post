@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T20:26:12.007760+00:00",
+  "as_of_utc": "2026-10-13T20:27:02.494331+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -733,6 +733,29 @@
       "review_report_sha256": "ffff275684f860b1dca142b401ce5b59c7f2c9804d09d4fc8decd88ebbb3f659",
       "review_read_utc": "2026-10-13T20:01:37.595824+00:00",
       "acceptance_packet": "reports/p008_20261013/student_g1_accepted_v1"
+    },
+    {
+      "request_id": "p008-student-frozen-lr-unattempted-r1",
+      "external_review": "pending",
+      "status": "pending",
+      "target_commit": "c50538143147dc97428f168799c0ecdcaeec2c3a",
+      "packet": "reports/p008_20261013/student_frozen_lr_amendment_v1",
+      "manifest": "reports/p008_20261013/student_frozen_lr_amendment_v1/MANIFEST.json",
+      "manifest_sha256": "2675b0082d099245d3badd110b3fb441f939c2cc771c304e02d89b4983f05dee",
+      "blocking": true,
+      "blocking_for": "Only remaining16 unattempted student source amendment; eight T1 may proceed only after genuine review. Base continues. Failed2 replacements not admitted. T8 remains N2-blocked.",
+      "questions": [
+        "Does strict hash validation of original published LR vectors remove host-libm recomputation while rejecting any one-ULP plan mutation and retaining all other plan/dose checks?",
+        "Are the new32 source bundle and independent local oracle consistent with the unchanged exact input/spec G1, same science run AST, same uploaded36inputs, per-worker caps and budget?",
+        "Are base and two failed original slots explicitly excluded from the new entrypoint/worker with immutable failed evidence and no automatic retry?",
+        "Can the eight unattempted T1 calls proceed after this source amendment, while keeping failed entries in the all10T1+base roster and N2 OPEN pending a separately accepted complete timing lineage?"
+      ],
+      "created_utc": "2026-10-13T20:27:02.494331+00:00",
+      "new_model_calls": 0,
+      "source_files": 32,
+      "exact_input_review_commit": "4a8bace07f8e0bb30e12294ad92f2a26d7ff844b",
+      "exact_input_target": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
+      "failed_student_retry_admitted": false
     }
   ],
   "p008_v31": {
@@ -756,12 +779,12 @@
     "hard_reservation_including_phase0_usd": 249.68,
     "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json",
     "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
-    "student_runtime_review_request": "p008-student-completion-queue-r1",
+    "student_runtime_review_request": "p008-student-frozen-lr-unattempted-r1",
     "student_numeric_admission": "Original exact inputs passed; new unattempted-source amendment pending; N2 remains open",
     "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "completed_collected_exported_merged_oracle_passed_provider_released",
     "latest_engineering_packet": "reports/p008_20261013/student_frozen_lr_amendment_v1",
-    "student_runtime_code_review": "PASS-WITH-NOTES completion121f plus exact0be inputs/spec at4a8bace0",
+    "student_runtime_code_review": "new32 frozenLR amendment pending atc50538143147dc97428f168799c0ecdcaeec2c3a",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
