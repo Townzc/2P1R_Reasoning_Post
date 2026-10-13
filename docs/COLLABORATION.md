@@ -1,6 +1,6 @@
 # P007 collaboration and current handoff
 
-Updated October13 2026,01:00PDT. Working branch `codex/icml-acl-2027`. P007 is fully closed. Owner has authorized P008 v3.1 including A1–A3; exact Phase0 G0 is pending, no new cloud/model calls. [Unified protocol](experiments/P008_v3_1_protocol.md) and [G0 packet](../reports/p008_20261013/REVIEW_REQUEST.md) govern the next work.
+Updated October 13 2026, 04:10 PDT. Working branch `codex/icml-acl-2027`. P007/A/B and P008 Phase 0 are fully closed. P008 main has two original teacher pools active; no student/base/final CPU calls. The admitted engineering branch is 18 students / 74 training units. Revised code has scoped review acceptance, but observed metadata overhead leaves timing gate N2 open; actual complete-pool and joint-plan G1 are also required. [Current status](../reports/p008_20261013/STATUS_0410.json) and [scoped review response](../reports/p008_20261013/preflight_review_f7a696b8_v1/DISPOSITION.md) distinguish code acceptance from admission.
 
 ## Responsibilities and authority
 
@@ -28,7 +28,7 @@ A handoff contains the question, pinned commit, manifest/entry point, and3–5 r
 
 Use [WORKBOARD](WORKBOARD.md) for current status and stage events, RUN_LOG for execution details, and a single issue per finding or decision. Keep credentials and large private state files out of public packets. Group routine presentation/wording reviews by milestone; address blocking scientific flaws immediately and preferably before an expensive queue. The [shareable workflow](RESEARCH_WORKFLOW_ZH.md) explains the roles.
 
-Budget: total$500, ceiling$450, protected$50. Historical closed-stage reservation$369.50 is not spending. Authorized P008cap$250 inclusive(Phase0$15); latest meter$87.20111458 at06:17:18UTC is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.
+Budget: total$500, ceiling$450, protected$50. Historical closed-stage reservation$369.50 is not spending. Authorized P008cap$250 inclusive(Phase0$15); latest meter$103.62150678 at11:07:13UTC is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.
 
 ## Reading and event-based review
 
