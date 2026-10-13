@@ -474,3 +474,8 @@ Recovered10completed label proofs/full original ledger/provider; remaining4 are 
 ## 2026-10-13 05:44UTC — finite CPU continuation verified
 
 The separately admitted continuation was submitted once and its actual CPU container, immutable claim, binding and published source bytes now match. Ten completed parent label proofs are carried; only four remaining labels receive full verification. Original timeout and blocked replacement remain failures. No GPU/model work; budget reservation369.50USD, not actual spending. Final result synthesis remains gated on the combined audit closeout.
+
+
+## 2026-10-13 05:51UTC — continuation advanced despite client warnings
+
+Same owned CPU worker/source/claim remained active without terminal. New depth_p4_s17 and depth_p4_s23 label JSONs match the existing completed source receipts, manifests and terminal-state SHA. Twelve of fourteen label proofs now exist; only the two original operational pilots remain. Three client heartbeat Deadline exceeded warnings retained as transport diagnostics; they did not justify cancellation, dispatch or replay. Collector/export/finalizer/summary/figures not started. Workspace delayed meter87.20084103USD at05:52:23UTC (billed0) is not an invoice or remaining balance; reservation369.50 unchanged.

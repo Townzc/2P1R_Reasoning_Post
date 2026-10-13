@@ -2194,3 +2194,8 @@ Recovered10completed label proofs/full original ledger/provider; remaining4 are 
 ## 2026-10-13 05:44UTC — CPU continuation startup verification
 
 Codex independently matched the actual single CPU container, immutable claim, exact binding and all23 published source files for the separately admitted continuation. Ten parent proofs are carried; only four remaining labels are fully checked. The original timed-out audit/blocked replacement remain failures. No GPU, model generation, training, or repeated student oracle. Result synthesis awaits the combined CPU closeout; reservation369.50USD is not spending.
+
+
+## 2026-10-13 05:51UTC — continuation advanced despite client warnings
+
+Same owned CPU worker/source/claim remained active without terminal. New depth_p4_s17 and depth_p4_s23 label JSONs match the existing completed source receipts, manifests and terminal-state SHA. Twelve of fourteen label proofs now exist; only the two original operational pilots remain. Three client heartbeat Deadline exceeded warnings retained as transport diagnostics; they did not justify cancellation, dispatch or replay. Collector/export/finalizer/summary/figures not started. Workspace delayed meter87.20084103USD at05:52:23UTC (billed0) is not an invoice or remaining balance; reservation369.50 unchanged.

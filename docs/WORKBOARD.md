@@ -85,18 +85,16 @@
 | 2026.10.12 21:21（第二次传输对账／修复前） | Codex | 首次补齐取得1个新分块后又在20秒元数据请求超时；原失败全部保留，现33完整文件/4有效分块，无坏文件。准备复用两次有效证据，仅补23分块和其余文件；90秒地址请求/360秒分块/900秒整体硬限 | [有界修复](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_BREADTH_EXPORT_RECOVERY_R2_20261013.json)；0模型调用/远端写入，全部GPU已释放 |
 | 2026.10.12 21:26（八项本地核验完成／CPU总审计前） | Codex | 最后多题949/1319、63截断，多解949/1319、60截断；八项共10,552原始输出、2,048更新/4,194,296targets和8份完整state通过，所有GPU已释放。二种子两档均持平，未重复首种子排名反转 | [八项本地核验](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ALL_LOCAL_ORACLES_CLOSED.json)；只读补齐复用4分块、861文件全SHA通过，原两次传输失败保留；下一步仅已预留CPU总审计 |
 | 2026.10.12 21:30（CPU总审计实际启动） | Codex | fresh gate确认八份oracle通过、GPU退出、audit无任何尝试后，仅一次提交原CPU审计；实际claim/config与唯一CPU容器一致，14份结果目录核验中 | [CPU实际启动](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_STARTED.json)；0 GPU/0新生成，原预留$3内执行，最终通知待原回执、输出和CPU释放核对 |
-
 | 2026.10.12 21:43（Claude交付），21:54/21:58（评论/固定报告读取） | Claude；Codex读取 | 第十二轮固定514cec51复核全部10,552输出与8终点state，PASS-WITH-NOTES；撤回将seed17单独跨题价下降作为发现的强调。CPU总审计仍活动 | [固定报告](https://github.com/Townzc/2P1R_Reasoning_Post/blob/514cec51b7903d0d53be33f861fcd11929b43722/audit/claude/20261013e/REPORT.md)；实际最终summary/图/事实页不在范围 |
 | 2026.10.12 22:00（第十二轮处理完成） | Codex | 从已核验终点记录复核breadth高价的跨seed翻转200题及两seed价格差−2.73/−0.68pp；接受F12-1，不作为重复损伤或稳健价格效应。保留四个已知E2、全部长度截断与原主分 | [限定审计处理](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND12_REVIEWED.json)；最终CPU及图表仍待完成，0新模型调用 |
-
 | 2026.10.12 22:06（保存记录的耗时复盘） | Codex | 八项更新耗时合计56.50 GPU分钟，worker合计9.78 GPU小时；被动样本平均利用率各16.05%–29.69%，显存峰值13.58–16.09 GiB。其余时间含评测、验证与读写，不全部视为训练或评测；未跑硬件优选试验 | [可复算运行诊断](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_RUNTIME_DIAGNOSTICS.json)；0新模型调用，CPU总审计仍活动 |
-
 | 2026.10.12 22:22（存储审计风险／应急准备） | Codex | 原CPU总审计仍活动，逐目录读写速度可能超过原55分钟硬限。已准备仅携带原核验完成目录、补核其余目录的CPU方案；8个CPU合同测试通过，尚无续核准入或提交 | 当前任务不延长/不取消，无新GPU/模型工作；只在原app停止且保存真实部分证据后才可能准入，新方案最多2个并行读取线程 |
-
 | 2026.10.12 22:24（CPU硬限）/22:27（对账中） | Codex | 原CPU审计按55分钟硬限退出124，服务商替换被原claim拦住；provider已停止、容器0。八项学生结果与本地完整核验不受影响。先保存完整账本和部分证据，再确定仅剩CPU核验范围 | [真实中断记录](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_INTERRUPTED.json)；0新增模型工作，尚未续核提交 |
-
 | 2026.10.12 22:37（中断对账完成／续核前） | Codex | 原审计10项已核验目录证明完整回收并绑定原claim/source/terminal，剩余仅depth_p4_s17/s23及两个旧先导；六个已下载小文件和原完整账本复用，补四个较大JSON和intent。原4MB本地大小门失败保留 | [明确续核准入](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_CONTINUATION_ADMISSION.json)；只核剩余四目录，2CPU/8GiB/2读取线程/55分钟/额外$3，尚未提交，无新模型工作 |
 | 2026.10.12 22:16（审计交付），22:33（固定报告读取） | Claude；Codex读取 | 第十三轮固定d7cb2d0d接受解释更正和运行诊断PASS；评测后端等价性检查仅作中期后建议，未准入，不改本轮结果；不依赖其提及的未确认未来$2700 | [限定处理](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND13_REVIEWED.json)；本轮仍$500总额/$450支出上限/$50保护 |
+| 2026.10.12 22:38（唯一提交）/22:44（实际核验） | Codex | 仅剩4目录的CPU续核已实际运行，10项原证明已接入；CPU容器、claim、冻结源码逐项一致。无GPU／新模型调用，原失败保留 | [真实启动证明](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_CONTINUATION_STARTED.json)；原CPU任务不重启，剩余验证结束后收取完整证据链 |
+| 2026.10.12 22:51（续核进度核对） | Codex | 两项高题价多解的新增CPU证明与原终点／manifest／完整state哈希匹配，累计12/14标签，尚余两个旧先导；保留3次客户端连接超时警告，同一worker仍推进，未重启 | 仅CPU收尾；22:52平台延迟计量$87.20，非发票／余额；总审计尚未完成，最终数值汇总和图表未执行 |
+
 
 ## 维护规则
 
@@ -108,5 +106,3 @@
 - 阶段完成更新一次。发生新风险、方案改变或需要研究者决策时立即更新。时间统一用 PDT，并在更正时保留原记录和更正来源。
 
 共享工作流说明：[RESEARCH_WORKFLOW_ZH.md](RESEARCH_WORKFLOW_ZH.md)。
-
-| 2026.10.12 22:38（唯一提交）/22:44（实际核验） | Codex | 仅剩4目录的CPU续核已实际运行，10项原证明已接入；CPU容器、claim、冻结源码逐项一致。无GPU／新模型调用，原失败保留 | [真实启动证明](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_CONTINUATION_STARTED.json)；原CPU任务不重启，剩余验证结束后收取完整证据链 |
