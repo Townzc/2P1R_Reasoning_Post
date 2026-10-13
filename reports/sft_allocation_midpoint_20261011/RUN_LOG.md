@@ -454,3 +454,8 @@ Read fixed514cec51/issue6138402969. All eight outcomes PASS-WITH-NOTES and termi
 ## 2026-10-13T05:06:31.209102+00:00 — saved GPU runtime diagnostics
 
 Computed receipts/passive60s GPU sample summaries from the eight completed students with original manifest SHA binding:56.50 summed update GPUminutes,9.778 workerGPUhours; recorded update time9.63% of worker wall, other time includes setup/evaluation/checkpoint/evidence I/O. Per-run sample-average utilization16.05–29.69%, maximum sampledmemory13.58–16.09GiB; samples mix phases and are not a FLOPS or optimal-hardware benchmark. Existing billing05:04UTC87.11084103USD,billed0 is delayed workspace metering; preceding87.31084103 retained, not a refund/balance inference. An optional read-only existing-container /proc probe had one local argument-parser failure and then exit0 with empty output; both receipts retained, no process claim inferred, no cloud function dispatched or signaled. Source20files remain unchanged.
+
+
+## 2026-10-13T05:22:20.603060+00:00 — conditional CPU audit continuation prepared, not admitted
+
+Original CPU audit remains active under3300s timer; seven completed label proofs seen05:09UTC. Prepared separate CPU-only continuation/helper and8contract tests: reject active/completed parents, changed proof bytes, dropped/replayed labels, rehashed missing checkpoints, foreign terminals, incorrect procurement-recovery mapping and deadline/slot expansion. No published continuation admission exists, no image build/dispatch or additional reservation has occurred. If original task finishes, do not use this path. If it stops incomplete, first preserve real provider/ledger/partial files; only remaining verification reads may proceed under a new bounded explicit slot. Model work is never repeated.
