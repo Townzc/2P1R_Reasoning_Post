@@ -12,7 +12,7 @@
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
 | 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，图v2已获Claude PASS。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
-| P008 v3.1 | Codex工程；Claude审计；研究者 | D1完整/G1；D2失败父保留，唯一续跑已完成；全部7416原始输出及8钱包本地合并G1通过，GPU已退出 | [启动证据](../reports/p008_20261013/D2_CONTINUATION_STARTED_v3.json)；8卡授权及代码审计已过，owner工作区ID与实验CLI匹配；配额截图已证实总GPU上限10，学生继续最多8卡；两采购G1和新完成队列代码/owner/配额范围均通过；18项共同计划及确切输入G1已通过；T1+base正做一次上传/派发准备，T8仍待实际N2计时 |
+| P008 v3.1 | Codex工程；Claude审计；研究者 | D1完整/G1；D2失败父保留，唯一续跑已完成；全部7416原始输出及8钱包本地合并G1通过，GPU已退出 | [启动证据](../reports/p008_20261013/D2_CONTINUATION_STARTED_v3.json)；8卡授权及代码审计已过，owner工作区ID与实验CLI匹配；配额截图已证实总GPU上限10，学生继续最多8卡；两采购G1和新完成队列代码/owner/配额范围均通过；18项共同计划及确切输入G1已通过；base已实际评测；两项学生在LR校验处失败，后续派发暂停；新冻结LR校验修订待审，T8仍待N2 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 13:12/13:13（失败）/13:15–13:24（独立诊断与修订） | Codex；实际原日志及Linux主机 | 两项学生在训练前严格LR比较失败；Linux余弦重算与原冻结值差最多1.36e−20；base正常，冻结原始LR不改 | [仅未尝试项修订](../reports/p008_20261013/student_frozen_lr_amendment_v1/REVIEW_REQUEST.md)；7项新CPU回归检查通过，完整失败保全仍进行，无自动重试 |
 | 2026.10.13 13:08（输入准入） | Codex | 原槽位未尝试核对、一次转移及输入回读通过；10项T1+base计时名单已在派发前冻结 | [输入/计时名单证据](../reports/p008_20261013/student_t1_dispatch_admission_v1/README.md)；下一步按固定顺序最多8项并行，T8待N2 |
 | 2026.10.13 12:42（Claude评论）/13:00–13:05（读取及准入准备） | Claude；Codex | 确切18计划、两采购输入及新学生spec获PASS-WITH-NOTES；保留length-conditioned曝光限制 | [学生G1接受](../reports/p008_20261013/student_g1_accepted_v1/DISPOSITION.md)；准备T1+base一次上传及派发，T8仍等N2 |
 | 2026.10.13 12:19/12:21（Claude评论）/12:34–12:37（读取及复核） | Claude；Codex | 完整D2合并G1与完成队列代码/owner/配额范围均PASS-WITH-NOTES；独立纠正审计表8格零可用题数，原评分/数据不改 | [限定接受及更正](../reports/p008_20261013/review_8d8a9e8b_followup_v1/DISPOSITION.md)；确切输入G1待审，无学生调用 |

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T20:08:43.459889+00:00",
+  "as_of_utc": "2026-10-13T20:26:12.007760+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -675,8 +675,8 @@
     },
     {
       "request_id": "p008-final-cpu-lineage-code-r1",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS-WITH-NOTES",
+      "status": "reviewed",
       "target_commit": "eb398fb1fec5306ab654ffec19e7b96e2005fdad",
       "packet": "reports/p008_20261013/final_cpu_lineage_code_v1",
       "manifest": "reports/p008_20261013/final_cpu_lineage_code_v1/MANIFEST.json",
@@ -692,7 +692,12 @@
       "new_model_calls": 0,
       "prepared_local_tool_packet": "reports/p008_20261013/final_cpu_preparation_tools_v1",
       "prepared_local_tools_executed": false,
-      "note": "Worker13sources unchanged. Prepared local orchestration only; actual input/byte/numeric admission still future and no CPU call."
+      "note": "Worker13sources unchanged. Prepared local orchestration only; actual input/byte/numeric admission still future and no CPU call.",
+      "review_commit": "7ce25d6a5a401a8e182b5464cab5a92a4c31f5ce",
+      "review_report": "audit/claude/20261013ac/FINAL_CPU_LINEAGE_CODE.md",
+      "review_report_sha256": "4399e3e4fa7910a91c151aa0e28de5a0b793e68dcae40b592db914085bc17425",
+      "review_read_utc": "2026-10-13T20:12:07.617648+00:00",
+      "numeric_admission": false
     },
     {
       "request_id": "p008-student-exact-input-g1-r1",
@@ -731,7 +736,7 @@
     }
   ],
   "p008_v31": {
-    "status": "T1_base_input_readback_complete_dispatch_imminent",
+    "status": "base_active_two_pretraining_failures_remaining_students_held_for_LR_source_review",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -752,10 +757,10 @@
     "main_progress": "reports/p008_20261013/MAIN_POOLS_STARTED.json",
     "engineering_risk_packet": "reports/p008_20261013/student_guard_latency_v2",
     "student_runtime_review_request": "p008-student-completion-queue-r1",
-    "student_numeric_admission": "T1 and base; T8 timing N2 open",
+    "student_numeric_admission": "Original exact inputs passed; new unattempted-source amendment pending; N2 remains open",
     "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "completed_collected_exported_merged_oracle_passed_provider_released",
-    "latest_engineering_packet": "reports/p008_20261013/student_admission_v1",
+    "latest_engineering_packet": "reports/p008_20261013/student_frozen_lr_amendment_v1",
     "student_runtime_code_review": "PASS-WITH-NOTES completion121f plus exact0be inputs/spec at4a8bace0",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
@@ -763,10 +768,10 @@
     "pool_d2_status": "complete_local_merged_oracle_and_external_G1_passed_parentfailed_preserved",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
     "owner_scope_or_deadline_question": "answered_direct_student_queue_until_complete_per_slot_caps_unchanged",
-    "active_gpu_tasks": 0,
+    "active_gpu_tasks": 1,
     "pool_d2_external_review": "PASS-WITH-NOTES merged numeric pool G1 at eb398fb1; no student admission",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/STUDENT_JOINT_PLAN_READY.json",
+    "current_status": "reports/p008_20261013/student_frozen_lr_amendment_v1/STATUS.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -796,8 +801,8 @@
     "student_input_bytes": 44387175,
     "student_input_upload_performed": true,
     "student_slot_transfer_performed": true,
-    "student_calls": 0,
-    "base_calls": 0,
+    "student_calls": 2,
+    "base_calls": 1,
     "final_cpu_calls": 0,
     "latest_delayed_workspace_meter_usd": 116.2618374,
     "latest_meter_is_invoice_or_balance": false,
@@ -805,6 +810,11 @@
     "final_cpu_preparation_tools": "reports/p008_20261013/final_cpu_preparation_tools_v1",
     "student_G1_acceptance_packet": "reports/p008_20261013/student_g1_accepted_v1",
     "timing_roster_packet": "reports/p008_20261013/student_t1_dispatch_admission_v1",
-    "T1_timing_roster_frozen": true
+    "T1_timing_roster_frozen": true,
+    "student_failed_calls": 2,
+    "student_retry_admitted": false,
+    "student_remaining_unattempted": 16,
+    "final_cpu_code_review": "PASS-WITH-NOTES code only; numeric gate absent",
+    "latest_review_corrections": "reports/p008_20261013/review_7ce25d6a_accepted_v1/CORRECTION_ZERO_USABLE.md"
   }
 }
