@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 
@@ -11,6 +12,17 @@ def read(path):
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def unused_percent(procurement):
+    """Check the stored fraction against charged units before displaying it."""
+    cap, charge = float(procurement['cap']), float(procurement['charge'])
+    if cap <= 0 or not 0 <= charge <= cap:
+        raise ValueError('invalid procurement cap or charge')
+    fraction = (cap - charge) / cap
+    if not math.isclose(float(procurement['unused']), fraction, rel_tol=1e-10, abs_tol=1e-12):
+        raise ValueError('unused fraction disagrees with cap and charge')
+    return 100 * fraction
 
 
 def build(summary_path, closeout_path, supply_path, figures_path, out):
@@ -46,7 +58,7 @@ def build(summary_path, closeout_path, supply_path, figures_path, out):
         '',
         '## 当前结论',
         '',
-        '统一 token 计价的八项学生已完成：2 个训练种子 × 2 档题价 × 多题/多解。10,552 条终点评测、2,048 次更新、4,194,296 个监督 targets 与 8 个完整终点状态全部核验；独立 CPU 审计证据链通过，GPU/CPU 容器均退出；原审计及有限续核的失败/继承范围在最终收尾清单中分别保留。',
+        '统一 token 计价的八项学生已完成：2 个训练种子 × 2 档题价 × 多题/多解。10,552 条终点评测、2,048 次更新、4,194,296 个监督 targets 与 8 个完整终点状态全部核验；独立 CPU 审计证据链通过：10 个目录由原审计完整核验，4 个由有限续核完整核验；GPU/CPU 容器均退出。原审计到限失败与续核继承范围分别保留，未声称14项在同一次运行中核验。',
         '',
         '第一个种子在零题价略偏多题、高题价略偏多解；第二个种子在两档题价下均持平。因此，现有实验没有复现稳定的策略优劣反转。共同预算上限下的采购—训练—评测流程已跑通，但尚不足以给出普遍的最优分配建议。',
         '',
@@ -81,7 +93,7 @@ def build(summary_path, closeout_path, supply_path, figures_path, out):
         row = cells[cell]; a = row['tariff_procurement']; d = supply['cells'][cell]
         exposure = [row['seeds'][str(seed)]['training_exposure']['mean_per_answer'] for seed in (17, 23)]
         title = ('0' if cell.endswith('p0') else '4m') + '/' + ('多题' if cell.startswith('breadth') else '多解')
-        lines.append(f"| {title} | {a['acquired']} | {a['covered']} | {a['usable']} | {a['attempts']} | {d['invalid_under_frozen_checker']} | {d['valid_duplicates_rejected']} | {100*a['unused']/a['cap']:.2f}% | {exposure[0]:.2f}/{exposure[1]:.2f} |")
+        lines.append(f"| {title} | {a['acquired']} | {a['covered']} | {a['usable']} | {a['attempts']} | {d['invalid_under_frozen_checker']} | {d['valid_duplicates_rejected']} | {unused_percent(a):.2f}% | {exposure[0]:.2f}/{exposure[1]:.2f} |")
     lines += ['', '检查器未通过包含错误、未解析及终止规则不合格，并非逐步推理的人工标签。四格共有1,408次入选前缀尝试、1,203条可用解、203条检查器未通过和2条有效重复，技术性无返回为0；全部原采购2,064输出、先导1,024输出及未入选后缀仍计入真实平台成本。',
               '', '## 与前一阶段的关系', '',
               '原公开答案库四组在431题开发评测上：Repeat309/307、Solutions354/355、Breadth350/352、Mixed348/351，base256。Solutions−Repeat平均+10.79pp；Breadth−Solutions平均−0.81pp，未识别稳定的多题优势。前者支持该多答案训练策略相对锚点重复的收益，未单独识别推理路径多样性或重复损伤。',

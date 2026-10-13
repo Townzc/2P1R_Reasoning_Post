@@ -1,0 +1,79 @@
+{
+  "schema": "p007_midpoint_materials_verification_v1",
+  "utc": "2026-10-13T06:27:48.030039+00:00",
+  "status": "technical_evidence_ready",
+  "new_model_calls": 0,
+  "all_model_and_cpu_work_closed": true,
+  "external_final_artifact_review": "pending",
+  "visual_inspection": {
+    "actual_pngs_viewed": [
+      "policy_gaps_and_price_interaction.png",
+      "accuracy_by_price_and_seed.png"
+    ],
+    "checks": [
+      "per-seed and mean values/intervals",
+      "conditional uncertainty qualifications",
+      "0-100 accuracy axis",
+      "readable labels and full denominators"
+    ]
+  },
+  "tests": "python -m unittest tests.test_midpoint_evidence_units -v: 2 passed; four fixed charges plus four bad unit/accounting fixtures",
+  "files": {
+    "reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md": {
+      "bytes": 8844,
+      "sha256": "5c8979ec0349f6e4b1f6149d8b4ea8f39d6fa53f9d550c53d0ea24e74da780dc"
+    },
+    "reports/sft_allocation_midpoint_20261011/P007B_REPORTING_UNITS_CORRECTION.json": {
+      "bytes": 739,
+      "sha256": "f694a200ca8d9290cf09806ff87ec6e4bafb2ebaf53b47ad2eca5c42936f6594"
+    },
+    "reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND14_REVIEWED.json": {
+      "bytes": 1180,
+      "sha256": "30b0ad84265ef3f3926d3850684dc1053e5a60b300d629a0bbb2351fe8dd0c25"
+    },
+    "scripts/build_token_midpoint_evidence.py": {
+      "bytes": 13598,
+      "sha256": "1b27688acee3f08b4e52f245f7e59ccc43a01bdcdafedea488e5d4ce262bcb82"
+    },
+    "tests/test_midpoint_evidence_units.py": {
+      "bytes": 1070,
+      "sha256": "cb7cc89f162a74aae7dccc23f0ae2466eb848d304d2a6576425ed928884d5a59"
+    },
+    "scripts/plot_token_policy_results.py": {
+      "bytes": 7982,
+      "sha256": "0bd50ce38bb51214a4bad7bbc2def73a8b66a6bb5624e3b2ec1eb8ed83eea8e9"
+    },
+    "reports/p007_audit/token_final_v1/manifest.json": {
+      "bytes": 3985,
+      "sha256": "2fec9fb54d187484081f2399166b87515dc050a809b93bef3819e921f71baaab"
+    },
+    "docs/P007_NEXT_PHASE_PLAN_20261013.md": {
+      "bytes": 8781,
+      "sha256": "f3dd7bf8551c75738b27d51fa9fb2e76e17ecce2e30bc5e84ce4e577d00ca6f8"
+    },
+    "docs/RESEARCH_WORKFLOW_ZH.md": {
+      "bytes": 4755,
+      "sha256": "421df3adb2d0fc4d1a7d84e0f6c08722634099c36730370cb15769dc73b04a41"
+    },
+    "reports/sft_allocation_midpoint_20261011/figures_token_v1/PROVENANCE.json": {
+      "bytes": 1054,
+      "sha256": "98c064e225141833487b833c87fed820155683f1e3201f5f7e501b9bfee15623"
+    },
+    "reports/sft_allocation_midpoint_20261011/figures_token_v1/accuracy_by_price_and_seed.png": {
+      "bytes": 113919,
+      "sha256": "1d4bad92b01c37bdaa336676f45a864122c4ce80607b99c88e17544c74f69b7c"
+    },
+    "reports/sft_allocation_midpoint_20261011/figures_token_v1/accuracy_by_price_and_seed.svg": {
+      "bytes": 17976,
+      "sha256": "79187a085ecc2a0e87f25ff73b4193779f61b9efef518fa765fc9bda4fe41442"
+    },
+    "reports/sft_allocation_midpoint_20261011/figures_token_v1/policy_gaps_and_price_interaction.png": {
+      "bytes": 137109,
+      "sha256": "9abb63f4662f7ad22063a5211dc8ba8217a22379ab0d72c4f126506cc3e09278"
+    },
+    "reports/sft_allocation_midpoint_20261011/figures_token_v1/policy_gaps_and_price_interaction.svg": {
+      "bytes": 32006,
+      "sha256": "8c71aab0930116e9d078926b17b42586926efe42073d128f2e37584fd91cf1d4"
+    }
+  }
+}

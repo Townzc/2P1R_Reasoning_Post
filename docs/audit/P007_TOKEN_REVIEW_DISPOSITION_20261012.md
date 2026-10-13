@@ -105,3 +105,13 @@ P11-1 accepted before rendering: the accuracy context figure now uses0–100%, a
 接受F12-1：第七轮S7-2仅是seed17的事后结果。seed23 breadth跨题价变化−0.68pp，高价breadth跨训练seed翻转200题；不以首seed单独下降作为发现，不因果解释为重复损伤。原第七轮记录保留，本段明确更正其解释地位。接受F12-2/3：事实页仍以14-label CPU审计通过为门，逐项披露截断。Claude关闭P11-2的是共享题目平均算法；最终输出文件、CPU回执、实际图表和事实页仍待其新审计。
 
 [Codex逐项处理及独立目标核验](../../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND12_REVIEWED.json)。没有修改模型、数据、剂量或冻结主评分。
+
+## 第十四轮：续核审阅与最终证据交接（2026-10-12 23:20PDT读取）
+
+Claude固定[`cb823703`](https://github.com/Townzc/2P1R_Reasoning_Post/blob/cb823703880cae47c729bfb75000bbe98919b283/audit/claude/20261013g/REPORT.md)针对4c44d8cc的续核代码给出PASS-WITH-NOTES，接受先对账/保留失败/只续核剩余目录的处理。该判定不覆盖后来完成的CPU回执、最终汇总、图表或事实页。
+
+- C14-1接受并落实：原审计完整验证10个目录，续核完整验证4个目录；继承证明按固定SHA与来源绑定，不称14项在同一次运行重新读取全部权重。原审计保持中断，无completed terminal。
+- C14-2接受为中期后工程建议：硬退出前60–120秒设软截止并保存失败/完成/unknown信息；当前已结束的运行不修改、不重跑。
+- C14-3日程风险已由真实完成解除：续核22:55:41PDT完成，provider22:55:45停止、容器0；完整收尾门通过。未放宽门控、未用部分审计冒充全部完成。
+
+[逐项处理](../../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND14_REVIEWED.json)。全量结果来自原冻结规则，均值差值及交互由预先固定的共享题目算法计算。最终packet/实际PNG/SVG/事实页现交付外审，**pending**。发布前发现事实页把已为比例的unused再次除以cap，显示0.00%；已按(cap-charge)/cap独立核对四格，修为6.14/6.88/12.26/10.90%，保存原文件及SHA，新增两项单位/篡改记账检查通过。科学summary、选择、模型、主分均未变化。[展示修复记录](../../reports/sft_allocation_midpoint_20261011/P007B_REPORTING_UNITS_CORRECTION.json)。

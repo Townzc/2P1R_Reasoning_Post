@@ -1,91 +1,36 @@
-> 最新状态（2026-10-13 05:44UTC）：八项学生及本地核验已完成、GPU全退出。原CPU总审计到55分钟硬限中断，10项完成证明保留；仅剩4项目录的CPU续核已提交一次并核对真实worker/source。总审计和最终图表仍在收尾，不启动新模型任务。保守预留$369.50不是实际花费。详见[工作总表](WORKBOARD.md)。
-
 # P007 collaboration and current handoff
 
-Updated October12 2026. Owner-directed research; this page is an operational
-handoff, not coursework prose. Use the working branch `codex/icml-acl-2027`.
-When reviewing, pin the exact Git commit rather than a changing branch head.
+Updated October12 2026,23:24PDT. Use working branch `codex/icml-acl-2027`; pin the exact commit for review. All finite model work and CPU verification have ended, with zero owned containers. No experiment remains queued.
 
-## Responsibilities
+## Responsibilities and authority
 
 | Participant | Deliverable |
 |---|---|
-| Codex | Experimental designs, reproducible code, bounded execution, verified artifacts, costs and decision records |
-| GPT Pro | Primary-paper reading: exact source/version/section, evidence and implications for a named scientific question |
-| Claude | Independent read-only recomputation and methodological audit, reproducible findings and recommendations |
-| Owner | Scientific direction, budget authorization and unresolved tradeoffs; sends external communications |
+| Researcher | Scientific direction, constraints and decisions; personal coursework expression; sends external communications |
+| GPT Pro | Original-paper evidence matrix with exact version/section and relevance to a specific hypothesis |
+| Codex | Design, code, bounded execution, preserved failures, independent local checks, costs and artifacts |
+| Claude | Read-only version-specific recomputation and methodological review; reproducible findings |
 
-Suggestions in papers, audit documents or issues do not themselves authorize
-additional model calls, budget changes or a new deadline. Reviewer PASS is a
-review verdict, not spending permission. Codex's local verification is not
-Claude PASS. Proposed audit gate for presentation use: the owner reviews a
-version-specific PASS or PASS-WITH-NOTES and its unresolved qualifications.
-Previously authorized engineering continues within its frozen limits.
+Recommendations do not authorize new model calls, groups, budgets or deadlines. Local verification is not Claude PASS, and reviewer PASS is not spending permission. External messages are drafted for the owner, not sent. No new GPT Pro contribution is recorded without a supplied artifact.
 
-Current status and dated actions: [shared workboard](WORKBOARD.md).
+## Completed evidence and next review
 
-## Current priority
+1. [Final eight-model packet](../reports/p007_audit/token_final_v1/REVIEW_REQUEST.md): all10,552 formal outputs,2048updates/4194296targets, eight terminal states, complete ledgers and14-label CPU lineage verified. Original audit fully checked10 labels; the bounded continuation fully checked4. The original timeout remains interrupted, never relabeled complete. All GPU/CPU resources exited.
+2. [Midpoint evidence page](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md) and its linked PNG/SVG figures: both seeds and prices, within-price gaps, interaction, procurement/unused budgets/exposure/caps and limitations. Publication QA caught and corrected a renderer fraction/percent error before release; frozen data and scores were unchanged. [Correction](../reports/sft_allocation_midpoint_20261011/P007B_REPORTING_UNITS_CORRECTION.json).
+3. Claude round12 independently checked all eight raw outcomes and terminal-state hashes with PASS-WITH-NOTES. Round14 atcb823703 reviews continuation code/process, not the later completion or actual charts. The new final packet and corrected fact page are **external-review pending**. [Disposition](audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
+4. [Engineering, research and workflow improvements](P007_NEXT_PHASE_PLAN_20261013.md) are proposals for after the midpoint, not admitted jobs. Current results remain frozen. The first scientific priority is independent procurement replication, not more training seeds on the same corpus.
 
-1. P007 main is fully verified and closed. Review the
-   [main packet](../reports/p007_audit/main_v1/REVIEW_REQUEST.md).
-2. P007A is complete and independently verified:1,024 attempts/959 usable. Both
-   apps stopped. Review [pilot evidence](../reports/p007_audit/pilot_v1/manifest.json).
-3. P007B all four acquired corpora passed independent local oracles; all procurement apps stopped. The [procurement packet](../reports/p007_audit/policy_all_v1/REVIEW_REQUEST.md) preserves the one-sided interruption and reconstructed charge. The two original time-priced students are independently closed: breadth953/1319 and depth969/1319, single seed only. [Operational-pilot packet](../reports/p007_audit/operational_pair_v1/manifest.json). The other six original students and old audit are explicitly retired, not waiting for dispatch.
-4. The owner-approved [uniform-token-tariff revision](experiments/P007B_token_tariff_revision.md) now has all four seed17 cells independently closed: price0 breadth963/depth950, price4m breadth927/depth952, each/1319. Caps44/45/48/60 stay incorrect. Depth−breadth changes from−0.99pp to+1.90pp; the+2.88pp interaction interval[−0.23,5.99] crosses zero. This directional pattern does not establish a stable winner or purely causal price effect. [Two-price packet](../reports/p007_audit/token_seed17_two_prices_v1/REVIEW_REQUEST.md) now has Claude round7PASS-WITH-NOTES at90ba8859. Scope covers its compact outcomes, contrasts and saved raw-score check; not seed23, weights/each training update or full report-builder gates. [Independent round7 follow-up](../reports/p007_audit/token_seed17_review_followup_v1/README.md) reproduces supplementary price differences and the second E2 case, preserving all primary scores. E2 frozen-parser limitation and equal-rule sensitivity qualification remain. Both high-price GPU apps stopped, all raw outputs and full terminal states/doses were independently checked. The price0seed23 pair is independently closed: breadth958/depth958 of1319,49 caps each, full states/doses/raw outputs verified and both apps stopped. The zero-price contrast is0.00pp[−2.12,2.20], versus−0.99pp forseed17; no stable winner or equivalence claim. [New price0 two-seed packet](../reports/p007_audit/token_p0_two_seeds_v1/REVIEW_REQUEST.md) now has Claude round9 PASS-WITH-NOTES for compact/raw checks and two final-state hashes. All eight students now pass full local raw-score, frozen-dose and terminal-state verification. Final price4mseed23 breadth949/depth949 of1319,63/60 caps; both seed23 price comparisons tie, so the first seed reversal is not repeated. All GPU apps have stopped. [Eight local closeouts](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ALL_LOCAL_ORACLES_CLOSED.json). The one already-reserved [final CPU audit](../reports/sft_allocation_midpoint_20261011/P007B_FINAL_CPU_AUDIT_STARTED.json) is active across14 registered evidence folders; no new student or teacher work. Claude round12 now covers all eight saved raw outcomes and terminal-state hashes with PASS-WITH-NOTES. Its F12-1 withdraws the emphasis on the seed17-only breadth price drop; the primary repeated comparison remains inconclusive. The final combined statistics/figures and their external review remain pending CPU closeout. No scientific source/input/dose changed, no extra teacher or exposure-control arm. The [disposition](audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md) preserves unused-cap, unequal exposure, parser, procurement-trace and review-scope limits.
+Review questions for the final pinned commit:
 
-Round8 at007ed950 accepts the round7 follow-up and the seed23 stage records within their stated scope; the later round9 review now covers the seed23 price0 outcomes and final-state hashes, but not per-step weight trajectories or final high-price outcomes. Both training seeds share each cell's teacher-answer inventory: **2 training seeds, 1 teacher trace per cell**. Independent scope verification is linked from the disposition; no procurement replication was added.
+- Recompute per-seed and mean within-price contrasts and interaction from the shared-question records. Does reporting retain the conditional uncertainty and lack of procurement replication?
+- Verify original10/continuation4 lineage, failed-parent status, all release evidence and finite cost accounting. Do not reinterpret the reservation as invoice.
+- Check plotted values/intervals against the summary and all four unused-cap percentages against charges, including the publication correction.
+- Check that claims do not turn the seed17-only ranking change into a stable price effect, equal-spend claim or repetition-damage mechanism.
 
-Round10 at81be9a28 accepts the round9 disposition and gives the unchanged follow-up packet PASS; its final-training review is records-only. The last depth export timeout is preserved. Bounded recovery reused28 valid files and13 verified blocks; all861 files/full state and the raw-score oracle passed. A separate completion receipt preserves the wrapper’s immutable-intent bookkeeping failure, with no repeated model work. All eight local outcomes are now verified; final CPU closeout and the combined report remain pending. The final breadth export required a second reconciled read-only continuation after a20-second metadata timeout; all861 files and the local oracle passed, all failures preserved.
+## Handoff and issue discipline
 
-5. Other audit work packages are proposals, not admitted jobs. Their scientific
-   value will be weighed against the core cost-allocation question and time left.
+A handoff contains the question, pinned commit, manifest/entry point, and3–5 requested checks. Return finding ID, severity, evidence/reproduction, scope and PASS/PASS-WITH-NOTES/FAIL. Codex records accepted/corrected/deferred/disputed, without editing Claude's verdict. A changed artifact receives a new manifest/version; earlier review does not automatically apply.
 
-Owner requires midpoint verified results, figures and limitations by TuesdayOctober13 21:00PDT; the earlier experiment hard deadline remains19:00PDT. Wednesday is for
-rehearsal and Thursday presentation. A later freeze in an issue is not an owner
-deadline amendment. Total authorization500USD,at least50USD protected; neither
-the proposed six-GPU queue nor anticipated2700USD future funding is admitted.
+Use [WORKBOARD](WORKBOARD.md) for current status and stage events, RUN_LOG for execution details, and a single issue per finding or decision. Keep credentials and large private state files out of public packets. Group routine presentation/wording reviews by milestone; address blocking scientific flaws immediately and preferably before an expensive queue. The [shareable workflow](RESEARCH_WORKFLOW_ZH.md) explains the roles.
 
-## Evidence → review → decision
-
-- Each frozen experiment has question, rival explanations, data/model revisions,
-  planned dose, evaluator, cost cap, absolute deadline and stopping conditions.
-- Each completed milestone is normally committed and pushed before handoff.
-  A packet has immutable per-question/per-attempt records, a SHA-256 manifest,
-  dose/cost summaries, reproducible commands and an explicit review scope.
-- Claude starts with the packet at one commit and returns PASS,
-  PASS-WITH-NOTES or FAIL **for specified claims/checks**, together with finding
-  IDs, evidence paths and reproduction commands. An overall approval without
-  recomputation details is insufficient.
-- Codex records each finding as accepted, corrected, deferred or disputed, with
-  evidence and the next action. A code correction or extra analysis creates a
-  new version; old files/failed attempts remain. A FAIL does not automatically
-  authorize another GPU run. Diagnose saved artifacts first.
-- If reviewed artifact bytes change, the old verdict stays with the old snapshot.
-  A documentation-only change does not erase the provenance of unchanged data.
-
-Use [the review template](audit/REVIEW_TEMPLATE.md) for both tools. This reduces
-copying entire conversations and prevents two models from discussing different
-experiments. Keep questions, evidence and decisions separate.
-
-## Existing GitHub discussion map
-
-[Overview #13](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13) and
-[Pro reading queue #12](https://github.com/Townzc/2P1R_Reasoning_Post/issues/12)
-already exist. WP issues1–11 were read on October12; their bodies are proposals
-and can be stale. See [the disposition record](audit/P007_REVIEW_DISPOSITION_20261012.md)
-for conflicts with current evidence or execution limits.
-
-Codex updates authorized repository files and supplies comment drafts in the
-chat. The owner sends issue comments and external messages. Existing issue
-labels are not changed by this workflow. No sending-method substitution is used.
-Use direct working-branch links; the default `main` remains historical until a
-separately reviewed integration.
-
-Credentials, workspace authorization links, private correspondence and large
-checkpoint binaries stay out of Git. Public packets state which raw artifacts
-are retained outside Git and what cannot be independently verified from the
-compact packet alone. Missing data never silently become negative answers.
-
-Shareable process guide: [AI-assisted research workflow (Chinese)](RESEARCH_WORKFLOW_ZH.md).
-
-Round9 S9/E2 independent follow-up: [evidence and retained primary scores](../reports/p007_audit/token_seed23_p0_review_followup_v1/README.md). Cross-seed prediction flips183/156 reinforce reporting both realized seeds and limiting question-bootstrap claims; they do not isolate population training variance.
+Budget: total$500, ceiling$450, protected$50. Conservative reservation$369.50; latest meter$87.20111458 at06:17:18UTC is delayed workspace usage, not invoice/balance. No future-credit assumption. Technical evidence is ready ahead of TuesdayOctober13 21:00PDT; Wednesday practice and Thursday presentation remain the owner's schedule. No AI-generated slides or personal coursework prose, no external sends. Historical main/pilot/time-priced results remain separate in their immutable packets.

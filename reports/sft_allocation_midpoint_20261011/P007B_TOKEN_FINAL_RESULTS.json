@@ -1,0 +1,920 @@
+{
+  "all_eight_local_oracles_and_cpu_audit_passed": true,
+  "all_owned_resources_released": true,
+  "billing": {
+    "note": "Delayed workspace meter including prior failures/setup/storage; not final invoice or available balance.",
+    "query_started_utc": "2026-10-13T06:17:17.421141+00:00",
+    "summary": {
+      "adjustments": {
+        "credits": "-87.17000000",
+        "free_storage": "-0.02984052",
+        "network_egress_allowance": "-0.00127405",
+        "plan_cost": "0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "billed_cost": "0E-8",
+      "metered_cost": "87.20111458",
+      "metered_cost_breakdown": {
+        "ephemeral_apps": "87.17512384",
+        "llm_tokens": "0E-8",
+        "volumes": "0.02984052"
+      }
+    },
+    "utc": "2026-10-13T06:17:18.733103+00:00"
+  },
+  "bootstrap": {
+    "interpretation": "Conditional on observed models/trace pools; not seed or procurement uncertainty.",
+    "replicates": 10000,
+    "seed": 20261013,
+    "unit": "shared paired question across eight fixed models"
+  },
+  "campaign": "mp-policy-token-20261012-r1",
+  "contrasts": {
+    "depth_minus_breadth_p0": {
+      "conditional_question_interval_pp": [
+        -2.2365428354814254,
+        1.250947687642153
+      ],
+      "mean_difference_pp": -0.4927975739196361,
+      "per_seed": {
+        "17": {
+          "conditional_question_interval_pp": [
+            -3.184230477634572,
+            1.2130401819560273
+          ],
+          "difference_pp": -0.9855951478392722,
+          "gained": 103,
+          "lost": 116,
+          "question_difference_counts": {
+            "-1": 116,
+            "0": 1100,
+            "1": 103
+          }
+        },
+        "23": {
+          "conditional_question_interval_pp": [
+            -2.122820318423048,
+            2.1986353297952994
+          ],
+          "difference_pp": 0.0,
+          "gained": 104,
+          "lost": 104,
+          "question_difference_counts": {
+            "-1": 104,
+            "0": 1111,
+            "1": 104
+          }
+        }
+      }
+    },
+    "depth_minus_breadth_p4": {
+      "conditional_question_interval_pp": [
+        -0.8339651250947688,
+        2.7293404094010616
+      ],
+      "mean_difference_pp": 0.9476876421531463,
+      "per_seed": {
+        "17": {
+          "conditional_question_interval_pp": [
+            -0.3032600454890068,
+            4.094010614101592
+          ],
+          "difference_pp": 1.8953752843062925,
+          "gained": 126,
+          "lost": 101,
+          "question_difference_counts": {
+            "-1": 101,
+            "0": 1092,
+            "1": 126
+          }
+        },
+        "23": {
+          "conditional_question_interval_pp": [
+            -2.2744503411675514,
+            2.2744503411675514
+          ],
+          "difference_pp": 0.0,
+          "gained": 121,
+          "lost": 121,
+          "question_difference_counts": {
+            "-1": 121,
+            "0": 1077,
+            "1": 121
+          }
+        }
+      }
+    },
+    "price_interaction": {
+      "conditional_question_interval_pp": [
+        -0.9476876421531463,
+        3.8665655799848366
+      ],
+      "mean_difference_pp": 1.4404852160727823,
+      "per_seed": {
+        "17": {
+          "conditional_question_interval_pp": [
+            -0.22744503411675512,
+            5.9893858984078845
+          ],
+          "difference_pp": 2.8809704321455647,
+          "question_difference_counts": {
+            "-1": 137,
+            "-2": 15,
+            "0": 982,
+            "1": 165,
+            "2": 20
+          }
+        },
+        "23": {
+          "conditional_question_interval_pp": [
+            -3.0326004548900682,
+            3.10841546626232
+          ],
+          "difference_pp": 0.0,
+          "question_difference_counts": {
+            "-1": 150,
+            "-2": 15,
+            "0": 994,
+            "1": 140,
+            "2": 20
+          }
+        }
+      }
+    }
+  },
+  "endpoint_outputs": 10552,
+  "external_review": "Claude round12@514cec51 reviewed all eight saved raw outcomes and terminal-state hashes (PASS-WITH-NOTES). This new combined summary, CPU receipt and rendered artifacts remain pending scoped external review.",
+  "full_closeout_sha256": "6bec550d09d39ffd48cfe9cf02a173e28eb7a2a9de0558651d3c649fa3dcdae4",
+  "historical_work": "Original time-priced pilots, prior engineering, failed work and acquisition costs remain separate and preserved.",
+  "interpretation": {
+    "all_cells_exceed_original_exact_spend_threshold": true,
+    "audited_source": "6c127d66",
+    "changes_scientific_data_or_dose": false,
+    "claude_report": "7339a60a2c5726ed1be0a5f19fa22832813aa2d3",
+    "disposition": {
+      "K1": "use canonical TARGETS in new runtime and auditor; values unchanged",
+      "T1": "publish source reproduction commands and public ordered lengths/hashes; reproduce exact eight plans",
+      "T2": "accept: common-cap comparison only, allslack>5%; full16 saved-trace constraint explicit",
+      "T3": "accept exposure disclosure/limit; retain already-authorized fixed-training-budget estimand, no new fixed-exposure dose admitted; external scientific concern remains documented"
+    },
+    "estimand": "Policy performance under common acquisition cap and fixed524287 supervised training targets/256updates, including resulting unequal repetition",
+    "exposures": {
+      "breadth_p0_s17": {
+        "histogram": {
+          "4": 222,
+          "5": 186
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.455882352941177,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1818,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "breadth_p0_s23": {
+        "histogram": {
+          "4": 215,
+          "5": 193
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.473039215686274,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1825,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "breadth_p4_s17": {
+        "histogram": {
+          "20": 23,
+          "21": 68
+        },
+        "max_per_answer": 21,
+        "mean_per_answer": 20.747252747252748,
+        "min_per_answer": 20,
+        "one_pass_supervised_tokens": 25245,
+        "presentations": 1888,
+        "token_weighted_exposure": 20.76795405030699,
+        "unique_answers": 91
+      },
+      "breadth_p4_s23": {
+        "histogram": {
+          "20": 23,
+          "21": 68
+        },
+        "max_per_answer": 21,
+        "mean_per_answer": 20.747252747252748,
+        "min_per_answer": 20,
+        "one_pass_supervised_tokens": 25245,
+        "presentations": 1888,
+        "token_weighted_exposure": 20.76795405030699,
+        "unique_answers": 91
+      },
+      "depth_p0_s17": {
+        "histogram": {
+          "3": 14,
+          "4": 460
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.970464135021097,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1882,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "depth_p0_s23": {
+        "histogram": {
+          "3": 16,
+          "4": 458
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.9662447257383966,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1880,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "depth_p4_s17": {
+        "histogram": {
+          "8": 229,
+          "9": 1
+        },
+        "max_per_answer": 9,
+        "mean_per_answer": 8.004347826086956,
+        "min_per_answer": 8,
+        "one_pass_supervised_tokens": 65510,
+        "presentations": 1841,
+        "token_weighted_exposure": 8.003159822927797,
+        "unique_answers": 230
+      },
+      "depth_p4_s23": {
+        "histogram": {
+          "8": 229,
+          "9": 1
+        },
+        "max_per_answer": 9,
+        "mean_per_answer": 8.004347826086956,
+        "min_per_answer": 8,
+        "one_pass_supervised_tokens": 65510,
+        "presentations": 1841,
+        "token_weighted_exposure": 8.003159822927797,
+        "unique_answers": 230
+      }
+    },
+    "not_identified": [
+      "Causal contribution of repetition damage versus solution diversity",
+      "Universal optimal data allocation",
+      "Equal realized acquisition expenditure",
+      "Cross-procurement uncertainty"
+    ],
+    "original_exact_spend_slack_threshold_percent": 5,
+    "owner_authorization": "Owner explicitly approved uniform tariff8students and subsequently instructed direct continuation; no extra arms/dose authorized",
+    "schema": "p007b_token_interpretation_amendment_v1",
+    "scientific_reflection": "Original Repeat difference motivates the hypothesis but does not isolate or prove repetition causally caused10.8pp. Fixed-exposure follow-up would alter training budget and answer a complementary question; not part of this queue.",
+    "unspent_percent": {
+      "breadth_p0": 6.142755032969322,
+      "breadth_p4": 12.263791111063775,
+      "depth_p0": 6.883085530893651,
+      "depth_p4": 10.90169867152331
+    },
+    "utc": "2026-10-12T21:46:36.114696+00:00"
+  },
+  "limitations": [
+    "Hypothetical token tariff and ex ante full-action cap; not actual equal dollars or universal optimum.",
+    "Saved-trace replay, source sampling paths differ across cells; one procurement trace per cell, no procurement uncertainty estimate.",
+    "All original generation and failure costs stay in platform expense, including unused trace suffixes.",
+    "Positive-price breadth prefix ends before infrastructure failure; this does not create independent replicated price evidence.",
+    "524287 common targets, one lower than original pilot; chosen using lengths, not accuracy.",
+    "Official benchmark previously researcher-observed; cannot rule out pretraining contamination.",
+    "Question bootstrap conditional on these trained models, not across procurement draws or training seeds.",
+    "Fixed524287 supervised targets and256updates include unequal repetition: approximately4.46/3.97/20.75/8.00 mean presentations for p0breadth/p0depth/p4breadth/p4depth. No isolated reasoning-diversity or repetition-damage causal claim.",
+    "Unspent caps6.14%,6.88%,12.26%,10.90% all exceed the original5% exact-spend qualification; this is a common-cap comparison.",
+    "Report both within-price contrasts alongside the interaction; an interaction alone is not a winner.",
+    "Non-significance is not equivalence. Final-answer correctness is not verified reasoning quality.",
+    "Length-capped outputs count as incorrect under the unchanged512-token evaluation rule; report every cell and seed truncation count without removing them from the denominator.",
+    "Unused wallets differ; this is a common budget cap, not exactly equal realized spending."
+  ],
+  "models": {
+    "breadth_p0_s17": {
+      "accuracy": 0.730098559514784,
+      "artifact_digest": "335313e12e455583434247e81ca21cb33283ce4b875b0a3fbaab0950a3222db4",
+      "cell": "breadth_p0",
+      "correct": 963,
+      "n": 1319,
+      "parsed": 1273,
+      "runtime_rate_estimate_usd": 4.830248430231625,
+      "seed": 17,
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26",
+      "state_sha256": "d4e8be43ad244c1dbe6a175657bc5027df74ce4754e86977d3288ba4b7dcdcb8",
+      "stop_reasons": {
+        "length_cap": 44,
+        "native_eos": 1275
+      },
+      "train_seconds": 402.1935571340011,
+      "training_exposure": {
+        "histogram": {
+          "4": 222,
+          "5": 186
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.455882352941177,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1818,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "truncated_outputs": 44,
+      "truncation_fraction": 0.03335860500379075,
+      "wall_seconds": 3956.33744430542
+    },
+    "breadth_p0_s23": {
+      "accuracy": 0.7263078089461713,
+      "artifact_digest": "33790154450340c812064388ae306fb32b39b98ee8837e836381f609d79999d5",
+      "cell": "breadth_p0",
+      "correct": 958,
+      "n": 1319,
+      "parsed": 1265,
+      "runtime_rate_estimate_usd": 4.258716715888977,
+      "seed": 23,
+      "source_commit": "90ba88599c462a86ca6eb5c065e31dc99a9f7f61",
+      "state_sha256": "45f95707484d4841436fd0c9702f4e701c29dae6b0bfbae3d0396c80fccdccc1",
+      "stop_reasons": {
+        "length_cap": 49,
+        "native_eos": 1270
+      },
+      "train_seconds": 347.1741480160001,
+      "training_exposure": {
+        "histogram": {
+          "4": 215,
+          "5": 193
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.473039215686274,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1825,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "truncated_outputs": 49,
+      "truncation_fraction": 0.037149355572403335,
+      "wall_seconds": 3488.209903240204
+    },
+    "breadth_p4_s17": {
+      "accuracy": 0.7028051554207733,
+      "artifact_digest": "1afc02367fc689153ccb911ad3f956847ce46749496f0608eb8923541ae8378a",
+      "cell": "breadth_p4",
+      "correct": 927,
+      "n": 1319,
+      "parsed": 1272,
+      "runtime_rate_estimate_usd": 6.406121605227259,
+      "seed": 17,
+      "source_commit": "3ee3e359b64c42ed9175d96df6503f6a0f8cf629",
+      "state_sha256": "a490a3ef80bbed7309d605ac52b6968816a79c56f09e39ff8624c377b1987d53",
+      "stop_reasons": {
+        "length_cap": 48,
+        "native_eos": 1271
+      },
+      "train_seconds": 488.9165665330005,
+      "training_exposure": {
+        "histogram": {
+          "20": 23,
+          "21": 68
+        },
+        "max_per_answer": 21,
+        "mean_per_answer": 20.747252747252748,
+        "min_per_answer": 20,
+        "one_pass_supervised_tokens": 25245,
+        "presentations": 1888,
+        "token_weighted_exposure": 20.76795405030699,
+        "unique_answers": 91
+      },
+      "truncated_outputs": 48,
+      "truncation_fraction": 0.03639120545868082,
+      "wall_seconds": 5247.0963253974915
+    },
+    "breadth_p4_s23": {
+      "accuracy": 0.7194844579226687,
+      "artifact_digest": "c4ecaaebd36a69276fee8bcde82e7732f2ee8731c17372f8677bd13d283f05cc",
+      "cell": "breadth_p4",
+      "correct": 949,
+      "n": 1319,
+      "parsed": 1258,
+      "runtime_rate_estimate_usd": 6.4953797194175715,
+      "seed": 23,
+      "source_commit": "5c69d32d6ced1eebb2c082290c16be27d26e4d73",
+      "state_sha256": "d7af06015803bc4487c27b719153db1dae0470683d7c84c5f388bf3f4dabfdac",
+      "stop_reasons": {
+        "length_cap": 63,
+        "native_eos": 1256
+      },
+      "train_seconds": 523.0271662220001,
+      "training_exposure": {
+        "histogram": {
+          "20": 23,
+          "21": 68
+        },
+        "max_per_answer": 21,
+        "mean_per_answer": 20.747252747252748,
+        "min_per_answer": 20,
+        "one_pass_supervised_tokens": 25245,
+        "presentations": 1888,
+        "token_weighted_exposure": 20.76795405030699,
+        "unique_answers": 91
+      },
+      "truncated_outputs": 63,
+      "truncation_fraction": 0.047763457164518575,
+      "wall_seconds": 5320.205446481705
+    },
+    "depth_p0_s17": {
+      "accuracy": 0.7202426080363912,
+      "artifact_digest": "c6b06fe1fba8cf63a20f805ff2b6a30cc1a48d904d62e37436183d2bfcbe64c4",
+      "cell": "depth_p0",
+      "correct": 950,
+      "n": 1319,
+      "parsed": 1272,
+      "runtime_rate_estimate_usd": 5.197301287407345,
+      "seed": 17,
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26",
+      "state_sha256": "a504f113a47af95ddab8a5c117bb1a4a96b9093f3173eed8b57c272d10642dd0",
+      "stop_reasons": {
+        "length_cap": 45,
+        "native_eos": 1274
+      },
+      "train_seconds": 438.6678008699995,
+      "training_exposure": {
+        "histogram": {
+          "3": 14,
+          "4": 460
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.970464135021097,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1882,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "truncated_outputs": 45,
+      "truncation_fraction": 0.03411675511751327,
+      "wall_seconds": 4256.9813940525055
+    },
+    "depth_p0_s23": {
+      "accuracy": 0.7263078089461713,
+      "artifact_digest": "3c84b21af4e918ed502f539b9960979f3947cc6a4b1c915b5b9a8d7db7fa6751",
+      "cell": "depth_p0",
+      "correct": 958,
+      "n": 1319,
+      "parsed": 1268,
+      "runtime_rate_estimate_usd": 4.466167545262337,
+      "seed": 23,
+      "source_commit": "90ba88599c462a86ca6eb5c065e31dc99a9f7f61",
+      "state_sha256": "496c16db4f2fdff802cd2d2ef5c484ec2d114596407814e781015eef492062db",
+      "stop_reasons": {
+        "length_cap": 49,
+        "native_eos": 1270
+      },
+      "train_seconds": 407.5276091399996,
+      "training_exposure": {
+        "histogram": {
+          "3": 16,
+          "4": 458
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.9662447257383966,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1880,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "truncated_outputs": 49,
+      "truncation_fraction": 0.037149355572403335,
+      "wall_seconds": 3658.1277639865875
+    },
+    "depth_p4_s17": {
+      "accuracy": 0.7217589082638363,
+      "artifact_digest": "7501d726066251626b6f01c558365984ab8ed9af090739e7275f3c60f233ac93",
+      "cell": "depth_p4",
+      "correct": 952,
+      "n": 1319,
+      "parsed": 1260,
+      "runtime_rate_estimate_usd": 6.391560084642622,
+      "seed": 17,
+      "source_commit": "3ee3e359b64c42ed9175d96df6503f6a0f8cf629",
+      "state_sha256": "c38088cc55b45f40635525c1e591934111c6c614295f1b8f716423a932cb94f4",
+      "stop_reasons": {
+        "length_cap": 60,
+        "native_eos": 1259
+      },
+      "train_seconds": 394.3548986230003,
+      "training_exposure": {
+        "histogram": {
+          "8": 229,
+          "9": 1
+        },
+        "max_per_answer": 9,
+        "mean_per_answer": 8.004347826086956,
+        "min_per_answer": 8,
+        "one_pass_supervised_tokens": 65510,
+        "presentations": 1841,
+        "token_weighted_exposure": 8.003159822927797,
+        "unique_answers": 230
+      },
+      "truncated_outputs": 60,
+      "truncation_fraction": 0.045489006823351025,
+      "wall_seconds": 5235.169342517853
+    },
+    "depth_p4_s23": {
+      "accuracy": 0.7194844579226687,
+      "artifact_digest": "b0a990ff2503a8f0520e28adc8a5a67e85764e5614f5be75f82c89931a51a5c4",
+      "cell": "depth_p4",
+      "correct": 949,
+      "n": 1319,
+      "parsed": 1257,
+      "runtime_rate_estimate_usd": 4.931424412135124,
+      "seed": 23,
+      "source_commit": "5c69d32d6ced1eebb2c082290c16be27d26e4d73",
+      "state_sha256": "bda34bceb0eb6dfd4d3606efb8b8b8bc16c713fbe9b0b26574452b94e53a1a6a",
+      "stop_reasons": {
+        "length_cap": 60,
+        "native_eos": 1259
+      },
+      "train_seconds": 388.3154507630007,
+      "training_exposure": {
+        "histogram": {
+          "8": 229,
+          "9": 1
+        },
+        "max_per_answer": 9,
+        "mean_per_answer": 8.004347826086956,
+        "min_per_answer": 8,
+        "one_pass_supervised_tokens": 65510,
+        "presentations": 1841,
+        "token_weighted_exposure": 8.003159822927797,
+        "unique_answers": 230
+      },
+      "truncated_outputs": 60,
+      "truncation_fraction": 0.045489006823351025,
+      "wall_seconds": 4039.2081978321075
+    }
+  },
+  "original_two_time_priced_students": "Retained separately as operational pilots, not pooled into this comparison.",
+  "protected_usd": 50,
+  "reservation_usd": 369.5,
+  "schema": "p007b_token_tariff_results_v1",
+  "sources": {
+    "breadth_p0_s17": {
+      "local_audit_sha256": "e65c9a770e80cd0aeb5fa82aa998c9da40a48dcc7c4b2a7717f18459b36e7433",
+      "receipt_sha256": "d98f3be3bd44e13fa8b036b6842d985fc4a82757ee966a811dd92410993e418d"
+    },
+    "breadth_p0_s23": {
+      "local_audit_sha256": "f32ef0daa18301d905ddde700c1aa5ec33b4c8b8405d128ce79f77ed8bc175b8",
+      "receipt_sha256": "4102eace9537b97504341c0fcf07e6fa46c8647730580f9c4acac0c1731506b9"
+    },
+    "breadth_p4_s17": {
+      "local_audit_sha256": "11e23d5010e8be9acafe6397cb781799dcb9f26a7b2ef6df72851a840be5d02b",
+      "receipt_sha256": "7a62ce5099b0b06c3ba48b2615f9f42720387868c7ce945a924c617f0b956d84"
+    },
+    "breadth_p4_s23": {
+      "local_audit_sha256": "f6eed26a5f722a3a1ac3e852839dabb1c97bbc2fc21b65d022f8b8ff8801d555",
+      "receipt_sha256": "e60186c1ec35d3540f56318b4955b82896ab62662d880f2e4925b721de7e00da"
+    },
+    "depth_p0_s17": {
+      "local_audit_sha256": "5c4ffe4ece60ac884bd226180adeb1278be227a433b7dee9161f927eddb483bd",
+      "receipt_sha256": "72bdeb109dc4267a2aa286007585c6857bf294be7111e1b9bb792efa5093aee8"
+    },
+    "depth_p0_s23": {
+      "local_audit_sha256": "420968df8bf5466d092b34288447a9214aaef780d3e108edcf68c30bea177494",
+      "receipt_sha256": "aed98bdccc971684a1e46857f07149542ecc9d6ea2b5d86e1ee79549a766a494"
+    },
+    "depth_p4_s17": {
+      "local_audit_sha256": "5245bd9edc3dcd276efe4ebac5cb31c5c7a93f9fe32cab8d91132dab5fe25155",
+      "receipt_sha256": "fee98a9c55150eca98c8933f8ae59fbc703502eb5eb025f112f6abebd769f768"
+    },
+    "depth_p4_s23": {
+      "local_audit_sha256": "497db1743e9022c96aea12da74941ea59ece7e37cf2afdcfcc2b9cf16fb2cd31",
+      "receipt_sha256": "69af37cc01bd4bdd9823d770e3957b0bd139752b59ff68685aed48454f05e6fd"
+    }
+  },
+  "spending_ceiling_usd": 450,
+  "supervised_targets": 4194296,
+  "table": [
+    {
+      "cell": "breadth_p0",
+      "mean_accuracy": 0.7282031842304777,
+      "seeds": {
+        "17": {
+          "accuracy": 0.730098559514784,
+          "correct": 963,
+          "n": 1319,
+          "parsed": 1273,
+          "runtime_rate_estimate_usd": 4.830248430231625,
+          "stop_reasons": {
+            "length_cap": 44,
+            "native_eos": 1275
+          },
+          "train_seconds": 402.1935571340011,
+          "training_exposure": {
+            "histogram": {
+              "4": 222,
+              "5": 186
+            },
+            "max_per_answer": 5,
+            "mean_per_answer": 4.455882352941177,
+            "min_per_answer": 4,
+            "one_pass_supervised_tokens": 117471,
+            "presentations": 1818,
+            "token_weighted_exposure": 4.463118556920431,
+            "unique_answers": 408
+          },
+          "truncated_outputs": 44,
+          "truncation_fraction": 0.03335860500379075,
+          "wall_seconds": 3956.33744430542
+        },
+        "23": {
+          "accuracy": 0.7263078089461713,
+          "correct": 958,
+          "n": 1319,
+          "parsed": 1265,
+          "runtime_rate_estimate_usd": 4.258716715888977,
+          "stop_reasons": {
+            "length_cap": 49,
+            "native_eos": 1270
+          },
+          "train_seconds": 347.1741480160001,
+          "training_exposure": {
+            "histogram": {
+              "4": 215,
+              "5": 193
+            },
+            "max_per_answer": 5,
+            "mean_per_answer": 4.473039215686274,
+            "min_per_answer": 4,
+            "one_pass_supervised_tokens": 117471,
+            "presentations": 1825,
+            "token_weighted_exposure": 4.463118556920431,
+            "unique_answers": 408
+          },
+          "truncated_outputs": 49,
+          "truncation_fraction": 0.037149355572403335,
+          "wall_seconds": 3488.209903240204
+        }
+      },
+      "tariff_procurement": {
+        "acquired": 420,
+        "attempts": 512,
+        "batches": 32,
+        "cap": 211257,
+        "charge": 198280.0,
+        "covered": 408,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.061427550329693215,
+        "usable": 408
+      },
+      "truncated_outputs_across_seeds": 93,
+      "truncation_fraction_across_seeds": 0.035253980288097043
+    },
+    {
+      "cell": "depth_p0",
+      "mean_accuracy": 0.7232752084912812,
+      "seeds": {
+        "17": {
+          "accuracy": 0.7202426080363912,
+          "correct": 950,
+          "n": 1319,
+          "parsed": 1272,
+          "runtime_rate_estimate_usd": 5.197301287407345,
+          "stop_reasons": {
+            "length_cap": 45,
+            "native_eos": 1274
+          },
+          "train_seconds": 438.6678008699995,
+          "training_exposure": {
+            "histogram": {
+              "3": 14,
+              "4": 460
+            },
+            "max_per_answer": 4,
+            "mean_per_answer": 3.970464135021097,
+            "min_per_answer": 3,
+            "one_pass_supervised_tokens": 132106,
+            "presentations": 1882,
+            "token_weighted_exposure": 3.9686842384146064,
+            "unique_answers": 474
+          },
+          "truncated_outputs": 45,
+          "truncation_fraction": 0.03411675511751327,
+          "wall_seconds": 4256.9813940525055
+        },
+        "23": {
+          "accuracy": 0.7263078089461713,
+          "correct": 958,
+          "n": 1319,
+          "parsed": 1268,
+          "runtime_rate_estimate_usd": 4.466167545262337,
+          "stop_reasons": {
+            "length_cap": 49,
+            "native_eos": 1270
+          },
+          "train_seconds": 407.5276091399996,
+          "training_exposure": {
+            "histogram": {
+              "3": 16,
+              "4": 458
+            },
+            "max_per_answer": 4,
+            "mean_per_answer": 3.9662447257383966,
+            "min_per_answer": 3,
+            "one_pass_supervised_tokens": 132106,
+            "presentations": 1880,
+            "token_weighted_exposure": 3.9686842384146064,
+            "unique_answers": 474
+          },
+          "truncated_outputs": 49,
+          "truncation_fraction": 0.037149355572403335,
+          "wall_seconds": 3658.1277639865875
+        }
+      },
+      "tariff_procurement": {
+        "acquired": 135,
+        "attempts": 528,
+        "batches": 33,
+        "cap": 211257,
+        "charge": 196716.0,
+        "covered": 128,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.06883085530893651,
+        "usable": 474
+      },
+      "truncated_outputs_across_seeds": 94,
+      "truncation_fraction_across_seeds": 0.0356330553449583
+    },
+    {
+      "cell": "breadth_p4",
+      "mean_accuracy": 0.711144806671721,
+      "seeds": {
+        "17": {
+          "accuracy": 0.7028051554207733,
+          "correct": 927,
+          "n": 1319,
+          "parsed": 1272,
+          "runtime_rate_estimate_usd": 6.406121605227259,
+          "stop_reasons": {
+            "length_cap": 48,
+            "native_eos": 1271
+          },
+          "train_seconds": 488.9165665330005,
+          "training_exposure": {
+            "histogram": {
+              "20": 23,
+              "21": 68
+            },
+            "max_per_answer": 21,
+            "mean_per_answer": 20.747252747252748,
+            "min_per_answer": 20,
+            "one_pass_supervised_tokens": 25245,
+            "presentations": 1888,
+            "token_weighted_exposure": 20.76795405030699,
+            "unique_answers": 91
+          },
+          "truncated_outputs": 48,
+          "truncation_fraction": 0.03639120545868082,
+          "wall_seconds": 5247.0963253974915
+        },
+        "23": {
+          "accuracy": 0.7194844579226687,
+          "correct": 949,
+          "n": 1319,
+          "parsed": 1258,
+          "runtime_rate_estimate_usd": 6.4953797194175715,
+          "stop_reasons": {
+            "length_cap": 63,
+            "native_eos": 1256
+          },
+          "train_seconds": 523.0271662220001,
+          "training_exposure": {
+            "histogram": {
+              "20": 23,
+              "21": 68
+            },
+            "max_per_answer": 21,
+            "mean_per_answer": 20.747252747252748,
+            "min_per_answer": 20,
+            "one_pass_supervised_tokens": 25245,
+            "presentations": 1888,
+            "token_weighted_exposure": 20.76795405030699,
+            "unique_answers": 91
+          },
+          "truncated_outputs": 63,
+          "truncation_fraction": 0.047763457164518575,
+          "wall_seconds": 5320.205446481705
+        }
+      },
+      "tariff_procurement": {
+        "acquired": 95,
+        "attempts": 112,
+        "batches": 7,
+        "cap": 211257,
+        "charge": 185348.8828125,
+        "covered": 91,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.12263791111063775,
+        "usable": 91
+      },
+      "truncated_outputs_across_seeds": 111,
+      "truncation_fraction_across_seeds": 0.0420773313115997
+    },
+    {
+      "cell": "depth_p4",
+      "mean_accuracy": 0.7206216830932525,
+      "seeds": {
+        "17": {
+          "accuracy": 0.7217589082638363,
+          "correct": 952,
+          "n": 1319,
+          "parsed": 1260,
+          "runtime_rate_estimate_usd": 6.391560084642622,
+          "stop_reasons": {
+            "length_cap": 60,
+            "native_eos": 1259
+          },
+          "train_seconds": 394.3548986230003,
+          "training_exposure": {
+            "histogram": {
+              "8": 229,
+              "9": 1
+            },
+            "max_per_answer": 9,
+            "mean_per_answer": 8.004347826086956,
+            "min_per_answer": 8,
+            "one_pass_supervised_tokens": 65510,
+            "presentations": 1841,
+            "token_weighted_exposure": 8.003159822927797,
+            "unique_answers": 230
+          },
+          "truncated_outputs": 60,
+          "truncation_fraction": 0.045489006823351025,
+          "wall_seconds": 5235.169342517853
+        },
+        "23": {
+          "accuracy": 0.7194844579226687,
+          "correct": 949,
+          "n": 1319,
+          "parsed": 1257,
+          "runtime_rate_estimate_usd": 4.931424412135124,
+          "stop_reasons": {
+            "length_cap": 60,
+            "native_eos": 1259
+          },
+          "train_seconds": 388.3154507630007,
+          "training_exposure": {
+            "histogram": {
+              "8": 229,
+              "9": 1
+            },
+            "max_per_answer": 9,
+            "mean_per_answer": 8.004347826086956,
+            "min_per_answer": 8,
+            "one_pass_supervised_tokens": 65510,
+            "presentations": 1841,
+            "token_weighted_exposure": 8.003159822927797,
+            "unique_answers": 230
+          },
+          "truncated_outputs": 60,
+          "truncation_fraction": 0.045489006823351025,
+          "wall_seconds": 4039.2081978321075
+        }
+      },
+      "tariff_procurement": {
+        "acquired": 61,
+        "attempts": 256,
+        "batches": 16,
+        "cap": 211257,
+        "charge": 188226.3984375,
+        "covered": 58,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.1090169867152331,
+        "usable": 230
+      },
+      "truncated_outputs_across_seeds": 120,
+      "truncation_fraction_across_seeds": 0.045489006823351025
+    }
+  ],
+  "tariff": {
+    "cap": 211257,
+    "input_output_price_ratio": 1,
+    "max_new_tokens": 1024,
+    "problem_prices": [
+      0.0,
+      1493.3671875
+    ],
+    "unit": "hypothetical prompt and completion token, inclEOS"
+  },
+  "updates": 2048,
+  "utc": "2026-10-13T06:20:13.225874+00:00"
+}
