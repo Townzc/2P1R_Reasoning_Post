@@ -108,7 +108,7 @@ def build(summary_path, closeout_path, supply_path, figures_path, out):
               '', '## 费用与耗时', '',
               f"平台计量快照（{billing['utc']}）为${meter:.2f}，billed={billing['summary']['billed_cost']}；这是包含此前准备/失败/工程/采购的延迟workspace计量，不是最终发票或剩余余额。$366.50为保守预留而非实际费用；$450支出上限与至少$50保护保持不变。", '',
               f"新八项训练阶段合计{sum(v['train_seconds'] for v in workers)/60:.1f} GPU分钟，有限worker合计{sum(v['wall_seconds'] for v in workers)/3600:.2f} GPU小时。其余worker时间包含终点评测、验证及读写开销；这些是已记录运行时长，不等于服务商最终账单。", '',
-              '计算和收尾已完成，后续优先研究者组织材料、审计意见和练习；不为不显著结果自动扩组或调参。',
+              '被动GPU采样及逐项耗时另见[运行诊断](P007B_TOKEN_RUNTIME_DIAGNOSTICS.json)：按约60秒采样混合各阶段，不能当FLOPS效率或硬件最优性证据。计算和收尾已完成，后续优先研究者组织材料、审计意见和练习；不为不显著结果自动扩组或调参。',
               '', '## 复现与图表', '',
               '主图：[差值与题价交互](figures_token_v1/policy_gaps_and_price_interaction.png)；辅助图：[各格准确率](figures_token_v1/accuracy_by_price_and_seed.png)（0–100%纵轴）。图表只读取冻结汇总，不新增bootstrap或模型调用。',
               '',

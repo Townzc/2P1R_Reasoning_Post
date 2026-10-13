@@ -2169,3 +2169,8 @@ Saved-prefix accounting confirms1408 charged attempts,1203usable,203invalid unde
 ## 2026-10-13T05:00:02.607632+00:00 — Claude round12 scoped follow-up
 
 Read fixed514cec51/issue6138402969. All eight outcomes PASS-WITH-NOTES and terminal SHA coverage confirmed; primary E2/cap policy unchanged. Independently checked saved endpoint totals and flips183/156/200/149, breadth price changes−2.73/−0.68pp. Accepted F12-1 retraction: do not present the seed17-only posthoc price contrast as a finding or evidence of repetition harm. Final CPU audit remains active; no new model call, summary, rendered chart or completed CPU claim. Final figures/factual handoff still gated on all14 audit labels and actual release.
+
+
+## 2026-10-13T05:06:31.209102+00:00 — saved GPU runtime diagnostics
+
+Computed receipts/passive60s GPU sample summaries from the eight completed students with original manifest SHA binding:56.50 summed update GPUminutes,9.778 workerGPUhours; recorded update time9.63% of worker wall, other time includes setup/evaluation/checkpoint/evidence I/O. Per-run sample-average utilization16.05–29.69%, maximum sampledmemory13.58–16.09GiB; samples mix phases and are not a FLOPS or optimal-hardware benchmark. Existing billing05:04UTC87.11084103USD,billed0 is delayed workspace metering; preceding87.31084103 retained, not a refund/balance inference. An optional read-only existing-container /proc probe had one local argument-parser failure and then exit0 with empty output; both receipts retained, no process claim inferred, no cloud function dispatched or signaled. Source20files remain unchanged.

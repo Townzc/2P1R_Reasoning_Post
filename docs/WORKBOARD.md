@@ -89,6 +89,8 @@
 | 2026.10.12 21:43（Claude交付），21:54/21:58（评论/固定报告读取） | Claude；Codex读取 | 第十二轮固定514cec51复核全部10,552输出与8终点state，PASS-WITH-NOTES；撤回将seed17单独跨题价下降作为发现的强调。CPU总审计仍活动 | [固定报告](https://github.com/Townzc/2P1R_Reasoning_Post/blob/514cec51b7903d0d53be33f861fcd11929b43722/audit/claude/20261013e/REPORT.md)；实际最终summary/图/事实页不在范围 |
 | 2026.10.12 22:00（第十二轮处理完成） | Codex | 从已核验终点记录复核breadth高价的跨seed翻转200题及两seed价格差−2.73/−0.68pp；接受F12-1，不作为重复损伤或稳健价格效应。保留四个已知E2、全部长度截断与原主分 | [限定审计处理](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND12_REVIEWED.json)；最终CPU及图表仍待完成，0新模型调用 |
 
+| 2026.10.12 22:06（保存记录的耗时复盘） | Codex | 八项更新耗时合计56.50 GPU分钟，worker合计9.78 GPU小时；被动样本平均利用率各16.05%–29.69%，显存峰值13.58–16.09 GiB。其余时间含评测、验证与读写，不全部视为训练或评测；未跑硬件优选试验 | [可复算运行诊断](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_RUNTIME_DIAGNOSTICS.json)；0新模型调用，CPU总审计仍活动 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。
