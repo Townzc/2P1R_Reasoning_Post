@@ -698,3 +698,6 @@ Oct13 12:13–12:15PDT: second localbuilder39991 stopped before outputs on missi
 
 
 2026-10-13T19:23:10.463943+00:00 — Registered fixed numericalG1 request p008-student-exact-input-g1-r1 at 0be9e6e050b716c2fe98a7709647a4fbadc2609f with exact all-draw packet and source30 linkage; D1/base acceptance can be reviewed before D2 raw review finishes, without waiving both complete local pools/common plans. Updated stale INDEX activity and quota/deadline wording. Zero new upload, immutable remote transfer or model calls; no existing preparation/oracle repeated.
+
+
+2026-10-13T19:38:44.319756+00:00 — Read full Claude8d8a9e8b reports, actual comments19:19:24/19:21:15 and read19:34:44: mergedD2 numericpoolG1 and completion121f code/owner/quota PASS-WITH-NOTES, not student numericG1 or N2. Accepted exactscopes; no old39tests/fulloracles repeated. Independent action/candidate-ID arithmetic corrects reported zero-usable counts to11/2/0/0/74/21/19/13. Preserved primary and reviewer-reported17 parser differences; no new17-case decode claimed. Qualified metadata speed attribution across changedhost/keycount/suffix;1200cents is reservation not invoice. Only newcompletion entry may run; oldentries remain retired. Prepared/syntax-parsed three futureCPU local tools, not executed; frozen13runtime source unchanged, actualinputs/admission/IOgate absent.

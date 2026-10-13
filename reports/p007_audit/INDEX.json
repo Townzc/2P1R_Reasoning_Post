@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T19:23:10.463943+00:00",
+  "as_of_utc": "2026-10-13T19:38:44.319756+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -616,8 +616,8 @@
     },
     {
       "request_id": "p008-student-completion-queue-r1",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS-WITH-NOTES",
+      "status": "reviewed",
       "target_commit": "121f17b1a2b88748ac9f325344e2d7f20c9e0380",
       "packet": "reports/p008_20261013/student_completion_queue_v1",
       "manifest": "reports/p008_20261013/student_completion_queue_v1/MANIFEST.json",
@@ -642,12 +642,18 @@
           "commit": "1a45409fa0fb279484accb441748fcaff2aadfd1",
           "packet": "reports/p008_20261013/student_parent_schema_v3"
         }
-      ]
+      ],
+      "review_commit": "8d8a9e8b17b821410db3e3a77b66d9f4ebed0f3b",
+      "review_report": "audit/claude/20261013aa/STUDENT_COMPLETION_QUEUE.md",
+      "review_report_sha256": "2a8b9db38311e88c3f03b38d06ba12bcc42fca294b08322922131ad1043bd311",
+      "review_read_utc": "2026-10-13T19:34:44.408263+00:00",
+      "numeric_student_admission": false,
+      "followup_packet": "reports/p008_20261013/review_8d8a9e8b_followup_v1"
     },
     {
       "request_id": "p008-g1-d2-merged-r1",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS-WITH-NOTES",
+      "status": "reviewed",
       "target_commit": "eb398fb1fec5306ab654ffec19e7b96e2005fdad",
       "packet": "reports/p008_20261013/pool_d2_merged_v1",
       "manifest": "reports/p008_20261013/pool_d2_merged_v1/MANIFEST.json",
@@ -659,7 +665,13 @@
         "All8 complete wallets/cumulative physical and returnedtoken bounds, exact full costs/cache reuse/no foreknowledge; combined7416 outputs not allnew?"
       ],
       "created_utc": "2026-10-13T19:10:26.558918+00:00",
-      "new_model_calls": 0
+      "new_model_calls": 0,
+      "review_commit": "8d8a9e8b17b821410db3e3a77b66d9f4ebed0f3b",
+      "review_report": "audit/claude/20261013aa/G1_D2_MERGED.md",
+      "review_report_sha256": "19faa384fe3d4ace7c50728cbc448cfed2a8e5a459401096a4697c911f1ab1fb",
+      "review_read_utc": "2026-10-13T19:34:44.408263+00:00",
+      "numeric_student_admission": false,
+      "followup_packet": "reports/p008_20261013/review_8d8a9e8b_followup_v1"
     },
     {
       "request_id": "p008-final-cpu-lineage-code-r1",
@@ -677,7 +689,10 @@
         "OriginalSHA/packedbytes and complete256/1024/2048 state/optimizer/RNG/dose integrity without claiming a new raw rescore?"
       ],
       "created_utc": "2026-10-13T19:10:26.558918+00:00",
-      "new_model_calls": 0
+      "new_model_calls": 0,
+      "prepared_local_tool_packet": "reports/p008_20261013/final_cpu_preparation_tools_v1",
+      "prepared_local_tools_executed": false,
+      "note": "Worker13sources unchanged. Prepared local orchestration only; actual input/byte/numeric admission still future and no CPU call."
     },
     {
       "request_id": "p008-student-exact-input-g1-r1",
@@ -711,7 +726,7 @@
     }
   ],
   "p008_v31": {
-    "status": "both_draws_locally_complete_joint_student_plans_frozen_external_G1_pending",
+    "status": "two_pools_G1_complete_completion_code_reviewed_exact_student_input_G1_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 250,
     "phase0_cap_usd": 15,
@@ -736,7 +751,7 @@
     "N2_status": "OPEN_actual_T1_timing_absent",
     "conditional_repair_status": "completed_collected_exported_merged_oracle_passed_provider_released",
     "latest_engineering_packet": "reports/p008_20261013/student_admission_v1",
-    "student_runtime_code_review": "completion121f17b1_pending_old30sourcePASS_scope_retained",
+    "student_runtime_code_review": "PASS-WITH-NOTES completion121f17b1 only; exact input0be9e6e0 pending",
     "timing_policy_review_request": "p008-t1-first-timing-policy-r2",
     "pool_d1_review_request": "p008-g1-d1-pool-r1",
     "pool_d1_packet": "reports/p008_20261013/pool_d1_v1",
@@ -744,7 +759,7 @@
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
     "owner_scope_or_deadline_question": "answered_direct_student_queue_until_complete_per_slot_caps_unchanged",
     "active_gpu_tasks": 0,
-    "pool_d2_external_review": "prior failed-prefix PASS; new complete merged G1 pending",
+    "pool_d2_external_review": "PASS-WITH-NOTES merged numeric pool G1 at eb398fb1; no student admission",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
     "current_status": "reports/p008_20261013/STUDENT_JOINT_PLAN_READY.json",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
@@ -780,6 +795,8 @@
     "base_calls": 0,
     "final_cpu_calls": 0,
     "latest_delayed_workspace_meter_usd": 116.2618374,
-    "latest_meter_is_invoice_or_balance": false
+    "latest_meter_is_invoice_or_balance": false,
+    "pool_d2_review_disposition": "reports/p008_20261013/review_8d8a9e8b_followup_v1",
+    "final_cpu_preparation_tools": "reports/p008_20261013/final_cpu_preparation_tools_v1"
   }
 }
