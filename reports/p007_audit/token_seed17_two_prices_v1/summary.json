@@ -1,0 +1,314 @@
+{
+  "billing": {
+    "not_invoice_or_balance": true,
+    "protected_usd": 50,
+    "reservation_usd": 366.5,
+    "spend_ceiling_usd": 450,
+    "summary": {
+      "adjustments": {
+        "credits": "-67.33000000",
+        "free_storage": "-0.02984052",
+        "network_egress_allowance": "-0.00100051",
+        "plan_cost": "0E-8",
+        "reservation_adjustment": "-0E-8"
+      },
+      "billed_cost": "0E-8",
+      "metered_cost": "67.36084103",
+      "metered_cost_breakdown": {
+        "ephemeral_apps": "67.33264622",
+        "llm_tokens": "0E-8",
+        "volumes": "0.02984052"
+      }
+    },
+    "utc": "2026-10-13T01:14:34.284583+00:00"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261013,
+    "unit": "shared paired question across four fixed seed17 models"
+  },
+  "campaign": "mp-policy-token-20261012-r1",
+  "contrasts": {
+    "p0_depth_minus_breadth": {
+      "conditional_question_bootstrap_95_pp": [
+        -3.184230477634572,
+        1.2130401819560273
+      ],
+      "difference_pp": -0.9855951478392722
+    },
+    "p4_depth_minus_breadth": {
+      "conditional_question_bootstrap_95_pp": [
+        -0.3032600454890068,
+        4.094010614101592
+      ],
+      "difference_pp": 1.8953752843062925
+    },
+    "price_interaction_p4_minus_p0": {
+      "conditional_question_bootstrap_95_pp": [
+        -0.22744503411675512,
+        5.9893858984078845
+      ],
+      "difference_pp": 2.8809704321455647
+    }
+  },
+  "external_claude_review": "This new two-price packet is pending; earlier p0-only verdict is retained at its reviewed version.",
+  "final_cloud_audit": "pending",
+  "full_states_verified": 4,
+  "limits": [
+    "Only seed17 is complete at both prices; four seed23 runs and the final cloud audit remain pending.",
+    "Each cell has one saved random teacher trace. A price contrast is not a clean causal price effect or procurement replication.",
+    "The hypothetical token cap is common, not equal realized spending or real API dollars; unused fractions are6.14%,6.88%,12.26%,10.90%.",
+    "Fixed supervised targets and updates include unequal repetition; no isolated reasoning-diversity or repetition-damage mechanism.",
+    "Shared-question bootstrap is conditional on these four models and traces, not training-seed or procurement uncertainty.",
+    "All512-token length caps remain incorrect in the full1319 denominator; frozen E2 parser cases are not selectively repaired.",
+    "Official test was researcher-observed in September; not a fresh uncontaminated test.",
+    "Old time-priced operational pilots stay separate and are not pooled.",
+    "Interaction alone does not establish a winner; non-significance is not equivalence."
+  ],
+  "models": {
+    "breadth_p0": {
+      "accuracy": 0.730098559514784,
+      "artifact_digest": "335313e12e455583434247e81ca21cb33283ce4b875b0a3fbaab0950a3222db4",
+      "containers": 0,
+      "correct": 963,
+      "n": 1319,
+      "procurement": {
+        "acquired": 420,
+        "attempts": 512,
+        "batches": 32,
+        "cap": 211257,
+        "charge": 198280.0,
+        "covered": 408,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.061427550329693215,
+        "usable": 408
+      },
+      "provider_stopped": true,
+      "run_id": "breadth_p0_s17",
+      "runtime_rate_estimate_usd": 4.830248430231625,
+      "seed": 17,
+      "state_sha256": "d4e8be43ad244c1dbe6a175657bc5027df74ce4754e86977d3288ba4b7dcdcb8",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03335860500379075,
+        "length_cap_outputs": 44,
+        "length_cap_scored_incorrect": 44,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 44,
+          "native_eos": 1275
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 402.1935571340011,
+      "training_exposure": {
+        "histogram": {
+          "4": 222,
+          "5": 186
+        },
+        "max_per_answer": 5,
+        "mean_per_answer": 4.455882352941177,
+        "min_per_answer": 4,
+        "one_pass_supervised_tokens": 117471,
+        "presentations": 1818,
+        "token_weighted_exposure": 4.463118556920431,
+        "unique_answers": 408
+      },
+      "updates": 256,
+      "wall_seconds": 3956.33744430542
+    },
+    "breadth_p4": {
+      "accuracy": 0.7028051554207733,
+      "artifact_digest": "1afc02367fc689153ccb911ad3f956847ce46749496f0608eb8923541ae8378a",
+      "containers": 0,
+      "correct": 927,
+      "n": 1319,
+      "procurement": {
+        "acquired": 95,
+        "attempts": 112,
+        "batches": 7,
+        "cap": 211257,
+        "charge": 185348.8828125,
+        "covered": 91,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.12263791111063775,
+        "usable": 91
+      },
+      "provider_stopped": true,
+      "run_id": "breadth_p4_s17",
+      "runtime_rate_estimate_usd": 6.406121605227259,
+      "seed": 17,
+      "state_sha256": "a490a3ef80bbed7309d605ac52b6968816a79c56f09e39ff8624c377b1987d53",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03639120545868082,
+        "length_cap_outputs": 48,
+        "length_cap_scored_incorrect": 48,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 48,
+          "native_eos": 1271
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 488.9165665330005,
+      "training_exposure": {
+        "histogram": {
+          "20": 23,
+          "21": 68
+        },
+        "max_per_answer": 21,
+        "mean_per_answer": 20.747252747252748,
+        "min_per_answer": 20,
+        "one_pass_supervised_tokens": 25245,
+        "presentations": 1888,
+        "token_weighted_exposure": 20.76795405030699,
+        "unique_answers": 91
+      },
+      "updates": 256,
+      "wall_seconds": 5247.0963253974915
+    },
+    "depth_p0": {
+      "accuracy": 0.7202426080363912,
+      "artifact_digest": "c6b06fe1fba8cf63a20f805ff2b6a30cc1a48d904d62e37436183d2bfcbe64c4",
+      "containers": 0,
+      "correct": 950,
+      "n": 1319,
+      "procurement": {
+        "acquired": 135,
+        "attempts": 528,
+        "batches": 33,
+        "cap": 211257,
+        "charge": 196716.0,
+        "covered": 128,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.06883085530893651,
+        "usable": 474
+      },
+      "provider_stopped": true,
+      "run_id": "depth_p0_s17",
+      "runtime_rate_estimate_usd": 5.197301287407345,
+      "seed": 17,
+      "state_sha256": "a504f113a47af95ddab8a5c117bb1a4a96b9093f3173eed8b57c272d10642dd0",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.03411675511751327,
+        "length_cap_outputs": 45,
+        "length_cap_scored_incorrect": 45,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 45,
+          "native_eos": 1274
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 438.6678008699995,
+      "training_exposure": {
+        "histogram": {
+          "3": 14,
+          "4": 460
+        },
+        "max_per_answer": 4,
+        "mean_per_answer": 3.970464135021097,
+        "min_per_answer": 3,
+        "one_pass_supervised_tokens": 132106,
+        "presentations": 1882,
+        "token_weighted_exposure": 3.9686842384146064,
+        "unique_answers": 474
+      },
+      "updates": 256,
+      "wall_seconds": 4256.9813940525055
+    },
+    "depth_p4": {
+      "accuracy": 0.7217589082638363,
+      "artifact_digest": "7501d726066251626b6f01c558365984ab8ed9af090739e7275f3c60f233ac93",
+      "containers": 0,
+      "correct": 952,
+      "n": 1319,
+      "procurement": {
+        "acquired": 61,
+        "attempts": 256,
+        "batches": 16,
+        "cap": 211257,
+        "charge": 188226.3984375,
+        "covered": 58,
+        "stop_reason": "cannot_reserve_full16_action",
+        "unused": 0.1090169867152331,
+        "usable": 230
+      },
+      "provider_stopped": true,
+      "run_id": "depth_p4_s17",
+      "runtime_rate_estimate_usd": 6.391560084642622,
+      "seed": 17,
+      "state_sha256": "c38088cc55b45f40635525c1e591934111c6c614295f1b8f716423a932cb94f4",
+      "stop_diagnostics": {
+        "length_cap_fraction": 0.045489006823351025,
+        "length_cap_outputs": 60,
+        "length_cap_scored_incorrect": 60,
+        "n": 1319,
+        "stop_reasons": {
+          "length_cap": 60,
+          "native_eos": 1259
+        }
+      },
+      "supervised_targets": 524287,
+      "train_seconds": 394.3548986230003,
+      "training_exposure": {
+        "histogram": {
+          "8": 229,
+          "9": 1
+        },
+        "max_per_answer": 9,
+        "mean_per_answer": 8.004347826086956,
+        "min_per_answer": 8,
+        "one_pass_supervised_tokens": 65510,
+        "presentations": 1841,
+        "token_weighted_exposure": 8.003159822927797,
+        "unique_answers": 230
+      },
+      "updates": 256,
+      "wall_seconds": 5235.169342517853
+    }
+  },
+  "paired_disagreements": {
+    "p0": {
+      "breadth_only": 116,
+      "depth_only": 103
+    },
+    "p4": {
+      "breadth_only": 101,
+      "depth_only": 126
+    }
+  },
+  "raw_outputs_independently_rescored": 5276,
+  "remaining_frozen_student_runs": 4,
+  "schema": "p007b_token_seed17_two_prices_v1",
+  "seed": 17,
+  "sources": {
+    "breadth_p0": {
+      "envelope_sha256": "d98f3be3bd44e13fa8b036b6842d985fc4a82757ee966a811dd92410993e418d",
+      "oracle_sha256": "e65c9a770e80cd0aeb5fa82aa998c9da40a48dcc7c4b2a7717f18459b36e7433",
+      "provider_sha256": "9628202f185b103b67eb15c74012a08f08978ac1a37191f1018b69e618dc9f05",
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26"
+    },
+    "breadth_p4": {
+      "envelope_sha256": "7a62ce5099b0b06c3ba48b2615f9f42720387868c7ce945a924c617f0b956d84",
+      "oracle_sha256": "11e23d5010e8be9acafe6397cb781799dcb9f26a7b2ef6df72851a840be5d02b",
+      "provider_sha256": "e384d25546b3a95aca75d1900b108b79207e76a3daf5466055cdb510554a8607",
+      "source_commit": "3ee3e359b64c42ed9175d96df6503f6a0f8cf629"
+    },
+    "depth_p0": {
+      "envelope_sha256": "72bdeb109dc4267a2aa286007585c6857bf294be7111e1b9bb792efa5093aee8",
+      "oracle_sha256": "5c4ffe4ece60ac884bd226180adeb1278be227a433b7dee9161f927eddb483bd",
+      "provider_sha256": "5b546bddc36160a61abe59395b9a1a2939ba0d29840ee2d79f3f5a9abea3937b",
+      "source_commit": "05be5032db9af07cb3480319f34560ca04260d26"
+    },
+    "depth_p4": {
+      "envelope_sha256": "fee98a9c55150eca98c8933f8ae59fbc703502eb5eb025f112f6abebd769f768",
+      "oracle_sha256": "5245bd9edc3dcd276efe4ebac5cb31c5c7a93f9fe32cab8d91132dab5fe25155",
+      "provider_sha256": "7b15d4b26df14f4ee32e312d061123e5ad7658b671a9bf9ac65dacc8b2e09c7d",
+      "source_commit": "3ee3e359b64c42ed9175d96df6503f6a0f8cf629"
+    }
+  },
+  "supervised_targets_verified": 2097148,
+  "unknown_endpoint_outputs": 0,
+  "updates_verified": 1024,
+  "utc": "2026-10-13T01:17:27.444706+00:00"
+}

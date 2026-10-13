@@ -61,18 +61,18 @@ All four procurement cells are now verified and released: low-price breadth437 u
 
 The original time-priced students are independently verified and closed: breadth953/1319 (72.25%), depth969/1319 (73.46%), one training seed. They remain operational pilots; six untouched original students and their audit are retired. These two scores do not identify a problem-price interaction. [Pilot closeout](reports/sft_allocation_midpoint_20261011/P007B_OPERATIONAL_PILOTS_CLOSED.json).
 
-After Claude C-B1, the owner approved a [fixed-token-tariff revision](docs/experiments/P007B_token_tariff_revision.md). Eight new finite students use saved teacher prefixes, one hypothetical tariff and524287 common targets over256 updates. **The first corrected pair is fully verified:**
+After Claude C-B1, the owner approved a [fixed-token-tariff revision](docs/experiments/P007B_token_tariff_revision.md). Eight new finite students use saved teacher prefixes, one hypothetical tariff and524287 common targets over256 updates. **All four seed17 cells are independently verified and released:**
 
-| Price0, seed17 | Correct /1319 | Accuracy | Length-capped, retained incorrect |
-|---|---:|---:|---:|
-| Breadth |963|73.01%|44|
-| Depth |950|72.02%|45|
+| Problem price, seed17 | Breadth /1319 | Depth /1319 | Depth−Breadth | Length caps, breadth/depth |
+|---|---:|---:|---:|---:|
+|0|963 (73.01%)|950 (72.02%)|−0.99pp|44/45|
+|4m|927 (70.28%)|952 (72.18%)|+1.90pp|48/60|
 
-Depth−Breadth is−0.99pp in this single seed/trace comparison. This is not a robust winner or a price interaction. Both GPU apps stopped, all2,638 raw outputs were independently rescored, and both complete terminal states/doses were verified. [Outcome evidence](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_RESULTS.json) and [new Claude packet](reports/p007_audit/token_p0_seed17_v1/REVIEW_REQUEST.md). The price4m/seed17 pair has completed training and is still evaluating on two verified H100 workers ([phase evidence](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_HIGH_PRICE_PAIR_TRAINED.json)); both prices at seed23 follow after complete closeout. No data, dose or evaluation change was made in response to these scores.
+The point-estimate ranking reverses. The price interaction is+2.88pp, with a conditional shared-question95% interval[−0.23,5.99]; within-price intervals are[−3.18,1.21] and[−0.30,4.09]. All cross zero. These are four fixed models from one training seed and one teacher trace per cell, not evidence of a stable winner or a clean causal effect of price. All5,276 raw outputs and four terminal states/doses passed local independent checks; every length-capped output remains incorrect in the full denominator. [Two-price evidence](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_SEED17_RESULTS.json) and [new Claude packet](reports/p007_audit/token_seed17_two_prices_v1/REVIEW_REQUEST.md). The original seed23 queue is next, without changes based on these scores.
 
-Claude round4 reproduced v2plans/exposure and the separate original-pilot outcomes. Round5 independently rescored3,088 teacher attempts with PASS-WITH-NOTES; two percentage-parser differences lie outside the corrected token prefix and do not affect these eight datasets. Claude round6 now gives the first corrected price0/seed17 outcome packet **PASS-WITH-NOTES**: one formatting false negative is retained under the frozen rule; independently recomputed depth−breadth interval[−3.18,1.21]pp crosses zero. High-price and seed23 outcomes remain pending. [Scoped review](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_REVIEWED.json). Unequal unused caps and repeated exposure prevent claims of equal actual spending or an isolated diversity mechanism.
+Claude round4 reproduced v2plans/exposure and the separate original-pilot outcomes. Round5 independently rescored3,088 teacher attempts with PASS-WITH-NOTES; two percentage-parser differences lie outside the corrected token prefix and do not affect these eight datasets. Claude round6 now gives the first corrected price0/seed17 outcome packet **PASS-WITH-NOTES**: one formatting false negative is retained under the frozen rule; independently recomputed depth−breadth interval[−3.18,1.21]pp crosses zero. The new two-price/seed17 packet is pending external review; seed23 outcomes remain pending. [Scoped review](reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FIRST_PAIR_REVIEWED.json). Unequal unused caps and repeated exposure prevent claims of equal actual spending or an isolated diversity mechanism.
 
-Latest workspace meter: **58.92084103USD at October13 00:06UTC (October12 17:06PDT)**, including engineering and failed work. Delayed usage is not a final invoice or credit balance. Conservative reservations366.50USD are distinct from spend;500USD total, maximum450USD spend, with at least50USD protected.
+Latest workspace meter: **67.36084103USD at October13 01:14UTC (October12 18:14PDT)**, including engineering and failed work. Delayed usage is not a final invoice or credit balance. Conservative reservations366.50USD are distinct from spend;500USD total, maximum450USD spend, with at least50USD protected.
 
 The old bank cannot be priced with the new teacher's pilot. Development accuracy
 does not establish uncontaminated generalization. The official GSM8K test was

@@ -344,3 +344,14 @@ Billing17:06:10PDT: workspace metered58.92084103USD,billed0,credit adjustment−
 ### October12 17:44–17:45 PDT — review correction and routine monitor
 
 Read Claude fixed87f9a233/comment6135161662: corrected depth denominator1,319 and accepted existing E2 disposition; no primary score or scientific change. Same two high-price workers remain active,256updates/524287targets each, terminal evaluation ongoing. No partial accuracy or nextseed dispatch; no repeated collector/export/oracle. Final state/full-output verification remains pending. Workspace billing at17:44:20PDT reports64.88084103USD metered,billed0,credit adjustment−64.85; delayed usage, not invoice or remaining balance. Reservation366.50/450ceiling/50protected unchanged.
+
+
+## Two-price seed17 closeout — 2026-10-13T01:18:51.858150+00:00
+
+Motivation: complete the already frozen price comparison, report both within-price contrasts before interpreting their interaction, and continue the second training seed without adapting the recipe. The two high-price apps stopped at18:03PDT; original CLI results, full immutable ledgers and861 files per run were collected once. Local oracles independently verified all2,638 raw endpoints,512 updates/1,048,574 targets, complete checkpoint states and capped-output handling. All closeout collectors, exporters and oracles are DONE; no repeated model work.
+
+Result: price0 breadth963/depth950 and price4m breadth927/depth952, each of1,319. High-price caps48/60 remain incorrect. Depth−breadth is−0.9856pp atprice0 and+1.8954pp atprice4m; interaction+2.8810pp. Shared-question10k bootstrap seed20261013 yields conditional intervals[−3.1842,1.2130],[−0.3033,4.0940],[−0.2274,5.9894]. [Evidence and limits](P007B_TOKEN_SEED17_RESULTS.json), [external audit packet](../p007_audit/token_seed17_two_prices_v1/REVIEW_REQUEST.md). New packet external review is pending. Claude's latest comment remains6135161662, accepting E2 handling and correcting the old report's denominator; no new experiment change is requested.
+
+Reflection: point estimates show the hypothesized change in relative ranking, but all three conditional intervals cross zero. One training seed and one teacher trace per cell do not establish a robust preference or a clean causal price effect. Unequal realized spending under a commoncap and unequal repetition are retained parts of the design. The next required evidence is the already admitted seed23 pair at each price, not selective rescoring or a new tuned arm. The original schedule proceeds unchanged after fresh zero-worker/empty-slot and published-source checks.
+
+Workspace delayed meter at18:14PDT is67.36084103USD,billed0,creditadjustment−67.33; not invoice or balance. Reservation366.50,450ceiling/50protected and October13 19PDT deadline unchanged. All remaining four students and CPUaudit are already reserved.

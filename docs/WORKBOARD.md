@@ -11,7 +11,7 @@
 | P007B 按真实时间计费的采购 | Codex | 四格本地核验完成；Claude 对零题价格记账 **PASS**、成本解释 **FAIL** | C-B1 已复现，不能将速度差直接归因于题价 |
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
-| 统一 token 计价修订 | Codex；Claude审计 | **零题价seed17已核验：多题963/1319，多解950/1319；Claude第六轮PASS-WITH-NOTES** | 高题价两项均完成256步，仍评测（阶段已保存240/80条）；结束核验后并列两档并推进seed23。尚无价格交互结果 |
+| 统一 token 计价修订 | Codex；Claude审计 | **seed17四项已完整核验并释放：零价963/950，高价927/952（各/1319）** | 点估计排名反转，交互+2.88pp，区间跨零；准备原seed23零题价对照。新两档结果待Claude审计，旧p0审计范围不扩展 |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
 | 独立审计与新增阅读 | Claude | 已收到固定版本审计及36–38号笔记链接 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
@@ -78,6 +78,10 @@
 | 2026.10.12 17:10（阶段／审计复核完成） | Codex | 高题价末步计划、524287targets和checkpoint256清单一致；已保存240/80条评测的末批raw/scored哈希与不可变回执一致。E2原始token单条独立解码复现；首对区间独立重算−0.99pp[−3.18,1.21] | [阶段核验](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_HIGH_PRICE_PAIR_TRAINED.json)、[E2处理](../reports/p007_audit/token_p0_review_followup_v1/README.md)；完整state二进制／全量评分留到收尾，主规则不改 |
 
 | 2026.10.12 17:19（评论交付），17:44（读取） | Claude；Codex读取 | 第六轮补充确认：每个学生1,319条、合计2,638条；接受Codex对E2的处理，主结果保持963／950。Codex检查固定修订报告，确认没有扩大审计范围或要求改变运行方案 | [更正评论](https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6135161662)、[固定修订报告87f9a233](https://github.com/Townzc/2P1R_Reasoning_Post/blob/87f9a233e96b8f6695622807e969238efa6332ca/audit/claude/20261012f/REPORT.md)；高题价仍正常评测，尚无完整结果，seed23未启动 |
+
+| 2026.10.12 18:14（高题价收尾开始） | Codex | 两项高题价学生均完成1,319题，实际app于18:03停止、容器0；开始只读完整账本、原始输出和完整检查点导出核验 | 待独立全量重评分后报告两档题价对比；四项seed23仍未启动 |
+
+| 2026.10.12 18:18（高题价核验完成／第二种子启动前） | Codex | 高价多题927／多解952，各1,319题，截断48／60条；全部2,638原始输出、512步／1,048,574 targets及两个完整state核验通过，GPU已退出。两档seed17点估计由多题+0.99pp变为多解+1.90pp，交互+2.88pp[−0.23,5.99] | [两档首种子结果](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_SEED17_RESULTS.json)、[待Claude审计包](../reports/p007_audit/token_seed17_two_prices_v1/REVIEW_REQUEST.md)；单seed／单trace局限保留，按原冻结队列推进seed23 |
 
 ## 维护规则
 
