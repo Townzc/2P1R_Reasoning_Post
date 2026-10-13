@@ -11,9 +11,10 @@
 | P007B 按真实时间计费的采购 | Codex | 四格本地核验完成；Claude 对零题价格记账 **PASS**、成本解释 **FAIL** | C-B1 已复现，不能将速度差直接归因于题价 |
 | 首批两项学生 | Codex；Claude审计 | 两项完整核验完成：多题953/1319，多解969/1319；GPU均已退出；Claude结果PASS | 仅作为原时间计价先导，保留截断38/33条及其他限制 |
 | 后六项原学生 | Codex | **未启动，已明确撤销** | 保留旧账本；新方案使用独立 campaign |
-| 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；新最终包外审pending。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
+| 统一 token 计价修订 | Codex；Claude审计 | **8/8学生与14目录CPU证据链完整关闭，GPU/CPU容器0**；seed17零价963/950、高价927/952；seed23零价958/958、高价949/949（各/1319） | [完整事实/图表/局限](../reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)已齐备；Claude第十五轮最终包/事实页PASS；原图PASS-WITH-NOTES，新v2图待复核。首seed反转未被次seed重复；原CPU10项+续核4项，原失败保留 |
+| P008 v2 | Claude提案；Codex独立评审 | **未准入、未运行**；待解决B/T目标量、测试门控和采购重复 | [设计评审与较小备选](audit/P008_V2_DESIGN_REVIEW_20261013.md) |
 | 阅读材料 | GPT Pro | 分工已明确；本轮尚未收到可核验的 Pro 新交付 | 用户转交论文链接、关键证据和阅读结论后登记 |
-| 独立审计与新增阅读 | Claude | 已收到固定版本审计及36–38号笔记链接 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
+| 独立审计与新增阅读 | Claude | 已收到第十五轮审计及39–42号新笔记；Codex已核查关键原文 | 按新证据版本继续审计；旧结论不自动覆盖新文件 |
 
 预算：总额$500，保护至少$50；保守预留$369.50不是花费。实际最新可用workspace延迟计量为$87.20111458（10月12日23:17:18PDT），billed0，非最终发票或余额。所有有限实验和CPU核验已关闭；中期核验数据、确定性图表和局限清单已在10月12日晚齐备，早于10月13日21:00PDT要求。最终slides和个人解释由研究者完成，周三练习；长期扩展中期后另定。
 
@@ -99,6 +100,11 @@
 | 2026.10.12 23:20–23:24（完整收尾与发布前检查） | Codex | 17个CPU证据文件62.70MB全SHA、原10+新4证明/全账本/八项既有oracle绑定通过，所有容器0；冻结汇总完成，生成并实看两张PNG。均值多解−多题零价−0.49pp、高价+0.95pp，交互+1.44pp，三个条件区间均跨零 | [最终审计包](../reports/p007_audit/token_final_v1/REVIEW_REQUEST.md)；新包待Claude外审；平台延迟计量$87.20，预留$369.50非花费 |
 | 2026.10.12 23:24（展示错误修复） | Codex | 发布前发现unused比例被再次除cap，事实页误显0.00%；按四格cap/charge重算，修为6.14/6.88/12.26/10.90%。原页与hash保留，单位及错误记账拒绝检查通过，零模型调用 | [修复记录](../reports/sft_allocation_midpoint_20261011/P007B_REPORTING_UNITS_CORRECTION.json)；原汇总、数据选择和主分未改 |
 | 2026.10.12 23:27（材料与下一轮方案） | Codex | 更新完整事实/图表/局限和工作流：下一轮先拆分评测读写耗时，再设计独立采购重复；提前审计成本和统计单位。没有启动优化或新增科学组 | [未执行的下一轮建议](P007_NEXT_PHASE_PLAN_20261013.md)、[共享工作流](RESEARCH_WORKFLOW_ZH.md)；所有中期技术材料准备完毕，等待新包限定范围外审 |
+
+| 2026.10.12 14:39（仓库提交），23:53（读取） | Claude笔记；Codex读取 | 新39–42号笔记涉及数据过滤、无限算力、缩放外推和污染识别；同时回查原文，记录对B/T与机制解释的限制 | [来源记录](../reports/p008_design_review_20261013/SOURCE_READ_RECORD.json)，不记为Pro交付 |
+| 2026.10.12 23:35（GitHub交付），23:53（读取） | Claude第十五轮 | 最终token_final_v1/事实页PASS；原图PASS-WITH-NOTES，要求重合点展示修复，并建议功效规划 | [固定报告3e3e33d3](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md)；判定目标736b3920 |
+| 2026.10.12 23:50（GitHub评论），23:51（开始处理） | Claude提案；研究者请求；Codex | 收到P008 v2和独立评价请求；开始读新笔记、检查目标量/门控/采购重复与成本，保持全部云任务关闭 | [原提案4934d852](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4934d852f375bc79bec99a636edd1fbf8f144604/audit/claude/20261013i/P008_PROPOSAL.md)；提案不是准入 |
+| 2026.10.13 00:05（评审整理） | Codex | 复核功效假设及164训练单位/295456次次评测；提出固定预算主比较+独立采购+正交桥接的11学生示例，尚未准入。v2图已实际查看，主分未改 | [评审](audit/P008_V2_DESIGN_REVIEW_20261013.md)、[算术](../reports/p008_design_review_20261013/CALCULATIONS.json)、[v2图](../reports/sft_allocation_midpoint_20261011/figures_token_v2/accuracy_by_price_and_seed.png)；0模型调用/0外部评论 |
 
 
 ## 维护规则

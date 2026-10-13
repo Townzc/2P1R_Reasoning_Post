@@ -1,6 +1,6 @@
 {
-  "schema": "p007_collaboration_index_v1",
-  "as_of_utc": "2026-10-12T22:23:05.880772+00:00",
+  "schema": "p007_collaboration_index_v2",
+  "as_of_utc": "2026-10-13T07:05:25.211340+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -17,15 +17,15 @@
     "maximum_outputs": 1024,
     "reservation_usd": 15,
     "packet": "reports/p007_audit/pilot_v1",
-    "external_review": "PASS for compact counts/censoring/prefix costs; raw teacher scoring not externally checked"
+    "external_review": "compact PASS; frozen teacher raw scoring PASS-WITH-NOTES round5 at5c660321"
   },
   "cost_comparison": {
-    "status": "original_pilots_verified_closed_corrected_token_first_pair_actually_running",
+    "status": "all_model_and_cpu_work_closed_resources_released",
     "design": "docs/experiments/P007B_cost_matched_policy_design.md",
     "admission": "reports/sft_allocation_midpoint_20261011/P007B_ADMISSION.json",
     "evidence": "reports/sft_allocation_midpoint_20261011/P007B_PROCUREMENT_CLOSEOUT.json",
     "acquisition_packet": "reports/p007_audit/policy_all_v1",
-    "external_review": "p0 bookkeepingPASS / cost interpretationFAIL C-B1; p4 and students not externally audited",
+    "external_review": "historical time-cost interpretationFAIL C-B1 retained; all procurement closed, operational pilots separate",
     "recovery": "reports/sft_allocation_midpoint_20261011/P007B_RECOVERY_ADMISSION.json",
     "student_admission": "reports/sft_allocation_midpoint_20261011/P007B_STUDENT_ADMISSION.json",
     "student_progress": "reports/sft_allocation_midpoint_20261011/P007B_STUDENTS_STARTED.json",
@@ -34,18 +34,58 @@
     "revision_admitted": true,
     "token_admission": "reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENT_ADMISSION.json",
     "token_packet": "reports/p007_audit/token_tariff_v2",
-    "token_external_review": "v1 prefix/dataPASS; studentcodePASS-WITH-NOTES at6c127d66; v2 amendments and outcomes pending",
+    "token_external_review": "final token_final_v1 PASS at736b3920, report3e3e33d3; prior scoped reviews retained",
     "token_review_disposition": "docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md",
     "operational_depth_packet": "reports/p007_audit/operational_depth_v1",
-    "operational_depth_external_review": "pending",
+    "operational_depth_external_review": "covered by operational_pair review",
     "operational_pair_packet": "reports/p007_audit/operational_pair_v1",
-    "operational_pair_external_review": "pending",
-    "token_student_progress": "reports/sft_allocation_midpoint_20261011/P007B_TOKEN_STUDENTS_STARTED.json"
+    "operational_pair_external_review": "PASS at round4 report730e7d06; separate time-pricing pilots",
+    "token_student_progress": "reports/sft_allocation_midpoint_20261011/P007B_TOKEN_FINAL_CLOSEOUT.json"
   },
   "additional_wp_queue": "proposed_not_admitted",
   "total_budget_usd": 500,
   "protected_usd": 50,
-  "owner_content_target": "2026-10-13 evening America/Los_Angeles",
+  "owner_content_target": "2026-10-13 21:00 America/Los_Angeles",
   "external_posting": "owner_sends_drafts_only",
-  "workboard": "docs/WORKBOARD.md"
+  "workboard": "docs/WORKBOARD.md",
+  "final_token_comparison": {
+    "status": "closed",
+    "packet": "reports/p007_audit/token_final_v1",
+    "manifest_sha256": "2fec9fb54d187484081f2399166b87515dc050a809b93bef3819e921f71baaab",
+    "external_review": "PASS",
+    "reviewed_commit": "736b3920fa565fd77899ed6aa6168b07ff2a8e57",
+    "review_report_commit": "3e3e33d3652e813a7685c2fb5bd6315b5448ccb5",
+    "review_report": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md",
+    "scope": "25-file final packet; score-column identity to independent prior raw checks; contrasts and intervals; CPU10+4 lineage; not every optimizer trajectory"
+  },
+  "midpoint_evidence": {
+    "path": "reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md",
+    "sha256": "5c8979ec0349f6e4b1f6149d8b4ea8f39d6fa53f9d550c53d0ea24e74da780dc",
+    "external_review": "PASS",
+    "reviewed_commit": "736b3920fa565fd77899ed6aa6168b07ff2a8e57"
+  },
+  "figures_v1": {
+    "path": "reports/sft_allocation_midpoint_20261011/figures_token_v1",
+    "external_review": "PASS-WITH-NOTES",
+    "reviewed_commit": "736b3920fa565fd77899ed6aa6168b07ff2a8e57",
+    "notes": "F15-1 overlapping markers/legend; retained original bytes"
+  },
+  "figures_v2": {
+    "path": "reports/sft_allocation_midpoint_20261011/figures_token_v2",
+    "provenance_sha256": "68a7ff265b32acdbf3b5e83c4ab627d35ff2fc637484b9bf7e7aaf01f9c7fb6c",
+    "external_review": "pending",
+    "scope": "display-only F15-1 repair; unchanged scores and primary forest PNG"
+  },
+  "p008": {
+    "status": "design_review_only_not_admitted",
+    "proposal_commit": "4934d852f375bc79bec99a636edd1fbf8f144604",
+    "packet": "reports/p008_design_review_20261013",
+    "manifest_sha256": "2aaa998126b197baf6c8a5fef3b3118705d98a35ec35a78de0981ee55c60e5a8",
+    "external_review": "pending",
+    "queued_model_jobs": 0
+  },
+  "spending_ceiling_usd": 450,
+  "latest_reading_record": "reports/p008_design_review_20261013/SOURCE_READ_RECORD.json",
+  "automation_p007": "PAUSED after finite closeout",
+  "review_requests": []
 }

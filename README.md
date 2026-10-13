@@ -7,7 +7,7 @@ Allocating data-acquisition budgets for reasoning SFT. Working branch: [`codex/i
 ## Evidence and current result
 
 - [Verified midpoint facts and limitations](reports/sft_allocation_midpoint_20261011/P007B_MIDPOINT_EVIDENCE.md)
-- [Primary contrast figure](reports/sft_allocation_midpoint_20261011/figures_token_v1/policy_gaps_and_price_interaction.png), [accuracy context figure](reports/sft_allocation_midpoint_20261011/figures_token_v1/accuracy_by_price_and_seed.png)
+- [Primary contrast figure](reports/sft_allocation_midpoint_20261011/figures_token_v2/policy_gaps_and_price_interaction.png), [accuracy context figure](reports/sft_allocation_midpoint_20261011/figures_token_v2/accuracy_by_price_and_seed.png)
 - [Final audit packet and recomputation scope](reports/p007_audit/token_final_v1/REVIEW_REQUEST.md)
 - [Workboard](docs/WORKBOARD.md), [collaboration handoff](docs/COLLABORATION.md), [reusable workflow](docs/RESEARCH_WORKFLOW_ZH.md)
 - [Post-midpoint engineering/research proposals — not executed](docs/P007_NEXT_PHASE_PLAN_20261013.md)
@@ -26,7 +26,9 @@ Mean depth−breadth is **−0.49pp** at price0, conditional95% interval[−2.24
 
 Intervals resample shared questions after averaging the two observed seeds. They condition on these models and inventories; they are not training-seed or procurement confidence intervals. Each cell has one random teacher trace, reused by both training seeds. Common cap211257 hypothetical token units leaves6.14%/6.88%/12.26%/10.90% unused; this is not equal realized spending or actual API dollars. Fixed training targets imply unequal repeat exposure. Neither final-answer correctness nor distinct text establishes reasoning quality or structural diversity. The official benchmark was already observed by this research effort in September.
 
-Claude round12 independently reviewed all eight saved raw outcomes and terminal-state hashes with **PASS-WITH-NOTES**. Round14 reviews the continuation code/process at its pinned version. **The final CPU closeout, combined summary, rendered charts and corrected fact page are newly published for external review, not yet Claude-approved.** Review scope and findings are in the [disposition](docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
+Claude [round15](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md) gives the final packet and factual evidence page **PASS**, and the original figures **PASS-WITH-NOTES**, at fixed commit736b3920. A new v2 accuracy plot fixes overlapping markers/legend without changing results; that display revision awaits external review. [Scope and disposition](docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
+
+**P008 v2 is under independent design review, not launched.** [Codex review and reduced alternative](docs/audit/P008_V2_DESIGN_REVIEW_20261013.md) identify joint acquisition/training scaling, test-score gate selection and procurement replication as issues to resolve. New reading notes39–42 and primary sources were checked; all existing model work remains closed.
 
 ## Previous stages, kept separate
 

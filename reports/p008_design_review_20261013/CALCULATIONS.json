@@ -1,0 +1,65 @@
+{
+  "schema": "p008_v2_design_arithmetic_review_v1",
+  "new_model_calls": 0,
+  "inputs": {
+    "reports/p007_audit/token_final_v1/summary.json": "7177640c454dbea5752d48aadd6b2508352f2a174c852deb35b2f9934141f061",
+    "reports/sft_allocation_midpoint_20261011/P007B_TOKEN_RUNTIME_DIAGNOSTICS.json": "caeb693780c625c840c98658d39347274318c06c1696f5c718e7c04c4692cad4"
+  },
+  "seed23_minus_seed17_pp": {
+    "breadth_p0": -0.37907505686126797,
+    "depth_p0": 0.6065200909780089,
+    "breadth_p4": 1.667930250189542,
+    "depth_p4": -0.2274450341167551
+  },
+  "pooled_cell_sd_assuming_common_variance": 0.6466536053537537,
+  "interaction_sd_assuming_independent_cells": 1.2933072107075074,
+  "two_observed_paired_interactions_pp": [
+    2.880970432145574,
+    0.0
+  ],
+  "paired_interaction_sample_sd_df1": 2.0371537289680735,
+  "illustrative_normal_n_without_procurement_or_covariance": 6.327093395291956,
+  "statistical_limits": [
+    "Only two training seeds; neither variance estimate is stable.",
+    "Independent-cell/common-variance assumptions are unverified.",
+    "The normal n is an illustrative calculation, not an 80%-power guarantee.",
+    "Procurement, within-draw clustering, question sampling and selection are not covered."
+  ],
+  "teacher_pool": {
+    "problems": 7473,
+    "attempts_per_problem": 8,
+    "outputs": 59784,
+    "maximum_completion_tokens": 61218816
+  },
+  "students": {
+    "new_models": 20,
+    "training_base_run_units": 164,
+    "formal_primary_outputs": 26380,
+    "base_outputs_additional": 1319,
+    "linear_training_gpu_hours": 19.30517570685293,
+    "linear_other_worker_gpu_hours": 22.09108237535616,
+    "caveat": "Conditional linear extrapolation, not a measured runtime or bill; audit/storage/retries/base/teacher/secondary extra."
+  },
+  "secondary": {
+    "old_models": 8,
+    "new_models": 20,
+    "answers_per_question": 8,
+    "questions": 1319,
+    "outputs_without_optional_D2": 295456,
+    "outputs_with_optional_D2": 337664,
+    "max_completion_tokens_without_D2_at_cap512": 151273472,
+    "caveat": "New temperature-sampled metric; not a variance reduction of the original greedy estimator."
+  },
+  "reduced_design_example": {
+    "status": "proposal_not_admitted",
+    "budget_units": 4,
+    "training_units": 4,
+    "main_students": 8,
+    "unit": "2 independent draws x 2 prices x 2 policies x one fixed training seed",
+    "extra_axis_bridge_students": 3,
+    "total_students": 11,
+    "base_evaluation_additional": 1,
+    "training_base_run_units": 38,
+    "caveat": "Two draws are exploratory and not a high-power or procurement-population guarantee."
+  }
+}

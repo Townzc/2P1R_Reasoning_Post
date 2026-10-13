@@ -115,3 +115,14 @@ Claude固定[`cb823703`](https://github.com/Townzc/2P1R_Reasoning_Post/blob/cb82
 - C14-3日程风险已由真实完成解除：续核22:55:41PDT完成，provider22:55:45停止、容器0；完整收尾门通过。未放宽门控、未用部分审计冒充全部完成。
 
 [逐项处理](../../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_ROUND14_REVIEWED.json)。全量结果来自原冻结规则，均值差值及交互由预先固定的共享题目算法计算。最终packet/实际PNG/SVG/事实页现交付外审，**pending**。发布前发现事实页把已为比例的unused再次除以cap，显示0.00%；已按(cap-charge)/cap独立核对四格，修为6.14/6.88/12.26/10.90%，保存原文件及SHA，新增两项单位/篡改记账检查通过。科学summary、选择、模型、主分均未变化。[展示修复记录](../../reports/sft_allocation_midpoint_20261011/P007B_REPORTING_UNITS_CORRECTION.json)。
+
+
+## 第十五轮：最终材料外审与展示修正（2026-10-12 23:53PDT读取）
+
+Claude[固定报告3e3e33d3](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md)审阅736b3920：最终token_final_v1与P007B_MIDPOINT_EVIDENCE.md **PASS**，两张v1图 **PASS-WITH-NOTES**。其核验以此前独立raw评分的8列SHA、25文件manifest、三主对比及区间、CPU10+4谱系和事实页数字为依据；不把它扩大为全部训练轨迹的外部逐步审计。旧事实页/结果包保持原字节。
+
+- F15-1接受并修复：新figures_token_v2使用空心蓝圈与橙色叉区分重合点、图例下置，并明确两策略在seed23两档均相同。已实际查看PNG；主差值图PNG与v1相同。v2展示本身仍待外审，不能沿用v1判定。[新图及来源](../../reports/sft_allocation_midpoint_20261011/figures_token_v2/PROVENANCE.json)。
+- F15-2接受功效规划方向，修正精确性：0.65/1.3pp和约7组来自共同方差/独立格/正态近似，两个实际配对交互的样本SD为2.04pp且仅1自由度。两者均不足以保证未来功效；本人的3draw×2seed建议也没有充分功效保证。[独立算术与P008设计评审](P008_V2_DESIGN_REVIEW_20261013.md)。
+- F15-3接受：先分阶段测量，再比较后端并保留不一致；没有启动新模型/评测/教师池。P008 v2属于待讨论方案，不是执行准入。
+
+新39–42阅读笔记已读并核查关键原文，来源记为Claude。本次也更正过期INDEX，将固定审计目标/范围与新pending包区分；不发送#13评论，保留owner发送规则。

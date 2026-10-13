@@ -52,7 +52,7 @@ def figures(summary_path, closeout_path, out):
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10,
                          'axes.spines.top': False, 'axes.spines.right': False,
                          'svg.fonttype': 'none',
-                         'svg.hashsalt': 'p007b-token-policy-figures-v1'})
+                         'svg.hashsalt': 'p007b-token-policy-figures-v2'})
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     outputs = []
@@ -73,8 +73,11 @@ def figures(summary_path, closeout_path, out):
         for policy, title in (('breadth', 'More problems'), ('depth', 'More solutions')):
             records = [cells[f'{policy}_p{price}']['seeds'][str(seed)] for price in (0, 4)]
             values = [100 * r['accuracy'] for r in records]
-            ax.plot([0, 1], values, marker='o', linewidth=2,
-                    color=colors[policy], label=title)
+            ax.plot([0, 1], values, marker='o' if policy == 'breadth' else 'x',
+                    markersize=7 if policy == 'breadth' else 5,
+                    markerfacecolor='white', markeredgewidth=1.5,
+                    linestyle='-' if policy == 'breadth' else '--',
+                    linewidth=2, color=colors[policy], label=title)
             for x, value, result in zip((0, 1), values, records):
                 offset = 10 if policy == 'breadth' else -22
                 ax.annotate(f"{value:.2f}%\n{result['correct']}/1319", (x, value),
@@ -85,12 +88,18 @@ def figures(summary_path, closeout_path, out):
         ax.set_xlim(-.18, 1.18)
         ax.set_ylim(0, 100)
         ax.grid(axis='y', alpha=.2)
+        if all(cells[f'breadth_p{p}']['seeds'][str(seed)]['correct'] ==
+               cells[f'depth_p{p}']['seeds'][str(seed)]['correct'] for p in (0, 4)):
+            ax.text(.5, .94, 'Both policies tie at both prices',
+                    transform=ax.transAxes, ha='center', fontsize=9)
     axes[0].set_ylabel('Greedy exact-answer accuracy (%)')
-    axes[1].legend(loc='upper right', frameon=False)
+    handles, labels = axes[1].get_legend_handles_labels()
+    fig.legend(handles, labels, loc='lower center', bbox_to_anchor=(.5, .12),
+               ncol=2, frameon=False)
     fig.suptitle('Common acquisition cap and fixed student training budget', fontsize=13)
     fig.text(.05, .065, 'Two training seeds; one teacher trace per cell. Hypothetical token tariff, not API dollars.', fontsize=9)
     fig.text(.05, .025, 'All 1,319 questions retained; 512-token capped outputs count as incorrect. Lines connect two observed scenarios.', fontsize=9)
-    fig.subplots_adjust(left=.09, right=.97, bottom=.23, top=.84, wspace=.16)
+    fig.subplots_adjust(left=.09, right=.97, bottom=.27, top=.84, wspace=.16)
     save(fig, 'accuracy_by_price_and_seed')
 
     names = ('depth_minus_breadth_p0', 'depth_minus_breadth_p4', 'price_interaction')
@@ -127,7 +136,7 @@ def figures(summary_path, closeout_path, out):
     fig.subplots_adjust(left=.25, right=.97, bottom=.17, top=.95, hspace=.55)
     save(fig, 'policy_gaps_and_price_interaction')
 
-    provenance = dict(schema='p007b_verified_deterministic_figures_v1',
+    provenance = dict(schema='p007b_verified_deterministic_figures_v2',
         summary_sha256=sha(summary_path), closeout_sha256=sha(closeout_path),
         generator_sha256=sha(__file__), figures={p.name: sha(p) for p in outputs},
         matplotlib_version=matplotlib.__version__,
