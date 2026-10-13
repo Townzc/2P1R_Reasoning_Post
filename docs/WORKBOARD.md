@@ -91,6 +91,10 @@
 
 | 2026.10.12 18:53（阶段／审计复核完成） | Codex | seed23零价两项末步、524287 targets和checkpoint256清单一致；已连续保存464／496条终点评测，末批原始返回及评分哈希一致。复现Claude第七轮全部对比与新增E2原始解析例；主评分不变 | [训练阶段](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_SECOND_SEED_TRAINED.json)、[审计处理](../reports/p007_audit/token_seed17_review_followup_v1/README.md)；完整state和全量评分待收尾，最后高价seed23仍未启动 |
 
+| 2026.10.12 18:58（审计交付），19:14（读取／复核开始） | Claude；Codex读取 | 第八轮固定007ed950接受第七轮处理、对follow-up复算和seed23训练阶段记录给出限定范围PASS；强调两训练种子共享每格同一教师轨迹 | [固定报告](https://github.com/Townzc/2P1R_Reasoning_Post/blob/007ed950183d547b5a92b8ca250c65fb4bacc588/audit/claude/20261013a/REPORT.md)；Codex核对路径集合与曝光，不把训练重复当采购重复 |
+
+| 2026.10.12 19:16（复核完成） | Codex | 独立核对两种子的路径集合408／474／91／230完全相同，曝光变化每路径至多1；保留“2 training seeds, 1 teacher trace per cell”表述。Claude第八轮接受上一轮处理、通过follow-up数值复算及阶段配置记录 | [种子范围证据](../reports/sft_allocation_midpoint_20261011/P007B_TOKEN_TRAINING_SEED_SCOPE.json)；不代表重新采购的方差，seed23终点评分尚未外审 |
+
 ## 维护规则
 
 - 一行对应一个可核验的交付、故障、决定或阶段变化，避免写“正在思考”之类无法回溯的活动。
