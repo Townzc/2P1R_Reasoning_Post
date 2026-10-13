@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-13T09:39:09.204938+00:00",
+  "as_of_utc": "2026-10-13T09:39:26.775276+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -236,6 +236,25 @@
       "review_commit": "02de4924acf33eba99ff0da1e671ab3ae1928f5f",
       "review_report": "audit/claude/20261013o/G0_MAIN_NUMERIC.md",
       "scope": "pool_d1/d2 only; no students"
+    },
+    {
+      "request_id": "p008-student-runtime-preflight-r1",
+      "target_commit": "f944723ee58e99483a5c5c4e7f41485a2d9fde9f",
+      "packet": "reports/p008_20261013/student_runtime_preflight_v1",
+      "manifest": "reports/p008_20261013/student_runtime_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "0f9b694bf58af110eda1e66cbd60a55048f1e76ce4be321f085fc8572854c698",
+      "external_review": "pending",
+      "blocking_for": "Future P008 student dispatch; code-only review cannot admit any model before exact-input G1",
+      "questions": [
+        "Student-only successor keeps original pool runtime/admission immutable and HF scientific recipe unchanged?",
+        "Exact joint-input/report/plan/draw and live pool terminal gates and full runtime+startup deadline check?",
+        "Independent local audit bindings, pool allraw/cost replay and forensic1024 structure/dose checks?"
+      ],
+      "requested_utc": "2026-10-13T09:39:26.775276+00:00",
+      "owner_authorized": true,
+      "numeric_student_inputs_pending": true,
+      "response_timeout_minutes": 45,
+      "timeout_action": "hold unreviewed dispatch; no silence approval"
     }
   ],
   "p008_v31": {
