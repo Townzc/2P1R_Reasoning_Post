@@ -4,6 +4,7 @@ from pathlib import Path
 from experiments.sft_allocation_midpoint.common import read,dump,sha,digest,verify
 from experiments.sft_allocation_midpoint import checkpoint as ck
 from experiments.sft_allocation_p008.student_runtime import validate_plan,EVAL
+from experiments.sft_allocation_p008.student_binding import validate_student_binding
 from src.sft_data import read_jsonl,encode_row,prefix
 from analyses.e017_audit import audit_predictions
 from scripts.audit_token_student import endpoint_stop_diagnostics
@@ -14,6 +15,8 @@ def audit(args):
  root=Path(args.export_dir);inputs=Path(args.inputs);env=read(args.receipt);db=read(args.ledger)
  sent=read(root/'intent.json');cfg=sent['config'];run=cfg['run_id'];base='midpoint/'+args.campaign+'/'
  spec=read(args.admission)
+ assert read(root/'admission.json')==spec
+ validate_student_binding(sent['plan'],cfg,sent['release'],spec)
  assert digest(cfg)==spec['config_sha256'][run] and digest(sent['plan'])==spec['plan_sha256']
  assert sha(inputs/'manifest.json')==cfg['input_sha256'];verify(inputs,read(inputs/'manifest.json')['files'])
  receipt=env['receipt'];assert receipt==db[base+'terminal/'+run] and receipt['status']=='completed'
@@ -30,7 +33,7 @@ def audit(args):
   prefix_key=base+run+'/'+kind+'/'
   assert {k[len(prefix_key):] for k in db if k.startswith(prefix_key)}==set(records)
   assert all(db[prefix_key+k]==v for k,v in records.items())
- expected=set();targets=processed=0;state_hash=None
+ expected=set();targets=processed=0;state_hash=None;forensic={}
  if cfg['role']!='base':
   rows=read_jsonl(inputs/cfg['rows_file']);encoded=[encode_row(r,tok,2048) for r in rows]
   plan=read(inputs/cfg['plan_file']);budget=validate_plan(rows,encoded,plan,cfg)
@@ -38,6 +41,7 @@ def audit(args):
   assert recipe['identity']['config']==cfg and recipe['eval']==EVAL
   state_path=root/f"checkpoint_{cfg['updates']:04d}";state=ck.load(state_path,recipe['identity']);state_hash=sha(state_path/'state.pt')
   assert state['schedule']==plan['updates'] and state['lrs']==plan['lrs'] and state['cursor']==state['step']==cfg['updates']
+  forensic={}
   for step,indices in enumerate(plan['updates'],1):
    name=f'update_{step:04d}';expected.add(name)
    item=dict(step=step,indices=indices,lr=plan['lrs'][step-1],supervised_tokens=sum(encoded[i]['n_supervised'] for i in indices),
@@ -45,6 +49,11 @@ def audit(args):
    assert intents[name]==item and all(done[name][k]==v for k,v in item.items())
    targets+=item['supervised_tokens'];processed+=item['processed_tokens']
    assert done[name]['cumulative_targets']==targets and done[name]['cumulative_processed']==processed
+   if cfg['updates']==2048 and step==1024:
+    mid=root/'checkpoint_1024';m=ck.load(mid,recipe['identity'])
+    assert m['cursor']==m['step']==1024 and m['schedule']==plan['updates'] and m['lrs']==plan['lrs']
+    assert m['supervised_tokens']==targets and m['processed_tokens']==processed
+    forensic['1024']=dict(sha256=sha(mid/'state.pt'),targets=targets,processed=processed,used_for_selection=False)
   assert targets==cfg['targets']==state['supervised_tokens']==result['targets']
   assert processed==state['processed_tokens']==result['processed_tokens']
   assert result['updates']==cfg['updates']
@@ -67,7 +76,7 @@ def audit(args):
  stops=endpoint_stop_diagnostics(saved,summary)
  return dict(passed=True,schema='p008_student_local_oracle_v1',utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
    run_id=run,role=cfg['role'],updates_verified=cfg['updates'],targets_verified=targets,outputs_rescored=1319,
-   correct=sum(qc.values()),state_sha256=state_hash,artifact_digest=digest(files),endpoint_stop_diagnostics=stops,
+   correct=sum(qc.values()),state_sha256=state_hash,forensic_checkpoints=forensic,artifact_digest=digest(files),endpoint_stop_diagnostics=stops,
    new_model_calls=0,external_review='pending')
 
 if __name__=='__main__':

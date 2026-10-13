@@ -531,3 +531,8 @@ Phase0 teacher1024/954usable/296801outputtokens, smoke8updates921targets/16outpu
 ## 2026-10-13T09:20:18.850172+00:00 — true numerical G0 PASS, pools only
 
 ReadfullClaude02de4924 fixed82e1fafd. VerifiedSOURCE_BUNDLE/specdigest and acceptedonlypool_d1/d2, nostudentadmission. N1predeclaredpriority andtimingriskretained;N2nofullJ;N3known2percentageE1cases primary954notchanged toClaude956. Prepareoneimmutablepool-inputupload/readback, theneachoriginalpoolcalloncebefore03PDT. Hardstage237.68reserved within250; no extra modelgroup.
+
+
+## P008 main pools actually running — 2026-10-13T09:34:32.604838+00:00
+
+G0 main numeric review02de4924 accepted the predeclared18/74 engineering branch, pools only. At02:21/02:24PDT each independent draw was submitted once; at09:31UTC actual H100/software/source/spec/input/claims and first16physical returns plus all8 virtual-wallet receipts independently matched. Full raw rescoring and G1 remain pending; no student calls. First local monitor expected an incorrect torch wheel suffix; original partial/error retained, corrected to the pinned teacher metadata2.8.0 with CUDA12.8, no worker/source/scientific change. Inputs2files/4195192bytes were uploaded once and read back before dispatch. No old jobs or outputs repeated. Keep original237.68 reservation within250stage/450project/50protection and19PDT compute cutoff.
