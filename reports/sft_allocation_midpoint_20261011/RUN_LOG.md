@@ -638,3 +638,8 @@ Owner retained both draws and explicitly extended child cutoff to13PDT after the
 
 
 2026-10-13T17:11:20.916600+00:00 — Owner13PDT authorization implemented as exact bounded review targets and prepared one-time upload/readback/startup/closeout/failure-preservation/merged-publication helpers. At17:09UTC no new Claude report beyond39caf811; no silence-as-approval, cloud image or model call.28 total new CPU checks passed in distinct15/13 scopes, no old scientific work repeated. Latest workspace delayedmeter114.07183710 at17:01:26, not invoice/balance; old snapshots retained. Actual joint plans/G1/N2 and finalCPU lineage remain prerequisites.
+
+
+### Oct13 10:28 PDT — exact D2 runtime review accepted before dispatch
+
+Motivation: close the genuine worker/spec review barrier within the owner-approved20UTC cutoff. Read Claude fixeda32454b5314884723cf64baa9b5fb0f0845a3365, comments6151035706/6151057303, and independently compared original start with one actual Volume environment mtime (13.721895s). Exact child review is PASS-WITH-NOTES; student lineage is code-only PASS. No formula/source/dose changes or new tests; no old oracle repeated. Decision: one unchanged child subject to real readback/provider/no-prior-attempt/full7900window and billed probe. Original failed parent retained. Final CPU lineage only a prepared private design, no executable admission. GitHub report header time and actual comment/read times kept separate. A local INDEX lookup initially used the wrong path and failed before any modification; actual INDEX is reports/p007_audit/INDEX.json.

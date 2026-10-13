@@ -22,6 +22,7 @@
 
 | 时间（PDT） | 执行者／来源 | 做了什么、得到什么 | 状态与证据 |
 |---|---|---|---|
+| 2026.10.13 10:25–10:28（读取及派发前核对） | Claude；Codex复核 | 新child固定a385fb38已获限定PASS-WITH-NOTES；实际父任务启动至环境13.72秒，支持按未改公式派发一次，真实主机测速仍可拒绝。学生8f31b0ca仅代码PASS，0学生准入 | [真实审计与N1核对](../reports/p008_20261013/d2_runtime_review_acceptance_v1/DISPOSITION.md)；接下来只上传7个新prefix文件并独立读回，最晚10:48:20PDT派发 |
 | 2026.10.13 10:11（准备收尾／实际审计读取10:09） | Codex | 续跑worker固定a385fb38、后续学生证据链固定8f31b0ca均已普通发布并登记独立审计；仍无新Claude结论。上传/运行核验/收尾/失败保全工具已备，0云构建/调用 | [真实待审状态](../reports/p008_20261013/D2_CONTINUATION_REVIEW_PENDING_1710.json)；保留13PDT截止，最晚10:48:20PDT完整窗口派发，无默许准入 |
 | 2026.10.13 10:00（准备完成） | Codex | 学生后续入口单独适配D1完成＋D2失败父＋完成child；13新CPU检查通过，原科学执行与独立评分函数保持一致；实际共同计划、G1、N2及云调用仍未开始 | [仅后续学生代码待审](../reports/p008_20261013/student_parent_child_lineage_v1/REVIEW_REQUEST.md)，不替代D2续跑准入 |
 | 2026.10.13 09:48（工程准备完成） | Codex | 新续跑worker、11条父子依赖实时检查、固定3次计费主机测速、7200秒入口硬限与独立父子raw核验脚本已准备；15新CPU测试通过，0云构建/调用 | [固定准入包待审](../reports/p008_20261013/d2_continuation_admission_v1/REVIEW_REQUEST.md)；代码PASS前不上传/派发，不把父失败改成completed |
