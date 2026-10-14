@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T18:46:29.396245+00:00",
+  "as_of_utc": "2026-10-14T18:54:48.744255+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1666,7 +1666,7 @@
       "packet": "reports/p009_20261014/design_and_inputs_v1",
       "manifest": "reports/p009_20261014/design_and_inputs_v1/MANIFEST.json",
       "manifest_sha256": "8ad23ec5f042bc66894949e9bc906f890308c54309b5debde688ac8c441b882a",
-      "status": "pending",
+      "status": "PASS-WITH-REQUIRED-CLARIFICATIONS",
       "blocking": true,
       "blocking_for": "P009 A0 and Stage0 input acceptance. This packet is not a runtime admission; separate exact A1 remains mandatory.",
       "review_request": "reports/p009_20261014/design_and_inputs_v1/REVIEW_REQUEST.md",
@@ -1676,7 +1676,12 @@
         "Precise P0/G0/G1/futility/Stage2 conditional inference, cost ceiling slack and pre-result interpretation corrections.",
         "Pinned data,8993request roster, disjoint whole4shot examples, fullcontext and D1new-tokenizer feasibility.",
         "Stage10/50/35+5 budgets, project450/50 protection, closed-stage reservations versus metered expense, first fullbatch calibration exception must be separately reviewed."
-      ]
+      ],
+      "review_commit": "e1d8d469399f214bc156985f5979c5eeee498ad7",
+      "report_sha256": "7641217c0a16df13b636c0e39c645a5dfd5118e388f70b6c73580fa1b00b14ed",
+      "review_read_utc": "2026-10-14T18:49:40.942572+00:00",
+      "stage0_inputs": "PASS; OLMo structural-only in original review",
+      "required_clarifications": "R1/R2 freeze before P2 outputs; own later stages only; separate exact runtime still mandatory"
     },
     {
       "request_id": "p009-p0-parity-runtime-r1",
@@ -1714,6 +1719,20 @@
         "Finalbox, capsincorrect, symbolicFalsefinal, boundedprocessfallback and teacherlabel eligibility.",
         "Eleven synthetic checks are not real-outputP1; retain required50training-response disagreements before studentselection."
       ]
+    },
+    {
+      "request_id": "p009-a0-required-clarifications-r1",
+      "scope": "p009-design-and-stage0-inputs-addendum",
+      "target_commit": "f1e6abd9de4d26150a33c285989236c663ed1acc",
+      "original_target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
+      "packet": "reports/p009_20261014/a0_required_clarifications_v1",
+      "manifest": "reports/p009_20261014/a0_required_clarifications_v1/MANIFEST.json",
+      "manifest_sha256": "1547f168ee3874712e3450ce229e3037b43101e610cd82dd42985030459f5f01",
+      "review_request": "reports/p009_20261014/A0_CLARIFICATIONS_REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "R1/R2 closure before P2 and explicit Stage0 design subsection verdict; exact P0 runtime independently pending",
+      "created_utc": "2026-10-14T18:54:48.744255+00:00"
     }
   ],
   "p008_v31": {
@@ -2007,7 +2026,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "A0_and_exact_P0_runtime_pending_no_cloud_calls",
+    "status": "stage0_inputs_reviewed_R1_R2_published_exact_P0_runtime_pending_zero_calls",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -2049,16 +2068,21 @@
       "notify": "meaningful change, completion, failure, owner action only"
     },
     "latest_read_review": {
-      "commit": "166dc7e67af09e80626a7e682666b451908b547b",
-      "read_utc": "2026-10-14T18:29:50.592655+00:00",
-      "scope": "context advice on earlier draft only, not A0 or runtime PASS",
-      "disposition": "reports/p009_20261014/review_166dc7e6_disposition_v1/DISPOSITION.md"
+      "commit": "e1d8d469399f214bc156985f5979c5eeee498ad7",
+      "read_utc": "2026-10-14T18:49:40.942572+00:00",
+      "scope": "A0 PASS-WITH-REQUIRED-CLARIFICATIONS; Stage0 inputs PASS; not runtime admission",
+      "disposition": "reports/p009_20261014/a0_required_clarifications_v1"
     },
     "math_scorer": {
       "status": "candidate_code_pending_real_P1_not_run",
       "target_commit": "4c652b03f6e319c82abb095d03577af631fa2ddc",
       "source_sha256": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
       "packet": "reports/p009_20261014/math_scorer_candidate_v1"
+    },
+    "clarifications": {
+      "target_commit": "f1e6abd9de4d26150a33c285989236c663ed1acc",
+      "R1_R2": "frozen before any P009 outputs; closure pending",
+      "p0_sources_unchanged": true
     }
   }
 }

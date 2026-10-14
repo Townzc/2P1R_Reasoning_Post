@@ -453,3 +453,9 @@ Real Claude ae553bd2 fullreport read2026-10-14T09:21:32.596179+00:00, event09:17
 ## 2026-10-14T09:45:58.823020+00:00 / 2026-10-14 02:45:58 PDT — all three suffixes running and first acknowledgements verified
 
 Exact47source remains accepted68c8bad5, execution4e6beb52. Original CLI51624student/32851base/52223Instruct eachsubmitted once; startup35993/89564/9906 allDONE, no retraining or saved-prefix overlap. Actualentries09:32:55.782/09:38:05.909/09:42:43.060UTC, hardstops10:52:55.782/10:58:05.909/11:02:43.060UTC. Inspector51769DONE read2026-10-14T09:44:34.738133+00:00:3ownedcontainers,3claims, no terminal/result/callbackerror; saved suffixacks304student/400base/48Instruct, not partialscores or finaloracle. Next stable provider about30min later. Real firststudentbatchtiming31.859/24.721s withaudit0.243/0.252s; no futurecompletionguarantee. Gate48858, inputreuse, firsttiming84654 allDONE, neverrepeat. No new model/image/input upload/checkpoint training beyond these admitted3calls. Data/weights alreadyonVolume, codeimage prepared normally. LatestPapers09:32 samee097b0cb. Privatepublisher reporttext now explicitlydiscloses pre-completion prefix score exposure, remainsNOTRUN.
+
+### 2026-10-14 11:54:48 PDT（P009 A0实际报告与两条预输出定义）
+
+实际报告e1d8d469/comment6175549931事件18:35:06UTC，完整读取18:49:40.942572UTC；总体PASS-WITH-REQUIRED-CLARIFICATIONS，Stage0输入PASS，不是runtime准入。R1固定S1 Stage1只用attempt01自身正确且格式合格，2–4次不得救资格；NC/S2源数据可到8次的差异披露。R2固定D从原seed17未按正确性筛选题序第一题起买、格式失败照收费；B上限包括遍历跳过题所有已尝试费用，A/B同P_nat。上述不改五组/剂量/100总帽。新补充包f1e6abd9de4d26150a33c285989236c663ed1acc共9成员逐Git字节核验、17资源tar回读；原15输入和P0源19未改。
+
+原审计未取得OLMo编码/完整dev候选，现附原分词器配置/卡和7个MATH原test分片。新本地BOS诊断2638默认/显式no-special/原存token均一致，0前导BOS；未下载权重/生成/评分。短示例4shot仅描述，不加3072实验。N3单批2美元是非阻塞建议，实际248cent/四prefix批P0精确方案另审，没把两者混成PASS；DESIGN/RUNTIME_ACCEPTED均未造。两个只读路径假设错误（review请求文件和INPUT_MANIFEST文件名）未写科学产物，改用实际目录；保留工具记录。新p009ACTIVE，旧两monitorPAUSED，0P009云调用。

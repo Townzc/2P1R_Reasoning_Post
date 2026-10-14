@@ -2760,3 +2760,9 @@ Codex read Claude proposal134c2546 in full and the owner's direct100USD/five-gro
 旧19P0sources/spec/输入和旧数据均未改，仍0P009云镜像/上传/调用。两份共享日志新条目尾部空行曾触发style警告，本次仅规范新尾部换行，历史原源snapshot告警仍保留。新p009ACTIVE、旧两monitorPAUSED。
 
 [候选MATH评分器](reports/p009_20261014/math_scorer_candidate_v1/README.md)。
+
+### 2026-10-14 11:54:48 PDT（P009 A0实际报告与两条预输出定义）
+
+实际报告e1d8d469/comment6175549931事件18:35:06UTC，完整读取18:49:40.942572UTC；总体PASS-WITH-REQUIRED-CLARIFICATIONS，Stage0输入PASS，不是runtime准入。R1固定S1 Stage1只用attempt01自身正确且格式合格，2–4次不得救资格；NC/S2源数据可到8次的差异披露。R2固定D从原seed17未按正确性筛选题序第一题起买、格式失败照收费；B上限包括遍历跳过题所有已尝试费用，A/B同P_nat。上述不改五组/剂量/100总帽。新补充包f1e6abd9de4d26150a33c285989236c663ed1acc共9成员逐Git字节核验、17资源tar回读；原15输入和P0源19未改。
+
+原审计未取得OLMo编码/完整dev候选，现附原分词器配置/卡和7个MATH原test分片。新本地BOS诊断2638默认/显式no-special/原存token均一致，0前导BOS；未下载权重/生成/评分。短示例4shot仅描述，不加3072实验。N3单批2美元是非阻塞建议，实际248cent/四prefix批P0精确方案另审，没把两者混成PASS；DESIGN/RUNTIME_ACCEPTED均未造。两个只读路径假设错误（review请求文件和INPUT_MANIFEST文件名）未写科学产物，改用实际目录；保留工具记录。新p009ACTIVE，旧两monitorPAUSED，0P009云调用。
