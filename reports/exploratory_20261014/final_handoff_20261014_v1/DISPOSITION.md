@@ -1,0 +1,13 @@
+# Scope of the final exploratory G3 acceptance
+
+Accepted at 2026-10-14T10:57:24.933488+00:00 (2026-10-14 03:57:24 PDT). The review event was 2026-10-14 10:34:50 UTC / 03:34:50 PDT; the complete fixed report was read at 2026-10-14T10:54:06.289257+00:00.
+
+[Claude's original report](https://github.com/Townzc/2P1R_Reasoning_Post/blob/8573632e0ac315a8404277b8cdf748799c53dc18/audit/claude/20261014ax/REPORT.md) gives **PASS** to the complete endpoint packet at `0debdeba2c9b581c3fdf526d346399721f4cf670`. Its SHA is `b35b027887405bfc4f7e00aa5738790c468d2f6b7a07063289e6e7b2e73b658c`. The copied SOURCE_REPORT is unchanged. The accepted scope is the three complete 1,319-question endpoints, immutable parent-prefix/child-suffix provenance, source/claim/terminal consistency, and public checkpoint-restoration proof. The reviewer independently decoded all 3,957 rows and found zero stop-event or score mismatches.
+
+The reviewer verified the 46 packet members and each suffix archive. The original failed parents remain failed; each suffix child has one claim/attempt and a completed terminal. All providers show zero owned containers. The student's continuation inherited the original 256-update/524,287-target state and made no training updates. The reviewer did **not** read the private checkpoint binary; this limitation remains explicit.
+
+The report additionally supplies reviewer-run paired-question bootstrap intervals and broader scientific interpretations. Those intervals are exploratory, pointwise and conditional on the observed models/test, and were not recomputed by Codex or inserted into the preregistered P008 analysis. This handoff retains the frozen full counts and descriptive differences only. The prior prefix-only description is superseded by the full 934 versus 969 counts.
+
+The natural-wrong bundle covers 101 questions, with different lengths, exposure and label ambiguity. Consequently this comparison does not isolate correctness, format, sample-quantity or reasoning mechanisms, demonstrate equivalence/saturation, or establish a capability ceiling. The reviewer's label-error estimates and literature analogy are not new Codex adjudications. No next experiment is admitted by the reviewer's recommendation. Prefix-result exposure and the previously seen test remain disclosed.
+
+The six-app dollar figure is delayed provider metering, not a final invoice or balance. All failed work/setup/build/download/storage remains chargeable within the original $30 plan. No science, saved-output oracle, test suite, collection, export or result publisher was repeated for this acceptance. Only metadata and the final handoff were added.

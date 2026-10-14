@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T10:30:08.771671+00:00",
+  "as_of_utc": "2026-10-14T10:57:24.933488+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -90,7 +90,7 @@
   },
   "spending_ceiling_usd": 450,
   "latest_reading_record": "reports/p008_design_review_20261013/SOURCE_READ_RECORD.json",
-  "automation_p007": "ACTIVE every30min for finiteP008, unchangedstate quiet",
+  "automation_p007": "PAUSED; verified saved configuration, unchanged by exploratory work",
   "review_requests": [
     {
       "request_id": "p008-v2-independent-design-review-r1",
@@ -1639,11 +1639,11 @@
       "packet": "reports/exploratory_20261014/completed_endpoints_v1",
       "manifest": "reports/exploratory_20261014/completed_endpoints_v1/MANIFEST.json",
       "manifest_sha256": "0b211f4c4f33808a535465561bdcecfce5f114769b5f501453ac30eb9b92733a",
-      "status": "pending",
-      "external_review": "PENDING",
+      "status": "accepted_result_g3",
+      "external_review": "PASS",
       "scope": "exploratory-completed-three-endpoints-g3",
-      "blocking": true,
-      "blocking_for": "Final actual-result handoff and pausing the finite exploratory monitor only; all scientific calls are completed and must not run again.",
+      "blocking": false,
+      "blocking_for": "Closed: three full endpoints and scoped actual-result G3 accepted; no additional computation.",
       "review_request": "reports/exploratory_20261014/COMPLETED_ENDPOINTS_REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T10:30:08.771671+00:00",
       "questions": [
@@ -1651,7 +1651,13 @@
         "Original failed parents/48 saved-unacknowledged outputs, zero duplicate generation, and exact256-step checkpoint restore proof with zero new training.",
         "Actual results823/904/934, descriptive969/965/638 references, natural-wrong confounds and prefix-viewing disclosure.",
         "Original-byte public archive projection/provenance, real STOPPED0/claims, and delayed six-app cost11.19667285 within unchanged30-dollar plan."
-      ]
+      ],
+      "review_commit": "8573632e0ac315a8404277b8cdf748799c53dc18",
+      "review_report_path": "audit/claude/20261014ax/REPORT.md",
+      "review_report_sha256": "b35b027887405bfc4f7e00aa5738790c468d2f6b7a07063289e6e7b2e73b658c",
+      "read_at_utc": "2026-10-14T10:54:06.289257+00:00",
+      "accepted_at_utc": "2026-10-14T10:57:24.933488+00:00",
+      "acceptance": "reports/exploratory_20261014/final_handoff_20261014_v1/ACCEPTED.json"
     }
   ],
   "p008_v31": {
@@ -1872,7 +1878,7 @@
     "handoff_commit": "031462f90c3da1eea4e636fd8f4d10d2a5a83d9b"
   },
   "exploratory_20261014": {
-    "status": "prepared_review_pending_zero_calls",
+    "status": "complete_actual_result_g3_pass",
     "owner_approved": true,
     "stage_cap_USD": 30,
     "scientific_slots": 3,
@@ -1880,7 +1886,13 @@
     "packet": "reports/exploratory_20261014/admission_v1",
     "fixed_target": "32c473d6d1eebbbbf81792df639ab5b36674d851",
     "original_p007": "PAUSED",
-    "scope": "New explicit authorization; does not reopen original P008"
+    "scope": "New explicit authorization; does not reopen original P008",
+    "full_endpoints": 3,
+    "active_scientific_calls": 0,
+    "final_handoff": "reports/exploratory_20261014/final_handoff_20261014_v1/README.md",
+    "result_target_commit": "0debdeba2c9b581c3fdf526d346399721f4cf670",
+    "actual_result_g3": "PASS",
+    "updated_at_utc": "2026-10-14T10:57:24.933488+00:00"
   },
   "exploratory_owner_stop": {
     "recorded_at_utc": "2026-10-14T08:18:54.684610+00:00",
@@ -1913,7 +1925,7 @@
       "wrong_teacher_t1_remaining_r1"
     ],
     "local_milestone": "reports/exploratory_20261014/BASE_4SHOT_LOCAL_CLOSED.json",
-    "actual_result_g3": "PENDING",
+    "actual_result_g3": "PASS",
     "remaining_original_calls": {},
     "read_at_utc": "2026-10-14T10:30:08.771671+00:00",
     "all_original_cli_consumed_exit0": true,
@@ -1926,6 +1938,11 @@
       "instruct_0shot": 904,
       "wrong_teacher_t1": 934
     },
-    "delayed_six_app_meter_usd": "11.19667285"
+    "delayed_six_app_meter_usd": "11.19667285",
+    "actual_result_review_commit": "8573632e0ac315a8404277b8cdf748799c53dc18",
+    "actual_result_report_sha256": "b35b027887405bfc4f7e00aa5738790c468d2f6b7a07063289e6e7b2e73b658c",
+    "actual_result_accepted_at_utc": "2026-10-14T10:57:24.933488+00:00",
+    "final_handoff": "reports/exploratory_20261014/final_handoff_20261014_v1/README.md",
+    "automation_4": "ACTIVE pending publication then requested pause; no compute remains"
   }
 }
