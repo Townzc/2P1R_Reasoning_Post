@@ -1,0 +1,14 @@
+{
+  "action": "Exact committed source/snapshot bytes preserved for scoped review; no style-check PASS claim",
+  "affected": [
+    "scripts/audit_p008_final_cpu.py",
+    "tests/test_p008_final_cpu_local.py",
+    "packet source copies of both"
+  ],
+  "check": "git diff --cached --check",
+  "reflection": "The shell command used newlines without exit gating, so commit followed the warning. Future dependent commit calls inspect the check exit before proceeding. No repeated tests or publisher.",
+  "result": "four new blank-line-at-EOF warnings",
+  "semantic_failure": false,
+  "target_commit": "3eaee7c7fa44e67dd84e6fa5d353317eb5830728",
+  "utc": "2026-10-14T04:16:58.127086+00:00"
+}
