@@ -1218,3 +1218,5 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 23:35:17实际reviewpoll84comments/newdec75690，23:35:27全文读br SHA9f13c52b；事件23:30:17/comment6180778007。确切2d3e owner修订PASS，引擎范围阻塞关闭，原base4%阻塞/P0不跨引擎可比事实永保，未来门不变。650只复用同Qwen/GSM0shot，950为旧P008参照不当新学习结果。N1两端点规格/greedy/GSM512或原MATH1024/同parser绑定，采购T.8另列；N3统一写事后internal-only。reviewer655简写不改变原2097148总target精确可行性门。
 
 新增三个纯生成core文件，复用原14450请求inventory，教师采样8993+六端点5457，拟三个有限model lifetimes及867c新reserve，保留1004旧reserve/Stage0余129c。一次16新mocked fixtures PASS(0.079s)，没有GPU/真实输出评分/旧测试/重算原库存。代码与拟first256×3付费测量例外送审，不等于准入；确切entry/input/modelreadback/provider/budget及独立oracle仍需完成。原高吞吐/38科学源不改。OLMo固定revision原权重在本地一次准备，没有remoteupload/模型调用。两处只读rg无匹配导致shell链退出，无文件或科学副作用。未重询问owner许可，p009继续，旧两监控暂停。
+
+新core包整包stylecheck只报两份原checkpoint/common快照EOF空行，原bytes保留；排除source快照后的新代码/文档检查PASS，不声称整包PASS。23source候选与br接受包31+4 manifest成员已逐Git核验（确切计数见原终端记录）；无旧模型/测试重复。
