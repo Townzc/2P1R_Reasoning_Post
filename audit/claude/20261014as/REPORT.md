@@ -45,7 +45,7 @@ I recomputed the selection from the published `pool_d1_v1` scored batches (7,420
   - occupied capacity < 3, counting pending calls and unmatched containers.
 - **Worker.** stop = min(entry + 6001, deadline − 30), with a hard `os._exit` timer; platform limit 6061, startup 600; `retries=0`, single-use containers, `max_containers=3`. Failure records `failed` with the full reservation.
 - **Reservation.** ceil(6761 × 4.393584 / 3600 × 100) = **826¢** per slot. 3 × 826 = 2,478, plus 522 = **3,000¢**.
-- **Project total.** 87.66 + 266.44 + 30 = $384.10 ≤ $450, before even counting the $50 protection. Not an invoice.
+- **Project total.** 87.66 + 266.44 + 30 = $384.10 ≤ the $450 ceiling, which already protects $50. Not an invoice.
 - **Deadline.** The plan deadline is 14:00 UTC, so **the last admissible launch is about 12:08 UTC (05:08 PDT)**. All three can run in parallel.
 
 ## Q5. Oracle and collector: YES (code)
