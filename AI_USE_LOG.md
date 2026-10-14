@@ -2480,3 +2480,8 @@ Owner directly approved9600seconds and266.44stage. Preserve original all8N2FAIL 
 
 
 2026-10-14T00:16:50.945009+00:00 — Synchronized mutable INDEX/README budget and owner-state aliases to266.44/new35source review requests; preserved old266.04 billing/authority snapshots and originalN2FAIL. No runtime/model/data/source change, no repeated checks.
+
+
+### 2026-10-14T00:30:23.213774+00:00 — Final CPU operational-cap provenance prepared
+
+Motivation: the final integrity audit must distinguish original9560 recipe identity from reviewed operational9600 and retain the failed N2 gate and supplemental accounting. Added19-source candidate with unchanged prior17/runtime35 bytes; original24physical/21logical checks retained and exact intent file SHA, two real T8 review scopes, nine ledger records, claim link,1253+5 reservations and actual compact intent checked.19 new/revised offline tests passed once; no old raw/state oracle or unchanged tests rerun. Three private helpers parsed NOTRUN; new code/actual-byte numeric reviews required before original500-cent CPU slot. Added metadata I/O unbenchmarked and not removed from forecast. No cloud image/call/upload. Reflection: unchanged scientific config does not mean unchanged operational provenance; preserve both explicitly instead of retroactively modifying the old plan or failed criterion.
