@@ -1,3 +1,7 @@
+# Latest October14 — Owner Plan A, old suffix retired
+
+Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` first. Owner selected high-throughput full new P0; old unattempted suffix7c9f093c is retired, NEVER dispatch it. Preserve failed original128 and source19/24; new exact runtime/numeric review required. No new scope/budget beyond100USD/stagecaps. Oldstudies and DONE operations remain closed.
+
 # October14 latest — P009 original P0 time gate failed and preserved
 
 Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` first. Original P0 CLI43936 is failed/STOPPED0 with128saved raw rows, full preservation DONE. Never restart it or repeat DONE checks. New exact24-source unused-suffix candidate7c9f093c is pending scoped runtime/numeric review,0newcalls. R1/R2 and pure training-plan code are now accepted; actual scientific/input gates remain. Owner100USD, teacher2048/sevenunsupported, stagecaps and no repeated output unchanged. OrdinaryINDEX+push only; no outside messages/subagents.

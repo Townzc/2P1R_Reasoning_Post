@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 13:18:54 PDT（owner选高吞吐方案A；旧后缀撤下，新完整P0确切送审）
+
+本聊天直接选择PlanA。原eagerP0仍failed/STOPPED0，128未评分和248c历史预留永保；原未尝试suffix7c9已retired，0gates/calls，不再执行旧入口。20:10:38–39实际完整读取Claude58017822 bg/bh：前者HOLD-PENDING-OWNER，不是PASS；后者只给PlanBpublisher代码PASS，不能覆盖新PlanA。bg预测margin算术有误，保留原文但不用于新门。
+
+新26source完整P0候选和独立publisher已准备，CUDAgraphs/FULL_AND_PIECEWISE/V1、256并发、8192batchedtokens、0.80显存；同prompt/greedy512/冻结parser/原969检查点，无训练。首次base256仅一次计时例外，其后每批（含correct首批）全观测max与实际elapsed；1200worker/1260platform/600startup/full1900，252c新+248c旧=500c，Stage0余500c后续需真实准入，不借未分配5。10新CPU/mockchecks一次PASS，包含2638完整覆盖/无继承/原claim保留/禁止重复/耗时和配置拒绝，不是实际GPU吞吐。原19/24源逐hash不变，未重跑旧模型、评分、测试或上传。
+
+配置API从固定vLLM0.11.0原source读取并存SHA；不宣称5–10x/今晚Stage1或1–2h审计保证。新Runtime/数值和publisher审计仍pending，0新GPU/CPUcall。p009指令已改PlanA，旧p007/automation4保持PAUSED。预算快照需在未来实际调用前更新；当前仅准备无新付费阶段。
+
+
 ### 2026-10-14 11:46:29 PDT（MATH评分候选独立准备完成；P0仍待审）
 
 新隔离本地依赖math-verify0.9.0/latex2sympy1.11.0/ANTLR4.13.2/SymPy1.14锁定。最终boxed、符号False不可被字符串覆盖、解析/工具失败专属fallback、进程超时及错误教师标签资格分别记录；11新合成检查通过，未评分任何新模型输出。初r1一fixture错误把(x)等同x，纠正fixture不放松解析；后追加不解析错误box不得进入C的守卫，所有日志保留。50真实教师训练输出分歧检查仍未执行，不能把codePASS当P1。新packet固定4c652b03，12manifest成员Git原字节核验，已请求独立代码审计，不阻塞P0。

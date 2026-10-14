@@ -2810,3 +2810,11 @@ Codex read Claude proposal134c2546 in full and the owner's direct100USD/five-gro
 实际19:41:22只读reviewpoll75comments/new3ce168ad；19:41:48.505658完整读bf报告SHA2a1386b584c05956e5aa0e95d99c2e94575f4ee5e0ac40fd223c411d9a16204d，comment6176564218事件19:28:05。target0b714161四源PASS-WITH-NOTES，原标量字节不变；reviewer未能运行math-verify，局限如实保留。唯一新增要求是在P1按池报告outertimeout/unique-pair比例，>0.5%须在资格使用前标出；首100真实行启动/新pair计时、50分歧及>2%fallback固定hash最多25抽查尚未执行。0真实P1/模型调用，旧8fixtures未重跑。
 
 P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget或调用。一次猜测packet/SPEC.json只读路径错误后改读实际SOURCE_BUNDLE；初acceptance写入把该wrapper当files导致FileNotFound、发生首写之前，随后shell空commit/no-op push原样保留。现只补未写产物并显式source_files/set-e，没重跑已有包或科学工作。f9261cca普通push70184完成并独立remote核验。后续review至少19:56:49、正常20:11；无需频繁查询。
+
+### 2026-10-14 13:18:54 PDT（owner选高吞吐方案A；旧后缀撤下，新完整P0确切送审）
+
+本聊天直接选择PlanA。原eagerP0仍failed/STOPPED0，128未评分和248c历史预留永保；原未尝试suffix7c9已retired，0gates/calls，不再执行旧入口。20:10:38–39实际完整读取Claude58017822 bg/bh：前者HOLD-PENDING-OWNER，不是PASS；后者只给PlanBpublisher代码PASS，不能覆盖新PlanA。bg预测margin算术有误，保留原文但不用于新门。
+
+新26source完整P0候选和独立publisher已准备，CUDAgraphs/FULL_AND_PIECEWISE/V1、256并发、8192batchedtokens、0.80显存；同prompt/greedy512/冻结parser/原969检查点，无训练。首次base256仅一次计时例外，其后每批（含correct首批）全观测max与实际elapsed；1200worker/1260platform/600startup/full1900，252c新+248c旧=500c，Stage0余500c后续需真实准入，不借未分配5。10新CPU/mockchecks一次PASS，包含2638完整覆盖/无继承/原claim保留/禁止重复/耗时和配置拒绝，不是实际GPU吞吐。原19/24源逐hash不变，未重跑旧模型、评分、测试或上传。
+
+配置API从固定vLLM0.11.0原source读取并存SHA；不宣称5–10x/今晚Stage1或1–2h审计保证。新Runtime/数值和publisher审计仍pending，0新GPU/CPUcall。p009指令已改PlanA，旧p007/automation4保持PAUSED。预算快照需在未来实际调用前更新；当前仅准备无新付费阶段。

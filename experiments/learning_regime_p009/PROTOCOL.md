@@ -279,3 +279,9 @@ No outside messages or subagents. Audit requests are published in the existing
 INDEX and ordinary branch pushes. The optional CPU-only stopping simulation
 is outside the critical path; it must be a separately labeled descriptive
 artifact if prepared, never additional scientific training or teacher calls.
+
+## Owner Plan A engineering amendment — October14, before any P0 accuracy outcome
+
+The owner selected a common high-throughput vLLM setting for all new evaluations and a fresh full P0 under that configuration. Original eager/32-sequence P0 failed its time gate with128 unscored rows; it remains failed and those rows do not enter the new P0. The unattempted identical-engine suffix is retired. NewP0 uses original base638/correct969 references, same2638 prompts/frozen parsing/greedy512, no training. Candidate shared settings are frozen in `high_throughput_v1.py`: V1/bf16/context2048/TP1,CUDA FULL_AND_PIECEWISE,level3,max256sequences,8192batchedtokens,0.80GPUmemory,chunkedprefilltrue/prefixcachefalse,seed17. Future teacher sampling still keeps original temperature/top-p/seed/EOS/max1024; future endpoint implementations require their own exact source/input/numeric review and must use the shared settings. This amendment does not infer parity for a different model or MATH task.
+
+Exact freshP0/runtime/bootstrap numeric review is required before a call. One first-base256 chunk is a paid measurement exception; every laterchunk uses all new complete batch times and actual elapsed. Oldeager forecasts are not substituted. New252c and old248c total500c, leaving500c in Stage0; other stagecaps and the unallocated500c remain unchanged. Planning$5–6/5–10x/1–2h are estimates. Every later admission still needs real science and financial gates, with no automatic retry or hidden use of unallocated funds. Original historical protocol and source snapshots are retained.
