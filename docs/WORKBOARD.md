@@ -540,3 +540,7 @@ P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget
 新32source候选p0_fast_remaining_preflight_v1只继承256、生成base256以后1063+correct1319=2382，维持原256chunk边界/高吞吐设置和检查点，无训练/上传。全部11新batch都须forecast，无新bootstrap；20.412141秒原unit至failedterminal含失败收尾仅proxy，不当完整ack耗时或上界。新1200worker/1260platform/600startup/full1900/$2.52，加旧$5共$7.52保守预留，Stage0余$2.48，后续尚未资金准入、不借未分配5、不缩科学量。9新mock检查一次PASS，不是GPU实测；全2638 mergedoracle代码已准备，实际没有新gate/claim/image/call。新fixedexactruntime/numeric/prefix/EOS审计是下一门，旧bi不能覆盖。
 
 本轮读取CODEX_HOME环境变量缺失在任何handoff写前停止，改用已读取并保留的配置后仅完成未写尾部；无科学副作用。原P0完整结果publisher没有执行，不能把本次failedprefix当完成。预算20:46原快照仍有效，本轮未重复刷新。原remaining-workload候选496c已不适合未来248c余量，明确留待真实阶段预算处理；不声称Stage1今晚保证。p009继续有限推进，旧p007/automation4保持PAUSED。
+
+### 2026-10-14 14:08:07 PDT（只读合并结果发布器准备；没有新计算）
+
+p0_fast_remaining_result发布器只在两完整1319 oracle/原result/三appSTOPPED0后create-only发布。继承256父raw明确引用5c522257失败包，新tar仅2382新后缀，保留no-done历史、3来源、原HF布尔表、所有科学门结果与隐私投影。原archive创建/回读AST与已审publisher相同，实际未执行；独立source299c662b需真实外审，仅阻塞该publisher、不挡新32源runtime独立审计。原32/26源未改、没有重测/评分/模型。前一整包whitespacecheck只对两旧冻结source末EOF空行告警；保留原字节，明确wholecheck未PASS，仅排除此两原快照后的检查通过，不造全范围stylePASS。
