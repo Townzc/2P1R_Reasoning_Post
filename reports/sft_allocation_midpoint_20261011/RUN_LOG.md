@@ -900,3 +900,10 @@ FullfixedClaude fe5b49f7 report read04:51:07/event04:31:05 gives PASS-WITH-NOTES
 ### 2026-10-14T04:57:38.438172+00:00 — Original final CPU admission completed once
 
 Admit78789 completed after actual full original provider/ledger absence and source verification; binding08416dc3/admissionfeba9e73,19unchangedruntimefiles/24physical21logical/33inputmembers. All3failedparents retained. No freeze/proposal replay; upload/call still0 before publication. Independent finalizer code remains pending, actualCPU proofs not claimed.
+
+
+### 2026-10-14T05:15:59.239531+00:00 — Final CPU missing-input completion verified, original transport failure retained
+
+Originalupload69942 was stopped locally05:06:55 after1,859 SSLclosed warnings and no readback (exit130). Readonlyreconciliation84375 found0committed/34missing at05:07:42. Separate600-second missing-only completion13814 committed each exactoriginalfile once withforceFalse and immediateSHAreadback, all34 PASS at2026-10-14T05:15:03.425179+00:00. OriginalUPLOAD_INTENT/log/failure and34per-file intents/readbacks retained;0overwrites,0CPU/modelcalls and0newreservation. No wholeuploader replay or original scientific/oracle work repeated. InstalledSDK concurrency reduction is an engineering choice, not a proven root cause. An initial read used an incorrect Python3.13package path; the actual3.12module/FILE=1enum was then read without remote operations. Only publishedunchanged19source/originalCPUadmission will dispatch next, actualCPUproof stillpending.
+
+Before the first publication, the upload-intent provider details were replaced in the public packet by an explicit non-provider projection and original file SHA. The uncommitted full copy/manifest and original private intent remain preserved. No credentials/account identity is needed for this transport record; no original execution data was changed.

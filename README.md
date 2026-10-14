@@ -1,6 +1,6 @@
 [21:00 PDT中期冻结材料](reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1/READINESS.md)：使用截止前原字节；未完审计明确pending，后续单列。
 
-P008 最新：18学生与base全部完成并通过本地核验，8/8 T8结果与完整注册统计/3图已获真实外审G3 PASS。[冻结后解读](reports/p008_20261013/post_freeze_results_review_v1/FACTS_ADDENDUM.md)明确高B带题价的depth优势只在D2出现、D1未复现；不称稳定效果。原21:00材料及原N2 FAIL/9600事后修订记录保持不变。最终CPU确切数值审计已通过，原5USD核验任务完成准入，待上传与执行。
+P008 最新：18学生与base全部完成并通过本地核验，8/8 T8结果与完整注册统计/3图已获真实外审G3 PASS。[冻结后解读](reports/p008_20261013/post_freeze_results_review_v1/FACTS_ADDENDUM.md)明确高B带题价的depth优势只在D2出现、D1未复现；不称稳定效果。原21:00材料及原N2 FAIL/9600事后修订记录保持不变。最终CPU确切数值审计已通过，原5USD核验任务已准入，输入传输故障已对账并逐文件补齐34/34原哈希；待首次CPU执行。
 
 # Problems, Paths, or Repeats?
 
