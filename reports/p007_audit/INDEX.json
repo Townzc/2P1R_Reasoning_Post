@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T19:08:26.933752+00:00",
+  "as_of_utc": "2026-10-14T19:18:30.843070+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1760,6 +1760,19 @@
       "status": "pending",
       "blocking": true,
       "blocking_for": "Future Stage1/2 pure plan code only, independent of P0. No actual selected-data plans or runtime admitted."
+    },
+    {
+      "request_id": "p009-math-scorer-persistent-pool-r1",
+      "scope": "p009-math-scorer-persistent-pool-code",
+      "target_commit": "0b714161dcc23a93cc44b52f4948eae271eaeb27",
+      "packet": "reports/p009_20261014/math_scoring_pool_preflight_v1",
+      "manifest": "reports/p009_20261014/math_scoring_pool_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "3f3acf3e236bf949bde87ab8939123d79f3b41b36a43a11626b61945f8521390",
+      "review_request": "reports/p009_20261014/math_scoring_pool_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T19:18:30.843070+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Future persistent local P1 scorer only. Does not block original P0. Actual first-100 throughput, durable driver and adjudications still required."
     }
   ],
   "p008_v31": {
@@ -2053,7 +2066,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "P0_exact_review_accepted_preparing_single_original_call",
+    "status": "original_P0_CLI_active_build_preflight_scientific_submission_not_yet_confirmed",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -2086,7 +2099,8 @@
       "worker_seconds": 1200,
       "reserved_usd": 2.48,
       "scope": "p009-p0-parity-runtime-and-bootstrap-numeric",
-      "status": "PASS-WITH-NOTES exact0fabdde8, bootstrapaccepted, no call yet"
+      "status": "PASS-WITH-NOTES; single original CLI invoked19:09:26UTC; building/preflight, never resubmit",
+      "original_cli_app_id": "ap-laRv7V5oQp7J6kKZdPolnd"
     },
     "automation": {
       "id": "p009",
@@ -2124,6 +2138,12 @@
       "status": "frozen_before_any_P009_outcomes_actualanalysis_notrun",
       "source_sha256": "ec9f46f20b2b1560a8064911172d3afb882367e7e4c97e8232c837542b02991f"
     },
-    "latest_budget": "reports/p009_20261014/P0_BUDGET_1907.json"
+    "latest_budget": "reports/p009_20261014/P0_BUDGET_1907.json",
+    "math_scoring_pool": {
+      "target_commit": "0b714161dcc23a93cc44b52f4948eae271eaeb27",
+      "packet": "reports/p009_20261014/math_scoring_pool_preflight_v1",
+      "status": "pending",
+      "scope": "p009-math-scorer-persistent-pool-code"
+    }
   }
 }

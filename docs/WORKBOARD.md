@@ -473,3 +473,12 @@ Exact47source remains accepted68c8bad5, execution4e6beb52. Original CLI51624stud
 必要新费用快照19:06:28阶段请求已完成，workspace235.101855delayed/billed0；保守近高235.6920755加25lag估计，再加新100=360.6920755<450（账本向上取整360.70），不称invoice/balance/严格上界。P0单slot248c在Stage0$10内，失败费用/旧claim均保留。原1024LR新纯计划候选c23ed875、bootstrap method预输出冻结e5c79962、duplicate925canonical预正确性选择defba927均不更改P0源19；后两无实际统计/模型输出。
 
 此条记录时0P009云调用；之后一次上传/回读/真实source/provider/无旧claim检查满足才提交ONLYmodal_p0。估计500–1300秒和EOS行为为reviewer预计，不是实测保证；若失败只保全原尝试，禁止自动重跑。
+
+### 2026-10-14 12:18:30 PDT（P009 P0原调用进行中；MATH持久进程池候选）
+
+原P0 CLI43936于19:09:26UTC仅调用一次，应用ap-laRv7V5oQp7J6kKZdPolnd已建，镜像构建结束后仍在派发前检查；本条读取尚无canonical submitted/result/error，不把CLI启动当GPU生成。原3文件上传75218及readback/gates已DONE，不重复。live19源与标量MATH源均原字节保留。新只读provider/4已知账本key核对46752进行中，不枚举全部旧账本或产生模型调用。
+
+为解决bc-N1每题重复import耗时，新独立两进程池准备完毕：原symbolic/decide不改、每进程主线程2秒alarm/父8秒外帽，启动等待不挤占其他活动任务的外帽；exact(gold,extractedanswer)含失败只算一次，每原row身份/stop/来源保留。8新合成检查（含真实固定依赖进程）一次PASS；旧11测试/真实输出评分均未重跑。包0b714161dcc23a93cc44b52f4948eae271eaeb27的12成员逐Git字节核验，请求仅新CPU调度代码；实际P1首100计时、durabledriver、50分歧与>2%fallback抽查仍未执行。
+
+几次只读路径查询命中了不存在的audit目录、docs/RUN_LOG和猜测helper/request名称，未修改科学产物；改用实际reports/p007_audit/INDEX与reports/sft_allocation_midpoint_20261011/RUN_LOG。无需新owner许可，后续严格真实审计和科学门。
+
