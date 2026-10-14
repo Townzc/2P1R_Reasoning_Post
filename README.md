@@ -1,3 +1,6 @@
+<!-- P009 exact runtime prepared: 2026-10-14T23:54:37.096625+00:00 -->
+P0 internal-only scope has real br PASS; original discordance and blocked cross-engine decision remain. [P009 exact Stage0 runtime](reports/p009_20261014/stage0_generation_runtime_preflight_v1/README.md) now binds all27 source files, original inputs/models and three finite workers; exact runtime/numeric review is pending. No new upload or generation call.
+
 # October14 — P009 owner-authorized internal-only scope
 
 P0 completed all2638 outputs with full local raw/lineage verification and all

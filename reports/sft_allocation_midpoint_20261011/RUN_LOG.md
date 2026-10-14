@@ -1226,3 +1226,5 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 已审internal-only修订保留原P0 blocked与不一致率。新增入口/binding/串行上传收集/独立raw oracle，原23core和38P0/高吞吐源未变。三新slot只14,450原请求、无训练/P0重生成；2400/900/1200入口帽与399/216/252c合867，保留1004c旧reserve，总1871<Stage02000。拟首256×3付费测量例外须确切runtime/numeric审计，300秒allowance未校准；plan24h仅有限派发/留存包络。
 
 OLMo固定revision原始10文件5,949,372,518bytes本地准备23:42:07完成，两权重LFS SHA符合官方固定记录，CLI27363已exit0消耗；无转换/模型加载/远端上传。原Qwen/教师Volume字节复用。16个新entry夹具中10项r1通过，6项因mock namespace漏SLOTS失败，保存原fixture/log；只重跑受影响6项r2均PASS(0.033s)，没有改实际worker/重跑旧core测试或旧oracle。首builder将18个非unit/done账本误计为20，任何输出前assert拒绝；原log保留，修正实际计数后首次产物建立，未重建旧包。新确切包准备一次，全部upload/gates/calls/actualoracles仍NOTRUN，真实P1/G0/Stage1均未准入。
+
+Exactruntime target `75b5ccded42fdc64f11615d93f4a37de13696e0d`:41 manifest members verified from Git bytes. Whole style check retained two historical copied-source EOF warnings; only check excluding those two passed. All old bytes retained; zero new cloud calls.

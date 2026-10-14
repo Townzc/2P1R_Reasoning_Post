@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T23:53:51.881794+00:00",
+  "as_of_utc": "2026-10-14T23:54:37.096625+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2269,6 +2269,22 @@
       "blocking_for": "Future Stage0 generation core only; exact executable runtime/model-input/numeric release remains separate",
       "created_utc": "2026-10-14T23:40:56.500162+00:00",
       "scientific_calls": 0
+    },
+    {
+      "request_id": "p009-stage0-generation-exact-runtime-r1",
+      "scope": "p009-stage0-generation-exact-runtime-and-numeric",
+      "target_commit": "75b5ccded42fdc64f11615d93f4a37de13696e0d",
+      "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v1",
+      "manifest": "reports/p009_20261014/stage0_generation_runtime_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "7ee016861d3d42bc1c17e71f43aa0243e957f4b8712d04af04740804380b3332",
+      "spec_sha256": "d64362270dceb26feb586c8520352318e2ddc7f19339e9bc0316948ae5547111",
+      "source_files": 27,
+      "review_request": "reports/p009_20261014/stage0_generation_runtime_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only the three exact P2/P3 finite generation slots; real P1/G0/Stage1 remain later gates",
+      "created_utc": "2026-10-14T23:54:37.096625+00:00",
+      "scientific_calls": 0
     }
   ],
   "p008_v31": {
@@ -2865,7 +2881,9 @@
       "retained_prior_cents": 1004,
       "uploads": 0,
       "calls": 0,
-      "first_paid_measurements_proposed": 3
+      "first_paid_measurements_proposed": 3,
+      "target_commit": "75b5ccded42fdc64f11615d93f4a37de13696e0d",
+      "manifest_sha256": "7ee016861d3d42bc1c17e71f43aa0243e957f4b8712d04af04740804380b3332"
     }
   }
 }
