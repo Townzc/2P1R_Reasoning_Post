@@ -1,3 +1,5 @@
+[21:00 PDT中期冻结材料](reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1/READINESS.md)：使用截止前原字节；未完审计明确pending，后续单列。
+
 P008 最新：18学生与base全部计算完成、原始输出和完整训练状态本地核验通过，资源均已释放。T8已有7/8项外审G3 PASS；[完整注册统计与3图](reports/p008_20261013/registered_primary_results_v1/FACTS_AND_LIMITS.md)已生成，最后结果/统计G3及最终CPU核验待审。原N2 FAIL/9600事后工程修订保留，21PDT材料按真实状态冻结。
 
 # Problems, Paths, or Repeats?
