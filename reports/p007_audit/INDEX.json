@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T22:55:50.047616+00:00",
+  "as_of_utc": "2026-10-14T23:16:47.574477+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2162,9 +2162,9 @@
       "additional_gate_manifest_sha256": "9dfd3559bd89c1404226d9b2a5d9d36a06e2ab058c6482b2d4c77a9b11780fc0",
       "review_request": "reports/p009_20261014/P0_ENTRY_REPAIR_ACTUAL_A2_REQUEST.md",
       "created_utc": "2026-10-14T22:55:50.047616+00:00",
-      "status": "pending",
-      "blocking": true,
-      "blocking_for": "Actual full P0 engine-comparability A2; base discordance gate is locally blocked, no later science admitted",
+      "status": "completed_integrity_PASS_original_scientific_gate_NOT_PASSED",
+      "blocking": false,
+      "blocking_for": "Original A2 is complete; successor owner-amendment scope review remains blocking",
       "new_raw_count": 2382,
       "inherited_raw_count": 256,
       "new_training_updates": 0,
@@ -2220,7 +2220,33 @@
       },
       "scientific_gate_passed": false,
       "old_eager128_excluded_unscored": true,
-      "all_four_apps_stopped": true
+      "all_four_apps_stopped": true,
+      "review_commit": "45b4163a1db202cdf09ddd3a8418d989bad8ef92",
+      "review_path": "audit/claude/20261014bq/REPORT.md",
+      "review_sha256": "b129dceb9910a1c282e77967bb5f4a720212cb32f9c119f22e9ec52f64c2360d",
+      "review_read_utc": "2026-10-14T23:15:36.194774+00:00",
+      "review_event_utc": "2026-10-14T23:07:06Z",
+      "integrity_decision": "PASS",
+      "owner_case4_resolution_recorded": true,
+      "owner_amendment_request": "p009-p0-internal-only-owner-amendment-r1"
+    },
+    {
+      "request_id": "p009-p0-internal-only-owner-amendment-r1",
+      "scope": "p009-p0-vllm-internal-only-owner-amendment",
+      "target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b",
+      "packet": "reports/p009_20261014/p0_internal_only_amendment_v1",
+      "manifest": "reports/p009_20261014/p0_internal_only_amendment_v1/MANIFEST.json",
+      "manifest_sha256": "9fb99f9f54c3794c25fdd88fe74dd461cc0e069f6f7e4e39a1246e871c9f2bcd",
+      "amendment_sha256": "4f2a56f3e794fd4182e1d9e36c30af0c09c0d6751dea157a3abd34918abf2872",
+      "owner_authority_sha256": "ab9eb85a14d61eb296707b6244ae3a7ed2ad97fd38f00ad0a92add402e1ec378",
+      "original_result_target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
+      "original_result_sha256": "1b065f68ba45f5e82fff8408597727ec7a5d5a42d4ff9e7c3950336dbaa0b0fc",
+      "review_request": "reports/p009_20261014/p0_internal_only_amendment_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Owner-resolved P0 engine scope, together with actual full P0 A2; no later scientific gate is waived",
+      "created_utc": "2026-10-14T23:15:12.951500+00:00",
+      "post_result_amendment": true
     }
   ],
   "p008_v31": {
@@ -2514,7 +2540,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "preclaim_zero_work_closed_new38_entry_repair_pending",
+    "status": "P0_integrity_A2_PASS_owner_internal_only_amendment_pending_exact_scope_review",
     "total_cap_usd": 110,
     "stage_caps_usd": {
       "stage0": 20,
@@ -2557,15 +2583,13 @@
       "notify": "Only Stage1 results or genuine blockers; stay quiet for unchanged state."
     },
     "latest_read_review": {
-      "commit": "1708a34fb0b7a452cc660af455a528998aebb6cf",
-      "read_utc": "2026-10-14T22:35:26.893377+00:00",
+      "commit": "45b4163a1db202cdf09ddd3a8418d989bad8ef92",
+      "read_utc": "2026-10-14T23:15:36.194774+00:00",
       "scopes": [
-        "p009-p0-fast-unattempted-remainder-runtime-and-numeric",
-        "p009-p0-fast-remainder-readonly-observation-and-failed-preservation-code",
-        "p009-p0-fast-remainder-result-publication-code",
-        "p009-math-p1-durable-journal-code"
+        "p009-p0-complete-engine-parity-A2"
       ],
-      "actual_science_passed": false
+      "actual_raw_integrity_passed": true,
+      "original_scientific_gate_passed": false
     },
     "math_scorer": {
       "status": "code_PASS-WITH-NOTES_actualP1_pending",
@@ -2616,7 +2640,7 @@
     },
     "active_scientific_calls": 0,
     "active_GPUs": 0,
-    "p0_status": "full_P0_local_integrity_passed_base_discordance_blocked_actual_A2_pending",
+    "p0_status": "original_gate_blocked_preserved_actual_integrity_A2_PASS_owner_internal_only_recorded",
     "p0_suffix": {
       "target_commit": "7c9f093cd9f0b866cce65329d0b88c42fe0066b8",
       "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
@@ -2776,6 +2800,27 @@
       "acceptance_packet": "reports/p009_20261014/review_1ae0a75c_accepted_v1",
       "target_commit": "90d6e260e8643b61bd9586114bfe24068a8b9f38",
       "current_repair_uses_release": false
+    },
+    "internal_only_amendment": {
+      "request_id": "p009-p0-internal-only-owner-amendment-r1",
+      "packet": "reports/p009_20261014/p0_internal_only_amendment_v1",
+      "owner_directly_authorized": true,
+      "post_result_amendment": true,
+      "comparison_scope": "P009_within_vllm_only",
+      "status": "owner_authorized_actual_P0_integrity_A2_PASS_exact_amendment_review_pending",
+      "added_budget_cents": 0,
+      "target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
+    },
+    "p0_actual_A2": {
+      "target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
+      "decision": "PASS_RAW_LINEAGE_ACCOUNTING_ONLY",
+      "report_commit": "45b4163a1db202cdf09ddd3a8418d989bad8ef92",
+      "report_path": "audit/claude/20261014bq/REPORT.md",
+      "report_sha256": "b129dceb9910a1c282e77967bb5f4a720212cb32f9c119f22e9ec52f64c2360d",
+      "read_utc": "2026-10-14T23:15:36.194774+00:00",
+      "packet": "reports/p009_20261014/review_45b4163a_disposition_v1",
+      "original_scientific_gate_passed": false,
+      "acceptance_target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
     }
   }
 }
