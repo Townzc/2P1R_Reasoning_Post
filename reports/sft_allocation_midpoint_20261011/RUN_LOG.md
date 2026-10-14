@@ -778,3 +778,13 @@ Motivation: the final integrity audit must distinguish original9560 recipe ident
 ### 2026-10-14T00:54:08.183742+00:00 — Real exact cap reviews accepted and original finite T8 dispatch prepared
 
 Full4edd8399 report read00:52UTC, events00:39:57/00:41:04; independent fixedtarget/source/spec hashes checked.35-source runtime PASS-WITH-NOTES and all8 amended numerical PASS bound separately, oldproposalFAIL unchanged.19CPU code only accepted; C1 all8completedcondition retained, actual I/O stillabsent. R1 stale embeddedbudget labels corrected in sidecar without changing immutable spec; R2 unresolvedsupplementfail retainsclaim/capacity/unknown/no replay; R3 hostlatency notguarantee. Initialwrong-repo Papers empty response caused local receipt assembly error; valid branch/comments reused, only note lookup corrected, actualea8befd5 unchanged. Newreading notinvented. No oldtests/oracles/models repeated. Next original8slots once under9600/$266.44/max8, no new upload.
+
+
+### 2026-10-14T01:16:06.978498+00:00 — Original T8 calls and registered analysis preparation
+
+First publishedsource66190046 T8 calls submitted at actual01:03:40,01:08:03,01:13:37UTC; firsttwo actualH100/16updates/spec/claim/supplement verified. Fourth CLI remains pending submission at this record. Initial first CLI rejected local --detach placement before scientific call; readonly records/directory absence confirmed, original log retained, correctedr2 is first scientific call. A local third-submitted read raced publication and raised FileNotFoundError; the orchestration did not check that command exit before starting fourthCLI. Record retained; no further dispatch until actual fourth submitted, and runtime lock/once-only claims unchanged. Scientificsource35 remains exact.
+
+Prepared compact per-run G3 publication plus all19-model registered analysis and figures. Six new synthetic paired-bootstrap tests passed; no oldtests/models/oracles repeated, actualdataanalysis notrun. All18 preregistered main contrasts, four retained conditional bridge effects and observeddraw means/ranges retained.10k pairedquestionseed20261013; pointwise conditional intervals, no population/seed/familywise inference. Original report trailing whitespace preserved to retain its SHA; no semantic correction to accepted evidence. Reflection: keep local submission bookkeeping error distinct from actual scientific attempts; require successful submitted proof before the next CLI.
+
+
+Publication tail note 2026-10-14T01:17:15.331478+00:00: immutable analysis preflight packet and RUN_LOG had completed before a wrong nested AI_USE_LOG path raised FileNotFoundError; retained error, wrote only missing root AI_USE_LOG tail, no packet rebuild or data/model execution.
