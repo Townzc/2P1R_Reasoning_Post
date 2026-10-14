@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 15:04:05 PDT（独立准备P1持久记录，不评分真实教师输出）
+
+新math_scoring_journal代码围绕已审且未改的scalar/persistent pool，用fsync、只创建记录和独占锁保存原有顺序/输入来源、批次intent、原symbolic结果与完成证明。完整批次可在下一本地会话继续未评分行并复用原答案对（包括超时/失败）；任何partial/未知chunk阻断继续，不重试不补零。预先登记的pair不冒充已实际调用。新11个fake-pool检查一次通过；没有实际math-verify、真实teacher评分、模型或云调用。
+
+首100实际行的启动/新pair/完整至proof耗时仍待真实运行，最后TIMING记录写入不含在观测区间且明确披露。串行scenario保留300秒未校准余量/20%，不假定双进程提速。后续需真实exact输入/driver/first100数值审计；50分歧与>2%fallback固定hash最多25仅留空adjudication等待独立检查，>0.5%outertimeout须标记。没有把代码准备当P1/A2/eligibility。新packet math_journal_preflight_v1只请求代码审计，不阻塞独立P0入口修复。
+
+原38source/sourcepackets保持未变，旧11entrychecks及旧math8/11checks均未重跑。PROTOCOL.md追加owner明确预算提高后的110/20分配记录，历史100/10与旧immutable包保留，未改科学量/解析器/随机种子。
+
+
 ### 2026-10-14 14:57:07 PDT（入口零工作失败已核清；授权提高预算并送审确切修复）
 
 原续跑CLI81028在21:43UTC因KeyError `inputs`退出，原app已STOPPED0。完整只读对账70936于21:48:41UTC完成：账本只有原计划登记，零claim、零unit/terminal、零模型加载和新增输出；原256条保持不动。故障来自入口读取不存在的顶层manifest，实际字段在parent_spec.inputs。旧测试和外审未覆盖这个真实入口错误，证据、原callback、旧源码及费用全部保留，不能把它记成科学parity失败或免费调用。

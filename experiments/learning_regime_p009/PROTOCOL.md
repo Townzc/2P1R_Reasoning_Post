@@ -285,3 +285,17 @@ artifact if prepared, never additional scientific training or teacher calls.
 The owner selected a common high-throughput vLLM setting for all new evaluations and a fresh full P0 under that configuration. Original eager/32-sequence P0 failed its time gate with128 unscored rows; it remains failed and those rows do not enter the new P0. The unattempted identical-engine suffix is retired. NewP0 uses original base638/correct969 references, same2638 prompts/frozen parsing/greedy512, no training. Candidate shared settings are frozen in `high_throughput_v1.py`: V1/bf16/context2048/TP1,CUDA FULL_AND_PIECEWISE,level3,max256sequences,8192batchedtokens,0.80GPUmemory,chunkedprefilltrue/prefixcachefalse,seed17. Future teacher sampling still keeps original temperature/top-p/seed/EOS/max1024; future endpoint implementations require their own exact source/input/numeric review and must use the shared settings. This amendment does not infer parity for a different model or MATH task.
 
 Exact freshP0/runtime/bootstrap numeric review is required before a call. One first-base256 chunk is a paid measurement exception; every laterchunk uses all new complete batch times and actual elapsed. Oldeager forecasts are not substituted. New252c and old248c total500c, leaving500c in Stage0; other stagecaps and the unallocated500c remain unchanged. Planning$5–6/5–10x/1–2h are estimates. Every later admission still needs real science and financial gates, with no automatic retry or hidden use of unallocated funds. Original historical protocol and source snapshots are retained.
+
+## October14 explicit owner budget increase (2026-10-14 21:53 UTC recorded)
+
+The owner directly authorized increasing the budget to prevent a small overrun
+from delaying the already authorized finite experiment. Codex stated and
+allocated a bounded **$110 total: Stage0 $20, Stage1 $50, Stage2 $35,
+unallocated $5**. This supersedes the historical $100/$10 figures above; it
+does not change scientific groups, doses, gates or retry restrictions. Project
+spending remains at most$450 with$50 protected. Exact authority and allocation
+are in `reports/p009_20261014/p0_entry_repair_preflight_v1/OWNER_BUDGET_AMENDMENT.json`.
+The pending entry repair retains every prior failed-call allowance: $7.52 plus
+$2.52 for its new slot, $10.04 total, leaving$9.96 within Stage0. No proposed
+closed-failure settlement release is needed for this admission. New exact code,
+input, numeric and scientific reviews still govern progression.

@@ -2880,3 +2880,11 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 新38source候选修复嵌套manifest并在登记前核对，timer finally覆盖预准入异常。原已登记计划不改，完整账本必须仅有同一计划且原marker/所有远端目录未尝试；另加永久dispatch marker，任何已有或未知提交阻止第二次调用。仍仅继承256并生成2382，1200worker/full1900/H100/zero retry/11批每批计时门，解析器、EOS窄修复、科学量和旧32源未改。实际入口的11个新mock检查通过，原KeyError也被复现；不是GPU实测。新的runtime/numeric、只读工具及publisher均需各自确切审计，实际新gate/image/upload/call均0。没有重跑旧模型/保全/tests/oracle。
 
 [原调用零工作证据](reports/p009_20261014/p0_preclaim_failure_v1/README.md)与[确切入口修复](reports/p009_20261014/p0_entry_repair_preflight_v1/README.md)已准备。后续仍按真实A2/G0、输入/源码/预算等门自动推进，不重复常规许可；p009继续，旧p007/automation-4保持PAUSED。Papers与账单最后21:31实际读取，下一付费阶段过1小时才必要刷新；不存在新的Stage1结果。
+
+### 2026-10-14 15:04:05 PDT（独立准备P1持久记录，不评分真实教师输出）
+
+新math_scoring_journal代码围绕已审且未改的scalar/persistent pool，用fsync、只创建记录和独占锁保存原有顺序/输入来源、批次intent、原symbolic结果与完成证明。完整批次可在下一本地会话继续未评分行并复用原答案对（包括超时/失败）；任何partial/未知chunk阻断继续，不重试不补零。预先登记的pair不冒充已实际调用。新11个fake-pool检查一次通过；没有实际math-verify、真实teacher评分、模型或云调用。
+
+首100实际行的启动/新pair/完整至proof耗时仍待真实运行，最后TIMING记录写入不含在观测区间且明确披露。串行scenario保留300秒未校准余量/20%，不假定双进程提速。后续需真实exact输入/driver/first100数值审计；50分歧与>2%fallback固定hash最多25仅留空adjudication等待独立检查，>0.5%outertimeout须标记。没有把代码准备当P1/A2/eligibility。新packet math_journal_preflight_v1只请求代码审计，不阻塞独立P0入口修复。
+
+原38source/sourcepackets保持未变，旧11entrychecks及旧math8/11checks均未重跑。PROTOCOL.md追加owner明确预算提高后的110/20分配记录，历史100/10与旧immutable包保留，未改科学量/解析器/随机种子。
