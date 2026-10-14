@@ -2,7 +2,7 @@ P008 有限实验及必要核验已全部完成：18学生+base、注册统计/3
 
 [最终结果与材料总入口](reports/p008_20261013/final_handoff_20261013_v1/README.md) · [最后CPU外审](reports/p008_20261013/review_24ef9fd7_accepted_v1/DISPOSITION.md) · [不可变21:00PDT中期材料](reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1/READINESS.md)
 
-最后CPU审计事件为2026.10.13 23:04:06PDT；本轮完整读取后接受。原N2 FAIL/9600秒事后修订、所有失败父任务和费用保留；A3统一次级parser按协议deferred，未执行。p007在最终交接发布后按用户指令暂停。
+最后CPU审计事件为2026.10.13 23:04:06PDT；本轮完整读取后接受。原N2 FAIL/9600秒事后修订、所有失败父任务和费用保留；A3统一次级parser按协议deferred，未执行。p007已于2026.10.13 23:18:52 PDT按用户指令暂停，[暂停回执](reports/p008_20261013/P007_PAUSED_20261013.json)已独立回读确认。
 
 # Problems, Paths, or Repeats?
 
