@@ -2804,3 +2804,9 @@ Codex read Claude proposal134c2546 in full and the owner's direct100USD/five-gro
 未尝试后缀runtime/numeric仍待真审计，0新child调用。独立准备create-only完整结果publisher，固定ab3425734d8927db87ead7ced9fe72efed5dd7d9，原始archive回读、所有gate结果如实报告、failedparent/128继承与2510新输出来源、两appSTOPPED0、原HF布尔表/全oracle/source绑定和明确隐私投影；仅语法解析，实际结果不存在故未执行，不重跑旧模型/评分/fixture。新4manifest成员逐Git字节核验；新请求只阻塞该publisher，不挡后缀exact审计。原24运行源未改。
 
 上一交接写入顶部/LIVE/AGENTS后因未定义p0变量导致CLI_SESSION尾部未更新；仅补这一未写字段，原1910版本保留，0科学副作用/旧builder重跑。ded97bb8普通push59526已完成并独立remote核验。p009prompt更新后实际读配置ACTIVE/30分钟，旧p007与automation-4 PAUSED；不把巡检配置当运行准入。
+
+### 2026-10-14 12:43:51 PDT（P009常驻评分代码外审通过；实际P0后缀仍待审）
+
+实际19:41:22只读reviewpoll75comments/new3ce168ad；19:41:48.505658完整读bf报告SHA2a1386b584c05956e5aa0e95d99c2e94575f4ee5e0ac40fd223c411d9a16204d，comment6176564218事件19:28:05。target0b714161四源PASS-WITH-NOTES，原标量字节不变；reviewer未能运行math-verify，局限如实保留。唯一新增要求是在P1按池报告outertimeout/unique-pair比例，>0.5%须在资格使用前标出；首100真实行启动/新pair计时、50分歧及>2%fallback固定hash最多25抽查尚未执行。0真实P1/模型调用，旧8fixtures未重跑。
+
+P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget或调用。一次猜测packet/SPEC.json只读路径错误后改读实际SOURCE_BUNDLE；初acceptance写入把该wrapper当files导致FileNotFound、发生首写之前，随后shell空commit/no-op push原样保留。现只补未写产物并显式source_files/set-e，没重跑已有包或科学工作。f9261cca普通push70184完成并独立remote核验。后续review至少19:56:49、正常20:11；无需频繁查询。

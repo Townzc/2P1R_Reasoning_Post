@@ -8,6 +8,6 @@ The [exact unused-suffix candidate](p0_suffix_preflight_v1/README.md), fixed7c9f
 
 [Design clarifications and training-plan code](a0_and_training_plan_review_accepted_v1/README.md) passed their scoped external reviews. This is not an actual training-input or student admission. The reviewer did not independently reproduce the MATH dev hash-order check; that limitation remains. The actual first3,200 selected S1 full answers must fit2,097,148 targets before any S1 training.
 
-The [persistent MATH scorer](math_scoring_pool_preflight_v1/README.md) awaits code review; actual P1 output scoring, throughput and disagreement audit have not run. The [complete-P0 publisher candidate](p0_result_publisher_preflight_v1/README.md) is prepared and parsed, not executed. Its review blocks only that publisher; genuine full-outcome A2 remains separate.
+The [persistent MATH scorer](review_3ce168ad_accepted_v1/README.md) has scoped code PASS-WITH-NOTES; actual P1 output scoring, throughput and disagreement audit have not run. Outer timeouts over0.5% of unique pairs must be flagged before eligibility use. The [complete-P0 publisher candidate](p0_result_publisher_preflight_v1/README.md) is prepared and parsed, not executed. Its review blocks only that publisher; genuine full-outcome A2 remains separate.
 
 P009 monitoring remains active every30minutes, quiet when unchanged. Oldp007 andautomation-4 stay paused; completed P008 and exploratory results remain immutable. No external messages, subagents, repeated output generation or automatic retries are authorized.
