@@ -4,6 +4,14 @@
 
 ## 当前状态
 
+### 2026-10-14 11:46:29 PDT（MATH评分候选独立准备完成；P0仍待审）
+
+新隔离本地依赖math-verify0.9.0/latex2sympy1.11.0/ANTLR4.13.2/SymPy1.14锁定。最终boxed、符号False不可被字符串覆盖、解析/工具失败专属fallback、进程超时及错误教师标签资格分别记录；11新合成检查通过，未评分任何新模型输出。初r1一fixture错误把(x)等同x，纠正fixture不放松解析；后追加不解析错误box不得进入C的守卫，所有日志保留。50真实教师训练输出分歧检查仍未执行，不能把codePASS当P1。新packet固定4c652b03，12manifest成员Git原字节核验，已请求独立代码审计，不阻塞P0。
+
+旧19P0sources/spec/输入和旧数据均未改，仍0P009云镜像/上传/调用。两份共享日志新条目尾部空行曾触发style警告，本次仅规范新尾部换行，历史原源snapshot告警仍保留。新p009ACTIVE、旧两monitorPAUSED。
+
+[候选MATH评分器](../reports/p009_20261014/math_scorer_candidate_v1/README.md)。
+
 ### 2026-10-14 11:41:07 PDT（P009确切P0准备送审，0云调用）
 
 已固定新19sourceP0入口，两个1319端点仅评测base638和正确969原检查点，无训练。1,200秒worker/1,260平台/600startup、$2.48预留及首4完整批次每role的计时例外均请求Claude确切审计；0image/upload/claim/model。9pure+3mockedflow共12不同CPUchecks通过，不当CUDA/模型已验证。初依赖方案在发布前修正为已观测vLLM0.11/NumPy2.2.6加PEFT，原未提交包保留；新测试本地临时目录已约束仓库。历史两个源snapshot末尾空行告警保留，不能称全范围stylePASS。

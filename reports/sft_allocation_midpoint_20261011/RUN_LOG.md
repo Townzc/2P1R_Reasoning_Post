@@ -1039,3 +1039,10 @@ Motivation: test a learning regime before a conditional five-condition allocatio
 
 [确切P0包](reports/p009_20261014/p0_runtime_preflight_v1/README.md) · [context意见回应](reports/p009_20261014/review_166dc7e6_disposition_v1/DISPOSITION.md)。
 
+### 2026-10-14 11:46:29 PDT（MATH评分候选独立准备完成；P0仍待审）
+
+新隔离本地依赖math-verify0.9.0/latex2sympy1.11.0/ANTLR4.13.2/SymPy1.14锁定。最终boxed、符号False不可被字符串覆盖、解析/工具失败专属fallback、进程超时及错误教师标签资格分别记录；11新合成检查通过，未评分任何新模型输出。初r1一fixture错误把(x)等同x，纠正fixture不放松解析；后追加不解析错误box不得进入C的守卫，所有日志保留。50真实教师训练输出分歧检查仍未执行，不能把codePASS当P1。新packet固定4c652b03，12manifest成员Git原字节核验，已请求独立代码审计，不阻塞P0。
+
+旧19P0sources/spec/输入和旧数据均未改，仍0P009云镜像/上传/调用。两份共享日志新条目尾部空行曾触发style警告，本次仅规范新尾部换行，历史原源snapshot告警仍保留。新p009ACTIVE、旧两monitorPAUSED。
+
+[候选MATH评分器](reports/p009_20261014/math_scorer_candidate_v1/README.md)。
