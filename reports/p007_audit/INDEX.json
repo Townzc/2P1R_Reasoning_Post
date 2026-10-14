@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T04:30:00.442846+00:00",
+  "as_of_utc": "2026-10-14T04:57:38.438172+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1401,8 +1401,8 @@
       "manifest": "reports/p008_20261013/final_audit_t8_cap_proposal_v1/MANIFEST.json",
       "manifest_sha256": "568d1e57acd33e87d56f197067a239a50b743baddda935891f9e11c8e7d26172",
       "timing_packet": "reports/p008_20261013/final_cpu_timing_observations_v1",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS-WITH-NOTES",
       "scope": "p008_cpu_replacement_integrity_numeric",
       "blocking": true,
       "blocking_for": "Only the original final CPU slot; models/complete primary analysis are already closed",
@@ -1418,7 +1418,12 @@
         "Assess whether3003.275382s proxy forecast is acceptable under3180admission/3300worker/full4000window:all26unchangedHTTPreceipts/min10.020938MBs plus once-only4.219557583s localfulloracle,3xtransfer/4x24processing/300sfixed/20%margin; those assumptions are uncalibrated,localHTTP+warmcache are not cloud4CPU/FUSE measurement or upperbound",
         "No upload/call/numericacceptance yet;500centreservation remains inside266.44stage,notactualinvoice"
       ],
-      "created_utc": "2026-10-14T03:54:25.991161+00:00"
+      "created_utc": "2026-10-14T03:54:25.991161+00:00",
+      "review_commit": "fe5b49f7c1c6b44e552b51c7eadd552ced442a43",
+      "review_report": "audit/claude/20261013ao/FINAL_CPU_NUMERIC.md",
+      "review_report_sha256": "3a3cfe55cad51109bc69960c9683de430389319b36f16cc3105f0b4cb4660db7",
+      "review_event_utc": "2026-10-14T04:31:05Z",
+      "read_utc": "2026-10-14T04:51:07.230536+00:00"
     },
     {
       "request_id": "p008-midpoint-freeze-integrity-r1",
@@ -1482,7 +1487,7 @@
     }
   ],
   "p008_v31": {
-    "status": "all19_local_and_G3_complete_materials_frozen_final_CPU_numeric_and_local_finalizer_code_pending",
+    "status": "all19_G3_complete_final_CPU_admitted_upload_dispatch_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.44,
     "phase0_cap_usd": 15,
@@ -1653,6 +1658,14 @@
     ],
     "material_freeze_packet": "reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1",
     "material_freeze_target": "e0025e0e0c47b696f5b8364e6b1ed2aa079452ef",
-    "local_cpu_finalizer": "prepared_code_review_pending_not_executed"
+    "local_cpu_finalizer": "prepared_code_review_pending_not_executed",
+    "final_cpu_admission": {
+      "path": "reports/p008_20261013/final_audit_t8_cap_admission_v1/ADMISSION.json",
+      "admission_sha256": "feba9e73118862e87a5a1272a294b1e97ee7afcaae5187a95dfde3954011d27a",
+      "binding_sha256": "08416dc337201295fc5ae5a4cfa682f12db8a40165f7cb45d03f84c653d1a2a5",
+      "code_review": "82c3912ab7df5e043a7f987565be516c29956560",
+      "numeric_review": "fe5b49f7c1c6b44e552b51c7eadd552ced442a43",
+      "CPU_called": false
+    }
   }
 }

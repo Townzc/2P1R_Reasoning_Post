@@ -890,3 +890,13 @@ Four extra final blank-line warnings were reported for new script/test and their
 ### 2026-10-14T04:23:46.467082+00:00 — Actual final T8 and complete registered results G3 accepted after cutoff
 
 Read full fixedClaude8aada22d reportSHAfa5612ebb0935acc865f18040463f3bbdaba3ab9d2e17b637d915f341eba05fb at2026-10-14T04:21:30.535853+00:00; actualcomment event04:02:24UTC. LastT8990/1319,caps36 andcomplete19models/31contrasts/threefigures PASS;8/8T8 externalaccepted. PublicstateSHA is not externalprivatebinaryinspection, finalCPU isnotdone. Codex only read existing31intervals (27includezero) and published pointvalues, no oldbootstrap/raw/stateoracle/model rerun. Originalnumpy2.5.4 vs reviewer2.2.6 recorded; reviewerextra seed7 diagnostic notadopted. R1 explicitD2-only/unreplicated nexttooriginalunchangedfigure is a newpost-freezeaddendum, originalsnapshot/packetsimmutable. Approximate22tests/chanceoneexclusion is heuristic, not calibrated correlated-family probability. Newwordingitselfawaitsreview. CPU numeric andlocalfinalizer remainpending, noGPU/CPUcalls. LocalINDEX pending-list read initially assumed status onallhistoricrows, KeyError before writes; corrected .get read, no remote/builderretry.
+
+
+### 2026-10-14T04:52:58.373693+00:00 — Final CPU exact numerical review accepted before original finite admission
+
+FullfixedClaude fe5b49f7 report read04:51:07/event04:31:05 gives PASS-WITH-NOTES to929b769a/19sources/24physical21logical/26states/9supplements. Numeric binding saved, no CPU dispatch yet. Correct report row wording to18students+base,19modeloutputs, preserve all byte totals. Transfer conservatism is reviewer judgement, not a calibrated bound; actualprocessing/metadata may exceed proxy. N1 retains actual per-label timings and forbids automatic retries. New billing summary/report original bytes saved, delayedmeter224.34193173/P008labels136.68119635/residual+266.44=354.10073538<450; notinvoice/balance. No old model/oracle/export/calibration rerun, original failures and N2FAIL retained.
+
+
+### 2026-10-14T04:57:38.438172+00:00 — Original final CPU admission completed once
+
+Admit78789 completed after actual full original provider/ledger absence and source verification; binding08416dc3/admissionfeba9e73,19unchangedruntimefiles/24physical21logical/33inputmembers. All3failedparents retained. No freeze/proposal replay; upload/call still0 before publication. Independent finalizer code remains pending, actualCPU proofs not claimed.
