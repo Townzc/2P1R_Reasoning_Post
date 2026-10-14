@@ -1,0 +1,22 @@
+# Blocking: exact 9,600-second T8 amendment, source and numerical admission
+
+The owner directly approved the unchanged eight unattempted T8 slots at a 9,600-second worker cap and a $266.44 P008 cap (additional $0.40). The original all-eight N2 criterion failed and remains immutable at 8e1b3463; this is explicitly a **post-hoc engineering deviation**, not a retrospective original-gate PASS. Claude b5c0a754 independently reproduced the failed formula and checked the proposed arithmetic. The new exact implementation and amended numerical admission still require this scoped review.
+
+## Exact implementation
+
+Only `experiments.sft_allocation_p008.modal_students_t8_cap::main` may run this version. Its 35-source bundle preserves all prior runtime files and the original scientific `frozen_lr_block_student_runtime.run` call. All 19 original configs, input bytes, original plan, source admissions, failed N2 data and failed history remain immutable. The config's historical `max_seconds=9560` remains visible in recipe identity; the separate, explicit reviewed operational spec/intent overrides only the worker cap to 9600. Worker timer starts at function entry, soft work cutoff 9570, platform timeout 9660, startup600, local complete-window10300. No additional model/dose/evaluation call is introduced.
+
+The SAME original campaign/run claim is acquired through the SAME RunGuard before any scientific work. An old or new competing worker loses this atomic claim. No migration, retired-slot recreation or updated registered plan is involved. An immutable global supplement record reserves the approved40cents; after winning the original claim, each worker records its5cent supplement bound to that claim. Any partial/conflicting record blocks replay. The original1253cent reservation and receipt remain; intent/result separately report the5cent supplement and total1258. Neither amount is a provider invoice. Full conservative workspace meter162.31184746 plus the entire266.44stage deliberately double-counts already-spent P008 and is428.75184746<450. Failed/setup/storage costs are retained.
+
+The supplementary records add bounded setup/end bookkeeping; the unchanged per-block/evaluation guard read path has no new reads. This extra setup is not empirically benchmarked and is not silently subtracted from timing. There is no guarantee that a future host fits; actual workers stop at their hard cap. The new source/numerical audit must assess this limitation.
+
+Both queues continue to share the original dispatch lock; pending/unknown/unmatched containers count toward max8. Canonical local receipt and remote claim/intent/terminal/unit/directory absence are checked before spawn. Exact13 T1/base terminal dependencies are re-read. No new input upload. All training/scoring rules,2048updates4194296targets,seed17,1319greedy endpoints and1024forensic checkpoint stay fixed.
+
+## Required independent decisions
+
+1. Source/runtime: check exact35source/spec/owner authority, unchanged science and real historical G1 records, original shared claim and create-only supplementary accounting, failure behavior, finite timer/reservation and concurrency. Historical source PASS cannot admit this new entry.
+2. Numerical: compare every unchanged forecast and all host/failed provenance to the original failed proposal; apply9570 uniformly. Expected9550.77764–9551.68345 gives18.31655–19.22236seconds headroom. This is only an amended engineering criterion, not a statistical/timeout probability guarantee. Two separate scoped acceptance records must name this exact source and spec, and preserve original_N2_passed=false.
+3. Independent local oracle: `scripts/audit_p008_student_t8_cap.py` verifies the original scientific data/state/dose chain plus exact amended operational cap and linked5cent reservation. Originalreceipt1253+supplement5=1258 is explicit, no expense inference.
+4. Thirteen new in-memory CPU checks cover both scoped reviews, all-eight configs, mutated authority/input/cap/budget, complete failed-host provenance, shared claim races and partial-claim no-retry behavior. No old oracle/test/model work repeated.
+
+Preparation has made zero cloud images, calls, uploads or ledger mutations. The21PDT material freeze remains; unfinished work is pending/later separately reported. Final CPU will need the actual new T8 operational provenance in its admission; old numerical CPU admission does not exist.
