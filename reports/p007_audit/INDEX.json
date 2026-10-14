@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T04:57:38.438172+00:00",
+  "as_of_utc": "2026-10-14T06:16:24.840605+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1509,8 +1509,8 @@
       "packet": "reports/p008_20261013/final_cpu_integrity_v1",
       "manifest": "reports/p008_20261013/final_cpu_integrity_v1/MANIFEST.json",
       "manifest_sha256": "081b4acc89c38ac1e82c5233e5f6f2a9d5bccce31da9657aea948e60f6d9a57b",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "scope": "Original final CPU integrity result G3:24physical21logical/26full-state proofs/3retainedfailures/9T8supplements; public proof review, not direct private binary inspection",
       "blocking": true,
       "blocking_for": "Final finite-work integrity acceptance and handoff; all scientific model/statistical G3 already accepted",
@@ -1522,7 +1522,14 @@
         "Verify source35 T8cap provenance/originalN2FAIL/posthoc9600/9supplementrecords and500centreservation vsactual152.001233816s/uncalibratedproxy, no newscientificoutputs or modelreplay.",
         "Verify originalbatchtransportfailure andseparatemissing-only34filecommit/readback retained withoutwholeuploader/CPUretry, and immutable21PDTsciencecutoff unaffected."
       ],
-      "created_utc": "2026-10-14T05:35:38.145749+00:00"
+      "created_utc": "2026-10-14T05:35:38.145749+00:00",
+      "review_commit": "24ef9fd7dda8d710d4b945f10523b8a41d553b7a",
+      "review_report": "audit/claude/20261014aq/REPORT.md",
+      "review_report_sha256": "3913038fd0cf014a8d8fac7558728867d42b2a5e175d804c9f79e3f8bf040095",
+      "review_comment_id": 6162033269,
+      "review_event_utc": "2026-10-14T06:04:06Z",
+      "review_read_utc": "2026-10-14T06:12:17.731904+00:00",
+      "disposition": "reports/p008_20261013/review_24ef9fd7_accepted_v1/DISPOSITION.md"
     }
   ],
   "p008_v31": {
@@ -1706,5 +1713,38 @@
       "numeric_review": "fe5b49f7c1c6b44e552b51c7eadd552ced442a43",
       "CPU_called": false
     }
+  },
+  "p008_final_delivery": {
+    "schema": "p008_final_delivery_v1",
+    "created_utc": "2026-10-14T06:16:24.840605+00:00",
+    "created_pdt": "2026.10.13 23:16:24 PDT",
+    "logical_students": 18,
+    "base_models": 1,
+    "training_units": 74,
+    "procurement_draws": 2,
+    "registered_cells": 19,
+    "reported_contrasts": 31,
+    "figures": 3,
+    "all_model_and_registered_results_G3": "PASS",
+    "final_CPU_public_proof_G3": "PASS",
+    "final_CPU_review_commit": "24ef9fd7dda8d710d4b945f10523b8a41d553b7a",
+    "final_CPU_packet_commit": "b1b9de5b8ff2f79d8e3cdab38ace6f7b4516f697",
+    "all_original_compute_calls_closed": true,
+    "new_model_or_cpu_calls": 0,
+    "stage_reservation_usd": "266.44",
+    "project_spend_ceiling_usd": "450",
+    "protected_usd": "50",
+    "costs_are_not_final_invoices": true,
+    "original_N2_passed": false,
+    "post_hoc_engineering_deviation": true,
+    "A3_uniform_secondary_parser": "DEFERRED_PER_PROTOCOL_NOT_EXECUTED",
+    "material_cutoff_utc": "2026-10-14T04:00:00Z",
+    "freeze_commit": "e0025e0e0c47b696f5b8364e6b1ed2aa079452ef",
+    "automation": {
+      "id": "p007",
+      "owner_requested_action_after_delivery": "PAUSE",
+      "pause_execution_record": "Separate application action after publication; not yet claimed here"
+    },
+    "handoff": "reports/p008_20261013/final_handoff_20261013_v1/README.md"
   }
 }
