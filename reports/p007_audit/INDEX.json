@@ -1557,6 +1557,25 @@
       "review_event_utc": "2026-10-14T07:21:46Z",
       "review_read_utc": "2026-10-14T07:25:03.171233+00:00",
       "disposition": "reports/exploratory_20261014/review_5f64cb77_accepted_v1/DISPOSITION.md"
+    },
+    {
+      "request_id": "exploratory-vocabulary-cache-proposal-r1",
+      "target_commit": "1a3c910ecb438bd16f0cff860973168c98edc56d",
+      "packet": "reports/exploratory_20261014/vocab_cache_proposal_v1",
+      "manifest": "reports/exploratory_20261014/vocab_cache_proposal_v1/MANIFEST.json",
+      "manifest_sha256": "71b7981ece7c891d2bda2da80c5c5e2a3268d46c1f4a74caa362164c8d02ef00",
+      "status": "pending",
+      "external_review": "PENDING",
+      "scope": "exploratory-vocabulary-cache-proposal-code",
+      "blocking": false,
+      "blocking_for": "Proposal only, not the three active original workers. No future runtime or retry admitted.",
+      "review_request": "reports/exploratory_20261014/vocab_cache_proposal_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T08:00:07.905303+00:00",
+      "questions": [
+        "Verify cached vocabulary scalar is semantically identical for the frozen tokenizer; original first-stop and parser stay unchanged.",
+        "Verify4new synthetic tests and32saved stop-event matches; local lookup timing and original ack intervals are not a calibrated cloud speed guarantee.",
+        "Confirm unapplied diff/no live37source edits/no new calls/no permission to hotpatch or retry."
+      ]
     }
   ],
   "p008_v31": {
