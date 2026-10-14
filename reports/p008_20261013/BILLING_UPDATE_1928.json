@@ -1,0 +1,52 @@
+{
+  "prepared_utc": "2026-10-14T02:26:44.521299+00:00",
+  "actual_read_receipt": {
+    "started_utc": "2026-10-14T02:26:43.465205+00:00",
+    "read_utc": "2026-10-14T02:26:44.520561+00:00",
+    "commands": {
+      "summary": [
+        ".local/midpoint_20261011/venv/bin/modal",
+        "billing",
+        "summary",
+        "--for",
+        "2026-10",
+        "--json"
+      ],
+      "monthly_report": [
+        ".local/midpoint_20261011/venv/bin/modal",
+        "billing",
+        "report",
+        "--for",
+        "this month",
+        "--json"
+      ]
+    },
+    "exit_codes": {
+      "summary": 0,
+      "monthly_report": 0
+    },
+    "delayed_meter_not_invoice_or_balance": true
+  },
+  "workspace_delayed_meter_usd": "202.88184746",
+  "billed_usd": "0E-8",
+  "monthly_report_rows": 60,
+  "monthly_report_sum_usd": "200.15878290",
+  "P008_description_prefix_rows": 26,
+  "P008_description_prefix_sum_usd": "113.23536393",
+  "meter_minus_labeled_P008_usd": "89.64648353",
+  "residual_scope": "May include lagging/unlabelled P008 and other costs; not claimed pure non-P008 spending",
+  "stage_authorized_reservation_usd": "266.44",
+  "residual_plus_entire_stage_usd": "356.08648353",
+  "deliberate_full_meter_plus_entire_stage_doublecount_usd": "469.32184746",
+  "project_ceiling_usd": "450",
+  "protected_usd": "50",
+  "invoice": false,
+  "balance": false,
+  "ongoing_T8_costs_can_lag": true,
+  "all_failure_setup_storage_costs_retained": true,
+  "original_files_sha256": {
+    "summary.json": "695f8bf3af63cb8c6eae15216ee5d32e1b0a86f34564b57a62328f917d3903a2",
+    "monthly_report.json": "c04fc68cf2657f30fc948524b4600355c702ece293b66cd2327bd4f0074ca797",
+    "READ_RECEIPT.json": "8d2525abf51d79505a5c4a0fbd8c3170cd3780f3f18129df8bddec1e999f90ea"
+  }
+}

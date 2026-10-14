@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T02:04:50.228941+00:00",
+  "as_of_utc": "2026-10-14T02:27:24.610096+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1098,8 +1098,8 @@
       "packet": "reports/p008_20261013/t8_readonly_closeout_preflight_v1",
       "manifest": "reports/p008_20261013/t8_readonly_closeout_preflight_v1/MANIFEST.json",
       "manifest_sha256": "68661ee0c671ed121b757c93b431ab7cf1f3df20c09b6f500ee8484e7c3a6276",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "blocking": true,
       "blocking_for": "Only use of the new optional read-only wave-collector/callback-recovery paths; does not block admitted T8, ordinary unused per-run closeout, or final CPU",
       "scope": "One bounded original-evidence collection route per completed run; zero actual helper/model calls",
@@ -1110,7 +1110,12 @@
       ],
       "created_utc": "2026-10-14T01:46:33.546742+00:00",
       "new_scientific_calls": 0,
-      "actual_closeout_or_recovery_calls": 0
+      "actual_closeout_or_recovery_calls": 0,
+      "review_commit": "7034ad9dad3d3aa2b7454641fef88d565350e595",
+      "review_report": "audit/claude/20261013ak/REPORTING_AND_CLOSEOUT.md",
+      "review_report_sha256": "64c143bff8f33f220e4a05cfe7574fa9ec0f863da6169274fc30ffc388316f24",
+      "review_read_utc": "2026-10-14T02:22:11.764200+00:00",
+      "disposition_packet": "reports/p008_20261013/review_7034ad9d_accepted_v1"
     },
     {
       "request_id": "p008-registered-reporting-A1-A2-r1",
@@ -1119,8 +1124,8 @@
       "manifest": "reports/p008_20261013/procurement_reporting_v1/MANIFEST.json",
       "manifest_sha256": "d5d4f245531d664a19af05757a8f529e0bf713f30db5aa504e57bb56a4df3df8",
       "created_utc": "2026-10-14T02:04:50.228941+00:00",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "blocking": true,
       "blocking_for": "Final publisher_v2 only; does not block live T8, per-run collection/oracle/publication, original all19 analysis or independent finalCPU",
       "scope": "registered-primary-reporting-A1-A2",
@@ -1130,11 +1135,16 @@
         "Check v2 includes all A1 numbers on the same final page, A2 conditional-unregistered label and A3 pending; original accepted94 core/prepare/per-run helper and live35/CPU19 unchanged"
       ],
       "new_model_calls": 0,
-      "new_raw_oracle_calls": 0
+      "new_raw_oracle_calls": 0,
+      "review_commit": "7034ad9dad3d3aa2b7454641fef88d565350e595",
+      "review_report": "audit/claude/20261013ak/REPORTING_AND_CLOSEOUT.md",
+      "review_report_sha256": "64c143bff8f33f220e4a05cfe7574fa9ec0f863da6169274fc30ffc388316f24",
+      "review_read_utc": "2026-10-14T02:22:11.764200+00:00",
+      "disposition_packet": "reports/p008_20261013/review_7034ad9d_accepted_v1"
     }
   ],
   "p008_v31": {
-    "status": "eight_original_T8_running_all_startups_verified",
+    "status": "all8_original_T8_active_six_evaluating_at_0221UTC",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.44,
     "phase0_cap_usd": 15,
@@ -1169,7 +1179,7 @@
     "active_gpu_tasks": 8,
     "pool_d2_external_review": "PASS-WITH-NOTES merged numeric pool G1 at eb398fb1; no student admission",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "All8 original T8 calls submitted once;8 first16 startup proofs verified. Actual01:41:49UTC snapshot8 containers/no terminal/result;2 saved-roster reads rate-limited, progressunknown.",
+    "current_status": "reports/p008_20261013/review_7034ad9d_accepted_v1/DISPOSITION.md",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -1277,6 +1287,9 @@
     "T8_closeout_helper_status": "PREPARED_NOTRUN_scoped_review_pending",
     "final_cpu_numeric_admission": "ABSENT_requires_all24physical/all21logical_completedproofs_and_actualIOfit",
     "registered_analysis_status": "prepared_only_fixed_code_review_pending_all19models_required",
-    "T8_readonly_closeout_review_request": "p008-t8-readonly-closeout-code-r1"
+    "T8_readonly_closeout_review_request": "p008-t8-readonly-closeout-code-r1",
+    "registered_reporting_review": "4c1ad2d9 PASS7034ad9d; actual all19 results pending",
+    "readonly_T8_closeout_review": "4aadc204 PASS7034ad9d; actual calls0",
+    "latest_billing_snapshot": "reports/p008_20261013/BILLING_UPDATE_1928.json"
   }
 }

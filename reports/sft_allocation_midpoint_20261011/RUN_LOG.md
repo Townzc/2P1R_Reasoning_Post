@@ -808,3 +808,15 @@ Execution: one saved-field aggregate across all16 wallet summaries/events and148
 Reflection: references to evidence do not substitute for direct numerical disclosure. Failure categories and duplicate/cap overlaps are explicit rather than double-counted; problem overlap is not shared teacher responses. New reporting code and numbers are pending independent review, not automatically covered by oldcodePASS. All8 original T8 workers continue; no provider repoll before the scheduled~02:12UTC check, no new dispatch or collection.
 
 Publication-format note: precommit whitespace check flagged the two standard csv.writer CRLF files. Original CSV bytes and manifest retained; source check excludes only those two CSV files. The failed command prevented commit; no publisher, aggregation or tests repeated.
+
+
+### 2026-10-14T02:26:19.737206+00:00 — Eight original T8s continue; reporting and read-only closeout reviews accepted
+
+Actual02:21:10UTC two-reader snapshot:8originalcontainers/claims,noterminal/result/error. Six savedfinal2048/4194296blocks then endpoint rosters656/288/464/432/64/32; lasttwo2000/1520updates. This is saved-acknowledgment progress, not a final raw/state oracle or partial score. All8 read successfully; oldrate-limit snapshots retained. No startup/model replay or completed-work repetition.
+
+Claude7034ad9d fullreportread02:22:11/event02:14:49: A1/A2 reporting and4aadc204 read-only helpers PASS. Trueacceptances preserve exactscope:4usable overlaps independently reconstructed;4purchased intersections internalarithmetic only. Fullreportcorrectbilling166.55/78.31 takesprecedence over truncatedcomment66.55/8.31; exactsnapshotunchanged. No actual full19 analysis orfinalG3. L1 nowprepared innewperT8publisher_v2: actualwave/single/recovery route, exactsourcehashes and completewaveproof beforeimmutablemanifest; no privategates. OriginalarchiveAST/collector/recovery/live35/CPU19 remain unchanged. Newmetadata-onlysource requires scopedreview; noactualpublisher/test/model/remote mutation.
+
+Read-only lookup errors retained: guessednonexistentbranch404 andempty.stderrJSONparse. Actualbranchclaude/audit thenfixed7034read; no externalmessage/accountchange/scientificretry. Reflection: preserve review scope and lookup provenance, and distinguish saved progress from full endpoint evidence.
+
+
+Billing read 2026-10-14T02:26:44.520561+00:00 (filename1928 is a label, actual19:26:44PDT): delayedworkspace$202.88184746, P008-labelled$113.23536393, residual$89.64648353. Residual may include lagging/unlabelledP008. Residual plus entire authorized266.44reservation=$356.08648353<450; allfailure/setup/storage retained. Deliberately adding the entire workspace meter to the entire P008 reservation double-counts alreadylabelled P008 and is now469.32184746; this diagnostic is not a450-limit violation or the admission calculation. Neither figure is an invoice/balance/finalP008 expense. Full finitequeue/266.44/max8 remains unchanged.
