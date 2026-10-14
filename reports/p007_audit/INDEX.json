@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T00:54:08.183742+00:00",
+  "as_of_utc": "2026-10-14T01:18:21.100066+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1066,6 +1066,25 @@
       "review_report_sha256": "7eaca51a44b0f35bbaffe0cdadc0ab7b4a42fa7925862d2cd62c0deaba7f1b31",
       "review_read_utc": "2026-10-14T00:52:00.746930+00:00",
       "disposition_packet": "reports/p008_20261013/t8_cap_9600_accepted_v1"
+    },
+    {
+      "request_id": "p008-registered-primary-analysis-code-r1",
+      "target_commit": "94eb84e648b71d6e9ad9915ff60b792edb82a215",
+      "packet": "reports/p008_20261013/registered_primary_analysis_preflight_v1",
+      "manifest": "reports/p008_20261013/registered_primary_analysis_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "b6c0ce4cc5331db8965b598887a60f6de01d1dd25e6b5406f3513a25e776578c",
+      "status": "pending",
+      "external_review": "pending",
+      "blocking": true,
+      "blocking_for": "Final primary result tables/figures only; does not block accepted T8 training or independent finalCPU",
+      "scope": "Complete 18student+base paired-question registered analysis and per-run compact publication; prepared only, zero result calculations",
+      "questions": [
+        "Verify all18 main per-draw contrasts and four retained bridge conditional effects; no full interaction or J; nine observed two-draw means/ranges.",
+        "Verify shared paired-question10k bootstrapseed20261013, pointwise conditional intervals, no seed/procurement-population or familywise inference; six new synthetic checks.",
+        "Verify immutable per-run original-byte archive/readback/private-gate exclusion, all19 completed-oracle roster, full failure/replacement lineage, no rescoring or model calls; actual G3 remains separate."
+      ],
+      "created_utc": "2026-10-14T01:18:21.100066+00:00",
+      "new_cloud_calls": 0
     }
   ],
   "p008_v31": {
@@ -1104,7 +1123,7 @@
     "active_gpu_tasks": 0,
     "pool_d2_external_review": "PASS-WITH-NOTES merged numeric pool G1 at eb398fb1; no student admission",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/t8_cap_9600_accepted_v1/DISPOSITION.md",
+    "current_status": "4 original T8 submitted once; first3 startup verified; remaining4 not yet invoked; all finite caps/source preserved",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -1188,11 +1207,11 @@
     "student_logical_T1_completed": 10,
     "replacement_results_packet": "reports/p008_20261013/student_t1_replacements_v1",
     "replacement_results_external_review": "pending",
-    "T8_calls": 0,
+    "T8_calls": 4,
     "T8_numeric_request": "p008-t8-cap-9600-numeric-r1",
     "T8_cap_amendment_status": "directowner_approved_9600_26644_exactsource_published_runtime_and_numeric_pending",
     "hard_reservation_usd": 266.44,
-    "student_T8_calls": 0,
+    "student_T8_calls": 4,
     "student_T8_numeric_admission": "Amended9570 PASS4edd8399, original9530 FAIL immutable;9600cap/266.44reserve",
     "t8_cap_amendment_target": "4fef52a374449dafec284ac503c5e78c83dc41f7",
     "t8_cap_owner_approved": true,
@@ -1200,6 +1219,7 @@
     "T8_runtime_helpers": "reports/p008_20261013/student_t8_cap_helpers_v1",
     "T8_new_operational_cap_seconds": 9600,
     "T8_amended_N2": "pending_exact_numeric_review",
-    "final_cpu_entry": "experiments.sft_allocation_p008.modal_audit_t8_cap::main"
+    "final_cpu_entry": "experiments.sft_allocation_p008.modal_audit_t8_cap::main",
+    "registered_analysis_code_request": "p008-registered-primary-analysis-code-r1"
   }
 }
