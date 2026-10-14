@@ -2818,3 +2818,11 @@ P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget
 新26source完整P0候选和独立publisher已准备，CUDAgraphs/FULL_AND_PIECEWISE/V1、256并发、8192batchedtokens、0.80显存；同prompt/greedy512/冻结parser/原969检查点，无训练。首次base256仅一次计时例外，其后每批（含correct首批）全观测max与实际elapsed；1200worker/1260platform/600startup/full1900，252c新+248c旧=500c，Stage0余500c后续需真实准入，不借未分配5。10新CPU/mockchecks一次PASS，包含2638完整覆盖/无继承/原claim保留/禁止重复/耗时和配置拒绝，不是实际GPU吞吐。原19/24源逐hash不变，未重跑旧模型、评分、测试或上传。
 
 配置API从固定vLLM0.11.0原source读取并存SHA；不宣称5–10x/今晚Stage1或1–2h审计保证。新Runtime/数值和publisher审计仍pending，0新GPU/CPUcall。p009指令已改PlanA，旧p007/automation4保持PAUSED。预算快照需在未来实际调用前更新；当前仅准备无新付费阶段。
+
+### 2026-10-14 13:30:26 PDT（PlanA只读状态与失败保全工具准备，未运行）
+
+20:26:50UTC的新只读审计检查仍58017822/76comments，没有PlanA新PASS；0新GPU/CPU调用，RUNTIME_ACCEPTED/BUDGET_CHECK/gates/runs均不存在。旧suffix继续retired，原128未评分和全部原失败保全保持关闭。
+
+为避免新P0中断时临时拼接工具，独立准备本地只读status/failed-preservation：只读原submitted/29已知账本key/精确provider，错误留unknown，不读partialscore；失败路线要求真failed+STOPPED0，再create-only保全原字节、双账本、前后清单和provider。上限512files/32MiB单文件/256MiB总量/2readers/1200本地秒，partial保留且不能整套重跑。4个新纯安全fixtures一次通过，未实际调用任何RPC或模型，原26runtime及旧工具源不改。确切代码审计只阻塞新可选只读helper，不阻塞独立runtime审计。
+
+本轮两次只读路径假设错误（不存在math_pool_code_review通配符和docs/RUN_LOG.md）无科学副作用；改用实际report目录及reports/sft_allocation_midpoint_20261011/RUN_LOG.md。预算19:06已过期，仅在真实下一付费阶段必要刷新；没有为了等待重复请求。旧p007/automation4保持PAUSED，p009继续30min有限推进。

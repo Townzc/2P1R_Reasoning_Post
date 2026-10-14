@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 13:30:26 PDT（PlanA只读状态与失败保全工具准备，未运行）
+
+20:26:50UTC的新只读审计检查仍58017822/76comments，没有PlanA新PASS；0新GPU/CPU调用，RUNTIME_ACCEPTED/BUDGET_CHECK/gates/runs均不存在。旧suffix继续retired，原128未评分和全部原失败保全保持关闭。
+
+为避免新P0中断时临时拼接工具，独立准备本地只读status/failed-preservation：只读原submitted/29已知账本key/精确provider，错误留unknown，不读partialscore；失败路线要求真failed+STOPPED0，再create-only保全原字节、双账本、前后清单和provider。上限512files/32MiB单文件/256MiB总量/2readers/1200本地秒，partial保留且不能整套重跑。4个新纯安全fixtures一次通过，未实际调用任何RPC或模型，原26runtime及旧工具源不改。确切代码审计只阻塞新可选只读helper，不阻塞独立runtime审计。
+
+本轮两次只读路径假设错误（不存在math_pool_code_review通配符和docs/RUN_LOG.md）无科学副作用；改用实际report目录及reports/sft_allocation_midpoint_20261011/RUN_LOG.md。预算19:06已过期，仅在真实下一付费阶段必要刷新；没有为了等待重复请求。旧p007/automation4保持PAUSED，p009继续30min有限推进。
+
+
 ### 2026-10-14 13:18:54 PDT（owner选高吞吐方案A；旧后缀撤下，新完整P0确切送审）
 
 本聊天直接选择PlanA。原eagerP0仍failed/STOPPED0，128未评分和248c历史预留永保；原未尝试suffix7c9已retired，0gates/calls，不再执行旧入口。20:10:38–39实际完整读取Claude58017822 bg/bh：前者HOLD-PENDING-OWNER，不是PASS；后者只给PlanBpublisher代码PASS，不能覆盖新PlanA。bg预测margin算术有误，保留原文但不用于新门。
