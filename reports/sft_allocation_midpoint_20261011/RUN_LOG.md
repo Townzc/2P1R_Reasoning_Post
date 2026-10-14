@@ -982,3 +982,8 @@ Before firstpublication, pinned existingprovider_release helper added to exactcl
 ## 2026-10-14T08:51:54.548012+00:00 — preservation review and overnight continuation
 
 FullClaude5258644e35be4b837649f664c29f6ee3f528e6e3 actualpreservationPASS accepted; exactnew47source/numeric stillpending. Reviewerprefixscience conclusions not adopted as full outcomes/causal evidence. NewPro notes43–46 at e097b0cb retrieved with method/admission boundaries; no extraarms or models. User requested overnightcompletion; separateheartbeat automation-4 created every30min, oldp007 remainsPAUSED, finite3hour localcaffeinate72820 only. Initialread-onlyautomationinventory used systempython withouttomllib and failed; repeatedonlyread with existingSDKpython succeeded, no settings changed. Newgates/worker/collector not executed.
+
+
+## 2026-10-14T09:04:55.227031+00:00 / October14 02:04 PDT — continuation authorization status clarified
+
+The README now reflects the owner-approved evaluation-only continuation and separate finite overnight monitor. Exact47-source/runtime-numeric review remains pending; no new cloud call/upload/image or repeated scientific work. Latest review branch ea518a9f contains a Pro-response/adjudication follow-up only. Its prefix-conditional scientific readings are not full1319 results or causal evidence; no labels, parser, arms or doses were changed. Original690-file preservation,496-prefix oracle and15 continuation checks remain DONE. No new permission is needed; the remaining prerequisite is the actual exact-scope external review.
