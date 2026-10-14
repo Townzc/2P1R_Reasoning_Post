@@ -530,3 +530,13 @@ Exact47source remains accepted68c8bad5, execution4e6beb52. Original CLI51624stud
 实际19:41:22只读reviewpoll75comments/new3ce168ad；19:41:48.505658完整读bf报告SHA2a1386b584c05956e5aa0e95d99c2e94575f4ee5e0ac40fd223c411d9a16204d，comment6176564218事件19:28:05。target0b714161四源PASS-WITH-NOTES，原标量字节不变；reviewer未能运行math-verify，局限如实保留。唯一新增要求是在P1按池报告outertimeout/unique-pair比例，>0.5%须在资格使用前标出；首100真实行启动/新pair计时、50分歧及>2%fallback固定hash最多25抽查尚未执行。0真实P1/模型调用，旧8fixtures未重跑。
 
 P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget或调用。一次猜测packet/SPEC.json只读路径错误后改读实际SOURCE_BUNDLE；初acceptance写入把该wrapper当files导致FileNotFound、发生首写之前，随后shell空commit/no-op push原样保留。现只补未写产物并显式source_files/set-e，没重跑已有包或科学工作。f9261cca普通push70184完成并独立remote核验。后续review至少19:56:49、正常20:11；无需频繁查询。
+
+### 2026-10-14 14:05:30 PDT（高吞吐P0 EOS边界验证失败已保全；仅未尝试后缀确切准备）
+
+真实bi/bj/bk限定审计通过后，原新CLI65166/appap-FkcENORfl85RlCVEvBibVl/callfc-01M4Y326BE6H7YP4BJW95BSDXK仅提交一次。worker20:53:39.497386UTC开始、20:55:17.866775失败，provider实际13:55:21PDT停止；20:56:27和21:00:07只读核owned0。实际graphFULL_AND_PIECEWISE/256并发/8192tokens/0.8/H100配置吻合。首base256全部保存、零doneack，correct969零尝试；所有原始文件7个1245643bytes、20条双campaign账本一次preserver9825完成。原CLIexit1已消耗，不能poll/重提/clearclaim；旧eager128未评分、旧suffix仍retired。
+
+唯一拒绝是gsm8k/test/00115在第512token真实EOS，backend finish_reason=length/stop_reason=null。固定vLLM0.11 V1源码先检查长度再检查EOS；旧transportchecker过严，并非科学parity失败。新p0_stop_metadata仅接受此精确边界，原token/backend字段不改、无补EOS；冻结first_stop与marked_answer_v1原字节不动。256新结构核对没有decode/accuracy；8新边界检查一次PASS。旧26source和所有DONE测试/模型/保全不重做。
+
+新32source候选p0_fast_remaining_preflight_v1只继承256、生成base256以后1063+correct1319=2382，维持原256chunk边界/高吞吐设置和检查点，无训练/上传。全部11新batch都须forecast，无新bootstrap；20.412141秒原unit至failedterminal含失败收尾仅proxy，不当完整ack耗时或上界。新1200worker/1260platform/600startup/full1900/$2.52，加旧$5共$7.52保守预留，Stage0余$2.48，后续尚未资金准入、不借未分配5、不缩科学量。9新mock检查一次PASS，不是GPU实测；全2638 mergedoracle代码已准备，实际没有新gate/claim/image/call。新fixedexactruntime/numeric/prefix/EOS审计是下一门，旧bi不能覆盖。
+
+本轮读取CODEX_HOME环境变量缺失在任何handoff写前停止，改用已读取并保留的配置后仅完成未写尾部；无科学副作用。原P0完整结果publisher没有执行，不能把本次failedprefix当完成。预算20:46原快照仍有效，本轮未重复刷新。原remaining-workload候选496c已不适合未来248c余量，明确留待真实阶段预算处理；不声称Stage1今晚保证。p009继续有限推进，旧p007/automation4保持PAUSED。

@@ -2834,3 +2834,13 @@ P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget
 20:46必要新budget/Papers已完成：workspace延迟235.23236984/billed0、原失败P0标签0.12296933非最终费用，近高235.6920755+25lag估计+100=360.6920755<450（账本36070c）；旧248不回收，新252共500c，Stage0余500c不得默借未分配5。Papers仍e097b0cb无新。一次localgate已完成、0inputtransfer，本条发布时0新科学调用。随后仅modal_p0_fast原新slot一次，实际provider/claim/完整窗口继续强制核对。
 
 保留reviewerCUDA API失败/启动成本、batchcomposition与未来模型任务不自动推广、P2/P3剩余预算各自准入限制。350–700s和5–10x均非实测保证；原bg解释不作新门。未重跑任何已DONE测试/旧保全/评分/模型。原128不评分、suffixretired。下一真实结果先本地完整oracle及独立A2，后续不会凭代码PASS跳科学门。
+
+### 2026-10-14 14:05:30 PDT（高吞吐P0 EOS边界验证失败已保全；仅未尝试后缀确切准备）
+
+真实bi/bj/bk限定审计通过后，原新CLI65166/appap-FkcENORfl85RlCVEvBibVl/callfc-01M4Y326BE6H7YP4BJW95BSDXK仅提交一次。worker20:53:39.497386UTC开始、20:55:17.866775失败，provider实际13:55:21PDT停止；20:56:27和21:00:07只读核owned0。实际graphFULL_AND_PIECEWISE/256并发/8192tokens/0.8/H100配置吻合。首base256全部保存、零doneack，correct969零尝试；所有原始文件7个1245643bytes、20条双campaign账本一次preserver9825完成。原CLIexit1已消耗，不能poll/重提/clearclaim；旧eager128未评分、旧suffix仍retired。
+
+唯一拒绝是gsm8k/test/00115在第512token真实EOS，backend finish_reason=length/stop_reason=null。固定vLLM0.11 V1源码先检查长度再检查EOS；旧transportchecker过严，并非科学parity失败。新p0_stop_metadata仅接受此精确边界，原token/backend字段不改、无补EOS；冻结first_stop与marked_answer_v1原字节不动。256新结构核对没有decode/accuracy；8新边界检查一次PASS。旧26source和所有DONE测试/模型/保全不重做。
+
+新32source候选p0_fast_remaining_preflight_v1只继承256、生成base256以后1063+correct1319=2382，维持原256chunk边界/高吞吐设置和检查点，无训练/上传。全部11新batch都须forecast，无新bootstrap；20.412141秒原unit至failedterminal含失败收尾仅proxy，不当完整ack耗时或上界。新1200worker/1260platform/600startup/full1900/$2.52，加旧$5共$7.52保守预留，Stage0余$2.48，后续尚未资金准入、不借未分配5、不缩科学量。9新mock检查一次PASS，不是GPU实测；全2638 mergedoracle代码已准备，实际没有新gate/claim/image/call。新fixedexactruntime/numeric/prefix/EOS审计是下一门，旧bi不能覆盖。
+
+本轮读取CODEX_HOME环境变量缺失在任何handoff写前停止，改用已读取并保留的配置后仅完成未写尾部；无科学副作用。原P0完整结果publisher没有执行，不能把本次failedprefix当完成。预算20:46原快照仍有效，本轮未重复刷新。原remaining-workload候选496c已不适合未来248c余量，明确留待真实阶段预算处理；不声称Stage1今晚保证。p009继续有限推进，旧p007/automation4保持PAUSED。

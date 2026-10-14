@@ -1,0 +1,44 @@
+{
+  "acknowledged_outputs": 0,
+  "all_rows_identity_prompt_token_structure_pass": true,
+  "candidate_checker_sha256": "db649972d5935e37b0fc4cbc7be6a73de283de5250cb13a1f4bb7e1cb7adac4b",
+  "candidate_runtime_admitted": false,
+  "cause": "Pinned vLLM 0.11 V1 check_stop checks length before EOS. A native EOS at original token512 has finish_reason=length; no fabricated or post-EOS token.",
+  "correct969_attempted": 0,
+  "failed_batch_through_terminal_proxy_seconds": 20.4121413230896,
+  "first_unit_started_epoch": 1792011297.454634,
+  "frozen_logical_completion_source_sha256": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+  "hard_deadline_epoch": 1792012419.497386,
+  "new_model_calls": 0,
+  "no_actual_speedup_or_future_bound_claim": true,
+  "observed_utc": "2026-10-14T20:58:41.024537+00:00",
+  "original_failed_terminal": {
+    "actual_cost_cents": 252,
+    "attempt_id": "638863fa051544078da95bddb202eeda",
+    "claim_sha256": "502e788bad5aec25e2f3031ae39675913174e2bc04f822ca45f1a33270895174",
+    "evidence_sha256": "74bd046adc4011085eb60578c1dadfcb695da048709847e74c67070379fe4d6b",
+    "finished_epoch": 1792011317.8667753,
+    "run_id": "p0_fast_pair",
+    "status": "failed"
+  },
+  "original_raw_file_sha256": "142defc1196c166279f506eee720bbe328cae8d3f21db9ae5cbbdb41cd0f6bfe",
+  "proxy_includes_failure_closeout": true,
+  "proxy_is_completed_batch": false,
+  "raw_bytes_unchanged": true,
+  "raw_file_sha256_after": "142defc1196c166279f506eee720bbe328cae8d3f21db9ae5cbbdb41cd0f6bfe",
+  "saved_outputs": 256,
+  "schema": "p009_fast_eos_structural_diagnosis_v1",
+  "scores_computed": false,
+  "sole_contract_rejection": [
+    {
+      "eos_positions": [
+        511
+      ],
+      "finish_reason": "length",
+      "problem_id": "gsm8k/test/00115",
+      "stop_reason": null,
+      "token_count": 512
+    }
+  ],
+  "worker_started_epoch": 1792011219.497386
+}
