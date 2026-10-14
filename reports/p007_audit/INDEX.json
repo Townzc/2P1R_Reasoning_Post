@@ -1409,10 +1409,28 @@
         "No upload/call/numericacceptance yet;500centreservation remains inside266.44stage,notactualinvoice"
       ],
       "created_utc": "2026-10-14T03:54:25.991161+00:00"
+    },
+    {
+      "request_id": "p008-midpoint-freeze-integrity-r1",
+      "target_commit": "e0025e0e0c47b696f5b8364e6b1ed2aa079452ef",
+      "packet": "reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1",
+      "manifest": "reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1/MANIFEST.json",
+      "manifest_sha256": "534469c5f90c4265fb11d87257ae5bdb7658db9a8b89382714d08f76c837c828",
+      "status": "pending",
+      "external_review": "pending",
+      "scope": "Material cutoff/provenance/status only; same original complete tables/figures, no recomputed science",
+      "blocking": false,
+      "blocking_for": "Independent acceptance of cutoff snapshot; CPU numeric review remains separate",
+      "questions": [
+        "Verify exactoriginalbytes copied frompre-cutoffb212b6a8/72e15f74,scheduled04UTCcutoff distinctfrom04:01:18UTCmetadatawrite",
+        "Verify all19localclosed/7T8G3PASS andlastG3/registeredanalysisG3/CPU/A3pending as lastreviewread03:59:17UTC",
+        "Verify no newmodels/oracles/statistics/plots and immutablefreeze withlaterupdatesseparate;266.44reservationnotinvoice/N2FAILposthockept"
+      ],
+      "created_utc": "2026-10-14T04:02:39.141913+00:00"
     }
   ],
   "p008_v31": {
-    "status": "all18_students_and_base_local_closed_seven_T8_G3_complete_registered_analysis_pending_final_G3_and_CPU",
+    "status": "all19_local_complete_registered_analysis_published_materials_frozen_G3_CPU_numeric_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.44,
     "phase0_cap_usd": 15,
@@ -1580,6 +1598,8 @@
       "d1_b8_p4_breadth_t8",
       "d1_b8_p4_depth_t8",
       "d2_b8_p4_breadth_t8"
-    ]
+    ],
+    "material_freeze_packet": "reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1",
+    "material_freeze_target": "e0025e0e0c47b696f5b8364e6b1ed2aa079452ef"
   }
 }
