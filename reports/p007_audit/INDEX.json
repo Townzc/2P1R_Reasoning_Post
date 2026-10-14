@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T20:19:50.827706+00:00",
+  "as_of_utc": "2026-10-14T21:06:15.901495+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1850,14 +1850,15 @@
       "spec_sha256": "1238d0cb542d27cf27ea0f565d96bffbc1292c280cd0dd6c7c0f00f1b2e145bc",
       "source_count": 26,
       "owner_decision_packet": "reports/p009_20261014/owner_plan_A_20261014_v1",
-      "new_cloud_calls": 0,
+      "new_cloud_calls": 1,
       "decision": "PASS-WITH-NOTES",
       "review_commit": "9609f778ac7071c489df0ecba6a8195c08dd669c",
       "review_report": "audit/claude/20261014bi/REPORT.md",
       "review_report_sha256": "a26307787d6d97fd7cad9672c416c7c98b881e6a95b317e7c7b84ad0c875ea02",
       "review_read_utc": "2026-10-14T20:45:39.001051+00:00",
       "acceptance_packet": "reports/p009_20261014/p0_fast_review_accepted_v1",
-      "actual_scientific_result_accepted": false
+      "actual_scientific_result_accepted": false,
+      "execution_status": "failed_STOPPED0_EOS_cap_metadata"
     },
     {
       "request_id": "p009-p0-fast-result-publication-code-r1",
@@ -1869,7 +1870,7 @@
       "review_request": "reports/p009_20261014/p0_fast_publisher_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T20:19:50.827706+00:00",
       "status": "accepted",
-      "blocking": true,
+      "blocking": false,
       "blocking_for": "Only matching Plan-A result publisher; no actual outcome or raw score yet; does not block independently reviewed runtime",
       "source_sha256": "692312c6c52746531ee2cf4b92b82a65cde3a368d5619c8a5edfd79fc75ce07b",
       "decision": "PASS-WITH-NOTES",
@@ -1878,7 +1879,8 @@
       "review_report_sha256": "6a6cdf0f045977898e45f185c94f6042a904f4863a21128d8c45af9a2f9b8ab1",
       "review_read_utc": "2026-10-14T20:45:38.967467+00:00",
       "acceptance_packet": "reports/p009_20261014/p0_fast_review_accepted_v1",
-      "actual_scientific_result_accepted": false
+      "actual_scientific_result_accepted": false,
+      "execution_status": "NOT_RUN_parent_failed_fullresult_unavailable"
     },
     {
       "request_id": "p009-p0-fast-readonly-code-r1",
@@ -1890,7 +1892,7 @@
       "review_request": "reports/p009_20261014/p0_fast_readonly_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T20:30:40.990518+00:00",
       "status": "accepted",
-      "blocking": true,
+      "blocking": false,
       "blocking_for": "Only optional new local status/failed-preservation helper; not independent P0 runtime or completed collector",
       "source_sha256": "009874616e16e47fbfab1a5c481257f1e2d5cb503dba299f3d505dca014c5b8e",
       "new_cloud_calls": 0,
@@ -1900,7 +1902,25 @@
       "review_report_sha256": "575680935bd46fb5b73cfde08d31b632bb175a5f678f9210d0401662b0f23e08",
       "review_read_utc": "2026-10-14T20:45:39.002271+00:00",
       "acceptance_packet": "reports/p009_20261014/p0_fast_review_accepted_v1",
-      "actual_scientific_result_accepted": false
+      "actual_scientific_result_accepted": false,
+      "execution_status": "status38270_and_failedpreservation9825_DONE_once"
+    },
+    {
+      "request_id": "p009-p0-fast-unattempted-remainder-r1",
+      "scope": "p009-p0-fast-unattempted-remainder-runtime-and-numeric",
+      "target_commit": "5c5222573dece18fe3fe715ecfa3bdbfec1d2d01",
+      "packet": "reports/p009_20261014/p0_fast_remaining_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_fast_remaining_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "5e8ded2ae5248015d2d00edeba6e1f32a50d0076d9c39e53c0c12b8d3431d866",
+      "review_request": "reports/p009_20261014/p0_fast_remaining_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T21:06:15.901495+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only original unattempted2382 high-throughput outputs, original256 saved untouched; exact32source/EOS metadata+prefix+numeric review required. No automatic model replay.",
+      "spec_sha256": "7e653032c0eacbe73c920c26de5c82497a11a1152974f0d2fb04d78366e9ccb0",
+      "parent_preservation_sha256": "608c33154abda7178a0413c78e26e4a004c310c7ac4e0edcb1138c46493022eb",
+      "prefix_packet": "reports/p009_20261014/p0_fast_failed_prefix_v1",
+      "new_cloud_calls": 0
     }
   ],
   "p008_v31": {
@@ -2194,7 +2214,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "Owner_Plan_A_full_high_throughput_P0_prepared_pending_exact_review_old_suffix_retired",
+    "status": "fast_P0_failed_EOS_metadata_prefix_preserved_exact_unattempted_remainder_pending",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -2218,7 +2238,7 @@
     "target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
     "input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
     "automatic_progression": "scientific gate + exact scoped review + complete raw evidence + budget/window/unused-slot admission; no repeated routine permission",
-    "scientific_calls": 1,
+    "scientific_calls": 2,
     "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged",
     "p0_runtime": {
       "target_commit": "6b8c5764b46c12c277f12dcf8323b375dfc119ec",
@@ -2237,11 +2257,9 @@
       "notify": "meaningful change, completion, failure, owner action only"
     },
     "latest_read_review": {
-      "commit": "58017822b180bd2f9e48d6cc705d8150e26049b0",
-      "read_utc": "2026-10-14T20:10:39.120652+00:00",
-      "P0_suffix": "HOLD-PENDING-OWNER; owner selectedA, retiredunused",
-      "suffix_publisher": "CODE PASS-WITH-NOTES PlanB only,retired",
-      "math_pool": "CODE PASS-WITH-NOTES at3ce168ad; actualP1notrun"
+      "commit": "9609f778ac7071c489df0ecba6a8195c08dd669c",
+      "read_utc": "2026-10-14T20:45:39.002271+00:00",
+      "bi_bj_bk": "originalfast runtime/numeric, publisher, read-only scoped PASS-WITH-NOTES; original call failed, no actual A2"
     },
     "math_scorer": {
       "status": "code_PASS-WITH-NOTES_actualP1_pending",
@@ -2265,7 +2283,7 @@
       "status": "frozen_before_any_P009_outcomes_actualanalysis_notrun",
       "source_sha256": "ec9f46f20b2b1560a8064911172d3afb882367e7e4c97e8232c837542b02991f"
     },
-    "latest_budget": "reports/p009_20261014/P0_BUDGET_1907.json",
+    "latest_budget": "reports/p009_20261014/p0_fast_review_accepted_v1/BUDGET_CHECK.json",
     "math_scoring_pool": {
       "target_commit": "0b714161dcc23a93cc44b52f4948eae271eaeb27",
       "packet": "reports/p009_20261014/math_scoring_pool_preflight_v1",
@@ -2274,7 +2292,7 @@
     },
     "active_scientific_calls": 0,
     "active_GPUs": 0,
-    "p0_status": "reports/p009_20261014/P0_TIMING_STOP_AND_SUFFIX_PROPOSAL.json",
+    "p0_status": "reports/p009_20261014/p0_fast_failed_prefix_v1/README.md",
     "p0_suffix": {
       "target_commit": "7c9f093cd9f0b866cce65329d0b88c42fe0066b8",
       "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
@@ -2287,20 +2305,42 @@
       "packet": "reports/p009_20261014/p0_fast_preflight_v1",
       "spec_sha256": "1238d0cb542d27cf27ea0f565d96bffbc1292c280cd0dd6c7c0f00f1b2e145bc",
       "scope": "p009-p0-high-throughput-full-runtime-and-bootstrap-numeric",
-      "status": "pending",
+      "status": "failed_STOPPED0_first256_saved_zero_ack_no_scoring",
       "source_count": 26,
       "new_reserved_cents": 252,
       "retained_prior_cents": 248,
       "stage0_remaining_cents": 500,
       "fresh_outputs": 2638,
       "inherited_outputs": 0,
-      "new_cloud_calls": 0
+      "new_cloud_calls": 1,
+      "original_cli": 65166,
+      "app_id": "ap-FkcENORfl85RlCVEvBibVl",
+      "call_id": "fc-01M4Y326BE6H7YP4BJW95BSDXK",
+      "failed_terminal_utc": "2026-10-14T20:55:17.866775+00:00",
+      "retained_saved_rows": 256,
+      "correct969_attempts": 0,
+      "original_source_unchanged": true,
+      "preservation_packet": "reports/p009_20261014/p0_fast_failed_prefix_v1",
+      "preservation_target": "5c5222573dece18fe3fe715ecfa3bdbfec1d2d01"
     },
     "owner_Plan_A": {
       "target_commit": "fe8a6bcc60b1fee23336f9fb39ae10ed8053f370",
       "packet": "reports/p009_20261014/owner_plan_A_20261014_v1",
       "authority": "direct human message",
       "speed_cost_time_estimates_not_measurements": true
+    },
+    "p0_fast_remaining": {
+      "status": "exact_candidate_pending_real_review_zero_new_calls",
+      "packet": "reports/p009_20261014/p0_fast_remaining_preflight_v1",
+      "target_commit": "5c5222573dece18fe3fe715ecfa3bdbfec1d2d01",
+      "source_count": 32,
+      "spec_sha256": "7e653032c0eacbe73c920c26de5c82497a11a1152974f0d2fb04d78366e9ccb0",
+      "new_reserved_cents": 252,
+      "retained_prior_cents": 500,
+      "stage0_remaining_after_candidate_cents": 248,
+      "inherited_outputs": 256,
+      "new_outputs": 2382,
+      "new_calls": 0
     }
   }
 }
