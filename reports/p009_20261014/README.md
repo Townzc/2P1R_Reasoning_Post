@@ -1,4 +1,4 @@
-# P009 — owner-authorized internal-only scope, actual reviews pending
+# P009 — internal-only scope accepted; next Stage0 runtime in preparation
 
 The owner has explicitly designated both complete P0 endpoints internal-only.
 All P009 comparisons will use the reviewed common vLLM configuration. This is
@@ -13,7 +13,8 @@ a post-result scope amendment, with both original gate decisions preserved.
 [complete original evidence](p0_entry_repair_complete_v1/README.md), and
 [actual runtime gate projection](p0_entry_repair_actual_gate_v1/README.md).
 Actual A2 raw/lineage/accounting has PASS at45b4163a, with the original scientific
-block retained. The exact owner-amendment review is pending. HF scores are historical
+block retained. [Exact owner scope](review_dec75690_accepted_v1/README.md) has
+Claude br PASS atdec75690. HF scores are historical
 diagnostics, excluded from P009 treatment effects and G0/G1 inputs. Existing
 vLLM endpoints are reused only for their identical definitions after A2; no
 original generation or scoring is repeated. This amendment adds$0.
@@ -23,6 +24,8 @@ All four providers stopped. All failures and costs remain. G0/G1, negative
 control, futility, data/dose and exact runtime/budget gates are unchanged.
 Current allocation:$110 total, Stage0$20/Stage1$50/Stage2$35/unallocated$5;
 project$450/protected$50. Stage2 remains five groups × seeds17/29, teachercontext
-2048 with seven unsupported MATH rows. No Stage1 outcome is available yet.
+2048 with seven unsupported MATH rows. [The new Stage0 generation core](stage0_generation_core_preflight_v1/README.md)
+has16 new offline checks, with code review pending; it is not an executable
+admission. No Stage1 outcome is available yet.
 Automatic progression is authorized after real gates; no routine permission is
 needed. p009 stays active, p007/automation-4 paused.

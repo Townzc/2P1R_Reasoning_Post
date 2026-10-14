@@ -8,9 +8,12 @@ configuration. This is a post-result scope amendment; base9.55% and correct-refe
 
 [Exact owner amendment](reports/p009_20261014/p0_internal_only_amendment_v1/README.md)
 and [full P0 evidence](reports/p009_20261014/p0_entry_repair_complete_v1/README.md)
-now have actual A2 integrity PASS at45b4163a; the exact owner-amendment review
-is pending. Later scientific stages advance automatically
-only after those reviews and every unchanged science/input/runtime/budget gate.
+have actual A2 integrity PASS at45b4163a and exact owner-scope PASS atdec75690.
+[Accepted scope](reports/p009_20261014/review_dec75690_accepted_v1/README.md) and
+[new Stage0 generation core](reports/p009_20261014/stage0_generation_core_preflight_v1/README.md)
+are recorded separately: the latter is code preparation, with no new cloud call.
+Later scientific stages advance automatically after their unchanged
+science/input/runtime/budget gates.
 No P0 rerun, extra generation or added budget is needed for the amendment.
 P009 remains active; P008/exploratory and their monitors remain closed.
 

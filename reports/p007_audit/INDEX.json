@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T23:16:47.574477+00:00",
+  "as_of_utc": "2026-10-14T23:39:38.879813+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2242,11 +2242,18 @@
       "original_result_target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
       "original_result_sha256": "1b065f68ba45f5e82fff8408597727ec7a5d5a42d4ff9e7c3950336dbaa0b0fc",
       "review_request": "reports/p009_20261014/p0_internal_only_amendment_v1/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_PASS",
+      "blocking": false,
       "blocking_for": "Owner-resolved P0 engine scope, together with actual full P0 A2; no later scientific gate is waived",
       "created_utc": "2026-10-14T23:15:12.951500+00:00",
-      "post_result_amendment": true
+      "post_result_amendment": true,
+      "review_commit": "dec75690eeb920597707a4aeb32b3ee30ae2bb98",
+      "review_path": "audit/claude/20261014br/REPORT.md",
+      "review_sha256": "9f13c52becf997815399a494bf78dede442de7939a47b4e5f091c9d589508a74",
+      "review_read_utc": "2026-10-14T23:35:27.332531+00:00",
+      "review_event_utc": "2026-10-14T23:30:17Z",
+      "accepted_packet": "reports/p009_20261014/review_dec75690_accepted_v1",
+      "comparison_scope": "P009_within_vllm_only"
     }
   ],
   "p008_v31": {
@@ -2540,7 +2547,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "P0_integrity_A2_PASS_owner_internal_only_amendment_pending_exact_scope_review",
+    "status": "P0_internal_only_owner_scope_PASS_future_stage0_runtime_preparing",
     "total_cap_usd": 110,
     "stage_caps_usd": {
       "stage0": 20,
@@ -2807,9 +2814,12 @@
       "owner_directly_authorized": true,
       "post_result_amendment": true,
       "comparison_scope": "P009_within_vllm_only",
-      "status": "owner_authorized_actual_P0_integrity_A2_PASS_exact_amendment_review_pending",
+      "status": "exact_scope_PASS",
       "added_budget_cents": 0,
-      "target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
+      "target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b",
+      "report_commit": "dec75690eeb920597707a4aeb32b3ee30ae2bb98",
+      "report_sha256": "9f13c52becf997815399a494bf78dede442de7939a47b4e5f091c9d589508a74",
+      "accepted_packet": "reports/p009_20261014/review_dec75690_accepted_v1"
     },
     "p0_actual_A2": {
       "target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
@@ -2821,6 +2831,16 @@
       "packet": "reports/p009_20261014/review_45b4163a_disposition_v1",
       "original_scientific_gate_passed": false,
       "acceptance_target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
+    },
+    "stage0_generation_core": {
+      "status": "PREPARED_CODE_REVIEW_PENDING_NOT_ADMITTED",
+      "packet": "reports/p009_20261014/stage0_generation_core_preflight_v1",
+      "source_files": 23,
+      "candidate_sha256": "740da1507b5d6186a39f7a6439abb780d602ff323990a01cb63a916990c62055",
+      "calls": 0,
+      "uploads": 0,
+      "new_reservation_candidate_cents": 867,
+      "retained_prior_cents": 1004
     }
   }
 }

@@ -2924,3 +2924,9 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 23:15:25因新owner裁定查到Claude45b4163a/83comments，事件23:07:06/comment6180462064；23:15:36全文读bq报告SHAb129dceb。外审独立重放2638行并完全复现650/950、126/77分歧和两原门决定，原字节/来源/账本/四STOPPED0 PASS，bo N3关闭。原base科学门blocked和correct internal-only永保；不写成跨引擎可比PASS。
 
 报告明确推荐(a)internal-only，用户已直接选择，无须再问。已保存限定完整性acceptance与原报告，新的确切owner范围/未来绑定修订仍待审，后续原科学门不变。reviewer额外近似sign-test只标其描述性诊断，bf16/kernel/merge是假说，不当已证机制。0新科学/评分/旧工具重复。下一正常审计约23:45，至少23:30:37后；旧监控暂停、新p009继续。
+
+### 2026-10-14 16:39:38 PDT（internal-only确切审计通过；后续Stage0纯工程准备）
+
+23:35:17实际reviewpoll84comments/newdec75690，23:35:27全文读br SHA9f13c52b；事件23:30:17/comment6180778007。确切2d3e owner修订PASS，引擎范围阻塞关闭，原base4%阻塞/P0不跨引擎可比事实永保，未来门不变。650只复用同Qwen/GSM0shot，950为旧P008参照不当新学习结果。N1两端点规格/greedy/GSM512或原MATH1024/同parser绑定，采购T.8另列；N3统一写事后internal-only。reviewer655简写不改变原2097148总target精确可行性门。
+
+新增三个纯生成core文件，复用原14450请求inventory，教师采样8993+六端点5457，拟三个有限model lifetimes及867c新reserve，保留1004旧reserve/Stage0余129c。一次16新mocked fixtures PASS(0.079s)，没有GPU/真实输出评分/旧测试/重算原库存。代码与拟first256×3付费测量例外送审，不等于准入；确切entry/input/modelreadback/provider/budget及独立oracle仍需完成。原高吞吐/38科学源不改。OLMo固定revision原权重在本地一次准备，没有remoteupload/模型调用。两处只读rg无匹配导致shell链退出，无文件或科学副作用。未重询问owner许可，p009继续，旧两监控暂停。

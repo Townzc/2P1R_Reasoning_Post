@@ -1,0 +1,224 @@
+{
+  "G0": false,
+  "actual_P1": false,
+  "actual_output_validation": false,
+  "datasets": {
+    "math_procurement": {
+      "file": "math_teacher_requests8993.jsonl",
+      "max_new_tokens": 1024,
+      "model": "teacher",
+      "n": 8993,
+      "procurement": true,
+      "sha256": "d835c0296f2d98575578566c0a06d203b6d95918ab7af00c87efdd7c8cd4e0ce"
+    },
+    "olmo_gsm_four": {
+      "file": "olmo_gsm_four.json",
+      "max_new_tokens": 512,
+      "model": "olmo",
+      "n": 1319,
+      "procurement": false,
+      "sha256": "5a98f29a6062f48ba8ad55206ad7a8bb429079426012d58db5616ab06f57625f"
+    },
+    "olmo_gsm_zero": {
+      "file": "olmo_gsm_zero.json",
+      "max_new_tokens": 512,
+      "model": "olmo",
+      "n": 1319,
+      "procurement": false,
+      "sha256": "0e66a93d6fe147168b5ede7e70fc1cf44f8accc0b81df14c355770a6d8c2d101"
+    },
+    "qwen_math_four": {
+      "file": "qwen_math_four.json",
+      "max_new_tokens": 1024,
+      "model": "qwen",
+      "n": 500,
+      "procurement": false,
+      "sha256": "60e3d2f03883aff0462c55e803ccac139316113a886d717cd47de0d79a73b406"
+    },
+    "qwen_math_zero": {
+      "file": "qwen_math_zero.json",
+      "max_new_tokens": 1024,
+      "model": "qwen",
+      "n": 500,
+      "procurement": false,
+      "sha256": "e091b60d6548bd68f64920f8b5853d56547e55576fee8cc892f1867f7e80443f"
+    },
+    "teacher_gsm_zero": {
+      "file": "teacher_gsm_zero.json",
+      "max_new_tokens": 512,
+      "model": "teacher",
+      "n": 1319,
+      "procurement": false,
+      "sha256": "14d332a3d50ff9b89358df30200dc4de373f39cddd18d84bb94b4491975ed47a"
+    },
+    "teacher_math_zero": {
+      "file": "teacher_math_zero.json",
+      "max_new_tokens": 1024,
+      "model": "teacher",
+      "n": 500,
+      "procurement": false,
+      "sha256": "64f07d5923e81af08bd7763d033b62ec7d6d09ef0f543539cfad70e6545377b6"
+    }
+  },
+  "dispatch_order": [
+    "teacher_p2_p3",
+    "qwen_p3",
+    "olmo_p3"
+  ],
+  "exact_future_runtime_and_model_input_binding_required": true,
+  "executable_admission": false,
+  "experiment_cap_cents": 11000,
+  "extra_scientific_probes": 0,
+  "financial_forecast": "<=80% stage0 remaining before each fixed-order slot; separate full-window reserve",
+  "first_measurement_per_worker": 256,
+  "first_paid_measurements_proposed": 3,
+  "full_batch_timing": "all complete intervals, actual elapsed,20% margin,300s uncalibrated future allowance",
+  "internal_only_amendment": {
+    "actual_A2_report_sha256": "b129dceb9910a1c282e77967bb5f4a720212cb32f9c119f22e9ec52f64c2360d",
+    "all_later_gates_unchanged": true,
+    "amendment_sha256": "4f2a56f3e794fd4182e1d9e36c30af0c09c0d6751dea157a3abd34918abf2872",
+    "comment_id": 6180778007,
+    "common_engine_source_sha256": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+    "comparison_scope": "P009_within_vllm_only",
+    "decision": "PASS",
+    "event_utc": "2026-10-14T23:30:17Z",
+    "manifest_sha256": "9fb99f9f54c3794c25fdd88fe74dd461cc0e069f6f7e4e39a1246e871c9f2bcd",
+    "new_scientific_calls": 0,
+    "notes": {
+      "N1": "Bind both G0 endpoint specifications: task/prompt family, greedy, 512 GSM or registered 1024 MATH, same engine and frozen parser; procurement sampling is separate.",
+      "N2": "Existing950 is a P008 checkpoint reference only, not NC or a new P009 student result.",
+      "N3": "Cite P0 as internal-only by post-result owner amendment, never parity passed."
+    },
+    "original_frozen_decisions_retained": true,
+    "original_result_sha256": "1b065f68ba45f5e82fff8408597727ec7a5d5a42d4ff9e7c3950336dbaa0b0fc",
+    "original_result_target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
+    "original_scientific_comparability_passed": false,
+    "owner_authority_sha256": "ab9eb85a14d61eb296707b6244ae3a7ed2ad97fd38f00ad0a92add402e1ec378",
+    "post_result_amendment": true,
+    "read_utc": "2026-10-14T23:35:27.332531+00:00",
+    "report_commit": "dec75690eeb920597707a4aeb32b3ee30ae2bb98",
+    "report_path": "audit/claude/20261014br/REPORT.md",
+    "report_sha256": "9f13c52becf997815399a494bf78dede442de7939a47b4e5f091c9d589508a74",
+    "request_id": "p009-p0-internal-only-owner-amendment-r1",
+    "schema": "p009_internal_only_owner_scope_acceptance_v1",
+    "scope": "p009-p0-vllm-internal-only-owner-amendment",
+    "target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
+  },
+  "local_only_weight_preparation": "Pinned OLMo original weights; not cloud upload or inference",
+  "modal_entry_prepared": false,
+  "model_upload_or_call": false,
+  "models": {
+    "olmo": {
+      "architecture": "Olmo2ForCausalLM",
+      "eos_token_ids": [
+        100257
+      ],
+      "model_id": "allenai/OLMo-2-0425-1B",
+      "revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+      "vocab_size": 100352
+    },
+    "qwen": {
+      "architecture": "Qwen2ForCausalLM",
+      "eos_token_ids": [
+        151643
+      ],
+      "model_id": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "vocab_size": 151936
+    },
+    "teacher": {
+      "architecture": "Qwen2ForCausalLM",
+      "eos_token_ids": [
+        151645,
+        151643
+      ],
+      "model_id": "Qwen/Qwen2.5-Math-1.5B-Instruct",
+      "revision": "aafeb0fc6f22cbf0eaeed126eff8be45b0360a35",
+      "vocab_size": 151936
+    }
+  },
+  "original_inputs_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
+  "p0_regeneration": 0,
+  "prior_reserved_cents": 1004,
+  "prior_workload_inventory_sha256": "8f1630863d9af81dc5e342335076afd478899e01fc33bda155bacdbef0d22344",
+  "project_cap_cents": 45000,
+  "protected_original_cents": 5000,
+  "schema": "p009_stage0_generation_core_candidate_v1",
+  "scope": "p009-stage0-generation-core-code-and-provisional-numeric",
+  "slot_reservations_cents": [
+    399,
+    216,
+    252
+  ],
+  "slots": {
+    "olmo_p3": {
+      "datasets": [
+        "olmo_gsm_zero",
+        "olmo_gsm_four"
+      ],
+      "full_window_seconds": 1900,
+      "model": "olmo",
+      "platform_seconds": 1260,
+      "reserved_cents": 252,
+      "stage0_remaining_before_cents": 381,
+      "startup_seconds": 600,
+      "worker_seconds": 1200
+    },
+    "qwen_p3": {
+      "datasets": [
+        "qwen_math_zero",
+        "qwen_math_four"
+      ],
+      "full_window_seconds": 1600,
+      "model": "qwen",
+      "platform_seconds": 960,
+      "reserved_cents": 216,
+      "stage0_remaining_before_cents": 597,
+      "startup_seconds": 600,
+      "worker_seconds": 900
+    },
+    "teacher_p2_p3": {
+      "datasets": [
+        "math_procurement",
+        "teacher_gsm_zero",
+        "teacher_math_zero"
+      ],
+      "full_window_seconds": 3100,
+      "model": "teacher",
+      "platform_seconds": 2460,
+      "reserved_cents": 399,
+      "stage0_remaining_before_cents": 996,
+      "startup_seconds": 600,
+      "worker_seconds": 2400
+    }
+  },
+  "source_files": {
+    "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+    "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+    "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+    "experiments/learning_regime_p009/gates.py": "1543f482098cee612256633e85b88e528c7418babfe6af6d4a00fc80347eefb0",
+    "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+    "experiments/learning_regime_p009/modal_p0.py": "f8b422289c486f4624fbfe90dd235e28dcedbd8fc25e9b28a37cd043f3741ac4",
+    "experiments/learning_regime_p009/p0_contract.py": "d82396a9e3372ce00a61a5dcff324e9b7344ff7859530bac62d810ae90ba1414",
+    "experiments/learning_regime_p009/p0_engine.py": "d32f2ad5b125200c92b7d911361ea3eca36f09c4cce03d286dea3306461b22bb",
+    "experiments/learning_regime_p009/p0_runtime.py": "7b2c3133c3492e2f081b033eafa59f80092551743d57d1fee5e9c8c17d19662b",
+    "experiments/learning_regime_p009/requirements_p0.txt": "375f161f867fe5bcdf846d5423fbdba991be4c7ee189d1dde9b5e52a39337b69",
+    "experiments/learning_regime_p009/stage0_generation_contract.py": "1621dbcdadd83c83b7c692e9112e17263bf195f735f4bfefac924720ca14d3e2",
+    "experiments/learning_regime_p009/stage0_generation_engine.py": "3f1505271c4bfb84d91577fee2a4c3f71dad8b1bb8fb5305d301c3184e0d2c0b",
+    "experiments/learning_regime_p009/stage0_generation_runtime.py": "7cdd2f0054d2bcf3bf0408315f54da0b274696bf56859d68dde37550cc9c89bc",
+    "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+    "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+    "experiments/sft_allocation_p008/provider_release.py": "7ebd47b4fcd91310ae3bacdb892008eb494e3ee2e8915717a9ed62989aae7593",
+    "experiments/sft_allocation_p008/student_concurrency.py": "8c006bfc8599baade1c523d3a0b5a3a0703cbe427196668199d9bf5d0a57812b",
+    "scripts/audit_p009_p0.py": "8da3518901a9ad57f2242c08616c7783620ab913d62043bc515ef1a87947c64e",
+    "scripts/p009_p0_io.py": "0a457bccc7a991a940aa437e80e7652aae4b93f092d49618a201545565abc660",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78"
+  },
+  "stage0_cap_cents": 2000,
+  "stage0_unreserved_after_cents": 129,
+  "total_new_reservation_cents": 867,
+  "training_updates": 0
+}
