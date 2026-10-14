@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T01:45:44.366757+00:00",
+  "as_of_utc": "2026-10-14T01:46:33.546742+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1085,6 +1085,26 @@
       ],
       "created_utc": "2026-10-14T01:18:21.100066+00:00",
       "new_cloud_calls": 0
+    },
+    {
+      "request_id": "p008-t8-readonly-closeout-code-r1",
+      "target_commit": "4aadc204fbe0aea1538ad4bb0e4b776f0914dc6a",
+      "packet": "reports/p008_20261013/t8_readonly_closeout_preflight_v1",
+      "manifest": "reports/p008_20261013/t8_readonly_closeout_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "68661ee0c671ed121b757c93b431ab7cf1f3df20c09b6f500ee8484e7c3a6276",
+      "status": "pending",
+      "external_review": "pending",
+      "blocking": true,
+      "blocking_for": "Only use of the new optional read-only wave-collector/callback-recovery paths; does not block admitted T8, ordinary unused per-run closeout, or final CPU",
+      "scope": "One bounded original-evidence collection route per completed run; zero actual helper/model calls",
+      "questions": [
+        "Review create-only disjoint wave fence, completed/stopped/zero-provider checks and one full-ledger enumeration shared by hardlink; preserve each original mtime/terminal/supplement proof. Three new fully mocked checks, no real completion claim.",
+        "Review partial-failure retention/no whole-wave retry or switch to original collector for the same partial run, selected-terminal stability and no atomic-snapshot claim for unrelated active rows.",
+        "Review missing-callback recovery from exactly four bounded original files after actual completed+STOPPED0, original submitted/source/spec/claim/supplement and saved ConnectionError; no remote writes, scientific replay or full raw rescoring."
+      ],
+      "created_utc": "2026-10-14T01:46:33.546742+00:00",
+      "new_scientific_calls": 0,
+      "actual_closeout_or_recovery_calls": 0
     }
   ],
   "p008_v31": {
@@ -1230,6 +1250,7 @@
     "T8_closeout_helper_packet": "reports/p008_20261013/t8_readonly_closeout_preflight_v1",
     "T8_closeout_helper_status": "PREPARED_NOTRUN_scoped_review_pending",
     "final_cpu_numeric_admission": "ABSENT_requires_all24physical/all21logical_completedproofs_and_actualIOfit",
-    "registered_analysis_status": "prepared_only_fixed_code_review_pending_all19models_required"
+    "registered_analysis_status": "prepared_only_fixed_code_review_pending_all19models_required",
+    "T8_readonly_closeout_review_request": "p008-t8-readonly-closeout-code-r1"
   }
 }
