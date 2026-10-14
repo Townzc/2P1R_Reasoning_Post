@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T08:18:54.684610+00:00",
+  "as_of_utc": "2026-10-14T08:42:59.504864+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1602,6 +1602,26 @@
         "Verify690 preserved files and272/144/80 saved raw inventories, with16 unacknowledged rows per run and no partial-score claim.",
         "Verify original256-step/524287-target checkpoint proof, full-state SHA and16 block acknowledgments; public proof is not reviewer binary access."
       ]
+    },
+    {
+      "request_id": "exploratory-exact-suffix-continuation-r1",
+      "target_commit": "68c8bad5459f752c1d42ba198f3ea68cfef624d2",
+      "packet": "reports/exploratory_20261014/continuation_admission_v1",
+      "manifest": "reports/exploratory_20261014/continuation_admission_v1/MANIFEST.json",
+      "manifest_sha256": "835f4bf4a4cd2e3da2fb4721999b3c754cf90655680e92398c88c6a16374364a",
+      "status": "pending",
+      "external_review": "PENDING",
+      "scope": "exploratory-exact-suffix-continuation-runtime-and-numeric",
+      "blocking": true,
+      "blocking_for": "All three distinct evaluation-only suffix child calls; prior proposal review does not admit runtime.",
+      "review_request": "reports/exploratory_20261014/continuation_admission_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T08:42:59.504864+00:00",
+      "questions": [
+        "Exact47source and failed-parent prefix reuse272/144/80 including48 unacknowledged outputs; independent496raw oracle, no duplicate generation.",
+        "Checkpoint256/524287 restore only, zero new training, reused official Instruct weights and original inputs; immutable parent suffix marker/claim/capacity guard.",
+        "Finite4800worker/5500window/672cents perchild, total original+new+ancillary $30; real source/spec/prefix/budget numeric binding and timing assumptions.",
+        "Reviewed gates/collector and full1319 merged oracle; original failed parents never completed or reset."
+      ]
     }
   ],
   "p008_v31": {
@@ -1841,5 +1861,18 @@
     "runtime_admitted": false,
     "retry_or_extra_budget_authorized": false,
     "p007": "PAUSED"
+  },
+  "exploratory_continuation": {
+    "owner_approved": true,
+    "source_target": "68c8bad5459f752c1d42ba198f3ea68cfef624d2",
+    "spec_sha256": "154a7f8307bf06ca16b90acca381a6e98e6a8048415ff1cf0348311e1d8a1f6d",
+    "source_files": 47,
+    "actual_calls": 0,
+    "review": "PENDING",
+    "new_training": 0,
+    "saved_raw_reuse": 496,
+    "original_unacknowledged_saved_raw": 48,
+    "budget_target_usd": 30,
+    "automation_p007": "PAUSED"
   }
 }
