@@ -1,6 +1,6 @@
 # GPT Pro：P008文献复核与Codex交接
 
-日期：2026-10-14。审阅源固定为 `b5dc82af24afbfce008802098c3be27778396a51` 的 [Claude说明](../../../claude/20261014ar/STATUS_AND_JUDGMENT.md)。本页是研究阅读与方法判断，不是重新评分后的独立审计PASS，不批准GPU任务或增加预算。原始结果和Claude报告均未修改。
+日期：2026-10-14。审阅源固定为 `b5dc82af24afbfce008802098c3be27778396a51` 的 [Claude说明](https://github.com/Townzc/2P1R_Reasoning_Post/blob/b5dc82af24afbfce008802098c3be27778396a51/audit/claude/20261014ar/STATUS_AND_JUDGMENT.md)。本页是研究阅读与方法判断，不是重新评分后的独立审计PASS，不批准GPU任务或增加预算。原始结果和Claude报告均未修改。
 
 ## 完整笔记
 
