@@ -1,4 +1,4 @@
-P008 最新：10项T1和base均已完整本地核验、GPU全部退出；[事实与图表](reports/p008_20261013/P008_T1_PROGRESS_20261013.md)已更新。原8项外审PASS，补跑969/965（各/1319）待审。T8实际计时门未通过，尚无T8调用；21PDT材料冻结不变。
+P008 最新：全部10项T1和base已完整本地核验，结果与[事实图表](reports/p008_20261013/P008_T1_PROGRESS_20261013.md)均获外审PASS。原T8计时门FAIL保留；owner批准9600秒后，确切35源及修订数值审计已通过，正在准备原8项首次派发。21PDT材料冻结不变。
 
 # Problems, Paths, or Repeats?
 
@@ -30,7 +30,7 @@ Intervals resample shared questions after averaging the two observed seeds. They
 
 Claude [round15](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md) gives the final packet and factual evidence page **PASS**, and the original figures **PASS-WITH-NOTES**, at fixed commit736b3920. A new v2 accuracy plot fixes overlapping markers/legend without changing results; that display revision is now PASS in [Claude v3 response](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md). [Scope and disposition](docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
 
-**P008:** Both draws/common inputs passed G1. All ten T1 endpoints and base are fully verified locally and released. Eight original outcomes have external PASS; the two authorized replacements scored969/965 of1319 and await external review. Their original zero-update failures remainfailed. All-host T8 forecasts exceed the frozen9,530s criterion by20.78–21.69s; no T8 is admitted. See the factual page for the separate finite-cap proposal. Owner student-until-complete authority preserves finite doses, once-only calls and budget;21PDT materials still freeze.
+**P008:** Both draws/common inputs passed G1. All ten T1 endpoints and base are fully verified locally, externally reviewed and released. The two independent replacements scored969/965 of1319; their original zero-update failures remainfailed. All-host T8 forecasts failed the original9,530s criterion by20.78–21.68s. Before any T8 outcome, the owner approved9,600s and$266.44; exact35-source runtime and amended9,570s numerical gate passed Claude4edd8399. Original failure/deviation stays explicit. The finite eight T8 slots are being prepared for their first dispatch, with no dose or evaluation change.21PDT material freeze remains.
 
 ## Previous stages, kept separate
 
@@ -50,6 +50,6 @@ P007A yielded1,024 physical attempts:959 usable,59 invalid and6 rejected valid d
 
 ## Cost and delivery
 
-Workspace delayed meter is **$162.31184746 at the October13 23:36UTC read**, billed$0; P008-labeled monthly rows total$74.31044653. This is not an invoice or credit balance. The owner directly approved P008 cap/reservation **$266.44**, including the two independent replacements and the additional$0.40 for the original eight T8 worker caps at9,600seconds. Residual workspace metering plus the full P008 reservation is$354.44140093; the$450 project ceiling/protected≥$50 remain. The original N2 failure is preserved as a post-hoc engineering deviation. [Exact35-source and amended numerical review](reports/p008_20261013/student_t8_cap_9600_v1/REVIEW_REQUEST.md) is pending; no T8 call has started. All10T1 outcomes and the descriptive figure now have scoped ClaudePASS (453720b6); statebinary inspection is not implied.
+Workspace delayed meter is **$162.31184746 at the October13 23:36UTC read**, billed$0; P008-labeled monthly rows total$74.31044653. This is not an invoice or credit balance. The owner directly approved P008 cap/reservation **$266.44**, including the two independent replacements and the additional$0.40 for the original eight T8 worker caps at9,600seconds. Residual workspace metering plus the full P008 reservation is$354.44140093; the$450 project ceiling/protected≥$50 remain. The original N2 failure is preserved as a post-hoc engineering deviation. [Exact35-source and amended numerical review](reports/p008_20261013/t8_cap_9600_accepted_v1/DISPOSITION.md) passed Claude4edd8399; first T8 dispatch preparation is underway. All10T1 outcomes and the descriptive figure now have scoped ClaudePASS (453720b6); statebinary inspection is not implied.
 
 Midpoint technical facts, deterministic charts and limitations are ready before the owner's TuesdayOctober13 21:00PDT deadline. Final slide composition, personal interpretation and rehearsal remain the researcher's work under the course policy. Long-term extensions are proposals only and do not change the closed experiment.

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T00:31:37.885597+00:00",
+  "as_of_utc": "2026-10-14T00:54:08.183742+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -998,8 +998,8 @@
       "manifest_sha256": "c89f7e33d23363e16a96d62adf190abf9f350a5e16e2b57fd7897310a24c7d90",
       "source_files": 35,
       "spec_sha256": "4ca2c55deb53307ddc96b8f6b631127958dd40ddbdc6d536986e38e7798a0044",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS-WITH-NOTES",
+      "status": "reviewed",
       "blocking": true,
       "blocking_for": "All eight original T8 calls; both exact runtime and amended numeric review required",
       "scope": "Exact35source/new operational spec/owner and supplemental accounting; no old code PASS substitution",
@@ -1009,7 +1009,12 @@
         "13newCPUchecks, unchanged science/previous34sourcebytes; unbenchmarked bounded startup/end bookkeeping only, no changed blockguard path"
       ],
       "created_utc": "2026-10-14T00:12:49.876746+00:00",
-      "new_cloud_calls": 0
+      "new_cloud_calls": 0,
+      "review_commit": "4edd839961f1367803395f52f484f7bb6fcd96ae",
+      "review_report": "audit/claude/20261013ai/T8_CAP_9600.md",
+      "review_report_sha256": "7eaca51a44b0f35bbaffe0cdadc0ab7b4a42fa7925862d2cd62c0deaba7f1b31",
+      "review_read_utc": "2026-10-14T00:52:00.746930+00:00",
+      "disposition_packet": "reports/p008_20261013/t8_cap_9600_accepted_v1"
     },
     {
       "request_id": "p008-t8-cap-9600-numeric-r1",
@@ -1019,8 +1024,8 @@
       "manifest_sha256": "c89f7e33d23363e16a96d62adf190abf9f350a5e16e2b57fd7897310a24c7d90",
       "source_files": 35,
       "spec_sha256": "4ca2c55deb53307ddc96b8f6b631127958dd40ddbdc6d536986e38e7798a0044",
-      "external_review": "pending",
-      "status": "pending",
+      "external_review": "PASS under amended9570 criterion; original9530 FAIL retained",
+      "status": "reviewed",
       "blocking": true,
       "blocking_for": "All eight original T8 calls; both exact runtime and amended numeric review required",
       "scope": "Amended9570 threshold only; preserve independently failed original9530 criterion and post-hoc deviation",
@@ -1030,7 +1035,12 @@
         "1253+5=1258 per originalslot, +40cents total; originalregisteredplan unchanged; currentfundedproject450/protected50 and21PDTfreeze retained"
       ],
       "created_utc": "2026-10-14T00:12:49.876746+00:00",
-      "new_cloud_calls": 0
+      "new_cloud_calls": 0,
+      "review_commit": "4edd839961f1367803395f52f484f7bb6fcd96ae",
+      "review_report": "audit/claude/20261013ai/T8_CAP_9600.md",
+      "review_report_sha256": "7eaca51a44b0f35bbaffe0cdadc0ab7b4a42fa7925862d2cd62c0deaba7f1b31",
+      "review_read_utc": "2026-10-14T00:52:00.746930+00:00",
+      "disposition_packet": "reports/p008_20261013/t8_cap_9600_accepted_v1"
     },
     {
       "request_id": "p008-final-cpu-t8-cap-code-r1",
@@ -1039,8 +1049,8 @@
       "manifest": "reports/p008_20261013/final_cpu_t8_cap_preflight_v1/MANIFEST.json",
       "manifest_sha256": "85b5716229b96fa6d8f393d68c25e495ebc5f7252f641bdb59a9d88d02f9bf74",
       "source_files": 19,
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS-WITH-NOTES code only; actual I/O numerical admission pending",
       "blocking": true,
       "blocking_for": "Future final CPU only; does not block T8 student runtime/numeric review",
       "scope": "Exact19-source final CPU with original21 logical/24 physical sources plus immutable operational T8 cap provenance; code-only no actual I/O admission",
@@ -1050,11 +1060,16 @@
         "19 new/revised offline checks; sole-entry guard and three prepared NOTRUN helpers; actualbyte/timing numerical admission still required under original500cent/3300second slot"
       ],
       "created_utc": "2026-10-14T00:31:37.885597+00:00",
-      "new_cloud_calls": 0
+      "new_cloud_calls": 0,
+      "review_commit": "4edd839961f1367803395f52f484f7bb6fcd96ae",
+      "review_report": "audit/claude/20261013ai/T8_CAP_9600.md",
+      "review_report_sha256": "7eaca51a44b0f35bbaffe0cdadc0ab7b4a42fa7925862d2cd62c0deaba7f1b31",
+      "review_read_utc": "2026-10-14T00:52:00.746930+00:00",
+      "disposition_packet": "reports/p008_20261013/t8_cap_9600_accepted_v1"
     }
   ],
   "p008_v31": {
-    "status": "all_T1_G3_and_figure_PASS_owner_9600_26644_approved_exact_runtime_pending",
+    "status": "exact_T8_runtime_and_amended_numeric_accepted_dispatch_preparation",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.44,
     "phase0_cap_usd": 15,
@@ -1089,7 +1104,7 @@
     "active_gpu_tasks": 0,
     "pool_d2_external_review": "PASS-WITH-NOTES merged numeric pool G1 at eb398fb1; no student admission",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/student_t8_cap_9600_v1/STATUS.json",
+    "current_status": "reports/p008_20261013/t8_cap_9600_accepted_v1/DISPOSITION.md",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -1132,7 +1147,7 @@
     "student_failed_calls": 2,
     "student_retry_admitted": false,
     "student_remaining_unattempted": 8,
-    "final_cpu_code_review": "19-source operational-cap amendment pending; prior17-source PASS retained for historical scope only",
+    "final_cpu_code_review": "19-source82c3912a PASS-WITH-NOTES4edd8399; actualinputs/numericabsent",
     "latest_review_corrections": "reports/p008_20261013/review_7ce25d6a_accepted_v1/CORRECTION_ZERO_USABLE.md",
     "failed_student_preservation_packet": "reports/p008_20261013/student_lr_failures_closed_v1",
     "latest_meter_utc": "2026-10-13T23:36:03.584193+00:00",
@@ -1178,7 +1193,7 @@
     "T8_cap_amendment_status": "directowner_approved_9600_26644_exactsource_published_runtime_and_numeric_pending",
     "hard_reservation_usd": 266.44,
     "student_T8_calls": 0,
-    "student_T8_numeric_admission": "Original9530criterionFAIL preserved; owner approved9600/9570 amendment; exact runtime/numeric review pending",
+    "student_T8_numeric_admission": "Amended9570 PASS4edd8399, original9530 FAIL immutable;9600cap/266.44reserve",
     "t8_cap_amendment_target": "4fef52a374449dafec284ac503c5e78c83dc41f7",
     "t8_cap_owner_approved": true,
     "T8_original_failed_numeric_request": "p008-t8-actual-n2-r1",
