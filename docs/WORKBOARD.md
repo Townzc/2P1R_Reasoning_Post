@@ -4,6 +4,10 @@
 
 ## 当前状态
 
+### 2026-10-14 03:59:53 PDT（探索性最终交接关闭；automation-4已暂停）
+
+最终材料固定e1ac125a已普通push并独立核对远端。应用工具已暂停automation-4，保存配置实际回读确认PAUSED，原prompt/节奏未改；p007原PAUSED及更新时间均未变。准确核对后清理本地有限caffeinate；0活动实验GPU/CPU，无新科学调用或旧工具重跑。[最终结果与材料](../reports/exploratory_20261014/final_handoff_20261014_v1/README.md) · [暂停回执](../reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json)。旧原包中的pending为发布时历史状态，由新datedacceptance承接，不回写证据。
+
 ### 2026-10-14 03:57:24 PDT（最后探索性结果G3通过；只剩发布后的自动化暂停）
 
 完整读取Claude8573632e报告；审计事件03:34:50PDT、实际读取03:54:06PDT，三项full1319独立解码共3957行，停止事件/评分0不一致。结果823/904/934和9/54/43截断不变，所有provider已STOPPED0。原496输出含48未ack及256步检查点来源保留，无重训/重复生成/旧工具重跑。
