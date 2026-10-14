@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 15:36:56 PDT（实际入口修复审计通过；准备唯一新调用）
+
+22:35:14UTC读到Claude1708a34f/82comments，22:35:26实际全文读取bo/bp。bo确认exact38source/spec996f6603、原256继承/2382新输出、preclaimproof与2000/11000帽PASS-WITH-NOTES；新readonly/publisher PASS。原32源及全部科学设置未动。审计者承认此前漏查入口schema，原失败完整保留；本次没有重跑旧tests/模型/保全。用户已直接允许预算增帽并自动推进，110/20为已明示有限分配，无重复常规询问。
+
+新必要meter22:35:40延迟235.35236991/billed0，保守recentmax+25lag工程估计26070c，加全新11000c=37070<45000，不是invoice/余额/保证。当前完整752+252=1004c不依赖bn释放；旧settlement硬编码1000c和两app，未来新帽结算必须另审。Papers仍e097b0cb。bp仅journal codePASS，实际P1/首100/分歧核验仍待真实输入与审计。原slowest-pair预测保留，不将reviewer替代scenario当已批准门。
+
+接下来只生成一次本地gate、普通发布并核远端后单次modal_p0_entry_repair。此记录写入时0新云调用；不把审计通过当生成完成或actualA2。
+
+
 ### 2026-10-14 15:06:14 PDT（真实预算结算审计通过；新入口修复仍待确切审计）
 
 22:05:02UTC检查新Claude1ae0a75c/80comments，22:05:18.879502全文读bn报告SHA96fb995d，事件21:47:36。两closedfailed计量覆盖层90d6为PASS-WITH-NOTES，独立复算126c/释放374c且8新fixtures由reviewer通过；Codex没有重跑。必须以原proposal文件SHA5c22d61e或其后续链传previous，防止较低新meter降低已记下限。buffer未校准、不是invoice/退款；失败/build/storage均保留。

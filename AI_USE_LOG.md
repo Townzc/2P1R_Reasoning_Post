@@ -2896,3 +2896,11 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 报告旧622c余量/496c候选与100/10帽是历史范围，后来owner直接批准增帽、Codex有限分配110/20已单列。本次新38入口仍完整计752+252=1004c，不用释放额；新preclaim调用不伪装成旧有claim结算。当前新入口runtime/readonly/publisher和新P1journal均pending，0新调用，无actualA2/Stage1。下次正常review约22:35、不得早于22:20:19；不因预算规则通过替代确切运行审计。
 
 本轮bn接受记录及5成员公共包、工作日志已一次写完；最后用create-only dump更新已存在INDEX触发FileExistsError，原错误日志保留。仅完成未写的mutable INDEX尾部，没有重跑接受包builder、预算算术、测试、云或科学工作。
+
+### 2026-10-14 15:36:56 PDT（实际入口修复审计通过；准备唯一新调用）
+
+22:35:14UTC读到Claude1708a34f/82comments，22:35:26实际全文读取bo/bp。bo确认exact38source/spec996f6603、原256继承/2382新输出、preclaimproof与2000/11000帽PASS-WITH-NOTES；新readonly/publisher PASS。原32源及全部科学设置未动。审计者承认此前漏查入口schema，原失败完整保留；本次没有重跑旧tests/模型/保全。用户已直接允许预算增帽并自动推进，110/20为已明示有限分配，无重复常规询问。
+
+新必要meter22:35:40延迟235.35236991/billed0，保守recentmax+25lag工程估计26070c，加全新11000c=37070<45000，不是invoice/余额/保证。当前完整752+252=1004c不依赖bn释放；旧settlement硬编码1000c和两app，未来新帽结算必须另审。Papers仍e097b0cb。bp仅journal codePASS，实际P1/首100/分歧核验仍待真实输入与审计。原slowest-pair预测保留，不将reviewer替代scenario当已批准门。
+
+接下来只生成一次本地gate、普通发布并核远端后单次modal_p0_entry_repair。此记录写入时0新云调用；不把审计通过当生成完成或actualA2。

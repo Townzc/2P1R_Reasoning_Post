@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T22:06:42.863887+00:00",
+  "as_of_utc": "2026-10-14T22:36:56.254143+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2018,7 +2018,7 @@
       "manifest_sha256": "0563be9d858befe1d656c493342c548d0bf7c73d8ec05aa13752ca017ddc53e7",
       "review_request": "reports/p009_20261014/p0_entry_repair_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T21:57:59.350122+00:00",
-      "status": "pending",
+      "status": "accepted",
       "blocking": true,
       "blocking_for": "Only the new38-source repaired entry and exact numeric admission",
       "new_cloud_calls": 0,
@@ -2068,7 +2068,14 @@
       "stage0_cap_cents": 2000,
       "experiment_cap_cents": 11000,
       "required_additional_flag": "preclaim_entry_schema_repair_accepted",
-      "test_prerequisite": "Create .local/p009_20261014/r1 if absent; PYTHONPATH=.:tests python -m unittest test_p009_entry_schema_repair -v. Eleven mocked entry checks are not actual GPU validation."
+      "test_prerequisite": "Create .local/p009_20261014/r1 if absent; PYTHONPATH=.:tests python -m unittest test_p009_entry_schema_repair -v. Eleven mocked entry checks are not actual GPU validation.",
+      "decision": "PASS-WITH-NOTES",
+      "review_commit": "1708a34fb0b7a452cc660af455a528998aebb6cf",
+      "review_report": "audit/claude/20261014bo/REPORT.md",
+      "review_report_sha256": "7b06550bc5bac22005e4c2a02c86161bad626357e4a311e1ded059c9e1f8cf80",
+      "review_read_utc": "2026-10-14T22:35:26.893377+00:00",
+      "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
+      "actual_science_passed": false
     },
     {
       "request_id": "p009-p0-entry-repair-readonly-r1",
@@ -2079,11 +2086,18 @@
       "manifest_sha256": "0563be9d858befe1d656c493342c548d0bf7c73d8ec05aa13752ca017ddc53e7",
       "review_request": "reports/p009_20261014/p0_entry_repair_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T21:57:59.350122+00:00",
-      "status": "pending",
+      "status": "accepted",
       "blocking": false,
       "blocking_for": "Only new exact read-only observation/failed-preservation; not runtime admission",
       "new_cloud_calls": 0,
-      "source_sha256": "7af71fe8a196c7a4fb6c7fe19a715ee8fac98a31a467b8d89a30d64d118694cd"
+      "source_sha256": "7af71fe8a196c7a4fb6c7fe19a715ee8fac98a31a467b8d89a30d64d118694cd",
+      "decision": "PASS",
+      "review_commit": "1708a34fb0b7a452cc660af455a528998aebb6cf",
+      "review_report": "audit/claude/20261014bo/REPORT.md",
+      "review_report_sha256": "7b06550bc5bac22005e4c2a02c86161bad626357e4a311e1ded059c9e1f8cf80",
+      "review_read_utc": "2026-10-14T22:35:26.893377+00:00",
+      "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
+      "actual_science_passed": false
     },
     {
       "request_id": "p009-p0-entry-repair-result-publication-r1",
@@ -2094,11 +2108,18 @@
       "manifest_sha256": "0b65f4cccf81486d3f10539c9b5588ad5a3e81f95676b30a5128e33e9b8fab2e",
       "review_request": "reports/p009_20261014/p0_entry_repair_publisher_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T21:57:59.350122+00:00",
-      "status": "pending",
+      "status": "accepted",
       "blocking": false,
       "blocking_for": "Only new repaired-entry completed-result publisher; not runtime admission",
       "new_cloud_calls": 0,
-      "source_sha256": "d5d08c20c3ee10585cd7360559af0f4ea45c3142928a1c9d62d8dfe01a80ecb3"
+      "source_sha256": "d5d08c20c3ee10585cd7360559af0f4ea45c3142928a1c9d62d8dfe01a80ecb3",
+      "decision": "PASS",
+      "review_commit": "1708a34fb0b7a452cc660af455a528998aebb6cf",
+      "review_report": "audit/claude/20261014bo/REPORT.md",
+      "review_report_sha256": "7b06550bc5bac22005e4c2a02c86161bad626357e4a311e1ded059c9e1f8cf80",
+      "review_read_utc": "2026-10-14T22:35:26.893377+00:00",
+      "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
+      "actual_science_passed": false
     },
     {
       "request_id": "p009-math-p1-durable-journal-r1",
@@ -2116,12 +2137,19 @@
         "tests/test_p009_math_scoring_journal.py": "8c5242689aab3bde6829c7cc90a6517e9f120ea674a20a8098f7958e31aff6bd"
       },
       "created_utc": "2026-10-14T22:04:28.836445+00:00",
-      "status": "pending",
+      "status": "accepted",
       "blocking": false,
       "blocking_for": "Only the future local durable P1 journal; not P0 repair or other independent code preparation",
       "actual_P1_rows_scored": 0,
       "actual_symbolic_attempts": 0,
-      "scientific_gate_passed": false
+      "scientific_gate_passed": false,
+      "decision": "PASS-WITH-NOTES",
+      "review_commit": "1708a34fb0b7a452cc660af455a528998aebb6cf",
+      "review_report": "audit/claude/20261014bp/REPORT.md",
+      "review_report_sha256": "d5790a6d3f6d16c89d2178c3942d6f572cfe78ae4d94623fbdaaf7e55aca5d6b",
+      "review_read_utc": "2026-10-14T22:35:26.906768+00:00",
+      "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
+      "actual_science_passed": false
     }
   ],
   "p008_v31": {
@@ -2458,9 +2486,14 @@
       "notify": "Only Stage1 results or genuine blockers; stay quiet for unchanged state."
     },
     "latest_read_review": {
-      "commit": "1ae0a75cd915921660feb00f9de0e00c3f5f0f5b",
-      "read_utc": "2026-10-14T22:05:18.879502+00:00",
-      "scope": "p009-closed-failure-metered-settlement-code-and-numeric",
+      "commit": "1708a34fb0b7a452cc660af455a528998aebb6cf",
+      "read_utc": "2026-10-14T22:35:26.893377+00:00",
+      "scopes": [
+        "p009-p0-fast-unattempted-remainder-runtime-and-numeric",
+        "p009-p0-fast-remainder-readonly-observation-and-failed-preservation-code",
+        "p009-p0-fast-remainder-result-publication-code",
+        "p009-math-p1-durable-journal-code"
+      ],
       "actual_science_passed": false
     },
     "math_scorer": {
@@ -2485,7 +2518,25 @@
       "status": "frozen_before_any_P009_outcomes_actualanalysis_notrun",
       "source_sha256": "ec9f46f20b2b1560a8064911172d3afb882367e7e4c97e8232c837542b02991f"
     },
-    "latest_budget": "reports/p009_20261014/p0_fast_review_accepted_v1/BUDGET_CHECK.json",
+    "latest_budget": {
+      "observed_epoch": 1792017340.832978,
+      "billing_summary_sha256": "6c943f98b64861199288d7bb4b274dc57b65e97df0e57343551688d9a35e2d77",
+      "billing_report_sha256": "7a8aa87c7bde1ace9c79da7fc01199f0692883d5c083b017ca9d06feaab0b0e9",
+      "latest_delayed_workspace_meter": "235.35236991",
+      "p009_stage0_used_and_pending_cents": 752,
+      "slot_reserved_cents": 252,
+      "effective_stage0_cap_cents": 2000,
+      "new_experiment_cap_cents": 11000,
+      "project_cap_cents": 45000,
+      "protected_original_cents": 5000,
+      "project_prior_upper_cents": 26070,
+      "prior_upper_is_engineering_estimate_not_invoice_bound": true,
+      "lag_allowance_usd": "25",
+      "current_runtime_keeps_all_752c_prior_reservations": true,
+      "closed_failure_settlement_release_used": false,
+      "original_claims_unchanged": true,
+      "snapshot": ".local/p009_20261014/r1/entry_repair_budget_20261014T223539Z"
+    },
     "math_scoring_pool": {
       "target_commit": "0b714161dcc23a93cc44b52f4948eae271eaeb27",
       "packet": "reports/p009_20261014/math_scoring_pool_preflight_v1",
@@ -2561,7 +2612,7 @@
       "protected_usd": 50
     },
     "p0_entry_repair": {
-      "status": "pending_exact_new_runtime_and_numeric_review_NOT_RUN",
+      "status": "exact_runtime_numeric_and_readonly_publication_accepted_not_yet_called",
       "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
       "packet": "reports/p009_20261014/p0_entry_repair_preflight_v1",
       "source_count": 38,
@@ -2573,10 +2624,12 @@
       "settlement_release_used": false,
       "new_calls": 0,
       "inherited_outputs": 256,
-      "new_outputs": 2382
+      "new_outputs": 2382,
+      "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
+      "new_cloud_calls": 0
     },
     "math_durable_journal": {
-      "status": "code_only_pending_actualP1_not_run",
+      "status": "code_accepted_actual_P1_not_admitted",
       "target_commit": "542b453f5004f8c0e8ec16107bb65cf26e9e6558",
       "packet": "reports/p009_20261014/math_journal_preflight_v1",
       "source_files": {
@@ -2585,7 +2638,8 @@
         "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
         "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
         "tests/test_p009_math_scoring_journal.py": "8c5242689aab3bde6829c7cc90a6517e9f120ea674a20a8098f7958e31aff6bd"
-      }
+      },
+      "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1"
     },
     "closed_failure_settlement": {
       "status": "scoped_PASS_WITH_NOTES_previous_chain_required",
