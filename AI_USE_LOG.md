@@ -2912,3 +2912,15 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 完整oracle：base650/1319、相对HF638 +12题/+0.909780pp，但126题discordance9.552691%超过冻结4%，真实blocked_unspecified_discordance_case；correct950/1319对原969 −19题/−1.440485pp、77分歧5.837756%，pass_internal_only。caps43/47、unknown0。只复制已有oracle，不重算/择优，不把来源核验PASS当科学门通过或实现错误证据。
 
 所有结果与原失败/缺ack/未评分eager128保留，exact已审publisher生成不可变complete包，另立实际gate字段投影供bo N3复核，原私有intent仍保留。实际A2请求待固定commit填INDEX，后续P1/P2/P3/Stage1科学调用未准入；没有改4%门或自动重跑。预算仍110/20，完整1004c预留不回收，22:35费用快照非invoice。当前0GPU/CPU；只有实际A2与科学门处置待完成，用户仅在真阻塞/Stage1结果通知。
+
+### 2026-10-14 16:15:12 PDT（负责人明确批准vLLM内部比较；原P0阻塞与不一致率保留）
+
+用户直接指定base也按internal-only、P009全程vLLM、不做跨引擎科学比较并公开不一致率。这是看到完整P0结果后的范围修订，不是原4%门预注册通过。新独立p0_internal_only_amendment_v1保留原26d7结果与blocked决定，复制原RESULTS字节；base126/1319=9.552691%、correct77/1319=5.837756%。后续用同引擎650/950，HF638/969仅历史诊断；G0/G1/数据/剂量/所有真实准入门不变。
+
+本轮只准备原始owner授权、确切范围/来源/未来绑定和审计请求；0新模型/训练/输出/评分/测试/费用。原38runtime与gate/engine源不改，无P0重跑。独立实际A2和新amendment审计仍pending，通过后按原授权自动推进，不重复常规许可。预算110/20/50/35+5与project450/50保护不变。原结果包不补写，所有失败与资源退出证据保留。
+
+### 2026-10-14 16:16:23 PDT（真实完整P0 A2已读；来源核验通过与原科学门阻塞分开记录）
+
+23:15:25因新owner裁定查到Claude45b4163a/83comments，事件23:07:06/comment6180462064；23:15:36全文读bq报告SHAb129dceb。外审独立重放2638行并完全复现650/950、126/77分歧和两原门决定，原字节/来源/账本/四STOPPED0 PASS，bo N3关闭。原base科学门blocked和correct internal-only永保；不写成跨引擎可比PASS。
+
+报告明确推荐(a)internal-only，用户已直接选择，无须再问。已保存限定完整性acceptance与原报告，新的确切owner范围/未来绑定修订仍待审，后续原科学门不变。reviewer额外近似sign-test只标其描述性诊断，bf16/kernel/merge是假说，不当已证机制。0新科学/评分/旧工具重复。下一正常审计约23:45，至少23:30:37后；旧监控暂停、新p009继续。

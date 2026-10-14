@@ -299,3 +299,24 @@ The pending entry repair retains every prior failed-call allowance: $7.52 plus
 $2.52 for its new slot, $10.04 total, leaving$9.96 within Stage0. No proposed
 closed-failure settlement release is needed for this admission. New exact code,
 input, numeric and scientific reviews still govern progression.
+
+## Direct owner post-result internal-only amendment — recorded 2026-10-14 16:15:12 PDT
+
+After the complete P0 outcomes were disclosed, the owner explicitly designated
+base as internal-only too: P009 will use vLLM throughout generation/evaluation,
+make no cross-engine scientific comparison, and publish both discordance rates.
+The exact authority and amendment are in
+`reports/p009_20261014/p0_internal_only_amendment_v1/AMENDMENT.json` and its
+OWNER_AUTHORITY.json. This is a post-result scope change. The original four-case
+P0 rule above, `gates.py`, raw outputs and blocked base decision remain historical
+evidence; no original threshold is silently altered or retrospectively passed.
+
+Base650 versus historicalHF638 has126/1319 discordance(9.552691%); correct950
+versusHF969 has77/1319(5.837756%). All future P009 comparisons and G0/G1 inputs
+use the common reviewed vLLM engine/endpoint definitions. HF scores are only
+historical engine diagnostics. Reuse the existing same-endpoint base650 after
+actualA2; do not regenerate P0. Each future admission binds this amendment and
+both actual A2/amendment reviews plus exact engine source/observed settings.
+All other scientific/input/runtime/budget/once-only gates and training libraries
+are unchanged. This amendment adds zero calls, outputs, training updates or cost.
+Actual A2 and exact amendment review remain required before later science.

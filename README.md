@@ -1,10 +1,18 @@
-# October14 — P009 entry repair awaiting exact review
+# October14 — P009 owner-authorized internal-only scope
 
-The owner authorized a budget increase to avoid a small overrun delaying the finite study. The current bounded allocation is **$110 total, $20 Stage0, $50 Stage1, $35 Stage2 and $5 unallocated**, with the project $450 spending ceiling and $50 protection unchanged.
+P0 completed all2638 outputs with full local raw/lineage verification and all
+providers stopped. The owner has explicitly resolved the base discordance case
+as **internal-only**: all P009 scientific comparisons use the common vLLM
+configuration. This is a post-result scope amendment; base9.55% and correct-reference
+5.84% discordance and the original blocked decision remain public.
 
-The latest continuation failed at an input-manifest lookup before a claim, model load or new output. [Original zero-work evidence](reports/p009_20261014/p0_preclaim_failure_v1/README.md) is closed, with all prior apps stopped. The [new exact entry repair](reports/p009_20261014/p0_entry_repair_preflight_v1/README.md) preserves the 256 saved rows and permits only the 2,382 unattempted outputs after its fixed runtime/numeric audit. Eleven mocked entry checks passed; no new repaired call has run. Full retained failure allowances plus the new slot are $10.04 within Stage0; the separate metered-settlement proposal is not needed for this admission.
-
-Five Stage2 conditions × two seeds, teacher context2,048 and seven unsupported MATH rows remain unchanged. Actual P0/A2, later scientific gates and exact admissions are still required before automatic progression. P009 remains active; P008/exploratory work and their old monitors stay closed.
+[Exact owner amendment](reports/p009_20261014/p0_internal_only_amendment_v1/README.md)
+and [full P0 evidence](reports/p009_20261014/p0_entry_repair_complete_v1/README.md)
+now have actual A2 integrity PASS at45b4163a; the exact owner-amendment review
+is pending. Later scientific stages advance automatically
+only after those reviews and every unchanged science/input/runtime/budget gate.
+No P0 rerun, extra generation or added budget is needed for the amendment.
+P009 remains active; P008/exploratory and their monitors remain closed.
 
 # Problems, Paths, or Repeats?
 

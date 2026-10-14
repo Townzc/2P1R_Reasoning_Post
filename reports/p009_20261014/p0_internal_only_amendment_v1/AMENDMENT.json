@@ -1,0 +1,69 @@
+{
+  "schema": "p009_owner_post_result_internal_only_amendment_v1",
+  "recorded_utc": "2026-10-14T23:15:12.951500+00:00",
+  "owner_authority_file_sha256": "ab9eb85a14d61eb296707b6244ae3a7ed2ad97fd38f00ad0a92add402e1ec378",
+  "post_result_amendment": true,
+  "outcome_exposure_before_amendment": true,
+  "original_result_target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
+  "original_result_file": "reports/p009_20261014/p0_entry_repair_complete_v1/RESULTS.json",
+  "original_result_file_sha256": "1b065f68ba45f5e82fff8408597727ec7a5d5a42d4ff9e7c3950336dbaa0b0fc",
+  "original_results_and_frozen_gate_decisions_immutable": true,
+  "original_base_decision": "blocked_unspecified_discordance_case",
+  "original_correct_reference_decision": "pass_internal_only",
+  "owner_authorized_disposition": {
+    "base_638": "internal_only",
+    "correct_969": "internal_only"
+  },
+  "external_amendment_review": "PENDING",
+  "actual_full_P0_A2_review": "PENDING",
+  "downstream_scientific_admission": false,
+  "comparison_scope": "P009_within_vllm_only",
+  "inference_engine": "vllm",
+  "common_engine_source": "experiments/learning_regime_p009/high_throughput_v1.py",
+  "common_engine_source_sha256": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+  "preserved_frozen_gate_source": "experiments/learning_regime_p009/gates.py",
+  "preserved_frozen_gate_source_sha256": "1543f482098cee612256633e85b88e528c7418babfe6af6d4a00fc80347eefb0",
+  "affected_scope": "Resolve this observed complete P0 base low-gap/high-discordance case; restrict all P009 comparisons to the reviewed common vLLM configuration.",
+  "permitted_P0_reuse": {
+    "Qwen_GSM_zero_shot": 650,
+    "existing_correct_reference_checkpoint": 950,
+    "denominator": 1319
+  },
+  "historical_HF_scores": {
+    "base": 638,
+    "correct_reference": 969,
+    "use": "Historical engine-disagreement disclosure only; never a P009 treatment-effect or G0/G1 input."
+  },
+  "required_disclosure": {
+    "base_discordance_count": 126,
+    "correct_reference_discordance_count": 77,
+    "denominator": 1319,
+    "base_discordance_percent": 9.552691432903716,
+    "correct_reference_discordance_percent": 5.837755875663381,
+    "original_gate_and_post_result_owner_resolution_must_both_appear": true
+  },
+  "downstream_requirements": [
+    "Actual full P0 A2 verifies immutable raw outputs, logical stopping, frozen parser, source/lineage, all resource exits and original gate decisions.",
+    "A real fixed full report accepts this exact owner amendment, manifest and comparison restriction; owner authority alone is not an audit report.",
+    "Each future input/runtime/analysis admission binds this amendment and both real reports, plus the exact common engine source and observed configuration.",
+    "Both sides of every P009 comparison use vLLM with the reviewed common configuration and matching question/parser/decoding definitions; model/task-specific differences remain disclosed.",
+    "Reuse P0 base650 for the same Qwen/GSM0-shot endpoint after A2; never regenerate it or import HF638/969 into P009 effects.",
+    "All actual P1/A2, G0, G1, negative-control, futility, data, complete-answer, dose, source/numeric, budget/window, unused-slot and resource-exit gates remain mandatory.",
+    "This does not waive unknowns, source defects, other scientific failures or future engine/configuration changes; those require their own disposition."
+  ],
+  "training_library_scope": "vLLM applies to generation/evaluation. Existing PyTorch/HF training and checkpoint machinery is unchanged.",
+  "added_model_calls": 0,
+  "added_generations": 0,
+  "added_training_updates": 0,
+  "added_budget_cents": 0,
+  "paid_replay_or_calibration_authorized_by_this_amendment": false,
+  "current_budget_cents": {
+    "total": 11000,
+    "stage0": 2000,
+    "stage1": 5000,
+    "stage2": 3500,
+    "unallocated": 500,
+    "project": 45000,
+    "protected": 5000
+  }
+}
