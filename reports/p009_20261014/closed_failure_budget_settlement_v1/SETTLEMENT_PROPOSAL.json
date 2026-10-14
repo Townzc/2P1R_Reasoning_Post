@@ -1,0 +1,50 @@
+{
+  "automatic_replay_authorized": false,
+  "fits_stage_cap": true,
+  "formula": "ceil(max retained gross app meter in USD * 100) + max(50c, ceil(20% rounded meter cents)); never decrease prior accounted cents",
+  "full_pending_reserved_cents": 252,
+  "limitations": "Uncalibrated lag/unattributed allowance; later metering increases consume headroom before a new slot. Missing/ambiguous current app rows refuse settlement. Original claims remain historical ceilings, not duplicate expenses.",
+  "metering_is_final_invoice": false,
+  "original_claims_mutated": false,
+  "original_reserved_cents": 500,
+  "prepared_utc": "2026-10-14T21:36:26.137483+00:00",
+  "released_reservation_cents": 374,
+  "runs": [
+    {
+      "accounted_cents": 63,
+      "app_id": "ap-laRv7V5oQp7J6kKZdPolnd",
+      "campaign": "p009-p0-parity-20261014-r1",
+      "claim_sha256": "303566965770f877f6fd7a8c844d9a6077ed7d2c9483cac346722666fb2dbe50",
+      "current_meter_usd": "0.12296933",
+      "delay_unattributed_allowance_cents": 50,
+      "meter_floor_usd": "0.12296933",
+      "original_reserved_cents": 248,
+      "original_status": "failed",
+      "released_reservation_cents": 185,
+      "rounded_meter_cents": 13,
+      "run_id": "p0_parity_pair",
+      "terminal_sha256": "0407a4078946b6d84e9744fb762d262e6df0f154246a44c26fc18b4154a90897"
+    },
+    {
+      "accounted_cents": 63,
+      "app_id": "ap-FkcENORfl85RlCVEvBibVl",
+      "campaign": "p009-p0-fast-20261014-r1",
+      "claim_sha256": "502e788bad5aec25e2f3031ae39675913174e2bc04f822ca45f1a33270895174",
+      "current_meter_usd": "0.12490961",
+      "delay_unattributed_allowance_cents": 50,
+      "meter_floor_usd": "0.12490961",
+      "original_reserved_cents": 252,
+      "original_status": "failed",
+      "released_reservation_cents": 189,
+      "rounded_meter_cents": 13,
+      "run_id": "p0_fast_pair",
+      "terminal_sha256": "4f771652f2e306423c1daf935a1d649683773eac5766555444f55063f6058d87"
+    }
+  ],
+  "runtime_admitted": false,
+  "settled_failed_cents": 126,
+  "stage_cap_cents": 1000,
+  "stage_committed_cents": 378,
+  "stage_remaining_cents": 622,
+  "status": "PENDING_EXACT_REVIEW_not_runtime_admission"
+}

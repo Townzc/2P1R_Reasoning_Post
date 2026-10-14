@@ -1,0 +1,7 @@
+# Exact EOS-boundary remainder review accepted
+
+Real Claude fixed37f3a31a reports bl/bm were read in full at21:35:49UTC; comment event21:22:26UTC is distinct. Runtime/numeric source32 target5c522257/spec7e653032, publisher58a4f511 and optional read-only3ddfadfd each have scoped PASS-WITH-NOTES. The32 runtime bytes and frozen scoring remain unchanged. This is not actual P0/A2 or Stage1 admission.
+
+The256 original saved rows remain unscored until full merged2638 validation. Only the2382 never-attempted rows may be generated, using unchanged256 boundaries and the same1200-worker/1260-platform/600-startup/full1900 cap. No fabricated parent acknowledgement or successful parent status. The20.412s failed interval is a proxy including failure closeout, not a complete acknowledged batch or a future speed guarantee. Reviewer's400–650s projection is not a measured future outcome. Mixing containers is explicitly disclosed for A2.
+
+The owner's new direct choice(a) resolves the requested budget-policy decision before P2/P3: stopped failures may be settled at actual metering plus a disclosed lag allowance. Its precise new code/numeric proposal is separately submitted. This current remainder retains its original stricter500c failed-reserve accounting and252c full new reserve; settlement review does not block it. No remaining scientific dose, total cap or original cloud claim was changed. No scientific result yet exists.

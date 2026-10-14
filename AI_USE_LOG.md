@@ -2856,3 +2856,17 @@ p0_fast_remaining_result发布器只在两完整1319 oracle/原result/三appSTOP
 为衔接未来唯一原后缀调用，准备独立只读status/failed-preservation：30已知keys覆盖11新批及三代来源，原256不伪造新ack；两父failed/原marker永久保留，新marker缺失只代表可能启动前失败，不构成重试许可。真failed+三appSTOPPED0才一次保全，512files/32MiB单件/256MiB总量/2readers/1200本地秒，原provider/listing/copy AST不改。6新纯谱系/状态fixtures一次PASS，无RPC/模型/旧tests或raw评分；新32科学源未改。新工具确切code审计仅阻塞可选只读路径，不阻塞独立runtime。
 
 原全体科学与预算门继续：新候选252c加旧500c共752c预留非花费，Stage0余248c，未来旧496c计划不符合余量；不得默借未分配5或缩剂量。实际P1/P2/P3/Stage1均未准入。本轮没有新付费阶段，不重复20:46费用/Papers快照。所有失败证据与未通过原科学门保留。
+
+### 2026-10-14 14:36:26 PDT（owner批准按实际计量结算已结束失败运行；确切预算规则送审）
+
+用户直接批准已结束失败运行按实际费用加延迟缓冲结算、释放多余预留回Stage0，并再次要求无需常规许可、只在Stage1结果或真正阻塞时通知。后续“余额290多、大胆用”按加速已授权工作理解，保留明确100/stage10+50+35/未分配5/project450/50保护；不自行发明无限预算或新科学范围。
+
+新必要账单读取21:31:45–46UTC：eager0.12296933、fast0.12490961，总0.24787894USD；workspace235.35236991/billed0均延迟计量非invoice/余额。两failed原claim/STOPPED0原证明完整。具体纯预算层取保留快照最大app毛计量向上分取整，再各加max(50c,20%取整计量)缓冲，候选126c替代500c历史预留作未来预算核算，释放374c；加仍完整252c新后缀预留后Stage0余622c。buffer是未校准工程余量，不免失败/setup/build/storage，不删除旧claim或回收失败尝试；后续计量增加先吃回headroom，缺失/模糊/未停任务不能结算。
+
+8新纯预算fixtures一次PASS，代码/数值/原字节依据已具体准备待外审，尚不准入未来P2/P3。新预算审计不阻塞当前32源后缀，其500c保守检查保持原字节；不为核算改EOS/解析器/科学剂量或重生成256。实际P0/A2/Stage1仍待门。Papers同e097b0cb无新，原43–46不重读、不编造Pro交付。
+
+### 2026-10-14 14:37:07 PDT（EOS修复及2382后缀真实审计通过，准备唯一调用）
+
+实际21:35:33只读检查新Claude37f3a31a/79comments，21:35:49.889–890全文读取bl/bm。bl报告SHA5951160fc24ecf70c0fa04c9cbf133d217b59e0ca68dc65d8911136d43addb48明确32source/spec7e653032/parent608c3315及三EOS/未尝试后缀flag PASS-WITH-NOTES；bm原publisher299c662b和只读f9ffa532分别代码PASS。真实接受记录、原报告和fresh21:31账单预算已存；localgate只生成一次，0上传，发布时0新科学调用，下一步唯一原新slot。旧256不评分/重生成、不伪造done；两个失败祖先永远failed。计时20.412s仅含失败收尾proxy，reviewer400–650s非实测未来保证。
+
+owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立exact code+numeric审；当前续跑仍保持原500c+252c保守约束，不因新核算改任何32运行源或等待不相关门。后续P2/P3资金必须真实规则审计后才能用释放额，科学A2与所有阶段门仍在。预算builder初次在首输出前因旧READ_RECEIPT缺label字段失败，已保留原脚本/log并仅按command身份读取旧schema后完成未写包；8新fixtures未重复，0云副作用。
