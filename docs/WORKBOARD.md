@@ -4,6 +4,10 @@
 
 ## 当前状态
 
+### 2026.10.13 20:16:38 PDT（5项T8本地闭合；实际provider20:14:25 PDT）
+
+新增D1/p0 depth965/1319（50 caps）与D2/p4 breadth935（45），两项完整原始输出/2048updates4194296targets/两份state通过；累计5项本地oracle通过。第二wave88072、两export10976/98355、oracle75773/24739与publisher均DONE。D2/p0两项也已STOPPED0，第三disjoint wave75040正在收集；仅D2/p4 depth仍运行。T8 G3/全19注册分析/最终CPU均pending，未重放科学调用。
+
 ### 2026.10.13 20:05:16 PDT（3项T8本地完整核验完成；外审待定）
 
 D1 B8/p0 breadth=967/1319（39 caps），D1 B8/p4 breadth=945（56），depth=939（47）。每项4701文件SHA、1319原始输出、2048更新/4194296 targets、1024取证与2048最终state全部本地核验，0技术unknown。只读3项wave/3exports/3oracles/3原字节publisher均一次完成，未重放模型。其余5项结果包、全19模型注册分析与最终CPU仍pending；原N2 FAIL/事后9600修订披露不变。[事实与原证据](../reports/p008_20261013/P008_T8_PROGRESS_20261014.md)。

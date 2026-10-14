@@ -1,4 +1,4 @@
-P008 最新：全部10项T1和base已本地核验及外审PASS；3项T8已完整本地核验（967/945/939，各1319题），其余5项与T8外审/全量分析/CPU核验仍pending。[实时事实页](reports/p008_20261013/P008_T8_PROGRESS_20261014.md)。原N2 FAIL与批准的9600秒工程修订保留，21PDT材料冻结不变。
+P008 最新：全部10项T1和base已本地核验及外审PASS；5项T8已完整本地核验，另2项云端完成待核验，1项仍评测。T8外审、全量分析及CPU核验pending。[事实页](reports/p008_20261013/P008_T8_PROGRESS_20261014.md)。原N2 FAIL/9600工程修订、21PDT材料冻结均保留。
 
 # Problems, Paths, or Repeats?
 
@@ -30,7 +30,7 @@ Intervals resample shared questions after averaging the two observed seeds. They
 
 Claude [round15](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md) gives the final packet and factual evidence page **PASS**, and the original figures **PASS-WITH-NOTES**, at fixed commit736b3920. A new v2 accuracy plot fixes overlapping markers/legend without changing results; that display revision is now PASS in [Claude v3 response](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md). [Scope and disposition](docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
 
-**P008:** Both draws and common inputs passed G1. All ten T1 endpoints and base are fully verified, externally reviewed and released. Three original T8 calls now passed complete local raw/state checks: D1/B8/p0 breadth967/1319, D1/B8/p4 breadth945 and depth939, with39/56/47 length caps. Each retains2048 updates,4194296 targets and both1024/2048 states. Other five outcome packages, T8 G3, complete registered analysis and final CPU integrity checks remain pending. At02:54:56UTC the other five original workers were still active. Original all-host N2 failure is retained; owner-approved9600-second caps and the amended9570 admission criterion passed exact independent review before T8 outcomes. This is a post-hoc engineering deviation, not a change to science inputs/dose/evaluation.21PDT materials freeze remains.
+**P008:** Both draws and common inputs passed G1. All ten T1 endpoints and base are fully verified, externally reviewed and released. Five original T8 calls now passed full local raw/state checks: D1/p0 breadth967, depth965; D1/p4 breadth945, depth939; D2/p4 breadth935, all of1319. Their length caps are39/50/56/47/45 respectively. Each retains2048 updates,4194296 targets and complete1024/2048 states. At03:14:25UTC, D2/p0 breadth and depth were also completed/released with collection underway, leaving only D2/p4 depth active. AllT8 G3, complete registered analysis and final CPU integrity remain pending. The original N2 failure and owner/independently accepted9600-second post-hoc engineering deviation remain explicit; science inputs/dose/evaluation and21PDT material freeze remain unchanged.
 
 ## Previous stages, kept separate
 

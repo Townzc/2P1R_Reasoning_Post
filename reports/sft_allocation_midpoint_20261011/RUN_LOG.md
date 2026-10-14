@@ -835,3 +835,8 @@ Named wave64785 completed02:59:40UTC with one full ledger scan and unchanged sel
 ### 2026-10-14T03:06:25.535251+00:00 — Pre-push archive staging gap retained and bounded fix
 
 The initial local metadata commita3450ff8 did not include three existing original_evidence.tar.gz files because .gitignore:14 ignores *.tar*. Detected before pushing or creating fixed G3 requests. The archive bytes/readback/manifests remain valid and unchanged. Fix is explicit staging of only these three reviewed public archives in a new ordinary commit; no publisher/export/oracle/model is rerun. Reflection: local manifest verification must also confirm every manifest member exists at the chosen Git target before requesting external review.
+
+
+### 2026-10-14T03:16:38.004605+00:00 — Second pair locally closed; seven original T8s released
+
+Second disjoint wave88072 completed03:12:58; export10976/98355,oracle75773/24739 and per-run v2 publications allDONE once. D1p0D965/1319,50caps; D2p4B935/1319,45caps. Both4701SHA files/2048updates4194296targets/full1024+2048state/0unknown. Exact03:14:25 provider confirms third pairD2p0B/D stopped0; originalCLI80773/58352 exit0 consumed. Third named wave75040 running once, originalD2p4D remains the only active science worker. No original model, oldcheck or prior closed result rerun. Allfive actual outcomeG3 pending; no partial-table winner or changedanalysisgate.
