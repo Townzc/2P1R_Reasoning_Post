@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T04:23:46.467082+00:00",
+  "as_of_utc": "2026-10-14T04:30:00.442846+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1460,6 +1460,25 @@
         "Known nonsemantic style warning: new script/test and their exact snapshots each retain an extra final blank line; immutable source bytes are preserved, no diff-check PASS claimed"
       ],
       "created_utc": "2026-10-14T04:16:58.127086+00:00"
+    },
+    {
+      "request_id": "p008-post-freeze-results-interpretation-r1",
+      "target_commit": "3e878403798266c32060fc962e74d157a6876bc4",
+      "packet": "reports/p008_20261013/post_freeze_results_review_v1",
+      "manifest": "reports/p008_20261013/post_freeze_results_review_v1/MANIFEST.json",
+      "manifest_sha256": "41d36029a8ab16d97a4d1ff32bcd3f9d8656e5b9aeaea161562f56a795ee46fd",
+      "status": "pending",
+      "external_review": "pending",
+      "scope": "Post-freeze R1 interpretation wording and original published table/image provenance only",
+      "blocking": false,
+      "blocking_for": "Acceptance of this separate dated interpretation addendum; final CPU numeric review remains independent",
+      "questions": [
+        "Check explicit D2-only high-budget/nonzero-price observation and lack of replication in D1; intervals including zero do not imply equivalence",
+        "Check six point estimates and intervals are copied from fixed b212b6a8 without another bootstrap, and the referenced original allocation PNG is unchanged",
+        "Check 27/31 pointwise intervals include zero; observed-draw means are not independent replication, and no calibrated chance or familywise claim is made",
+        "Check after-cutoff review event04:02:24/read04:21:30 is separate from immutable04:00 cutoff snapshot; finalCPU and uniformsecondaryparser remain disclosed pending"
+      ],
+      "created_utc": "2026-10-14T04:30:00.442846+00:00"
     }
   ],
   "p008_v31": {
