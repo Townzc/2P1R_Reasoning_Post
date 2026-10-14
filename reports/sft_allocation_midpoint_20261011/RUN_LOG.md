@@ -1219,4 +1219,10 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 
 新增三个纯生成core文件，复用原14450请求inventory，教师采样8993+六端点5457，拟三个有限model lifetimes及867c新reserve，保留1004旧reserve/Stage0余129c。一次16新mocked fixtures PASS(0.079s)，没有GPU/真实输出评分/旧测试/重算原库存。代码与拟first256×3付费测量例外送审，不等于准入；确切entry/input/modelreadback/provider/budget及独立oracle仍需完成。原高吞吐/38科学源不改。OLMo固定revision原权重在本地一次准备，没有remoteupload/模型调用。两处只读rg无匹配导致shell链退出，无文件或科学副作用。未重询问owner许可，p009继续，旧两监控暂停。
 
-新core包整包stylecheck只报两份原checkpoint/common快照EOF空行，原bytes保留；排除source快照后的新代码/文档检查PASS，不声称整包PASS。23source候选与br接受包31+4 manifest成员已逐Git核验（确切计数见原终端记录）；无旧模型/测试重复。
+新core包整包stylecheck只报两份原checkpoint/common快照EOF空行，原bytes保留；排除source快照后的新代码/文档检查PASS，不声称整包PASS。23source候选与br接受包32+4 manifest成员已逐Git核验（确切计数见原终端记录）；无旧模型/测试重复。
+
+### 2026-10-14 16:53:51 PDT（Stage0确切27源入口/输入/数值候选齐备，0新云调用）
+
+已审internal-only修订保留原P0 blocked与不一致率。新增入口/binding/串行上传收集/独立raw oracle，原23core和38P0/高吞吐源未变。三新slot只14,450原请求、无训练/P0重生成；2400/900/1200入口帽与399/216/252c合867，保留1004c旧reserve，总1871<Stage02000。拟首256×3付费测量例外须确切runtime/numeric审计，300秒allowance未校准；plan24h仅有限派发/留存包络。
+
+OLMo固定revision原始10文件5,949,372,518bytes本地准备23:42:07完成，两权重LFS SHA符合官方固定记录，CLI27363已exit0消耗；无转换/模型加载/远端上传。原Qwen/教师Volume字节复用。16个新entry夹具中10项r1通过，6项因mock namespace漏SLOTS失败，保存原fixture/log；只重跑受影响6项r2均PASS(0.033s)，没有改实际worker/重跑旧core测试或旧oracle。首builder将18个非unit/done账本误计为20，任何输出前assert拒绝；原log保留，修正实际计数后首次产物建立，未重建旧包。新确切包准备一次，全部upload/gates/calls/actualoracles仍NOTRUN，真实P1/G0/Stage1均未准入。

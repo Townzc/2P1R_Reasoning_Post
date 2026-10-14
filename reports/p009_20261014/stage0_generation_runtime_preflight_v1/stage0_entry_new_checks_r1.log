@@ -1,0 +1,111 @@
+test_any_original_attempt_record_blocks_dispatch (test_p009_stage0_entry.EntryTests.test_any_original_attempt_record_blocks_dispatch) ... ok
+test_changed_old_p0_proof_prevents_new_claim (test_p009_stage0_entry.EntryTests.test_changed_old_p0_proof_prevents_new_claim) ... ERROR
+test_code_only_review_cannot_admit (test_p009_stage0_entry.EntryTests.test_code_only_review_cannot_admit) ... ok
+test_malformed_readback_fails_before_registration (test_p009_stage0_entry.EntryTests.test_malformed_readback_fails_before_registration) ... ok
+test_model_exception_persists_failed_claim (test_p009_stage0_entry.EntryTests.test_model_exception_persists_failed_claim) ... ERROR
+test_new_review_does_not_replace_exact_owner_scope (test_p009_stage0_entry.EntryTests.test_new_review_does_not_replace_exact_owner_scope) ... ok
+test_no_model_when_a_single_dataset_fence_is_missing (test_p009_stage0_entry.EntryTests.test_no_model_when_a_single_dataset_fence_is_missing) ... ERROR
+test_old_reservations_cannot_be_recycled (test_p009_stage0_entry.EntryTests.test_old_reservations_cannot_be_recycled) ... ok
+test_olmo_actual_entry_uses_1200_seconds (test_p009_stage0_entry.EntryTests.test_olmo_actual_entry_uses_1200_seconds) ... ERROR
+test_original_three_unused_slot_order (test_p009_stage0_entry.EntryTests.test_original_three_unused_slot_order) ... ok
+test_project_protection_binds_before_model (test_p009_stage0_entry.EntryTests.test_project_protection_binds_before_model) ... ok
+test_qwen_actual_entry_uses_900_seconds (test_p009_stage0_entry.EntryTests.test_qwen_actual_entry_uses_900_seconds) ... ERROR
+test_teacher_actual_entry_completes_once (test_p009_stage0_entry.EntryTests.test_teacher_actual_entry_completes_once) ... ERROR
+test_unknown_dispatch_and_terminal_cannot_be_skipped (test_p009_stage0_entry.EntryTests.test_unknown_dispatch_and_terminal_cannot_be_skipped) ... ok
+test_unreviewed_bootstrap_cannot_admit (test_p009_stage0_entry.EntryTests.test_unreviewed_bootstrap_cannot_admit) ... ok
+test_wrong_engine_configuration_rejected (test_p009_stage0_entry.EntryTests.test_wrong_engine_configuration_rejected) ... ok
+
+======================================================================
+ERROR: test_changed_old_p0_proof_prevents_new_claim (test_p009_stage0_entry.EntryTests.test_changed_old_p0_proof_prevents_new_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 131, in test_changed_old_p0_proof_prevents_new_claim
+    with self.assertRaises(ValueError):self.worker()
+                                       ^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 97, in worker
+    return namespace['worker'](deepcopy(self.plan),self.run,deepcopy(self.release))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/learning_regime_p009/modal_stage0_generation.py", line 45, in worker
+    for key in [dispatch_key(run)]+[dataset_key(n) for n in SLOTS[run]['datasets']]:
+                                                            ^^^^^
+NameError: name 'SLOTS' is not defined
+
+======================================================================
+ERROR: test_model_exception_persists_failed_claim (test_p009_stage0_entry.EntryTests.test_model_exception_persists_failed_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 113, in test_model_exception_persists_failed_claim
+    with self.assertRaises(RuntimeError):self.worker()
+                                         ^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 97, in worker
+    return namespace['worker'](deepcopy(self.plan),self.run,deepcopy(self.release))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/learning_regime_p009/modal_stage0_generation.py", line 45, in worker
+    for key in [dispatch_key(run)]+[dataset_key(n) for n in SLOTS[run]['datasets']]:
+                                                            ^^^^^
+NameError: name 'SLOTS' is not defined
+
+======================================================================
+ERROR: test_no_model_when_a_single_dataset_fence_is_missing (test_p009_stage0_entry.EntryTests.test_no_model_when_a_single_dataset_fence_is_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 126, in test_no_model_when_a_single_dataset_fence_is_missing
+    with self.assertRaises(ValueError):self.worker()
+                                       ^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 97, in worker
+    return namespace['worker'](deepcopy(self.plan),self.run,deepcopy(self.release))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/learning_regime_p009/modal_stage0_generation.py", line 45, in worker
+    for key in [dispatch_key(run)]+[dataset_key(n) for n in SLOTS[run]['datasets']]:
+                                                            ^^^^^
+NameError: name 'SLOTS' is not defined
+
+======================================================================
+ERROR: test_olmo_actual_entry_uses_1200_seconds (test_p009_stage0_entry.EntryTests.test_olmo_actual_entry_uses_1200_seconds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 109, in test_olmo_actual_entry_uses_1200_seconds
+    self.run='olmo_p3';self.mark();self.assertEqual(self.worker()['receipt']['actual_cost_cents'],252)
+                                                    ^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 97, in worker
+    return namespace['worker'](deepcopy(self.plan),self.run,deepcopy(self.release))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/learning_regime_p009/modal_stage0_generation.py", line 45, in worker
+    for key in [dispatch_key(run)]+[dataset_key(n) for n in SLOTS[run]['datasets']]:
+                                                            ^^^^^
+NameError: name 'SLOTS' is not defined
+
+======================================================================
+ERROR: test_qwen_actual_entry_uses_900_seconds (test_p009_stage0_entry.EntryTests.test_qwen_actual_entry_uses_900_seconds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 106, in test_qwen_actual_entry_uses_900_seconds
+    self.run='qwen_p3';self.mark();self.assertEqual(self.worker()['receipt']['actual_cost_cents'],216)
+                                                    ^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 97, in worker
+    return namespace['worker'](deepcopy(self.plan),self.run,deepcopy(self.release))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/learning_regime_p009/modal_stage0_generation.py", line 45, in worker
+    for key in [dispatch_key(run)]+[dataset_key(n) for n in SLOTS[run]['datasets']]:
+                                                            ^^^^^
+NameError: name 'SLOTS' is not defined
+
+======================================================================
+ERROR: test_teacher_actual_entry_completes_once (test_p009_stage0_entry.EntryTests.test_teacher_actual_entry_completes_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 100, in test_teacher_actual_entry_completes_once
+    result=self.worker();self.assertEqual(result['receipt']['status'],'completed')
+           ^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p009_stage0_entry.py", line 97, in worker
+    return namespace['worker'](deepcopy(self.plan),self.run,deepcopy(self.release))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/learning_regime_p009/modal_stage0_generation.py", line 45, in worker
+    for key in [dispatch_key(run)]+[dataset_key(n) for n in SLOTS[run]['datasets']]:
+                                                            ^^^^^
+NameError: name 'SLOTS' is not defined
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.040s
+
+FAILED (errors=6)

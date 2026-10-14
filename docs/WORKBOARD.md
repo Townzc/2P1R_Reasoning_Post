@@ -4,6 +4,13 @@
 
 ## 当前状态
 
+### 2026-10-14 16:53:51 PDT（Stage0确切27源入口/输入/数值候选齐备，0新云调用）
+
+已审internal-only修订保留原P0 blocked与不一致率。新增入口/binding/串行上传收集/独立raw oracle，原23core和38P0/高吞吐源未变。三新slot只14,450原请求、无训练/P0重生成；2400/900/1200入口帽与399/216/252c合867，保留1004c旧reserve，总1871<Stage02000。拟首256×3付费测量例外须确切runtime/numeric审计，300秒allowance未校准；plan24h仅有限派发/留存包络。
+
+OLMo固定revision原始10文件5,949,372,518bytes本地准备23:42:07完成，两权重LFS SHA符合官方固定记录，CLI27363已exit0消耗；无转换/模型加载/远端上传。原Qwen/教师Volume字节复用。16个新entry夹具中10项r1通过，6项因mock namespace漏SLOTS失败，保存原fixture/log；只重跑受影响6项r2均PASS(0.033s)，没有改实际worker/重跑旧core测试或旧oracle。首builder将18个非unit/done账本误计为20，任何输出前assert拒绝；原log保留，修正实际计数后首次产物建立，未重建旧包。新确切包准备一次，全部upload/gates/calls/actualoracles仍NOTRUN，真实P1/G0/Stage1均未准入。
+
+
 ### 2026-10-14 16:39:38 PDT（internal-only确切审计通过；后续Stage0纯工程准备）
 
 23:35:17实际reviewpoll84comments/newdec75690，23:35:27全文读br SHA9f13c52b；事件23:30:17/comment6180778007。确切2d3e owner修订PASS，引擎范围阻塞关闭，原base4%阻塞/P0不跨引擎可比事实永保，未来门不变。650只复用同Qwen/GSM0shot，950为旧P008参照不当新学习结果。N1两端点规格/greedy/GSM512或原MATH1024/同parser绑定，采购T.8另列；N3统一写事后internal-only。reviewer655简写不改变原2097148总target精确可行性门。
