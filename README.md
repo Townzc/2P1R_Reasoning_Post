@@ -1,15 +1,10 @@
-# October14 — P009 P0 time gate stopped; exact suffix review pending
+# October14 — P009 entry repair awaiting exact review
 
-The new $100 finite study retains five Stage2 conditions and two seeds. Teacher
-context remains2,048; seven overlength MATH rows are unsupported and never generated.
-The original P0 stopped after128 saved outputs because its measured forecast
-exceeded the1,200-second cap; the app is STOPPED0 and all evidence is preserved.
-No complete parity score exists yet. [Original failed prefix](reports/p009_20261014/p0_interrupted_prefix_v1/README.md)
-and [exact unused-suffix proposal](reports/p009_20261014/p0_suffix_preflight_v1/README.md)
-retain the original failure and await scoped review before any new call.
-[A0/plan review](reports/p009_20261014/a0_and_training_plan_review_accepted_v1/DISPOSITION.md)
-closed R1/R2 and accepted planning code; actual data/science/runtime gates still apply.
-Newp009 remains active; oldP008/exploratory work and both old monitors remain closed.
+The owner authorized a budget increase to avoid a small overrun delaying the finite study. The current bounded allocation is **$110 total, $20 Stage0, $50 Stage1, $35 Stage2 and $5 unallocated**, with the project $450 spending ceiling and $50 protection unchanged.
+
+The latest continuation failed at an input-manifest lookup before a claim, model load or new output. [Original zero-work evidence](reports/p009_20261014/p0_preclaim_failure_v1/README.md) is closed, with all prior apps stopped. The [new exact entry repair](reports/p009_20261014/p0_entry_repair_preflight_v1/README.md) preserves the 256 saved rows and permits only the 2,382 unattempted outputs after its fixed runtime/numeric audit. Eleven mocked entry checks passed; no new repaired call has run. Full retained failure allowances plus the new slot are $10.04 within Stage0; the separate metered-settlement proposal is not needed for this admission.
+
+Five Stage2 conditions × two seeds, teacher context2,048 and seven unsupported MATH rows remain unchanged. Actual P0/A2, later scientific gates and exact admissions are still required before automatic progression. P009 remains active; P008/exploratory work and their old monitors stay closed.
 
 # Problems, Paths, or Repeats?
 

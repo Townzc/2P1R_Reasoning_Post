@@ -1,3 +1,7 @@
+# Latest October14 — owner budget increase and zero-work entry repair
+
+Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` and `LIVE_P009_ENTRY_REPAIR_HANDOFF.md` first. Original remainder CLI81028 failed before claim/model/output; full reconciliation70936 DONE, never repeat either. Only the original immutable plan exists. New38-source entry repair is not admitted or called; real exact review required. Preserve original256, generate only2382, no training or claim clearing. Owner explicitly authorized a budget increase: current bounded allocation P009$110/Stage0$20/Stage1$50/Stage2$35/unallocated$5, project$450/protected$50 unchanged. Old cap statements below are historical. Oldp007/automation-4 PAUSED, p009 ACTIVE. No subagents/outside messages; INDEX and ordinary push authorized. No repetition of DONE operations.
+
 # Latest October14 — Owner Plan A, old suffix retired
 
 Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` first. Owner selected high-throughput full new P0; old unattempted suffix7c9f093c is retired, NEVER dispatch it. Preserve failed original128 and source19/24; new exact runtime/numeric review required. No new scope/budget beyond100USD/stagecaps. Oldstudies and DONE operations remain closed.

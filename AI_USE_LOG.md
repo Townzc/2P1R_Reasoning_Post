@@ -2870,3 +2870,13 @@ p0_fast_remaining_result发布器只在两完整1319 oracle/原result/三appSTOP
 实际21:35:33只读检查新Claude37f3a31a/79comments，21:35:49.889–890全文读取bl/bm。bl报告SHA5951160fc24ecf70c0fa04c9cbf133d217b59e0ca68dc65d8911136d43addb48明确32source/spec7e653032/parent608c3315及三EOS/未尝试后缀flag PASS-WITH-NOTES；bm原publisher299c662b和只读f9ffa532分别代码PASS。真实接受记录、原报告和fresh21:31账单预算已存；localgate只生成一次，0上传，发布时0新科学调用，下一步唯一原新slot。旧256不评分/重生成、不伪造done；两个失败祖先永远failed。计时20.412s仅含失败收尾proxy，reviewer400–650s非实测未来保证。
 
 owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立exact code+numeric审；当前续跑仍保持原500c+252c保守约束，不因新核算改任何32运行源或等待不相关门。后续P2/P3资金必须真实规则审计后才能用释放额，科学A2与所有阶段门仍在。预算builder初次在首输出前因旧READ_RECEIPT缺label字段失败，已保留原脚本/log并仅按command身份读取旧schema后完成未写包；8新fixtures未重复，0云副作用。
+
+### 2026-10-14 14:57:07 PDT（入口零工作失败已核清；授权提高预算并送审确切修复）
+
+原续跑CLI81028在21:43UTC因KeyError `inputs`退出，原app已STOPPED0。完整只读对账70936于21:48:41UTC完成：账本只有原计划登记，零claim、零unit/terminal、零模型加载和新增输出；原256条保持不动。故障来自入口读取不存在的顶层manifest，实际字段在parent_spec.inputs。旧测试和外审未覆盖这个真实入口错误，证据、原callback、旧源码及费用全部保留，不能把它记成科学parity失败或免费调用。
+
+用户本轮直接批准提高预算以免小额超出拖慢进度。Codex据此采用并在聊天明示有限分配：P009总$110、Stage0$20、Stage1$50、Stage2$35、未分配$5；project$450与$50保护不变，不宣称用户逐字指定了$110。新候选保留原两失败$5及此次零科学工作调用$2.52，再预留新slot$2.52，共$10.04，Stage0余$9.96；按实际毛计量加缓冲结算的独立提案仍待审，但本次修复不依赖释放额。
+
+新38source候选修复嵌套manifest并在登记前核对，timer finally覆盖预准入异常。原已登记计划不改，完整账本必须仅有同一计划且原marker/所有远端目录未尝试；另加永久dispatch marker，任何已有或未知提交阻止第二次调用。仍仅继承256并生成2382，1200worker/full1900/H100/zero retry/11批每批计时门，解析器、EOS窄修复、科学量和旧32源未改。实际入口的11个新mock检查通过，原KeyError也被复现；不是GPU实测。新的runtime/numeric、只读工具及publisher均需各自确切审计，实际新gate/image/upload/call均0。没有重跑旧模型/保全/tests/oracle。
+
+[原调用零工作证据](reports/p009_20261014/p0_preclaim_failure_v1/README.md)与[确切入口修复](reports/p009_20261014/p0_entry_repair_preflight_v1/README.md)已准备。后续仍按真实A2/G0、输入/源码/预算等门自动推进，不重复常规许可；p009继续，旧p007/automation-4保持PAUSED。Papers与账单最后21:31实际读取，下一付费阶段过1小时才必要刷新；不存在新的Stage1结果。
