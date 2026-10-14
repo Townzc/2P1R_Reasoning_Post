@@ -1,0 +1,202 @@
+{
+  "dev_selection": "fixed SHA order, whole original solution, length-only<=floor((1024-max_question_prompt)/4), train/test-disjoint",
+  "duplicate_policy": "Generate by original row as approved; downstream unique-question curves retain earliest eligible source row and charge all attempts.",
+  "duplicate_questions": [
+    {
+      "problem_ids": [
+        "math/algebra/train/925",
+        "math/algebra/train/959"
+      ],
+      "question_sha256": "c5056007477fb16b7e629ec24b041027dccef1eda92e1f72d05f68862f2a3c85"
+    }
+  ],
+  "endpoint_summary": {
+    "olmo_gsm_four": {
+      "eos_token_id": 100257,
+      "max_context": 2048,
+      "max_new_tokens": 512,
+      "max_prompt_tokens": 853,
+      "n": 1319
+    },
+    "olmo_gsm_zero": {
+      "eos_token_id": 100257,
+      "max_context": 2048,
+      "max_new_tokens": 512,
+      "max_prompt_tokens": 189,
+      "n": 1319
+    },
+    "qwen_gsm_zero_parity": {
+      "eos_token_id": 151643,
+      "max_context": 2048,
+      "max_new_tokens": 512,
+      "max_prompt_tokens": 192,
+      "n": 1319
+    },
+    "qwen_math_four": {
+      "eos_token_id": 151643,
+      "max_context": 2048,
+      "max_new_tokens": 1024,
+      "max_prompt_tokens": 978,
+      "n": 500
+    },
+    "qwen_math_zero": {
+      "eos_token_id": 151643,
+      "max_context": 2048,
+      "max_new_tokens": 1024,
+      "max_prompt_tokens": 795,
+      "n": 500
+    },
+    "teacher_gsm_zero": {
+      "eos_token_id": 151645,
+      "max_context": 2048,
+      "max_new_tokens": 512,
+      "max_prompt_tokens": 216,
+      "n": 1319
+    },
+    "teacher_math_zero": {
+      "eos_token_id": 151645,
+      "max_context": 2048,
+      "max_new_tokens": 1024,
+      "max_prompt_tokens": 819,
+      "n": 500
+    }
+  },
+  "extra_attempt_parents": 500,
+  "math_dev_per_example_limit": 57,
+  "math_train_rows": 7500,
+  "math_unique_questions": 7499,
+  "maximum_teacher_generations": 8993,
+  "p0_reuse": "Both new parity evaluations use the exact qwen_gsm_zero_parity prompts; original model calls stay closed.",
+  "preregistered_inputs_not_runtime_admission": true,
+  "schema": "p009_stage0_inputs_v1",
+  "supported_rows": 7493,
+  "tokenizer_files": {
+    "olmo": {
+      "README.md": {
+        "bytes": 12892,
+        "sha256": "8e09b3ce741d945b340e51530dd95f49c646a210d0342b1a831a19e36928758b"
+      },
+      "config.json": {
+        "bytes": 623,
+        "sha256": "3dc581384d61b3366fc34a95d12c20e595014ea62352469c17c3e3a77f32882a"
+      },
+      "generation_config.json": {
+        "bytes": 121,
+        "sha256": "6b4e5d0f5199345ef9e1f55139f13451f65eb5bd308a40718df1874ee2998ecf"
+      },
+      "merges.txt": {
+        "bytes": 916646,
+        "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 14873,
+        "sha256": "704e57695805a67b0c43220e60e31cf43948c387f39799b82b260bb4df8180e6"
+      },
+      "special_tokens_map.json": {
+        "bytes": 125,
+        "sha256": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+      },
+      "tokenizer.json": {
+        "bytes": 7137177,
+        "sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+      },
+      "tokenizer_config.json": {
+        "bytes": 4345,
+        "sha256": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0"
+      },
+      "vocab.json": {
+        "bytes": 1611056,
+        "sha256": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195"
+      }
+    },
+    "qwen": {
+      "config.json": {
+        "bytes": 684,
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "retrieval_receipt.json": {
+        "bytes": 1593,
+        "sha256": "24723e82db3ca44c2ab9b5ab1368201317ae4ea25fc49d46cf9b5976a02ec54a"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7228,
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "teacher": {
+      "config.json": {
+        "bytes": 656,
+        "sha256": "a48e6ab280ad87a25f06da604d486aa819b9c1bc467dae7c25fe5d05c57f5511"
+      },
+      "generation_config.json": {
+        "bytes": 160,
+        "sha256": "6cdbb935125f725b568855b396e182b00c9c736fdfab1ef3970087f4ee5cac3f"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7315,
+        "sha256": "d743761ff02297cc5cdf38a612b0f78d5cdf5ceb3f251ab1d25ad353d24b1887"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "unsupported": [
+    {
+      "problem_id": "math/counting_and_probability/train/603",
+      "prompt_tokens": 1063,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    },
+    {
+      "problem_id": "math/geometry/train/101",
+      "prompt_tokens": 1682,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    },
+    {
+      "problem_id": "math/geometry/train/388",
+      "prompt_tokens": 1536,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    },
+    {
+      "problem_id": "math/geometry/train/522",
+      "prompt_tokens": 1198,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    },
+    {
+      "problem_id": "math/geometry/train/543",
+      "prompt_tokens": 1320,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    },
+    {
+      "problem_id": "math/prealgebra/train/174",
+      "prompt_tokens": 1055,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    },
+    {
+      "problem_id": "math/prealgebra/train/1087",
+      "prompt_tokens": 1072,
+      "reason": "owner_approved_context_unsupported_no_generation"
+    }
+  ]
+}

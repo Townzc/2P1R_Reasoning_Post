@@ -1,0 +1,55 @@
+{
+  "read_at_utc": "2026-10-14T18:10:01.690785+00:00",
+  "math_train": 7500,
+  "math_original_test": 5000,
+  "math500": 500,
+  "train_unique_questions": 7499,
+  "math500_unique_questions": 500,
+  "train_test_exact_normalized_overlap": [],
+  "math500_not_in_original_test": [],
+  "math_dev_candidates": 4500,
+  "normalization": "NFC then whitespace collapse",
+  "tokenizers": {
+    "qwen": {
+      "eos": 151643,
+      "math0_max_prompt": 795,
+      "math0_exceed_prompt_budget": 0,
+      "math4_first_fixed_dev_max_prompt": 1665,
+      "math4_first_fixed_dev_exceed_prompt_budget": 44,
+      "math4_first_fixed_dev_ids": [
+        "intermediate_algebra/test/800",
+        "algebra/test/747",
+        "prealgebra/test/80",
+        "algebra/test/1011"
+      ],
+      "gsm0_max_prompt": 192,
+      "gsm4_max_prompt": 936,
+      "gsm4_exceed_prompt_budget": 0,
+      "d1_valid": 3436,
+      "d1_invalid": 0,
+      "d1_length_sum": 1002615,
+      "d1_lengths_sha256": "1d1ef5a1623c909f90109defae875c7d0d6b015dc203f77808c31666172a3419"
+    },
+    "olmo": {
+      "eos": 100257,
+      "math0_max_prompt": 760,
+      "math0_exceed_prompt_budget": 0,
+      "math4_first_fixed_dev_max_prompt": 1599,
+      "math4_first_fixed_dev_exceed_prompt_budget": 30,
+      "math4_first_fixed_dev_ids": [
+        "intermediate_algebra/test/800",
+        "algebra/test/747",
+        "prealgebra/test/80",
+        "algebra/test/1011"
+      ],
+      "gsm0_max_prompt": 189,
+      "gsm4_max_prompt": 853,
+      "gsm4_exceed_prompt_budget": 0,
+      "d1_valid": 3436,
+      "d1_invalid": 0,
+      "d1_length_sum": 946461,
+      "d1_lengths_sha256": "de7544a2d3819aed6f3d8cf572e2c6a6d14c3cac8207af42d359b769db4c1c79"
+    }
+  },
+  "d1_correct_breadth_rows": 3436
+}
