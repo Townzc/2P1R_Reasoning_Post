@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T00:16:50.945009+00:00",
+  "as_of_utc": "2026-10-14T00:31:37.885597+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1031,6 +1031,26 @@
       ],
       "created_utc": "2026-10-14T00:12:49.876746+00:00",
       "new_cloud_calls": 0
+    },
+    {
+      "request_id": "p008-final-cpu-t8-cap-code-r1",
+      "target_commit": "82c3912ab7df5e043a7f987565be516c29956560",
+      "packet": "reports/p008_20261013/final_cpu_t8_cap_preflight_v1",
+      "manifest": "reports/p008_20261013/final_cpu_t8_cap_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "85b5716229b96fa6d8f393d68c25e495ebc5f7252f641bdb59a9d88d02f9bf74",
+      "source_files": 19,
+      "status": "pending",
+      "external_review": "pending",
+      "blocking": true,
+      "blocking_for": "Future final CPU only; does not block T8 student runtime/numeric review",
+      "scope": "Exact19-source final CPU with original21 logical/24 physical sources plus immutable operational T8 cap provenance; code-only no actual I/O admission",
+      "questions": [
+        "Review all original24 physical claims/failed-lineage/state checks retained and originalT8cfg9560/effective9600/originalN2false/supplement5cent distinguished",
+        "Review exact archived intent bytes and35-source scope reviews, nine real immutable supplemental records read before CPU admission and after source proofs; no model/raw oracle replay",
+        "19 new/revised offline checks; sole-entry guard and three prepared NOTRUN helpers; actualbyte/timing numerical admission still required under original500cent/3300second slot"
+      ],
+      "created_utc": "2026-10-14T00:31:37.885597+00:00",
+      "new_cloud_calls": 0
     }
   ],
   "p008_v31": {
@@ -1087,7 +1107,7 @@
     "student_quota_evidence": "reports/p008_20261013/STUDENT_GPU_QUOTA_EVIDENCE.json",
     "pool_d2_review_request": "p008-g1-d2-merged-r1",
     "pool_d2_packet": "reports/p008_20261013/pool_d2_merged_v1",
-    "final_cpu_runtime_review_request": "p008-final-cpu-replacements-code-r1",
+    "final_cpu_runtime_review_request": "p008-final-cpu-t8-cap-code-r1",
     "student_exact_input_review_request": "p008-student-exact-input-g1-r1",
     "student_exact_input_commit": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
     "student_exact_input_packet": "reports/p008_20261013/student_admission_v1",
@@ -1105,14 +1125,14 @@
     "latest_delayed_workspace_meter_usd": 162.31184746,
     "latest_meter_is_invoice_or_balance": false,
     "pool_d2_review_disposition": "reports/p008_20261013/review_8d8a9e8b_followup_v1",
-    "final_cpu_preparation_tools": "reports/p008_20261013/review_62fb9c5b_disposition_v1",
+    "final_cpu_preparation_tools": "reports/p008_20261013/final_cpu_t8_cap_preflight_v1",
     "student_G1_acceptance_packet": "reports/p008_20261013/student_g1_accepted_v1",
     "timing_roster_packet": "reports/p008_20261013/student_t1_dispatch_admission_v1",
     "T1_timing_roster_frozen": true,
     "student_failed_calls": 2,
     "student_retry_admitted": false,
     "student_remaining_unattempted": 8,
-    "final_cpu_code_review": "17source63fee8e6 PASS-WITH-NOTES62fb9c5b; actualnumericand24sourceinputsabsent",
+    "final_cpu_code_review": "19-source operational-cap amendment pending; prior17-source PASS retained for historical scope only",
     "latest_review_corrections": "reports/p008_20261013/review_7ce25d6a_accepted_v1/CORRECTION_ZERO_USABLE.md",
     "failed_student_preservation_packet": "reports/p008_20261013/student_lr_failures_closed_v1",
     "latest_meter_utc": "2026-10-13T23:36:03.584193+00:00",
@@ -1164,6 +1184,7 @@
     "T8_original_failed_numeric_request": "p008-t8-actual-n2-r1",
     "T8_runtime_helpers": "reports/p008_20261013/student_t8_cap_helpers_v1",
     "T8_new_operational_cap_seconds": 9600,
-    "T8_amended_N2": "pending_exact_numeric_review"
+    "T8_amended_N2": "pending_exact_numeric_review",
+    "final_cpu_entry": "experiments.sft_allocation_p008.modal_audit_t8_cap::main"
   }
 }
