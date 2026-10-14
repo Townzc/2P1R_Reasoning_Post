@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T19:33:16.543827+00:00",
+  "as_of_utc": "2026-10-14T20:19:50.827706+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1801,12 +1801,19 @@
       "manifest_sha256": "694c0a226a50a74b3d1ba4213bf0de6b57991da01101e48fe38aa2a8e0d18e6e",
       "review_request": "reports/p009_20261014/p0_suffix_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T19:33:16.543827+00:00",
-      "status": "pending",
-      "blocking": true,
+      "status": "HOLD-PENDING-OWNER",
+      "blocking": false,
       "blocking_for": "Only original two P0 endpoints never-attempted suffix. Exact24source/spec/failedprefix/1800cap/326cent amendment; no new child call before real acceptance.",
       "spec_sha256": "dd6785e05ee36c5fa13b796b042f53051a7c4b2826039afb99481fe88da5e1e8",
       "prefix_packet": "reports/p009_20261014/p0_interrupted_prefix_v1",
-      "parent_preservation_sha256": "7d0b862fb6965000dbc244698a8a3a6ce4fdef7129058a48714e78643a70f031"
+      "parent_preservation_sha256": "7d0b862fb6965000dbc244698a8a3a6ce4fdef7129058a48714e78643a70f031",
+      "review_commit": "58017822b180bd2f9e48d6cc705d8150e26049b0",
+      "report_path": "audit/claude/20261014bg/REPORT.md",
+      "report_sha256": "688421cded7b95f0979023754cf54aefa09cccbc960b527eac6578058b6855e2",
+      "read_utc": "2026-10-14T20:10:38.793802+00:00",
+      "owner_resolution": "Plan A selected directly; this Plan-B suffix is retired without gate/call",
+      "execution_status": "RETIRED_UNATTEMPTED",
+      "runtime_admitted": false
     },
     {
       "request_id": "p009-p0-suffix-result-publication-code-r1",
@@ -1817,10 +1824,47 @@
       "manifest_sha256": "32f46fd8753fbf091618b915491917b5ec31bf20443880c4328c4d3defde8400",
       "review_request": "reports/p009_20261014/p0_result_publisher_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T19:41:06.583144+00:00",
+      "status": "PASS-WITH-NOTES",
+      "blocking": false,
+      "blocking_for": "Only new complete-result publisher, not suffix runtime. Helper parsed, no actual output/scoring/cloud call; full actual A2 separate.",
+      "source_sha256": "01476c1f6f2d2f134cc1b2d9c7e8da0493ecfd0c4871c240bb7dde9cce773de9",
+      "review_commit": "58017822b180bd2f9e48d6cc705d8150e26049b0",
+      "report_path": "audit/claude/20261014bh/REPORT.md",
+      "report_sha256": "9f2ac96b4ada24954884fbd55d33dc8dbe20590ae552cbb2ed6b4952e40fe5fa",
+      "read_utc": "2026-10-14T20:10:39.120652+00:00",
+      "execution_status": "RETIRED_WITH_PLAN_B",
+      "scope_limit": "Only Plan-B suffix publisher; does not cover owner-selected Plan-A full fresh P0"
+    },
+    {
+      "request_id": "p009-p0-high-throughput-full-r1",
+      "scope": "p009-p0-high-throughput-full-runtime-and-bootstrap-numeric",
+      "target_commit": "fe8a6bcc60b1fee23336f9fb39ae10ed8053f370",
+      "packet": "reports/p009_20261014/p0_fast_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_fast_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "4082a261eac3991e4e8352cf0488bec311ae398972d426c0ff4f28cb36e56f13",
+      "review_request": "reports/p009_20261014/p0_fast_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T20:19:50.827706+00:00",
       "status": "pending",
       "blocking": true,
-      "blocking_for": "Only new complete-result publisher, not suffix runtime. Helper parsed, no actual output/scoring/cloud call; full actual A2 separate.",
-      "source_sha256": "01476c1f6f2d2f134cc1b2d9c7e8da0493ecfd0c4871c240bb7dde9cce773de9"
+      "blocking_for": "Only new full2638 P0,26source/graph256/one-bootstrap/252cent plusold248; actual A2 remains separate",
+      "spec_sha256": "1238d0cb542d27cf27ea0f565d96bffbc1292c280cd0dd6c7c0f00f1b2e145bc",
+      "source_count": 26,
+      "owner_decision_packet": "reports/p009_20261014/owner_plan_A_20261014_v1",
+      "new_cloud_calls": 0
+    },
+    {
+      "request_id": "p009-p0-fast-result-publication-code-r1",
+      "scope": "p009-p0-fast-result-publication-code",
+      "target_commit": "fe8a6bcc60b1fee23336f9fb39ae10ed8053f370",
+      "packet": "reports/p009_20261014/p0_fast_publisher_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_fast_publisher_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "ad44dcb69f76e2c8716c2a425ce335f0ceff5710f4549a3aaef88ddff5f3a1f6",
+      "review_request": "reports/p009_20261014/p0_fast_publisher_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T20:19:50.827706+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only matching Plan-A result publisher; no actual outcome or raw score yet; does not block independently reviewed runtime",
+      "source_sha256": "692312c6c52746531ee2cf4b92b82a65cde3a368d5619c8a5edfd79fc75ce07b"
     }
   ],
   "p008_v31": {
@@ -2114,7 +2158,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "P0_original_timing_gate_failed_preserved_STOPPED0_exact_unused_suffix_prepared_pending_review",
+    "status": "Owner_Plan_A_full_high_throughput_P0_prepared_pending_exact_review_old_suffix_retired",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -2157,12 +2201,11 @@
       "notify": "meaningful change, completion, failure, owner action only"
     },
     "latest_read_review": {
-      "commit": "2446e22122cd64ca2d269e6ba7a87ae41a4ae2c4",
-      "read_utc": "2026-10-14T19:23:58.145446+00:00",
-      "A0": "PASS-WITH-NOTES,R1/R2CLOSED",
-      "training_plan": "codeonlyPASS-WITH-NOTES",
-      "math_pool": "pending",
-      "P0_suffix": "pending"
+      "commit": "58017822b180bd2f9e48d6cc705d8150e26049b0",
+      "read_utc": "2026-10-14T20:10:39.120652+00:00",
+      "P0_suffix": "HOLD-PENDING-OWNER; owner selectedA, retiredunused",
+      "suffix_publisher": "CODE PASS-WITH-NOTES PlanB only,retired",
+      "math_pool": "CODE PASS-WITH-NOTES at3ce168ad; actualP1notrun"
     },
     "math_scorer": {
       "status": "code_PASS-WITH-NOTES_actualP1_pending",
@@ -2190,7 +2233,7 @@
     "math_scoring_pool": {
       "target_commit": "0b714161dcc23a93cc44b52f4948eae271eaeb27",
       "packet": "reports/p009_20261014/math_scoring_pool_preflight_v1",
-      "status": "pending",
+      "status": "CODE_PASS-WITH-NOTES_at3ce168ad_actualP1_pending",
       "scope": "p009-math-scorer-persistent-pool-code"
     },
     "active_scientific_calls": 0,
@@ -2201,7 +2244,27 @@
       "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
       "scope": "p009-p0-unattempted-suffix-runtime-and-numeric",
       "spec_sha256": "dd6785e05ee36c5fa13b796b042f53051a7c4b2826039afb99481fe88da5e1e8",
-      "status": "pending"
+      "status": "retired_unattempted_owner_Plan_A"
+    },
+    "p0_fast": {
+      "target_commit": "fe8a6bcc60b1fee23336f9fb39ae10ed8053f370",
+      "packet": "reports/p009_20261014/p0_fast_preflight_v1",
+      "spec_sha256": "1238d0cb542d27cf27ea0f565d96bffbc1292c280cd0dd6c7c0f00f1b2e145bc",
+      "scope": "p009-p0-high-throughput-full-runtime-and-bootstrap-numeric",
+      "status": "pending",
+      "source_count": 26,
+      "new_reserved_cents": 252,
+      "retained_prior_cents": 248,
+      "stage0_remaining_cents": 500,
+      "fresh_outputs": 2638,
+      "inherited_outputs": 0,
+      "new_cloud_calls": 0
+    },
+    "owner_Plan_A": {
+      "target_commit": "fe8a6bcc60b1fee23336f9fb39ae10ed8053f370",
+      "packet": "reports/p009_20261014/owner_plan_A_20261014_v1",
+      "authority": "direct human message",
+      "speed_cost_time_estimates_not_measurements": true
     }
   }
 }
