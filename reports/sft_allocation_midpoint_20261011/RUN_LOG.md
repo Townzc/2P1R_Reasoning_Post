@@ -845,3 +845,8 @@ Second disjoint wave88072 completed03:12:58; export10976/98355,oracle75773/24739
 ### 2026-10-14T03:21:45.830209+00:00 — Seven T8s locally verified, final original call continues
 
 Third disjoint wave75040 DONE03:18:35; exports23879/28995 and independent oracles86485/22954 DONE once. D2p0B956/1319,51caps; D2p0D971/1319,45caps; full2048/4194296,1024forensic+2048state and4701artifactSHA each,0unknown. New exact v2 original-byte packets published once; actual G3 remains pending. Only originalD2p4D pending, no new model or replay. All19 analysis and CPU are not executed with a missing cell. Billing79650 DONE, actual03:19:49UTC delayed224.56193173/P008labels135.30891807/residual89.25301366; residual+entire266.44stage355.69301366<450. Fullmeter+entirestage491.00193173 deliberately double-counts labeledP008 and is not actual overrun/admission calculation. No invoice/balance claim; all failures/setup/storage retained.
+
+
+### 2026-10-14T03:28:19.335886+00:00 — Five actual T8 G3 reviews accepted, final original host continues
+
+Inspector58667 DONE actual03:26:00UTC: seven originalcompleted terminals; onlyD2p4D active1container, noresult/error, saved2048/4194296 and1056endpoint outputs. No partialscore. Review/Papers80861 DONE03:25:55, newClaude2a236343/61comments andPaperssameea8befd5; fullreport03:26:49read. Five G3PASS bindfirsttwo packetcommits,6595raw/dose/lineage,publicstateSHAonly. One reviewer-parser falsepositive remains reviewer-reported, no Codex selecteddecode orprimarychange. Clarify originalactual_cost_cents1253 isreservation, supplement5 totals1258/invoiceunknown. Observed five runtimes5666–7119s donotretroactivelypassN2orproveotherhosts; originalFAIL/deviationkept. D2p0pair G3pending,lastD2p4D modelactive,complete19analysis/CPU notrun.

@@ -1,4 +1,4 @@
-P008 最新：全部10项T1和base已核验及外审PASS；7项T8已完整本地核验并发布，最后D2/p4 depth仍待完成。T8 G3、全19注册分析及CPU核验pending。[事实页](reports/p008_20261013/P008_T8_PROGRESS_20261014.md)。原N2 FAIL/9600工程修订、21PDT材料冻结均保留。
+P008 最新：全部10项T1和base已核验及外审PASS；7项T8已完整本地核验并发布，其中5项已获外审G3 PASS；最后D2/p4 depth仍运行，其余外审/全19注册分析/CPU核验pending。[事实页](reports/p008_20261013/P008_T8_PROGRESS_20261014.md)。原N2 FAIL/9600工程修订、21PDT材料冻结均保留。
 
 # Problems, Paths, or Repeats?
 
@@ -30,7 +30,7 @@ Intervals resample shared questions after averaging the two observed seeds. They
 
 Claude [round15](https://github.com/Townzc/2P1R_Reasoning_Post/blob/3e3e33d3652e813a7685c2fb5bd6315b5448ccb5/audit/claude/20261013h/REPORT.md) gives the final packet and factual evidence page **PASS**, and the original figures **PASS-WITH-NOTES**, at fixed commit736b3920. A new v2 accuracy plot fixes overlapping markers/legend without changing results; that display revision is now PASS in [Claude v3 response](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4dfd22f6b28c0b99e7bbe0d27c4dbf6ca2a4ce74/audit/claude/20261013j/P008_V3_RESPONSE.md). [Scope and disposition](docs/audit/P007_TOKEN_REVIEW_DISPOSITION_20261012.md).
 
-**P008:** Both draws and common inputs passed G1. All ten T1 endpoints and base are fully verified, externally reviewed and released. Seven original T8 calls passed complete local raw/state checks: D1/p0 breadth967,depth965; D1/p4 breadth945,depth939; D2/p0 breadth956,depth971; D2/p4 breadth935, all of1319. Length caps39/50/56/47/51/45/45 respectively remain incorrect under the frozen rule. Each completed student retains2048updates,4194296targets and complete1024/2048states. Only D2/p4 depth remains pending; it had one active container at03:14:25UTC. T8 G3, complete registered analysis and final CPU integrity remain pending. The original N2 failure and owner/independently accepted9600-second post-hoc engineering deviation remain explicit; science inputs/dose/evaluation and21PDT material freeze remain unchanged.
+**P008:** Both draws and common inputs passed G1. All ten T1 endpoints and base are fully verified, externally reviewed and released. Seven original T8 calls passed complete local raw/state checks: D1/p0 breadth967,depth965; D1/p4 breadth945,depth939; D2/p0 breadth956,depth971; D2/p4 breadth935, all of1319. Length caps39/50/56/47/51/45/45 respectively remain incorrect under the frozen rule. Each completed student retains2048updates,4194296targets and complete1024/2048states. Only D2/p4 depth remains pending; it had one active container and1056 saved endpoint outputs at03:26:00UTC. All four D1 T8s and D2/p4 breadth now have external G3 PASS (Claude2a236343); the D2/p0 pair awaits G3. Complete registered analysis and final CPU integrity remain pending. The original N2 failure and owner/independently accepted9600-second post-hoc engineering deviation remain explicit; science inputs/dose/evaluation and21PDT material freeze remain unchanged.
 
 ## Previous stages, kept separate
 

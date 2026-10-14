@@ -1,0 +1,11 @@
+# Five T8 outcomes: independent G3 accepted
+
+Claude2a236343, comment event03:21:11UTC and full report read03:26:49UTC, gives PASS to the first five exact outcome packets at57a61a53/9a34c532. The reviewer independently decoded and rescored6595 raw endpoints, reproduced every frozen per-question result and all caps, and checked all2048 update plans/4194296 target totals,128 blocks, source/spec/claim/supplement chain, checkpoint metadata and stopped provider. The exact five-run scope and original report hash are bound in the acceptance JSON. This is actual outcome G3, not merely code approval.
+
+The public full-state hashes are checksums; Claude explicitly did not inspect the binary state files. Codex's earlier independent local state checks remain the binary validation source. No raw decoding or oracle was rerun to process this review. The one parser disagreement is reviewer-reported as the reviewer's own false positive on a variable-containing boxed expression. Codex has not performed a new selected-example check or changed the frozen primary parser.
+
+The report calls the original receipt field actual_cost_cents=1253 an actual cost. That field is the original conservative reservation. Together with the5-cent supplement it is1258cents reserved; provider_invoice_usd remains null. It must not be presented as an invoice or realized per-run spending.
+
+The observed five entry-to-terminal durations are5666–7119seconds. These are completed-host observations, not a calibrated bound or probability for other hosts. They do not retroactively pass the failed original N2 gate or remove the post-hoc cap amendment. The component-max estimate and actual runtimes are distinct; the original N2 FAIL and explicit owner/independent9600 approval remain in every packet.
+
+At this report's event time three cells were pending. Since then the D2/p0 pair has been locally fully verified and published at28ad56c5; its G3 is still pending. The remaining original D2/p4 depth was active at03:26:00UTC, with saved2048 training updates/4194296 targets and1056 endpoint outputs. Saved progress is not its full raw/state oracle or a partial score. Complete registered analysis and final CPU verification remain pending; no missing result is imputed.
