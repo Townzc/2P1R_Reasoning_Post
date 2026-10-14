@@ -13,3 +13,5 @@ The [original eager P0](p0_interrupted_prefix_v1/README.md) remains failed/STOPP
 The [persistent MATH scorer](review_3ce168ad_accepted_v1/README.md) has scoped code PASS-WITH-NOTES; real P1 throughput/output scoring/disagreement audit remain unperformed. Report outertimeouts/unique-pairs and flag>0.5% before eligibility. No old scorer/test suite is repeated.
 
 P009 monitoring remains active every30minutes, quiet unchanged. Oldp007 andautomation-4 remain paused. Completed P008 and exploratory records are immutable. No external messages, subagents or automatic retries. The new full P0 is the owner's explicit changed-configuration authorization, not a silent retry of the old call.
+
+[Optional remainder observation and failed preservation](p0_fast_remaining_readonly_preflight_v1/README.md) is prepared and pending its own code review. Six new lineage/status fixtures passed; no real cloud read or new call has run. It does not block independent remainder runtime review.

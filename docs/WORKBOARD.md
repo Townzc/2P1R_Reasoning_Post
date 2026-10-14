@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 14:17:19 PDT（未尝试后缀的只读收尾工具准备，实际续跑仍待审）
+
+21:14:57UTC实际只读检查仍Claude9609f778/78comments，没有新32源或合并publisher审计。原高吞吐P0已failed/STOPPED0，256输出完整保全未评分；原CLI/status/保全均DONE。新后缀RUNTIME_ACCEPTED/BUDGET_CHECK/gates/runs仍不存在，0新云调用；旧p007及automation-4保持PAUSED。
+
+为衔接未来唯一原后缀调用，准备独立只读status/failed-preservation：30已知keys覆盖11新批及三代来源，原256不伪造新ack；两父failed/原marker永久保留，新marker缺失只代表可能启动前失败，不构成重试许可。真failed+三appSTOPPED0才一次保全，512files/32MiB单件/256MiB总量/2readers/1200本地秒，原provider/listing/copy AST不改。6新纯谱系/状态fixtures一次PASS，无RPC/模型/旧tests或raw评分；新32科学源未改。新工具确切code审计仅阻塞可选只读路径，不阻塞独立runtime。
+
+原全体科学与预算门继续：新候选252c加旧500c共752c预留非花费，Stage0余248c，未来旧496c计划不符合余量；不得默借未分配5或缩剂量。实际P1/P2/P3/Stage1均未准入。本轮没有新付费阶段，不重复20:46费用/Papers快照。所有失败证据与未通过原科学门保留。
+
+
 ### 2026-10-14 13:47:02 PDT（PlanA确切运行/数值审计通过，准备一次启动）
 
 20:45:27读取新branch9609f778/78comments；20:45:38–39完整读bi/bj/bk。bi精确26source/spec1238d0cb/fresh2638/唯一首base256计时例外PASS-WITH-NOTES，bj发布器及bk只读工具分别codePASS，真实报告/读取时间/源hash已存。不是actualA2。用户本轮再次明确通过即直接启动、后续真阶段门自动推进；无需再问许可。
