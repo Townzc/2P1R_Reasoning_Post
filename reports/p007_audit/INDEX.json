@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T21:37:07.764063+00:00",
+  "as_of_utc": "2026-10-14T21:57:59.350122+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1928,7 +1928,7 @@
       "review_read_utc": "2026-10-14T21:35:49.889323+00:00",
       "acceptance_packet": "reports/p009_20261014/fast_remainder_review_accepted_v1",
       "actual_scientific_result_accepted": false,
-      "execution_status": "NOT_RUN_at_acceptance_publication"
+      "execution_status": "original_entry_failed_preclaim_zero_scientific_work_reconciled; old scoped review retained; new38 requires new review"
     },
     {
       "request_id": "p009-p0-fast-remainder-result-publication-code-r1",
@@ -1988,7 +1988,7 @@
       "created_utc": "2026-10-14T21:37:07.764063+00:00",
       "status": "pending",
       "blocking": false,
-      "blocking_for": "Only future budget admissions using released closed-failure reserves; existing32-source remainder remains independently accepted with conservative500c",
+      "blocking_for": "Only a future admission using released reserves. New38 repair retains all752c and new252c within owner-amended2000c Stage0 without settlement.",
       "source_files": {
         "experiments/learning_regime_p009/closed_budget_settlement.py": "2742feba9f6187079e9c3307a4af181214c86a10371ac32e3c3603949667d118",
         "tests/test_p009_closed_budget_settlement.py": "d28c29694c91c7f8c880b2fc9dc48318ca22a2f3827004564c8ab66af08f9876"
@@ -1999,6 +1999,97 @@
       "proposed_release_cents": 374,
       "post_remainder_stage0_remaining_cents": 622,
       "new_cloud_calls": 0
+    },
+    {
+      "request_id": "p009-p0-entry-schema-repair-r1",
+      "scope": "p009-p0-fast-unattempted-remainder-runtime-and-numeric",
+      "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
+      "packet": "reports/p009_20261014/p0_entry_repair_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_entry_repair_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "0563be9d858befe1d656c493342c548d0bf7c73d8ec05aa13752ca017ddc53e7",
+      "review_request": "reports/p009_20261014/p0_entry_repair_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T21:57:59.350122+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only the new38-source repaired entry and exact numeric admission",
+      "new_cloud_calls": 0,
+      "source_files": {
+        "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+        "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/gates.py": "1543f482098cee612256633e85b88e528c7418babfe6af6d4a00fc80347eefb0",
+        "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+        "experiments/learning_regime_p009/modal_p0.py": "f8b422289c486f4624fbfe90dd235e28dcedbd8fc25e9b28a37cd043f3741ac4",
+        "experiments/learning_regime_p009/modal_p0_entry_repair.py": "dcd957ea2dbf0f84e424a753cb5f95d2f4c22a492a893a7cbba6f762781dd2b3",
+        "experiments/learning_regime_p009/modal_p0_fast.py": "7778eb8ceb8fe240dbd84f5e7da63919474ab207000dedf4edff853687e8639f",
+        "experiments/learning_regime_p009/modal_p0_fast_remaining.py": "75eea6ba4fac61ea6307189d0effb2e28847415b8009a93fbd24fc431ed816bb",
+        "experiments/learning_regime_p009/p0_contract.py": "d82396a9e3372ce00a61a5dcff324e9b7344ff7859530bac62d810ae90ba1414",
+        "experiments/learning_regime_p009/p0_engine.py": "d32f2ad5b125200c92b7d911361ea3eca36f09c4cce03d286dea3306461b22bb",
+        "experiments/learning_regime_p009/p0_entry_repair_binding.py": "98acb310f4a8b9c5d61f56870135bb310565f4ea5b73062e7ed676752085b348",
+        "experiments/learning_regime_p009/p0_entry_repair_runtime.py": "32bef14463f0a64e9438b087f89cd464f09f2cd2a8b85691186418396da08fe5",
+        "experiments/learning_regime_p009/p0_fast_contract.py": "64788a48e0c1ec3a4a898163b9436da8c0417d6d9876d668e44630c2453f7377",
+        "experiments/learning_regime_p009/p0_fast_engine.py": "58fef665f247a33e19b5ae99c0a435bc974653f5a78f895b6c80ad8dc2ccd40d",
+        "experiments/learning_regime_p009/p0_fast_remaining_contract.py": "7520bb75e0f132db03045825869df53712e31628b8d9e35cdd68c4e9d9de8f87",
+        "experiments/learning_regime_p009/p0_fast_remaining_runtime.py": "523c44b27b4cc8f3984164769c58eb94cf2fa92a512290824c3eefab7a9d0083",
+        "experiments/learning_regime_p009/p0_fast_runtime.py": "b8a1db8d3525c8655aff3da86c0feffdfc24aeba7e946ea87f643d43ee1a5c74",
+        "experiments/learning_regime_p009/p0_runtime.py": "7b2c3133c3492e2f081b033eafa59f80092551743d57d1fee5e9c8c17d19662b",
+        "experiments/learning_regime_p009/p0_stop_metadata.py": "db649972d5935e37b0fc4cbc7be6a73de283de5250cb13a1f4bb7e1cb7adac4b",
+        "experiments/learning_regime_p009/requirements_p0.txt": "375f161f867fe5bcdf846d5423fbdba991be4c7ee189d1dde9b5e52a39337b69",
+        "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+        "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+        "experiments/sft_allocation_p008/provider_release.py": "7ebd47b4fcd91310ae3bacdb892008eb494e3ee2e8915717a9ed62989aae7593",
+        "experiments/sft_allocation_p008/student_concurrency.py": "8c006bfc8599baade1c523d3a0b5a3a0703cbe427196668199d9bf5d0a57812b",
+        "scripts/audit_p009_p0.py": "8da3518901a9ad57f2242c08616c7783620ab913d62043bc515ef1a87947c64e",
+        "scripts/audit_p009_p0_entry_repair.py": "c0420542a68cd4ffd3bfc2e3bd9f8c63fde40f23b0f5f14440529ed2d2824d65",
+        "scripts/audit_p009_p0_fast.py": "cfeab81d3db1068ffeb9f47ccaf5f565ebea11106cf592559f8c366c4d01a8c7",
+        "scripts/audit_p009_p0_fast_remaining.py": "a9802cd00a5f48ef0151993d1fe77bdd428fb8ea77774c1a618523c6a5d66ff3",
+        "scripts/p009_p0_entry_repair_io.py": "3c450dff8cefd2c8b9ac86eed49ba295d94d0b0de522bc354ddbeeb6254f738b",
+        "scripts/p009_p0_entry_repair_readonly.py": "7af71fe8a196c7a4fb6c7fe19a715ee8fac98a31a467b8d89a30d64d118694cd",
+        "scripts/p009_p0_fast_io.py": "32d89b0485f1f1403c448ff93a8b11c538e5ffa8ee590b40e2afe1452dde4df7",
+        "scripts/p009_p0_fast_remaining_io.py": "52909f500824f2d01cc621b762b57170c25da70f5b0bb21c80fe4a3ae72504df",
+        "scripts/p009_p0_io.py": "0a457bccc7a991a940aa437e80e7652aae4b93f092d49618a201545565abc660",
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78"
+      },
+      "spec_sha256": "996f66034e889b0ac22cf2e1ae5173712b94b8187f1a3939f300201af4ed6df1",
+      "preclaim_proof_sha256": "87c882413b1e8c14367658a6f72a6c00ef5e228e43f744398d938d7fbbd30e02",
+      "owner_budget_amendment_sha256": "cc668683e84e29e321a842b8884f68aa6d59fcd4a411e29ec38df0cb53aea963",
+      "stage0_cap_cents": 2000,
+      "experiment_cap_cents": 11000,
+      "required_additional_flag": "preclaim_entry_schema_repair_accepted",
+      "test_prerequisite": "Create .local/p009_20261014/r1 if absent; PYTHONPATH=.:tests python -m unittest test_p009_entry_schema_repair -v. Eleven mocked entry checks are not actual GPU validation."
+    },
+    {
+      "request_id": "p009-p0-entry-repair-readonly-r1",
+      "scope": "p009-p0-fast-remainder-readonly-observation-and-failed-preservation-code",
+      "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
+      "packet": "reports/p009_20261014/p0_entry_repair_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_entry_repair_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "0563be9d858befe1d656c493342c548d0bf7c73d8ec05aa13752ca017ddc53e7",
+      "review_request": "reports/p009_20261014/p0_entry_repair_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T21:57:59.350122+00:00",
+      "status": "pending",
+      "blocking": false,
+      "blocking_for": "Only new exact read-only observation/failed-preservation; not runtime admission",
+      "new_cloud_calls": 0,
+      "source_sha256": "7af71fe8a196c7a4fb6c7fe19a715ee8fac98a31a467b8d89a30d64d118694cd"
+    },
+    {
+      "request_id": "p009-p0-entry-repair-result-publication-r1",
+      "scope": "p009-p0-fast-remainder-result-publication-code",
+      "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
+      "packet": "reports/p009_20261014/p0_entry_repair_publisher_v1",
+      "manifest": "reports/p009_20261014/p0_entry_repair_publisher_v1/MANIFEST.json",
+      "manifest_sha256": "0b65f4cccf81486d3f10539c9b5588ad5a3e81f95676b30a5128e33e9b8fab2e",
+      "review_request": "reports/p009_20261014/p0_entry_repair_publisher_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T21:57:59.350122+00:00",
+      "status": "pending",
+      "blocking": false,
+      "blocking_for": "Only new repaired-entry completed-result publisher; not runtime admission",
+      "new_cloud_calls": 0,
+      "source_sha256": "d5d08c20c3ee10585cd7360559af0f4ea45c3142928a1c9d62d8dfe01a80ecb3"
     }
   ],
   "p008_v31": {
@@ -2292,10 +2383,10 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "fast_P0_failed_EOS_metadata_prefix_preserved_exact_unattempted_remainder_pending",
-    "total_cap_usd": 100,
+    "status": "preclaim_zero_work_closed_new38_entry_repair_pending",
+    "total_cap_usd": 110,
     "stage_caps_usd": {
-      "stage0": 10,
+      "stage0": 20,
       "stage1": 50,
       "stage2": 35
     },
@@ -2332,7 +2423,7 @@
       "id": "p009",
       "status": "ACTIVE",
       "cadence_minutes": 30,
-      "notify": "meaningful change, completion, failure, owner action only"
+      "notify": "Only Stage1 results or genuine blockers; stay quiet for unchanged state."
     },
     "latest_read_review": {
       "commit": "9609f778ac7071c489df0ecba6a8195c08dd669c",
@@ -2370,7 +2461,7 @@
     },
     "active_scientific_calls": 0,
     "active_GPUs": 0,
-    "p0_status": "reports/p009_20261014/p0_fast_failed_prefix_v1/README.md",
+    "p0_status": "reports/p009_20261014/p0_preclaim_failure_v1/README.md",
     "p0_suffix": {
       "target_commit": "7c9f093cd9f0b866cce65329d0b88c42fe0066b8",
       "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
@@ -2408,7 +2499,7 @@
       "speed_cost_time_estimates_not_measurements": true
     },
     "p0_fast_remaining": {
-      "status": "exact_candidate_pending_real_review_zero_new_calls",
+      "status": "original_preclaim_KeyError_failed_STOPPED0_zero_model_and_output",
       "packet": "reports/p009_20261014/p0_fast_remaining_preflight_v1",
       "target_commit": "5c5222573dece18fe3fe715ecfa3bdbfec1d2d01",
       "source_count": 32,
@@ -2418,7 +2509,38 @@
       "stage0_remaining_after_candidate_cents": 248,
       "inherited_outputs": 256,
       "new_outputs": 2382,
-      "new_calls": 0
+      "new_calls": 1,
+      "original_cli": 81028,
+      "app_id": "ap-AWwBuFC9C1MSINlMCioi5O",
+      "call_id": "fc-01M4Y5X0QZVYFXKX0RXQTPCX39",
+      "scientific_claims": 0,
+      "new_model_outputs": 0,
+      "zero_work_packet": "reports/p009_20261014/p0_preclaim_failure_v1",
+      "zero_work_target": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6"
+    },
+    "cloud_function_calls": 3,
+    "owner_budget_amendment": {
+      "path": "reports/p009_20261014/p0_entry_repair_preflight_v1/OWNER_BUDGET_AMENDMENT.json",
+      "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
+      "sha256": "cc668683e84e29e321a842b8884f68aa6d59fcd4a411e29ec38df0cb53aea963",
+      "authority": "Direct owner authorized an increase; bounded110/20 allocation chosen and stated by Codex.",
+      "project_cap_usd": 450,
+      "protected_usd": 50
+    },
+    "p0_entry_repair": {
+      "status": "pending_exact_new_runtime_and_numeric_review_NOT_RUN",
+      "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
+      "packet": "reports/p009_20261014/p0_entry_repair_preflight_v1",
+      "source_count": 38,
+      "spec_sha256": "996f66034e889b0ac22cf2e1ae5173712b94b8187f1a3939f300201af4ed6df1",
+      "prior_failed_reserves_cents": 752,
+      "new_slot_cents": 252,
+      "total_conservative_cents": 1004,
+      "stage0_remaining_cents": 996,
+      "settlement_release_used": false,
+      "new_calls": 0,
+      "inherited_outputs": 256,
+      "new_outputs": 2382
     }
   }
 }
