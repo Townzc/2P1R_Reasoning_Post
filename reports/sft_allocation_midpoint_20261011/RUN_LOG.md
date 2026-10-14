@@ -987,3 +987,8 @@ FullClaude5258644e35be4b837649f664c29f6ee3f528e6e3 actualpreservationPASS accept
 ## 2026-10-14T09:04:55.227031+00:00 / October14 02:04 PDT — continuation authorization status clarified
 
 The README now reflects the owner-approved evaluation-only continuation and separate finite overnight monitor. Exact47-source/runtime-numeric review remains pending; no new cloud call/upload/image or repeated scientific work. Latest review branch ea518a9f contains a Pro-response/adjudication follow-up only. Its prefix-conditional scientific readings are not full1319 results or causal evidence; no labels, parser, arms or doses were changed. Original690-file preservation,496-prefix oracle and15 continuation checks remain DONE. No new permission is needed; the remaining prerequisite is the actual exact-scope external review.
+
+
+## 2026-10-14T09:22:29.013248+00:00 / 2026-10-14 02:22:29 PDT — exact exploratory suffix review accepted
+
+Real Claude ae553bd2 fullreport read2026-10-14T09:21:32.596179+00:00, event09:17:43UTC: PASS-WITH-NOTES exact47source/spec154a7f83/prefixbfc786ca/budget36b7ea56. Three remaining suffixes admitted subject to unchanged live guards. N1 student-first/4800cap and residual-time uncertainty retained; N2 prefix-results-viewed disclosure required; N3 failedparents and48unacknowledged saved outputs retained. Reviewer14/15 with torch unavailable, existing Codex15/15 not rerun. No newscience/dose/budget/source changes; no childcall yet. Original parentsSTOPPED0, no upload or weight redownload. p007paused, separate finiteovernightmonitoractive.
