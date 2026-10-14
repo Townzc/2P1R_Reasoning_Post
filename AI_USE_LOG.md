@@ -2826,3 +2826,11 @@ P0exact24source/suffix/spec与结果publisher仍pending，未生成gate、budget
 为避免新P0中断时临时拼接工具，独立准备本地只读status/failed-preservation：只读原submitted/29已知账本key/精确provider，错误留unknown，不读partialscore；失败路线要求真failed+STOPPED0，再create-only保全原字节、双账本、前后清单和provider。上限512files/32MiB单文件/256MiB总量/2readers/1200本地秒，partial保留且不能整套重跑。4个新纯安全fixtures一次通过，未实际调用任何RPC或模型，原26runtime及旧工具源不改。确切代码审计只阻塞新可选只读helper，不阻塞独立runtime审计。
 
 本轮两次只读路径假设错误（不存在math_pool_code_review通配符和docs/RUN_LOG.md）无科学副作用；改用实际report目录及reports/sft_allocation_midpoint_20261011/RUN_LOG.md。预算19:06已过期，仅在真实下一付费阶段必要刷新；没有为了等待重复请求。旧p007/automation4保持PAUSED，p009继续30min有限推进。
+
+### 2026-10-14 13:47:02 PDT（PlanA确切运行/数值审计通过，准备一次启动）
+
+20:45:27读取新branch9609f778/78comments；20:45:38–39完整读bi/bj/bk。bi精确26source/spec1238d0cb/fresh2638/唯一首base256计时例外PASS-WITH-NOTES，bj发布器及bk只读工具分别codePASS，真实报告/读取时间/源hash已存。不是actualA2。用户本轮再次明确通过即直接启动、后续真阶段门自动推进；无需再问许可。
+
+20:46必要新budget/Papers已完成：workspace延迟235.23236984/billed0、原失败P0标签0.12296933非最终费用，近高235.6920755+25lag估计+100=360.6920755<450（账本36070c）；旧248不回收，新252共500c，Stage0余500c不得默借未分配5。Papers仍e097b0cb无新。一次localgate已完成、0inputtransfer，本条发布时0新科学调用。随后仅modal_p0_fast原新slot一次，实际provider/claim/完整窗口继续强制核对。
+
+保留reviewerCUDA API失败/启动成本、batchcomposition与未来模型任务不自动推广、P2/P3剩余预算各自准入限制。350–700s和5–10x均非实测保证；原bg解释不作新门。未重跑任何已DONE测试/旧保全/评分/模型。原128不评分、suffixretired。下一真实结果先本地完整oracle及独立A2，后续不会凭代码PASS跳科学门。

@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 13:47:02 PDT（PlanA确切运行/数值审计通过，准备一次启动）
+
+20:45:27读取新branch9609f778/78comments；20:45:38–39完整读bi/bj/bk。bi精确26source/spec1238d0cb/fresh2638/唯一首base256计时例外PASS-WITH-NOTES，bj发布器及bk只读工具分别codePASS，真实报告/读取时间/源hash已存。不是actualA2。用户本轮再次明确通过即直接启动、后续真阶段门自动推进；无需再问许可。
+
+20:46必要新budget/Papers已完成：workspace延迟235.23236984/billed0、原失败P0标签0.12296933非最终费用，近高235.6920755+25lag估计+100=360.6920755<450（账本36070c）；旧248不回收，新252共500c，Stage0余500c不得默借未分配5。Papers仍e097b0cb无新。一次localgate已完成、0inputtransfer，本条发布时0新科学调用。随后仅modal_p0_fast原新slot一次，实际provider/claim/完整窗口继续强制核对。
+
+保留reviewerCUDA API失败/启动成本、batchcomposition与未来模型任务不自动推广、P2/P3剩余预算各自准入限制。350–700s和5–10x均非实测保证；原bg解释不作新门。未重跑任何已DONE测试/旧保全/评分/模型。原128不评分、suffixretired。下一真实结果先本地完整oracle及独立A2，后续不会凭代码PASS跳科学门。
+
+
 ### 2026-10-14 13:30:26 PDT（PlanA只读状态与失败保全工具准备，未运行）
 
 20:26:50UTC的新只读审计检查仍58017822/76comments，没有PlanA新PASS；0新GPU/CPU调用，RUNTIME_ACCEPTED/BUDGET_CHECK/gates/runs均不存在。旧suffix继续retired，原128未评分和全部原失败保全保持关闭。
