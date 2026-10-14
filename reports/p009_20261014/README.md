@@ -1,7 +1,5 @@
 # P009 — current evidence and next gate
 
-[Design/input packet](design_and_inputs_v1/README.md) is fixed at`e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e`. The owner approved100USD total, five Stage2 groups and automatic progression after science/review/resource gates. Exact runtime and first full-batch measurement are still being prepared; no P009 scientific call has started.
+The owner directly approved100USD, five Stage2 conditions A/B/C/B-prime/D×seeds17/29, and keeping teacher2048 withseven unsupported MATH rows never generated. [Design and exact inputs](design_and_inputs_v1/README.md) fixed e6350f0b remain pendingA0. Exact [P0 code/bootstrap numeric packet](p0_runtime_preflight_v1/README.md) fixed6b8c5764b46c12c277f12dcf8323b375dfc119ec is now prepared with19sources and12distinct CPUchecks, not a CUDA test or runtime approval. It proposes one finite pure-eval pair at248cents, reusing original base and correct969state. No P009 image/upload/claim/model call yet.
 
-Stage0: prepared8993teacherrequests; seven original rows explicitly unsupported under retained2048context. MATH4shot uses full disjoint dev examples. Stage1 and2 remain conditional. Llama unavailable; OLMo fallback follows the source proposal.
-
-Old P008 and exploratory monitors remain paused.12hours is a target, not a promise; no shortening, retry or budget increase is automatic.
+[Context-review disposition](review_166dc7e6_disposition_v1/DISPOSITION.md) binds the actually read166dc7e6 report, whose draft advice is not A0/P0PASS. Newp009monitor is ACTIVE every30min, quiet when unchanged; oldp007/automation4 remainPAUSED. Within100USD, automatic stage progression requires real scientific/review/resource/budget/unused-slot gates.12hours remains a target, not a guarantee; no hidden retries, truncation or cap borrowing.

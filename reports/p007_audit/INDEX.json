@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T18:22:12.776721+00:00",
+  "as_of_utc": "2026-10-14T18:41:07.095812+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1677,6 +1677,25 @@
         "Pinned data,8993request roster, disjoint whole4shot examples, fullcontext and D1new-tokenizer feasibility.",
         "Stage10/50/35+5 budgets, project450/50 protection, closed-stage reservations versus metered expense, first fullbatch calibration exception must be separately reviewed."
       ]
+    },
+    {
+      "request_id": "p009-p0-parity-runtime-r1",
+      "scope": "p009-p0-parity-runtime-and-bootstrap-numeric",
+      "target_commit": "6b8c5764b46c12c277f12dcf8323b375dfc119ec",
+      "packet": "reports/p009_20261014/p0_runtime_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_runtime_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "872e60e2fc074d247b8632e46289714a70af18d52c34edd0031a192612b74182",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only new P0 parity source/bootstrap numeric admission; A0 remains independently required. No cloud work yet.",
+      "review_request": "reports/p009_20261014/p0_runtime_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T18:41:07.095812+00:00",
+      "questions": [
+        "Exact19sources/reference969state and originalHF outcome provenance; zero new training.",
+        "Explicit first4 full batches per role within same outputs,1200worker/248c finite allowance; no pre-existing timing assumed.",
+        "One permanent pairclaim, raw preservation before validity check, process cleanup and independentCPU oracle; no retries.",
+        "Scope/plan/source/spec cdb52f9b9b726fbc5276230ce674084d72baeb3a3943a567cf412b46ce22df77, review/report/readback/fresh budget required before upload/dispatch."
+      ]
     }
   ],
   "p008_v31": {
@@ -1970,7 +1989,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "owner_authorized_design_and_inputs_prepared_actual_runtime_pending",
+    "status": "A0_and_exact_P0_runtime_pending_no_cloud_calls",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -1995,6 +2014,27 @@
     "input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
     "automatic_progression": "scientific gate + exact scoped review + complete raw evidence + budget/window/unused-slot admission; no repeated routine permission",
     "scientific_calls": 0,
-    "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged"
+    "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged",
+    "p0_runtime": {
+      "target_commit": "6b8c5764b46c12c277f12dcf8323b375dfc119ec",
+      "spec_sha256": "cdb52f9b9b726fbc5276230ce674084d72baeb3a3943a567cf412b46ce22df77",
+      "source_files": 19,
+      "worker_seconds": 1200,
+      "reserved_usd": 2.48,
+      "scope": "p009-p0-parity-runtime-and-bootstrap-numeric",
+      "status": "pending"
+    },
+    "automation": {
+      "id": "p009",
+      "status": "ACTIVE",
+      "cadence_minutes": 30,
+      "notify": "meaningful change, completion, failure, owner action only"
+    },
+    "latest_read_review": {
+      "commit": "166dc7e67af09e80626a7e682666b451908b547b",
+      "read_utc": "2026-10-14T18:29:50.592655+00:00",
+      "scope": "context advice on earlier draft only, not A0 or runtime PASS",
+      "disposition": "reports/p009_20261014/review_166dc7e6_disposition_v1/DISPOSITION.md"
+    }
   }
 }

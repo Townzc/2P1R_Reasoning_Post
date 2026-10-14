@@ -4,6 +4,14 @@
 
 ## 当前状态
 
+### 2026-10-14 11:41:07 PDT（P009确切P0准备送审，0云调用）
+
+已固定新19sourceP0入口，两个1319端点仅评测base638和正确969原检查点，无训练。1,200秒worker/1,260平台/600startup、$2.48预留及首4完整批次每role的计时例外均请求Claude确切审计；0image/upload/claim/model。9pure+3mockedflow共12不同CPUchecks通过，不当CUDA/模型已验证。初依赖方案在发布前修正为已观测vLLM0.11/NumPy2.2.6加PEFT，原未提交包保留；新测试本地临时目录已约束仓库。历史两个源snapshot末尾空行告警保留，不能称全范围stylePASS。
+
+完整读Claude166dc7e6只给教师context排除建议、未核实已发布数据包；不扩大成A0。实际七题/teacher和student全评测长度结果已在e6350f0b；100美元与5未分配已有owner直接批准，无需再问。新p009有限30min巡检已创建ACTIVE，旧p007/automation4保持PAUSED。新代码包fixed6b8c5764的36个manifest成员逐Git原字节核验。待A0+真实P0runtime/numeric通过后才一次上传/派发。
+
+[确切P0包](../reports/p009_20261014/p0_runtime_preflight_v1/README.md) · [context意见回应](../reports/p009_20261014/review_166dc7e6_disposition_v1/DISPOSITION.md)。
+
 ### 2026-10-14 11:22:12 PDT（P009五组设计和Stage0输入固定送审；未派发）
 
 用户直接批准总帽$100、Stage2 A/B/C/B′/D五组×2seed，并选择保持教师context2048、7题不支持且不生成。Stage0固定7493首次+500×3追加=8993上限；MATH-500与训练0规范化重叠，4完整dev按长度规则均容纳，D1 3436题两tokenizer完整可编码。Llama401采用原方案允许的OLMo；不是新模型临时替换。

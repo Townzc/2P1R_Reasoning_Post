@@ -1,3 +1,7 @@
+# October14 — P009 owner-authorized, new finite monitor
+
+Read .local/p009_20261014/r1/ACTIVE_HANDOFF.md and current INDEX first. User directly approved new100USD and Stage2 A/B/C/B-prime/D×17/29, teachercontext2048 with7MATHrows unsupported/notgenerated. Scientific/A0/exactruntime+numeric/budget/once-only gates govern automatic progression; newp009heartbeatACTIVE, oldp007 andautomation-4PAUSED. Current design/input and exactP0code/bootstrap proposals are published but not accepted;0P009cloud calls. No subagents/external messages/new unapproved scope; ordinaryINDEX+push authorized. Keep oldP008/exploratory immutable. Below dated states are historical and do not block the new explicit scope.
+
 # October13 07:20UTC — P008 v3 core endorsed, discussion only
 
 Owner asks agreement before execution. Codex accepts Claude C.1 and prefers v3 core20students/90training units over its prior11-item alternative. See docs/audit/P008_V3_CODEX_RESPONSE_20261013.md and current INDEX for F1–F5 protocol details. No P008 admission, Phase0 call or automation resume. Prior finite work stays closed; figurev2 now has ClaudePASS at7cefa253. Check new reading-note commit before phases. Earlier dated statuses remain historical.
