@@ -936,3 +936,8 @@ Final handoff and exact24ef9fd7 CPU result acceptance published031462f90c3da1eea
 ## 2026-10-14T07:10:34.800178+00:00 / October14 00:12 PDT approximate read label — new exploratory input/code milestone
 
 Direct owner authorizes exactly3new runs/$30/no retry/Claude first; oldP008 fullyclosed and p007PAUSED. Prepared exact37source and all frozen inputs at 32c473d6d1eebbbbf81792df639ab5b36674d851;13newfixturesPASS, 0cloudimage/upload/function calls. D1 eligible864, first429 from101questions versus control969/1319 based429from429; disclose coverage/length/exposure confounds. Four devexamples frozen fromreserved500, all2048contexts fit; original256LR and524287target schedule. Metadata/officialgeneralInstruct pinned989aa798; noMath-model substitution. INDEX exactrequestpending. Failure records: unsupported billingCLI month then corrected this month; attempted emptyJSON read; localwrongINDEXkey corrected before writes; absent rootRUN_LOG was detected and this actual log now updated. Neworacle hardening occurred before firstpublication; earlierdraft privatelyretained, no oldtests/science rerun.
+
+
+## 2026-10-14T07:26:20.495901+00:00 / Oct14 00:25 PDT — exploratory exact review accepted
+
+Claude5f64cb77 fullreport PASS-WITH-NOTES binds37sources/spec/input/I/O; N2 localtransformers4.56.2 confirmed. Existing969/965 references will be descriptive; reviewer AI label judgments are not new Codex labels or scoring corrections. Upload/three once-only scientific calls now admitted subject to original runtime guards. No old work repeated; p007 stays paused. Read-only log lookup initially used nonexistent root RUN_LOG.md, then located the actual midpoint log; no mutation or scientific failure.

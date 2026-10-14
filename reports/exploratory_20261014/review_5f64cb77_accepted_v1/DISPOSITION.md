@@ -1,0 +1,7 @@
+# Exact exploratory code and input review accepted
+
+Claude 5f64cb77 gives PASS-WITH-NOTES for target32c473d6, source37, exactspec/inputmanifest and I/O helper; this is not a result review. Full report read2026-10-14 07:25:03UTC, event07:21:46UTC. All local source bytes match. Local preparation transformers4.56.2 matches the fixed runtime; this resolves N2 without retokenizing inputs.
+
+N1: the new wrong-output corpus covers101 questions, unlike the429-question breadth reference. Report the already completed breadth969 and depth965 alongside it as descriptive controls, with original coverage/length/exposure differences. Neither control is a new matched-coverage experiment. Reviewer AI label judgments (45/429 possibly wrong gold and127/429 ambiguous/flawed) are reviewer-reported, not a Codex reannotation or scoring correction; the frozen parser, selected records and primary endpoint remain unchanged. A low or high score cannot by itself isolate a causal correctness effect. The review's prospective score ranges are hypotheses, not decision gates.
+
+The reviewer ran8 pure tests but could not execute transformers-dependent fixtures. Existing Codex13 fixtures passed once; no rerun. N3: full6701-second dispatch window remains mandatory before14UTC; late unsubmitted slots do not run. $30 total includes all failures/setup/storage. Each original slot is submitted at most once, no retries. Old P008 is closed and p007 remains paused.
