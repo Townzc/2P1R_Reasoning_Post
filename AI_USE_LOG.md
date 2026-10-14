@@ -2643,3 +2643,10 @@ Newdatedacceptance andfinalhandoff onlysummarizeexistingauditedfacts, noexternal
 ### 2026-10-14T06:18:52.828263+00:00 — Final delivery published and p007 paused on owner instruction
 
 Final handoff and exact24ef9fd7 CPU result acceptance published031462f90c3da1eea4e636fd8f4d10d2a5a83d9b, remote verified06:17:35UTC. Existingp007 updated only toPAUSED through the app tool; independentTOMLreadback confirmsstatus and unchangedname/prompt/recurrence/destination. All finite scientific/CPU/requiredreview work closed. No cloudcalls, billingrepeat, oldoracles/tests/statistics/figures or externalmessage. Originalcutoff/statushistory/Volume/failedparents retained; A3deferred asprotocol. BoundedlocalcaffeinatePID9586alreadyexitednaturally. This is the final scheduled-monitor closure, not a new experiment authorization.
+
+
+## 2026-10-14 00:09:33 PDT — new exploratory follow-up prepared, zero cloud calls
+
+Direct owner approval authorizes exactly base4shot, official generalInstruct0shot and one wrong-teacher student, $30 total, each once/no retry, Claude code/data review first. P008 and its immutable materials remain closed; p007 stays paused. D1 original frozen eligibility yields864; first429 from101questions selected, versus correct-control429from429 and969/1319. First4reserveddev examples and all1319 prompt IDs fit2048 with512new; original256LR and schedule yield524287targets. Thirteen new CPU fixtures pass. New37source package and I/O helper prepared; no image/upload/function calls. Read reports/exploratory_20261014/REVIEW_REQUEST.md.
+
+Motivation: owner-requested post-result exploratory controls; coverage/length/exposure confounds explicitly disclosed. Failures: first billing CLI range month rejected, emptyJSON read failed; corrected this month GET saved independently. Capacity helper signature fixed before tests; prepublication oracle metadata/weight binding tightened with two new fixtures (prior11 not rerun). Papers remains ea8befd5. No old oracle/tests/models rerun. Budget $24.78 worker envelopes+$5.22 nonworker reserve; newproject conservative envelope384.09574154<450, delayed meter notinvoice.

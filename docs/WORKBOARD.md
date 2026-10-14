@@ -349,3 +349,10 @@ Claude b5c0a754独立从原包重建全部计时，确认8项原N2 **FAIL**；40
 ### 2026-10-13T12:27:28.597206+00:00 / Oct13 05:27 PDT — D1 local G1 closed, D2 parent failed
 
 D1 originalcompleted12:20:18UTC/STOPPED05:20:23PDT, collector28973/export63771/oracle99752 allDONE:2793filesSHA,7420physicalraw outputs/2200804completiontokens independently decoded/scored/deduplicated, all8wallets legally replayed withfullcost/nopeeking. Publicpool_d1_v1 externalG1pending; no studentadmission. D2 originalfinite-deadline failureterminal12:24:47UTC/STOPPED05:24:52PDT, noownedcontainers12:25. Originalfailure kept; interruptedpreservation77411 inprogress, nochild/retry. Scientific failure/unknown status requires complete reconciliation, notlogcounts. Only localread-only closeout/newpublication,0new modelcalls.
+
+
+## 2026-10-14 00:09:33 PDT — new exploratory follow-up prepared, zero cloud calls
+
+Direct owner approval authorizes exactly base4shot, official generalInstruct0shot and one wrong-teacher student, $30 total, each once/no retry, Claude code/data review first. P008 and its immutable materials remain closed; p007 stays paused. D1 original frozen eligibility yields864; first429 from101questions selected, versus correct-control429from429 and969/1319. First4reserveddev examples and all1319 prompt IDs fit2048 with512new; original256LR and schedule yield524287targets. Thirteen new CPU fixtures pass. New37source package and I/O helper prepared; no image/upload/function calls. Read reports/exploratory_20261014/REVIEW_REQUEST.md.
+
+Motivation: owner-requested post-result exploratory controls; coverage/length/exposure confounds explicitly disclosed. Failures: first billing CLI range month rejected, emptyJSON read failed; corrected this month GET saved independently. Capacity helper signature fixed before tests; prepublication oracle metadata/weight binding tightened with two new fixtures (prior11 not rerun). Papers remains ea8befd5. No old oracle/tests/models rerun. Budget $24.78 worker envelopes+$5.22 nonworker reserve; newproject conservative envelope384.09574154<450, delayed meter notinvoice.
