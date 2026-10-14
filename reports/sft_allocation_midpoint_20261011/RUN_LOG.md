@@ -820,3 +820,13 @@ Read-only lookup errors retained: guessednonexistentbranch404 andempty.stderrJSO
 
 
 Billing read 2026-10-14T02:26:44.520561+00:00 (filename1928 is a label, actual19:26:44PDT): delayedworkspace$202.88184746, P008-labelled$113.23536393, residual$89.64648353. Residual may include lagging/unlabelledP008. Residual plus entire authorized266.44reservation=$356.08648353<450; allfailure/setup/storage retained. Deliberately adding the entire workspace meter to the entire P008 reservation double-counts alreadylabelled P008 and is now469.32184746; this diagnostic is not a450-limit violation or the admission calculation. Neither figure is an invoice/balance/finalP008 expense. Full finitequeue/266.44/max8 remains unchanged.
+
+
+### 2026-10-14T02:56:57.168287+00:00 — First three T8 completions and scoped collection-publication acceptance
+
+Actual provider02:54:56 UTC: three completed/zero-container original calls and five active; exact appinfo02:55:50 confirms released apps. Original CLI92424/41313/4207 consumed exit0, no replay. Named disjoint wave collector started once for those three, session64785; preserve any partial output, no whole-wave retry. New Claude1bf72559 full report read02:55:34 accepts exact per-run publication v2 code at b4796e6e. Acceptance and review provenance saved; actual raw/state oracle and G3 not yet claimed. Papers remains ea8befd5, no Pro delivery. No new model, remote write, old test or completed-work repeat. Reflection: original completed callbacks are evidence of termination, while numerical results remain unverified until independent raw/state checks.
+
+
+### 2026-10-14T03:05:16.251746+00:00 — First three T8 raw/state closures, original science unchanged
+
+Named wave64785 completed02:59:40UTC with one full ledger scan and unchanged selected terminal/supplement records. Export33468/2594/79320 and independent oracle37120/10984/5706 all exit0, once each: D1p0B967/39caps, D1p4B945/56, D1p4D939/47; each1319 raw,2048updates4194296targets,4701 artifactSHA,complete1024+2048 state checked,0unknown. All three exact reviewed v2 publishers completed once with actual public COLLECTION and archive readback. No recovery, new model or remote write, and no prior closed task repeated. G3 not yet supplied; other five outcomes and all19 analysis/CPU remain pending. Reflection: individual factual outcomes can be disclosed after their full oracle without changing the registered all-cell analysis gate or selecting a favorable result. Original N2 FAIL and owner/independently accepted engineering cap deviation remain explicit.

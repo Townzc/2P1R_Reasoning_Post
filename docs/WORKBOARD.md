@@ -4,6 +4,14 @@
 
 ## 当前状态
 
+### 2026.10.13 20:05:16 PDT（3项T8本地完整核验完成；外审待定）
+
+D1 B8/p0 breadth=967/1319（39 caps），D1 B8/p4 breadth=945（56），depth=939（47）。每项4701文件SHA、1319原始输出、2048更新/4194296 targets、1024取证与2048最终state全部本地核验，0技术unknown。只读3项wave/3exports/3oracles/3原字节publisher均一次完成，未重放模型。其余5项结果包、全19模型注册分析与最终CPU仍pending；原N2 FAIL/事后9600修订披露不变。[事实与原证据](../reports/p008_20261013/P008_T8_PROGRESS_20261014.md)。
+
+### 2026.10.13 19:56:57 PDT（收尾开始；provider 实际读取19:54:56 PDT）
+
+3项原T8已完成并STOPPED/0容器，5项仍评测。已完成项为D1 B8/p0 breadth与D1 B8/p4两策略；开始一次不重叠3项只读收集，完整raw/state oracle尚未执行。Claude1bf72559已对确切公共COLLECTION publisher v2给出代码PASS；不等于实际结果G3。所有原科学调用/源/剂量/时长帽不变。
+
 ### 2026.10.13 19:26:19 PDT（审计处理；实际provider读取19:21:10PDT）
 
 8原T8仍各1个容器／无terminal/result/error，6项保存完整2048步后进入终点评测，末2项保存2000/1520步；不报告部分分数，最终raw/state核验尚未执行。2路只读巡检全8成功，上次限流历史保留。Claude7034ad9d报告19:22:11读：A1/A2报告及只读收尾工具分别PASS，已真绑定；4行usable重叠独立核算，purchased交集仅审内部算术，不扩大外审范围。新每T8公共COLLECTION来源标记publisher v2仅准备待审，原收集/恢复/科学35/CPU19源不改。

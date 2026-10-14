@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T02:27:58.712782+00:00",
+  "as_of_utc": "2026-10-14T03:05:16.251746+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1148,8 +1148,8 @@
       "packet": "reports/p008_20261013/t8_collection_provenance_preflight_v1",
       "manifest": "reports/p008_20261013/t8_collection_provenance_preflight_v1/MANIFEST.json",
       "manifest_sha256": "49e7333cef16faad522a0d9ab56526d99fd89573ae9d33d21570754af54aad0a",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "scope": "t8-public-collection-provenance",
       "blocking": true,
       "blocking_for": "New per-T8 publisher v2 only; ongoing models and accepted collection/recovery/oracles/all19 analysis/finalCPU are unaffected",
@@ -1161,11 +1161,16 @@
       "created_utc": "2026-10-14T02:27:58.712782+00:00",
       "new_model_calls": 0,
       "new_raw_oracle_calls": 0,
-      "new_actual_helper_calls": 0
+      "new_actual_helper_calls": 0,
+      "review_commit": "1bf72559d486dd3571f93ff33ec137f813c63f69",
+      "review_report": "audit/claude/20261013al/T8_PUBLIC_COLLECTION.md",
+      "review_report_sha256": "f6b39c0cd8f5691ed00eecac9e5a9062b5e3ea2ff7413e9079c75521042ca5fa",
+      "review_read_utc": "2026-10-14T02:55:34.767019+00:00",
+      "disposition_packet": "reports/p008_20261013/review_1bf72559_accepted_v1"
     }
   ],
   "p008_v31": {
-    "status": "all8_original_T8_active_six_evaluating_at_0221UTC",
+    "status": "three_T8_full_local_oracles_published_five_outcomes_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.44,
     "phase0_cap_usd": 15,
@@ -1197,10 +1202,10 @@
     "pool_d2_status": "complete_local_merged_oracle_and_external_G1_passed_parentfailed_preserved",
     "pool_d1_external_review": "PASS-WITH-NOTES D1 only",
     "owner_scope_or_deadline_question": "answered_direct_student_until_complete_then_exact8T8cap9600_stage26644",
-    "active_gpu_tasks": 8,
+    "active_gpu_tasks": 5,
     "pool_d2_external_review": "PASS-WITH-NOTES merged numeric pool G1 at eb398fb1; no student admission",
     "continuation_core_external_review": "PASS-WITH-NOTES code only",
-    "current_status": "reports/p008_20261013/review_7034ad9d_accepted_v1/DISPOSITION.md",
+    "current_status": "reports/p008_20261013/P008_T8_PROGRESS_20261014.md",
     "review_corrections_acknowledgement": "reports/p008_20261013/D2_REVIEW_CORRECTIONS_ACKNOWLEDGED.json",
     "review_corrections_status": "accepted by reviewer in comment6146926321; no new execution admission",
     "continuation_runtime_review_request": "p008-d2-deadline14pdt-r3",
@@ -1311,6 +1316,15 @@
     "T8_readonly_closeout_review_request": "p008-t8-readonly-closeout-code-r1",
     "registered_reporting_review": "4c1ad2d9 PASS7034ad9d; actual all19 results pending",
     "readonly_T8_closeout_review": "4aadc204 PASS7034ad9d; actual calls0",
-    "latest_billing_snapshot": "reports/p008_20261013/BILLING_UPDATE_1928.json"
+    "latest_billing_snapshot": "reports/p008_20261013/BILLING_UPDATE_1928.json",
+    "t8_public_collection_review": "b4796e6e PASS1bf72559; actual outcomes await G3",
+    "t8_locally_closed": [
+      "d1_b8_p0_breadth_t8",
+      "d1_b8_p4_breadth_t8",
+      "d1_b8_p4_depth_t8"
+    ],
+    "t8_outcome_external_review": "pending",
+    "t8_collection_wave": "0adcc4f016f2e4c29a04175c74594ad32402d715f6977008e5c5bd6bacfaa199",
+    "active_gpu_tasks_as_of_utc": "2026-10-14T02:54:56.309083+00:00"
   }
 }
