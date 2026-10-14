@@ -2888,3 +2888,9 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 首100实际行的启动/新pair/完整至proof耗时仍待真实运行，最后TIMING记录写入不含在观测区间且明确披露。串行scenario保留300秒未校准余量/20%，不假定双进程提速。后续需真实exact输入/driver/first100数值审计；50分歧与>2%fallback固定hash最多25仅留空adjudication等待独立检查，>0.5%outertimeout须标记。没有把代码准备当P1/A2/eligibility。新packet math_journal_preflight_v1只请求代码审计，不阻塞独立P0入口修复。
 
 原38source/sourcepackets保持未变，旧11entrychecks及旧math8/11checks均未重跑。PROTOCOL.md追加owner明确预算提高后的110/20分配记录，历史100/10与旧immutable包保留，未改科学量/解析器/随机种子。
+
+### 2026-10-14 15:06:14 PDT（真实预算结算审计通过；新入口修复仍待确切审计）
+
+22:05:02UTC检查新Claude1ae0a75c/80comments，22:05:18.879502全文读bn报告SHA96fb995d，事件21:47:36。两closedfailed计量覆盖层90d6为PASS-WITH-NOTES，独立复算126c/释放374c且8新fixtures由reviewer通过；Codex没有重跑。必须以原proposal文件SHA5c22d61e或其后续链传previous，防止较低新meter降低已记下限。buffer未校准、不是invoice/退款；失败/build/storage均保留。
+
+报告旧622c余量/496c候选与100/10帽是历史范围，后来owner直接批准增帽、Codex有限分配110/20已单列。本次新38入口仍完整计752+252=1004c，不用释放额；新preclaim调用不伪装成旧有claim结算。当前新入口runtime/readonly/publisher和新P1journal均pending，0新调用，无actualA2/Stage1。下次正常review约22:35、不得早于22:20:19；不因预算规则通过替代确切运行审计。

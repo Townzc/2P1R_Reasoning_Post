@@ -4,6 +4,13 @@
 
 ## 当前状态
 
+### 2026-10-14 15:06:14 PDT（真实预算结算审计通过；新入口修复仍待确切审计）
+
+22:05:02UTC检查新Claude1ae0a75c/80comments，22:05:18.879502全文读bn报告SHA96fb995d，事件21:47:36。两closedfailed计量覆盖层90d6为PASS-WITH-NOTES，独立复算126c/释放374c且8新fixtures由reviewer通过；Codex没有重跑。必须以原proposal文件SHA5c22d61e或其后续链传previous，防止较低新meter降低已记下限。buffer未校准、不是invoice/退款；失败/build/storage均保留。
+
+报告旧622c余量/496c候选与100/10帽是历史范围，后来owner直接批准增帽、Codex有限分配110/20已单列。本次新38入口仍完整计752+252=1004c，不用释放额；新preclaim调用不伪装成旧有claim结算。当前新入口runtime/readonly/publisher和新P1journal均pending，0新调用，无actualA2/Stage1。下次正常review约22:35、不得早于22:20:19；不因预算规则通过替代确切运行审计。
+
+
 ### 2026-10-14 15:04:05 PDT（独立准备P1持久记录，不评分真实教师输出）
 
 新math_scoring_journal代码围绕已审且未改的scalar/persistent pool，用fsync、只创建记录和独占锁保存原有顺序/输入来源、批次intent、原symbolic结果与完成证明。完整批次可在下一本地会话继续未评分行并复用原答案对（包括超时/失败）；任何partial/未知chunk阻断继续，不重试不补零。预先登记的pair不冒充已实际调用。新11个fake-pool检查一次通过；没有实际math-verify、真实teacher评分、模型或云调用。
