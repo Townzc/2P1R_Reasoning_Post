@@ -1,3 +1,7 @@
+# October14 latest — P009 original P0 time gate failed and preserved
+
+Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` first. Original P0 CLI43936 is failed/STOPPED0 with128saved raw rows, full preservation DONE. Never restart it or repeat DONE checks. New exact24-source unused-suffix candidate7c9f093c is pending scoped runtime/numeric review,0newcalls. R1/R2 and pure training-plan code are now accepted; actual scientific/input gates remain. Owner100USD, teacher2048/sevenunsupported, stagecaps and no repeated output unchanged. OrdinaryINDEX+push only; no outside messages/subagents.
+
 # October14 — P009 owner-authorized, new finite monitor
 
 Read .local/p009_20261014/r1/ACTIVE_HANDOFF.md and current INDEX first. User directly approved new100USD and Stage2 A/B/C/B-prime/D×17/29, teachercontext2048 with7MATHrows unsupported/notgenerated. Scientific/A0/exactruntime+numeric/budget/once-only gates govern automatic progression; newp009heartbeatACTIVE, oldp007 andautomation-4PAUSED. Stage0 inputs have real scoped PASS within A0 required-clarifications review; R1/R2 are frozen before outputs and their closure is requested. Exact P0 runtime/bootstrap and Stage0-scoped A0 have passed0fabdde8; read latest private handoff for whether the single P0 call has already started, never duplicate it. No subagents/external messages/new unapproved scope; ordinaryINDEX+push authorized. Keep oldP008/exploratory immutable. Below dated states are historical and do not block the new explicit scope.

@@ -1077,3 +1077,12 @@ P009 pre-outcome statistical convention frozen at 2026-10-14T19:03:09.392241+00:
 
 几次只读路径查询命中了不存在的audit目录、docs/RUN_LOG和猜测helper/request名称，未修改科学产物；改用实际reports/p007_audit/INDEX与reports/sft_allocation_midpoint_20261011/RUN_LOG。无需新owner许可，后续严格真实审计和科学门。
 
+### 2026-10-14 12:33:16 PDT（P009原P0时限门失败已保全；未尝试后缀确切送审）
+
+原CLI43936/appap-laRv7V5oQp7J6kKZdPolnd/callfc-01M4XXJ3HRXAE35NP3ZXYW5E2Y仅一次，entry19:17:26.847498UTC，terminal19:19:03.367798UTC failed，provider12:19:05PDT STOPPED且所属0。首4完整base批128输出已保存/ack，correct969零尝试。实际max11.793591s导致总预测1582.947208s>1170准入线；原1200帽如实失败，不算科学parity失败或软件结论。CLIexit1已消耗；启动只读98216与状态46752均DONE，不能重做。
+
+一次只读保全26362于19:25:14完成：21文件670700bytes/full13账本/前后Volume清单一致，failedmanifest与terminal吻合。新结构reconciliation确认128saved/0unknown/4unit=4done，未decode评分/旧HF重评分。新prefix包和新24源后缀代码固定7c9f093cd9f0b866cce65329d0b88c42fe0066b8、specdd6785e05ee36c5fa13b796b042f53051a7c4b2826039afb99481fe88da5e1e8；6新合成检查含80批mock-flow通过，不是GPU运行。只拟补base1191+correct1319=2510，复用128、旧input和原969state，不训练、不重生成。新1800/1860/600/full2500/$3.26，加旧不可回收$2.48共$5.74；Stage0余$4.26须独立满足后续门，不借未分配5、不扩100。现在0新childimage/gate/call，必须真实确切前缀/source/numeric审计后才执行。
+
+19:23:57–58实际读Claude2446e221的bd/be全文：R1/R2均CLOSED，Stage0设计PASS-WITH-NOTES，OLMo2638prompt独立重编0差异；MATH示例hash-order仍未独立复现。纯训练计划代码PASS，实际S1首次3200答案总长<=2097148需P2后核，655.35875平均上限用精确整数和，不采用reviewer近似655作新门。旧8计划/11标量测试不重复。新持久MATH进程池0b714161仍待外审，真实P1尚未运行。
+
+本轮原日志追加多一尾空行曾令stylecheck告警后仍提交08bec09e，保留历史、不称全范围PASS；本次仅规范三个可变日志尾部，immutable源/包不改。所有新packet成员逐Git原字节核验：{'p0_interrupted_prefix_v1': 13, 'p0_suffix_preflight_v1': 34, 'a0_and_training_plan_review_accepted_v1': 7}。无需重传或改冻结科学剂量；旧p007/automation4继续PAUSED，新p009继续有限审计推进。

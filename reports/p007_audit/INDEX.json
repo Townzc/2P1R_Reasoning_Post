@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T19:18:30.843070+00:00",
+  "as_of_utc": "2026-10-14T19:33:16.543827+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1707,7 +1707,8 @@
       "report_path": "audit/claude/20261014bb/REPORT.md",
       "report_sha256": "e09115593c31bcf29b3e490c4f70784592d5b8c7264c953c7024ea4227373f34",
       "bootstrap_exception_accepted": true,
-      "read_utc": "2026-10-14T19:05:51.122540+00:00"
+      "read_utc": "2026-10-14T19:05:51.122540+00:00",
+      "execution_outcome": "Original call failed measured-time gate after128 saved rows; prefix fully preserved, STOPPED0. Exact code PASS remains historical."
     },
     {
       "request_id": "p009-math-scorer-code-r1",
@@ -1741,12 +1742,18 @@
       "manifest": "reports/p009_20261014/a0_required_clarifications_v1/MANIFEST.json",
       "manifest_sha256": "1547f168ee3874712e3450ce229e3037b43101e610cd82dd42985030459f5f01",
       "review_request": "reports/p009_20261014/A0_CLARIFICATIONS_REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "PASS-WITH-NOTES",
+      "blocking": false,
       "blocking_for": "R1/R2 later selection/stage1/2 closure only; Stage0 scoped verdict explicitly granted by20261014bb, not a P0 blocker",
       "created_utc": "2026-10-14T18:54:48.744255+00:00",
       "followup_preoutput_identity_commit": "defba927",
-      "followup_identity_policy": "reports/p009_20261014/DUPLICATE_IDENTITY_POLICY.json"
+      "followup_identity_policy": "reports/p009_20261014/DUPLICATE_IDENTITY_POLICY.json",
+      "review_commit": "2446e22122cd64ca2d269e6ba7a87ae41a4ae2c4",
+      "report_sha256": "c0e298ef622153a69edabc2a40d4b6629c0965a1d08fe378a5294bc435708557",
+      "read_utc": "2026-10-14T19:23:57.816092+00:00",
+      "R1": "CLOSED",
+      "R2": "CLOSED",
+      "limitations": "Reviewer could not reconstruct MATH dev hash ordering without a Parquet reader; disjointness/selected lengths verified."
     },
     {
       "request_id": "p009-training-plan-code-r1",
@@ -1757,9 +1764,13 @@
       "manifest_sha256": "8403f2def5936ab7a2cbf7fa526439c33bfd60cb288a60987fb11893f301e156",
       "review_request": "reports/p009_20261014/training_plan_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T19:01:41.516630+00:00",
-      "status": "pending",
-      "blocking": true,
-      "blocking_for": "Future Stage1/2 pure plan code only, independent of P0. No actual selected-data plans or runtime admitted."
+      "status": "PASS-WITH-NOTES",
+      "blocking": false,
+      "blocking_for": "Future Stage1/2 pure plan code only, independent of P0. No actual selected-data plans or runtime admitted.",
+      "review_commit": "2446e22122cd64ca2d269e6ba7a87ae41a4ae2c4",
+      "report_sha256": "e4f4d41889e8995743864f3b86c9c75f527ddd50acc9bd9aa828c01b3eb457c3",
+      "read_utc": "2026-10-14T19:23:58.145446+00:00",
+      "actual_plans_admitted": false
     },
     {
       "request_id": "p009-math-scorer-persistent-pool-r1",
@@ -1773,6 +1784,22 @@
       "status": "pending",
       "blocking": true,
       "blocking_for": "Future persistent local P1 scorer only. Does not block original P0. Actual first-100 throughput, durable driver and adjudications still required."
+    },
+    {
+      "request_id": "p009-p0-unattempted-suffix-r1",
+      "scope": "p009-p0-unattempted-suffix-runtime-and-numeric",
+      "target_commit": "7c9f093cd9f0b866cce65329d0b88c42fe0066b8",
+      "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
+      "manifest": "reports/p009_20261014/p0_suffix_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "694c0a226a50a74b3d1ba4213bf0de6b57991da01101e48fe38aa2a8e0d18e6e",
+      "review_request": "reports/p009_20261014/p0_suffix_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T19:33:16.543827+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only original two P0 endpoints never-attempted suffix. Exact24source/spec/failedprefix/1800cap/326cent amendment; no new child call before real acceptance.",
+      "spec_sha256": "dd6785e05ee36c5fa13b796b042f53051a7c4b2826039afb99481fe88da5e1e8",
+      "prefix_packet": "reports/p009_20261014/p0_interrupted_prefix_v1",
+      "parent_preservation_sha256": "7d0b862fb6965000dbc244698a8a3a6ce4fdef7129058a48714e78643a70f031"
     }
   ],
   "p008_v31": {
@@ -2066,7 +2093,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "original_P0_CLI_active_build_preflight_scientific_submission_not_yet_confirmed",
+    "status": "P0_original_timing_gate_failed_preserved_STOPPED0_exact_unused_suffix_prepared_pending_review",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -2090,7 +2117,7 @@
     "target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
     "input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
     "automatic_progression": "scientific gate + exact scoped review + complete raw evidence + budget/window/unused-slot admission; no repeated routine permission",
-    "scientific_calls": 0,
+    "scientific_calls": 1,
     "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged",
     "p0_runtime": {
       "target_commit": "6b8c5764b46c12c277f12dcf8323b375dfc119ec",
@@ -2099,7 +2126,7 @@
       "worker_seconds": 1200,
       "reserved_usd": 2.48,
       "scope": "p009-p0-parity-runtime-and-bootstrap-numeric",
-      "status": "PASS-WITH-NOTES; single original CLI invoked19:09:26UTC; building/preflight, never resubmit",
+      "status": "original executed once; time gate failed,128 saved,STOPPED0; never restart",
       "original_cli_app_id": "ap-laRv7V5oQp7J6kKZdPolnd"
     },
     "automation": {
@@ -2109,12 +2136,12 @@
       "notify": "meaningful change, completion, failure, owner action only"
     },
     "latest_read_review": {
-      "commit": "0fabdde8461a1a3ef75e63bb6edce38835aee04e",
-      "read_utc": "2026-10-14T19:05:51.774392+00:00",
-      "P0": "runtime_and_bootstrap_numeric_PASS-WITH-NOTES",
-      "A0": "explicit_stage0_scoped_PASS-WITH-NOTES; R1/R2laterclosurepending",
-      "MATH": "candidate_code_PASS-WITH-NOTES; realP1pending",
-      "packet": "reports/p009_20261014/p0_and_math_code_review_accepted_v1"
+      "commit": "2446e22122cd64ca2d269e6ba7a87ae41a4ae2c4",
+      "read_utc": "2026-10-14T19:23:58.145446+00:00",
+      "A0": "PASS-WITH-NOTES,R1/R2CLOSED",
+      "training_plan": "codeonlyPASS-WITH-NOTES",
+      "math_pool": "pending",
+      "P0_suffix": "pending"
     },
     "math_scorer": {
       "status": "code_PASS-WITH-NOTES_actualP1_pending",
@@ -2124,12 +2151,12 @@
     },
     "clarifications": {
       "target_commit": "f1e6abd9de4d26150a33c285989236c663ed1acc",
-      "R1_R2": "frozen before any P009 outputs; closure pending",
+      "R1_R2": "CLOSED by2446e221; actual selection/runtime still independently gated",
       "p0_sources_unchanged": true
     },
     "training_plan_code": {
       "target_commit": "c23ed87558685f152b2c03b4af9a75cef6c18ca7",
-      "status": "prepared_pending_code_review_no_actual_plans",
+      "status": "CODE PASS-WITH-NOTES at2446e221; no actual selected plans/runtime",
       "packet": "reports/p009_20261014/training_plan_preflight_v1",
       "original_1024_lr_sha256": "14ac59d273e901d23524a077fd6b89c393f698f07fb0da0bc71a1c8d46f08a73"
     },
@@ -2144,6 +2171,16 @@
       "packet": "reports/p009_20261014/math_scoring_pool_preflight_v1",
       "status": "pending",
       "scope": "p009-math-scorer-persistent-pool-code"
+    },
+    "active_scientific_calls": 0,
+    "active_GPUs": 0,
+    "p0_status": "reports/p009_20261014/P0_TIMING_STOP_AND_SUFFIX_PROPOSAL.json",
+    "p0_suffix": {
+      "target_commit": "7c9f093cd9f0b866cce65329d0b88c42fe0066b8",
+      "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
+      "scope": "p009-p0-unattempted-suffix-runtime-and-numeric",
+      "spec_sha256": "dd6785e05ee36c5fa13b796b042f53051a7c4b2826039afb99481fe88da5e1e8",
+      "status": "pending"
     }
   }
 }

@@ -1,14 +1,15 @@
-# October14 — P009 learning-regime study authorized; Stage0 preparing
+# October14 — P009 P0 time gate stopped; exact suffix review pending
 
-The owner approved a new$100 finite study with conditional Stage2 A/B/C/B-prime/D and two seeds. Stage progression requires registered scientific gates, exact review and budget/once-only admission. [Protocol and prepared data](reports/p009_20261014/design_and_inputs_v1/README.md). [Exact P0 runtime/bootstrap review](reports/p009_20261014/p0_runtime_preflight_v1/README.md) is prepared. A0 Stage0 inputs passed; [required R1/R2 clarifications and reproducibility sources](reports/p009_20261014/a0_required_clarifications_v1/README.md) are frozen before any teacher output and await closure. [P0 runtime and its bounded first-measurement exception have passed exact review](reports/p009_20261014/p0_and_math_code_review_accepted_v1/DISPOSITION.md); the single original P0 CLI is in image/preflight processing; its scientific submission is not yet confirmed. Do not resubmit it. Newp009monitor active; oldP008 and exploratory results remain closed, both old monitors paused.
-
-探索性两实验、三个完整评测也已完成并通过实际结果 G3 外审：[最终结果与材料](reports/exploratory_20261014/final_handoff_20261014_v1/README.md)。base4-shot823、官方Instruct904、错误教师学生934，各/1319；全部计算已退出。
-
-P008 有限实验及必要核验已全部完成：18学生+base、注册统计/3图和最终CPU完整性均已获独立G3 PASS，计算资源全部释放。
-
-[最终结果与材料总入口](reports/p008_20261013/final_handoff_20261013_v1/README.md) · [最后CPU外审](reports/p008_20261013/review_24ef9fd7_accepted_v1/DISPOSITION.md) · [不可变21:00PDT中期材料](reports/p008_20261013/midpoint_freeze_20261013_2100PDT_v1/READINESS.md)
-
-最后CPU审计事件为2026.10.13 23:04:06PDT；本轮完整读取后接受。原N2 FAIL/9600秒事后修订、所有失败父任务和费用保留；A3统一次级parser按协议deferred，未执行。p007已于2026.10.13 23:18:52 PDT按用户指令暂停，[暂停回执](reports/p008_20261013/P007_PAUSED_20261013.json)已独立回读确认。
+The new $100 finite study retains five Stage2 conditions and two seeds. Teacher
+context remains2,048; seven overlength MATH rows are unsupported and never generated.
+The original P0 stopped after128 saved outputs because its measured forecast
+exceeded the1,200-second cap; the app is STOPPED0 and all evidence is preserved.
+No complete parity score exists yet. [Original failed prefix](reports/p009_20261014/p0_interrupted_prefix_v1/README.md)
+and [exact unused-suffix proposal](reports/p009_20261014/p0_suffix_preflight_v1/README.md)
+retain the original failure and await scoped review before any new call.
+[A0/plan review](reports/p009_20261014/a0_and_training_plan_review_accepted_v1/DISPOSITION.md)
+closed R1/R2 and accepted planning code; actual data/science/runtime gates still apply.
+Newp009 remains active; oldP008/exploratory work and both old monitors remain closed.
 
 # Problems, Paths, or Repeats?
 
