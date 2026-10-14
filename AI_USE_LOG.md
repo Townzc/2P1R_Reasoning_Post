@@ -2542,3 +2542,8 @@ Actual provider02:54:56 UTC: three completed/zero-container original calls and f
 ### 2026-10-14T03:05:16.251746+00:00 — First three T8 raw/state closures, original science unchanged
 
 Named wave64785 completed02:59:40UTC with one full ledger scan and unchanged selected terminal/supplement records. Export33468/2594/79320 and independent oracle37120/10984/5706 all exit0, once each: D1p0B967/39caps, D1p4B945/56, D1p4D939/47; each1319 raw,2048updates4194296targets,4701 artifactSHA,complete1024+2048 state checked,0unknown. All three exact reviewed v2 publishers completed once with actual public COLLECTION and archive readback. No recovery, new model or remote write, and no prior closed task repeated. G3 not yet supplied; other five outcomes and all19 analysis/CPU remain pending. Reflection: individual factual outcomes can be disclosed after their full oracle without changing the registered all-cell analysis gate or selecting a favorable result. Original N2 FAIL and owner/independently accepted engineering cap deviation remain explicit.
+
+
+### 2026-10-14T03:06:25.535251+00:00 — Pre-push archive staging gap retained and bounded fix
+
+The initial local metadata commita3450ff8 did not include three existing original_evidence.tar.gz files because .gitignore:14 ignores *.tar*. Detected before pushing or creating fixed G3 requests. The archive bytes/readback/manifests remain valid and unchanged. Fix is explicit staging of only these three reviewed public archives in a new ordinary commit; no publisher/export/oracle/model is rerun. Reflection: local manifest verification must also confirm every manifest member exists at the chosen Git target before requesting external review.
