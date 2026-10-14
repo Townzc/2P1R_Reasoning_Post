@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-14T07:51:02.509784+00:00",
+  "purpose": "New read-only local timing of repeated len(tokenizer), no model/generation/scoring/raw replay",
+  "transformers": "4.56.2",
+  "tokenizers": "0.22.1",
+  "calls": 64,
+  "vocab_size": 151665,
+  "all_equal": true,
+  "elapsed_seconds": 0.405570832954254,
+  "mean_seconds": 0.006337044264910219,
+  "python_wrapper": "    def __len__(self) -> int:\n        \"\"\"\n        Size of the full vocabulary with the added tokens.\n        \"\"\"\n        return self._tokenizer.get_vocab_size(with_added_tokens=True)\n",
+  "live_source_changed": false,
+  "cloud_calls": 0,
+  "host_is_cloud_worker": false
+}

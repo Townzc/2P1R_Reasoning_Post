@@ -2660,3 +2660,8 @@ Claude5f64cb77 fullreport PASS-WITH-NOTES binds37sources/spec/input/I/O; N2 loca
 ## 2026-10-14T07:47:55.539910+00:00 / Oct14 00:48 PDT — all three exploratory calls running
 
 One original call each: base07:36:25UTC, Instruct07:40:44UTC, wrong student07:44:47UTC. Startup readback07:46:23 confirms three H10080GB, exactsource37/config/claim and official Instruct weightSHA. Serialized15-file input transfer/readback complete, no retry. GPU generation logs alone do not establish final result or exact total ETA; complete raw/state oracle and STOPPED0 still required. Original6001-second hardcaps, $30 envelope, no extra runs, p007PAUSED. See reports/exploratory_20261014/started_v1/README.md.
+
+
+## 2026-10-14T07:59:45.126788+00:00 / 2026-10-14 00:59:45 PDT — exploratory timing risk and isolated proposal
+
+Original three calls continue; no retries or hot changes. Saved ack intervals show base72–100seconds per16 and initialInstruct174seconds, so prior ETA was optimistic and original6001caps may prevent complete endpoints. New local64lookup diagnostic identifies repeated len(tokenizer) as a likely substantial overhead, not fully isolated cloud timing. Unapplied cache proposal passes4new edge cases and32saved stop-event comparisons with no scoring/generation. Live37source unchanged. Owner stop/preserve versus original-cap question pending; no additional-call authorization. reports/exploratory_20261014/vocab_cache_proposal_v1/README.md.

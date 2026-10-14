@@ -1,0 +1,15 @@
+--- a/experiments/sft_exploratory_20261014/runtime.py
++++ b/experiments/sft_exploratory_20261014/runtime.py
+@@ -18,10 +18,11 @@
+     # C020 independently scans all decoded prefixes. Substituting only native
+     # terminal IDs leaves the visible text unchanged and permits both official
+     # Instruct EOS IDs; the original single-EOS student contract is unchanged.
++    vocabulary_size = len(tok)
+     normalized = [tok.eos_token_id if t in eos_ids else t for t in tokens]
+     return first_stop(normalized, lambda x:tok.decode(x,skip_special_tokens=True,
+         clean_up_tokenization_spaces=False), tok.eos_token_id, 512,
+-        (set(tok.all_special_ids)-set(eos_ids)) | {t for t in tokens if t>=len(tok)})
++        (set(tok.all_special_ids)-set(eos_ids)) | {t for t in tokens if t>=vocabulary_size})
+ 
+ 
+ def audit_batch(raw, records, rows, prompts, tok, eos_ids):
