@@ -1025,3 +1025,7 @@ Reviewer-only bootstrap and broader mechanism/saturation suggestions are not ado
 ## 2026-10-14T10:59:53.255800+00:00 / 2026-10-14 03:59:53 PDT — exploratory delivery closed and monitor paused
 
 Final handoffe1ac125a ordinarily pushed and independently matched remote; six newmanifestmembers matched Git bytes. Exact bounded localcaffeinate PID/start/command was verified beforeSIGTERM; process absent afterward. App tool pausedautomation-4, then savedconfiguration independently confirmedPAUSED with originalprompt/cadence retained. Originalp007 remainsPAUSED with unchangedupdated_at. Publicpause receipt omits account/thread/privatepath data. Allthree full-resultG3 and delivery closed, no active experimental GPU/CPU, no further scientific calls or repeatprocessing. Original immutable results/P008 freeze remain unchanged.
+
+## 2026-10-14 11:22:12 PDT — P009 direct authorization and pre-result data preparation
+
+Motivation: test a learning regime before a conditional five-condition allocation comparison. Direct100USD cap,2048teacher/7unsupported and five-group choice recorded. Pure gate tests8/8; initial builder domain error produced no release, retained; new seed domain and successful create-only15-member input release are fixed. Runtime/cost calibration remains unadmitted. No old work repeated. A0 request p009-design-and-stage0-inputs-r1 at e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e. Exact model/API inputs, scientific-dose feasibility and future A1 remain required.

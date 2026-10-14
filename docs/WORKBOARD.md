@@ -4,6 +4,14 @@
 
 ## 当前状态
 
+### 2026-10-14 11:22:12 PDT（P009五组设计和Stage0输入固定送审；未派发）
+
+用户直接批准总帽$100、Stage2 A/B/C/B′/D五组×2seed，并选择保持教师context2048、7题不支持且不生成。Stage0固定7493首次+500×3追加=8993上限；MATH-500与训练0规范化重叠，4完整dev按长度规则均容纳，D1 3436题两tokenizer完整可编码。Llama401采用原方案允许的OLMo；不是新模型临时替换。
+
+新A0/输入包固定e6350f0b，8个新纯CPU门槛检查通过；A0与确切A1/runtime仍pending，0P009模型/云上传。首builder旧seed域错误在输出前停止并保留，明确P009域修复后一次成功。原OLMo模型卡1处尾空白保持原字节，全范围stylecheck有告警；排除此原始卡的代码检查通过。未重跑任何旧模型/测试/oracle。全部旧p007与automation-4实际回读PAUSED不变。
+
+[方案与数据](../reports/p009_20261014/design_and_inputs_v1/README.md)。范围内各阶段在科学门槛、真实审计、预算/完整窗口/无旧claim通过后自动推进，失败停下报告；12小时是目标而非保证。
+
 ### 2026-10-14 03:59:53 PDT（探索性最终交接关闭；automation-4已暂停）
 
 最终材料固定e1ac125a已普通push并独立核对远端。应用工具已暂停automation-4，保存配置实际回读确认PAUSED，原prompt/节奏未改；p007原PAUSED及更新时间均未变。准确核对后清理本地有限caffeinate；0活动实验GPU/CPU，无新科学调用或旧工具重跑。[最终结果与材料](../reports/exploratory_20261014/final_handoff_20261014_v1/README.md) · [暂停回执](../reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json)。旧原包中的pending为发布时历史状态，由新datedacceptance承接，不回写证据。

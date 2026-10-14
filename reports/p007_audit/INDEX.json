@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T10:59:53.255800+00:00",
+  "as_of_utc": "2026-10-14T18:22:12.776721+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1658,6 +1658,25 @@
       "read_at_utc": "2026-10-14T10:54:06.289257+00:00",
       "accepted_at_utc": "2026-10-14T10:57:24.933488+00:00",
       "acceptance": "reports/exploratory_20261014/final_handoff_20261014_v1/ACCEPTED.json"
+    },
+    {
+      "request_id": "p009-design-and-stage0-inputs-r1",
+      "scope": "p009-design-and-stage0-inputs",
+      "target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
+      "packet": "reports/p009_20261014/design_and_inputs_v1",
+      "manifest": "reports/p009_20261014/design_and_inputs_v1/MANIFEST.json",
+      "manifest_sha256": "8ad23ec5f042bc66894949e9bc906f890308c54309b5debde688ac8c441b882a",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "P009 A0 and Stage0 input acceptance. This packet is not a runtime admission; separate exact A1 remains mandatory.",
+      "review_request": "reports/p009_20261014/design_and_inputs_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T18:22:12.776721+00:00",
+      "questions": [
+        "Direct owner100USD/five groups/2048teacher and7unsupported amendments; automatic gated progression.",
+        "Precise P0/G0/G1/futility/Stage2 conditional inference, cost ceiling slack and pre-result interpretation corrections.",
+        "Pinned data,8993request roster, disjoint whole4shot examples, fullcontext and D1new-tokenizer feasibility.",
+        "Stage10/50/35+5 budgets, project450/50 protection, closed-stage reservations versus metered expense, first fullbatch calibration exception must be separately reviewed."
+      ]
     }
   ],
   "p008_v31": {
@@ -1949,5 +1968,33 @@
     "final_handoff": "reports/exploratory_20261014/final_handoff_20261014_v1/README.md",
     "automation_4": "PAUSED; app update and saved configuration independently verified",
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
+  },
+  "p009": {
+    "status": "owner_authorized_design_and_inputs_prepared_actual_runtime_pending",
+    "total_cap_usd": 100,
+    "stage_caps_usd": {
+      "stage0": 10,
+      "stage1": 50,
+      "stage2": 35
+    },
+    "unallocated_usd": 5,
+    "stage2_conditions": [
+      "A",
+      "B",
+      "C",
+      "B_prime",
+      "D"
+    ],
+    "seeds": [
+      17,
+      29
+    ],
+    "protocol": "experiments/learning_regime_p009/PROTOCOL.md",
+    "packet": "reports/p009_20261014/design_and_inputs_v1",
+    "target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
+    "input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
+    "automatic_progression": "scientific gate + exact scoped review + complete raw evidence + budget/window/unused-slot admission; no repeated routine permission",
+    "scientific_calls": 0,
+    "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged"
   }
 }

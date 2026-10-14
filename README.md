@@ -1,3 +1,7 @@
+# October14 — P009 learning-regime study authorized; Stage0 preparing
+
+The owner approved a new$100 finite study with conditional Stage2 A/B/C/B-prime/D and two seeds. Stage progression requires registered scientific gates, exact review and budget/once-only admission. [Protocol and prepared data](reports/p009_20261014/design_and_inputs_v1/README.md). No P009 scientific call yet; oldP008 and exploratory results remain closed, both old monitors paused.
+
 探索性两实验、三个完整评测也已完成并通过实际结果 G3 外审：[最终结果与材料](reports/exploratory_20261014/final_handoff_20261014_v1/README.md)。base4-shot823、官方Instruct904、错误教师学生934，各/1319；全部计算已退出。
 
 P008 有限实验及必要核验已全部完成：18学生+base、注册统计/3图和最终CPU完整性均已获独立G3 PASS，计算资源全部释放。
