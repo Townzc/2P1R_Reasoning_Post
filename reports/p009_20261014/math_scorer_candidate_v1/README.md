@@ -1,0 +1,15 @@
+# P009 MATH scorer candidate — code preparation only
+
+Frozen candidate dependencies: math-verify0.9.0, latex2sympy2_extended1.11.0, antlr4-python3-runtime4.13.2, SymPy1.14.0 andmpmath1.3.0. Installed in a new local environment; no old environment or cloud runtime changed. No model outputs were graded. The candidate is not yet P1 accepted and does not unblock student selection.
+
+Use the final explicit boxed/fbox answer; a malformed final box never backfills an earlier answer. NativeEOS/new-problem logical stopping is supplied by the independent frozen stream contract. Length caps and invalid special stops are incorrect. Gold comes from supplied MATH500 answers or the final balanced box in the original training solution; absent gold must be reported unsupported, not silently scoredzero. Generated streams will remain original and full.
+
+Symbolic parsing has no library string fallback and uses only the extracted box. Comparison freezes strict=True, numericprecision15, floatrounding6, relation/set coercionFalse. A valid symbolicFalse is final. Deterministic string fallback is allowed only for parsing/tool failure or timeout; normalization isNFC/whitespace, outerdollars, left/right and dfrac spelling, without changing arithmetic or deleting parentheses/units. Such failures and fallback decisions must be counted in full. An unparsed unequal box cannot be selected as a natural-wrong teacher answer. An exact-string fallback match may be eligible ascorrect, and its source must be disclosed.
+
+Each expression pair runs in a fresh CPU process so the library signal timeout runs in that process's mainthread. Individual parse/compare alarms2s, outer response timer8s plus bounded child cleanup. No threads-with-disabled-timeout workaround. Dependency mismatch raises a technical error; it is never converted into an incorrect model answer. No oldGSM parser or results were modified.
+
+Eleven final authored checks pass, including two real symbolic subprocess comparisons. Earlier r1 had one bad fixture: expected x to equal(parenthesizedx) under the intentionally strict string fallback. Corrected the fixture to identical parenthesizedx; did not relaxscorer. r2 passed10; a separate teacher-label eligibility guard was then added and finalr3 passed11. All logs retained. These are synthetic checks, not evaluation results, coverage proof or P1's required real-output audit.
+
+After a separately admitted teacher acquisition, enumerate every string/symbolic disagreement on its training responses, choose50 by fixed pre-result hash order (all if fewer), and publish independent adjudication before freezingP1 for training. That selection/adjudication is NOTRUN. Do not claim this code-only packet constitutes the required real sample review. Any actual parser correction must be explicit and source-bound, not score-target tuning.
+
+Primary dependency documentation: [Math-Verify official repository](https://github.com/huggingface/Math-Verify). API and installed source hashes are recorded; no inference extra or model weights were installed.
