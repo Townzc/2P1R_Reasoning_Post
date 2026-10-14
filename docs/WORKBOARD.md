@@ -4,6 +4,10 @@
 
 ## 当前状态
 
+### 2026.10.13 20:21:45 PDT（7项T8本地闭合；最后1项待完成）
+
+新增D2/p0 breadth956/1319（51 caps）与depth971（45），各4701文件/1319raw/2048updates4194296targets/full1024+2048state/0unknown。第三wave75040、exports23879/28995、oracles86485/22954、原字节publisher均DONE；累计7项本地通过，G3和全19统计/CPU仍pending。唯一待完成D2/p4 depth原CLI74595，不重发。实际20:19:49PDT延迟meter224.56193173，P008标记135.30891807；残余+整阶段355.69301366<450，非invoice/余额，保守预留266.44不当花费。
+
 ### 2026.10.13 20:16:38 PDT（5项T8本地闭合；实际provider20:14:25 PDT）
 
 新增D1/p0 depth965/1319（50 caps）与D2/p4 breadth935（45），两项完整原始输出/2048updates4194296targets/两份state通过；累计5项本地oracle通过。第二wave88072、两export10976/98355、oracle75773/24739与publisher均DONE。D2/p0两项也已STOPPED0，第三disjoint wave75040正在收集；仅D2/p4 depth仍运行。T8 G3/全19注册分析/最终CPU均pending，未重放科学调用。

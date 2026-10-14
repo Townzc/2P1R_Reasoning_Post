@@ -840,3 +840,8 @@ The initial local metadata commita3450ff8 did not include three existing origina
 ### 2026-10-14T03:16:38.004605+00:00 — Second pair locally closed; seven original T8s released
 
 Second disjoint wave88072 completed03:12:58; export10976/98355,oracle75773/24739 and per-run v2 publications allDONE once. D1p0D965/1319,50caps; D2p4B935/1319,45caps. Both4701SHA files/2048updates4194296targets/full1024+2048state/0unknown. Exact03:14:25 provider confirms third pairD2p0B/D stopped0; originalCLI80773/58352 exit0 consumed. Third named wave75040 running once, originalD2p4D remains the only active science worker. No original model, oldcheck or prior closed result rerun. Allfive actual outcomeG3 pending; no partial-table winner or changedanalysisgate.
+
+
+### 2026-10-14T03:21:45.830209+00:00 — Seven T8s locally verified, final original call continues
+
+Third disjoint wave75040 DONE03:18:35; exports23879/28995 and independent oracles86485/22954 DONE once. D2p0B956/1319,51caps; D2p0D971/1319,45caps; full2048/4194296,1024forensic+2048state and4701artifactSHA each,0unknown. New exact v2 original-byte packets published once; actual G3 remains pending. Only originalD2p4D pending, no new model or replay. All19 analysis and CPU are not executed with a missing cell. Billing79650 DONE, actual03:19:49UTC delayed224.56193173/P008labels135.30891807/residual89.25301366; residual+entire266.44stage355.69301366<450. Fullmeter+entirestage491.00193173 deliberately double-counts labeledP008 and is not actual overrun/admission calculation. No invoice/balance claim; all failures/setup/storage retained.
