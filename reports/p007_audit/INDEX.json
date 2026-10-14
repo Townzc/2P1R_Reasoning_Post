@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T22:36:56.254143+00:00",
+  "as_of_utc": "2026-10-14T22:55:50.047616+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2150,6 +2150,77 @@
       "review_read_utc": "2026-10-14T22:35:26.906768+00:00",
       "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
       "actual_science_passed": false
+    },
+    {
+      "request_id": "p009-p0-entry-repair-complete-A2-r1",
+      "scope": "p009-p0-complete-engine-parity-A2",
+      "target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
+      "packet": "reports/p009_20261014/p0_entry_repair_complete_v1",
+      "manifest": "reports/p009_20261014/p0_entry_repair_complete_v1/MANIFEST.json",
+      "manifest_sha256": "76695a90eb05bb481905254098dd78e8e3cde04d633d96d503d1732b9c732ce7",
+      "additional_actual_gate_packet": "reports/p009_20261014/p0_entry_repair_actual_gate_v1",
+      "additional_gate_manifest_sha256": "9dfd3559bd89c1404226d9b2a5d9d36a06e2ab058c6482b2d4c77a9b11780fc0",
+      "review_request": "reports/p009_20261014/P0_ENTRY_REPAIR_ACTUAL_A2_REQUEST.md",
+      "created_utc": "2026-10-14T22:55:50.047616+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Actual full P0 engine-comparability A2; base discordance gate is locally blocked, no later science admitted",
+      "new_raw_count": 2382,
+      "inherited_raw_count": 256,
+      "new_training_updates": 0,
+      "local_integrity_passed": true,
+      "summary": {
+        "base_638": {
+          "backend_stops": {
+            "length": 298,
+            "stop": 1021
+          },
+          "correct": 650,
+          "logical_stops": {
+            "length_cap": 43,
+            "native_eos": 985,
+            "new_problem_boundary": 291
+          },
+          "native_eos_at_cap_metadata_ties": 1,
+          "parity": {
+            "decision": "blocked_unspecified_discordance_case",
+            "delta_count": 12,
+            "delta_pp": 0.9097801364670205,
+            "discordance_percent": 9.552691432903716,
+            "discordant_count": 126,
+            "implementation_error_proven": false,
+            "n": 1319
+          },
+          "technical_unknown": 0,
+          "total": 1319
+        },
+        "correct_969": {
+          "backend_stops": {
+            "length": 47,
+            "stop": 1272
+          },
+          "correct": 950,
+          "logical_stops": {
+            "length_cap": 47,
+            "native_eos": 1272
+          },
+          "native_eos_at_cap_metadata_ties": 0,
+          "parity": {
+            "decision": "pass_internal_only",
+            "delta_count": -19,
+            "delta_pp": -1.4404852160727823,
+            "discordance_percent": 5.837755875663381,
+            "discordant_count": 77,
+            "implementation_error_proven": false,
+            "n": 1319
+          },
+          "technical_unknown": 0,
+          "total": 1319
+        }
+      },
+      "scientific_gate_passed": false,
+      "old_eager128_excluded_unscored": true,
+      "all_four_apps_stopped": true
     }
   ],
   "p008_v31": {
@@ -2545,7 +2616,7 @@
     },
     "active_scientific_calls": 0,
     "active_GPUs": 0,
-    "p0_status": "reports/p009_20261014/p0_preclaim_failure_v1/README.md",
+    "p0_status": "full_P0_local_integrity_passed_base_discordance_blocked_actual_A2_pending",
     "p0_suffix": {
       "target_commit": "7c9f093cd9f0b866cce65329d0b88c42fe0066b8",
       "packet": "reports/p009_20261014/p0_suffix_preflight_v1",
@@ -2612,7 +2683,7 @@
       "protected_usd": 50
     },
     "p0_entry_repair": {
-      "status": "exact_runtime_numeric_and_readonly_publication_accepted_not_yet_called",
+      "status": "completed_local_oracle_A2_pending_scientific_gate_blocked",
       "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
       "packet": "reports/p009_20261014/p0_entry_repair_preflight_v1",
       "source_count": 38,
@@ -2626,7 +2697,66 @@
       "inherited_outputs": 256,
       "new_outputs": 2382,
       "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
-      "new_cloud_calls": 0
+      "new_cloud_calls": 1,
+      "actual_call_id": "fc-01M4Y9B3H6X7Q1YMXZBVFRJJT3",
+      "actual_app_id": "ap-qifF5xCCz1p7jnLZPqLgnL",
+      "execution_commit": "f8d6863d7d4a7ff276b5eb95f0451724f29381ad",
+      "result_packet": "reports/p009_20261014/p0_entry_repair_complete_v1",
+      "result_target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015",
+      "actual_gate_projection": "reports/p009_20261014/p0_entry_repair_actual_gate_v1",
+      "local_integrity_passed": true,
+      "all_four_apps_stopped": true,
+      "scientific_gate_passed": false,
+      "summary": {
+        "base_638": {
+          "backend_stops": {
+            "length": 298,
+            "stop": 1021
+          },
+          "correct": 650,
+          "logical_stops": {
+            "length_cap": 43,
+            "native_eos": 985,
+            "new_problem_boundary": 291
+          },
+          "native_eos_at_cap_metadata_ties": 1,
+          "parity": {
+            "decision": "blocked_unspecified_discordance_case",
+            "delta_count": 12,
+            "delta_pp": 0.9097801364670205,
+            "discordance_percent": 9.552691432903716,
+            "discordant_count": 126,
+            "implementation_error_proven": false,
+            "n": 1319
+          },
+          "technical_unknown": 0,
+          "total": 1319
+        },
+        "correct_969": {
+          "backend_stops": {
+            "length": 47,
+            "stop": 1272
+          },
+          "correct": 950,
+          "logical_stops": {
+            "length_cap": 47,
+            "native_eos": 1272
+          },
+          "native_eos_at_cap_metadata_ties": 0,
+          "parity": {
+            "decision": "pass_internal_only",
+            "delta_count": -19,
+            "delta_pp": -1.4404852160727823,
+            "discordance_percent": 5.837755875663381,
+            "discordant_count": 77,
+            "implementation_error_proven": false,
+            "n": 1319
+          },
+          "technical_unknown": 0,
+          "total": 1319
+        }
+      },
+      "actual_A2": "pending"
     },
     "math_durable_journal": {
       "status": "code_accepted_actual_P1_not_admitted",
