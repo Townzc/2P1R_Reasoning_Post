@@ -1,29 +1,31 @@
-# P009 — current evidence and next gate
+# P009 — complete P0 and the current scientific gate
 
-The new38-source P0 entry repair and numeric admission have actual
-[PASS-WITH-NOTES](entry_repair_review_accepted_v1/README.md). Read-only observation
-and result publication code also passed. The repaired entry is prepared to
-reuse256 preserved outputs and generate only2382 never-attempted outputs; actual
-P0 parity/A2 is still pending. The previous KeyError occurred before any claim
-or model work; [full zero-work evidence](p0_preclaim_failure_v1/README.md) remains.
-The earlier eager128 are excluded and both earlier claimed failures stay failed.
+The repaired P0 is complete:2,382 new outputs plus the unchanged256 saved outputs.
+Both complete1,319 endpoints passed local raw/source/lineage verification; all
+four apps are STOPPED0. No training or repeated output generation occurred.
 
-The owner directly authorized an increase and automatic progression. Codex's
-bounded current allocation is$110: Stage0$20, Stage1$50, Stage2$35, unallocated$5.
-Project$450/protected$50 remain. The current repaired slot keeps all752 prior
-cents plus252 new cents; it does not use settlement releases. Future stages
-require exact source/input/numeric and actual scientific gates, no routine
-permission, and no automatic retry. Twelve hours is a goal, not a promise.
+|Endpoint|New vLLM score|Saved HF score|Discordance|Frozen local decision|
+|---|---:|---:|---:|---|
+|Base|650/1319|638/1319|126/1319 (9.55%)|Blocked: <=1pp gap but >4% discordance|
+|Correct reference|950/1319|969/1319|77/1319 (5.84%)|Internal-engine comparison only|
 
-Stage2 remains five groups A/B/C/B-prime/D with seeds17/29. Teacher context2048
-and the seven unsupported MATH rows are unchanged. All old evidence is retained;
-P007/P008/exploratory work and their monitors remain closed/paused.
+[Complete results and original evidence](p0_entry_repair_complete_v1/README.md),
+[actual runtime gate projection](p0_entry_repair_actual_gate_v1/README.md), and
+[independent A2 request](P0_ENTRY_REPAIR_ACTUAL_A2_REQUEST.md) are available.
+Actual A2 is pending. No later scientific stage is admitted; small marginal
+accuracy differences do not waive the frozen discordance condition. A blocked
+parity decision is not proof of a software defect or a learning-regime result.
 
-[P1 durable scoring journal](math_journal_preflight_v1/README.md) has code-only
-PASS-WITH-NOTES; generated inputs, real first100 timing, fixed adjudications and
-actual P1 remain pending. [Design and training-plan code](a0_and_training_plan_review_accepted_v1/README.md)
-are scoped acceptances, not student admission. No Stage1 outcome exists yet.
+[Exact entry/code/numeric reviews](entry_repair_review_accepted_v1/README.md)
+passed before this single call. Original failed scientific parents and the
+preclaim KeyError remain, with all costs and the excluded eager128 preserved.
+The current bounded budget is$110 total: Stage0$20, Stage1$50, Stage2$35,
+unallocated$5; project$450/protected$50 remain. These are Codex's stated allocation
+under the owner's direct increase authorization. All1004c prior/new reservations
+are retained; no settlement release was used and no balance/invoice is inferred.
 
-P009 monitoring remains active every30minutes, quiet when unchanged. Only Stage1
-results or genuine blockers require user notification. No outside messages or
-subagents; INDEX requests and ordinary branch pushes carry review artifacts.
+P1 journal has code-only acceptance; no actual generated MATH rows or student
+outcomes have been scored. Later stages advance automatically only when real
+audits, scientific gates, exact input/runtime and budget conditions hold. The
+five-group/two-seed design and teacher2048/seven unsupported rows are unchanged.
+P009 remains active for A2 and disposition; oldp007/automation-4 stay paused.

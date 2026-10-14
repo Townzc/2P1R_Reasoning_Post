@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 15:55:30 PDT（完整P0已收尾；真实逐题一致性门阻塞）
+
+原修复CLI23176 exit0已消耗，terminal22:48:18.469875UTC、15:48:21PDT STOPPED0。只生成2382，原256原样继承，0训练/重生成。collector38180/export44023/oracle76861和原已审publisher均DONE一次，67artifact SHA、全2638原始输出/11forecasts/38source/merge/四provider通过；完整worker298.099277s，pack前293.579279s，只是本次观测。
+
+完整oracle：base650/1319、相对HF638 +12题/+0.909780pp，但126题discordance9.552691%超过冻结4%，真实blocked_unspecified_discordance_case；correct950/1319对原969 −19题/−1.440485pp、77分歧5.837756%，pass_internal_only。caps43/47、unknown0。只复制已有oracle，不重算/择优，不把来源核验PASS当科学门通过或实现错误证据。
+
+所有结果与原失败/缺ack/未评分eager128保留，exact已审publisher生成不可变complete包，另立实际gate字段投影供bo N3复核，原私有intent仍保留。实际A2请求待固定commit填INDEX，后续P1/P2/P3/Stage1科学调用未准入；没有改4%门或自动重跑。预算仍110/20，完整1004c预留不回收，22:35费用快照非invoice。当前0GPU/CPU；只有实际A2与科学门处置待完成，用户仅在真阻塞/Stage1结果通知。
+
+
 ### 2026-10-14 15:36:56 PDT（实际入口修复审计通过；准备唯一新调用）
 
 22:35:14UTC读到Claude1708a34f/82comments，22:35:26实际全文读取bo/bp。bo确认exact38source/spec996f6603、原256继承/2382新输出、preclaimproof与2000/11000帽PASS-WITH-NOTES；新readonly/publisher PASS。原32源及全部科学设置未动。审计者承认此前漏查入口schema，原失败完整保留；本次没有重跑旧tests/模型/保全。用户已直接允许预算增帽并自动推进，110/20为已明示有限分配，无重复常规询问。

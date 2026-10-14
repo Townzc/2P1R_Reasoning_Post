@@ -1192,3 +1192,11 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 新必要meter22:35:40延迟235.35236991/billed0，保守recentmax+25lag工程估计26070c，加全新11000c=37070<45000，不是invoice/余额/保证。当前完整752+252=1004c不依赖bn释放；旧settlement硬编码1000c和两app，未来新帽结算必须另审。Papers仍e097b0cb。bp仅journal codePASS，实际P1/首100/分歧核验仍待真实输入与审计。原slowest-pair预测保留，不将reviewer替代scenario当已批准门。
 
 接下来只生成一次本地gate、普通发布并核远端后单次modal_p0_entry_repair。此记录写入时0新云调用；不把审计通过当生成完成或actualA2。
+
+### 2026-10-14 15:55:30 PDT（完整P0已收尾；真实逐题一致性门阻塞）
+
+原修复CLI23176 exit0已消耗，terminal22:48:18.469875UTC、15:48:21PDT STOPPED0。只生成2382，原256原样继承，0训练/重生成。collector38180/export44023/oracle76861和原已审publisher均DONE一次，67artifact SHA、全2638原始输出/11forecasts/38source/merge/四provider通过；完整worker298.099277s，pack前293.579279s，只是本次观测。
+
+完整oracle：base650/1319、相对HF638 +12题/+0.909780pp，但126题discordance9.552691%超过冻结4%，真实blocked_unspecified_discordance_case；correct950/1319对原969 −19题/−1.440485pp、77分歧5.837756%，pass_internal_only。caps43/47、unknown0。只复制已有oracle，不重算/择优，不把来源核验PASS当科学门通过或实现错误证据。
+
+所有结果与原失败/缺ack/未评分eager128保留，exact已审publisher生成不可变complete包，另立实际gate字段投影供bo N3复核，原私有intent仍保留。实际A2请求待固定commit填INDEX，后续P1/P2/P3/Stage1科学调用未准入；没有改4%门或自动重跑。预算仍110/20，完整1004c预留不回收，22:35费用快照非invoice。当前0GPU/CPU；只有实际A2与科学门处置待完成，用户仅在真阻塞/Stage1结果通知。
