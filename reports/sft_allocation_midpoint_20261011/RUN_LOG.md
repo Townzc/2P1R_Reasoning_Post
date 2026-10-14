@@ -941,3 +941,8 @@ Direct owner authorizes exactly3new runs/$30/no retry/Claude first; oldP008 full
 ## 2026-10-14T07:26:20.495901+00:00 / Oct14 00:25 PDT — exploratory exact review accepted
 
 Claude5f64cb77 fullreport PASS-WITH-NOTES binds37sources/spec/input/I/O; N2 localtransformers4.56.2 confirmed. Existing969/965 references will be descriptive; reviewer AI label judgments are not new Codex labels or scoring corrections. Upload/three once-only scientific calls now admitted subject to original runtime guards. No old work repeated; p007 stays paused. Read-only log lookup initially used nonexistent root RUN_LOG.md, then located the actual midpoint log; no mutation or scientific failure.
+
+
+## 2026-10-14T07:47:55.539910+00:00 / Oct14 00:48 PDT — all three exploratory calls running
+
+One original call each: base07:36:25UTC, Instruct07:40:44UTC, wrong student07:44:47UTC. Startup readback07:46:23 confirms three H10080GB, exactsource37/config/claim and official Instruct weightSHA. Serialized15-file input transfer/readback complete, no retry. GPU generation logs alone do not establish final result or exact total ETA; complete raw/state oracle and STOPPED0 still required. Original6001-second hardcaps, $30 envelope, no extra runs, p007PAUSED. See reports/exploratory_20261014/started_v1/README.md.
