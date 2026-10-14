@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T04:16:58.127086+00:00",
+  "as_of_utc": "2026-10-14T04:23:46.467082+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1351,8 +1351,8 @@
       "packet": "reports/p008_20261013/t8_results_v1/d2_b8_p4_depth_t8",
       "manifest": "reports/p008_20261013/t8_results_v1/d2_b8_p4_depth_t8/MANIFEST.json",
       "manifest_sha256": "cf717f02eee4dc2dd5dc3aa2d8cac5b2118a60b7d9ce90442c653d7b78db1bee",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "scope": "Final original T8 raw/dose/state-hash/provenance G3",
       "blocking": false,
       "blocking_for": "External acceptance of these materials; separate CPU preparation continues",
@@ -1362,7 +1362,12 @@
         "Bind original35source/spec/config/claim,9600effectivecap,5cent/global40cent,originalN2FAIL/posthoc",
         "Verify fourth named-wave collection/archive originals/STOPPED0; no replay"
       ],
-      "created_utc": "2026-10-14T03:47:34.760005+00:00"
+      "created_utc": "2026-10-14T03:47:34.760005+00:00",
+      "review_commit": "8aada22da73864802d7809a9813021377e11c3a9",
+      "review_report": "audit/claude/20261013an/REGISTERED_RESULTS_G3.md",
+      "review_report_sha256": "fa5612ebb0935acc865f18040463f3bbdaba3ab9d2e17b637d915f341eba05fb",
+      "review_event_utc": "2026-10-14T04:02:24Z",
+      "read_utc": "2026-10-14T04:21:30.535853+00:00"
     },
     {
       "request_id": "p008-complete-registered-primary-results-r1",
@@ -1370,8 +1375,8 @@
       "packet": "reports/p008_20261013/registered_primary_results_v1",
       "manifest": "reports/p008_20261013/registered_primary_results_v1/MANIFEST.json",
       "manifest_sha256": "6040b44a1ff2ca670b704ac594c1da812fe6bcab72284128cb889360a2bec858",
-      "status": "pending",
-      "external_review": "pending",
+      "status": "reviewed",
+      "external_review": "PASS",
       "scope": "All19-model registered contrasts, complete A1/A2 reporting, three figures and limitations G3",
       "blocking": false,
       "blocking_for": "External acceptance of these materials; separate CPU preparation continues",
@@ -1382,7 +1387,12 @@
         "Inspect allthreePNG figures and explicit missingB1T8/fullBT/J,seenbenchmark/parserlimitations,N2FAIL/posthoc and failedphysicalparents; A3uniformparserpending",
         "FinalCPUintegrity remains separately pending; publicstateSHA does not imply externalbinaryinspection"
       ],
-      "created_utc": "2026-10-14T03:47:34.760005+00:00"
+      "created_utc": "2026-10-14T03:47:34.760005+00:00",
+      "review_commit": "8aada22da73864802d7809a9813021377e11c3a9",
+      "review_report": "audit/claude/20261013an/REGISTERED_RESULTS_G3.md",
+      "review_report_sha256": "fa5612ebb0935acc865f18040463f3bbdaba3ab9d2e17b637d915f341eba05fb",
+      "review_event_utc": "2026-10-14T04:02:24Z",
+      "read_utc": "2026-10-14T04:21:30.535853+00:00"
     },
     {
       "request_id": "p008-final-cpu-actual-byte-numeric-r1",
@@ -1453,7 +1463,7 @@
     }
   ],
   "p008_v31": {
-    "status": "all19_local_complete_registered_analysis_published_materials_frozen_G3_CPU_numeric_pending",
+    "status": "all19_local_and_G3_complete_materials_frozen_final_CPU_numeric_and_local_finalizer_code_pending",
     "protocol": "docs/experiments/P008_v3_1_protocol.md",
     "stage_cap_usd": 266.44,
     "phase0_cap_usd": 15,

@@ -2597,3 +2597,8 @@ Reflection: a generic stopped-provider row alone is insufficient; the exact app 
 ### 2026-10-14T04:16:58.127086+00:00 — Finalizer publication style-check note
 
 Four extra final blank-line warnings were reported for new script/test and their exact packet snapshots. The command sequence did not stop after that style check and the commit completed. Exact immutable source bytes are preserved, all packet members checked at fixed3eaee7c7, and no style-check PASS is claimed. This is a nonsemantic formatting warning, not a test/CPU/model failure. Future dependent commits inspect each prior exit. No old publisher/test/raw oracle rerun.
+
+
+### 2026-10-14T04:23:46.467082+00:00 — Actual final T8 and complete registered results G3 accepted after cutoff
+
+Read full fixedClaude8aada22d reportSHAfa5612ebb0935acc865f18040463f3bbdaba3ab9d2e17b637d915f341eba05fb at2026-10-14T04:21:30.535853+00:00; actualcomment event04:02:24UTC. LastT8990/1319,caps36 andcomplete19models/31contrasts/threefigures PASS;8/8T8 externalaccepted. PublicstateSHA is not externalprivatebinaryinspection, finalCPU isnotdone. Codex only read existing31intervals (27includezero) and published pointvalues, no oldbootstrap/raw/stateoracle/model rerun. Originalnumpy2.5.4 vs reviewer2.2.6 recorded; reviewerextra seed7 diagnostic notadopted. R1 explicitD2-only/unreplicated nexttooriginalunchangedfigure is a newpost-freezeaddendum, originalsnapshot/packetsimmutable. Approximate22tests/chanceoneexclusion is heuristic, not calibrated correlated-family probability. Newwordingitselfawaitsreview. CPU numeric andlocalfinalizer remainpending, noGPU/CPUcalls. LocalINDEX pending-list read initially assumed status onallhistoricrows, KeyError before writes; corrected .get read, no remote/builderretry.

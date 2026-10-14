@@ -1,0 +1,11 @@
+# Final T8 and complete registered results: actual external PASS
+
+Claude's fixed report 8aada22da73864802d7809a9813021377e11c3a9, audit/claude/20261013an/REGISTERED_RESULTS_G3.md, was fully read at the time recorded in READ_RECEIPT.json. Its comment event was 2026-10-14 04:02:24 UTC; reading was 04:21:30 UTC. This postdates the 04:00 UTC material cutoff.
+
+The report gives PASS to the last T8 result and the complete 19-model / 31-contrast numbers and three figures at b212b6a8. All eight T8 outcomes now have actual external G3 acceptance. The last cell is 990/1319 with 36 length caps and no reported event/parser disagreement. Public state hashes and dose provenance were reviewed; this is not external inspection of the private state binaries or completion of the separate CPU integrity task.
+
+Codex checked the existing published interval table, without rerunning bootstrap, raw scoring or a model: 27 of 31 intervals include zero; the four exclusions are D2 Delta_p4_B8, D2 C_p4 and their two observed-draw means. The means reuse the same D1/D2 models and are not independent replications. The primary run recorded numpy 2.5.4; the reviewer reports a separate numpy 2.2.6 recomputation matching interval endpoints to three decimals. Original provenance is preserved. The reviewer's seed7/4000-bootstrap and analytic-SE diagnostics remain reviewer-only checks, not a substituted or new primary analysis.
+
+R1 is addressed in a separate post-freeze interpretation page next to the unchanged original allocation figure. D2's positive difference is not repeated in D1. D1's interval containing zero is not proof of equivalence. The reviewer's approximate '22 non-redundant intervals / roughly one chance exclusion' is treated as a heuristic multiplicity warning, not a calibrated false-positive probability for this correlated family or a probability that the observed effect is chance. No new multiplicity-adjusted inference is claimed.
+
+The 21:00 PDT snapshot and immutable original result packets remain unchanged. The addendum has not itself received an external review. Final CPU numeric admission, execution and local proof verification remain pending. No prior oracle, export, statistics, plot or model was rerun.

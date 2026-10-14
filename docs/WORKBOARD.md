@@ -4,6 +4,10 @@
 
 ## 当前状态
 
+### 2026.10.13 21:23:46 PDT（完整结果/3图G3已通过；04:02事件、04:21读取）
+
+Claude8aada22d完整报告给最后T8及全19模型/31对比/3图PASS，T8累计8/8外审通过。R1明确D2高B带题价depth优势在D1未复现；原均值不当独立重复、区间含零不当等效。只读现有表核对27/31区间含零，不重跑统计。新增[冻结后解读](../reports/p008_20261013/post_freeze_results_review_v1/FACTS_ADDENDUM.md)保留原图/数据；其措辞本身待审，21:00快照不改。CPU数值/执行及本地finalizer代码仍待审，0运行任务。
+
 ### 2026.10.13 21:15:42 PDT（最终CPU本地校验代码准备，未执行）
 
 新增只读校验工具绑定24物理来源/21逻辑标签、26份state原SHA、全部CPU proof/原账本及原应用STOPPED证据。12项proof夹具和3项独立provider夹具通过；不是实际CPU核验，无新云调用。原19CPU源码与21:00冻结材料均未改。局部检查补强了原应用日志身份绑定，保留准确测试范围；精确代码外审待定，仅阻塞新本地finalizer。[代码请求](../reports/p008_20261013/final_cpu_local_finalizer_preflight_v1/REVIEW_REQUEST.md)。
