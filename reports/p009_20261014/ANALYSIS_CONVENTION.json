@@ -1,0 +1,26 @@
+{
+  "schema": "p009_preoutcome_analysis_convention_v1",
+  "created_utc": "2026-10-14T19:03:09.392241+00:00",
+  "new_P009_outcomes_observed": 0,
+  "source_path": "scripts/p008_paired_question_analysis.py",
+  "source_sha256": "ec9f46f20b2b1560a8064911172d3afb882367e7e4c97e8232c837542b02991f",
+  "source_unchanged": true,
+  "numpy_version": "2.5.4",
+  "generator": "numpy.random.default_rng / PCG64",
+  "bootstrap_seed": 20261014,
+  "resamples": 10000,
+  "shared_question_sample": true,
+  "original_chunk_size": 100,
+  "quantiles": [
+    0.025,
+    0.975
+  ],
+  "quantile_method": "linear",
+  "alignment": "Full identical problem ID sets, lexicographically sorted IDs; actual endpoint N500 or1319; booleans only; no missing/unknown conversion",
+  "stage1_G1": "Seed17 n3200-minus-n400 point>=5pp and lower95>0; seed29 same contrast>=2.5pp; no rounded gate thresholds",
+  "stage2_primary": "B-minus-D separately for both registered seeds; shared question resampling; both positive bounds / both negative bounds / otherwise unresolved",
+  "inference": "pointwise, conditional on selected setting/data/models, not familywise, training-seed population or unselected benchmark evidence",
+  "actual_analysis_run": false,
+  "runtime_admitted": false,
+  "validation": "Existing core source unchanged; no old bootstrap/tests rerun. Future actual-input wrapper and exact results still require A5/A7 review."
+}

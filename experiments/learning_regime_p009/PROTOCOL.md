@@ -167,9 +167,14 @@ candidate gap<2pp, cancel all remaining scientific slots; no partial denominator
 Otherwise complete registered remaining n100/n1,600 and seed29 pairs.
 
 G1 requires seed17 gap>=5pp, paired-question10,000-bootstrap95% lower>0, and
-seed29 gap>=2.5pp in the same direction. Freeze bootstrap seed20261014 and
-quantile method before new outcomes; intervals are pointwise conditional on the
-observed model/data choices, not simultaneous or population/seed guarantees.
+seed29 gap>=2.5pp in the same direction. Bootstrap seed20261014 and the method
+are frozen before new outcomes: NumPy2.5.4 PCG64/default_rng, shared question
+samples, original paired_percentile implementation with batches of100,
+percentile quantiles0.025/0.975 using method='linear'. Align complete Boolean
+outcomes on identical lexicographically sorted problem IDs, never intersection
+or unknown-to-zero conversion. The source SHA and exact convention are in
+reports/p009_20261014/ANALYSIS_CONVENTION.json. Intervals are pointwise conditional
+on the observed model/data choices, not simultaneous or population/seed guarantees.
 If both settings pass, choose the larger seed17 gap; if difference<1pp chooseS1.
 If none pass, stop. Stage1 selection uses already-seen benchmark questions;
 Stage2 is conditional/adaptive inference, not an untouched confirmatory test.
