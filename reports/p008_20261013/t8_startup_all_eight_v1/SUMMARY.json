@@ -1,0 +1,416 @@
+{
+  "prepared_utc": "2026-10-14T01:44:30.883038+00:00",
+  "actual_provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+  "source_provider_snapshot_sha256": "810f8faacd3f65e6b81ee8b583992c9c7d8196d04ea602431e70752555c388c4",
+  "campaign": "p008-students-completion-20261013-r1",
+  "entrypoint": "experiments.sft_allocation_p008.modal_students_t8_cap::main",
+  "scientific_calls": 8,
+  "original_slots_only": true,
+  "startup_verified": 8,
+  "active_owned_containers": 8,
+  "completed_T8": 0,
+  "new_input_uploads": 0,
+  "run_data": {
+    "d1_b8_p0_breadth_t8": {
+      "provider_app_id": "ap-YRcGjCmDdII36X2zJjX1RI",
+      "original_call_id": "fc-01M4VYZF49V2G3KYM64E94JNH7",
+      "execution_commit": "661900467b8430080b78324575ea2f8825e2cf54",
+      "submitted_file_mtime_utc": "2026-10-14T01:03:40.746372+00:00",
+      "startup_verified_utc": "2026-10-14T01:05:51.515952+00:00",
+      "startup_proof_sha256": "9c565415816743170e515019d4accae40bf699ee1a2b9b141f428a70edbe6f9e",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 40112,
+        "supervised_targets": 32732
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:03:44.348852+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T03:43:44.348852+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T03:43:14.348852+00:00",
+      "original_claim_deadline_utc": "2026-10-14T03:44:16.138537+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-YRcGjCmDdII36X2zJjX1RI",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4VYZFNB32Q8J5ZBKGPGS9RR",
+          "start_time": "2026-10-13 18:03:44-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "read_error": "VolumeListFiles rate limit exceeded. Please wait and retry.",
+        "read_error_type": "ResourceExhaustedError",
+        "unknown_preserved": true
+      }
+    },
+    "d1_b8_p0_depth_t8": {
+      "provider_app_id": "ap-Suxnk4MeSWNxBMVv5MnFut",
+      "original_call_id": "fc-01M4VZ7FFRP5TH6MRMDDS17FV7",
+      "execution_commit": "661900467b8430080b78324575ea2f8825e2cf54",
+      "submitted_file_mtime_utc": "2026-10-14T01:08:03.236528+00:00",
+      "startup_verified_utc": "2026-10-14T01:10:46.334320+00:00",
+      "startup_proof_sha256": "a0a19942dd02c093eb9732c01071ee12175e410dcae8b641c3dfba3b7a9b5c5a",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 39986,
+        "supervised_targets": 32769
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:08:08.699458+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T03:48:08.699458+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T03:47:38.699458+00:00",
+      "original_claim_deadline_utc": "2026-10-14T03:48:47.758609+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-Suxnk4MeSWNxBMVv5MnFut",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4VZ7FTBFK0V047DTE2Z3JGR",
+          "start_time": "2026-10-13 18:08:07-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "last_training_block_ack": {
+          "completions_sha256": "476cd23bf4b6cc7196e7ed0041d91b031a2e2af518aae72552d9a855e0b12ef6",
+          "count": 16,
+          "cumulative_processed": 2876014,
+          "cumulative_targets": 2359482,
+          "first_step": 1137,
+          "intent_sha256": "9fcdf56fa969f79cc049826f65e70980b01c904632aedc77fb7574b873b24518",
+          "last_step": 1152,
+          "policy": "p008_training_block_journal_v1"
+        },
+        "reported_committed_updates": 1152,
+        "scope": "Saved rosters/immutable acknowledgments only, not full raw/state oracle or score"
+      }
+    },
+    "d1_b8_p4_breadth_t8": {
+      "provider_app_id": "ap-bk2sTrC6TBPh18EvK7fNKC",
+      "original_call_id": "fc-01M4VZHNQ02VR60B19BXT8P8FP",
+      "execution_commit": "661900467b8430080b78324575ea2f8825e2cf54",
+      "submitted_file_mtime_utc": "2026-10-14T01:13:37.309705+00:00",
+      "startup_verified_utc": "2026-10-14T01:15:50.745435+00:00",
+      "startup_proof_sha256": "b56c35a1a7c46e09346f6a3d238821438bb3b41a4cc0e6c43b02d0c4d4932d86",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 40159,
+        "supervised_targets": 32744
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:13:40.095496+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T03:53:40.095496+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T03:53:10.095496+00:00",
+      "original_claim_deadline_utc": "2026-10-14T03:54:10.855572+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-bk2sTrC6TBPh18EvK7fNKC",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4VZHNW3M519HRZWEHP9WC5R",
+          "start_time": "2026-10-13 18:13:40-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "last_training_block_ack": {
+          "completions_sha256": "5a005b3fd74b1034bc0a769f8d4089fcec1dc14188ec994a6c74a990bce6de9a",
+          "count": 16,
+          "cumulative_processed": 2797797,
+          "cumulative_targets": 2293921,
+          "first_step": 1105,
+          "intent_sha256": "3419e0056c0f2417298d261ca187c9a85254b74fee77243406d293cd670f2bfa",
+          "last_step": 1120,
+          "policy": "p008_training_block_journal_v1"
+        },
+        "reported_committed_updates": 1120,
+        "scope": "Saved rosters/immutable acknowledgments only, not full raw/state oracle or score"
+      }
+    },
+    "d1_b8_p4_depth_t8": {
+      "provider_app_id": "ap-EDlV3AwZWTP4FuDoUZhU1h",
+      "original_call_id": "fc-01M4VZQBW4KET6XK1KPSMG6V6D",
+      "execution_commit": "661900467b8430080b78324575ea2f8825e2cf54",
+      "submitted_file_mtime_utc": "2026-10-14T01:16:43.833933+00:00",
+      "startup_verified_utc": "2026-10-14T01:21:04.124044+00:00",
+      "startup_proof_sha256": "59646dbf3518c07b024e236215fcc1bae1b09b5a533c40237c38f7650b47967c",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 40464,
+        "supervised_targets": 32839
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:17:19.490246+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T03:57:19.490246+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T03:56:49.490246+00:00",
+      "original_claim_deadline_utc": "2026-10-14T03:57:51.733120+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-EDlV3AwZWTP4FuDoUZhU1h",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4VZQC3H8MWMVRMYBK5041AR",
+          "start_time": "2026-10-13 18:17:19-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "last_training_block_ack": {
+          "completions_sha256": "618bf21b57642718b0e440bb99f8e8b5ff367d9e4efd5b5a2dfe84ece0c359e3",
+          "count": 16,
+          "cumulative_processed": 2559474,
+          "cumulative_targets": 2097180,
+          "first_step": 1009,
+          "intent_sha256": "28cd0642b924ba731881252472e55617d2e7a02e8bbd9dc5e728d20c8cc50734",
+          "last_step": 1024,
+          "policy": "p008_training_block_journal_v1"
+        },
+        "reported_committed_updates": 1024,
+        "scope": "Saved rosters/immutable acknowledgments only, not full raw/state oracle or score"
+      }
+    },
+    "d2_b8_p0_breadth_t8": {
+      "provider_app_id": "ap-PqKuZ23G0fRIWAqmV45ibN",
+      "original_call_id": "fc-01M4W00XM94YG0Z9J96C7NKJ2Y",
+      "execution_commit": "b80d2ff7f97346533193fda926b5b32753e179bb",
+      "submitted_file_mtime_utc": "2026-10-14T01:21:56.948533+00:00",
+      "startup_verified_utc": "2026-10-14T01:25:40.410561+00:00",
+      "startup_proof_sha256": "13666ead5edf770558e5394d6d6109e9eeaf795def2c791dab54ad7a6c9da8fb",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 39785,
+        "supervised_targets": 32904
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:22:02.567071+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T04:02:02.567071+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T04:01:32.567071+00:00",
+      "original_claim_deadline_utc": "2026-10-14T04:02:33.527164+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-PqKuZ23G0fRIWAqmV45ibN",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4W00Y29MTBD3F3W88SG6B4R",
+          "start_time": "2026-10-13 18:22:02-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "last_training_block_ack": {
+          "completions_sha256": "401add559985794db498f6690acea5c3c9b289a6dd89073030210bea4fad4700",
+          "count": 16,
+          "cumulative_processed": 1714433,
+          "cumulative_targets": 1409159,
+          "first_step": 673,
+          "intent_sha256": "3556689d5d66660cc09799c7e020979f5c5b9301dffd91f47557945d34e504bf",
+          "last_step": 688,
+          "policy": "p008_training_block_journal_v1"
+        },
+        "reported_committed_updates": 688,
+        "scope": "Saved rosters/immutable acknowledgments only, not full raw/state oracle or score"
+      }
+    },
+    "d2_b8_p0_depth_t8": {
+      "provider_app_id": "ap-YjdQhyipn5BelSVh2tB26m",
+      "original_call_id": "fc-01M4W08K5TKNFQQVWNVKM6F0S0",
+      "execution_commit": "b80d2ff7f97346533193fda926b5b32753e179bb",
+      "submitted_file_mtime_utc": "2026-10-14T01:26:08.364804+00:00",
+      "startup_verified_utc": "2026-10-14T01:30:33.849135+00:00",
+      "startup_proof_sha256": "9bb2152d3fc8109c9eef5efc46e8b3e165fe9136526c0867d6db7bd3d2c114ff",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 40004,
+        "supervised_targets": 32684
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:26:13.956236+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T04:06:13.956236+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T04:05:43.956236+00:00",
+      "original_claim_deadline_utc": "2026-10-14T04:06:53.077612+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-YjdQhyipn5BelSVh2tB26m",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4W08KANMTPX4FVNKF6PQDPR",
+          "start_time": "2026-10-13 18:26:12-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "read_error": "VolumeListFiles rate limit exceeded. Please wait and retry.",
+        "read_error_type": "ResourceExhaustedError",
+        "unknown_preserved": true
+      }
+    },
+    "d2_b8_p4_breadth_t8": {
+      "provider_app_id": "ap-FobQpYsltrsEUVgjNfRNTC",
+      "original_call_id": "fc-01M4W0H3HF47XJ2RPQJMB5XD19",
+      "execution_commit": "b80d2ff7f97346533193fda926b5b32753e179bb",
+      "submitted_file_mtime_utc": "2026-10-14T01:30:47.239268+00:00",
+      "startup_verified_utc": "2026-10-14T01:35:34.127601+00:00",
+      "startup_proof_sha256": "ba79f1efc2c8f4b7f5ff89fc52f5e20ef47f5ce58b235e0d191a1e93c8c47172",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 40373,
+        "supervised_targets": 32788
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:30:51.133649+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T04:10:51.133649+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T04:10:21.133649+00:00",
+      "original_claim_deadline_utc": "2026-10-14T04:11:24.345266+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-FobQpYsltrsEUVgjNfRNTC",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4W0H3WNZZGYG6VGF3TPXCYR",
+          "start_time": "2026-10-13 18:30:50-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "last_training_block_ack": {
+          "completions_sha256": "40be61f0456d08f4fa25f595d97192247ee91b982c8ec120072a4c9d69252a93",
+          "count": 16,
+          "cumulative_processed": 957277,
+          "cumulative_targets": 786445,
+          "first_step": 369,
+          "intent_sha256": "7c68eb41d793f23d8f624c8983a14f46d9831b1d755ee62caca4a85aaee5b330",
+          "last_step": 384,
+          "policy": "p008_training_block_journal_v1"
+        },
+        "reported_committed_updates": 384,
+        "scope": "Saved rosters/immutable acknowledgments only, not full raw/state oracle or score"
+      }
+    },
+    "d2_b8_p4_depth_t8": {
+      "provider_app_id": "ap-DGHf9fzuoBck0zR1XxXCLh",
+      "original_call_id": "fc-01M4W0R3RNFY83KMBHN9A2WYVB",
+      "execution_commit": "b80d2ff7f97346533193fda926b5b32753e179bb",
+      "submitted_file_mtime_utc": "2026-10-14T01:34:36.839938+00:00",
+      "startup_verified_utc": "2026-10-14T01:41:30.858804+00:00",
+      "startup_proof_sha256": "a91fc2af2a7338e653099f7b6490ba64844f888c8b05d5d4187aa2eb609e172f",
+      "startup_proof_scope": "Actual provider/source/spec/claim/environment and first completed unit only; not final raw/state/dose oracle",
+      "first_completed_unit": {
+        "committed_updates": 16,
+        "processed_tokens": 40137,
+        "supervised_targets": 32725
+      },
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "cuda": "12.8",
+      "source_sha256": "28f4266920077c6b98bb0aa463af2416d1330605ccd9affb473cfbdca0236b1d",
+      "worker_entry_utc": "2026-10-14T01:34:39.817871+00:00",
+      "effective_hard_deadline_utc": "2026-10-14T04:14:39.817871+00:00",
+      "effective_soft_deadline_utc": "2026-10-14T04:14:09.817871+00:00",
+      "original_claim_deadline_utc": "2026-10-14T04:15:10.838556+00:00",
+      "original_config_seconds": 9560,
+      "effective_worker_seconds": 9600,
+      "reserved_cents": 1258,
+      "invoice": false,
+      "provider_observation_utc": "2026-10-14T01:41:49.094458+00:00",
+      "owned_containers": [
+        {
+          "app_id": "ap-DGHf9fzuoBck0zR1XxXCLh",
+          "app_name": "p008-eight-t8-owner-cap-9600",
+          "container_id": "ta-01M4W0R4054RFVXZMJJQ6ERCVR",
+          "start_time": "2026-10-13 18:34:39-07:00"
+        }
+      ],
+      "terminal": null,
+      "canonical_result_present": false,
+      "local_callback_error": false,
+      "saved_progress": {
+        "last_training_block_ack": {
+          "completions_sha256": "8e79163749b6c14e63e6328747832377d53e30266375e34b39c0e666715f6318",
+          "count": 16,
+          "cumulative_processed": 519667,
+          "cumulative_targets": 426065,
+          "first_step": 193,
+          "intent_sha256": "b1635f170c63fec0e8721b13dd4f2eedaf14be1d148be6d1cb7fc6cc83b4c6bf",
+          "last_step": 208,
+          "policy": "p008_training_block_journal_v1"
+        },
+        "reported_committed_updates": 208,
+        "scope": "Saved rosters/immutable acknowledgments only, not full raw/state oracle or score"
+      }
+    }
+  },
+  "stage_authorized_reservation_usd": 266.44,
+  "original_N2_passed": false,
+  "amended_9570_numeric_review": "PASS Claude4edd8399",
+  "post_hoc_engineering_deviation": true,
+  "runtime_review_target": "4fef52a374449dafec284ac503c5e78c83dc41f7",
+  "spec_sha256": "4ca2c55deb53307ddc96b8f6b631127958dd40ddbdc6d536986e38e7798a0044",
+  "full_raw_state_oracle_performed": false,
+  "partial_endpoint_scores_computed": false,
+  "material_freeze_utc": "2026-10-14T04:00:00Z",
+  "pending_results_policy": "Freeze actual verified materials; later results separately labelled",
+  "no_future_runtime_or_host_guarantee": true
+}

@@ -788,3 +788,12 @@ Prepared compact per-run G3 publication plus all19-model registered analysis and
 
 
 Publication tail note 2026-10-14T01:17:15.331478+00:00: immutable analysis preflight packet and RUN_LOG had completed before a wrong nested AI_USE_LOG path raised FileNotFoundError; retained error, wrote only missing root AI_USE_LOG tail, no packet rebuild or data/model execution.
+
+
+### 2026-10-14T01:44:30.883038+00:00 — All eight original T8 calls and read-only closeout preparation
+
+Motivation: finish the finite admitted dispatch and prepare efficient evidence collection without repeating any model call or full ledger scan. All8 submitted once; first4 execution66190046, last4b80d2ff7, sameaccepted35 files. Actualprovider snapshot01:41:49UTC has8 owned H100 containers/claims, no terminal/result, andall8 separate first16 startup proofs pass. Two VolumeListFiles rate-limit errors remain unknown progress; no immediate retry. Future inspector only reduces8 readers to2, parsedNOTRUN. Scientific35/CPU19 bytes remain unchanged.
+
+The optional wave collector and callback recovery are prepared only, pending scoped review. Three new fully mocked checks passed; no actual T8 closeout/raw/state oracle was run. Original per-run route remains available for runs with no wave intent or closeout. Original raw,state,claim,mtime provenance and strict partial-failure fencing remain mandatory. Registered analysis also awaits fixed-code review and actualcompleted results. OriginalN2FAIL/post-hoc amendment and9600/$266.44 authority retained. Localroot WORKBOARD read path was wrong; corrected to docs/WORKBOARD.md with no remote action. Prior local CLI parse/sequencing/publication-tail failures stay recorded, and all actualcalls remain unique. Reflection: monitoring rate limits do not establish a science failure; preserve missing reads and lower subsequent read concurrency instead of replaying work.
+
+Billingread01:24:44–45 meter166.55184746; P008-labelled78.30771199, residual88.24413547 may include lag/unlabelledP008. Residual+entire266.44=354.68413547; deliberatefullmeter+entirestage432.99184746, bothbelow450. Delayedmeter/reservations notinvoice/balance; allfailure/setup/storage costs retained.
