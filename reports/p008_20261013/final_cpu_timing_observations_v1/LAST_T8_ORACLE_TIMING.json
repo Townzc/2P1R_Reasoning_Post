@@ -1,0 +1,30 @@
+{
+  "started_utc": "2026-10-14T03:44:25.082377+00:00",
+  "finished_utc": "2026-10-14T03:44:29.301961+00:00",
+  "wall_seconds": 4.219557583,
+  "exit_code": 0,
+  "command": [
+    ".local/midpoint_20261011/data_pipeline/venv/bin/python",
+    "scripts/audit_p008_student_t8_cap.py",
+    "--campaign",
+    "p008-students-completion-20261013-r1",
+    "--export-dir",
+    ".local/p008_20261013/main_r1/student_completion_r1/exports/d2_b8_p4_depth_t8/evidence",
+    "--inputs",
+    ".local/p008_20261013/main_r1/student_preparation_r1/inputs",
+    "--tokenizer",
+    ".local/midpoint_20261011/data_pipeline/reconstruction_r1/tokenizer",
+    "--receipt",
+    ".local/p008_20261013/main_r1/student_completion_r1/runs/d2_b8_p4_depth_t8/result.json",
+    "--ledger",
+    ".local/p008_20261013/main_r1/student_completion_r1/closeouts/d2_b8_p4_depth_t8/ledger.json",
+    "--admission",
+    "reports/p008_20261013/student_t8_cap_9600_v1/ADMISSION.json",
+    "--out",
+    ".local/p008_20261013/main_r1/student_completion_r1/exports/d2_b8_p4_depth_t8/evidence/LOCAL_ORACLE_AUDIT.json"
+  ],
+  "source_sha256": "dc48c5d706859c19be49ffe0222920b77ad86c90908ba682ce734b092ee66036",
+  "scope": "Once-only final T8 complete local raw and full-state oracle; local host observation, not planned cloud CPU benchmark",
+  "new_model_calls": 0,
+  "oracle_repetitions": 0
+}
