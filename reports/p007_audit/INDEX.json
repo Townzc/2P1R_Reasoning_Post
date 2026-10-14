@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T10:00:49.539132+00:00",
+  "as_of_utc": "2026-10-14T10:30:08.771671+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1632,6 +1632,26 @@
       "review_report_sha256": "57933e30cb23ae2b2bee40aadbc27d2e854a102d52c3c92da37194d4d0ce25b3",
       "acceptance_packet": "reports/exploratory_20261014/review_ae553bd2_continuation_accepted_v1",
       "accepted_utc": "2026-10-14T09:22:29.013248+00:00"
+    },
+    {
+      "request_id": "exploratory-completed-three-endpoints-g3-r1",
+      "target_commit": "0debdeba2c9b581c3fdf526d346399721f4cf670",
+      "packet": "reports/exploratory_20261014/completed_endpoints_v1",
+      "manifest": "reports/exploratory_20261014/completed_endpoints_v1/MANIFEST.json",
+      "manifest_sha256": "0b211f4c4f33808a535465561bdcecfce5f114769b5f501453ac30eb9b92733a",
+      "status": "pending",
+      "external_review": "PENDING",
+      "scope": "exploratory-completed-three-endpoints-g3",
+      "blocking": true,
+      "blocking_for": "Final actual-result handoff and pausing the finite exploratory monitor only; all scientific calls are completed and must not run again.",
+      "review_request": "reports/exploratory_20261014/COMPLETED_ENDPOINTS_REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T10:30:08.771671+00:00",
+      "questions": [
+        "Independent full1319 parent-prefix plus child-suffix raw audit for each of three endpoints; exact parser/caps/roster and source47/spec.",
+        "Original failed parents/48 saved-unacknowledged outputs, zero duplicate generation, and exact256-step checkpoint restore proof with zero new training.",
+        "Actual results823/904/934, descriptive969/965/638 references, natural-wrong confounds and prefix-viewing disclosure.",
+        "Original-byte public archive projection/provenance, real STOPPED0/claims, and delayed six-app cost11.19667285 within unchanged30-dollar plan."
+      ]
     }
   ],
   "p008_v31": {
@@ -1886,22 +1906,26 @@
     "automation_p007": "PAUSED",
     "review_commit": "ae553bd21b492ee16b5416912bc0f423650181e1",
     "review_scope": "exploratory-exact-suffix-continuation-runtime-and-numeric",
-    "full_local_endpoints": 1,
+    "full_local_endpoints": 3,
     "local_closed_runs": [
-      "base_4shot_remaining_r1"
+      "base_4shot_remaining_r1",
+      "instruct_0shot_remaining_r1",
+      "wrong_teacher_t1_remaining_r1"
     ],
     "local_milestone": "reports/exploratory_20261014/BASE_4SHOT_LOCAL_CLOSED.json",
     "actual_result_g3": "PENDING",
-    "remaining_original_calls": {
-      "wrong_teacher_t1_remaining_r1": {
-        "result_exists": false,
-        "return_error_exists": false
-      },
-      "instruct_0shot_remaining_r1": {
-        "result_exists": false,
-        "return_error_exists": false
-      }
+    "remaining_original_calls": {},
+    "read_at_utc": "2026-10-14T10:30:08.771671+00:00",
+    "all_original_cli_consumed_exit0": true,
+    "active_scientific_calls": 0,
+    "result_packet": "reports/exploratory_20261014/completed_endpoints_v1",
+    "result_target_commit": "0debdeba2c9b581c3fdf526d346399721f4cf670",
+    "result_request_id": "exploratory-completed-three-endpoints-g3-r1",
+    "completed_counts": {
+      "base_4shot": 823,
+      "instruct_0shot": 904,
+      "wrong_teacher_t1": 934
     },
-    "read_at_utc": "2026-10-14T10:00:49.539132+00:00"
+    "delayed_six_app_meter_usd": "11.19667285"
   }
 }
