@@ -1,0 +1,159 @@
+{
+  "base_files": {
+    "LICENSE": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "README.md": {
+      "bytes": 3850,
+      "sha256": "84cc3bdbfd781149913126b70981cf1e341176fe4bc9d878601a83f18b035ddf"
+    },
+    "config.json": {
+      "bytes": 684,
+      "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+    },
+    "generation_config.json": {
+      "bytes": 138,
+      "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model.safetensors": {
+      "bytes": 3087467144,
+      "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7228,
+      "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "base_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "bootstrap_batches_per_role": 4,
+  "bootstrap_exception": {
+    "after_prefix": "all full-batch max plus 300s uncalibrated setup/closing, 20% margin, <=1170worker seconds and <=80% remaining stage0",
+    "all_outputs_reused_once": true,
+    "not_yet_accepted": true,
+    "old_generation_only_measurements_used": false,
+    "paid_within_P0": true,
+    "role_prefix_batches": 4
+  },
+  "checkpoint_files": {
+    "manifest.json": {
+      "bytes": 324,
+      "sha256": "8d610e496df4160c9131afa5ae95102393ac5577050199ccc7acb546570ce3b1"
+    },
+    "state.pt": {
+      "bytes": 222110325,
+      "sha256": "c3e6de44d072defadee03d552c98874c9937ad14614454540a8f2812999cc341"
+    }
+  },
+  "decode": {
+    "batch_size": 32,
+    "dtype": "bfloat16",
+    "engine": "vllm0.11.0",
+    "eos_token_id": 151643,
+    "generation_config": "vllm",
+    "max_model_len": 2048,
+    "max_new_tokens": 512,
+    "max_num_batched_tokens": 4096,
+    "seed": 17,
+    "temperature": 0
+  },
+  "design_target": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
+  "experiment_cap_cents": 10000,
+  "full_window_seconds": 1900,
+  "inputs": {
+    "HF_REFERENCE_OUTCOMES.json": {
+      "bytes": 105492,
+      "sha256": "06de676ffeec23e90766836a2186d9ecad2ce72f004be522aa713531711a8130"
+    },
+    "gsm8k_test1319.jsonl": {
+      "bytes": 870670,
+      "sha256": "e8e85dd16771c7f3121b061afdb7d9d90ceadb2580137d108b66abf51cb248b3"
+    },
+    "qwen_gsm_zero_parity.json": {
+      "bytes": 1263758,
+      "sha256": "bfbb7b5b131de24a0d65e524f2eff356864a6019e8d16a51934e25843cd7451c"
+    }
+  },
+  "new_training_updates": 0,
+  "plan_sha256": "2205da68893ef41b0147179a7769b3a69282c48739a8304eafee501f118a96c3",
+  "platform_seconds": 1260,
+  "project_cap_cents": 45000,
+  "protected_original_cents": 5000,
+  "reference_identity_sha256": "0b51d053e1b55ac2826a9b4808ef7dfd198a6afb6530a484cb5308c6e17aa592",
+  "reference_state_sha256": "c3e6de44d072defadee03d552c98874c9937ad14614454540a8f2812999cc341",
+  "remote_base_model": "/evidence/mp-engineering-20261012-r1/assets/model",
+  "remote_inputs": "/evidence/p009-stage0-inputs-20261014-r1/p0",
+  "remote_reference_checkpoint": "/evidence/p008-student-lr-replacement-20261013-r1/d1_b1_p0_breadth_t1_replacement_r1/checkpoint_0256",
+  "reservation": {
+    "build_storage_transfer_allowance_cents": 20,
+    "platform_plus_startup_seconds": 1860,
+    "provider_invoice": false,
+    "rate_rounded_cents": 228,
+    "rate_usd_per_second": "0.00122044",
+    "total_cents": 248,
+    "unknown_build_overrun_requires_stop_and_accounting": true
+  },
+  "reserved_cents": 248,
+  "roles": [
+    "base_638",
+    "correct_969"
+  ],
+  "runtime_admitted": false,
+  "schema": "p009_p0_runtime_preflight_v1",
+  "scope": "p009-p0-parity-runtime-and-bootstrap-numeric",
+  "source_files": {
+    "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+    "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+    "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+    "experiments/learning_regime_p009/gates.py": "1543f482098cee612256633e85b88e528c7418babfe6af6d4a00fc80347eefb0",
+    "experiments/learning_regime_p009/modal_p0.py": "f8b422289c486f4624fbfe90dd235e28dcedbd8fc25e9b28a37cd043f3741ac4",
+    "experiments/learning_regime_p009/p0_contract.py": "d82396a9e3372ce00a61a5dcff324e9b7344ff7859530bac62d810ae90ba1414",
+    "experiments/learning_regime_p009/p0_engine.py": "d32f2ad5b125200c92b7d911361ea3eca36f09c4cce03d286dea3306461b22bb",
+    "experiments/learning_regime_p009/p0_runtime.py": "7b2c3133c3492e2f081b033eafa59f80092551743d57d1fee5e9c8c17d19662b",
+    "experiments/learning_regime_p009/requirements_p0.txt": "375f161f867fe5bcdf846d5423fbdba991be4c7ee189d1dde9b5e52a39337b69",
+    "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+    "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+    "experiments/sft_allocation_p008/provider_release.py": "7ebd47b4fcd91310ae3bacdb892008eb494e3ee2e8915717a9ed62989aae7593",
+    "experiments/sft_allocation_p008/student_concurrency.py": "8c006bfc8599baade1c523d3a0b5a3a0703cbe427196668199d9bf5d0a57812b",
+    "scripts/audit_p009_p0.py": "8da3518901a9ad57f2242c08616c7783620ab913d62043bc515ef1a87947c64e",
+    "scripts/p009_p0_io.py": "0a457bccc7a991a940aa437e80e7652aae4b93f092d49618a201545565abc660",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78"
+  },
+  "stage0_cap_cents": 1000,
+  "stage0_unreserved_cents_after_this_slot": 752,
+  "startup_seconds": 600,
+  "tokenizer_files": {
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7228,
+      "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "worker_seconds": 1200
+}

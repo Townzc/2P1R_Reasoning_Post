@@ -1,0 +1,17 @@
+# P009 P0: exact bounded parity implementation — prepared, not admitted
+
+This is a new pure-evaluation pair: base638 and the completed correct-breadth969 checkpoint. Each receives the same1,319 frozen prompts once. No training, teacher generation, old-call restart or benchmark-dependent selection occurs. Original old scores are read, never re-decoded or overwritten.
+
+One H100 function owns both evaluations, in order base then correct969, with a fresh CUDA subprocess per model. The original FP32 LoRA adapter is copied exactly, merged in FP32 then saved bf16; vLLM bf16 comparability is the object of P0. Original optimizer/RNG remain in the unchanged full state; greedy evaluation does not restore training. Source and checkpoint hashes are bound. Returned native token IDs are preserved; a missing EOS is not invented. Logical stopping and marked_answer_v1 replay run independently on local CPU after STOPPED0. Model generation never enumerates the vocabulary per token or runs the CPU oracle.
+
+## First measurement exception requiring exact A1 approval
+
+There is no matching full-batch vLLM timing yet. The first four batches **of each role** form a bounded, already-budgeted prefix of these same endpoints. They are not extra probes and will never be regenerated. After that role's four batches, every next batch is gated by the slowest complete batch measured across both roles, including guard, forecast serialization, raw I/O, all journals and commits. Measured setup is retained separately; actual elapsed time already includes it. Future setup/merge/closing uses an explicit uncalibrated300s allowance. Prediction is `elapsed+1.2*(max_full_batch_seconds*remaining_batches+300)`, <=1,170s and <=80% of remaining Stage0 money. A slower observation can stop the original run; it never authorizes a retry, cap extension or alternate host. No scores are examined in these gates.
+
+Worker hardtimer1,200s starts at entry, platform1,260s/startup600s/full local dispatch window1,900s. One slot reserves248cents: ceil(1,860×0.00122044×100)=228c plus20c build/storage/transfer allowance. This is a conservative engineering reservation, not an invoice or mathematically proven provider cost bound. Stage0 keeps752c unreserved; exact measured admission is required for every later worker. Any expense overrun must be reconciled, not hidden. The3-day absolute ledger window is technical retention, never permission for continuous spend. Initial P0 requires zero existing/unknown workspace containers, maxone; future P009 ceiling remainsfour.
+
+## Evidence and limitations
+
+Nine pure contract checks and three mocked failure-flow checks passed (12 distinct checks). They cover lost/EOS/cap/prompt/identity cases, slowest timing and reservation; they do not demonstrate actual CUDA/vLLM startup, LoRA merge speed, provider throughput, runtime parity or GPU cleanup. Original sources and old scientific results are unchanged. Genuine A0 and this exact runtime/bootstrap numeric review must pass before any input upload or paid call. Full reports and source/spec hashes must bind acceptance. No ACCEPTED records or cloud calls exist at publication.
+
+Sources: [vLLM0.11.0 engine settings](https://docs.vllm.ai/en/v0.11.0/configuration/engine_args.html), [sampling parameters](https://docs.vllm.ai/en/v0.11.0/api/vllm/sampling_params.html), [Modal published resource rates](https://modal.com/pricing). generation_config=vllm avoids implicit HF generation overrides; explicit primary EOS remains151643. Physical backend stop and frozen logical stop are reported separately.
