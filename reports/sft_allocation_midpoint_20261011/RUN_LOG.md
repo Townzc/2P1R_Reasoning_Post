@@ -1182,3 +1182,5 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 22:05:02UTC检查新Claude1ae0a75c/80comments，22:05:18.879502全文读bn报告SHA96fb995d，事件21:47:36。两closedfailed计量覆盖层90d6为PASS-WITH-NOTES，独立复算126c/释放374c且8新fixtures由reviewer通过；Codex没有重跑。必须以原proposal文件SHA5c22d61e或其后续链传previous，防止较低新meter降低已记下限。buffer未校准、不是invoice/退款；失败/build/storage均保留。
 
 报告旧622c余量/496c候选与100/10帽是历史范围，后来owner直接批准增帽、Codex有限分配110/20已单列。本次新38入口仍完整计752+252=1004c，不用释放额；新preclaim调用不伪装成旧有claim结算。当前新入口runtime/readonly/publisher和新P1journal均pending，0新调用，无actualA2/Stage1。下次正常review约22:35、不得早于22:20:19；不因预算规则通过替代确切运行审计。
+
+本轮bn接受记录及5成员公共包、工作日志已一次写完；最后用create-only dump更新已存在INDEX触发FileExistsError，原错误日志保留。仅完成未写的mutable INDEX尾部，没有重跑接受包builder、预算算术、测试、云或科学工作。

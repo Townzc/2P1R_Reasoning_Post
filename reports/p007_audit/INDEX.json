@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T22:04:28.836445+00:00",
+  "as_of_utc": "2026-10-14T22:06:42.863887+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1986,7 +1986,7 @@
       "manifest_sha256": "2708784b3bb0bf9bea7538d6968f8c34c04770493ea295d6a6fddfd382a3bcb3",
       "review_request": "reports/p009_20261014/closed_failure_budget_settlement_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T21:37:07.764063+00:00",
-      "status": "pending",
+      "status": "accepted",
       "blocking": false,
       "blocking_for": "Only a future admission using released reserves. New38 repair retains all752c and new252c within owner-amended2000c Stage0 without settlement.",
       "source_files": {
@@ -1998,7 +1998,16 @@
       "proposed_settled_failed_cents": 126,
       "proposed_release_cents": 374,
       "post_remainder_stage0_remaining_cents": 622,
-      "new_cloud_calls": 0
+      "new_cloud_calls": 0,
+      "decision": "PASS-WITH-NOTES",
+      "review_commit": "1ae0a75cd915921660feb00f9de0e00c3f5f0f5b",
+      "review_report": "audit/claude/20261014bn/REPORT.md",
+      "review_report_sha256": "96fb995deff3b430247fb2d34f56049c7b5feb894ef6c3bda7032a6d119e6495",
+      "review_read_utc": "2026-10-14T22:05:18.879502+00:00",
+      "acceptance_packet": "reports/p009_20261014/review_1ae0a75c_accepted_v1",
+      "required_previous_proposal_file_sha256": "5c22d61e840475ea86edd758fe44be87c7397fc4932e0211290d8944f7aa4f37",
+      "runtime_admitted": false,
+      "current_repair_uses_release": false
     },
     {
       "request_id": "p009-p0-entry-schema-repair-r1",
@@ -2449,9 +2458,10 @@
       "notify": "Only Stage1 results or genuine blockers; stay quiet for unchanged state."
     },
     "latest_read_review": {
-      "commit": "9609f778ac7071c489df0ecba6a8195c08dd669c",
-      "read_utc": "2026-10-14T20:45:39.002271+00:00",
-      "bi_bj_bk": "originalfast runtime/numeric, publisher, read-only scoped PASS-WITH-NOTES; original call failed, no actual A2"
+      "commit": "1ae0a75cd915921660feb00f9de0e00c3f5f0f5b",
+      "read_utc": "2026-10-14T22:05:18.879502+00:00",
+      "scope": "p009-closed-failure-metered-settlement-code-and-numeric",
+      "actual_science_passed": false
     },
     "math_scorer": {
       "status": "code_PASS-WITH-NOTES_actualP1_pending",
@@ -2576,6 +2586,12 @@
         "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
         "tests/test_p009_math_scoring_journal.py": "8c5242689aab3bde6829c7cc90a6517e9f120ea674a20a8098f7958e31aff6bd"
       }
+    },
+    "closed_failure_settlement": {
+      "status": "scoped_PASS_WITH_NOTES_previous_chain_required",
+      "acceptance_packet": "reports/p009_20261014/review_1ae0a75c_accepted_v1",
+      "target_commit": "90d6e260e8643b61bd9586114bfe24068a8b9f38",
+      "current_repair_uses_release": false
     }
   }
 }
