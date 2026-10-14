@@ -459,3 +459,9 @@ Exact47source remains accepted68c8bad5, execution4e6beb52. Original CLI51624stud
 实际报告e1d8d469/comment6175549931事件18:35:06UTC，完整读取18:49:40.942572UTC；总体PASS-WITH-REQUIRED-CLARIFICATIONS，Stage0输入PASS，不是runtime准入。R1固定S1 Stage1只用attempt01自身正确且格式合格，2–4次不得救资格；NC/S2源数据可到8次的差异披露。R2固定D从原seed17未按正确性筛选题序第一题起买、格式失败照收费；B上限包括遍历跳过题所有已尝试费用，A/B同P_nat。上述不改五组/剂量/100总帽。新补充包f1e6abd9de4d26150a33c285989236c663ed1acc共9成员逐Git字节核验、17资源tar回读；原15输入和P0源19未改。
 
 原审计未取得OLMo编码/完整dev候选，现附原分词器配置/卡和7个MATH原test分片。新本地BOS诊断2638默认/显式no-special/原存token均一致，0前导BOS；未下载权重/生成/评分。短示例4shot仅描述，不加3072实验。N3单批2美元是非阻塞建议，实际248cent/四prefix批P0精确方案另审，没把两者混成PASS；DESIGN/RUNTIME_ACCEPTED均未造。两个只读路径假设错误（review请求文件和INPUT_MANIFEST文件名）未写科学产物，改用实际目录；保留工具记录。新p009ACTIVE，旧两monitorPAUSED，0P009云调用。
+
+### 2026-10-14 12:01:41 PDT（P009未来完整答案训练计划候选，独立于P0）
+
+为减少后续训练准入等待，准备纯CPU计划/校验器；直接复用P008已发布1024LR向量14ac59d2及原文件cb9c2e04，不重算hostcos，不重启旧模型。固定1024updates/2097148targets、seed17/29、所有所选答案至少一次、q/q+1、完整EOS/遮罩/context2048；旧q0桥接与0.1%降量不继承。7新fixtures先通过；随后补整数metadata拒绝并只运行新增第8fixture（其setup也用最终源构造完整合成计划），不冒充最终源重跑全部7或真实训练。原两日志保留；实际学生数据计划/runtime/GPU均未建立。
+
+新immutablepacketc23ed87558685f152b2c03b4af9a75cef6c18ca7的13成员已逐Git字节核验；请求p009-training-plan-code-r1只挡未来计划代码，不挡P0。源snapshot保原字节，style检查排snapshot并准确限定。独立审计待真实反馈，0新增科学/收费调用。只读查找先猜不存在frozen_lr.py和zsh空glob失败，随后用rg实际文件定位，无写科学产物。旧两巡检PAUSED，新p009ACTIVE。

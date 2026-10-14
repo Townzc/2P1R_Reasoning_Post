@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T18:54:48.744255+00:00",
+  "as_of_utc": "2026-10-14T19:01:41.516630+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1733,6 +1733,19 @@
       "blocking": true,
       "blocking_for": "R1/R2 closure before P2 and explicit Stage0 design subsection verdict; exact P0 runtime independently pending",
       "created_utc": "2026-10-14T18:54:48.744255+00:00"
+    },
+    {
+      "request_id": "p009-training-plan-code-r1",
+      "scope": "p009-whole-answer-training-plan-code",
+      "target_commit": "c23ed87558685f152b2c03b4af9a75cef6c18ca7",
+      "packet": "reports/p009_20261014/training_plan_preflight_v1",
+      "manifest": "reports/p009_20261014/training_plan_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "8403f2def5936ab7a2cbf7fa526439c33bfd60cb288a60987fb11893f301e156",
+      "review_request": "reports/p009_20261014/training_plan_preflight_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T19:01:41.516630+00:00",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Future Stage1/2 pure plan code only, independent of P0. No actual selected-data plans or runtime admitted."
     }
   ],
   "p008_v31": {
@@ -2083,6 +2096,12 @@
       "target_commit": "f1e6abd9de4d26150a33c285989236c663ed1acc",
       "R1_R2": "frozen before any P009 outputs; closure pending",
       "p0_sources_unchanged": true
+    },
+    "training_plan_code": {
+      "target_commit": "c23ed87558685f152b2c03b4af9a75cef6c18ca7",
+      "status": "prepared_pending_code_review_no_actual_plans",
+      "packet": "reports/p009_20261014/training_plan_preflight_v1",
+      "original_1024_lr_sha256": "14ac59d273e901d23524a077fd6b89c393f698f07fb0da0bc71a1c8d46f08a73"
     }
   }
 }
