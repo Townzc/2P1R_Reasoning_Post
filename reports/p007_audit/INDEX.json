@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T19:01:41.516630+00:00",
+  "as_of_utc": "2026-10-14T19:08:26.933752+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1667,7 +1667,7 @@
       "manifest": "reports/p009_20261014/design_and_inputs_v1/MANIFEST.json",
       "manifest_sha256": "8ad23ec5f042bc66894949e9bc906f890308c54309b5debde688ac8c441b882a",
       "status": "PASS-WITH-REQUIRED-CLARIFICATIONS",
-      "blocking": true,
+      "blocking": false,
       "blocking_for": "P009 A0 and Stage0 input acceptance. This packet is not a runtime admission; separate exact A1 remains mandatory.",
       "review_request": "reports/p009_20261014/design_and_inputs_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T18:22:12.776721+00:00",
@@ -1681,7 +1681,9 @@
       "report_sha256": "7641217c0a16df13b636c0e39c645a5dfd5118e388f70b6c73580fa1b00b14ed",
       "review_read_utc": "2026-10-14T18:49:40.942572+00:00",
       "stage0_inputs": "PASS; OLMo structural-only in original review",
-      "required_clarifications": "R1/R2 freeze before P2 outputs; own later stages only; separate exact runtime still mandatory"
+      "required_clarifications": "R1/R2 freeze before P2 outputs; own later stages only; separate exact runtime still mandatory",
+      "stage0_scoped_decision": "PASS-WITH-NOTES explicitly in20261014bb",
+      "scope_equivalence_report_sha256": "e09115593c31bcf29b3e490c4f70784592d5b8c7264c953c7024ea4227373f34"
     },
     {
       "request_id": "p009-p0-parity-runtime-r1",
@@ -1690,8 +1692,8 @@
       "packet": "reports/p009_20261014/p0_runtime_preflight_v1",
       "manifest": "reports/p009_20261014/p0_runtime_preflight_v1/MANIFEST.json",
       "manifest_sha256": "872e60e2fc074d247b8632e46289714a70af18d52c34edd0031a192612b74182",
-      "status": "pending",
-      "blocking": true,
+      "status": "PASS-WITH-NOTES",
+      "blocking": false,
       "blocking_for": "Only new P0 parity source/bootstrap numeric admission; A0 remains independently required. No cloud work yet.",
       "review_request": "reports/p009_20261014/p0_runtime_preflight_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T18:41:07.095812+00:00",
@@ -1700,7 +1702,12 @@
         "Explicit first4 full batches per role within same outputs,1200worker/248c finite allowance; no pre-existing timing assumed.",
         "One permanent pairclaim, raw preservation before validity check, process cleanup and independentCPU oracle; no retries.",
         "Scope/plan/source/spec cdb52f9b9b726fbc5276230ce674084d72baeb3a3943a567cf412b46ce22df77, review/report/readback/fresh budget required before upload/dispatch."
-      ]
+      ],
+      "review_commit": "0fabdde8461a1a3ef75e63bb6edce38835aee04e",
+      "report_path": "audit/claude/20261014bb/REPORT.md",
+      "report_sha256": "e09115593c31bcf29b3e490c4f70784592d5b8c7264c953c7024ea4227373f34",
+      "bootstrap_exception_accepted": true,
+      "read_utc": "2026-10-14T19:05:51.122540+00:00"
     },
     {
       "request_id": "p009-math-scorer-code-r1",
@@ -1710,15 +1717,20 @@
       "manifest": "reports/p009_20261014/math_scorer_candidate_v1/MANIFEST.json",
       "manifest_sha256": "fe6d0849c876a2fbbd1bf015587cb4df30f4a599bbfabba1fe8ec0b6be0c2e57",
       "review_request": "reports/p009_20261014/math_scorer_candidate_v1/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "PASS-WITH-NOTES",
+      "blocking": false,
       "blocking_for": "Future MATH scoring/P1 code only; independent of and does not block P0. Actual50disagreement audit remains mandatory.",
       "created_utc": "2026-10-14T18:46:29.396245+00:00",
       "questions": [
         "Pinned0.9.0/1.11.0/ANTLR4.13.2/Sympy1.14 and installedsourcehashes.",
         "Finalbox, capsincorrect, symbolicFalsefinal, boundedprocessfallback and teacherlabel eligibility.",
         "Eleven synthetic checks are not real-outputP1; retain required50training-response disagreements before studentselection."
-      ]
+      ],
+      "review_commit": "0fabdde8461a1a3ef75e63bb6edce38835aee04e",
+      "report_path": "audit/claude/20261014bc/REPORT.md",
+      "report_sha256": "8e971d372ef16c74b60d488e20c5e32176a608e74335615c12cc9d5268896a1f",
+      "read_utc": "2026-10-14T19:05:51.774392+00:00",
+      "P1_actual_review": "not performed"
     },
     {
       "request_id": "p009-a0-required-clarifications-r1",
@@ -1731,8 +1743,10 @@
       "review_request": "reports/p009_20261014/A0_CLARIFICATIONS_REVIEW_REQUEST.md",
       "status": "pending",
       "blocking": true,
-      "blocking_for": "R1/R2 closure before P2 and explicit Stage0 design subsection verdict; exact P0 runtime independently pending",
-      "created_utc": "2026-10-14T18:54:48.744255+00:00"
+      "blocking_for": "R1/R2 later selection/stage1/2 closure only; Stage0 scoped verdict explicitly granted by20261014bb, not a P0 blocker",
+      "created_utc": "2026-10-14T18:54:48.744255+00:00",
+      "followup_preoutput_identity_commit": "defba927",
+      "followup_identity_policy": "reports/p009_20261014/DUPLICATE_IDENTITY_POLICY.json"
     },
     {
       "request_id": "p009-training-plan-code-r1",
@@ -2039,7 +2053,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "stage0_inputs_reviewed_R1_R2_published_exact_P0_runtime_pending_zero_calls",
+    "status": "P0_exact_review_accepted_preparing_single_original_call",
     "total_cap_usd": 100,
     "stage_caps_usd": {
       "stage0": 10,
@@ -2072,7 +2086,7 @@
       "worker_seconds": 1200,
       "reserved_usd": 2.48,
       "scope": "p009-p0-parity-runtime-and-bootstrap-numeric",
-      "status": "pending"
+      "status": "PASS-WITH-NOTES exact0fabdde8, bootstrapaccepted, no call yet"
     },
     "automation": {
       "id": "p009",
@@ -2081,13 +2095,15 @@
       "notify": "meaningful change, completion, failure, owner action only"
     },
     "latest_read_review": {
-      "commit": "e1d8d469399f214bc156985f5979c5eeee498ad7",
-      "read_utc": "2026-10-14T18:49:40.942572+00:00",
-      "scope": "A0 PASS-WITH-REQUIRED-CLARIFICATIONS; Stage0 inputs PASS; not runtime admission",
-      "disposition": "reports/p009_20261014/a0_required_clarifications_v1"
+      "commit": "0fabdde8461a1a3ef75e63bb6edce38835aee04e",
+      "read_utc": "2026-10-14T19:05:51.774392+00:00",
+      "P0": "runtime_and_bootstrap_numeric_PASS-WITH-NOTES",
+      "A0": "explicit_stage0_scoped_PASS-WITH-NOTES; R1/R2laterclosurepending",
+      "MATH": "candidate_code_PASS-WITH-NOTES; realP1pending",
+      "packet": "reports/p009_20261014/p0_and_math_code_review_accepted_v1"
     },
     "math_scorer": {
-      "status": "candidate_code_pending_real_P1_not_run",
+      "status": "code_PASS-WITH-NOTES_actualP1_pending",
       "target_commit": "4c652b03f6e319c82abb095d03577af631fa2ddc",
       "source_sha256": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
       "packet": "reports/p009_20261014/math_scorer_candidate_v1"
@@ -2107,6 +2123,7 @@
       "path": "reports/p009_20261014/ANALYSIS_CONVENTION.json",
       "status": "frozen_before_any_P009_outcomes_actualanalysis_notrun",
       "source_sha256": "ec9f46f20b2b1560a8064911172d3afb882367e7e4c97e8232c837542b02991f"
-    }
+    },
+    "latest_budget": "reports/p009_20261014/P0_BUDGET_1907.json"
   }
 }

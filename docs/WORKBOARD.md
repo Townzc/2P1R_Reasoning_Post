@@ -465,3 +465,11 @@ Exact47source remains accepted68c8bad5, execution4e6beb52. Original CLI51624stud
 为减少后续训练准入等待，准备纯CPU计划/校验器；直接复用P008已发布1024LR向量14ac59d2及原文件cb9c2e04，不重算hostcos，不重启旧模型。固定1024updates/2097148targets、seed17/29、所有所选答案至少一次、q/q+1、完整EOS/遮罩/context2048；旧q0桥接与0.1%降量不继承。7新fixtures先通过；随后补整数metadata拒绝并只运行新增第8fixture（其setup也用最终源构造完整合成计划），不冒充最终源重跑全部7或真实训练。原两日志保留；实际学生数据计划/runtime/GPU均未建立。
 
 新immutablepacketc23ed87558685f152b2c03b4af9a75cef6c18ca7的13成员已逐Git字节核验；请求p009-training-plan-code-r1只挡未来计划代码，不挡P0。源snapshot保原字节，style检查排snapshot并准确限定。独立审计待真实反馈，0新增科学/收费调用。只读查找先猜不存在frozen_lr.py和zsh空glob失败，随后用rg实际文件定位，无写科学产物。旧两巡检PAUSED，新p009ACTIVE。
+
+### 2026-10-14 12:08:26 PDT（P009 P0确切运行/首次测量例外通过，准备单次派发）
+
+真实Claude0fabdde8完整bb/bc报告19:05:51读取、comment事件18:55:02。bb明确19source/spec cdb52f9b/248cent/1200worker/每role首4完整prefix批例外PASS-WITH-NOTES，并明确将原A0对Stage0限定为PASS-WITH-NOTES；原整体required-clarifications与后续R1/R2审计仍保留。已保存真实DESIGN_ACCEPTED/RUNTIME_ACCEPTED，没修改旧源或造PASS。bc仅候选评分代码PASS，实际P1尚缺；fallback超过2%须固定hash最多25人工/AI抽查、报告无bracebox/不支持gold与计时，长期进程池建议尚未实现，不能代替审计。
+
+必要新费用快照19:06:28阶段请求已完成，workspace235.101855delayed/billed0；保守近高235.6920755加25lag估计，再加新100=360.6920755<450（账本向上取整360.70），不称invoice/balance/严格上界。P0单slot248c在Stage0$10内，失败费用/旧claim均保留。原1024LR新纯计划候选c23ed875、bootstrap method预输出冻结e5c79962、duplicate925canonical预正确性选择defba927均不更改P0源19；后两无实际统计/模型输出。
+
+此条记录时0P009云调用；之后一次上传/回读/真实source/provider/无旧claim检查满足才提交ONLYmodal_p0。估计500–1300秒和EOS行为为reviewer预计，不是实测保证；若失败只保全原尝试，禁止自动重跑。
