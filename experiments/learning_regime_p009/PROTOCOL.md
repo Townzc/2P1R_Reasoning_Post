@@ -107,6 +107,13 @@ attempts for a fixed hash-selected500 supported rows: maximum8,993 outputs.
 All first attempts precede the preselected attempt2..4 rows. Selection uses only
 IDs before seeing outputs. Teacher input plus full generation cap must fit2,048.
 
+R1, frozen before any P2 output: S1 Stage1 eligibility uses **attempt01 only**.
+That first output must itself be format-eligible and correct, and that exact
+output is the training answer. A success on attempt02..04 cannot rescue an
+ineligible first attempt. Extra attempts serve descriptive retry analysis and
+Stage2 only. This differs from NC/S2, which reuse D1 answers correct within up
+to eight attempts; report the cross-setting eligibility difference explicitly.
+
 P0: two new parity evaluations only, on the existing base638 reference and the
 correct breadth969 replacement checkpoint SHA
 `c3e6de44d072defadee03d552c98874c9937ad14614454540a8f2812999cc341`.
@@ -138,7 +145,8 @@ questions. Fixed hash order selects four whole demonstrations each<=57 Qwen
 tokens (no answer shortening): prealgebra/test/537,
 counting_and_probability/test/460, precalculus/test/320, prealgebra/test/744.
 Maximum resulting MATH-500 prompt978 leaves all1,024 output tokens. This
-length-conditioned dev selection is disclosed. GSM reuses the original four
+length-conditioned dev selection is disclosed as "short-demo 4-shot", not a
+representative demonstration sample. GSM reuses the original four
 dev examples; OLMo maximum four-shot prompt853. No test answers select examples.
 
 G0 per candidate: teacher−student0-shot>=20pp; every relevant complete endpoint
@@ -172,18 +180,29 @@ Only the G1-selected setting enters. n*=1,600 unless its seed17 n1,600 accuracy
 is within1pp of n3,200 or higher, in which case n*=400. Maximum four teacher
 attempts per question. Use only native-EOS, untruncated, parseable outputs.
 
-- P_nat follows the seed17 question order and retains n* questions with a
-  usable correct answer within4 attempts. Count all skipped/censored questions
-  and their generation costs. A and B must have the same eligible question set.
+- P_nat follows the raw seed17 question order and retains n* questions whose
+  attempt01 is format-eligible and which have an eligible correct answer within
+  four attempts. Freeze this order over the supported unique-question domain
+  before correctness filtering. Count every traversed/skipped/censored question
+  and every attempted output in the acquisition trace. A and B have this same
+  eligible question set.
 - A uses the literal first attempt, irrespective of correctness. If that first
   attempt is not format-eligible, it cannot be replaced silently with a later
   one; matched-set eligibility and all excluded costs require exact A6 review.
 - B uses the first eligible correct attempt.
-- D uses first attempts on P_nat and then subsequent new questions under B's
-  total teacher-token ceiling. Every failed/filtered/duplicate attempt counts.
+- R2, frozen before any P2 output: B's teacher-token ceiling includes every
+  attempt on every question it traverses in the raw seed17 order until P_nat
+  reaches n*, including failed attempts and questions it skips. D starts at the
+  **first question of that same raw order**, never at the filtered P_nat list.
+  D buys one first attempt per traversed question, charges format-ineligible
+  outputs too, and retains each format-eligible first attempt regardless of
+  correctness. D receives no free knowledge of whether retries could succeed.
   Whole outputs are indivisible: stop before the next first attempt would exceed
-  the ceiling. Report exact unused slack; call this a common spending ceiling,
+  B's ceiling. Report exact unused slack; call this a common spending ceiling,
   not exactly equal realized token expenditure. No fractional answer truncation.
+  A6 must bind the actual raw roster, cost trace and censored next item. All real
+  generation charges, including any output excluded by a virtual ceiling, remain
+  in the physical/project ledger; a virtual comparison never erases paid work.
 - P_mix follows the same order, at most n* questions with both eligible correct
   and wrong answers within4 attempts. B-prime uses first correct and C first
   wrong on this identical set. If fewer than300 eligible questions, C is omitted

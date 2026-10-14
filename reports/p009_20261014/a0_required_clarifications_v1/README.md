@@ -1,0 +1,10 @@
+# P009 A0 required clarifications — before any model output
+
+The original report gives **PASS-WITH-REQUIRED-CLARIFICATIONS**; Stage0 inputs pass, while R1/R2 govern later stages. This supplement freezes those definitions before P2 and preserves the original target/input bytes. It does not create a runtime acceptance.
+
+- **R1:** S1 Stage1 uses only an eligible/correct attempt01 answer. Attempts02–04 cannot admit a question. NC/S2 reuse D1 successes within up to eight attempts, a disclosed cross-setting difference.
+- **R2:** B pays for attempts on all questions it traverses, including skipped failures. D starts from the first question of the same raw seed17 order, pays for every first attempt, and retains format-eligible first attempts irrespective of correctness. P_nat requires format-eligible attempt01 plus eligible correctness within four attempts. No free label-based skipping; physical costs remain separate from virtual comparison ceilings.
+- **N1/N2:** MATH is labeled short-demo4shot. The supplementary archive contains the seven original MATH test shards, plus pinned OLMo tokenizer/config/card files. The new BOS check confirms default tokenization equals explicit no-special encoding for all2,638 stored OLMo prompts. Future training uses that same no-leading-BOS convention and a single answer EOS100257.
+- **N3:** The exact P0 bootstrap request is already separate. It proposes one1,200s worker/$2.48 reservation and four paid complete prefix batches per role, all retained in the two full endpoints. The report's onebatch/$2 suggestion is not recorded as approval of that different exact proposal.
+
+No model weights downloaded, no raw outputs rescored, no cloud upload/image/claim/model call. Original P0 source19 and original immutable design/input packet are unchanged. Exact runtime review remains mandatory. Please explicitly close the R1/R2 clarifications and give a scoped Stage0 design verdict tied to the original target plus this supplement; the current P0 gate cannot consume the broader required-clarifications verdict as an invented PASS.

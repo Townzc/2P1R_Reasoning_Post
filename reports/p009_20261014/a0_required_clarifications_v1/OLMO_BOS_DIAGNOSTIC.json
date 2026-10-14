@@ -1,0 +1,32 @@
+{
+  "add_bos_token": false,
+  "bos_token_id": 100257,
+  "checks": [
+    {
+      "default_leading_bos_count": 0,
+      "default_vs_no_special_mismatches": 0,
+      "endpoint": "olmo_gsm_zero",
+      "n": 1319,
+      "stored_mismatches": 0
+    },
+    {
+      "default_leading_bos_count": 0,
+      "default_vs_no_special_mismatches": 0,
+      "endpoint": "olmo_gsm_four",
+      "n": 1319,
+      "stored_mismatches": 0
+    }
+  ],
+  "convention": "No leading BOS; add_special_tokens=False for prompts and answer text; append exactly one native EOS100257 to supervised full answers. No chat template for this base model.",
+  "eos_token_id": 100257,
+  "evidence": "Pinned model card uses the default tokenizer call; config/generation_config do not add BOS; tokenizer has no postprocessor. Default equals explicit no-special encoding for all2638 frozen OLMo endpoint prompts. Training must use the same explicit convention.",
+  "model_calls": 0,
+  "model_config_has_bos": false,
+  "model_revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+  "observed_utc": "2026-10-14T18:53:09.840500+00:00",
+  "pad_token_id": 100277,
+  "scoring_calls": 0,
+  "tokenizer_class": "GPT2TokenizerFast",
+  "tokenizer_json_postprocessor": null,
+  "transformers": "4.56.2"
+}
