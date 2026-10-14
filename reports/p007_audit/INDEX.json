@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T06:18:52.828263+00:00",
+  "as_of_utc": "2026-10-14T07:10:34.800178+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1530,6 +1530,26 @@
       "review_event_utc": "2026-10-14T06:04:06Z",
       "review_read_utc": "2026-10-14T06:12:17.731904+00:00",
       "disposition": "reports/p008_20261013/review_24ef9fd7_accepted_v1/DISPOSITION.md"
+    },
+    {
+      "request_id": "exploratory-20261014-three-run-code-data-r1",
+      "target_commit": "32c473d6d1eebbbbf81792df639ab5b36674d851",
+      "packet": "reports/exploratory_20261014/admission_v1",
+      "manifest": "reports/exploratory_20261014/admission_v1/MANIFEST.json",
+      "manifest_sha256": "546138b5676049c0a09587f433141ef8dd28f1108dda83f8ec66aea73140dbad",
+      "status": "pending",
+      "external_review": "PENDING",
+      "scope": "exploratory-20261014-code-and-data",
+      "blocking": true,
+      "blocking_for": "Only the NEW three exploratory slots. Original P008 closed, p007 remains paused.",
+      "review_request": "reports/exploratory_20261014/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T07:10:34.800178+00:00",
+      "questions": [
+        "Exact37source + IO helper; original864eligible/429selected from101parents, reserveddev4shots and model/template/dualEOS.",
+        "Same frozen256LR/524287targets schedule and sole1319endpoint; no gold-target substitution, cap scores incorrect.",
+        "Three once-only slots6001seconds/$24.78 plus$5.22 overhead within$30; originalproject450/50protected, no automatic retry or oldclaim reuse.",
+        "Full new raw/state oracle, frozen input tokenizations, one pinned generalInstruct download within same paid worker; reviewer explicit scope/source/spec/input/helper hashes."
+      ]
     }
   ],
   "p008_v31": {
@@ -1748,5 +1768,16 @@
     },
     "handoff": "reports/p008_20261013/final_handoff_20261013_v1/README.md",
     "handoff_commit": "031462f90c3da1eea4e636fd8f4d10d2a5a83d9b"
+  },
+  "exploratory_20261014": {
+    "status": "prepared_review_pending_zero_calls",
+    "owner_approved": true,
+    "stage_cap_USD": 30,
+    "scientific_slots": 3,
+    "preregistered": false,
+    "packet": "reports/exploratory_20261014/admission_v1",
+    "fixed_target": "32c473d6d1eebbbbf81792df639ab5b36674d851",
+    "original_p007": "PAUSED",
+    "scope": "New explicit authorization; does not reopen original P008"
   }
 }
