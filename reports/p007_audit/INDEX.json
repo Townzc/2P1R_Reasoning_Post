@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T07:10:34.800178+00:00",
+  "as_of_utc": "2026-10-14T08:18:54.684610+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -1564,17 +1564,43 @@
       "packet": "reports/exploratory_20261014/vocab_cache_proposal_v1",
       "manifest": "reports/exploratory_20261014/vocab_cache_proposal_v1/MANIFEST.json",
       "manifest_sha256": "71b7981ece7c891d2bda2da80c5c5e2a3268d46c1f4a74caa362164c8d02ef00",
-      "status": "pending",
-      "external_review": "PENDING",
+      "status": "accepted_proposal_code_only",
+      "external_review": "PASS",
       "scope": "exploratory-vocabulary-cache-proposal-code",
       "blocking": false,
-      "blocking_for": "Proposal only, not the three active original workers. No future runtime or retry admitted.",
+      "blocking_for": "Proposal code only. Three originals owner-stopped; no executable continuation or retry admitted.",
       "review_request": "reports/exploratory_20261014/vocab_cache_proposal_v1/REVIEW_REQUEST.md",
       "created_utc": "2026-10-14T08:00:07.905303+00:00",
       "questions": [
         "Verify cached vocabulary scalar is semantically identical for the frozen tokenizer; original first-stop and parser stay unchanged.",
         "Verify4new synthetic tests and32saved stop-event matches; local lookup timing and original ack intervals are not a calibrated cloud speed guarantee.",
         "Confirm unapplied diff/no live37source edits/no new calls/no permission to hotpatch or retry."
+      ],
+      "review_commit": "0b63a8095209cb6dbaebdf7055d53ee5dc08cdb8",
+      "review_report_path": "audit/claude/20261014at/REPORT.md",
+      "review_report_sha256": "e68a609f2cebc322bc742f18993225cb207ccf45eeea0fdd5ec84c59f9f52007",
+      "read_at_utc": "2026-10-14T08:16:26.167096+00:00",
+      "acceptance": "reports/exploratory_20261014/review_0b63a809_accepted_v1/ACCEPTED.json",
+      "runtime_admitted": false,
+      "retry_or_continuation_authorized": false
+    },
+    {
+      "request_id": "exploratory-owner-stop-preservation-r1",
+      "target_commit": "bdf2ffd36ffe07ac94b7cd5c03290f0a20092c1d",
+      "packet": "reports/exploratory_20261014/owner_stop_preservation_v1",
+      "manifest": "reports/exploratory_20261014/owner_stop_preservation_v1/MANIFEST.json",
+      "manifest_sha256": "94a35853a3beef3a91354e71400326d69f794655294820092e59105a82f38185",
+      "status": "pending",
+      "external_review": "PENDING",
+      "scope": "exploratory-owner-stop-preservation",
+      "blocking": false,
+      "blocking_for": "Stopped original evidence review only; no new model calls admitted.",
+      "review_request": "reports/exploratory_20261014/owner_stop_preservation_v1/REVIEW_REQUEST.md",
+      "created_utc": "2026-10-14T08:18:54.684610+00:00",
+      "questions": [
+        "Verify three original failed terminals and STOPPED0 provider projection; no new call/retry/remote claim edits.",
+        "Verify690 preserved files and272/144/80 saved raw inventories, with16 unacknowledged rows per run and no partial-score claim.",
+        "Verify original256-step/524287-target checkpoint proof, full-state SHA and16 block acknowledgments; public proof is not reviewer binary access."
       ]
     }
   ],
@@ -1805,5 +1831,15 @@
     "fixed_target": "32c473d6d1eebbbbf81792df639ab5b36674d851",
     "original_p007": "PAUSED",
     "scope": "New explicit authorization; does not reopen original P008"
+  },
+  "exploratory_owner_stop": {
+    "recorded_at_utc": "2026-10-14T08:18:54.684610+00:00",
+    "all_three_stopped": true,
+    "active_containers": 0,
+    "packet_target": "bdf2ffd36ffe07ac94b7cd5c03290f0a20092c1d",
+    "cache_proposal_code_review": "PASS",
+    "runtime_admitted": false,
+    "retry_or_extra_budget_authorized": false,
+    "p007": "PAUSED"
   }
 }
