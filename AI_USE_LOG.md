@@ -2562,3 +2562,12 @@ Third disjoint wave75040 DONE03:18:35; exports23879/28995 and independent oracle
 ### 2026-10-14T03:28:19.335886+00:00 — Five actual T8 G3 reviews accepted, final original host continues
 
 Inspector58667 DONE actual03:26:00UTC: seven originalcompleted terminals; onlyD2p4D active1container, noresult/error, saved2048/4194296 and1056endpoint outputs. No partialscore. Review/Papers80861 DONE03:25:55, newClaude2a236343/61comments andPaperssameea8befd5; fullreport03:26:49read. Five G3PASS bindfirsttwo packetcommits,6595raw/dose/lineage,publicstateSHAonly. One reviewer-parser falsepositive remains reviewer-reported, no Codex selecteddecode orprimarychange. Clarify originalactual_cost_cents1253 isreservation, supplement5 totals1258/invoiceunknown. Observed five runtimes5666–7119s donotretroactivelypassN2orproveotherhosts; originalFAIL/deviationkept. D2p0pair G3pending,lastD2p4D modelactive,complete19analysis/CPU notrun.
+
+
+### 2026-10-14T03:47:07.444423+00:00 — All finite model calls closed; complete registered analysis prepared
+
+Last originalD2p4D completed03:37:42UTC, exactSTOPPED20:37:44PDT/0containers read03:39:17. OriginalCLI74595 consumedexit0. Fourth disjoint wave76455, export78367, oracle68339 and exactv2publisher DONE once:990/1319,36caps,4701artifactSHA,2048updates4194296targets/full1024+2048state,0unknown. No callback recovery or model replay. The final once-only local oracle took4.21956s, retained as local-host timing observation, not a cloudCPU guarantee. All18logicalstudents+base now locally closed.
+
+FullreadClaude3c15e24c03:44:26/event03:38:10 accepts D2p0pair G3;7/8T8 externallyPASS, lastnewpacketpending. Paperssameea8befd5. Exactly one accepted prepare_registered_p008_analysis and publisher_v2 executed:19cells,18registeredmain+4conditionalbridges+9observeddrawmeans,10kshared-questionbootstrapseed20261013; threePNGactuallyviewed/readable. No rawrescoring/statisticalmethod substitution or omitted contrasts. Sourcepublication/finalG3 and finalCPU integrity remain separate pending. OriginalN2FAIL/posthoc9600 and allfailedphysicalparents preserved;21PDTmaterialsfreeze remains.
+
+Read-only preparation errors retained: initial unmatched shell glob for material paths and guessed missing TRANSFER_VERIFIED filename caused no file/data/remote writes; subsequent reads used discovered exact paths. No failed helper rerun. Saved24existingHTTPstate-transfer measurements minimum10.020938MB/s are localtransport observations, not CPU/FUSE timings or numericadmission.
