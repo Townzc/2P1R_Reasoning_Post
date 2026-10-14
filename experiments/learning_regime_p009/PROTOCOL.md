@@ -95,9 +95,14 @@ MATH source pins: EleutherAI/hendrycks_math
 `6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be`. Exact normalized-text audit finds
 zero train/MATH-500 overlap. This is not a semantic or pretraining-contamination
 guarantee. MATH contains7,500 rows but7,499 normalized unique questions; the
-duplicate algebra/train/925 and959 remains in acquisition accounting. Future
-unique-question student curves retain the earliest eligible source row, with
-both original generation costs retained.
+duplicate algebra/train/925 and959 remains in acquisition accounting. For future
+unique-question student curves and Stage2 raw rosters, choose the earliest source
+row in the frozen original file order **before reading correctness**. For the
+known pair this is algebra/train/925; train/959 cannot supply a second first-try
+eligibility chance. Both original generation costs remain in physical accounting,
+and both raw records stay preserved. The immutable initial input SUMMARY used
+the earlier wording "earliest eligible"; this pre-output R1 clarification
+supersedes that downstream selection wording, without changing the8,993 requests.
 
 Seven teacher-context exclusions, explicitly approved by the owner:
 counting_and_probability/train/603; geometry/train/101,388,522,543;

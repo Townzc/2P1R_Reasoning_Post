@@ -1,0 +1,22 @@
+{
+  "schema": "p009_preoutput_normalized_question_identity_v1",
+  "frozen_utc": "2026-10-14T19:04:58.461962+00:00",
+  "original_input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
+  "duplicate_group": {
+    "problem_ids": [
+      "math/algebra/train/925",
+      "math/algebra/train/959"
+    ],
+    "question_sha256": "c5056007477fb16b7e629ec24b041027dccef1eda92e1f72d05f68862f2a3c85"
+  },
+  "canonical_problem_id": "math/algebra/train/925",
+  "excluded_from_downstream_identity": "math/algebra/train/959",
+  "canonical_selection": "earliest source row in frozen original JSONL order, before correctness",
+  "stage1_s1_answer": "canonical source attempt01 itself must be format-eligible and correct; duplicate row cannot rescue eligibility",
+  "stage2_attempt_identity": "Use canonical source candidate IDs only; no borrowing noncanonical duplicate attempt01 as an extra draw; actual lineage/cost code still requires A6",
+  "physical_generations_preserved": 8993,
+  "duplicate_generation_costs_retained": true,
+  "original_input_files_changed": false,
+  "P009_outputs_observed": 0,
+  "scope": "R1 uniform eligibility refinement before any output; exact reviewer closure pending"
+}
