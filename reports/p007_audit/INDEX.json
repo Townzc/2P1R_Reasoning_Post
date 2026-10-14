@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-14T21:57:59.350122+00:00",
+  "as_of_utc": "2026-10-14T22:04:28.836445+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2090,6 +2090,29 @@
       "blocking_for": "Only new repaired-entry completed-result publisher; not runtime admission",
       "new_cloud_calls": 0,
       "source_sha256": "d5d08c20c3ee10585cd7360559af0f4ea45c3142928a1c9d62d8dfe01a80ecb3"
+    },
+    {
+      "request_id": "p009-math-p1-durable-journal-r1",
+      "scope": "p009-math-p1-durable-journal-code",
+      "target_commit": "542b453f5004f8c0e8ec16107bb65cf26e9e6558",
+      "packet": "reports/p009_20261014/math_journal_preflight_v1",
+      "manifest": "reports/p009_20261014/math_journal_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "819ae59d67753c06592a2fc3944b5db3641c4533f089b1226f319dedf6593e09",
+      "review_request": "reports/p009_20261014/math_journal_preflight_v1/REVIEW_REQUEST.md",
+      "source_files": {
+        "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+        "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+        "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+        "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
+        "tests/test_p009_math_scoring_journal.py": "8c5242689aab3bde6829c7cc90a6517e9f120ea674a20a8098f7958e31aff6bd"
+      },
+      "created_utc": "2026-10-14T22:04:28.836445+00:00",
+      "status": "pending",
+      "blocking": false,
+      "blocking_for": "Only the future local durable P1 journal; not P0 repair or other independent code preparation",
+      "actual_P1_rows_scored": 0,
+      "actual_symbolic_attempts": 0,
+      "scientific_gate_passed": false
     }
   ],
   "p008_v31": {
@@ -2541,6 +2564,18 @@
       "new_calls": 0,
       "inherited_outputs": 256,
       "new_outputs": 2382
+    },
+    "math_durable_journal": {
+      "status": "code_only_pending_actualP1_not_run",
+      "target_commit": "542b453f5004f8c0e8ec16107bb65cf26e9e6558",
+      "packet": "reports/p009_20261014/math_journal_preflight_v1",
+      "source_files": {
+        "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+        "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+        "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+        "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
+        "tests/test_p009_math_scoring_journal.py": "8c5242689aab3bde6829c7cc90a6517e9f120ea674a20a8098f7958e31aff6bd"
+      }
     }
   }
 }
