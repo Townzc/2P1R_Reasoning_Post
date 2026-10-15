@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T06:30:53.623088+00:00",
+  "as_of_utc": "2026-10-15T06:40:33.283130+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2938,12 +2938,16 @@
         "scripts/publish_p009_stage0_result.py": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26"
       },
       "review_request": "reports/p009_20261014/stage1_nc_replacement_closeout_preflight_v1/REVIEW_REQUEST.md",
-      "status": "pending",
+      "status": "completed_PASS-WITH-NOTES_historical49_scope_only",
       "blocking": false,
       "blocking_for": "Only these new read-only observation/startup/pair-publication paths; does not block the separately-reviewed49-source model admission.",
       "actual_execution": false,
       "created_utc": "2026-10-15T05:45:51.854817+00:00",
-      "current_applicability": "Original49 entry failed before claim. These old helpers are not executable for the new53 repair; original request and any report remain historical."
+      "current_applicability": "Original49 entry failed before claim. These old helpers are not executable for the new53 repair; original request and any report remain historical.",
+      "acceptance_packet": "reports/p009_20261014/review_7a764470_historical_acceptance_v1",
+      "report_commit": "7a764470fb90e8f8a7764024393ee52bcbb81db4",
+      "report_sha256": "3af2fd6a4a5f13237e2a549009503fe04e21918029f65e234b2c9e2faab0e0e7",
+      "read_utc": "2026-10-15T06:33:49.811443+00:00"
     },
     {
       "request_id": "p009-stage1-NC-guard-intent-repair-r1",
@@ -3090,6 +3094,27 @@
       "owner_proxy_comment_required_prefix": "【Owner 代理决定】",
       "owner_proxy_expires_utc": "2026-10-15T14:00:00+00:00",
       "failure_packet": "reports/p009_20261014/stage1_nc_replacement_preclaim_failure_v1"
+    },
+    {
+      "request_id": "p009-stage1-NC-guard-repair-closeout-code-r1",
+      "scope": "p009-stage1-NC-guard-repair-observation-and-pair-publication-code",
+      "target_commit": "8154c25b3c2300e9d95d70576e95081b11426f3c",
+      "packet": "reports/p009_20261014/stage1_nc_guard_repair_closeout_preflight_v1",
+      "manifest": "reports/p009_20261014/stage1_nc_guard_repair_closeout_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "9a4f0f216af16552213f9d369edf8a29f68f5e826f9067db68e884fde00d32d7",
+      "source_files": {
+        "scripts/p009_nc_guard_repair_observe.py": "a39fb1c79627f09dd29caf3618ce3f56827d6f99a6007f72696244f57aa00ed5",
+        "scripts/publish_p009_nc_guard_repair_pair.py": "5ea01d95110fee8efd286343041c4778615a0b0919e0bf0d5f35d40539e92e2f",
+        "scripts/publish_p009_stage0_result.py": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26"
+      },
+      "runtime_target": "e8f57a1973cacf7efd508b59df9a94fda1539a1a",
+      "runtime_spec_sha256": "ab01c527ea82d1dd72ad78960bc00709063e3ad22d4e9793ae1d4305540f18b5",
+      "review_request": "reports/p009_20261014/stage1_nc_guard_repair_closeout_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only new53-source observer/startup/pair publication; independent repair runtime and owner decision remain separate.",
+      "actual_execution": false,
+      "created_utc": "2026-10-15T06:40:33.283130+00:00"
     }
   ],
   "p008_v31": {
@@ -3940,7 +3965,10 @@
       "new_proposed_cents": 655,
       "stage1_cap_cents": 5000,
       "experiment_cap_cents": 13000,
-      "additional_150_authority_used_cents": 0
+      "additional_150_authority_used_cents": 0,
+      "closeout_code_request": "p009-stage1-NC-guard-repair-closeout-code-r1",
+      "latest_review_poll_utc": "2026-10-15T06:33:22.789425+00:00",
+      "owner_proxy_decision_observed": false
     }
   }
 }

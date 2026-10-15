@@ -1,3 +1,7 @@
+# Latest P009 guard repair and proxy state
+
+Read current ACTIVE_HANDOFF and LIVE_P009_NC_GUARD_REPAIR_HANDOFF.md. Originalpreclaimfailure/zero-workproof DONE, old87425neverrepeat. New53source e8f57a19 runtime andproxydecisionpending; newhelpers8154c25b pending. Oldce7a764470CODEPASS historicalonly. Nextreview07:03:50/min06:48:50 afteractual06:33:49 fullread. NoactiveGPU/CPU.13+7newchecksDONE. Nightdirectauthorityuntil14UTC; onlytrue【Owner 代理决定】plusindependentexactaudit, noarm/rulechange. Current130allocation/project450/50protected unchanged, originalfailedreserves retained. p009ACTIVE,oldmonitorsPAUSED.
+
 # Latest P009 preclaim repair state — 2026-10-15T06:29:40.336156+00:00
 
 Read .local/p009_20261014/r1/ACTIVE_HANDOFF.md and LIVE_P009_NC_GUARD_REPAIR_HANDOFF.md. Original replacementCLI87425failedbeforeclaim/zero-workreconciliation94084DONE/STOPPED0; neverpoll/retry. New53-source guard-intent repair onlyPREPARED, awaits realownerproxydecision andindependentexactaudit; original49andscienceunchanged. Overnightdirectownerdelegateuntil14UTC isvalidonlyregisteredStage1/G1-afterStage2, noarms/rulechanges/auditwaiver. INDEXordinarypushonly, nooutsidemessages/subagents. Current130allocationunchanged; newcandidate655retains1965prior. p009ACTIVE/oldmonitorsPAUSED. Earlierstatesbelowhistorical.
