@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T02:32:33.079019+00:00",
+  "as_of_utc": "2026-10-15T02:35:24.433453+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2640,6 +2640,43 @@
       "created_utc": "2026-10-15T02:26:33.227130+00:00",
       "actual_student_calls": 0,
       "actual_analysis_runs": 0
+    },
+    {
+      "request_id": "p009-math-p1-complete-scoring-A2-r1",
+      "scope": "p009-math-p1-complete-scoring-and-independent-adjudication-A2",
+      "target_commit": "ae8b8c3c2f1ad75bac25678d49f85f6a7c1b6694",
+      "packet": "reports/p009_20261014/p1_complete_scoring_v1",
+      "manifest": "reports/p009_20261014/p1_complete_scoring_v1/MANIFEST.json",
+      "manifest_sha256": "6200fd888fe74686d1df350531b1055bff8b6819140c3c61398fdc40379eece6",
+      "summary_file_sha256": "984c91a03e12278c5a30620a7482f15dce7c8b3deab087cac6be2e58a3cea060",
+      "collection_file_sha256": "8af88b2e83e27c53b4b57ba5826d962363f319c8cac06db267e7dde9cb7ed50b",
+      "archive_file_sha256": "637c97252e77426c10c10b7dc7023ea53db1dc16704223cd563f131651dcac64",
+      "driver_source_files": {
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+        "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+        "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+        "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+        "experiments/learning_regime_p009/p1_input_binding.py": "a91500918ce46898c577f73c3346dec5ebc9616f60357a4bb933219b2f89bf14",
+        "experiments/learning_regime_p009/p1_input_binding_extended.py": "af1590bfe0b2993c0fa4371324d96ad83936a9ba9ede894aa0040f746290ea3d",
+        "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
+        "experiments/learning_regime_p009/stage0_generation_contract_v2.py": "3f36030d76715bc92cbe75ac674089137cb8bfd8027b5cdb6c1254dac7482d53",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "scripts/p009_p1_driver.py": "610fab373f2ce8f985447ac11b9e11fe78b0cc6c09a889ca2083d7f07ae09ad7",
+        "scripts/p009_p1_driver_extended.py": "1c8447ce5f7852d946da4eb40ac8b0744f8406a710aedf8f73b42c27f167d42a"
+      },
+      "publisher_source_files": {
+        "scripts/p009_p1_complete_evidence.py": "8863741fe13e6ff966aa61e20e04a45ab8e8d70a973c4183b9512221231942a8"
+      },
+      "review_request": "reports/p009_20261014/P1_COMPLETE_ACTUAL_REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Actual P1 labels and S1 G0 only; NC has independent G0/input acceptance but still requires exact runtime/numeric admission.",
+      "created_utc": "2026-10-15T02:35:24.433453+00:00",
+      "complete_rows": 10489,
+      "independent_adjudication_complete": false,
+      "G0_admitted": false,
+      "actual_model_calls": 0
     }
   ],
   "p008_v31": {
