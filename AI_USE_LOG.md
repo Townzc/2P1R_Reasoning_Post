@@ -3000,3 +3000,13 @@ Stage1 roster publication: full staged style check retains the original common.p
 报告8aba02ff/20261014bu/REPORT.md SHA3c4664b5于2026-10-15T00:58:02.445940+00:00UTC全文读取，评论事件00:44:03。原P1十源CODE PASS-WITH-NOTES，但owner已选B，新12源bb2629ba的36小时总帽须自己精确审计，旧报告不准入新入口。原first1001200/pair8/保守公式不变，0实际symbolic，未看首100后再改门。Stage0结果publisher原708d426f真实CODE PASS已准确保存，实际原始结果A2仍须后续。
 
 三个原科学调用都已正常exit0、原CLI已消耗；Qwen收集74242/导出24064/oracle30566与3项启动核验全DONE；teacher原collector55399一次进行中，OLMo尚未collect。teacher与OLMo的原始输出尚待独立fulloracle。没有新模型、上传、旧测试或重评分重复。账务仍Stage040/P009130，不把预留叫花费。
+
+### 2026-10-14 18:08:26 PDT（原三项生成完整闭合；实际GSM门如实送审）
+
+三原调用teacher25996/Qwen93362/OLMo81858均EXIT0已消耗，terminal分别00:57:05.476334/00:48:56.937124/00:55:56.506418UTC，真实provider各STOPPED0。三项startup68886/7928/2242、collect74242/55399/3987、export24064/90108/38061、oracle30566/48928/76496、原已审per-run publisher全部DONE一次，0新调用/训练/重复输出。原14450输出/原始请求、source34、全部forecast/ack/Linuxconstructor/ledger已核，所有MATH仅decode未symbolic，原失败与费用保留。
+
+完整已核GSM：teacher1106/1319 caps48；OLMo0shot166/1319 caps546；OLMo4shot487/1319 caps43；既有vLLM Qwen0shot650/1319 caps43只按owner内部范围复用。用原冻结g0函数只计算一次、无raw重评分：NC gap456/1319=34.571645pp且cap门通过；S2虽然gap940，但零样本546/1319=41.394996% caps>15%，本地G0FAIL，不以4shot替换零样本、不延生成帽或重跑。真实独立A2仍pending；S1待P1，不将MATH nativeEOS当正确/资格。Stage1训练仍0。
+
+Qwen MATH0/4 caps68/39各500，teacherMATH caps36/500，采购8993中nativeEOS8253/caps740、所有unknown0，均未产生MATH分数。新完整summary/gate原值投影仅去三个host reportlocators并绑定原intentSHA；原三个不可变result包不回写。P1 owner B在任何实测前固定36h，新12sourcebb2629ba待真审计，旧6h未运行退役；first100仍1200、pair8/原保守formula不变。只读模板有一处继承的10-source文案，独立scope-note明确实际12；没有变运行源/生成结果。
+
+动机是尽快给Stage1可靠输入，同时原门失败按原定义公开；工程完成不是科学门通过。新增实际A2只覆盖完整raw/GSM门，不能替P1/G0S1或学生runtime准入。预算Stage040/P009130是授权/预留，不是花费；原2641c全部保留未释放，无新费用请求。

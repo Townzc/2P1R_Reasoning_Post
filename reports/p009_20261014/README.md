@@ -1,3 +1,35 @@
+# P009 current: complete Stage0 generation, local P1 pending exact36h review
+
+All14,450 original Stage0 outputs are complete and passed local raw/source/lineage
+verification; all three original apps are STOPPED0. No new training occurred.
+[Complete evidence and actual A2 request](stage0_complete_a2_v1/README.md).
+
+| Complete GSM endpoint | Correct /1319 | Logical caps |
+|---|---:|---:|
+| Teacher zero-shot |1106|48|
+| Qwen zero-shot, reused accepted P009 vLLM P0 |650|43|
+| OLMo zero-shot |166|546|
+| OLMo four-shot |487|43|
+
+NC's local G0 passes. S2's local G0 fails because546/1319 logical caps exceed15%;
+four-shot cannot replace the frozen zero-shot endpoint. Independent actual A2 is
+pending, and no student is admitted. S1 remains pending actual MATH scoring;
+Qwen/teacher MATH outputs are fully decoded but not symbolically scored.
+
+Owner chose optionB before the first100. Codex concretized a36-hour local total
+ceiling, preserving first1001200s, pair8s and the original conservative serial
+forecast. [Amendment](p1_local_window_amendment_v1/README.md) and
+[exact12-source review](p1_local_window_preflight_v2/REVIEW_REQUEST.md).
+The original6-hour driver's bu code PASS is historical, not this successor's
+admission. No actual P1 rows have been scored and no cloud budget was added.
+
+Current authorized caps remain Stage0$40 / Stage1$50 / Stage2$35 / unallocated$5,
+P009$130, project$450/protected$50. Reservations are not spending. All immutable
+old experiments, P0 discordance and failed calls remain preserved. p009 continues;
+p007/automation-4 stay paused. Later stages advance on real audits/scientific gates.
+
+--- Prior dated records ---
+
 <!-- Owner optionB 2026-10-15T00:56:09.169491+00:00 -->
 [P1 local window amendment](p1_local_window_amendment_v1/README.md): before first100,
 owner chose a longer local ceiling; Codex set36h total, original formula/scorer

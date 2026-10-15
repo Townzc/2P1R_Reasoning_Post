@@ -328,3 +328,21 @@ Stage1 $50, Stage2 $35, unallocated $5: P009 $130 total. Project spending remain
 capped at $450 with $50 protected. These are authorizations, not actual spending.
 Exact future runtime/numeric review remains required; no extra scientific scope
 or automatic retry is authorized. Old immutable budgets are historical.
+
+## Owner local-window amendment: pre-first100
+
+On October14 PDT, before any real P1 first100 rows were scored, the owner directly
+selected optionB (relax local total scoring duration). Codex concretized the
+bounded total as36 hours/129600seconds; this number is Codex's implementation of
+the authorization, not a verbatim owner number or an expected runtime. The first
+100 command retains1200seconds and pair outer timeout remains8seconds. The original
+maximum-observed-new-pair serial forecast,20% margin and uncalibrated300-second
+allowance remain unchanged. The old6-hour driver is preserved unattempted.
+
+Exact12-source successor review atbb2629ba4ceb21db97cb500afa0d9b47387b9290 must
+bind the owner amendment hash. A real measured first100 numeric review still
+precedes the sole remainder, whose wall excludes elapsed first-command time.
+No timeout-mixture formula, new scorer, label repair, sample selection, scientific
+G0/G1 change or cloud budget increase is authorized by this amendment. Immutable
+prior source/protocol snapshots retain their original values. See the public
+p1_local_window_amendment_v1 and p1_local_window_preflight_v2 packets.
