@@ -1,3 +1,6 @@
+<!-- Actual preclaim failure 2026-10-15T06:28:03.018365+00:00 -->
+NC3200替代在guard claim前失败，0训练/输出，原调用已STOPPED0；[原证据](stage1_nc_replacement_preclaim_failure_v1/README.md)保全，[确切新入口修复](stage1_nc_guard_repair_preflight_v1/README.md)待Claude限时代理决定及独立审计。原NC400不重跑，S1尚未准入。
+
 <!-- Actual cd acceptance 2026-10-15T06:05:27.826941+00:00 -->
 [原NC结果A4和单项独立替代确切审计已通过](review_41323a10_accepted_v1/README.md)，必要新费用核对完成，接下来一次派发。原配对NC门尚不可计算，S1未准入。[限时owner代理与追加额度](owner_overnight_proxy_v1/README.md)有效至Oct15 07:00PDT；不得新增arm、改判定门或豁免独立审计。
 

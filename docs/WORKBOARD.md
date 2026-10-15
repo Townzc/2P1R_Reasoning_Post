@@ -1,3 +1,11 @@
+### 2026-10-14 23:28:03 PDT — NC替代入口preclaim失败保全，真实guard修复待代理决定与独立审计
+
+原CLI87425exit1已消耗/appap-iCt0KOKWNfNojiIzZv1LoM/callfc-01M4Z33847TMFE5KP93N8B5NXQ，23:13:31PDT真实STOPPED0。真实新只读reconciliation94084于06:22:57UTC完成：plan+两个永久dispatchfence存在，guard intent/claim/attempt/terminal/unit/远端目录均无，0训练/输出/检查点；不是伪造failedterminal，也不等于免费。旧655c保留。此前“images built/preflight进行中”已被真实callback覆盖。旧NC400954与failed896父均不动。
+
+原因是49源intent增加父/owner两个字段，原RunGuard只接受四个base字段。本次13新检查0.337s包括真实旧错误复现、真实guard新四字段准入/重复拒绝、从实际新worker抽取guard三语句实跑；未重跑旧tests或mock成真GPU。准备53source新入口/绑定/IO/fulloracle，原49源与训练/评测函数不变。原campaign/run/plan未claim所以保留，旧fences不清；新permanentrepairfence先于单次spawn。所有原时间/剂量/科学门不改。
+
+当前1965预留+候选655=2620<Stage15000，余2380，P009130/project450/50保护不变，无新150分配/失败release。需要真正【Owner 代理决定】含理由和新exactsource/numeric审计；无新gates/model/upload，0活动GPU。已获human overnight范围内代理授权，不重复问睡眠owner，也不自行重试。核对截至14UTC、禁止新arm/改门/审计豁免。原13测试/保全/新builder完成后不得重复。所有失败根因与不足公开，不能称旧审计代码等于真实运行成功。
+
 ### 2026-10-14 23:05:27 PDT — cd真实A4与49源替代准入；新增限时owner代理授权
 
 cd事件05:44:14UTC/comment6185359919，完整报告实际06:01:26.148448读取，SHA72d18a58。原NC400实际1319raw/954正确/1024剂量与failedNC3200保全A4分别PASS；不是NC配对PASS。新49源/3938689c/spec35b17552/timing/owner/父/输入/655c真实PASS-WITH-NOTES，RUNTIME_ACCEPTED及PARENT A4准确保存。原954在owner批准前已公开的非盲态时间线保留；N3明确非阻塞，不重复询问。N4新只读/配对publisher仍独立待审，不用旧cc路径。原49科学字节未改，无旧检查/模型重跑。
