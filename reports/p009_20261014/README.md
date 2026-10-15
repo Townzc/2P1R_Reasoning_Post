@@ -1,3 +1,8 @@
+<!-- P1 code preparation 2026-10-15T00:23:26.904405+00:00 -->
+[P1 input binding and first100 driver](p1_driver_preflight_v1/README.md) is prepared
+for exact review. Actual MATH scoring has not begun; funded Stage0 runtime review
+and the later real first100 numeric gate remain separate.
+
 <!-- Funded exact successor prepared 2026-10-15T00:10:27.547549+00:00 -->
 [Stage0 funded runtime v2](stage0_generation_runtime_preflight_v2/README.md) binds the owner-added$20 to bounded workers
 and the unchanged14,450 requests.34-source exact runtime/numeric review is pending;

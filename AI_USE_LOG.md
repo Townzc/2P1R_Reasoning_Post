@@ -2956,3 +2956,11 @@ PyPI固定vllm0.11 Linuxwheel438217982bytes一次SHA通过，原sampling_params.
 独立P1两个新文件仅草拟、未测试/发布/执行，仍绑定旧generation spec，必须后续适配新确切spec才送审；无实际mathverify/首100/G0/Stage1。新v2包准备完成，所有真实接受/currentbudget/upload/gates/calls仍ABSENT。费用235.06实际dashboard与未来reserve分开，新增预算不是花费。
 
 Public funding/core/v2 packets at974efcbf3c6eae6034828ef11c78831cb97dea46 have3+4+57 manifest members independently checked from Git bytes. The new v2 exact request is pending. Before publication the constructor-r1 traceback's absolute local path was projected to<repository>, with the original private log and SHA retained and explicit CONSTRUCTOR_LOG_PROJECTION; no code/result changed or builder rerun. Whole whitespace check reports the same two original checkpoint/common EOF blank lines; exclude only those two to pass, do not claim full style PASS. Current INDEX aliases were reconciled to completed actual P0 A2/br scope and3 scientific calls/4 cloud functions including the zero-model preclaim failure; no new outcome computation.
+
+### 2026-10-14 17:23:26 PDT（P1确切输入与首100入口准备；真实评分未执行）
+
+为生成结束后直接接上P1，新增10源driver/input合同固定funded34源spec e3775978/target974efcbf。真实两完整oracle/receipt/ledger/providerSTOPPED及输入/来源齐备后才freeze原10493行；缺gold单列排除，不算错，test缺gold仍阻断G0。首100仅在确切代码审计有条件批准后一次，1200本地秒；余量须真实首100 max-pair/serial/20%+300未校准场景数值审计，<=21600总本地秒减原首段。每command/chunk一旦partial不自动重试，复用已确认cache。四pool固定50分歧/>2%fallback25/>0.5%outertimeout标记和空adjudication保留，不把评分结束写成G0/eligibility通过。
+
+12个新合成输入/顶层driver集成检查一次PASS(0.034s)，不跑math-verify、不重复旧journal11fixtures或原raworacle。原34生成源/冻结标注器不改；P1实际freeze/first100/rest/A2均NOTRUN。新request只挡本地P1入口，不挡独立funded generation审计。此前误猜journal测试路径的sed读取失败无写入或科学副作用。费用40/130是授权，当前未新增云调用/上传/费用请求。
+
+P1 publication: four prior scalar/pool/journal/requirements source hashes were explicitly verified against the SOURCE_BINDING.source_files wrapper. Whole staged style check retains one original common.py EOF blank-line warning; only that copied historical file is excluded from the passing source check. No old bytes or tests changed.

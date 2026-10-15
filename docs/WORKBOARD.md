@@ -4,6 +4,13 @@
 
 ## 当前状态
 
+### 2026-10-14 17:23:26 PDT（P1确切输入与首100入口准备；真实评分未执行）
+
+为生成结束后直接接上P1，新增10源driver/input合同固定funded34源spec e3775978/target974efcbf。真实两完整oracle/receipt/ledger/providerSTOPPED及输入/来源齐备后才freeze原10493行；缺gold单列排除，不算错，test缺gold仍阻断G0。首100仅在确切代码审计有条件批准后一次，1200本地秒；余量须真实首100 max-pair/serial/20%+300未校准场景数值审计，<=21600总本地秒减原首段。每command/chunk一旦partial不自动重试，复用已确认cache。四pool固定50分歧/>2%fallback25/>0.5%outertimeout标记和空adjudication保留，不把评分结束写成G0/eligibility通过。
+
+12个新合成输入/顶层driver集成检查一次PASS(0.034s)，不跑math-verify、不重复旧journal11fixtures或原raworacle。原34生成源/冻结标注器不改；P1实际freeze/first100/rest/A2均NOTRUN。新request只挡本地P1入口，不挡独立funded generation审计。此前误猜journal测试路径的sed读取失败无写入或科学副作用。费用40/130是授权，当前未新增云调用/上传/费用请求。
+
+
 ### 2026-10-14 16:53:51 PDT（Stage0确切27源入口/输入/数值候选齐备，0新云调用）
 
 已审internal-only修订保留原P0 blocked与不一致率。新增入口/binding/串行上传收集/独立raw oracle，原23core和38P0/高吞吐源未变。三新slot只14,450原请求、无训练/P0重生成；2400/900/1200入口帽与399/216/252c合867，保留1004c旧reserve，总1871<Stage02000。拟首256×3付费测量例外须确切runtime/numeric审计，300秒allowance未校准；plan24h仅有限派发/留存包络。
