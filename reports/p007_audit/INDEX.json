@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:35:52.383483+00:00",
+  "as_of_utc": "2026-10-15T00:48:53.257922+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2355,6 +2355,30 @@
       "blocking_for": "Only this per-slot local result publisher; not generation or P1.",
       "created_utc": "2026-10-15T00:35:52.383483+00:00",
       "actual_publisher_calls": 0
+    },
+    {
+      "request_id": "p009-stage1-roster-selection-code-r1",
+      "scope": "p009-stage1-roster-selection-code",
+      "target_commit": "fd03e883c9377258c81ce080cef79dedee856b82",
+      "packet": "reports/p009_20261014/stage1_roster_preflight_v1",
+      "manifest": "reports/p009_20261014/stage1_roster_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "57d08a2bd1997bff15f4f0d870573888d62d3bbdbf4e7bebb17090c9303fa280",
+      "source_files": {
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/stage1_roster.py": "94e043d01218cd5fd217ca2a98379e0418e74d0ae60ad6d6ff49a6b5767bfad8",
+        "experiments/learning_regime_p009/training_plan.py": "fff9a0a12d2361e5c0d33449b8bc292f5b055fe0b446fe5b758db27fc9ca07d2",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "experiments/sft_allocation_p008/schedule.py": "0f576f3408b4aabb5197ccd073d3b60d3b9b5337099c381dd685db5a4111477e",
+        "reports/p008_20261013/LR_VECTORS.json": "cb9c2e046e588dcdede0770f497f32550b797f0a7d7feacde343936a486cabe2",
+        "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+      },
+      "review_request": "reports/p009_20261014/stage1_roster_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only future Stage1 roster preparation; not active Stage0 generation or independent P1.",
+      "created_utc": "2026-10-15T00:48:53.257922+00:00",
+      "actual_corpus_selections": 0,
+      "actual_student_calls": 0
     }
   ],
   "p008_v31": {
