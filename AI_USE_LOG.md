@@ -3036,3 +3036,11 @@ New core packet whole staged style check retained two unchanged historical EOF b
 实际首100/原publisher已完成，numeric请求85f1321a已普通发布，remaining仍NOTRUN。新增独立standard-library只读工具验证完整原journal每chunk/row/pair/proof和实际review，再汇总保存Boolean、固定样本/timeout/fallback/gold排除；不调用symbolic/原parser，不把样本空adjudication或代码PASS当标签/G0。仅remaining intent中的host reportlocator公开投影，原intentSHA与projection分开，私有原件保留；partial不能wholetool重跑。九个新合成证据检查一次PASS(0.026s)，原12源与旧tests未改/重跑，实际completepublisher未执行。新请求只挡此publisher，不挡独立remaining数值准入。
 
 本轮几处只读旧路径/系统Python tomllib错误发生读取前，无科学输出/重复调用；改用实际INDEX/RUN_LOG与已存在3.12环境读取。上一刻handoff预写的01:34标签已改为实际01:32:18，实际事件与记录分开。Stage0A2与学生仍未准入；无新云费用。
+
+### 2026-10-14 18:54:05 PDT（NC两固定输入与1024步计划准备；无学生调用）
+
+在等待P1实际数值审计期间，新增本地准备一次完成，CLI40926 EXIT0已消耗。原D1完整3436正确breadth按原G1/输入SHA复用；逐行新编码与原responseSHA和三项长度一致，不重做原raworacle/旧feasibility。已审seed17 hash顺序形成嵌套n400/3200，完整答案sum114758/934547；各1024updates/2097148targets/原LR，q18和2、曝光18/19及2/3、无q0/缩n/截断，完整presentation7308/7183。复制原1319tokenID端点，无新生成/训练。
+
+新4个边界fixtures一次PASS0.006s，不是实际学生或旧测试重跑。新packet stage1_nc_inputs_v1保存完整原字节archive/readback、原G1/roster报告和实际config/plan；现需确切输入/计划外审，不能称准入。明确补入原accepted roster包未复制的transitive scripts.plan_real_math_scale.py exact_remainder原字节（未改旧源），旧CLI从未调用。P1first100仍DONE/remaining数值pending，Stage0A2与Stage1core仍等待真实报告，无新云调用/费用请求。先前几个只读路径猜测失败无写入副作用，现使用真实路径。
+
+新NC包whole staged whitespace check报告1处原common.py冻结副本EOF空行；原字节保留，不称全范围PASS。仅排除该旧源副本后的检查通过；无模型/科学失败。

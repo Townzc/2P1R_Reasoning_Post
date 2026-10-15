@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 18:54:05 PDT（NC两固定输入与1024步计划准备；无学生调用）
+
+在等待P1实际数值审计期间，新增本地准备一次完成，CLI40926 EXIT0已消耗。原D1完整3436正确breadth按原G1/输入SHA复用；逐行新编码与原responseSHA和三项长度一致，不重做原raworacle/旧feasibility。已审seed17 hash顺序形成嵌套n400/3200，完整答案sum114758/934547；各1024updates/2097148targets/原LR，q18和2、曝光18/19及2/3、无q0/缩n/截断，完整presentation7308/7183。复制原1319tokenID端点，无新生成/训练。
+
+新4个边界fixtures一次PASS0.006s，不是实际学生或旧测试重跑。新packet stage1_nc_inputs_v1保存完整原字节archive/readback、原G1/roster报告和实际config/plan；现需确切输入/计划外审，不能称准入。明确补入原accepted roster包未复制的transitive scripts.plan_real_math_scale.py exact_remainder原字节（未改旧源），旧CLI从未调用。P1first100仍DONE/remaining数值pending，Stage0A2与Stage1core仍等待真实报告，无新云调用/费用请求。先前几个只读路径猜测失败无写入副作用，现使用真实路径。
+
+新NC包whole staged whitespace check报告1处原common.py冻结副本EOF空行；原字节保留，不称全范围PASS。仅排除该旧源副本后的检查通过；无模型/科学失败。
+
+
 ### 2026-10-14 18:26:55 PDT（P1唯一首100已完成；实测数值送审）
 
 真实bv新12源PASS后，extendeddriver freeze一次EXIT0、first100原CLI17733一次EXIT0已消耗；actual完成2026-10-15T01:25:24.198916+00:00，全command1.048697秒。原10493生成行中4采购gold结构不支持单列排除，10489scorable，全部端点1500 gold齐备；不把排除记错或与7上下文不支持混淆。原首100精确orderedrows/73新distinctpair缓存/两个本地worker版本/原chunks00000证明齐，0模型调用、0旧symbolic或raw重放。
