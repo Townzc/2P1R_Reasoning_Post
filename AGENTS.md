@@ -1,3 +1,7 @@
+# Latest P009 one repaired NC is RUNNING
+
+CLI54872/appap-X5eqTV19egvsfSzNNFntTB/callfc-01M4Z6HD5JSKHXMDZQFV86YSRE submitted once, execution66c669ae. New53 source unchanged; trueproxy6186240160 plus cf audit accepted. Startup24047 first16/32849targets DONE; initialstatus69665 at07:18:39 onecontainer/201savedupdates/noendpoint/terminal/error. Neverrepeat call, startup or oldworkers. Nextprovider07:48:40, nextnormalreview07:28:37. Only this NC is active; S1 not admitted until realNCpairA4. FutureStage170/P009150 is proposalONLY/current50/130 unchanged; INDEXasks realproxybudgetdecision, no waiver or newarm. Readlatestprivatehandoff.
+
 # Latest P009 true cf admission
 
 New53 guardrepair e8f57a19 has originalproxycomment6186240160 and independentcf f1b53059 runtimePASS; newhelpers8154c25b PASS-WITH-NOTES. Exactacceptances/BUDGET_CHECK recorded, call stillNOTRUN; use latestprivatehandoff. Onlyone newmodal_stage1_nc_guard_repair, no old87425retry. Proxy says ifthisentryfails no furtherexception. Source53/failedreserves/scienceunchanged. NewS1scoreprocess draft96fb5312/8newchecksDONE, noactualscoring. Nextnormalreview07:28:37/min07:13:37.

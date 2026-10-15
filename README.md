@@ -1,3 +1,6 @@
+<!-- Actual repaired NC startup 2026-10-15T07:24:37.184596+00:00 -->
+[唯一NC3200修复调用已训练并通过首16步启动核验](reports/p009_20261014/stage1_nc_guard_repair_started_v1/README.md)。完整结果和NC配对A4仍pending；[未来S1预算调整](reports/p009_20261014/stage1_s1_budget_proposal_v1/README.md)仅提案，当前额度未变。
+
 <!-- cf actual acceptance 2026-10-15T07:04:48.773574+00:00 -->
 [NC3200入口修复获真实代理批准及独立审计PASS](reports/p009_20261014/review_f1b53059_accepted_v1/README.md)。仅一次新调用，失败费用保留；NC配对结果/A4和S1仍未完成。
 

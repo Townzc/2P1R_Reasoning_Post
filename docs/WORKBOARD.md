@@ -1,3 +1,11 @@
+### 2026-10-15 00:24:37 PDT — 唯一NC修复真启动核验；S1预算仅提案
+
+CLI54872/appap-X5eqTV19egvsfSzNNFntTB/callfc-01M4Z6HD5JSKHXMDZQFV86YSRE已真实submitted，execution66c669ae。实际entry2026-10-15T07:13:34.991808+00:00，4500秒hard2026-10-15T08:28:34.991808+00:00不延长。startup24047一次PASS/EXIT0消耗，首16步32849targets、H100/53源/49依赖/claim与修复fences均真核对，非全剂量/oracle。status69665一次DONE，07:18:39真实1container/无terminal/result/error，保存201更新/0endpoint；未查看终点评分，下一稳定provider07:48:40。原9inputs复用不上传，旧失败/NC400全不重跑。新publicstage1_nc_guard_repair_started_v1仅投影元数据，private原SHA保留。
+
+独立准备了未来六个原S1槽位的预算提案：Stage150→70/P009130→150，拟用夜间追加授权中的20，当前2620c历史预留不释放，余量拟2380→4380。6×655=3930只是量级示例，非S1实际cap/调用准入；实际全源/输入/计时/预算审计与真NC pairA4/futility/G1仍必需。当前仍130/50，须真实【Owner 代理决定】后才生效；提案不改活跃NC release、不豁免失败后不再追加例外、project450/50保护不变。INDEX仅请求限定owner预算决定，不新增独立code-only科学门。
+
+全部旧检查及新8进程supervisor检查/5manifest已DONE不重做。新审计仍06:58/f1b53059/103comments，下一正常07:28:37；usage98%无需credits/reset。原caffeinate至08:06:15为localawake，不作云controller。
+
 ### 2026-10-15 00:04:48 PDT — cf真实代理决定与53源审计接受
 
 原代理comment6186240160事件06:47:28UTC，经既有Claude app/Townzc OWNER发布，批准唯一guardrepair新入口；明确这次再失败不追加例外。独立cf fixedf1b53059事件06:49:33/fullread06:58:36.352460，reportSHA37d5c822，53源e8f57a19 runtime/numeric PASS、新helper8154c25b PASS-WITH-NOTES。真实guard兼容/replay试验由reviewer完成，Codex未重跑旧tests。旧cd遗漏与preclaim655c历史永久保留，不假造failedterminal；非盲NC400954时间线不变。
