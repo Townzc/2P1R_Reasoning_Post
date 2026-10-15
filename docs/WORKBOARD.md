@@ -4,6 +4,13 @@
 
 ## 当前状态
 
+### 2026-10-14 18:57:05 PDT（Stage0完整A2通过来源；NC G0通过、S2原门失败）
+
+真实Claude8efc897f/20261014bw全文2026-10-15T01:55:41.992284+00:00已读，事件01:40:58/comment6182426679，SHA0e30ac3c。固定192f9156全部14450 raw/60batches/57forecasts独立重放PASS；reviewer自己的BPE解码器加冻结first_stop/completion_score，不称另造独立parser。NC1106vs650/caps48/43真实G0PASS；S2原546/1319caps>15%真实FAIL，不换4shot/延cap/重跑。S1仍需完整P1。准确STAGE0_COMPLETE_A2_ACCEPTED与publicreview_8efc897f已保存，原immutable局部pending字样保留历史；当前接受不是学生runtime/numeric准入。
+
+保留N2：未来QwenMATH4shot分数旁披露386/500new-problem boundary；原统一stop/parser不改。3重复attempt问题仅reviewerreported，未重做采购聚合。最新reviewpoll01:55:29.396707/89comments，下一正常02:25:42、最早02:10:42；first100numeric/Stage1core/完整P1publisher/新NC输入按此观察仍pending。新NC精确输入7abac861已普通发布，INDEXa31a47c9独立remoteverified、push82630消耗EXIT0。没有新评分/云调用/账单查询。一次宽泛只读搜索误扫历史comments导致日志冗长，后续限定真实文件，不公开其用户字段。
+
+
 ### 2026-10-14 18:54:05 PDT（NC两固定输入与1024步计划准备；无学生调用）
 
 在等待P1实际数值审计期间，新增本地准备一次完成，CLI40926 EXIT0已消耗。原D1完整3436正确breadth按原G1/输入SHA复用；逐行新编码与原responseSHA和三项长度一致，不重做原raworacle/旧feasibility。已审seed17 hash顺序形成嵌套n400/3200，完整答案sum114758/934547；各1024updates/2097148targets/原LR，q18和2、曝光18/19及2/3、无q0/缩n/截断，完整presentation7308/7183。复制原1319tokenID端点，无新生成/训练。

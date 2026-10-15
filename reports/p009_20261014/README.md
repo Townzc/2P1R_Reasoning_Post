@@ -1,36 +1,32 @@
-<!-- P009 first100 actual 2026-10-15T01:26:55.424787+00:00 -->
-P1新36h入口已获真实bv代码PASS，唯一首100实测已完成，剩余数值审计待处理。
-[实际首100与完整证据](P1_FIRST100_ACTUAL_REVIEW_REQUEST.md)；
-保留原条件门，尚无Stage1学生结果。
+# P009 current: Stage0 A2 accepted; P1 remainder awaits numeric review
 
-# P009 current: Stage0 closed; actual P1 first100 complete
+All14,450 Stage0 outputs are fully locally verified and independently replayed
+in [bw A2](review_8efc897f_accepted_v1/DISPOSITION.md); all original apps STOPPED0.
+NC G0 is PASS: teacher1106 vs same-vLLM base650/1319, caps48/43.
+S2 G0 is FAIL: original zero-shot546/1319 caps exceed15%; no4-shot replacement,
+cap relaxation or replay. S1 still awaits full MATH scoring and adjudication.
 
-All14,450 Stage0 outputs are locally verified, all original apps STOPPED0.
-[Complete Stage0 evidence/A2 request](stage0_complete_a2_v1/README.md) remains under
-independent outcome review. NC local G0 passes; S2 fails the frozen zero-shot cap
-criterion546/1319>15% and is not admitted. S1 awaits complete MATH scoring.
+The [36-hour local driver](review_10cbc965_accepted_v1/DISPOSITION.md) ran its
+only first100 at01:25:24UTC:73 distinct pairs, max0.074970291s,3975 remaining.
+The unchanged serial scenario718.157927s is not a bound. [Exact actual numeric
+review](P1_FIRST100_ACTUAL_REVIEW_REQUEST.md) remains pending before remaining.
+First100 confirmed pairs, including failures/timeouts, must be reused. Four
+unsupported procurement golds are excluded, not scored zero; seven original
+context exclusions remain separate. The technical total ceiling129600s was
+fixed before measurements, not an expected runtime or cloud-budget increase.
 
-The new36-hour local driver and Stage1 roster code have real
-[bv review acceptance](review_10cbc965_accepted_v1/DISPOSITION.md). First100 ran
-once and completed at01:25:24UTC:73 unique pairs, max0.074970291s,3975 remaining
-pairs; the unchanged serial scenario is718.157927s, not a completion guarantee.
-[Actual first100 numeric request](P1_FIRST100_ACTUAL_REVIEW_REQUEST.md) is pending
-before the only remaining invocation. The finite total ceiling stays129600 local
-seconds; no cloud budget changed. Four unsupported procurement gold rows are
-explicitly excluded from10493 generated MATH rows;10489 scorable, all1500 endpoint
-golds present. The seven original context exclusions remain separate.
+[Two NC input candidates](stage1_nc_inputs_v1/README.md) are complete and now
+under exact review: original D13436 inventory, fixed nested400/3200,1024updates
+and2097148targets each, original LR. Whole-answer sums114758/934547; no q0 or
+answer truncation. No students have run. Scientific core, exact worker/numeric
+and actual input/G0 gates must all precede paid training. Full P1 evidence
+publisher is prepared and separately pending code review. S1 input selection
+requires its own complete P1/adjudication/G0; S2 is not admitted.
 
-[NC/S1 scientific core](stage1_scientific_core_preflight_v1/README.md) and
-[complete P1 evidence publisher](p1_complete_evidence_preflight_v1/README.md) are
-prepared for exact code review. No students or full P1 scientific admission yet.
-The original six-hour driver is retired unattempted; all completed generations,
-first100, tests and publishers must not repeat. Immutable P0 disagreement and
-post-result internal-vLLM-only scope remain disclosed; HF638/969 are historical.
-
-Budget caps: Stage0$40 / Stage1$50 / Stage2$35 / unallocated$5 = P009$130,
-project$450/protected$50. Reservations are not actual spend. p009 continues;
-p007/automation-4 stay paused. Subsequent stages require actual scientific and
-exact source/input/numeric reviews.
+Budget Stage0$40/Stage1$50/Stage2$35/unallocated$5=P009$130, project$450 with
+$50 protection. Reservations are not spending. p009 ACTIVE; oldp007 andautomation-4
+PAUSED. Immutable P0discordance/post-result vLLM-only amendment and all failures
+remain. HF638/969 never enter P009 effects. No completed tool or model is replayed.
 
 --- Prior dated records ---
 

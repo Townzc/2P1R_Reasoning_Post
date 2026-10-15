@@ -1,19 +1,10 @@
-<!-- P009 first100 actual 2026-10-15T01:26:55.424787+00:00 -->
-P009首100真实评分已完成；[原始计时及完整证据](reports/p009_20261014/P1_FIRST100_ACTUAL_REVIEW_REQUEST.md)等待精确数值审计后继续。Stage1尚无学生结果，所有旧模型保持关闭。
+<!-- Current P009 status: 2026-10-15T01:59:20.663120+00:00 -->
+P009 Stage0 全部14,450条输出已通过[完整外审](reports/p009_20261014/review_8efc897f_accepted_v1/DISPOSITION.md)，所有原应用已停止。NC 的 G0 通过；S2 因原零样本截断率546/1319超过15%淘汰，保留原门，不换4-shot基线。S1 等待完整 MATH 评分与独立核验。
 
-<!-- Latest actual Stage0 closeout / owner B: 2026-10-15T01:12:01.936663+00:00 -->
-[All14,450 Stage0 outputs are locally verified and the three apps are STOPPED0](reports/p009_20261014/stage0_complete_a2_v1/README.md).
-Actual A2 is pending. NC passes the local GSM G0; S2 fails the frozen cap gate
-(546/1319 logical caps>15%), so no S2 student is admitted. S1 remains pending
-actual MATH scoring, not a failed setting. No model reruns or training occurred.
+P1 的新36小时本地入口已有确切代码PASS，首100行已完成；[实际计时数值审计](reports/p009_20261014/P1_FIRST100_ACTUAL_REVIEW_REQUEST.md)通过后才执行唯一剩余评分。未重复首100缓存。
+[NC两组固定输入与1024步计划](reports/p009_20261014/stage1_nc_inputs_v1/README.md)已准备并送审，尚无学生调用或Stage1结果。
 
-Before any first100 MATH scoring, the owner selected optionB. Codex fixed a
-[36-hour local total ceiling](reports/p009_20261014/p1_local_window_amendment_v1/README.md),
-with the original first1001200-second cap,8-second pair timeout, scorer and
-conservative serial forecast unchanged. [Exact12-source successor review](reports/p009_20261014/p1_local_window_preflight_v2/REVIEW_REQUEST.md)
-is pending; old6-hour driver remains unattempted/retired. No cloud budget increase.
-P009$130/Stage0$40 remain authorizations, not measured expenses. The monitor
-continues on actual gates; oldp007 andautomation-4 remain paused.
+P009上限$130/Stage0$40是授权额度，不是已花费用；原P0内部vLLM范围与跨引擎不一致率继续公开。p009保持有限门控推进，旧p007与automation-4暂停。
 
 --- Earlier dated checkpoints ---
 

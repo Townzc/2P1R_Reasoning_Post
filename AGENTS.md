@@ -1,3 +1,7 @@
+# Latest P009 Stage0 A2 / NC input candidates — 2026-10-15T01:59:20.663120+00:00
+
+Read current ACTIVE_HANDOFF and LIVE_P009_STAGE0_A2_NC_INPUTS.md. Stage0 bw actual rawA2PASS/NCG0PASS/S2G0FAIL; fullP1/S1 pending. NC400/3200 exact inputs and1024plans prepared once at7abac861, actualinputreview pending. No students. First100/freeze/publisher DONE; remaining still waiting true85f1321a numeric. Lastpoll01:55:29/fullread01:55:42, nextnormal02:25:42/min02:10:42. Preserve all DONE/oldsource/oldmonitorsPAUSED, p009ACTIVE. Earlier dated entries are history.
+
 # Latest P009 actual local scoring checkpoint — 2026-10-15T01:40:51.066302+00:00
 
 Read current ACTIVE_HANDOFF/LIVE_P009_P1_FIRST100_DONE.md. First100/freeze/publisher are DONE; no remainder yet. Actual numeric request85f1321a, Stage0A2, Stage1core and new fullP1 readonlypublisher0e79cff5 await their separate real reports. Last review01:39:42 still10cbc965/88comments; next normal02:09:43/min01:54:43. Do not rerun any DONE tool/tests/source packet or use codePASS as numeric/outcomePASS. p009 continues, old monitors paused. Latest ordinary71224129 remoteverified. Earlier dated states are history.
