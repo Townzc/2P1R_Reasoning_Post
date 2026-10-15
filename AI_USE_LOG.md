@@ -3169,3 +3169,8 @@ New core packet whole staged style check retained two unchanged historical EOF b
 真实Claudea236a90e/20261014bx全文于2026-10-15T02:14:14.674849+00:00读取，事件02:11:23/comment6182813699，SHA8c70c024。确切85f1321a proposalFILESHA f925c847、basis eb2c3989、firstresult2b8b226b、原12source/ownerhash/total129600真实PASS，准确TIMING_ACCEPTED已保存。onlyremaining原CLI78388在02:15:04.399286UTC启动，独立p1_remaining_r1.log，实际wall129598.951302583减原首段；首100/73缓存和所有旧raw不重评分/重生成，partial不wholejobretry。无新云调用或费用请求。
 
 保留N1约0.5秒scenario与fullcommand差异，实际总帽减fullcommand；不热改原源或预测。N2最坏8秒乘pair算术不是含调度/I/O的保证。报告header写93manifest而实际固定清单102，原manifestSHA相同；保留差异，不把report93写成外审逐102核验，也不重做旧Git检查。完整P1仍须固定抽查/真实独立adjudication/A2才S1资格/G0，不用前缀得分挑样或改门。仅本地剩余正在运行，实际终点状态后续读取。
+
+
+Exact NC3200 replacement candidate is fixed at 3938689cb3156d9a67773f49d8d7cd7f4390bc9c; all124 manifest members and MANIFEST verified from Git bytes once. New request p009-stage1-NC3200-independent-replacement-r1 is pending; actual parent A4 remains separately required. Whole staged whitespace check reported only two original frozen checkpoint/common EOF blank lines. Those bytes stay unchanged; only exclusion of these two copies passed. No old test/model/tool repeated, no new acceptance/gate/call. Recorded 2026-10-15T05:36:46.858884+00:00.
+
+Chronology disclosure 2026-10-15T05:37:30.165440+00:00: NC400954/1319 was known and published before the owner replacement answer was recorded. This is not outcome-blind or pre-registered. The stale05:11 reviewer comment had not inspected the later fixed evidence and is not actual A4/PASS. New exact request explicitly records the limitation; no science/gates repeated.

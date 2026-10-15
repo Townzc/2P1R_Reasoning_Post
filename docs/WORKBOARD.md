@@ -882,3 +882,8 @@ Public funding/core/v2 packets at974efcbf3c6eae6034828ef11c78831cb97dea46 have3+
 实际首100/原publisher已完成，numeric请求85f1321a已普通发布，remaining仍NOTRUN。新增独立standard-library只读工具验证完整原journal每chunk/row/pair/proof和实际review，再汇总保存Boolean、固定样本/timeout/fallback/gold排除；不调用symbolic/原parser，不把样本空adjudication或代码PASS当标签/G0。仅remaining intent中的host reportlocator公开投影，原intentSHA与projection分开，私有原件保留；partial不能wholetool重跑。九个新合成证据检查一次PASS(0.026s)，原12源与旧tests未改/重跑，实际completepublisher未执行。新请求只挡此publisher，不挡独立remaining数值准入。
 
 本轮几处只读旧路径/系统Python tomllib错误发生读取前，无科学输出/重复调用；改用实际INDEX/RUN_LOG与已存在3.12环境读取。上一刻handoff预写的01:34标签已改为实际01:32:18，实际事件与记录分开。Stage0A2与学生仍未准入；无新云费用。
+
+
+Exact NC3200 replacement candidate is fixed at 3938689cb3156d9a67773f49d8d7cd7f4390bc9c; all124 manifest members and MANIFEST verified from Git bytes once. New request p009-stage1-NC3200-independent-replacement-r1 is pending; actual parent A4 remains separately required. Whole staged whitespace check reported only two original frozen checkpoint/common EOF blank lines. Those bytes stay unchanged; only exclusion of these two copies passed. No old test/model/tool repeated, no new acceptance/gate/call. Recorded 2026-10-15T05:36:46.858884+00:00.
+
+Chronology disclosure 2026-10-15T05:37:30.165440+00:00: NC400954/1319 was known and published before the owner replacement answer was recorded. This is not outcome-blind or pre-registered. The stale05:11 reviewer comment had not inspected the later fixed evidence and is not actual A4/PASS. New exact request explicitly records the limitation; no science/gates repeated.
