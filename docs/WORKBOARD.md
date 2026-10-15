@@ -4,6 +4,11 @@
 
 ## 当前状态
 
+### 2026-10-14 17:35:37 PDT（上传原进程继续；只读结果发布代码准备）
+
+已审34源runtime/scope/budget全部不变，原upload62346一次运行中，7输入已回读、OLMo权重传输中，无错误/无科学调用。为完成后直接送实际A3，新增只读per-slot publisher，原raw/完整oracle字节归档readback、原intentSHA与provider隐私投影、完整计数和MATH待P1/G0未准入明确。3新合成archive/路径/不覆盖夹具一次PASS(0.004s)，不是实际raw重评分或云核验；publisher/真实产物均NOTRUN。精确publisher审计只挡其后续发布，不挡生成/P1。新草稿意外patch前导符在任何解析/执行前移除，无输出或科学副作用。未重跑旧publisher/tests。
+
+
 ### 2026-10-14 17:31:02 PDT（新34源生成入口与数值审计真实通过；准备三项一次调用）
 
 00:29:02巡检查到eeb65b04/86comments；bt事件00:20:12/comment6181426795，完整报告00:29:13.594776读取，SHA50f92033。确切974efcbf/spec e377/34源、三首256例外和1637c新预留PASS-WITH-NOTES；真实RUNTIME_ACCEPTED已保存。外审6fixtures通过、4依私有未重跑，wheel未独立重新下载限制保留。不是P1/G0/速度保证。reviewer近似655/早期长度建议不成为新门，实际仍selected3200完整答案sum<=2097148。0旧测试/模型重跑。
