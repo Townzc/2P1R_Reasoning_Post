@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T07:26:01.829925+00:00",
+  "as_of_utc": "2026-10-15T07:52:24.218557+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3157,6 +3157,27 @@
       "scientific_gates_unchanged": true,
       "current_allocation_unchanged_until_actual_scoped_approval": true,
       "created_utc": "2026-10-15T07:26:01.829925+00:00"
+    },
+    {
+      "request_id": "p009-stage1-NC-guard-repair-complete-pair-A4-r1",
+      "scope": "p009-stage1-NC-guard-repair-complete-pair-A4",
+      "target_commit": "9a266dbe74e76b2936265bf47f7342083ccc146a",
+      "packet": "reports/p009_20261014/stage1_nc_guard_repair_complete_v1",
+      "manifest": "reports/p009_20261014/stage1_nc_guard_repair_complete_v1/MANIFEST.json",
+      "manifest_sha256": "fc560e602f13bee81f92c86ba6a573fb2eba107ec22b9a649e588e1f35403d3d",
+      "registered_decision_file_sha256": "cfe104837c120e37c8e745351c54445e031ad9628e508ae343fd44022af52c1b",
+      "review_request": "reports/p009_20261014/NC_GUARD_REPAIR_COMPLETE_PAIR_A4_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_scope": "Actual paired NC A4 before S1 dispatch; independent full S1 runtime preparation may continue",
+      "created_utc": "2026-10-15T07:52:24.218557+00:00",
+      "actual_local_oracle_passed": true,
+      "local_registered_NC_gate": "NC_gate_passed",
+      "complete_logical_cells": 2,
+      "physical_scientific_runs": 3,
+      "preclaim_only_calls": 1,
+      "failed_parent_retained": true,
+      "current_scientific_workers": 0
     }
   ],
   "p008_v31": {
@@ -4001,7 +4022,7 @@
       "request_id": "p009-stage1-NC-guard-intent-repair-r1",
       "target_commit": "e8f57a1973cacf7efd508b59df9a94fda1539a1a",
       "packet": "reports/p009_20261014/stage1_nc_guard_repair_preflight_v1",
-      "status": "one_actual_submitted_running_first16_verified",
+      "status": "complete_full_local_oracle_and_registered_pair_A4_pending",
       "new_calls": 1,
       "prior_reserved_cents": 1965,
       "new_proposed_cents": 655,
@@ -4024,10 +4045,18 @@
       "startup_packet": "reports/p009_20261014/stage1_nc_guard_repair_started_v1",
       "startup_target": "bd78d6a235125188dcde595273cbf7b67376a7d5",
       "startup_verified": true,
-      "actual_result_full_oracle_complete": false,
+      "actual_result_full_oracle_complete": true,
       "paired_A4_complete": false,
-      "latest_provider_read_utc": "2026-10-15T07:18:39.723350+00:00",
-      "next_normal_provider_utc": "2026-10-15T07:48:40+00:00"
+      "latest_provider_read_utc": "2026-10-15T07:44:40.339586+00:00",
+      "next_normal_provider_utc": null,
+      "correct": 967,
+      "total": 1319,
+      "caps": 58,
+      "technical_unknown": 0,
+      "result_packet": "reports/p009_20261014/stage1_nc_guard_repair_complete_v1",
+      "result_target_commit": "9a266dbe74e76b2936265bf47f7342083ccc146a",
+      "paired_review_request": "p009-stage1-NC-guard-repair-complete-pair-A4-r1",
+      "all_related_apps_STOPPED0": true
     },
     "S1_score_process_preparation": {
       "packet": "reports/p009_20261014/stage1_s1_score_process_draft_v1",
