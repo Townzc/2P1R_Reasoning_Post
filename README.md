@@ -1,3 +1,8 @@
+<!-- Actual cb acceptance 2026-10-15T04:05:26.377825+00:00 -->
+[NC确切运行/数值与S1实际输入已通过真实审计](reports/p009_20261014/review_06fac149_accepted_v1/DISPOSITION.md)。两NC将在必要新预算与一次输入回读后按原有限槽位运行；S1仍待NC结果A4与自己的完整运行准入，当前没有学生结果。原时限、剂量与一次性调用不变。
+
+--- Earlier dated checkpoints ---
+
 <!-- S1 local execution draft 2026-10-15T03:39:26.959571+00:00 -->
 [S1训练与500题评测适配准备](reports/p009_20261014/stage1_s1_execution_draft_v1/README.md)已完成10项新合成/全mock检查。没有新入口、实际时长帽、调用或独立阻塞门；未来完整运行准入绑定真实NC结果和计时。NC确切审计/S1输入审计仍按最新实际读取待回复。
 

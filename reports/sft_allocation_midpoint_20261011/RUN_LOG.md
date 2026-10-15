@@ -1,3 +1,11 @@
+### 2026-10-14 21:05:53 PDT（NC新付费阶段必要预算与Papers读取）
+
+实际21:04:09–11PDT读取Modal：delayed meter237.29237081、billed0E-8、credit adjustment-237.00000000，74行月报完整私有保留。新高值+25未校准lag向上取262.30，加未来整个P009130后392.30<450，是准入情景不是已花/余额/严格上界；全部失败/setup/build/storage计，旧2641c预留不释放。两NC新1310c在Stage15000内，原9inputs即将一次回读，无重复权重传输。Papers commit仍e097b0cb，无新Pro交付。
+
+### 2026-10-14 21:05:26 PDT（cb确切NC运行/数值与S1实际输入审计通过）
+
+固定06fac149完整报告已读取并保存SHA8e27ab943cb903655f30882bbf5b4210e78c8aec3aa01040e4ae0336dc1ba665；事件NC03:40:26/S1输入03:45:32UTC与实际读取区分。NC42源22b02e31和4192.982未校准情景PASS-WITH-NOTES，S1实际10源3d4c5974/5774合格题/六完整计划PASS。准确接受记录已保存，仍无学生输出；下一步必要新预算/Papers与9输入一次回读、两NC各一次调用。原4500秒/655c每项、原科学门不变，S1仍需NC A4和自己的完整运行审计。报告P0 eager措辞已据原graph/V1来源纠正，未改原计时；典型速度/费用是reviewer估计不是实测或保证。reviewer24无torch检查不扩大到未执行的3torchfixtures；旧测试/评分/准备不重复。一次只读猜测请求文件名不存在，无写入/科学副作用，实际INDEX作为请求来源。
+
 ### 2026-10-14 20:39:26 PDT（S1运行适配准备，无新增科学调用）
 
 在NC42源确切审计等待期间，仅新增S1 contract/training-child/runtime三模块和两份新测试。复用原训练core与训练进程exit/join后创建vLLM的顺序，固定500题/1024token、原1024updates/2097148targets/完整答案，原始raw先落盘；新代码没有Modal入口、实际时长帽或准入。8项synthetic +2项真实新child代码body全mock检查一次PASS（0.029/0.008s），不是GPU实测。4000秒只是合成fixture，不是实际候选；6×655超过Stage1剩3690，明确拒绝，不静默借用未分配额或回收reserve。后续需真NC A4/实际计时、S1输入、完整source/numeric与原科学门绑定；本草稿不新增独立阻塞门。旧NC42字节未变、无acceptance/budget/upload/gates/runs，0模型/评分。两次误猜只读文件路径不存在，无副作用，已按rg真实路径读取。旧tests/P1/inputs/packets不重复。
