@@ -1,3 +1,7 @@
+# P009 final actual A4 accepted; registered study stopped — 2026-10-15T11:14:49.140581+00:00
+
+Actualcj b0662285/reportSHA0076c884 fullread11:07:20UTC PASS binds target30b906daa. All47fixedrows were matched to original samples; no rescoring/labels/source changes. FIRST_PAIR_STOP_A4_ACCEPTED exists:273/276,original<2pp STOP, no remainingS1 orStage2, G1/bootstrapNOTRUN. Zero scientificGPU/CPU. Finalhandoff reports/p009_20261014/final_handoff_20261015_v1 andacceptance reports/p009_20261014/review_b0662285_actual_s1_stop_accepted_v1 prepared once; original immutablepackets unchanged. Next onlyordinarycommit/push/remoteverify and authorizedpausep009, then recordactualpause/finish. Do not repeat any model/collector/export/oracle/score/tests/publisher or oldCLI. OldmonitorsPAUSED; newreport closes the sole outstandingA4. Reviewer didnot rerunmathverify or readprivatebinary; limits retained. No routinepermission/externalposts/subagents. Earlier pending/running entries arehistorical.
+
 # Current S1 first pair closed locally; registered stop awaiting actual A4
 
 Read ACTIVE_HANDOFF latest top. Original80236/2114, status34710, collector93080/42462,

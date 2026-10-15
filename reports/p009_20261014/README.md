@@ -1,3 +1,6 @@
+<!-- P009 final actual A4 2026-10-15T11:14:49.140581+00:00 -->
+**P009已按预注册停止，最终实际A4通过。** S1为273/500与276/500（+0.6pp<2pp）；后四S1和Stage2未启动、G1/bootstrap未执行。[最终结果与材料](final_handoff_20261015_v1/README.md)。全部科学资源已退出；交接远端核验后暂停p009。
+
 <!-- P009 S1 first pair locally closed 2026-10-15T10:23:04.456004+00:00 -->
 [S1 首对完整结果与证据](stage1_s1_first_pair_handoff_v1/README.md)：n400 273/500，n3200 276/500，差值+0.6pp，触发原<2pp futility停止规则。两app已STOPPED/owned0；后四项S1与Stage2不启动。完整实际A4外审待完成，G1/bootstrap未执行。
 
