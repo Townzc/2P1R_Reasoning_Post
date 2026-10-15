@@ -1280,3 +1280,9 @@ P1 publication: four prior scalar/pool/journal/requirements source hashes were e
 当前原teacher25996与OLMo81858已submitted，原Qwen93362已completed/exit0消耗；Qwen启动核验7928DONE，原collector74242一次运行中，fullledger安静不当失败。三个均原执行80ff96，无模型重发；teacher首核68886DONE。所有原上传/旧P0仍不可重跑。
 
 2026-10-15T00:56:55.946250+00:00 — The local-window publisher r1 read a direct source map as a wrapper and raised KeyError before pub.mkdir or any output. Original script/log retained; r2 changed only the map access and completed previously unwritten artifacts once. No test/scoring/model replay. Earlier missing INDEX pathname/glob reads were read-only failures with no mutation.
+
+### 2026-10-14 17:58:51 PDT（bu实际读取；旧6h未运行，新36h待确切审计）
+
+报告8aba02ff/20261014bu/REPORT.md SHA3c4664b5于2026-10-15T00:58:02.445940+00:00UTC全文读取，评论事件00:44:03。原P1十源CODE PASS-WITH-NOTES，但owner已选B，新12源bb2629ba的36小时总帽须自己精确审计，旧报告不准入新入口。原first1001200/pair8/保守公式不变，0实际symbolic，未看首100后再改门。Stage0结果publisher原708d426f真实CODE PASS已准确保存，实际原始结果A2仍须后续。
+
+三个原科学调用都已正常exit0、原CLI已消耗；Qwen收集74242/导出24064/oracle30566与3项启动核验全DONE；teacher原collector55399一次进行中，OLMo尚未collect。teacher与OLMo的原始输出尚待独立fulloracle。没有新模型、上传、旧测试或重评分重复。账务仍Stage040/P009130，不把预留叫花费。

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:57:44.761530+00:00",
+  "as_of_utc": "2026-10-15T00:58:51.097339+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2332,7 +2332,7 @@
       "candidate_sha256": "0d2adc7933e0b31abc540543b1df4ef355a690faa886aa2774dc4809bc47692a",
       "source_files": 10,
       "review_request": "reports/p009_20261014/p1_driver_preflight_v1/REVIEW_REQUEST.md",
-      "status": "superseded_UNATTEMPTED_owner_local_window_amendment",
+      "status": "code_PASS_WITH_NOTES_original_6h_SUPERSEDED_UNATTEMPTED",
       "blocking": false,
       "blocking_for": "Only local P1 input freeze and conditional first100; not funded Stage0 generation.",
       "generation_target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
@@ -2340,7 +2340,9 @@
       "created_utc": "2026-10-15T00:24:09.442404+00:00",
       "actual_symbolic_attempts": 0,
       "scientific_model_calls": 0,
-      "successor_request": "p009-math-p1-local-window-36h-r1"
+      "successor_request": "p009-math-p1-local-window-36h-r1",
+      "report_commit": "8aba02fff6d0ea6f37235835ed70fad48dac3010",
+      "report_sha256": "3c4664b5b4b8f80f8433572df6518ca16a229dc97e3252c4f7475c5c2ea508f8"
     },
     {
       "request_id": "p009-stage0-generation-result-publication-r1",
@@ -2351,11 +2353,14 @@
       "manifest_sha256": "da52a35f8db6ac0f2b019b4880c1eb3cd48c03f7ad587c25a28c75d48ff43717",
       "source_sha256": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26",
       "review_request": "reports/p009_20261014/stage0_result_publication_preflight_v1/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "code_PASS_actual_publications_pending",
+      "blocking": false,
       "blocking_for": "Only this per-slot local result publisher; not generation or P1.",
       "created_utc": "2026-10-15T00:35:52.383483+00:00",
-      "actual_publisher_calls": 0
+      "actual_publisher_calls": 0,
+      "report_commit": "8aba02fff6d0ea6f37235835ed70fad48dac3010",
+      "report_path": "audit/claude/20261014bu/REPORT.md",
+      "report_sha256": "3c4664b5b4b8f80f8433572df6518ca16a229dc97e3252c4f7475c5c2ea508f8"
     },
     {
       "request_id": "p009-stage1-roster-selection-code-r1",
@@ -3079,7 +3084,7 @@
       "packet": "reports/p009_20261014/stage0_result_publication_preflight_v1",
       "target_commit": "b679dd7dc5e889d9e95d718f7f2fd5b2a664c279",
       "source_sha256": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26",
-      "status": "code_review_pending_NOTRUN"
+      "status": "code_PASS_actual_publications_pending"
     },
     "math_p1_driver_extended": {
       "actual_generated_model_calls_added": 0,
