@@ -1,3 +1,11 @@
+### 2026-10-14 23:38:53 PDT — ce旧helper真实CODEPASS归档；53源收尾适配准备
+
+reviewpoll实际06:33:21–22UTC/7a764470/101comments（分页完整保留），ce全文06:33:49.811443读，event06:05:29/comment6185656709/SHA3af2fd6a。旧b63ab三helper CODEPASS-WITH-NOTES真实存档，不执行旧49路径、不代新53修复/代理决定/结果A4。06:17普通巡检没有代理前缀，不能当批准。最新新修复request刚固定e8f57a19等待真正scope回复。下次正常07:03:50、绝不早于06:48:50，未变安静。
+
+新两只读helper对应53source/root/gates，新7checks一次通过（见log），没有旧8checks重跑、模型/raw/state/analysis调用。新publisher纳入preclaim零工作/655c/原fences，11provider/2620reserve并移除raw_comment_local_path，provider投影前置。原NC400metadata不重建，3科学run identities外另列1preclaimonly call不造terminal，原一次NC判定仍只未来全oracle后调用。新scope只挡helper不挡独立runtime。新sources/包仅prepared，不拿旧cePASS覆盖。
+
+Codexusage工具06:33读取1%used/99%remaining/ordinaryallowed/2resetcardsstillavailable；相较06:03变化原因未知，Codex没有使用credit或resetcard，不能声称主动重置。阈值未触发，余额/账号只私有不公开；Modal费用仍06:03原snapshot，未重复查询。
+
 ### 2026-10-14 23:28:03 PDT — NC替代入口preclaim失败保全，真实guard修复待代理决定与独立审计
 
 原CLI87425exit1已消耗/appap-iCt0KOKWNfNojiIzZv1LoM/callfc-01M4Z33847TMFE5KP93N8B5NXQ，23:13:31PDT真实STOPPED0。真实新只读reconciliation94084于06:22:57UTC完成：plan+两个永久dispatchfence存在，guard intent/claim/attempt/terminal/unit/远端目录均无，0训练/输出/检查点；不是伪造failedterminal，也不等于免费。旧655c保留。此前“images built/preflight进行中”已被真实callback覆盖。旧NC400954与failed896父均不动。
