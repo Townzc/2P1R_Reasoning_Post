@@ -1,3 +1,11 @@
+### 2026-10-14 23:05:27 PDT — cd真实A4与49源替代准入；新增限时owner代理授权
+
+cd事件05:44:14UTC/comment6185359919，完整报告实际06:01:26.148448读取，SHA72d18a58。原NC400实际1319raw/954正确/1024剂量与failedNC3200保全A4分别PASS；不是NC配对PASS。新49源/3938689c/spec35b17552/timing/owner/父/输入/655c真实PASS-WITH-NOTES，RUNTIME_ACCEPTED及PARENT A4准确保存。原954在owner批准前已公开的非盲态时间线保留；N3明确非阻塞，不重复询问。N4新只读/配对publisher仍独立待审，不用旧cc路径。原49科学字节未改，无旧检查/模型重跑。
+
+必要新06:03:03–04UTC费用meter241.00237099/billed0/credits240.71，77月报行，Papers仍e097b0cb。近期高+25未校准lag向上266.10，加原完整130得396.10为保守准入情景，不是花费/余额/上界。Stage1原13.10+新6.55=19.65预留，未释放失败或使用新追加额度。下一只运行一次新gates/入口，无新输入上传。
+
+Owner新直接授权至Oct15 07:00PDT/14UTC：Claude在#13以【Owner 代理决定】开头、写明理由的评论可代批原P009 Stage1及G1后Stage2内失败替代/stage预算调整；追加最多150USD仍受450/50保护。不是新增arm/改判定门/豁免自己的独立确切审计，也不授权Codex发送外部消息。每项原comment/作者/时间/理由必须存档。当前已审130分配不静默改为全部280未来预留；本slot不需新额度。usage低于3%才credits优先、不可用再一张重置卡，须核真实入口和结果；当前读取仍有24%普通额度，未触发。相关余额/账号信息仅私有保留，不混入Modal费用。
+
 ### 2026-10-14 23:00:02 PDT — S1评分日志只读核验准备
 
 新增stage1_s1_score_proof.py只读验证完整500行/五chunk/全部pair与缓存顺序/原SHA/固定抽查，0模型、state加载、rawdecode、box提取或symbolic重评分。保存的boxed分母仅原样引用，独立判断仍须真实外审；payload_only/科学未准入明确保留。未来完整S1入口须整合真实NC配对A4、全部source/runtime/input/local-time证明；未新增独立code-only阻塞门，也无实际S1调用。

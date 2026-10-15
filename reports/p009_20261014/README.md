@@ -1,3 +1,6 @@
+<!-- Actual cd acceptance 2026-10-15T06:05:27.826941+00:00 -->
+[原NC结果A4和单项独立替代确切审计已通过](review_41323a10_accepted_v1/README.md)，必要新费用核对完成，接下来一次派发。原配对NC门尚不可计算，S1未准入。[限时owner代理与追加额度](owner_overnight_proxy_v1/README.md)有效至Oct15 07:00PDT；不得新增arm、改判定门或豁免独立审计。
+
 <!-- S1 readonly score proof draft 2026-10-15T06:00:02.171422+00:00 -->
 [S1评分日志核验准备](stage1_s1_score_proof_draft_v1/README.md)完成8个新合成检查，无实际评分或新准入。确切替代运行/原父A4仍待真实报告；这项独立准备不新增阻塞门。
 

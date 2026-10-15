@@ -1,3 +1,6 @@
+<!-- Actual cd acceptance 2026-10-15T06:05:27.826941+00:00 -->
+[原NC结果A4和单项独立替代确切审计已通过](reports/p009_20261014/review_41323a10_accepted_v1/README.md)，必要新费用核对完成，接下来一次派发。原配对NC门尚不可计算，S1未准入。[限时owner代理与追加额度](reports/p009_20261014/owner_overnight_proxy_v1/README.md)有效至Oct15 07:00PDT；不得新增arm、改判定门或豁免独立审计。
+
 <!-- Explicit owner replacement authorization and exact preparation 2026-10-15T05:32:48.132065+00:00 -->
 **NC3200 单项独立替代已获你直接批准，正在等确切审计。** [49源/输入/计时/预算候选](reports/p009_20261014/stage1_nc_replacement_preflight_v1/README.md)保留原失败父及NC400完整结果，采用新的永久运行标识；原配方、4500秒帽和$6.55单次预留不变。实际新调用为0；原NC配对门仍不可计算，S1尚未放行。旧提案内“待owner”是历史状态，当前不再等待相同许可。
 

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T05:45:51.854817+00:00",
+  "as_of_utc": "2026-10-15T06:05:27.826941+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2827,15 +2827,22 @@
       "manifest": "reports/p009_20261014/stage1_nc_preemption_disposition_v1/MANIFEST.json",
       "manifest_sha256": "74c4590c8b112ba1b2623824c0bc2bb82facc3c7a590fe59a0ba1bb9eecec609",
       "review_request": "reports/p009_20261014/NC_PREEMPTION_ACTUAL_A4_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_PASS",
+      "blocking": false,
       "blocking_for": "Actual NC400 result and failed NC3200 preservation/disposition. Does not admit a replacement or S1; original pair gate unavailable.",
       "created_utc": "2026-10-15T05:14:17.354563+00:00",
       "actual_model_calls_added": 0,
       "replacement_proposal_only": true,
       "owner_once_only_exception_accepted": true,
       "owner_authority_file_sha256": "108c82f933990473119f48b186223057f1ab3a0f92769e666bbe2b34be8e0ae3",
-      "owner_addendum": "Owner now directly approved exactly one new NC3200 replacement. Fixed parent packet pending-owner text remains historical. No new runtime admission/call; candidate exact scope separately requested."
+      "owner_addendum": "Owner now directly approved exactly one new NC3200 replacement. Fixed parent packet pending-owner text remains historical. No new runtime admission/call; candidate exact scope separately requested.",
+      "acceptance_packet": "reports/p009_20261014/review_41323a10_accepted_v1",
+      "report_commit": "41323a10495e2ebddbadeaf658099cb40dfe60c4",
+      "report_path": "audit/claude/20261014cd/REPORT.md",
+      "report_sha256": "72d18a58f2e89268c3351a7484d6c20c3733674b39b03743bbb7e3e924bbf814",
+      "read_utc": "2026-10-15T06:01:26.148448+00:00",
+      "event_utc": "2026-10-15T05:44:14Z",
+      "comment_id": 6185359919
     },
     {
       "request_id": "p009-stage1-NC3200-independent-replacement-r1",
@@ -2845,8 +2852,8 @@
       "manifest": "reports/p009_20261014/stage1_nc_replacement_preflight_v1/MANIFEST.json",
       "manifest_sha256": "9a6a0509327da49f35aeb6116581a2afd3bfa1b5e49dc12e5d12270cf80585e9",
       "review_request": "reports/p009_20261014/NC_REPLACEMENT_EXACT_REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_PASS-WITH-NOTES",
+      "blocking": false,
       "blocking_for": "Only the owner-approved single NC3200 independent replacement; original completed NC400 and failed NC3200 remain closed. Actual original-parent A4 is separately required.",
       "created_utc": "2026-10-15T05:36:46.858884+00:00",
       "actual_model_calls_added": 0,
@@ -2909,7 +2916,14 @@
       "parent_packet_target": "ab271a94749570308690b3eda2ee6a5c68c3618c",
       "same_scientific_recipe": true,
       "decision_blinded_to_NC400": false,
-      "chronology_disclosure": "NC400954/1319 was read/published before owner replacement authority was recorded; transparent post-failure engineering exception, not preregistered or blinded."
+      "chronology_disclosure": "NC400954/1319 was read/published before owner replacement authority was recorded; transparent post-failure engineering exception, not preregistered or blinded.",
+      "acceptance_packet": "reports/p009_20261014/review_41323a10_accepted_v1",
+      "report_commit": "41323a10495e2ebddbadeaf658099cb40dfe60c4",
+      "report_path": "audit/claude/20261014cd/REPORT.md",
+      "report_sha256": "72d18a58f2e89268c3351a7484d6c20c3733674b39b03743bbb7e3e924bbf814",
+      "read_utc": "2026-10-15T06:01:26.148448+00:00",
+      "event_utc": "2026-10-15T05:44:14Z",
+      "comment_id": 6185359919
     },
     {
       "request_id": "p009-stage1-NC-replacement-closeout-code-r1",
@@ -3712,7 +3726,7 @@
       "paired_NC_gate": "UNAVAILABLE_TECHNICAL_FAILURE",
       "replacement_proposal_only": true,
       "replacement_new_owner_exception_accepted": true,
-      "review_status": "pending",
+      "review_status": "actual_A4_PASS_pair_unavailable",
       "target_commit": "ab271a94749570308690b3eda2ee6a5c68c3618c",
       "request_id": "p009-stage1-NC-preemption-and-n400-A4-r1",
       "review_request": "reports/p009_20261014/NC_PREEMPTION_ACTUAL_A4_REQUEST.md",
@@ -3731,7 +3745,7 @@
       "actual_calls": 0,
       "actual_gates": 0,
       "actual_uploads": 0,
-      "status": "owner_approved_exact_runtime_review_pending_0_calls",
+      "status": "exact_runtime_numeric_PASS_with_notes_gate_and_call_pending",
       "target_commit": "3938689cb3156d9a67773f49d8d7cd7f4390bc9c",
       "request_id": "p009-stage1-NC3200-independent-replacement-r1",
       "manifest_members_git_verified": 124,
@@ -3741,7 +3755,24 @@
         "request_id": "p009-stage1-NC-replacement-closeout-code-r1",
         "code_status": "PENDING",
         "all_actual_actions": "NOTRUN"
-      }
+      },
+      "runtime_review_commit": "41323a10495e2ebddbadeaf658099cb40dfe60c4"
+    },
+    "overnight_owner_proxy": {
+      "packet": "reports/p009_20261014/owner_overnight_proxy_v1",
+      "owner_authority_sha256": "c5b2308c5cace6f199b498c4554bc8cf4845de898a3873bcf00e6989364235f3",
+      "expires_utc": "2026-10-15T14:00:00+00:00",
+      "required_comment_prefix": "【Owner 代理决定】",
+      "additional_authorized_usd": 150,
+      "current_reviewed_total_usd": 130,
+      "scientific_rules_unchanged": true,
+      "independent_audit_required": true
+    },
+    "S1_score_proof_preparation": {
+      "packet": "reports/p009_20261014/stage1_s1_score_proof_draft_v1",
+      "target_commit": "db195321cde56f8da26b16de2c87e857762c83bc",
+      "actual_execution": false,
+      "new_code_only_blocking_request": false
     }
   }
 }
