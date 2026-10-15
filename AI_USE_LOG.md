@@ -1,3 +1,17 @@
+### 2026-10-14 22:13:08 PDT — NC400完整核验、NC3200抢占失败保全关闭
+
+原NC400 terminal04:48:48UTC，fulloracle实际04:58:50UTC通过954/1319、caps56、0unknown及1024updates/2097148targets、完整stateSHA f9aca4bf。collector34016/export17437/oracle79445全部一次EXIT0已消耗；不重评分或加载旧state。原NC3200 terminal04:52:46UTC failed，provider04:56:04读两app STOPPED0；原CLI记录平台抢占并尝试同输入重启，永久guard在新claim/训练前拒绝。原CLI26666/3874均已消耗，0新模型调用。
+
+唯一只读preserver77581于05:11:20UTC完成2024文件/3527435bytes全部SHA、前后目录/五项账本匹配，复用已有300记录fullledger、0新Dict枚举/远端写；零传输unknown。独立结构核验一次核896保存步/1834908 targets/2232929 processed/56 immutableacks，56forecast但仅55完整timing，末块计时未完成。无模型/优化器/RNG检查点、无终点评测；这些记录不代表可恢复state或完整科学剂量。原failed父、655c预留和全部失败费用永久保留，ledger名为actual_cost_cents仍是保守占位，非账单。
+
+新static只读失败处置publisher22581一次完成31成员，原NC400 raw/全oracle与原failedmanifest/精确投影/私有原SHA公开，没有执行已审完整pairpublisher或NC统计。实际结果/失败处置A4待独立审计。配对门为UNAVAILABLE_TECHNICAL_FAILURE，不能填零、称科学门失败/通过或放行S1。具体独立替代提案仅原NC3200从原base重新完成1024步、同seed17/输入/LR/2097148targets/1319终点，候选4500秒/$6.55新预留且一次零retry；不是从896步续训，未获新的模型调用例外、未准备实际runtime。替代若准入后Stage1累计1965c、剩3035c，不能假装后续六S1已获数值预算准入。
+
+动机是保存真实失败并提供可审阅处置，原完成工具/测试/原科学源均未重复。两次猜测私有保全脚本/公开review-request路径的只读失败无副作用，已用rg和INDEX准确定位。公开provider去actor/intent去hostlocator/failure仅workspace前缀投影；完整private原件保留。无新paid阶段，未重复费用或Papers请求。p009继续核验/处置，旧两监控PAUSED。
+
+### 2026-10-14 22:02:16 PDT — cc publisher code accepted; actual NC3200 failure blocks pair
+
+Full fixed b83b4949 report SHA4e57ad3eb81085bad64825a3be5f9ff173d5d2536de63d4670294dc9ce064e7c read2026-10-15T05:02:16.663419+00:00, event04:43:44UTC separate. Exacttwo-source originalpublisher PASS-WITH-NOTES; correctly savedPUBLICATION_CODE_ACCEPTED. It remains NOTRUN because bothcompleted precondition fails for originalNC3200. N1 partialpublication risk/N2pinning/N3schema notes retained, no unreviewed source changes. Reviewer startup/pace extrapolation is not preemption or completion assurance. No NC paired statistic/A4/S1 release. One local read of slurpedcomments initially treated nestedpages ascomment and raisedAttributeError; corrected parsing of the same savedJSON,0externalwrites.
+
 ### 2026-10-14 21:58:48 PDT — P009 NC3200 platform preemption; Stage1 blocked
 
 Original CLI3874 exit1 consumed. The saved original log explicitly reports Modal platform preemption and an attempted same-input restart, rejected at RunGuard.admit before any second claim/training. Actual observer48814 read04:56:04UTC proves bothoriginalapps STOPPED/owned0, NC400completed and NC3200failed with896continuous saved updates/0endpointnames; metadata is not a full-dose or state oracle. Original NC3200 failedterminal/655c reservation and fences retained. No operator resubmission, claim clearing or model replay. A bounded2reader read-only preservation77581 is running, reusing the already-complete NC400fullledger and checking five lineagekeys plus before/afterVolume lists.2024listedfiles/3527435bytes include no.pt/.safetensors; fulltransfer validation pending. This blocks the NC paired gate and S1; no scientific result inferred. OriginalNC400collector34016/export17437 completed once,2355originalfiles SHAverified; fulloracle now starts once.

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T04:55:43.669888+00:00",
+  "as_of_utc": "2026-10-15T05:13:08.316058+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2805,12 +2805,19 @@
         "scripts/publish_p009_stage0_result.py": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26"
       },
       "review_request": "reports/p009_20261014/stage1_nc_publication_preflight_v1/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_PASS-WITH-NOTES",
+      "blocking": false,
       "blocking_for": "Only the new complete-pair readonly publisher/analysis binding; not NC workers or S1 input acceptance.",
       "created_utc": "2026-10-15T04:17:45.802325+00:00",
       "actual_execution": false,
-      "actual_NC_outcomes": false
+      "actual_NC_outcomes": false,
+      "acceptance_packet": "reports/p009_20261014/review_b83b4949_accepted_v1",
+      "report_commit": "b83b494984b7c3ee59982fb654157b22ef642d0f",
+      "report_path": "audit/claude/20261014cc/REPORT.md",
+      "report_sha256": "4e57ad3eb81085bad64825a3be5f9ff173d5d2536de63d4670294dc9ce064e7c",
+      "read_utc": "2026-10-15T05:02:16.663419+00:00",
+      "event_utc": "2026-10-15T04:43:44Z",
+      "comment_id": 6184598703
     }
   ],
   "p008_v31": {
@@ -3104,7 +3111,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "funded_stage0_runtime_accepted_preparing_once_only_original_three_slots",
+    "status": "original_NC_pair_closed_with_technical_failure_actual_disposition_A4_pending",
     "total_cap_usd": 130,
     "stage_caps_usd": {
       "stage0": 40,
@@ -3541,7 +3548,7 @@
       "request_id": "p009-stage1-NC-runtime-and-numeric-r1",
       "source_count": 42,
       "actual_calls": 2,
-      "status": "exact_runtime_accepted_two_original_calls_submitted"
+      "status": "original_n400_completed_n3200_failed_both_STOPPED0"
     },
     "stage1_s1_inputs_candidate": {
       "target_commit": "3d4c5974f195ad73bc47eec847404efff7eddeaf",
@@ -3574,6 +3581,27 @@
       "manifest_sha256": "770add2aaea338978a0deb97bb0e8ffbe18dd0e9d201d19ef132ba6b90bc045b",
       "actual_execution": false,
       "blocking_request_created": false
+    },
+    "NC_failure_disposition": {
+      "utc": "2026-10-15T05:13:08.316058+00:00",
+      "nc400_full_oracle_passed": true,
+      "nc3200_failed_preserved": true,
+      "GPU_CPU_workers": 0,
+      "replacement_calls": 0,
+      "paired_analysis_run": false,
+      "S1_admitted": false,
+      "packet": "reports/p009_20261014/stage1_nc_preemption_disposition_v1",
+      "manifest_sha256": "74c4590c8b112ba1b2623824c0bc2bb82facc3c7a590fe59a0ba1bb9eecec609",
+      "preservation_sha256": "75f29c7560e963f8e28777906158762b30c449de688fc2d2e7726a1eb4fa9b8b",
+      "nc400_correct": 954,
+      "nc400_caps": 56,
+      "nc3200_saved_updates": 896,
+      "nc3200_known_saved_targets": 1834908,
+      "checkpoint_present": false,
+      "paired_NC_gate": "UNAVAILABLE_TECHNICAL_FAILURE",
+      "replacement_proposal_only": true,
+      "replacement_new_owner_exception_accepted": false,
+      "review_status": "pending_fixed_request"
     }
   }
 }

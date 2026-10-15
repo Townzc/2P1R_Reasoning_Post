@@ -1,0 +1,10 @@
+{
+  "original_sha256": "584d6a1a4c4b8b05f6ac6544998426b7b77242c48005753204aaa144a4aa94ac",
+  "projection": "Only local workspace prefix replaced by <WORKSPACE>; original private bytes retained.",
+  "value": {
+    "error": "",
+    "retry_authorized": false,
+    "traceback": "Traceback (most recent call last):\n  File \"<WORKSPACE>/experiments/learning_regime_p009/modal_stage1_nc.py\", line 61, in work\n  File \"/workspace/experiments/learning_regime_p009/stage1_nc_runtime.py\", line 113, in execute\n    trained, joined = training_once(training_child,\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/learning_regime_p009/stage1_nc_runtime.py\", line 30, in training_once\n    kind, result = receive(connection, process, stop)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/learning_regime_p009/p0_runtime.py\", line 14, in receive\n    if connection.poll(min(1., max(.001, stop-30-time.time()))):\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/multiprocessing/connection.py\", line 257, in poll\n    return self._poll(timeout)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/multiprocessing/connection.py\", line 440, in _poll\n    r = wait([self], timeout)\n        ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/multiprocessing/connection.py\", line 1136, in wait\n    ready = selector.select(timeout)\n            ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/selectors.py\", line 415, in select\n    fd_event_list = self._selector.poll(timeout)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt\n",
+    "type": "KeyboardInterrupt"
+  }
+}

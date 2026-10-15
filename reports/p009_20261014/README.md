@@ -1,3 +1,8 @@
+<!-- Actual original NC closeout 2026-10-15T05:13:08.316058+00:00 -->
+**Stage1 当前受技术失败阻塞。** [NC400完整结果及NC3200抢占证据](stage1_nc_preemption_disposition_v1/README.md)：NC400为954/1319、caps56、完整1024步本地核验通过；NC3200保存896步记录但没有模型检查点或终点，原失败永保。两app已STOPPED0。配对NC门无法计算，S1未放行。[独立替代提案](stage1_nc_preemption_disposition_v1/REPLACEMENT_PROPOSAL.json)仅为具体候选，仍需原一次调用限制的明确例外及确切代码/输入/数值审计；没有新模型调用。实际结果A4待审。
+
+--- Earlier dated checkpoints ---
+
 <!-- Actual NC startups 2026-10-15T04:36:15.246903+00:00 -->
 [两项原NC已启动并完成首批核验](stage1_nc_started_v1/README.md)。n400/n3200各原科学调用一次；04:31UTC只读快照各有1个容器、无终点结果。完整收尾与实际A4之后才推进S1，原时限和剂量不变。[cb更正及范围](review_036a97d9_erratum_v1/DISPOSITION.md)保留原始报告和所有计时限制。
 
