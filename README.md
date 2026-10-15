@@ -1,3 +1,6 @@
+<!-- Actual NC complete pair 2026-10-15T07:51:10.787909+00:00 -->
+[NC两逻辑端点已完整本地核验](reports/p009_20261014/stage1_nc_guard_repair_complete_v1/README.md)：954与967/1319，差值+0.99pp未触发注册5pp停止门；实际结果A4待审，S1尚未调用。原失败与非盲态替代记录保留，全部11app STOPPED0。
+
 <!-- Actual repaired NC startup 2026-10-15T07:24:37.184596+00:00 -->
 [唯一NC3200修复调用已训练并通过首16步启动核验](reports/p009_20261014/stage1_nc_guard_repair_started_v1/README.md)。完整结果和NC配对A4仍pending；[未来S1预算调整](reports/p009_20261014/stage1_s1_budget_proposal_v1/README.md)仅提案，当前额度未变。
 

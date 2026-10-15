@@ -1,3 +1,11 @@
+### 2026-10-15T00:51:10.787909-07:00 — NC完整配对本地核验完成，实际A4待审
+
+唯一修复原CLI54872 EXIT0已消耗，entry07:13:34.991808、terminal07:38:29.656611UTC、provider00:38:31PDT STOPPED0；含pack1494.664802秒只为本次观测，不是未来时长/抢占保证。全部11相关app STOPPED/所属容器0。唯一collector81972/export28027/oracle5998与已审pairpublisher均DONE；2355原artifact逐SHA通过，新完整state/raw/剂量/49依赖/53source/forecast原证据闭合。原NC400不重跑/不重评分，failed896父与preclaim零工作调用分别保留，2620c预留不是花费。
+
+新n3200=967/1319、caps58、unknown0；原n400=954/1319、caps56。一次已审nc_result给delta13/+0.985595pp，小于原5pp停止线；local NC门通过，actualA4仍PENDING，不能冒充S1运行准入或等效。新immutable包stage1_nc_guard_repair_complete_v1和确切actualA4请求已准备；后续需真实报告。NC400先公开后批准替代的非盲态时间线永保。
+
+独立S1全运行整合正在本地准备：新funded适配/binding/entry是UNREVIEWED草稿，尚未测试/发布/调用，70/150仍仅预算提案，旧50/130未改。首个只读INDEX脚本误猜requests键、两处旧文件名误猜均在任何相应写入前失败，已用真实review_requests/文件路径；无模型/科学副作用。usage07:39实际3%used/97%remaining，未触发credits/reset；隐私原记录仅private。本轮没有新费用查询/旧核验重跑。
+
 ### 2026-10-15 00:24:37 PDT — 唯一NC修复真启动核验；S1预算仅提案
 
 CLI54872/appap-X5eqTV19egvsfSzNNFntTB/callfc-01M4Z6HD5JSKHXMDZQFV86YSRE已真实submitted，execution66c669ae。实际entry2026-10-15T07:13:34.991808+00:00，4500秒hard2026-10-15T08:28:34.991808+00:00不延长。startup24047一次PASS/EXIT0消耗，首16步32849targets、H100/53源/49依赖/claim与修复fences均真核对，非全剂量/oracle。status69665一次DONE，07:18:39真实1container/无terminal/result/error，保存201更新/0endpoint；未查看终点评分，下一稳定provider07:48:40。原9inputs复用不上传，旧失败/NC400全不重跑。新publicstage1_nc_guard_repair_started_v1仅投影元数据，private原SHA保留。
