@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T05:13:08.316058+00:00",
+  "as_of_utc": "2026-10-15T05:14:17.354563+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2818,6 +2818,22 @@
       "read_utc": "2026-10-15T05:02:16.663419+00:00",
       "event_utc": "2026-10-15T04:43:44Z",
       "comment_id": 6184598703
+    },
+    {
+      "request_id": "p009-stage1-NC-preemption-and-n400-A4-r1",
+      "scope": "p009-stage1-NC-preemption-and-complete-n400-A4-disposition",
+      "target_commit": "ab271a94749570308690b3eda2ee6a5c68c3618c",
+      "packet": "reports/p009_20261014/stage1_nc_preemption_disposition_v1",
+      "manifest": "reports/p009_20261014/stage1_nc_preemption_disposition_v1/MANIFEST.json",
+      "manifest_sha256": "74c4590c8b112ba1b2623824c0bc2bb82facc3c7a590fe59a0ba1bb9eecec609",
+      "review_request": "reports/p009_20261014/NC_PREEMPTION_ACTUAL_A4_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Actual NC400 result and failed NC3200 preservation/disposition. Does not admit a replacement or S1; original pair gate unavailable.",
+      "created_utc": "2026-10-15T05:14:17.354563+00:00",
+      "actual_model_calls_added": 0,
+      "replacement_proposal_only": true,
+      "owner_once_only_exception_accepted": false
     }
   ],
   "p008_v31": {
@@ -3601,7 +3617,10 @@
       "paired_NC_gate": "UNAVAILABLE_TECHNICAL_FAILURE",
       "replacement_proposal_only": true,
       "replacement_new_owner_exception_accepted": false,
-      "review_status": "pending_fixed_request"
+      "review_status": "pending",
+      "target_commit": "ab271a94749570308690b3eda2ee6a5c68c3618c",
+      "request_id": "p009-stage1-NC-preemption-and-n400-A4-r1",
+      "review_request": "reports/p009_20261014/NC_PREEMPTION_ACTUAL_A4_REQUEST.md"
     }
   }
 }
