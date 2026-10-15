@@ -1,3 +1,7 @@
+### 2026-10-14 21:17:07 PDT（NC完整结果只读发布与分析绑定准备）
+
+新增publish_p009_nc_complete.py只在两完整fulloracle/result/STOPPED0后一次发布原compact投影和无损oracle，原stateSHA/manifest公开不冒充外审加载binary；独立intent/provider投影明确记录去除的私有locator/actor及原SHA。复用既有archive_original和已审nc_result，不重评分/训练/bootstrap。全原>=5pp NC门不改，实际结果A4仍后续。新代码只ASTparsed、未实际执行，没有重跑旧checks，也不将准备当结果。源与两直接文件snapshot送新限定审计，只挡该publisher、不挡已审NC worker。首次编写时analysis scope按真实ACCEPTED改正后再固定，未执行任何分析。数次只读猜测路径不存在，无科学或写入副作用；后续按真实INDEX/rg定位。
+
 ### 2026-10-14 21:05:53 PDT（NC新付费阶段必要预算与Papers读取）
 
 实际21:04:09–11PDT读取Modal：delayed meter237.29237081、billed0E-8、credit adjustment-237.00000000，74行月报完整私有保留。新高值+25未校准lag向上取262.30，加未来整个P009130后392.30<450，是准入情景不是已花/余额/严格上界；全部失败/setup/build/storage计，旧2641c预留不释放。两NC新1310c在Stage15000内，原9inputs即将一次回读，无重复权重传输。Papers commit仍e097b0cb，无新Pro交付。
