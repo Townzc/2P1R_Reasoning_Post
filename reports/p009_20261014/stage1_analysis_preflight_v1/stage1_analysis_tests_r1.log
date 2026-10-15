@@ -1,0 +1,24 @@
+....F.E..
+======================================================================
+ERROR: test_real_synthetic_bootstrap_degenerate_pair (tests.test_p009_stage1_analysis.Stage1Analysis.test_real_synthetic_bootstrap_degenerate_pair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "REPOSITORY_ROOT/tests/test_p009_stage1_analysis.py", line 78, in test_real_synthetic_bootstrap_degenerate_pair
+    result=a.paired_bootstrap(list(reversed(self.s1)),low,high)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "REPOSITORY_ROOT/experiments/learning_regime_p009/stage1_analysis.py", line 91, in paired_bootstrap
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+
+======================================================================
+FAIL: test_nc_integer_threshold_and_direction (tests.test_p009_stage1_analysis.Stage1Analysis.test_nc_integer_threshold_and_direction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "REPOSITORY_ROOT/tests/test_p009_stage1_analysis.py", line 18, in test_nc_integer_threshold_and_direction
+    self.assertFalse(a.nc_result(self.nc,low,self.scores(self.nc,666))['stop_all_positive_regimes'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.015s
+
+FAILED (failures=1, errors=1)

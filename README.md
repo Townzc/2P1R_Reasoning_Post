@@ -1,10 +1,9 @@
-<!-- Current P009 status: 2026-10-15T01:59:20.663120+00:00 -->
-P009 Stage0 全部14,450条输出已通过[完整外审](reports/p009_20261014/review_8efc897f_accepted_v1/DISPOSITION.md)，所有原应用已停止。NC 的 G0 通过；S2 因原零样本截断率546/1319超过15%淘汰，保留原门，不换4-shot基线。S1 等待完整 MATH 评分与独立核验。
+<!-- Current P009 status: 2026-10-15T02:20:41.691669+00:00 -->
+P009 Stage0 全部14,450条输出已通过[完整外审](reports/p009_20261014/review_8efc897f_accepted_v1/DISPOSITION.md)。NC G0通过；S2因原零样本截断率超过15%淘汰，所有原应用停止。
 
-P1 的新36小时本地入口已有确切代码PASS，首100行已完成；[实际计时数值审计](reports/p009_20261014/P1_FIRST100_ACTUAL_REVIEW_REQUEST.md)通过后才执行唯一剩余评分。未重复首100缓存。
-[NC两组固定输入与1024步计划](reports/p009_20261014/stage1_nc_inputs_v1/README.md)已准备并送审，尚无学生调用或Stage1结果。
+P1 [实际计时数值审计已通过](reports/p009_20261014/review_a236a90e_accepted_v1/DISPOSITION.md)，唯一剩余评分已于02:15:16UTC完成，实际12.10秒；全部10,489行无技术未知项，首100缓存复用。完整证据发布工具仍待代码审计，随后独立判定与P1 A2通过后才能用于S1资格/G0。36小时是技术总帽，非预计耗时。
 
-P009上限$130/Stage0$40是授权额度，不是已花费用；原P0内部vLLM范围与跨引擎不一致率继续公开。p009保持有限门控推进，旧p007与automation-4暂停。
+[NC固定输入与1024步计划](reports/p009_20261014/stage1_nc_inputs_v1/README.md)已准备送审，尚无学生调用或Stage1结果。P009上限$130/Stage0$40是额度而非已花费用；旧P0不一致率与内部vLLM范围保持公开。p009继续，旧p007和automation-4暂停。
 
 --- Earlier dated checkpoints ---
 

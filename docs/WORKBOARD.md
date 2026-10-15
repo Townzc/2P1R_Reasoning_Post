@@ -1,8 +1,27 @@
+
+### 2026-10-14 19:26:08 PDT（Stage1预结果判定代码准备，无实际分析）
+
+P1唯一remaining已完成，现等待完整证据publisher真审计及后续独立判定/P1A2。独立补齐Stage1的原NC/2%futility/G1/n*判定core，固定NumPy2.2.6/PCG64/seed20261014/10000pairedquestions/linear分位数，严格完整1319或500布尔端点和全6S1cells；S2原G0失败不能绕过。原门函数/22core/12P1/34generation未改，没有学生调用、真实统计或重评分，代码送真实范围审计。
+
+九个新检查覆盖：首轮七PASS，一处fixture把66/1319误当低于5%（原门计算正确），一处math-only本地环境缺NumPy；原失败日志/fixture保全。修fixture为65/66，另建analysis_env钉numpy2.2.6，未改评分环境；仅两失败项定向运行并PASS(3.022s)，七个已PASS不重复。纯局部读取曾误猜三个私有/公共文件路径而exit1，无写入或科学副作用，随后用实际路径。新代码包create-only一次完成；旧oracle/模型/首100和remaining不重跑。这个代码PASS未来只挡分析，不应挡独立NC worker准备或P1证据。
+
+
+## P009 P1 remaining completed — 2026-10-15T02:20:41.691669+00:00 / October14 19:15:16 PDT event
+
+Actual event02:15:16.497334UTC; read/update2026-10-15T02:20:41.691669+00:00. The exactly admitted remaining command (CLI78388, exit0 consumed) completed once in12.097635833s, with10489 complete scored rows and0technicalunknown, no cloud/model call, no raw re-decoding or first100 cache replay. All original pair failures/timeouts remain cached. No eligibility/G0/independent adjudication is claimed. Complete evidence publisher still awaits exact code review; then actual fixed-sample adjudication/P1A2. Stage1 scientific core and exact NC input review remain pending. The36h ceiling was technical headroom, not expected duration. This observation does not calibrate future inputs/hosts.
+
 # P007 / P008 工作总表
 
 所有时间使用 **America/Los_Angeles（PDT，UTC−7）**。这是团队进度与决策入口；实验原始证据仍在结果文件、RUN_LOG 和审计包中。时间来自提交、回执或 GitHub 事件；仅知道读取时间时写“收录”，不假定那是实际发生时间。
 
 ## 当前状态
+
+### 2026-10-14 19:16:40 PDT（P1实测数值审计通过；唯一剩余评分已启动）
+
+真实Claudea236a90e/20261014bx全文于2026-10-15T02:14:14.674849+00:00读取，事件02:11:23/comment6182813699，SHA8c70c024。确切85f1321a proposalFILESHA f925c847、basis eb2c3989、firstresult2b8b226b、原12source/ownerhash/total129600真实PASS，准确TIMING_ACCEPTED已保存。onlyremaining原CLI78388在02:15:04.399286UTC启动，独立p1_remaining_r1.log，实际wall129598.951302583减原首段；首100/73缓存和所有旧raw不重评分/重生成，partial不wholejobretry。无新云调用或费用请求。
+
+保留N1约0.5秒scenario与fullcommand差异，实际总帽减fullcommand；不热改原源或预测。N2最坏8秒乘pair算术不是含调度/I/O的保证。报告header写93manifest而实际固定清单102，原manifestSHA相同；保留差异，不把report93写成外审逐102核验，也不重做旧Git检查。完整P1仍须固定抽查/真实独立adjudication/A2才S1资格/G0，不用前缀得分挑样或改门。仅本地剩余正在运行，实际终点状态后续读取。
+
 
 ### 2026-10-14 18:57:05 PDT（Stage0完整A2通过来源；NC G0通过、S2原门失败）
 

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T01:57:05.157882+00:00",
+  "as_of_utc": "2026-10-15T02:26:08.984005+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2505,8 +2505,8 @@
       "manifest": "reports/p009_20261014/p1_first100_actual_v1/MANIFEST.json",
       "manifest_sha256": "e984d81f7e2dc17f35e7f35331b91e400d38e5119e37879292a34cd981dd828e",
       "review_request": "reports/p009_20261014/P1_FIRST100_ACTUAL_REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_NUMERIC_PASS_single_remaining_only",
+      "blocking": false,
       "blocking_for": "Only the unattempted local P1 remaining invocation; no cloud/model call and no scientific eligibility or G0 approval.",
       "created_utc": "2026-10-15T01:30:39.276740+00:00",
       "driver_source_files": {
@@ -2530,7 +2530,15 @@
       "proposed_total_wall_seconds": 129600,
       "actual_first100_rows": 100,
       "actual_first100_completed_utc": "2026-10-15T01:25:24.198916+00:00",
-      "remaining_invocations": 0
+      "remaining_invocations": 1,
+      "report_commit": "a236a90ed944d7785afa2aa9085749573aed64c0",
+      "report_path": "audit/claude/20261014bx/REPORT.md",
+      "report_sha256": "8c70c0245fe7e64b7641dc983273c6014a500398c342cfdb027aec7f39c993af",
+      "review_read_utc": "2026-10-15T02:14:14.674849+00:00",
+      "review_event_utc": "2026-10-15T02:11:23Z",
+      "acceptance_packet": "reports/p009_20261014/review_a236a90e_accepted_v1",
+      "approved_total_wall_seconds": 129600,
+      "remaining_cli": 78388
     },
     {
       "request_id": "p009-math-p1-complete-readonly-publication-r1",
@@ -2547,8 +2555,9 @@
       "blocking": true,
       "blocking_for": "Only future read-only complete P1 evidence publication; not the independent measured remaining-scoring admission.",
       "created_utc": "2026-10-15T01:39:03.416907+00:00",
-      "actual_full_scoring": false,
-      "actual_publisher_execution": false
+      "actual_full_scoring": true,
+      "actual_publisher_execution": false,
+      "remaining_completed_utc": "2026-10-15T02:15:16.497334+00:00"
     },
     {
       "request_id": "p009-stage1-NC-exact-input-and-plan-r1",

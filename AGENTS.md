@@ -1,3 +1,14 @@
+# P009 complete local P1 scoring — 2026-10-15T02:20:41.691669+00:00
+
+Real bx numeric PASS a236a90ed944d7785afa2aa9085749573aed64c0 was fully read02:14:14.674849UTC. Exact12-source/proposal/owner129600 bindings accepted. The unique remaining CLI78388 EXIT0 is CONSUMED:02:15:16.497334UTC completion,12.097635832964443 command seconds;10489 rows/0technicalunknown/0modelcalls. Originalfirst100 cached pairs reused. NEVER remaining/freeze/first100/poll78388 again. This is not independent adjudication, eligibility or G0 acceptance.
+
+FullP1 readonlypublisher scripts/p009_p1_complete_evidence.py@0e79cff5 is still NOTRUN/code-review PENDING; do not bypass. All original chunks/pairs/complete rows/fixed samples are preserved. Exact full-P1 publication after real scopedcodePASS then actual independent fixed-sample/P1A2 remain necessary. Stage1core919ab478 and NCactualinputs7abac861 remain pending; no students or new GPU/CPU calls.
+
+Lastreviewpoll02:14:04.147852/90comments; fullread02:14:14.674849. Nextnormal02:44:15, neverbefore02:29:15. bx first100manifest prose93 differs from actual102; originalmanifestSHA matches, do not claim reviewer individually checked102. No cached rescoring/tests/oldmodel repeats. Read LIVE_P009_P1_SCORING_COMPLETE.md plus prior latest handoffs for immutable commands.
+
+
+--- Previous dated state ---
+
 # Latest P009 Stage0 A2 / NC input candidates — 2026-10-15T01:59:20.663120+00:00
 
 Read current ACTIVE_HANDOFF and LIVE_P009_STAGE0_A2_NC_INPUTS.md. Stage0 bw actual rawA2PASS/NCG0PASS/S2G0FAIL; fullP1/S1 pending. NC400/3200 exact inputs and1024plans prepared once at7abac861, actualinputreview pending. No students. First100/freeze/publisher DONE; remaining still waiting true85f1321a numeric. Lastpoll01:55:29/fullread01:55:42, nextnormal02:25:42/min02:10:42. Preserve all DONE/oldsource/oldmonitorsPAUSED, p009ACTIVE. Earlier dated entries are history.

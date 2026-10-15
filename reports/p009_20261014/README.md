@@ -1,32 +1,12 @@
-# P009 current: Stage0 A2 accepted; P1 remainder awaits numeric review
+# P009 — complete local P1 scoring; independent outcome review remains
 
-All14,450 Stage0 outputs are fully locally verified and independently replayed
-in [bw A2](review_8efc897f_accepted_v1/DISPOSITION.md); all original apps STOPPED0.
-NC G0 is PASS: teacher1106 vs same-vLLM base650/1319, caps48/43.
-S2 G0 is FAIL: original zero-shot546/1319 caps exceed15%; no4-shot replacement,
-cap relaxation or replay. S1 still awaits full MATH scoring and adjudication.
+Updated 2026-10-15T02:20:41.691669+00:00. [Stage0 actual A2](review_8efc897f_accepted_v1/DISPOSITION.md) verified all14450 raw outputs. NC G0 passes; S2's original546/1319 cap failures exceed15% and permanently fail its G0. No4-shot substitution or S2 student is admitted.
 
-The [36-hour local driver](review_10cbc965_accepted_v1/DISPOSITION.md) ran its
-only first100 at01:25:24UTC:73 distinct pairs, max0.074970291s,3975 remaining.
-The unchanged serial scenario718.157927s is not a bound. [Exact actual numeric
-review](P1_FIRST100_ACTUAL_REVIEW_REQUEST.md) remains pending before remaining.
-First100 confirmed pairs, including failures/timeouts, must be reused. Four
-unsupported procurement golds are excluded, not scored zero; seven original
-context exclusions remain separate. The technical total ceiling129600s was
-fixed before measurements, not an expected runtime or cloud-budget increase.
+[Exact P1 first100 numeric review](review_a236a90e_accepted_v1/DISPOSITION.md) is PASS. The unique remaining command finished02:15:16.497334UTC in12.097635833s. All10489 scorable rows are complete, technical_unknown=0; first100 cached pairs were reused. Four unsupported procurement golds remain excluded, not zero; seven context exclusions remain separately never-generated. No new model call, raw re-decoding or scientific score repair occurred.129600s was a pre-measurement technical ceiling, not an expected runtime.
 
-[Two NC input candidates](stage1_nc_inputs_v1/README.md) are complete and now
-under exact review: original D13436 inventory, fixed nested400/3200,1024updates
-and2097148targets each, original LR. Whole-answer sums114758/934547; no q0 or
-answer truncation. No students have run. Scientific core, exact worker/numeric
-and actual input/G0 gates must all precede paid training. Full P1 evidence
-publisher is prepared and separately pending code review. S1 input selection
-requires its own complete P1/adjudication/G0; S2 is not admitted.
+FullP1 evidence publisher code review is pending; independent fixed-sample adjudication and actualP1 A2 still precede label eligibility and S1 G0. This completion does not assert those gates. [NC400/3200 inputs](stage1_nc_inputs_v1/README.md) are prepared under exact review, as is the scientific core; no student has run. All original scientific/runtime/input/numeric/budget gates remain.
 
-Budget Stage0$40/Stage1$50/Stage2$35/unallocated$5=P009$130, project$450 with
-$50 protection. Reservations are not spending. p009 ACTIVE; oldp007 andautomation-4
-PAUSED. Immutable P0discordance/post-result vLLM-only amendment and all failures
-remain. HF638/969 never enter P009 effects. No completed tool or model is replayed.
+Stage040/Stage150/Stage235/unallocated5=P009130, project450/protected50. Reservations are not spending. p009ACTIVE; oldp007 andautomation-4PAUSED. Original P0discordance and post-result vLLM-only scope remain; HF638/969 never enter P009 effects. Every DONE operation remains closed.
 
 --- Prior dated records ---
 
