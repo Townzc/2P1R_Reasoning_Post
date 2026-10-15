@@ -1,3 +1,9 @@
+### 2026-10-15 02:03:58 PDT — S1 exact81 runtime/numeric true PASS-WITH-NOTES; fresh paid-phase budget
+
+ch a3fde15c完整报告SHA91e01c7e，事件08:44:41/实际读取08:55:21.571426UTC。81源/6f0bd17e/spec e326/timing a69/真实budgetproxy与NCcg完整绑定已准确保存，两个首槽prospective只读验证通过。原模型/评分/tests/收尾没有重复；此时0S1上传/gates/调用。随后仅首seed17 n400/3200各一次，后四项必须真实futility A4。
+
+新必要billing09:00:53 delayed242.75237116/billed0，+25未校准lag向上267.80+全未来150=417.80只是准入情景非已花/余额/严格上界；原2620c保留、新3930c预留、Stage170/P009150、project450/50保护，不释放失败费。Papers仍e097b0cb、原43–46已读。N1同token帽不能保证未来host时间不超过旧base最大，明确不采用该更强保证；N2抢占风险、N3独立完整评分/A4不变。新helperadfc66仍只代码待审，不阻塞runtime。一次误读stage1_s1_binding.py不存在发生只读阶段、无任何状态改变，后续读取真实funded_binding，无测试/科学副作用。
+
 ### 2026-10-15 01:51:44 PDT — S1只读启动核验及完整交接工具准备
 
 新S1命名slot observer与per-run/first-pair publisher仅PREPARED，原81source不改。状态读取失败留unknown/500终点计数，首16原ack后一次startup核seed17或29/原计划/55依赖/claim与source；不是全oracle。完整交接绑定真实STOPPED0/fullstate-rawproof/冻结500评分journal，保留所有confirmedpair失败/固定抽查null，不重复symbolic/rawdecode或binaryload。首对只执行原注册pointfutility，真实独立判定/A4之后才后四槽。

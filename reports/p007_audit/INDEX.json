@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T08:52:57.452181+00:00",
+  "as_of_utc": "2026-10-15T09:03:58.892659+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3202,8 +3202,8 @@
       "manifest_sha256": "bdaf5a68ba0165cf3360b4e0a325423625c14a8b19ea4ed391fe434e1e8851c7",
       "source_binding": "reports/p009_20261014/stage1_s1_runtime_preflight_v1/SOURCE_BINDING.json",
       "review_request": "reports/p009_20261014/S1_COMPLETE_RUNTIME_REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_exact_runtime_and_numeric_PASS_WITH_NOTES",
+      "blocking": false,
       "blocking_scope": "Only complete six registered S1 execution/local scoring; actualNCpairedA4 separately gates firstpair dispatch and actualfutilityA4 laterfour",
       "created_utc": "2026-10-15T08:22:32.845354+00:00",
       "source_count": 81,
@@ -3214,7 +3214,14 @@
       "experiment_cap_cents": 15000,
       "prior_reserved_cents": 2620,
       "new_reserved_cents": 3930,
-      "new_calls": 0
+      "new_calls": 0,
+      "report_commit": "a3fde15c538f6b0c3e845aa7e9148368d137976c",
+      "report_sha256": "91e01c7e005a7b7949bf822841eb64443895c41dce95291207af184bb59f9841",
+      "event_utc": "2026-10-15T08:44:41Z",
+      "read_utc": "2026-10-15T08:55:21.571426+00:00",
+      "acceptance_packet": "reports/p009_20261014/review_a3fde15c_s1_runtime_accepted_v1",
+      "actual_S1_calls": 0,
+      "later_four_require_actual_futility_A4": true
     },
     {
       "request_id": "p009-stage1-S1-readonly-closeout-code-r1",
@@ -4137,9 +4144,15 @@
       "target_commit": "6f0bd17e9f788437328c903558df623cf65a94e4",
       "spec_sha256": "e3267d0981e854862026c665f4f840cef9024e2c3a9e7cb158d1d2ff16b95a7f",
       "source_count": 81,
-      "actual_runtime_review_pending": true,
+      "actual_runtime_review_pending": false,
       "actual_NC_pair_A4_pending": false,
-      "actual_calls": 0
+      "actual_calls": 0,
+      "runtime_report_commit": "a3fde15c538f6b0c3e845aa7e9148368d137976c",
+      "runtime_report_sha256": "91e01c7e005a7b7949bf822841eb64443895c41dce95291207af184bb59f9841",
+      "acceptance_packet": "reports/p009_20261014/review_a3fde15c_s1_runtime_accepted_v1",
+      "actual_uploads": 0,
+      "actual_gates": 0,
+      "first_pair_ready_after_original_upload_readback_and_fresh_provider_unused_checks": true
     },
     "current_owner_approved_allocation_cents": {
       "stage0": 4000,
@@ -4160,11 +4173,11 @@
       "prior_reserves_retained_cents": 2620
     },
     "latest_review_poll": {
-      "completed_utc": "2026-10-15T08:34:39.775048+00:00",
-      "commit": "573ff9bea59649679a02fe62e594939600cfd9e3",
-      "comments": 106,
-      "last_comment_id": 6187614474,
-      "next_normal_not_before_utc": "2026-10-15T09:05:09+00:00"
+      "completed_utc": "2026-10-15T08:54:48.178165+00:00",
+      "commit": "a3fde15c538f6b0c3e845aa7e9148368d137976c",
+      "comments": 107,
+      "last_comment_id": 6188137203,
+      "next_normal_not_before_utc": "2026-10-15T09:25:22+00:00"
     },
     "S1_readonly_closeout_candidate": {
       "target_commit": "adfc66cbdb233f764c8861859fde7e5958571ad8",

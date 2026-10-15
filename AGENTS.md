@@ -1,3 +1,7 @@
+# Latest S1 true runtime admission — 2026-10-15T09:03:58.892659+00:00
+
+Actualch a3fde15c/reportSHA91e01c7e/fullread08:55:21.571426 now PASS-WITH-NOTES exact81/6f0bd17e/spec e326/timing a69. ActualcgNCpair alreadyaccepted. sr/RUNTIME_ACCEPTED andBUDGET_CHECK nowDONE; prospectivefirstpair truebindingspassed,0upload/gates/calls asofthisnote. Freshbilling09:00:53 meter242.75237116/billed0;prior26780+15000=41780scenarioNOTspend/balance/guarantee. Noreserve release. Stage170/P009150,originalallsciencegates. Onlyfirsttwo s1_s17_n400/s1_s17_n3200 afteronce25fileupload/readback/perrungate/freshentrychecks; laterfour needtruefutilityA4. Fullcommandsbelowunchanged. S1helpersadfc66bcpending,onlyblocksnewhelpers; 10newfixturechecks/8manifestDONE,actualhelpersNOTRUN. Newreportdoesnotcoverhelpercode. Nextnormalreview09:25:22,min09:10:22. Original81frozen,oldworkDONEneverrepeat. Priorpendingruntimeentriesbelowhistorical.
+
 # Latest actual NC A4 acceptance — 2026-10-15T08:37:48.931144+00:00
 
 Truecg573ff9be/reportSHAe035cf2f/fullread08:35:08.918705UTC now accepts actualNCpair at9a266dbe:954/967,delta13,NCpointstopnotfired. r/NC_GUARD_REPAIR_PAIR_A4_ACCEPTED.json exists; publicreview_573ff9be_actual_nc_pair_accepted_v1. S1runtime81/6f0bd17e stillpending,0S1upload/gates/calls. Budget70/150approved. AllNCclosed/DONE,neverrepeat. Reviewer causal-flat claim not adopted; publicbinarySHA not externalbinaryread. Lastpoll08:34:39/106comments;nextnormal09:05:09,min08:50:09. Previous pendingNCstatements below historical.

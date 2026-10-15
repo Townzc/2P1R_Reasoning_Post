@@ -1,3 +1,6 @@
+<!-- S1 exact runtime accepted 2026-10-15T09:03:58.892659+00:00 -->
+[S1 完整运行与数值外审 PASS-WITH-NOTES](reports/p009_20261014/review_a3fde15c_s1_runtime_accepted_v1/DISPOSITION.md)。真实 NC A4 已通过；首 seed 17 n400/n3200 接下来各运行一次，后四项保留原 futility/A4 门。当前为准入记录，尚无 S1 结果。
+
 <!-- S1 readonly helpers 2026-10-15T08:51:44.117059+00:00 -->
 [S1启动核验与完整结果交接工具](reports/p009_20261014/stage1_s1_readonly_closeout_preflight_v1/README.md)已准备并待限定代码审计，10项新合成检查通过；原81源运行候选未改，真实NC配对A4已通过，当前S1调用仍为0。
 
