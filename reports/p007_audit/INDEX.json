@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T01:06:22.352364+00:00",
+  "as_of_utc": "2026-10-15T01:08:52.117872+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2417,6 +2417,26 @@
       "local_window_amendment_sha256": "de0ca58c2cb44877f210f4060f99cadcc9b447e53367ab6130c0ad2f4016b7b0",
       "actual_symbolic_attempts": 0,
       "source_count_clarification": "reports/p009_20261014/P1_LOCAL_WINDOW_SCOPE_NOTE.md"
+    },
+    {
+      "request_id": "p009-stage0-generation-complete-A2-r1",
+      "scope": "p009-stage0-generation-complete-raw-and-GSM-G0-A2",
+      "target_commit": "192f9156c9235d1bcc3433ac5eade608ef5bbec9",
+      "packet": "reports/p009_20261014/stage0_complete_a2_v1",
+      "manifest": "reports/p009_20261014/stage0_complete_a2_v1/MANIFEST.json",
+      "manifest_sha256": "51637b82e1f690c14e97b832fb36ce6f061b7a8453fb4266ef4041d79760ed23",
+      "review_request": "reports/p009_20261014/stage0_complete_a2_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Actual raw/GSM G0 and future student admission; independent owner-extended P1 exact code remains separate.",
+      "created_utc": "2026-10-15T01:08:52.117865+00:00",
+      "new_raw_outputs": 14450,
+      "local_GSM_G0": {
+        "NC": true,
+        "S2": false
+      },
+      "S1": "PENDING actual P1",
+      "source_spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24"
     }
   ],
   "p008_v31": {
@@ -3046,7 +3066,7 @@
       "owner_authority_sha256": "4e705c0024e34516a6b71ddf574cb285a1973b4570d466168665199461cf440a"
     },
     "stage0_generation_runtime_v2": {
-      "status": "three_original_calls_submitted_once_closeout_in_progress",
+      "status": "all_three_FULL_LOCAL_RAW_VERIFIED_STOPPED0_actual_A2_pending",
       "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v2",
       "target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
       "source_files": 34,
@@ -3061,7 +3081,10 @@
       "request_id": "p009-stage0-generation-funded-v2-r1",
       "review_commit": "eeb65b04e8d698c16a7d670f0f59ad63a0e3afbd",
       "acceptance_packet": "reports/p009_20261014/review_eeb65b04_accepted_v1",
-      "execution_commit": "80ff96a439916fb33ec9fc70f371294f7fd21217"
+      "execution_commit": "80ff96a439916fb33ec9fc70f371294f7fd21217",
+      "actual_result_target_commit": "192f9156c9235d1bcc3433ac5eade608ef5bbec9",
+      "result_packet": "reports/p009_20261014/stage0_complete_a2_v1",
+      "actual_symbolic_P1_calls": 0
     },
     "accounting_terms": {
       "packet": "reports/p009_20261014/owner_stage0_add20_v1",
@@ -3085,7 +3108,7 @@
       "packet": "reports/p009_20261014/stage0_result_publication_preflight_v1",
       "target_commit": "b679dd7dc5e889d9e95d718f7f2fd5b2a664c279",
       "source_sha256": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26",
-      "status": "code_PASS_actual_publications_pending"
+      "status": "all_three_published_once_actual_A2_pending"
     },
     "math_p1_driver_extended": {
       "actual_generated_model_calls_added": 0,
