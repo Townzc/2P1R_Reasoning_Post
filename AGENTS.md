@@ -1,3 +1,9 @@
+# Latest actual Stage0 closeout / owner B pending exact review
+
+Read `.local/p009_20261014/r1/LIVE_P009_P1_36H_STAGE0_CLOSED.md` and latest ACTIVE_HANDOFF. All three Stage0 model calls/startups/collectors/exports/oracles/publishers are DONE, original sessions consumed, actual providers STOPPED0. Do not repeat or poll any. Actual full generation/GSM gate A2 request targets192f9156. NC localG0 passes; S2 localG0 fails546/1319 caps>15% and is not admitted. S1 awaits actual P1; no actual P1 root or rows scored yet.
+
+Owner B concretized pre-first100 as36h by Codex, new12-source targetbb2629ba exact review pending. Only new extended P1 entry may be admitted, never old6h driver or historicalbuPASS. All commands and future acceptance fields are in the latest LIVE. Keep p009ACTIVE30min and p007/automation4PAUSED; sources/budgets/science unchanged. No subagents/outside sends, ordinaryINDEX+pushauthorized/no force/unrelatedlt002preserved. Earlier statuses below are historical and superseded.
+
 # Latest owner option B — local P1 ceiling fixed before measurements
 
 Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` and `LIVE_P009_P1_WINDOW_AND_GENERATION_HANDOFF.md` for live sessions. Owner selected B; Codex concretized total36h (129600s), not an owner numeric quote or expected duration. Original first1001200s/pair8s/scoring/serial forecast unchanged, no cloud budget change. Only new `scripts/p009_p1_driver_extended.py` may run after real12-source scope review atbb2629ba. Old6h driver remains unattempted and retired; its bu code PASS does not admit new36h. Real first100 numerical review still required before remainder. No actualP1 row has been scored at this checkpoint.

@@ -1,3 +1,19 @@
+<!-- Latest actual Stage0 closeout / owner B: 2026-10-15T01:12:01.936663+00:00 -->
+[All14,450 Stage0 outputs are locally verified and the three apps are STOPPED0](reports/p009_20261014/stage0_complete_a2_v1/README.md).
+Actual A2 is pending. NC passes the local GSM G0; S2 fails the frozen cap gate
+(546/1319 logical caps>15%), so no S2 student is admitted. S1 remains pending
+actual MATH scoring, not a failed setting. No model reruns or training occurred.
+
+Before any first100 MATH scoring, the owner selected optionB. Codex fixed a
+[36-hour local total ceiling](reports/p009_20261014/p1_local_window_amendment_v1/README.md),
+with the original first1001200-second cap,8-second pair timeout, scorer and
+conservative serial forecast unchanged. [Exact12-source successor review](reports/p009_20261014/p1_local_window_preflight_v2/REVIEW_REQUEST.md)
+is pending; old6-hour driver remains unattempted/retired. No cloud budget increase.
+P009$130/Stage0$40 remain authorizations, not measured expenses. The monitor
+continues on actual gates; oldp007 andautomation-4 remain paused.
+
+--- Earlier dated checkpoints ---
+
 <!-- Actual funded-runtime review 2026-10-15T00:31:02.699164+00:00 -->
 [Funded Stage0 runtime bt PASS-WITH-NOTES](reports/p009_20261014/review_eeb65b04_accepted_v1/README.md):34 exact sources,
 three once-only workers and their budget are accepted. Fresh budget saved;
