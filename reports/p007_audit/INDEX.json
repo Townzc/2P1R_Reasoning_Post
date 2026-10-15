@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T04:45:29.139938+00:00",
+  "as_of_utc": "2026-10-15T04:55:43.669888+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3540,14 +3540,14 @@
       "target_commit": "22b02e313ef38581fb715a8273131f0be3b98c35",
       "request_id": "p009-stage1-NC-runtime-and-numeric-r1",
       "source_count": 42,
-      "actual_calls": 0,
-      "status": "exact_runtime_numeric_pending"
+      "actual_calls": 2,
+      "status": "exact_runtime_accepted_two_original_calls_submitted"
     },
     "stage1_s1_inputs_candidate": {
       "target_commit": "3d4c5974f195ad73bc47eec847404efff7eddeaf",
       "request_id": "p009-stage1-S1-exact-input-and-plan-r1",
       "actual_calls": 0,
-      "status": "input_plan_review_pending",
+      "status": "exact_actual_input_plan_PASS",
       "eligible_distinct_questions": 5774
     },
     "nc_actual_startups": {
@@ -3566,6 +3566,12 @@
     "S1_payload_preparation": {
       "packet": "reports/p009_20261014/stage1_s1_payload_draft_v1",
       "manifest_sha256": "21147e39edf3bf3005006332c51266ada19b9ae11e48e4a515b739a637bc7ad3",
+      "actual_execution": false,
+      "blocking_request_created": false
+    },
+    "S1_scoring_preparation": {
+      "packet": "reports/p009_20261014/stage1_s1_scoring_draft_v1",
+      "manifest_sha256": "770add2aaea338978a0deb97bb0e8ffbe18dd0e9d201d19ef132ba6b90bc045b",
       "actual_execution": false,
       "blocking_request_created": false
     }

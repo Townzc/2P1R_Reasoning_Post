@@ -1,3 +1,15 @@
+### 2026-10-14 21:58:48 PDT — P009 NC3200 platform preemption; Stage1 blocked
+
+Original CLI3874 exit1 consumed. The saved original log explicitly reports Modal platform preemption and an attempted same-input restart, rejected at RunGuard.admit before any second claim/training. Actual observer48814 read04:56:04UTC proves bothoriginalapps STOPPED/owned0, NC400completed and NC3200failed with896continuous saved updates/0endpointnames; metadata is not a full-dose or state oracle. Original NC3200 failedterminal/655c reservation and fences retained. No operator resubmission, claim clearing or model replay. A bounded2reader read-only preservation77581 is running, reusing the already-complete NC400fullledger and checking five lineagekeys plus before/afterVolume lists.2024listedfiles/3527435bytes include no.pt/.safetensors; fulltransfer validation pending. This blocks the NC paired gate and S1; no scientific result inferred. OriginalNC400collector34016/export17437 completed once,2355originalfiles SHAverified; fulloracle now starts once.
+
+### 2026-10-14 21:55:43 PDT — P009 S1 durable scoring preparation
+
+New S1 scoring helper and7synthetic checks completed once (0.056s), noactualsymbolic/model/oldtests. Per-pair durable preservation, exact500orderedrows, fivechunks, same-sessionpairreuse, failed/partialrootrefusal, frozenlabels and independentadjudicationnull. Future fullruntime/P1A2/NC A4/payload/numeric and outerhardtimer required; helper grants noadmission. AcceptedNC42 and P1sources unchanged. No separateblockingcodegate added; exactfuture S1packet will include it. An earlier read guessed nonexistent tests/test_p009_math_journal.py and failed without writes; actual test_p009_math_scoring_journal.py was located withrg. NC400 originalresult arrived and oncecollector34016 is active; NC3200 originalcall remains, no repeatedmodels orstartup.
+
+## 2026-10-14T21:52:17.590735-07:00 — P009 NC400 original completion; closeout beginning
+
+Actual read 2026-10-15T04:52:17.590735+00:00: canonical original completed result now exists; original CLI26666 exit0 consumed once. No closeout/export directory or matching process exists. Begin the original single collector, which checks actual provider STOPPED0 before creating evidence, then one export/fulloracle. Original NC3200 call3874 continues; no resubmission, partial scores or repeated startup. Result not yet fully verified and no NC gate/A4 claimed.
+
 ### 2026-10-14 21:45:29 PDT（S1完整证据核验适配准备，NC继续训练）
 
 新增stage1_s1_evidence.py为未来S1 fullstate/1024步/2097148targets/merge退出顺序/全部forecast/两完整500题batch及gold来源核验提供payload helper。明确不是完整runtime/receipt/provider准入、无CLI/Modal入口/实际scoring；完整外层准入与冻结MATH评分尚须整合。词表全endpoint只读取一次、每batch原hash核后复用，避免旧探索性重复词表开销；新7个synthetic变异检查一次PASS0.110s，未重复原NC/P1测试、原数据/状态/评分。实际S1调用仍0；合成4000秒非候选帽。旧活动42源按其原manifest核字节未变，预算/科学门不变。不增独立code-only阻塞门；未来完整runtime确切审核须包含这些新字节。
