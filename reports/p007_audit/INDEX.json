@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T07:04:48.773574+00:00",
+  "as_of_utc": "2026-10-15T07:26:01.829925+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3129,6 +3129,34 @@
       "read_utc": "2026-10-15T06:58:36.352460+00:00",
       "event_utc": "2026-10-15T06:49:33Z",
       "comment_id": 6186269247
+    },
+    {
+      "request_id": "p009-stage1-registered-S1-budget-r1",
+      "scope": "p009-registered-stage1-budget-allocation-owner-proxy",
+      "target_commit": "bd78d6a235125188dcde595273cbf7b67376a7d5",
+      "packet": "reports/p009_20261014/stage1_s1_budget_proposal_v1",
+      "manifest": "reports/p009_20261014/stage1_s1_budget_proposal_v1/MANIFEST.json",
+      "manifest_sha256": "169568a5255d1bba9ef4ac7ace250639b6c9326481409d0e82274c98f60615d4",
+      "review_request": "reports/p009_20261014/stage1_s1_budget_proposal_v1/README.md",
+      "status": "pending_owner_proxy_decision",
+      "blocking": false,
+      "blocking_scope": "Only future proposed Stage1 allocation; not the running NC or a new independent code-only gate",
+      "request_type": "original_owner_proxy_budget_comment",
+      "source_binding": {
+        "proposal_file_sha256": "4ba56755979ddcc02c05e041dd8394f696c9518b5a3f3ff4210ead0a7ec8b9c9",
+        "proposed_stage1_cap_cents": 7000,
+        "proposed_experiment_cap_cents": 15000,
+        "increment_cents": 2000,
+        "project_cap_cents": 45000,
+        "protected_cents": 5000
+      },
+      "required_comment_prefix": "【Owner 代理决定】",
+      "reason_required": true,
+      "delegation_expires_utc": "2026-10-15T14:00:00+00:00",
+      "independent_exact_future_runtime_audit_required": true,
+      "scientific_gates_unchanged": true,
+      "current_allocation_unchanged_until_actual_scoped_approval": true,
+      "created_utc": "2026-10-15T07:26:01.829925+00:00"
     }
   ],
   "p008_v31": {
@@ -3973,8 +4001,8 @@
       "request_id": "p009-stage1-NC-guard-intent-repair-r1",
       "target_commit": "e8f57a1973cacf7efd508b59df9a94fda1539a1a",
       "packet": "reports/p009_20261014/stage1_nc_guard_repair_preflight_v1",
-      "status": "actual_proxy_AND_runtime_PASS_gate_call_pending",
-      "new_calls": 0,
+      "status": "one_actual_submitted_running_first16_verified",
+      "new_calls": 1,
       "prior_reserved_cents": 1965,
       "new_proposed_cents": 655,
       "stage1_cap_cents": 5000,
@@ -3988,13 +4016,36 @@
       "owner_proxy_decision_url": "https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6186240160",
       "runtime_report_commit": "f1b530591209f235bd4dde694286a7812c73c9cb",
       "actual_results_A4_pending": true,
-      "no_further_exception_if_this_call_fails": true
+      "no_further_exception_if_this_call_fails": true,
+      "cli_session": 54872,
+      "app_id": "ap-X5eqTV19egvsfSzNNFntTB",
+      "call_id": "fc-01M4Z6HD5JSKHXMDZQFV86YSRE",
+      "execution_commit": "66c669aef9864f923748ede7c19bcf4d1f22d2de",
+      "startup_packet": "reports/p009_20261014/stage1_nc_guard_repair_started_v1",
+      "startup_target": "bd78d6a235125188dcde595273cbf7b67376a7d5",
+      "startup_verified": true,
+      "actual_result_full_oracle_complete": false,
+      "paired_A4_complete": false,
+      "latest_provider_read_utc": "2026-10-15T07:18:39.723350+00:00",
+      "next_normal_provider_utc": "2026-10-15T07:48:40+00:00"
     },
     "S1_score_process_preparation": {
       "packet": "reports/p009_20261014/stage1_s1_score_process_draft_v1",
       "target_commit": "96fb5312bd46124cab1d3920b42d55fd006c5f14",
       "actual_execution": false,
       "new_code_only_blocking_request": false
+    },
+    "registered_S1_budget_proposal": {
+      "request_id": "p009-stage1-registered-S1-budget-r1",
+      "packet": "reports/p009_20261014/stage1_s1_budget_proposal_v1",
+      "target_commit": "bd78d6a235125188dcde595273cbf7b67376a7d5",
+      "status": "proposal_only",
+      "current_stage1_cap_cents": 5000,
+      "current_experiment_cap_cents": 13000,
+      "proposed_stage1_cap_cents": 7000,
+      "proposed_experiment_cap_cents": 15000,
+      "owner_overnight_additional_authority_used_cents": 0,
+      "actual_S1_calls": 0
     }
   }
 }
