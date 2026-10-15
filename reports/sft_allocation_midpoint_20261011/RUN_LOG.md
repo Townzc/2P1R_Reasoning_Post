@@ -1,3 +1,9 @@
+### 2026-10-14 21:36:15 PDT（两项原NC已提交，首批核验完成）
+
+实际entry为21:23:58PDT的nc_s17_n400和21:28:56的nc_s17_n3200，各原调用一次，执行02e7fc9e/已审42源不变。首16步分别32890与32849 targets；本记录不将首块当完整剂量。两个唯一startup31876/74431均EXIT0已消耗，H100/CUDA12.8/source/claim/双fence核验通过。21:31:21PDT唯一只读inspector74920观察保存更新304/64、endpoint0/0，两原app各1容器、无terminal/result/error；这是名单和immutableack，不是fullraw/stateoracle或中途分数。原上传55357及零科学工作对账71606已DONE，均不重复。后续等各完整原result/STOPPED0再一次collect/export/fulloracle，两项齐后原NC分析和实际A4；S1输入虽已真实PASS，仍无调用。
+
+cb erratum事件21:13:05PDT，实际完整读取21:30:52PDT。原P0graph更正由reviewer确认，4192.982未校准情景和4500帽未变；新erratum的650-row措辞按原事实纠正为650正确/1319题，原报告字节保留，没有重评分。新NC结果publisher exact8692f55f仍pending，仅阻塞其自身。没有旧测试、模型、输入准备或费用请求重跑；公开provider投影去actor、private原件SHA保留。
+
 ### 2026-10-14 21:19:22 PDT（NC本地锁目录前置错误已对账，科学槽位仍未尝试）
 
 首次本地CLI90968 EXIT1已消耗，appap-xaVu6AKuXm3E1ah8gSBpXR实际21:12:48PDT STOPPED0；错误为缺失stage1_dispatch父目录，发生于任何store检查/marker/spawn前。唯一只读对账CLI71606于21:18:26PDT确认整个NC campaign记录为空、两logical marker和远端输出目录全缺失、本地canonical receipt目录缺失，0科学调用/更新/输出，不造failedterminal/不清claim。原镜像build与失败费用保留、不当免费。仅补齐本地共享锁父目录，全部42已审源/plan/gates/9已回读inputs不改、不再upload。既有mock entry检查没有覆盖缺目录前置条件；原失败记录与修复动机公开。下一本地入口只提交仍未尝试的原科学槽位，非重复科学调用。

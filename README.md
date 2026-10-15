@@ -1,3 +1,8 @@
+<!-- Actual NC startups 2026-10-15T04:36:15.246903+00:00 -->
+[两项原NC已启动并完成首批核验](reports/p009_20261014/stage1_nc_started_v1/README.md)。n400/n3200各原科学调用一次；04:31UTC只读快照各有1个容器、无终点结果。完整收尾与实际A4之后才推进S1，原时限和剂量不变。[cb更正及范围](reports/p009_20261014/review_036a97d9_erratum_v1/DISPOSITION.md)保留原始报告和所有计时限制。
+
+--- Earlier dated checkpoints ---
+
 <!-- Actual cb acceptance 2026-10-15T04:05:26.377825+00:00 -->
 [NC确切运行/数值与S1实际输入已通过真实审计](reports/p009_20261014/review_06fac149_accepted_v1/DISPOSITION.md)。两NC将在必要新预算与一次输入回读后按原有限槽位运行；S1仍待NC结果A4与自己的完整运行准入，当前没有学生结果。原时限、剂量与一次性调用不变。
 
