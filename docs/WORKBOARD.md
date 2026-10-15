@@ -1,3 +1,11 @@
+### 2026-10-14 22:45:35 PDT — 替代运行只读监控与配对交接准备，未执行
+
+新增 scripts/p009_nc_replacement_observe.py 绑定新physical/campaign/49source：600秒有界只读provider/claim/连续ack；首16更新核验另外检查46原父依赖且create-only，不算全raw/state oracle。无remote写/评分/model，任何readerror保unknown；实际两个action都NOTRUN，未来真helper代码审计后才用。
+
+新增 publish_p009_nc_replacement_pair.py 仅原NC400固定公开oracle元数据及完整replacement新证据，保留原failedNC3200作为第三physical，不重建旧archive/重载旧binary/重评分。新全oracle/10appSTOPPED0/双campaignledger/真runtime与parentA4/原analysis代码齐才一次原>=5pp配对判断、公开新原raw投影和losslessoracle。嵌套original_release里的私有reportlocator和provideractor明确投影，原SHA保留；NC400结果在owner批准前已知的时间线直接披露。真正配对A4仍需后续，publication不准入S1。
+
+八项新synthetic边界检查一次PASS0.004s，明确mockruntime/provider并非实际新49运行验证；首批准16项和所有旧test/model/tool均未重复。三directsource与新runtime49/analysis固定依赖分别列明，真实helper审计只挡这两个新只读路径，不挡独立替代runtime审计/准入。实际archive/resultpublisher/NCpairedanalysis0；原49/42/P112/Stage034未改。新预审包8manifest成员，实际调用前需真scope p009-stage1-NC-replacement-observation-and-pair-publication-code。
+
 ### 2026-10-14 22:32:48 PDT — Owner授权单项NC3200替代；exact49源准备完成，未调用
 
 Owner直接答复“批准这一项独立替代，审计通过后运行”，已独立记录OWNER_AUTHORITY/fileSHA108c82f933990473119f48b186223057f1ab3a0f92769e666bbe2b34be8e0ae3；不再等待或重复询问相同许可。批准范围仅新physicalnc_s17_n3200_replacement_r1，原3200完整答案/seed17/1024updates2097148targets/冻结LR/1319greedy512；4500entry/4560platform/600startup/full5200/655c一次零自动retry。原NC400954/1319全核验和原NC3200failed896步无checkpoint保全均DONE，不重跑/假续训/清claim。
