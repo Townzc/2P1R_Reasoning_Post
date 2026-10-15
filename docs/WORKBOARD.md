@@ -1,3 +1,17 @@
+### 2026-10-14T20:16:23.149386-07:00（NC确切运行与数值候选完成，尚未调用）
+
+新42source含训练子进程真实退出后再创建vLLM、原始输出先保存、永久logical/dispatch fences、全state/raw/剂量oracle。两NC仍1024/2097148，候选4500秒/655c各、合计1310c在Stage15000内，无新预留写入/上传/gate/image/call。原18host1184block全纳入，原mtime+明确padding与failedprefix都是未校准迁移proxy，4192.9819566秒不是host保证。15新/修订检查通过；原8项fixture setup错误修正只重跑受阻类，2原workerbody完全mock/3tinyCPUstate不是实际模型。原代码22/12/34未改。固定包创建与原件拷贝完成一次，下一步固定提交、INDEX确切审计、Git原字节核验，旧测试/模型不重复。
+
+
+### 2026-10-14 20:05:47 PDT（bz完整P1真A2及ca分析代码接受）
+
+03:04:10.401374UTC完整读取fixedb910bbfb两报告；bzSHAa6479f674f52bbf5dd1fd4d66362a4651a1ad18ecfc37c03807c24249f274477，caSHAd83169911dca1bcd5f7dae4354faa5a00fee14e49d076b78fcaae1487c05b5ab，事件分别02:42:49/02:44:31。P1 raw PASS、117固定样本集合与独立reviewer判定PASS-WITH-NOTES、采购标签资格ACCEPT-WITH-NOTES、S1G0 PASS359vs136/500 caps36/68分别存准确ACCEPTED。reviewer未重跑math-verify；4format病例、12采购保守漏判、1歧义toolerror原标签全保留，不冒充Codex新判定/符号执行/统计。ca仅分析代码PASS，reviewernumpy2.5.3补丁检查不冒充正式2.2.6实测；实际分析零。原冻结包不改、S2capFAIL保留、NC仍先过确切runtime/numeric再调用。新增timing草案读取P0字段名KeyError发生写入前，原failure保存；仅完成未写draft采用真实new_full_batch_seconds，18host1184block全保留，无重新科学核验。候选旧4000未提交窗口不足4192.982proxy，未注册草案改4500/655c×2，不扩Stage150。
+
+
+### 2026-10-15T02:44:46.434023+00:00 UTC / October14 PDT（完整P1已发布，NC运行封装仍为草稿）
+
+最新ordinary65841f8e已独立remoteverified，push11659消耗。P1全包126和by接受包9个manifest成员逐Git原字节核验一次DONE；旧common.py副本EOF空行告警保留，wholecheck不是PASS，仅排除该旧文件后PASS，无科学失败/不改旧源。新NC contract与trainingchild仅未发布草稿、ASTparsed，六个新contract checks一次PASS0.036s；提出4000/594c候选不等准入，没有entry/完整oracle/实际child测试/真实timingbasis，没有云调用或预留写入。accepted22source不热改，未来image确定性/hash与parent退出约束落实在草稿；下一步完整runtime与确切审计。完整P1A2仍待独立117样本与G0，不能提前使用标签。
+
 
 ### 2026-10-14 19:32:33 PDT（by三项真审计接受；P1完整证据首次发布）
 

@@ -1,3 +1,18 @@
+# Latest P009 — P1 A2/S1 G0 accepted; NC42-source candidate prepared (2026-10-15T03:16:23.148090+00:00)
+
+Read ACTIVE_HANDOFF latest top. Real bz/ca atb910bbfb accepts P1 evidence/independent117 adjudication/eligibility/S1G0 with notes and registered analysis code. Original labels and format disputes remain; no actual student analysis yet. New NC exact42-source runtime/numeric candidate is prepared, not admitted,4500/655c each, old4000 draft never used. Actual inputs/core/G0 accepted do not replace exact runtime review. No upload/gate/image/call. NC first; S1 actualinput prep independent; S2capFAIL not bypassed. All DONE Stage0/P1/old studies must never repeat. New sources already frozen in candidate packet; don't hot-edit. p009ACTIVE, oldmonitorsPAUSED; no subagents/outside messages, ordinaryINDEX/push authorized.
+
+# P009 latest actual checkpoint — 2026-10-15T02:44:46.434023+00:00
+
+Read LIVE_P009_P1_PUBLISHED_NC_RUNTIME_DRAFT.md. P1 remaining78388 and full readonly publisher43474 are DONE/EXIT0CONSUMED, all10489rows/105chunks/4048pairs preserved, actualP1A2 targetae8b8c3c pending. No repeated scoring, originaltools or model. by448e0ac1 true fullreport reads02:31:03:22-source scientificcore and NC10-source actualinput PASS-WITH-NOTES, fullP1publisherPASS. Three realACCEPTED stored. Reviewer eager650 note is corrected with exact originalgraphenv256+1063; oldeager128excluded. Stage1runtime still incomplete/noadmission/call.
+
+New four-sourceanalysis2c7d6b5c codepending/noactualanalysis; new untrackedNC contract/trainingchild drafts parsed/sixnewcontractchecksPASS, notfullruntime/childtested/admitted. Their candidate4000s/594c is not an approvedreservation. Allremainingimplementation/timing/trueaudit requirements in latestLIVE. Old22/12/34source bytes unchanged. CurrentordinaryHEAD65841f8e8c06a5d79718677f72fe261d3de9d8ba remoteverified/push11659consumed; fullP1126+by9manifestGitchecksDONE. WholeoldcopiedcommonEOFstylewarning retained, exclusion-onlyPASS.
+
+Lastreviewpoll02:29:47/fullread02:31:03, nextnormal03:01:04/min02:46:04. Do not use older timestamps. No newcloudcalls/billingrefresh. p009ACTIVE; oldmonitorsPAUSED; onlyStage1/newgenuineblocker/actionnotify. No repeatDONE/no subagent/externalmessage, preserveunrelatedlt002.
+
+
+--- Previous dated state ---
+
 # P009 complete local P1 scoring — 2026-10-15T02:20:41.691669+00:00
 
 Real bx numeric PASS a236a90ed944d7785afa2aa9085749573aed64c0 was fully read02:14:14.674849UTC. Exact12-source/proposal/owner129600 bindings accepted. The unique remaining CLI78388 EXIT0 is CONSUMED:02:15:16.497334UTC completion,12.097635832964443 command seconds;10489 rows/0technicalunknown/0modelcalls. Originalfirst100 cached pairs reused. NEVER remaining/freeze/first100/poll78388 again. This is not independent adjudication, eligibility or G0 acceptance.

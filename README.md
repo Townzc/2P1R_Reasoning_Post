@@ -1,9 +1,9 @@
-<!-- Current P009 status: 2026-10-15T02:33:53.352989+00:00 -->
-P009 Stage0 全部14,450条输出已通过[完整外审](reports/p009_20261014/review_8efc897f_accepted_v1/DISPOSITION.md)，NC G0通过、S2按原截断率门淘汰，所有原应用停止。
+<!-- Current P009 status: 2026-10-15T03:16:23.148090+00:00 -->
+P1 完整评分、117 个固定样本的独立审查及 S1 G0 已取得[真实限定范围接受](reports/p009_20261014/review_b910bbfb_accepted_v1/DISPOSITION.md)。S1 教师359/500、学生零样本136/500，冻结标签不变；4个格式争议和采购漏判限制公开保留。Stage1分析与停止规则代码也通过，尚无实际学生结果。
 
-P1完整10,489行评分及[完整证据发布](reports/p009_20261014/p1_complete_scoring_v1/SUMMARY.json)均已完成；唯一剩余评分实际12.10秒，首100缓存复用，没有重复生成或重评分。[独立固定抽查和S1 G0审计](reports/p009_20261014/P1_COMPLETE_ACTUAL_REVIEW_REQUEST.md)待真实报告。完整评分不等于资格或G0准入。
+[两项 NC 确切运行候选](reports/p009_20261014/stage1_nc_runtime_preflight_v1/README.md)已准备42源/4500秒每项/合计$13.10预留，等待确切运行和数值审计。全18个旧训练主机的计时证据均保留；4192.98秒是未校准迁移情景，不能当实测上界。没有新上传、gate、image或学生调用。NC先运行；S1输入可独立准备，S2原截断率门失败保留。
 
-[Stage1科学核心与NC两组确切输入](reports/p009_20261014/review_448e0ac1_accepted_v1/DISPOSITION.md)已通过代码/输入审计；实际学生runtime和数值准入仍需准备，尚无Stage1学生或结果。[预结果判定代码](reports/p009_20261014/stage1_analysis_preflight_v1/README.md)另已冻结送审。所有旧结果和门槛保留，p009继续，旧监控暂停。预算额度与实际费用分开。
+全部旧Stage0/P0/P008/探索结果均已关闭，不重生成或重评分。P009额度$130、Stage1额度$50与实际费用分开；p009继续，旧监控暂停。
 
 --- Earlier dated checkpoints ---
 
