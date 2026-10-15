@@ -1,3 +1,7 @@
+# Latest actual NC A4 acceptance — 2026-10-15T08:37:48.931144+00:00
+
+Truecg573ff9be/reportSHAe035cf2f/fullread08:35:08.918705UTC now accepts actualNCpair at9a266dbe:954/967,delta13,NCpointstopnotfired. r/NC_GUARD_REPAIR_PAIR_A4_ACCEPTED.json exists; publicreview_573ff9be_actual_nc_pair_accepted_v1. S1runtime81/6f0bd17e stillpending,0S1upload/gates/calls. Budget70/150approved. AllNCclosed/DONE,neverrepeat. Reviewer causal-flat claim not adopted; publicbinarySHA not externalbinaryread. Lastpoll08:34:39/106comments;nextnormal09:05:09,min08:50:09. Previous pendingNCstatements below historical.
+
 # Latest S1 full candidate and actual budget — 2026-10-15T08:21:26.113107+00:00
 
 Trueproxy6187149432 approvesStage170/P009150; prior2620c remains reserved. New81source completeS1candidate has six4500/655c slots, actualcalls0. Independentexactruntime/numeric and actualNCpairedA4 remain required; laterfour needactualfirstpairfutilityA4. NC54872/81972/28027/5998/publisherallDONE/11STOPPED0;neverrepeat.17newchecks passed aftertwo prepublicationfixes, oldsource/oldtests/science unchanged. Readlatestprivatehandoff. p009ACTIVE,oldmonitorsPAUSED,nooutside messages/subagents,unrelatedlt002preserved.

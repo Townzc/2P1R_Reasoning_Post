@@ -1,3 +1,9 @@
+### 2026-10-15 01:37:48 PDT — NC实际配对A4通过；S1确切运行仍待审
+
+cg固定573ff9be完整报告SHAe035cf2f于08:35:08.918705UTC读取，comment6187614474事件08:14:00。独立1319原raw与1024剂量核对PASS，NC400954/NC3200replacement967，+13与237discordance吻合；原注册NC停止门未触发，真实限定ACCEPTED已保存。原failed896父/preclaim无工作调用和2620c预留永保，11原apps关闭。0重评分/新bootstrap/模型/旧oracle重复。
+
+Reviewer称设计本身不可能产生斜率超出这一对NC证据，Codex不采用该因果推断；点阈值通过不等于等效或稳定零效应。其Python-random区间只是其诊断，公共stateSHA不当外部privatebinary读取；954先知的非盲替代时间线不变。完整81源S1候选6f0bd17e真实runtime/numeric仍pending，预算代理70/150已批准，0S1调用/上传/gates；首两组之后仍须原futility/A4。未新增费用查询或外部消息。
+
 
 Publication tail correction 2026-10-15T08:21:26.113107+00:00: both new immutable packets and all source/test copies had completed before a documentation-only FileNotFoundError for nonexistent experiments/learning_regime_p009/README.md. Original builder/log retained. Only unwritten reports/p009_20261014/README.md, AGENTS/protocol and private completion record were finished; no packet recreation, test, scorer or model repeat.
 ### 2026-10-15 01:19:46 PDT — S1完整运行候选和真实代理预算接受

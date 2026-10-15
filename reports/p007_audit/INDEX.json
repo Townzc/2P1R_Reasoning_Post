@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T08:22:32.845354+00:00",
+  "as_of_utc": "2026-10-15T08:37:48.931144+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3174,8 +3174,8 @@
       "manifest_sha256": "fc560e602f13bee81f92c86ba6a573fb2eba107ec22b9a649e588e1f35403d3d",
       "registered_decision_file_sha256": "cfe104837c120e37c8e745351c54445e031ad9628e508ae343fd44022af52c1b",
       "review_request": "reports/p009_20261014/NC_GUARD_REPAIR_COMPLETE_PAIR_A4_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_actual_paired_NC_A4_PASS",
+      "blocking": false,
       "blocking_scope": "Actual paired NC A4 before S1 dispatch; independent full S1 runtime preparation may continue",
       "created_utc": "2026-10-15T07:52:24.218557+00:00",
       "actual_local_oracle_passed": true,
@@ -3184,7 +3184,14 @@
       "physical_scientific_runs": 3,
       "preclaim_only_calls": 1,
       "failed_parent_retained": true,
-      "current_scientific_workers": 0
+      "current_scientific_workers": 0,
+      "report_commit": "573ff9bea59649679a02fe62e594939600cfd9e3",
+      "report_sha256": "e035cf2ffbe1f74434d2bd86730c5b64200cfab640ef8dd392fc0b85c094a28a",
+      "event_utc": "2026-10-15T08:14:00Z",
+      "read_utc": "2026-10-15T08:35:08.918705+00:00",
+      "acceptance_packet": "reports/p009_20261014/review_573ff9be_actual_nc_pair_accepted_v1",
+      "paired_NC_gate_passed": true,
+      "S1_runtime_admitted": false
     },
     {
       "request_id": "p009-stage1-S1-full-runtime-and-numeric-r1",
@@ -4038,7 +4045,7 @@
       "expires_utc": "2026-10-15T14:00:00+00:00",
       "required_comment_prefix": "【Owner 代理决定】",
       "additional_authorized_usd": 150,
-      "current_reviewed_total_usd": 130,
+      "current_reviewed_total_usd": 150,
       "scientific_rules_unchanged": true,
       "independent_audit_required": true
     },
@@ -4052,7 +4059,7 @@
       "request_id": "p009-stage1-NC-guard-intent-repair-r1",
       "target_commit": "e8f57a1973cacf7efd508b59df9a94fda1539a1a",
       "packet": "reports/p009_20261014/stage1_nc_guard_repair_preflight_v1",
-      "status": "complete_full_local_oracle_and_registered_pair_A4_pending",
+      "status": "complete_full_local_oracle_and_actual_paired_A4_PASS",
       "new_calls": 1,
       "prior_reserved_cents": 1965,
       "new_proposed_cents": 655,
@@ -4066,7 +4073,7 @@
       "owner_proxy_comment_sha256": "d66bec7bb2f5a46782ccf3650cc00e6e005ddd033e52b195f4653611e1b9b947",
       "owner_proxy_decision_url": "https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6186240160",
       "runtime_report_commit": "f1b530591209f235bd4dde694286a7812c73c9cb",
-      "actual_results_A4_pending": true,
+      "actual_results_A4_pending": false,
       "no_further_exception_if_this_call_fails": true,
       "cli_session": 54872,
       "app_id": "ap-X5eqTV19egvsfSzNNFntTB",
@@ -4076,7 +4083,7 @@
       "startup_target": "bd78d6a235125188dcde595273cbf7b67376a7d5",
       "startup_verified": true,
       "actual_result_full_oracle_complete": true,
-      "paired_A4_complete": false,
+      "paired_A4_complete": true,
       "latest_provider_read_utc": "2026-10-15T07:44:40.339586+00:00",
       "next_normal_provider_utc": null,
       "correct": 967,
@@ -4086,7 +4093,10 @@
       "result_packet": "reports/p009_20261014/stage1_nc_guard_repair_complete_v1",
       "result_target_commit": "9a266dbe74e76b2936265bf47f7342083ccc146a",
       "paired_review_request": "p009-stage1-NC-guard-repair-complete-pair-A4-r1",
-      "all_related_apps_STOPPED0": true
+      "all_related_apps_STOPPED0": true,
+      "actual_A4_report_commit": "573ff9bea59649679a02fe62e594939600cfd9e3",
+      "actual_A4_report_sha256": "e035cf2ffbe1f74434d2bd86730c5b64200cfab640ef8dd392fc0b85c094a28a",
+      "acceptance_packet": "reports/p009_20261014/review_573ff9be_actual_nc_pair_accepted_v1"
     },
     "S1_score_process_preparation": {
       "packet": "reports/p009_20261014/stage1_s1_score_process_draft_v1",
@@ -4098,12 +4108,12 @@
       "request_id": "p009-stage1-registered-S1-budget-r1",
       "packet": "reports/p009_20261014/stage1_s1_budget_proposal_v1",
       "target_commit": "bd78d6a235125188dcde595273cbf7b67376a7d5",
-      "status": "proposal_only",
-      "current_stage1_cap_cents": 5000,
-      "current_experiment_cap_cents": 13000,
+      "status": "approved_by_actual_owner_proxy_6187149432",
+      "current_stage1_cap_cents": 7000,
+      "current_experiment_cap_cents": 15000,
       "proposed_stage1_cap_cents": 7000,
       "proposed_experiment_cap_cents": 15000,
-      "owner_overnight_additional_authority_used_cents": 0,
+      "owner_overnight_additional_authority_used_cents": 2000,
       "actual_S1_calls": 0
     },
     "latest_s1_full_runtime_candidate": {
@@ -4111,7 +4121,7 @@
       "spec_sha256": "e3267d0981e854862026c665f4f840cef9024e2c3a9e7cb158d1d2ff16b95a7f",
       "source_count": 81,
       "actual_runtime_review_pending": true,
-      "actual_NC_pair_A4_pending": true,
+      "actual_NC_pair_A4_pending": false,
       "actual_calls": 0
     },
     "current_owner_approved_allocation_cents": {
@@ -4131,6 +4141,13 @@
       "packet": "reports/p009_20261014/stage1_s1_budget_proxy_accepted_v1",
       "night_additional_authority_used_cents": 2000,
       "prior_reserves_retained_cents": 2620
+    },
+    "latest_review_poll": {
+      "completed_utc": "2026-10-15T08:34:39.775048+00:00",
+      "commit": "573ff9bea59649679a02fe62e594939600cfd9e3",
+      "comments": 106,
+      "last_comment_id": 6187614474,
+      "next_normal_not_before_utc": "2026-10-15T09:05:09+00:00"
     }
   }
 }
