@@ -1,3 +1,15 @@
+<!-- Funded exact successor prepared 2026-10-15T00:10:27.547549+00:00 -->
+[Stage0 funded runtime v2](stage0_generation_runtime_preflight_v2/README.md) binds the owner-added$20 to bounded workers
+and the unchanged14,450 requests.34-source exact runtime/numeric review is pending;
+no new upload, gate or cloud call. Old27-source candidate is unattempted/superseded.
+
+<!-- Owner funding and accounting update 2026-10-15T00:05:34.944028+00:00 -->
+Current P009 ceiling **$130**, including **Stage0 $40**, after the owner's additional$20.
+The owner's dashboard shows **$235.06 credits used**; the former$370.70 was a future
+budget/lag scenario, not money spent. [Funding and accounting definitions](owner_stage0_add20_v1/README.md).
+Generation core has code-only bsPASS; the unattempted exact27-source candidate is
+superseded before admission while the bounded funded successor is prepared.
+
 <!-- P009 exact runtime prepared: 2026-10-14T23:54:37.096625+00:00 -->
 P0 internal-only scope has real br PASS; original discordance and blocked cross-engine decision remain. [Exact Stage0 runtime](stage0_generation_runtime_preflight_v1/README.md) now binds all27 source files, original inputs/models and three finite workers; exact runtime/numeric review is pending. No new upload or generation call.
 
@@ -25,10 +37,10 @@ original generation or scoring is repeated. This amendment adds$0.
 All2638 outputs are locally verified;2,382 were new and256 inherited unchanged.
 All four providers stopped. All failures and costs remain. G0/G1, negative
 control, futility, data/dose and exact runtime/budget gates are unchanged.
-Current allocation:$110 total, Stage0$20/Stage1$50/Stage2$35/unallocated$5;
+Current allocation:$130 total, Stage0$40/Stage1$50/Stage2$35/unallocated$5;
 project$450/protected$50. Stage2 remains five groups × seeds17/29, teachercontext
 2048 with seven unsupported MATH rows. [The new Stage0 generation core](stage0_generation_core_preflight_v1/README.md)
-has16 new offline checks, with code review pending; it is not an executable
+has code-only bs PASS-WITH-NOTES after16 new offline checks; it is not an executable
 admission. No Stage1 outcome is available yet.
 Automatic progression is authorized after real gates; no routine permission is
 needed. p009 stays active, p007/automation-4 paused.

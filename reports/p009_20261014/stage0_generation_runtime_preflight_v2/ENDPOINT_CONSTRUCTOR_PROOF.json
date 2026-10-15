@@ -1,0 +1,75 @@
+{
+  "cloud_calls": 0,
+  "constructor_module_bytes_modified": false,
+  "counts": {
+    "olmo_gsm_four": 1319,
+    "olmo_gsm_zero": 1319,
+    "qwen_math_four": 500,
+    "qwen_math_zero": 500,
+    "teacher_gsm_zero": 1319,
+    "teacher_math_zero": 500
+  },
+  "dependency_versions": {
+    "msgspec": "0.19.0",
+    "pydantic": "2.11.7",
+    "pydantic-core": "2.33.2"
+  },
+  "exact_contract_sha256": "1621dbcdadd83c83b7c692e9112e17263bf195f735f4bfefac924720ca14d3e2",
+  "finished_utc": "2026-10-15T00:06:53.737995+00:00",
+  "full_linux_runtime_verified": false,
+  "github_tag_module_identical": true,
+  "gpu_calls": 0,
+  "greedy_normalization": {
+    "actual_top_k": 0,
+    "requested_top_k": -1
+  },
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "import_adapters": {
+    "vllm.logger": [
+      "init_logger"
+    ],
+    "vllm.logits_process": [
+      "LogitsProcessor"
+    ],
+    "vllm.transformers_utils.tokenizer": [
+      "AnyTokenizer"
+    ]
+  },
+  "input_file_shas": {
+    "math_teacher_requests8993.jsonl": "d835c0296f2d98575578566c0a06d203b6d95918ab7af00c87efdd7c8cd4e0ce",
+    "olmo_gsm_four.json": "5a98f29a6062f48ba8ad55206ad7a8bb429079426012d58db5616ab06f57625f",
+    "olmo_gsm_zero.json": "0e66a93d6fe147168b5ede7e70fc1cf44f8accc0b81df14c355770a6d8c2d101",
+    "qwen_math_four.json": "60e3d2f03883aff0462c55e803ccac139316113a886d717cd47de0d79a73b406",
+    "qwen_math_zero.json": "e091b60d6548bd68f64920f8b5853d56547e55576fee8cc892f1867f7e80443f",
+    "teacher_gsm_zero.json": "14d332a3d50ff9b89358df30200dc4de373f39cddd18d84bb94b4491975ed47a",
+    "teacher_math_zero.json": "64f07d5923e81af08bd7763d033b62ec7d6d09ef0f543539cfad70e6545377b6"
+  },
+  "limits": "Unmodified wheel SamplingParams class executed with actual msgspec/pydantic; import-time logging/type-only adapters on macOS. No full vLLM package, Linux, V1 sampler, CUDA graph, throughput or model validation.",
+  "model_calls": 0,
+  "objects_constructed": 5457,
+  "ordered_objects_digest": "bdfa7e845b5e0314ac723e68c7bdc862583128f802e1c683fd34749726625157",
+  "outputs_generated": 0,
+  "passed": true,
+  "previous_procurement_check": {
+    "kind": "r1 completed its first ordered dataset before first endpoint assertion failure",
+    "log_sha256": "439c1f69c08bf374781fa31eebc13f79931a85280ec914840c9f9b6edfd40b90",
+    "original_error": "fixture expected greedy top_k to remain -1; actual pinned class intentionally normalizes it to0; no constructor rejection",
+    "rows": 8993,
+    "script_sha256": "ffb21cb05f8fda88fc10f88521f993b7e6fa0dcbcc2971077b1c4ffa8b83367d"
+  },
+  "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]",
+  "reviewer_acceptance_required": true,
+  "schema": "p009_exact_wheel_sampling_constructor_isolated_v1",
+  "started_utc": "2026-10-15T00:06:53.562873+00:00",
+  "wheel": {
+    "bytes": 438217982,
+    "filename": "vllm-0.11.0-cp38-abi3-manylinux1_x86_64.whl",
+    "finished_epoch": 1792022672.0303948,
+    "model_calls": 0,
+    "same_pinned_linux_wheel": true,
+    "sha256": "3861c75ff2b12e24f6d179ff5c084d791b42ded8675d76c8706697c79f68cd62",
+    "started_epoch": 1792022653.283511,
+    "url": "https://files.pythonhosted.org/packages/47/33/d19e0763c34392ec956534536fa837c060495bfff31ed83452135ea7608d/vllm-0.11.0-cp38-abi3-manylinux1_x86_64.whl"
+  },
+  "wheel_python_module_sha256": "8219442773ae7cca6d3b63507438e8b0654fbcf024bf7f037dd80ed9f860bf01"
+}

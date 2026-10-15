@@ -2940,3 +2940,17 @@ owner选(a)已直接明确，126c实际计量加缓冲候选/374c释放送独立
 OLMo固定revision原始10文件5,949,372,518bytes本地准备23:42:07完成，两权重LFS SHA符合官方固定记录，CLI27363已exit0消耗；无转换/模型加载/远端上传。原Qwen/教师Volume字节复用。16个新entry夹具中10项r1通过，6项因mock namespace漏SLOTS失败，保存原fixture/log；只重跑受影响6项r2均PASS(0.033s)，没有改实际worker/重跑旧core测试或旧oracle。首builder将18个非unit/done账本误计为20，任何输出前assert拒绝；原log保留，修正实际计数后首次产物建立，未重建旧包。新确切包准备一次，全部upload/gates/calls/actualoracles仍NOTRUN，真实P1/G0/Stage1均未准入。
 
 Exactruntime target `75b5ccded42fdc64f11615d93f4a37de13696e0d`:41 manifest members verified from Git bytes. Whole style check retained two historical copied-source EOF warnings; only check excluding those two passed. All old bytes retained; zero new cloud calls.
+
+### 2026-10-14 17:05:34 PDT（追加Stage0预算与费用口径纠正；core限定代码审计已通过）
+
+用户直接给Stage0追加20美元，分配明确为Stage0 40/Stage1 50/Stage2 35/未分配5，P009共130；project450/50保护不变。截图显示credits已用235.06、剩294.94、cashcharge0。之前370.70是近期meter高值235.6920755+未校准25延迟缓冲向上取到260.70+当时未来110额度的准入情景，不是已花费用，且可能重复覆盖已计量P009。此前Stage0余1.29指内部预留空间，不是账号余额。今后实际计量、未来预留、缓冲分开报告，不称三百多已用。原1004c历史claim保留、没有settlementrelease或新billing请求。
+
+23:58:14 reviewpoll查到184a0c78/85comments，23:58:38全文读bs报告1e99c6b3；事件23:55:10。23源core限定CODE PASS-WITH-NOTES，reviewer独立16fixture通过；Codex未重跑旧测试。旧27源75b5尚无gate/upload/call，因本次追加预算明确superseded/unattempted，原包不改。新有界时长/预算入口与原轮子SamplingParams构造核验准备中，尚不准入。教师nativechat与学生rawprompt差异必须披露；不将reviewer近似655或首批均长变成新科学门。原P0/所有旧实验保持关闭。
+
+### 2026-10-14 17:10:27 PDT（新增20美元落实为有限v2入口；精确轮子构造核验与局限）
+
+新34源v2只改尚未尝试的工程帽/预算与前置构造检查：teacher7200、Qwen/OLMo各1800，原14,450请求/科学剂量/固定高吞吐不变。新最大reserve985+326+326=1637c，保留旧1004c共2641，Stage04000余1359；总13000，project45000/50保护。仍原campaign/全局datasetfence，旧75b5无upload/gate/call已superseded，不可调用；旧27源全部未改。teacher首批场景由约36秒增至127.19秒，仍非实测或完成保证，所有后批/硬时限/零自动retry保留。
+
+PyPI固定vllm0.11 Linuxwheel438217982bytes一次SHA通过，原sampling_params.py与tag字节相同。Mac只适配logger/类型注解import，实际msgspec/pydantic执行原类；r1完成8993采购对象后首greedy断言失败（真实类把top_k=-1归一化0），原log留存；仅余5457端点r2通过。无模型/GPU/Linux完整runtime实测，不假称轮子整包可运行；需新确切审计认可有限证据。未来真实worker还在LLM加载前全量构造原参数，保存真实Linux版本验证。10个新fundedfixtures一次PASS(0.005s)，无旧检查重跑。
+
+独立P1两个新文件仅草拟、未测试/发布/执行，仍绑定旧generation spec，必须后续适配新确切spec才送审；无实际mathverify/首100/G0/Stage1。新v2包准备完成，所有真实接受/currentbudget/upload/gates/calls仍ABSENT。费用235.06实际dashboard与未来reserve分开，新增预算不是花费。

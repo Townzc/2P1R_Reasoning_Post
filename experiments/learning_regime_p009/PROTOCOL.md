@@ -320,3 +320,11 @@ both actual A2/amendment reviews plus exact engine source/observed settings.
 All other scientific/input/runtime/budget/once-only gates and training libraries
 are unchanged. This amendment adds zero calls, outputs, training updates or cost.
 Actual A2 and exact amendment review remain required before later science.
+
+## Direct owner funding amendment — recorded October14 PDT
+
+The owner adds $20 specifically to Stage0. Current ceilings are Stage0 $40,
+Stage1 $50, Stage2 $35, unallocated $5: P009 $130 total. Project spending remains
+capped at $450 with $50 protected. These are authorizations, not actual spending.
+Exact future runtime/numeric review remains required; no extra scientific scope
+or automatic retry is authorized. Old immutable budgets are historical.

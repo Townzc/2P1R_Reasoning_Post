@@ -1,3 +1,15 @@
+<!-- Funded exact successor prepared 2026-10-15T00:10:27.547549+00:00 -->
+[Stage0 funded runtime v2](reports/p009_20261014/stage0_generation_runtime_preflight_v2/README.md) binds the owner-added$20 to bounded workers
+and the unchanged14,450 requests.34-source exact runtime/numeric review is pending;
+no new upload, gate or cloud call. Old27-source candidate is unattempted/superseded.
+
+<!-- Owner funding and accounting update 2026-10-15T00:05:34.944028+00:00 -->
+Current P009 ceiling **$130**, including **Stage0 $40**, after the owner's additional$20.
+The owner's dashboard shows **$235.06 credits used**; the former$370.70 was a future
+budget/lag scenario, not money spent. [Funding and accounting definitions](reports/p009_20261014/owner_stage0_add20_v1/README.md).
+Generation core has code-only bsPASS; the unattempted exact27-source candidate is
+superseded before admission while the bounded funded successor is prepared.
+
 <!-- P009 exact runtime prepared: 2026-10-14T23:54:37.096625+00:00 -->
 P0 internal-only scope has real br PASS; original discordance and blocked cross-engine decision remain. [P009 exact Stage0 runtime](reports/p009_20261014/stage0_generation_runtime_preflight_v1/README.md) now binds all27 source files, original inputs/models and three finite workers; exact runtime/numeric review is pending. No new upload or generation call.
 

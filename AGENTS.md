@@ -1,3 +1,7 @@
+# Latest owner funding — Stage0 $40 / P009 $130
+
+Direct owner added$20 to Stage0. Remaining stagecaps50/35/unallocated5 andproject450/50protection unchanged. Distinguish actual platform meter235.06 from future reservations/uncalibratedlag; previous370.70 was NOT spending. No model replay/retry authorized. Read ACTIVE_HANDOFF current top: brinternal-onlyPASS and bscoreCODEPASS are real, old27source75b5 unattempted superseded for funded exactsuccessor. Old scientificbytes/claims/packets remain immutable; no Stage1 outcome yet.
+
 # Latest October14 — P0 internal-only scope accepted; prepare next Stage0 runtime
 
 Read `.local/p009_20261014/r1/ACTIVE_HANDOFF.md` first. Claude br dec75690 gives exact owner amendment PASS; actual P0 A2 raw integrity remains PASS and the original cross-engine comparability block remains historical. Do not repeat P0 or ask owner again. All future scientific effects/G0/G1 use the same reviewed vLLM definitions;650 only same Qwen/GSM0shot,950 only oldP008 reference. All later gates unchanged. New stage0_generation core and23-source code packet are prepared; no Modal entry/admission or new GPU call.16 new offline checks done once; do not rerun. Bounded original OLMo weight preparation is local only. Preserve1004c oldreserve/Stage0 2000/P00911000; new867c grouping only provisional. No subagents/externalmessages; INDEX+ordinarypush authorized. Old monitors paused,p009 active. Older dated status below is historical.
