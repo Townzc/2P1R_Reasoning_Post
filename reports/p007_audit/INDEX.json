@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T05:36:46.858884+00:00",
+  "as_of_utc": "2026-10-15T05:45:51.854817+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2910,6 +2910,25 @@
       "same_scientific_recipe": true,
       "decision_blinded_to_NC400": false,
       "chronology_disclosure": "NC400954/1319 was read/published before owner replacement authority was recorded; transparent post-failure engineering exception, not preregistered or blinded."
+    },
+    {
+      "request_id": "p009-stage1-NC-replacement-closeout-code-r1",
+      "scope": "p009-stage1-NC-replacement-observation-and-pair-publication-code",
+      "target_commit": "b63ab5182db63844680be958759fa477fe21000c",
+      "packet": "reports/p009_20261014/stage1_nc_replacement_closeout_preflight_v1",
+      "manifest": "reports/p009_20261014/stage1_nc_replacement_closeout_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "cd8a5410457ca53eb1cea8abaef232ce703f1d6605283c107ad7fd643d69decc",
+      "source_files": {
+        "scripts/p009_nc_replacement_observe.py": "8536d22c27f4fc87066d2c6c26e9819e1b28f8767b3fc9c542da1318da5761c8",
+        "scripts/publish_p009_nc_replacement_pair.py": "3c7dad52132614585720883545b6b9198bce55952586b3cddc48fe7d42dfadc7",
+        "scripts/publish_p009_stage0_result.py": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26"
+      },
+      "review_request": "reports/p009_20261014/stage1_nc_replacement_closeout_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only these new read-only observation/startup/pair-publication paths; does not block the separately-reviewed49-source model admission.",
+      "actual_execution": false,
+      "created_utc": "2026-10-15T05:45:51.854817+00:00"
     }
   ],
   "p008_v31": {
@@ -3716,7 +3735,13 @@
       "target_commit": "3938689cb3156d9a67773f49d8d7cd7f4390bc9c",
       "request_id": "p009-stage1-NC3200-independent-replacement-r1",
       "manifest_members_git_verified": 124,
-      "decision_blinded_to_NC400": false
+      "decision_blinded_to_NC400": false,
+      "readonly_preflight": {
+        "target_commit": "b63ab5182db63844680be958759fa477fe21000c",
+        "request_id": "p009-stage1-NC-replacement-closeout-code-r1",
+        "code_status": "PENDING",
+        "all_actual_actions": "NOTRUN"
+      }
     }
   }
 }
