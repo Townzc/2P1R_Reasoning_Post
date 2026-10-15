@@ -1,3 +1,7 @@
+# Latest funded successor prepared — October14 PDT
+
+Only modal_stage0_generation_v2 may be admitted next after real fixed review.34 source/spec e3775978, target974efcbf; three original slots with7200/1800/1800 hard entry caps,1637c new/full1004c prior, Stage04000/P00913000. No upload/gate/call yet. Old27 candidate75b5 retired unattempted; all old bytes and completed P0 preserved. Wheel constructor evidence has explicit Mac logger/type adapters and original greedy top_k assertion failure, not full Linux/GPU validation; new exact reviewer must accept scope. Ten new tests done once. Read latest private LIVE_P009_FUNDED_STAGE0_HANDOFF.md for actual commands and remaining preparation; no routine owner permission.
+
 # Latest owner funding — Stage0 $40 / P009 $130
 
 Direct owner added$20 to Stage0. Remaining stagecaps50/35/unallocated5 andproject450/50protection unchanged. Distinguish actual platform meter235.06 from future reservations/uncalibratedlag; previous370.70 was NOT spending. No model replay/retry authorized. Read ACTIVE_HANDOFF current top: brinternal-onlyPASS and bscoreCODEPASS are real, old27source75b5 unattempted superseded for funded exactsuccessor. Old scientificbytes/claims/packets remain immutable; no Stage1 outcome yet.

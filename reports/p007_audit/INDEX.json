@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:05:34.944028+00:00",
+  "as_of_utc": "2026-10-15T00:12:51.310885+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2292,6 +2292,29 @@
       "created_utc": "2026-10-14T23:54:37.096625+00:00",
       "scientific_calls": 0,
       "superseded_reason": "Owner added20USD to Stage0 before any upload/gate/call; exact successor will bind revised caps."
+    },
+    {
+      "request_id": "p009-stage0-generation-funded-v2-r1",
+      "scope": "p009-stage0-generation-funded-v2-runtime-and-numeric",
+      "target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
+      "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v2",
+      "manifest": "reports/p009_20261014/stage0_generation_runtime_preflight_v2/MANIFEST.json",
+      "manifest_sha256": "8e1d95a666119836d47553a0349319303381add9bb9bb5a2a1c7ec0a64e7dfab",
+      "spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
+      "source_files": 34,
+      "review_request": "reports/p009_20261014/stage0_generation_runtime_preflight_v2/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only funded v2 three Stage0 generation slots/uploads; independent P1 code preparation may continue, actual P1 and G0 still gated.",
+      "created_utc": "2026-10-15T00:12:51.310885+00:00",
+      "scientific_calls": 0,
+      "owner_budget_amendment_sha256": "4e705c0024e34516a6b71ddf574cb285a1973b4570d466168665199461cf440a",
+      "sampling_constructor_proof_sha256": "3398a05652dbc7f5ce8ea333cb9a054e04c9bd1b31c2fb9b2d7f5a086a903900",
+      "first_paid_batch_exceptions_proposed": 3,
+      "new_reserved_cents": 1637,
+      "stage0_cap_cents": 4000,
+      "experiment_cap_cents": 13000,
+      "original23_and27_sources_preserved": true
     }
   ],
   "p008_v31": {
@@ -2585,10 +2608,10 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "P0_internal_only_scope_PASS_stage0_core_CODE_PASS_budget130_40_exact_successor_preparing",
-    "total_cap_usd": 110,
+    "status": "P0_internal_only_scope_PASS_stage0_core_CODE_PASS_funded_v2_exact_review_pending",
+    "total_cap_usd": 130,
     "stage_caps_usd": {
-      "stage0": 20,
+      "stage0": 40,
       "stage1": 50,
       "stage2": 35
     },
@@ -2609,7 +2632,7 @@
     "target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
     "input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
     "automatic_progression": "scientific gate + exact scoped review + complete raw evidence + budget/window/unused-slot admission; no repeated routine permission",
-    "scientific_calls": 2,
+    "scientific_calls": 3,
     "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged",
     "p0_runtime": {
       "target_commit": "6b8c5764b46c12c277f12dcf8323b375dfc119ec",
@@ -2674,7 +2697,8 @@
       "current_runtime_keeps_all_752c_prior_reservations": true,
       "closed_failure_settlement_release_used": false,
       "original_claims_unchanged": true,
-      "snapshot": ".local/p009_20261014/r1/entry_repair_budget_20261014T223539Z"
+      "snapshot": ".local/p009_20261014/r1/entry_repair_budget_20261014T223539Z",
+      "scope_note": "Original22:35P0 dispatch snapshot retained, not a current funded-v2 admission; refresh before paid work."
     },
     "math_scoring_pool": {
       "target_commit": "0b714161dcc23a93cc44b52f4948eae271eaeb27",
@@ -2741,7 +2765,7 @@
       "zero_work_packet": "reports/p009_20261014/p0_preclaim_failure_v1",
       "zero_work_target": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6"
     },
-    "cloud_function_calls": 3,
+    "cloud_function_calls": 4,
     "owner_budget_amendment": {
       "path": "reports/p009_20261014/p0_entry_repair_preflight_v1/OWNER_BUDGET_AMENDMENT.json",
       "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
@@ -2751,7 +2775,7 @@
       "protected_usd": 50
     },
     "p0_entry_repair": {
-      "status": "completed_local_oracle_A2_pending_scientific_gate_blocked",
+      "status": "completed_A2_integrity_PASS_original_gate_preserved_owner_internal_only_amendment_PASS",
       "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
       "packet": "reports/p009_20261014/p0_entry_repair_preflight_v1",
       "source_count": 38,
@@ -2761,7 +2785,7 @@
       "total_conservative_cents": 1004,
       "stage0_remaining_cents": 996,
       "settlement_release_used": false,
-      "new_calls": 0,
+      "new_calls": 1,
       "inherited_outputs": 256,
       "new_outputs": 2382,
       "acceptance_packet": "reports/p009_20261014/entry_repair_review_accepted_v1",
@@ -2824,7 +2848,7 @@
           "total": 1319
         }
       },
-      "actual_A2": "pending"
+      "actual_A2": "PASS_RAW_LINEAGE_ACCOUNTING_ONLY"
     },
     "math_durable_journal": {
       "status": "code_accepted_actual_P1_not_admitted",
@@ -2871,7 +2895,7 @@
       "acceptance_target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
     },
     "stage0_generation_core": {
-      "status": "PREPARED_CODE_REVIEW_PENDING_NOT_ADMITTED",
+      "status": "CODE_PASS_WITH_NOTES_at184a0c78_not_runtime_admission",
       "packet": "reports/p009_20261014/stage0_generation_core_preflight_v1",
       "source_files": 23,
       "candidate_sha256": "740da1507b5d6186a39f7a6439abb780d602ff323990a01cb63a916990c62055",
@@ -2879,10 +2903,12 @@
       "uploads": 0,
       "new_reservation_candidate_cents": 867,
       "retained_prior_cents": 1004,
-      "target_commit": "6f0633f5ef6b6c505b6b37c9465981ae5d5ce007"
+      "target_commit": "6f0633f5ef6b6c505b6b37c9465981ae5d5ce007",
+      "review_commit": "184a0c7831d68c6411adfe5f71aef21e0fff3b2f",
+      "acceptance_packet": "reports/p009_20261014/review_184a0c78_accepted_v1"
     },
     "stage0_generation_runtime": {
-      "status": "EXACT_REVIEW_PENDING_NOT_ADMITTED",
+      "status": "superseded_unattempted_owner_add20",
       "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v1",
       "source_files": 27,
       "spec_sha256": "d64362270dceb26feb586c8520352318e2ddc7f19339e9bc0316948ae5547111",
@@ -2892,7 +2918,8 @@
       "calls": 0,
       "first_paid_measurements_proposed": 3,
       "target_commit": "75b5ccded42fdc64f11615d93f4a37de13696e0d",
-      "manifest_sha256": "7ee016861d3d42bc1c17e71f43aa0243e957f4b8712d04af04740804380b3332"
+      "manifest_sha256": "7ee016861d3d42bc1c17e71f43aa0243e957f4b8712d04af04740804380b3332",
+      "successor_request": "p009-stage0-generation-funded-v2-r1"
     },
     "budget_current": {
       "schema": "p009_owner_stage0_add20_v1",
@@ -2915,6 +2942,28 @@
       "all_scientific_and_exact_review_gates_retained": true,
       "packet": "reports/p009_20261014/owner_stage0_add20_v1",
       "owner_authority_sha256": "4e705c0024e34516a6b71ddf574cb285a1973b4570d466168665199461cf440a"
+    },
+    "stage0_generation_runtime_v2": {
+      "status": "EXACT_REVIEW_PENDING_NOT_ADMITTED",
+      "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v2",
+      "target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
+      "source_files": 34,
+      "spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
+      "new_reserved_cents": 1637,
+      "retained_prior_cents": 1004,
+      "stage0_total_reserved_if_all_called_cents": 2641,
+      "stage0_unreserved_after_cents": 1359,
+      "uploads": 0,
+      "gates": 0,
+      "calls": 0,
+      "request_id": "p009-stage0-generation-funded-v2-r1"
+    },
+    "accounting_terms": {
+      "packet": "reports/p009_20261014/owner_stage0_add20_v1",
+      "meter_from_owner_screenshot_usd": "235.06",
+      "remaining_credit_from_owner_screenshot_usd": "294.94",
+      "cash_charges_usd": "0.00",
+      "earlier370_70_is_actual_spend": false
     }
   }
 }
