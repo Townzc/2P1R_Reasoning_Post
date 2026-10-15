@@ -1,3 +1,6 @@
+<!-- P009 first100 actual 2026-10-15T01:26:55.424787+00:00 -->
+P009首100真实评分已完成；[原始计时及完整证据](reports/p009_20261014/P1_FIRST100_ACTUAL_REVIEW_REQUEST.md)等待精确数值审计后继续。Stage1尚无学生结果，所有旧模型保持关闭。
+
 <!-- Latest actual Stage0 closeout / owner B: 2026-10-15T01:12:01.936663+00:00 -->
 [All14,450 Stage0 outputs are locally verified and the three apps are STOPPED0](reports/p009_20261014/stage0_complete_a2_v1/README.md).
 Actual A2 is pending. NC passes the local GSM G0; S2 fails the frozen cap gate

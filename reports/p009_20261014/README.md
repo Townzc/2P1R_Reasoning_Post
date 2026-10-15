@@ -1,3 +1,8 @@
+<!-- P009 first100 actual 2026-10-15T01:26:55.424787+00:00 -->
+P1新36h入口已获真实bv代码PASS，唯一首100实测已完成，剩余数值审计待处理。
+[实际首100与完整证据](P1_FIRST100_ACTUAL_REVIEW_REQUEST.md)；
+保留原条件门，尚无Stage1学生结果。
+
 # P009 current: complete Stage0 generation, local P1 pending exact36h review
 
 All14,450 original Stage0 outputs are complete and passed local raw/source/lineage

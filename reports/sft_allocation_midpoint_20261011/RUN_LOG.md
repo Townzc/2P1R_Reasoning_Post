@@ -1308,3 +1308,9 @@ Qwen MATH0/4 caps68/39各500，teacherMATH caps36/500，采购8993中nativeEOS82
 新Claude10cbc965/20261014bv全文于2026-10-15T01:24:18.967447+00:00读取，事件01:08:32/comment6182030416，SHAbb61d6bc。新12源bb2629ba/owner36h129600/P1first1001200真实PASS，限定接受记录已保存；旧6h未尝试退役，不重跑旧5/8tests。Stage1七源fd03e883名单代码PASS-WITH-NOTES，实际corpus/学生仍未准入。未来Stage2原始seed17域复用同一个已冻结hash排序键、在正确性前选择；不新增排列或改变科学门。
 
 此刻p1_actual_r1仍不存在，接下来只freeze和first100一次；真实际吞吐报告之后才能remaining。Reviewer约101k极端算术不当实测上界/必然准入，记录pair还含调度/处理开销，须真实max和原串行公式。原模板10-source措辞已有独立12-source说明，原代码/包不改。所有Stage0收尾均已完成，reviewer旧未收集表述是事件时状态；全14450 A2与NC本地PASS/S2capFAIL仍等待独立结果报告。0新GPU/模型/旧评分重放。
+
+### 2026-10-14 18:26:55 PDT（P1唯一首100已完成；实测数值送审）
+
+真实bv新12源PASS后，extendeddriver freeze一次EXIT0、first100原CLI17733一次EXIT0已消耗；actual完成2026-10-15T01:25:24.198916+00:00，全command1.048697秒。原10493生成行中4采购gold结构不支持单列排除，10489scorable，全部端点1500 gold齐备；不把排除记错或与7上下文不支持混淆。原首100精确orderedrows/73新distinctpair缓存/两个本地worker版本/原chunks00000证明齐，0模型调用、0旧symbolic或raw重放。
+
+原最大newpair0.074970291秒，剩余3975distinctpair；不假定双worker加速的原serial+300/20%情景718.157926719秒。拟总129600本地秒减原首段，保留owner36h技术上限以容纳后续慢pair；需真实独立数值报告，不自写ACCEPTED，不把718秒预测变成过紧的硬截止。所有首100缓存包括失败/超时类型未来只复用，partial不得自动重跑。未公布prefix正确率或用它调整实验。原已审publisher一次完成原字节/完整losslessROWS/pairs/timing12-source包，模板旧10字说明由单独canonical请求明确12，immutable不改。remaining/完整P1/G0/学生仍NOTRUN。
