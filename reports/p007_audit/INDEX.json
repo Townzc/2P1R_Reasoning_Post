@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:24:09.442404+00:00",
+  "as_of_utc": "2026-10-15T00:31:02.699164+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2303,8 +2303,8 @@
       "spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
       "source_files": 34,
       "review_request": "reports/p009_20261014/stage0_generation_runtime_preflight_v2/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_PASS_WITH_NOTES_upload_dispatch_subject_to_fresh_checks",
+      "blocking": false,
       "blocking_for": "Only funded v2 three Stage0 generation slots/uploads; independent P1 code preparation may continue, actual P1 and G0 still gated.",
       "created_utc": "2026-10-15T00:12:51.310885+00:00",
       "scientific_calls": 0,
@@ -2314,7 +2314,13 @@
       "new_reserved_cents": 1637,
       "stage0_cap_cents": 4000,
       "experiment_cap_cents": 13000,
-      "original23_and27_sources_preserved": true
+      "original23_and27_sources_preserved": true,
+      "review_commit": "eeb65b04e8d698c16a7d670f0f59ad63a0e3afbd",
+      "review_path": "audit/claude/20261014bt/REPORT.md",
+      "review_sha256": "50f92033dc9104176f34a370070c59455ba867263ed77a1e4bddf7b513966be5",
+      "review_read_utc": "2026-10-15T00:29:13.594776+00:00",
+      "review_event_utc": "2026-10-15T00:20:12Z",
+      "acceptance_packet": "reports/p009_20261014/review_eeb65b04_accepted_v1"
     },
     {
       "request_id": "p009-math-p1-driver-first100-r1",
@@ -2627,7 +2633,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "P0_internal_only_scope_PASS_stage0_core_CODE_PASS_funded_v2_exact_review_pending",
+    "status": "funded_stage0_runtime_accepted_preparing_once_only_original_three_slots",
     "total_cap_usd": 130,
     "stage_caps_usd": {
       "stage0": 40,
@@ -2963,7 +2969,7 @@
       "owner_authority_sha256": "4e705c0024e34516a6b71ddf574cb285a1973b4570d466168665199461cf440a"
     },
     "stage0_generation_runtime_v2": {
-      "status": "EXACT_REVIEW_PENDING_NOT_ADMITTED",
+      "status": "accepted_actual_upload_and_calls_NOTRUN",
       "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v2",
       "target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
       "source_files": 34,
@@ -2975,7 +2981,9 @@
       "uploads": 0,
       "gates": 0,
       "calls": 0,
-      "request_id": "p009-stage0-generation-funded-v2-r1"
+      "request_id": "p009-stage0-generation-funded-v2-r1",
+      "review_commit": "eeb65b04e8d698c16a7d670f0f59ad63a0e3afbd",
+      "acceptance_packet": "reports/p009_20261014/review_eeb65b04_accepted_v1"
     },
     "accounting_terms": {
       "packet": "reports/p009_20261014/owner_stage0_add20_v1",

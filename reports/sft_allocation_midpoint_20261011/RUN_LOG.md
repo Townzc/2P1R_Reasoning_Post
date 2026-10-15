@@ -1252,3 +1252,9 @@ Public funding/core/v2 packets at974efcbf3c6eae6034828ef11c78831cb97dea46 have3+
 12个新合成输入/顶层driver集成检查一次PASS(0.034s)，不跑math-verify、不重复旧journal11fixtures或原raworacle。原34生成源/冻结标注器不改；P1实际freeze/first100/rest/A2均NOTRUN。新request只挡本地P1入口，不挡独立funded generation审计。此前误猜journal测试路径的sed读取失败无写入或科学副作用。费用40/130是授权，当前未新增云调用/上传/费用请求。
 
 P1 publication: four prior scalar/pool/journal/requirements source hashes were explicitly verified against the SOURCE_BINDING.source_files wrapper. Whole staged style check retains one original common.py EOF blank-line warning; only that copied historical file is excluded from the passing source check. No old bytes or tests changed.
+
+### 2026-10-14 17:31:02 PDT（新34源生成入口与数值审计真实通过；准备三项一次调用）
+
+00:29:02巡检查到eeb65b04/86comments；bt事件00:20:12/comment6181426795，完整报告00:29:13.594776读取，SHA50f92033。确切974efcbf/spec e377/34源、三首256例外和1637c新预留PASS-WITH-NOTES；真实RUNTIME_ACCEPTED已保存。外审6fixtures通过、4依私有未重跑，wheel未独立重新下载限制保留。不是P1/G0/速度保证。reviewer近似655/早期长度建议不成为新门，实际仍selected3200完整答案sum<=2097148。0旧测试/模型重跑。
+
+新必要00:29:35费用meter235.35236991/billed0/credits235.06；近期高+25未校准lag向上260.70+未来130=390.70为准入情景不是已花/余额/严格上界，可能重复覆盖少量已有P009。Stage0原10.04+新16.37=26.41<40。首次report错误range this-month仅CLI失败，原log留存；只补缺this month报告70行，未重复summary/Papers。Papers e097b0cb无新。接下来已授权一次upload/readback/dispatch，当前这些仍未执行。

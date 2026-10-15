@@ -1,3 +1,8 @@
+<!-- Actual funded-runtime review 2026-10-15T00:31:02.699164+00:00 -->
+[Funded Stage0 runtime bt PASS-WITH-NOTES](reports/p009_20261014/review_eeb65b04_accepted_v1/README.md):34 exact sources,
+three once-only workers and their budget are accepted. Fresh budget saved;
+upload/readback/dispatch are next. P1/G0 remain separate, no outcome exists yet.
+
 <!-- Funded exact successor prepared 2026-10-15T00:10:27.547549+00:00 -->
 [Stage0 funded runtime v2](reports/p009_20261014/stage0_generation_runtime_preflight_v2/README.md) binds the owner-added$20 to bounded workers
 and the unchanged14,450 requests.34-source exact runtime/numeric review is pending;

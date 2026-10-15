@@ -1,3 +1,8 @@
+<!-- Actual funded-runtime review 2026-10-15T00:31:02.699164+00:00 -->
+[Funded Stage0 runtime bt PASS-WITH-NOTES](review_eeb65b04_accepted_v1/README.md):34 exact sources,
+three once-only workers and their budget are accepted. Fresh budget saved;
+upload/readback/dispatch are next. P1/G0 remain separate, no outcome exists yet.
+
 <!-- P1 code preparation 2026-10-15T00:23:26.904405+00:00 -->
 [P1 input binding and first100 driver](p1_driver_preflight_v1/README.md) is prepared
 for exact review. Actual MATH scoring has not begun; funded Stage0 runtime review
