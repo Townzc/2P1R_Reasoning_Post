@@ -1,3 +1,7 @@
+### 2026-10-14 21:19:22 PDT（NC本地锁目录前置错误已对账，科学槽位仍未尝试）
+
+首次本地CLI90968 EXIT1已消耗，appap-xaVu6AKuXm3E1ah8gSBpXR实际21:12:48PDT STOPPED0；错误为缺失stage1_dispatch父目录，发生于任何store检查/marker/spawn前。唯一只读对账CLI71606于21:18:26PDT确认整个NC campaign记录为空、两logical marker和远端输出目录全缺失、本地canonical receipt目录缺失，0科学调用/更新/输出，不造failedterminal/不清claim。原镜像build与失败费用保留、不当免费。仅补齐本地共享锁父目录，全部42已审源/plan/gates/9已回读inputs不改、不再upload。既有mock entry检查没有覆盖缺目录前置条件；原失败记录与修复动机公开。下一本地入口只提交仍未尝试的原科学槽位，非重复科学调用。
+
 ### 2026-10-14 21:17:07 PDT（NC完整结果只读发布与分析绑定准备）
 
 新增publish_p009_nc_complete.py只在两完整fulloracle/result/STOPPED0后一次发布原compact投影和无损oracle，原stateSHA/manifest公开不冒充外审加载binary；独立intent/provider投影明确记录去除的私有locator/actor及原SHA。复用既有archive_original和已审nc_result，不重评分/训练/bootstrap。全原>=5pp NC门不改，实际结果A4仍后续。新代码只ASTparsed、未实际执行，没有重跑旧checks，也不将准备当结果。源与两直接文件snapshot送新限定审计，只挡该publisher、不挡已审NC worker。首次编写时analysis scope按真实ACCEPTED改正后再固定，未执行任何分析。数次只读猜测路径不存在，无科学或写入副作用；后续按真实INDEX/rg定位。
