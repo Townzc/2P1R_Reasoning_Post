@@ -1,3 +1,6 @@
+<!-- S1 first pair submitted 2026-10-15T09:27:39.576583+00:00 -->
+[S1首对已各提交一次](reports/p009_20261014/stage1_s1_first_pair_started_v1/README.md)：seed 17 的 n400、n3200；完整结果与外审待完成，后四组继续受原 futility 门约束。
+
 <!-- S1 exact runtime accepted 2026-10-15T09:03:58.892659+00:00 -->
 [S1 完整运行与数值外审 PASS-WITH-NOTES](reports/p009_20261014/review_a3fde15c_s1_runtime_accepted_v1/DISPOSITION.md)。真实 NC A4 已通过；首 seed 17 n400/n3200 接下来各运行一次，后四项保留原 futility/A4 门。当前为准入记录，尚无 S1 结果。
 

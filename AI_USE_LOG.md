@@ -1,3 +1,17 @@
+### 2026-10-15 02:30:12 PDT — S1两原训练已启动核验；首次真实provider快照闭合
+
+两原calls80236/2114各submitted一次且仍active，执行ad7cf856/source81不变。新25inputs上传99016和两gateDONE；首16startup28213/60424都PASS（32769/32878targets，真实H10080GB与原claim/fences/55依赖），仅启动局部取证，不是1024全剂量或结果oracle。实际status80651于09:27:30.351292UTC读取两ownedcontainers各1、无terminal/result/error，保存469/106连续更新和0/0终点，不计算partialscore。下次稳定provider09:57:31。
+
+ci确切helper3报告SHA0504b3d0已真接受；实际单runpublisher/评分/futility全NOTRUN。两个原硬帽从各worker入口计4500秒，不能延长。所有旧闭合工作不重复。新本地有界caffeinate69065/PID70909 09:27:39至11:27:39用于原回执和本地收尾，非云controller/永久设置。原旧caffeinate自然到期，不消耗重置卡或主动credits。下一正常review09:52:40；正常状态未变安静，后四项等待真实首对futilityA4。
+
+### 2026-10-15 02:27:39 PDT — S1首seed17 n400/n3200各一次实际submitted
+
+两原S1调用已实际submitted，身份和dispatch时间保存reports/p009_20261014/stage1_s1_first_pair_started_v1/SUMMARY.json。25冻结inputs一次上传99016已exit0消耗并全SHA回读；两gate各一次。ch exact81/cg actualNC/budgetproxy/freshbilling全部绑定，源81未变，没有新训练量/旧输出重生成。当前只有提交证据，尚无S1结果、完整oracle、评分或实际A4；workerentry/harddeadline不从localdispatch冒充。只保留这两原调用，不重复提交/清claim/热改源；后四项依原futilityA4。ci exact3 helper代码PASS-WITH-NOTES已实际读取，两startup首16/H100/source81核验完成；不冒充fulloracle或actualA4。首镜像构建和必要真实依赖读取计入原过程，日志安静不当卡死。预算预留不是花费；所有旧失败和费用永保。
+
+### 2026-10-15 02:24:23 PDT — S1只读startup/完整结果publisher确切代码审通过
+
+ci c9891f6e完整报告SHA0504b3d0，comment6188649611事件09:13:55/fullread09:22:39.474854UTC。exact3source/adfc66/runtime81绑定PASS-WITH-NOTES，准确READONLY_PUBLICATION_CODE_ACCEPTED及原报告已存；0旧tests/评分/模型重复。仅代码接受，不是结果或futilityA4；publisher在mkdir后归档的partial风险保留，不能wholehelper重试，固定500×2独立decode/50分歧/fallback/timeout仍需真实A4。此次正常约30分钟查询09:22:05/108comments，下次09:52:40/min09:37:40。原80236训练和2114启动调用保持，不重新提交。
+
 ### 2026-10-15 02:03:58 PDT — S1 exact81 runtime/numeric true PASS-WITH-NOTES; fresh paid-phase budget
 
 ch a3fde15c完整报告SHA91e01c7e，事件08:44:41/实际读取08:55:21.571426UTC。81源/6f0bd17e/spec e326/timing a69/真实budgetproxy与NCcg完整绑定已准确保存，两个首槽prospective只读验证通过。原模型/评分/tests/收尾没有重复；此时0S1上传/gates/调用。随后仅首seed17 n400/3200各一次，后四项必须真实futility A4。
