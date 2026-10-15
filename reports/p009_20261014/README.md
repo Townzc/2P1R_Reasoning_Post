@@ -1,3 +1,6 @@
+<!-- S1 readonly score proof draft 2026-10-15T06:00:02.171422+00:00 -->
+[S1评分日志核验准备](stage1_s1_score_proof_draft_v1/README.md)完成8个新合成检查，无实际评分或新准入。确切替代运行/原父A4仍待真实报告；这项独立准备不新增阻塞门。
+
 <!-- Explicit owner replacement authorization and exact preparation 2026-10-15T05:32:48.132065+00:00 -->
 **NC3200 单项独立替代已获你直接批准，正在等确切审计。** [49源/输入/计时/预算候选](stage1_nc_replacement_preflight_v1/README.md)保留原失败父及NC400完整结果，采用新的永久运行标识；原配方、4500秒帽和$6.55单次预留不变。实际新调用为0；原NC配对门仍不可计算，S1尚未放行。旧提案内“待owner”是历史状态，当前不再等待相同许可。
 

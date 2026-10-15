@@ -1,3 +1,9 @@
+### 2026-10-14 23:00:02 PDT — S1评分日志只读核验准备
+
+新增stage1_s1_score_proof.py只读验证完整500行/五chunk/全部pair与缓存顺序/原SHA/固定抽查，0模型、state加载、rawdecode、box提取或symbolic重评分。保存的boxed分母仅原样引用，独立判断仍须真实外审；payload_only/科学未准入明确保留。未来完整S1入口须整合真实NC配对A4、全部source/runtime/input/local-time证明；未新增独立code-only阻塞门，也无实际S1调用。
+
+八个新的纯synthetic证据损坏与来源检查一次PASS0.103s；旧test/scorer/模型/collector均未重复。NC49/旧42/P112/Stage034原字节不改。准备包stage1_s1_score_proof_draft_v1含5manifest成员。当前替代runtime与原parentA4仍按上次05:36:19读取pending，未再次查审计；无新费用/Papers查询、gates/upload/model。只读阶段误猜两个旧日志/协议路径失败无副作用，已rg定位真实路径；未隐瞒或重跑已完成工作。
+
 ### 2026-10-14 22:45:35 PDT — 替代运行只读监控与配对交接准备，未执行
 
 新增 scripts/p009_nc_replacement_observe.py 绑定新physical/campaign/49source：600秒有界只读provider/claim/连续ack；首16更新核验另外检查46原父依赖且create-only，不算全raw/state oracle。无remote写/评分/model，任何readerror保unknown；实际两个action都NOTRUN，未来真helper代码审计后才用。
