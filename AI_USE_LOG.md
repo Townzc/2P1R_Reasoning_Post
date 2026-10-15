@@ -1,3 +1,7 @@
+### 2026-10-15T03:16:55.011237+00:00 UTC（固定NC审计请求与原字节核验）
+
+固定22b02e313ef38581fb715a8273131f0be3b98c35的NC137和bz/ca接受7个manifest成员逐Git原字节核验DONE一次。新INDEX请求p009-stage1-NC-runtime-and-numeric-r1等待真实42源/数值报告；无调用。两处复制的旧checkpoint/common EOF样式告警保留，wholecheck非PASS，仅排除该两原字节副本后PASS。旧测试/模型/评分不重复，unrelatedlt002保留。
+
 ### 2026-10-14T20:16:23.149386-07:00（NC确切运行与数值候选完成，尚未调用）
 
 新42source含训练子进程真实退出后再创建vLLM、原始输出先保存、永久logical/dispatch fences、全state/raw/剂量oracle。两NC仍1024/2097148，候选4500秒/655c各、合计1310c在Stage15000内，无新预留写入/上传/gate/image/call。原18host1184block全纳入，原mtime+明确padding与failedprefix都是未校准迁移proxy，4192.9819566秒不是host保证。15新/修订检查通过；原8项fixture setup错误修正只重跑受阻类，2原workerbody完全mock/3tinyCPUstate不是实际模型。原代码22/12/34未改。固定包创建与原件拷贝完成一次，下一步固定提交、INDEX确切审计、Git原字节核验，旧测试/模型不重复。
