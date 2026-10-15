@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T09:30:12.024462+00:00",
+  "as_of_utc": "2026-10-15T10:25:47.728069+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3245,6 +3245,87 @@
       "read_utc": "2026-10-15T09:22:39.474854+00:00",
       "acceptance_packet": "reports/p009_20261014/review_c9891f6e_s1_helpers_accepted_v1",
       "actual_result_A4": false
+    },
+    {
+      "request_id": "p009-stage1-S1-first-pair-actual-A4-r1",
+      "scope": "p009-stage1-S1-first-pair-complete-and-futility-A4",
+      "target_commit": "30b906daa81a3c1c5ce1603d701310be0c6e72f2",
+      "packet": "reports/p009_20261014/stage1_s1_first_pair_v1",
+      "handoff_packet": "reports/p009_20261014/stage1_s1_first_pair_handoff_v1",
+      "manifest": "reports/p009_20261014/stage1_s1_first_pair_v1/MANIFEST.json",
+      "manifest_sha256": "0882644c22da786f603b90d83dfbb46ed9b14faf583bfaa3355fa8ea72baa670",
+      "endpoint_packet_manifests": {
+        "s1_s17_n400": "9f9b0929fdf7afb5ffbcbebd553034a565a6348fdbdf16759783bf0883509301",
+        "s1_s17_n3200": "64c85f6abd47a320d7d1b661335433ed3b2fa90ee566f8134afeb5cd2ed4320e"
+      },
+      "handoff_manifest_sha256": "7938e036fec6a451356833b040cf886c7280731015760c833101fd92200283dc",
+      "registered_decision_file_sha256": "88d2b615ba40048c993f56196c23872e50abf00f29646d614793e9f85150afa1",
+      "review_request": "reports/p009_20261014/S1_FIRST_PAIR_ACTUAL_A4_REVIEW_REQUEST.md",
+      "status": "pending_actual_complete_endpoint_adjudication_and_registered_futility_stop_A4",
+      "blocking": true,
+      "blocking_scope": "Final independent result/stop disposition and study handoff. Original local futility stop prevents all later scientific slots; no new scientific permission requested.",
+      "created_utc": "2026-10-15T10:25:47.728069+00:00",
+      "counts": [
+        273,
+        276
+      ],
+      "total_per_endpoint": 500,
+      "logical_caps": [
+        36,
+        54
+      ],
+      "technical_unknown": 0,
+      "delta_pp": 0.6,
+      "discordant_count": 91,
+      "local_registered_decision": "stop_registered_futility",
+      "remaining_scientific_slots_allowed": false,
+      "G1_assessed": false,
+      "bootstrap_run": false,
+      "fixed_independent_disagreement_samples": [
+        25,
+        22
+      ],
+      "fallback_samples": [
+        0,
+        0
+      ],
+      "outer_timeout_unique_pairs": [
+        0,
+        0
+      ],
+      "source_binding": "reports/p009_20261014/stage1_s1_first_pair_v1/REVIEW_BINDING.json",
+      "NC_A4_report_sha256": "e035cf2ffbe1f74434d2bd86730c5b64200cfab640ef8dd392fc0b85c094a28a",
+      "S1_G0_report_sha256": "a6479f674f52bbf5dd1fd4d66362a4651a1ad18ecfc37c03807c24249f274477",
+      "first_pair_run_ids": [
+        "s1_s17_n400",
+        "s1_s17_n3200"
+      ],
+      "first_pair_app_ids": [
+        "ap-6JVYmBoPItp1qDysYgkbMK",
+        "ap-XPgrJGIyLLH05M6qHhcs7V"
+      ],
+      "required_terminal_records": {
+        "midpoint/p009-stage1-s1-20261015-r1/terminal/s1_s17_n3200": {
+          "actual_cost_cents": 655,
+          "attempt_id": "7b7cc63f1e054857823a14c6fca6672c",
+          "claim_sha256": "8e7132d47ad87e8de298ce4cf28c705951478ba1c91ed524fef945a3398d5fb1",
+          "evidence_sha256": "11a28a22dd5e942297f997a188438290f99737b723ae251900c446aaeefc43af",
+          "finished_epoch": 1792058053.7220016,
+          "run_id": "s1_s17_n3200",
+          "status": "completed"
+        },
+        "midpoint/p009-stage1-s1-20261015-r1/terminal/s1_s17_n400": {
+          "actual_cost_cents": 655,
+          "attempt_id": "617aa7a591db43d5a42353108e660212",
+          "claim_sha256": "e8e0be84c5bdb99485479bde329839d27e82bb6a040cfe5cc0185adda48713e4",
+          "evidence_sha256": "6a15b45743d26d3d86fec4ad8346b5d870bb2412a4bcfa91a29d9b7b185f7d2a",
+          "finished_epoch": 1792057273.9729362,
+          "run_id": "s1_s17_n400",
+          "status": "completed"
+        }
+      },
+      "new_model_calls": 0,
+      "all_manifest_members_git_verified": 43
     }
   ],
   "p008_v31": {
@@ -3538,7 +3619,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "one_NC3200_replacement_owner_approved_exact_49_source_runtime_prepared_pending_review",
+    "status": "S1_first_pair_locally_complete_registered_futility_stop_actual_A4_pending",
     "total_cap_usd": 130,
     "stage_caps_usd": {
       "stage0": 40,
@@ -3562,7 +3643,7 @@
     "target_commit": "e6350f0bf1f987d7c8a5acd76bbf924b6ed33f4e",
     "input_manifest_sha256": "3097b6fe56c21cc7d357b7f53b0125dced6e82bd5182bb74e6a85710a468d22c",
     "automatic_progression": "scientific gate + exact scoped review + complete raw evidence + budget/window/unused-slot admission; no repeated routine permission",
-    "scientific_calls": 3,
+    "scientific_calls": 11,
     "old_monitors": "p007 and automation-4 independently read PAUSED; unchanged",
     "p0_runtime": {
       "target_commit": "6b8c5764b46c12c277f12dcf8323b375dfc119ec",
@@ -3695,7 +3776,7 @@
       "zero_work_packet": "reports/p009_20261014/p0_preclaim_failure_v1",
       "zero_work_target": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6"
     },
-    "cloud_function_calls": 4,
+    "cloud_function_calls": 13,
     "owner_budget_amendment": {
       "path": "reports/p009_20261014/p0_entry_repair_preflight_v1/OWNER_BUDGET_AMENDMENT.json",
       "target_commit": "c12f7b3cd9ceaa5b9120ffc0280328df568a14b6",
@@ -4175,7 +4256,7 @@
           "worker_seconds": 4500,
           "reserved_cents": 655,
           "worker_entry_and_hard_deadline": "Actual original worker intent times are preserved in startup_verified; not inferred from local dispatch.",
-          "scientific_completion": false,
+          "scientific_completion": true,
           "startup_verified": {
             "actual_gpu": "NVIDIA H100 80GB HBM3",
             "app_id": "ap-6JVYmBoPItp1qDysYgkbMK",
@@ -4251,7 +4332,7 @@
           "worker_seconds": 4500,
           "reserved_cents": 655,
           "worker_entry_and_hard_deadline": "Actual original worker intent times are preserved in startup_verified; not inferred from local dispatch.",
-          "scientific_completion": false,
+          "scientific_completion": true,
           "startup_verified": {
             "actual_gpu": "NVIDIA H100 80GB HBM3",
             "app_id": "ap-XPgrJGIyLLH05M6qHhcs7V",
@@ -4314,25 +4395,28 @@
         }
       },
       "started_packet": "reports/p009_20261014/stage1_s1_first_pair_started_v1",
-      "actual_S1_full_results": 0,
+      "actual_S1_full_results": 2,
       "first_pair_startup_verified": true,
       "startup_cli_sessions": [
         28213,
         60424
       ],
-      "last_provider_read_utc": "2026-10-15T09:27:30.351292+00:00",
+      "last_provider_read_utc": "2026-10-15T10:05:49.865640+00:00",
       "provider_owned_counts": [
-        1,
-        1
+        0,
+        0
       ],
       "saved_update_records": [
-        469,
-        106
+        1024,
+        1024
       ],
       "partial_scores_computed": false,
-      "full_results_available": 0,
+      "full_results_available": 2,
       "readonly_helper_code_review_pending": false,
-      "helper_report_commit": "c9891f6ee386fdbe14dd655800df518a1bba86ba"
+      "helper_report_commit": "c9891f6ee386fdbe14dd655800df518a1bba86ba",
+      "all_original_calls_exit0_consumed": true,
+      "first_pair_futility_stopped": true,
+      "remaining_S1_admitted": false
     },
     "current_owner_approved_allocation_cents": {
       "stage0": 4000,
@@ -4353,11 +4437,11 @@
       "prior_reserves_retained_cents": 2620
     },
     "latest_review_poll": {
-      "completed_utc": "2026-10-15T09:22:05.008731+00:00",
+      "completed_utc": "2026-10-15T10:08:14.530295+00:00",
       "commit": "c9891f6ee386fdbe14dd655800df518a1bba86ba",
       "comments": 108,
       "last_comment_id": 6188649611,
-      "next_normal_not_before_utc": "2026-10-15T09:52:40+00:00"
+      "next_normal_not_before_utc": "2026-10-15T10:38:15+00:00"
     },
     "S1_readonly_closeout_candidate": {
       "target_commit": "adfc66cbdb233f764c8861859fde7e5958571ad8",
@@ -4369,6 +4453,98 @@
         "scripts/publish_p009_stage0_result.py": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26"
       },
       "runtime_candidate_unchanged": true
-    }
+    },
+    "S1_first_pair_actual_result": {
+      "request_id": "p009-stage1-S1-first-pair-actual-A4-r1",
+      "scope": "p009-stage1-S1-first-pair-complete-and-futility-A4",
+      "target_commit": "30b906daa81a3c1c5ce1603d701310be0c6e72f2",
+      "packet": "reports/p009_20261014/stage1_s1_first_pair_v1",
+      "handoff_packet": "reports/p009_20261014/stage1_s1_first_pair_handoff_v1",
+      "manifest": "reports/p009_20261014/stage1_s1_first_pair_v1/MANIFEST.json",
+      "manifest_sha256": "0882644c22da786f603b90d83dfbb46ed9b14faf583bfaa3355fa8ea72baa670",
+      "endpoint_packet_manifests": {
+        "s1_s17_n400": "9f9b0929fdf7afb5ffbcbebd553034a565a6348fdbdf16759783bf0883509301",
+        "s1_s17_n3200": "64c85f6abd47a320d7d1b661335433ed3b2fa90ee566f8134afeb5cd2ed4320e"
+      },
+      "handoff_manifest_sha256": "7938e036fec6a451356833b040cf886c7280731015760c833101fd92200283dc",
+      "registered_decision_file_sha256": "88d2b615ba40048c993f56196c23872e50abf00f29646d614793e9f85150afa1",
+      "review_request": "reports/p009_20261014/S1_FIRST_PAIR_ACTUAL_A4_REVIEW_REQUEST.md",
+      "status": "pending_actual_complete_endpoint_adjudication_and_registered_futility_stop_A4",
+      "blocking": true,
+      "blocking_scope": "Final independent result/stop disposition and study handoff. Original local futility stop prevents all later scientific slots; no new scientific permission requested.",
+      "created_utc": "2026-10-15T10:25:47.728069+00:00",
+      "counts": [
+        273,
+        276
+      ],
+      "total_per_endpoint": 500,
+      "logical_caps": [
+        36,
+        54
+      ],
+      "technical_unknown": 0,
+      "delta_pp": 0.6,
+      "discordant_count": 91,
+      "local_registered_decision": "stop_registered_futility",
+      "remaining_scientific_slots_allowed": false,
+      "G1_assessed": false,
+      "bootstrap_run": false,
+      "fixed_independent_disagreement_samples": [
+        25,
+        22
+      ],
+      "fallback_samples": [
+        0,
+        0
+      ],
+      "outer_timeout_unique_pairs": [
+        0,
+        0
+      ],
+      "source_binding": "reports/p009_20261014/stage1_s1_first_pair_v1/REVIEW_BINDING.json",
+      "NC_A4_report_sha256": "e035cf2ffbe1f74434d2bd86730c5b64200cfab640ef8dd392fc0b85c094a28a",
+      "S1_G0_report_sha256": "a6479f674f52bbf5dd1fd4d66362a4651a1ad18ecfc37c03807c24249f274477",
+      "first_pair_run_ids": [
+        "s1_s17_n400",
+        "s1_s17_n3200"
+      ],
+      "first_pair_app_ids": [
+        "ap-6JVYmBoPItp1qDysYgkbMK",
+        "ap-XPgrJGIyLLH05M6qHhcs7V"
+      ],
+      "required_terminal_records": {
+        "midpoint/p009-stage1-s1-20261015-r1/terminal/s1_s17_n3200": {
+          "actual_cost_cents": 655,
+          "attempt_id": "7b7cc63f1e054857823a14c6fca6672c",
+          "claim_sha256": "8e7132d47ad87e8de298ce4cf28c705951478ba1c91ed524fef945a3398d5fb1",
+          "evidence_sha256": "11a28a22dd5e942297f997a188438290f99737b723ae251900c446aaeefc43af",
+          "finished_epoch": 1792058053.7220016,
+          "run_id": "s1_s17_n3200",
+          "status": "completed"
+        },
+        "midpoint/p009-stage1-s1-20261015-r1/terminal/s1_s17_n400": {
+          "actual_cost_cents": 655,
+          "attempt_id": "617aa7a591db43d5a42353108e660212",
+          "claim_sha256": "e8e0be84c5bdb99485479bde329839d27e82bb6a040cfe5cc0185adda48713e4",
+          "evidence_sha256": "6a15b45743d26d3d86fec4ad8346b5d870bb2412a4bcfa91a29d9b7b185f7d2a",
+          "finished_epoch": 1792057273.9729362,
+          "run_id": "s1_s17_n400",
+          "status": "completed"
+        }
+      },
+      "new_model_calls": 0,
+      "all_manifest_members_git_verified": 43
+    },
+    "latest_observed_cost": {
+      "packet": "reports/p009_20261014/stage1_s1_first_pair_handoff_v1/OBSERVED_COST.json",
+      "actual_read_utc": "2026-10-15T10:11:06.447209+00:00",
+      "workspace_delayed_metered_usd": "246.90239056",
+      "billed_usd": "0",
+      "two_S1_apps_delayed_metered_usd": "4.02358019",
+      "is_invoice_or_balance": false,
+      "reserve_release": 0
+    },
+    "call_counter_scope_note": "Current unique submitted call identities from original local receipts:11 with scientific model work and2 preclaim failures. An unspawned local lock-setup app and same-call platform restart are not additional scientific calls. No old ledger/test rerun.",
+    "call_counter_source_sha256": "5b08a72ed3c3108fd1e457396d4166cf5d8df802d8de01961639402b57ed905a"
   }
 }
