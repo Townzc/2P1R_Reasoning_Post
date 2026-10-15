@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:48:53.257922+00:00",
+  "as_of_utc": "2026-10-15T00:57:44.761530+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2332,14 +2332,15 @@
       "candidate_sha256": "0d2adc7933e0b31abc540543b1df4ef355a690faa886aa2774dc4809bc47692a",
       "source_files": 10,
       "review_request": "reports/p009_20261014/p1_driver_preflight_v1/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "superseded_UNATTEMPTED_owner_local_window_amendment",
+      "blocking": false,
       "blocking_for": "Only local P1 input freeze and conditional first100; not funded Stage0 generation.",
       "generation_target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
       "generation_spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
       "created_utc": "2026-10-15T00:24:09.442404+00:00",
       "actual_symbolic_attempts": 0,
-      "scientific_model_calls": 0
+      "scientific_model_calls": 0,
+      "successor_request": "p009-math-p1-local-window-36h-r1"
     },
     {
       "request_id": "p009-stage0-generation-result-publication-r1",
@@ -2379,6 +2380,37 @@
       "created_utc": "2026-10-15T00:48:53.257922+00:00",
       "actual_corpus_selections": 0,
       "actual_student_calls": 0
+    },
+    {
+      "request_id": "p009-math-p1-local-window-36h-r1",
+      "scope": "p009-math-p1-extended-local-window-and-first100",
+      "target_commit": "bb2629ba4ceb21db97cb500afa0d9b47387b9290",
+      "packet": "reports/p009_20261014/p1_local_window_preflight_v2",
+      "manifest": "reports/p009_20261014/p1_local_window_preflight_v2/MANIFEST.json",
+      "manifest_sha256": "f9c6cd3d0c5d24998196d9093ed95e5fb370544e0dadd360bb443770d25931b5",
+      "source_files": {
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+        "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+        "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+        "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+        "experiments/learning_regime_p009/p1_input_binding.py": "a91500918ce46898c577f73c3346dec5ebc9616f60357a4bb933219b2f89bf14",
+        "experiments/learning_regime_p009/p1_input_binding_extended.py": "af1590bfe0b2993c0fa4371324d96ad83936a9ba9ede894aa0040f746290ea3d",
+        "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
+        "experiments/learning_regime_p009/stage0_generation_contract_v2.py": "3f36030d76715bc92cbe75ac674089137cb8bfd8027b5cdb6c1254dac7482d53",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "scripts/p009_p1_driver.py": "610fab373f2ce8f985447ac11b9e11fe78b0cc6c09a889ca2083d7f07ae09ad7",
+        "scripts/p009_p1_driver_extended.py": "1c8447ce5f7852d946da4eb40ac8b0744f8406a710aedf8f73b42c27f167d42a"
+      },
+      "review_request": "reports/p009_20261014/p1_local_window_preflight_v2/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only unattempted extended local P1 freeze/first100; not the three already submitted generators.",
+      "created_utc": "2026-10-15T00:57:44.761530+00:00",
+      "maximum_total_wall_seconds": 129600,
+      "first100_wall_seconds": 1200,
+      "local_window_amendment_sha256": "de0ca58c2cb44877f210f4060f99cadcc9b447e53367ab6130c0ad2f4016b7b0",
+      "actual_symbolic_attempts": 0
     }
   ],
   "p008_v31": {
@@ -3008,7 +3040,7 @@
       "owner_authority_sha256": "4e705c0024e34516a6b71ddf574cb285a1973b4570d466168665199461cf440a"
     },
     "stage0_generation_runtime_v2": {
-      "status": "accepted_actual_upload_and_calls_NOTRUN",
+      "status": "three_original_calls_submitted_once_closeout_in_progress",
       "packet": "reports/p009_20261014/stage0_generation_runtime_preflight_v2",
       "target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
       "source_files": 34,
@@ -3017,12 +3049,13 @@
       "retained_prior_cents": 1004,
       "stage0_total_reserved_if_all_called_cents": 2641,
       "stage0_unreserved_after_cents": 1359,
-      "uploads": 0,
-      "gates": 0,
-      "calls": 0,
+      "uploads": 1,
+      "gates": 3,
+      "calls": 3,
       "request_id": "p009-stage0-generation-funded-v2-r1",
       "review_commit": "eeb65b04e8d698c16a7d670f0f59ad63a0e3afbd",
-      "acceptance_packet": "reports/p009_20261014/review_eeb65b04_accepted_v1"
+      "acceptance_packet": "reports/p009_20261014/review_eeb65b04_accepted_v1",
+      "execution_commit": "80ff96a439916fb33ec9fc70f371294f7fd21217"
     },
     "accounting_terms": {
       "packet": "reports/p009_20261014/owner_stage0_add20_v1",
@@ -3032,7 +3065,7 @@
       "earlier370_70_is_actual_spend": false
     },
     "math_p1_driver": {
-      "status": "exact_code_review_pending_actual_P1_NOTRUN",
+      "status": "superseded_UNATTEMPTED_owner_local_window_amendment",
       "packet": "reports/p009_20261014/p1_driver_preflight_v1",
       "target_commit": "7dc7168cb6aaf9ba03af613fee354b45285ae601",
       "source_files": 10,
@@ -3047,6 +3080,47 @@
       "target_commit": "b679dd7dc5e889d9e95d718f7f2fd5b2a664c279",
       "source_sha256": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26",
       "status": "code_review_pending_NOTRUN"
+    },
+    "math_p1_driver_extended": {
+      "actual_generated_model_calls_added": 0,
+      "actual_symbolic_attempts": 0,
+      "first100_wall_seconds": 1200,
+      "generation_spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
+      "generation_target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
+      "local_window_amendment_sha256": "de0ca58c2cb44877f210f4060f99cadcc9b447e53367ab6130c0ad2f4016b7b0",
+      "maximum_total_wall_seconds": 129600,
+      "original_candidate_commit": "7dc7168cb6aaf9ba03af613fee354b45285ae601",
+      "original_ten_source_files_unchanged": {
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+        "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+        "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+        "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+        "experiments/learning_regime_p009/p1_input_binding.py": "a91500918ce46898c577f73c3346dec5ebc9616f60357a4bb933219b2f89bf14",
+        "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
+        "experiments/learning_regime_p009/stage0_generation_contract_v2.py": "3f36030d76715bc92cbe75ac674089137cb8bfd8027b5cdb6c1254dac7482d53",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "scripts/p009_p1_driver.py": "610fab373f2ce8f985447ac11b9e11fe78b0cc6c09a889ca2083d7f07ae09ad7"
+      },
+      "readonly_first100_publisher_sha256": "b622aa1787505c726e73b2bd50d73b25f738992df182e23e094d95a5b8473dfb",
+      "scope": "p009-math-p1-extended-local-window-and-first100",
+      "source_files": {
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+        "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+        "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+        "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+        "experiments/learning_regime_p009/p1_input_binding.py": "a91500918ce46898c577f73c3346dec5ebc9616f60357a4bb933219b2f89bf14",
+        "experiments/learning_regime_p009/p1_input_binding_extended.py": "af1590bfe0b2993c0fa4371324d96ad83936a9ba9ede894aa0040f746290ea3d",
+        "experiments/learning_regime_p009/requirements_math.txt": "594eec6ef9f07cf0e766edda89b134d146e95e663290544fdc66a677869daa43",
+        "experiments/learning_regime_p009/stage0_generation_contract_v2.py": "3f36030d76715bc92cbe75ac674089137cb8bfd8027b5cdb6c1254dac7482d53",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "scripts/p009_p1_driver.py": "610fab373f2ce8f985447ac11b9e11fe78b0cc6c09a889ca2083d7f07ae09ad7",
+        "scripts/p009_p1_driver_extended.py": "1c8447ce5f7852d946da4eb40ac8b0744f8406a710aedf8f73b42c27f167d42a"
+      },
+      "status": "exact_review_pending_actual_P1_NOTRUN",
+      "target_commit": "bb2629ba4ceb21db97cb500afa0d9b47387b9290",
+      "packet": "reports/p009_20261014/p1_local_window_preflight_v2"
     }
   }
 }
