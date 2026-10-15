@@ -1262,3 +1262,11 @@ P1 publication: four prior scalar/pool/journal/requirements source hashes were e
 ### 2026-10-14 17:35:37 PDT（上传原进程继续；只读结果发布代码准备）
 
 已审34源runtime/scope/budget全部不变，原upload62346一次运行中，7输入已回读、OLMo权重传输中，无错误/无科学调用。为完成后直接送实际A3，新增只读per-slot publisher，原raw/完整oracle字节归档readback、原intentSHA与provider隐私投影、完整计数和MATH待P1/G0未准入明确。3新合成archive/路径/不覆盖夹具一次PASS(0.004s)，不是实际raw重评分或云核验；publisher/真实产物均NOTRUN。精确publisher审计只挡其后续发布，不挡生成/P1。新草稿意外patch前导符在任何解析/执行前移除，无输出或科学副作用。未重跑旧publisher/tests。
+
+### 2026-10-14 17:48:25 PDT（Stage0 原三调用推进；Stage1 纯选择代码准备）
+
+教师原CLI25996已提交并通过一次首256元数据核验68886，H100/CUDA12.8/原34源/spec/claim与持久标记一致；这不是完整raw或分数。Qwen原CLI93362已提交，OLMo原CLI81858一次启动仍待submitted；未重发原调用。17原上传文件和回读62346已完成不可重跑。
+
+新增Stage1纯选择core：MATH在读正确性前保留最早原始重复行、只attempt01、nativeEOS/完整/可解析正确；固定seed17/29的SHA排列与嵌套n，NC仅17的400/3200；不足3200或精确全答案sum>2097148阻断，不降量/q0/截断。八个新合成规则检查一次PASS(0.217s)，原训练计划/评分器/活动34源不变。真实corpus选择、P1、G0、学生均未执行；新代码审计不阻塞独立生成。
+
+另备好私有只读P1首100证据publisher（仅parsed/NOTRUN），将原rows/pairs/timing/source原字节提交真实吞吐审计，不重新评分或自写接受。两次查找旧路径/glob失败均无写入或科学副作用；已改用实际文件路径，不重做旧检查。
