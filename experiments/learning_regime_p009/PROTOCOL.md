@@ -346,3 +346,8 @@ No timeout-mixture formula, new scorer, label repair, sample selection, scientif
 G0/G1 change or cloud budget increase is authorized by this amendment. Immutable
 prior source/protocol snapshots retain their original values. See the public
 p1_local_window_amendment_v1 and p1_local_window_preflight_v2 packets.
+
+
+## Actual overnight owner-proxy budget allocation — 2026-10-15T08:21:26.113107+00:00
+
+Original issue13 comment6187149432 approves Stage1$70 and P009$150, using$20 of the human's additional overnight$150 authority. Stage0$40/Stage2$35/unallocated$5/project$450/protected$50 unchanged. All original failures and reservations remain; no scientific arm/dose/rule changes. ActualNCpairedA4, exact source/runtime/input/numeric and first-pair futility/G1 remain necessary. See reports/p009_20261014/stage1_s1_budget_proxy_accepted_v1.

@@ -1,3 +1,19 @@
+S1 source style note 2026-10-15T08:21:50.427076+00:00: whole staged check retained the two original checkpoint/common EOF blank-line warnings. Their original bytes and manifests stay unchanged. Only exclusion of these two immutable source snapshots passed; no claim of whole-scope style PASS.
+
+
+Publication tail correction 2026-10-15T08:21:26.113107+00:00: both new immutable packets and all source/test copies had completed before a documentation-only FileNotFoundError for nonexistent experiments/learning_regime_p009/README.md. Original builder/log retained. Only unwritten reports/p009_20261014/README.md, AGENTS/protocol and private completion record were finished; no packet recreation, test, scorer or model repeat.
+### 2026-10-15 01:19:46 PDT — S1完整运行候选和真实代理预算接受
+
+NC原54872/collect81972/export28027/oracle5998/配对publisher全部DONE，11appsSTOPPED0；954与967/1319，本地原NC门PASS，实际pairedA4仍pending。没有新模型/上传/评分/旧检查。
+
+真正代理comment6187149432事件07:45:39UTC、读取08:01:09.921317，Townzc/OWNER/claude原GET绑定。Stage170/P009150已批准，使用night150中的20；Stage040/Stage235/unallocated5/project450/protected50不变。2620c旧预留保留，余4380。原“23.80不到六槽一半”算术措辞不准确（39.30一半19.65），完整六槽仍放不下；保原文并纠正。416.10/33.90是旧计量+未校准lag+未来全额情景/余量，不是花费/余额。
+
+完整81源S1候选：六原槽4500/4560/600/full5200/655c各，3930+2620=6550<=7000；保所有21host1368训练及28端点计时，MATH迁移与600/20%未校准，4095.003678<=4470仅情景。真实NC A4、首两组futility后四组、输入/source/numeric/freshbudget/unused/provider门都保留。一个完整新scope审入口/IO/fullstate+raworacle/原冻结本地评分，0云调用；无新增孤立code-only阻塞门。
+
+17个新合成/真实RunGuard及actualworkerbody/外层oracle控制检查。首批发现UTF8与ASCII评论canonical口径不同、raworacle误importread_jsonl；只修新未发布源码，旧草稿/失败日志保留，针对受影响检查通过；未重复旧tests/scoring/models。外层raw与score都拒绝partial重跑，scoring6000+cleanup5、serialworstpair5160不当保证，仍需固定独立判定/实际A4。新版candidate仅重绑定两处源码SHA，原plan/输入/剂量/计时不变。未来审计报告必须真实，不保存任何合成ACCEPTED。
+
+最新review07:59:43仍f1b53059/105comments，新增仅上述真实预算代理；下一正常08:29:44。usage约08:11工具4%used/96%remaining，未触发credits/reset，账号/余额只private。旧caffeinate6883已自然退出；新有界5400秒会话2026仅本地工程awake，无永久设置或云controller。没有新billing/Papers，真正paidstage前须fresh快照。
+
 ### 2026-10-15T00:51:10.787909-07:00 — NC完整配对本地核验完成，实际A4待审
 
 唯一修复原CLI54872 EXIT0已消耗，entry07:13:34.991808、terminal07:38:29.656611UTC、provider00:38:31PDT STOPPED0；含pack1494.664802秒只为本次观测，不是未来时长/抢占保证。全部11相关app STOPPED/所属容器0。唯一collector81972/export28027/oracle5998与已审pairpublisher均DONE；2355原artifact逐SHA通过，新完整state/raw/剂量/49依赖/53source/forecast原证据闭合。原NC400不重跑/不重评分，failed896父与preclaim零工作调用分别保留，2620c预留不是花费。

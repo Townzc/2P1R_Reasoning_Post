@@ -1,3 +1,6 @@
+<!-- S1完整候选与真实预算 2026-10-15T08:19:46.825317+00:00 -->
+[Stage1预算已获真实代理批准为$70，P009总$150](reports/p009_20261014/stage1_s1_budget_proxy_accepted_v1/README.md)。[六个原S1完整运行候选](reports/p009_20261014/stage1_s1_runtime_preflight_v1/README.md)已完成新检查并送确切审计；实际NC配对A4仍待审，S1调用为0。所有原失败预留和科学停止规则保持。
+
 <!-- Actual NC complete pair 2026-10-15T07:51:10.787909+00:00 -->
 [NC两逻辑端点已完整本地核验](reports/p009_20261014/stage1_nc_guard_repair_complete_v1/README.md)：954与967/1319，差值+0.99pp未触发注册5pp停止门；实际结果A4待审，S1尚未调用。原失败与非盲态替代记录保留，全部11app STOPPED0。
 

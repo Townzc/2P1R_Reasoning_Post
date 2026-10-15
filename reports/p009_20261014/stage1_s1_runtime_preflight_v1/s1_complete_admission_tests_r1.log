@@ -1,0 +1,79 @@
+test_actual_worker_changed_source_before_claim (tests.test_p009_s1_complete_admission.ActualWorkerBody.test_actual_worker_changed_source_before_claim) ... ok
+test_actual_worker_scientific_failure_preserves_claim_and_terminal (tests.test_p009_s1_complete_admission.ActualWorkerBody.test_actual_worker_scientific_failure_preserves_claim_and_terminal) ... FAIL
+test_actual_worker_success_with_real_guard (tests.test_p009_s1_complete_admission.ActualWorkerBody.test_actual_worker_success_with_real_guard) ... ERROR
+test_actual_nc_result_cannot_be_replaced_by_code_review (tests.test_p009_s1_complete_admission.CompleteAdmission.test_actual_nc_result_cannot_be_replaced_by_code_review) ... ok
+test_failed_nc_or_rule_change_blocks_every_s1 (tests.test_p009_s1_complete_admission.CompleteAdmission.test_failed_nc_or_rule_change_blocks_every_s1) ... ok
+test_later_four_require_actual_futility_then_reject_stop (tests.test_p009_s1_complete_admission.CompleteAdmission.test_later_four_require_actual_futility_then_reject_stop) ... ERROR
+test_original_dose_and_exact_source_cannot_change (tests.test_p009_s1_complete_admission.CompleteAdmission.test_original_dose_and_exact_source_cannot_change) ... ok
+test_original_failed_reservations_cannot_be_silently_released (tests.test_p009_s1_complete_admission.CompleteAdmission.test_original_failed_reservations_cannot_be_silently_released) ... ok
+test_original_first_pair_passes_only_full_synthetic_binding (tests.test_p009_s1_complete_admission.CompleteAdmission.test_original_first_pair_passes_only_full_synthetic_binding) ... ERROR
+test_permanent_fence_unknown_and_order_rejected (tests.test_p009_s1_complete_admission.CompleteAdmission.test_permanent_fence_unknown_and_order_rejected) ... ok
+test_real_guard_exact_four_fields_and_permanent_replay_rejection (tests.test_p009_s1_complete_admission.CompleteAdmission.test_real_guard_exact_four_fields_and_permanent_replay_rejection) ... ok
+test_wrong_proxy_or_expired_decision_rejected (tests.test_p009_s1_complete_admission.CompleteAdmission.test_wrong_proxy_or_expired_decision_rejected) ... ok
+
+======================================================================
+ERROR: test_actual_worker_success_with_real_guard (tests.test_p009_s1_complete_admission.ActualWorkerBody.test_actual_worker_success_with_real_guard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p009_s1_complete_admission.py", line 180, in test_actual_worker_success_with_real_guard
+    def test_actual_worker_success_with_real_guard(self): self.exercise()
+                                                          ^^^^^^^^^^^^^^^
+  File "<workspace>/tests/test_p009_s1_complete_admission.py", line 168, in exercise
+    result=namespace['work'](plan,run,release)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "actual_S1_worker_body", line 43, in work
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 131, in validate
+    budget_proxy_checked(release['budget_owner_decision'], spec)
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 85, in budget_proxy_checked
+    require(created.tzinfo is not None and created < expiry
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 32, in require
+    raise ValueError(message)
+ValueError: Actual bounded proxy allocation, preserved reserves and independent audit must match
+
+======================================================================
+ERROR: test_later_four_require_actual_futility_then_reject_stop (tests.test_p009_s1_complete_admission.CompleteAdmission.test_later_four_require_actual_futility_then_reject_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p009_s1_complete_admission.py", line 116, in test_later_four_require_actual_futility_then_reject_stop
+    with self.assertRaises(KeyError): b.validate(self.s,self.p,run,self.r)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 131, in validate
+    budget_proxy_checked(release['budget_owner_decision'], spec)
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 85, in budget_proxy_checked
+    require(created.tzinfo is not None and created < expiry
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 32, in require
+    raise ValueError(message)
+ValueError: Actual bounded proxy allocation, preserved reserves and independent audit must match
+
+======================================================================
+ERROR: test_original_first_pair_passes_only_full_synthetic_binding (tests.test_p009_s1_complete_admission.CompleteAdmission.test_original_first_pair_passes_only_full_synthetic_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p009_s1_complete_admission.py", line 84, in test_original_first_pair_passes_only_full_synthetic_binding
+    cap = b.validate(self.s,self.p,run,self.r)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 131, in validate
+    budget_proxy_checked(release['budget_owner_decision'], spec)
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 85, in budget_proxy_checked
+    require(created.tzinfo is not None and created < expiry
+  File "<workspace>/experiments/learning_regime_p009/stage1_s1_funded_binding.py", line 32, in require
+    raise ValueError(message)
+ValueError: Actual bounded proxy allocation, preserved reserves and independent audit must match
+
+======================================================================
+FAIL: test_actual_worker_scientific_failure_preserves_claim_and_terminal (tests.test_p009_s1_complete_admission.ActualWorkerBody.test_actual_worker_scientific_failure_preserves_claim_and_terminal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p009_s1_complete_admission.py", line 182, in test_actual_worker_scientific_failure_preserves_claim_and_terminal
+    def test_actual_worker_scientific_failure_preserves_claim_and_terminal(self): self.exercise(model_failed=True)
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/tests/test_p009_s1_complete_admission.py", line 175, in exercise
+    model.assert_called_once()
+  File "<user>/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/unittest/mock.py", line 928, in assert_called_once
+    raise AssertionError(msg)
+AssertionError: Expected 'mock' to have been called once. Called 0 times.
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.076s
+
+FAILED (failures=1, errors=3)

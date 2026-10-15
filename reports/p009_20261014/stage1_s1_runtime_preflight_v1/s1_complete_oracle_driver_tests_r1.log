@@ -1,0 +1,21 @@
+test_p009_s1_complete_oracle_drivers (unittest.loader._FailedTest.test_p009_s1_complete_oracle_drivers) ... ERROR
+
+======================================================================
+ERROR: test_p009_s1_complete_oracle_drivers (unittest.loader._FailedTest.test_p009_s1_complete_oracle_drivers)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_p009_s1_complete_oracle_drivers
+Traceback (most recent call last):
+  File "<user>/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/tests/test_p009_s1_complete_oracle_drivers.py", line 14, in <module>
+    from scripts import audit_p009_stage1_s1 as raw
+  File "<workspace>/scripts/audit_p009_stage1_s1.py", line 11, in <module>
+    from experiments.sft_allocation_midpoint.common import read, dump, sha, digest, verify, read_jsonl
+ImportError: cannot import name 'read_jsonl' from 'experiments.sft_allocation_midpoint.common' (<workspace>/experiments/sft_allocation_midpoint/common.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,3 +1,7 @@
+# Latest S1 full candidate and actual budget — 2026-10-15T08:21:26.113107+00:00
+
+Trueproxy6187149432 approvesStage170/P009150; prior2620c remains reserved. New81source completeS1candidate has six4500/655c slots, actualcalls0. Independentexactruntime/numeric and actualNCpairedA4 remain required; laterfour needactualfirstpairfutilityA4. NC54872/81972/28027/5998/publisherallDONE/11STOPPED0;neverrepeat.17newchecks passed aftertwo prepublicationfixes, oldsource/oldtests/science unchanged. Readlatestprivatehandoff. p009ACTIVE,oldmonitorsPAUSED,nooutside messages/subagents,unrelatedlt002preserved.
+
 # Latest NC pair closed locally — 2026-10-15T07:51:10.787909+00:00
 
 Originalrepair54872/collect81972/export28027/oracle5998/pairpublisher allDONE, neverrepeat. All11appsSTOPPED0. Actualn400954/n3200replacement967,58caps,full1024/2097148; one registeredNCdecisionlocalPASS, externalpairedA4PENDING, noS1call. Readlatestprivatehandoff. NewS1funded adapters/binding/entry onlyunreviewedunpublished drafts, budget70/150proposalpending/current50/130unchanged. OldmonitorsPAUSED,p009ACTIVE. Nooutside messages/subagents.
