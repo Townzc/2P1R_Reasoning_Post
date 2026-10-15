@@ -1,3 +1,7 @@
+### 2026-10-14 21:45:29 PDT（S1完整证据核验适配准备，NC继续训练）
+
+新增stage1_s1_evidence.py为未来S1 fullstate/1024步/2097148targets/merge退出顺序/全部forecast/两完整500题batch及gold来源核验提供payload helper。明确不是完整runtime/receipt/provider准入、无CLI/Modal入口/实际scoring；完整外层准入与冻结MATH评分尚须整合。词表全endpoint只读取一次、每batch原hash核后复用，避免旧探索性重复词表开销；新7个synthetic变异检查一次PASS0.110s，未重复原NC/P1测试、原数据/状态/评分。实际S1调用仍0；合成4000秒非候选帽。旧活动42源按其原manifest核字节未变，预算/科学门不变。不增独立code-only阻塞门；未来完整runtime确切审核须包含这些新字节。
+
 ### 2026-10-14 21:36:15 PDT（两项原NC已提交，首批核验完成）
 
 实际entry为21:23:58PDT的nc_s17_n400和21:28:56的nc_s17_n3200，各原调用一次，执行02e7fc9e/已审42源不变。首16步分别32890与32849 targets；本记录不将首块当完整剂量。两个唯一startup31876/74431均EXIT0已消耗，H100/CUDA12.8/source/claim/双fence核验通过。21:31:21PDT唯一只读inspector74920观察保存更新304/64、endpoint0/0，两原app各1容器、无terminal/result/error；这是名单和immutableack，不是fullraw/stateoracle或中途分数。原上传55357及零科学工作对账71606已DONE，均不重复。后续等各完整原result/STOPPED0再一次collect/export/fulloracle，两项齐后原NC分析和实际A4；S1输入虽已真实PASS，仍无调用。
