@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T07:52:24.218557+00:00",
+  "as_of_utc": "2026-10-15T08:22:32.845354+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3138,7 +3138,7 @@
       "manifest": "reports/p009_20261014/stage1_s1_budget_proposal_v1/MANIFEST.json",
       "manifest_sha256": "169568a5255d1bba9ef4ac7ace250639b6c9326481409d0e82274c98f60615d4",
       "review_request": "reports/p009_20261014/stage1_s1_budget_proposal_v1/README.md",
-      "status": "pending_owner_proxy_decision",
+      "status": "completed_actual_owner_proxy_APPROVED",
       "blocking": false,
       "blocking_scope": "Only future proposed Stage1 allocation; not the running NC or a new independent code-only gate",
       "request_type": "original_owner_proxy_budget_comment",
@@ -3155,8 +3155,15 @@
       "delegation_expires_utc": "2026-10-15T14:00:00+00:00",
       "independent_exact_future_runtime_audit_required": true,
       "scientific_gates_unchanged": true,
-      "current_allocation_unchanged_until_actual_scoped_approval": true,
-      "created_utc": "2026-10-15T07:26:01.829925+00:00"
+      "current_allocation_unchanged_until_actual_scoped_approval": false,
+      "created_utc": "2026-10-15T07:26:01.829925+00:00",
+      "accepted_comment_id": 6187149432,
+      "accepted_comment_url": "https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6187149432",
+      "event_utc": "2026-10-15T07:45:39Z",
+      "read_utc": "2026-10-15T08:01:09.921317+00:00",
+      "actual_acceptance_packet": "reports/p009_20261014/stage1_s1_budget_proxy_accepted_v1",
+      "acceptance_commit": "6f0bd17e9f788437328c903558df623cf65a94e4",
+      "independent_runtime_and_actual_NC_A4_still_required": true
     },
     {
       "request_id": "p009-stage1-NC-guard-repair-complete-pair-A4-r1",
@@ -3178,6 +3185,29 @@
       "preclaim_only_calls": 1,
       "failed_parent_retained": true,
       "current_scientific_workers": 0
+    },
+    {
+      "request_id": "p009-stage1-S1-full-runtime-and-numeric-r1",
+      "scope": "p009-stage1-S1-exact-runtime-input-and-numeric",
+      "target_commit": "6f0bd17e9f788437328c903558df623cf65a94e4",
+      "packet": "reports/p009_20261014/stage1_s1_runtime_preflight_v1",
+      "manifest": "reports/p009_20261014/stage1_s1_runtime_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "bdaf5a68ba0165cf3360b4e0a325423625c14a8b19ea4ed391fe434e1e8851c7",
+      "source_binding": "reports/p009_20261014/stage1_s1_runtime_preflight_v1/SOURCE_BINDING.json",
+      "review_request": "reports/p009_20261014/S1_COMPLETE_RUNTIME_REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_scope": "Only complete six registered S1 execution/local scoring; actualNCpairedA4 separately gates firstpair dispatch and actualfutilityA4 laterfour",
+      "created_utc": "2026-10-15T08:22:32.845354+00:00",
+      "source_count": 81,
+      "spec_sha256": "e3267d0981e854862026c665f4f840cef9024e2c3a9e7cb158d1d2ff16b95a7f",
+      "timing_sha256": "a69cef17b69bb06a1e9c60b7101f2665d48a6d3beb8ee74ac711dd31cbfb5722",
+      "budget_owner_comment_sha256": "336be02ed18fa1b98c9387a3cc2641e973f475cb58ff684e1ddc8529c7acdcc3",
+      "stage1_cap_cents": 7000,
+      "experiment_cap_cents": 15000,
+      "prior_reserved_cents": 2620,
+      "new_reserved_cents": 3930,
+      "new_calls": 0
     }
   ],
   "p008_v31": {
@@ -4075,6 +4105,32 @@
       "proposed_experiment_cap_cents": 15000,
       "owner_overnight_additional_authority_used_cents": 0,
       "actual_S1_calls": 0
+    },
+    "latest_s1_full_runtime_candidate": {
+      "target_commit": "6f0bd17e9f788437328c903558df623cf65a94e4",
+      "spec_sha256": "e3267d0981e854862026c665f4f840cef9024e2c3a9e7cb158d1d2ff16b95a7f",
+      "source_count": 81,
+      "actual_runtime_review_pending": true,
+      "actual_NC_pair_A4_pending": true,
+      "actual_calls": 0
+    },
+    "current_owner_approved_allocation_cents": {
+      "stage0": 4000,
+      "stage1": 7000,
+      "stage2": 3500,
+      "unallocated": 500,
+      "total": 15000,
+      "project": 45000,
+      "protected": 5000
+    },
+    "stage1_budget_owner_proxy": {
+      "comment_id": 6187149432,
+      "event_utc": "2026-10-15T07:45:39Z",
+      "read_utc": "2026-10-15T08:01:09.921317+00:00",
+      "comment_sha256": "336be02ed18fa1b98c9387a3cc2641e973f475cb58ff684e1ddc8529c7acdcc3",
+      "packet": "reports/p009_20261014/stage1_s1_budget_proxy_accepted_v1",
+      "night_additional_authority_used_cents": 2000,
+      "prior_reserves_retained_cents": 2620
     }
   }
 }
