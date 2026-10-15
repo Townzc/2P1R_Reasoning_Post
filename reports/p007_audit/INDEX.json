@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T11:14:49.140581+00:00",
+  "as_of_utc": "2026-10-15T11:20:56.314475+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3629,7 +3629,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "closed_registered_S1_futility_stop_actual_A4_PASS_final_delivery",
+    "status": "closed_registered_futility_stop_actual_A4_PASS_delivered_paused",
     "total_cap_usd": 130,
     "stage_caps_usd": {
       "stage0": 40,
@@ -3667,10 +3667,12 @@
     },
     "automation": {
       "id": "p009",
-      "status": "ACTIVE",
+      "status": "PAUSED",
       "cadence_minutes": 30,
       "notify": "Only Stage1 results or genuine blockers; stay quiet for unchanged state.",
-      "purpose": "final verified delivery then authorized pause; no further scientific calls"
+      "purpose": "finite study closed; no remaining scientific calls or monitoring",
+      "paused_utc": "2026-10-15T11:18:14.542000+00:00",
+      "actual_pause_receipt": "reports/p009_20261014/P009_CLOSED_AUTOMATION_STATUS.json"
     },
     "latest_read_review": {
       "commit": "184a0c7831d68c6411adfe5f71aef21e0fff3b2f",
@@ -4578,9 +4580,11 @@
       "packet": "reports/p009_20261014/final_handoff_20261015_v1",
       "manifest_sha256": "fe436a53e7f354b56f026edb917331f5315a4fa3b332234196374410a99d0906",
       "actual_stop_A4_acceptance_packet": "reports/p009_20261014/review_b0662285_actual_s1_stop_accepted_v1",
-      "publication_commit": "filled_after_first_commit",
-      "verified_remote_delivery": false,
-      "automation_pause_after_verified_delivery": true
+      "publication_commit": "70d73a45e98e39d483d1ed1c8b64ba5a407f732a",
+      "verified_remote_delivery": true,
+      "automation_pause_after_verified_delivery": true,
+      "automation_paused_utc": "2026-10-15T11:18:14.542000+00:00",
+      "actual_closeout_receipt": "reports/p009_20261014/P009_CLOSED_AUTOMATION_STATUS.json"
     }
   }
 }
