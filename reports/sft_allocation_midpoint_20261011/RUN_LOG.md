@@ -1,3 +1,7 @@
+### 2026-10-14 20:39:26 PDT（S1运行适配准备，无新增科学调用）
+
+在NC42源确切审计等待期间，仅新增S1 contract/training-child/runtime三模块和两份新测试。复用原训练core与训练进程exit/join后创建vLLM的顺序，固定500题/1024token、原1024updates/2097148targets/完整答案，原始raw先落盘；新代码没有Modal入口、实际时长帽或准入。8项synthetic +2项真实新child代码body全mock检查一次PASS（0.029/0.008s），不是GPU实测。4000秒只是合成fixture，不是实际候选；6×655超过Stage1剩3690，明确拒绝，不静默借用未分配额或回收reserve。后续需真NC A4/实际计时、S1输入、完整source/numeric与原科学门绑定；本草稿不新增独立阻塞门。旧NC42字节未变、无acceptance/budget/upload/gates/runs，0模型/评分。两次误猜只读文件路径不存在，无副作用，已按rg真实路径读取。旧tests/P1/inputs/packets不重复。
+
 ### 2026-10-14 20:27:41 PDT（新审计队列交接，0科学调用）
 
 真实bz/ca接受记录已公开；NC42源确切运行/数值请求22b02e31和S1实际10源输入请求3d4c5974分别pending，不冒充PASS。NC655c×2候选总1310在Stage15000内；实际S1六计划已完成但NC科学门之前不调用，未来S1预算按真实NC计时另准确准入。新NC137/bzca7/S1input24个manifest成员原Git核验全部DONE；S1全包加MANIFEST共25文件，先前新日志25members口径已修正，不重核/重建。原已完成模型/P1评分/旧tests均不重复，0新费用请求。p009已更新ACTIVE30min/旧两监控保持PAUSED，新完整LIVE交接记录真实后续命令与pending范围。最新review03:03poll/03:04read，正常03:34再查，未变安静。

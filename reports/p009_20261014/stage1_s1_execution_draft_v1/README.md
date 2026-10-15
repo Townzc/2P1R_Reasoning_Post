@@ -1,0 +1,11 @@
+# S1 execution adapters prepared; no entry or numerical admission
+
+Recorded 2026-10-15T03:39:26.959571+00:00 UTC / 2026-10-14 20:39:26 PDT.
+
+Three new modules prepare the six already registered S1 recipes, unchanged1024 updates/2097148 targets/full answers, and a500-question MATH endpoint with1024 generated tokens. Training stays in its own process; the parent reuses the existing join/exit check before starting the unchanged reviewed vLLM endpoint engine. No symbolic scoring runs on the GPU. Original backend bytes are saved before transport checks, including native EOS exactly at token1024 with length metadata. Genuine logical caps remain for the frozen local scorer to mark incorrect.
+
+No Modal entry, campaign plan, actual caps, timing acceptance, dispatch gate, upload or model call is added. Explicit per-slot limits must be supplied by the later source-bound runtime/numeric review. The4000-second value in tests is synthetic, not a proposed actual cap. A future binding must verify NC A4, S1 G0 and actual inputs, complete timing/source/budget evidence, original single-use fences and the first-pair futility ordering. Six oldNC655-cent reservations do not fit the remaining3690 cents and are explicitly rejected. No ended reservation is reclaimed here.
+
+Ten new tests passed once: eight synthetic contract/transport/endpoint persistence checks (0.029s) and two executions of the actual new training-child adapter with fully mocked torch/Modal/training core (0.008s). They exercise500=256+244 outputs, seed29/S1 filenames, raw-before-rejection, no repeated send, native-EOS1024 boundary, unchanged1024/2097148 metadata and budget rejection. These are not GPU measurements, completed training, MATH scoring or runtime acceptance. Old tests, inputs, P1 scoring, outputs and immutable packets were not repeated. The42-source NC candidate remains unchanged.
+
+NEW_FILES.json binds only the three new modules and two new test files, not their complete transitive runtime closure. The eventual exact S1 runtime request will include these bytes, any new admission/IO/oracle/scoring code, real NC results/timings and the then-current reviewed limits. No separate code-only gate is introduced for this draft; it does not delay the already pending NC runtime or S1 input requests.
