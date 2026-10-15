@@ -1296,3 +1296,9 @@ P1 publication: four prior scalar/pool/journal/requirements source hashes were e
 Qwen MATH0/4 caps68/39各500，teacherMATH caps36/500，采购8993中nativeEOS8253/caps740、所有unknown0，均未产生MATH分数。新完整summary/gate原值投影仅去三个host reportlocators并绑定原intentSHA；原三个不可变result包不回写。P1 owner B在任何实测前固定36h，新12sourcebb2629ba待真审计，旧6h未运行退役；first100仍1200、pair8/原保守formula不变。只读模板有一处继承的10-source文案，独立scope-note明确实际12；没有变运行源/生成结果。
 
 动机是尽快给Stage1可靠输入，同时原门失败按原定义公开；工程完成不是科学门通过。新增实际A2只覆盖完整raw/GSM门，不能替P1/G0S1或学生runtime准入。预算Stage040/P009130是授权/预留，不是花费；原2641c全部保留未释放，无新费用请求。
+
+### 2026-10-14 18:20:53 PDT（Stage1科学核心准备，实际学生未准入）
+
+新NC/S1训练与独立vLLM端点core已经准备；复用原P008训练/loss/AdamW/裁剪/完整state与16-update journal函数，固定1024更新2097148targets/原LR/完整答案。最后state保存后FP32 safe merge转BF16，未来独立父须确保训练进程退出后才启动vLLM。只NC17n400/3200、S1原seed17/29各n；S2本地cap门失败不准入。端点原完整tokenID/256batch/greedy512或1024/commonhighthroughput/seed17，不在GPU评分，不重复发送。代码没有云入口或实际输入/数值准入，不是已运行。
+
+22源closure含旧未执行路径，旧P00934生成与12评分源均未改。P009统一NumPy2.2.6与历史P0082.3.2差异明确披露，不称bitwise跨实验复现。八个新CPU/mock检查一次PASS(0.024s)，验证顶层最终保存后merge与重复调用拒绝；不是GPU/checkpointbinary/真实训练。所有旧tests/oracles/调用未重复。新core仅代码审计，不阻塞独立P1和Stage0结果A2；实际学生source/input/numeric/预算/科学门仍待准备与真审计。首100依然0次，新36h待完整报告。几处只读旧文件名查找失败无写入或科学副作用。

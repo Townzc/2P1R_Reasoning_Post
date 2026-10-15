@@ -4,6 +4,13 @@
 
 ## 当前状态
 
+### 2026-10-14 18:20:53 PDT（Stage1科学核心准备，实际学生未准入）
+
+新NC/S1训练与独立vLLM端点core已经准备；复用原P008训练/loss/AdamW/裁剪/完整state与16-update journal函数，固定1024更新2097148targets/原LR/完整答案。最后state保存后FP32 safe merge转BF16，未来独立父须确保训练进程退出后才启动vLLM。只NC17n400/3200、S1原seed17/29各n；S2本地cap门失败不准入。端点原完整tokenID/256batch/greedy512或1024/commonhighthroughput/seed17，不在GPU评分，不重复发送。代码没有云入口或实际输入/数值准入，不是已运行。
+
+22源closure含旧未执行路径，旧P00934生成与12评分源均未改。P009统一NumPy2.2.6与历史P0082.3.2差异明确披露，不称bitwise跨实验复现。八个新CPU/mock检查一次PASS(0.024s)，验证顶层最终保存后merge与重复调用拒绝；不是GPU/checkpointbinary/真实训练。所有旧tests/oracles/调用未重复。新core仅代码审计，不阻塞独立P1和Stage0结果A2；实际学生source/input/numeric/预算/科学门仍待准备与真审计。首100依然0次，新36h待完整报告。几处只读旧文件名查找失败无写入或科学副作用。
+
+
 ### 2026-10-14 18:08:26 PDT（原三项生成完整闭合；实际GSM门如实送审）
 
 三原调用teacher25996/Qwen93362/OLMo81858均EXIT0已消耗，terminal分别00:57:05.476334/00:48:56.937124/00:55:56.506418UTC，真实provider各STOPPED0。三项startup68886/7928/2242、collect74242/55399/3987、export24064/90108/38061、oracle30566/48928/76496、原已审per-run publisher全部DONE一次，0新调用/训练/重复输出。原14450输出/原始请求、source34、全部forecast/ack/Linuxconstructor/ledger已核，所有MATH仅decode未symbolic，原失败与费用保留。
