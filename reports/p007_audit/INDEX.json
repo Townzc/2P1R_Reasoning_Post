@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T04:05:26.377825+00:00",
+  "as_of_utc": "2026-10-15T04:17:45.802436+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2792,6 +2792,25 @@
       "review_read_utc": "2026-10-15T04:05:26.377825+00:00",
       "review_event_utc": "2026-10-15T03:45:32Z",
       "acceptance_packet": "reports/p009_20261014/review_06fac149_accepted_v1"
+    },
+    {
+      "request_id": "p009-stage1-NC-complete-publication-code-r1",
+      "scope": "p009-stage1-NC-complete-publication-and-analysis-binding-code",
+      "target_commit": "8692f55f5e7e74312bbf3e4ed6c5c94bf66d75f3",
+      "packet": "reports/p009_20261014/stage1_nc_publication_preflight_v1",
+      "manifest": "reports/p009_20261014/stage1_nc_publication_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "14c5c8a19c63af9ebdcd053a525554b1658fe35b0828aedbd551fcf1b818e6d8",
+      "source_files": {
+        "scripts/publish_p009_nc_complete.py": "ef15ff1f20c90f158390ca99c680492f24296e8ca9c9f02f5d24addecc890970",
+        "scripts/publish_p009_stage0_result.py": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26"
+      },
+      "review_request": "reports/p009_20261014/stage1_nc_publication_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only the new complete-pair readonly publisher/analysis binding; not NC workers or S1 input acceptance.",
+      "created_utc": "2026-10-15T04:17:45.802325+00:00",
+      "actual_execution": false,
+      "actual_NC_outcomes": false
     }
   ],
   "p008_v31": {
