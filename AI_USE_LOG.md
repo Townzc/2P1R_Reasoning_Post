@@ -1,3 +1,9 @@
+### 2026-10-15 01:51:44 PDT — S1只读启动核验及完整交接工具准备
+
+新S1命名slot observer与per-run/first-pair publisher仅PREPARED，原81source不改。状态读取失败留unknown/500终点计数，首16原ack后一次startup核seed17或29/原计划/55依赖/claim与source；不是全oracle。完整交接绑定真实STOPPED0/fullstate-rawproof/冻结500评分journal，保留所有confirmedpair失败/固定抽查null，不重复symbolic/rawdecode或binaryload。首对只执行原注册pointfutility，真实独立判定/A4之后才后四槽。
+
+10新合成/mock检查一次PASS0.023s，含真实archive/readback和原futility函数的合成表；不当实际GPU/评分核验。原旧tests/NC/P1全不重复。新三源helper scope只挡新helper，不挡原81完整runtime审计；当前0S1model/upload/gates，预算70/150及原科学门不变。三个误猜旧只读路径均发生任何相应写入前，无科学副作用；已使用实际文件名，没有重跑原工作。usage08:40:45实际95%remaining，未触发credit/reset操作；账号和余额只private。
+
 ### 2026-10-15 01:37:48 PDT — NC实际配对A4通过；S1确切运行仍待审
 
 cg固定573ff9be完整报告SHAe035cf2f于08:35:08.918705UTC读取，comment6187614474事件08:14:00。独立1319原raw与1024剂量核对PASS，NC400954/NC3200replacement967，+13与237discordance吻合；原注册NC停止门未触发，真实限定ACCEPTED已保存。原failed896父/preclaim无工作调用和2620c预留永保，11原apps关闭。0重评分/新bootstrap/模型/旧oracle重复。

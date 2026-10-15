@@ -1,3 +1,6 @@
+<!-- S1 readonly helpers 2026-10-15T08:51:44.117059+00:00 -->
+[S1启动核验与完整结果交接工具](reports/p009_20261014/stage1_s1_readonly_closeout_preflight_v1/README.md)已准备并待限定代码审计，10项新合成检查通过；原81源运行候选未改，真实NC配对A4已通过，当前S1调用仍为0。
+
 <!-- Actual NC A4 2026-10-15T08:37:48.931144+00:00 -->
 [NC实际配对外审已PASS](reports/p009_20261014/review_573ff9be_actual_nc_pair_accepted_v1/DISPOSITION.md)：954与967/1319，原停止门未触发。S1完整81源运行/数值审计仍待审；通过后首两组自动推进，后四组保留原futility门。当前S1调用为0。
 
