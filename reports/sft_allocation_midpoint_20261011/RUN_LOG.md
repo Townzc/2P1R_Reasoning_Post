@@ -1,6 +1,10 @@
+### 2026-10-14 20:27:41 PDT（新审计队列交接，0科学调用）
+
+真实bz/ca接受记录已公开；NC42源确切运行/数值请求22b02e31和S1实际10源输入请求3d4c5974分别pending，不冒充PASS。NC655c×2候选总1310在Stage15000内；实际S1六计划已完成但NC科学门之前不调用，未来S1预算按真实NC计时另准确准入。新NC137/bzca7/S1input24个manifest成员原Git核验全部DONE；S1全包加MANIFEST共25文件，先前新日志25members口径已修正，不重核/重建。原已完成模型/P1评分/旧tests均不重复，0新费用请求。p009已更新ACTIVE30min/旧两监控保持PAUSED，新完整LIVE交接记录真实后续命令与pending范围。最新review03:03poll/03:04read，正常03:34再查，未变安静。
+
 ### 2026-10-15T03:22:44.860138+00:00 UTC（S1固定输入请求）
 
-固定3d4c5974f195ad73bc47eec847404efff7eddeaf，25manifest成员逐Git原字节核验一次DONE；原18.24MB archive回读已DONE，不重复。新实际input-only请求p009-stage1-S1-exact-input-and-plan-r1 pending，不挡独立NC。1处旧common.py EOF副本样式告警保留，wholecheck非PASS，排除旧副本后PASS。原NC42/P112/Stage034未改；0新GPU调用。
+固定3d4c5974f195ad73bc47eec847404efff7eddeaf，24manifest成员（全包含MANIFEST共25文件）逐Git原字节核验一次DONE；原18.24MB archive回读已DONE，不重复。新实际input-only请求p009-stage1-S1-exact-input-and-plan-r1 pending，不挡独立NC。1处旧common.py EOF副本样式告警保留，wholecheck非PASS，排除旧副本后PASS。原NC42/P112/Stage034未改；0新GPU调用。
 
 ### 2026-10-14 20:21:41 PDT（S1实际输入一次准备完成，未训练）
 
