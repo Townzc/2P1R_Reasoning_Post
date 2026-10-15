@@ -1,12 +1,14 @@
-# P009 — complete local P1 scoring; independent outcome review remains
+# P009 — complete P1 evidence under actual A2 review; NC inputs accepted
 
-Updated 2026-10-15T02:20:41.691669+00:00. [Stage0 actual A2](review_8efc897f_accepted_v1/DISPOSITION.md) verified all14450 raw outputs. NC G0 passes; S2's original546/1319 cap failures exceed15% and permanently fail its G0. No4-shot substitution or S2 student is admitted.
+Updated 2026-10-15T02:33:53.352989+00:00. [Stage0 A2](review_8efc897f_accepted_v1/DISPOSITION.md) verified all14450 raw outputs, NC G0PASS and original S2 capFAIL. All prior providers stopped. No S2 substitution.
 
-[Exact P1 first100 numeric review](review_a236a90e_accepted_v1/DISPOSITION.md) is PASS. The unique remaining command finished02:15:16.497334UTC in12.097635833s. All10489 scorable rows are complete, technical_unknown=0; first100 cached pairs were reused. Four unsupported procurement golds remain excluded, not zero; seven context exclusions remain separately never-generated. No new model call, raw re-decoding or scientific score repair occurred.129600s was a pre-measurement technical ceiling, not an expected runtime.
+The unique P1 remainder finished in12.097635833s, with10489 complete scored rows,105 committed chunks and4048 cached pairs. First100 was reused. The [complete readonly publication](p1_complete_scoring_v1/SUMMARY.json) is DONE after its actual codePASS. Four unsupported procurement golds are excluded rather than zero; seven context exclusions were never generated. No raw/symbolic/model rerun occurred. The36h ceiling was technical headroom, not a runtime estimate.
 
-FullP1 evidence publisher code review is pending; independent fixed-sample adjudication and actualP1 A2 still precede label eligibility and S1 G0. This completion does not assert those gates. [NC400/3200 inputs](stage1_nc_inputs_v1/README.md) are prepared under exact review, as is the scientific core; no student has run. All original scientific/runtime/input/numeric/budget gates remain.
+[Actual independent sample adjudication and S1 G0 request](P1_COMPLETE_ACTUAL_REVIEW_REQUEST.md) is pending. Saved complete endpoint summaries are teacher359/500, Qwen0-shot136/500,4-shot147/500, caps36/68/39;4-shot386/500 new-problem boundaries must be disclosed. These do not yet grant S1 label/G0 admission. Procurement6905 correct rows are not a count of unique eligible questions.117 fixed disagreement samples,1 preserved tool_error,4 unsupported golds and all original denominator/timeout/fallback records are provided for review.
 
-Stage040/Stage150/Stage235/unallocated5=P009130, project450/protected50. Reservations are not spending. p009ACTIVE; oldp007 andautomation-4PAUSED. Original P0discordance and post-result vLLM-only scope remain; HF638/969 never enter P009 effects. Every DONE operation remains closed.
+[Scientific core and NC actual inputs](review_448e0ac1_accepted_v1/DISPOSITION.md) now have scoped PASS-WITH-NOTES. Reviewer eager650 wording is corrected with the original fast256+remaining1063 graph-engine records; oldeager128 was excluded. Future runtime must bind :4096:8,threads4,H100 and exact base/tokenizer hashes. No student worker is admitted or called yet. [Pre-outcome Stage1 decision/linear bootstrap code](stage1_analysis_preflight_v1/README.md) is separately prepared/pending; no actual analysis run.
+
+All oldP0 discordance and owner post-result vLLM-only scope persist. HF638/969 never enter P009 effects. Stage040/Stage150/Stage235/unallocated5=P009130 and project450/protected50 are ceilings/reservations, not spending. p009ACTIVE; oldmonitorsPAUSED. No DONE operation is repeated.
 
 --- Prior dated records ---
 

@@ -1,4 +1,11 @@
 
+### 2026-10-14 19:32:33 PDT（by三项真审计接受；P1完整证据首次发布）
+
+全文by448e0ac1于2026-10-15T02:31:03.182227+00:00读取，事件02:18:02/comment6182901683，SHAc9b44a8090c1cde9ec4e64361cc0ae47ad06a1798925c38aaf87ad9a6fbe58e8。原22科学core/NC10source实际inputs及plans分别PASS-WITH-NOTES，原单源完整P1publisherPASS；真实三个ACCEPTED保存，非学生runtime/numeric/P1A2。P1publisher原CLI43474一次EXIT0已消耗，全10489rows/105chunks/4048pairs只读核验/一次archive回读，原首100+remaining不重评分。117固定分歧样本待独立判定(50采购+34教师+16zero+17four)，四池fallback未超2%、outertimeout均0；采购1tool_error保持原失败标签待审，不变0unknown的技术定义、不自动重试。
+
+完整现成Boolean汇总：teacherMATH359/500caps36，Qwen0-shot136/500caps68，4-shot147/500caps39且原386/500new-problem boundaries必须披露。采购6905正确/8989可评分，原生成8993、4unsupportedgold单列；尚无资格/G0/A2接受，不据中间结果选样/改门。实际完整数据与原输出来源提交A2，不新symbolic/模型/统计。byN2误称base650为eager；原fast256和续1063的两environment原件都明确enforce_eagerfalse/graphs，旧eager128排除未评分。复制原证据纠正、不重跑P0。N1未来image必须:4096:8/threads4/H100，N3模型/tokenizer完整hash绑定；原core未改。NC遗留lengthflag说明nsubset按hash、schedule仍按length精确剂量；不把等targets写成等真实FLOPs/费用。
+
+
 ### 2026-10-14 19:26:08 PDT（Stage1预结果判定代码准备，无实际分析）
 
 P1唯一remaining已完成，现等待完整证据publisher真审计及后续独立判定/P1A2。独立补齐Stage1的原NC/2%futility/G1/n*判定core，固定NumPy2.2.6/PCG64/seed20261014/10000pairedquestions/linear分位数，严格完整1319或500布尔端点和全6S1cells；S2原G0失败不能绕过。原门函数/22core/12P1/34generation未改，没有学生调用、真实统计或重评分，代码送真实范围审计。
