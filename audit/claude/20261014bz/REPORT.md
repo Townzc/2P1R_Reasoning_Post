@@ -136,5 +136,5 @@ All 117 are the same kind of disagreement: symbolic equivalent = True while the 
 
 - **This is the first real signal from P009.** On MATH, the same Qwen base student is 44.6 pp below the teacher, against 34.6 pp for NC/GSM8K. The headroom is large.
 - **Caveat for interpreting G1.** 144 of 500 (28.8%) of the 0-shot student's outputs are format failures: 68 caps and 76 with no box. Any SFT will fix format quickly. Because G1 compares n400 against n3200 at equal compute, and both learn format, format alone should not create the G1 slope. Still, the n100 point and the A4 futility check should be read with this in mind.
-- **Teacher 4-shot vs 0-shot.** The Qwen 4-shot prompt helps only +2.2 pp and mostly ends at new-problem boundaries. This matches the earlier observation that few-shot prompting is not a substitute for SFT here.
+- **Student 4-shot vs 0-shot.** The Qwen 4-shot prompt helps only +2.2 pp and mostly ends at new-problem boundaries. This matches the earlier observation that few-shot prompting is not a substitute for SFT here.
 - **Now the candidates.** S2 is out (cap rule). S1 and NC both have G0 PASS. Stage 1 can proceed once the separate input/runtime/numeric gates pass.
