@@ -1302,3 +1302,9 @@ Qwen MATH0/4 caps68/39各500，teacherMATH caps36/500，采购8993中nativeEOS82
 新NC/S1训练与独立vLLM端点core已经准备；复用原P008训练/loss/AdamW/裁剪/完整state与16-update journal函数，固定1024更新2097148targets/原LR/完整答案。最后state保存后FP32 safe merge转BF16，未来独立父须确保训练进程退出后才启动vLLM。只NC17n400/3200、S1原seed17/29各n；S2本地cap门失败不准入。端点原完整tokenID/256batch/greedy512或1024/commonhighthroughput/seed17，不在GPU评分，不重复发送。代码没有云入口或实际输入/数值准入，不是已运行。
 
 22源closure含旧未执行路径，旧P00934生成与12评分源均未改。P009统一NumPy2.2.6与历史P0082.3.2差异明确披露，不称bitwise跨实验复现。八个新CPU/mock检查一次PASS(0.024s)，验证顶层最终保存后merge与重复调用拒绝；不是GPU/checkpointbinary/真实训练。所有旧tests/oracles/调用未重复。新core仅代码审计，不阻塞独立P1和Stage0结果A2；实际学生source/input/numeric/预算/科学门仍待准备与真审计。首100依然0次，新36h待完整报告。几处只读旧文件名查找失败无写入或科学副作用。
+
+### 2026-10-14 18:25:10 PDT（bv确切36h和名单代码审计通过；准备唯一首100）
+
+新Claude10cbc965/20261014bv全文于2026-10-15T01:24:18.967447+00:00读取，事件01:08:32/comment6182030416，SHAbb61d6bc。新12源bb2629ba/owner36h129600/P1first1001200真实PASS，限定接受记录已保存；旧6h未尝试退役，不重跑旧5/8tests。Stage1七源fd03e883名单代码PASS-WITH-NOTES，实际corpus/学生仍未准入。未来Stage2原始seed17域复用同一个已冻结hash排序键、在正确性前选择；不新增排列或改变科学门。
+
+此刻p1_actual_r1仍不存在，接下来只freeze和first100一次；真实际吞吐报告之后才能remaining。Reviewer约101k极端算术不当实测上界/必然准入，记录pair还含调度/处理开销，须真实max和原串行公式。原模板10-source措辞已有独立12-source说明，原代码/包不改。所有Stage0收尾均已完成，reviewer旧未收集表述是事件时状态；全14450 A2与NC本地PASS/S2capFAIL仍等待独立结果报告。0新GPU/模型/旧评分重放。
