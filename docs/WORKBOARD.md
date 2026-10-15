@@ -736,3 +736,9 @@ PyPI固定vllm0.11 Linuxwheel438217982bytes一次SHA通过，原sampling_params.
 独立P1两个新文件仅草拟、未测试/发布/执行，仍绑定旧generation spec，必须后续适配新确切spec才送审；无实际mathverify/首100/G0/Stage1。新v2包准备完成，所有真实接受/currentbudget/upload/gates/calls仍ABSENT。费用235.06实际dashboard与未来reserve分开，新增预算不是花费。
 
 Public funding/core/v2 packets at974efcbf3c6eae6034828ef11c78831cb97dea46 have3+4+57 manifest members independently checked from Git bytes. The new v2 exact request is pending. Before publication the constructor-r1 traceback's absolute local path was projected to<repository>, with the original private log and SHA retained and explicit CONSTRUCTOR_LOG_PROJECTION; no code/result changed or builder rerun. Whole whitespace check reports the same two original checkpoint/common EOF blank lines; exclude only those two to pass, do not claim full style PASS. Current INDEX aliases were reconciled to completed actual P0 A2/br scope and3 scientific calls/4 cloud functions including the zero-model preclaim failure; no new outcome computation.
+
+### 2026-10-14 18:38:49 PDT（完整P1只读交接代码准备；不重评分）
+
+实际首100/原publisher已完成，numeric请求85f1321a已普通发布，remaining仍NOTRUN。新增独立standard-library只读工具验证完整原journal每chunk/row/pair/proof和实际review，再汇总保存Boolean、固定样本/timeout/fallback/gold排除；不调用symbolic/原parser，不把样本空adjudication或代码PASS当标签/G0。仅remaining intent中的host reportlocator公开投影，原intentSHA与projection分开，私有原件保留；partial不能wholetool重跑。九个新合成证据检查一次PASS(0.026s)，原12源与旧tests未改/重跑，实际completepublisher未执行。新请求只挡此publisher，不挡独立remaining数值准入。
+
+本轮几处只读旧路径/系统Python tomllib错误发生读取前，无科学输出/重复调用；改用实际INDEX/RUN_LOG与已存在3.12环境读取。上一刻handoff预写的01:34标签已改为实际01:32:18，实际事件与记录分开。Stage0A2与学生仍未准入；无新云费用。

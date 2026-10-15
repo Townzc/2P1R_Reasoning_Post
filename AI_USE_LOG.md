@@ -3030,3 +3030,9 @@ New core packet whole staged style check retained two unchanged historical EOF b
 真实bv新12源PASS后，extendeddriver freeze一次EXIT0、first100原CLI17733一次EXIT0已消耗；actual完成2026-10-15T01:25:24.198916+00:00，全command1.048697秒。原10493生成行中4采购gold结构不支持单列排除，10489scorable，全部端点1500 gold齐备；不把排除记错或与7上下文不支持混淆。原首100精确orderedrows/73新distinctpair缓存/两个本地worker版本/原chunks00000证明齐，0模型调用、0旧symbolic或raw重放。
 
 原最大newpair0.074970291秒，剩余3975distinctpair；不假定双worker加速的原serial+300/20%情景718.157926719秒。拟总129600本地秒减原首段，保留owner36h技术上限以容纳后续慢pair；需真实独立数值报告，不自写ACCEPTED，不把718秒预测变成过紧的硬截止。所有首100缓存包括失败/超时类型未来只复用，partial不得自动重跑。未公布prefix正确率或用它调整实验。原已审publisher一次完成原字节/完整losslessROWS/pairs/timing12-source包，模板旧10字说明由单独canonical请求明确12，immutable不改。remaining/完整P1/G0/学生仍NOTRUN。
+
+### 2026-10-14 18:38:49 PDT（完整P1只读交接代码准备；不重评分）
+
+实际首100/原publisher已完成，numeric请求85f1321a已普通发布，remaining仍NOTRUN。新增独立standard-library只读工具验证完整原journal每chunk/row/pair/proof和实际review，再汇总保存Boolean、固定样本/timeout/fallback/gold排除；不调用symbolic/原parser，不把样本空adjudication或代码PASS当标签/G0。仅remaining intent中的host reportlocator公开投影，原intentSHA与projection分开，私有原件保留；partial不能wholetool重跑。九个新合成证据检查一次PASS(0.026s)，原12源与旧tests未改/重跑，实际completepublisher未执行。新请求只挡此publisher，不挡独立remaining数值准入。
+
+本轮几处只读旧路径/系统Python tomllib错误发生读取前，无科学输出/重复调用；改用实际INDEX/RUN_LOG与已存在3.12环境读取。上一刻handoff预写的01:34标签已改为实际01:32:18，实际事件与记录分开。Stage0A2与学生仍未准入；无新云费用。
