@@ -1,3 +1,6 @@
+<!-- S1 local scoring supervisor draft 2026-10-15T06:54:06.832636+00:00 -->
+[S1本地评分进程时限准备](stage1_s1_score_process_draft_v1/README.md)：8个新合成检查完成；没有实际S1评分或新增准入，未来完整runtime审计须纳入这些字节。
+
 <!-- Actual preclaim failure 2026-10-15T06:28:03.018365+00:00 -->
 NC3200替代在guard claim前失败，0训练/输出，原调用已STOPPED0；[原证据](stage1_nc_replacement_preclaim_failure_v1/README.md)保全，[确切新入口修复](stage1_nc_guard_repair_preflight_v1/README.md)待Claude限时代理决定及独立审计。原NC400不重跑，S1尚未准入。
 
