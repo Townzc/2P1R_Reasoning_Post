@@ -1,3 +1,6 @@
+<!-- cf actual acceptance 2026-10-15T07:04:48.773574+00:00 -->
+[NC3200入口修复获真实代理批准及独立审计PASS](review_f1b53059_accepted_v1/README.md)。仅一次新调用，失败费用保留；NC配对结果/A4和S1仍未完成。
+
 <!-- S1 local scoring supervisor draft 2026-10-15T06:54:06.832636+00:00 -->
 [S1本地评分进程时限准备](stage1_s1_score_process_draft_v1/README.md)：8个新合成检查完成；没有实际S1评分或新增准入，未来完整runtime审计须纳入这些字节。
 

@@ -1,3 +1,11 @@
+### 2026-10-15 00:04:48 PDT — cf真实代理决定与53源审计接受
+
+原代理comment6186240160事件06:47:28UTC，经既有Claude app/Townzc OWNER发布，批准唯一guardrepair新入口；明确这次再失败不追加例外。独立cf fixedf1b53059事件06:49:33/fullread06:58:36.352460，reportSHA37d5c822，53源e8f57a19 runtime/numeric PASS、新helper8154c25b PASS-WITH-NOTES。真实guard兼容/replay试验由reviewer完成，Codex未重跑旧tests。旧cd遗漏与preclaim655c历史永久保留，不假造failedterminal；非盲NC400954时间线不变。
+
+审计原GET comment canonicald66bec7b/file3c8310ca已固定；当前列表对象仅avatar_url和app.client_id元数据不同。首相等断言在acceptance/gate前失败，保存两原对象、精确差异与所有批准字段相等后，仅完成未写provenance/准入；没有改写原comment或冒充全部API字节相同。helper Codex7checks和reviewer8按各自来源保留，不重测。
+
+必要新费用07:01:41UTC delayed240.86237099/billed0/credits240.57；历史较高241.00237099保留下限，+25未校准lag向上266.10+全130=396.10仅准入情景，非已花/余额/上界。Stage1原1965+新655=2620预留，未释放或动用追加150。Papers同e097b0cb。保存真实OWNER_PROXY_DECISION/RUNTIME_ACCEPTED/READONLY_PUBLICATION_CODE_ACCEPTED/BUDGET_CHECK；下一仅一次新gates和modal_stage1_nc_guard_repair调用，原9inputs复用不上传。此时尚无新call，S1仍待NC实际pairA4。
+
 ### 2026-10-14 23:54:06 PDT — S1本地评分进程时限准备
 
 新增stage1_s1_score_process.py，未来完整审计后才可调用：单一独立POSIX进程组、输入/原source校验、父进程总时限、超时保留部分证据并终止所属组、任何既有目录拒绝重跑。原scorer/pair8秒/parser/剂量和全部NC53字节不改；最多5秒退出清理与评分帽分开，主机/父进程突失仍标未知。该helper不授予完整runtime、独立判定或G1准入，也不新增单独code-only阻塞门。

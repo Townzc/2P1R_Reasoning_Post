@@ -1,3 +1,6 @@
+<!-- cf actual acceptance 2026-10-15T07:04:48.773574+00:00 -->
+[NC3200入口修复获真实代理批准及独立审计PASS](reports/p009_20261014/review_f1b53059_accepted_v1/README.md)。仅一次新调用，失败费用保留；NC配对结果/A4和S1仍未完成。
+
 <!-- Actual preclaim failure 2026-10-15T06:28:03.018365+00:00 -->
 NC3200替代在guard claim前失败，0训练/输出，原调用已STOPPED0；[原证据](reports/p009_20261014/stage1_nc_replacement_preclaim_failure_v1/README.md)保全，[确切新入口修复](reports/p009_20261014/stage1_nc_guard_repair_preflight_v1/README.md)待Claude限时代理决定及独立审计。原NC400不重跑，S1尚未准入。
 

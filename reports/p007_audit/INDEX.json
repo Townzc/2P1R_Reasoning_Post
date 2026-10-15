@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T06:40:33.283130+00:00",
+  "as_of_utc": "2026-10-15T07:04:48.773574+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3085,15 +3085,22 @@
         "timing_sha256": "e3dc389f7cd5f1a6c180d948504870248b0b0d717ee309a43a73a484ad4fa817"
       },
       "review_request": "reports/p009_20261014/NC_GUARD_INTENT_REPAIR_REVIEW_REQUEST.md",
-      "status": "pending_owner_proxy_decision_AND_independent_exact_audit",
-      "blocking": true,
+      "status": "completed_PASS",
+      "blocking": false,
       "blocking_for": "One new entry call only; old preclaim call/guard gates permanently retired. Zero scientific work confirmed locally, external evidence review required.",
       "actual_execution": false,
       "created_utc": "2026-10-15T06:30:53.623088+00:00",
       "owner_delegation_packet": "reports/p009_20261014/owner_overnight_proxy_v1",
       "owner_proxy_comment_required_prefix": "【Owner 代理决定】",
       "owner_proxy_expires_utc": "2026-10-15T14:00:00+00:00",
-      "failure_packet": "reports/p009_20261014/stage1_nc_replacement_preclaim_failure_v1"
+      "failure_packet": "reports/p009_20261014/stage1_nc_replacement_preclaim_failure_v1",
+      "acceptance_packet": "reports/p009_20261014/review_f1b53059_accepted_v1",
+      "report_commit": "f1b530591209f235bd4dde694286a7812c73c9cb",
+      "report_path": "audit/claude/20261014cf/REPORT.md",
+      "report_sha256": "37d5c822750835fe605e8043a06464ed63698884d74d91c0e2b0a47e3b80cf76",
+      "read_utc": "2026-10-15T06:58:36.352460+00:00",
+      "event_utc": "2026-10-15T06:49:33Z",
+      "comment_id": 6186269247
     },
     {
       "request_id": "p009-stage1-NC-guard-repair-closeout-code-r1",
@@ -3110,11 +3117,18 @@
       "runtime_target": "e8f57a1973cacf7efd508b59df9a94fda1539a1a",
       "runtime_spec_sha256": "ab01c527ea82d1dd72ad78960bc00709063e3ad22d4e9793ae1d4305540f18b5",
       "review_request": "reports/p009_20261014/stage1_nc_guard_repair_closeout_preflight_v1/REVIEW_REQUEST.md",
-      "status": "pending",
-      "blocking": true,
+      "status": "completed_PASS-WITH-NOTES",
+      "blocking": false,
       "blocking_for": "Only new53-source observer/startup/pair publication; independent repair runtime and owner decision remain separate.",
       "actual_execution": false,
-      "created_utc": "2026-10-15T06:40:33.283130+00:00"
+      "created_utc": "2026-10-15T06:40:33.283130+00:00",
+      "acceptance_packet": "reports/p009_20261014/review_f1b53059_accepted_v1",
+      "report_commit": "f1b530591209f235bd4dde694286a7812c73c9cb",
+      "report_path": "audit/claude/20261014cf/REPORT.md",
+      "report_sha256": "37d5c822750835fe605e8043a06464ed63698884d74d91c0e2b0a47e3b80cf76",
+      "read_utc": "2026-10-15T06:58:36.352460+00:00",
+      "event_utc": "2026-10-15T06:49:33Z",
+      "comment_id": 6186269247
     }
   ],
   "p008_v31": {
@@ -3959,7 +3973,7 @@
       "request_id": "p009-stage1-NC-guard-intent-repair-r1",
       "target_commit": "e8f57a1973cacf7efd508b59df9a94fda1539a1a",
       "packet": "reports/p009_20261014/stage1_nc_guard_repair_preflight_v1",
-      "status": "prepared_only_proxy_and_exact_audit_pending",
+      "status": "actual_proxy_AND_runtime_PASS_gate_call_pending",
       "new_calls": 0,
       "prior_reserved_cents": 1965,
       "new_proposed_cents": 655,
@@ -3967,8 +3981,20 @@
       "experiment_cap_cents": 13000,
       "additional_150_authority_used_cents": 0,
       "closeout_code_request": "p009-stage1-NC-guard-repair-closeout-code-r1",
-      "latest_review_poll_utc": "2026-10-15T06:33:22.789425+00:00",
-      "owner_proxy_decision_observed": false
+      "latest_review_poll_utc": "2026-10-15T06:58:01.615249+00:00",
+      "owner_proxy_decision_observed": true,
+      "owner_proxy_comment_id": 6186240160,
+      "owner_proxy_comment_sha256": "d66bec7bb2f5a46782ccf3650cc00e6e005ddd033e52b195f4653611e1b9b947",
+      "owner_proxy_decision_url": "https://github.com/Townzc/2P1R_Reasoning_Post/issues/13#issuecomment-6186240160",
+      "runtime_report_commit": "f1b530591209f235bd4dde694286a7812c73c9cb",
+      "actual_results_A4_pending": true,
+      "no_further_exception_if_this_call_fails": true
+    },
+    "S1_score_process_preparation": {
+      "packet": "reports/p009_20261014/stage1_s1_score_process_draft_v1",
+      "target_commit": "96fb5312bd46124cab1d3920b42d55fd006c5f14",
+      "actual_execution": false,
+      "new_code_only_blocking_request": false
     }
   }
 }
