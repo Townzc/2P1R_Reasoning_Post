@@ -4,6 +4,15 @@
 
 ## 当前状态
 
+### 2026-10-14 17:56:09 PDT（用户选B：P1本地时限在实测前延长）
+
+用户直接“就选b”，允许放宽本地评分时长。Codex将授权具体为总36小时129600秒（不是用户逐字给36，也不是预计时长），首100仍1200秒、pair8秒、原最慢pair×剩余distinct串行预测/20%+300未校准项不变。新云调用/费用额度增加0，Stage0$40/P009$130不变。此时p1_actual_r1仍不存在，0实际symbolic/首100，原6小时候选完整保留、未尝试停用。
+
+新12源extended driver/binding须精确scope+ownerhash+129600审计；不能用旧6小时候选PASS直接运行。原10源/scalar/pool/journal与活动34生成源全部原SHA不变。五个新合成顶层窗口检查一次PASS(0.010s)，覆盖大于6小时真实审计窗口扣原耗时、超过36小时/owner不符在attempt前拒绝；旧12/11检查未重跑。不改变标签、抽样、G0/G1或科学剂量。只读first100publisher新版已parsed/NOTRUN，旧版保留。
+
+当前原teacher25996与OLMo81858已submitted，原Qwen93362已completed/exit0消耗；Qwen启动核验7928DONE，原collector74242一次运行中，fullledger安静不当失败。三个均原执行80ff96，无模型重发；teacher首核68886DONE。所有原上传/旧P0仍不可重跑。
+
+
 ### 2026-10-14 17:48:25 PDT（Stage0 原三调用推进；Stage1 纯选择代码准备）
 
 教师原CLI25996已提交并通过一次首256元数据核验68886，H100/CUDA12.8/原34源/spec/claim与持久标记一致；这不是完整raw或分数。Qwen原CLI93362已提交，OLMo原CLI81858一次启动仍待submitted；未重发原调用。17原上传文件和回读62346已完成不可重跑。

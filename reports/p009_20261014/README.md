@@ -1,3 +1,8 @@
+<!-- Owner optionB 2026-10-15T00:56:09.169491+00:00 -->
+[P1 local window amendment](p1_local_window_amendment_v1/README.md): before first100,
+owner chose a longer local ceiling; Codex set36h total, original formula/scorer
+unchanged. [Exact12-source successor](p1_local_window_preflight_v2/README.md) needs review; no actualP1 yet.
+
 <!-- Actual funded-runtime review 2026-10-15T00:31:02.699164+00:00 -->
 [Funded Stage0 runtime bt PASS-WITH-NOTES](review_eeb65b04_accepted_v1/README.md):34 exact sources,
 three once-only workers and their budget are accepted. Fresh budget saved;

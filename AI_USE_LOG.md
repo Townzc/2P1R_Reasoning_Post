@@ -2984,3 +2984,13 @@ P1 publication: four prior scalar/pool/journal/requirements source hashes were e
 另备好私有只读P1首100证据publisher（仅parsed/NOTRUN），将原rows/pairs/timing/source原字节提交真实吞吐审计，不重新评分或自写接受。两次查找旧路径/glob失败均无写入或科学副作用；已改用实际文件路径，不重做旧检查。
 
 Stage1 roster publication: full staged style check retains the original common.py EOF blank-line warning. Only that historical copied source is excluded from the passing style check; no frozen bytes or tests changed. The preceding unstaged check did not cover the then-untracked packet.
+
+### 2026-10-14 17:56:09 PDT（用户选B：P1本地时限在实测前延长）
+
+用户直接“就选b”，允许放宽本地评分时长。Codex将授权具体为总36小时129600秒（不是用户逐字给36，也不是预计时长），首100仍1200秒、pair8秒、原最慢pair×剩余distinct串行预测/20%+300未校准项不变。新云调用/费用额度增加0，Stage0$40/P009$130不变。此时p1_actual_r1仍不存在，0实际symbolic/首100，原6小时候选完整保留、未尝试停用。
+
+新12源extended driver/binding须精确scope+ownerhash+129600审计；不能用旧6小时候选PASS直接运行。原10源/scalar/pool/journal与活动34生成源全部原SHA不变。五个新合成顶层窗口检查一次PASS(0.010s)，覆盖大于6小时真实审计窗口扣原耗时、超过36小时/owner不符在attempt前拒绝；旧12/11检查未重跑。不改变标签、抽样、G0/G1或科学剂量。只读first100publisher新版已parsed/NOTRUN，旧版保留。
+
+当前原teacher25996与OLMo81858已submitted，原Qwen93362已completed/exit0消耗；Qwen启动核验7928DONE，原collector74242一次运行中，fullledger安静不当失败。三个均原执行80ff96，无模型重发；teacher首核68886DONE。所有原上传/旧P0仍不可重跑。
+
+2026-10-15T00:56:55.946250+00:00 — The local-window publisher r1 read a direct source map as a wrapper and raised KeyError before pub.mkdir or any output. Original script/log retained; r2 changed only the map access and completed previously unwritten artifacts once. No test/scoring/model replay. Earlier missing INDEX pathname/glob reads were read-only failures with no mutation.
