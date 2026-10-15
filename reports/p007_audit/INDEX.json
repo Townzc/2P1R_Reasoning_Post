@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T02:26:08.984005+00:00",
+  "as_of_utc": "2026-10-15T02:26:33.227130+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2586,6 +2586,41 @@
       "archive_file_sha256": "266fde7c700a5360594163162f24b662d04c51a306ec645445223c479c6ce92e",
       "created_utc": "2026-10-15T01:55:12.643407+00:00",
       "scientific_worker_calls": 0
+    },
+    {
+      "request_id": "p009-stage1-registered-analysis-code-r1",
+      "scope": "p009-stage1-registered-analysis-and-stop-code",
+      "target_commit": "2c7d6b5ce7fe7d9c23ad59dc6e185493390f9a81",
+      "packet": "reports/p009_20261014/stage1_analysis_preflight_v1",
+      "manifest": "reports/p009_20261014/stage1_analysis_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "dd832619a8adeb522cc171806c8a5e4eca9a9f4e16d9731c147a01f0c48cbe6b",
+      "source_files": {
+        "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+        "experiments/learning_regime_p009/gates.py": "1543f482098cee612256633e85b88e528c7418babfe6af6d4a00fc80347eefb0",
+        "experiments/learning_regime_p009/requirements_stage1_analysis.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+        "experiments/learning_regime_p009/stage1_analysis.py": "97c02fb9b284967955258c20d91a4568017965b15ff687aa17eba647b3d27221"
+      },
+      "bootstrap_policy": {
+        "generator": "numpy.PCG64",
+        "interval_scope": "pointwise_conditional_not_simultaneous_or_seed_population",
+        "numpy_version": "2.2.6",
+        "ordering": "lexicographic_frozen_question_id",
+        "quantile_method": "linear",
+        "quantiles": [
+          0.025,
+          0.975
+        ],
+        "replicates": 10000,
+        "seed": 20261014,
+        "unit": "paired_question"
+      },
+      "review_request": "reports/p009_20261014/stage1_analysis_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only future Stage1 outcome decision/analysis; not independent P1 publication or NC runtime preparation.",
+      "created_utc": "2026-10-15T02:26:33.227130+00:00",
+      "actual_student_calls": 0,
+      "actual_analysis_runs": 0
     }
   ],
   "p008_v31": {
