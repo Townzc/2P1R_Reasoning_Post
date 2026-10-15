@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:31:02.699164+00:00",
+  "as_of_utc": "2026-10-15T00:35:52.383483+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2340,6 +2340,21 @@
       "created_utc": "2026-10-15T00:24:09.442404+00:00",
       "actual_symbolic_attempts": 0,
       "scientific_model_calls": 0
+    },
+    {
+      "request_id": "p009-stage0-generation-result-publication-r1",
+      "scope": "p009-stage0-generation-result-publication-code",
+      "target_commit": "b679dd7dc5e889d9e95d718f7f2fd5b2a664c279",
+      "packet": "reports/p009_20261014/stage0_result_publication_preflight_v1",
+      "manifest": "reports/p009_20261014/stage0_result_publication_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "da52a35f8db6ac0f2b019b4880c1eb3cd48c03f7ad587c25a28c75d48ff43717",
+      "source_sha256": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26",
+      "review_request": "reports/p009_20261014/stage0_result_publication_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only this per-slot local result publisher; not generation or P1.",
+      "created_utc": "2026-10-15T00:35:52.383483+00:00",
+      "actual_publisher_calls": 0
     }
   ],
   "p008_v31": {
@@ -3002,6 +3017,12 @@
       "actual_inputs_frozen": false,
       "actual_symbolic_attempts": 0,
       "new_synthetic_checks_passed": 12
+    },
+    "stage0_result_publication": {
+      "packet": "reports/p009_20261014/stage0_result_publication_preflight_v1",
+      "target_commit": "b679dd7dc5e889d9e95d718f7f2fd5b2a664c279",
+      "source_sha256": "708d426fc1097e00e5f8a56b5daa6441c87c25c7eb62b3cf1477fb8d6f94ab26",
+      "status": "code_review_pending_NOTRUN"
     }
   }
 }
