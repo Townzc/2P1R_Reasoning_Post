@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T00:12:51.310885+00:00",
+  "as_of_utc": "2026-10-15T00:24:09.442404+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2315,6 +2315,25 @@
       "stage0_cap_cents": 4000,
       "experiment_cap_cents": 13000,
       "original23_and27_sources_preserved": true
+    },
+    {
+      "request_id": "p009-math-p1-driver-first100-r1",
+      "scope": "p009-math-p1-driver-and-first100-input-contract",
+      "target_commit": "7dc7168cb6aaf9ba03af613fee354b45285ae601",
+      "packet": "reports/p009_20261014/p1_driver_preflight_v1",
+      "manifest": "reports/p009_20261014/p1_driver_preflight_v1/MANIFEST.json",
+      "manifest_sha256": "ce6e4178a575bedaef819838b83b7d274f3d91154e2f743ec907aa1615aaeafd",
+      "candidate_sha256": "0d2adc7933e0b31abc540543b1df4ef355a690faa886aa2774dc4809bc47692a",
+      "source_files": 10,
+      "review_request": "reports/p009_20261014/p1_driver_preflight_v1/REVIEW_REQUEST.md",
+      "status": "pending",
+      "blocking": true,
+      "blocking_for": "Only local P1 input freeze and conditional first100; not funded Stage0 generation.",
+      "generation_target_commit": "974efcbf3c6eae6034828ef11c78831cb97dea46",
+      "generation_spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
+      "created_utc": "2026-10-15T00:24:09.442404+00:00",
+      "actual_symbolic_attempts": 0,
+      "scientific_model_calls": 0
     }
   ],
   "p008_v31": {
@@ -2964,6 +2983,17 @@
       "remaining_credit_from_owner_screenshot_usd": "294.94",
       "cash_charges_usd": "0.00",
       "earlier370_70_is_actual_spend": false
+    },
+    "math_p1_driver": {
+      "status": "exact_code_review_pending_actual_P1_NOTRUN",
+      "packet": "reports/p009_20261014/p1_driver_preflight_v1",
+      "target_commit": "7dc7168cb6aaf9ba03af613fee354b45285ae601",
+      "source_files": 10,
+      "first100_wall_seconds": 1200,
+      "generation_spec_sha256": "e3775978166cf1e5209c864ef3e3e84c03c2751c3c58cbe2c14a58273efa6b24",
+      "actual_inputs_frozen": false,
+      "actual_symbolic_attempts": 0,
+      "new_synthetic_checks_passed": 12
     }
   }
 }
