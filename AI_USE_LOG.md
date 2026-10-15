@@ -1,3 +1,7 @@
+### 2026-10-15T03:22:44.860138+00:00 UTC（S1固定输入请求）
+
+固定3d4c5974f195ad73bc47eec847404efff7eddeaf，25manifest成员逐Git原字节核验一次DONE；原18.24MB archive回读已DONE，不重复。新实际input-only请求p009-stage1-S1-exact-input-and-plan-r1 pending，不挡独立NC。1处旧common.py EOF副本样式告警保留，wholecheck非PASS，排除旧副本后PASS。原NC42/P112/Stage034未改；0新GPU调用。
+
 ### 2026-10-14 20:21:41 PDT（S1实际输入一次准备完成，未训练）
 
 真实P1/G0接受后，新本地prepare唯一CLI43952 EXIT0已消耗。原8993生成/8989标签只读绑定，按原7500顺序先去重复再取attempt01原生EOS/可解析正确，得到5774独立合格题。4unsupportedgold和7contextunsupported及原format/toolerror标签不变，无重评分/重生成。新完整编码全部<=2048；seed17 n100/400/1600/3200总长46523/188446/735768/1494755，seed29 n400/3200总长183519/1484687，全部固定1024updates/2097148targets且q>=1。原500endpoint IDs复制。四新bindingfixtures一次PASS0.030s，不是GPU实测。全6输入/计划archive回读和create-only发布一次完成，需确切10源实际输入A1；NC先行/后续futility门不变。三个初始只读路径猜测失败（BASIS/SOURCE_BINDING/ARCHIVE_MANIFEST不存在）发生准备前，无写或评分副作用，后续按实际目录/COLLECTION original_files绑定。

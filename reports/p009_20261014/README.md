@@ -1,3 +1,6 @@
+<!-- New S1 candidate 2026-10-15T03:22:44.860138+00:00 -->
+[S1六组确切输入与完整答案计划](stage1_s1_inputs_v1/README.md)已准备并送审：5774个合格独立题目，两个3200题子集完整答案总长1494755/1484687，均满足固定2097148 targets；无截断、缩n、重评分或学生调用。NC仍须先行；输入审计不代运行准入。
+
 # P009 — P1/S1 G0 accepted; exact NC runtime candidate under review
 
 Updated 2026-10-15T03:16:23.148090+00:00. [Full bz/ca review disposition](review_b910bbfb_accepted_v1/DISPOSITION.md) records actual P1 raw evidence,117 fixed independent sample adjudications and procurement label eligibility separately from S1 G0 PASS359vs136/500,caps36/68. Four unsupported golds, one tool error, four format disputes and known conservative false negatives retain their original labels. Reviewer did not rerun math-verify; public proof is not private binary access. The original complete P1 packet is immutable.
