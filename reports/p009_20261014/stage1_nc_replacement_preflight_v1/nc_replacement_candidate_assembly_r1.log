@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<WORKSPACE>/.local/p009_20261014/r1/assemble_nc_replacement_candidate_once.py", line 23, in <module>
+    train,endpoint=extended_timing(old['timing'],extension,proof['original_terminal'])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/learning_regime_p009/stage1_nc_replacement_binding.py", line 52, in extended_timing
+    if x['training_blocks_left']!=64-i or x['admitted'] is not True or x['eval_batches_left']!=6:
+                                                                       ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'eval_batches_left'

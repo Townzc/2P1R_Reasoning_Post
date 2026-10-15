@@ -1,3 +1,7 @@
+# Owner-approved single NC3200 replacement candidate — 2026-10-15T05:32:48.132065+00:00
+
+Directhumanapprovedoneindependentreplacementafterexactreview; do NOTaskagain. New49source/spec35b17552 candidateprepared, original42bytes unchanged. Onlynewmodal_stage1_nc_replacement may be admitted aftertrueexactreport+actualparentA4+freshbudget/Papers+completewindow/unused/fences. 4500entry/655c/seed17/3200/1024/2097148 unchanged; oldNC400 andfailedNC3200 arefullyclosed/DONEandneverrepeated. No newACCEPTED/gates/upload/call. ReadACTIVE_HANDOFF latesttop/newreplacementhandoffbeforeolderpending-ownerorhealthyNCstates. OldmonitorsPAUSED,p009ACTIVE, nooutside messages/subagents; ordinaryINDEX/pushauthorized.
+
 # Latest original NC closure with technical failure — 2026-10-15T05:13:08.316058+00:00
 
 Read ACTIVE_HANDOFF and LIVE_P009_NC_PREEMPTED_HANDOFF.md. Both originalNC apps STOPPED0; originalCLI26666/3874 consumed. NC400 originalfulloracle954/1319/caps56/1024/2097148 PASS; originalNC3200 failed after platformpreemption,896 savedrecords/56acks but nocheckpoint/endpoint. Failedpreserver77581/prefixaudit/newstaticpublisher22581 allDONE. Never redispatch, clearclaim, repeat oldtools or runcompletepairpublisher/NCpairedanalysis. True pairedNCgate unavailable; S1 unadmitted. Concreteone-replacementproposal4500s/655c is not authorization; originalonce-onlyexception andexactreview required. Preserve failedparent andcosts, noreserve release. No subagents/externalmessages, INDEX/ordinarypush authorized. OldmonitorsPAUSED,p009ACTIVE. Earlierdatedstateshistorical.

@@ -1,3 +1,8 @@
+<!-- Explicit owner replacement authorization and exact preparation 2026-10-15T05:32:48.132065+00:00 -->
+**NC3200 单项独立替代已获你直接批准，正在等确切审计。** [49源/输入/计时/预算候选](reports/p009_20261014/stage1_nc_replacement_preflight_v1/README.md)保留原失败父及NC400完整结果，采用新的永久运行标识；原配方、4500秒帽和$6.55单次预留不变。实际新调用为0；原NC配对门仍不可计算，S1尚未放行。旧提案内“待owner”是历史状态，当前不再等待相同许可。
+
+--- Earlier dated checkpoints ---
+
 <!-- Actual original NC closeout 2026-10-15T05:13:08.316058+00:00 -->
 **Stage1 当前受技术失败阻塞。** [NC400完整结果及NC3200抢占证据](reports/p009_20261014/stage1_nc_preemption_disposition_v1/README.md)：NC400为954/1319、caps56、完整1024步本地核验通过；NC3200保存896步记录但没有模型检查点或终点，原失败永保。两app已STOPPED0。配对NC门无法计算，S1未放行。[独立替代提案](reports/p009_20261014/stage1_nc_preemption_disposition_v1/REPLACEMENT_PROPOSAL.json)仅为具体候选，仍需原一次调用限制的明确例外及确切代码/输入/数值审计；没有新模型调用。实际结果A4待审。
 

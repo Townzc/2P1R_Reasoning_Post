@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-15T05:14:17.354563+00:00",
+  "as_of_utc": "2026-10-15T05:32:48.132065+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -2833,7 +2833,9 @@
       "created_utc": "2026-10-15T05:14:17.354563+00:00",
       "actual_model_calls_added": 0,
       "replacement_proposal_only": true,
-      "owner_once_only_exception_accepted": false
+      "owner_once_only_exception_accepted": true,
+      "owner_authority_file_sha256": "108c82f933990473119f48b186223057f1ab3a0f92769e666bbe2b34be8e0ae3",
+      "owner_addendum": "Owner now directly approved exactly one new NC3200 replacement. Fixed parent packet pending-owner text remains historical. No new runtime admission/call; candidate exact scope separately requested."
     }
   ],
   "p008_v31": {
@@ -3127,7 +3129,7 @@
     "pause_receipt": "reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json"
   },
   "p009": {
-    "status": "original_NC_pair_closed_with_technical_failure_actual_disposition_A4_pending",
+    "status": "one_NC3200_replacement_owner_approved_exact_49_source_runtime_prepared_pending_review",
     "total_cap_usd": 130,
     "stage_caps_usd": {
       "stage0": 40,
@@ -3616,11 +3618,27 @@
       "checkpoint_present": false,
       "paired_NC_gate": "UNAVAILABLE_TECHNICAL_FAILURE",
       "replacement_proposal_only": true,
-      "replacement_new_owner_exception_accepted": false,
+      "replacement_new_owner_exception_accepted": true,
       "review_status": "pending",
       "target_commit": "ab271a94749570308690b3eda2ee6a5c68c3618c",
       "request_id": "p009-stage1-NC-preemption-and-n400-A4-r1",
-      "review_request": "reports/p009_20261014/NC_PREEMPTION_ACTUAL_A4_REQUEST.md"
+      "review_request": "reports/p009_20261014/NC_PREEMPTION_ACTUAL_A4_REQUEST.md",
+      "owner_authority_file_sha256": "108c82f933990473119f48b186223057f1ab3a0f92769e666bbe2b34be8e0ae3"
+    },
+    "NC3200_independent_replacement": {
+      "packet": "reports/p009_20261014/stage1_nc_replacement_preflight_v1",
+      "manifest_sha256": "9a6a0509327da49f35aeb6116581a2afd3bfa1b5e49dc12e5d12270cf80585e9",
+      "source_count": 49,
+      "spec_sha256": "35b1755261290f97c4da03c1121b73ad1cb47e0abf52f657790464bfc381dcaf",
+      "owner_direct_approval": true,
+      "owner_authority_file_sha256": "108c82f933990473119f48b186223057f1ab3a0f92769e666bbe2b34be8e0ae3",
+      "prior_stage1_reserved_cents": 1310,
+      "new_slot_reserved_cents": 655,
+      "stage1_cap_cents": 5000,
+      "actual_calls": 0,
+      "actual_gates": 0,
+      "actual_uploads": 0,
+      "status": "PREPARED_NOT_ADMITTED"
     }
   }
 }

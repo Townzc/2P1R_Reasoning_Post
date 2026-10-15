@@ -1,3 +1,15 @@
+### 2026-10-14 22:32:48 PDT — Owner授权单项NC3200替代；exact49源准备完成，未调用
+
+Owner直接答复“批准这一项独立替代，审计通过后运行”，已独立记录OWNER_AUTHORITY/fileSHA108c82f933990473119f48b186223057f1ab3a0f92769e666bbe2b34be8e0ae3；不再等待或重复询问相同许可。批准范围仅新physicalnc_s17_n3200_replacement_r1，原3200完整答案/seed17/1024updates2097148targets/冻结LR/1319greedy512；4500entry/4560platform/600startup/full5200/655c一次零自动retry。原NC400954/1319全核验和原NC3200failed896步无checkpoint保全均DONE，不重跑/假续训/清claim。
+
+新49源闭包包含原42字节全部不改和7新binding/适配/入口/IO/oracle，spec35b1755261290f97c4da03c1121b73ad1cb47e0abf52f657790464bfc381dcaf。新campaign和父绑定永久replacementfence，原失败logicaldispatch/claim/terminal完全保留；46原records、9原appsSTOPPED0、max4pendingunknownunmatched、原plan绝对deadline、真owner/原实际处置A4/新exactruntime/input/numeric/新必要预算共同约束。旧9输入原readback及原base复用0上传。实际RUNTIME_ACCEPTED/BUDGET_CHECK/gates/runs均不存在，0新image/model。
+
+保留全部18旧host1184训练proxy和12原终点obs，新增NC40064完整训练/6终点、failedNC3200的55完整相邻forecast间隔及最后29.551296711秒故障收尾proxy，20host/1304训练/18终点；旧max43.307480978与20.412141323仍最大。原600未校准项及20%情景4192.981956637秒，618c预测满足4470soft/4500hard、655c槽位与3690c阶段余额80%门。不是速度/抢占概率保证；新slot预留后1965c/5000、余3035，不声称6个未来S1已准入，不借5/回收原失败预留。
+
+16项新synthetic边界与真实函数AST保持检查一次PASS0.144s；新body训练/运行/全oracle/worker硬帽与原body除依赖绑定/schema保持。无GPU或旧模型/state/scorer/oldtests重跑。首准备把原forecast字段误写eval_batches_left导致候选写入前KeyError，原失败源/日志保留，仅纠正新字段endpoint_batches_left后完成未写候选；不冒充首遍成功。公开投影测试fixture可供独立复核，Codex没有为重构公开路径再跑已通过16项。owner文件SHA为正式绑定；先前控制台UTF8非ascii规范digest与repo默认ascii不同，未用于任何gate，规范已明确。
+
+新publicstage1_nc_replacement_preflight_v1含124manifest成员、owner原答复、实际新计时来源和全部49源。真正runtime/numeric审计及原actualA4仍待报告，旧代码PASS不代新准入。原真实失败和预算保全仍有效。没有新费用/Papers请求；仅真付费阶段才保存必要freshsnapshot。
+
 ### 2026-10-14 22:13:08 PDT — NC400完整核验、NC3200抢占失败保全关闭
 
 原NC400 terminal04:48:48UTC，fulloracle实际04:58:50UTC通过954/1319、caps56、0unknown及1024updates/2097148targets、完整stateSHA f9aca4bf。collector34016/export17437/oracle79445全部一次EXIT0已消耗；不重评分或加载旧state。原NC3200 terminal04:52:46UTC failed，provider04:56:04读两app STOPPED0；原CLI记录平台抢占并尝试同输入重启，永久guard在新claim/训练前拒绝。原CLI26666/3874均已消耗，0新模型调用。
