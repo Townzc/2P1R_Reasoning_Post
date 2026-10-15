@@ -96,3 +96,59 @@
 No outcomes yet. These two NC students are the preregistered negative control.
 - If Δ(3200−400) ≥ 5 pp, the design itself creates a slope and the study stops (§5.3).
 - A flat NC result is what P008 predicts, and it is required before S1 is interpreted.
+
+---
+
+# Part B: `p009-stage1-S1-exact-input-and-plan-r1`
+
+- **Scope:** `p009-stage1-S1-exact-input-and-plan`
+- **Target:** `3d4c5974f195ad73bc47eec847404efff7eddeaf`
+- **Manifest:** `bdc05b9fce149b1e6f3bfb51103a1dbdcdd04fae85073423c6d218b677f63900`. All 24 entries match.
+- **Archive:** all 37 members match `ARCHIVE_MANIFEST`.
+- **BASIS file SHA:** `47c5c5e88877d50056a76b7595f20e6aff6abfc6aa54593f41d421854b29ebdb`
+- **ARCHIVE file SHA:** `ba1fbefbe441f0871a0c1285168bd8128ddf67de34dd451199fc8185adfdcde4`
+- **P1 A2 report SHA:** `a6479f674f52bbf5dd1fd4d66362a4651a1ad18ecfc37c03807c24249f274477`. This equals my bz `REPORT.md`.
+- **source_files:** the exact 10-entry map in `SOURCE_BINDING.json`. Every file at the target hashes to it, including `scripts/prepare_p009_s1_inputs.py` `8915bec5…`. The roster, training-plan and schedule files are the bv-accepted bytes.
+
+## Decision: PASS
+
+All checks below are independent (`s1_inputs_verify.py`). They use my own Qwen BPE encoder, the original `math_train7500.jsonl` (`73d37f56…`) and the bz-verified P1 evidence (`ROWS.json`, `ALL_SCORED_ROWS.json`).
+
+**Eligibility**
+- The rule is: first source row per `question_sha256` in the original 7,500 order, then attempt01 only, with native EOS, `correct`, `parsed` and `teacher_label_eligible`.
+- This rule is the one in `stage1_roster.py`, accepted in bv at `fd03e883` (17:48 PDT). That was before any P1 label existed, so it is pre-registered by code.
+- 7,499 unique questions (1 duplicate row). Of these, **5,774 are eligible**, 1,714 fail at attempt01, and 11 were never scored (7 context exclusions + 4 unsupported gold).
+- The eligible list matches the inventory exactly, in order. No later attempt and no duplicate rescues a row, and unsupported gold is never treated as zero.
+
+**Text and tokenization (all 5,774 rows)**
+- Each prompt equals the original `problem`, and each response equals the P1 `answer_segment` byte-for-byte.
+- `"Problem: …\nSolution:\n" + response` + EOS 151643 equals `ALL_ENCODED` in ids, labels and all three counts.
+- 0 boundary-crossing tokens and 0 embedded EOS. The longest row is 1,571 tokens, within 2048.
+
+**Orders:** both hash orders (seed 17 and seed 29) reproduce `ROSTER_s17/29.full_order` exactly, and every cell is the exact prefix, nested.
+
+**Plans (all six)**
+
+| Cell | Whole-answer sum | Exposures | Unexposed |
+|---|---|---|---|
+| s17 n100 | 46,523 | {45, 46} | 0 |
+| s17 n400 | 188,446 | {11, 12} | 0 |
+| s17 n1600 | 735,768 | {2, 3} | 0 |
+| s17 n3200 | 1,494,755 | {1, 2} | 0 |
+| s29 n400 | 183,519 | {11, 12} | 0 |
+| s29 n3200 | 1,484,687 | {1, 2} | 0 |
+
+- Every plan has 1024 non-empty updates and exactly 2,097,148 targets.
+- `row_exposures` match, the LR vector digest is `14ac59d2…` (identical to NC), and the config digests recompute.
+
+**Endpoint:** 500 rows. `input_ids` and order equal the Stage 0 `qwen_math_zero.json` prompts (the S1 G0 base endpoint), with `S1::` ids and recomputed source SHAs.
+
+**Tests:** the 4 new binding tests pass here.
+
+## Notes
+- **N1 (science, disclosed).** Eligibility is attempt01-only, so the S1 pool contains only problems the teacher solved on its first try. That is 77.1% of first tries; using retries would have rescued about 32 more of the 500 four-attempt problems. The pool therefore leans easier than MATH train as a whole. This is by design for Stage 1, where retries belong to Stage 2. Any claim must be phrased as "conditional on first-try-solvable problems".
+- **N2.** n100 repeats each answer 45–46 times, as PREREG §5.2 anticipated (40–60). G1 compares only n400 (11–12×) against n3200 (1–2×).
+
+## 科学信号检查 (science-signal check)
+
+No outcome. The six S1 corpora are exact, outcome-blind and preregistered. S1 dispatch still waits for the NC result (NC-first rule) and its own runtime/numeric admission.
