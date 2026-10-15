@@ -1,3 +1,15 @@
+### 2026-10-15 03:23:04 PDT — S1首对完整核验/评分结束；原futility触发，实际A4待审
+
+原n400/n3200完成事件分别09:41:13.972936和09:54:13.722002UTC，读取provider10:05:49.865640确认两STOPPED/所属0，原CLI80236/2114均exit0已消耗。n400 collector93080/export38858/fulloracle16437；n3200 collector42462/export7126/fulloracle57731全部DONE一次，两套各2335artifact SHA通过、1024全state/2097148targets/500raw/来源/原forecast核验PASS。两本地冻结评分各一次PASS（约1.04/1.05秒），两runpublisher和first-pair publisher均DONE，无新模型/训练/重复生成、旧P1缓存评分或旧binary加载。完整账本枚举各约数分钟，保持等待未重复工具。
+
+真实保存结果273/500(54.6%)与276/500(55.2%)，caps36/54均算错、technicalunknown0；原registered first_pair_decision唯一一次给+3/+0.6pp/91discordants，stop_registered_futility=true，原<2pp门触发。后四项S1和Stage2不启动，G1/bootstrap未执行，不写成G1失败或通过。固定分歧样本25+22为全部可用分歧，fallback/outertimeout均0；独立样本判定和实际A4仍PENDING，不能把localPASS或旧ci代码PASS当结果外审。单seed/既见benchmark与数据曝光覆盖混杂，不宣称等效、稳定零效应、能力上限或纯机制。原S2 capFAIL、NC954/967与所有失败父/预留保持。
+
+本次必要完成后费用读取10:11:06UTC：两S1 app延迟计量1.76600245+2.25757774=4.02358019USD，workspace246.90239056/billed0；非invoice/余额。原655c/slot仍预留不是花费，所有失败/setup/build/storage/lag保留，无预留回收或预算增加。Papers仍e097b0cb。review10:08:14仍c9891f6e/108comments，下次正常10:38:15；只发INDEX实际A4请求，无issue13评论。一次误猜旧NC请求文件路径只读失败无副作用，改读真实P1模板；没有为此重做科学工作。旧p007/automation4暂停，p009仅继续最后真实外审与交接，真实停止闭合后暂停。
+
+### 2026-10-15 03:08:12 PDT — S1首对原调用结束；开始一次完整收尾
+
+原CLI80236/2114均exit0已消耗，canonicalresult真实completed。实际provider读取10:05:49.865640UTC两appSTOPPED/owned0，各1024保存更新与500endpoint元数据；尚非完整state/raw/doseoracle或得分。现在按已审原81source/ci helper逐项只做一次collector/export/fulloracle/local500评分，所有旧工作/两startup和上传不重复。原receipt字段actual_cost_cents=655仍是保守记账预留，不是实际invoice。首对真实futilityA4前后四项仍未准入。
+
 ### 2026-10-15 02:30:12 PDT — S1两原训练已启动核验；首次真实provider快照闭合
 
 两原calls80236/2114各submitted一次且仍active，执行ad7cf856/source81不变。新25inputs上传99016和两gateDONE；首16startup28213/60424都PASS（32769/32878targets，真实H10080GB与原claim/fences/55依赖），仅启动局部取证，不是1024全剂量或结果oracle。实际status80651于09:27:30.351292UTC读取两ownedcontainers各1、无terminal/result/error，保存469/106连续更新和0/0终点，不计算partialscore。下次稳定provider09:57:31。

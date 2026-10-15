@@ -1,3 +1,6 @@
+<!-- P009 S1 first pair locally closed 2026-10-15T10:23:04.456004+00:00 -->
+[S1 首对完整结果与证据](reports/p009_20261014/stage1_s1_first_pair_handoff_v1/README.md)：n400 273/500，n3200 276/500，差值+0.6pp，触发原<2pp futility停止规则。两app已STOPPED/owned0；后四项S1与Stage2不启动。完整实际A4外审待完成，G1/bootstrap未执行。
+
 <!-- S1 first pair submitted 2026-10-15T09:27:39.576583+00:00 -->
 [S1首对已各提交一次](reports/p009_20261014/stage1_s1_first_pair_started_v1/README.md)：seed 17 的 n400、n3200；完整结果与外审待完成，后四组继续受原 futility 门约束。
 
