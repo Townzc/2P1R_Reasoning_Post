@@ -56,3 +56,6 @@ Fullfixed c/d reports read04:30:47UTC; C4exact34/T15K4K8 A2PASS and T7raw/K1 A1P
 2026-10-19 22:12:20 PDT: [Five original K1/E1d candidate](student_runtime_k1_e1d_v1/README.md) prepared, no calls. Both originalT1.5K4/K8 continue; E4endpoint-only ownerexception/A2 and disputedK4/K8 ownerchoice pending.
 
 2026-10-19 22:15:24 PDT: [Direct owner decisions](owner_selection_and_e4_endpoint_20261020_v1/README.md): four T7/T72 K4/K8 cells cancelled; K1/E1d retained. E4 endpoint-only exception approved, exactA2 still pending.
+
+
+[C6 adapter and dev-input preparation](c6_adapters_and_dev_draft_v1/README.md): seven new checks passed; original thirty prompts are gold-free worker inputs. No actual search or new model call.

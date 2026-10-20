@@ -3478,3 +3478,8 @@ CLI28484/46497 each EXIT0CONSUMED; originalterminals05:39:19.254768 and05:40:30.
 ### 2026-10-19 22:44:48 PDT — Both E4 endpoint-only results locally verified and published
 
 Newcollectors46768/94328, records47774/89196, oracles25619/42446 allEXIT0CONSUMED once. Each29originalartifactentries/29namedrecords andfull1319tokens passed source/parent/owner/A2/forecast checks; bothprovidersSTOPPED0. Results509/654, caps89/76, unknown0;0newtraining/repeatedstateloads. Two metadata-only publishers DONE once, originaltarbytecopies and oldtrainingproof retained; actualA3requested. No symbolic scoring, bootstrap or course-report prose generated. One guessed oldsummary path was absent during reference lookup; actual originalOLMoRESULTS.json copied unchanged, no oldscore/model rerun.
+
+
+### 2026-10-19 22:54:30 PDT — C6 adapters and gold-free dev inputs prepared
+
+Two new adapters and seven new checks are complete; full runtime/A2 remain unattempted. Only the original thirty dev prompts were encoded once, preserving IDs/order and excluding every solution/gold field from worker input. Maximum prompt length is 384; adding two cue tokens and1024 continuation tokens fits2048. Original S1/E1d/MATH500 ID disjointness is recorded without semantic-uniqueness claims. Full probability matrices and failed-prefix intents are create-only; parser failures are never silently missing. No model, scientific generation, old test/scoring or state reload occurred. C4/E4 are locally closed awaiting actualA3; five original K1/E1d still await exactA2. No new approval gate or budget change.
