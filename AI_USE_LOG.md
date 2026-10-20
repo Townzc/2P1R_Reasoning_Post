@@ -3593,3 +3593,9 @@ D3 and independentk exactA2 are real and saved. One newlocal helper resumes only
 ### 2026-10-20 01:54:00 PDT — C6 local completion and Tier3 exact candidates
 
 Unique approved C6 local66685 completed08:43:22UTC, selectedcandidate2/token1249,731keys/3700rows reused,815newparserattempts includingonefailed-key attempt,0repeatedconfirmedparser/0newmodel. New read-only publication copies saved1703files and originalfailure/raw links; actualselectionA3 pending. OriginalC9/fullsevenresults actualA3accepted; A4issued; limitsretain noindependentsymbolicrescore/privatebinaryclaim and noequivalence/causalproof. Fourseed29actualinputs andcomplete34runtime source candidates arefixedad21722d/22f2593e, trueA1/A2pending; E9inputsA1accepted/fullruntimepreparationnext. No oldtools or tests repeated. Original98d5push36469EXIT0CONSUMED independentlyremoteverified.
+
+### 2026-10-20 02:03:20 PDT — Complete delegated E9 runtime candidate
+
+Original E4 train/merge AST unchanged, two sameT72-text students and one zero-training baseline/500greedy each. Ten inputfiles copy exact9A1files plusgoldfreeprompttext, no newencoding/plans; worker now checks actualtext/token equality. Nine new syntheticchecksPASS0.187s once; noGPU/realmathverify. Existing checked reviewer cannot re-tokenize limitation remains explicit. NewfullA2 includes allsource/input/budget/timing/transfer/oracle/scoring, no extra code-only permission round. No newpaid call or reserve release. A guessed nonexistent student_score_evidence.py read failed harmlessly; actual scoring adapter located and read. Minor import-only readability and error-message cleanup after tests changes no scientific behavior; original failed sources/EOF warnings retain.
+
+E9 publication preserves four frozen common/checkpoint EOF warnings; whole style check is not PASS. The remaining exact staged files passed. No original source bytes were changed for formatting.
