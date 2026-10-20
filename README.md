@@ -1,3 +1,9 @@
+P011 update 2026-10-20T22:26:24.140426+00:00: direct owner adopted data R1/R3 (max once-pass common B;
+shuffle candidates before prefix eligibility); R2 epoch scheduling repaired.
+Exact candidate df4d590485a2bb6b8cb2eeb02e8688f64ebd03db, true revised CR pending, production NOTRUN.
+Original plan remains immutable; see reports/p011_20261020/LONG_DATA_CR_R2_REQUEST.md.
+P010 Oct21 12PDT freeze/finalA5 duty remains separate.
+
 # Current P011 — fixed exploratory plan, source acquisition and code review
 
 [P011 execution record](reports/p011_20261020/README.md) and [first path CR](reports/p011_20261020/LONG_DATA_CR_REQUEST.md). No P011 scientific model has run. Hard180/A115/B20/C12/D25/emergency8; final cutoff Oct21 22PDT. The separate P010 scheduled freeze at Oct21 12PDT remains pending.

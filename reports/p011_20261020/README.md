@@ -1,3 +1,12 @@
+# Latest P011 — revised data CR pending
+
+All raw inputs are downloaded and SHA verified. Direct owner adopted R1/R3;
+revised candidate `df4d590485a2bb6b8cb2eeb02e8688f64ebd03db` implements all three audit requests. Eight new
+checks passed. Production construction and paid scientific calls remain NOTRUN.
+See [re-review request](LONG_DATA_CR_R2_REQUEST.md) and
+[revised packet](long_data_preflight_v2/README.md). Original plan/source history
+below remains intact; it is supplemented by the explicit owner amendment.
+
 # P011 exploratory supplement — execution
 
 Owner supplied the frozen [P011 plan](P011_PLAN_v1.md), original

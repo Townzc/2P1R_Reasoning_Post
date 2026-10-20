@@ -1,3 +1,9 @@
+P011 update 2026-10-20T22:26:24.140426+00:00: direct owner adopted data R1/R3 (max once-pass common B;
+shuffle candidates before prefix eligibility); R2 epoch scheduling repaired.
+Exact candidate df4d590485a2bb6b8cb2eeb02e8688f64ebd03db, true revised CR pending, production NOTRUN.
+Original plan remains immutable; see reports/p011_20261020/LONG_DATA_CR_R2_REQUEST.md.
+P010 Oct21 12PDT freeze/finalA5 duty remains separate.
+
 # P011 exploratory supplement — fixed execution plan v1
 
 The owner adopted claude/audit e0dee182972f9910b707fac68800dcb5a3aff2d3. Exact plan and execution status: [P011](../reports/p011_20261020/README.md). Scope, budgets, selection/cut rules and audit obligations come from that immutable plan, not this summary. Existing P010 data/results and its Oct21 12PDT freeze remain intact. P011 cutoff is Oct21 22PDT.

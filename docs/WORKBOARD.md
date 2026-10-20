@@ -1,3 +1,22 @@
+### 2026-10-20 15:26:24 PDT — P011 data CR changes implemented after direct owner amendment
+
+Claude efa4a7a8 REPORT SHA69f2ee65 was CHANGES-REQUIRED, not PASS; actual
+commit22:20:10/read22:21–22:22 is recorded separately from its future22:45 header.
+Owner explicitly adopted R1/R3 before production: max once-pass B across eight
+original A cells; shuffled candidate-prefix selection4096/1024. No budget/arm
+increase. R2 now shuffles independent complete passes, with exact extras last and
+no global length buckets. Original plan and old unattempted candidate are retained.
+New exact3source candidate df4d590485a2bb6b8cb2eeb02e8688f64ebd03db, sharedCR-r2 pending. Eight new offline
+checks passed0.042s; no old successful tests repeated.11new packet members plus
+3source/1test verified from fixedGit once. AM common-pool source metadata and
+entry disk>=1.5x checks included. Actual builder/A1/runtime/model NOTRUN.
+Original OT3 download55016 EXIT0 consumed; new fullSHA verifier11104 EXIT0 consumed,
+120files28188197544B PASS. BothD raw files were already verified, no repeat.
+C1 exact input metadata located (T15 originalS1; T7/T72 P010r2); no forward model
+or old input preparation/scoring run. Read-only missing guessed filenames and
+truncated historical output were narrowed with real discovered paths; no science
+side effect. P010 Oct21 19UTC freeze and no-Z1 boundary remain unchanged.
+
 ### 2026-10-20 15:11:46 PDT — P011 fixed plan adopted; first construction path sent for exact CR
 
 Direct owner instruction supplies claude/audit e0dee182972f9910b707fac68800dcb5a3aff2d3,
