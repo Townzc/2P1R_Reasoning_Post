@@ -1,0 +1,7 @@
+# t7_s17_n400_k1 — complete local evidence, actual A3 pending
+
+Original1024 updates /2,097,148 targets, complete adapter/optimizer/RNG and original2500 token streams were independently verified once. The original app is STOPPED with zero owned containers. Primary greedy is 251/500; secondary sampled mean pass@1 is 1027/2000 across the four fixed seeds, not best-of-four. Original caps, parser failures and all fixed audit samples remain included. No test-selected checkpoint, changed dose or additional generation.
+
+The original compact archive is copied byte-for-byte. The complete saved CPU scoring journal contains original rows, pair observations, confirmed chunks, fixed audit samples and Boolean tables; publication performs no decoding, tokenization, symbolic comparison, state deserialization or bootstrap. The existing frozen scorer and original runtime source maps remain bound in the proofs. Full state binaries stay private; their public SHA does not assert external auditor access. Independent actual A3 and its fixed-sample decisions are still required.
+
+Provider data removes only actor identity and retains the full private file hash. The reserved6.55USD is not actual spending, final invoice or a balance. Existing failed E4 attempts retain their costs/reservations. The prior T1.5 K1 n400/n3200 primary results are273/276 of500, reused from the fixed P009 closure; no old checkpoint or output was repeated for these references. These audit notes are not course-report prose.

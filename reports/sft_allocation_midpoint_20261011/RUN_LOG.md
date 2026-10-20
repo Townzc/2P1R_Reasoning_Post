@@ -1825,3 +1825,17 @@ Originalupload8214 exited0, exactgoldfree30dev35212bytes completed07:18:42,0mode
 ### 2026-10-20 00:31:50 PDT — First K1 completed; original E1d submitted once
 
 T72n3200 original2746EXIT0CONSUMED andcollector1528EXIT0CONSUMED/actualSTOPPED0, full originalartifact/state downloaded once; namedrecords and fulloracle/scoring still pending. Original E1d59957/appap-vwht3i3XyViIlETn8CFCwd/callfc-01M5C3G8DCT2EDDM5EA3CD2XQN submitted once after realfree slot; originalseed17/1024/2097148 and34source unchanged, no retry. T attemptedreserved63.99/G44, notexpense. Fourotheroriginalcells are not reissued. C6upload8214DONE, noC6/samplecall yet. SixnewcuepayloadchecksPASS and4newgenerationchecks now allpassed: oneoriginaltimingcheckPASS; threefake-workerchecks initially failed becausefixture lackedremote_path, onlythose3 reran afterfixture correction,0runtimechange/modelcalls. Absent guessed scoreevidence filename read had no sideeffects.
+
+### 2026-10-20 00:37:51 PDT — Actual delegated D1/D2 read; original C6 and sample phase
+
+Full fixedeb2373c8/reportfede9fb4 read, ownerdelegation supplies authority. D1 permits same-category grossdelayedmeter×1.2 only with STOPPED0 and real meter coverage through end; no release applied. D2 replaces unattemptedE5 with scoped E9 OLMo/T72MATH pair+baseline, originalA1/A2/A4 required and allcaps unchanged. Reported causal motivation remainshypothesis, notadoptedproof. ActualC6original20554/appap-xPLmKYrPYx6fHKAGOaKU3T/callfc-01M5C3T4T15PRWB83G31VZGNWS submittedonce afterallfiveK1receipts; firstS1sampleonly dispatch now begun, no retraining or oldgreedy generation. Newnecessary07:34meter282.20549832/cash0 is delayedworkspaceusage, notreservation orbalance.
+
+### 2026-10-20 00:49:21 PDT — E9 original texts fit unchanged OLMo context and dose
+
+Unique new input preparation38892EXIT0CONSUMED;3 new boundary checks passed once.3200 complete answers encoded once, nested400 reused; full lengths1429/1675 max, once-each184164/1468689, exact1024/2097148/frozenLR/EOS100257, no omitted/truncated/reselected answers. New metadata/archive publisher only copies confirmed files and verifies readback; no old encoding/scoring or model repeated. ActualA1 pending, runtime/A4 still required. Two guessed future-command/request filenames were absent in read-only checks; actual files located with rg, no execution/write side effects.
+
+### 2026-10-20 00:50:49 PDT — Four original K1 results closed, inference calls completed
+
+T7 n400/n3200 greedy251/273 and T72 n400/n3200 greedy243/265, all/500; fullstate/raw/dose/score/metadata publication completed once, actualA3 still pending. E1d original59957 remainsactive, source34 unchanged. C6 original20554 and originalS1 sample-only48504/80036 exited0, unique collections/records ongoing; no oldgreedy ortraining repeated. New E9 input candidate is ready forA1, no paidTier3call. Attemptedreserves116.29=G44+T69.03+I3.26, notactualexpense;07:34workspacegross282.20549832 notfinalinvoice/balance. D1 has no releases; exactcoverage evidence not asserted fromdailyrows. A mistyped unused interpreter path and guessed read-only module/request paths failed with no scientificsideeffects; valid original evidence retained.
+
+Publication style check retains nine original frozen common/checkpoint EOF warnings. Whole check is not PASS; the remaining staged source/docs pass after those exact original copies are excluded. No immutable source byte was edited for formatting.

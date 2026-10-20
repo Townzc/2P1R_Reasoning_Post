@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-10-20T07:31:50.934477+00:00",
+  "as_of_utc": "2026-10-20T07:50:49.141978+00:00",
   "hard_cap_usd": 240,
   "category_caps_usd": {
     "G": 50,
@@ -8,22 +8,22 @@
     "C": 25
   },
   "latest_workspace_delayed_meter": {
-    "metered_cost": "273.60548723",
+    "metered_cost": "282.20549832",
     "billed_cost": "0E-8",
     "adjustments": {
       "free_storage": "-1.13096249",
-      "credits": "-272.45000000",
+      "network_egress_allowance": "-0.02453583",
       "reservation_adjustment": "-0E-8",
-      "network_egress_allowance": "-0.02452474",
+      "credits": "-281.05000000",
       "plan_cost": "0E-8"
     },
     "metered_cost_breakdown": {
-      "ephemeral_apps": "272.47924130",
       "llm_tokens": "0E-8",
+      "ephemeral_apps": "281.07434538",
       "volumes": "1.13096249"
     }
   },
-  "P010_attempted_reserved_usd": 107.99,
+  "P010_attempted_reserved_usd": 116.29,
   "planned_asset_download_reserve_usd": {
     "t7": 0.5,
     "t72": 0.5
@@ -31,11 +31,11 @@
   "reported_owner_remaining_usd": 283,
   "protected_usd": 43,
   "is_current_balance_or_invoice": false,
-  "notes": "G44/T63.99 retained attempted reservations, not actual expenses. All five original K1/E1d calls submitted; one completed STOPPED0. Four original calls remain active. C6 and original S1 sample-only unattempted; no releases or transfers.",
+  "notes": "All original failed reservations retained; no D1 release applied. G44/T69.03/I3.26 are attempted slot reservations, not actual spending. Gross workspace delayed meter282.20549832 is not a final invoice or balance. D1 requires real STOPPED0 and coverage through ending time; daily interval_start alone supplies no through-watermark.",
   "attempted_by_category": {
     "G": 44,
-    "T": 63.99,
-    "I": 0,
+    "T": 69.03,
+    "I": 3.26,
     "C": 0
   },
   "attempted_reservation_items": {
@@ -55,12 +55,16 @@
     "t72_s17_n3200_k1": 6.55,
     "t7_s17_n400_k1": 6.55,
     "t7_s17_n3200_k1": 6.55,
-    "t72_s17_e1d_n3200_k1": 6.55
+    "t72_s17_e1d_n3200_k1": 6.55,
+    "C6_search": 3.26,
+    "S1_n400_four_sample_only": 2.52,
+    "S1_n3200_four_sample_only": 2.52
   },
   "proposed_unattempted": {
-    "C6_search": 3.26,
-    "original_S1_four_sample_endpoints": 5.04
+    "E9_OLMo_T72_MATH_two_students_max_T": 13.1,
+    "E9_OLMo_MATH_base_max_I": 2.52
   },
   "P010_tagged_delayed_meter_usd": "26.05417028",
-  "latest_snapshot_read_utc": "2026-10-20T06:32:15.677877+00:00"
+  "latest_snapshot_read_utc": "2026-10-20T07:34:09.530100+00:00",
+  "P010_tagged_delayed_meter_usd_scope": "Prior tagged figure retained with its original06:32 snapshot; not recomputed at07:34."
 }

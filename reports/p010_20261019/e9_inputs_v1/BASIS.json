@@ -1,0 +1,124 @@
+{
+  "endpoint_file_sha256": "d51fbb15dbcda17bbe7a86ffeea68e5c0a3ea6bfc7abc818922596a05249ab39",
+  "exact_runtime_A2_and_A4_required": true,
+  "independent_A1_pending": true,
+  "input_archive_sha256": "e356c1e704ee26e8954707a280983aad1c121a7b4ed1e014aab113a9cec70e19",
+  "model": {
+    "architecture": "Olmo2ForCausalLM",
+    "eos_token_ids": [
+      100257
+    ],
+    "files": {
+      "config.json": {
+        "bytes": 623,
+        "sha256": "3dc581384d61b3366fc34a95d12c20e595014ea62352469c17c3e3a77f32882a"
+      },
+      "generation_config.json": {
+        "bytes": 121,
+        "sha256": "6b4e5d0f5199345ef9e1f55139f13451f65eb5bd308a40718df1874ee2998ecf"
+      },
+      "merges.txt": {
+        "bytes": 916646,
+        "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502"
+      },
+      "model-00001-of-00002.safetensors": {
+        "bytes": 4983360992,
+        "sha256": "c52e4ac8bf4867e698d908f9e8c2b84aa891b91dff066d46bf2a7cf453ad77fb"
+      },
+      "model-00002-of-00002.safetensors": {
+        "bytes": 956326560,
+        "sha256": "5f80762572fe28aca49b01b98895d96ca529b9792fc10925a977a161ad768d30"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 14873,
+        "sha256": "704e57695805a67b0c43220e60e31cf43948c387f39799b82b260bb4df8180e6"
+      },
+      "special_tokens_map.json": {
+        "bytes": 125,
+        "sha256": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+      },
+      "tokenizer.json": {
+        "bytes": 7137177,
+        "sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+      },
+      "tokenizer_config.json": {
+        "bytes": 4345,
+        "sha256": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0"
+      },
+      "vocab.json": {
+        "bytes": 1611056,
+        "sha256": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195"
+      }
+    },
+    "model_id": "allenai/OLMo-2-0425-1B",
+    "provenance": {
+      "download_verified_sha256": "4e36d5e24c83b39dc290ec509d77a78c8c940c12986a73fd868d86c9886b9e1d",
+      "kind": "pinned_official_original_F32_weights_no_conversion",
+      "source_sha256": "7460401de4a792c466ac58b66cd3df39907cbf1b1afc440b8d9631f7603fe79e"
+    },
+    "remote_path": "/evidence/p009-stage0-generation-20261014-r1/assets/olmo",
+    "revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+    "vocab_size": 100352
+  },
+  "new_scientific_calls": 0,
+  "original_T72_A1_report_sha256": "3a76f572c38cd2f30f810f1c9788a277323d03c1cf1a2a6847f1071e60e9434b",
+  "original_gold_file_sha256": "132582ca829ff11820b9d739a14c6e3ce383aacb51dba50e406acd2d27d1b95d",
+  "original_rows": {
+    "3200": {
+      "file_sha256": "d9a7b626456fb5a01d4820ca43cc3b003fbd1b4d1c81c3992a352d082a9ead18",
+      "new_original_text_copy_sha256": "d9a7b626456fb5a01d4820ca43cc3b003fbd1b4d1c81c3992a352d082a9ead18"
+    },
+    "400": {
+      "file_sha256": "df0ee10ec45cc04f1058a0777196eb67b2c0babaadcc9905c0052a66f537da93",
+      "new_original_text_copy_sha256": "df0ee10ec45cc04f1058a0777196eb67b2c0babaadcc9905c0052a66f537da93"
+    }
+  },
+  "original_student_spec_sha256": "af2ec37f1ac8e8756afe5e193713d881246f9dc21a51829dc06cc382b2d12e98",
+  "owner_decision_commit": "eb2373c813dcf37f839a5fa6dc2468bbbd4a9328",
+  "owner_decision_report_sha256": "fede9fb4256878596ae36e0e35fac22cbd9bffa08b4bccb46f359c7bf3ed78fa",
+  "protocol_status": "P010 exploratory owner amendment; after prior outcomes, before E9 outcomes",
+  "scope": "p010-E9-exact-input-and-plan-A1",
+  "source_files": {
+    "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+    "experiments/learning_regime_p009/training_plan.py": "fff9a0a12d2361e5c0d33449b8bc292f5b055fe0b446fe5b758db27fc9ca07d2",
+    "experiments/p010/__init__.py": "ffe59067af5aa399e71129929700941e8f82a41537f17a8e22882045f9d16813",
+    "experiments/p010/common.py": "95bd95ce8017b5fed5f6b4554a61b778b4fa7d287b6021c724162ddf861f68f4",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "experiments/sft_allocation_p008/schedule.py": "0f576f3408b4aabb5197ccd073d3b60d3b9b5337099c381dd685db5a4111477e",
+    "reports/p008_20261013/LR_VECTORS.json": "cb9c2e046e588dcdede0770f497f32550b797f0a7d7feacde343936a486cabe2",
+    "scripts/fetch_real_math_sources.py": "b177d81ca199a3185ac9dae5b1cf719eb70b1a472d8c8963a87c9910879da67f",
+    "scripts/plan_real_math_scale.py": "b6aa2a38a0204618add921672573ddf11e5a20e47b812c51a05d13db038fb7ad",
+    "scripts/prepare_p010_e9_inputs.py": "6ba74e773e2efe8f13ff4cc71df21aad52683ce084f807c8957460a3a4cf5b0e",
+    "scripts/prepare_real_math_audit.py": "e7a24e892df0271338811aa3af63ef259d4df2d4a8e74146e3d2ef91eaf069a5",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "tokenizer_files": {
+    "config.json": {
+      "bytes": 623,
+      "sha256": "3dc581384d61b3366fc34a95d12c20e595014ea62352469c17c3e3a77f32882a"
+    },
+    "merges.txt": {
+      "bytes": 916646,
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502"
+    },
+    "special_tokens_map.json": {
+      "bytes": 125,
+      "sha256": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae"
+    },
+    "tokenizer.json": {
+      "bytes": 7137177,
+      "sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca"
+    },
+    "tokenizer_config.json": {
+      "bytes": 4345,
+      "sha256": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0"
+    },
+    "vocab.json": {
+      "bytes": 1611056,
+      "sha256": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195"
+    }
+  },
+  "utc": "2026-10-20T07:49:21.456998+00:00"
+}
