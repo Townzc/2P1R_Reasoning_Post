@@ -1,0 +1,9 @@
+# Revised original E3 allocation proposal — includes actual setup
+
+This dated candidate supersedes unattempted proposal v1 at5df5a688; neither proposal is approved or executed. The original T72 worker-entry-to-first-batch interval was 457.33399844169617seconds, preserved by exact original intent hashes. V1's batch-only initial estimate omitted this observed setup. No old generation, scoring or timing experiment was repeated.
+
+Original E3 remains unchanged: the already frozen e3_hash200 roster from n400, temperatures0.6/1.0, eight attempts each, saved0.8 first-eight attempts reused, no training or new arm. Fourteen batches, observed setup, the all-full-batch maximum38.098671706999994seconds,300seconds uncalibrated closing allowance and20% margin yield1548.8584828076353032seconds. With600startupseconds the prospective resource cost is$9.959701204795452714095616. These are engineering scenarios, not host bounds or actual E3 expense.
+
+**Requested explicit delegated decision:** transfer exactly$7 from C to G, resulting in G57/T150/I15/C18,total240,protected43. Retain oldG44 reserves, leaving$13;80% is$10.40. The proposed one-call reserve is$11.13,1800worker/1860platform/600startup/full2500window. Separately raise the T72 cache+originalteacher+E3 ceiling from$30 to$35.63=0.50+24+11.13. These are explicit exceptions to the original category-transfer and T72 subcap rules, effective only after a real reasoned delegated decision. No settlement credit or failed-reserve release is used.
+
+Every batch including the first will require its actual elapsed time plus an all-observed-batch remainder forecast within the unchanged newly admitted cap and monetary gate; no measurement exception or automatic retry. The complete exact input/runtime/numeric audit remains mandatory before any E3 call. Other accepted seed29/E9/C6 sources are untouched; E3 uses the exception only after their original dispatches have closed. All first proposal bytes remain immutable.

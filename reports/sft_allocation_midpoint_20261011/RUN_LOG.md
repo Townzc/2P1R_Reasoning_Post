@@ -1901,3 +1901,7 @@ Actual calls55669/83964/23135/9847 submitted once, source34 and original4500 cap
 Preserved T72 all-full-batch maximum38.098671707 gives original3200outputs/14batch scenario1000.057685seconds and$7.416075 projected with startup, beyond current Gremaining$6×80%. Proposed explicit delegated exception C→G$4 (G54/C21,total240/protected43 unchanged), newone-slotreserve8.35,1200worker/full1900; no settlementrelease or scientificscopechange. This is NOT approved/admitted. Exactinput/runtime/numericA2 remains required; livefour seed29 and E9/C6 independentwork unchanged. No originalmodel/score/test repeated.
 
 Before first publication, original T72 SPEC also revealed the separate$30 selfhosting ceiling; the unexecuted draft was preserved and proposal explicitly added32.85 (0.5+24+8.35) as another delegated exception. No old immutable record or scientific source changed.
+
+### 2026-10-20 03:03:38 PDT — E3 initial scenario corrected using original setup evidence
+
+Original intent timestamps show457.333998seconds before first T72 batch. V1 batch-only forecast omitted this actual setup and is superseded UNATTEMPTED, allbytes preserved. V2 adds that proxy before20% margin: scenario1548.8584828076353032s/forecast$9.959701204795452714095616, proposes1800worker/11.13reserve,G57/C18,total240/protected43 unchanged,T72subcap35.63. Actual delegated approval and independentfullA2 stillrequired. No input/model/scoring retry, no live source edit or reserve release. Reflection: include both model startup and batch history before declaring a complete numeric candidate.
