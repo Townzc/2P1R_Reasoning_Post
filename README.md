@@ -1,3 +1,9 @@
+# Current P010 — exact Tier3 runtime accepted
+
+[Actual Claude l acceptance](reports/p010_20261019/review_6f1a5293_Tier3_C6_accepted_v1/README.md): four original seed29 same-data inputs/runtime and delegated E9 runtime PASS. C6 saved selection actual A3 PASS; its complete benchmark A2 remains pending. New Tier3 calls follow fresh budget/input/once-only gates. All old evidence stays immutable.
+
+--- Earlier dated state ---
+
 # Current P010 — A3 accepted, A4 issued, Tier3 preparation
 
 [Actual results and C9 A3 acceptance](reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1/README.md) is saved with independent-review limitations. [C6 saved selection](reports/p010_20261019/c6_complete_selection_v1/README.md) completed its approved local repair without new model outputs; actual selection A3 is pending. Four seed29 exact inputs/runtime await A1/A2. E9 inputs have A1 PASS; its full runtime is being prepared. No new Tier3 model has been called. Hard $240/G50/T150/I15/C25 remains unchanged.
