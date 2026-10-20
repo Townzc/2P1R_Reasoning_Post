@@ -1,0 +1,5 @@
+# P010 teacher transport v3
+
+T7 failed after saving256 raw outputs, before any scoring/ack. Tokenizer length151665 is not model output vocabulary152064. The observed record195 has three unmapped model IDs, length1024, noEOS and backendlength; it remains unusable. The fixed P009 first_stop and symbolic scorer are unchanged. Original token/backend bytes stay intact. Other unmapped/out-of-range cases still fail.
+
+T72 is unattempted and can use this narrow transport correction under original C1 fallback authorization. Proposed T7 suffix needs direct owner exception to plan§5 noautomaticretry; original call remains failed. It reuses256 raw outputs, performs their previously unattempted CPU scoring, and generates only8944 fixed missing outputs plus original conditional K1 attempts. New3600s/5.50G allowance retains prior8G; total G reservations including T72 would44<=50, no category transfer. All-batch20percent forecast includes the original failed interval as an explicitly uncalibrated proxy. Five new boundary/actual-body mocked checksPASS, no newGPUcall. OriginalT15 source staysunchanged.

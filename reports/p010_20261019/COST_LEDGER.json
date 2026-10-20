@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-10-20T02:40:57.239313+00:00",
+  "as_of_utc": "2026-10-20T03:12:27.589537+00:00",
   "hard_cap_usd": 240,
   "category_caps_usd": {
     "G": 50,
@@ -23,7 +23,7 @@
       "volumes": "1.13096249"
     }
   },
-  "P010_attempted_reserved_usd": 0,
+  "P010_attempted_reserved_usd": 14.5,
   "planned_asset_download_reserve_usd": {
     "t7": 0.5,
     "t72": 0.5
@@ -31,5 +31,21 @@
   "reported_owner_remaining_usd": 283,
   "protected_usd": 43,
   "is_current_balance_or_invoice": false,
-  "notes": "No automatic category transfers or old reservation releases. Actual new model requests0; upcoming CPU-only cache jobs are bounded and charged toG."
+  "notes": "Amounts above are conservative reservations, not actual charges. T15 completed; T7 failed after256raw. T72 CPUdownload active, noT72 inference. Failed8G remains reserved. No budget/category transfers; no whole-run retry. Setup/build/storage and delayed billing remain counted.",
+  "attempted_by_category": {
+    "G": 14.5,
+    "T": 0,
+    "I": 0,
+    "C": 0
+  },
+  "attempted_reservation_items": {
+    "T7_CPUcache": 0.5,
+    "T72_CPUcache": 0.5,
+    "T15_generator": 5.5,
+    "failed_T7_generator": 8
+  },
+  "proposed_unattempted": {
+    "T72_main_G": 24,
+    "T7_suffix_G_requires_owner": 5.5
+  }
 }

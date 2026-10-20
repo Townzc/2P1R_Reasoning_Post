@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T03:00:47.326694+00:00",
+  "as_of_utc": "2026-10-20T03:12:27.589537+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3365,6 +3365,15 @@
       "request": "reports/p010_20261019/C8_A1_A2_REQUEST.md",
       "status": "pending",
       "blocking_scope": "Only two C8 diagnostic training cells; no repeated per-slot review."
+    },
+    {
+      "request_id": "p010-C2-T7-suffix-owner-exception-r1",
+      "scope": "One proposed T7 unattempted suffix; original no-auto-retry exception requires direct owner",
+      "status": "pending_owner",
+      "packet": "reports/p010_20261019/teacher_runtime_v3",
+      "proposal_sha256": "a8165657a4feab58c707be87ac030e05d70288b39d47bba27f8d0067484c9d84",
+      "blocking_scope": "T7 suffix only; T72 unattempted first run independent",
+      "created_utc": "2026-10-20T03:12:27.589537+00:00"
     }
   ],
   "p008_v31": {
@@ -4617,7 +4626,7 @@
     }
   },
   "p010": {
-    "status": "teacher_runtime_and_C8_A1_A2_prepared_assets_started",
+    "status": "T15_generation_completed_T7_failed_prefix_preserved_T72_assets_active",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4631,7 +4640,10 @@
     "no_old_work_replayed": true,
     "C8_input_commit": "1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59",
     "C8_runtime": "reports/p010_20261019/e4_runtime_v1",
-    "teacher_runtime": "reports/p010_20261019/teacher_runtime_v2",
-    "runtime_source_commit": "17ed56d954560c6285acacef9bc23bc56f9f40b7"
+    "teacher_runtime": "reports/p010_20261019/teacher_runtime_v3",
+    "runtime_source_commit": "17ed56d954560c6285acacef9bc23bc56f9f40b7",
+    "T7_suffix": "proposal_only_owner_exception_required_no_replay",
+    "C3_preparation": "reports/p010_20261019/c3_selection_preparation_v1",
+    "active_automation": "p010-finite-execution-and-audit"
   }
 }

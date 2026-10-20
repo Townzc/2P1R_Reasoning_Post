@@ -1,0 +1,3 @@
+# C3/C4 selection and whole-answer plan preparation
+
+Saved frozen verdicts only; no scorer/model. Exact attemptorder, P008 NFC-whitespace within-question de-duplication, fixedS1 questionroster, K1/K4/K8 nesting, keep underfilledoriginalquestions, report thresholds and fallback/nesting conflicts. OriginalS1 K1 bytes are references, no re-training. Multi-answer plans reuse original scheduler/LR and unchanged single-answer mask/EOS validation, allowing distinctpaths for repeatedquestions. Allanswerspositiveexposure,1024updates/2097148targets; no q0/truncation or doseadjustment. Nine distinct new checksPASS. Actualdatasets await fullteacher evidence/A1; this is engineering preparation, no new code-only blockingreview.

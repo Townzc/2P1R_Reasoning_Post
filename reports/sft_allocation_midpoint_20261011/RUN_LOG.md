@@ -1620,3 +1620,11 @@ Teacher raw files precede frozen CPU scoring; canonical requests prevent replay,
 ### 2026-10-20T03:00:47.329431+00:00 — P010 teacher stop contract final preflight
 
 Before any teacher GPU call, v1 was superseded by teacher_runtime_v2: logical stop now directly uses frozen P009 first_stop (including next-problem boundary and invalid-special handling). Only native EOS remains usable. Original P1 symbolic scorer unchanged. Revised actual-body mocked EOS-at-cap checkPASS; vocab size still cached once. Original v1 source commit/packet remains unattempted historical evidence.
+
+### 2026-10-20T03:12:27.589537+00:00 — P010 T1.5 完成与 T7 首批失败保全
+
+T1.5 原调用完成5940条新输出，另460条旧输出保留复用，无训练或重复生成；原CLI84107 exit0已消耗，一次collector25147正在按原result及STOPPED0收集。T7原CLI25368首批256原raw落盘后失败并STOPPED0，原call不重发。一次只读保全61172保存5files/2571967bytes并核前后目录。唯一异常是记录195含模型词表内而tokenizer未映射的3个token，原长1024/noEOS/backendlength；没有写评分或ack。诊断查询曾在每token重建词表造成不必要本地等待，未生成/评分；新代码只缓存词表一次。原批次区间19.485449s含失败收尾，仅工程proxy。
+
+新25源v3仅允许该已知noEOS长度帽情形按原冻结first_stop保留为不可用，原tokens/backend与scorer不改，其余未知格式仍失败。T72从未推理，可用修正后的首次入口；T7新后缀只提案，须owner明确例外于v3§5无自动重试。提案原256全部复用，只生成8944未尝试固定输出及原K1条件尝试；追加G5.50保留原8，全部G含T72候选44<=50，不挪用类别。5项新测试含真实workerbody模拟复用256、仅生成1、vocab一次，均PASS；只准备未调用。
+
+C3选解/多答案计划纯代码准备：9distinct新检查PASS。初positive synthetic lengths不能构成exact remainder被原scheduler正确拒绝；保留失败，改成可表示fixture并增加明确negative检查，仅2项相关检查运行。实际C3未选解/编码/准入。原P009源码、当前T15源码和E4候选源码均未改。旧RUN_LOG.md/acquisition.py猜错路径只读失败保留，无写入或科学副作用。有限P010heartbeat已实际ACTIVE/30min，不改旧暂停监控，状态未变不通知。

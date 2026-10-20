@@ -1,3 +1,7 @@
+# Current execution — 2026-10-20T03:12:27.589537+00:00
+
+T1.5 has completed5,940 new outputs;460original outputs remain reused. Its independent collection/A1 is in progress. T7 stopped after saving256raw before scoring; see [failure evidence](t7_first_batch_failure_v1/README.md) and [proposed bounded suffix](teacher_runtime_v3/README.md). T7 is not automatically restarted. T72 pinned CPU cache is still active; T72 has no inference yet. C8 exact A1/A2 pending. [C3 selection preparation](c3_selection_preparation_v1/README.md) is code only. Allcost allowances are reservations, not spending.
+
 # P010 execution records
 
 Authorized exploratory plan: [v3/A0](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4287537f7733f5c3568ddb11695d47b566ef75fa/audit/claude/20261019a/P010_PLAN_v3.md). Hard cap$240; G50/T150/I15/C25; no category transfers. Tier3 follows actualA4 automatically subject to the unchanged integrity and budget gates. Existing P008/P009 results stay immutable; old automations stay paused.
