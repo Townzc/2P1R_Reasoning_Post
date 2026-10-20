@@ -1,5 +1,6 @@
 """P010 complete-state and five-endpoint verification; no model or scorer calls."""
 from collections import Counter
+import json
 import math
 from pathlib import Path
 
@@ -40,7 +41,7 @@ def verify_training(root, inputs, spec, run, identity, ledger, tokenizer, prior)
     root, inputs = Path(root), Path(inputs)
     rows, encoded, plan, config = [read(inputs/run/(n+'.json'))
                                   for n in ('rows', 'encoded', 'plan', 'config')]
-    recipe = checked_recipe(config, encoded, plan)
+    recipe = json.loads(json.dumps(checked_recipe(config, encoded, plan), allow_nan=False))
     if config != identity['config'] or digest(rows) != config['training_rows_sha256']:
         raise ValueError('Exact source rows/configuration differ')
     if [encode_row(row, tokenizer, 2048) for row in rows] != encoded:

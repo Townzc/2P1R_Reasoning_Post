@@ -5,6 +5,7 @@ checkpoint remains a complete training artifact even if later evaluation failed;
 its original call and terminal remain failed.
 """
 from pathlib import Path
+import json
 from experiments.p010.common import read,sha,digest
 from experiments.p010.training import checked_recipe
 from experiments.p010.student_evidence import positive
@@ -22,6 +23,17 @@ def verify_training(root, inputs, spec, run, identity, ledger, tokenizer):
         raise ValueError('Exact source rows/configuration differ')
     if [encode_row(row, tokenizer, 2048) for row in rows] != encoded:
         raise ValueError('Independent whole-answer encoding differs')
+    return verify_training_after_encoding(root, inputs, spec, run, identity, ledger)
+
+
+def verify_training_after_encoding(root, inputs, spec, run, identity, ledger):
+    """Unattempted state/dose tail after a separately bound encoding prefix."""
+    root, inputs = Path(root), Path(inputs)
+    encoded, plan, config = [read(inputs/('e4_n'+str(identity['config']['n'])+'_'+n+'.json'))
+                             for n in ('encoded', 'plan', 'config')]
+    # JSON object keys are strings, including budget_report's integer row indices.
+    # Match the original serialization exactly, without dropping any field.
+    recipe = json.loads(json.dumps(checked_recipe(config, encoded, plan), allow_nan=False))
     stored = read(root/'recipe.json')
     if (stored['identity'] != identity or stored['recipe'] != recipe
             or stored['schedule'] != plan['updates'] or stored['lrs'] != plan['lrs']

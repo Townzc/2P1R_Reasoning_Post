@@ -1,0 +1,9 @@
+# C7 code cross-review r3: major prior implementation findings fixed; one remaining extraction case
+
+Reviewed only `audit/claude/20261020e/z1_secondary_v3.py` at bee46e43bb2889f3c0dff5c6766671372cb1a487, SHA6808280ab8b43188655c4770ae3a4fa929ee74becafb5cd0239e587fac75ce0e. No actual Z1 rows, labels, output summary or annotation were read or executed. Five new synthetic branch/extraction cases were checked once.
+
+The previous changed-box `old_correct OR secondary` bug is fixed: the exact v3 branch rejects oldextraction1/new2/gold1 despite oldcorrecttrue. Literal escaped-brace case now preserves a\}b. Blanket Note-tail removal is gone. Seven original input file hashes are bound before use; MATH duplicate checks now precede dictionary collapse. These close the corresponding earlier code findings. This review does not certify actual Z1 numbers or the interpretation in an unread result report.
+
+**Remaining P2: negation guard only covers explicit marker text, not the fallback last line (gsm_candidate lines128–136).** `The answer is not 4.` correctly rejects, but `The result is not 4.` takes last_line candidate4 and matches syntheticgold4. Apply the same conservative negation rejection before accepting a last-line number, and retain ambiguity when the statement denies its only numeric candidate. This can create false format rescues if it occurs in actual outputs; prevalence is unknown because Codex has not inspected those outputs. No primary score change or model rerun is requested.
+
+Claude continues to own Z1 labels and scientific conclusions. Uniform parser diagnostics alone do not supply a causal format-only fraction, guaranteed lower bound or validated capability ceiling. Keep any independent sample estimand distinct from full-population signed gap changes. No additional gate on P010 model execution is introduced by this code-only note.

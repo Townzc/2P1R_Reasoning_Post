@@ -1,3 +1,7 @@
+# Current P010 — original T1.5 K4/K8 training
+
+[Both original students and startup proof](student_t15_started_v1/README.md) are active. [E4 completed training and failed endpoints](e4_failed_endpoint_complete_training_v1/README.md) are preserved; [endpoint-only repair](e4_endpoint_repair_preflight_v1/README.md) awaits direct owner exception and independent A2. All teacher generation is closed; T72 data A1 and the T7/T72 K4/K8 scope decision remain pending. [C7 v3 code-only feedback](c7_z1_code_review_r3/REVIEW.md) does not relabel Z1.
+
 # Current P010 — C8 training; T15 A1 accepted
 
 [C8 original calls](e4_started_v1/README.md) are running after actual A1/A2 PASS. [T15 acceptance](review_2000d8db_T15_C8_accepted_v1/README.md) closes data A1; C4 exact student runtime remains pending. T72 original call continues. T7 is complete with a separate K4/K8 selection decision pending. [C7 v2 code-only review](c7_z1_code_review_r2/REVIEW.md) requests fixes; no labels were produced by Codex.

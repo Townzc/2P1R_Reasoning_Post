@@ -1,6 +1,6 @@
 # Current: P010 v3 authorized exploratory pilot
 
-P010 execution and code-review records: [reports/p010_20261019](reports/p010_20261019/README.md). Plan4287537f; $240 hard cap splitG50/T150/I15/C25. Prior P009 registered stop and all old studies remain closed. New results require P010 A1–A5 integrity gates; T15 and T7 generation are complete; data audits and first student runtime reviews are pending. T72 generation is active.
+[P010 execution and evidence](reports/p010_20261019/README.md): original T1.5 K4/K8 students are training after A1/A2; all teachers are complete. E4 final training states are verified but original endpoint calls failed; a bounded endpoint-only exception awaits approval and audit. $240 hard cap/G50/T150/I15/C25. Old P009 remains closed.
 
 <!-- P009 CLOSED 2026-10-15T11:20:56.314475+00:00 -->
 **P009已关闭，p009已暂停。** 最终实际A4通过并确认预注册停止；273/500与276/500，后四S1/Stage2未启动，G1/bootstrap未执行。[最终材料](reports/p009_20261014/final_handoff_20261015_v1/README.md) · [实际关闭回执](reports/p009_20261014/P009_CLOSED_AUTOMATION_STATUS.json)。

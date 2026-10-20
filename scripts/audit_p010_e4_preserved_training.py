@@ -9,13 +9,25 @@ from experiments.sft_allocation_p008.provider_release import validate_stopped_ap
 
 
 def endpoint_wrapper_failure(failure):
+    import re
     # Python 3.12 made slice hashable: the same original dict slice raises
     # KeyError there, whereas the local older interpreter raises TypeError.
     known = {('TypeError', "unhashable type: 'slice'"),
              ('KeyError', 'slice(0, 256, None)')}
+    source = Path(__file__).resolve().parents[1]/'experiments/p010/modal_e4.py'
+    # Modal's serialized worker traceback retains the source location but can
+    # omit the line text. Bind that exact location to the frozen source bytes.
+    if sha(source) != '81271eee05a8342d6e74b110ec1a7435f1cc5da52426ea418999d76f651d9d00':
+        return False
+    trace = failure.get('traceback', '')
+    location = re.search(r'File "[^"\n]*/experiments/p010/modal_e4\.py", line (\d+), in worker\n', trace)
+    if location is None:
+        return False
+    number = int(location.group(1))
+    lines = source.read_text().splitlines()
     return ((failure.get('type'), failure.get('error')) in known
-            and 'part=rows[startrow:startrow+256]' in failure.get('traceback', '')
-            and 'modal_e4.py' in failure.get('traceback', ''))
+            and 0 < number <= len(lines)
+            and 'part=rows[startrow:startrow+256]' in lines[number-1])
 
 
 def audit(args):

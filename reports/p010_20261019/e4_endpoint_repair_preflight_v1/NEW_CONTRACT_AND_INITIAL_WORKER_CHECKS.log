@@ -1,0 +1,55 @@
+test_actual_original_wrapper_unwrapped_without_mutation (tests.test_p010_e4_endpoint_only.Contract.test_actual_original_wrapper_unwrapped_without_mutation) ... ok
+test_actual_worker_all_six_batches_and_permanent_replay_block (tests.test_p010_e4_endpoint_only.Contract.test_actual_worker_all_six_batches_and_permanent_replay_block) ... ERROR
+test_actual_worker_failure_preserves_intent_and_no_retry (tests.test_p010_e4_endpoint_only.Contract.test_actual_worker_failure_preserves_intent_and_no_retry) ... ERROR
+test_forecast_no_bootstrap_exemption_all_times_and_budget (tests.test_p010_e4_endpoint_only.Contract.test_forecast_no_bootstrap_exemption_all_times_and_budget) ... ok
+test_parent_partial_or_original_endpoint_rejects (tests.test_p010_e4_endpoint_only.Contract.test_parent_partial_or_original_endpoint_rejects) ... ok
+test_wrapper_rejects_partial_duplicate_long_or_changed_endpoint (tests.test_p010_e4_endpoint_only.Contract.test_wrapper_rejects_partial_duplicate_long_or_changed_endpoint) ... ok
+
+======================================================================
+ERROR: test_actual_worker_all_six_batches_and_permanent_replay_block (tests.test_p010_e4_endpoint_only.Contract.test_actual_worker_all_six_batches_and_permanent_replay_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_p010_e4_endpoint_only.py", line 100, in test_actual_worker_all_six_batches_and_permanent_replay_block
+    with tempfile.TemporaryDirectory() as temp:self.worker(Path(temp))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "tests/test_p010_e4_endpoint_only.py", line 87, in worker
+    result=ns['worker'](run,'new',proof,{},'26.20')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<actual endpoint-only worker body>", line 39, in worker
+  File "experiments/sft_allocation_midpoint/common.py", line 30, in read
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "<private-home>/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<private-home>/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/spec.json'
+
+======================================================================
+ERROR: test_actual_worker_failure_preserves_intent_and_no_retry (tests.test_p010_e4_endpoint_only.Contract.test_actual_worker_failure_preserves_intent_and_no_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_p010_e4_endpoint_only.py", line 103, in test_actual_worker_failure_preserves_intent_and_no_retry
+    with tempfile.TemporaryDirectory() as temp:self.worker(Path(temp),True)
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "tests/test_p010_e4_endpoint_only.py", line 85, in worker
+    with self.assertRaisesRegex(RuntimeError,'synthetic generation'):ns['worker'](run,'new',proof,{},'26.20')
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<actual endpoint-only worker body>", line 39, in worker
+  File "experiments/sft_allocation_midpoint/common.py", line 30, in read
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "<private-home>/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<private-home>/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/spec.json'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.029s
+
+FAILED (errors=2)

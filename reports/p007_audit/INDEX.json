@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T04:32:39.990661+00:00",
+  "as_of_utc": "2026-10-20T05:00:25.167957+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3460,6 +3460,30 @@
       "blocking_scope": "Actual T72 data; K4/K8 need owner disposition, K1 reporting fulfilled, E1d separate valid plan",
       "target_commit": "1f0c6ed613f4bb8ef60b177d2930c555c4a2063a",
       "all_manifest_members_git_verified": 40
+    },
+    {
+      "request_id": "p010-C7-Z1-code-cross-review-r3",
+      "scope": "Code cross-review only; Claude retains Z1 labels and interpretations",
+      "reviewed_source_commit": "bee46e43bb2889f3c0dff5c6766671372cb1a487",
+      "review": "reports/p010_20261019/c7_z1_code_review_r3/REVIEW.md",
+      "packet": "reports/p010_20261019/c7_z1_code_review_r3",
+      "manifest_sha256": "804652d2cf39aa3be8e5b1ed3a194d48ee92cf1d80016b6c4afadd6b0eda8839",
+      "status": "major_previous_code_findings_closed_one_P2_remaining",
+      "blocking_scope": "Z1 code feedback only; no model gate",
+      "created_utc": "2026-10-20T04:46:05.458623+00:00"
+    },
+    {
+      "request_id": "p010-E4-endpoint-only-repair-A2-r1",
+      "scope": "p010-C8-endpoint-only-repair-A2",
+      "status": "pending_owner_exception_and_exact_A2",
+      "request": "reports/p010_20261019/E4_ENDPOINT_ONLY_REPAIR_A2_REQUEST.md",
+      "packet": "reports/p010_20261019/e4_endpoint_repair_preflight_v1",
+      "manifest_sha256": "2917324d261d0fe10f65983485a14731a41320f5f051fdb0b86631e7bd4acb3a",
+      "spec_sha256": "83db72d57e4cbde67ce563ec1abaf67f57a294ecf58d013cb258be54edfd3dab",
+      "parent_packet": "reports/p010_20261019/e4_failed_endpoint_complete_training_v1",
+      "parent_manifest_sha256": "2c8cc027f4a888d941e796a9bd453bede2c6ebaaac34503fe3f3c4c79b0ae689",
+      "created_utc": "2026-10-20T04:57:32.352904+00:00",
+      "target_commit": "PIN_AFTER_COMMIT"
     }
   ],
   "p008_v31": {
@@ -4712,7 +4736,7 @@
     }
   },
   "p010": {
-    "status": "T72_original_active_two_E4_originals_training_T15_A1_PASS_C4_A2_pending",
+    "status": "T15_K4_K8_originals_submitted_E4_full_training_preserved_endpoint_exception_pending",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4765,6 +4789,67 @@
       "issue": "Original endpoint wrapper dictionary is sliced as list after training; checkpoint preservation and no-retrain completion proposal required if actual failure occurs"
     },
     "T72_data_packet": "reports/p010_20261019/t72_data_candidate_v1",
-    "teacher_K_owner_options": "reports/p010_20261019/TEACHER_K_SELECTION_CONFLICT_OPTIONS.md"
+    "teacher_K_owner_options": "reports/p010_20261019/TEACHER_K_SELECTION_CONFLICT_OPTIONS.md",
+    "E4_endpoint_repair": "reports/p010_20261019/e4_endpoint_repair_preflight_v1",
+    "C7_review_v3": "reports/p010_20261019/c7_z1_code_review_r3/REVIEW.md",
+    "C4_started": "reports/p010_20261019/student_t15_started_v1",
+    "C4_started_manifest_sha256": "d4d96ee582fba32a736843a41427bbcc9fd0e69cbe368887ea552475ba4332bd",
+    "latest_original_calls": [
+      {
+        "app_id": "ap-0kEQAn1nepSQD3bZWHpZXp",
+        "call_id": "fc-01M5BTFHBNCXGWB81MJ4V4KM0S",
+        "run": "t15_s17_n400_k4",
+        "cli_session": 55749,
+        "execution": "f44962ce803a3bf1393f8fd188ed0f992ec74f1c",
+        "dispatch_epoch": 1792471975.076931,
+        "worker_entry_utc": "2026-10-20T04:52:58.241452+00:00",
+        "hard_deadline_utc": "2026-10-20T06:07:58.241452+00:00",
+        "local_intent_sha256": "50dd96b3bd0bc67f62cd7822c19b911bd951f510dccbf433e34293e2f75a0663",
+        "submitted_sha256": "61658baa2fb5fc0e3818bcd981a352b2677d6f411f39be24d9ecbfd7f60b5ca1",
+        "budget": {
+          "cap_usd": "150",
+          "category": "T",
+          "forecast_usd": "6.091167509188109",
+          "maximum_forecast_fraction": ".8",
+          "new_reserved_usd": "6.55",
+          "not_actual_spending": true,
+          "prior_reserved_usd": "13.10",
+          "remaining_before_usd": "136.90"
+        },
+        "first_block_proof_sha256": "8077b6cf718c040f11a052efb4b63700b5d1920745c078c2357b7712a04ef3ff",
+        "startup_cli": 80661,
+        "startup_consumed": true,
+        "full_state_or_result_oracle": false
+      },
+      {
+        "app_id": "ap-P0uenTlrWcIKgDWFqlaZ4Q",
+        "call_id": "fc-01M5BTGVVZMB5PNXGTYNZXS4Z2",
+        "run": "t15_s17_n400_k8",
+        "cli_session": 78820,
+        "execution": "f44962ce803a3bf1393f8fd188ed0f992ec74f1c",
+        "dispatch_epoch": 1792472018.084478,
+        "worker_entry_utc": "2026-10-20T04:53:42.198225+00:00",
+        "hard_deadline_utc": "2026-10-20T06:08:42.198225+00:00",
+        "local_intent_sha256": "061f1c7a19542b6e5276f80d7b86cc4653c4b2adc9351c22915ae15d09efe41b",
+        "submitted_sha256": "87e5396ca1d60e9f05a106172bf2c1b8fdc5b48f623733766b0e38fd4bd29385",
+        "budget": {
+          "cap_usd": "150",
+          "category": "T",
+          "forecast_usd": "6.091167509188109",
+          "maximum_forecast_fraction": ".8",
+          "new_reserved_usd": "6.55",
+          "not_actual_spending": true,
+          "prior_reserved_usd": "19.65",
+          "remaining_before_usd": "130.35"
+        },
+        "first_block_proof_sha256": "d31ff347af33e3e0e1e16b59c931f141d91c8c30ce2ae593dcf00c2fa3824942",
+        "startup_cli": 93659,
+        "startup_consumed": true,
+        "full_state_or_result_oracle": false
+      }
+    ],
+    "actual_T_reserved_usd": 26.2,
+    "E4_status": "two_original_failed_zero_endpoint_complete_training_verified_once",
+    "T72_actual_A1": "pending"
   }
 }
