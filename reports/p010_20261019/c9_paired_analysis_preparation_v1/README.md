@@ -1,0 +1,7 @@
+# C9 paired-question analysis preparation
+
+The pure analysis source is byte-identical to the already checked preparation. Four synthetic checks passed once; no real outcome table or bootstrap has run. The fixed original-plan contrasts are enumerated, with the cancelled T7/T72 K4/K8 comparisons explicitly unavailable. No missing cell is assigned zero and no completed comparison is selected by its observed effect.
+
+Each complete 500- or1319-question group uses10000 paired question resamples, one shared resampling matrix and deterministic seed20261019. Four-sample endpoints are question means of all four Boolean outcomes, not best-of-four. Pointwise intervals are conditional on the observed models and question resampling; they are not training-seed population or familywise intervals, equivalence tests, or an automatic scientific admission. The >=3pp and positive-lower-bound flag implements the original exploratory plan's arithmetic only. Deterministic seed choice is fixed during implementation after some results exist; it is not represented as preregistration.
+
+The actual input/provenance loader, final tables and new PNGs remain to be bound to completed evidence. Existing P008 T2/F1 artifacts must be referenced unchanged. Claude-owned Z1 results are excluded from Codex reads/calculations; Claude integrates those data. This preparation adds no separate code-only blocking gate; review it with the complete actual C9/A4 evidence. Tier3 evidence will be a dated addendum.
