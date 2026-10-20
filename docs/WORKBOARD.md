@@ -1,3 +1,15 @@
+### 2026-10-20 16:44:46 PDT — Independent C1 input/journal adapter prepared
+
+New c1_evidence.py binds the six original producer paths/manifests and unchanged
+encoded arrays, saves attempted/confirmed forward chunks and per-token NLL,
+blocks missing/nonfinite/partial evidence and replay, and provides read-only
+closure checks without recomputing statistics. Seven new synthetic checks passed
+once0.052s; original source/13oldtests unchanged. Only existing manifest metadata
+was copied into a new draft; no actual old corpus construction or C1 forward.
+No loader/entry/exact runtime or numeric admission yet, no new code-only gate.
+Full shared C1 CR/A1/A2-lite remains required. No science model/paid call/reserve.
+OT3 owner252/1008/4032 approved; exact4source CR410c035d pending, not waiting owner.
+
 ### 2026-10-20 16:39:23 PDT — Direct owner approved 252/1008/4032; exact reuse CR candidate
 
 Owner replied “采用 252/1008/4032，复审通过后执行（推荐）”. Authority is now
