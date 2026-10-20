@@ -3591,6 +3591,21 @@
       "created_utc": "2026-10-20T06:14:46.875587+00:00",
       "target_commit": "1635cc9f2ff2ce538a8b7403411991e12af2c63e",
       "all_manifest_members_git_verified": 47
+    },
+    {
+      "request_id": "p010-C5-existing-S1-samples-A2-r1",
+      "scope": "p010-C5-existing-S1-sample-only-A2",
+      "status": "pending_exact_existing_state_sample_only_A2",
+      "request": "reports/p010_20261019/EXISTING_S1_SAMPLES_EXACT_A2_REQUEST.md",
+      "packet": "reports/p010_20261019/existing_s1_sampling_runtime_v1",
+      "spec_sha256": "fbb07d3dc9fc1f16975e1eb0701b640598c707d3ec5d1fdd39fad1ceefa5f41c",
+      "manifest_sha256": "f6acdac19d2b55b98d30983462b303984644604524a7e89cfa0e110962880bcd",
+      "runtime_source_count": 32,
+      "verification_source_count": 47,
+      "original_new_outputs_per_model": 2000,
+      "new_training_updates": 0,
+      "actual_calls": 0,
+      "created_utc": "2026-10-20T06:48:32.796674+00:00"
     }
   ],
   "p008_v31": {
@@ -5034,17 +5049,10 @@
       "all_manifest_members_git_verified": 47
     },
     "existing_S1_sample_preparation": {
-      "packet": "reports/p010_20261019/existing_s1_sampling_draft_v1",
-      "status": "DRAFT_NOT_RUN",
-      "source_files": {
-        "experiments/p010/existing_student_samples.py": "c1d67e2569391e385ffd1fc6e3d5dbe0ae897e212002138cbc24b4acfe975c19",
-        "experiments/p010/existing_student_restore.py": "d22c2cbd9fbc5d496ecbbd54ec6d57b5bd0dfd9631eead726b3f9121292c45dd",
-        "tests/test_p010_existing_student_samples.py": "94926a0acf7a9708838d5022011bb2d0da9e12b7d0a6f041f9305e1c2cf2811e"
-      },
-      "new_tests": 7,
-      "no_separate_code_only_gate": true,
-      "actual_calls": 0,
-      "execution_draft": "reports/p010_20261019/existing_s1_sampling_runtime_draft_v1"
+      "status": "full_runtime_A2_pending_zero_calls",
+      "packet": "reports/p010_20261019/existing_s1_sampling_runtime_v1",
+      "spec_sha256": "fbb07d3dc9fc1f16975e1eb0701b640598c707d3ec5d1fdd39fad1ceefa5f41c",
+      "new_T_prospective_usd": "5.04"
     },
     "K1_E1d_runtime_A2": "PASS_0be431cf_exact34",
     "latest_acceptance_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1"

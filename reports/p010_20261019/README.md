@@ -71,3 +71,5 @@ Fullfixed c/d reports read04:30:47UTC; C4exact34/T15K4K8 A2PASS and T7raw/K1 A1P
 
 
 [Original S1 sample-only adapters](existing_s1_sampling_draft_v1/README.md): seven new synthetic checks; actual complete runtime and calls still unattempted.
+
+Original S1 sample-only fullcandidate: [exact A2 request](EXISTING_S1_SAMPLES_EXACT_A2_REQUEST.md). Two existing models, four new sampling passes each; no call or approval yet.
