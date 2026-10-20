@@ -1237,3 +1237,23 @@ Exact32runtime/47verification source candidate covers the two original final mod
 ### 2026-10-19 23:52:17 PDT — Input-transfer contingency prepared while original remains active
 
 Original uploader51950 has8/21 confirmed files at06:51:29UTC and remains inside1200seconds. No cancellation/extension/repetition. New separate missing-only continuation is prepared/tested but gated by actual ended124 and original-process absence; it cannot run now. Four fake-Volume checks passed once0.004s, no cloud operation. Confirmed readbacks will be reused; unconfirmed names alone may be completed once after real failure, no overwrite/wholehelper replay or modelretry. Complete S1sample candidate8a63b8d7/69members is published and independentlyremoteverifiedordinary1d162fac; realA2 remainspending.
+
+### 2026-10-19 23:55:37 PDT — Original input transfer reached its fixed local limit
+
+Original uploader51950 returned124 at its1200-second bound; PID35104 is absent. 14/21 originalconfirmed SHAreadbacks and allintent/logbytes retained; no scientificcell was called. No wholeuploader retry or extendedoriginalwindow. Prepared once-only completion2a5955c0 will reuse originalconfirmed proofs and read/upload only unconfirmed names, without overwrite, two readers/3600local bound. Unknown remote errors abort. Separateprivate budgetwriter may bind this truthful completion while originaltimeout staysfailed. No additionalGPU or scientific scope, no claimthat uncommitted transfer parts were free.
+
+### 2026-10-19 23:59:58 PDT — Admit already complete T72 inputs independently
+
+Both T72 K1 cells have all five required files (four cell inputs plus commonMATH500) with original confirmedSHA readbacks. Their exact approved worker already verifies this same per-cell subset; no runtime/gate/source or scientificrule changed. Private budgetpreparation now consumes these original per-cell proofs instead of an unnecessary all21-file completion dependency. The final unconfirmedT7 input remains with originalonce-onlycompletion90371; noextra remotechecks/uploads or oldproof rerun. Globaltransfer is not called complete. This routine sequencing change permits originalT72 calls without waiting for unrelated inputbytes; all actualA1/A2/budget/unused/provider/deadline checks remain.
+
+### 2026-10-20 00:05:07 PDT — Five-cell input transfer reconciled once
+
+Original51950EXIT124/14confirmedparts remainsfailed. New90371completion now hasall21exactSHA/byteproofs, reusedoriginal14 without replay, only7unconfirmednames inspected/completed once. 7 genuinelyabsent names uploaded, 0 committedunconfirmed reused;0overwrites/modelcalls. OriginaluncommittedSDKparts/costs unknown, notfree.34runtime/spec andactualA1/A2 unchanged. Metadata-onlypublicationonce; no oldmodels/tests/inputencoding repeated.
+
+### 2026-10-20 00:08:45 PDT — C6 and original S1 sample-only exact A2 accepted
+
+Full 79cfe895/reportd595ddd1 read; C6 PASS-WITH-NOTES and original two S1 sample-only PASS, exact18/32 runtime plus21/47 verification sources match reviewed2a5955c0. No actual cue or sample outcome yet. Report method notes retained, no Z1 labels read. Original four K1 cells are being dispatched once; fifth E1d waits for a real free slot. Later phase submits C6 before sample-only calls to respect frozen resource bookkeeping. No old model/test/scoring repeated. One readiness metadata read initially guessed the wrong new-proof suffix and failed before readiness/budget writes; only unwritten metadata completed from actual .done.json proofs. Two binding-module read guesses and one absent standalone C6 verification-map guess had no scientific side effects; the exact maps are in SPEC. 07:00:11 review timer rejected before API, actual poll07:04:23 observed the new report.
+
+### 2026-10-20 00:11:41 PDT — Four original starts and direct overnight delegation
+
+Four original K1 calls35542/2746/3069/81377 are SUBMITTED once; allfour first16-block observations24953/53116/78036/83399 EXIT0CONSUMED. Exact34/H100/CUDA12.8/claim and first targets32854/32701/32800/32702 verified, not fullstate/raw outcomes. Fifth E1d unattempted pending real slotrelease. T57.44/G44 reservations retained; no release or newmeterquery. Direct owner delegated tonight's P010 approval decisions to existingClaude; record real decisions/reasons and retain independentexactaudit, hard240/categorycaps/protected43. No externalpost or invented newbudget/scientific permission. One repeated guessedCOST_LEDGER.md and nonexistentoldstartedpublisher read failed without writes; actualJSON ledger and new metadata-only publisher used.

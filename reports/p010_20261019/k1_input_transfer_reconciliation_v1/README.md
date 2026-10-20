@@ -1,0 +1,7 @@
+# Five-cell input transfer complete
+
+The original uploader hit its unchanged1200second local limit and exited124 before any new scientificcall. Fourteen confirmed file SHA readbacks, originalintent/log and all partial evidence were preserved. One separate3600second, two-reader missing-only completion reused those confirmed proofs. Only previously unconfirmed names were read; already committed matching files were reused and genuinely absent files uploaded with force=False. All21 original files now have exact expected SHA/byte proofs; no existing committed file was overwritten and the whole original helper was not repeated. Worker inputs/34runtime sources/scientificscope/A1/A2 remain unchanged.
+
+This is transfer recovery, not another student attempt or a scientific retry. Four fake-Volume tests preceded it; those fixtures were not cloud observations. Actual once-only transfer proofs and failures are included here. No oldmodel, stateoracle, scoring, tokenization or training occurred. The private budgetwriter binds this new completion rather than rewriting the failed original uploader as completed.
+
+The per-file field remote_uploaded_again=false means no overwrite of a committed input; it does not establish that the timed-out SDK sent no uncommitted blob parts. Those historical bytes/costs are unknown and not declared free. Existing_remote_reused and original-confirmed proof distinguish the actual cases. This packet contains metadata, not credentials or provider actor identity.

@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T06:34:03.017593+00:00",
+  "as_of_utc": "2026-10-20T07:11:41.317754+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3579,7 +3579,7 @@
     {
       "request_id": "p010-C6-search-A2-r1",
       "scope": "p010-C6-search-input-runtime-and-selection-A2",
-      "status": "pending_exact_original_search_A2",
+      "status": "completed_A2_PASS-WITH-NOTES",
       "request": "reports/p010_20261019/C6_SEARCH_EXACT_A2_REQUEST.md",
       "packet": "reports/p010_20261019/c6_search_runtime_v1",
       "spec_sha256": "5014f3ce10f9c7ba719e69a61effd0bcd526a815737fd49b355bb856e73713f8",
@@ -3590,12 +3590,17 @@
       "actual_model_calls": 0,
       "created_utc": "2026-10-20T06:14:46.875587+00:00",
       "target_commit": "1635cc9f2ff2ce538a8b7403411991e12af2c63e",
-      "all_manifest_members_git_verified": 47
+      "all_manifest_members_git_verified": 47,
+      "review_commit": "79cfe89581e10084f97192a4049e2c75e6af886c",
+      "report_sha256": "d595ddd19f5f9986e94586962aae75bbf926a340d7de366a59ca5cef82b37015",
+      "acceptance_packet": "reports/p010_20261019/review_79cfe895_C6_S1_samples_A2_accepted_v1",
+      "acceptance_file": "C6_SEARCH_A2_ACCEPTED.json",
+      "full_report_read_utc": "2026-10-20T07:06:02.144948+00:00"
     },
     {
       "request_id": "p010-C5-existing-S1-samples-A2-r1",
       "scope": "p010-C5-existing-S1-sample-only-A2",
-      "status": "pending_exact_existing_state_sample_only_A2",
+      "status": "completed_A2_PASS",
       "request": "reports/p010_20261019/EXISTING_S1_SAMPLES_EXACT_A2_REQUEST.md",
       "packet": "reports/p010_20261019/existing_s1_sampling_runtime_v1",
       "spec_sha256": "fbb07d3dc9fc1f16975e1eb0701b640598c707d3ec5d1fdd39fad1ceefa5f41c",
@@ -3607,7 +3612,12 @@
       "actual_calls": 0,
       "created_utc": "2026-10-20T06:48:32.796674+00:00",
       "target_commit": "8a63b8d74932953c7be34d4d93d520a8095df9f3",
-      "all_manifest_members_git_verified": 69
+      "all_manifest_members_git_verified": 69,
+      "review_commit": "79cfe89581e10084f97192a4049e2c75e6af886c",
+      "report_sha256": "d595ddd19f5f9986e94586962aae75bbf926a340d7de366a59ca5cef82b37015",
+      "acceptance_packet": "reports/p010_20261019/review_79cfe895_C6_S1_samples_A2_accepted_v1",
+      "acceptance_file": "EXISTING_S1_SAMPLES_A2_ACCEPTED.json",
+      "full_report_read_utc": "2026-10-20T07:06:02.144948+00:00"
     }
   ],
   "p008_v31": {
@@ -4860,7 +4870,7 @@
     }
   },
   "p010": {
-    "status": "five_original_K1_E1d_A2_ACCEPTED_C4_E4_actual_A3_ACCEPTED_C6_A2_pending",
+    "status": "K1_E1d_original_training_started_C6_and_existing_S1_sample_A2_accepted",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -5058,6 +5068,19 @@
       "target_commit": "8a63b8d74932953c7be34d4d93d520a8095df9f3"
     },
     "K1_E1d_runtime_A2": "PASS_0be431cf_exact34",
-    "latest_acceptance_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1"
+    "latest_acceptance_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1",
+    "K1_E1d_input_transfer": {
+      "status": "complete_after_bounded_missing_parts_reconciliation",
+      "packet": "reports/p010_20261019/k1_input_transfer_reconciliation_v1",
+      "original_exit": 124,
+      "confirmed_original": 14,
+      "new_model_calls": 0,
+      "manifest_sha256": "00c1c52ed6d52e4ff3cb123152b1a4362159c32c85c1011990b6c3f724a941fc"
+    },
+    "C6_search_runtime_A2": "PASS_WITH_NOTES_79cfe895",
+    "existing_S1_sample_runtime_A2": "PASS_79cfe895",
+    "K1_E1d_first_four_started": "reports/p010_20261019/k1_first_four_started_v1",
+    "owner_overnight_delegation": "reports/p010_20261019/owner_overnight_delegation_20261020_v1",
+    "owner_delegation_file_sha256": "85a08b9cb6ca519db13aec3c1c7a0b72ba0a72f188da1dd90f7f9093a35b7f6c"
   }
 }

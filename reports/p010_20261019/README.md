@@ -1,3 +1,7 @@
+# Current P010 — four K1 original cells running
+
+[Actual startup records](k1_first_four_started_v1/README.md); [C6 and original S1 sample-only A2](review_79cfe895_C6_S1_samples_A2_accepted_v1/README.md); [input transfer reconciliation](k1_input_transfer_reconciliation_v1/README.md); [direct overnight delegation](owner_overnight_delegation_20261020_v1/README.md). Fifth E1d waits for a real free slot. Completed T15/E4 results remain unchanged.
+
 # Current P010 — exact K1/E1d A2 and completed results A3 accepted
 
 [Original report and scoped acceptances](review_a59b6622_K1_A2_results_A3_accepted_v1/DISPOSITION.md). Five original K1/E1d cells may proceed after fresh budget/input transfer; no new call yet. E4 counts509/654 and T1.5 K4/K8 counts262/279 now have actual A3 PASS with disclosed independent-scoring limits. C6 search exactA2 remains pending. Four T7/T72 K4/K8 cells remain owner-cancelled.
