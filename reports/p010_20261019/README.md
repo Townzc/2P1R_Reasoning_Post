@@ -1,3 +1,7 @@
+# Latest execution — 2026-10-20T03:23:14.621855+00:00
+
+[T1.5 complete data/A1 candidate](t15_data_candidate_v1/README.md): K4=1592 answers and K8=3146, both400 questions, alloriginaldoseplans ready. [Original generation evidence](teacher_t15_complete_v1/README.md) retains5940new+460reused provenance; actual externalA1 pending. T72 originalselfhostcall is active (TP4H100/bf16), no smoke result yet. T7 proposed no-replay suffix awaits the directowner exception already requested; no secondT7call. C8 combinedA1/A2 remains pending.
+
 # Current execution — 2026-10-20T03:12:27.589537+00:00
 
 T1.5 has completed5,940 new outputs;460original outputs remain reused. Its independent collection/A1 is in progress. T7 stopped after saving256raw before scoring; see [failure evidence](t7_first_batch_failure_v1/README.md) and [proposed bounded suffix](teacher_runtime_v3/README.md). T7 is not automatically restarted. T72 pinned CPU cache is still active; T72 has no inference yet. C8 exact A1/A2 pending. [C3 selection preparation](c3_selection_preparation_v1/README.md) is code only. Allcost allowances are reservations, not spending.

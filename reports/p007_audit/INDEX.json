@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T03:12:27.589537+00:00",
+  "as_of_utc": "2026-10-20T03:23:14.621855+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3373,7 +3373,21 @@
       "packet": "reports/p010_20261019/teacher_runtime_v3",
       "proposal_sha256": "a8165657a4feab58c707be87ac030e05d70288b39d47bba27f8d0067484c9d84",
       "blocking_scope": "T7 suffix only; T72 unattempted first run independent",
-      "created_utc": "2026-10-20T03:12:27.589537+00:00"
+      "created_utc": "2026-10-20T03:12:27.589537+00:00",
+      "target_commit": "75157b1040cc363bf7e982272a3a24f00c057860"
+    },
+    {
+      "request_id": "p010-T15-complete-data-A1-r1",
+      "scope": "p010-T15-complete-data-A1",
+      "status": "pending",
+      "request": "reports/p010_20261019/T15_DATA_A1_REQUEST.md",
+      "packets": {
+        "reports/p010_20261019/teacher_t15_complete_v1": "bef0be83490e064189691ae7a616a7c4a521e4228a7a7dafaefe99305843502c",
+        "reports/p010_20261019/t15_data_candidate_v1": "f59d973ae62693f7e32429072487103b889bb172bd44f0b07fa0547490246f91"
+      },
+      "input_archive_sha256": "1b5aa7883a821b77ff4127170c0fd7cffcab7c7e2f533b60053f17e4caa44183",
+      "created_utc": "2026-10-20T03:23:14.621855+00:00",
+      "blocking_scope": "New T1.5 K4/K8 training data only; T72 and C8 independent"
     }
   ],
   "p008_v31": {
@@ -4626,7 +4640,7 @@
     }
   },
   "p010": {
-    "status": "T15_generation_completed_T7_failed_prefix_preserved_T72_assets_active",
+    "status": "T15_data_A1_pending_T72_original_active_T7_owner_exception_pending",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4644,6 +4658,13 @@
     "runtime_source_commit": "17ed56d954560c6285acacef9bc23bc56f9f40b7",
     "T7_suffix": "proposal_only_owner_exception_required_no_replay",
     "C3_preparation": "reports/p010_20261019/c3_selection_preparation_v1",
-    "active_automation": "p010-finite-execution-and-audit"
+    "active_automation": "p010-finite-execution-and-audit",
+    "T15_data_packet": "reports/p010_20261019/t15_data_candidate_v1",
+    "T72_original": {
+      "app_id": "ap-xccCmT5uLfvWmqkAvCjsoz",
+      "call_id": "fc-01M5BMZX7AW9BGN6983VMRED9R",
+      "execution": "75157b1040cc363bf7e982272a3a24f00c057860",
+      "status": "submitted_original_no_retry"
+    }
   }
 }

@@ -3346,3 +3346,11 @@ T1.5 原调用完成5940条新输出，另460条旧输出保留复用，无训�
 新25源v3仅允许该已知noEOS长度帽情形按原冻结first_stop保留为不可用，原tokens/backend与scorer不改，其余未知格式仍失败。T72从未推理，可用修正后的首次入口；T7新后缀只提案，须owner明确例外于v3§5无自动重试。提案原256全部复用，只生成8944未尝试固定输出及原K1条件尝试；追加G5.50保留原8，全部G含T72候选44<=50，不挪用类别。5项新测试含真实workerbody模拟复用256、仅生成1、vocab一次，均PASS；只准备未调用。
 
 C3选解/多答案计划纯代码准备：9distinct新检查PASS。初positive synthetic lengths不能构成exact remainder被原scheduler正确拒绝；保留失败，改成可表示fixture并增加明确negative检查，仅2项相关检查运行。实际C3未选解/编码/准入。原P009源码、当前T15源码和E4候选源码均未改。旧RUN_LOG.md/acquisition.py猜错路径只读失败保留，无写入或科学副作用。有限P010heartbeat已实际ACTIVE/30min，不改旧暂停监控，状态未变不通知。
+
+### 2026-10-20T03:23:14.621855+00:00 / Oct19 PDT — T1.5 A1 数据候选与 T72 原调用
+
+T15原84107、collector25147、C3prepare90417均一次DONE；新5940独立原始token核验与原460P2/P1复用来源完整，零新增symbolic评分。K4 N1592/400题/5不足/742953一次targets，K8 N3146/400题/14不足/1457460一次targets；均原1024/2097148/LR且全部正曝光。新metadata-only publisher67704一次完成两个不可变包及原tar/readback、选解inputarchive/source18；外部A1真实pending，不能称训练已准入。原rootSUMMARY绝对源码路径仅公开投影为repo相对路径，private原SHA保留；provider actor不公开。
+
+T72原CPU14976全部44files145424086788bytes完成/STOPPED0，原GPU17614已唯一提交ap-xccCmT5uLfvWmqkAvCjsoz/callfc-01M5BMZX7AW9BGN6983VMRED9R/source75157b10，bf16/TP4H100/4500hard/G24，当前加载权重，未完成smoke。T7新后缀仍等已发出的owner例外答复，原256不重复，旧failure保持。原P010 v3§5没有自动重试是此处明确许可原因，不重复常规询问。
+
+必要billing89109于03:17:10–11UTC一次DONE：workspacegross248.45546721/cash0；四P010已标记app合计0.83928102延迟计量，非invoice/余额/最终费用。已尝试G预留38.5、T7候选另5.5，保留失败/启动/存储/lag，无分类挪用或释放预留。新publisher执行前核真实billing键为object_id，未执行稿已修正，无部分产物。误读不存在LIVE_P010_HANDOFF.md发生写前，实际handoff已改读正确文件。

@@ -1,5 +1,5 @@
 {
-  "as_of_utc": "2026-10-20T03:12:27.589537+00:00",
+  "as_of_utc": "2026-10-20T03:23:14.621855+00:00",
   "hard_cap_usd": 240,
   "category_caps_usd": {
     "G": 50,
@@ -8,22 +8,22 @@
     "C": 25
   },
   "latest_workspace_delayed_meter": {
-    "metered_cost": "247.55342744",
+    "metered_cost": "248.45546721",
     "billed_cost": "0E-8",
     "adjustments": {
-      "plan_cost": "0E-8",
-      "credits": "-246.42000000",
-      "reservation_adjustment": "-0E-8",
       "free_storage": "-1.13096249",
-      "network_egress_allowance": "-0.00246495"
+      "reservation_adjustment": "-0E-8",
+      "credits": "-247.30000000",
+      "plan_cost": "0E-8",
+      "network_egress_allowance": "-0.02450472"
     },
     "metered_cost_breakdown": {
       "llm_tokens": "0E-8",
-      "ephemeral_apps": "246.42507101",
-      "volumes": "1.13096249"
+      "volumes": "1.13096249",
+      "ephemeral_apps": "247.32887056"
     }
   },
-  "P010_attempted_reserved_usd": 14.5,
+  "P010_attempted_reserved_usd": 38.5,
   "planned_asset_download_reserve_usd": {
     "t7": 0.5,
     "t72": 0.5
@@ -31,9 +31,9 @@
   "reported_owner_remaining_usd": 283,
   "protected_usd": 43,
   "is_current_balance_or_invoice": false,
-  "notes": "Amounts above are conservative reservations, not actual charges. T15 completed; T7 failed after256raw. T72 CPUdownload active, noT72 inference. Failed8G remains reserved. No budget/category transfers; no whole-run retry. Setup/build/storage and delayed billing remain counted.",
+  "notes": "T15 and CPU caches completed; failed T7 kept8G. Original T72 GPUcall active with24G. Known P010 app tags delayed0.83928102 exclude not-yet-metered T72GPU; no finalinvoice/balance claim. No reserve release, category transfer or double counting of included charges.",
   "attempted_by_category": {
-    "G": 14.5,
+    "G": 38.5,
     "T": 0,
     "I": 0,
     "C": 0
@@ -42,10 +42,12 @@
     "T7_CPUcache": 0.5,
     "T72_CPUcache": 0.5,
     "T15_generator": 5.5,
-    "failed_T7_generator": 8
+    "failed_T7_generator": 8,
+    "T72_main": 24
   },
   "proposed_unattempted": {
-    "T72_main_G": 24,
     "T7_suffix_G_requires_owner": 5.5
-  }
+  },
+  "P010_tagged_delayed_meter_usd": "0.83928102",
+  "latest_snapshot_read_utc": "2026-10-20T03:17:11.513737+00:00"
 }
