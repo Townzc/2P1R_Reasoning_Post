@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T04:28:45.221933+00:00",
+  "as_of_utc": "2026-10-20T04:32:39.990661+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3403,19 +3403,22 @@
     {
       "request_id": "p010-C4-student-A2-r1",
       "scope": "p010-C4-A2",
-      "status": "pending",
+      "status": "completed_PASS_T15_K4_K8_only",
       "packet": "reports/p010_20261019/student_runtime_v1",
       "spec_sha256": "753cbafbe895b1f13650ba235356a9e46b9f1f898dd369c0f9a54f17019c8601",
       "manifest_sha256": "0faef8042e34228a4a33ea2b32f4a4e9b55f8bca2a6b22a85b180931460af711",
       "request": "reports/p010_20261019/C4_A2_REQUEST.md",
       "blocking_scope": "Only C4 first actual student entry; A1 data remains separately required, combined report welcome",
       "created_utc": "2026-10-20T03:36:18.817041+00:00",
-      "target_commit": "73afc9db175e678a9fb538379e0f630cfdd45fdb"
+      "target_commit": "73afc9db175e678a9fb538379e0f630cfdd45fdb",
+      "actual_report_commit": "bee46e43bb2889f3c0dff5c6766671372cb1a487",
+      "actual_report_sha256": "aa946f4ab8db1b9d9d43b121fa298573796df4a9ecc5b7b6d691b83f27df24aa",
+      "acceptance_packet": "reports/p010_20261019/review_bee46e43_C4_T7_accepted_v1"
     },
     {
       "request_id": "p010-T7-complete-data-A1-r1",
       "scope": "p010-T7-complete-data-A1",
-      "status": "pending_actual_A1_K4_K8_owner_resolution_required",
+      "status": "completed_K1_PASS_K4_K8_OWNER_BLOCKED",
       "request": "reports/p010_20261019/T7_DATA_A1_REQUEST.md",
       "packets": {
         "reports/p010_20261019/teacher_t7_complete_v1": "50995ae6fd4e5ca1c47b8c25dd1c7ce3661974003e426e5fc73c0e8ffcf06b1e",
@@ -3426,7 +3429,10 @@
       "blocking_scope": "T7 data only; K4/K8 unresolved nesting/coverage; original K1 plans intact",
       "owner_options": "reports/p010_20261019/T7_SELECTION_CONFLICT_OPTIONS.md",
       "target_commit": "33405785c8deb8ebd9c16116564ad17437c86f5f",
-      "all_manifest_members_git_verified": 40
+      "all_manifest_members_git_verified": 40,
+      "actual_report_commit": "bee46e43bb2889f3c0dff5c6766671372cb1a487",
+      "actual_report_sha256": "7881a0b3123a6cc540749b68060f297e163bb86d294f79804c807b346fe019fd",
+      "acceptance_packet": "reports/p010_20261019/review_bee46e43_C4_T7_accepted_v1"
     },
     {
       "request_id": "p010-C7-Z1-code-cross-review-r2",
@@ -4736,11 +4742,10 @@
     },
     "C4_candidate": "reports/p010_20261019/student_runtime_v1",
     "latest_review": {
-      "commit": "2000d8db66d3f0c30f1b04f2c2fd3b0a7b4cdc89",
-      "actual_read_utc": "2026-10-20T04:01:24.622666+00:00",
-      "T15_A1": "PASS",
-      "C8_A1_A2": "PASS",
-      "C4_A2": "PENDING"
+      "commit": "bee46e43bb2889f3c0dff5c6766671372cb1a487",
+      "fullread_utc": "2026-10-20T04:30:47.775772+00:00",
+      "C4": "PASS_exact_T15_K4_K8",
+      "T7": "PASS_raw_K1_K4_K8_need_owner"
     },
     "C7_review_v2": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
     "C8_started": "reports/p010_20261019/e4_started_v1",
