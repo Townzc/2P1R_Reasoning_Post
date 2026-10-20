@@ -1905,3 +1905,17 @@ Before first publication, original T72 SPEC also revealed the separate$30 selfho
 ### 2026-10-20 03:03:38 PDT — E3 initial scenario corrected using original setup evidence
 
 Original intent timestamps show457.333998seconds before first T72 batch. V1 batch-only forecast omitted this actual setup and is superseded UNATTEMPTED, allbytes preserved. V2 adds that proxy before20% margin: scenario1548.8584828076353032s/forecast$9.959701204795452714095616, proposes1800worker/11.13reserve,G57/C18,total240/protected43 unchanged,T72subcap35.63. Actual delegated approval and independentfullA2 stillrequired. No input/model/scoring retry, no live source edit or reserve release. Reflection: include both model startup and batch history before declaring a complete numeric candidate.
+
+### 2026-10-20 03:14:35 PDT — Two original seed29 endpoints returned
+
+Original t72seed29n3200 terminal10:09:50UTC and t15seed29n400 terminal10:13:47UTC now have completed envelopes; original CLIs83964/23135 EXIT0 consumed once. Begin their unique stopped-provider collection, then full state/raw/dose oracle and frozen new scoring. Other two original calls remain unresubmitted. No partial scores or old scientific computation. Prior broad JSON read printed excessive metadata; subsequent reads select small status fields only.
+
+### 2026-10-20 03:22:47 PDT — Seed29 original generation complete; E9 originals dispatched
+
+All four original seed29 calls completed and original CLIs consumed once; three full oracles and frozen new scores/publishers done, fourth unique closeout in progress. All known completed provider proofs are STOPPED0. E9 original two students plus baseline each submitted once under true l exactA2/A1/A4 and fresh09:41billing; startup87709/79390 each verified original first16/H100/source34 once, not full-state/raw proof. Original four seed29 source unchanged. Attempted reserves now G44/T108.33/I5.78/C0=158.11, not actual spend; no release. E3 private11contract+6actual-body entirely mocked newchecks PASS once; no GPU/symbolic/model/oldtest repeats. No actual E3 allocation/A2 yet. Two guessed read-only filenames absent and one broad metadata read were navigation failures only; subsequent file discovery and bounded status output corrected the workflow.
+
+### 2026-10-20 03:32:47 PDT — Four original seed29 results and analysis closed locally
+
+All four original seed29 calls/collectors/full-state and raw oracles/frozen scorers/per-run publishers are DONE; no repeats. Greedy counts T72 n400/n3200=242/259 and T15 n400/n3200=259/273 of500. Original Tier3-only four primary and four secondary question-paired contrasts ran once at10:27:30UTC; metadata-only publication now copies those completed results. Actual A3 is pending. E9 baseline unique full raw oracle74549 and frozen scoring are DONE, zero training; both original E9 students remain active with their once-only first16 proofs. No old seed17 bootstrap/scoring/state loading repeated. Original failed costs remain; attempted reserves158.11 are not spending. Purpose: deliver complete original results to independent audit while the two existing students continue. Absolute host locator in the new analysis intent is explicitly projected with original SHA retained.
+
+Publication style note: whole staged whitespace check retains eight existing EOF warnings from exact common/checkpoint source copies. The check excluding only those eight frozen copies passed; whole-range style is not reported PASS. Original bytes were preserved.

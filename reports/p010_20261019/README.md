@@ -1,3 +1,9 @@
+# Current P010 — seed 29 complete locally; two E9 students active
+
+[Four original seed29 results and conditional analysis](seed29_analysis_v1/README.md) are ready for actual A3. [E9 original submissions](e9_original_started_v1/README.md) retain both running students and the completed baseline. C6 benchmark exact A2 and E3 explicit allocation/full A2 remain pending. No old work was repeated.
+
+--- Earlier dated state ---
+
 # Current P010 — four seed29 originals running
 
 [Submission and startup evidence](seed29_original_started_v1/README.md): exact A1/A2 and four first-block proofs are complete. E9 inputs are ready and wait for a real shared slot; C6 full benchmark A2 remains pending. No old work was repeated.

@@ -1,0 +1,3 @@
+# Original E9 calls and startup metadata
+
+Each of the two original OLMo students and original zero-training baseline was submitted once after exact A1/A2 and the issued A4 report. Each student first-16-update proof verifies original H100/source/claim/recipe bindings, not complete training or endpoint results. The baseline completed its unique collection, original full raw oracle and frozen 500-row symbolic scoring; its actual result A3 remains pending. Two original students are still active at this metadata observation. No call was repeated. Full result evidence will be published as a dated packet, without rewriting this startup record.
