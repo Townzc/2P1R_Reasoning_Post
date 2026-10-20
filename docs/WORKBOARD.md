@@ -1335,3 +1335,9 @@ Full Claude l report read2026-10-20T09:41:10.885879+00:00, event09:21UTC minute 
 ### 2026-10-20 02:56:47 PDT — Four original seed29 calls and startup evidence
 
 Actual calls55669/83964/23135/9847 submitted once, source34 and original4500 caps unchanged. Startup49388(firstthree)/91942(fourth) EXIT0 consumed, first16 targets32520/32776/32393/32600; not fullstate/raw or outcomes. Unique17-file seed29 upload63044 and10-file E9 upload44089 completed/readback once. E9 models still uncalled awaiting actual shared slot; C6 completebenchmarkA2 pending. AttemptedG44/T95.23/I3.26/C0=142.49 are reservations, notspend; actual09:41 delayedworkspace285.01552108 notinvoice/balance. Papers47–54 fully read as background only, no new scientificauthority. No oldmodel/scoring/input/test repeat. Read-only typo of an unused interpreter and a guessed plural module filename failed before writes or calls; corrected only navigation, not scientific work.
+
+### 2026-10-20 02:59:13 PDT — Concrete original E3 funding proposal, no execution
+
+Preserved T72 all-full-batch maximum38.098671707 gives original3200outputs/14batch scenario1000.057685seconds and$7.416075 projected with startup, beyond current Gremaining$6×80%. Proposed explicit delegated exception C→G$4 (G54/C21,total240/protected43 unchanged), newone-slotreserve8.35,1200worker/full1900; no settlementrelease or scientificscopechange. This is NOT approved/admitted. Exactinput/runtime/numericA2 remains required; livefour seed29 and E9/C6 independentwork unchanged. No originalmodel/score/test repeated.
+
+Before first publication, original T72 SPEC also revealed the separate$30 selfhosting ceiling; the unexecuted draft was preserved and proposal explicitly added32.85 (0.5+24+8.35) as another delegated exception. No old immutable record or scientific source changed.
