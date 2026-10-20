@@ -1,0 +1,9 @@
+# Original Tier 3 seed 29 inputs — A1 pending
+
+These are the four cells in P010 v3 §3.7: T1.5 and T72, each n400/n3200. Every original seed17 question, teacher answer and token array is copied byte-for-byte. P009's independently selected seed29 question lists are not used. Only four seed29 whole-answer training schedules were built; there was no new answer encoding, selection, teacher generation, training or scoring.
+
+Every cell retains1024 updates,2097148 supervised targets including native EOS151643, the frozen learning-rate vector, and at least one exposure per complete answer. T1.5 once-each lengths are188446/1494755; T72 lengths are191865/1529639. Exposures are11/12,1/2,10/11,1/2 respectively. All500 original MATH prompt identities and the primary greedy plus four-sample endpoint definitions are retained.
+
+The first unpublished preparation omitted the literal tier field and represented the same pinned model identity as a two-element list. A metadata finalizer failed at the existing contract before writing any cell. Its original source and failure log are retained. The separate unwritten-tail completion added tier=3 and expressed the identical model ID/revision as the existing identity dictionary. It copied every already computed plan and all rows/tokens without rebuilding them; the original recipe contract then accepted all four. This was a local metadata failure with no model call. Both preparations and the failed source remain evidence.
+
+The lossless archive, original config representation, full source closure and actual four new boundary-check results are supplied. No old test, tokenizer pass, schedule or scientific computation was repeated for publication. This candidate requires exact A1, a complete runtime A2, and the original A4 signal report before Tier3 execution. P010 is exploratory, not preregistered; the replication cells were already specified by the owner-approved v3.

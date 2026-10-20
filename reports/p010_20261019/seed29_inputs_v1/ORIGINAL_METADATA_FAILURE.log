@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/finalize_p010_seed29_recipe_metadata.py", line 37, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True);print(json.dumps(execute(p.parse_args().root)))
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/finalize_p010_seed29_recipe_metadata.py", line 23, in execute
+    config=dict(source,tier=3);recipe=checked_recipe(config,read(old/run/'encoded.json'),read(old/run/'plan.json'))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/p010/student_training.py", line 31, in checked_recipe
+    raise ValueError('Frozen P010 whole-answer inventory/model/dose differs')
+ValueError: Frozen P010 whole-answer inventory/model/dose differs
