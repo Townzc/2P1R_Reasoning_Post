@@ -1285,3 +1285,13 @@ T7 n400/n3200 greedy251/273 and T72 n400/n3200 greedy243/265, all/500; fullstate
 ### 2026-10-20 01:01:37 PDT — C6 local infinity failure preserved; scoped completion proposed
 
 OriginalGPU20554/collect44730/records69891/fullraworacle30822 DONE/STOPPED0. Local selection94851 EXIT1CONSUMED on numeric infinity;731confirmed keys/37fullbatches preserved, no cue selected. Proposed new signed-infinity symbolic grouping keeps original scoring and entropy rules, reuses confirmed parts, and requests one failed-key new attempt plus unattempted keys only.8new syntheticchecksPASS0.212s;0new actualparser/model calls. Exact delegateddecision and independentA2 pending, original21verification/18runtime bytes unchanged. E1d original59957 completed; unique49997collect/79860recordsDONE, fulloracle15679active. No healthy cloud work cancelled or old model repeated.
+
+### 2026-10-20T01:09:42.002035-07:00 — C9 exact saved Boolean-table analysis begins
+
+All five K1/E1d and two new S1 sampling-only calls are complete/STOPPED0. E1d local primary272/500 and1020/2000 four-sample correct. Three new input-loader checks passed once; no old statistical tests repeated. The original fixed nineteen comparisons (nine primary, nine secondary, one E4) will use numpy2.2.6 and shared paired-question bootstrap10000/seed20261019 exactly once. This produces audit tables, not course-report prose; actual A3 remains required. No rescoring, token decoding, model or state load.
+
+### 2026-10-20T01:13:46.827214-07:00 — C9 complete, all contrasts retained for actual A3
+
+Original computation completed once with9+9+1contrasts. Newthree loaderchecksPASS; originalpurefourchecks not repeated. Two final PNGs visually checked; secondary endpoint label collision corrected through display-only newrender, no statistic rerun. Seven new resultpackets and their350fixed sample rows submitted to independentA3 by repository INDEX. Originaltwo guessed request/report paths were absent on read-only inspection; actual paths then located withrg, no scientific sideeffects. All started model calls/closeouts nowDONE, C6 original selection failure preserved, no new paid calls.
+
+Transport failure: original push46446 exited1 because GitHub refused195.96MiB original C6 gzip. Remote remained10ef1332. Saved rejected local history on an unpushed archive branch; soft-rebased only the unpublished commits, preserving all work, and split the original gzip into four exact byte parts with whole SHA/readback. Newv2 transport at94a27ffc; original source/SPEC/science and failed parser bytes unchanged. No force push, model, collector or oracle repeated.
