@@ -1,3 +1,18 @@
+### 2026-10-20 16:56:47 PDT — Long worker integration and pinned3B assets prepared
+
+New long_execution/long_numeric drafts connect exact whole-answer update markers,
+full-state/export ordering, successful child exit before vLLM, gold-free3300row
+endpoints, raw-before-shape evidence and category/window forecasts. Ten new
+synthetic checks plus four fully mocked full-body checks passed once; no old
+tests or real science repeated. Full shared CR/A1/A2-lite, actual timing/caps,
+dispatch, collector and raw/scoring oracle are still needed; no separate gate.
+Stock3B fixedrevision download58703 and SHA/Git verifier48263 EXIT0CONSUMED:
+nine files6183451098B, four tokenizer files copied rather than redownloaded.
+Original1.5B remote asset path traced to its writer and saved historical receipt;
+no old download/provider lookup. Nothing uploaded/loaded; paid/reserved0.
+Original4032 reuse CR and AM actualA1 still pending at last observation.
+A read-only path typo failed without science effects, then producer resolved.
+
 ### 2026-10-20 16:44:46 PDT — Independent C1 input/journal adapter prepared
 
 New c1_evidence.py binds the six original producer paths/manifests and unchanged

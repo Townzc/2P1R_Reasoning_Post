@@ -1,3 +1,5 @@
+P011 engineering 2026-10-20T23:56:47.210949+00:00: [long worker integration and pinned3B local assets](long_execution_draft_v1/README.md) prepared;14newsynthetic checks passed. No actual model/upload/paid call; exact shared full-path review still required. Count4032 reuse CR and AMactualA1 pending at last observation.
+
 P011 current 2026-10-20T23:39:23.621006+00:00: owner approved A grid252/1008/4032, conditional on exact reuse-path CR. Original4038/4096 gateFAIL preserved; no new filtering/model. New consumer candidate and 11synthetic checks complete, production NOTRUN. AM actualA1 remains pending. See [new exact reuse candidate](ot3_4032_reuse_preflight_v1/README.md). Earlier owner-pending entries are historical.
 
 P011 current 2026-10-20T23:28:56.460978+00:00: OT3 exhausted its original candidate pool with4038/4096 parents; original gateFAIL preserved, owner scope decision pending. AM1024 common parents complete, actual jointA1 pending. 0P011 model/paid calls. See [actual request](LONG_DATA_ACTUAL_A1_REQUEST.md) and [scope options](OT3_INSUFFICIENT_PARENT_OPTIONS.md). Earlier running/pending-code notes below are historical.
