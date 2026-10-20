@@ -1,0 +1,32 @@
+{
+  "automatic_next_stage_admission": false,
+  "contrasts": [
+    {
+      "difference_pp": 10.310841546626232,
+      "equivalence_test": false,
+      "familywise_interval": false,
+      "interval_scope": "conditional_on_observed_models_and_question_resampling",
+      "left": "base_gsm/cue",
+      "left_mean": 0.4836997725549659,
+      "meets_frozen_3pp_and_positive_lower": true,
+      "name": "base_gsm_cue_minus_no_cue",
+      "pointwise_95_ci_pp": [
+        8.623957543593631,
+        12.016679302501895
+      ],
+      "questions": 1319,
+      "right": "base_gsm/no_cue",
+      "right_mean": 0.38059135708870356,
+      "training_seed_population": false
+    }
+  ],
+  "draws": 10000,
+  "metric": "sampled_mean_pass_at_1",
+  "model_calls": 0,
+  "numpy_version": "2.2.6",
+  "parser_calls": 0,
+  "percentile_method": "linear",
+  "primary_labels_changed": false,
+  "seed": 20261019,
+  "shared_question_draws": true
+}

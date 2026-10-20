@@ -1,3 +1,9 @@
+# Current P010 — E3 and C6 locally complete; actual A3 pending
+
+[E3 evidence](e3_complete_results_v1/README.md) and [C6 complete evidence](c6_complete_results_v1/README.md) are complete; [all eight C6 comparisons](c6_analysis_v1/README.md) are saved. Both original final apps are STOPPED/owned0. Independent actual result A3 and final number-trace delivery remain open. No further scientific calls are planned.
+
+--- Earlier dated entries ---
+
 # Current P010 — E3 full local evidence complete
 
 [E3 complete evidence and descriptive metrics](e3_complete_results_v1/README.md) contains3,200 new outputs and1,600 reused original outputs; full raw and frozen-score proofs passed. Actual independent A3 is pending. The independently approved C6 remaining call is active.

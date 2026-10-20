@@ -1,0 +1,74 @@
+{
+  "automatic_next_stage_admission": false,
+  "contrasts": [
+    {
+      "difference_pp": 7.8,
+      "discordant_questions": 105,
+      "equivalence_test": false,
+      "familywise_interval": false,
+      "interval_scope": "conditional_on_observed_models_and_question_resampling",
+      "left": "base_math/cue",
+      "left_mean": 0.35,
+      "meets_frozen_3pp_and_positive_lower": true,
+      "name": "base_math_cue_minus_no_cue",
+      "net_correct_count": 39,
+      "pointwise_95_ci_pp": [
+        3.8,
+        11.799999999999999
+      ],
+      "questions": 500,
+      "right": "base_math/no_cue",
+      "right_mean": 0.272,
+      "training_seed_population": false
+    },
+    {
+      "difference_pp": 0.0,
+      "discordant_questions": 8,
+      "equivalence_test": false,
+      "familywise_interval": false,
+      "interval_scope": "conditional_on_observed_models_and_question_resampling",
+      "left": "s1_n400_math/cue",
+      "left_mean": 0.546,
+      "meets_frozen_3pp_and_positive_lower": false,
+      "name": "s1_n400_math_cue_minus_no_cue",
+      "net_correct_count": 0,
+      "pointwise_95_ci_pp": [
+        -1.0,
+        1.2
+      ],
+      "questions": 500,
+      "right": "s1_n400_math/no_cue",
+      "right_mean": 0.546,
+      "training_seed_population": false
+    },
+    {
+      "difference_pp": 0.0,
+      "discordant_questions": 8,
+      "equivalence_test": false,
+      "familywise_interval": false,
+      "interval_scope": "conditional_on_observed_models_and_question_resampling",
+      "left": "t72_n400_math/cue",
+      "left_mean": 0.486,
+      "meets_frozen_3pp_and_positive_lower": false,
+      "name": "t72_n400_math_cue_minus_no_cue",
+      "net_correct_count": 0,
+      "pointwise_95_ci_pp": [
+        -1.2,
+        1.2
+      ],
+      "questions": 500,
+      "right": "t72_n400_math/no_cue",
+      "right_mean": 0.486,
+      "training_seed_population": false
+    }
+  ],
+  "draws": 10000,
+  "metric": "greedy",
+  "model_calls": 0,
+  "numpy_version": "2.2.6",
+  "parser_calls": 0,
+  "percentile_method": "linear",
+  "primary_labels_changed": false,
+  "seed": 20261019,
+  "shared_question_draws": true
+}
