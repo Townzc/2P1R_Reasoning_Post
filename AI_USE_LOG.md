@@ -3432,3 +3432,7 @@ Both E4 parents preserved2318files each/146518082 and147919276bytes with zeroend
 
 C7v3 sourceonly/fivesyntheticcases closes previouscorefindings; one last-line negationP2 remains. NoactualZ1rows/labels/scoringread. Reviewpoll04:59:26UTC unchangedbee46e43/109comments, nextnormal05:29:27. Current G44/T26.20 attemptedreserve is70.20, not expense; freshworkspacegross270.50547195/cash0 remains04:43necessarysnapshot. Nooutside messages orsubagents.
 
+
+### 2026-10-19 22:12:20 PDT — Original five K1/E1d candidate prepared; two original T1.5 calls continue
+
+Copied existing C3 bytes for T7/T72 K1 sizes400/3200 and original E1d3200; no encoding, selection, schedule reconstruction or teacher/model replay. New configs passed original fullanswer1024/2097148 validation once. Exact34runtime/44verification sources and original-input archive now await one combinedA2; actual perteacherA1 still required.12 new targeted checks passed once(10+2), covering error-versus-provider release, unknown/unmatched resources, failed/endpoint budgets and explicitcellA1. Original34runtime and its two active calls untouched. Newfive32.75T is prospective, not actualcharge or budgetrelease. E4endpoint exception and disputedK4/K8 owner questions remain pending. Two harmless read-path/key assumptions failed before candidate writes; corrected from actual file inventory, no scientific side effect.

@@ -42,3 +42,5 @@ OriginalT72 completed14,098 outputs at04:20:12UTC; collector95291/C3prepare47900
 ### P010 actual C4/T7 acceptance — 2026-10-19T21:32:40.265040-07:00
 
 Fullfixed c/d reports read04:30:47UTC; C4exact34/T15K4K8 A2PASS and T7raw/K1 A1PASS stored, K4K8 still owner-blocked. Reviewer authored future timestamps kept separate. Budget13.10prior/19.65afterfirst/26.20aftertwo clarified. New E4 bounded read-only preserver5synthetic checks oncePASS0.040s; shell readonly-status assignment failed only after tests, original log provesPASS/no rerun. Four new exactwrapper failure-signature cases PASS cover actualPython3.12KeyError and localolderTypeError. Preserver/full-training-proof source is new engineering, actualproofNOTRUN; old31/34/25source unchanged. OriginalE4n3200 actualfailure consumed, read-only preservation41763 underway; n400 neverreplayed.
+
+2026-10-19 22:12:20 PDT: [Five original K1/E1d candidate](student_runtime_k1_e1d_v1/README.md) prepared, no calls. Both originalT1.5K4/K8 continue; E4endpoint-only ownerexception/A2 and disputedK4/K8 ownerchoice pending.
