@@ -1,3 +1,16 @@
+# Current P010 — actual result audits accepted; scheduled freeze remains
+
+[Dated technical handoff](reports/p010_20261019/technical_handoff_20261020_v1/README.md),
+[exact E3/C6 A3 and early Z2 A5 dispositions](reports/p010_20261019/review_f04922a_actual_E3_C6_Z2_accepted_v1/README.md)
+and [required table footnotes](reports/p010_20261019/post_audit_technical_notes_20261020_v1/README.md) are available.
+All retained scientific work is closed. The actual 2026-10-21 12:00 PDT freeze and
+its final A5 remain outstanding. Original tables and labels are unchanged.
+The mixed A5 report unexpectedly exposed a Claude-owned Z1 section; this is
+recorded explicitly. No original Z1 artifact was opened, and Codex does not
+adopt its values or claim independent verification of the owner's checks.
+
+--- Earlier dated entries ---
+
 # Current P010 — all planned science locally closed; actual A3/A5 pending
 
 [E3 complete evidence](reports/p010_20261019/e3_complete_results_v1/README.md), [C6 complete evidence](reports/p010_20261019/c6_complete_results_v1/README.md), [all C6 paired results](reports/p010_20261019/c6_analysis_v1/README.md), and [Z2 technical tables/figures with number trace](reports/p010_20261019/z2_number_trace_v1/README.md) are published. All scientific apps are STOPPED/owned0. Independent actual E3/C6 A3 and Z2 A5 remain pending; this is a dated early assembly, not the scheduled Oct21 12:00PDT result freeze. Z1 is Claude-owned and was not read by Codex.

@@ -1450,3 +1450,34 @@ C6 immutablee150366b contains21,371 raw outputs and four complete once-scored ce
 New Z2 technical assembly9178029d copies original tables/figures and provides77 number-trace entries plus the original460reuse binding. T1–T4/F1–F2 Codex-owned portions are prepared for actualA5, not the Oct21 12:00PDT freeze. Z1 actuallabels/report were not read; Claude supplies that component separately. No old rawdecode/symbolic/state/analysis/renderer repeated, no interpretive course prose. First unpublished metadata displayed underfill/unverified ID lists instead of counts and used an absolute locator for the assembler. Bounded correction preserved original bytes, counted only existing lists and made that locator relative; no wholebuilder rerun or scientific changes. Original P008 CSV CRLF stylewarnings retained; only the range excluding exactly those two byte-exactcopies passes. All38 new manifestmembers verified fromGit once.
 
 Necessary12:51:38UTC billing remains delayed workspacegross302.93554409/cash0; exact P010-description rows total55.23443347, which may omit unlabelled/setup/storage/lag and is not finalinvoice/balance. Effective reservationG35.16/T108.33/I14.68 remains separate. No new allocation or provider request. A5request is limited technicalnumbertracing with allactualA3 prerequisites disclosed.
+
+### 2026-10-20T07:28:40.078124-07:00 — Actual E3/C6 A3 and early Z2 A5 accepted; dated technical handoff
+
+Fixed Claude f04922a reports E3/C6/Z2 PASS-WITH-NOTES were read and bound to their
+exact targets/manifests. File-commit events are14:06:20/14:11:30/14:14:08UTC;
+approximate header labels are retained separately and are not observation times.
+E3 raw/old-T08 reuse and descriptive metrics, all21371 C6 rows and eight saved
+paired estimates/intervals are accepted. Reviewer did not run vLLM/math-verify;
+base no-cue greedy per-question lineage was not rechecked in this packet.
+Early Z2 A5 independently verified73/77 trace sources; four local-only references
+remain unverified. Actual scheduled Oct21 19UTC freeze/finalA5 still outstanding.
+
+The read-only A5 report unexpectedly included a Claude-owned Z1 section. Initial
+full display exposed summary/label information before separation; original Z1
+files were not fetched/opened. An explicit incident record preserves this fact,
+all subsequent projections exclude the section, no values are adopted, and no
+claim of continued blindness or owner12-item verification is made. C7 is not rerun.
+Future mixed reports must be section-screened before model-visible rendering.
+
+Dated metadata notes define T1 retried_questions as selected K1 attempts2–4,
+excluding fallback, and disclose reviewer GSM parser sensitivity10.31→about5.31pp
+as an additional diagnostic, not a primary replacement or causal formatting
+fraction. Original label/parse/tolerance/UTF8 caveats and all contrasts remain.
+No scientific calls, scoring, statistics, renderer, old validation or paid requests.
+An overbroad filename search accidentally matched hash substrings and produced
+noisy filenames only; no artifact contents or scientific work were executed.
+
+Last necessary delayed meter302.93554409 workspace and55.23443347 P010-description
+rows is retained, with incomplete attribution/invoice limits. Effective reservations
+are separate and no new release or budget change occurred. The finite monitor
+continues only for dated delivery and the real scheduled freeze/finalA5.
