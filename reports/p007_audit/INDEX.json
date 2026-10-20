@@ -3832,7 +3832,7 @@
     {
       "request_id": "p010-C6-complete-benchmark-A2-r1",
       "scope": "p010-C6-complete-benchmark-input-runtime-and-numeric-A2",
-      "status": "pending",
+      "status": "completed_PASS",
       "request": "reports/p010_20261019/C6_COMPLETE_BENCHMARK_A2_REQUEST.md",
       "packet": "reports/p010_20261019/c6_benchmark_runtime_v1",
       "manifest_sha256": "03b6b08812eb5b04a50c1e694009544319b6a171c2d6e5332cde6d7119f706aa",
@@ -3840,18 +3840,26 @@
       "source_count": 16,
       "verification_count": 32,
       "created_utc": "2026-10-20T09:31:43.128250+00:00",
-      "target_commit": "a998d25251422707f65bfc836ad0fcfe69d56a43"
+      "target_commit": "a998d25251422707f65bfc836ad0fcfe69d56a43",
+      "review_commit": "e3a42987bde72b238f455a064e287a2cac070c83",
+      "review_report_sha256": "6983bdce8f79df5abc775f26fa5d9b815c51c306703395bbab73b54b735f6d53",
+      "review_read_utc": "2026-10-20T10:41:12.286926+00:00",
+      "acceptance_packet": "reports/p010_20261019/review_e3a42987_C6_D4_disposition_v1"
     },
     {
       "request_id": "p010-E3-budget-reallocation-owner-decision-r1",
       "scope": "p010-E3-original-scope-contingency-to-generation-allocation",
-      "status": "pending_delegated_owner_decision",
+      "status": "D4_transfer_and_cap_increase_REJECTED_use_qualifying_D1_path",
       "packet": "reports/p010_20261019/e3_budget_reallocation_proposal_v2",
       "request_file": "reports/p010_20261019/E3_BUDGET_REALLOCATION_OWNER_REQUEST.md",
       "proposal_sha256": "472d9d8a09fda2ad168f902a5c5f725d2186803cb8ac36ea14868644ed2f8f89",
       "target_commit": "2a9e5216bd2bb1791c5706a4355b488eb245dfdc",
       "T72_selfhosting_cap_proposed_usd": 35.63,
-      "superseded_unattempted_target": "5df5a688f004faa6e3a1b2bc065aaca20ef79140"
+      "superseded_unattempted_target": "5df5a688f004faa6e3a1b2bc065aaca20ef79140",
+      "decision_commit": "e3a42987bde72b238f455a064e287a2cac070c83",
+      "decision_sha256": "72ec41dcd19b2e06069cfc66a0c443e8025563736779ef6f20595a5665495f40",
+      "decision_packet": "reports/p010_20261019/review_e3a42987_C6_D4_disposition_v1",
+      "reserve_release_used": false
     },
     {
       "request_id": "p010-Tier3-seed29-results-analysis-A3-r1",
@@ -5151,11 +5159,14 @@
     },
     "C4_candidate": "reports/p010_20261019/student_runtime_v1",
     "latest_review": {
-      "utc": "2026-10-20T10:09:33.863166+00:00",
-      "commit": "6f1a5293acbd71b87494e26499972248244b5b11",
+      "utc": "2026-10-20T10:40:17.055721+00:00",
+      "commit": "e3a42987bde72b238f455a064e287a2cac070c83",
       "prior_commit": "6f1a5293acbd71b87494e26499972248244b5b11",
       "comments": 109,
-      "changed_files": [],
+      "changed_files": [
+        "audit/claude/20261020i/OWNER_DELEGATION_AND_DECISIONS.md",
+        "audit/claude/20261020m/REPORT.md"
+      ],
       "latest_comment_metadata": [
         {
           "id": 6188137203,
@@ -5176,7 +5187,8 @@
       "full_Z1_reports_or_labels_read": false,
       "files": {
         "comments.json": "89fb64f13bb12fe04c278b6c661eb65b39c231fc3100cae950771f9696e46182",
-        "head.json": "3ee140f6fad95616b1022e53a762b31f0654a151293a75c8e8f1e684c1c4be88"
+        "head.json": "724fede54d1987f1b4f9d88f700aab59131fac13388cb0a63f26b6a433f78330",
+        "compare.json": "56a39af85c2ea30830bbd121b2eef6314c03ccecb8542cbab21761b9baa09ba3"
       }
     },
     "C7_review_v2": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
@@ -5687,7 +5699,7 @@
     "C6_status": "Complete selection actual A3 accepted; complete benchmark exact A2 pending; no new benchmark call",
     "C6_benchmark_candidate": "reports/p010_20261019/c6_benchmark_runtime_v1",
     "C6_benchmark_target_commit": "a998d25251422707f65bfc836ad0fcfe69d56a43",
-    "latest_review_commit": "6f1a5293acbd71b87494e26499972248244b5b11",
+    "latest_review_commit": "e3a42987bde72b238f455a064e287a2cac070c83",
     "seed29_original_started": {
       "packet": "reports/p010_20261019/seed29_original_started_v1",
       "manifest_sha256": "abac737969ed8f2c3cfa295ef8269f782421f645e73242880e0cdc1308c241ad",
@@ -5725,6 +5737,8 @@
       "C": 0,
       "total": 158.11,
       "is_actual_spend": false
-    }
+    },
+    "C6_benchmark_status": "exact_A2_PASS_NOTRUN_fresh_budget_upload_pending",
+    "E3_status": "D4_no_category_transfer_no_cap_increase_qualifying_D1_settlement_and_new_exact_A1_A2_required"
   }
 }

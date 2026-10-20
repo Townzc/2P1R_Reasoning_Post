@@ -1,0 +1,5 @@
+# e9_base_math — original complete E9 endpoint, actual A3 pending
+
+Original OLMo-2-0425-1B endpoint: 1/500 greedy, with all caps and frozen parser decisions retained. Zero technical unknown. This baseline has zero training updates and no checkpoint or repeated binary load. The original app is STOPPED with zero owned containers. No test-selected checkpoint, changed dose, sampled endpoint or repeated generation.
+
+The original compact archive is copied byte-for-byte. The complete frozen CPU scoring journal preserves original pair attempts, chunks, fixed audit samples and Boolean tables. Publication does not decode, tokenize, symbolically score, deserialize state or bootstrap. Independent actual A3 and fixed-sample adjudication remain pending; public state hashes do not imply external access to private binaries. Provider actor identity is projected with the private original SHA retained. The 2.52USD reservation is not observed spending, final invoice or remaining credit. Existing failed attempts retain their records and costs. These are deterministic audit metadata, not course-report prose.

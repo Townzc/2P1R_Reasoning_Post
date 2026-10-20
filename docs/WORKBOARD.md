@@ -1361,3 +1361,7 @@ All four original seed29 calls/collectors/full-state and raw oracles/frozen scor
 Publication style note: whole staged whitespace check retains eight existing EOF warnings from exact common/checkpoint source copies. The check excluding only those eight frozen copies passed; whole-range style is not reported PASS. Original bytes were preserved.
 
 Metadata failure retained: the first INDEX tail read app_id at the wrong CLI-book level and stopped after creating the request, before any INDEX write. Only the unwritten INDEX tail was completed from original SUBMITTED files; no packet, score, analysis or model was repeated.
+
+### 2026-10-20 03:43:36 PDT — True C6 benchmark A2 and delegated E3 D4
+
+Full fixed m report/owner decision read2026-10-20T10:41:12.286926+00:00, event10:12UTC minute precision. C6 exact16/32-source benchmark A2 PASS; no old model/test/scoring repeats. D4 refuses G/C transfer and cap increase, keeps240/G50T150I15C25/protected43, directs qualifying D1 settlement with end-coverage evidence then originalE3 A1/A2; no actual reserve release. Private unattempted G57 E3 draft superseded, not executed. Daily aggregate is not a completeness watermark. New necessary C6 billing requested once after the prior snapshot expired. Original GSM650 is correctcount/1319, not650rows. One guessed selection-acceptance filename read failed before writes; discovered actual C6_COMPLETE_SELECTION_A3_ACCEPTED path, no scientific side effect.
