@@ -1,3 +1,21 @@
+### 2026-10-20 16:39:23 PDT — Direct owner approved 252/1008/4032; exact reuse CR candidate
+
+Owner replied “采用 252/1008/4032，复审通过后执行（推荐）”. Authority is now
+recorded in OWNER_OT3_4032_AMENDMENT.json SHA5d1fa79a456f358abccaca8e50aba47603e3af957c09d5ac11f8e5ef8b3da74a.
+The original 4038/4096 failure remains failed. New four-source path reads only
+confirmed eligible dispositions and original SQLite, takes first4032/tail6,
+retains literal response seed, same K/nesting/equal-N diagonal, max-eight-cell B
+and original whole-answer exact q/q+1 schedule. No old filtering or ingestion.
+One new fixed attempt fence/output prevents replay. Inherited dose labels are
+clarified with additive FROZEN_DOSE_SCOPE, without changing the accepted source.
+
+Eleven new synthetic tests PASS0.263s once; old tests/actual data not rerun.
+Newconsumer NOTRUN until exact independent CR; actual new-input A1 afterwards.
+AM complete A1 and OT3 failure integrity remain pending at cf9a12e4. No extra
+owner approval is needed for the already chosen counts. No paid/model call,
+new reserve, billing/provider check, Z1 read, subagent or outside message.
+P010 scheduled Oct21 19UTC freeze remains. All original failures/bytes retained.
+
 ### 2026-10-20 16:28:56 PDT — OT3 actual parent deficit; AM complete A1 submitted
 
 OriginalOT3 CLI88890 EXIT1CONSUMED at23:24:04.514255UTC: all53107 candidates
