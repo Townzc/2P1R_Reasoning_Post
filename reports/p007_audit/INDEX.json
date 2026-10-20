@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T05:14:21.872268+00:00",
+  "as_of_utc": "2026-10-20T05:15:24.840971+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3418,7 +3418,7 @@
     {
       "request_id": "p010-T7-complete-data-A1-r1",
       "scope": "p010-T7-complete-data-A1",
-      "status": "completed_K1_PASS_K4_K8_OWNER_BLOCKED",
+      "status": "completed_K1_PASS_K4_K8_cancelled_by_owner",
       "request": "reports/p010_20261019/T7_DATA_A1_REQUEST.md",
       "packets": {
         "reports/p010_20261019/teacher_t7_complete_v1": "50995ae6fd4e5ca1c47b8c25dd1c7ce3661974003e426e5fc73c0e8ffcf06b1e",
@@ -3448,7 +3448,7 @@
     {
       "request_id": "p010-T72-complete-data-A1-r1",
       "scope": "p010-T72-complete-data-A1",
-      "status": "pending_actual_A1_K4_K8_owner_resolution_required",
+      "status": "pending_actual_A1_K1_E1d_K4_K8_cancelled_by_owner",
       "request": "reports/p010_20261019/T72_DATA_A1_REQUEST.md",
       "packets": {
         "reports/p010_20261019/t72_data_candidate_v1": "aa262790a5e38f3fe43a4953899a434604633c389eba735fcf38abf9a2dc0e21",
@@ -3475,7 +3475,7 @@
     {
       "request_id": "p010-E4-endpoint-only-repair-A2-r1",
       "scope": "p010-C8-endpoint-only-repair-A2",
-      "status": "pending_owner_exception_and_exact_A2",
+      "status": "owner_exception_APPROVED_pending_exact_A2",
       "request": "reports/p010_20261019/E4_ENDPOINT_ONLY_REPAIR_A2_REQUEST.md",
       "packet": "reports/p010_20261019/e4_endpoint_repair_preflight_v1",
       "manifest_sha256": "2917324d261d0fe10f65983485a14731a41320f5f051fdb0b86631e7bd4acb3a",
@@ -3483,7 +3483,9 @@
       "parent_packet": "reports/p010_20261019/e4_failed_endpoint_complete_training_v1",
       "parent_manifest_sha256": "2c8cc027f4a888d941e796a9bd453bede2c6ebaaac34503fe3f3c4c79b0ae689",
       "created_utc": "2026-10-20T04:57:32.352904+00:00",
-      "target_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9"
+      "target_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
+      "owner_packet": "reports/p010_20261019/owner_selection_and_e4_endpoint_20261020_v1",
+      "owner_acceptance_sha256": "33164e050ac39dfab28227df1b50f4474193facf0f7be5ae0b8b7977aaca3be9"
     },
     {
       "request_id": "p010-C4-K1-E1d-A2-r1",
@@ -4868,6 +4870,18 @@
     "E4_status": "two_original_failed_zero_endpoint_complete_training_verified_once",
     "T72_actual_A1": "pending",
     "C4_E4_C7_publication_fixed_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
-    "K1_E1d_next_candidate": "reports/p010_20261019/student_runtime_k1_e1d_v1"
+    "K1_E1d_next_candidate": "reports/p010_20261019/student_runtime_k1_e1d_v1",
+    "owner_selection_E4_disposition": {
+      "packet": "reports/p010_20261019/owner_selection_and_e4_endpoint_20261020_v1",
+      "manifest_sha256": "8d72f20be084d080313b47a3e5c76ef9136454bbcbddbb83538bcf15cb39b9b0",
+      "target_commit": "PIN_AFTER_COMMIT",
+      "cancelled_cells": [
+        "t7_s17_n400_k4",
+        "t7_s17_n400_k8",
+        "t72_s17_n400_k4",
+        "t72_s17_n400_k8"
+      ],
+      "E4_owner_approved_A2_pending": true
+    }
   }
 }

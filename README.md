@@ -177,3 +177,5 @@ The three owner-stopped parents remain failed. Their496 saved outputs, including
 The10:23UTC provider snapshot records **$11.19667285 delayed metering** for the six original+suffix apps, not a final invoice or balance; the approved total cap remains$30. All scientific calls and local closing work are complete. The complete fixed actual-result report has been read and accepted; automation-4 is now **PAUSED**, independently confirmed in its saved configuration ([pause receipt](reports/exploratory_20261014/AUTOMATION_4_PAUSED_20261014.json)); original P008 and its21PDT material freeze remain unchanged, and p007 stays paused.
 
 P010 update 2026-10-19 22:12:20 PDT: original five K1/E1d runtime/input candidate prepared; exactA2 and teacher-specificA1 required. [Candidate](reports/p010_20261019/student_runtime_k1_e1d_v1/README.md). Two originalT1.5K4/K8 calls remain active; no teacher/student replay.
+
+P010 2026-10-19 22:15:24 PDT: direct owner cancels four conflicting T7/T72 K4/K8 cells and approves two E4 endpoint-only evaluations after exactaudit; see [decisions](reports/p010_20261019/owner_selection_and_e4_endpoint_20261020_v1/README.md).
