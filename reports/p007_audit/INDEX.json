@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T06:21:07.892306+00:00",
+  "as_of_utc": "2026-10-20T06:34:03.017593+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3499,7 +3499,7 @@
     {
       "request_id": "p010-C4-K1-E1d-A2-r1",
       "scope": "p010-C4-K1-E1d-A2",
-      "status": "pending_exact_A2_and_teacher_specific_actual_A1",
+      "status": "completed_PASS_with_explicit_review_limits",
       "request": "reports/p010_20261019/K1_E1D_STUDENT_A2_REQUEST.md",
       "packet": "reports/p010_20261019/student_runtime_k1_e1d_v1",
       "manifest_sha256": "7ab06ec6bf38871e49b42504dbb7f0abd00092e7830df2c3fc72b8555f099e03",
@@ -3510,12 +3510,16 @@
       "created_utc": "2026-10-20T05:12:20.326611+00:00",
       "target_commit": "0be431cfa7a7a81a3debd43e393ef343d759ec46",
       "preliminary_unbound_commit": "6d76e2416d29a4bc2d5abe342ce8ae7edc62be57",
-      "all_manifest_members_git_verified": 93
+      "all_manifest_members_git_verified": 93,
+      "review_commit": "a59b6622b9549e9aff055a04b7ed76429dad2f45",
+      "report_sha256": "5785dc1dfa02403ef8c4a79baec0cf2a2719a5245cd462006152047ca608cf74",
+      "disposition_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1",
+      "read_utc": "2026-10-20T06:31:34.057282+00:00"
     },
     {
       "request_id": "p010-C4-T15-K4-K8-complete-A3-r1",
       "scope": "p010-C4-T15-K4-K8-complete-results-A3",
-      "status": "pending_actual_A3",
+      "status": "completed_PASS_with_explicit_review_limits",
       "request": "reports/p010_20261019/T15_K4_K8_ACTUAL_A3_REQUEST.md",
       "packet": "reports/p010_20261019/t15_k4_k8_actual_results_v1",
       "manifest_sha256": "9ee192dcdf3cb9b5f2d338adb99f82b840bd9172dcdb41c0051619b70fe5f322",
@@ -3531,7 +3535,11 @@
       },
       "created_utc": "2026-10-20T05:29:11.035366+00:00",
       "target_commit": "17f768dfbd5d81cb20046445446c4e975bdbc115",
-      "all_manifest_members_git_verified": true
+      "all_manifest_members_git_verified": true,
+      "review_commit": "a59b6622b9549e9aff055a04b7ed76429dad2f45",
+      "report_sha256": "5785dc1dfa02403ef8c4a79baec0cf2a2719a5245cd462006152047ca608cf74",
+      "disposition_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1",
+      "read_utc": "2026-10-20T06:31:34.057282+00:00"
     },
     {
       "request_id": "p010-C7-Z1-code-cross-review-r4",
@@ -3547,7 +3555,7 @@
     {
       "request_id": "p010-C8-E4-complete-A3-r1",
       "scope": "p010-C8-E4-complete-results-A3",
-      "status": "pending_actual_A3",
+      "status": "completed_PASS_with_explicit_review_limits",
       "request": "reports/p010_20261019/E4_COMPLETE_ACTUAL_A3_REQUEST.md",
       "packet": "reports/p010_20261019/e4_complete_results_v1",
       "manifest_sha256": "81d78a2fa9cf68eb68693f5ceffd5cca4ef08a6251ace0f0da8d8434a54f268b",
@@ -3562,7 +3570,11 @@
         }
       },
       "created_utc": "2026-10-20T05:44:48.719602+00:00",
-      "target_commit": "9af6e67a8880e1b2846e987bd0f5e4548c53730d"
+      "target_commit": "9af6e67a8880e1b2846e987bd0f5e4548c53730d",
+      "review_commit": "a59b6622b9549e9aff055a04b7ed76429dad2f45",
+      "report_sha256": "5785dc1dfa02403ef8c4a79baec0cf2a2719a5245cd462006152047ca608cf74",
+      "disposition_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1",
+      "read_utc": "2026-10-20T06:31:34.057282+00:00"
     },
     {
       "request_id": "p010-C6-search-A2-r1",
@@ -4831,7 +4843,7 @@
     }
   },
   "p010": {
-    "status": "C4_T15_and_E4_locally_closed_A3_pending_five_K1_E1d_A2_pending",
+    "status": "five_original_K1_E1d_A2_ACCEPTED_C4_E4_actual_A3_ACCEPTED_C6_A2_pending",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4855,17 +4867,21 @@
       "app_id": "ap-xccCmT5uLfvWmqkAvCjsoz",
       "call_id": "fc-01M5BMZX7AW9BGN6983VMRED9R",
       "execution": "75157b1040cc363bf7e982272a3a24f00c057860",
-      "status": "completed_collected_selected_published_A1_pending",
+      "status": "completed_collected_selected_A1_PASS_K1_E1d",
       "new_outputs": 14098,
       "provider_stopped": true
     },
     "C4_candidate": "reports/p010_20261019/student_runtime_v1",
     "latest_review": {
-      "utc": "2026-10-20T06:00:12.507711+00:00",
-      "commit": "c542484d39888cdc74db7b68e70ae5afab163f6c",
+      "utc": "2026-10-20T06:30:17.788952+00:00",
+      "commit": "a59b6622b9549e9aff055a04b7ed76429dad2f45",
       "prior_commit": "c542484d39888cdc74db7b68e70ae5afab163f6c",
       "comments": 109,
-      "changed_files": [],
+      "changed_files": [
+        "audit/claude/20261020g/A3_RESULT.json",
+        "audit/claude/20261020g/REPORT.md",
+        "audit/claude/20261020g/a3_check.py"
+      ],
       "latest_comment_metadata": [
         {
           "id": 6188137203,
@@ -4886,7 +4902,8 @@
       "full_Z1_reports_or_labels_read": false,
       "files": {
         "comments.json": "89fb64f13bb12fe04c278b6c661eb65b39c231fc3100cae950771f9696e46182",
-        "head.json": "e04dacaab004934e89bfc780bd6d630a0e7cc717e34ccf83479cf027d62cc902"
+        "head.json": "b47ceb40fb91df2893b788967e1a118189ca9b03f1f38e076452e62410d02641",
+        "compare.json": "83e312b68ef90d949ac7a95e39ee92ac4c537e8bacf5ef3f263c546d292cb2c8"
       }
     },
     "C7_review_v2": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
@@ -4901,7 +4918,7 @@
     },
     "C8_endpoint_input_risk": {
       "local_prospective_proof_sha256": "9717e1bda6db0e61725ce536471db6bce8aa15128f4ec5ac8f8ab8a4156cdbaf",
-      "original_calls_still_training": true,
+      "original_calls_still_training": false,
       "automatic_retry": false,
       "original_sources_unchanged": true,
       "issue": "Original endpoint wrapper dictionary is sliced as list after training; checkpoint preservation and no-retrain completion proposal required if actual failure occurs"
@@ -4966,8 +4983,8 @@
         "full_state_or_result_oracle": false
       }
     ],
-    "actual_T_reserved_usd": 26.2,
-    "E4_status": "both_saved_state_endpoint_children_complete_STOPPED0_full_local_PASS_actual_A3_pending",
+    "actual_T_reserved_usd": 31.24,
+    "E4_status": "complete_STOPPED0_actual_A3_PASS_with_limits",
     "T72_actual_A1": "PASS_WITH_NOTES_K1_and_E1d",
     "C4_E4_C7_publication_fixed_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
     "K1_E1d_next_candidate": "reports/p010_20261019/student_runtime_k1_e1d_v1",
@@ -4981,14 +4998,14 @@
         "t72_s17_n400_k4",
         "t72_s17_n400_k8"
       ],
-      "E4_owner_approved_A2_pending": true,
+      "E4_owner_approved_A2_pending": false,
       "git_members_verified": 3
     },
-    "C4_original_two_status": "complete_STOPPED0_full_local_state_raw_scoring_PASS_actual_A3_pending",
+    "C4_original_two_status": "complete_STOPPED0_actual_A3_PASS_with_limits",
     "C4_complete_result_packet": "reports/p010_20261019/t15_k4_k8_actual_results_v1",
     "T7_T72_K4_K8_status": "owner_cancelled_all_four_unattempted_cells",
     "E4_endpoint_owner_exception": "APPROVED_and_exact_A2_PASS_two_children_consumed",
-    "E4_endpoint_only_A2": "PASS_owner_separately_APPROVED_not_yet_called",
+    "E4_endpoint_only_A2": "PASS_owner_exception_consumed_two_completed_children",
     "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
     "active_scientific_calls": 0,
     "C6_adapters_and_dev": {
@@ -5026,7 +5043,10 @@
       },
       "new_tests": 7,
       "no_separate_code_only_gate": true,
-      "actual_calls": 0
-    }
+      "actual_calls": 0,
+      "execution_draft": "reports/p010_20261019/existing_s1_sampling_runtime_draft_v1"
+    },
+    "K1_E1d_runtime_A2": "PASS_0be431cf_exact34",
+    "latest_acceptance_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1"
   }
 }

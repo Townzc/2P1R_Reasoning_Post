@@ -1,3 +1,9 @@
+# Current P010 — exact K1/E1d A2 and completed results A3 accepted
+
+[Original report and scoped acceptances](review_a59b6622_K1_A2_results_A3_accepted_v1/DISPOSITION.md). Five original K1/E1d cells may proceed after fresh budget/input transfer; no new call yet. E4 counts509/654 and T1.5 K4/K8 counts262/279 now have actual A3 PASS with disclosed independent-scoring limits. C6 search exactA2 remains pending. Four T7/T72 K4/K8 cells remain owner-cancelled.
+
+--- Historical progress below ---
+
 # Current P010 — E4 complete locally, actual A3 pending
 
 [E4 original-model results and evidence](e4_complete_results_v1/README.md):509/1319 and654/1319, zero technicalunknown. Both owner-approved endpoint-only children completed with no retraining or repeatedoutputs; bothfailedparents remainfailed. [T1.5 K4/K8](t15_k4_k8_actual_results_v1/README.md) are also locallycomplete, actualA3 pending. No scientificworker remainsactive. Five originalK1/E1d students still await their exactA2; allT7/T72K4/K8 trainingcells are owner-cancelled. [C7 latest source-only review](c7_z1_code_review_r4/REVIEW.md) closes the previouslyreported codefinding; Claude owns Z1 labels.

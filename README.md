@@ -1,3 +1,9 @@
+# Current P010 — new K1/E1d A2 and completed-result A3 accepted
+
+[P010 current evidence](reports/p010_20261019/README.md): original five K1/E1d cells have exact A2 PASS; completed E4 and T1.5K4/K8 have A3 PASS with stated limitations. C6 search A2 pending. New model calls remain zero at this publication. Original budgets and owner cancellations remain unchanged.
+
+--- Historical dated state below ---
+
 # Current: P010 v3 authorized exploratory pilot
 
 [P010 results and evidence](reports/p010_20261019/README.md): E4 saved-model endpoint completion is fully locallyverified (509/1319 and654/1319); original T1.5K4/K8 results are262/500 and279/500. Actual A3 remains pending for these results. Allscientificworkers are stopped; fiveK1/E1d await exactA2. FourT7/T72K4/K8 cells are cancelled by the owner. Hard cap$240/G50/T150/I15/C25. OldP009 remainsclosed.

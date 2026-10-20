@@ -1,0 +1,24 @@
+{
+  "actual_A4_or_Tier3_admission": false,
+  "decision": "PASS",
+  "full_report_read_utc": "2026-10-20T06:31:34.057282+00:00",
+  "independent_result_sha256": "3b88a03b0cb25b4e4c1e3c2899e22ab285f9297793d0820729b6ba82b73d1bb3",
+  "limitations": [
+    "Reviewer independently checked ordered decoded output/score tables and computed question-paired10000-draw bootstrap; original GPU state binaries were not read.",
+    "Reviewer explicitly lacked math-verify: symbolic equivalence was not independently recomputed. Thirty string-different correct cases per T1.5 cell were spot-checked.",
+    "E4 simplified-parser agreement1315/1319 and1319/1319; four n400 differences retained as diagnostic only, frozenprimary509/654 unchanged.",
+    "Question-paired intervals are conditional on these realized single-seed runs, not training-seed or population guarantees; no familywise claim.",
+    "The report wording that family is the only changed variable is not adopted: OLMo1B vs Qwen1.5B also changes model size/architecture/tokenizer. No isolated causal family claim."
+  ],
+  "manifest_sha256": "9ee192dcdf3cb9b5f2d338adb99f82b840bd9172dcdb41c0051619b70fe5f322",
+  "original_primary_labels_unchanged": true,
+  "packet": "reports/p010_20261019/t15_k4_k8_actual_results_v1",
+  "report_event_utc": "2026-10-20T06:05:26Z",
+  "report_sha256": "5785dc1dfa02403ef8c4a79baec0cf2a2719a5245cd462006152047ca608cf74",
+  "report_url": "https://github.com/Townzc/2P1R_Reasoning_Post/blob/a59b6622b9549e9aff055a04b7ed76429dad2f45/audit/claude/20261020g/REPORT.md",
+  "review_commit": "a59b6622b9549e9aff055a04b7ed76429dad2f45",
+  "reviewed_context_commit": "46cfd6e9165bfd1a701f977d5679112acc5213e6",
+  "reviewer_code_sha256": "329dc88757d02b1cbbaea3af58d604764a38f4052aa89124456bd5e1bfb73d40",
+  "scope": "p010-C4-T15-K4-K8-complete-results-A3",
+  "target_commit": "17f768dfbd5d81cb20046445446c4e975bdbc115"
+}
