@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-20T04:05:48.829279+00:00",
+  "source_file": "audit/claude/20261020b/z1_secondary_v2.py",
+  "actual_Z1_records_or_labels_loaded": false,
+  "model_calls": 0,
+  "cases": {
+    "escaped_brace": {
+      "text": "\\boxed{a\\}b}",
+      "v2": "a\\",
+      "frozen": "a\\}b"
+    },
+    "meaningful_note_removed": {
+      "text": "Answer: 7.\nNote: correction: final answer is 9.",
+      "v2_candidate": [
+        "7",
+        "marker"
+      ]
+    },
+    "negated_numeric_answer": {
+      "text": "The answer is not 4.",
+      "v2_candidate": [
+        "4",
+        "marker"
+      ],
+      "secondary_correct_when_gold_4": true
+    },
+    "different_candidate_reuses_old_true": {
+      "old_extracted": "1",
+      "new_candidate": "2",
+      "gold": "1",
+      "old_correct": true,
+      "secondary": true,
+      "rule": "box_differs_from_frozen"
+    }
+  },
+  "original_private_proof_file_sha256": "eb311d4b625f2ad6aef35ed1defdda8af83bab5bf82121977bbb9a39b84c777c"
+}

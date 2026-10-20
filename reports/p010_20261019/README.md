@@ -1,3 +1,7 @@
+# Current P010 — C8 training; T15 A1 accepted
+
+[C8 original calls](e4_started_v1/README.md) are running after actual A1/A2 PASS. [T15 acceptance](review_2000d8db_T15_C8_accepted_v1/README.md) closes data A1; C4 exact student runtime remains pending. T72 original call continues. T7 is complete with a separate K4/K8 selection decision pending. [C7 v2 code-only review](c7_z1_code_review_r2/REVIEW.md) requests fixes; no labels were produced by Codex.
+
 # Current P010 — T7 supply complete, two selection cells need owner disposition
 
 [T7 actual data](t7_data_candidate_v1/README.md) and [original evidence](teacher_t7_complete_v1/README.md):9410new+256inherited, STOPPED0. K1plans intact; K4/K8 have12 nesting conflicts and P_cov397. [Concrete options](T7_SELECTION_CONFLICT_OPTIONS.md), actualA1pending. T72 original bulk/E1d remains active; T15A1/C8A1-A2/C4A2 pending. [C6 label-free selection draft](c6_selection_draft_v1/README.md) has5newtestsPASS, no cue/model execution.

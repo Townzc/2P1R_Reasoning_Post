@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T04:04:00.182389+00:00",
+  "as_of_utc": "2026-10-20T04:13:54.118970+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3343,9 +3343,11 @@
       "target_commit": "1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59",
       "packet": "reports/p010_20261019/c8_input_candidate_v1",
       "manifest_sha256": "3507a63ce8b2fdae146ac24e9e98e5ef2a8e611d717dbc46e116b3f7039211f7",
-      "status": "pending",
+      "status": "completed_PASS_in_combined_A1_A2",
       "blocking_scope": "C8 training inputs only; C1/C2 independent",
-      "created_utc": "2026-10-20T02:48:34.071547+00:00"
+      "created_utc": "2026-10-20T02:48:34.071547+00:00",
+      "actual_report_commit": "2000d8db66d3f0c30f1b04f2c2fd3b0a7b4cdc89",
+      "actual_report_sha256": "e2207a679f44936450c8e98f5e2ec350c4a25e93976b3b59a5d3bbca015a2d3b"
     },
     {
       "request_id": "p010-C7-Z1-code-cross-review-r1",
@@ -3425,6 +3427,17 @@
       "owner_options": "reports/p010_20261019/T7_SELECTION_CONFLICT_OPTIONS.md",
       "target_commit": "33405785c8deb8ebd9c16116564ad17437c86f5f",
       "all_manifest_members_git_verified": 40
+    },
+    {
+      "request_id": "p010-C7-Z1-code-cross-review-r2",
+      "scope": "Code cross-review delivered; Claude owns Z1 labels and corrections",
+      "reviewed_source_commit": "2000d8db66d3f0c30f1b04f2c2fd3b0a7b4cdc89",
+      "review": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
+      "packet": "reports/p010_20261019/c7_z1_code_review_r2",
+      "manifest_sha256": "108baca5f996b86e10ba846394dcf8bfb5e35907b1439dd934d90a41b7057df8",
+      "status": "changes_requested",
+      "blocking_scope": "Z1 only; no Codex labeling or model work",
+      "created_utc": "2026-10-20T04:13:54.118970+00:00"
     }
   ],
   "p008_v31": {
@@ -4677,7 +4690,7 @@
     }
   },
   "p010": {
-    "status": "T72_smoke_PASS_bulk_active_T7_approved_suffix_active_T15_A1_C8_A1A2_pending",
+    "status": "T72_original_active_two_E4_originals_training_T15_A1_PASS_C4_A2_pending",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4693,7 +4706,7 @@
     "C8_runtime": "reports/p010_20261019/e4_runtime_v1",
     "teacher_runtime": "reports/p010_20261019/teacher_runtime_v3",
     "runtime_source_commit": "17ed56d954560c6285acacef9bc23bc56f9f40b7",
-    "T7_suffix": "one_direct_approved_original_call_active",
+    "T7_suffix": "DONE_no_replay_256_inherited_9410_new",
     "C3_preparation": "reports/p010_20261019/c3_selection_preparation_v1",
     "active_automation": "p010-finite-execution-and-audit",
     "T15_data_packet": "reports/p010_20261019/t15_data_candidate_v1",
@@ -4710,6 +4723,9 @@
       "T15_A1": "PASS",
       "C8_A1_A2": "PASS",
       "C4_A2": "PENDING"
-    }
+    },
+    "C7_review_v2": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
+    "C8_started": "reports/p010_20261019/e4_started_v1",
+    "C8_started_manifest_sha256": "71da7a47296fe856e1aef38a2c0eed49783325c5c02a2a1a84645b4f67e838c0"
   }
 }
