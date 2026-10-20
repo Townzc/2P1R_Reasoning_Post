@@ -1,3 +1,29 @@
+### 2026-10-20 16:24:35 PDT — AM complete; long training/evaluation leaf code prepared
+
+Original AM64426 EXIT0CONSUMED, completed23:15:27UTC:1024eligible from1079examined
+common parents, B_D4070922/U64, two exact whole-answer plans/no planning failure.
+ActualA1 not accepted. OT3 original88890 continues; no restart or source edit.
+Both production sources remain exactdf4d5904. P011 paid/model calls0.
+
+New long_training/long_evaluation leaf drafts prepared, no cloud entry or false
+admission:6new synthetic training checksPASS0.822s and5new endpoint/statistic checks
+PASS0.059s. Strict native mask/EOS151645, token-normalized full-answer accumulation,
+FP32 terminal full/adapter state before BF16 export covered with tiny CPU models;
+3300native endpoint roster/think-region-only adaptation/cappedwrong/unknownblock
+and question-level paired bootstrap covered with new synthetic data. No real
+scientific bootstrap/scoring or oldtest repeated. New private copy-only actualA1
+publisher prepared, not run; it retains selected raw/encoded/plans/dispositions,
+omits huge derivedSQLite with originalSHA and explicit access limitation.
+
+Two exploratory read-only probes failed (missing torch in legacyvenv; benchmark
+JSON list mistakenly queried as dict); no writes/scienceeffects. Existing
+pipelineenv used. Oversized ID-list diagnostic output was not new analysis.
+Unpublished extras-order check removed before tests; exact original planSHA must
+bind its extras and update boundaries. No active source touched. Ordinary68b90605
+independentlyremoteverified once; push8866DONE. Heartbeat ACTIVEreadbackconfirmed;
+old owner pause is historical and revoked by direct“开始吧”. P010freezeOct21
+19UTC preserved; noZ1/subagents/externalmessages or oldprovider/billing queries.
+
 ### 2026-10-20 16:12:50 PDT — owner resumed; revised data CR accepted and original builders started
 
 Actualread23:06UTC Claude5c91d0d1/reportf346f121 fullnonZ1 PASS-WITH-NOTES,
