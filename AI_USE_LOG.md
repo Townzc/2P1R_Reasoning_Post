@@ -3354,3 +3354,5 @@ T15原84107、collector25147、C3prepare90417均一次DONE；新5940独立原始
 T72原CPU14976全部44files145424086788bytes完成/STOPPED0，原GPU17614已唯一提交ap-xccCmT5uLfvWmqkAvCjsoz/callfc-01M5BMZX7AW9BGN6983VMRED9R/source75157b10，bf16/TP4H100/4500hard/G24，当前加载权重，未完成smoke。T7新后缀仍等已发出的owner例外答复，原256不重复，旧failure保持。原P010 v3§5没有自动重试是此处明确许可原因，不重复常规询问。
 
 必要billing89109于03:17:10–11UTC一次DONE：workspacegross248.45546721/cash0；四P010已标记app合计0.83928102延迟计量，非invoice/余额/最终费用。已尝试G预留38.5、T7候选另5.5，保留失败/启动/存储/lag，无分类挪用或释放预留。新publisher执行前核真实billing键为object_id，未执行稿已修正，无部分产物。误读不存在LIVE_P010_HANDOFF.md发生写前，实际handoff已改读正确文件。
+
+T15 A1 packets fixed8303d26c727240cd1d38015cb39c69d07292b2e0; 43 manifest members verified from Git bytes. Whole style check reported original frozen common.py EOF blank line; only excluding that snapshot passed. Original bytes retained, no old checks repeated.
