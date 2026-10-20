@@ -1,0 +1,5 @@
+# C6 complete actual selection A3
+
+Scope `p010-C6-complete-search-selection-A3`. Read `c6_complete_selection_v1` in full and its ORIGINAL_EVIDENCE_REFERENCES fixed at94a27ffc. Confirm all21 candidates /30dev problems /16rollouts, original10080raw/probability/stop lineage, originalfailed selection plus full confirmed cache, and the one D3/k-authorized local completion. Recompute the fixed entropy/missing/tie rule from saved grouping observations independently; verify selected candidate2/token[1249]. Confirm731confirmedkeys/3700rows reused without reparse,815newparserattempts, exactlyone newattempt on originalfailed infinity key, no newmodeloutputs/gold/correctness/testdata. Preserve post-failure infinity-rule amendment and its exact independent A2.
+
+Please state any unavailable parser/runtime verification explicitly. Original failure and all candidate results stay public; no claims about benchmark performance are available yet. This request is actual selection evidence A3, not new model permission or another A4 gate. C6 benchmark execution still requires its own complete source/input/runtime A2.

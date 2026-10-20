@@ -1311,3 +1311,7 @@ Full reports read at2026-10-20T08:40:26.954116+00:00; reportevents08:29/08:31UTC
 ### 2026-10-20 01:43:19 PDT — Approved exact C6 local completion starts
 
 D3 and independentk exactA2 are real and saved. One newlocal helper resumes only6380remainingrows and the one identified failed infinity key, reusing731confirmedkeys/3700rows. No GPU/teacher/test generation or frozen primary scoring. Originalfailure preserved. Initial acceptance builder stopped on the multi-packet INDEX schema afterwritingonlyA3andowner records; separate unwritten-tail completion savedremainingacceptances once. No prior record or scientific computation was repeated.
+
+### 2026-10-20 01:54:00 PDT — C6 local completion and Tier3 exact candidates
+
+Unique approved C6 local66685 completed08:43:22UTC, selectedcandidate2/token1249,731keys/3700rows reused,815newparserattempts includingonefailed-key attempt,0repeatedconfirmedparser/0newmodel. New read-only publication copies saved1703files and originalfailure/raw links; actualselectionA3 pending. OriginalC9/fullsevenresults actualA3accepted; A4issued; limitsretain noindependentsymbolicrescore/privatebinaryclaim and noequivalence/causalproof. Fourseed29actualinputs andcomplete34runtime source candidates arefixedad21722d/22f2593e, trueA1/A2pending; E9inputsA1accepted/fullruntimepreparationnext. No oldtools or tests repeated. Original98d5push36469EXIT0CONSUMED independentlyremoteverified.

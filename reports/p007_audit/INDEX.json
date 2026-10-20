@@ -3786,6 +3786,16 @@
       "verification_source_count": 45,
       "created_utc": "2026-10-20T08:38:08.198617+00:00",
       "target_commit": "22f2593ee8772f35fa3e08cd1d3ec42ce27490e2"
+    },
+    {
+      "request_id": "p010-C6-complete-selection-A3-r1",
+      "scope": "p010-C6-complete-search-selection-A3",
+      "status": "pending",
+      "request": "reports/p010_20261019/C6_COMPLETE_SELECTION_A3_REQUEST.md",
+      "packet": "reports/p010_20261019/c6_complete_selection_v1",
+      "manifest_sha256": "fecc92bee1f519aacc13b3d226da66a0e9955b1c3b62ee35e5059e96167acc54",
+      "selection_sha256": "a910f9034a95a1e331ee64eaa645a95d04ce44ca542333f4dfe3705a095a2b67",
+      "created_utc": "2026-10-20T08:54:00.499070+00:00"
     }
   ],
   "p008_v31": {
@@ -5202,7 +5212,7 @@
     "E4_endpoint_owner_exception": "APPROVED_and_exact_A2_PASS_two_children_consumed",
     "E4_endpoint_only_A2": "PASS_owner_exception_consumed_two_completed_children",
     "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
-    "active_scientific_calls": 4,
+    "active_scientific_calls": 0,
     "C6_adapters_and_dev": {
       "packet": "reports/p010_20261019/c6_adapters_and_dev_draft_v1",
       "status": "PREPARED_NOT_RUN",
@@ -5581,13 +5591,18 @@
     },
     "latest_four_K1_outcomes_fixed_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
     "E9_input_candidate_fixed_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
-    "C6_actual_search_status": "GPU_complete_fullraw_PASS; local_selection_FAILED_infinity; no_cue_selected",
+    "C6_actual_search_status": "GPU and unique local continuation complete; candidate2 token1249; actual selection A3 pending; benchmark not run",
     "seed29_status": "four_original_same_data_inputs_prepared_A1_pending_no_calls",
     "seed29_input_packet": "reports/p010_20261019/seed29_inputs_v1",
     "seed29_runtime_candidate": "reports/p010_20261019/seed29_runtime_v1",
     "actual_C9_A3": "PASS_scoped_limits_retained",
     "A4_report": "reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1/A4_SCIENTIFIC_SIGNAL_REPORT.json",
     "A4_issued": true,
-    "C6_local_continuation": "D3_and_exact_A2_accepted_unattempted"
+    "C6_local_continuation": {
+      "status": "DONE",
+      "packet": "reports/p010_20261019/c6_complete_selection_v1",
+      "new_model_calls": 0,
+      "repeated_confirmed_parser_attempts": 0
+    }
   }
 }

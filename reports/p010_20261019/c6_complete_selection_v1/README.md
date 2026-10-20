@@ -1,0 +1,5 @@
+# C6 saved complete selection — actual A3 pending
+
+The one approved local completion reused all 731 confirmed answer keys / 3,700 confirmed rows. It made 815 new parser attempts, including exactly one new attempt on the previously failed infinity key; it did not regenerate any model output. All 10,080 original dev responses are now grouped, with zero technical unknowns. Saved selection chooses candidate 2, token ID [1249]. The full 1,703-file journal is preserved with archive readback hashes.
+
+Original GPU outputs, probabilities, source, terminal/STOPPED proof and failed local attempt remain in the fixed original evidence packet linked by ORIGINAL_EVIDENCE_REFERENCES.json. The signed-infinity rule was approved after the original failure, with independent exact A2; this is disclosed rather than described as a pre-failure rule. No gold, correctness or test labels were used. No benchmark effect has yet been measured. Publication copies saved bytes only; it does not invoke a parser, selection computation, tokenizer, oracle or model. Actual independent selection A3 is requested separately.

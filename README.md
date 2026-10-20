@@ -1,3 +1,9 @@
+# Current P010 — A3 accepted, A4 issued, Tier3 preparation
+
+[Actual results and C9 A3 acceptance](reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1/README.md) is saved with independent-review limitations. [C6 saved selection](reports/p010_20261019/c6_complete_selection_v1/README.md) completed its approved local repair without new model outputs; actual selection A3 is pending. Four seed29 exact inputs/runtime await A1/A2. E9 inputs have A1 PASS; its full runtime is being prepared. No new Tier3 model has been called. Hard $240/G50/T150/I15/C25 remains unchanged.
+
+--- Earlier dated state ---
+
 # Current P010 — new K1/E1d A2 and completed-result A3 accepted
 
 [P010 current evidence](reports/p010_20261019/README.md): original five K1/E1d cells have exact A2 PASS; completed E4 and T1.5K4/K8 have A3 PASS with stated limitations. C6 search A2 pending. New model calls remain zero at this publication. Original budgets and owner cancellations remain unchanged.
