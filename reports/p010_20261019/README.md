@@ -1,3 +1,7 @@
+# Current P010 — original T1.5 K4/K8 locally complete
+
+[Results and original evidence](t15_k4_k8_actual_results_v1/README.md):262/500 and279/500 greedy, sampled means54.75%/52.70%; actualA3 pending. [Direct owner amendment](owner_selection_and_e4_endpoint_20261020_v1/README.md) cancels allfourT7/T72K4/K8 cells and approves two E4 endpoint-only children after exactaudit; K1/E1d remain in scope. No scientific call is currently active; five K1/E1d and two E4 children await their real audits.
+
 # Current P010 — original T1.5 K4/K8 training
 
 [Both original students and startup proof](student_t15_started_v1/README.md) are active. [E4 completed training and failed endpoints](e4_failed_endpoint_complete_training_v1/README.md) are preserved; [endpoint-only repair](e4_endpoint_repair_preflight_v1/README.md) awaits direct owner exception and independent A2. All teacher generation is closed; T72 data A1 and the T7/T72 K4/K8 scope decision remain pending. [C7 v3 code-only feedback](c7_z1_code_review_r3/REVIEW.md) does not relabel Z1.

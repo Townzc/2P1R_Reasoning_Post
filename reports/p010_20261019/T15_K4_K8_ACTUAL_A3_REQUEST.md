@@ -1,0 +1,11 @@
+# Actual P010 T1.5 K4/K8 results — A3
+
+Scope `p010-C4-T15-K4-K8-complete-results-A3`; request `p010-C4-T15-K4-K8-complete-A3-r1`. Exact target and per-packet manifests are in INDEX.
+
+Please independently verify all original500greedy+4×500sampled tokens per cell, immutable request/ack/forecasts, source34 and original A1/A2,152namedrecords,1024updates/2097148targets, final-state hash/merge/exit proofs and provider STOPPED0. Full state binaries are private; do not imply an external binary read. Local full-state/raw check and frozen math-verify scoring each ran once; all originals and incomplete/failed historical parents remain unchanged.
+
+Both original compact archives, complete saved scoring journals, frozen Boolean tables and original gold/source bindings are in each result packet. Verify the entire primary denominator and sampled mean pass@1 (not best-of4), capped outcomes, technicalunknown0 and pair cache provenance. Independently adjudicate both preselected50-row disagreement sets and report the per-endpoint fixed samples as appropriate. K4 has133 disagreements,0fallback,0outertimeout,872unique pairs; K8 has130disagreements,1fallback (<2%),0outertimeout,881pairs. Original adjudication fields are deliberately false/pending. Unsupportedgold0. Do not silently relabel primary scores or claim Codex did independent adjudication.
+
+Local results262/500 and279/500; four-samplemeans1095/2000 and1054/2000. OriginalK1n400273/500 andn3200276/500 are reused references; no old raw scoring/checkpoint replay. There is no new CI/bootstrap in this package. C9 will bind the shared question tables and original planned contrasts; no winner selection or omitted unfavorable result. This actual A3 is not a Tier3/A4 release or approval for cancelled T7/T72K4/K8 cells. E4 endpoint-only approval is a separate narrow owner exception requiring its own exactA2.
+
+Review original exact runtime/input `student_runtime_v1` at73afc9db, actualA1/A2 `review_bee46e43_C4_T7_accepted_v1`; complete MATHgold source is the originalP009 input archive, hashed132582ca829ff11820b9d739a14c6e3ce383aacb51dba50e406acd2d27d1b95d. Primary scalar frozenSHAd310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe. All new source and ledger bindings are in the result packets. Reviewer limitations must remain explicit.

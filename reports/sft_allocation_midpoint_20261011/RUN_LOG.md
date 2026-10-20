@@ -1732,3 +1732,11 @@ Both original CLI55749/78820 exited0 and were consumed once. Results record orig
 ### 2026-10-19 22:25:15 PDT — E4 child local evidence prepared
 
 New read-only29-key collection and1319 raw/source/owner/parent endpoint proof prepared,7new synthetic checks passed once0.174s; no actual child/oracle. Per-batch hash computed once before deployment. Exact runtime33 unchanged and original A2 pending; no extra code-onlygate. Two originalC4collectors15025/49961 started once after originalCLIexit0. A guessed nonexistent old evidence module path caused a read-only search error; no mutation or science followed that command.
+
+### 2026-10-19 22:27:34 PDT — C4 original complete-state/raw checks pass; frozen scoring starts
+
+Unique collectors15025/49961 and named-ledger readers61669/43919 completed once, each2368 artifact entries/152 original named keys, providerSTOPPED0. Full state/raw oracles75558/49549 passed at05:26:25UTC:1024updates2097148targets and2500 raw streams each, zero technicalunknown, no symbolic scoring yet. Each finalstate was loaded once. Next each2500-row frozenCPU scoring job runs once with unchanged math-verify, pair cache and original fixed sample requests; no rawdecode/state/model repeat. ActualA3 remains pending.
+
+### 2026-10-19 22:29:11 PDT — T1.5 full scoring complete; actualA3 requested
+
+Originalscore jobs77370/8762 EXIT0CONSUMED DONE once: greedy262/279 of500, sampled1095/1054 of2000, zero technicalunknown. All25chunks each and872/881unique pairs saved; actualelapsed2.694619/2.689791seconds are observations only. K4greedy is11below originalK1; K8is6above, both descriptive and owner notified immediately perv3. Two metadata-only publishers completed once, originaltar andfullscorejournal archived/readback, no scorer/raw/state rerun. IndependentA3/fixed50+50disagreementjudgments stillpending, no CI, no Tier3 release. ProviderSTOPPED0 confirmed in originalcollectors; no modelactive.
