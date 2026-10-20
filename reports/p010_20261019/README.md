@@ -1,3 +1,7 @@
+# Current P010 — T7 supply complete, two selection cells need owner disposition
+
+[T7 actual data](t7_data_candidate_v1/README.md) and [original evidence](teacher_t7_complete_v1/README.md):9410new+256inherited, STOPPED0. K1plans intact; K4/K8 have12 nesting conflicts and P_cov397. [Concrete options](T7_SELECTION_CONFLICT_OPTIONS.md), actualA1pending. T72 original bulk/E1d remains active; T15A1/C8A1-A2/C4A2 pending. [C6 label-free selection draft](c6_selection_draft_v1/README.md) has5newtestsPASS, no cue/model execution.
+
 # Latest — 2026-10-20T03:36:18.817041+00:00
 
 [T72 smoke passed17/20 and originalT7suffix active](active_generators_v1/README.md). [C4/A2 candidate](student_runtime_v1/README.md) preserves original1024/2097148 and adds the authorized four-sample endpoints; no student calls yet. T15A1 andC8A1/A2 remain pending. Attempted G reservations44, not actual spending.

@@ -1650,3 +1650,17 @@ T72原call17614的只读3file回执43253一次DONE，17/20usablecorrect、17boxe
 T15两个原C3input只字节复制、追加config与原MATH500endpoint，零重选/重编码/调度/评分。新C4 source34候选保留原train_and_merge完整函数AST，仅多答案外层验证；1024/2097148、seed17/LR/LoRA不变，子进程退出后greedy+4sample/共2500raw。原23hosts1496training/32endpoint全保留情景4290.960s/6.091USD<=4500/6.55，greedy到sampling和600s/20%仍未校准。6新checks五项首PASS；实际worker mock首因fixture未映射/workspace路径失败，修fixture后仅该项PASS；实际worker拒重复不改原terminal。旧tests不重跑。新spec未发布稿保存后更新replay保护sourcehash；实际Modal定义只本地import无调用。
 
 review97970于03:29:00UTC仍cc0d29f2/109comments，无新C8/A1报告，下一正常03:59。几次旧文件名猜测只读失败发生代码/候选写入前，无科学副作用，今后按rg已列路径。C4A2实际pending，无student/upload。
+
+### 2026-10-20T03:45:43.431471+00:00 / 2026-10-19 20:45:43 PDT — T7 actual collection closed, C3 begins
+
+Original suffix45692 EXIT0CONSUMED:9410new=8944fixed+466conditional,256inherited unchanged; completed03:44:25.522091UTC,955.738386s includingpack. Collector65225 EXIT0CONSUMED, originalresult/archive/providerSTOPPED0 verified. One C3 independent raw/source/score-journal binding and frozen selection will now run into a new directory; no symbolic rescore or generation. T72 original17614 remains active.
+
+### 2026-10-20T03:50:35.581716+00:00 / 2026-10-19 20:50:35 PDT — T7 complete data and unresolved nesting; C6 draft
+
+T7C3 CLI35821 EXIT0CONSUMED andmetadata publisher39725 EXIT0CONSUMED once. Full9666logicaloutputs bind9410new+256original. K1n400/n3200 plans exact1024/2097148, fallback12/400=3% and82/3200=2.5625%. K4/K8 usable inventories1560/3064 cover397,12nesting conflicts(9laterusable,3noanswer), so no plans/admission. ActualA1 and concrete owner options published; no silent re-selection/truncation/extra generation or scientific waiver. T72 continues its original call.
+
+Completionbilling76712 once03:47:14–15UTC grossworkspace258.67546892/cash0; scopedP010tags10.30234481 delayed(notinvoice/finalcost/balance), G44 reservations retained. This is a new necessary completion snapshot, not the old03:17 query repeated.
+
+C6 draft pure probability/entropy selection5newsyntheticchecksPASS once0.019s, no gold/test/model/normalizer execution. Inspected pinned authorcodecd9caabe; its100problem/width40/top12x4 defaults differ from fixedP01030/width20/depth2. Explicit proposed mean-joint-probability pooling/complete480response entropy/no-cue eligibility documented for future fullC6 review, no new code-only blocking gate.
+
+Metadata-only publisher initially failed ASTparse on a dict keyword colon before anyexecution/write; saved faulty source, corrected one token then onlyparsed andexecuted once. A later documentation batch had an unclosed multiline string and failed before any writes; those absent documents were then created once with apply_patch. Unpublished PDT label arithmetic was corrected using America/Los_Angeles while UTC event unchanged. Old immutable packets/sources/tests remain untouched.
