@@ -1,3 +1,7 @@
+# Current P010 — four seed29 originals running
+
+[Submission and startup evidence](seed29_original_started_v1/README.md): exact A1/A2 and four first-block proofs are complete. E9 inputs are ready and wait for a real shared slot; C6 full benchmark A2 remains pending. No old work was repeated.
+
 # Current P010 — A3 accepted, A4 issued, Tier3 preparation
 
 [Actual results and C9 A3 acceptance](review_c37f62c5_A3_A4_C6_E9_accepted_v1/README.md) is saved with independent-review limitations. [C6 saved selection](c6_complete_selection_v1/README.md) completed its approved local repair without new model outputs; actual selection A3 is pending. Four seed29 exact inputs/runtime await A1/A2. E9 inputs have A1 PASS; its full runtime is being prepared. No new Tier3 model has been called. Hard $240/G50/T150/I15/C25 remains unchanged.

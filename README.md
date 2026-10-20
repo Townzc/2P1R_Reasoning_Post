@@ -1,3 +1,7 @@
+# Current P010 — four seed29 originals running
+
+[Submission and startup evidence](reports/p010_20261019/seed29_original_started_v1/README.md): exact A1/A2 and four first-block proofs are complete. E9 inputs are ready and wait for a real shared slot; C6 full benchmark A2 remains pending. No old work was repeated.
+
 # Current P010 — exact Tier3 runtime accepted
 
 [Actual Claude l acceptance](reports/p010_20261019/review_6f1a5293_Tier3_C6_accepted_v1/README.md): four original seed29 same-data inputs/runtime and delegated E9 runtime PASS. C6 saved selection actual A3 PASS; its complete benchmark A2 remains pending. New Tier3 calls follow fresh budget/input/once-only gates. All old evidence stays immutable.

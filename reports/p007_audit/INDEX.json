@@ -5257,7 +5257,28 @@
     "E4_endpoint_owner_exception": "APPROVED_and_exact_A2_PASS_two_children_consumed",
     "E4_endpoint_only_A2": "PASS_owner_exception_consumed_two_completed_children",
     "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
-    "active_scientific_calls": 0,
+    "active_scientific_calls": [
+      {
+        "app_id": "ap-WpJhkIqlAhD0MORLKxFFxl",
+        "call_id": "fc-01M5CB9Z2JFDDYF7H7KMZCWD3C",
+        "run": "t72_s29_n400_k1"
+      },
+      {
+        "app_id": "ap-d27g1acF5RK1VbV3HkdFSD",
+        "call_id": "fc-01M5CBBND9S052S1V4N8P1TTTE",
+        "run": "t72_s29_n3200_k1"
+      },
+      {
+        "app_id": "ap-k1UF9Wi1oSrCmxst7AaaT9",
+        "call_id": "fc-01M5CBDRVEGGE69T7SF913FAV1",
+        "run": "t15_s29_n400_k1"
+      },
+      {
+        "app_id": "ap-oSYPjAS8AiLNhVBkT7MwIO",
+        "call_id": "fc-01M5CBHHH89VS4K6ABKHD8MWV2",
+        "run": "t15_s29_n3200_k1"
+      }
+    ],
     "C6_adapters_and_dev": {
       "packet": "reports/p010_20261019/c6_adapters_and_dev_draft_v1",
       "status": "PREPARED_NOT_RUN",
@@ -5593,7 +5614,7 @@
     "E1d_original_started": "reports/p010_20261019/e1d_original_started_v1",
     "owner_night_D1_D2": "reports/p010_20261019/owner_night_D1_D2_20261020_v1",
     "E5_status": "superseded_UNATTEMPTED_by_delegated_E9",
-    "E9_status": "Exact A1 and full A2 accepted; no calls yet",
+    "E9_status": "A1_A2_PASS_inputs_readback_complete_waiting_actual_free_slot",
     "reserve_settlement_D1": "approved_conditional_no_release_applied",
     "E9_input_packet": "reports/p010_20261019/e9_inputs_v1",
     "C6_and_S1_sample_original_calls": {
@@ -5637,7 +5658,7 @@
     "latest_four_K1_outcomes_fixed_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
     "E9_input_candidate_fixed_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
     "C6_actual_search_status": "GPU and unique local continuation complete; candidate2 token1249; actual selection A3 pending; benchmark not run",
-    "seed29_status": "Exact actual A1/A2 accepted; no calls yet",
+    "seed29_status": "four_original_seed29_calls_submitted_startup_verified",
     "seed29_input_packet": "reports/p010_20261019/seed29_inputs_v1",
     "seed29_runtime_candidate": "reports/p010_20261019/seed29_runtime_v1",
     "actual_C9_A3": "PASS_scoped_limits_retained",
@@ -5653,6 +5674,23 @@
     "C6_status": "Complete selection actual A3 accepted; complete benchmark exact A2 pending; no new benchmark call",
     "C6_benchmark_candidate": "reports/p010_20261019/c6_benchmark_runtime_v1",
     "C6_benchmark_target_commit": "a998d25251422707f65bfc836ad0fcfe69d56a43",
-    "latest_review_commit": "6f1a5293acbd71b87494e26499972248244b5b11"
+    "latest_review_commit": "6f1a5293acbd71b87494e26499972248244b5b11",
+    "seed29_original_started": {
+      "packet": "reports/p010_20261019/seed29_original_started_v1",
+      "manifest_sha256": "abac737969ed8f2c3cfa295ef8269f782421f645e73242880e0cdc1308c241ad",
+      "runs": [
+        "t72_s29_n400_k1",
+        "t72_s29_n3200_k1",
+        "t15_s29_n400_k1",
+        "t15_s29_n3200_k1"
+      ]
+    },
+    "latest_attempted_reservations_usd": {
+      "G": 44,
+      "T": 95.23,
+      "I": 3.26,
+      "C": 0,
+      "total": 142.49
+    }
   }
 }
