@@ -1035,3 +1035,7 @@ Public funding/core/v2 packets at974efcbf3c6eae6034828ef11c78831cb97dea46 have3+
 Exact NC3200 replacement candidate is fixed at 3938689cb3156d9a67773f49d8d7cd7f4390bc9c; all124 manifest members and MANIFEST verified from Git bytes once. New request p009-stage1-NC3200-independent-replacement-r1 is pending; actual parent A4 remains separately required. Whole staged whitespace check reported only two original frozen checkpoint/common EOF blank lines. Those bytes stay unchanged; only exclusion of these two copies passed. No old test/model/tool repeated, no new acceptance/gate/call. Recorded 2026-10-15T05:36:46.858884+00:00.
 
 Chronology disclosure 2026-10-15T05:37:30.165440+00:00: NC400954/1319 was known and published before the owner replacement answer was recorded. This is not outcome-blind or pre-registered. The stale05:11 reviewer comment had not inspected the later fixed evidence and is not actual A4/PASS. New exact request explicitly records the limitation; no science/gates repeated.
+
+### P010 cache startup observation 2026-10-20T02:48:34.073968+00:00
+
+Default Modal source mounting uploaded the historical experiments package. Local SIGINT raced submission: original T7 call fc-01M5BKA54GCWRE94EB4V63ABTG is active and its once-only claim is present. It is retained, never resubmitted; local KeyboardInterrupt stays recorded. T72 future entry explicitly mounts only required sources. No scientific model inference occurred. Initial staged check rejected two new log EOF blank lines, corrected before commit; no frozen bytes changed.

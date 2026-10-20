@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T02:45:44.612746+00:00",
+  "as_of_utc": "2026-10-20T02:48:34.071315+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3336,6 +3336,25 @@
       "Stage2_allowed": false,
       "actual_adjudication_complete": true,
       "reviewer_symbolic_rerun": false
+    },
+    {
+      "request_id": "p010-C8-A1-inputs-r1",
+      "scope": "p010-C8-original-D1-OLMo-inputs",
+      "target_commit": "1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59",
+      "packet": "reports/p010_20261019/c8_input_candidate_v1",
+      "manifest_sha256": "3507a63ce8b2fdae146ac24e9e98e5ef2a8e611d717dbc46e116b3f7039211f7",
+      "status": "pending",
+      "blocking_scope": "C8 training inputs only; C1/C2 independent",
+      "created_utc": "2026-10-20T02:48:34.071547+00:00"
+    },
+    {
+      "request_id": "p010-C7-Z1-code-cross-review-r1",
+      "scope": "Code cross-review delivered; Claude owns Z1 corrections and labeling",
+      "target_commit": "1916613325dc669a030cd290df3e276d815e6680",
+      "review_request": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
+      "status": "changes_requested",
+      "blocking_scope": "Z1 only",
+      "created_utc": "2026-10-20T02:48:34.071550+00:00"
     }
   ],
   "p008_v31": {
@@ -4588,7 +4607,7 @@
     }
   },
   "p010": {
-    "status": "authorized_preparation_no_scientific_calls",
+    "status": "T7_cache_original_running_T72_cache_prepared",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4599,6 +4618,7 @@
       "I": 15,
       "C": 25
     },
-    "no_old_work_replayed": true
+    "no_old_work_replayed": true,
+    "C8_input_commit": "1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59"
   }
 }
