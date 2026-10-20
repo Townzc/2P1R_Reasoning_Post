@@ -62,3 +62,6 @@ Fullfixed c/d reports read04:30:47UTC; C4exact34/T15K4K8 A2PASS and T7raw/K1 A1P
 
 
 [C6 full search candidate](c6_search_runtime_v1/README.md): original dev/input/runtime/selection A2 pending; no search performed.
+
+
+[Original S1 sample-only adapters](existing_s1_sampling_draft_v1/README.md): seven new synthetic checks; actual complete runtime and calls still unattempted.
