@@ -1,0 +1,548 @@
+{
+  "actual_T72_config_sha256": "b583ee6751a5b41979fdb4beaa240533dcd77d8ef8f01c0745727ef19d159362",
+  "actual_settlement_release_applied": false,
+  "cap_new_tokens": 1024,
+  "caps_usd": {
+    "C": 25,
+    "G": 50,
+    "I": 15,
+    "T": 150
+  },
+  "context": 2048,
+  "created_utc": "2026-10-20T11:29:22.658321+00:00",
+  "descriptive_metric_definitions": {
+    "aggregation": "pooled pair mean and equal-weight question means among questions with at least one pair, with denominator",
+    "complete": "original frozen native_eos only; other stops separately counted",
+    "confidence_intervals": false,
+    "correct": "original frozen Boolean, all eight attempts in denominator",
+    "equation_jaccard_empty": "both empty -> 1, one empty -> 0; empty-union count disclosed",
+    "equation_set": "lexical expressions inside LaTeX math delimiters, plus un-delimited single-line equations; Unicode NFKC, whitespace removed",
+    "length": "original physical returned token count; logical retained tokens also reported",
+    "pairs": "all 28 original within-question pairs first; usable-unique pairs separate, never a replacement",
+    "rouge_L": "F1 of exact longest common subsequence of whitespace-separated answer-segment tokens; case preserved",
+    "semantic_equivalence_claim": false,
+    "token_cost": "all eight physical returned tokens, including bad/capped/duplicate, divided by usable unique count",
+    "usable_unique": "native EOS, parsed correct; original normalized full-answer key; first occurrence per question"
+  },
+  "first_paid_measurement_exceptions": 0,
+  "full_cloud_window_seconds": 2500,
+  "full_result_window_seconds": 51105,
+  "gold_source_sha256": "a1278ae678fb5c89a66fab96db3893cbbf2ee38fe256dbdd02b471b01e05ba67",
+  "gpu": "H100!:4",
+  "independent_actual_A3_required": true,
+  "input_files": {
+    "PROMPT_TEXTS.json": {
+      "bytes": 248137,
+      "sha256": "903603c20e81e734090f9f925ebfa89a5c109656e4b75d7fc30469e7f010e89b"
+    },
+    "ROSTER.json": {
+      "bytes": 7755,
+      "sha256": "e2a43b2e2913dc8128bf29670ffb45558da020120b90a5bbbc542b6c3221d182"
+    },
+    "t06_requests.json": {
+      "bytes": 2857895,
+      "sha256": "d8361d95f3079a309fd4c48f790c53bc486ae61cff1fa8e22a94b12eb55a7a43"
+    },
+    "t10_requests.json": {
+      "bytes": 2857895,
+      "sha256": "56f79e187969e06ce8f32f5436219d9f72a616d0940ea6e487b15b44a1b24fd4"
+    }
+  },
+  "local_tokenizer_files": {
+    "config.json": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "retrieval_receipt.json": "24723e82db3ca44c2ab9b5ab1368201317ae4ea25fc49d46cf9b5976a02ec54a",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "local_window_components_seconds": {
+    "collection": 3600,
+    "metrics": 3600,
+    "publication": 600,
+    "raw_oracle": 7200,
+    "records": 1200,
+    "symbolic_with_cleanup": 32405
+  },
+  "maximum_shared_active_predecessors": 0,
+  "model": {
+    "files": {
+      "config.json": {
+        "bytes": 658,
+        "sha256": "b583ee6751a5b41979fdb4beaa240533dcd77d8ef8f01c0745727ef19d159362"
+      },
+      "generation_config.json": {
+        "bytes": 161,
+        "sha256": "071d157e94ad482562138f323df1ac3355d8bde9efce56f0a82ac2c333ee6525"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "model-00001-of-00037.safetensors": {
+        "bytes": 3762345336,
+        "sha256": "6f769e30120e4ca25f6fbebb6cf2375ec87887581a82872182e819b7440aa078"
+      },
+      "model-00002-of-00037.safetensors": {
+        "bytes": 3995200440,
+        "sha256": "11bd5d235e5c9ffd93a52fb414379cf487b1db557192f298712c5a4a8165dc9a"
+      },
+      "model-00003-of-00037.safetensors": {
+        "bytes": 3812769392,
+        "sha256": "d49faa48cfbee1ace386e4c23ba36d732358fb8b52c9a1413eb6a8bd5d39d9cf"
+      },
+      "model-00004-of-00037.safetensors": {
+        "bytes": 3995183944,
+        "sha256": "dab05182bfa5d8f310886dc2c2ace3c490c241518fb00f59ef3b226e5411100a"
+      },
+      "model-00005-of-00037.safetensors": {
+        "bytes": 3995183944,
+        "sha256": "1baa454c7adc550ef993d3d23884fbf2205fc6ec4bc467d9ea4ca4964cd25121"
+      },
+      "model-00006-of-00037.safetensors": {
+        "bytes": 3995200456,
+        "sha256": "d96acee55070b103d1104188982a68b367139b9968881fb5a546b57cb1c6f27f"
+      },
+      "model-00007-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "d3b727e7cbd7753cdd4a053754be808d4a199019768a71476e6cbc9596fe177b"
+      },
+      "model-00008-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "fd1089ddc98c9fb45d756dcbedc64d80b5622f9fc5c5a5713b18b113f633e42d"
+      },
+      "model-00009-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "70d1640dac847624d415d45f6768742e2b49e50ba738284f5aefd608625f775f"
+      },
+      "model-00010-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "de1547c3e9086ef6e492f337ba10ea1c2e70bcefc60a2e98c3a0eee9aa4142ed"
+      },
+      "model-00011-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "4d9451a273a6db884fe7661a7c3ea9a3ceaadfb3495d1fdeca3326526ba1aa07"
+      },
+      "model-00012-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "2ddd1a5ea6b88dbac4ea49a5dd3e5bee7b8cf67a68c69451f714aa4ed82c7f59"
+      },
+      "model-00013-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "c5788d9a92b142044b7bf04c86531f8d2f0eecded99667bb4e503cc113044507"
+      },
+      "model-00014-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "c334eee8aa65865da70b3d75f75d8bba3f66b8d88d61a9a77eaf297de6a6c439"
+      },
+      "model-00015-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "cb84af734b89210128c7ecb9c0b88f2d52f2393086b9c54b57f5fcf5367ea701"
+      },
+      "model-00016-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "79f7b716d9f6dc3428de9edea8b00fb4d1df6e0982734da8f004571547c84661"
+      },
+      "model-00017-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "3ea5ea321b0700512d4a0e0a967a30ed604da6ccd3c7049b56e604142754eb05"
+      },
+      "model-00018-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "c614195122e349e3fc0d1cf673452ec4f14c5c2a904576451ccda89f36dc31fc"
+      },
+      "model-00019-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "a74bdfec9f7fa798d78eba034420a724c368c4911cefb31a375daf2d1422bd05"
+      },
+      "model-00020-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "696ccefad420393887700a52136ae9adc8bfa0e9d70bfb728831692dea8abf30"
+      },
+      "model-00021-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "d73050b869902f526d9bf1ea3122bffe6895e7d9a5f19adfdcc708f6e4056228"
+      },
+      "model-00022-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "d3aa2e684f92276c3ba26cd837f5a0ed6721910228dcbdf3ee9b97a0ca2b6742"
+      },
+      "model-00023-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "27be2a738395d6cc3d37c381d1389947729f72b7f318b878b1f31d98246b1d41"
+      },
+      "model-00024-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "8bd8296d30e29f2d23a5da7d55f9623cf3eb07ecf989635db7d3abb19db1a3f5"
+      },
+      "model-00025-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "980ecea197102bc606b395ab36de235ff7aeb88e79f588be6bea3e1207377c90"
+      },
+      "model-00026-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "fb34d398d8069f48733502160a540f3b1861350e8bc2c25bb04a0d43120e5565"
+      },
+      "model-00027-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "826335f3f8b1feb2ed4224e5473eaa22520d5558f66b17c76748b39fee1c4f60"
+      },
+      "model-00028-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "fa0461e1654ee3de5e200a52eaf254f545b7f83994d88378796f660e582320b0"
+      },
+      "model-00029-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "eeffc2bad44ddc7bb3a9c85ad3196c76f2714c7989831d3f478e8bbe43b643e4"
+      },
+      "model-00030-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "43093674e39c7aa54139c31dfee2cafd4c6ff065c04382b31652a40b2e16a286"
+      },
+      "model-00031-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "4e5857aba8ed3c5527b4010c6f1faf6abe827d91d1f6c12e25bf5e955822807a"
+      },
+      "model-00032-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "96c59272591b1d96363b328b47b0b27cc99cbad85f3d9634a21811f06ec22a62"
+      },
+      "model-00033-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "a1e3e1daed001384c410100e783ac1c70250c089cfea6bc1768f1709adec46b5"
+      },
+      "model-00034-of-00037.safetensors": {
+        "bytes": 3995200464,
+        "sha256": "be31c44e83974f869d3df0434ca486dd25a9126050fe713e4b3525d8530939d3"
+      },
+      "model-00035-of-00037.safetensors": {
+        "bytes": 3812769424,
+        "sha256": "6d233b983f1f5e041fb627694c7a04cbe1cb2d6ed895706309e05cdf5fc16c96"
+      },
+      "model-00036-of-00037.safetensors": {
+        "bytes": 3995183968,
+        "sha256": "77381250f5c1e2b5dc81cc651f1faa9c2286942cad0ad0959311ca9c11a71c69"
+      },
+      "model-00037-of-00037.safetensors": {
+        "bytes": 3460317640,
+        "sha256": "3c065840daf5eed3b58428c0628e4e413ee3eb0d501feb3bbbc35cc22e8f8176"
+      },
+      "model.safetensors.index.json": {
+        "bytes": 79025,
+        "sha256": "6c1d85cad4513d35273d05a4c7206c04b4c8aea0ebd35ef2b26cb88ec56dfe66"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7315,
+        "sha256": "d743761ff02297cc5cdf38a612b0f78d5cdf5ceb3f251ab1d25ad353d24b1887"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "model_id": "Qwen/Qwen2.5-Math-72B-Instruct",
+    "original_result_sha256": "3c8801c41970ff40f699eca41a03ab1c4c5f47ab3b5223e039128df4958fb10f",
+    "remote_path": "/evidence/p010-20261019/assets/t72",
+    "revision": "8fcf92b1eac8eca48c3d49778ad3dd1b394c9a17",
+    "vocab_size": 152064
+  },
+  "new_G_reserved_usd": "11.13",
+  "new_attempts_per_question_per_temperature": 8,
+  "new_confidence_intervals": false,
+  "new_outputs": 3200,
+  "new_training_updates": 0,
+  "no_automatic_retry": true,
+  "old_T08_regenerated_or_rescored": false,
+  "original_T08_metadata_proof_sha256": "6a8341892521e7924b07e402948d9468871594fa5d4a176da4b80e0467eac229",
+  "original_T08_rows_sha256": "68c6a829003322a7e45380b7147994824fe4d39654085feef004da7b063de4e1",
+  "original_actual_teacher_A1": {
+    "accepted_cells": [
+      "n400_k1",
+      "n3200_k1",
+      "e1d_n3200_k1"
+    ],
+    "blocked_cells": [
+      "n400_k4",
+      "n400_k8"
+    ],
+    "commit": "c542484d39888cdc74db7b68e70ae5afab163f6c",
+    "data_manifest_sha256": "aa262790a5e38f3fe43a4953899a434604633c389eba735fcf38abf9a2dc0e21",
+    "decision": "PASS-WITH-NOTES",
+    "input_archive_sha256": "10c7b934b05be3896fd3ab1e8e2102fee4c9ef5184fb68c2e8eaf4917625a619",
+    "issue_comment_event": null,
+    "later_owner_cancelled_cells": [
+      "n400_k4",
+      "n400_k8"
+    ],
+    "limitations": [
+      "Independent A1 selection/order/bytes/plan checks; no claim of fresh external GPU inference or private state reading.",
+      "Fallback13/400=3.25% was reported before training; plan requires reporting, not another approval.",
+      "2479/14098 teacher outputs are capped; accepted answers condition on short enough completions.",
+      "E1d3200 retained rows contain one normalized duplicate pair (algebra/train/925 and959),3199 distinct normalized problems; reviewer accepts with disclosure, original input bytes unchanged.",
+      "E1d overlaps S1n3200 on1597 problems; level distributions differ; not a pure isolated difficulty causal comparison."
+    ],
+    "path": "audit/claude/20261020f/REPORT.md",
+    "read_utc": "2026-10-20T05:30:53.509511+00:00",
+    "report_added_commit": "a321c4c6aa4ba43de9fddee4d4dd5bd58a235edb",
+    "report_authored_time_label": "2026-10-20 05:14 UTC",
+    "report_commit_event_utc": "2026-10-20T05:14:32Z",
+    "report_sha256": "3a76f572c38cd2f30f810f1c9788a277323d03c1cf1a2a6847f1071e60e9434b",
+    "reviewed_context_commit": "33b99ccfc639a431efef317ee8361ae83568f6e3",
+    "scope": "p010-T72-complete-data-A1",
+    "target_commit": "1f0c6ed613f4bb8ef60b177d2930c555c4a2063a",
+    "teacher_manifest_sha256": "c5d67e393530fadd116c4a31f5a889dd233ebae002b9323597a65eaaea8380e3"
+  },
+  "original_input_basis_sha256": "13d36b7537ee006b1ea02c499989f3c5bd3646bf56929ce2576ac57b2ee56672",
+  "original_matched_questions": 200,
+  "original_seed_function_unchanged": true,
+  "overall_cap_usd": 240,
+  "owner_D4_file_sha256": "7cd6d0cf6c0d755f1883c9d7a3981988a83b24ce9dc78a7e9fe7e51108dd8e0e",
+  "owner_D4_original_evidence_sha256": "72ec41dcd19b2e06069cfc66a0c443e8025563736779ef6f20595a5665495f40",
+  "owner_delegation_sha256": "85a08b9cb6ca519db13aec3c1c7a0b72ba0a72f188da1dd90f7f9093a35b7f6c",
+  "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
+  "platform_seconds": 1860,
+  "prior_original_G_reserve_usd": "44",
+  "proposed_charged_G_usd": "24.03",
+  "protected_usd": 43,
+  "required_prior_receipt_directories": [
+    "student_runs/t72_s29_n400_k1",
+    "student_runs/t72_s29_n3200_k1",
+    "student_runs/t15_s29_n400_k1",
+    "student_runs/t15_s29_n3200_k1",
+    "e9_runs/e9_s17_n400",
+    "e9_runs/e9_s17_n3200",
+    "e9_runs/e9_base_math",
+    "cue_benchmark_runs/benchmark_group_r1"
+  ],
+  "reused_T08_outputs": 1600,
+  "runtime_A2_scope": "p010-E3-complete-input-runtime-and-numeric-A2",
+  "scenario": {
+    "D1_charged_G_usd": "24.03",
+    "G_cap_usd": "50",
+    "completed_batches": 0,
+    "elapsed_seconds": 0,
+    "first_paid_measurement_exceptions": 0,
+    "future_seconds": 1548.8584828076353,
+    "margin": 1.2,
+    "maximum_observed_batch_seconds": 38.098671706999994,
+    "model_loaded": false,
+    "new_batch_seconds": [],
+    "new_reserved_usd": "11.13",
+    "not_a_future_host_bound_or_probability": true,
+    "observed_original_setup_seconds": 457.33399844169617,
+    "original_batch_seconds": [
+      33.35119195499999,
+      33.986084334,
+      33.447647383,
+      33.76748201099997,
+      32.19673042399995,
+      32.532641539,
+      33.51057528399997,
+      33.60972539299996,
+      33.553288863000034,
+      32.580910956000025,
+      32.76002745899996,
+      32.25287049799999,
+      32.343494687999964,
+      34.17690950300005,
+      33.25730261000001,
+      32.819698969000115,
+      32.139506672999914,
+      32.46204598600002,
+      32.870094655,
+      32.04331273599996,
+      32.686145072000045,
+      32.998408903000154,
+      32.32919946099992,
+      32.53769632900003,
+      32.66689183199992,
+      31.71658322600001,
+      32.87991891700017,
+      31.408805261999987,
+      31.81755149600008,
+      32.694187027,
+      31.889550111999824,
+      32.43836379300001,
+      32.47414243399999,
+      32.162098385000036,
+      32.21278710999991,
+      38.098671706999994
+    ],
+    "original_claims_rewritten": false,
+    "original_prior_G_reserved_usd": "44",
+    "projected_total_worker_seconds": 1548.8584828076353,
+    "projected_usd": "9.959701204795452699264",
+    "setup_proxy_remaining_seconds": 457.33399844169617,
+    "total_batches": 14,
+    "uncalibrated_closing_seconds": 300
+  },
+  "schema": "p010_original_E3_complete_v1",
+  "settlement_files": {
+    "HISTORICAL_APP_ROWS.json": {
+      "bytes": 9541,
+      "sha256": "43f0264f8c9611b5b229568c3a532b5352745fccd07651b50e4a70cde9a1719d"
+    },
+    "HOURLY_ORIGINAL_APP_ROWS.json": {
+      "bytes": 7091,
+      "sha256": "17b68e58130543c2a0dd1d4ce35d560695ccbbaaeca53b513ec1596cf0921026"
+    },
+    "HOURLY_QUERY_RECEIPT.json": {
+      "bytes": 895,
+      "sha256": "fc8064fd11c96bd8977fcb671560bf2d38e55f8d733a2faf3fa948896c80a4aa"
+    },
+    "ORIGINAL_RESERVATIONS.json": {
+      "bytes": 2542,
+      "sha256": "80337131a0eeca31d62813387325fff2b5e462a289d1717fce166babca5ec67f"
+    },
+    "PROPOSAL.json": {
+      "bytes": 10526,
+      "sha256": "e0766a9a6cb3f91f7fc1835f6dded5b23e9fe6495a1bc22b8930610458ce3ea4"
+    },
+    "PROVIDER_PROJECTIONS.json": {
+      "bytes": 1730,
+      "sha256": "d66957f5b0802f86266d6191e9ab0d47e2450cbf0d4abb609dc863f5dc3dc44e"
+    },
+    "README.md": {
+      "bytes": 1498,
+      "sha256": "bb8f5950d9171058c3046ba6c840397a867921a20cb3a4e8261bc261b529e1b8"
+    },
+    "SOURCE_BASIS.json": {
+      "bytes": 4654,
+      "sha256": "0e977bc11e12d13a4aedf30d9ac720be60f46a36e4c8d785ac91e2f9ef64c654"
+    },
+    "SOURCE_BINDING.json": {
+      "bytes": 210,
+      "sha256": "cccdd6c7c184b53ed1616da6b8b43da8ecbd2d2a99ecc3a61af6e45538fb6c1e"
+    },
+    "source/experiments/p010/common.py": {
+      "bytes": 2724,
+      "sha256": "95bd95ce8017b5fed5f6b4554a61b778b4fa7d287b6021c724162ddf861f68f4"
+    },
+    "source/experiments/p010/settlement_d1.py": {
+      "bytes": 4393,
+      "sha256": "917119eba9d4f015f11cb9e8cbba59ff08f7fdec4e0561acf82ae2657c97ca0f"
+    }
+  },
+  "settlement_manifest_sha256": "d43aad5041bbf22bf99a890970b6fa3991c6c4f4dc4d27673eebdd9be170dbd7",
+  "settlement_packet": "reports/p010_20261019/e3_d1_settlement_candidate_v1",
+  "settlement_proposal_sha256": "e0766a9a6cb3f91f7fc1835f6dded5b23e9fe6495a1bc22b8930610458ce3ea4",
+  "source_files": {
+    "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+    "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+    "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+    "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+    "experiments/learning_regime_p009/p0_contract.py": "d82396a9e3372ce00a61a5dcff324e9b7344ff7859530bac62d810ae90ba1414",
+    "experiments/learning_regime_p009/p0_engine.py": "d32f2ad5b125200c92b7d911361ea3eca36f09c4cce03d286dea3306461b22bb",
+    "experiments/learning_regime_p009/requirements_p0.txt": "375f161f867fe5bcdf846d5423fbdba991be4c7ee189d1dde9b5e52a39337b69",
+    "experiments/learning_regime_p009/stage0_generation_contract_v2.py": "3f36030d76715bc92cbe75ac674089137cb8bfd8027b5cdb6c1254dac7482d53",
+    "experiments/learning_regime_p009/stage0_generation_engine_v2.py": "4f89824206d89eafdd654c64063717b1e934dd831ea1a3c55dd94559044bc599",
+    "experiments/p010/__init__.py": "ffe59067af5aa399e71129929700941e8f82a41537f17a8e22882045f9d16813",
+    "experiments/p010/common.py": "95bd95ce8017b5fed5f6b4554a61b778b4fa7d287b6021c724162ddf861f68f4",
+    "experiments/p010/e3_contract.py": "f2f083bef5eb06749820342904453a6630ebbe4007d80c0d34538457decbec03",
+    "experiments/p010/e3_runtime.py": "7f63d51a0ea06a7d6147f5d1315410c2bcc608437f083142064f507b7a6dc237",
+    "experiments/p010/e3_settlement_binding.py": "41fc783544e94119ddb9a841349ddde4aaa043ef19190b5cfb14e831e24cc39d",
+    "experiments/p010/modal_e3.py": "98110190d6b776bd10c4c1bd9f42e073b3e6f201b143ca32bab50e961729f1e6",
+    "experiments/p010/runtime_support.py": "8ae0e53878fafdb1ad6e094d5920bde7351884ab42082b63da26cf8cf4f89b9a",
+    "experiments/p010/settlement_d1.py": "917119eba9d4f015f11cb9e8cbba59ff08f7fdec4e0561acf82ae2657c97ca0f",
+    "experiments/p010/teacher_contract.py": "2a22595377e906c8d26b8fade487d7846b9913ef78b03d16b4efc266998d4596",
+    "experiments/p010/teacher_transport.py": "6167a2e4c234ab46054a51a64968dca9346ce9e31ba622adf34ebcc8eaa37e74",
+    "experiments/p010/tier3_dispatch.py": "6dd072833bb37ce69b730d8cdca736c0881e151e7d29dc27c5cac5da7f175cfa",
+    "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "startup_seconds": 600,
+  "teacher_native_chat": true,
+  "temperatures": [
+    0.6,
+    0.8,
+    1.0
+  ],
+  "tensor_parallel": 4,
+  "timing": {
+    "future_host_upper_bound": false,
+    "margin": 1.2,
+    "observed_pre_first_batch_seconds": 457.33399844169617,
+    "original_full_batch_seconds": [
+      33.35119195499999,
+      33.986084334,
+      33.447647383,
+      33.76748201099997,
+      32.19673042399995,
+      32.532641539,
+      33.51057528399997,
+      33.60972539299996,
+      33.553288863000034,
+      32.580910956000025,
+      32.76002745899996,
+      32.25287049799999,
+      32.343494687999964,
+      34.17690950300005,
+      33.25730261000001,
+      32.819698969000115,
+      32.139506672999914,
+      32.46204598600002,
+      32.870094655,
+      32.04331273599996,
+      32.686145072000045,
+      32.998408903000154,
+      32.32919946099992,
+      32.53769632900003,
+      32.66689183199992,
+      31.71658322600001,
+      32.87991891700017,
+      31.408805261999987,
+      31.81755149600008,
+      32.694187027,
+      31.889550111999824,
+      32.43836379300001,
+      32.47414243399999,
+      32.162098385000036,
+      32.21278710999991,
+      38.098671706999994
+    ],
+    "original_result_sha256": "cdaf25f47d7f452be7627a2fc82e309c9e81ec7ac468884dfa86bd2dfba4c233",
+    "original_setup_source_files": {
+      "INTENT.json": "8cbebfc91c0cd3de5e66e66fa2471813fcd2cf48991579f177752b25cf099fc1",
+      "intents/00000.json": "fd1f2c096f8412c920c2eacef32ecfc21c7b0e50a8cef7c61a8f7030cfc3719f"
+    },
+    "uncalibrated_closing_seconds": 300
+  },
+  "verification_source_files": {
+    "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+    "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+    "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
+    "experiments/learning_regime_p009/high_throughput_v1.py": "539d9cf94146bfcdaa0ef678e66ed40cbc941bc8ec20e1fd72fe0500301d2e8c",
+    "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
+    "experiments/learning_regime_p009/math_scoring_journal.py": "c7d86daf1cda405406178fcb0ec3ba42c8404a6e5550e95dae2d23bccf28846c",
+    "experiments/learning_regime_p009/math_scoring_pool.py": "c3ac26aa20bc1da64708dc07bff585a26beeb4adc4b90924a05d4627b80ebb99",
+    "experiments/learning_regime_p009/stage1_s1_scoring.py": "b0480d3e996fa9e3ffc0755d46f1e1456f06ba74bfa7dcc0d33891c8fcf1dc35",
+    "experiments/p010/__init__.py": "ffe59067af5aa399e71129929700941e8f82a41537f17a8e22882045f9d16813",
+    "experiments/p010/common.py": "95bd95ce8017b5fed5f6b4554a61b778b4fa7d287b6021c724162ddf861f68f4",
+    "experiments/p010/dataset_selection.py": "42e6086e4510ccc7e67d6db83592476857900e37dacf79747d78d6f990435a5d",
+    "experiments/p010/e3_contract.py": "f2f083bef5eb06749820342904453a6630ebbe4007d80c0d34538457decbec03",
+    "experiments/p010/e3_metrics.py": "a00037f20c7f0af0665bf1e7124dbf365efebd5990e5360b6e88eebdc5391585",
+    "experiments/p010/e3_score_process.py": "493e5c233baaf2813ef275a6ad47e6bf111c862b475a60c0d5a436e6babafe22",
+    "experiments/p010/e3_scoring.py": "e43f297a91315ce92ddf381d0fa84a913415345567baf233111ba3736e9350c3",
+    "experiments/p010/teacher_contract.py": "2a22595377e906c8d26b8fade487d7846b9913ef78b03d16b4efc266998d4596",
+    "experiments/p010/teacher_transport.py": "6167a2e4c234ab46054a51a64968dca9346ce9e31ba622adf34ebcc8eaa37e74",
+    "experiments/p010/tier3_dispatch.py": "6dd072833bb37ce69b730d8cdca736c0881e151e7d29dc27c5cac5da7f175cfa",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "experiments/sft_allocation_p008/provider_release.py": "7ebd47b4fcd91310ae3bacdb892008eb494e3ee2e8915717a9ed62989aae7593",
+    "scripts/audit_p010_e3.py": "236b78c488e3e83579c89f30c1676dcf5366104d8cf2fc56c3264494892f4786",
+    "scripts/p010_e3_io.py": "0818cfeec842e24e3fd388046aedd1af4e7b9c24a6cb362055d26dca1cf7306c",
+    "scripts/p010_transfer.py": "3115b8396e3d35eedd5951b4e64ba103badd1393c49a7481bf1a2660f402f724",
+    "scripts/score_p010_e3.py": "9dceb908922b5023476f80f2d0436fde8327aeab2550234d301d5ee21cc85fda",
+    "scripts/summarize_p010_e3.py": "b1a1e9480a0aacaa6c4b22a06f17e2b9126208a0b529d08eae377b716fa8d7bf",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+    "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+  },
+  "worker_seconds": 1800
+}

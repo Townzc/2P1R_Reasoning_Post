@@ -1,3 +1,9 @@
+# Current P010 — E3 full local evidence complete
+
+[E3 complete evidence and descriptive metrics](e3_complete_results_v1/README.md) contains3,200 new outputs and1,600 reused original outputs; full raw and frozen-score proofs passed. Actual independent A3 is pending. The independently approved C6 remaining call is active.
+
+--- Earlier dated state ---
+
 # Current P010 — original E3 submitted
 
 [Original E3 submission evidence](e3_original_started_v1/README.md): exact audit accepted, original call submitted once;3,200 new outputs are planned and1,600 saved T0.8 outputs are reused. C6 is separately approved and waits for E3 STOPPED0. Actual new results remain pending.
