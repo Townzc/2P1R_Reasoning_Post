@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-20T05:37:08.088451+00:00",
+  "source_sha256": "e771b5fa173b0bf579dbff4deec1741879bfabe4f975956c502656f233a4cf86",
+  "scope": "new v3.1 last-line negation fix only",
+  "source_code_only": true,
+  "actual_Z1_rows_or_labels_read": false,
+  "top_level_dataset_loading_executed": false,
+  "new_cases": [
+    {
+      "synthetic_text": "The result is not 4.",
+      "expected_candidate": null,
+      "expected_rule": "last_line_negated",
+      "actual_candidate": null,
+      "actual_rule": "last_line_negated",
+      "passed": true
+    },
+    {
+      "synthetic_text": "The result is neither 4 nor 5.",
+      "expected_candidate": null,
+      "expected_rule": "last_line_negated",
+      "actual_candidate": null,
+      "actual_rule": "last_line_negated",
+      "passed": true
+    },
+    {
+      "synthetic_text": "The result 4 is incorrect.",
+      "expected_candidate": null,
+      "expected_rule": "last_line_negated",
+      "actual_candidate": null,
+      "actual_rule": "last_line_negated",
+      "passed": true
+    },
+    {
+      "synthetic_text": "A notable result is 4.",
+      "expected_candidate": "4",
+      "expected_rule": "last_line",
+      "actual_candidate": "4",
+      "actual_rule": "last_line",
+      "passed": true
+    },
+    {
+      "synthetic_text": "We are not choosing the intermediate value 3.\n4 dollars",
+      "expected_candidate": "4 dollars",
+      "expected_rule": "last_line",
+      "actual_candidate": "4 dollars",
+      "actual_rule": "last_line",
+      "passed": true
+    },
+    {
+      "synthetic_text": "There is no answer.\n",
+      "expected_candidate": null,
+      "expected_rule": "none",
+      "actual_candidate": null,
+      "actual_rule": "none",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

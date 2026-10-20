@@ -1744,3 +1744,11 @@ Originalscore jobs77370/8762 EXIT0CONSUMED DONE once: greedy262/279 of500, sampl
 ### 2026-10-19 22:31:46 PDT — Real T72 A1 / E4 child A2 accepted
 
 Full20261020f3a76f572 report binds exactT72data and original33E4repair. T72K1/E1d PASS-WITH-NOTES, including3199distinctnormalizedE1dquestions in3200rows and2479teacher caps. Owner separatelyapprovedE4exception andcancelledfourK4/K8cells. ExactE4A2 PASS, nochildcalledyet; ordinarysource/acceptancepublication andfreshbudget will precede eachonce-only original endpoint. No newmodel or oldcheck repeated.
+
+### 2026-10-19 22:37:58 PDT — C7 v3.1 source-only follow-up complete
+
+Only the new two-line last-line negation guard was reviewed. Six new synthetic checks passed once; no Z1 actualdata/labels/summary/report was read or executed. Prior P2 finding closed within this changed-code scope; no claim about actual Z1 outcomes. First E4 endpoint-only originalCLI28484 is building; no repeat or live source edit. A guessed C7 README path was absent; the actual INDEX-linked REVIEW.md was then read, with no scientific side effect.
+
+### 2026-10-19 22:39:57 PDT — Both owner-approved E4 endpoint-only calls submitted
+
+Original new CLI28484/46497 each has a real submitted app/call, execution7a887815/source33 unchanged. Each reuses its verified final model for original1319 questions, no training/repeatedoutputs. Both exact owner and A2 recorded before calls. T reservation31.24/G44 now75.24 total attempted, not expense; parents and their costs retained. Fresh original04:43billing was within one hour at bothdispatches. Complete outputs/oracles/actualA3 are still pending. OriginalC4 and all oldcalls remain closed.
