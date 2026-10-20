@@ -3877,6 +3877,22 @@
       },
       "all_new_manifest_members_git_verified": 308,
       "created_utc": "2026-10-20T10:34:39.406235+00:00"
+    },
+    {
+      "request_id": "p010-E9-three-complete-endpoints-and-analysis-A3-r1",
+      "scope": "p010-E9-three-complete-endpoints-and-analysis-A3",
+      "status": "pending",
+      "target_commit": "43c2285fae0464bde6d926699aff93a884d481d9",
+      "request": "reports/p010_20261019/E9_COMPLETE_ACTUAL_A3_REQUEST.md",
+      "packet": "reports/p010_20261019/e9_analysis_v1",
+      "result_manifest_sha256": {
+        "reports/p010_20261019/e9_results_v1/e9_base_math": "628ef2f9f086a92684fc33a9e80e905181c6cbbf9f37e8c2c8af0dc44828e0fa",
+        "reports/p010_20261019/e9_results_v1/e9_s17_n400": "2197f04ab4174a45dbf41dfa4206c5875617eac184f3fbc412d3442159aa0f0f",
+        "reports/p010_20261019/e9_results_v1/e9_s17_n3200": "9aaf92a4937aa8cf64ea2948fba6b2432f00dd8674d6b95ddf1c9eff072c46b5",
+        "reports/p010_20261019/e9_analysis_v1": "abe77c6203ecf25a75d9d8687959b68a5f9288c21e0b6d6d270de4b2955763ce"
+      },
+      "new_manifest_members_git_verified": 146,
+      "created_utc": "2026-10-20T10:57:14.478864+00:00"
     }
   ],
   "p008_v31": {
@@ -5294,14 +5310,9 @@
     "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
     "active_scientific_calls": [
       {
-        "app_id": "ap-TwENFf6cmNfwlIZ0w7AUMQ",
-        "call_id": "fc-01M5CD1WC033RR6XFQ5N95R0D7",
-        "run": "e9_s17_n400"
-      },
-      {
-        "app_id": "ap-9tP7QMXEkNwlcZBHGYHX8k",
-        "call_id": "fc-01M5CD4JQCF7PPFZ3DFE6A3BQT",
-        "run": "e9_s17_n3200"
+        "run": "C6_benchmark_group_r1",
+        "app_id": "ap-8WJssHwHSF4p64MnoRn80q",
+        "call_id": "fc-01M5CES57R566B6CT0VY1QNG61"
       }
     ],
     "C6_adapters_and_dev": {
@@ -5729,16 +5740,26 @@
       "packet": "reports/p010_20261019/seed29_analysis_v1",
       "old_work_replayed": false
     },
-    "E9_actual_status": "two_original_students_running_baseline_full_local_verified_A3_pending",
+    "E9_actual_status": {
+      "status": "three_complete_local_actual_A3_pending",
+      "target_commit": "43c2285fae0464bde6d926699aff93a884d481d9",
+      "packet": "reports/p010_20261019/e9_analysis_v1"
+    },
     "attempted_reserved_usd": {
       "G": 44,
       "T": 108.33,
-      "I": 5.78,
+      "I": 14.43,
       "C": 0,
-      "total": 158.11,
-      "is_actual_spend": false
+      "total": 166.76,
+      "actual_expense": false,
+      "settlement_release_used": false
     },
-    "C6_benchmark_status": "exact_A2_PASS_NOTRUN_fresh_budget_upload_pending",
+    "C6_benchmark_status": {
+      "status": "original_running_first256_ack_verified",
+      "app_id": "ap-8WJssHwHSF4p64MnoRn80q",
+      "call_id": "fc-01M5CES57R566B6CT0VY1QNG61",
+      "packet": "reports/p010_20261019/c6_benchmark_original_started_v1"
+    },
     "E3_status": "D4_no_category_transfer_no_cap_increase_qualifying_D1_settlement_and_new_exact_A1_A2_required"
   }
 }

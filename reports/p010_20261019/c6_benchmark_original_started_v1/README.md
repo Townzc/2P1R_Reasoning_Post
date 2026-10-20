@@ -1,0 +1,3 @@
+# Original C6 four-cell benchmark started
+
+One original call after exact m A2 and actual selection A3; selected cue token1249. The first256 saved outputs have a matching immutable acknowledgement, original16-source/claim/5400-second entry window and actual frozen vLLM graph settings. This is startup metadata, not full raw/scoring proof or actual result A3. No partial score was computed. All four sequential children are inside the one original21371-output/85-batch lifetime. No training, checkpoint loading, remerge or old-output regeneration. Original I8.65 reservation is not actual spending. The worker is not resubmitted; failed/unknown evidence would be preserved.
