@@ -1,3 +1,9 @@
+# Current P010 — all planned science locally closed; actual A3/A5 pending
+
+[E3 complete evidence](e3_complete_results_v1/README.md), [C6 complete evidence](c6_complete_results_v1/README.md), [all C6 paired results](c6_analysis_v1/README.md), and [Z2 technical tables/figures with number trace](z2_number_trace_v1/README.md) are published. All scientific apps are STOPPED/owned0. Independent actual E3/C6 A3 and Z2 A5 remain pending; this is a dated early assembly, not the scheduled Oct21 12:00PDT result freeze. Z1 is Claude-owned and was not read by Codex.
+
+--- Earlier dated entries ---
+
 # Current P010 — E3 and C6 locally complete; actual A3 pending
 
 [E3 evidence](e3_complete_results_v1/README.md) and [C6 complete evidence](c6_complete_results_v1/README.md) are complete; [all eight C6 comparisons](c6_analysis_v1/README.md) are saved. Both original final apps are STOPPED/owned0. Independent actual result A3 and final number-trace delivery remain open. No further scientific calls are planned.
