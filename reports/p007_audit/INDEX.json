@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T02:48:34.071315+00:00",
+  "as_of_utc": "2026-10-20T02:57:26.954485+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3355,6 +3355,16 @@
       "status": "changes_requested",
       "blocking_scope": "Z1 only",
       "created_utc": "2026-10-20T02:48:34.071550+00:00"
+    },
+    {
+      "request_id": "p010-C8-A1-A2-r1",
+      "scope": "p010-C8-A1-A2",
+      "target_commit": "FIX_AFTER_SOURCE_COMMIT",
+      "packet": "reports/p010_20261019/e4_runtime_v1",
+      "spec_sha256": "9d51985fbfb7667f84904f60f9a5b672deaf54cda2b8c80f8543c2c5b5cfdb33",
+      "request": "reports/p010_20261019/C8_A1_A2_REQUEST.md",
+      "status": "pending",
+      "blocking_scope": "Only two C8 diagnostic training cells; no repeated per-slot review."
     }
   ],
   "p008_v31": {
@@ -4607,7 +4617,7 @@
     }
   },
   "p010": {
-    "status": "T7_cache_original_running_T72_cache_prepared",
+    "status": "teacher_runtime_and_C8_A1_A2_prepared_assets_started",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -4619,6 +4629,8 @@
       "C": 25
     },
     "no_old_work_replayed": true,
-    "C8_input_commit": "1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59"
+    "C8_input_commit": "1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59",
+    "C8_runtime": "reports/p010_20261019/e4_runtime_v1",
+    "teacher_runtime": "reports/p010_20261019/teacher_runtime_v1"
   }
 }

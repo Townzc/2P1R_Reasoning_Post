@@ -1,0 +1,7 @@
+# P010 C8 A1/A2 review
+
+Exact inputs: c8_input_candidate_v1 at1609f712dd07f5df5fa2ffcaccb4d7f8611ceb59. New runtime: e4_runtime_v1/SPEC.json at this request's fixed commit in INDEX. Scope `p010-C8-A1-A2`: original D1 and P009 S2 question order, OLMo identity/EOS, whole answer masking, 1024updates/2097148targets, exactLR, seed17, final state only, child exit before V1 evaluation, pinned source and inputs. Diagnostic bypass of old G0 is directly authorized in P010v3. Original OLMo4shot487/1319 reused.
+
+The adapter copies the original stage1_training_core body and uses unchanged optimizer/gradients/runtime.train/checkpoint/FP32merge; changes are OLMo identity/EOS, whole-answer encoding and P010 recipe bindings. No new training occurred. Runtime includes fixed4500s/6.55USD per cell; prior all-host Qwen16-update43.307s is an uncalibrated OLMo timing proxy, not a speed guarantee. Actual full blocks update its maximum; failure/partialwork is preserved with no automatic replay.
+
+Please report decision, exact SPEC file SHA and input source. This single A1/A2 review replaces old per-slot guard rounds. C1/C2 are independent. Evidence tests: three E4 input/dose mutation checksPASS. Teacher actual-body mock initially found a local hardcoded workspace path at final metadata; portable module-relative lookup fixed it before any GPU call; only that failed mock rerunPASS. All source/generation is still unattempted.

@@ -1,0 +1,9 @@
+# C1/C2 bounded generation
+
+P010v3 explicitly authorizes C1 smoke, C2 generation and fallback72B after availability failure. The nativebf16/TP4 Modal smoke uses20 fixed S1 training questions; its outputs are reused in the main first-attempt roster. Then one full256 batch per new teacher establishes actual cost. These initial measurements are paid parts of the authorized roster, not extra requests or speed guarantees. Every subsequent batch records a full-batch maximum/remaining-count forecast and enforces the original hard worker and category caps.
+
+G reservations: asset caching1.00, T1.5=5.50, T7=8.00, T72 main=24.00 USD. T72 cache.50+main24+futureE3atmost5=29.50<=30; E3 cannot start beforeA4. No transfer between G/T/I/C. API serverless unavailable did not produce any inference. Initial cache image/source setup errors and original T7 callback interruption are preserved; its cloud download completed once. T72 cache is the original submitted call.
+
+T1.5 generates only5940 missing IDs and preserves460existing source records. T7/T72 generate9200fixed records, then only previously unattempted conditional K1 retries (max4) and T72 E1d in frozen random order until3200accepted. No use of test results for selection. Candidate IDs prevent resampling shared E1/E1d requests. All16 attempts for400questions are generated regardless of correctness. Gold unsupported records remain explicit, not zero-scored. Native EOS at token1024 is retained even if backend labels length; original backend fields remain. CPU symbolic scorer uses exact original P1source. A1 dataset selection/nesting/coverage audit still precedes training.
+
+The v3 fallback rule may yield an unverified K1 after4failures, while K4/K8 demand usable solutions plus K1 nesting. Any realized conflict is reported before that cell trains; no silent rule change. Inputs and full raw outputs are immutable.
