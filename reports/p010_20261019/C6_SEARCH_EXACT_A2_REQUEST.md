@@ -10,3 +10,5 @@ Please audit complete actual inputs and these exact sources jointly. This is the
 Requested fixed report acceptance fields: decision PASS or PASS-WITH-NOTES, exact scope/target/spec_sha256/source_files/verification_source_files/dev_input_sha256/dev_basis_sha256; gold_and_test_excluded=true, original_30_dev_order_preserved=true, hf_process_exit_before_vllm=true, exact_10080_original_outputs=true, full_probability_and_raw_preservation=true, uncalibrated_timing_transfer_disclosed=true, new_I_reserved_usd=3.26, first_paid_measurement_exceptions=0, no_automatic_retry=true. Original full report bytes/SHA and read time will be recorded; comments alone are not acceptance.
 
 All prior C4/E4 scientific calls remainclosed and actual A3pending. Five original K1/E1d A2 is independent; no extra code-only gate or owner permission is requested. Claude owns Z1; no actual Z1 data were used here.
+
+Fixed candidate commit: `1635cc9f2ff2ce538a8b7403411991e12af2c63e`; all 47 manifest members matched original Git bytes once. No actual search.
