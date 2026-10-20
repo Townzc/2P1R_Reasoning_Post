@@ -28,3 +28,8 @@ Authorized exploratory plan: [v3/A0](https://github.com/Townzc/2P1R_Reasoning_Po
 - C7: [code cross-review](C7_Z1_CODE_REVIEW.md), changes requested. Z1 labels remain Claude's responsibility; Codex did not relabel or rerunZ1.
 
 These are engineering/audit records, not AI-authored prose for the course report. Current measured workspace usage and P010 reservations are separate; see COST_LEDGER.json.
+
+
+### P010 T72 closed and actual A1 requested — 2026-10-19T21:28:45.222061-07:00
+
+OriginalT72 completed14,098 outputs at04:20:12UTC; collector95291/C3prepare47900/publisher56704 each DONE once, originalSTOPPED0. K1n40013/400fallback3.25% explicitly reported per§2.3; n320083/3200. E1d3200 from3837 with originalfull1024/2097148. K4/K8 N1557/3064,Pcov394,13nestingconflicts/no plans. Combined T7/T72 concrete owner options published, no scientific rule silently changed. Original immutable raw/scored/selected archives preserved; new source-level/type counts use only existing metadata. No new generation/scoring or completed-tool repeat. E4 originaltwo calls still training, prospective wrapper TypeError reproduced only locally; source31 unchanged. A read-only inspection assumed MATH_SOURCE was dict; actual list discovered before metadata writes, no scientific effect. Budget G44/T13.10 are reservations, not metered spend.

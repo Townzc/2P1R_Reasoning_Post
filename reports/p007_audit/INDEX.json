@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T04:19:18.464476+00:00",
+  "as_of_utc": "2026-10-20T04:28:45.221933+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3438,6 +3438,20 @@
       "status": "changes_requested",
       "blocking_scope": "Z1 only; no Codex labeling or model work",
       "created_utc": "2026-10-20T04:13:54.118970+00:00"
+    },
+    {
+      "request_id": "p010-T72-complete-data-A1-r1",
+      "scope": "p010-T72-complete-data-A1",
+      "status": "pending_actual_A1_K4_K8_owner_resolution_required",
+      "request": "reports/p010_20261019/T72_DATA_A1_REQUEST.md",
+      "packets": {
+        "reports/p010_20261019/t72_data_candidate_v1": "aa262790a5e38f3fe43a4953899a434604633c389eba735fcf38abf9a2dc0e21",
+        "reports/p010_20261019/teacher_t72_complete_v1": "c5d67e393530fadd116c4a31f5a889dd233ebae002b9323597a65eaaea8380e3"
+      },
+      "input_archive_sha256": "10c7b934b05be3896fd3ab1e8e2102fee4c9ef5184fb68c2e8eaf4917625a619",
+      "created_utc": "2026-10-20T04:28:45.221933+00:00",
+      "owner_options": "reports/p010_20261019/TEACHER_K_SELECTION_CONFLICT_OPTIONS.md",
+      "blocking_scope": "Actual T72 data; K4/K8 need owner disposition, K1 reporting fulfilled, E1d separate valid plan"
     }
   ],
   "p008_v31": {
@@ -4714,7 +4728,9 @@
       "app_id": "ap-xccCmT5uLfvWmqkAvCjsoz",
       "call_id": "fc-01M5BMZX7AW9BGN6983VMRED9R",
       "execution": "75157b1040cc363bf7e982272a3a24f00c057860",
-      "status": "submitted_original_no_retry"
+      "status": "completed_collected_selected_published_A1_pending",
+      "new_outputs": 14098,
+      "provider_stopped": true
     },
     "C4_candidate": "reports/p010_20261019/student_runtime_v1",
     "latest_review": {
@@ -4740,6 +4756,8 @@
       "automatic_retry": false,
       "original_sources_unchanged": true,
       "issue": "Original endpoint wrapper dictionary is sliced as list after training; checkpoint preservation and no-retrain completion proposal required if actual failure occurs"
-    }
+    },
+    "T72_data_packet": "reports/p010_20261019/t72_data_candidate_v1",
+    "teacher_K_owner_options": "reports/p010_20261019/TEACHER_K_SELECTION_CONFLICT_OPTIONS.md"
   }
 }
