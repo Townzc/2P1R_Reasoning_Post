@@ -1,3 +1,24 @@
+### 2026-10-20 16:12:50 PDT — owner resumed; revised data CR accepted and original builders started
+
+Actualread23:06UTC Claude5c91d0d1/reportf346f121 fullnonZ1 PASS-WITH-NOTES,
+Git event22:39:32. Exact3source/df4d5904, source lock and direct ownerR1/R3 hashes
+bound; LONG_DATA_CR_ACCEPTED exists, code only, actualA1 pending future completion.
+Oldpausedrecord retained; direct“开始吧”revokes pause. Heartbeat restoredACTIVE.
+Originalpush64805 EXIT0consumed/9539b6a5 independentremoteequal once. No resend.
+OnlynewOT3builder88890 andAMbuilder64426 each startedonce on original exactpaths;
+INTENTs exist, no retries. Bothrawingests complete/eligibility underway at23:10,
+last free535GB; partial and sourcebytes preserved. No GPU/paid model/training.
+BoundedcaffeinatePID63274 started23:08:14 for14400s, localawakeonly/no permanent
+settings/cloudcontroller. Old downloads and SHA/tests/builders not repeated.
+
+Independent newC1 NLL andB/C2 leaf functions prepared: 11newfixturesPASS0.596s,
+then2newinputfixturesPASS0.188s; no old successful checks repeated. ExactC1 causal
+shift/mask/EOS/weightedNLL/fallback and6group identity tested with synthetic data;
+no realbaseforward. BnewtemperatureK1 not oldS1, sourceunknown not zero, C2oldT72
+reuse/no regeneration andfirst400 overlap behavior covered. Complete IO/runtime,
+realnumeric/budget/sourcebinding and sharedCR still required. No extra code-only
+blocking gate or false admission. P010 Oct21 19UTC freeze remains; noZ1 read.
+
 ### 2026-10-20 15:26:24 PDT — P011 data CR changes implemented after direct owner amendment
 
 Claude efa4a7a8 REPORT SHA69f2ee65 was CHANGES-REQUIRED, not PASS; actual

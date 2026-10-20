@@ -1,3 +1,8 @@
+P011 current 2026-10-20T23:12:50.977421+00:00: owner resumed; exact revised data CR passed with notes.
+Original OT3/AM local constructions each started once, no paid model/training.
+See reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1 and current private
+handoff. C1/B/C2 leaf drafts prepared only; actual data A1 still follows completion.
+
 P011 update 2026-10-20T22:26:24.140426+00:00: direct owner adopted data R1/R3 (max once-pass common B;
 shuffle candidates before prefix eligibility); R2 epoch scheduling repaired.
 Exact candidate df4d590485a2bb6b8cb2eeb02e8688f64ebd03db, true revised CR pending, production NOTRUN.

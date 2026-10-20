@@ -4027,7 +4027,7 @@
       "request_id": "p011-OT3-AM-long-data-construction-CR-r2",
       "scope": "p011-OT3-AM-long-data-construction-CR",
       "target_commit": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
-      "status": "pending_exact_re_review_after_direct_owner_R1_R3_adoption",
+      "status": "completed_PASS_WITH_NOTES_CODE_ONLY_actual_A1_NOTRUN",
       "request_file": "reports/p011_20261020/LONG_DATA_CR_R2_REQUEST.md",
       "submitted_utc": "2026-10-20T22:26:24.140426+00:00",
       "packet_manifest_sha256": "c8648dde2563e098c753a18a0980882d8264c36ece615bab58d245129b442242",
@@ -4040,7 +4040,10 @@
         "scripts/prepare_p011_long_inputs.py": "4468a80d82f0a80d6c217d92e54ac41b211dcf943b156432850bffb6405812e1"
       },
       "source_lock_sha256": "0e78298f49b86ee3de7182443eb052da422d14af14f423bceb3f728a1696fdb0",
-      "new_scientific_calls": 0
+      "new_scientific_calls": 0,
+      "review_commit": "5c91d0d1c65f92d7fbaed123f2bad9485c8d33b4",
+      "review_sha256": "f346f1211e0638a2002bcd306a6f958f4c1fa9e1a71fe98ecfdeb8c6c64f4837",
+      "acceptance_packet": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1"
     }
   ],
   "p008_v31": {
@@ -5903,9 +5906,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-20T22:26:24.140426+00:00",
+  "last_updated_utc": "2026-10-20T23:12:50.977421+00:00",
   "p011": {
-    "status": "all_raw_sources_verified_revised_data_path_CR_pending",
+    "status": "OT3_AM_unique_local_constructions_running",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -5921,12 +5924,26 @@
     "category_transfers_allowed": false,
     "cutoff_utc": "2026-10-22T05:00:00Z",
     "exploratory": true,
-    "production_construction_run": false,
+    "production_construction_run": true,
     "scientific_calls": 0,
-    "pending_path_CR": "p011-OT3-AM-long-data-construction-CR-r2",
+    "pending_path_CR": null,
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
     "raw_downloads": "all_complete_and_SHA_verified",
-    "owner_R1_R3_adopted": true
+    "owner_R1_R3_adopted": true,
+    "production_construction": {
+      "ot3": {
+        "session_id": 88890,
+        "state": "ACTIVE_UNCONSUMED"
+      },
+      "am": {
+        "session_id": 64426,
+        "state": "ACTIVE_UNCONSUMED"
+      }
+    },
+    "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
+    "independent_leaf_drafts": "reports/p011_20261020/c1_short_generation_drafts_v1",
+    "scientific_model_calls": 0,
+    "actual_A1": false
   }
 }
