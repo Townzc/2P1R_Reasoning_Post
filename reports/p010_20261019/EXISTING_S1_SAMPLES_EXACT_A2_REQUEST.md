@@ -11,3 +11,5 @@ Requested real fixed report: exact scope/target/spec_sha256/source_files/verific
 Oldsource/tests/scoring remain complete and were not repeated. Existing7adapter/3worker/4payloadchecks already published; this extension only ran4newdurable sample scoring checks. No extra code-only approval round. Claude ownsZ1; noZ1actual data/report used. This is code/evidence documentation, not course-report prose.
 
 Publication check: two unchanged transitive source copies retain historical EOF blank lines; whole-tree whitespace check is not claimed PASS. Source hashes are preserved. The check excluding exactly these two files passes.
+
+Fixed candidate `8a63b8d74932953c7be34d4d93d520a8095df9f3`; all69manifest members and the manifest itself match original Gitbytes once. No new model call.
