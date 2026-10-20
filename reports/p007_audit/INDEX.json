@@ -4044,6 +4044,19 @@
       "review_commit": "5c91d0d1c65f92d7fbaed123f2bad9485c8d33b4",
       "review_sha256": "f346f1211e0638a2002bcd306a6f958f4c1fa9e1a71fe98ecfdeb8c6c64f4837",
       "acceptance_packet": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1"
+    },
+    {
+      "request_id": "p011-OT3-deficit-and-AM-complete-input-A1-r1",
+      "scope": "p011-OT3-deficit-and-AM-complete-input-A1",
+      "target_commit": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
+      "status": "pending",
+      "request_file": "reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md",
+      "submitted_utc": "2026-10-20T23:28:56.460978+00:00",
+      "packet_manifest_sha256": {
+        "AM": "58d871c6eee9f010c248adcee822ddde64e97146fadc61722ad8fc1945015c59",
+        "OT3": "b68bcfc8b05cf701ad18e4ffe595b9add38052fc2d0e81e7d7fb40021e23c1d5"
+      },
+      "new_scientific_calls": 0
     }
   ],
   "p008_v31": {
@@ -5906,9 +5919,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-20T23:24:35.315096+00:00",
+  "last_updated_utc": "2026-10-20T23:28:56.460978+00:00",
   "p011": {
-    "status": "OT3_AM_unique_local_constructions_running",
+    "status": "OT3_4038_of4096_gate_failed_owner_disposition_pending_AM_complete_A1_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -5934,17 +5947,23 @@
     "production_construction": {
       "ot3": {
         "session_id": 88890,
-        "state": "ACTIVE_UNCONSUMED"
+        "state": "EXIT1_CONSUMED",
+        "eligible": 4038,
+        "original_required": 4096
       },
       "am": {
         "session_id": 64426,
-        "state": "EXIT0_CONSUMED"
+        "state": "EXIT0_CONSUMED",
+        "eligible": 1024
       }
     },
     "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
     "independent_leaf_drafts": "reports/p011_20261020/c1_short_generation_drafts_v1",
     "scientific_model_calls": 0,
     "actual_A1": false,
-    "long_runtime_leaf_drafts": "reports/p011_20261020/long_runtime_drafts_v1"
+    "long_runtime_leaf_drafts": "reports/p011_20261020/long_runtime_drafts_v1",
+    "actual_data_target": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
+    "actual_data_request": "reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md",
+    "ot3_owner_proposal": "reports/p011_20261020/OT3_INSUFFICIENT_PARENT_OPTIONS.md"
   }
 }

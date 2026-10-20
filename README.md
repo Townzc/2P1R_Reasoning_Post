@@ -1,3 +1,5 @@
+P011 current 2026-10-20T23:28:56.460978+00:00: OT3 exhausted its original candidate pool with4038/4096 parents; original gateFAIL preserved, owner scope decision pending. AM1024 common parents complete, actual jointA1 pending. 0P011 model/paid calls. See [actual request](reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md) and [scope options](reports/p011_20261020/OT3_INSUFFICIENT_PARENT_OPTIONS.md). Earlier running/pending-code notes below are historical.
+
 P011 current 2026-10-20T23:12:50.977421+00:00: owner resumed; exact revised data CR passed with notes.
 Original OT3/AM local constructions each started once, no paid model/training.
 See reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1 and current private

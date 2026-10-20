@@ -1,3 +1,28 @@
+### 2026-10-20 16:28:56 PDT — OT3 actual parent deficit; AM complete A1 submitted
+
+OriginalOT3 CLI88890 EXIT1CONSUMED at23:24:04.514255UTC: all53107 candidates
+exhausted,4038eligible vs4096required. Actual frozen data gateFAIL. No training
+or final encoded/dose/plan artifacts. Trigger§7.4 immediately reported to owner;
+concrete252/1008/4032 proposal and alternatives await direct owner choice. Earlier
+R1/R3 authority does not cover count change. Do not retry/relabel originalfailed.
+Preservation42977 EXIT0CONSUMED,8files43133951211bytes once; public11memberpacket
+omits private43GBSQLite with exactSHA/access limit. All source/errors/dispositions
+retained; overlapping flags and missingdifficulty disclosed. No scoring/model.
+
+AM completed1024commonparents,B_D4070922/U64, actualA1pending. Newcopy-onlypublisher
+once:14originalartifacts archive25,452,570bytes fullreadbackPASS,16publicmembers.
+No tokenizer/filter/scorer/oldpublisher rerun. Unexecutedjointpublisher preserved;
+AM-onlycopy variant executed once afterOT3failed. Original *.tar* gitignore omitted
+archive from unpublished c4a2126c; only explicit add of existing archive, no rebuild.
+Exactcf9a12e4 contains fullarchive. SharedactualA1request now bindsAMcomplete and
+OT3deficit integrity separately, no falseadequacyPASS or runtimeadmission. New
+longdraft4members plusAM16+OT3 11 and4source/test=35Gitbytechecks,3manifests onceDONE.
+
+P011paid/model0. All localconstructors closed. B/C independent engineering may
+continue; A/D training depends on actualreview/ownerdisposition and fullruntime.
+No externalmessages/subagents/Z1/oldscience/providers/billing refresh. P010 Oct21
+19UTC formalcopyfreeze remains; combinedheartbeat ACTIVE, nooldmonitorrestored.
+
 ### 2026-10-20 16:24:35 PDT — AM complete; long training/evaluation leaf code prepared
 
 Original AM64426 EXIT0CONSUMED, completed23:15:27UTC:1024eligible from1079examined
