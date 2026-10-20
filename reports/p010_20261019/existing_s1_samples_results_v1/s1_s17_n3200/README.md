@@ -1,0 +1,5 @@
+# Original S1 new samples — actual A3 pending
+
+Original completed result and STOPPED/zero-container proof, exact frozen source, complete raw oracle, saved journal and all fixed audit samples are included. Publication only copies and validates stored evidence; no model, training, symbolic score, tokenization, raw decoding, state deserialization or bootstrap is repeated. Public state/model hashes do not assert external auditor access to private binaries. Four sampled draws are means of pass@1, never best-of-four. For C6, selection uses only the original30 dev questions and no gold/correctness/test data; actual benchmark effects have not yet been measured. Original S1 greedy results are reused without regeneration.
+
+Independent A3 remains required. Provider projection removes actor identity and retains the private original SHA. Reserved USD is a conservative slot allowance, not actual cost, invoice or balance. Historical failed attempts and costs remain. This packet is evidence, not course-report prose.
