@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T03:36:18.817041+00:00",
+  "as_of_utc": "2026-10-20T04:04:00.182389+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3363,8 +3363,11 @@
       "packet": "reports/p010_20261019/e4_runtime_v1",
       "spec_sha256": "9d51985fbfb7667f84904f60f9a5b672deaf54cda2b8c80f8543c2c5b5cfdb33",
       "request": "reports/p010_20261019/C8_A1_A2_REQUEST.md",
-      "status": "pending",
-      "blocking_scope": "Only two C8 diagnostic training cells; no repeated per-slot review."
+      "status": "completed_PASS",
+      "blocking_scope": "Only two C8 diagnostic training cells; no repeated per-slot review.",
+      "actual_report_commit": "2000d8db66d3f0c30f1b04f2c2fd3b0a7b4cdc89",
+      "actual_report_sha256": "e2207a679f44936450c8e98f5e2ec350c4a25e93976b3b59a5d3bbca015a2d3b",
+      "acceptance_packet": "reports/p010_20261019/review_2000d8db_T15_C8_accepted_v1"
     },
     {
       "request_id": "p010-C2-T7-suffix-owner-exception-r1",
@@ -3381,7 +3384,7 @@
     {
       "request_id": "p010-T15-complete-data-A1-r1",
       "scope": "p010-T15-complete-data-A1",
-      "status": "pending",
+      "status": "completed_PASS",
       "request": "reports/p010_20261019/T15_DATA_A1_REQUEST.md",
       "packets": {
         "reports/p010_20261019/teacher_t15_complete_v1": "bef0be83490e064189691ae7a616a7c4a521e4228a7a7dafaefe99305843502c",
@@ -3390,7 +3393,10 @@
       "input_archive_sha256": "1b5aa7883a821b77ff4127170c0fd7cffcab7c7e2f533b60053f17e4caa44183",
       "created_utc": "2026-10-20T03:23:14.621855+00:00",
       "blocking_scope": "New T1.5 K4/K8 training data only; T72 and C8 independent",
-      "target_commit": "8303d26c727240cd1d38015cb39c69d07292b2e0"
+      "target_commit": "8303d26c727240cd1d38015cb39c69d07292b2e0",
+      "actual_report_commit": "2000d8db66d3f0c30f1b04f2c2fd3b0a7b4cdc89",
+      "actual_report_sha256": "e2207a679f44936450c8e98f5e2ec350c4a25e93976b3b59a5d3bbca015a2d3b",
+      "acceptance_packet": "reports/p010_20261019/review_2000d8db_T15_C8_accepted_v1"
     },
     {
       "request_id": "p010-C4-student-A2-r1",
@@ -4697,6 +4703,13 @@
       "execution": "75157b1040cc363bf7e982272a3a24f00c057860",
       "status": "submitted_original_no_retry"
     },
-    "C4_candidate": "reports/p010_20261019/student_runtime_v1"
+    "C4_candidate": "reports/p010_20261019/student_runtime_v1",
+    "latest_review": {
+      "commit": "2000d8db66d3f0c30f1b04f2c2fd3b0a7b4cdc89",
+      "actual_read_utc": "2026-10-20T04:01:24.622666+00:00",
+      "T15_A1": "PASS",
+      "C8_A1_A2": "PASS",
+      "C4_A2": "PENDING"
+    }
   }
 }

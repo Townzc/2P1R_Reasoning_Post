@@ -3384,3 +3384,13 @@ C6 draft pure probability/entropy selection5newsyntheticchecksPASS once0.019s, n
 Metadata-only publisher initially failed ASTparse on a dict keyword colon before anyexecution/write; saved faulty source, corrected one token then onlyparsed andexecuted once. A later documentation batch had an unclosed multiline string and failed before any writes; those absent documents were then created once with apply_patch. Unpublished PDT label arithmetic was corrected using America/Los_Angeles while UTC event unchanged. Old immutable packets/sources/tests remain untouched.
 
 T7 A1/source and C6 draft fixed33405785c8deb8ebd9c16116564ad17437c86f5f; 45 new MANIFEST members verified from Git bytes once. Whole style check retained original frozen common.py EOF warning; only the check excluding that immutable snapshot passed. No old check or source was rerun/changed.
+
+### 2026-10-20T03:57:16.869450+00:00 / 2026-10-19 20:57:16 PDT — C5 independent closeout preparation
+
+Prepare new full-state/raw oracle and durable five-endpoint CPU scoring for the exact P010 student candidate. No model/scoring/old-check execution; runtime34 stays immutable. T7 nesting choice sent as an async owner question with concrete local options, while originalT72 continues. Two read-only guessed filenames (READ.json instead of READ_RECEIPT.json; old SPEC instead of ADMISSION.json) were absent before writes; actual names now resolved. Push5122 remains original/unconsumed.
+
+### 2026-10-20T04:04:00.182389+00:00 / 2026-10-19 21:04:00 PDT — actual T1.5/C8 acceptance and new C5 draft
+
+Readonlypoll24081 DONE at04:00:24 found2000d8db/109comments. Full20261020a reportSHAe2207a67 read04:01:24: T15 actualA1 andC8 exactA1/A2 PASS, accurate acceptances saved once. Original limits(no mathverify/tokenizer rerun) and future authored timestamps retained, no falseactualevent. C4A2 stillpending. C7v2 source/report read only, noZ1label files loaded; code review continues. Source/recipe/input integrity is accepted, no new student result or causal conclusion.
+
+Newstudent_evidence/audit script PREPARED NOTRUN;5 distinct synthetic checks oncePASS0.286s,0model/symbolic/checkpoint calls. C4original34 unchanged. Plan originalSTOP/provider and raw/state verification precede one local scoring job. Originalpush5122 nowEXIT0consumed;HEADd42fcd01 independentlyremoteverified04:00. T72original stillactive; T7ownerselection question remainspending.

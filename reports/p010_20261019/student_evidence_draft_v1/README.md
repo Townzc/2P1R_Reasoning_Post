@@ -1,0 +1,5 @@
+# Prepared C5 independent student evidence verifier
+
+Prepared, not run on actual data. Exact152 named cloud records, original completed receipt/archive and STOPPED0 provider snapshot precede a single full1024 checkpoint load, all2097148 targets, whole-answer encoding, merge/process exit and all5x500 raw endpoint checks. Original scalar scorer/gold hashes remain fixed. Valid model-vocabulary unmapped IDs are allowed only in the preserved no-EOS1024-token backend-length case; first_stop itself is unchanged. Symbolic scoring is not performed by this draft and its durable driver remains in preparation.
+
+Five new synthetic checks passed once, including a rehashed but wrong sampling seed, missing final sample batch, exact-cap nativeEOS and invalid/unmapped token boundaries. These are not real GPU/state proofs. No old tests or raw outputs were rerun. This draft adds no separate code-only blocking gate; its exact source and eventual CPU scorer are supplied with actual A3 evidence for independent review. Original34 runtime sources remain unchanged.
