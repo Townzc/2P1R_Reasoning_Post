@@ -1209,3 +1209,10 @@ Newcollectors46768/94328, records47774/89196, oracles25619/42446 allEXIT0CONSUME
 ### 2026-10-19 22:54:30 PDT — C6 adapters and gold-free dev inputs prepared
 
 Two new adapters and seven new checks are complete; full runtime/A2 remain unattempted. Only the original thirty dev prompts were encoded once, preserving IDs/order and excluding every solution/gold field from worker input. Maximum prompt length is 384; adding two cue tokens and1024 continuation tokens fits2048. Original S1/E1d/MATH500 ID disjointness is recorded without semantic-uniqueness claims. Full probability matrices and failed-prefix intents are create-only; parser failures are never silently missing. No model, scientific generation, old test/scoring or state reload occurred. C4/E4 are locally closed awaiting actualA3; five original K1/E1d still await exactA2. No new approval gate or budget change.
+
+
+### 2026-10-19 23:14:46 PDT — Complete original C6 candidate prepared
+
+Exact 18 runtime/21 verification source candidate uses original thirty gold-free dev inputs, one HF probability process then vLLM10080continuations, and separate bounded local raw replay/entropy selection. No actual model/upload/parse/selection. One combined input/runtime/numeric A2 requested; no extra code-only gate. All20 completed C4 batch intervals retained in uncalibrated transfer scenario 1634.352421s <=1770; I3.26 prospective, no budget transfer/release. E4/C4 actualA3 and fiveK1 exactA2 remainpending; latestreview06:00:12 unchangedc542.
+
+Eight new search checks and ten new evidence/parser checks complete. First evidence log had two fixture expectation failures: 'final answer' phrase was extractable and frozen boundary retains newline. Original failedfixture/log preserved, onlytwofailedcases reran; no runtime/science altered or oldchecks repeated. This is not realGPU/fullmodeltiming. Two read-only guesses (student_runtime.py and K1_E1D_EXACT_A2_REQUEST.md) were absent before mutations; actual source/INDEX paths were used. No outside messages, Z1 labels, oldmodel/state/scoring or source edits.

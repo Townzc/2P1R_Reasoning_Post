@@ -1,0 +1,35 @@
+test_actual_group_job_preserves_failure_and_blocks_selection (tests.test_p010_cue_evidence.ParserCases.test_actual_group_job_preserves_failure_and_blocks_selection) ... ok
+test_gold_or_partial_rows_rejected_before_parser_process (tests.test_p010_cue_evidence.ParserCases.test_gold_or_partial_rows_rejected_before_parser_process) ... ok
+test_outer_timeout_is_not_retried_or_assigned_missing (tests.test_p010_cue_evidence.ParserCases.test_outer_timeout_is_not_retried_or_assigned_missing) ... ok
+test_real_pinned_process_cache_missing_and_successful_exit (tests.test_p010_cue_evidence.ParserCases.test_real_pinned_process_cache_missing_and_successful_exit) ... FAIL
+test_worker_parser_exception_is_a_preserved_technical_failure (tests.test_p010_cue_evidence.ParserCases.test_worker_parser_exception_is_a_preserved_technical_failure) ... ok
+test_exact_cap_native_eos_does_not_become_length_cap (tests.test_p010_cue_evidence.RawCases.test_exact_cap_native_eos_does_not_become_length_cap) ... ok
+test_exact_named_ledger_contains_all_batches (tests.test_p010_cue_evidence.RawCases.test_exact_named_ledger_contains_all_batches) ... ok
+test_forced_cue_is_part_of_assistant_answer (tests.test_p010_cue_evidence.RawCases.test_forced_cue_is_part_of_assistant_answer) ... ok
+test_incomplete_or_foreign_stream_is_not_missing (tests.test_p010_cue_evidence.RawCases.test_incomplete_or_foreign_stream_is_not_missing) ... ok
+test_real_cap_and_logical_boundary_are_preserved (tests.test_p010_cue_evidence.RawCases.test_real_cap_and_logical_boundary_are_preserved) ... FAIL
+
+======================================================================
+FAIL: test_real_pinned_process_cache_missing_and_successful_exit (tests.test_p010_cue_evidence.ParserCases.test_real_pinned_process_cache_missing_and_successful_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p010_cue_evidence.py", line 82, in test_real_pinned_process_cache_missing_and_successful_exit
+    self.assertIsNone(missing['answer_key']);self.assertEqual(pool.count,1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'text:here.' is not None
+
+======================================================================
+FAIL: test_real_cap_and_logical_boundary_are_preserved (tests.test_p010_cue_evidence.RawCases.test_real_cap_and_logical_boundary_are_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p010_cue_evidence.py", line 52, in test_real_cap_and_logical_boundary_are_preserved
+    self.assertEqual(result['answer_segment'],r'\boxed{2}')
+AssertionError: '\\boxed{2}\n' != '\\boxed{2}'
+  \boxed{2}
+- 
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.399s
+
+FAILED (failures=2)

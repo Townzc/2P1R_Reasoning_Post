@@ -59,3 +59,6 @@ Fullfixed c/d reports read04:30:47UTC; C4exact34/T15K4K8 A2PASS and T7raw/K1 A1P
 
 
 [C6 adapter and dev-input preparation](c6_adapters_and_dev_draft_v1/README.md): seven new checks passed; original thirty prompts are gold-free worker inputs. No actual search or new model call.
+
+
+[C6 full search candidate](c6_search_runtime_v1/README.md): original dev/input/runtime/selection A2 pending; no search performed.
