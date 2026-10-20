@@ -1,3 +1,9 @@
+# Current P010 — E3 and C6 continuation admitted
+
+[Independent E3/C6 audits and delegated D5 decision](reports/p010_20261019/review_81e857ab_E3_C6_D5_accepted_v1/README.md) are accepted with limitations. E3 will generate its original3,200 temperature outputs while reusing1,600 saved outputs. After E3 exits, C6 may generate only its original2,500 unattempted outputs and reuse18,871 preserved outputs. No new model has been called at this admission record. Existing budgets and failed-parent evidence are retained.
+
+--- Earlier dated state ---
+
 # Current P010 — four seed29 originals running
 
 [Submission and startup evidence](reports/p010_20261019/seed29_original_started_v1/README.md): exact A1/A2 and four first-block proofs are complete. E9 inputs are ready and wait for a real shared slot; C6 full benchmark A2 remains pending. No old work was repeated.
