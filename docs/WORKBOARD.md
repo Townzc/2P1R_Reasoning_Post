@@ -1168,3 +1168,11 @@ Publication metadata correction 2026-10-20T05:14:07.351516+00:00: generic manife
 ### 2026-10-19 22:15:24 PDT — Direct owner resolves both P010 exceptions
 
 Actual direct reply cancels all four T7/T72K4/K8 unattempted training cells and retains K1/E1d/T1.5, with data-known scope reduction and12/13question conflicts disclosed. No teacher replay or filtering. Owner separately approves both E4 endpoint-only children after exactA2, additionalT5.04 within original150/240, original1319 each/no training. OWNER_E4_ENDPOINT_ONLY_ACCEPTED and OWNER_K_SELECTION_DISPOSITION accurately saved; no cloud call/acceptance fabricated. FiveK1candidate already excludes cancelledcells and is unchanged. No routine approval question remains for these two dispositions; actual audits still required.
+
+### 2026-10-19 22:24:27 PDT — Original T1.5 K4/K8 complete; unique evidence retrieval begins
+
+Both original CLI55749/78820 exited0 and were consumed once. Results record original terminal05:12:53.373272/05:12:39.057163UTC and2500 outputs each, but full local verification/scoring remains unattempted. Next each original completed app must independently pass STOPPED0 inside its single collector before original compact/state download,152namedrecords and one complete state/raw oracle. No generation or training replay. Seven new E4 endpoint proof fixtures passed once0.174s; actual E4child remains unattempted pending exactA2, with owner exception already approved.
+
+### 2026-10-19 22:25:15 PDT — E4 child local evidence prepared
+
+New read-only29-key collection and1319 raw/source/owner/parent endpoint proof prepared,7new synthetic checks passed once0.174s; no actual child/oracle. Per-batch hash computed once before deployment. Exact runtime33 unchanged and original A2 pending; no extra code-onlygate. Two originalC4collectors15025/49961 started once after originalCLIexit0. A guessed nonexistent old evidence module path caused a read-only search error; no mutation or science followed that command.
