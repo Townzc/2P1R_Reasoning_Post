@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "scripts/prepare_p011_long_inputs.py", line 409, in <module>
+    main()
+  File "scripts/prepare_p011_long_inputs.py", line 379, in main
+    eligible, report = ot3_inventory(db, tokenizer, decontam, out, progress)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scripts/prepare_p011_long_inputs.py", line 215, in ot3_inventory
+    raise ValueError('OT3 eligible parents below4096; report without resampling')
+ValueError: OT3 eligible parents below4096; report without resampling
