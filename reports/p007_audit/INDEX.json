@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T07:11:41.317754+00:00",
+  "as_of_utc": "2026-10-20T11:29:22.880799+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3864,7 +3864,7 @@
     {
       "request_id": "p010-Tier3-seed29-results-analysis-A3-r1",
       "scope": "p010-Tier3-seed29-four-complete-results-and-analysis-A3",
-      "status": "pending",
+      "status": "completed_A3_PASS_with_explicit_independent_MC_and_access_notes",
       "target_commit": "60802b8c0825bb06cb6d91433503a26704df7545",
       "request": "reports/p010_20261019/SEED29_RESULTS_ANALYSIS_ACTUAL_A3_REQUEST.md",
       "packet": "reports/p010_20261019/seed29_analysis_v1",
@@ -3876,12 +3876,16 @@
         "reports/p010_20261019/seed29_analysis_v1": "bfd97050cf55cb122f5c4d4601ad1ff807f7ed11b8822f1a0a4518554954b703"
       },
       "all_new_manifest_members_git_verified": 308,
-      "created_utc": "2026-10-20T10:34:39.406235+00:00"
+      "created_utc": "2026-10-20T10:34:39.406235+00:00",
+      "review_commit": "87bafe1bdf1a029e25513f5d8f574bf823275294",
+      "review_report_sha256": "0012d31ed5fc4cec9111e596473a9e2d2feac50e0d3f380096dc9f2601a39266",
+      "review_read_utc": "2026-10-20T11:11:51.900347+00:00",
+      "acceptance_packet": "reports/p010_20261019/review_87bafe1b_actual_seed29_E9_A3_v1"
     },
     {
       "request_id": "p010-E9-three-complete-endpoints-and-analysis-A3-r1",
       "scope": "p010-E9-three-complete-endpoints-and-analysis-A3",
-      "status": "pending",
+      "status": "completed_A3_PASS_with_explicit_independent_MC_and_access_notes",
       "target_commit": "43c2285fae0464bde6d926699aff93a884d481d9",
       "request": "reports/p010_20261019/E9_COMPLETE_ACTUAL_A3_REQUEST.md",
       "packet": "reports/p010_20261019/e9_analysis_v1",
@@ -3892,7 +3896,29 @@
         "reports/p010_20261019/e9_analysis_v1": "abe77c6203ecf25a75d9d8687959b68a5f9288c21e0b6d6d270de4b2955763ce"
       },
       "new_manifest_members_git_verified": 146,
-      "created_utc": "2026-10-20T10:57:14.478864+00:00"
+      "created_utc": "2026-10-20T10:57:14.478864+00:00",
+      "review_commit": "87bafe1bdf1a029e25513f5d8f574bf823275294",
+      "review_report_sha256": "0012d31ed5fc4cec9111e596473a9e2d2feac50e0d3f380096dc9f2601a39266",
+      "review_read_utc": "2026-10-20T11:11:51.900347+00:00",
+      "acceptance_packet": "reports/p010_20261019/review_87bafe1b_actual_seed29_E9_A3_v1"
+    },
+    {
+      "request_id": "p010-C6-only-unattempted-T72-cell-owner-exception-r1",
+      "scope": "p010-C6-only-unattempted-T72-cell-owner-exception",
+      "status": "pending_explicit_Claude_owner_decision_and_future_exact_A2",
+      "packet": "reports/p010_20261019/c6_remaining_owner_proposal_v1",
+      "failure_packet": "reports/p010_20261019/c6_benchmark_failed_preservation_v1",
+      "request": "reports/p010_20261019/C6_UNATTEMPTED_T72_OWNER_REQUEST.md",
+      "proposal_sha256": "de852c92b8351876db5ba5f83c2c62ea3081b0692a2e60e8e64160506b33c53f"
+    },
+    {
+      "request_id": "p010-E3-complete-input-runtime-numeric-A2-r1",
+      "scope": "p010-E3-complete-input-runtime-and-numeric-A2",
+      "status": "pending_real_exact_combined_A1_A2_D1_scope",
+      "packet": "reports/p010_20261019/e3_runtime_v1",
+      "request": "reports/p010_20261019/E3_COMPLETE_A1_A2_REVIEW_REQUEST.md",
+      "spec_sha256": "d7a9d37c081271be8b00a24e8d6528145991a5921f4f9e7a3ef0c7cb2688a7a9",
+      "settlement_proposal_sha256": "e0766a9a6cb3f91f7fc1835f6dded5b23e9fe6495a1bc22b8930610458ce3ea4"
     }
   ],
   "p008_v31": {
@@ -5175,13 +5201,14 @@
     },
     "C4_candidate": "reports/p010_20261019/student_runtime_v1",
     "latest_review": {
-      "utc": "2026-10-20T10:40:17.055721+00:00",
-      "commit": "e3a42987bde72b238f455a064e287a2cac070c83",
-      "prior_commit": "6f1a5293acbd71b87494e26499972248244b5b11",
+      "utc": "2026-10-20T11:10:27.314059+00:00",
+      "commit": "87bafe1bdf1a029e25513f5d8f574bf823275294",
+      "prior_commit": "e3a42987bde72b238f455a064e287a2cac070c83",
       "comments": 109,
       "changed_files": [
-        "audit/claude/20261020i/OWNER_DELEGATION_AND_DECISIONS.md",
-        "audit/claude/20261020m/REPORT.md"
+        "audit/claude/20261020n/A3_S29_E9.json",
+        "audit/claude/20261020n/REPORT.md",
+        "audit/claude/20261020n/a3_s29_e9.py"
       ],
       "latest_comment_metadata": [
         {
@@ -5203,8 +5230,8 @@
       "full_Z1_reports_or_labels_read": false,
       "files": {
         "comments.json": "89fb64f13bb12fe04c278b6c661eb65b39c231fc3100cae950771f9696e46182",
-        "head.json": "724fede54d1987f1b4f9d88f700aab59131fac13388cb0a63f26b6a433f78330",
-        "compare.json": "56a39af85c2ea30830bbd121b2eef6314c03ccecb8542cbab21761b9baa09ba3"
+        "head.json": "f936571223c1d42fb7e046dffe132a884257ff59a91c89c4eadbc164d2554e94",
+        "compare.json": "dd2207b89e1a67c4e7cd89f6e9b52d85058bb37536888c51a1f193b262c43420"
       }
     },
     "C7_review_v2": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
@@ -5308,13 +5335,7 @@
     "E4_endpoint_owner_exception": "APPROVED_and_exact_A2_PASS_two_children_consumed",
     "E4_endpoint_only_A2": "PASS_owner_exception_consumed_two_completed_children",
     "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
-    "active_scientific_calls": [
-      {
-        "run": "C6_benchmark_group_r1",
-        "app_id": "ap-8WJssHwHSF4p64MnoRn80q",
-        "call_id": "fc-01M5CES57R566B6CT0VY1QNG61"
-      }
-    ],
+    "active_scientific_calls": 0,
     "C6_adapters_and_dev": {
       "packet": "reports/p010_20261019/c6_adapters_and_dev_draft_v1",
       "status": "PREPARED_NOT_RUN",
@@ -5650,7 +5671,7 @@
     "E1d_original_started": "reports/p010_20261019/e1d_original_started_v1",
     "owner_night_D1_D2": "reports/p010_20261019/owner_night_D1_D2_20261020_v1",
     "E5_status": "superseded_UNATTEMPTED_by_delegated_E9",
-    "E9_status": "A1_A2_PASS_inputs_readback_complete_waiting_actual_free_slot",
+    "E9_status": "all_three_closed_actual_A3_PASS_original_interval_retained",
     "reserve_settlement_D1": "approved_conditional_no_release_applied",
     "E9_input_packet": "reports/p010_20261019/e9_inputs_v1",
     "C6_and_S1_sample_original_calls": {
@@ -5694,7 +5715,7 @@
     "latest_four_K1_outcomes_fixed_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
     "E9_input_candidate_fixed_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
     "C6_actual_search_status": "GPU and unique local continuation complete; candidate2 token1249; actual selection A3 pending; benchmark not run",
-    "seed29_status": "four_original_seed29_calls_submitted_startup_verified",
+    "seed29_status": "all_four_closed_actual_A3_PASS",
     "seed29_input_packet": "reports/p010_20261019/seed29_inputs_v1",
     "seed29_runtime_candidate": "reports/p010_20261019/seed29_runtime_v1",
     "actual_C9_A3": "PASS_scoped_limits_retained",
@@ -5710,7 +5731,7 @@
     "C6_status": "Complete selection actual A3 accepted; complete benchmark exact A2 pending; no new benchmark call",
     "C6_benchmark_candidate": "reports/p010_20261019/c6_benchmark_runtime_v1",
     "C6_benchmark_target_commit": "a998d25251422707f65bfc836ad0fcfe69d56a43",
-    "latest_review_commit": "e3a42987bde72b238f455a064e287a2cac070c83",
+    "latest_review_commit": "87bafe1bdf1a029e25513f5d8f574bf823275294",
     "seed29_original_started": {
       "packet": "reports/p010_20261019/seed29_original_started_v1",
       "manifest_sha256": "abac737969ed8f2c3cfa295ef8269f782421f645e73242880e0cdc1308c241ad",
@@ -5754,12 +5775,7 @@
       "actual_expense": false,
       "settlement_release_used": false
     },
-    "C6_benchmark_status": {
-      "status": "original_running_first256_ack_verified",
-      "app_id": "ap-8WJssHwHSF4p64MnoRn80q",
-      "call_id": "fc-01M5CES57R566B6CT0VY1QNG61",
-      "packet": "reports/p010_20261019/c6_benchmark_original_started_v1"
-    },
-    "E3_status": "D4_no_category_transfer_no_cap_increase_qualifying_D1_settlement_and_new_exact_A1_A2_required"
+    "C6_benchmark_status": "FAILED_STOPPED0_preserved18871_only2500_unattempted_owner_exception_pending",
+    "E3_status": "full_candidate_prepared_not_admitted_or_called_original_scope_D1_pending"
   }
 }

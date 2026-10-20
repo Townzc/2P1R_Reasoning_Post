@@ -1,0 +1,7 @@
+# D1/D4 covered G settlement candidate — no release applied
+
+All six original G app reservations remain immutable. Five saved STOPPED/owned0 proofs have complete returned hourly buckets spanning their actual provider lifetimes. The original T7 CPU asset app lacks a saved exact owned-container proof, so its full0.50 reservation is retained; no cloud query is repeated to release that small amount. T7 failed generation is included. Per-app charge uses the greatest existing daily/hourly gross meter, multiplied by1.2 and rounded upward to cents; a lower fresh reading never resets the observed floor.
+
+Original G44; candidate charged G24.03; candidate release19.97; remaining80percent20.776 >= E3 reserve11.13. G50/T150/I15/C25,total240,protected43 remain unchanged. There is no cross-category transfer, claim rewrite, actual release, invoice-finality claim or model call.
+
+The Modal report supplies complete hour intervals (end exclusive; partial final intervals excluded), not an explicit billing-finality/latency watermark. The candidate makes this evidence scope explicit for the full E3 A1/A2 review, and applies the owner D1 20% buffer; it does not manufacture final costs. Original full private reports/proofs remain hash-bound; public projections retain only six relevant app rows and omit provider actors. D4 denied the earlier G57/C18 proposal; that unattempted candidate is retired. E3 must still pass exact full A1/A2 and D4 deadline/resource rules before any use of this candidate.

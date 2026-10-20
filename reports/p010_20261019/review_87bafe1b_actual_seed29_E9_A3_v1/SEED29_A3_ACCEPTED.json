@@ -1,0 +1,57 @@
+{
+  "analysis_manifest_sha256": "bfd97050cf55cb122f5c4d4601ad1ff807f7ed11b8822f1a0a4518554954b703",
+  "counts": {
+    "e9_base_math": {
+      "greedy": 1,
+      "sampled": null
+    },
+    "e9_s17_n3200": {
+      "greedy": 47,
+      "sampled": null
+    },
+    "e9_s17_n400": {
+      "greedy": 20,
+      "sampled": null
+    },
+    "t15_s29_n3200_k1": {
+      "greedy": 273,
+      "sampled": 1079
+    },
+    "t15_s29_n400_k1": {
+      "greedy": 259,
+      "sampled": 1041
+    },
+    "t72_s29_n3200_k1": {
+      "greedy": 259,
+      "sampled": 1035
+    },
+    "t72_s29_n400_k1": {
+      "greedy": 242,
+      "sampled": 959
+    }
+  },
+  "decision": "PASS",
+  "event_time_precision": "minute",
+  "full_report_read_utc": "2026-10-20T11:11:51.900347+00:00",
+  "independent_reviewer_result_sha256": "0c28faa08ec9d2df6f5bbed5de0632faa60d1a21978cc64495b11c5b00f3d659",
+  "independent_reviewer_script_sha256": "fbe7ecd9ca068f2d9cc139469a6137eaca44272df67a3ff905756bcacf9029cd",
+  "literal_report_audit_object_commit": "cdb80b51b4ee2c8fa79cd83a77be441ba2b41abe",
+  "new_bootstrap_runs": 0,
+  "new_models": 0,
+  "new_scores": 0,
+  "notes": [
+    "Reported actual A3 PASS; scopes reflect the full fixed report, not a claim of private checkpoint access.",
+    "Reviewer uses Python random.Random(20261020) and sorted order-statistic endpoints. Original analysis uses numpy2.2.6,seed20261019 and its frozen percentile method. No original analysis rerun or byte change.",
+    "Reviewer E9 lower CI2.6 differs from original2.8pp; both upper8.2 and point5.4. Preserve both, do not claim numerical identity of independent Monte Carlo intervals.",
+    "Reviewer additional E9 n400-versus-base interval is a separate diagnostic, not a new primary comparison.",
+    "Two observed training seeds do not estimate a general plus-or-minus3pp seed bound or stable population mechanism."
+  ],
+  "report_commit": "87bafe1bdf1a029e25513f5d8f574bf823275294",
+  "report_event_utc": "2026-10-20T11:01:00Z",
+  "report_path": "audit/claude/20261020n/REPORT.md",
+  "report_sha256": "0012d31ed5fc4cec9111e596473a9e2d2feac50e0d3f380096dc9f2601a39266",
+  "reviewer_independent_math_verify_rerun_established": false,
+  "reviewer_private_binary_loading_established": false,
+  "scope": "p010-Tier3-seed29-four-complete-results-and-analysis-A3",
+  "target_commit": "60802b8c0825bb06cb6d91433503a26704df7545"
+}

@@ -1,0 +1,5 @@
+# C6 original benchmark failure: preserved, STOPPED0
+
+The fourth cell failed before generation because its frozen model binding used `student/` instead of the original `students/` directory. Original base MATH4,500 + base GSM11,871 + S1n400 MATH2,500 =18,871 raw outputs and75 batch acknowledgments are preserved. T72n400 has zero raw outputs and zero batch acknowledgments. The original group remains failed; its claim, four cell markers and8.65USD reservation remain intact.
+
+The bounded read-only preservation saved325 files /222,808,495 bytes with stable before/after inventories and ledger boundaries. The archive contains324 byte-identical files. The one outer failure traceback is separately projected only to remove private local paths; its original hash is retained. This is structural preservation, not complete token decoding or scoring. Correct-path inventory matches every original merged-file size and one small tokenizer-file SHA; future exact worker must verify all weight hashes. No weights were downloaded, remerged or retrained.

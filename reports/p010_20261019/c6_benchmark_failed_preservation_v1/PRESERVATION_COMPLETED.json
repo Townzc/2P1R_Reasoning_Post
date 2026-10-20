@@ -1,0 +1,56 @@
+{
+  "app_id": "ap-8WJssHwHSF4p64MnoRn80q",
+  "bytes": 222808495,
+  "call_id": "fc-01M5CES57R566B6CT0VY1QNG61",
+  "cells": {
+    "base_gsm": {
+      "cell_reserved": true,
+      "confirmed_batch_acks": 47,
+      "original_cell_result_present": true,
+      "raw_files": 47,
+      "saved_raw_rows": 11871,
+      "scores_computed": false
+    },
+    "base_math": {
+      "cell_reserved": true,
+      "confirmed_batch_acks": 18,
+      "original_cell_result_present": true,
+      "raw_files": 18,
+      "saved_raw_rows": 4500,
+      "scores_computed": false
+    },
+    "s1_n400_math": {
+      "cell_reserved": true,
+      "confirmed_batch_acks": 10,
+      "original_cell_result_present": true,
+      "raw_files": 10,
+      "saved_raw_rows": 2500,
+      "scores_computed": false
+    },
+    "t72_n400_math": {
+      "cell_reserved": true,
+      "confirmed_batch_acks": 0,
+      "original_cell_result_present": false,
+      "raw_files": 0,
+      "saved_raw_rows": 0,
+      "scores_computed": false
+    }
+  },
+  "failed_parent_remains_failed": true,
+  "files": 325,
+  "full_raw_oracle": false,
+  "manifest_sha256": "875a27099352a40ffd04a5cfe1899c5f3092ba1857572638307832888e0fac13",
+  "new_generations": 0,
+  "new_models": 0,
+  "no_continuation_authorization_granted": true,
+  "original_terminal": {
+    "error": "Original cell did not complete and exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p010/cue_benchmark_group.py\", line 145, in child\n    result = generate_cell(run, out_path, read(input_path), binding, claim, started,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p010/cue_benchmark_group.py\", line 91, in generate_cell\n    proof = model_reuse(run, binding, store)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p010/cue_benchmark_group.py\", line 73, in model_reuse\n    verify(binding['remote_path'], binding['files'])\n  File \"/workspace/experiments/sft_allocation_midpoint/common.py\", line 44, in verify\n    if p.is_symlink() or p.stat().st_size != record['bytes'] or sha(p) != record['sha256']:\n                         ^^^^^^^^\n  File \"/usr/local/lib/python3.12/pathlib.py\", line 840, in stat\n    return os.stat(self, follow_symlinks=follow_symlinks)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/evidence/p010-20261019/student/t72_s17_n400_k1/merged/added_tokens.json'\n",
+    "status": "failed"
+  },
+  "owned_count": 0,
+  "provider_stopped": true,
+  "remote_writes": 0,
+  "scores_computed": false,
+  "total_saved_raw_rows": 18871,
+  "utc": "2026-10-20T11:18:07.009371+00:00"
+}

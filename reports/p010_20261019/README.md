@@ -1,3 +1,9 @@
+# Current P010 — actual seed29/E9 A3 accepted; C6 remaining proposal and E3 candidate
+
+[Actual seed29/E9 A3](review_87bafe1b_actual_seed29_E9_A3_v1/README.md) accepted with the original independent-review limitations. [C6 failure preservation](c6_benchmark_failed_preservation_v1/README.md) retains18,871 outputs and the failed parent; [remaining2,500 proposal](c6_remaining_owner_proposal_v1/README.md) awaits an explicit delegated decision and exact A2. [Original E3 full candidate](e3_runtime_v1/README.md) awaits combined A1/A2 with covered D1 scope. No active model, no new call or actual reserve release.
+
+--- Earlier dated state ---
+
 # Current P010 — E9 and seed29 results ready for actual A3
 
 [Original E9 endpoints and paired table](e9_analysis_v1/README.md): base1/500, n40020/500, n320047/500; independent A3 pending. [Original seed29 results](seed29_analysis_v1/README.md) remain pending actual A3. C6 original benchmark is active after exact m A2. E3 follows D4/D1 under unchanged G50/T150/I15/C25/$240/protected43, with no settlement release or new call yet.
