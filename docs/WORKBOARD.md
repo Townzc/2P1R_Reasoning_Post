@@ -1299,3 +1299,7 @@ Transport failure: original push46446 exited1 because GitHub refused195.96MiB or
 ### 2026-10-20 01:31:23 PDT — Original four seed29 exact input candidate
 
 Preparation59981 completed once08:22:15UTC; metadata finalization completed08:25:24 after a retained local schema failure before cell writes. All original seed17 rows/tokens and the four completed seed29 plans remain byte-identical; no data reselection, encoding, scoring or model call. Four new boundary checks passed once. New archive/source publication requests exact A1; runtime/A4 still required. The completed C6 split-delivery/C9 push37077 exited0 and independent remote matcheda172e10c; no forcepush or scientific repetition. Reflection: validate literal runtime config representation before future input builders, preserving both original failure and the narrow unwritten-tail completion.
+
+### 2026-10-20 01:38:08 PDT — Original seed29 full runtime candidate
+
+Original scientific worker AST unchanged. New complete A2 binds four exact same-data A1 inputs, real actual A3 plus issued A4 report, all-category once-only accounting and original4500/655c caps. Eight new admission/identity checksPASS0.011s once; no old tests or input preparations repeated. New timing metadata includes all7 completed P010 Qwen training hosts and2 S1 sample-only hosts; no new calibration. No Tier3 upload/model/gate. Read-only guessed filenames were absent; located actual existing files without writes or scientific effects.
