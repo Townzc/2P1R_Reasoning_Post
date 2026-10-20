@@ -119,8 +119,11 @@ def encode_complete(tokenizer, question, response, path_id):
 
 
 def ot3_order(eligible_keys, rows_by_parent):
-    order = sorted(eligible_keys)
-    random.Random(20261020).shuffle(order)
+    # The inventory already shuffles candidates and retains the first4096
+    # eligible parents under the owner-approved R3 amendment. Never reshuffle.
+    order = list(eligible_keys)
+    if len(order) != len(set(order)):
+        raise ValueError('Selected parent order contains duplicates')
     if len(order) < 4096:
         raise ValueError(f'Only {len(order)} eligible OT3 parents; report without resampling')
     selected = order[:4096]
@@ -197,19 +200,13 @@ def whole_schedule(rows, budget, seed=17):
     if q < 1:
         raise ValueError('One complete pass exceeds frozen B; never drop answers or raise B')
     extras = exact_subset(lengths, remainder, seed)
-    stream = list(range(len(rows))) * q + extras
-    # Randomly order length buckets and the presentations inside each bucket.
-    buckets = {}
-    for i in stream:
-        bucket = (rows[i]['n_processed'] - 1) // 512
-        buckets.setdefault(bucket, []).append(i)
-    rng = random.Random(seed + 1)
-    keys = sorted(buckets)
-    rng.shuffle(keys)
     stream = []
-    for key in keys:
-        rng.shuffle(buckets[key])
-        stream.extend(buckets[key])
+    for epoch in range(q):
+        one_pass = list(range(len(rows)))
+        random.Random(f'17:pass:{epoch}').shuffle(one_pass)
+        stream.extend(one_pass)
+    random.Random('17:extras').shuffle(extras)
+    stream.extend(extras)
     updates = (budget + 63999) // 64000
     if len(stream) < updates:
         raise ValueError('Insufficient whole presentations for nonempty updates')
@@ -230,5 +227,6 @@ def whole_schedule(rows, budget, seed=17):
     return {'supervised_tokens': budget, 'optimizer_updates': updates, 'q': q,
             'seed': seed, 'row_path_ids': [x['path_id'] for x in rows],
             'exposures': [counts[i] for i in range(len(rows))], 'updates': batches,
-            'length_bucket_width': 512, 'subset_selection_depends_on_lengths': True,
+            'length_bucket_width': None, 'presentation_order': 'shuffled_full_passes_then_extras',
+            'subset_selection_depends_on_lengths': True,
             'runtime_admitted': False}
