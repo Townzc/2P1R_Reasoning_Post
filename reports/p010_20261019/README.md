@@ -1,3 +1,9 @@
+# Current P010 — E9 and seed29 results ready for actual A3
+
+[Original E9 endpoints and paired table](e9_analysis_v1/README.md): base1/500, n40020/500, n320047/500; independent A3 pending. [Original seed29 results](seed29_analysis_v1/README.md) remain pending actual A3. C6 original benchmark is active after exact m A2. E3 follows D4/D1 under unchanged G50/T150/I15/C25/$240/protected43, with no settlement release or new call yet.
+
+--- Earlier dated state ---
+
 # Current P010 — seed 29 complete locally; two E9 students active
 
 [Four original seed29 results and conditional analysis](seed29_analysis_v1/README.md) are ready for actual A3. [E9 original submissions](e9_original_started_v1/README.md) retain both running students and the completed baseline. C6 benchmark exact A2 and E3 explicit allocation/full A2 remain pending. No old work was repeated.
