@@ -4057,6 +4057,64 @@
         "OT3": "b68bcfc8b05cf701ad18e4ffe595b9add38052fc2d0e81e7d7fb40021e23c1d5"
       },
       "new_scientific_calls": 0
+    },
+    {
+      "request_id": "p011-OT3-4032-confirmed-parent-reuse-construction-CR-r1",
+      "scope": "p011-OT3-4032-confirmed-parent-reuse-construction-CR",
+      "target_commit": "410c035d8c9b12d5c6e5d98220cec99914c0daeb",
+      "status": "pending_exact_CR_owner_count_amendment_approved",
+      "request_file": "reports/p011_20261020/OT3_4032_REUSE_CR_REQUEST.md",
+      "submitted_utc": "2026-10-20T23:39:57.158501+00:00",
+      "packet_manifest_sha256": "ac864839c51b477775715e1169abb5f2818179cd74feefdf45b7f061585ac27c",
+      "grid": {
+        "A1": [
+          252,
+          1
+        ],
+        "A2": [
+          252,
+          2
+        ],
+        "A3": [
+          252,
+          4
+        ],
+        "A4": [
+          252,
+          8
+        ],
+        "A5": [
+          252,
+          16
+        ],
+        "A6": [
+          1008,
+          1
+        ],
+        "A7": [
+          4032,
+          1
+        ],
+        "A8": [
+          1008,
+          4
+        ]
+      },
+      "original_code_acceptance_sha256": "54820eeb48098146ae97194cc7f9323d9645e2e0610329e001c6b83e9444a56b",
+      "original_failure_preservation_sha256": "662d42e2b68f207e0a2946a4d9b11d21df25784dd0b91a51f4f010c0c6c89849",
+      "owner_count_amendment_sha256": "5d1fa79a456f358abccaca8e50aba47603e3af957c09d5ac11f8e5ef8b3da74a",
+      "owner_prior_R1_R3_sha256": "e58e8d721f740e438d82ef3f5e6ecea50970e3b507458ad3d77e07eacfe75c72",
+      "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
+      "proposal_sha256": "7fc901983816ded497f89fe622aa061df446f1e2a116e68c1166b5870be12726",
+      "source_files": {
+        "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+        "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+        "scripts/prepare_p011_long_inputs.py": "4468a80d82f0a80d6c217d92e54ac41b211dcf943b156432850bffb6405812e1",
+        "scripts/prepare_p011_ot3_4032_inputs.py": "4546ffad73a9171804cfa1b3d931ce6ae27b61aa40efdb7d8bfbda84af67ca3a"
+      },
+      "source_lock_sha256": "0e78298f49b86ee3de7182443eb052da422d14af14f423bceb3f728a1696fdb0",
+      "production_executed": false,
+      "new_scientific_calls": 0
     }
   ],
   "p008_v31": {
@@ -5919,9 +5977,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-20T23:28:56.460978+00:00",
+  "last_updated_utc": "2026-10-20T23:39:57.158501+00:00",
   "p011": {
-    "status": "OT3_4038_of4096_gate_failed_owner_disposition_pending_AM_complete_A1_pending",
+    "status": "owner_252_1008_4032_approved_exact_reuse_CR_pending_AM_A1_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -5939,7 +5997,7 @@
     "exploratory": true,
     "production_construction_run": true,
     "scientific_calls": 0,
-    "pending_path_CR": null,
+    "pending_path_CR": "p011-OT3-4032-confirmed-parent-reuse-construction-CR-r1",
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
     "raw_downloads": "all_complete_and_SHA_verified",
@@ -5964,6 +6022,43 @@
     "long_runtime_leaf_drafts": "reports/p011_20261020/long_runtime_drafts_v1",
     "actual_data_target": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
     "actual_data_request": "reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md",
-    "ot3_owner_proposal": "reports/p011_20261020/OT3_INSUFFICIENT_PARENT_OPTIONS.md"
+    "ot3_owner_proposal": "reports/p011_20261020/OT3_INSUFFICIENT_PARENT_OPTIONS.md",
+    "owner_OT3_count_amendment_approved": true,
+    "owner_count_amendment_sha256": "5d1fa79a456f358abccaca8e50aba47603e3af957c09d5ac11f8e5ef8b3da74a",
+    "ot3_amended_grid": {
+      "A1": [
+        252,
+        1
+      ],
+      "A2": [
+        252,
+        2
+      ],
+      "A3": [
+        252,
+        4
+      ],
+      "A4": [
+        252,
+        8
+      ],
+      "A5": [
+        252,
+        16
+      ],
+      "A6": [
+        1008,
+        1
+      ],
+      "A7": [
+        4032,
+        1
+      ],
+      "A8": [
+        1008,
+        4
+      ]
+    },
+    "ot3_reuse_candidate": "410c035d8c9b12d5c6e5d98220cec99914c0daeb"
   }
 }
