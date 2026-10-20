@@ -201,3 +201,5 @@ The10:23UTC provider snapshot records **$11.19667285 delayed metering** for the 
 P010 update 2026-10-19 22:12:20 PDT: original five K1/E1d runtime/input candidate prepared; exactA2 and teacher-specificA1 required. [Candidate](reports/p010_20261019/student_runtime_k1_e1d_v1/README.md). Two originalT1.5K4/K8 calls remain active; no teacher/student replay.
 
 P010 2026-10-19 22:15:24 PDT: direct owner cancels four conflicting T7/T72 K4/K8 cells and approves two E4 endpoint-only evaluations after exactaudit; see [decisions](reports/p010_20261019/owner_selection_and_e4_endpoint_20261020_v1/README.md).
+
+P010 technical update 2026-10-20T11:47:48.372951+00:00: C6 original failure preserved; only2,500 unattempted outputs proposed, E3 exact full A1/A2 pending. [Current evidence](reports/p010_20261019/README.md). No new model admitted.

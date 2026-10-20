@@ -105,3 +105,5 @@ Fullfixed c/d reports read04:30:47UTC; C4exact34/T15K4K8 A2PASS and T7raw/K1 A1P
 [Original S1 sample-only adapters](existing_s1_sampling_draft_v1/README.md): seven new synthetic checks; actual complete runtime and calls still unattempted.
 
 Original S1 sample-only fullcandidate: [exact A2 request](EXISTING_S1_SAMPLES_EXACT_A2_REQUEST.md). Two existing models, four new sampling passes each; no call or approval yet.
+
+Latest technical handoff (2026-10-20T11:47:48.372951+00:00): all seed29/E9 actual A3 accepted; C6 original failed after18,871 saved outputs and is fully preserved/STOPPED0. E3 full A1/A2 candidate is published at2311841a; new C6 remaining-only full candidate awaits explicit delegated exception and independent A1/A2. No active model or new call. Original caps240/G50T150I15C25/protected43 and failed costs retained; proposed D1 charges are not spending or actual releases. See [C6 complete candidate](c6_remaining_runtime_v1/README.md) and [E3 complete candidate](e3_runtime_v1/README.md).
