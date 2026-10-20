@@ -1,3 +1,9 @@
+# Current P010 — original E3 submitted
+
+[Original E3 submission evidence](reports/p010_20261019/e3_original_started_v1/README.md): exact audit accepted, original call submitted once;3,200 new outputs are planned and1,600 saved T0.8 outputs are reused. C6 is separately approved and waits for E3 STOPPED0. Actual new results remain pending.
+
+--- Earlier dated state ---
+
 # Current P010 — E3 and C6 continuation admitted
 
 [Independent E3/C6 audits and delegated D5 decision](reports/p010_20261019/review_81e857ab_E3_C6_D5_accepted_v1/README.md) are accepted with limitations. E3 will generate its original3,200 temperature outputs while reusing1,600 saved outputs. After E3 exits, C6 may generate only its original2,500 unattempted outputs and reuse18,871 preserved outputs. No new model has been called at this admission record. Existing budgets and failed-parent evidence are retained.

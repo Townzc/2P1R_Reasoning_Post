@@ -1,3 +1,9 @@
+# Current P010 — original E3 submitted
+
+[Original E3 submission evidence](e3_original_started_v1/README.md): exact audit accepted, original call submitted once;3,200 new outputs are planned and1,600 saved T0.8 outputs are reused. C6 is separately approved and waits for E3 STOPPED0. Actual new results remain pending.
+
+--- Earlier dated state ---
+
 # Current P010 — actual seed29/E9 A3 accepted; C6 remaining proposal and E3 candidate
 
 [Actual seed29/E9 A3](review_87bafe1b_actual_seed29_E9_A3_v1/README.md) accepted with the original independent-review limitations. [C6 failure preservation](c6_benchmark_failed_preservation_v1/README.md) retains18,871 outputs and the failed parent; [remaining2,500 proposal](c6_remaining_owner_proposal_v1/README.md) awaits an explicit delegated decision and exact A2. [Original E3 full candidate](e3_runtime_v1/README.md) awaits combined A1/A2 with covered D1 scope. No active model, no new call or actual reserve release.
