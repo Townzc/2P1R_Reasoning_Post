@@ -3622,7 +3622,7 @@
     {
       "request_id": "p010-E9-exact-input-A1-r1",
       "scope": "p010-E9-exact-input-and-plan-A1",
-      "status": "pending",
+      "status": "completed_exact_input_A1_PASS_with_tokenizer_limitation",
       "request": "reports/p010_20261019/E9_EXACT_INPUT_A1_REQUEST.md",
       "packet": "reports/p010_20261019/e9_inputs_v1",
       "manifest_sha256": "94354f7d89e8f983ffd9a3b3c53d71d1cf77f77bb1102b7191fbace4c324a9f4",
@@ -3647,12 +3647,17 @@
       "owner_decision_report_sha256": "fede9fb4256878596ae36e0e35fac22cbd9bffa08b4bccb46f359c7bf3ed78fa",
       "created_utc": "2026-10-20T07:49:21.464702+00:00",
       "target_commit": "3215d45caf3d56a0ad7a5890a6a83199c38ae336",
-      "all_manifest_members_git_verified": 22
+      "all_manifest_members_git_verified": 22,
+      "actual_report_commit": "c37f62c5e6bd00f5e645817181c7eb8ee0a7ca31",
+      "actual_report_sha256": "cbf8833fa4456231eec9eb33f41fffe36541d79a80d4087272bf868acabdf79c",
+      "report_audit_object_commit": "a172e10c106713b13d9279cae024b2bfffd4013d",
+      "read_utc": "2026-10-20T08:40:26.954116+00:00",
+      "disposition_packet": "reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1"
     },
     {
       "request_id": "p010-C6-nonfinite-local-resume-r1",
       "scope": "p010-C6-nonfinite-local-selection-resume-A2",
-      "status": "pending_delegated_decision_and_independent_exact_A2",
+      "status": "completed_delegated_D3_and_exact_A2_PASS",
       "request": "reports/p010_20261019/C6_NONFINITE_LOCAL_COMPLETION_REQUEST.md",
       "packet": "reports/p010_20261019/c6_nonfinite_resume_preflight_v1",
       "failure_packet": "reports/p010_20261019/c6_search_selection_failure_v2",
@@ -3666,7 +3671,12 @@
       "transport_only_repackaging": true,
       "unchanged_original_failure_packet_manifest_sha256": "b0729523345283666c94887bdbd957d79c8c2ce4adb59020e170d2862c59ee4b",
       "target_commit": "94a27ffc39e8e358d45edc00c1fc8e96129269ef",
-      "all_new_manifest_members_git_verified": 264
+      "all_new_manifest_members_git_verified": 264,
+      "actual_report_commit": "c37f62c5e6bd00f5e645817181c7eb8ee0a7ca31",
+      "actual_report_sha256": "cbf8833fa4456231eec9eb33f41fffe36541d79a80d4087272bf868acabdf79c",
+      "report_audit_object_commit": "a172e10c106713b13d9279cae024b2bfffd4013d",
+      "read_utc": "2026-10-20T08:40:26.954116+00:00",
+      "disposition_packet": "reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1"
     },
     {
       "created_utc": "2026-10-20T08:13:46.824846+00:00",
@@ -3710,9 +3720,14 @@
         "experiments/p010/common.py": "95bd95ce8017b5fed5f6b4554a61b778b4fa7d287b6021c724162ddf861f68f4",
         "scripts/analyze_p010_completed_students.py": "4b2cd8fe88476a180100e5dcc3b1fc5399e40a0c3bb170e3e69462eee61921f9"
       },
-      "status": "pending",
+      "status": "completed_actual_A3_PASS_with_explicit_reviewer_limits",
       "target_commit": "a8fb5c78190b5cd5f75cdcafd269af81cf717ff8",
-      "all_manifest_members_git_verified": 31
+      "all_manifest_members_git_verified": 31,
+      "actual_report_commit": "c37f62c5e6bd00f5e645817181c7eb8ee0a7ca31",
+      "actual_report_sha256": "0bb31e41fe4c8be9ce4ffa7197f26f525bb74b399b2de341571dff3e21684642",
+      "report_audit_object_commit": "a172e10c106713b13d9279cae024b2bfffd4013d",
+      "read_utc": "2026-10-20T08:40:26.954116+00:00",
+      "disposition_packet": "reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1"
     },
     {
       "request_id": "p010-Tier3-seed29-exact-input-A1-r1",
@@ -5523,7 +5538,7 @@
     "E1d_original_started": "reports/p010_20261019/e1d_original_started_v1",
     "owner_night_D1_D2": "reports/p010_20261019/owner_night_D1_D2_20261020_v1",
     "E5_status": "superseded_UNATTEMPTED_by_delegated_E9",
-    "E9_status": "exact_inputs_prepared_A1_pending_runtime_NOT_PREPARED_no_calls",
+    "E9_status": "actual_input_A1_PASS_runtime_preparation",
     "reserve_settlement_D1": "approved_conditional_no_release_applied",
     "E9_input_packet": "reports/p010_20261019/e9_inputs_v1",
     "C6_and_S1_sample_original_calls": {
@@ -5569,6 +5584,10 @@
     "C6_actual_search_status": "GPU_complete_fullraw_PASS; local_selection_FAILED_infinity; no_cue_selected",
     "seed29_status": "four_original_same_data_inputs_prepared_A1_pending_no_calls",
     "seed29_input_packet": "reports/p010_20261019/seed29_inputs_v1",
-    "seed29_runtime_candidate": "reports/p010_20261019/seed29_runtime_v1"
+    "seed29_runtime_candidate": "reports/p010_20261019/seed29_runtime_v1",
+    "actual_C9_A3": "PASS_scoped_limits_retained",
+    "A4_report": "reports/p010_20261019/review_c37f62c5_A3_A4_C6_E9_accepted_v1/A4_SCIENTIFIC_SIGNAL_REPORT.json",
+    "A4_issued": true,
+    "C6_local_continuation": "D3_and_exact_A2_accepted_unattempted"
   }
 }

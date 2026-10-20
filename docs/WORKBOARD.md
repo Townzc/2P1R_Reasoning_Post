@@ -1303,3 +1303,11 @@ Preparation59981 completed once08:22:15UTC; metadata finalization completed08:25
 ### 2026-10-20 01:38:08 PDT — Original seed29 full runtime candidate
 
 Original scientific worker AST unchanged. New complete A2 binds four exact same-data A1 inputs, real actual A3 plus issued A4 report, all-category once-only accounting and original4500/655c caps. Eight new admission/identity checksPASS0.011s once; no old tests or input preparations repeated. New timing metadata includes all7 completed P010 Qwen training hosts and2 S1 sample-only hosts; no new calibration. No Tier3 upload/model/gate. Read-only guessed filenames were absent; located actual existing files without writes or scientific effects.
+
+### 2026-10-20 01:42:58 PDT — Actual j/k and D3 accepted; A4 issued
+
+Full reports read at2026-10-20T08:40:26.954116+00:00; reportevents08:29/08:31UTC are minute precision. Actual new results/C9 A3PASS, original A4issued. Full symbolic rescore/privatebinary access/350 new individual labels are not claimed; formal statistics and labels remain unchanged. D3 permits one exact local infinity continuation, no new generation; E9 exactinputsA1PASS with tokenizer limitation. Original Tier3 automatically follows exactA1/A2/budget, not another permission round. No old tool/test/model rerun; no billing refresh.
+
+### 2026-10-20 01:43:19 PDT — Approved exact C6 local completion starts
+
+D3 and independentk exactA2 are real and saved. One newlocal helper resumes only6380remainingrows and the one identified failed infinity key, reusing731confirmedkeys/3700rows. No GPU/teacher/test generation or frozen primary scoring. Originalfailure preserved. Initial acceptance builder stopped on the multi-packet INDEX schema afterwritingonlyA3andowner records; separate unwritten-tail completion savedremainingacceptances once. No prior record or scientific computation was repeated.
