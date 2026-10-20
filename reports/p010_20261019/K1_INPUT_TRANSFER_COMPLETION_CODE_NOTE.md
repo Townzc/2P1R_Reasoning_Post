@@ -1,0 +1,7 @@
+# Input-transfer contingency code — prepared, not executed
+
+Original five-cell upload51950 is still active within its original1200second local window; it is not cancelled or extended. This helper can only run after true exit124, confirmed original PID absence, saved termination evidence and the original exactSPEC/intent. It is neither a model retry nor a replay of the original uploader.
+
+The helper reuses original confirmed per-file SHA readbacks without repeating their transfers/checks. Only previously unconfirmed filenames are read fromVolume; matching bytes are reused, actually absent files are uploaded once with force=False. Conflicting bytes or unknown read failures abort without overwrite or retries. At most2readers, new3600local hard cap, create-only per-file intents/proofs, original partials unchanged. No models, cloud function, inference, claims or scientific output. Unknown uncommitted blob costs are not declared free.
+
+Source [complete_p010_k1_input_parts.py](../../scripts/complete_p010_k1_input_parts.py) SHA `a1ea2ffbb80b38d97dd8d832cad3d259d81f61c921937e1ceb50d889ac4dabfa`. Four new fake-Volume checks passed once0.004s: reused confirmedparts, matching/unconfirmed remote data, missing-only upload, conflicting/unknown remote refusal. These are not real transfer observations. Original A2 runtime and source bytes are unchanged; this local I/O repair is disclosed separately and introduces no extra scientific approval round. No termination evidence or actual completion exists yet.
