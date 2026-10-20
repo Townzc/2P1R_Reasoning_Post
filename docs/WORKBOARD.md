@@ -1,3 +1,9 @@
+### 2026-10-19 19:45:44 PDT — P010 v3 execution begins; C1 availability/C2/C8 preparation and C7 code review
+
+Direct owner authorization binds claude/audit4287537f, hard$240 G50/T150/I15/C25, protected$43, Tier3 afterA4, T72 selfhosting<=30 after availability failure. Official Fireworks page says serverless unsupported; no API inference attempted. Modal token had expired; user completed normal login renewal, verified CLI connection and empty app list. No credential is public. New workspace delayed gross247.55342744/cash0 is separate from P010 reservations and owner-reported balance.
+
+New exact inputs preserve S1 IDs and460 existing T1.5 outputs;5940 missing requests. OLMo400/3200 full-answer sums108416/882133 fit2097148 and frozen LR; no old model/scoring/oracle repeated. C7 code-only review of19166133 requests corrections; noZ1 annotation by Codex. Three new budget/publication testsPASS; first metadata query used a venv without Hub package and failed read-only, then existing data venv succeeded. Old studies/automations remain closed. Next: bounded CPU model caches, measured T72 smoke/generation, C8 runtime/A1/A2.
+
 ### 2026-10-15 04:20:56 PDT — P009最终交接已远端核验；p009实际暂停
 
 最终A4接受包与datedhandoff固定70d73a45e98e39d483d1ed1c8b64ba5a407f732a，12新manifest成员及2manifest逐Git原字节核验一次，普通push30330 exit0已消耗，独立ls-remote一致；全部旧科学/收尾/评分/检查未重做。新包隐私与staged whitespace检查PASS。元数据builder只执行一次；发布前修正误指P1 README的未发布链接，原草稿/manifest和编排exit检查失败保留于private cj_handoff_link_repair_r1，没有重跑builder/科学工作。

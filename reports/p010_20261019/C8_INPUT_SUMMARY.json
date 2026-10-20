@@ -1,0 +1,121 @@
+{
+  "corpus_sha256": "3e239334229b5b79dd86dac3cdd789469038fd4be4a54c924c7dadf8a0b6d2f0",
+  "endpoint_files_reused": true,
+  "four_shot_baseline_reuse": "P009 olmo_p3 already completed 487/1319, no duplicate inference",
+  "frozen_OLMo_lengths_sha256": "de7544a2d3819aed6f3d8cf572e2c6a6d14c3cac8207af42d359b769db4c1c79",
+  "original_G1": {
+    "G1_D1_ACCEPTED.json": {
+      "common_plan_gate_sha256": "2bec44b26559dc5ca963d5011f7c93709eca39f44afa27ccec28cb6d4f01edd9",
+      "draw": 1,
+      "input_sha256": "dae1bd27ae469f5b8c32af68146f8447717af5ef4f6299b36f8ddf2bcbf8ee24",
+      "local_oracle_sha256": "9e633a2f816c214786a2fedb7668b5a5653184450911f57adfe7401dcb36eeae",
+      "pool_G1_acceptance_sha256": "9e443a9492997d9450fc7b8016b295bf48c2d61958740b67070d60eee72e41d0",
+      "read_utc": "2026-10-13T20:01:37.595824+00:00",
+      "review_commit": "4a8bace07f8e0bb30e12294ad92f2a26d7ff844b",
+      "review_report_sha256": "ffff275684f860b1dca142b401ce5b59c7f2c9804d09d4fc8decd88ebbb3f659",
+      "scope": "Exact all-draw student input/spec G1; T1 admitted, T8 execution requires N2",
+      "source_files": {
+        "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
+        "analyses/e017_audit.py": "9747952267e026ba7153fdebfa0e1bb8b009a536f236d521ca102d3b00490b8e",
+        "analyses/e017_stopping.py": "96c8df6aa6b928f32120a0dd619d3ad25a6aeb06d958c43abf0f01ad2f0e7fb0",
+        "analyses/gsm8k_answer_audit.py": "ecd479ff4069eba1890e5e9e2a3518d6190c2fa5b937f7ab46cc3f177c820325",
+        "configs/models.lock.json": "fa630ec8215607d194056325421e3e598383ce624c52e9d3d05200df6c0f774d",
+        "experiments/sft_allocation_acquisition/contract.py": "30e5971269b74f921cd2732a78b75f3bb016d0556ba9097bf8c4aea3d3be5d9a",
+        "experiments/sft_allocation_acquisition/policy_contract.py": "c6df9c2c13556c5fbde8d7fcdfc00521d88b496ce5879b91f5aa347b6bc67ef9",
+        "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "experiments/sft_allocation_midpoint/guard.py": "009d14ae171d39b8ab86b20af1d8784ba3d40a92f7abf088f0cb548bbb599754",
+        "experiments/sft_allocation_midpoint/monitor.py": "6c8c534a2a7bad8f45524517b8875b522362c95615454f96fbbf166ad3882081",
+        "experiments/sft_allocation_midpoint/runtime.py": "97c1c1b84acd8c9bf84cae423e1f6c73ca4a9a73049aa030045c0309868743bb",
+        "experiments/sft_allocation_p008/block_journal.py": "c86069b02c8f1d401076fa4c5f1b213a173b3d5d8a7c8abf19e4af8114c77088",
+        "experiments/sft_allocation_p008/block_student_runtime.py": "4005ffbf844480d4b8a99cd10566b04c982f3ecb922c325d149a170ab29f9f13",
+        "experiments/sft_allocation_p008/completion_queue.py": "1aeae2e7782ec781397d3271ef8ab2ee040a8681d88e476d81f1abf576b96908",
+        "experiments/sft_allocation_p008/completion_student_binding.py": "f2b7828c53c2eb988c30b656e57ee9acc4d60cb7c04ac612c685faf6d887ded5",
+        "experiments/sft_allocation_p008/contract.py": "796542678703603c75a37e7ce722e49f788e3b6f2b8646e816f1af26e510aef8",
+        "experiments/sft_allocation_p008/evidence_bundle.py": "bd7498d38aef92037c9a722de809c7e706f5522b837916eb5441001783f12768",
+        "experiments/sft_allocation_p008/main_binding.py": "ae8d85356088477dd971d87c68d48906b82de10edbdc164032b9c0c6f1f53b90",
+        "experiments/sft_allocation_p008/modal_students_completion.py": "07adfdf97d46eb52a213ba7b80294ad71c0cab8469203a9cb942fd62a53d5852",
+        "experiments/sft_allocation_p008/parallel_guard.py": "84302b6899805354a99ca4b3da9d825dad6e05af6e0dcd4836918e8b52b2f106",
+        "experiments/sft_allocation_p008/pool_lineage.py": "dcbbe26f55e4391cfadd04344c4cd69aa72a08c949c95c40ce4310b86606ea76",
+        "experiments/sft_allocation_p008/pool_runtime.py": "c566a9a3ab35601f15b861425ef45a6e4a3a851e8ed60c9881fbe65ea922af0b",
+        "experiments/sft_allocation_p008/procurement.py": "9f15cb9443eabc6ef30c95e3ddc9adb4bdee8bde7814e2cfd3be117f4176efc4",
+        "experiments/sft_allocation_p008/requirements_teacher.txt": "95c4f31a6249df55dda6e7f6c60a4b684f62dcd93d739194c102b7c733f696e2",
+        "experiments/sft_allocation_p008/student_concurrency.py": "8c006bfc8599baade1c523d3a0b5a3a0703cbe427196668199d9bf5d0a57812b",
+        "experiments/sft_allocation_p008/student_runtime.py": "d053bfdac4c1f5bd614874d2f1f85597b1ce3bb223abbe599a149152734a6364",
+        "requirements.txt": "973d7d8c0faf8d4dfa2d4026146c47ae288ce423ac3c11b4d9d9667cbfeec952",
+        "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
+        "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+      },
+      "spec_sha256": "ab49b0a638090f61dfd39e7391c61e4427a47b6ea94acfe6e0de3c4f606b21ee",
+      "target_commit": "0be9e6e050b716c2fe98a7709647a4fbadc2609f",
+      "verdict": "PASS-WITH-NOTES"
+    },
+    "G1_D1_POOL_ACCEPTED.json": {
+      "accepted_utc": "2026-10-13T12:44:09.253985+00:00",
+      "draw": 1,
+      "local_oracle_sha256": "9e633a2f816c214786a2fedb7668b5a5653184450911f57adfe7401dcb36eeae",
+      "notes": "Primary parser remains frozen; review table zero-usable counts and actual-cost phrasing corrected separately, common parser does not establish absence of differential policy impact.",
+      "review_commit": "b4a0e5e7f43f580d4d7c8eab92ad7b1f6e16d0dc",
+      "review_report_sha256": "c6d808172e8c7f16aad507099ad94f36af9f1dc537b1b8d13e3aeb043d6cdbd3",
+      "scope": "D1 complete pool numeric G1 only",
+      "student_admitted": false,
+      "target_commit": "7973161bb3d46dd02a8db088ef11274fdf4d8654",
+      "verdict": "PASS-WITH-NOTES"
+    }
+  },
+  "summaries": {
+    "3200": {
+      "config": {
+        "arm": "E4",
+        "encoded_sha256": "36ef9b424a0a2a04d1769094c9e66a52b56963ca116c08f987c099aa09612b9a",
+        "endpoint": "GSM8K",
+        "eos_token_id": 100257,
+        "experiment": "P010",
+        "g0_bypassed_by_explicit_diagnostic_scope": true,
+        "lr_vector_sha256": "14ac59d273e901d23524a077fd6b89c393f698f07fb0da0bc71a1c8d46f08a73",
+        "max_new_tokens": 512,
+        "model": [
+          "allenai/OLMo-2-0425-1B",
+          "a1847dff35000b4271fa70afc5db10fd29fedbdf"
+        ],
+        "n": 3200,
+        "plan_sha256": "6cd4d15516e18f60c45d4224cc56238028c33ddea91d357c4b73671d84fdfefe",
+        "rows_sha256": "7e58f9ce78ff750e8940ce5c9130ba4c2e9b8cc4509381b6c5433e03d87ddc77",
+        "seed": 17,
+        "targets": 2097148,
+        "updates": 1024
+      },
+      "max_exposures": 3,
+      "min_exposures": 2,
+      "once_each_targets": 882133,
+      "q": 2
+    },
+    "400": {
+      "config": {
+        "arm": "E4",
+        "encoded_sha256": "cff9381a253c0f06d271dd5446fb69239b88e77254522104088a509221dcf5cb",
+        "endpoint": "GSM8K",
+        "eos_token_id": 100257,
+        "experiment": "P010",
+        "g0_bypassed_by_explicit_diagnostic_scope": true,
+        "lr_vector_sha256": "14ac59d273e901d23524a077fd6b89c393f698f07fb0da0bc71a1c8d46f08a73",
+        "max_new_tokens": 512,
+        "model": [
+          "allenai/OLMo-2-0425-1B",
+          "a1847dff35000b4271fa70afc5db10fd29fedbdf"
+        ],
+        "n": 400,
+        "plan_sha256": "e6ddfe39b0323c887ad411d2491710df22202a2ed0bce3eef818ae0c3c8f76fc",
+        "rows_sha256": "58e8330861433a9706b0c997580d05839e39f9e44365c02b57b9b921f711c070",
+        "seed": 17,
+        "targets": 2097148,
+        "updates": 1024
+      },
+      "max_exposures": 20,
+      "min_exposures": 19,
+      "once_each_targets": 108416,
+      "q": 19
+    }
+  },
+  "training_calls": 0
+}
