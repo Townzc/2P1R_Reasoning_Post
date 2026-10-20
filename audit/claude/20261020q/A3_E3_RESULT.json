@@ -1,0 +1,340 @@
+{
+ "manifest_sha": "3d040dd81c48fe9aef541efb8d07efc366d083fffd07f62b985c0108636b8f3f",
+ "manifest_files_checked": 74,
+ "manifest_files_bad": [],
+ "manifest_entries": 74,
+ "spec_sha": "d7a9d37c081271be8b00a24e8d6528145991a5921f4f9e7a3ef0c7cb2688a7a9",
+ "t08_rows_sha": "68c6a829003322a7e45380b7147994824fe4d39654085feef004da7b063de4e1",
+ "t08_rows_identical_to_A1_frozen_copy": true,
+ "roster_identical": true,
+ "gold_identical": true,
+ "raw_rows": 3200,
+ "raw_ids_equal_requests": true,
+ "raw_identity_mismatch": 0,
+ "decode_checks": {
+  "len_match": 3200,
+  "eos_ok": 2579,
+  "eos_seg_equal_stripped": 2579,
+  "eos_retained_eq_len_minus1": 0,
+  "answer_text_eq_segment": 3200,
+  "cap_ok": 608,
+  "cap_seg_prefix": 602,
+  "other_invalid_special_token": 13,
+  "other_seg_prefix": 13
+ },
+ "decode_examples": {},
+ "scored_rows": 3200,
+ "score_ids_equal": true,
+ "score_checks": {
+  "gold_eq_lastbox_solution": 3168,
+  "scoring_seg_eq_decoded": 3200,
+  "right_string_differs": 208,
+  "string_symbolic_disagreement": 208
+ },
+ "correct_by_temp": {
+  "t06": 1477,
+  "t10": 1003
+ },
+ "status_counts": {
+  "compared": 2578,
+  "length_cap": 608,
+  "invalid_special_token": 13,
+  "no_box": 1
+ },
+ "score_examples": {
+  "right_string_differs": [
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "54",
+    "54\\text{ gallons}"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "4",
+    "x=4"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "16",
+    "16\\text{ daps}"
+   ],
+   [
+    "112875",
+    "112,\\!875"
+   ],
+   [
+    "112875",
+    "112,\\!875"
+   ]
+  ]
+ },
+ "t08_lengths_n": 1600,
+ "t08_lengths_match_original_raw": 1600,
+ "metrics_replay": {
+  "t06": {
+   "native_eos": {
+    "mine": 1545,
+    "theirs": 1545,
+    "ok": true
+   },
+   "correct": {
+    "mine": 1477,
+    "theirs": 1477,
+    "ok": true
+   },
+   "usable_unique": {
+    "mine": 1416,
+    "theirs": 1416,
+    "ok": true
+   },
+   "physical_tokens": {
+    "mine": 777162,
+    "theirs": 777162,
+    "ok": true
+   },
+   "tokens_per_uu": {
+    "mine": 548.8432203389831,
+    "theirs": 548.8432203389831,
+    "ok": true
+   },
+   "rougeL_all": {
+    "mine": 0.6886885433599231,
+    "theirs": 0.6886885433599231,
+    "ok": true
+   },
+   "jacc_all": {
+    "mine": 0.5283444481904704,
+    "theirs": 0.5283444481904704,
+    "ok": true
+   },
+   "uu_pairs": {
+    "mine": 4574,
+    "theirs": 4574,
+    "ok": true
+   },
+   "uu_q": {
+    "mine": 194,
+    "theirs": 194,
+    "ok": true
+   },
+   "rougeL_uu": {
+    "mine": 0.69167314214877,
+    "theirs": 0.69167314214877,
+    "ok": true
+   },
+   "jacc_uu": {
+    "mine": 0.5344226973188729,
+    "theirs": 0.5344226973188729,
+    "ok": true
+   },
+   "eqq_rougeL_uu": {
+    "mine": 0.696687296306847,
+    "theirs": 0.696687296306847,
+    "ok": true
+   }
+  },
+  "t08": {
+   "native_eos": {
+    "mine": 1463,
+    "theirs": 1463,
+    "ok": true
+   },
+   "correct": {
+    "mine": 1389,
+    "theirs": 1389,
+    "ok": true
+   },
+   "usable_unique": {
+    "mine": 1367,
+    "theirs": 1367,
+    "ok": true
+   },
+   "physical_tokens": {
+    "mine": 820788,
+    "theirs": 820788,
+    "ok": true
+   },
+   "tokens_per_uu": {
+    "mine": 600.4301389904901,
+    "theirs": 600.4301389904901,
+    "ok": true
+   },
+   "rougeL_all": {
+    "mine": 0.635058051978685,
+    "theirs": 0.635058051978685,
+    "ok": true
+   },
+   "jacc_all": {
+    "mine": 0.4817786033705225,
+    "theirs": 0.4817786033705225,
+    "ok": true
+   },
+   "uu_pairs": {
+    "mine": 4346,
+    "theirs": 4346,
+    "ok": true
+   },
+   "uu_q": {
+    "mine": 191,
+    "theirs": 191,
+    "ok": true
+   },
+   "rougeL_uu": {
+    "mine": 0.6798257706296256,
+    "theirs": 0.6798257706296256,
+    "ok": true
+   },
+   "jacc_uu": {
+    "mine": 0.5245922490627631,
+    "theirs": 0.5245922490627631,
+    "ok": true
+   },
+   "eqq_rougeL_uu": {
+    "mine": 0.6716834350550842,
+    "theirs": 0.6716834350550842,
+    "ok": true
+   }
+  },
+  "t10": {
+   "native_eos": {
+    "mine": 1034,
+    "theirs": 1034,
+    "ok": true
+   },
+   "correct": {
+    "mine": 1003,
+    "theirs": 1003,
+    "ok": true
+   },
+   "usable_unique": {
+    "mine": 996,
+    "theirs": 996,
+    "ok": true
+   },
+   "physical_tokens": {
+    "mine": 1053220,
+    "theirs": 1053220,
+    "ok": true
+   },
+   "tokens_per_uu": {
+    "mine": 1057.4497991967871,
+    "theirs": 1057.4497991967871,
+    "ok": true
+   },
+   "rougeL_all": {
+    "mine": 0.4312562552450379,
+    "theirs": 0.4312562552450379,
+    "ok": true
+   },
+   "jacc_all": {
+    "mine": 0.34516996993702165,
+    "theirs": 0.34516996993702165,
+    "ok": true
+   },
+   "uu_pairs": {
+    "mine": 2556,
+    "theirs": 2556,
+    "ok": true
+   },
+   "uu_q": {
+    "mine": 176,
+    "theirs": 176,
+    "ok": true
+   },
+   "rougeL_uu": {
+    "mine": 0.6729808020542273,
+    "theirs": 0.6729808020542273,
+    "ok": true
+   },
+   "jacc_uu": {
+    "mine": 0.5242972309570841,
+    "theirs": 0.5242972309570841,
+    "ok": true
+   },
+   "eqq_rougeL_uu": {
+    "mine": 0.6543105888751223,
+    "theirs": 0.6543105888751223,
+    "ok": true
+   }
+  }
+ },
+ "metrics_all_ok": true,
+ "same_seed_all_three_temps": true
+}
