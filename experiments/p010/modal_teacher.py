@@ -3,7 +3,7 @@ from pathlib import Path
 import modal
 from experiments.p010.common import read
 ROOT=Path(__file__).resolve().parents[2]
-SPEC='reports/p010_20261019/teacher_runtime_v1/SPEC.json'
+SPEC='reports/p010_20261019/teacher_runtime_v2/SPEC.json'
 spec=read(ROOT/SPEC)
 app=modal.App('p010-teacher-generation')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)

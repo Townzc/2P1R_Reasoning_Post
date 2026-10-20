@@ -26,6 +26,8 @@ class TeacherChecks(unittest.TestCase):
         from experiments.p010.teacher_runtime import run
         class Tok:
             lengths=0
+            all_special_ids=[151643,151645]
+            eos_token_id=151645
             def __len__(self):self.lengths+=1;return 152064
             def apply_chat_template(self,*a,**kw):return [1,2]
             def decode(self,ids,**kw):return r'Final \boxed{1}'

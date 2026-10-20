@@ -14,7 +14,7 @@ def run(model,inputs,assets,out,store,volume,started,deadline):
     from experiments.learning_regime_p009.math_scoring import last_box
     from experiments.learning_regime_p009.math_scoring_pool import SymbolicPool
     from experiments.learning_regime_p009.stage0_generation_engine_v2 import returned_records
-    from experiments.sft_allocation_acquisition.contract import completion
+    from analyses.completion_contract import first_stop
     inputs=Path(inputs);out=Path(out);slot=SLOTS[model]
     if torch.cuda.device_count()!=slot['gpus'] or any('H100' not in torch.cuda.get_device_name(i) or torch.cuda.get_device_properties(i).total_memory<75*1024**3 for i in range(slot['gpus'])):
         raise ValueError('Actual GPU allocation differs')
@@ -22,6 +22,7 @@ def run(model,inputs,assets,out,store,volume,started,deadline):
     verify(assets['remote_path'],assets['files'])
     tok=AutoTokenizer.from_pretrained(assets['remote_path'],local_files_only=True)
     vocabulary_size=len(tok)
+    special_ids=set(tok.all_special_ids)
     alltrain=read(inputs/'MATH_SOURCE.json');train={r['problem_id']:r for r in alltrain}
     roster=read(inputs/'MATH_ROSTERS.json');queue=read(inputs/f'{model}_fixed_requests.json')
     validate_queue(queue,model)
@@ -78,9 +79,9 @@ def run(model,inputs,assets,out,store,volume,started,deadline):
                 ids=x['token_ids']
                 if not ids or len(ids)>1024 or any(type(tid)!=int or not 0<=tid<vocabulary_size for tid in ids):
                     raise ValueError('Invalid raw token stream')
-                logical=completion(ids)
-                logical['stop_reason']='native_eos' if logical['eos'] else 'length_cap'
-                text=tok.decode(logical['text_token_ids'],skip_special_tokens=False,clean_up_tokenization_spaces=False)
+                native=next((tid for tid in ids if tid in (151645,151643)),tok.eos_token_id)
+                logical=first_stop(ids,lambda ts:tok.decode(ts,skip_special_tokens=False,clean_up_tokenization_spaces=False),native,1024,special_ids)
+                text=logical['answer_segment']
                 gold=last_box(train[r['problem_id']]['solution'])['answer']
                 d=dict(candidate_id=r['candidate_id'],problem_id=r['problem_id'],attempt=r['attempt'],
                     raw_file=f'raw/{name}.json',raw_record_sha256=digest(x),answer_text=text,
@@ -113,7 +114,7 @@ def run(model,inputs,assets,out,store,volume,started,deadline):
             values=[records[r['candidate_id']] for r in smoke]
             smokeproof=dict(correct=sum(r['usable'] for r in values),n=20,
                 contains_box=sum(bool(r['score'] and r['score']['score'].get('box_extracted')) for r in values),
-                lengths=[r['stop']['token_count'] for r in values],provider='Modal selfhost',
+                lengths=[r['stop']['retained_tokens'] for r in values],provider='Modal selfhost',
                 dtype='bfloat16',quantization=None,not_Fireworks_API_test=True)
             dump(out/'SMOKE20.json',smokeproof);volume.commit()
             if smokeproof['correct']<14:raise ValueError('Selfhost smoke quality below14/20; no bulk')
