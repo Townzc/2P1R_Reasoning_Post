@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T05:31:46.079479+00:00",
+  "as_of_utc": "2026-10-20T05:44:48.719564+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3543,6 +3543,25 @@
       "status": "previous_reported_code_findings_closed_no_new_finding_in_changed_lines",
       "blocking_scope": "Z1 feedback only; no model gate",
       "created_utc": "2026-10-20T05:37:58.951760+00:00"
+    },
+    {
+      "request_id": "p010-C8-E4-complete-A3-r1",
+      "scope": "p010-C8-E4-complete-results-A3",
+      "status": "pending_actual_A3",
+      "request": "reports/p010_20261019/E4_COMPLETE_ACTUAL_A3_REQUEST.md",
+      "packet": "reports/p010_20261019/e4_complete_results_v1",
+      "manifest_sha256": "81d78a2fa9cf68eb68693f5ceffd5cca4ef08a6251ace0f0da8d8434a54f268b",
+      "results": {
+        "e4_s17_n400": {
+          "packet": "reports/p010_20261019/e4_endpoint_results_v1/e4_s17_n400",
+          "manifest_sha256": "75aae460ec1b6b40e2279db6ce168f1f2cacc818b0a6964f679069164892860a"
+        },
+        "e4_s17_n3200": {
+          "packet": "reports/p010_20261019/e4_endpoint_results_v1/e4_s17_n3200",
+          "manifest_sha256": "67e4c64ee549f07425496d13dc997d95e59dded4aab129b5b81b39567ba49b2c"
+        }
+      },
+      "created_utc": "2026-10-20T05:44:48.719602+00:00"
     }
   ],
   "p008_v31": {
@@ -4908,7 +4927,7 @@
       }
     ],
     "actual_T_reserved_usd": 26.2,
-    "E4_status": "two_original_failed_zero_endpoint_complete_training_verified_once",
+    "E4_status": "both_saved_state_endpoint_children_complete_STOPPED0_full_local_PASS_actual_A3_pending",
     "T72_actual_A1": "PASS_WITH_NOTES_K1_and_E1d",
     "C4_E4_C7_publication_fixed_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
     "K1_E1d_next_candidate": "reports/p010_20261019/student_runtime_k1_e1d_v1",
@@ -4928,7 +4947,9 @@
     "C4_original_two_status": "complete_STOPPED0_full_local_state_raw_scoring_PASS_actual_A3_pending",
     "C4_complete_result_packet": "reports/p010_20261019/t15_k4_k8_actual_results_v1",
     "T7_T72_K4_K8_status": "owner_cancelled_all_four_unattempted_cells",
-    "E4_endpoint_owner_exception": "APPROVED_exact_A2_pending",
-    "E4_endpoint_only_A2": "PASS_owner_separately_APPROVED_not_yet_called"
+    "E4_endpoint_owner_exception": "APPROVED_and_exact_A2_PASS_two_children_consumed",
+    "E4_endpoint_only_A2": "PASS_owner_separately_APPROVED_not_yet_called",
+    "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
+    "active_scientific_calls": 0
   }
 }

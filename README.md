@@ -1,6 +1,6 @@
 # Current: P010 v3 authorized exploratory pilot
 
-[P010 execution and evidence](reports/p010_20261019/README.md): original T1.5 K4/K8 calls and local state/raw/scoring verification completed; independent A3 is pending; all teachers are complete. The owner approved E4 endpoint-only completion after exact audit and cancelled the four T7/T72 K4/K8 training cells; K1/E1d remain in scope. $240 hard cap/G50/T150/I15/C25. Old P009 remains closed.
+[P010 results and evidence](reports/p010_20261019/README.md): E4 saved-model endpoint completion is fully locallyverified (509/1319 and654/1319); original T1.5K4/K8 results are262/500 and279/500. Actual A3 remains pending for these results. Allscientificworkers are stopped; fiveK1/E1d await exactA2. FourT7/T72K4/K8 cells are cancelled by the owner. Hard cap$240/G50/T150/I15/C25. OldP009 remainsclosed.
 
 <!-- P009 CLOSED 2026-10-15T11:20:56.314475+00:00 -->
 **P009已关闭，p009已暂停。** 最终实际A4通过并确认预注册停止；273/500与276/500，后四S1/Stage2未启动，G1/bootstrap未执行。[最终材料](reports/p009_20261014/final_handoff_20261015_v1/README.md) · [实际关闭回执](reports/p009_20261014/P009_CLOSED_AUTOMATION_STATUS.json)。

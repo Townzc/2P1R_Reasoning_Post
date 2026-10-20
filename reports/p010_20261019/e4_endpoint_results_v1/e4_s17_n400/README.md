@@ -1,0 +1,7 @@
+# e4_s17_n400 — complete endpoint-only evidence, actual A3 pending
+
+Original final-model endpoint: 509/1319, with 89 logical length caps and zero technical unknowns. The child app is STOPPED with zero owned containers. It reused the original complete1024-update/2,097,148-target model and generated each original endpoint once. No training or repeated endpoint outputs. The two original training calls remain failed at their pre-generation wrapper-read entrance; their evidence and costs are retained.
+
+The original compact archive is copied byte-for-byte. Full1319 token streams, six requests/acks/forecasts, original parent and child fences, exact owner exception and A2, engine configuration and frozen marked_answer_v1 decisions were independently verified once locally. Publication only copies and summarizes saved proofs: no tokenization, decoding, state deserialization or rescoring. The old complete-state proof is reused, not rerun. Public state hashes do not assert external access to private binaries. Actual A3 remains pending.
+
+Provider metadata removes actor identity only and binds the full private original hash. The2.52USD child and6.55USD failed-parent reservations are not actual spending, final cost or balances. No release or category transfer. All original outcomes, including caps and parser failures, remain included. These are operational audit records, not course-report prose.

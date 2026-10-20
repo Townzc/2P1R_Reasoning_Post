@@ -1196,3 +1196,11 @@ Only the new two-line last-line negation guard was reviewed. Six new synthetic c
 ### 2026-10-19 22:39:57 PDT — Both owner-approved E4 endpoint-only calls submitted
 
 Original new CLI28484/46497 each has a real submitted app/call, execution7a887815/source33 unchanged. Each reuses its verified final model for original1319 questions, no training/repeatedoutputs. Both exact owner and A2 recorded before calls. T reservation31.24/G44 now75.24 total attempted, not expense; parents and their costs retained. Fresh original04:43billing was within one hour at bothdispatches. Complete outputs/oracles/actualA3 are still pending. OriginalC4 and all oldcalls remain closed.
+
+### 2026-10-19 22:41:16 PDT — Both endpoint-only original calls returned complete
+
+CLI28484/46497 each EXIT0CONSUMED; originalterminals05:39:19.254768 and05:40:30.162297UTC contain1319outputs/zero newtraining. Originalworkers took95.729756/101.553864 seconds includingpack, observations not futureguarantees. Unique boundedcollectors nextverify actualSTOPPED0 before compactretrieval; no parentbinaryreload or repeatedoutputs. ExactresultA3 stillpending.
+
+### 2026-10-19 22:44:48 PDT — Both E4 endpoint-only results locally verified and published
+
+Newcollectors46768/94328, records47774/89196, oracles25619/42446 allEXIT0CONSUMED once. Each29originalartifactentries/29namedrecords andfull1319tokens passed source/parent/owner/A2/forecast checks; bothprovidersSTOPPED0. Results509/654, caps89/76, unknown0;0newtraining/repeatedstateloads. Two metadata-only publishers DONE once, originaltarbytecopies and oldtrainingproof retained; actualA3requested. No symbolic scoring, bootstrap or course-report prose generated. One guessed oldsummary path was absent during reference lookup; actual originalOLMoRESULTS.json copied unchanged, no oldscore/model rerun.

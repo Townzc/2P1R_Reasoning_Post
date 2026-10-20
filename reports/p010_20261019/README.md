@@ -1,3 +1,9 @@
+# Current P010 — E4 complete locally, actual A3 pending
+
+[E4 original-model results and evidence](e4_complete_results_v1/README.md):509/1319 and654/1319, zero technicalunknown. Both owner-approved endpoint-only children completed with no retraining or repeatedoutputs; bothfailedparents remainfailed. [T1.5 K4/K8](t15_k4_k8_actual_results_v1/README.md) are also locallycomplete, actualA3 pending. No scientificworker remainsactive. Five originalK1/E1d students still await their exactA2; allT7/T72K4/K8 trainingcells are owner-cancelled. [C7 latest source-only review](c7_z1_code_review_r4/REVIEW.md) closes the previouslyreported codefinding; Claude owns Z1 labels.
+
+--- Historical progress below ---
+
 # Current P010 — original T1.5 K4/K8 locally complete
 
 [Results and original evidence](t15_k4_k8_actual_results_v1/README.md):262/500 and279/500 greedy, sampled means54.75%/52.70%; actualA3 pending. [Direct owner amendment](owner_selection_and_e4_endpoint_20261020_v1/README.md) cancels allfourT7/T72K4/K8 cells and approves two E4 endpoint-only children after exactaudit; K1/E1d remain in scope. No scientific call is currently active; five K1/E1d and two E4 children await their real audits.
