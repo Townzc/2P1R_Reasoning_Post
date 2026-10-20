@@ -1184,3 +1184,7 @@ Unique collectors15025/49961 and named-ledger readers61669/43919 completed once,
 ### 2026-10-19 22:29:11 PDT — T1.5 full scoring complete; actualA3 requested
 
 Originalscore jobs77370/8762 EXIT0CONSUMED DONE once: greedy262/279 of500, sampled1095/1054 of2000, zero technicalunknown. All25chunks each and872/881unique pairs saved; actualelapsed2.694619/2.689791seconds are observations only. K4greedy is11below originalK1; K8is6above, both descriptive and owner notified immediately perv3. Two metadata-only publishers completed once, originaltar andfullscorejournal archived/readback, no scorer/raw/state rerun. IndependentA3/fixed50+50disagreementjudgments stillpending, no CI, no Tier3 release. ProviderSTOPPED0 confirmed in originalcollectors; no modelactive.
+
+### 2026-10-19 22:31:46 PDT — Real T72 A1 / E4 child A2 accepted
+
+Full20261020f3a76f572 report binds exactT72data and original33E4repair. T72K1/E1d PASS-WITH-NOTES, including3199distinctnormalizedE1dquestions in3200rows and2479teacher caps. Owner separatelyapprovedE4exception andcancelledfourK4/K8cells. ExactE4A2 PASS, nochildcalledyet; ordinarysource/acceptancepublication andfreshbudget will precede eachonce-only original endpoint. No newmodel or oldcheck repeated.

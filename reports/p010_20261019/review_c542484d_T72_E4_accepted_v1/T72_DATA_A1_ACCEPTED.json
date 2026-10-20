@@ -1,0 +1,37 @@
+{
+  "accepted_cells": [
+    "n400_k1",
+    "n3200_k1",
+    "e1d_n3200_k1"
+  ],
+  "blocked_cells": [
+    "n400_k4",
+    "n400_k8"
+  ],
+  "commit": "c542484d39888cdc74db7b68e70ae5afab163f6c",
+  "data_manifest_sha256": "aa262790a5e38f3fe43a4953899a434604633c389eba735fcf38abf9a2dc0e21",
+  "decision": "PASS-WITH-NOTES",
+  "input_archive_sha256": "10c7b934b05be3896fd3ab1e8e2102fee4c9ef5184fb68c2e8eaf4917625a619",
+  "issue_comment_event": null,
+  "later_owner_cancelled_cells": [
+    "n400_k4",
+    "n400_k8"
+  ],
+  "limitations": [
+    "Independent A1 selection/order/bytes/plan checks; no claim of fresh external GPU inference or private state reading.",
+    "Fallback13/400=3.25% was reported before training; plan requires reporting, not another approval.",
+    "2479/14098 teacher outputs are capped; accepted answers condition on short enough completions.",
+    "E1d3200 retained rows contain one normalized duplicate pair (algebra/train/925 and959),3199 distinct normalized problems; reviewer accepts with disclosure, original input bytes unchanged.",
+    "E1d overlaps S1n3200 on1597 problems; level distributions differ; not a pure isolated difficulty causal comparison."
+  ],
+  "path": "audit/claude/20261020f/REPORT.md",
+  "read_utc": "2026-10-20T05:30:53.509511+00:00",
+  "report_added_commit": "a321c4c6aa4ba43de9fddee4d4dd5bd58a235edb",
+  "report_authored_time_label": "2026-10-20 05:14 UTC",
+  "report_commit_event_utc": "2026-10-20T05:14:32Z",
+  "report_sha256": "3a76f572c38cd2f30f810f1c9788a277323d03c1cf1a2a6847f1071e60e9434b",
+  "reviewed_context_commit": "33b99ccfc639a431efef317ee8361ae83568f6e3",
+  "scope": "p010-T72-complete-data-A1",
+  "target_commit": "1f0c6ed613f4bb8ef60b177d2930c555c4a2063a",
+  "teacher_manifest_sha256": "c5d67e393530fadd116c4a31f5a889dd233ebae002b9323597a65eaaea8380e3"
+}

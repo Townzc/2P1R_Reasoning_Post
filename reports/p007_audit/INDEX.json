@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T05:29:11.035324+00:00",
+  "as_of_utc": "2026-10-20T05:31:46.079479+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3448,7 +3448,7 @@
     {
       "request_id": "p010-T72-complete-data-A1-r1",
       "scope": "p010-T72-complete-data-A1",
-      "status": "pending_actual_A1_K1_E1d_K4_K8_cancelled_by_owner",
+      "status": "completed_A1_K1_E1d_PASS_WITH_NOTES_K4_K8_owner_cancelled",
       "request": "reports/p010_20261019/T72_DATA_A1_REQUEST.md",
       "packets": {
         "reports/p010_20261019/t72_data_candidate_v1": "aa262790a5e38f3fe43a4953899a434604633c389eba735fcf38abf9a2dc0e21",
@@ -3459,7 +3459,11 @@
       "owner_options": "reports/p010_20261019/TEACHER_K_SELECTION_CONFLICT_OPTIONS.md",
       "blocking_scope": "Actual T72 data; K4/K8 need owner disposition, K1 reporting fulfilled, E1d separate valid plan",
       "target_commit": "1f0c6ed613f4bb8ef60b177d2930c555c4a2063a",
-      "all_manifest_members_git_verified": 40
+      "all_manifest_members_git_verified": 40,
+      "review_commit": "c542484d39888cdc74db7b68e70ae5afab163f6c",
+      "report_sha256": "3a76f572c38cd2f30f810f1c9788a277323d03c1cf1a2a6847f1071e60e9434b",
+      "disposition_packet": "reports/p010_20261019/review_c542484d_T72_E4_accepted_v1",
+      "read_utc": "2026-10-20T05:30:53.509511+00:00"
     },
     {
       "request_id": "p010-C7-Z1-code-cross-review-r3",
@@ -3475,7 +3479,7 @@
     {
       "request_id": "p010-E4-endpoint-only-repair-A2-r1",
       "scope": "p010-C8-endpoint-only-repair-A2",
-      "status": "owner_exception_APPROVED_pending_exact_A2",
+      "status": "completed_exact_A2_PASS_owner_separately_approved",
       "request": "reports/p010_20261019/E4_ENDPOINT_ONLY_REPAIR_A2_REQUEST.md",
       "packet": "reports/p010_20261019/e4_endpoint_repair_preflight_v1",
       "manifest_sha256": "2917324d261d0fe10f65983485a14731a41320f5f051fdb0b86631e7bd4acb3a",
@@ -3486,7 +3490,11 @@
       "target_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
       "owner_packet": "reports/p010_20261019/owner_selection_and_e4_endpoint_20261020_v1",
       "owner_acceptance_sha256": "33164e050ac39dfab28227df1b50f4474193facf0f7be5ae0b8b7977aaca3be9",
-      "local_evidence_addendum": "reports/p010_20261019/e4_endpoint_evidence_preflight_v1"
+      "local_evidence_addendum": "reports/p010_20261019/e4_endpoint_evidence_preflight_v1",
+      "review_commit": "c542484d39888cdc74db7b68e70ae5afab163f6c",
+      "report_sha256": "3a76f572c38cd2f30f810f1c9788a277323d03c1cf1a2a6847f1071e60e9434b",
+      "disposition_packet": "reports/p010_20261019/review_c542484d_T72_E4_accepted_v1",
+      "read_utc": "2026-10-20T05:30:53.509511+00:00"
     },
     {
       "request_id": "p010-C4-K1-E1d-A2-r1",
@@ -4890,7 +4898,7 @@
     ],
     "actual_T_reserved_usd": 26.2,
     "E4_status": "two_original_failed_zero_endpoint_complete_training_verified_once",
-    "T72_actual_A1": "pending",
+    "T72_actual_A1": "PASS_WITH_NOTES_K1_and_E1d",
     "C4_E4_C7_publication_fixed_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
     "K1_E1d_next_candidate": "reports/p010_20261019/student_runtime_k1_e1d_v1",
     "owner_selection_E4_disposition": {
@@ -4909,6 +4917,7 @@
     "C4_original_two_status": "complete_STOPPED0_full_local_state_raw_scoring_PASS_actual_A3_pending",
     "C4_complete_result_packet": "reports/p010_20261019/t15_k4_k8_actual_results_v1",
     "T7_T72_K4_K8_status": "owner_cancelled_all_four_unattempted_cells",
-    "E4_endpoint_owner_exception": "APPROVED_exact_A2_pending"
+    "E4_endpoint_owner_exception": "APPROVED_exact_A2_pending",
+    "E4_endpoint_only_A2": "PASS_owner_separately_APPROVED_not_yet_called"
   }
 }
