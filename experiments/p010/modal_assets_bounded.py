@@ -12,7 +12,8 @@ image=(modal.Image.debian_slim(python_version='3.12')
 for name in ('experiments/__init__.py','experiments/p010/__init__.py',
     'experiments/p010/common.py','experiments/sft_allocation_midpoint/__init__.py',
     'experiments/sft_allocation_midpoint/common.py'):
-    image = image.add_local_file(ROOT/name,'/workspace/'+name,copy=True)
+    if (ROOT/name).is_file():  # experiments is an existing namespace package.
+        image = image.add_local_file(ROOT/name,'/workspace/'+name,copy=True)
 
 
 @app.function(image=image,cpu=(2,2),memory=(8192,8192),timeout=3600,startup_timeout=600,
