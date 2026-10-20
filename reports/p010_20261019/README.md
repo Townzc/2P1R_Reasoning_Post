@@ -1,3 +1,7 @@
+# Latest — 2026-10-20T03:36:18.817041+00:00
+
+[T72 smoke passed17/20 and originalT7suffix active](active_generators_v1/README.md). [C4/A2 candidate](student_runtime_v1/README.md) preserves original1024/2097148 and adds the authorized four-sample endpoints; no student calls yet. T15A1 andC8A1/A2 remain pending. Attempted G reservations44, not actual spending.
+
 # Latest execution — 2026-10-20T03:23:14.621855+00:00
 
 [T1.5 complete data/A1 candidate](t15_data_candidate_v1/README.md): K4=1592 answers and K8=3146, both400 questions, alloriginaldoseplans ready. [Original generation evidence](teacher_t15_complete_v1/README.md) retains5940new+460reused provenance; actual externalA1 pending. T72 originalselfhostcall is active (TP4H100/bf16), no smoke result yet. T7 proposed no-replay suffix awaits the directowner exception already requested; no secondT7call. C8 combinedA1/A2 remains pending.

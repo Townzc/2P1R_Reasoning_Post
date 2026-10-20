@@ -1,0 +1,30 @@
+test_actual_worker_emits_five_endpoints_and_replay_preserves_original (tests.test_p010_student_contract.StudentChecks.test_actual_worker_emits_five_endpoints_and_replay_preserves_original) ... ERROR
+test_all_batches_time_and_budget_retained (tests.test_p010_student_contract.StudentChecks.test_all_batches_time_and_budget_retained) ... ok
+test_fixed_grid_and_sample_seeds (tests.test_p010_student_contract.StudentChecks.test_fixed_grid_and_sample_seeds) ... ok
+test_new_multi_answer_recipe_preserves_dose (tests.test_p010_student_contract.StudentChecks.test_new_multi_answer_recipe_preserves_dose) ... ok
+test_original_training_body_identical (tests.test_p010_student_contract.StudentChecks.test_original_training_body_identical) ... ok
+test_wrong_seed_original_cell_and_truncated_answer_rejected (tests.test_p010_student_contract.StudentChecks.test_wrong_seed_original_cell_and_truncated_answer_rejected) ... ok
+
+======================================================================
+ERROR: test_actual_worker_emits_five_endpoints_and_replay_preserves_original (tests.test_p010_student_contract.StudentChecks.test_actual_worker_emits_five_endpoints_and_replay_preserves_original)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_p010_student_contract.py", line 119, in test_actual_worker_emits_five_endpoints_and_replay_preserves_original
+    result = ns['worker'](run, 'fixture', {}, '0')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<actual worker>", line 42, in worker
+  File "experiments/sft_allocation_midpoint/common.py", line 30, in read
+    return json.loads(Path(path).read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-runtime>/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/SPEC.json'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.812s
+
+FAILED (errors=1)

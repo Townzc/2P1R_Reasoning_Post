@@ -1071,3 +1071,11 @@ T15 A1 packets fixed8303d26c727240cd1d38015cb39c69d07292b2e0; 43 manifest member
 ### 2026-10-20T03:27:40.748828+00:00 — T7 owner明确例外
 
 真实owner答复“批准这一次续作，不重复已有输出”，绑定75157b10提案。保存原文/read时间，未伪造发送时间。当前G38.50+新5.50=44，原T72预算已保守包含该候选；新T7实际余额80%检查通过，无类别挪用。只一次新后缀，原256原样继承、旧失败永保。新C4两个纯源码draft仅parsed/PREPARED，训练body原函数源码不改，无A2/执行。
+
+### 2026-10-20T03:36:18.817041+00:00 / Oct19 PDT — T72 smoke通过、T7后缀与C4候选
+
+T72原call17614的只读3file回执43253一次DONE，17/20usablecorrect、17boxed、3lengthcaps、bf16/TP4/noquantization，已复用20继续bulk。原start1792466223.4465542/hard1792470723.4465542；不把自部署门说成Fireworks计费测试。T7后缀原45692唯一提交ap-Zo2xnVaTB1cDptmXQ4BShm/fc-01M5BNMTZQH2DAF3WZ16M6H18W，原256只CPU首次评分后继续缺失输出。实际Greservations44，lastmeter未重复刷。
+
+T15两个原C3input只字节复制、追加config与原MATH500endpoint，零重选/重编码/调度/评分。新C4 source34候选保留原train_and_merge完整函数AST，仅多答案外层验证；1024/2097148、seed17/LR/LoRA不变，子进程退出后greedy+4sample/共2500raw。原23hosts1496training/32endpoint全保留情景4290.960s/6.091USD<=4500/6.55，greedy到sampling和600s/20%仍未校准。6新checks五项首PASS；实际worker mock首因fixture未映射/workspace路径失败，修fixture后仅该项PASS；实际worker拒重复不改原terminal。旧tests不重跑。新spec未发布稿保存后更新replay保护sourcehash；实际Modal定义只本地import无调用。
+
+review97970于03:29:00UTC仍cc0d29f2/109comments，无新C8/A1报告，下一正常03:59。几次旧文件名猜测只读失败发生代码/候选写入前，无科学副作用，今后按rg已列路径。C4A2实际pending，无student/upload。
