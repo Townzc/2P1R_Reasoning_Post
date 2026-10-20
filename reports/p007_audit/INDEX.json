@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T04:13:54.118970+00:00",
+  "as_of_utc": "2026-10-20T04:19:18.464476+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -4726,6 +4726,20 @@
     },
     "C7_review_v2": "reports/p010_20261019/c7_z1_code_review_r2/REVIEW.md",
     "C8_started": "reports/p010_20261019/e4_started_v1",
-    "C8_started_manifest_sha256": "71da7a47296fe856e1aef38a2c0eed49783325c5c02a2a1a84645b4f67e838c0"
+    "C8_started_manifest_sha256": "71da7a47296fe856e1aef38a2c0eed49783325c5c02a2a1a84645b4f67e838c0",
+    "C5_scoring_prepared": {
+      "packet": "reports/p010_20261019/student_scoring_draft_v1",
+      "manifest_sha256": "88bba1885d8c86409d5d58e19af79aeedc64d0aacc2e0091b0b795022e77ad56",
+      "actual_scoring": false,
+      "source_count": 11,
+      "six_new_synthetic_checks_passed": true
+    },
+    "C8_endpoint_input_risk": {
+      "local_prospective_proof_sha256": "9717e1bda6db0e61725ce536471db6bce8aa15128f4ec5ac8f8ab8a4156cdbaf",
+      "original_calls_still_training": true,
+      "automatic_retry": false,
+      "original_sources_unchanged": true,
+      "issue": "Original endpoint wrapper dictionary is sliced as list after training; checkpoint preservation and no-retrain completion proposal required if actual failure occurs"
+    }
   }
 }
