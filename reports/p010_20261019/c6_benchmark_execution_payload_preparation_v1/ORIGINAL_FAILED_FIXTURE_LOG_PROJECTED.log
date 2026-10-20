@@ -1,0 +1,50 @@
+E.EE
+======================================================================
+ERROR: test_actual_body_saves_raw_and_exact_params_once (__main__.Generation.test_actual_body_saves_raw_and_exact_params_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/.local/p010_20261019/r1/test_cue_benchmark_generation_prepared.py", line 37, in test_actual_body_saves_raw_and_exact_params_once
+    values=fixtures();result=self.execute(Path(td),values)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/.local/p010_20261019/r1/test_cue_benchmark_generation_prepared.py", line 34, in execute
+    return m.generate(out,roster,binding,config,store,key,claim,Volume(),start,start+1800,'0')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/.local/p010_20261019/r1/cue_benchmark_generation_prepared.py", line 67, in generate
+    llm=LLM(model=binding['remote_path'],tokenizer=binding['remote_path'],**engine_kwargs())
+                  ~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'remote_path'
+
+======================================================================
+ERROR: test_malformed_outputs_preserved_without_ack (__main__.Generation.test_malformed_outputs_preserved_without_ack)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/.local/p010_20261019/r1/test_cue_benchmark_generation_prepared.py", line 45, in test_malformed_outputs_preserved_without_ack
+    with self.assertRaises(ValueError):self.execute(Path(td),values)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/.local/p010_20261019/r1/test_cue_benchmark_generation_prepared.py", line 34, in execute
+    return m.generate(out,roster,binding,config,store,key,claim,Volume(),start,start+1800,'0')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/.local/p010_20261019/r1/cue_benchmark_generation_prepared.py", line 67, in generate
+    llm=LLM(model=binding['remote_path'],tokenizer=binding['remote_path'],**engine_kwargs())
+                  ~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'remote_path'
+
+======================================================================
+ERROR: test_reserved_batch_prevents_second_generation (__main__.Generation.test_reserved_batch_prevents_second_generation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/.local/p010_20261019/r1/test_cue_benchmark_generation_prepared.py", line 51, in test_reserved_batch_prevents_second_generation
+    with self.assertRaises(RuntimeError):self.execute(Path(td),values)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/.local/p010_20261019/r1/test_cue_benchmark_generation_prepared.py", line 34, in execute
+    return m.generate(out,roster,binding,config,store,key,claim,Volume(),start,start+1800,'0')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/.local/p010_20261019/r1/cue_benchmark_generation_prepared.py", line 67, in generate
+    llm=LLM(model=binding['remote_path'],tokenizer=binding['remote_path'],**engine_kwargs())
+                  ~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'remote_path'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.024s
+
+FAILED (errors=3)

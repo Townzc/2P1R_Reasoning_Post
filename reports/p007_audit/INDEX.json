@@ -5010,7 +5010,7 @@
         "full_state_or_result_oracle": false
       }
     ],
-    "actual_T_reserved_usd": 31.24,
+    "actual_T_reserved_usd": 63.99,
     "E4_status": "complete_STOPPED0_actual_A3_PASS_with_limits",
     "T72_actual_A1": "PASS_WITH_NOTES_K1_and_E1d",
     "C4_E4_C7_publication_fixed_commit": "58c97a798dc9763997c4f1b37587146e8a12e8c9",
@@ -5034,7 +5034,7 @@
     "E4_endpoint_owner_exception": "APPROVED_and_exact_A2_PASS_two_children_consumed",
     "E4_endpoint_only_A2": "PASS_owner_exception_consumed_two_completed_children",
     "E4_result_packet": "reports/p010_20261019/e4_complete_results_v1",
-    "active_scientific_calls": 0,
+    "active_scientific_calls": 4,
     "C6_adapters_and_dev": {
       "packet": "reports/p010_20261019/c6_adapters_and_dev_draft_v1",
       "status": "PREPARED_NOT_RUN",
@@ -5047,7 +5047,7 @@
     "C6_search_candidate": {
       "request_id": "p010-C6-search-A2-r1",
       "scope": "p010-C6-search-input-runtime-and-selection-A2",
-      "status": "pending_exact_original_search_A2",
+      "status": "actual_A2_PASS_WITH_NOTES_input_upload_complete_model_NOTRUN",
       "request": "reports/p010_20261019/C6_SEARCH_EXACT_A2_REQUEST.md",
       "packet": "reports/p010_20261019/c6_search_runtime_v1",
       "spec_sha256": "5014f3ce10f9c7ba719e69a61effd0bcd526a815737fd49b355bb856e73713f8",
@@ -5061,14 +5061,14 @@
       "all_manifest_members_git_verified": 47
     },
     "existing_S1_sample_preparation": {
-      "status": "full_runtime_A2_pending_zero_calls",
+      "status": "actual_A2_PASS_model_NOTRUN",
       "packet": "reports/p010_20261019/existing_s1_sampling_runtime_v1",
       "spec_sha256": "fbb07d3dc9fc1f16975e1eb0701b640598c707d3ec5d1fdd39fad1ceefa5f41c",
       "new_T_prospective_usd": "5.04",
       "target_commit": "8a63b8d74932953c7be34d4d93d520a8095df9f3"
     },
     "K1_E1d_runtime_A2": "PASS_0be431cf_exact34",
-    "latest_acceptance_packet": "reports/p010_20261019/review_a59b6622_K1_A2_results_A3_accepted_v1",
+    "latest_acceptance_packet": "reports/p010_20261019/review_79cfe895_C6_S1_samples_A2_accepted_v1",
     "K1_E1d_input_transfer": {
       "status": "complete_after_bounded_missing_parts_reconciliation",
       "packet": "reports/p010_20261019/k1_input_transfer_reconciliation_v1",
@@ -5083,6 +5083,94 @@
     "owner_overnight_delegation": "reports/p010_20261019/owner_overnight_delegation_20261020_v1",
     "owner_delegation_file_sha256": "85a08b9cb6ca519db13aec3c1c7a0b72ba0a72f188da1dd90f7f9093a35b7f6c",
     "C9_paired_analysis_preparation": "reports/p010_20261019/c9_paired_analysis_preparation_v1",
-    "C6_benchmark_contract_preparation": "reports/p010_20261019/c6_benchmark_contract_preparation_v1"
+    "C6_benchmark_contract_preparation": "reports/p010_20261019/c6_benchmark_contract_preparation_v1",
+    "K1_E1d_original_calls": {
+      "t72_s17_n400_k1": {
+        "cli_session": 35542,
+        "log": ".local/p010_20261019/r1/t72_s17_n400_k1_run_r1.log",
+        "app_id": "ap-OsXLpvjDdU6cIhVsHq1CDn",
+        "phase": "SUBMITTED; original log passed first16 updates",
+        "consumed": false,
+        "may_not_resubmit": true,
+        "call_id": "fc-01M5C1VMDQ8TRP5NYXM7AZ4PBG",
+        "run": "t72_s17_n400_k1",
+        "submitted": true,
+        "submitted_read_utc": "2026-10-20T07:04:33.715181+00:00",
+        "execution_commit": "2a5955c0ba3ee15d92c3792307ae51a885c30413",
+        "startup": {
+          "cli_session": 24953,
+          "exit_code": 0,
+          "consumed": true,
+          "proof": ".local/p010_20261019/r1/student_startups/t72_s17_n400_k1/COMPLETED.json"
+        }
+      },
+      "t72_s17_n3200_k1": {
+        "app_id": "ap-CmiNihHR8TO3K464xYJGAx",
+        "call_id": "fc-01M5C21JHFV5B9JNCR0X09R45X",
+        "run": "t72_s17_n3200_k1",
+        "cli_session": 2746,
+        "execution_commit": "2a5955c0ba3ee15d92c3792307ae51a885c30413",
+        "consumed": true,
+        "submitted": true,
+        "submitted_read_utc": "2026-10-20T07:05:37.870054+00:00",
+        "log": ".local/p010_20261019/r1/t72_s17_n3200_k1_run_r1.log",
+        "startup": {
+          "cli_session": 53116,
+          "exit_code": 0,
+          "consumed": true,
+          "proof": ".local/p010_20261019/r1/student_startups/t72_s17_n3200_k1/COMPLETED.json"
+        },
+        "exit_code": 0,
+        "phase": "originalRESULT_completed; uniquecollect_next"
+      },
+      "t7_s17_n400_k1": {
+        "app_id": "ap-bb6aHk27nFY8CkQhesS1iY",
+        "call_id": "fc-01M5C24BSVJ7YWW36RVKSDXM2E",
+        "run": "t7_s17_n400_k1",
+        "cli_session": 3069,
+        "execution_commit": "2a5955c0ba3ee15d92c3792307ae51a885c30413",
+        "consumed": false,
+        "submitted": true,
+        "submitted_read_utc": "2026-10-20T07:07:00.654424+00:00",
+        "log": ".local/p010_20261019/r1/t7_s17_n400_k1_run_r1.log",
+        "startup": {
+          "cli_session": 78036,
+          "exit_code": 0,
+          "consumed": true,
+          "proof": ".local/p010_20261019/r1/student_startups/t7_s17_n400_k1/COMPLETED.json"
+        }
+      },
+      "t7_s17_n3200_k1": {
+        "app_id": "ap-QoIMa1u2K7NrX9gWihIGHi",
+        "call_id": "fc-01M5C25ZG2V1SHT3QATJHRS492",
+        "run": "t7_s17_n3200_k1",
+        "cli_session": 81377,
+        "execution_commit": "2a5955c0ba3ee15d92c3792307ae51a885c30413",
+        "consumed": false,
+        "submitted": true,
+        "submitted_read_utc": "2026-10-20T07:09:38.135564+00:00",
+        "log": ".local/p010_20261019/r1/t7_s17_n3200_k1_run_r1.log",
+        "startup": {
+          "cli_session": 83399,
+          "exit_code": 0,
+          "consumed": true,
+          "proof": ".local/p010_20261019/r1/student_startups/t7_s17_n3200_k1/COMPLETED.json"
+        }
+      },
+      "t72_s17_e1d_n3200_k1": {
+        "app_id": "ap-vwht3i3XyViIlETn8CFCwd",
+        "call_id": "fc-01M5C3G8DCT2EDDM5EA3CD2XQN",
+        "run": "t72_s17_e1d_n3200_k1",
+        "cli_session": 59957,
+        "execution_commit": "3f5ecbbf964c6d225d4090ec87c5409b39a77031",
+        "consumed": false,
+        "submitted": true,
+        "submitted_read_utc": "2026-10-20T07:31:50.933869+00:00",
+        "log": ".local/p010_20261019/r1/t72_s17_e1d_n3200_k1_run_r1.log",
+        "may_not_resubmit": true
+      }
+    },
+    "C6_benchmark_payload_preparation": "reports/p010_20261019/c6_benchmark_execution_payload_preparation_v1",
+    "E1d_original_started": "reports/p010_20261019/e1d_original_started_v1"
   }
 }

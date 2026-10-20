@@ -3535,3 +3535,11 @@ Four original K1 calls35542/2746/3069/81377 are SUBMITTED once; allfour first16-
 ### 2026-10-20 00:17:46 PDT — Independent C6 roster and C9 statistical preparation
 
 Four original K1 calls remain active; no reissue. New C6 benchmark roster has six new synthetic checksPASS0.064s, noactualcue/inputbinding/runtime/cap or admission. Exact prior no-cue endpoints will be reused; an empty selectedopening aliases the identical same-seed condition, no duplicate generation. New C9 pure source copies previously checked bytes exactly; original four synthetic tests not rerun, noactualbootstrap/labels. Plan contrasts explicitly list cancelledcells as unavailable, four-sample means notbest-of-four, pointwiseconditional intervals. Implementationseed fixednowafterpartialresults, notpreregistered. No new code-onlyblockingrequest; complete bindings go with actual fullreview. Two additional guessed oldmodule read paths were absent before any write; actual rg inventory used, no scientificsideeffects.
+
+### 2026-10-20 00:24:06 PDT — C6 input transfer closed; next inference bookkeeping prepared
+
+Originalupload8214 exited0, exactgoldfree30dev35212bytes completed07:18:42,0modelcalls. FouroriginalK1trainingcalls unchanged; allstartup complete. C9/C6purepreparation3f5 remoteverified, noactualbootstrap orcue result. Preparing privatebudgetwriters from actualretainedreservations and freshsnapshot only; no live34/18/32source changes or newpaidcall beforeactualslot/admission. No extra review gate.
+
+### 2026-10-20 00:31:50 PDT — First K1 completed; original E1d submitted once
+
+T72n3200 original2746EXIT0CONSUMED andcollector1528EXIT0CONSUMED/actualSTOPPED0, full originalartifact/state downloaded once; namedrecords and fulloracle/scoring still pending. Original E1d59957/appap-vwht3i3XyViIlETn8CFCwd/callfc-01M5C3G8DCT2EDDM5EA3CD2XQN submitted once after realfree slot; originalseed17/1024/2097148 and34source unchanged, no retry. T attemptedreserved63.99/G44, notexpense. Fourotheroriginalcells are not reissued. C6upload8214DONE, noC6/samplecall yet. SixnewcuepayloadchecksPASS and4newgenerationchecks now allpassed: oneoriginaltimingcheckPASS; threefake-workerchecks initially failed becausefixture lackedremote_path, onlythose3 reran afterfixture correction,0runtimechange/modelcalls. Absent guessed scoreevidence filename read had no sideeffects.
