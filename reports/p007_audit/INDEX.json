@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T11:48:13.593692+00:00",
+  "as_of_utc": "2026-10-20T22:11:46.743050+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -4003,6 +4003,23 @@
       "review_event_utc": "2026-10-20T14:14:08Z",
       "acceptance_packet": "reports/p010_20261019/review_f04922a_actual_E3_C6_Z2_accepted_v1",
       "post_audit_technical_notes": "reports/p010_20261019/post_audit_technical_notes_20261020_v1"
+    },
+    {
+      "request_id": "p011-OT3-AM-long-data-construction-CR-r1",
+      "scope": "p011-OT3-AM-long-data-construction-CR",
+      "target_commit": "eb728b30e6208ab081680b17cf28c7e2ad813322",
+      "status": "pending_exact_code_review_production_NOTRUN",
+      "request_file": "reports/p011_20261020/LONG_DATA_CR_REQUEST.md",
+      "submitted_utc": "2026-10-20T22:11:46.743050+00:00",
+      "source_lock_sha256": "0e78298f49b86ee3de7182443eb052da422d14af14f423bceb3f728a1696fdb0",
+      "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
+      "packet_manifest_sha256": "9ea9f574b90800d350e2c2c5d30f24316527c14195d7f4e10581b622e6bf0ea4",
+      "source_files": {
+        "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+        "experiments/p011/data_contract.py": "153a83072f2692450bffa9d5e3931e90eff65a4dcc5338dff25434526d7b4be2",
+        "scripts/prepare_p011_long_inputs.py": "762068f8f67c8e80fa502c00f88bfd71d056d7303062611e4bd6beee4fa98d90"
+      },
+      "new_scientific_calls": 0
     }
   ],
   "p008_v31": {
@@ -5865,5 +5882,27 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-20T14:28:40.078124+00:00"
+  "last_updated_utc": "2026-10-20T14:28:40.078124+00:00",
+  "p011": {
+    "status": "source_acquisition_and_exact_path_CR",
+    "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
+    "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
+    "report_root": "reports/p011_20261020",
+    "budget_usd": 180,
+    "subcaps_usd": {
+      "A": 115,
+      "B": 20,
+      "C": 12,
+      "D": 25,
+      "emergency": 8
+    },
+    "protected_minimum_usd": 48,
+    "category_transfers_allowed": false,
+    "cutoff_utc": "2026-10-22T05:00:00Z",
+    "exploratory": true,
+    "production_construction_run": false,
+    "scientific_calls": 0,
+    "pending_path_CR": "p011-OT3-AM-long-data-construction-CR-r1",
+    "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z"
+  }
 }

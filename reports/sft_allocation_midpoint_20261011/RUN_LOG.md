@@ -1,3 +1,37 @@
+### 2026-10-20 15:11:46 PDT — P011 fixed plan adopted; first construction path sent for exact CR
+
+Direct owner instruction supplies claude/audit e0dee182972f9910b707fac68800dcb5a3aff2d3,
+plan SHA20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22.
+Exploratory P011 hard180/A115/B20/C12/D25/emergency8, no category transfers,
+at least48 protected including prior43; cutoff Oct21 22PDT/Oct22 05UTC. This
+scope does not reopen P007/P009 or change P010's separate Oct21 12PDT freeze.
+
+Pinned OT3/AM datasets and 1.5B/3B Instruct revisions; exact Qwen tokenizer bytes
+match the old local cache, so no tokenizer/old weight re-download. D partner
+AM-Qwen3-Distilled verified from the authors' card and API. Raw D12.0065/14.5827GB
+stock-client downloads and LFS SHA checks completed; OT3 original download55016
+is still active, not restarted. Three new benchmark sources30/30/40 plus the old
+MATH500 materialization are source-bound. No real production input filtering,
+scoring, model calls, uploads or paid budget use.
+
+New code target eb728b30e6208ab081680b17cf28c7e2ad813322: parent grouping, whole-parent filtering, nested
+selection, native assistant supervision, exact balanced full-answer scheduling,
+create-only OT3/AM driver. One path-level CR submitted in INDEX, actual CR and
+A1 still pending. Seven new manifest members and five source/test files were
+checked from Git once. New checks11initialPASS/1boundaryERROR; only the failed
+native tokenizer test rerun after a boundary repair passed, plus4newIOchecksPASS.
+Original error is retained; whole-string BPE had merged prompt/assistant newline.
+The segmented-boundary policy preserves text but is explicitly subject to CR.
+Strict total16384, word13gram/short exactmatch, Dduplicate seed and length-bucket
+choices are stated for review. Infeasible exactB never changes B or drops answers.
+
+Read-only navigation failures (missing local short commit/object, guessed paths,
+overlarge/truncated reads and one schema-probe indentation error) had no science
+side effects; fixed using API/discovery/bounded reads. Two fresh unpublished
+README EOF warnings were repaired once before commit, retaining prior metadata;
+final staged check passed. No original plan/runtime/result byte was changed.
+Course interpretation prose, external messages and Z1 work remain excluded.
+
 ### 2026-10-15 04:20:56 PDT — P009最终交接已远端核验；p009实际暂停
 
 最终A4接受包与datedhandoff固定70d73a45e98e39d483d1ed1c8b64ba5a407f732a，12新manifest成员及2manifest逐Git原字节核验一次，普通push30330 exit0已消耗，独立ls-remote一致；全部旧科学/收尾/评分/检查未重做。新包隐私与staged whitespace检查PASS。元数据builder只执行一次；发布前修正误指P1 README的未发布链接，原草稿/manifest和编排exit检查失败保留于private cj_handoff_link_repair_r1，没有重跑builder/科学工作。

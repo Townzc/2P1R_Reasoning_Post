@@ -1,3 +1,7 @@
+# 2026-10-20 — owner adopts P011 v1
+
+Direct owner instruction supplied frozen e0dee182. Start data acquisition and code preparation under exact plan180/A115/B20/C12/D25/emergency8 with at least48 protected, no category transfers or automatic retries. Claude chooses the A student by the fixed three-arm smoke rule; all new production code paths need line review. No paid P011 work has started. Preserve separate P010 freeze and all closed work. [Execution](../reports/p011_20261020/README.md).
+
 ## October11 midpoint continuation
 
 Owner approved P007 engineering pilot followed by the four-arm paired-seed study if engineering passes; first results target October13 evening. New finite Modal work is within the existing $500 envelope. Prior Q2/LT002 remain closed. No scientific outcome measured yet.

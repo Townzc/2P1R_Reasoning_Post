@@ -1,3 +1,9 @@
+# Current owner authorization — P011 v1, 2026-10-20
+
+User directly supplied frozen claude/audit e0dee182 P011_PLAN_v1.md and asked Codex to start. See reports/p011_20261020/README.md and private p011 ACTIVE_HANDOFF. New exploratory scope180/A115/B20/C12/D25/emergency8, protected minimum48, no transfers, cutoff Oct21 22PDT. Every new/changed production code path requires real Claude CR before first execution; shared path review rather than per-cell gates. No automatic retry, new scientific arms, external messages or subagents. Preserve old DONE work and unrelated lt002. P010 scheduled Oct21 12PDT freeze/final A5 remains a separate duty. No Z1 reads or AI course interpretation prose.
+
+--- Earlier dated authorizations ---
+
 # Current owner authorization — P010 v3, 2026-10-19
 
 Execute exact plan claude/audit4287537f/P010_PLAN_v3.md, direct owner approval19:21PT. Hard$240/G50/T150/I15/C25/protected43; T72 failed serverless availability permits bf16 TP4 selfhosting<=30 withinG. C1/C2/C8 start now; Z1 belongs toClaude, Codex C7 code review only. A1 data, A2 startup/source/dose, A3 independent results, A4 report before automaticTier3, A5 number tracing; omit old per-slot multiround guard bureaucracy as expressly directed byv3. OldP008/P009/exploration stays closed; historical no-new-work statements below do not revoke this new scope. No external messages; ordinary source/INDEX pushes authorized.

@@ -1,3 +1,9 @@
+# P011 exploratory supplement — fixed execution plan v1
+
+The owner adopted claude/audit e0dee182972f9910b707fac68800dcb5a3aff2d3. Exact plan and execution status: [P011](../reports/p011_20261020/README.md). Scope, budgets, selection/cut rules and audit obligations come from that immutable plan, not this summary. Existing P010 data/results and its Oct21 12PDT freeze remain intact. P011 cutoff is Oct21 22PDT.
+
+--- Earlier protocols ---
+
 # October 11 preparation for the SFT allocation midpoint
 
 [P007](experiments/P007_midpoint_allocation_plan.md) is the current reviewable

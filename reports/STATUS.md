@@ -1,3 +1,9 @@
+# Current P011 preparation; P010 scheduled freeze remains
+
+See [P011](p011_20261020/README.md). Raw data acquisition and the first exact construction-path CR are underway; no production builder, student or teacher call has run. P010 science remains closed; its Oct21 12PDT freeze/finalA5 is separate from the P011 Oct21 22PDT cutoff.
+
+--- Earlier dated states ---
+
 # October12 19:10UTC — P007 fully closed; same-teacher pilot admitted
 
 All eight trajectories and base passed independent local scoring/state checks and the final cloud CPU audit. Main2,048 updates/4,194,304 targets,5,791 saved outputs;8 unknown middle diagnostics preserved,formal endpoints complete. All seven main apps STOPPED/zero containers. Meter27.76043680USD is delayed usage,not invoice/balance. [Verified closeout](sft_allocation_midpoint_20261011/MAIN_CLOSEOUT_20261012.json).

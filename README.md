@@ -1,3 +1,9 @@
+# Current P011 — fixed exploratory plan, source acquisition and code review
+
+[P011 execution record](reports/p011_20261020/README.md) and [first path CR](reports/p011_20261020/LONG_DATA_CR_REQUEST.md). No P011 scientific model has run. Hard180/A115/B20/C12/D25/emergency8; final cutoff Oct21 22PDT. The separate P010 scheduled freeze at Oct21 12PDT remains pending.
+
+--- Earlier dated entries ---
+
 # Current P010 — actual result audits accepted; scheduled freeze remains
 
 [Dated technical handoff](reports/p010_20261019/technical_handoff_20261020_v1/README.md),
