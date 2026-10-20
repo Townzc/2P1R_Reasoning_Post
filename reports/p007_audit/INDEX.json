@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-20T03:23:14.621855+00:00",
+  "as_of_utc": "2026-10-20T03:27:40.748828+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -3369,12 +3369,14 @@
     {
       "request_id": "p010-C2-T7-suffix-owner-exception-r1",
       "scope": "One proposed T7 unattempted suffix; original no-auto-retry exception requires direct owner",
-      "status": "pending_owner",
+      "status": "direct_owner_approved_one_suffix",
       "packet": "reports/p010_20261019/teacher_runtime_v3",
       "proposal_sha256": "a8165657a4feab58c707be87ac030e05d70288b39d47bba27f8d0067484c9d84",
       "blocking_scope": "T7 suffix only; T72 unattempted first run independent",
       "created_utc": "2026-10-20T03:12:27.589537+00:00",
-      "target_commit": "75157b1040cc363bf7e982272a3a24f00c057860"
+      "target_commit": "75157b1040cc363bf7e982272a3a24f00c057860",
+      "owner_packet": "reports/p010_20261019/owner_t7_suffix_accepted_v1",
+      "owner_sha256": "975c9dd6c4c5b67cdb96ae3205ecb0c95f634002a9544c5e4a2f27e83cc0d047"
     },
     {
       "request_id": "p010-T15-complete-data-A1-r1",
@@ -4657,7 +4659,7 @@
     "C8_runtime": "reports/p010_20261019/e4_runtime_v1",
     "teacher_runtime": "reports/p010_20261019/teacher_runtime_v3",
     "runtime_source_commit": "17ed56d954560c6285acacef9bc23bc56f9f40b7",
-    "T7_suffix": "proposal_only_owner_exception_required_no_replay",
+    "T7_suffix": "direct_owner_approved_one_suffix_dispatch_pending",
     "C3_preparation": "reports/p010_20261019/c3_selection_preparation_v1",
     "active_automation": "p010-finite-execution-and-audit",
     "T15_data_packet": "reports/p010_20261019/t15_data_candidate_v1",

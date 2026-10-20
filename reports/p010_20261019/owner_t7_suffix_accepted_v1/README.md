@@ -1,0 +1,3 @@
+# Direct owner exception: one T7 suffix
+
+The owner directly answered “批准这一次续作，不重复已有输出”. This authorizes exactly the fixed proposal at75157b10: inherit all256 original raw outputs, generate only8944 unattempted fixed outputs and original K1 conditional attempts. Original failed claim and8G reservation remain. One new distinct suffix lifetime,3600s and5.50G; no whole-worker automatic retry or new scientific arm. Actual currently attempted G38.50 plus this5.50 is44.00<=50, including originalT72 alreadyactive. Existing T72 admission conservatively already included the proposedT7 slot; no double reservation.

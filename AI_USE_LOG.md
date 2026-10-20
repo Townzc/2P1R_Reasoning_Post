@@ -3356,3 +3356,7 @@ T72原CPU14976全部44files145424086788bytes完成/STOPPED0，原GPU17614已唯�
 必要billing89109于03:17:10–11UTC一次DONE：workspacegross248.45546721/cash0；四P010已标记app合计0.83928102延迟计量，非invoice/余额/最终费用。已尝试G预留38.5、T7候选另5.5，保留失败/启动/存储/lag，无分类挪用或释放预留。新publisher执行前核真实billing键为object_id，未执行稿已修正，无部分产物。误读不存在LIVE_P010_HANDOFF.md发生写前，实际handoff已改读正确文件。
 
 T15 A1 packets fixed8303d26c727240cd1d38015cb39c69d07292b2e0; 43 manifest members verified from Git bytes. Whole style check reported original frozen common.py EOF blank line; only excluding that snapshot passed. Original bytes retained, no old checks repeated.
+
+### 2026-10-20T03:27:40.748828+00:00 — T7 owner明确例外
+
+真实owner答复“批准这一次续作，不重复已有输出”，绑定75157b10提案。保存原文/read时间，未伪造发送时间。当前G38.50+新5.50=44，原T72预算已保守包含该候选；新T7实际余额80%检查通过，无类别挪用。只一次新后缀，原256原样继承、旧失败永保。新C4两个纯源码draft仅parsed/PREPARED，训练body原函数源码不改，无A2/执行。
