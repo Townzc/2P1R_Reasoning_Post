@@ -1,0 +1,136 @@
+{
+  "actual_independent_reviews": {
+    "P009_P0_raw": {
+      "decision": "PASS_RAW_LINEAGE_ACCOUNTING_ONLY",
+      "report_sha256": "b129dceb9910a1c282e77967bb5f4a720212cb32f9c119f22e9ec52f64c2360d",
+      "scope": "p009-p0-complete-engine-parity-A2",
+      "target_commit": "26d7cff6fe2b305542c70a3de1713d42ee87f015"
+    },
+    "P009_P1": {
+      "decision": "PASS_WITH_SEPARATE_ELIGIBILITY_AND_G0_DISPOSITIONS",
+      "report_sha256": "a6479f674f52bbf5dd1fd4d66362a4651a1ad18ecfc37c03807c24249f274477",
+      "scope": "p009-math-p1-complete-scoring-and-independent-adjudication-A2",
+      "target_commit": "ae8b8c3c2f1ad75bac25678d49f85f6a7c1b6694"
+    },
+    "P009_S1": {
+      "decision": "PASS",
+      "report_sha256": "0076c884aee730a6f63a034f577bbf9141c2abe1a3e1f0281675dc4d3678f05e",
+      "scope": "p009-stage1-S1-first-pair-complete-and-futility-A4",
+      "target_commit": "30b906daa81a3c1c5ce1603d701310be0c6e72f2"
+    },
+    "P009_internal_only": {
+      "decision": "PASS",
+      "report_sha256": "9f13c52becf997815399a494bf78dede442de7939a47b4e5f091c9d589508a74",
+      "scope": "p009-p0-vllm-internal-only-owner-amendment",
+      "target_commit": "2d3e1dd13277d556b18a3569cd80c252b112d54b"
+    },
+    "P010_results": {
+      "decision": "PASS",
+      "report_sha256": "0bb31e41fe4c8be9ce4ffa7197f26f525bb74b399b2de341571dff3e21684642",
+      "scope": "p010-K1-E1d-existing-samples-and-C9-complete-A3",
+      "target_commit": "a8fb5c78190b5cd5f75cdcafd269af81cf717ff8"
+    }
+  },
+  "endpoint_files": {
+    ".local/p009_20261014/r1/p0_r1/inputs/qwen_gsm_zero_parity.json": "bfbb7b5b131de24a0d65e524f2eff356864a6019e8d16a51934e25843cd7451c",
+    ".local/p009_20261014/r1/stage0_inputs_r1/qwen_math_zero.json": "e091b60d6548bd68f64920f8b5853d56547e55576fee8cc892f1867f7e80443f",
+    ".local/p010_20261019/r1/student_inputs_r2/MATH_ENDPOINT.json": "8f9a0500f80f0f2178d96e2b909057a5e7ea6803401358d83121d4cf01fbadae"
+  },
+  "new_batches": 85,
+  "new_outputs": {
+    "base_gsm": 11871,
+    "base_math": 4500,
+    "s1_n400_math": 2500,
+    "t72_n400_math": 2500
+  },
+  "no_training_or_encoding_or_decoding_or_scoring": true,
+  "original_sources": {
+    ".local/p009_20261014/r1/P0_ACTUAL_A2_INTEGRITY_ACCEPTED.json": {
+      "bytes": 1691,
+      "sha256": "a9d5affbdf523621f2517acbc5269d70b53565e6542623a815706466c440e104"
+    },
+    ".local/p009_20261014/r1/P0_INTERNAL_ONLY_AMENDMENT_ACCEPTED.json": {
+      "bytes": 1939,
+      "sha256": "c90c3225fe88db9d6ece16063d8b897e37d9f68a64e2669e5eea4cfc4a235062"
+    },
+    ".local/p009_20261014/r1/P1_COMPLETE_A2_ACCEPTED.json": {
+      "bytes": 3789,
+      "sha256": "927dcf67b1284de3e315ceaa4ee0ab95db5812ddae9c45143f47f965062340b3"
+    },
+    ".local/p009_20261014/r1/p0_entry_repair_r1/export_r1/evidence/LOCAL_ORACLE_AUDIT.json": {
+      "bytes": 5537619,
+      "sha256": "b36d5c3730ec616f8220ebf04be35a3a75a52961028e4ad6d1ba9aca92e001ab"
+    },
+    ".local/p009_20261014/r1/p1_actual_r1/ALL_SCORED_ROWS.json": {
+      "bytes": 7083111,
+      "sha256": "6f3b718f969268d30d44ed4b9d31c466a2a4e91988e809a96943e7d6b09dfd51"
+    },
+    ".local/p009_20261014/r1/p1_actual_r1/ROWS.json": {
+      "bytes": 41830066,
+      "sha256": "02fac50dcd0bad0580b425ee13b11cc7ef1a641244bc628fe3a2aadc998db974"
+    },
+    ".local/p009_20261014/r1/stage0_generation_budget_r2/exports/qwen_p3/evidence/LOCAL_ORACLE_AUDIT.json": {
+      "bytes": 1497277,
+      "sha256": "3aacee368d6517496d813a3ce775dafd391c7ab293fc09f97a9da90155844fa1"
+    },
+    ".local/p009_20261014/r1/stage1_s1_r1/FIRST_PAIR_STOP_A4_ACCEPTED.json": {
+      "bytes": 14703,
+      "sha256": "874bca7621787e11e85c993983d9a929f21695c267cd4a723ad448799258e729"
+    },
+    ".local/p009_20261014/r1/stage1_s1_r1/oracles/s1_s17_n400/COMPLETED.json": {
+      "bytes": 11514,
+      "sha256": "f09d8b09d66631da5b050b22b2f2f1a08f022a6a5716f318d01e6de053cf051f"
+    },
+    ".local/p009_20261014/r1/stage1_s1_r1/scores/s1_s17_n400/LOCAL_ORACLE_AUDIT.json": {
+      "bytes": 25162,
+      "sha256": "961756ae346cd95283444243b591113278b95501ce4e761885c6572cc624df33"
+    },
+    ".local/p010_20261019/r1/K1_E1D_S1_SAMPLES_C9_A3_ACCEPTED.json": {
+      "bytes": 2152,
+      "sha256": "94b0e4d347a8f87f1b47ab39f66959feda4de93ac94778cb1257689da9445d8a"
+    },
+    ".local/p010_20261019/r1/existing_s1_sample_exports/s1_s17_n400/evidence/ORIGINAL_MODEL_PROOF.json": {
+      "bytes": 13751,
+      "sha256": "52daf351dd0c02e53f8d67edc760aa3493543edd71cd0ef1d62cd1e2d5d67439"
+    },
+    ".local/p010_20261019/r1/existing_s1_sample_oracles/s1_s17_n400/COMPLETED.json": {
+      "bytes": 21881,
+      "sha256": "b1f8860e3bfed299c0e8fc53edde6b337e8fcf25d56f47b722cb7cd16f4efafc"
+    },
+    ".local/p010_20261019/r1/existing_s1_sample_runs/s1_s17_n400/RESULT.json": {
+      "bytes": 14868,
+      "sha256": "fe467184f61282c10f5a6b3095e7f5a21c9dd39724ba11e03f3913ef69c197c5"
+    },
+    ".local/p010_20261019/r1/existing_s1_sample_scores/s1_s17_n400/LOCAL_ORACLE_AUDIT.json": {
+      "bytes": 77290,
+      "sha256": "7a9bdb99e8ff8b76421b90aaaefbd3b3f77094f2f1e75f855296990a7bc66adc"
+    },
+    ".local/p010_20261019/r1/student_exports/t72_s17_n400_k1/evidence/MERGE_PROOF.json": {
+      "bytes": 2224,
+      "sha256": "7f30a108d06039ca80d7cff5f4968787dbe30a8d88c21e36727a8ff3e1accea9"
+    },
+    ".local/p010_20261019/r1/student_oracles/t72_s17_n400_k1/COMPLETED.json": {
+      "bytes": 18098,
+      "sha256": "b9224dda283e5bd22006d2e4ebe1d520cd36e68e2bd205788f93c305b099fcba"
+    },
+    ".local/p010_20261019/r1/student_runs/t72_s17_n400_k1/RESULT.json": {
+      "bytes": 726364,
+      "sha256": "ef9b22960a6eaffda761a7f0e8ecc06e62179046633dd0d9c965104b603ad88f"
+    },
+    ".local/p010_20261019/r1/student_scores/t72_s17_n400_k1/LOCAL_ORACLE_AUDIT.json": {
+      "bytes": 94073,
+      "sha256": "dc7702794032053903208269b26b5f74465570ebc7953bbf3e30ef69a6fd3efb"
+    },
+    "reports/p010_20261019/c6_search_runtime_v1/SPEC.json": {
+      "bytes": 12995,
+      "sha256": "5014f3ce10f9c7ba719e69a61effd0bcd526a815737fd49b355bb856e73713f8"
+    }
+  },
+  "scientific_dispatch_admitted": false,
+  "selected_cue": [
+    1249
+  ],
+  "selection_complete_file_sha256": "aad2f7aeba1dfd2401f9e5b055d60805f14fb9f6fb8e1108f960f27462ffa028",
+  "selection_file_sha256": "a910f9034a95a1e331ee64eaa645a95d04ce44ca542333f4dfe3705a095a2b67",
+  "utc": "2026-10-20T09:15:35.456183+00:00"
+}

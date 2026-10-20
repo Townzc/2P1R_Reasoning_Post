@@ -1,0 +1,44 @@
+test_actual_group_and_actual_cell_body_complete_all_once (tests.test_p010_cue_benchmark_group.GroupChecks.test_actual_group_and_actual_cell_body_complete_all_once) ... ERROR
+test_all_prior_batches_and_elapsed_are_retained (tests.test_p010_cue_benchmark_group.GroupChecks.test_all_prior_batches_and_elapsed_are_retained) ... ok
+test_existing_group_claim_blocks_all_children (tests.test_p010_cue_benchmark_group.GroupChecks.test_existing_group_claim_blocks_all_children) ... FAIL
+test_failed_child_preserves_prefix_and_never_starts_later_cell (tests.test_p010_cue_benchmark_group.GroupChecks.test_failed_child_preserves_prefix_and_never_starts_later_cell) ... FAIL
+test_group_numeric_fits_after_E9_without_release (tests.test_p010_cue_benchmark_group.GroupChecks.test_group_numeric_fits_after_E9_without_release) ... ok
+test_new_score_partition_cannot_include_reused_conditions (tests.test_p010_cue_benchmark_group.GroupChecks.test_new_score_partition_cannot_include_reused_conditions) ... ok
+test_persisted_model_rejects_merge_and_parent_change (tests.test_p010_cue_benchmark_group.GroupChecks.test_persisted_model_rejects_merge_and_parent_change) ... ok
+test_score_projection_retains_original_text_stop_and_identity (tests.test_p010_cue_benchmark_group.GroupChecks.test_score_projection_retains_original_text_stop_and_identity) ... ok
+
+======================================================================
+ERROR: test_actual_group_and_actual_cell_body_complete_all_once (tests.test_p010_cue_benchmark_group.GroupChecks.test_actual_group_and_actual_cell_body_complete_all_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p010_cue_benchmark_group.py", line 95, in test_actual_group_and_actual_cell_body_complete_all_once
+    if isinstance(value,Exception):raise value
+                                   ^^^^^^^^^^^
+  File "<workspace>/tests/test_p010_cue_benchmark_group.py", line 89, in body
+    try:result=ns['worker']('synthetic-execution',{},'5.78')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<actual original C6 group worker>", line 36, in worker
+NameError: name 'read' is not defined
+
+======================================================================
+FAIL: test_existing_group_claim_blocks_all_children (tests.test_p010_cue_benchmark_group.GroupChecks.test_existing_group_claim_blocks_all_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p010_cue_benchmark_group.py", line 111, in test_existing_group_claim_blocks_all_children
+    self.assertIsInstance(value,RuntimeError);self.assertEqual(calls,[]);self.assertFalse(out.exists())
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: NameError("name 'read' is not defined") is not an instance of <class 'RuntimeError'>
+
+======================================================================
+FAIL: test_failed_child_preserves_prefix_and_never_starts_later_cell (tests.test_p010_cue_benchmark_group.GroupChecks.test_failed_child_preserves_prefix_and_never_starts_later_cell)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/tests/test_p010_cue_benchmark_group.py", line 105, in test_failed_child_preserves_prefix_and_never_starts_later_cell
+    self.assertIsInstance(value,RuntimeError);self.assertEqual(calls,['base_math','base_gsm'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: NameError("name 'read' is not defined") is not an instance of <class 'RuntimeError'>
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.834s
+
+FAILED (failures=2, errors=1)
