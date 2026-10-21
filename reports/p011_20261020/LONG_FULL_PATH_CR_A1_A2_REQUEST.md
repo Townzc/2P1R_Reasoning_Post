@@ -1,3 +1,5 @@
+Current 2026-10-21T15:16:16.771342+00:00: exact scope `p011-long-A-D-complete-path-CR-A1-A2-lite` PASS accepted from `c8280a7c667c211959a0db5d163436ecf423d4b6` / SHA `06008670fc66d5f8b11330ef04a66511846062f2e762e3d354eb527c46ea4461`. This request is answered for its exact target. Fresh per-entry budget/provider/fences/window pending; no new model at acceptance. See `review_516bc518_B_students_long_LR_r2_accepted_v1`. Earlier chronological requests preserved.
+
 ### 2026-10-21 07:29 PDT — Exact frozen-LR r2 complete path submitted
 
 Target `f704855dd2c3a2909ab53ea0b94fdd40da749256` / `long_lr_r2_runtime_v1` contains exact55source (original48 unchanged plus7 new files), SPEC SHA9f675f1c4e92f45f438e251ce926f096e9833868680bb2459e4cd14603e24f7b, the original two successful input-readback receipt bindings, and all21 exact review flags. Same request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, source appendix `p011-long-frozen-LR-r2-complete-path-CR`, fullscope `p011-long-A-D-complete-path-CR-A1-A2-lite`. Real reasoned Claude481620ca is preserved and grants preparation only. No source/numeric acceptance or r2 model permission is inferred.

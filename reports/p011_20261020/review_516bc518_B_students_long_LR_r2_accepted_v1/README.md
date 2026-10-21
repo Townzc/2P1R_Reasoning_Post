@@ -1,0 +1,5 @@
+# Exact B students and frozen-LR r2 admission reviews
+
+Both fixed Claude reports are PASS. B covers actual student input A1, the one local metadata IO change, exact96 sources and all14 numeric flags; only B1/B3. Long covers exact55 sources and all21 flags, unchanged frozen LR values with the delegated narrow validator, original uploaded input receipt reuse, and only F15 A7/baseline r2. Original conditional report and all failed parents/reservations remain unchanged.
+
+The reports and reviewer input-audit attachment are preserved verbatim. The reviewer script was not executed by Codex. Complete source maps and abbreviated binding fields in the reports are resolved from their immutable target requirements, with this normalization explicit in each acceptance. Real file Git events, discovery and full-read confirmation are separate. Fresh rates/current accounting/shared slots/unused fences/full result windows are still required for each new dispatch. No paid call or reserve is created by this metadata acceptance. No B2 or later A/D permission; A6 budget gap remains.

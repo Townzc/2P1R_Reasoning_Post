@@ -1,3 +1,5 @@
+Current 2026-10-21T15:16:16.771342+00:00: exact scope `p011-B-retained-students-complete-path-CR-A1-A2-lite` PASS accepted from `516bc51859d84946372121c0469895be747f3809` / SHA `acea0550f12e6600557ccc65b5d0f6ac337a2421e2a5b0331a016aae7121fa18`. This request is answered for its exact target. Fresh per-entry budget/provider/fences/window pending; no new model at acceptance. See `review_516bc518_B_students_long_LR_r2_accepted_v1`. Earlier chronological requests preserved.
+
 ### 2026-10-21 07:25 PDT — Actual B student inputs and numeric candidate submitted
 
 Target `0f0d78d3f5c0d38f121b073bbf4e02e7665deabf` binds the real original constructor (CLI59316 EXIT0CONSUMED, observed14:17:20UTC), all3160 original input files in a10,262,295-byte archive, and actual B1/B2/B3 configs/plans. All3126 new selected answers encoded once/shared across K; original P010 encodings and endpoint bytes reused; B2 model remains cut. Exact92/96 source PASS e1dbb377@4e0951a0 accepted at14:15:34, report Git14:03:27/discovery14:12:45 kept separate. Actual student input A1 is now requested, not inferred from source PASS.

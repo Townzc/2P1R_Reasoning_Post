@@ -1,3 +1,7 @@
+### 2026-10-21T15:16:16.771342+00:00 — Exact B students and frozen-LR r2 reviews accepted
+
+Claude `516bc518` B report `acea0550` and long file `c8280a7c` / report `06008670` are real PASS, fully read after filename/heading screening. B actual student input A1/exact96 IO delta/14flags and long exact55 source/numeric/21flags are accepted in [the fixed acceptance packet](reports/p011_20261020/review_516bc518_B_students_long_LR_r2_accepted_v1/README.md). B reviewer independently decoded all actual input rows; original inputs and reviewer tests/scripts were not rerun by Codex. Long uses the original frozen LR values with the delegated narrow validator; only F15 A7 and baseline r2. Failed parents and A6 budget gap remain. Fresh budget/slots/fences/window checks precede any paid dispatch. No new model or reserve at this acceptance.
+
 ### 2026-10-21 07:29 PDT — Exact frozen-LR r2 complete path submitted
 
 Target `f704855dd2c3a2909ab53ea0b94fdd40da749256` / `long_lr_r2_runtime_v1` contains exact55source (original48 unchanged plus7 new files), SPEC SHA9f675f1c4e92f45f438e251ce926f096e9833868680bb2459e4cd14603e24f7b, the original two successful input-readback receipt bindings, and all21 exact review flags. Same request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, source appendix `p011-long-frozen-LR-r2-complete-path-CR`, fullscope `p011-long-A-D-complete-path-CR-A1-A2-lite`. Real reasoned Claude481620ca is preserved and grants preparation only. No source/numeric acceptance or r2 model permission is inferred.
