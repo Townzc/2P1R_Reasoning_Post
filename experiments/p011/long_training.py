@@ -13,6 +13,7 @@ import time
 
 from experiments.sft_allocation_midpoint.common import digest, dump, manifest, verify
 from experiments.sft_allocation_midpoint import checkpoint
+from experiments.p011 import long_checkpoint
 
 TARGETS = ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']
 ARMS = {
@@ -198,7 +199,7 @@ def train_terminal(model, tokenizer, optimizer, encoded, plan, rates, arm, out, 
     state['schema'] = 'p011_complete_training_state_v1'
     state['adaptation_mode'] = ARMS[arm]['mode']
     state['parameter_payload_meaning'] = 'all_trainable_parameters; full model for full arm, adapters for LoRA'
-    state_record = checkpoint.save(out, state, journal.commit)
+    state_record = long_checkpoint.save(out, state, journal.commit)
     del state
     journal.end('terminal_state', state_record)
     journal.commit()

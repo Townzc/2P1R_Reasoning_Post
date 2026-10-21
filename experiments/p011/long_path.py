@@ -4,6 +4,7 @@ A shared source/input/numeric review covers this path, never per-cell CR. Actual
 configuration, timing and Claude smoke selection remain data, not self-approval.
 """
 from decimal import Decimal, ROUND_CEILING
+from experiments.p011.long_protocol import ENDPOINT_BATCHES, resources
 import fcntl
 import hashlib
 from pathlib import Path
@@ -39,6 +40,8 @@ def validate(spec):
             or not spec.get('jobs') or spec.get('measurement_exceptions')!=0
             or spec.get('result_cutoff_epoch')!=CUTOFF):
         raise ValueError('Exact original long-path plan/source/jobs required')
+    if any(name not in spec['source_files'] for name in ('src/sft_data.py','src/__init__.py','experiments/p011/long_checkpoint.py','experiments/p011/long_protocol.py')):
+        raise ValueError('R1 complete training source closure required')
     for name,job in spec['jobs'].items():
         kind,cell,arm=job['kind'],job['cell'],job['arm'];limits=job['limits'];model=job['model']
         if (kind not in ('baseline','student') or arm not in long_training.ARMS
@@ -70,6 +73,14 @@ def validate(spec):
                 or not job['timing']['source_evidence_files']
                 or job['timing'].get('whole_iteration_scope_accepted') is not True):
             raise ValueError('Unreviewed arm/dose/model/input/full-window configuration')
+        if job.get('resources') != resources(kind,arm):
+            raise ValueError('Exact per-arm CPU/host-memory resources required')
+        rates=job.get('resource_rates_usd_per_hour',{})
+        if set(rates)!=set(('H100','cpu_core','GiB')) or any(not Decimal(str(v)).is_finite() or Decimal(str(v))<=0 for v in rates.values()):
+            raise ValueError('Fresh full resource rate components required')
+        expected_rate=Decimal(str(rates['H100']))+4*Decimal(str(rates['cpu_core']))+Decimal(job['resources']['memory_mib'])/1024*Decimal(str(rates['GiB']))
+        if Decimal(str(limits['hourly_rate_usd']))!=expected_rate:
+            raise ValueError('Host-memory cost must be included in admitted full rate')
         long_execution.engine_settings(job['context'])
         # No new measurement exception for A/D. Every initial model must have
         # a specific independently accepted complete-iteration timing basis.
@@ -85,7 +96,7 @@ def policy(job,start,prior):
         training_unit_seconds=t['training_unit_seconds'],endpoint_batch_seconds=t['endpoint_batch_seconds'],
         hourly_rate_usd=l['hourly_rate_usd'],startup_allowance_seconds=l['startup_seconds'],
         reserved_usd=l['reserved_usd'],prior_reserved_usd=prior,platform_timeout_seconds=l['platform_seconds'])
-    long_numeric.forecast(p,job['U'],104,[],[],start)
+    long_numeric.forecast(p,job['U'],ENDPOINT_BATCHES,[],[],start)
     return p
 
 
@@ -147,7 +158,7 @@ def budget_check(root,spec,job,budget,records,obs,now):
     for name,value in budget['source_evidence_files'].items():
         p=Path(name)
         if p.is_absolute() or '..' in p.parts or sha(Path(root)/p)!=value:raise ValueError('Budget bytes differ')
-    initial=long_numeric.forecast(policy(job,now,totals[cat]),job['U'],104,[],[],now)
+    initial=long_numeric.forecast(policy(job,now,totals[cat]),job['U'],ENDPOINT_BATCHES,[],[],now)
     return dict(category=cat,new_reserved_usd=str(reserve),prior_reserved_usd=totals[cat],
         all_attempted_reservations_usd=totals,provider_slots=slots,initial_forecast=initial,
         protected_usd='48',not_actual_expense=True)

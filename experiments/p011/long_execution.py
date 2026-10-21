@@ -9,6 +9,7 @@ import math
 import multiprocessing
 import os
 from pathlib import Path
+from experiments.p011.long_protocol import ENDPOINT_BATCH, ENDPOINT_BATCHES, ENGINE_MAX_SEQS, GRAPH_CAPTURE_SIZES, endpoint_batches
 import time
 import traceback
 
@@ -111,11 +112,11 @@ def engine_settings(context):
     if type(context) is not int or not MAX_NEW_TOKENS < context <= 32768:
         raise ValueError('Actual complete-prompt plus original cap context required')
     return dict(dtype='bfloat16', tensor_parallel_size=1, max_model_len=context,
-        max_num_seqs=32, max_num_batched_tokens=8192, gpu_memory_utilization=.80,
+        max_num_seqs=ENGINE_MAX_SEQS, max_num_batched_tokens=8192, gpu_memory_utilization=.80,
         enforce_eager=False, enable_prefix_caching=False, enable_chunked_prefill=True,
         seed=17, generation_config='vllm', disable_log_stats=True, trust_remote_code=False,
         compilation_config=dict(level=3, cudagraph_mode='FULL_AND_PIECEWISE',
-            cudagraph_capture_sizes=[1,2,4,8,16,32]))
+            cudagraph_capture_sizes=GRAPH_CAPTURE_SIZES.copy()))
 
 
 def validate_engine(config, context):
@@ -130,9 +131,9 @@ def validate_engine(config, context):
         cudagraph_mode=config.compilation_config.cudagraph_mode.name,
         cudagraph_capture_sizes=sorted(config.compilation_config.cudagraph_capture_sizes))
     expected = dict(max_model_len=context, enforce_eager=False, dtype='torch.bfloat16',
-        max_num_seqs=32, max_num_batched_tokens=8192, enable_chunked_prefill=True,
+        max_num_seqs=ENGINE_MAX_SEQS, max_num_batched_tokens=8192, enable_chunked_prefill=True,
         enable_prefix_caching=False, gpu_memory_utilization=.80, compilation_level=3,
-        cudagraph_mode='FULL_AND_PIECEWISE', cudagraph_capture_sizes=[1,2,4,8,16,32])
+        cudagraph_mode='FULL_AND_PIECEWISE', cudagraph_capture_sizes=GRAPH_CAPTURE_SIZES.copy())
     if actual != expected:
         raise ValueError('Actual long-context engine differs; no eager fallback')
     return actual
@@ -204,13 +205,13 @@ def evaluate(llm, constructor, rows, model_eos, out, key, store, commit, check, 
     """One request per original seed; every raw return survives shape failures."""
     out = Path(out)
     times,cycles = [],[]
-    for first in range(0, len(rows), 32):
+    for first in range(0, len(rows), ENDPOINT_BATCH):
         cycle_start=time.monotonic()
         check()
-        part = rows[first:first+32]
+        part = rows[first:first+ENDPOINT_BATCH]
         params = [sampling(r, model_eos) for r in part]
-        name = f'eval_{first//32:04d}'
-        projection = forecast((len(rows)-first+31)//32, list(times))
+        name = f'eval_{first//ENDPOINT_BATCH:04d}'
+        projection = forecast(endpoint_batches(len(rows)-first), list(times))
         dump(out/'forecasts'/(name+'.json'), projection)
         intent = dict(requests=part, sampling=params)
         if not store.put(key+'/unit/'+name, intent, skip_if_exists=True):
@@ -235,7 +236,7 @@ def evaluate(llm, constructor, rows, model_eos, out, key, store, commit, check, 
             raise RuntimeError('Duplicate endpoint completion')
         commit()
         elapsed=time.monotonic()-cycle_start
-        cycles.append(dict(batch=first//32,seconds=elapsed,body_seconds=ack['seconds'],
+        cycles.append(dict(batch=first//ENDPOINT_BATCH,seconds=elapsed,body_seconds=ack['seconds'],
             volume_commits_included=3,remote_unit_and_done_included=True))
         times.append(elapsed)
     dump(out/'ENDPOINT_COMPLETE_CYCLES.json',cycles)
@@ -262,7 +263,7 @@ def child(conn, model_assets, arm, inputs, out, identity, key, claim, stop, timi
         volume.commit()
         model, tokenizer, optimizer = training.load_model(model_assets, arm)
         journal = WholeAnswerJournal(out,key,store,volume.commit,check,encoded,plan,rates,
-            lambda left, observed: forecast(timing, left, (3300+31)//32, observed, [], time.time()))
+            lambda left, observed: forecast(timing, left, ENDPOINT_BATCHES, observed, [], time.time()))
         result = training.train_terminal(model,tokenizer,optimizer,encoded,plan,rates,arm,
                                          out,journal,identity)
         journal.complete()
@@ -362,7 +363,7 @@ def worker_body(job, inputs, out, identity, key, claim, stop, timing, store, vol
     dump(out/'LINUX_CONSTRUCTORS.json',dict(count=len(rows),environment=environment,
         before_vllm_model_allocation=True,all_native_prompt_texts_verified=True))
     volume.commit()
-    projection=forecast(timing,0,(len(rows)+31)//32,training_times,[],time.time())
+    projection=forecast(timing,0,endpoint_batches(len(rows)),training_times,[],time.time())
     dump(out/'PRE_ENGINE_FORECAST.json',projection)
     llm=LLM(model=model_path,tokenizer=model_path,**engine_settings(job['context']))
     config=llm.llm_engine.vllm_config

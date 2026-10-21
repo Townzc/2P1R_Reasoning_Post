@@ -15,8 +15,8 @@ for n in [*spec['source_files'],path.SPEC]:image=image.add_local_file(ROOT/n,'/w
 # Each function has its own exact spec-bound billed window. All still share the
 # one local dispatch lock, permanent ledger and four-slot provider accounting.
 def make_worker(job_id):
-    limits=spec['jobs'][job_id]['limits']
-    @app.function(name=job_id,image=image,gpu='H100!',cpu=(4,4),memory=(32768,32768),
+    limits=spec['jobs'][job_id]['limits']; resources=spec['jobs'][job_id]['resources']
+    @app.function(name=job_id,image=image,gpu='H100!',cpu=(resources['cpu'],resources['cpu']),memory=(resources['memory_mib'],resources['memory_mib']),
         timeout=limits['platform_seconds'],startup_timeout=limits['startup_seconds'],
         retries=0,max_containers=4,min_containers=0,buffer_containers=0,
         scaledown_window=2,single_use_containers=True,serialized=True,include_source=False,

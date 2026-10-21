@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/prepare_p011_long_runtime_inputs.py", line 97, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/prepare_p011_long_runtime_inputs.py", line 83, in main
+    requests=long_evaluation.request_roster(benchmarks,tok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/p011/long_evaluation.py", line 24, in request_roster
+    raise ValueError('Duplicate endpoint or unsupported gold cannot be silently dropped')
+ValueError: Duplicate endpoint or unsupported gold cannot be silently dropped

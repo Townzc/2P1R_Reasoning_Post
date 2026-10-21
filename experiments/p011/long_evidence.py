@@ -8,6 +8,7 @@ artifact hashes and actual STOPPED0. These functions alone grant no admission.
 from collections import Counter
 import math
 from pathlib import Path
+from experiments.p011.long_protocol import ENDPOINT_BATCH, ENDPOINT_BATCHES, ENGINE_MAX_SEQS, GRAPH_CAPTURE_SIZES
 
 from experiments.sft_allocation_midpoint.common import read, sha, digest
 from experiments.p011.long_training import ARMS, TARGETS, validate_plan
@@ -142,7 +143,7 @@ def expected_units(kind, updates):
         raise ValueError('Baseline zero updates and student positive updates required')
     training = ([f'update_{i:05d}' for i in range(1,updates+1)] +
                 ['terminal_state','terminal_model_export']) if kind == 'student' else []
-    return training + [f'eval_{i:04d}' for i in range(104)]
+    return training + [f'eval_{i:04d}' for i in range(ENDPOINT_BATCHES)]
 
 
 def expected_record_keys(key, kind, updates):
@@ -198,7 +199,7 @@ def verify_training(root, encoded, plan, rates, arm, config, identity, attempts,
                 or actual['gradient_norm'] < 0 or actual['max_allocated_bytes'] <= 0):
             raise ValueError('Exact complete per-update dose/finite proof differs')
         replay_forecast(read(root/'forecasts'/(name+'.json')),timing,
-                        proof['U']-step+1,104,times[:step-1],[])
+                        proof['U']-step+1,ENDPOINT_BATCHES,times[:step-1],[])
     state = load_state_once(root,identity,encoded,plan,rates,arm,config)
     exported, joined = read(root/'MODEL_EXPORT.json'),read(root/'TRAINING_EXIT.json')
     trained = {**proof,'actual_supervised_tokens':targets,'actual_processed_tokens':processed,
@@ -257,18 +258,18 @@ def verify_endpoint(root, requests, context, eos, tokenizer, config, attempts, d
     gpu = [{**{k:v for k,v in r.items() if k!='gold'},'request_sha256':digest(r)} for r in requests]
     validate_endpoint(gpu,context)
     result = read(root/'RESULT.json')
-    times = positive(result['endpoint_batch_seconds'],104)
+    times = positive(result['endpoint_batch_seconds'],ENDPOINT_BATCHES)
     cycles=read(root/'ENDPOINT_COMPLETE_CYCLES.json')
-    if len(cycles)!=104:raise ValueError('Complete endpoint cycles missing')
+    if len(cycles)!=ENDPOINT_BATCHES:raise ValueError('Complete endpoint cycles missing')
     if result['raw_endpoint_count'] != 3300 or result['unique_questions'] != 600:
         raise ValueError('All3300 original endpoints required')
-    if {p.stem for p in (root/'raw').glob('*.json')} != {f'eval_{i:04d}' for i in range(104)}:
+    if {p.stem for p in (root/'raw').glob('*.json')} != {f'eval_{i:04d}' for i in range(ENDPOINT_BATCHES)}:
         raise ValueError('Missing/extra original raw endpoint batch')
     decoded,stops = {},Counter()
-    for index,first in enumerate(range(0,len(requests),32)):
-        name = f'eval_{index:04d}';part=requests[first:first+32]
+    for index,first in enumerate(range(0,len(requests),ENDPOINT_BATCH)):
+        name = f'eval_{index:04d}';part=requests[first:first+ENDPOINT_BATCH]
         rawfile=root/'raw'/(name+'.json');raw=read(rawfile)
-        expected = dict(requests=gpu[first:first+32],sampling=[sampling(r,eos) for r in part])
+        expected = dict(requests=gpu[first:first+ENDPOINT_BATCH],sampling=[sampling(r,eos) for r in part])
         if (attempts[name] != expected or len(raw) != len(part)
                 or done[name] != dict(count=len(part),raw_file_sha256=sha(rawfile),
                                      request_ids=[r['id'] for r in part],seconds=cycles[index]['body_seconds'])
@@ -276,22 +277,22 @@ def verify_endpoint(root, requests, context, eos, tokenizer, config, attempts, d
                     volume_commits_included=3,remote_unit_and_done_included=True)
                 or times[index]<done[name]['seconds']):
             raise ValueError('Complete original raw batch intent/ack differs')
-        replay_forecast(read(root/'forecasts'/(name+'.json')),timing,0,104-index,train_times,times[:index])
+        replay_forecast(read(root/'forecasts'/(name+'.json')),timing,0,ENDPOINT_BATCHES-index,train_times,times[:index])
         for row,item in zip(part,raw):
             value=decode_record(row,item,eos,tokenizer,config['vocab_size'])
             value.update(raw_file='raw/'+name+'.json',raw_file_sha256=sha(rawfile))
             decoded[row['id']]=value;stops[value['stop_reason']]+=1
-    expected_forecasts = {f'eval_{i:04d}' for i in range(104)} | {
+    expected_forecasts = {f'eval_{i:04d}' for i in range(ENDPOINT_BATCHES)} | {
         f'update_{i:05d}' for i in range(1,len(train_times)+1)}
     if {p.stem for p in (root/'forecasts').glob('*.json')} != expected_forecasts:
         raise ValueError('Missing/extra original all-observation forecasts')
-    replay_forecast(read(root/'PRE_ENGINE_FORECAST.json'),timing,0,104,train_times,[])
+    replay_forecast(read(root/'PRE_ENGINE_FORECAST.json'),timing,0,ENDPOINT_BATCHES,train_times,[])
     engine = read(root/'ENGINE.json')
     settings = engine_settings(context)
     expected_actual = dict(max_model_len=context,enforce_eager=False,dtype='torch.bfloat16',
-        max_num_seqs=32,max_num_batched_tokens=8192,enable_chunked_prefill=True,
+        max_num_seqs=ENGINE_MAX_SEQS,max_num_batched_tokens=8192,enable_chunked_prefill=True,
         enable_prefix_caching=False,gpu_memory_utilization=.8,compilation_level=3,
-        cudagraph_mode='FULL_AND_PIECEWISE',cudagraph_capture_sizes=[1,2,4,8,16,32])
+        cudagraph_mode='FULL_AND_PIECEWISE',cudagraph_capture_sizes=GRAPH_CAPTURE_SIZES.copy())
     constructor = read(root/'LINUX_CONSTRUCTORS.json')
     if (engine['requested'] != settings or engine['actual'] != expected_actual
             or constructor['count'] != 3300 or constructor['before_vllm_model_allocation'] is not True
