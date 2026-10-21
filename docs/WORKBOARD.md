@@ -1,3 +1,9 @@
+### 2026-10-21T17:52:24.964165+00:00 — D budget clarification implemented; B first local audit environment failures
+
+Real D report87d2eba3 atb61b88f8/Git17:31:39/fullread17:46:41 is CHANGES-REQUIRED, explicit predicted-cost80/fullreserve-hardcap clarification. Only one functional check plus immutableSPEC locator changed; exact62 candidate at687011075c425de058f35133a44284153a4c6159, five NEW checks oncePASS0.001s,13newGitfilesverified. D remains exactCR pending,0calls/reserve. OriginalDjobs/limits/963future/600proxy and failedreservations unchanged; Aownerhold/P01019UTC unchanged.
+
+Original B1/B3 models94581/44421 EXIT0CONSUMED, each1024updates/2500raw. Originalcollect8411/10573 EXIT0CONSUMED with STOPPED0, fulltar3388385280/3421460480B and153namedrecords each. First audits44679/32774 EXIT1CONSUMED because chosen Modal interpreter lacks transformers; after extraction before tokenizer/stateoracle/decode/score. Both complete archives/extractedpayloads and originalfailure evidence retained; no repeat. Separate exact bounded remaining-tail disposition being prepared, no accepted exception yet. RetainedA75.46/B18.38/C6.38=100.22,0reserve release;0activecloud/localscience. This failure is an execution-environment mistake, not a scientific result.
+
 ### 2026-10-21T17:01:29.401208+00:00 — B first pair active; D exact62 candidate and numeric discrepancy
 
 B1 CLI94581 / B3 CLI44421 real submissions16:52:16.494072 /16:54:23.113265UTC at44e5829e. Their only uploads60117/66017 areDONE; original source100 not edited. Two active first student calls, no completed model/result yet. RetainedA75.46/B18.38/C6.38=100.22;10scientific function attempts includingfailures +3engineering=13total, notsuccesscount. Current INDEX prior changed fields preserved in b_first_students_submitted_v1.

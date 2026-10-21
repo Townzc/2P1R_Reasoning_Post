@@ -1,3 +1,15 @@
+# D pair predicted-cost clarification: exact narrow review pending
+
+Prepared 2026-10-21T17:52:24.964165+00:00. Fixed target `687011075c425de058f35133a44284153a4c6159`; packet [long_d_pair_predicted_budget_runtime_v1](long_d_pair_predicted_budget_runtime_v1/README.md). Same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, scope `p011-D-F15-pair-complete-path-CR-A1-A2-lite`.
+
+Claude b61b88f8/report87d2eba3 gave CHANGES-REQUIRED and an explicit reasoned budget clarification. The only functional diff changes pair_budget from fullreserve80 to reserve <= remaining D cap; unchanged forecast enforces projectedcost80. The SPEC locator moves to a new immutable packet. All61 other sources and both exact job objects remain unchanged. New SPEC SHA438a120f242b10f99bddc76a06a80f9412dce766dc014fcf603e23e0e71d9321, new source SHA dbb7dfefb2d28ef700cc3f4c0e11e5377589bdb36d8aff12fb9756fd20397eb9, MANIFEST ed9d04f16be142d5a5d1a25fab9d8d919cb1311aed8a272d393408dbcbdcad60. [Complete binding and17 flags](long_d_pair_predicted_budget_runtime_v1/REVIEW_REQUIREMENTS.json), [exact diff](long_d_pair_predicted_budget_runtime_v1/SOURCE_DIFF.patch), five NEW checks oncePASS0.001s. Old10successfulchecks not repeated.
+
+D predictions10.33/10.27 and all22.80reserved retained withinD25; unchanged963future/uncalibrated600endpoint/W7700/full22765/latest22:40:35UTC. Both D cells or neither, no A smoke selection. No D upload/model/reservation/ACCEPTED. This is not paid permission until the complete fixed report accepts changed62/SPEC, original16 flags and predicted_cost_80percent_with_full_pair_reservations_accepted. Necessary per-entry fresh rates/D1/allfailedledger/slots/fences/window still required. A remains held for owner; no cap increase, transfer or reservation release.
+
+B1/B3 models now genuinely complete and STOPPED0; first local audits failed at missing transformers before state oracle/decode/score. That separate first-local-tail exception is pending, not a reason to alter D science or delay its exact review. P01019UTC freeze remains independent.
+
+--- Previous request retained ---
+
 # D F15 pair full source/numeric appendix and explicit budget disposition
 
 Prepared 2026-10-21T17:01:29.401208+00:00; fixed target `42255fc64579b5770021241ab51a58a0126e90c3`. Same request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, D scope `p011-D-F15-pair-complete-path-CR-A1-A2-lite`. Exact62 source / SPEC `cbc2e3f04b69ff9909e7c0f1dd6eb5eff2f1e824d6fb23a57b6629cc2e02906f` / MANIFEST `176a2b93b70a281f2cd4bbea7a228aa93bd632a621aa8a8d1af8b377f3d764e1`. Complete authoritative source/input/decision/jobs/failure binding and16 required true flags are in [REVIEW_REQUIREMENTS](long_d_pair_runtime_v1/REVIEW_REQUIREMENTS.json).
