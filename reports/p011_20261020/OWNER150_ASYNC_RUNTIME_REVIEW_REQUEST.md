@@ -1,3 +1,7 @@
+### Asynchronous A1 retry / post-retry optional report received 2026-10-21T21:52:43.772022+00:00
+
+7c0ac0a5/report272403a4: no scientific issue found, do not stop. Public acceptance review_7c0ac0a5_A1_retry_optional_async_accepted_v1. OriginalA1preemption remainsfailed; sole r2retry remainsactive. A1report Git21:50:44 was527.424950seconds after its30minute target; optional77 within target. No extra retry, budget waiver or model completion inferred. Separate closed-app collector scope not explicitly covered.
+
 ### 2026-10-21T21:19:27.938932+00:00 — Optional clients after A1 preemption and exact-attempt contrasts
 
 Fixed targetc6917185a1ae0a8578fff24647f4f502d5053ad9, packet owner_optional_post_retry_accounting_v1, CLIENT_BINDING77exactfiles. New clients include original A1failed elapsed/partial artifact bounds and its one submitted retry, both controls and all original jobs. All active69/63/110 scientific source files remain unchanged. No optional call has run. New4accounting+2locator tests passed once, allold successful tests notrerun. New cross-attempt analyzer routes A1owner_r2 to its ownSPEC/proof; paired-question interval and contrast allowlist unchanged, no statistical run yet. Please include this diff in asynchronous review within30minutes; direct owner execution remains nonblocking, stop only for a scientific bug. Previous optional targetb2ef4d81 is historical and must not be used after the newfailedparent.

@@ -1,3 +1,7 @@
+### Asynchronous A1 retry / post-retry optional report received 2026-10-21T21:52:43.772022+00:00
+
+7c0ac0a5/report272403a4: no scientific issue found, do not stop. Public acceptance review_7c0ac0a5_A1_retry_optional_async_accepted_v1. OriginalA1preemption remainsfailed; sole r2retry remainsactive. A1report Git21:50:44 was527.424950seconds after its30minute target; optional77 within target. No extra retry, budget waiver or model completion inferred. Separate closed-app collector scope not explicitly covered.
+
 # Asynchronous review: one A1 infrastructure retry after provider preemption
 
 Request p011-owner150-A1-infrastructure-retry-async-CR-r1. Direct owner instruction authorizes one infrastructure-only retry and dispatch after pushing the diff, without pre-review waiting. Review within30minutes of remote publication; stop only for a scientific bug. This is not a new request for owner permission.
