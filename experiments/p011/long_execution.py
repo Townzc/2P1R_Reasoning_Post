@@ -33,11 +33,15 @@ class WholeAnswerJournal:
             for i, indices in enumerate(plan['updates'])]
         self.cursor, self.pending, self.terminal_cursor = 0, None, 0
         self.times, self.failed = [], False
+        self.cycles, self.cycle_started = [], None
         self.total_supervised, self.total_processed = 0, 0
 
     def begin(self, name, record):
         try:
             self.check()
+            if self.cycle_started is not None:
+                raise ValueError('Previous complete iteration has not closed')
+            if name.startswith('update_'):self.cycle_started=time.monotonic()
             if self.failed or self.pending is not None:
                 raise RuntimeError('Failed or unfinished unit cannot be reused')
             if name.startswith('update_'):
@@ -79,7 +83,7 @@ class WholeAnswerJournal:
             if name.startswith('update_'):
                 self.cursor += 1
                 self.total_supervised, self.total_processed = next_s, next_p
-                self.times.append(record['seconds'])
+                self.body_seconds=record['seconds']
             else:
                 self.terminal_cursor += 1
             self.pending = None
@@ -87,10 +91,19 @@ class WholeAnswerJournal:
             self.failed = True
             raise
 
+    def finish_update(self):
+        if self.cycle_started is None or self.pending is not None or self.failed:
+            raise ValueError('Complete acknowledged update and both commits required')
+        elapsed=time.monotonic()-self.cycle_started
+        if elapsed<self.body_seconds:raise ValueError('Complete cycle shorter than model work')
+        self.cycles.append(dict(step=self.cursor,seconds=elapsed,body_seconds=self.body_seconds,
+            volume_commits_included=2,remote_unit_and_done_included=True))
+        self.times.append(elapsed);self.cycle_started=None
+
     def complete(self):
         self.check()
         if (self.failed or self.pending is not None or self.cursor != len(self.records)
-                or self.terminal_cursor != 2):
+                or self.terminal_cursor != 2 or self.cycle_started is not None):
             raise ValueError('Full exact training/state/export journal required')
 
 
@@ -149,7 +162,7 @@ def validate_endpoint(rows, context):
         for mode, seeds in ([('sample', range(4)), ('greedy', [0])] if b=='math500'
                             else [('sample', range(8))]) for seed in seeds}
     fields = {'id','problem_id','benchmark','source_row','mode','seed','prompt_token_ids',
-              'prompt_text_sha256','required_context','request_sha256'}
+              'prompt_text_sha256','raw_prompt_text_sha256','native_NFC_changed','required_context','request_sha256'}
     if len(rows) != len(expected) or {r['id'] for r in rows} != expected:
         raise ValueError('Exactly all 3300 original long endpoints required')
     prompts = {}
@@ -159,12 +172,13 @@ def validate_endpoint(rows, context):
         if (set(r) != fields or r['problem_id'] != pid
                 or r['id'] != f"{pid}:{r['mode']}:{r['seed']}"
                 or not ids or any(type(i) is not int or not 0 <= i < 151936 for i in ids)
+                or type(r['native_NFC_changed']) is not bool
                 or r['required_context'] != len(ids)+MAX_NEW_TOKENS
                 or r['required_context'] > context
                 or any(not isinstance(r[k],str) or len(r[k])!=64
-                       for k in ('request_sha256','prompt_text_sha256'))):
+                       for k in ('request_sha256','prompt_text_sha256','raw_prompt_text_sha256'))):
             raise ValueError('Foreign, truncated, gold-bearing or malformed endpoint')
-        prompt = (ids, r['prompt_text_sha256'])
+        prompt = (ids, r['prompt_text_sha256'],r['raw_prompt_text_sha256'],r['native_NFC_changed'])
         if pid in prompts and prompts[pid] != prompt:
             raise ValueError('The same question has different native prompt tokens')
         prompts[pid] = prompt
@@ -189,8 +203,9 @@ def save_raw(part, params, returned):
 def evaluate(llm, constructor, rows, model_eos, out, key, store, commit, check, forecast):
     """One request per original seed; every raw return survives shape failures."""
     out = Path(out)
-    times = []
+    times,cycles = [],[]
     for first in range(0, len(rows), 32):
+        cycle_start=time.monotonic()
         check()
         part = rows[first:first+32]
         params = [sampling(r, model_eos) for r in part]
@@ -219,7 +234,11 @@ def evaluate(llm, constructor, rows, model_eos, out, key, store, commit, check, 
         if not store.put(key+'/done/'+name, ack, skip_if_exists=True):
             raise RuntimeError('Duplicate endpoint completion')
         commit()
-        times.append(ack['seconds'])
+        elapsed=time.monotonic()-cycle_start
+        cycles.append(dict(batch=first//32,seconds=elapsed,body_seconds=ack['seconds'],
+            volume_commits_included=3,remote_unit_and_done_included=True))
+        times.append(elapsed)
+    dump(out/'ENDPOINT_COMPLETE_CYCLES.json',cycles)
     return times
 
 
@@ -236,7 +255,7 @@ def child(conn, model_assets, arm, inputs, out, identity, key, claim, stop, timi
         def check():
             if time.time() >= stop-30: raise TimeoutError('Original full worker deadline')
             if store.get(key+'/claim') != claim: raise RuntimeError('Original claim changed')
-        encoded, plan, rates = [read(Path(inputs)/name) for name in ('encoded.json','plan.json','rates.json')]
+        encoded, plan, rates = [read(Path(inputs)/name) for name in ('encoded.json','plan.json','rates_'+arm+'.json')]
         training.validate_plan(encoded, plan, rates, arm)
         check()
         dump(Path(out)/'TRAINING_ENVIRONMENT.json',software())
@@ -247,6 +266,7 @@ def child(conn, model_assets, arm, inputs, out, identity, key, claim, stop, timi
         result = training.train_terminal(model,tokenizer,optimizer,encoded,plan,rates,arm,
                                          out,journal,identity)
         journal.complete()
+        dump(Path(out)/'TRAINING_COMPLETE_CYCLES.json',journal.cycles)
         dump(Path(out)/'TRAINING_PROCESS_RESULT.json',dict(result=result,update_seconds=journal.times,
                                                           pid=os.getpid()))
         volume.commit()

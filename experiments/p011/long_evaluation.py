@@ -4,6 +4,7 @@ No vLLM/model/scorer calls occur here. Complete runtime CR must bind the
 original benchmark rows, tokenizer/config, source and budget before use.
 """
 from collections import Counter
+import unicodedata
 from experiments.sft_allocation_midpoint.common import digest
 
 BENCHMARK_COUNTS = {'math500': 500, 'aime24': 30, 'aime25': 30, 'amc23': 40}
@@ -25,6 +26,10 @@ def request_roster(benchmarks, tokenizer):
         messages = [{'role': 'user', 'content': row['problem']}]
         text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
         tokens = tokenizer(text, add_special_tokens=False)['input_ids']
+        normalized=tokenizer.backend_tokenizer.normalizer.normalize_str(text)
+        if (normalized!=unicodedata.normalize('NFC',text)
+                or tokenizer.decode(tokens,skip_special_tokens=False,clean_up_tokenization_spaces=False)!=normalized):
+            raise ValueError('Pinned native NFC-only prompt roundtrip differs; no cleanup/truncation')
         if not tokens or any(type(t) is not int or t < 0 for t in tokens):
             raise ValueError('Original complete native prompt token IDs required')
         # Context size is selected and reviewed from the actual longest prompt;
@@ -35,7 +40,8 @@ def request_roster(benchmarks, tokenizer):
         for mode, seed in modes:
             requests.append({'id': f'{pid}:{mode}:{seed}', 'problem_id': pid,
                 'benchmark': benchmark, 'source_row': index, 'mode': mode, 'seed': seed,
-                'prompt_token_ids': tokens, 'prompt_text_sha256': digest(text),
+                'prompt_token_ids': tokens, 'prompt_text_sha256': digest(normalized), 'raw_prompt_text_sha256':digest(text),
+                'native_NFC_changed':text!=normalized,
                 'gold': row['answer'], 'required_context': len(tokens) + MAX_NEW_TOKENS})
     return requests
 

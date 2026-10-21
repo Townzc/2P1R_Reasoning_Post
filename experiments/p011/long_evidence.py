@@ -178,6 +178,8 @@ def verify_training(root, encoded, plan, rates, arm, config, identity, attempts,
     proof = validate_plan(encoded,plan,rates,arm)
     child, result = read(root/'TRAINING_PROCESS_RESULT.json'),read(root/'RESULT.json')
     times = positive(child['update_seconds'],proof['U'])
+    cycles=read(root/'TRAINING_COMPLETE_CYCLES.json')
+    if len(cycles)!=proof['U']:raise ValueError('Complete training cycles missing')
     targets = processed = 0
     for step, indices in enumerate(plan['updates'],1):
         name = f'update_{step:05d}'
@@ -188,7 +190,9 @@ def verify_training(root, encoded, plan, rates, arm, config, identity, attempts,
         actual = done[name]
         if (attempts[name] != expected or any(actual.get(k)!=v for k,v in expected.items())
                 or actual['cumulative_supervised'] != targets or actual['cumulative_processed'] != processed
-                or actual['seconds'] != times[step-1]
+                or cycles[step-1] != dict(step=step,seconds=times[step-1],body_seconds=actual['seconds'],
+                    volume_commits_included=2,remote_unit_and_done_included=True)
+                or times[step-1]<actual['seconds']
                 or any(type(actual[k]) not in (int,float) or not math.isfinite(actual[k])
                        for k in ('loss','gradient_norm','max_allocated_bytes'))
                 or actual['gradient_norm'] < 0 or actual['max_allocated_bytes'] <= 0):
@@ -254,6 +258,8 @@ def verify_endpoint(root, requests, context, eos, tokenizer, config, attempts, d
     validate_endpoint(gpu,context)
     result = read(root/'RESULT.json')
     times = positive(result['endpoint_batch_seconds'],104)
+    cycles=read(root/'ENDPOINT_COMPLETE_CYCLES.json')
+    if len(cycles)!=104:raise ValueError('Complete endpoint cycles missing')
     if result['raw_endpoint_count'] != 3300 or result['unique_questions'] != 600:
         raise ValueError('All3300 original endpoints required')
     if {p.stem for p in (root/'raw').glob('*.json')} != {f'eval_{i:04d}' for i in range(104)}:
@@ -265,7 +271,10 @@ def verify_endpoint(root, requests, context, eos, tokenizer, config, attempts, d
         expected = dict(requests=gpu[first:first+32],sampling=[sampling(r,eos) for r in part])
         if (attempts[name] != expected or len(raw) != len(part)
                 or done[name] != dict(count=len(part),raw_file_sha256=sha(rawfile),
-                                     request_ids=[r['id'] for r in part],seconds=times[index])):
+                                     request_ids=[r['id'] for r in part],seconds=cycles[index]['body_seconds'])
+                or cycles[index]!=dict(batch=index,seconds=times[index],body_seconds=done[name]['seconds'],
+                    volume_commits_included=3,remote_unit_and_done_included=True)
+                or times[index]<done[name]['seconds']):
             raise ValueError('Complete original raw batch intent/ack differs')
         replay_forecast(read(root/'forecasts'/(name+'.json')),timing,0,104-index,train_times,times[:index])
         for row,item in zip(part,raw):

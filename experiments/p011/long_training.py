@@ -188,6 +188,7 @@ def train_terminal(model, tokenizer, optimizer, encoded, plan, rates, arm, out, 
             'seconds': time.monotonic() - start, 'cumulative_supervised': supervised,
             'cumulative_processed': processed, 'max_allocated_bytes': torch.cuda.max_memory_allocated()})
         journal.commit()
+        journal.finish_update()
     if supervised != proof['B']:
         raise ValueError('Actual full dose differs')
     optimizer.zero_grad(set_to_none=True)

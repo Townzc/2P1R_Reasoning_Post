@@ -1,0 +1,206 @@
+diff --git a/experiments/p011/long_evaluation.py b/experiments/p011/long_evaluation.py
+index b7f1ee90..f911d241 100644
+--- a/experiments/p011/long_evaluation.py
++++ b/experiments/p011/long_evaluation.py
+@@ -4,6 +4,7 @@ No vLLM/model/scorer calls occur here. Complete runtime CR must bind the
+ original benchmark rows, tokenizer/config, source and budget before use.
+ """
+ from collections import Counter
++import unicodedata
+ from experiments.sft_allocation_midpoint.common import digest
+ 
+ BENCHMARK_COUNTS = {'math500': 500, 'aime24': 30, 'aime25': 30, 'amc23': 40}
+@@ -25,6 +26,10 @@ def request_roster(benchmarks, tokenizer):
+         messages = [{'role': 'user', 'content': row['problem']}]
+         text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+         tokens = tokenizer(text, add_special_tokens=False)['input_ids']
++        normalized=tokenizer.backend_tokenizer.normalizer.normalize_str(text)
++        if (normalized!=unicodedata.normalize('NFC',text)
++                or tokenizer.decode(tokens,skip_special_tokens=False,clean_up_tokenization_spaces=False)!=normalized):
++            raise ValueError('Pinned native NFC-only prompt roundtrip differs; no cleanup/truncation')
+         if not tokens or any(type(t) is not int or t < 0 for t in tokens):
+             raise ValueError('Original complete native prompt token IDs required')
+         # Context size is selected and reviewed from the actual longest prompt;
+@@ -35,7 +40,8 @@ def request_roster(benchmarks, tokenizer):
+         for mode, seed in modes:
+             requests.append({'id': f'{pid}:{mode}:{seed}', 'problem_id': pid,
+                 'benchmark': benchmark, 'source_row': index, 'mode': mode, 'seed': seed,
+-                'prompt_token_ids': tokens, 'prompt_text_sha256': digest(text),
++                'prompt_token_ids': tokens, 'prompt_text_sha256': digest(normalized), 'raw_prompt_text_sha256':digest(text),
++                'native_NFC_changed':text!=normalized,
+                 'gold': row['answer'], 'required_context': len(tokens) + MAX_NEW_TOKENS})
+     return requests
+ 
+diff --git a/experiments/p011/long_evidence.py b/experiments/p011/long_evidence.py
+index a1da3b9e..208fc27f 100644
+--- a/experiments/p011/long_evidence.py
++++ b/experiments/p011/long_evidence.py
+@@ -178,6 +178,8 @@ def verify_training(root, encoded, plan, rates, arm, config, identity, attempts,
+     proof = validate_plan(encoded,plan,rates,arm)
+     child, result = read(root/'TRAINING_PROCESS_RESULT.json'),read(root/'RESULT.json')
+     times = positive(child['update_seconds'],proof['U'])
++    cycles=read(root/'TRAINING_COMPLETE_CYCLES.json')
++    if len(cycles)!=proof['U']:raise ValueError('Complete training cycles missing')
+     targets = processed = 0
+     for step, indices in enumerate(plan['updates'],1):
+         name = f'update_{step:05d}'
+@@ -188,7 +190,9 @@ def verify_training(root, encoded, plan, rates, arm, config, identity, attempts,
+         actual = done[name]
+         if (attempts[name] != expected or any(actual.get(k)!=v for k,v in expected.items())
+                 or actual['cumulative_supervised'] != targets or actual['cumulative_processed'] != processed
+-                or actual['seconds'] != times[step-1]
++                or cycles[step-1] != dict(step=step,seconds=times[step-1],body_seconds=actual['seconds'],
++                    volume_commits_included=2,remote_unit_and_done_included=True)
++                or times[step-1]<actual['seconds']
+                 or any(type(actual[k]) not in (int,float) or not math.isfinite(actual[k])
+                        for k in ('loss','gradient_norm','max_allocated_bytes'))
+                 or actual['gradient_norm'] < 0 or actual['max_allocated_bytes'] <= 0):
+@@ -254,6 +258,8 @@ def verify_endpoint(root, requests, context, eos, tokenizer, config, attempts, d
+     validate_endpoint(gpu,context)
+     result = read(root/'RESULT.json')
+     times = positive(result['endpoint_batch_seconds'],104)
++    cycles=read(root/'ENDPOINT_COMPLETE_CYCLES.json')
++    if len(cycles)!=104:raise ValueError('Complete endpoint cycles missing')
+     if result['raw_endpoint_count'] != 3300 or result['unique_questions'] != 600:
+         raise ValueError('All3300 original endpoints required')
+     if {p.stem for p in (root/'raw').glob('*.json')} != {f'eval_{i:04d}' for i in range(104)}:
+@@ -265,7 +271,10 @@ def verify_endpoint(root, requests, context, eos, tokenizer, config, attempts, d
+         expected = dict(requests=gpu[first:first+32],sampling=[sampling(r,eos) for r in part])
+         if (attempts[name] != expected or len(raw) != len(part)
+                 or done[name] != dict(count=len(part),raw_file_sha256=sha(rawfile),
+-                                     request_ids=[r['id'] for r in part],seconds=times[index])):
++                                     request_ids=[r['id'] for r in part],seconds=cycles[index]['body_seconds'])
++                or cycles[index]!=dict(batch=index,seconds=times[index],body_seconds=done[name]['seconds'],
++                    volume_commits_included=3,remote_unit_and_done_included=True)
++                or times[index]<done[name]['seconds']):
+             raise ValueError('Complete original raw batch intent/ack differs')
+         replay_forecast(read(root/'forecasts'/(name+'.json')),timing,0,104-index,train_times,times[:index])
+         for row,item in zip(part,raw):
+diff --git a/experiments/p011/long_execution.py b/experiments/p011/long_execution.py
+index 5f8ad300..c96f81cd 100644
+--- a/experiments/p011/long_execution.py
++++ b/experiments/p011/long_execution.py
+@@ -33,11 +33,15 @@ class WholeAnswerJournal:
+             for i, indices in enumerate(plan['updates'])]
+         self.cursor, self.pending, self.terminal_cursor = 0, None, 0
+         self.times, self.failed = [], False
++        self.cycles, self.cycle_started = [], None
+         self.total_supervised, self.total_processed = 0, 0
+ 
+     def begin(self, name, record):
+         try:
+             self.check()
++            if self.cycle_started is not None:
++                raise ValueError('Previous complete iteration has not closed')
++            if name.startswith('update_'):self.cycle_started=time.monotonic()
+             if self.failed or self.pending is not None:
+                 raise RuntimeError('Failed or unfinished unit cannot be reused')
+             if name.startswith('update_'):
+@@ -79,7 +83,7 @@ class WholeAnswerJournal:
+             if name.startswith('update_'):
+                 self.cursor += 1
+                 self.total_supervised, self.total_processed = next_s, next_p
+-                self.times.append(record['seconds'])
++                self.body_seconds=record['seconds']
+             else:
+                 self.terminal_cursor += 1
+             self.pending = None
+@@ -87,10 +91,19 @@ class WholeAnswerJournal:
+             self.failed = True
+             raise
+ 
++    def finish_update(self):
++        if self.cycle_started is None or self.pending is not None or self.failed:
++            raise ValueError('Complete acknowledged update and both commits required')
++        elapsed=time.monotonic()-self.cycle_started
++        if elapsed<self.body_seconds:raise ValueError('Complete cycle shorter than model work')
++        self.cycles.append(dict(step=self.cursor,seconds=elapsed,body_seconds=self.body_seconds,
++            volume_commits_included=2,remote_unit_and_done_included=True))
++        self.times.append(elapsed);self.cycle_started=None
++
+     def complete(self):
+         self.check()
+         if (self.failed or self.pending is not None or self.cursor != len(self.records)
+-                or self.terminal_cursor != 2):
++                or self.terminal_cursor != 2 or self.cycle_started is not None):
+             raise ValueError('Full exact training/state/export journal required')
+ 
+ 
+@@ -149,7 +162,7 @@ def validate_endpoint(rows, context):
+         for mode, seeds in ([('sample', range(4)), ('greedy', [0])] if b=='math500'
+                             else [('sample', range(8))]) for seed in seeds}
+     fields = {'id','problem_id','benchmark','source_row','mode','seed','prompt_token_ids',
+-              'prompt_text_sha256','required_context','request_sha256'}
++              'prompt_text_sha256','raw_prompt_text_sha256','native_NFC_changed','required_context','request_sha256'}
+     if len(rows) != len(expected) or {r['id'] for r in rows} != expected:
+         raise ValueError('Exactly all 3300 original long endpoints required')
+     prompts = {}
+@@ -159,12 +172,13 @@ def validate_endpoint(rows, context):
+         if (set(r) != fields or r['problem_id'] != pid
+                 or r['id'] != f"{pid}:{r['mode']}:{r['seed']}"
+                 or not ids or any(type(i) is not int or not 0 <= i < 151936 for i in ids)
++                or type(r['native_NFC_changed']) is not bool
+                 or r['required_context'] != len(ids)+MAX_NEW_TOKENS
+                 or r['required_context'] > context
+                 or any(not isinstance(r[k],str) or len(r[k])!=64
+-                       for k in ('request_sha256','prompt_text_sha256'))):
++                       for k in ('request_sha256','prompt_text_sha256','raw_prompt_text_sha256'))):
+             raise ValueError('Foreign, truncated, gold-bearing or malformed endpoint')
+-        prompt = (ids, r['prompt_text_sha256'])
++        prompt = (ids, r['prompt_text_sha256'],r['raw_prompt_text_sha256'],r['native_NFC_changed'])
+         if pid in prompts and prompts[pid] != prompt:
+             raise ValueError('The same question has different native prompt tokens')
+         prompts[pid] = prompt
+@@ -189,8 +203,9 @@ def save_raw(part, params, returned):
+ def evaluate(llm, constructor, rows, model_eos, out, key, store, commit, check, forecast):
+     """One request per original seed; every raw return survives shape failures."""
+     out = Path(out)
+-    times = []
++    times,cycles = [],[]
+     for first in range(0, len(rows), 32):
++        cycle_start=time.monotonic()
+         check()
+         part = rows[first:first+32]
+         params = [sampling(r, model_eos) for r in part]
+@@ -219,7 +234,11 @@ def evaluate(llm, constructor, rows, model_eos, out, key, store, commit, check,
+         if not store.put(key+'/done/'+name, ack, skip_if_exists=True):
+             raise RuntimeError('Duplicate endpoint completion')
+         commit()
+-        times.append(ack['seconds'])
++        elapsed=time.monotonic()-cycle_start
++        cycles.append(dict(batch=first//32,seconds=elapsed,body_seconds=ack['seconds'],
++            volume_commits_included=3,remote_unit_and_done_included=True))
++        times.append(elapsed)
++    dump(out/'ENDPOINT_COMPLETE_CYCLES.json',cycles)
+     return times
+ 
+ 
+@@ -236,7 +255,7 @@ def child(conn, model_assets, arm, inputs, out, identity, key, claim, stop, timi
+         def check():
+             if time.time() >= stop-30: raise TimeoutError('Original full worker deadline')
+             if store.get(key+'/claim') != claim: raise RuntimeError('Original claim changed')
+-        encoded, plan, rates = [read(Path(inputs)/name) for name in ('encoded.json','plan.json','rates.json')]
++        encoded, plan, rates = [read(Path(inputs)/name) for name in ('encoded.json','plan.json','rates_'+arm+'.json')]
+         training.validate_plan(encoded, plan, rates, arm)
+         check()
+         dump(Path(out)/'TRAINING_ENVIRONMENT.json',software())
+@@ -247,6 +266,7 @@ def child(conn, model_assets, arm, inputs, out, identity, key, claim, stop, timi
+         result = training.train_terminal(model,tokenizer,optimizer,encoded,plan,rates,arm,
+                                          out,journal,identity)
+         journal.complete()
++        dump(Path(out)/'TRAINING_COMPLETE_CYCLES.json',journal.cycles)
+         dump(Path(out)/'TRAINING_PROCESS_RESULT.json',dict(result=result,update_seconds=journal.times,
+                                                           pid=os.getpid()))
+         volume.commit()
+diff --git a/experiments/p011/long_training.py b/experiments/p011/long_training.py
+index 9575000d..6223b83f 100644
+--- a/experiments/p011/long_training.py
++++ b/experiments/p011/long_training.py
+@@ -188,6 +188,7 @@ def train_terminal(model, tokenizer, optimizer, encoded, plan, rates, arm, out,
+             'seconds': time.monotonic() - start, 'cumulative_supervised': supervised,
+             'cumulative_processed': processed, 'max_allocated_bytes': torch.cuda.max_memory_allocated()})
+         journal.commit()
++        journal.finish_update()
+     if supervised != proof['B']:
+         raise ValueError('Actual full dose differs')
+     optimizer.zero_grad(set_to_none=True)
