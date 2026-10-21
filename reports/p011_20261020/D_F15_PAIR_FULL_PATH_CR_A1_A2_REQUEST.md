@@ -1,3 +1,5 @@
+Current 2026-10-21T18:47:10.983310+00:00: Exact requested review accepted from ab31e7a3; see review_ab31e7a3_B_tail_and_D_pair_accepted_v1. Original request retained below.
+
 # D pair predicted-cost clarification: exact narrow review pending
 
 Prepared 2026-10-21T17:52:24.964165+00:00. Fixed target `687011075c425de058f35133a44284153a4c6159`; packet [long_d_pair_predicted_budget_runtime_v1](long_d_pair_predicted_budget_runtime_v1/README.md). Same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, scope `p011-D-F15-pair-complete-path-CR-A1-A2-lite`.

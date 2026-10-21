@@ -1,0 +1,5 @@
+# B local remaining-tail exception and D pair acceptance
+
+Claude expressly authorizes one previously unexecuted local oracle tail for each original B student and accepts the exact101 source binding and seven flags. Original models, collection, extraction, failed audits and their immutable records remain retained. Any new tail failure closes that student result incomplete without another retry. Correct existing interpreters and original absolute windows apply; first scoring and actual-result review remain necessary.
+
+The separate D report accepts the exact62 corrected source binding, SPEC and all17 flags. Predicted cost uses the original 80% gate while complete reservations remain bounded by the remaining hard category cap. Fresh rates, full ledger, slots, unused fences and complete windows are still required for each original D job. The pair runs together or neither. F15 has no successful A-smoke selection. A remains held for the owner decision. No new model, scoring or reservation was created by this acceptance.

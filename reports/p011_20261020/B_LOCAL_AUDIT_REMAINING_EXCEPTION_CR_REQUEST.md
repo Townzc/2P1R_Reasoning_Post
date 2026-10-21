@@ -1,3 +1,5 @@
+Current 2026-10-21T18:47:10.983310+00:00: Exact requested review accepted from ab31e7a3; see review_ab31e7a3_B_tail_and_D_pair_accepted_v1. Original request retained below.
+
 # B first local audit: explicit remaining-tail exception and exact CR
 
 Prepared 2026-10-21T17:57:19.847303+00:00. Request `p011-B-first-local-audit-remaining-tail-exception-CR-r1`; scope `p011-B-first-local-audit-remaining-tail-exception-CR`, attached to original shared `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`. Fixed source101 target `30e5a71ba4c74cb49af42b95d34b80c0c42c5e38`; [complete candidate](b_local_audit_remaining_preflight_v1/README.md), [binding and7 required true flags](b_local_audit_remaining_preflight_v1/REVIEW_REQUIREMENTS.json), [original failures](b_students_local_audit_environment_failures_v1/README.md).
