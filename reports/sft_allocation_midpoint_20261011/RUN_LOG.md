@@ -1,3 +1,26 @@
+### 2026-10-20 22:29:40 PDT — Complete B path submitted for shared CR
+
+Exact71source targetbca90236c7be2c2b37f3a207eb23d1f518027290, requestp011-B-generation-student-complete-path-CR-A1-A2-lite-r1. Generation400x16, complete raw
+oracle/frozen scoring, ownerB16selection, unique-new-answer preparation, original
+B1/B2/B3training, fullstate/export-childexit/vLLM2500, completed-only transport,
+fulloracle/scoring and new pairedcontrasts integrated. Two immutable generation/
+student SPEC paths prevent later overwriting earlier receipts. Actual input A1,
+fullcycle timing, concreteSPEC/current D1budget and numericA2 stillrequired.
+No actualinputconsumer/model/oldscore/statistic/upload/reservation executed.
+
+20distinctnewchecks pass. Studentinitial9PASS/1fixturecreate-onlytamper error,
+onlyfailedcase repairedPASS0.147s. Outerinitial8PASS/2wrongteachernamefixtureerrors,
+onlythose2 repairedPASS0.005s. Oldsuccessfulchecks notrerun.23newGitfiles verified
+once; stagedstylePASS. Metadata builder first failed missing local_path inC1SPEC
+before anypayloadwrite; actual oldP010tokenizer path found, five smalltokenizer
+hashes checked asNEWconsumer sources, onlyunwrittenpayload completed. Original
+failedscript retained. Read-only guessedinputbuilder/analysis/test/WORKBOARD paths
+failed beforecorrectrg lookup; no scientificsideeffects. No oldweight hash replay.
+
+C1 exactA2/currentownerbalance and longsourceCR remainpending atlatestread96430;
+OT3 actual narrow correctionclosed. No newHEAD/billing/provider/Papers checks
+for oldclosedwork. P01019UTC formalcopyfreeze remains separate.
+
 ### 2026-10-20 22:06:22 PDT — B input/student adapters prepared; no production replay
 
 New target4e8718058135aaae750900f2c41500384f72c8e3 adds the complete input
