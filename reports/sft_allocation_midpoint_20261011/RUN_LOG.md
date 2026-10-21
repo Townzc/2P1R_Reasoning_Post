@@ -1,3 +1,20 @@
+### 2026-10-20 19:44:10 PDT — C1 complete source path prepared for the shared review
+
+Fixed source target 364868f6ca2cb9579057d59df5b5b50fad662f01; packet c1_full_path_preflight_v1 and
+C1_FULL_PATH_CR_A1_A2_REQUEST.md. New actual Modal entry, permanent shared dispatch
+ledger/fence/claim, input upload/readback, completed-call collection and readonly
+closure implemented. Source12;9 outer checks0.027s then6 new transport/closure
+checks0.023s once;13 new Git files verified. Original8 C1 sources unchanged.
+No actual SPEC/timing basis/input copy/model/forward/upload/provider/billing/reserve.
+One shared request: sourceCR authorizes original-byte copy, then actualA1/numeric
+addendum before any paid work. No extra per-group/code-only gate. Original NLL
+has no measured duration; no reviewer estimate or synthetic fixture is treated
+as measurement. NFC actualA1/readonlydiagnostic CR remain pending; nextnormal
+review>=02:54:44UTC for those requests. P010 formal freeze stillOct21 19UTC.
+Preparation navigation failures (two nonexistent old log paths and one guessed
+private builder path) were read-only, before publication, with no science effect.
+No old science/checks/builders repeated; no Z1/external messages/subagents.
+
 Technical metadata clarification: the immutable NFC archive's first9parts
 are exactly40MiB, and the last is41,753,040bytes; the correct bound is at most40MiB.
 Exact manifests already held correct sizes. A new dated note corrects wording;

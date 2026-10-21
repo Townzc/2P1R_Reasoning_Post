@@ -1,3 +1,5 @@
+P011 2026-10-21T02:44:10.654490+00:00: [C1 shared full-path review](C1_FULL_PATH_CR_A1_A2_REQUEST.md), source12 and15new checks prepared; actual inputs/timing/paid admission absent. NFC actualA1 and diagnosticCR still pending.
+
 P011 2026-10-21T02:19:20.078375+00:00: [OT3 complete actual A1 request](OT3_NFC_COMPLETE_ACTUAL_A1_REQUEST.md),10080encodings/eightplans/B41813212/U654 complete; no training admission. Read-only diagnostic exactCR remains pending.
 
 P011 2026-10-21T02:11:25.140710+00:00: [Read-only diagnostic exact CR request](OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md), prepared NOTRUN; owner-approved NFC continuation independently running.
