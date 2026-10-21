@@ -1,3 +1,5 @@
+Current 2026-10-21T16:46:20.151203+00:00: Exact100/all16 flags accepted from41931b7c/report2423ae52. Original actual input and B1 upload unchanged; fresh first-dispatch gates remain. See review_c780b4e4_B100_and_long_disposition_accepted_v1. Earlier request preserved below.
+
 # Current B students: exact100-source failed-parent append-only admission
 
 Updated 2026-10-21T15:36:31.492037+00:00; target `3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce`. Same request `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`, scope `p011-B-retained-students-complete-path-CR-A1-A2-lite`. Status `POST_LONG_R2_FAILED_LEDGER_AND_ORIGINAL_B1_UPLOAD_REUSE_EXACT100_PENDING`.

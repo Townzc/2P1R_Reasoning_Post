@@ -1,3 +1,5 @@
+Current 2026-10-21T16:46:20.151203+00:00: Answered by c780b4e4/reportbba65b44: failure integrity PASS, A held for owner decision, D1+D2 F15 preparation explicitly authorized subject to new full CR/numeric. No paid/retry/reserve-release permission. See review_c780b4e4_B100_and_long_disposition_accepted_v1. Earlier request preserved below.
+
 # Original long r2 forecast failures: integrity and delegated disposition
 
 Request `p011-long-LR-r2-forecast-failure-disposition-r1`; scope `p011-long-LR-r2-forecast-failure-disposition`. Target `3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce`. Submitted locally 2026-10-21T15:36:31.492037+00:00. Exact failure manifest SHA `8ede80afc6dc0e59f1e04df562a2289b9af358381dfd1f96121444de5c3793e8`. Read `LONG_LR_R2_FAILURE_HEADROOM_ERRATUM.md` with the unchanged failure packet: original README prose2.6s is wrong; actual saved diagnostic baseline headroom3.744444144s.
