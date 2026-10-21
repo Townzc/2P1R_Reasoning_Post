@@ -1,3 +1,7 @@
+## Original3 models/collections complete; one local pre-entry disposition — 2026-10-21T11:02:09.540358+00:00
+
+Original exact37-source/A1/A2 and total5.95 engineering admission remain accepted. All three model calls and collections are DONE/actualSTOPPED0. L15/L3 full state/raw oracles DONE. F15 local audit failed before ATTEMPT creation because a new unrelated review-appendix HEAD was not published yet. [Failure bytes, original collection, precise scope and future command](long_F15_local_audit_preentry_failure_v1/README.md). Please give an explicit reasoned delegated allowance for one new unchanged local audit only, within original deadline2026-10-21T12:50:18.903812+00:00. No automatic retry has occurred; no paid call/model/collect/source/score rerun is requested. This is appended to existing preflight request and does not change the scientific experiment.
+
 Latest 2026-10-21T10:23:10.455125+00:00: Exact37 failed-ledger amendment and original actual input/numeric accepted by Claude a7ab5c42, report395b60e2. All11flags and the source-map erratum explicitly covered. Fresh entry budget10:21:42 observed; original three engineering calls remain unused before entry. Formal44-source and formal numeric are separate pending.
 
 Latest binding clarification 2026-10-21T09:44:02.935517+00:00: [dated source-map erratum](LONG_PREFLIGHT_LEDGER_BINDING_ERRATUM.md). Exactcandidate remains37source@38942d3a; inherited top-level33 map is historical. SPEC, SOURCE_BINDING and requirements.binding agree. No source/test/model change.

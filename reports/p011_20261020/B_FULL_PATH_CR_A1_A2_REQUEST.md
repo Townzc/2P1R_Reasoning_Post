@@ -1,3 +1,11 @@
+## Current owner erratum appendix — 2026-10-21T11:02:09.540358+00:00
+
+Same request `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`, exact scope `p011-B-remaining-generation-complete-path-CR-A1-A2-lite`, new target **5993ccef3da13a68b9c988a173b36de8161e9974**. [Current91-source packet](b_remaining_current_runtime_v1/README.md), [exact requirements](b_remaining_current_runtime_v1/REVIEW_REQUIREMENTS.json), [SPEC](b_remaining_current_runtime_v1/SPEC.json).
+
+Claude a51adc62 explicitly voids the old B preserve48 clause. The previous87-source candidate at7fec6ba3 stays immutable. Four new adapters change only current protected0 accounting, the SPEC locator and binding to the true erratum SHA; source/transport/selection/dose/timing and all failed reserves stay unchanged. Please bind exact91-source/SPEC, both original decision and erratum, all14 required flags, actual old reuse A1 and full numeric requirements. Four new tests passed once; no original21 successful checks repeated. No new B model/transport/encoding/score/reserve/upload. The deadline remains13:54:30UTC and students remain unadmitted.
+
+The original a7ab self-described report times are corrected by the immutable erratum: review completion preceded Git10:08:11UTC. Original files are retained. This top appendix supersedes the preserve48 and87-source portions below.
+
 ## Current continuation appendix — 2026-10-21T10:50:34.870946+00:00
 
 The original B call remains failed. The same request `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1` now requests exact `p011-B-remaining-generation-complete-path-CR-A1-A2-lite` review at **7fec6ba31d9507edfd771a051110b21896072d16**, packet [b_remaining_runtime_v1](b_remaining_runtime_v1/README.md). All87 source bindings, concrete SPEC, original reuse A1 and13 flags are in REVIEW_REQUIREMENTS.json. No new B model, transport, encoding or score ran. Claude's a7ab5c42 conditional delegated decision is preserved verbatim; it alone is not the new exact runtime approval.

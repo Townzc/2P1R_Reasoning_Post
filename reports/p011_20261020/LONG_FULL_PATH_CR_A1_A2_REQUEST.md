@@ -1,3 +1,9 @@
+## Formal44 source accepted; actual numerical appendix follows — 2026-10-21T11:02:09.540358+00:00
+
+Claude a51adc62 exact44-source report SHA83d5d8c9a4ad6e63afb9b15a51be2261843c242978ae88b0f9e112782b6830e5 is truly PASS at61989e7b, with all six source flags. [Saved acceptance](review_a51adc62_long44_and_B_erratum_accepted_v1/README.md) fixed at5993ccef3da13a68b9c988a173b36de8161e9974. No upload, input reconstruction or formal model is admitted. Actual engineering/state/timing/memory, concrete formalSPEC/nine numeric flags and original Claude smoke selection still follow in the same shared request.
+
+All three original engineering models and collections completed. L15 andL3 complete local state/raw oracles passed; F15 local audit hit the pre-entry publication guard before creating its audit directory, described in [the exact local-only disposition](long_F15_local_audit_preentry_failure_v1/README.md). No automatic retry, model/collector replay or newwindow. The original absolute closeout deadline is2026-10-21T12:50:18.903812+00:00.
+
 ## Current-owner and artifact-reuse source appendix - 2026-10-21T09:41:19.518063+00:00
 
 Exact source target **`61989e7b43c3d9d309047cc615b3dc12aba689db`**,44-source map in [SOURCE_BINDING](long_current_source_addendum_v1/SOURCE_BINDING.json); [requirements](long_current_source_addendum_v1/REVIEW_REQUIREMENTS.json) and [narrow diff](long_current_source_addendum_v1/NARROW_FORMAL_ADAPTER_DIFF.patch). This is the same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, source scope `p011-long-A-D-complete-path-CR`; no per-cell or new scientific gate.

@@ -1,0 +1,4 @@
+
+### 2026-10-21 04:02:09 PDT / event and read times in packet — P011 audit follow-up
+
+Current91-source B appendix at5993ccef3da13a68b9c988a173b36de8161e9974 adopts truea51adc62 protected0 erratum; all failed reserves and original science retained. Four new tests passed once, old successes untouched. Formal44 source accepted, numeric/selection not accepted. Three original engineering models and collections completed; LoRA15/LoRA3 full oracles passed. Fullparameter local audit exited before directory/ATTEMPT because newHEAD was unpushed: operator sequencing failure, no state/model/scoring work. Original evidence preserved and one local-only disposition appended to shared review, no automatic retry. Earlier remoteverify succeeded before a later CLI-record KeyError; only unwritten CLI tail repaired, no repeated remoteverify. P01019UTC freeze/finalA5 retained.
