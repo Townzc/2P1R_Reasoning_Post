@@ -1,3 +1,5 @@
+P011 2026-10-21T08:03:21.245286+00:00: [C1 r2 complete original-token NLL evidence](reports/p011_20261020/c1_r2_complete_results_v1/README.md); all9,594sequences locallyverified/STOPPED0, actualA3 pending. B andlongpreflight exactadmission remainpending.
+
 P011 2026-10-21T07:44:30.984654+00:00: C1 r2 full A2 accepted, fresh entry evidence ready; [B generation numerical review](reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md) now contains concreteSPEC and originalcompletecycle evidence. No repeat of completed inputs or old runs; P01019UTCfreeze remains separate.
 
 P011 2026-10-21T07:24:21.357367+00:00: [Completed long input evidence and complete engineering preflight review](reports/p011_20261020/LONG_PREFLIGHT_CR_A1_A2_REQUEST.md). B actualinputA1 accepted; C1r2 finalreview pending. OriginalC1failed/preserved, no newGPUcall. P010Oct21 19UTCfreeze remains due.

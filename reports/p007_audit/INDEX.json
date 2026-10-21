@@ -4548,7 +4548,7 @@
     {
       "request_id": "p011-C1-r2-chunk320-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-C1-r2-chunk320-complete-path-CR-A1-A2-lite",
-      "status": "ACCEPTED_PASS_WITH_NOTES_ONE_R2_SUBMITTED",
+      "status": "ACCEPTED_ONE_R2_COMPLETED_CLOSED_ACTUAL_A3_PENDING",
       "target_commit": "d18581c10d2a7647ff9ecb1f028eca911b7837cf",
       "request_file": "reports/p011_20261020/C1_R2_COMPLETE_PATH_CR_A1_A2_REQUEST.md",
       "source_count": 22,
@@ -4556,11 +4556,11 @@
       "packet": "reports/p011_20261020/c1_r2_runtime_v1",
       "submitted_utc": "2026-10-21T06:51:11.480491+00:00",
       "candidate_reserve_usd": "2.64",
-      "actual_new_reserve_usd": "0",
+      "actual_new_reserve_usd": "2.64",
       "retained_failed_C1_reserve_usd": "3.74",
       "input_recopy": false,
       "input_upload": false,
-      "scientific_calls_new": 0,
+      "scientific_calls_new": 1,
       "report_commit": "2dacfd835503e6ea2021a21951c3b0f199c75b1d",
       "report_sha256": "f1861f6d49a2a78b70c3633fdeffd155340cf5a1558a63fbf04aa5201f4f831c",
       "acceptance_packet": "reports/p011_20261020/review_2dacfd83_C1r2_full_A2_accepted_v1",
@@ -4630,6 +4630,21 @@
       "actual_new_reserved_usd": "0",
       "owner_maximum_three_job_reserve_usd": "6",
       "new_distinct_checks": 13
+    },
+    {
+      "request_id": "p011-C1-r2-complete-original-token-NLL-actual-A3-r1",
+      "scope": "p011-C1-r2-complete-original-token-NLL-actual-A3",
+      "target_commit": "bf0ca6de753a1788db31887f9523f4a29ac1bc27",
+      "status": "PENDING_ACTUAL_A3",
+      "request_file": "reports/p011_20261020/C1_R2_COMPLETE_ACTUAL_A3_REQUEST.md",
+      "packet": "reports/p011_20261020/c1_r2_complete_results_v1",
+      "manifest_sha256": "ab609ac33112eaf2484039f5b6bb25a32ce284350af57e2b271acb5944c5c8fc",
+      "submitted_utc": "2026-10-21T08:03:21.245286+00:00",
+      "original_result_sha256": "7ac0f5eb314ca805fc2e0d74bdc89a8906732015c9c8992913fe7f8afc28e4b6",
+      "summary_sha256": "0a5cc7d5e25f61a59ae6e23203b40262b8d5f682b702ef0bae0a18cbbba0db3c",
+      "completed_call": true,
+      "provider_STOPPED_owned0": true,
+      "new_forward_during_closeout": 0
     }
   ],
   "p008_v31": {
@@ -6492,9 +6507,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T07:53:02.526935+00:00",
+  "last_updated_utc": "2026-10-21T08:03:21.245286+00:00",
   "p011": {
-    "status": "C1_r2_submitted_full_A2_accepted_B_numeric_and_long_preflight_pending",
+    "status": "C1_r2_COMPLETE_LOCAL_PROOF_A3_PENDING_B_LONG_ADMISSION_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6622,7 +6637,7 @@
     "ot3_NFC_candidate": "10738e624300ff125c59fd127e798bc4e5fbdc85",
     "ot3_NFC_owner_exception_approved": true,
     "ot3_NFC_production_executed": true,
-    "active_scientific_computation": true,
+    "active_scientific_computation": false,
     "c1_execution_draft": {
       "packet": "reports/p011_20261020/c1_execution_draft_v1",
       "status": "PREPARED_NOTRUN",
@@ -6915,6 +6930,24 @@
       "new_checks": 8,
       "old_checks_repeated": 0,
       "actual_corpus_reads_or_model_calls": 0
+    },
+    "c1_r2_complete": {
+      "target": "bf0ca6de753a1788db31887f9523f4a29ac1bc27",
+      "packet": "reports/p011_20261020/c1_r2_complete_results_v1",
+      "manifest_sha256": "ab609ac33112eaf2484039f5b6bb25a32ce284350af57e2b271acb5944c5c8fc",
+      "unique_sequences": 9594,
+      "chunks": 30,
+      "provider_STOPPED0": true,
+      "actual_A3_accepted": false,
+      "no_new_tokenization_or_training": true,
+      "retained_C_attempt_reserve_usd": "6.38"
+    },
+    "c2_scoring_draft": {
+      "target": "bf0ca6de753a1788db31887f9523f4a29ac1bc27",
+      "packet": "reports/p011_20261020/c2_scoring_draft_v1",
+      "new_checks": 6,
+      "production_scoring": false,
+      "new_separate_review_gate": false
     }
   }
 }

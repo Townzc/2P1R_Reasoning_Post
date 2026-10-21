@@ -1,3 +1,5 @@
+P011 2026-10-21T08:03:21.245286+00:00: [C1 r2 complete original-token NLL evidence](c1_r2_complete_results_v1/README.md); all9,594sequences locallyverified/STOPPED0, actualA3 pending. B andlongpreflight exactadmission remainpending.
+
 P011 2026-10-21T07:53:02.526935+00:00: [C1 r2 submitted once](c1_r2_started_v1/README.md), originalinputupload reused; fullresult stillpending. [C2 newoutput evidence draft](c2_new_output_evidence_draft_v1/README.md), notadmission.
 
 P011 2026-10-21T07:44:30.984654+00:00: [C1 r2 final A2 accepted](review_2dacfd83_C1r2_full_A2_accepted_v1/README.md); fresh entry checks then one call with originalupload reuse. [B concrete generation numeric candidate](b_generation_runtime_v1/README.md) submitted; latestdispatch09:05:35UTC under fullwindow. Long preflight source/actualinput review pending.
