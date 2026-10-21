@@ -1,3 +1,8 @@
+Technical metadata clarification: the immutable NFC archive's first9parts
+are exactly40MiB, and the last is41,753,040bytes; the correct bound is at most40MiB.
+Exact manifests already held correct sizes. A new dated note corrects wording;
+no immutable packet/scientific bytes or checks were repeated.
+
 ### 2026-10-20 19:19:20 PDT — Approved NFC continuation completed; actual full input A1 requested
 
 Original32741EXIT0CONSUMED, event02:16:03UTC;965confirmed byte reuse +9115new =10080,

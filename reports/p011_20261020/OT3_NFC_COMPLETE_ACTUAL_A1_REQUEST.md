@@ -23,7 +23,7 @@ all exact whole-answer q-or-q+1 exposure plans are included. The owner adopted
 max-eight-cell B and252/1008/4032 before any P011 student result; do not restore
 the superseded original A7-once-dose or4096target in this acceptance.
 
-The complete original archive is419240400bytes across10numbered parts under40MiB.
+The complete original archive is419240400bytes across10numbered parts of at most40MiB.
 Concatenate in lexical order. Single streaming readback matched all18original
 members, including all SELECTED_RAW/ENCODED/NATIVE_NORMALIZATION lines, eight
 plans, memberships, dose, intent, benchmarks and original manifest. Public
@@ -53,3 +53,6 @@ CR; it cannot alter this fixed input packet or be assumed to have found anything
 
 Keep report strictly non-Z1. Original labels and no-correctness-verification
 policy remain. Created 2026-10-21T02:19:20.078375+00:00, ordinary noforce publication follows.
+
+Part-size wording is clarified in OT3_NFC_ARCHIVE_SIZE_NOTE.md; the immutable
+actual packet and all exact byte sizes remain unchanged.
