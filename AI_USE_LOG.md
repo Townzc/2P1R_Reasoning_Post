@@ -1,3 +1,21 @@
+### 2026-10-20 21:39:29 PDT — Independent B loader/scorer preparation
+
+Original400 prompt projection (not executed), exact T1.5/vLLM loader,6400raw-gold
+binding,64chunk frozen-symbolic journal/owned process/saved-Boolean-only proof and
+B16 selection integration prepared.10NEWmock checks PASS1.219s, no old successful
+suite or real model/scorer rerun. Proposed62000+5local cap/61800scenario remains
+unadmitted; entire result window and unchanged B1/B2/B3 path still need full CR.
+No separate code-only gate or paid measurement exception created. Full B input
+copy, outer/source/asset/timing/admission/collector/CLI and student integration
+remain necessary; no actual B input/output/reserve. Raw-gold/model/source oldbytes
+untouched. Read-only guessed old request/test filenames failed, no sideeffect.
+
+Long A/D full31source request now remote verified at a48333d9/source db1aff07;
+push66836EXIT0 consumed, no repeat. C1 bounded exception candidate a253452a awaits
+exact shortCR/A2, original inputcopy/A1 already done. OT3 narrow attachment fix
+pending. LastHEADa281 observed04:05; next C1normal>=04:45:38UTC. No provider/billing/
+Papers or paidwork. P010 Oct21 19UTC formal freeze retained.
+
 ### 2026-10-20 21:33:15 PDT — Long A/D complete path submitted for shared CR
 
 Exact31source targetdb1aff076163606ded08776eca637c043d6c916b, one shared requestp011-long-A-D-complete-path-CR-A1-A2-lite-r1. Full entry/consumer/
