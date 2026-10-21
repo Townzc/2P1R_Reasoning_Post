@@ -151,3 +151,21 @@ completed for17distinctnewfiles. Nooldscience/testing rerun.
 Prepared newBstudentanalysis adapter changes only import tocurrentownerpath;
 originalscienceAST is identical byone newboundarycheck. Noanalysis ran; adapter
 must enter future complete student-source CR, notactivegeneration75source.
+
+### 2026-10-21 02:07:49 PDT — original B generation failed and preserved
+
+Original51777EXIT1CONSUMED, source75unchanged, worker08:56:56.623944→failure08:59:50.524229;
+provider09:01:18STOPPED0. Newoperator-onlyboundedpreservation69146EXIT0CONSUMED
+09:02:07.827389:31files16,328,937bytes and54namedkeys (13present/41absent), stableinventory.
+Original1280raw/1024transportconfirmed retained;5120unattempted. One375-token nativeEOS
+answer contains unmappedbutinmodelvocabID151924; outsideoldnoEOS1024capexception.
+Metadata-onlyinspection used vocabJSON, zeroencode/decode/score;unknownnotzero.
+No model/source hotpatch/retry/fullcollector. Failed3.01 andC1both6.38retained.
+
+Fixedfailuretarget14898f087718cdf0b1ba0e1b3f01df94f36aaa13, originalpublicarchiveprivacyprojection/fullreadback,
+13newGitfilesverifiedonce. Samecurrentowner caps/noautomaticretry; explicitreasoned
+Claudeownerdecision andindependentexactreviewrequested forcloseorboundednewcontinuation,
+includingtransportclassandcompletewindow. No sleepownerquestion/externalmessage.
+Original09:05:35latestwindowisnotfuturepermission. C2sharesoldtransport:riskaddedto
+itspendingsourceCR, noC2rule/source/callchanged. Longactualsubset/spec67877fc1
+requestalreadypublished, remainsawaitingfinalA1/numeric; C1actualA3alreadyaccepted.

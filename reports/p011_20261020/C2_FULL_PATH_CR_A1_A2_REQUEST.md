@@ -1,3 +1,5 @@
+Latest 2026-10-21T09:07:49.899463+00:00: New independent Bfailure used the shared oldteacher_transport guard: a375token nativeEOS output has unmappedmodelID151924. Evidence anddecisionrequest atB_FAILED_NATIVE_EOS_REVIEW_REQUEST.md. C2source78unchanged/noactualinput/call; considerthisrisk in pendingCR, noautomaticrulechange.
+
 # C2 full generation/student path: shared CR → actual A1 → numeric A2-lite
 
 Submitted 2026-10-21T08:35:55.599379+00:00. Exact candidate **f0a1d8aafc98c671f433f838a9ef278e670d848a**,78-source closure in [reports/p011_20261020/c2_full_path_preflight_v1/SOURCE_BINDING.json](c2_full_path_preflight_v1/SOURCE_BINDING.json). Request `p011-C2-generation-student-complete-path-CR-A1-A2-lite-r1`; complete scope `p011-C2-generation-student-complete-path-CR-A1-A2-lite`. First source scope `p011-C2-generation-student-complete-path-CR`.

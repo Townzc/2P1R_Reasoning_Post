@@ -1,3 +1,5 @@
+Latest 2026-10-21T09:07:49.899463+00:00: Original admittedgenerationfailed08:59:50UTC; full1280raw/1024confirmedpreserved/STOPPED0. No retry. Explicitdecision pending atB_FAILED_NATIVE_EOS_REVIEW_REQUEST.md.
+
 Latest 2026-10-21T08:47:00.549726+00:00: Generation-only exact A2-lite PASS-WITH-NOTES at85bc4260 accepted fromClaude bbf60ab0; fresh08:44:25 rates/D1 saved. One originalupload/entry stillpending atthisentry; Bstudents/B4notadmitted.
 Acceptance: reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1
 

@@ -4417,7 +4417,7 @@
       "scope": "p011-B-generation-student-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
       "target_commit": "85bc4260036c607aae6db10bd3179eab14c91a66",
-      "status": "GENERATION_EXACT_A2_ACCEPTED_FRESH_ENTRY_PENDING_STUDENTS_NOT_ADMITTED",
+      "status": "ADMITTED_ORIGINAL_GENERATION_FAILED_PRESERVED_NO_RETRY_STUDENTS_NOT_ADMITTED",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/b_generation_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4518,7 +4518,9 @@
       "new_revision_distinct_checks": 6,
       "old_successful_checks_repeated": 0,
       "accepted_record": "reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1/B_GENERATION_A1_A2_ACCEPTED.json",
-      "acceptance_read_utc": "2026-10-21T08:43:53.865220+00:00"
+      "acceptance_read_utc": "2026-10-21T08:43:53.865220+00:00",
+      "failure_packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
+      "failure_decision_request": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1"
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -4670,6 +4672,21 @@
       "submitted_utc": "2026-10-21T08:35:55.599379+00:00",
       "source_only_authorizes_first_CPU_projection": true,
       "production_input_or_model_run": false
+    },
+    {
+      "request_id": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1",
+      "scope": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision",
+      "target_commit": "14898f087718cdf0b1ba0e1b3f01df94f36aaa13",
+      "status": "PENDING_FAILURE_INTEGRITY_AND_EXPLICIT_CLAUDE_OWNER_DECISION_NO_CONTINUATION",
+      "request_file": "reports/p011_20261020/B_FAILED_NATIVE_EOS_REVIEW_REQUEST.md",
+      "packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
+      "manifest_sha256": "155e905de5839bce47818e1e245fd3fea10d7c18eff82de267696e935abe26ce",
+      "submitted_utc": "2026-10-21T09:07:49.899463+00:00",
+      "original_parent_failed": true,
+      "raw_outputs_preserved": 1280,
+      "confirmed_outputs": 1024,
+      "unattempted_outputs": 5120,
+      "new_calls": 0
     }
   ],
   "p008_v31": {
@@ -6532,7 +6549,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T08:59:20.852728+00:00",
+  "last_updated_utc": "2026-10-21T09:07:49.899463+00:00",
   "p011": {
     "status": "C1_r2_COMPLETE_LOCAL_PROOF_A3_PENDING_B_LONG_ADMISSION_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6810,14 +6827,19 @@
       "input_A1_report_commit": "135a4f53196b43f4e31cc4e9ef222530a50b479a",
       "spec_sha256": "9fe8109ff13cfcf7f86900ec66d635a9506697e947c06c77d6fd950b85ee1a79",
       "latest_dispatch_utc": "2026-10-21T09:05:35Z",
-      "generation_status": "ORIGINAL_SUBMITTED",
+      "generation_status": "ORIGINAL_FAILED_STOPPED0_PRESERVED",
       "app_id": "ap-8rAEj1Ve8WNUjGycJvffzx",
       "call_id": "fc-01M5ETTXQ9X76CGEDHX23M464X",
       "submitted_epoch": 1792573011.712575,
       "original_cli_session": 51777,
       "actual_generation_reserve_usd": "3.01",
       "source75_unchanged": true,
-      "students_not_admitted": true
+      "students_not_admitted": true,
+      "original_cli51777": "EXIT1CONSUMED",
+      "failure_packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
+      "failure_decision_request": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1",
+      "original_generation_reserve_retained_usd": "3.01",
+      "no_retry": true
     },
     "C1_actual_A2_current": {
       "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",
@@ -7017,6 +7039,7 @@
       "C": "6.38",
       "D": "0",
       "emergency": "0"
-    }
+    },
+    "latest_failure_request": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1"
   }
 }
