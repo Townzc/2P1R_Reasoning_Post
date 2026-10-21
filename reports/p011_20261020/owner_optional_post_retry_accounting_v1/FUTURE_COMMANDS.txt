@@ -1,0 +1,10 @@
+# Only after a prospective current-state screen supports spending; each new job once.
+# JOB: A4 first, then A3, then A2/A8; global lastdispatch22:30UTC.
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/record_p011_owner_post_retry_optional_budget.py --directory .local/p011_20261020/r1/NEW_DATED_OPTIONAL_DIRECTORY
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/prepare_p011_long_owner_post_retry_optional_transfer.py --job JOB
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/modal run experiments/p011/modal_long_owner_post_retry_optional.py --jobs JOB --review-json .local/p011_20261020/r1/OWNER150_EXECUTION_AUTHORIZATION.json --budget-json .local/p011_20261020/r1/NEW_DATED_OPTIONAL_DIRECTORY/BUDGET.json
+# No commit/push between launch and SUBMITTED.
+# New optional collect/audit/score via p011_long_owner_post_retry_optional_io.py, respectively Modal/data_pipeline/math_verify environments.
+# Completed A1 retry comparisons use analysis_env, exactly once per original allowed pair:
+PYTHONPATH=. .local/p009_20261014/r1/analysis_env/bin/python scripts/analyze_p011_long_owner_cross_attempt.py --left long_A1_S-F15_s17_owner_r2 --right JOB --review .local/p011_20261020/r1/OWNER150_EXECUTION_AUTHORIZATION.json
+# A7/baseline posthoc smoke and D1/D2 can retain their original closed analysis locators.
