@@ -1,3 +1,5 @@
+P011 2026-10-21T06:16:07.619434+00:00: [Long runtime R1–R3 repair review](LONG_FULL_PATH_CR_A1_A2_REQUEST.md), exact37source targete6ce0467 and13newchecks. Original input-only permission was consumed by [CPU input failure](long_input_failed_preservation_v1/README.md); [one independent CPU replacement](LONG_NUMERIC_GOLD_INPUT_REPLACEMENT_PROPOSAL.md) awaits explicitownerexception andexactCR. No long-model call. C1 remains failed/preserved with3.74reserved; Bfull71review pending. P01019UTCformalfreeze remains independent.
+
 P011 2026-10-21T05:50:55.251082+00:00: [C1 failed; preserved, no retry](c1_failed_preservation_v1/README.md), [actual review request](C1_FAILED_ACTUAL_REVIEW_REQUEST.md). B and long fullsource requests pending.
 
 P011 2026-10-21T05:38:32.554883+00:00: [C1 original call submitted once](c1_original_started_v1/README.md); fullresult/A3pending.
