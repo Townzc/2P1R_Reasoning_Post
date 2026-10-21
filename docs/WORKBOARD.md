@@ -9,7 +9,7 @@ those unavailable answers and record actual P_cov. More than10% all-failure
 requires disposition before training preparation. Original dose/seed/LR remain.
 Full B entry, shared numeric admission, transport and endpoint integration are
 still pending; no input consumer, encoding, model, score or reservation executed.
-See [adapter packet](../reports/p011_20261020/b_input_student_adapter_draft_v1/README.md).
+See [adapter packet](https://github.com/Townzc/2P1R_Reasoning_Post/blob/4e8718058135aaae750900f2c41500384f72c8e3/reports/p011_20261020/b_input_student_adapter_draft_v1/README.md).
 
 Long complete source request db1aff07 remains pending. Latest read-only branch
 observation05:05:59UTC still96430ebd, no new report. It occurred about3 seconds
