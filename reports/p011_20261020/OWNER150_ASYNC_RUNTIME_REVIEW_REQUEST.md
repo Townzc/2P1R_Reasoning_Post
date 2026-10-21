@@ -1,3 +1,7 @@
+### 2026-10-21T21:19:27.938932+00:00 — Optional clients after A1 preemption and exact-attempt contrasts
+
+Fixed targetc6917185a1ae0a8578fff24647f4f502d5053ad9, packet owner_optional_post_retry_accounting_v1, CLIENT_BINDING77exactfiles. New clients include original A1failed elapsed/partial artifact bounds and its one submitted retry, both controls and all original jobs. All active69/63/110 scientific source files remain unchanged. No optional call has run. New4accounting+2locator tests passed once, allold successful tests notrerun. New cross-attempt analyzer routes A1owner_r2 to its ownSPEC/proof; paired-question interval and contrast allowlist unchanged, no statistical run yet. Please include this diff in asynchronous review within30minutes; direct owner execution remains nonblocking, stop only for a scientific bug. Previous optional targetb2ef4d81 is historical and must not be used after the newfailedparent.
+
 ### 2026-10-21T21:10:24.086847+00:00 — A1 preemption infrastructure retry
 
 See [OWNER_A1_PREEMPTION_INFRA_RETRY_ASYNC_REVIEW_REQUEST.md](OWNER_A1_PREEMPTION_INFRA_RETRY_ASYNC_REVIEW_REQUEST.md), target52a8e21c7cfb70cd4fa6ddc4a4f220cce7574d89. Direct owner permits one infrastructure retry; async scientific review within30minutes, no prior gate. Closed-collector and optional-source reviews remain pending. The old optional entry cannot handle this new failed parent and must not be used for new spend.
