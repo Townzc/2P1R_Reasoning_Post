@@ -1,3 +1,7 @@
+## Actual failure-state update 2026-10-21T13:21:28.888873+00:00
+
+Independent B92 input/6400actualA3/96 source reviews remain pending. Future paid student SPEC/ledger must additionally bind two new original failed long jobs26.08+15.63; currentA47.66/B6.02/C6.38. B CPU input path is not implicitly blocked after its own existing gates. Evidence: `reports/p011_20261020/LONG_INITIAL3_VALIDATION_FAILURE_DISPOSITION_REQUEST.md`.
+
 ## Complete retained-student source appendix — 2026-10-21T12:45:01.155651+00:00
 
 Same shared B request; target **bf708e6ac81fa91b93e59d56b58a57ded9b0e7fb**, [96-source complete student path](b_retained_students_source_v1/README.md), [exact source/required conclusions](b_retained_students_source_v1/REVIEW_REQUIREMENTS.json), source scope `p011-B-retained-students-complete-path-CR`. Four new adapters preserve the prior92 source entries and original science. Seven new synthetic integration checks passed once0.005s. No actual student input/SPEC/model. This source appendix may be reviewed with the pending92-source input driver and actual6400 A3; their exact bindings remain distinct and unchanged. Source PASS alone grants no paid work.

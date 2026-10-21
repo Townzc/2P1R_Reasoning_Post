@@ -4330,7 +4330,7 @@
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
       "target_commit": "eb694d374ec7f780a10d1f14ea3e2a33994725db",
-      "status": "INITIAL3_EXACT48_CR_A1_A2_ACCEPTED_FRESH_DISPATCH_REQUIRED",
+      "status": "INITIAL_TWO_FAILED_PRE_MODEL_VALIDATION_BASELINE_HELD_DELEGATED_DISPOSITION_PENDING",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_conditional_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4564,7 +4564,10 @@
         "long_A7_S-F15_s17_r1",
         "long_baseline_S-L15_s17_r1"
       ],
-      "later_jobs_admitted": false
+      "later_jobs_admitted": false,
+      "failure_disposition_request": "p011-long-initial2-rate-validation-failure-disposition-r1",
+      "failure_packet": "reports/p011_20261020/long_initial3_plan_validation_failures_v1",
+      "current_paid_dispatch_permitted": false
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
@@ -5015,6 +5018,18 @@
       "actual_independent_A3_accepted": false,
       "student_input_admitted": false,
       "student_models_admitted": false
+    },
+    {
+      "request_id": "p011-long-initial2-rate-validation-failure-disposition-r1",
+      "scope": "p011-long-initial2-rate-validation-failure-disposition",
+      "status": "PENDING_EXPLICIT_DELEGATED_DISPOSITION_AND_INDEPENDENT_FAILURE_REVIEW",
+      "target_commit": "141dae026c3dcf1cc20089f153561e53ec03bc9a",
+      "request_file": "reports/p011_20261020/LONG_INITIAL3_VALIDATION_FAILURE_DISPOSITION_REQUEST.md",
+      "evidence_packet": "reports/p011_20261020/long_initial3_plan_validation_failures_v1",
+      "manifest_sha256": "8afff3c26860e50c884826b778c0735e224d04de61cabbd05539beb5d2bc1d27",
+      "no_automatic_retry": true,
+      "baseline_not_dispatched": true,
+      "failed_attempts_retained": 2
     }
   ],
   "p008_v31": {
@@ -6877,9 +6892,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T12:56:17.619534+00:00",
+  "last_updated_utc": "2026-10-21T13:21:28.888873+00:00",
   "p011": {
-    "status": "C1_ACTUAL_A3_CLOSED_C2_DELEGATED_CLOSED_THREE_ENGINEERING_CALLS_COMPLETE_B91_AND_FORMAL_NUMERIC_PENDING",
+    "status": "LONG_INITIAL_TWO_FAILED_PRESERVED_STOPPED0_B_ACTUAL_AND_STUDENT_REVIEWS_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6896,7 +6911,7 @@
     "cutoff_utc": "2026-10-22T05:00:00Z",
     "exploratory": true,
     "production_construction_run": true,
-    "scientific_calls": 4,
+    "scientific_calls": 6,
     "pending_path_CR": "p011-long-three-arm-engineering-preflight-CR-A1-A2-lite-r1",
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
@@ -6938,7 +6953,7 @@
     },
     "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
     "independent_leaf_drafts": "reports/p011_20261020/c1_short_generation_drafts_v1",
-    "scientific_model_calls": 4,
+    "scientific_model_calls": 6,
     "actual_A1": true,
     "long_runtime_leaf_drafts": "reports/p011_20261020/long_runtime_drafts_v1",
     "actual_data_target": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
@@ -7108,16 +7123,16 @@
       "target_commit": "eb694d374ec7f780a10d1f14ea3e2a33994725db",
       "source_count": 48,
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "status": "INITIAL3_EXACT48_CR_A1_A2_ACCEPTED_FRESH_DISPATCH_REQUIRED",
+      "status": "INITIAL_TWO_FAILED_PRE_MODEL_VALIDATION_BASELINE_HELD_DELEGATED_DISPOSITION_PENDING",
       "actual_SPEC": true,
-      "actual_model_calls": 0,
+      "actual_model_calls": 2,
       "actual_endpoint_prompt_tokenizations": 600,
       "saved_endpoint_prompt_encodings": 600,
       "actual_input_consumer_failed": true,
       "original_input_cli": 37318,
       "original_input_permission_consumed": true,
       "repair_packet": "reports/p011_20261020/long_runtime_repair_v1",
-      "failure_packet": "reports/p011_20261020/long_input_failed_preservation_v1",
+      "failure_packet": "reports/p011_20261020/long_initial3_plan_validation_failures_v1",
       "owner_exception_pending": false,
       "owner_exception_approved": true,
       "owner_decision_file_sha256": "9c02012181100feac80ce29855de189d8436251d8b9aaab875e59347c72cbd21",
@@ -7132,7 +7147,7 @@
       "current_source_acceptance_packet": "reports/p011_20261020/review_a51adc62_long44_and_B_erratum_accepted_v1",
       "current_source_report_commit": "a51adc6292fe89a4104eab66fedb62ee6769b11b",
       "actual_formal_SPEC": true,
-      "actual_formal_model_calls": 0,
+      "actual_formal_model_calls": 2,
       "actual_engineering_packet": "reports/p011_20261020/long_preflight_measured_evidence_v1",
       "actual_engineering_target": "fdf8bd86c5113c1f716ab749d24f4f2a9faaf8ac",
       "actual_engineering_models_completed": 3,
@@ -7165,11 +7180,11 @@
         "actual_F15_full_local_proof_condition_satisfied",
         "original_jobs_science_limits_and_no_reserve_release_unchanged"
       ],
-      "actual_formal_uploads": 0,
+      "actual_formal_uploads": 3,
       "initial5_A_reserved_scenario_usd": "110.53",
       "mandatory_remainder_fits": false,
       "explicit_reasoned_budget_disposition_required_before_paid_admission": true,
-      "actual_formal_SPEC_is_candidate_pending_numeric": true,
+      "actual_formal_SPEC_is_candidate_pending_numeric": false,
       "actual_SPEC_selected": true,
       "formal_job_selection_accepted": false,
       "paid_admission_accepted": false,
@@ -7191,8 +7206,17 @@
       "conditional48_exact_review_accepted": true,
       "acceptance_packet": "reports/p011_20261020/review_40bc423e_long_initial3_accepted_v1",
       "current_report_sha256": "1842e920d7f712c2b37bc0dbaa8e09f5412314d2ce2389f873674139b25245b1",
-      "formal_models_submitted": 0,
-      "later_jobs_admitted": false
+      "formal_models_submitted": 2,
+      "later_jobs_admitted": false,
+      "current_paid_dispatch_permitted": false,
+      "actual_formal_training_updates": 0,
+      "actual_formal_endpoint_outputs": 0,
+      "failed_original_model_reservations_usd": "41.71",
+      "retained_category_A_usd": "47.66",
+      "failure_disposition_request": "p011-long-initial2-rate-validation-failure-disposition-r1",
+      "baseline_model_dispatched": false,
+      "baseline_input_upload_completed": true,
+      "baseline_held_for_common_validation_disposition": true
     },
     "B_loader_scoring_prepared": {
       "utc": "2026-10-21T04:39:29.959894+00:00",
@@ -7400,7 +7424,8 @@
         ],
         "actual_student_SPEC_exists": false,
         "student_models_admitted": false
-      }
+      },
+      "future_numeric_requires_all_current_failed_long_parents": true
     },
     "C1_actual_A2_current": {
       "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",
@@ -7637,7 +7662,7 @@
     "long_preflight_source_CR": true,
     "retained_C1_reservations_usd": "6.38",
     "retained_P011_reservations_snapshot_usd": {
-      "A": "5.95",
+      "A": "47.66",
       "B": "6.02",
       "C": "6.38",
       "D": "0",
@@ -7665,10 +7690,10 @@
       "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     "engineering_preflight_model_calls": 3,
-    "paid_model_function_calls_total": 7,
-    "scientific_call_counter_scope": "4 scientific forward/generation calls (including failed attempts) plus3 engineering preflights; not7 successful scientific models",
-    "current_call_counter_source": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/RECEIPT_COUNTERS.json",
-    "retained_reservation_snapshot_note": "Existing original INTENT receipts only; A5.95+B3.01+C6.38=15.34 retained; no expense, invoice, refund or release claim",
+    "paid_model_function_calls_total": 9,
+    "scientific_call_counter_scope": "6 scientific job-function attempts including original C1/B failures and2 pre-model long failures, plus3 engineering calls; not9 successful scientific models",
+    "current_call_counter_source": "reports/p011_20261020/long_initial3_plan_validation_failures_v1/FAILURE_SUMMARY.json",
+    "retained_reservation_snapshot_note": "Actual original attempts retained: A47.66+B6.02+C6.38=60.06; no expense/refund/release or unused-baseline reserve claim",
     "current_state_metadata_addendum": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1",
     "B_complete6400_actual": {
       "request_id": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
@@ -7688,6 +7713,7 @@
       "actual_independent_A3_accepted": false,
       "student_input_admitted": false,
       "student_models_admitted": false
-    }
+    },
+    "active_scientific_compute": 0
   }
 }

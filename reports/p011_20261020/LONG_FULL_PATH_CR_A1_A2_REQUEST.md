@@ -1,3 +1,7 @@
+## Actual failure-state update 2026-10-21T13:21:28.888873+00:00
+
+Exact48 remains historically accepted, but both original A7 L15/F15 calls failed before model load at validate_plan; all failures/STOPPED0/1329 keys preserved. Baseline held. No new model/retry until explicit delegated failure disposition plus exact repair/source/numeric review. Evidence: `reports/p011_20261020/LONG_INITIAL3_VALIDATION_FAILURE_DISPOSITION_REQUEST.md`.
+
 ## Actual exact48 acceptance 2026-10-21T12:56:17.619534+00:00
 
 Claude40bc423e report1842e920 PASS accepts exact eb694d37 adapter, all18 flags and initial3 only. Original conditional numeric report remains unchanged; fresh per-entry budget/provider/fence/window checks and later actualA3/reduced selection remain required. Evidence: `reports/p011_20261020/review_40bc423e_long_initial3_accepted_v1`.
