@@ -1,0 +1,107 @@
+test_binding_missing_from_real_ledger_blocks (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_binding_missing_from_real_ledger_blocks) ... ok
+test_changed_bound_failure_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_changed_bound_failure_rejected) ... ERROR
+test_completed_results_keep_original_success_identity_rules (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_completed_results_keep_original_success_identity_rules) ... ERROR
+test_failed_is_retained_without_writing_success_or_repolling (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_failed_is_retained_without_writing_success_or_repolling) ... ok
+test_false_result_or_missing_provider_cannot_release_failure (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_false_result_or_missing_provider_cannot_release_failure) ... ok
+test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) ... 
+  test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='observed_epoch', value=9.0) ... ERROR
+  test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='observed_epoch', value=nan) ... ERROR
+  test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='app_id', value='ap-other') ... ERROR
+  test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='owned_containers', value=1) ... ERROR
+test_pending_unknown_and_unmatched_slots_still_count (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_pending_unknown_and_unmatched_slots_still_count) ... ok
+test_remote_reads_only_three_exact_saved_fences (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_remote_reads_only_three_exact_saved_fences) ... ok
+test_scientific_worker_budget_policy_and_wrapper_bodies_identical (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_scientific_worker_budget_policy_and_wrapper_bodies_identical) ... ok
+
+======================================================================
+ERROR: test_changed_bound_failure_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_changed_bound_failure_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/tests/test_p011_failed_attempt_ledger.py", line 56, in test_changed_bound_failure_rejected
+    root=Path(d);spec,base=fixture(root);dump(root/'saved/failure.json',{'status':'completed'})
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmpt0cy1jda/saved/failure.json'
+
+======================================================================
+ERROR: test_completed_results_keep_original_success_identity_rules (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_completed_results_keep_original_success_identity_rules)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/tests/test_p011_failed_attempt_ledger.py", line 99, in test_completed_results_keep_original_success_identity_rules
+    dump(p/'RESULT.json',{'app_id':'ap-complete','status':'failed','finished_epoch':19.})
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmppf_q9ujy/.local/p011_20261020/r1/dispatch/complete/RESULT.json'
+
+======================================================================
+ERROR: test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='observed_epoch', value=9.0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/tests/test_p011_failed_attempt_ledger.py", line 70, in test_old_unknown_or_mismatched_provider_is_rejected
+    root=Path(d);spec,base=fixture(root);p=read(base/'PROVIDER_STOPPED0.json');p[key]=value;dump(base/'PROVIDER_STOPPED0.json',p)
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmpo6sx_n2p/.local/p011_20261020/r1/dispatch/B_generation_t10_400x16_r1/PROVIDER_STOPPED0.json'
+
+======================================================================
+ERROR: test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='observed_epoch', value=nan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/tests/test_p011_failed_attempt_ledger.py", line 70, in test_old_unknown_or_mismatched_provider_is_rejected
+    root=Path(d);spec,base=fixture(root);p=read(base/'PROVIDER_STOPPED0.json');p[key]=value;dump(base/'PROVIDER_STOPPED0.json',p)
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmpv5t3zfca/.local/p011_20261020/r1/dispatch/B_generation_t10_400x16_r1/PROVIDER_STOPPED0.json'
+
+======================================================================
+ERROR: test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='app_id', value='ap-other')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/tests/test_p011_failed_attempt_ledger.py", line 70, in test_old_unknown_or_mismatched_provider_is_rejected
+    root=Path(d);spec,base=fixture(root);p=read(base/'PROVIDER_STOPPED0.json');p[key]=value;dump(base/'PROVIDER_STOPPED0.json',p)
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmpt4key4pv/.local/p011_20261020/r1/dispatch/B_generation_t10_400x16_r1/PROVIDER_STOPPED0.json'
+
+======================================================================
+ERROR: test_old_unknown_or_mismatched_provider_is_rejected (tests.test_p011_failed_attempt_ledger.NewFailedLedgerTests.test_old_unknown_or_mismatched_provider_is_rejected) (key='owned_containers', value=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<WORKSPACE>/tests/test_p011_failed_attempt_ledger.py", line 70, in test_old_unknown_or_mismatched_provider_is_rejected
+    root=Path(d);spec,base=fixture(root);p=read(base/'PROVIDER_STOPPED0.json');p[key]=value;dump(base/'PROVIDER_STOPPED0.json',p)
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/tmpwc710kxu/.local/p011_20261020/r1/dispatch/B_generation_t10_400x16_r1/PROVIDER_STOPPED0.json'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.046s
+
+FAILED (errors=6)

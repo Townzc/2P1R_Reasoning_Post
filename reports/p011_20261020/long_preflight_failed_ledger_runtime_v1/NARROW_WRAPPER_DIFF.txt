@@ -1,0 +1,35 @@
+--- experiments/p011/long_preflight/path.py
++++ experiments/p011/long_preflight/failed_ledger_path.py
+@@ -7,0 +8 @@
++from experiments.p011 import failed_attempt_ledger
+@@ -12 +13 @@
+-SPEC='reports/p011_20261020/long_preflight_runtime_v1/SPEC.json'
++SPEC='reports/p011_20261020/long_preflight_failed_ledger_runtime_v1/SPEC.json'
+@@ -25,0 +27,2 @@
++            or not spec.get('failed_attempt_bindings')
++            or spec.get('original_preflight_A1_A2_report_sha256')!='2dd1dc459fb00a0a52190b489de7b2d6db37e092130ba85cfb3a608ee60735c1'
+@@ -67 +70,3 @@
+-        'formal_repair_review_sha256':spec['formal_repair_review_sha256']}
++        'formal_repair_review_sha256':spec['formal_repair_review_sha256'],
++        'failed_attempt_bindings_sha256':digest(spec['failed_attempt_bindings']),
++        'original_preflight_A1_A2_report_sha256':spec['original_preflight_A1_A2_report_sha256']}
+@@ -71 +76,2 @@
+-        'current_owner_budget_scope_and_full_window_accepted','no_scientific_result_or_A3_A5_claim')
++        'current_owner_budget_scope_and_full_window_accepted','no_scientific_result_or_A3_A5_claim','failed_terminal_ledger_and_original_reservations_accepted',
++        'original_three_preflight_jobs_unchanged')
+@@ -131 +137 @@
+-        fcntl.flock(lock.fileno(),fcntl.LOCK_EX);records=parent.records_with_failed_parent(root,spec,lifecycle.ledger(root));parent.remote_fences(root,spec,store);obs=observation(root,records)
++        fcntl.flock(lock.fileno(),fcntl.LOCK_EX);records=parent.records_with_failed_parent(root,spec,failed_attempt_ledger.ledger(root,spec));parent.remote_fences(root,spec,store);failed_attempt_ledger.remote_fences(root,spec,store);obs=observation(root,records)
+--- experiments/p011/long_preflight/modal_entry.py
++++ experiments/p011/long_preflight/modal_failed_ledger_entry.py
+@@ -4 +4 @@
+-from experiments.p011.long_preflight import path
++from experiments.p011.long_preflight import failed_ledger_path as path
+@@ -26 +26 @@
+-        from experiments.p011.long_preflight import path as run
++        from experiments.p011.long_preflight import failed_ledger_path as run
+--- scripts/p011_long_preflight_io.py
++++ scripts/p011_long_preflight_failed_ledger_io.py
+@@ -4 +4 @@
+-from experiments.p011.long_preflight import path,evidence
++from experiments.p011.long_preflight import failed_ledger_path as path,evidence

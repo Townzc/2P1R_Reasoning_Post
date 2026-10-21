@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<WORKSPACE>/scripts/prepare_p011_c2_runtime_inputs.py", line 24, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "<WORKSPACE>/scripts/prepare_p011_c2_runtime_inputs.py", line 20, in main
+    try:inputs.prepare(ROOT,binding,review)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/p011/c2_input_path.py", line 78, in prepare
+    pack=prepare_projection(**values,window_size=binding['window_size'])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/p011/c2_reuse_projection.py", line 75, in prepare_projection
+    right,rproof=indexed_records(t72_index,ordered,'t72')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/p011/c2_reuse_projection.py", line 48, in indexed_records
+    if (type(row.get('score',{}).get('score',{}).get('correct')) is not bool
+             ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
