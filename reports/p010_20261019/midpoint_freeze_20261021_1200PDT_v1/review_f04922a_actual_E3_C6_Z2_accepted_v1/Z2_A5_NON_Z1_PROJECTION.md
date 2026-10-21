@@ -1,0 +1,79 @@
+# Z2 确定性表格与数字溯源：A5
+
+- **审计方**：Claude，2026-10-20 14:35 UTC 前后
+- **请求**：`p010-Z2-deterministic-table-figure-number-trace-A5-r1`
+- **scope**：`p010-Z2-deterministic-table-figure-number-trace-A5`
+- **目标提交**：`9178029d82776b01a759d6376d7309bd7df9681a`
+- **数据包**：`z2_number_trace_v1`，MANIFEST SHA 为 `40c6ae6323a9a3408528cc7e847c011faa3cd93b5d4512b8bda996012f34aa3d`，38 个文件全部一致
+- **结论：PASS-WITH-NOTES**
+
+> 本次是 10/20 早期组装版的 A5。10/21 12:00 PDT 冻结时，如果有任何表格变动，需要重新做一次 A5。
+
+## 一、溯源
+
+- NUMBER_TRACE 共 77 条。其中 73 条的来源文件存在，SHA **全部一致**。
+- 其余 4 条指向仅在本地保存的文件，我无法读取，因此**未验证**：
+  - `.local/.../billing_e3_c6_completed_r1/report.json`，3 条；
+  - `.local/.../assemble_z2_number_trace_once.py`，1 条。
+- 以下文件与来源**逐字节相同**：
+  - F1（P008 `allocation_joint_scaling.png`）；
+  - F2 的 png 和 pdf（c9 `F2_MATH_AXES`）；
+  - `T3_CUE_COMPLETE_CELLS.csv` 和 `T3_CUE_ALL8_PAIRED.csv`（c6_analysis）；
+  - `T4_E1_E1D_SEED17.csv`（c9）。
+- F1 的标题"不是受控的数据规模曲线"已经在 FIGURES.md 中。
+
+## 二、逐表独立核对
+
+**T1：数据构成**
+
+| 核对对象 | 与哪份审计对照 | 结果 |
+|---|---|---|
+| T1.5 K4 / K8 | 20261020a | N=1592，欠填 5；N=3146，欠填 14 ✓ |
+| T7 | 20261020d | 回退 12 / 82；K4/K8 的 P_cov=397，嵌套冲突 12，N=1560 / 3064，欠填 16 / 30；once 196278 / 1566436 ✓ |
+| T72 | 20261020f | 回退 13 / 83；K4/K8 的 P_cov=394，嵌套冲突 13，N=1557 / 3064，欠填 15 / 32；once 191865 / 1529639 ✓ |
+| E1d | — | examined_prefix=3837，与 SELECTION 一致 ✓ |
+
+- **`retried_questions` 这一列的含义需要在表头说清楚**：它统计的是"K1 最终选中第 2–4 次尝试的题"，**不包括回退题**。我重新计数"第 1 次尝试不可用"的题：T7 有 44 / 285，T72 有 48 / 338；减去回退数后正好是 32 / 203 和 35 / 255，与表中一致。建议把列名改为 `K1_selected_from_attempt_2to4`，或者加脚注。
+- 被取消的四个格都标为 `owner_cancelled_unattempted`，没有用 0 填充 ✓。
+- T1 的资源池表（POOL）：T1.5 新增 5940 + 复用 460 = 6400；T72 14098；T7 9410 + 256 = 9666。三者都与此前审过的记录数一致。每个 app 的 gross 与 D1 结算包中的数一致：0.5885、1.1730、17.5836。
+- POOL 表明确写了"不按格分摊成本"，这是正确的处理。
+
+**T2：P008 的 12 个政策差距行**
+
+12 行的 estimate 和 CI 与 `p008/.../ALL_CONTRASTS.csv` 中同名的行逐一相同 ✓。31 行的原表作为引用件附带，SHA 一致。
+
+**T3：基线与 cue**
+
+- 基线阶梯：MATH 136 / 147 / 359，截断数 68 / 39 / 36，与 P009 p1 SUMMARY 一致 ✓。OLMo GSM 166 / 487 的数字来自 P009 stage0 的 SUMMARY，SHA 一致。
+- HF 的历史端点被隔离在单独的表里，**没有用于 P010 的任何效应** ✓。
+- cue 表与我刚做完的 C6 A3（`C6_A3_REPORT.md`）一致。**但必须给 GSM 的 cue 行加脚注**，说明解析规则会影响结果：在宽松规则下，采样指标的效应从 +10.31pp 降到约 +5.31pp。
+
+**T4：学生结果**
+
+- seed17 九格的 greedy、sampled 和截断数，与我的 A3（20261020j）以及本次重新计算的截断数（46 / 50 / 65 / 81 / 57 / 69 / 61）一致 ✓。
+- seed29 四格、E4、E9 与 20261020g 和 20261020n 一致 ✓。
+- 全部 18 项配对对比，**点估计与我独立重算的结果逐位一致**。CI 和我的计算只差 bootstrap 随机流带来的 ≤0.2pp 噪声：我用的是 Python random，Codex 用的是 numpy，两者的抽样不同。
+
+## Claude-owned section excluded from this Codex projection
+
+The original third section is excluded in full. This projection does not adopt its labels, numeric conclusions, or claimed owner checks. See PROJECTION.json and the exposure record.
+
+## 四、我需要更正的一处说法
+
+我在 07:00 PDT 发给负责人的夜间汇总中写道："只有 seed17 T72 greedy 达到 O1"。**这句话不完整。** 按照冻结标准（≥3pp 且 CI 下限 > 0），T4 中达标的对比有：
+- seed17 greedy：Δ_P_T7 +4.4 [0.4, 8.4]、Δ_P_T72 +4.4 [0.6, 8.4]；
+- seed17 sampled：Δ_P_T15 +3.15 [0.85, 5.45]；
+- seed29 sampled：Δ_P_T72 +3.8 [1.3, 6.35]；
+- E4 和 E9 的 Δ_P。
+
+这些都是逐项的条件区间，没有做多重比较校正。在不同的 seed、指标和教师之间，达标的情况并不一致。负责人写报告时应以 T4 表为准。
+
+## 五、备注
+
+1. **T7 的 Δ_T 不在冻结对比列表中。** 计划 v3 把 Δ_T 定义为 T72 − T1.5，所以 Z2 的处理忠实于计划。我在 20261020j 额外算过的 T7 − T1.5（n400 greedy −4.4 [−8.4, −0.4]）属于**事后补充**，如果要用，必须标为未预先指定。
+2. **账单数字的含义。** `OBSERVED_P010_PREFIX_METER` 的 55.23 是带 P010 标签的延迟计量，302.94 是整个工作区的延迟计量。两者都不是账单。P010 的计量远低于 $240 的上限。
+3. **E5 没有执行**，已由 D2 替换为 E9。表中如实标注了这一点 ✓。
+4. **本审计的局限**：
+   - 4 条本地文件无法读取，未验证；
+   - 我没有重新渲染图像，只核对了字节相同；
+   - 冻结时的最终版本需要重新做 A5。
