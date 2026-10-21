@@ -8151,7 +8151,7 @@
     }
   },
   "p011_owner150_current": {
-    "recorded_utc": "2026-10-21T21:52:43.772022+00:00",
+    "recorded_utc": "2026-10-21T22:06:55.490292+00:00",
     "source_head": "9d6817a6b82a9350d80f3e863273c888f8639433",
     "new_spend_cap_usd": 150,
     "slots": 8,
@@ -8169,12 +8169,13 @@
     "completed_result_jobs": [
       "long_baseline_S-L15_s17_owner_r1",
       "fallback_t72_clean_s17_n400_k1_r1",
-      "fallback_t72_clean_s17_n3200_k1_r1"
+      "fallback_t72_clean_s17_n3200_k1_r1",
+      "long_D1_S-F15_s17_owner_r1"
     ],
     "local_baseline_first_collect": "INFRASTRUCTURE_FAILED_BEFORE_ARCHIVE; one authorized retry pending original app STOPPED0",
     "closed_closeout_adapter": "scripts/p011_long_owner_closed_io.py",
     "per_call_adapter": "WITHDRAWN",
-    "optional_admission": "POST_RETRY_ALL_EPOCH_ACCOUNTING_PREPARED_NOT_RUN",
+    "optional_admission": "A4_NOT_DISPATCHED_HISTORICAL_RATE_RISK_SCREEN_170.46_OVER_150; NOT_ACTUAL_EXPENSE",
     "optional_packet": "reports/p011_20261020/owner_optional_post_retry_accounting_v1",
     "fallback_n400": "COMPLETE_ACTUAL_A3_ACCEPTED_WITH_NOTES",
     "fallback_n3200": "COMPLETE_ACTUAL_A3_ACCEPTED_WITH_NOTES",
@@ -8182,7 +8183,7 @@
     "fallback_results_target": "469cbaa0acc839eae3714b5174320354d0d0e5eb",
     "fallback_actual_A3_request": "reports/p011_20261020/FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md",
     "fallback_actual_A3_accepted": true,
-    "active_model_jobs": 6,
+    "active_model_jobs": 5,
     "new_epoch_model_attempts": 10,
     "all_P011_model_function_attempts_including_failures_and_engineering": 23,
     "all_P011_scientific_function_attempts_including_failures": 20,
@@ -8207,7 +8208,9 @@
     "optional77_async_scientific_review": "ACCEPTED_NO_SCIENTIFIC_ISSUE_FOUND",
     "A1_optional_async_report_sha256": "272403a401c8ceac28df43c801b0b13eceff0a43001aa1f1b86fda8e1e7d0bd1",
     "A1_async_report_late_seconds": 527.42495,
-    "closed_collector_async_review": "NOT_EXPLICITLY_COVERED_BY_REPORT"
+    "closed_collector_async_review": "NOT_EXPLICITLY_COVERED_BY_REPORT",
+    "D1": "MODEL_COMPLETED_LOCAL_CLOSEOUT_PENDING_SHARED_APP_EXIT",
+    "latest_progress": "reports/p011_20261020/OWNER150_PROGRESS_20261021T2206Z.json"
   },
   "p010_actual_final_A5": {
     "decision": "PASS",
