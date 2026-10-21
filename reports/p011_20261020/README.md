@@ -132,3 +132,22 @@ remain; no settlement/release. OriginalC1vectors were not recomputed. Longsource
 permits oneCPUsubset only, notGPU. C2complete78-source CR remainspending.
 Privateaccounting/dispatchaccess limits and reviewer timing/cost non-guarantees remain.
 A wrongmetadatafilename/glob read failed without scientific effects; nooldworkrerun.
+
+### 2026-10-21 01:59:20 PDT — B original call submitted; long preflight actual A1/numeric submitted
+
+B original51777/appap-8rAEj1Ve8WNUjGycJvffzx/callfc-01M5ETTXQ9X76CGEDHX23M464X submitted08:56:51.712575UTC,
+executionfc5c892a5fbddcb939a1adb49c829c0fa706d040; one upload and one dispatch, source75 unchanged.
+3.01 B reservation plus retained C6.38 are not expenses. No localdispatch-to-worker
+start inference; originalCLI remainsunconsumed. Realcompleted+STOPPED0 required
+for originalonce-onlycloseout. Bstudents/B4 remainnotadmitted.
+
+LongCPU76173 completedonce08:48:07.198572; actual3arms×2savedrows/2updates/B65082/
+32requests/context17243. Newactual20-memberarchive readback and SPEC validation
+were each once. Fixedtarget67877fc1c26ad2dac391cd9daa72f74dcf0d8a08, samefinalrequest actualsubsetA1/numericA2pending;
+candidate5.95, no paidlongcalls. Defaultgitignore initially excluded newarchive;
+exactoldbytes added unchanged, sixpassedGitchecks not repeated, remainingchecks
+completed for17distinctnewfiles. Nooldscience/testing rerun.
+
+Prepared newBstudentanalysis adapter changes only import tocurrentownerpath;
+originalscienceAST is identical byone newboundarycheck. Noanalysis ran; adapter
+must enter future complete student-source CR, notactivegeneration75source.
