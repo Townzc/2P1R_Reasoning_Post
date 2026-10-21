@@ -1,0 +1,112 @@
+--- experiments/p011/long_current_path.py
++++ experiments/p011/long_conditional_path.py
+@@ -25 +25,7 @@
+-SPEC='reports/p011_20261020/long_current_runtime_v1/SPEC.json'
++SPEC='reports/p011_20261020/long_conditional_runtime_v1/SPEC.json'
++ORIGINAL_SPEC='reports/p011_20261020/long_current_runtime_v1/SPEC.json'
++ORIGINAL_SPEC_SHA='f0e9274459b17b25a9754b863ce88d4ecee5c35fe9804e3ffdd86f8ce92c522b'
++DISPOSITION='reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/REPORT_LONG_FORMAL_NUMERIC_A2_LITE_AND_7_4_DISPOSITION.md'
++DISPOSITION_SHA='aac07df3b995480490ff2ba8844745849c06741efe03bf940f8460234d237f0b'
++F15_PROOF='reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/F15_COMPLETE_READONLY_PROOF.json'
++INITIAL_JOBS=('long_A7_S-L15_s17_r1','long_A7_S-F15_s17_r1','long_baseline_S-L15_s17_r1')
+@@ -43,0 +50,3 @@
++    # The original conditional report stays conditional. A new exact source
++    # review binds this adapter; it cannot create additional scientific jobs.
++    conditional_evidence(spec)
+@@ -108,0 +118,29 @@
++def conditional_evidence(spec,root=None):
++    root=Path(root) if root is not None else Path(__file__).resolve().parents[2]
++    files=spec.get('conditional_evidence_files',{})
++    if (set(files)!={ORIGINAL_SPEC,DISPOSITION,F15_PROOF}
++            or files.get(ORIGINAL_SPEC)!=ORIGINAL_SPEC_SHA
++            or files.get(DISPOSITION)!=DISPOSITION_SHA
++            or spec.get('original_numeric_decision')!='PASS-WITH-CONDITIONS'
++            or spec.get('initial_allowed_jobs')!=list(INITIAL_JOBS)):
++        raise ValueError('Exact unchanged conditional disposition/evidence required')
++    for name,value in files.items():
++        p=root/name
++        if p.is_symlink() or not re.fullmatch(r'[0-9a-f]{64}',str(value)) or sha(p)!=value:
++            raise ValueError('Conditional evidence bytes changed')
++    old=read(root/ORIGINAL_SPEC)
++    if (not spec.get('jobs') or any(old['jobs'].get(k)!=v for k,v in spec['jobs'].items())
++            or any(v['arm']=='S-L3' for v in spec['jobs'].values())
++            or any(spec['source_files'].get(k)!=v for k,v in old['source_files'].items())):
++        raise ValueError('Original job/source bytes changed or cancelled L3 restored')
++    proof=read(root/F15_PROOF)
++    if (proof.get('complete') is not True or proof.get('engineering_only') is not True
++            or proof.get('no_score_computed') is not True
++            or proof.get('job_sha256')!='08f754e10213e328109e7102c24cf50338c7a330a4c6c56ca8d9d80c0615fee6'
++            or not 0<proof.get('completed_epoch',0)<1792587018.9038124
++            or proof.get('full_state',{}).get('updates')!=2
++            or proof['full_state'].get('targets')!=65082):
++        raise ValueError('Actual original F15 local proof condition absent')
++    return old
++
++
+@@ -128 +166,5 @@
+-        actual_input_directory=LOCAL_INPUT_DIRECTORY,actual_input_binding_sha256=spec['actual_input_binding_sha256'])
++        actual_input_directory=LOCAL_INPUT_DIRECTORY,actual_input_binding_sha256=spec['actual_input_binding_sha256'],
++        source_appendix_scope='p011-long-conditional-initial3-adapter-CR',
++        original_numeric_spec_sha256=ORIGINAL_SPEC_SHA,original_numeric_report_sha256=DISPOSITION_SHA,
++        original_numeric_decision='PASS-WITH-CONDITIONS',
++        conditional_evidence_files=spec['conditional_evidence_files'],initial_allowed_jobs=list(INITIAL_JOBS))
+@@ -133 +175,10 @@
+-        'completed_numeric_gold_inputs_and_prior_asset_reuse_accepted')
++        'completed_numeric_gold_inputs_and_prior_asset_reuse_accepted',
++        'original32_to_formal512_and_processed_token_scaling_scope_accepted',
++        'new_A_D7200_scoring_cap_with_frozen_per_row_rules_and_full_window_accepted',
++        'plan7_4_mandatory_remaining_budget_disposition_explicitly_accepted',
++        'fullparameter_actual_local_oracle_accepted_after_preentry_disposition',
++        'original_conditional_numeric_report_preserved_and_inherited',
++        'only_initial_two_smokes_and_one_baseline_admitted',
++        'all_L3_jobs_cancelled_and_later_jobs_require_reduced_selection',
++        'actual_F15_full_local_proof_condition_satisfied',
++        'original_jobs_science_limits_and_no_reserve_release_unchanged')
+@@ -146 +197 @@
+-    for name in [*spec['source_files'],SPEC]:
++    for name in [*spec['source_files'],*spec['conditional_evidence_files'],SPEC]:
+@@ -152 +203,2 @@
+-    if job['kind']=='baseline' or job['cell']=='A7':return None
++    if job['arm']=='S-L3':raise ValueError('L3 jobs cancelled by delegated disposition')
++    if logical(job) in INITIAL_JOBS:return None
+@@ -155 +207 @@
+-    if (review.get('scope')!='p011-long-smoke-student-selection'
++    if (review.get('scope')!='p011-long-reduced-smoke-student-selection'
+@@ -156,0 +209 @@
++            or review.get('conditional_disposition_sha256')!=DISPOSITION_SHA
+@@ -158,2 +211,4 @@
+-            or review.get('all_three_smokes_and_two_baselines_A3_accepted') is not True):
+-        raise ValueError('Real Claude original smoke decision required for later A/D')
++            or review.get('both_retained_smokes_and_single_baseline_A3_accepted') is not True
++            or review.get('mandatory_order_and_budget_feasibility_explicitly_decided') is not True
++            or (job['category']=='D' and review.get('D_both_or_none_feasibility_accepted') is not True)):
++        raise ValueError('Real reduced-smoke A3/Claude selection and budget decision required')
+@@ -243 +298 @@
+-        if job['kind']=='student' and job['cell']!='A7':
++        if logical(job) not in INITIAL_JOBS:
+--- experiments/p011/modal_long_current.py
++++ experiments/p011/modal_long_conditional.py
+@@ -4 +4 @@
+-from experiments.p011 import long_current_path as path
++from experiments.p011 import long_conditional_path as path
+@@ -14 +14 @@
+-for n in [*spec['source_files'],path.SPEC]:image=image.add_local_file(ROOT/n,'/workspace/'+n,copy=True)
++for n in [*spec['source_files'],*spec['conditional_evidence_files'],path.SPEC]:image=image.add_local_file(ROOT/n,'/workspace/'+n,copy=True)
+@@ -26 +26 @@
+-        from experiments.p011 import long_current_path as run
++        from experiments.p011 import long_conditional_path as run
+--- scripts/p011_long_current_io.py
++++ scripts/p011_long_conditional_io.py
+@@ -14 +14 @@
+-from experiments.p011 import long_current_path as path,long_transport,long_evidence,long_scoring,long_score_process
++from experiments.p011 import long_conditional_path as path,long_transport,long_evidence,long_scoring,long_score_process
+@@ -161 +161 @@
+-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=['upload','collect','audit','score']);parser.add_argument('--job',required=True);parser.add_argument('--review',required=True);args=parser.parse_args()
++    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=['upload','collect','audit','score']);parser.add_argument('--job',required=True);parser.add_argument('--review',required=True);parser.add_argument('--selection');args=parser.parse_args()
+@@ -162,0 +163 @@
++    if args.mode=='upload':path.selection(job,read(args.selection) if args.selection else None)
+--- scripts/analyze_p011_long_current_pair.py
++++ scripts/analyze_p011_long_conditional_pair.py
+@@ -4 +4 @@
+-from experiments.p011 import long_current_path as path,long_evaluation
++from experiments.p011 import long_conditional_path as path,long_evaluation
