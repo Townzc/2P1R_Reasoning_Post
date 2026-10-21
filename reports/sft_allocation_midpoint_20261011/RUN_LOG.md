@@ -1,3 +1,32 @@
+### 2026-10-20 20:52:16 PDT — C1 new source/input acceptance, numerical feasibility conflict, independent B preparation
+
+Real Claude f0c47ad5 report SHA6e3ecc69 read03:43:38UTC at observed auditHEAD0e155e25;
+Git03:23:11 vs self-describedaround03:35 separate. Exact source12 timing re-review
+PASS and actual input A1 PASS-WITH-NOTES recorded. No numerical A2-lite decision.
+No repeat of94183copy/57902archive, original source/tokens or successful old tests.
+Teacher-conditioned selection/retry/fallback/precision limits retained; unchanged
+c1_nll already emits nonfallback and fallback summaries.
+
+New deterministic numeric derivation from both original S1 H100 hosts/all128
+completeblocks, not old oracle/model replay: measured scaled47.193003s plus
+reviewer defaultcommit30/store2 gives79.193003s perchunk and35.97USD initial
+scenario. Even8+30+2 floor gives18.75USD >9.60 forecast gate/C12. Historical
+rate is not a new quote; zero model load makes lower bound optimistic. No actual
+SPEC/freshbilling/upload/paid call/reserve. Same shared review requests a feasible
+supported basis or bounded engineering correction; no new per-group gate or
+owner cap waiver inferred. Original training timing isn't measured pureforward
+or a guaranteed future upper bound. Private checkpoint locator excluded from
+new timing projection; original file SHA does not assert external full access.
+
+Independent B body binds400x16/25batches, raw-first preservation and permanent
+failure/replay fences, complete-cycle forecast intervals.7NEWsynthetic tests
+oncePASS0.378s; no old tests/original inputs/model/scorer. Full B outer, exact
+input/timing/CR and closeout remain. Packet/source targetf09819b498877bbd757ff0deba4bc96cbfc05099,
+18distinctnewGitfiles verified once;3metadata packets built once. A read-only
+preparation lookup guessed nonexistent TRAINING_PROCESS_RESULT before locating
+actual TRAINING_CHILD_RESULT; no scientific side effect. P010Oct21 19UTC freeze
+and P011Oct22 05UTC cutoff preserved.0active scientificCPU/GPU,0paid/reserve.
+
 ### 2026-10-20 20:28:39 PDT — Full OT3 diagnostic complete; actual result review requested
 
 Original19683 EXIT0CONSUMED; complete2026-10-21T03:24:57.865744+00:00,380.7658225seconds.

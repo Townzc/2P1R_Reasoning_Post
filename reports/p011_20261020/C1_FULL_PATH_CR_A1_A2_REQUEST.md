@@ -1,3 +1,20 @@
+# C1 shared review follow-up — source/input accepted; numerical default does not fit
+
+Updated 2026-10-21T03:52:16.552207+00:00. Same request `p011-C1-complete-path-CR-A1-A2-lite-r1`.
+New evidence target **`f09819b498877bbd757ff0deba4bc96cbfc05099`**; accepted runtime source remains the exact12 files at `0c37b5a07025fbfa71b6b82532d1dc3797813b45`.
+
+Claude `audit/claude/20261021f/REPORT_C1_TIMING_RECR_AND_INPUT_A1.md`, file commit `f0c47ad56b1f92f3f29b2b8442a6a6ff870cb7dd`, SHA `6e3ecc69d401239fcdaf9049a5543913a15a3a78db61a10b522f9c0cafa87ad3`, explicitly accepts the timing-source correction PASS and actual input A1 PASS-WITH-NOTES. Actual full read03:43:38.821472UTC; Git event03:23:11 and self-describedaround03:35 kept distinct. Original source/input acceptance records in [new accepted packet](review_f0c47ad5_C1_source_and_input_accepted_v1/README.md). No source/input copy or prior successful test rerun; original acceptance and inputs remain immutable.
+
+**Numeric A2-lite remains ABSENT. No upload/dispatch.** The report's prospective recipe is not its final A2-lite decision. New [feasibility evidence](c1_numeric_feasibility_v1/README.md) binds both original S1 H100 hosts/all128 complete blocks, same base and original encoded inputs. Fullintervals/processed-token maxima give47.1930032638s for32×1758; plus3×10s commit and2×1s store gives79.1930032638s/chunk. The historical full-resource rate yields35.97USD initial scenario. Even dropping that measured scaling to the8-second per-call floor yields18.75USD, above current9.60USD forecast ceiling andC12. Zero model load is optimistic, not an observed measurement.
+
+Please resolve this numerical feasibility within this SAME request: identify an explicitly supported feasible proxy or a bounded engineering change, keeping original token/mask/EOS/whole-result proof, C12/80percent/protect48, no paid-measurement exception and no scope transfer. No actual SPEC is fabricated, no measurement acceptance flag set, no new reservation, no paid sample. An absent standalone commit stopwatch cannot be replaced by an invented measurement. The record shows a modeling budget conflict, not proof that actual C1 computation costs35.97USD.
+
+Input notes remain: T1.5-success-conditioned population, T7/T72 retry/fallback confounding, six shared exact sequences and BF16 precision. Existing `c1_nll` already provides all/nonfallback/fallback summaries; no new statistics or label changes. Reviewer suggested fixture maintenance is not authorization to rerun successful old checks.
+
+Independent preparation only: [B generation journal](b_generation_execution_draft_v1/README.md), new7mockchecks oncePASS. It is not an admitted model path and adds no separate code-only gate. Full B outer/model/timing/input/oracle integration remains.
+
+--- Prior exact request and historical status, retained below ---
+
 # C1 shared request — actual input A1 and timing-source correction
 
 Request `p011-C1-complete-path-CR-A1-A2-lite-r1` remains the one shared C1 review.
