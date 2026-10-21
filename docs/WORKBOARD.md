@@ -1,3 +1,22 @@
+### 2026-10-20 21:54:28 PDT — C1 exact source PASS, concrete SPEC; OT3 narrow review closed
+
+Claude96430ebd C1 exact13source PASS and efc4ccd3 OT3 field-name correction
+were fully read04:46:44UTC; Git04:35:08 and04:34:13 separate from selftimes.
+C1_SOURCE and OT3_ACTUAL exact acceptances saved, fixedc30d999394b003c57138067feadb28d380f289c1;16new Gitfiles
+verified once. Old results/source/input/test/recount untouched. OT3 actualresult
+closed with correct847overlength/3decontamhit; private43GB limitations retained.
+First concreteC1SPEC2400/2460/600/load900/closeout7200/full10260; authenticated
+rates4.3952USD/h, candidate3.74USD only, actualreserve0. NewlyselectedSPEC
+validatedonce without model/inputload/testrepeat. Source/input PASS is not A2.
+FreshCLI summary/report04:46 andrates04:52 are exact saved observations, gross
+revision retained withoutrefundclaim. Browser wrongemptyworkspace not used;
+actualresearchavailablebalance remainsmissing, askedowner to select Billing.
+ConcreteSPEC sent to sameA2request, nofabricatedbudget/dispatch. This is missing
+account evidence, not routine permission. Longfull31sourceCRdb1aff07 nowpending;
+Bloader/scorer3newmodules/10checksfd1e78f8 alreadyDONE. No activecompute/paidcall.
+Navigation misses on billingAPI-proto/oldbudgetglob were readonly, no sideeffect.
+P010Oct21 19UTC formal freeze andP011Oct22 05UTC cutoff preserved.
+
 ### 2026-10-20 21:39:29 PDT — Independent B loader/scorer preparation
 
 Original400 prompt projection (not executed), exact T1.5/vLLM loader,6400raw-gold

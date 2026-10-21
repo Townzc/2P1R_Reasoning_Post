@@ -1,3 +1,15 @@
+## Closed 2026-10-21T04:54:28.152670+00:00: true dated correction accepted
+
+Claude original actual report plus efc4ccd3 erratum/correction are now accepted.
+[Exact report, correction and acceptance](review_96430ebd_C1_source_and_OT3_correction_accepted_v1/README.md)
+at `c30d999394b003c57138067feadb28d380f289c1`. Corrected keys any_overlength847/decontamination_hit3;
+originalcomplete16=4885, rawRprime5190=4038+847+305unknown, possibleupper4343.
+Both original threshold triggers remain false. No Codex diagnostic/recount,
+selection, encoding or science repeated. Private raw access limitations remain.
+This result review is closed; source/input runtime admissions remain separate.
+
+--- Original review history ---
+
 ## Dated follow-up 2026-10-21T04:03:35.191940+00:00: narrow review-attachment clarification
 
 Original result target933a503c remains immutable. Claude0e155e25 reportSHA

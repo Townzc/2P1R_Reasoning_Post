@@ -1,3 +1,39 @@
+# Concrete C1 SPEC and numerical A2-lite follow-up — 2026-10-21T04:54:28.152670+00:00
+
+Same request `p011-C1-complete-path-CR-A1-A2-lite-r1`; exact new target **`c30d999394b003c57138067feadb28d380f289c1`**.
+[Actual SPEC and numeric proposal](c1_runtime_v1/README.md), SPEC SHA
+`416f80bba5cb97162ec170b3f8410082a3f3175b098ad5840e5d6cd6e99395eb`, MANIFEST SHA `ba1751aa83a3dd4397614e88b2ed0fdc3220171054b91c8914923b66a80856c0`.
+Source13 unchanged from a253452a and now true source PASS by Claude96430ebd,
+reportSHA4aef0d0ca53b9a4e42406b0bf54d43bd97a627d79bdf6eceddacb2d9fbcf4ddc.
+Actual original input A1 remains true; neither source tests nor inputcopy repeated.
+
+Please review this selected SPEC under the SAME finalscope
+`p011-C1-complete-path-CR-A1-A2-lite`: exact source/input map, inventory/timing
+canonical hashes in NEW_SPEC_VALIDATION, original group binding, measurement1,
+ownerSHAa08ba1abec5108b7ed583175151116f6a074626093c51148e783a5c1020506f0,
+bounded_in_run_self_calibration_accepted=true, and original six admission flags.
+Original worker2400/platform2460/startup600/load900, aftereverychunk1.2+300
+forecast, original permanent fences. Actual authenticated rates give4.3952USD/h,
+upwardrounded0.001220888888889USD/s and candidate cent-ceiling3.74USD, below4
+and current80percentC9.60. Public web rounded rate is superseded for this SPEC.
+Shared closeout7200 includes both collect/audit local3600 caps without resetting
+original deadline; fullwindow10260, latestdispatchOct22 02:09UTC for05UTCcutoff.
+No source timing estimates or mock values are admitted as measurements.
+
+**Actual available-credit floor remains unverified.** FreshCLI summary/report
+04:46UTC provide delayed gross only, not available balance. Browser is in a
+different empty workspace; its balance is not used. Owner approximate228 is
+not substituted. The owner has been asked to select the research Billing page.
+NUMERIC_PROPOSAL records null availability; no fabricated BUDGET_CHECK/fullA2.
+All prior failed and category reservations remain. The old gross302.93554409
+is retained despite the revised302.78554409 read; no release inferred.
+Do not issue an unconditional paid admission until fresh current availability
+minus retained obligations really covers protected48 plus3.74. Acceptable
+concrete numerical/source conclusions may be recorded separately while this
+last evidence is pending. No upload, image, forward or reserve has occurred.
+
+--- Historical source/input/numeric submissions retained below ---
+
 # C1 owner-bounded self-calibration: exact short CR and A2-lite follow-up
 
 Updated 2026-10-21T04:14:06.485257+00:00. Same shared request `p011-C1-complete-path-CR-A1-A2-lite-r1`.
