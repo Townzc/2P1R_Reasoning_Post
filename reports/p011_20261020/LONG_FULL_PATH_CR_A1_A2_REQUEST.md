@@ -1,3 +1,7 @@
+## Actual exact48 acceptance 2026-10-21T12:56:17.619534+00:00
+
+Claude40bc423e report1842e920 PASS accepts exact eb694d37 adapter, all18 flags and initial3 only. Original conditional numeric report remains unchanged; fresh per-entry budget/provider/fence/window checks and later actualA3/reduced selection remain required. Evidence: `reports/p011_20261020/review_40bc423e_long_initial3_accepted_v1`.
+
 ## Exact conditional initial-three adapter ready — 2026-10-21T12:21:00.498118+00:00
 
 Same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, exact target `eb694d374ec7f780a10d1f14ea3e2a33994725db`; full scope `p011-long-A-D-complete-path-CR-A1-A2-lite`, source appendix `p011-long-conditional-initial3-adapter-CR`.

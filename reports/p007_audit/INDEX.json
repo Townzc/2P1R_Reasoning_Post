@@ -4330,7 +4330,7 @@
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
       "target_commit": "eb694d374ec7f780a10d1f14ea3e2a33994725db",
-      "status": "CONDITIONAL_INITIAL3_EXACT48_SOURCE_APPENDIX_CR_PENDING",
+      "status": "INITIAL3_EXACT48_CR_A1_A2_ACCEPTED_FRESH_DISPATCH_REQUIRED",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_conditional_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4476,8 +4476,8 @@
       "current_source_acceptance_scope": "source-only exact44; candidateSPEC and numeric/disposition remain pending",
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
       "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json",
-      "report_commit": "02719f84f0e7e359b38e3f2412e499059dfba134",
-      "report_sha256": "aac07df3b995480490ff2ba8844745849c06741efe03bf940f8460234d237f0b",
+      "report_commit": "40bc423e0ab1cc4e5678d48467fcc9d43be103d7",
+      "report_sha256": "1842e920d7f712c2b37bc0dbaa8e09f5412314d2ce2389f873674139b25245b1",
       "conditional_packet": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1",
       "source_appendix_scope": "p011-long-conditional-initial3-adapter-CR",
       "current_binding": {
@@ -4556,7 +4556,15 @@
         },
         "spec_sha256": "0007c1062f38d0bdf14c9b1011e8e13faa46120fa01e2b95fc46ff4e09ad57ca"
       },
-      "prior_conditional_numeric_target": "99508f316768237185479fbfa660850ea4ed5c0f"
+      "prior_conditional_numeric_target": "99508f316768237185479fbfa660850ea4ed5c0f",
+      "source_appendix_accepted": true,
+      "acceptance_packet": "reports/p011_20261020/review_40bc423e_long_initial3_accepted_v1",
+      "initial_allowed_jobs": [
+        "long_A7_S-L15_s17_r1",
+        "long_A7_S-F15_s17_r1",
+        "long_baseline_S-L15_s17_r1"
+      ],
+      "later_jobs_admitted": false
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
@@ -6869,7 +6877,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T12:45:01.155651+00:00",
+  "last_updated_utc": "2026-10-21T12:56:17.619534+00:00",
   "p011": {
     "status": "C1_ACTUAL_A3_CLOSED_C2_DELEGATED_CLOSED_THREE_ENGINEERING_CALLS_COMPLETE_B91_AND_FORMAL_NUMERIC_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6990,8 +6998,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T12:03:59.686397+00:00",
-    "last_review_head": "02719f84f0e7e359b38e3f2412e499059dfba134",
+    "last_review_observed_utc": "2026-10-21T12:54:27.234115+00:00",
+    "last_review_head": "40bc423e0ab1cc4e5678d48467fcc9d43be103d7",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -7084,7 +7092,7 @@
       "actual_A2_report_commit": "0103c6eb11b2ad1e777a705ef50b7e9c8800e346"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
-    "last_full_review_read_utc": "2026-10-21T12:05:33.524580+00:00",
+    "last_full_review_read_utc": "2026-10-21T12:56:17.619534+00:00",
     "active_local_readonly_diagnostic": 0,
     "last_fixed_report_read_utc": "2026-10-21T03:58:11.775722+00:00",
     "B_generation_evidence_preparation": {
@@ -7100,7 +7108,7 @@
       "target_commit": "eb694d374ec7f780a10d1f14ea3e2a33994725db",
       "source_count": 48,
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "status": "CONDITIONAL_INITIAL3_EXACT48_SOURCE_APPENDIX_CR_PENDING",
+      "status": "INITIAL3_EXACT48_CR_A1_A2_ACCEPTED_FRESH_DISPATCH_REQUIRED",
       "actual_SPEC": true,
       "actual_model_calls": 0,
       "actual_endpoint_prompt_tokenizations": 600,
@@ -7179,7 +7187,12 @@
       "formal_conditional_report_sha256": "aac07df3b995480490ff2ba8844745849c06741efe03bf940f8460234d237f0b",
       "F15_complete_proof": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/F15_COMPLETE_READONLY_PROOF.json",
       "prior44_source_CR_accepted": true,
-      "conditional_source_packet": "reports/p011_20261020/long_conditional_runtime_v1"
+      "conditional_source_packet": "reports/p011_20261020/long_conditional_runtime_v1",
+      "conditional48_exact_review_accepted": true,
+      "acceptance_packet": "reports/p011_20261020/review_40bc423e_long_initial3_accepted_v1",
+      "current_report_sha256": "1842e920d7f712c2b37bc0dbaa8e09f5412314d2ce2389f873674139b25245b1",
+      "formal_models_submitted": 0,
+      "later_jobs_admitted": false
     },
     "B_loader_scoring_prepared": {
       "utc": "2026-10-21T04:39:29.959894+00:00",

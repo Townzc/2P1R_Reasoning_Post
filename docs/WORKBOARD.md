@@ -1,3 +1,7 @@
+### 2026-10-21 05:57 PDT - Exact long initial-three adapter accepted
+
+Claude40bc423e/1842e920 report PASS at eb694d37 explicitly accepts48 sources, SPEC0007c106 and18 flags. Git event12:26:27UTC, discovery12:54:27UTC, and actual full-read confirmation are distinct. Originalaac07df3 stays PASS-WITH-CONDITIONS. Only A7 L15/F15 and L15 baseline proceed to new fresh fee/D1/provider/unused-fence/full-window entry. No later jobs, reserve release, cap increase, old science/test/collector repeats or engineering performance selection. Current B6400 DONE/STOPPED0 is later than the report historical B-running statement. B actualA3/input92/student96 remain pending. One unmatched guessed billing-script glob was a read-only lookup failure before effects. P01019UTC freeze remains independent.
+
 ### 2026-10-21 05:45:01 PDT - P011 retained B student full source appendix
 
 Prepared96-source targetbf708e6ac81fa91b93e59d56b58a57ded9b0e7fb, four new adapters over prior92,7newsyntheticchecksPASS0.005s,12newGitfiles verifiedonce. B1/B3 only; failed B/C1 and all completed attempt reservations retained, both sequential80percent budgets checked before a new student. Original asset receipt validated before remote mutations; new input upload only, worker full-model verification unchanged. Actual6400 A3,92-source input constructionCR and lateractualstudentA1/numeric stillpending. No studentinputs/SPEC/model or oldscience/test/weighttransfer repeated. One guessed privatepublisher filename lookup failed read-only; no oldpublisher called. P01019UTCfreeze remains.
