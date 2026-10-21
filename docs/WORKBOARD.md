@@ -1,3 +1,20 @@
+### 2026-10-20 22:55:57 PDT — C2 independent batch driver prepared; stale counters corrected
+
+Two new C2 modules and12newchecks PASS once0.040s; oldsuccesses notrerun.
+OriginalE1dorder/T72reuse/T15max4/T.8/originalseed/first400/S1overlap retained.
+Only boundedmissingrequests; wholecycle includes3commits+remoteack, rawbefore
+validation, unknownoldverdict blocks, partial/fences neverreplayed. Candidate
+700window not actualselected/admitted; stillneedsfullC2source/entry/inputs/score/
+student/eval/analysis/numeric. No standaloneleafCRrequest or actualcomputation.
+C1-onlyexception doesnotapply, failed3.74reserve retained. Bfull71/long31pending.
+
+INDEX legacytop scientific_calls/scientific_model_calls/c1_current still held
+old0 even though newer C1_actual_A2_current and originalreceipt showed1; corrected
+from existing38d337 dispatch/failedterminal, no newcloudledger/provider query.
+Onefailedpaidcall,32confirmedsequences, no completeC1 result. CurrentinputA1 and
+historicalA2 remain accepted; actualfailedpreservationreview stillpending.
+Nooldscience/costsettlement/test/scorer repeated. P01019UTC duty unchanged.
+
 ### 2026-10-20 22:50:55 PDT — C1 failed; original evidence preserved, no retry
 
 OriginalC1 terminal2026-10-21T05:37:35.253025UTC, observedCLI failure05:39:30;

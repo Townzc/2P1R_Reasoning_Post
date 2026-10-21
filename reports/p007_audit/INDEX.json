@@ -6341,7 +6341,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T05:50:55.251082+00:00",
+  "last_updated_utc": "2026-10-21T05:55:57.819725+00:00",
   "p011": {
     "status": "OT3_actual_input_A1_accepted_diagnostic_complete_result_review_pending_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6360,7 +6360,7 @@
     "cutoff_utc": "2026-10-22T05:00:00Z",
     "exploratory": true,
     "production_construction_run": true,
-    "scientific_calls": 0,
+    "scientific_calls": 1,
     "pending_path_CR": "p011-C1-complete-path-CR-A1-A2-lite-r1",
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
@@ -6402,7 +6402,7 @@
     },
     "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
     "independent_leaf_drafts": "reports/p011_20261020/c1_short_generation_drafts_v1",
-    "scientific_model_calls": 0,
+    "scientific_model_calls": 1,
     "actual_A1": true,
     "long_runtime_leaf_drafts": "reports/p011_20261020/long_runtime_drafts_v1",
     "actual_data_target": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
@@ -6540,16 +6540,20 @@
       "chunks": 300,
       "input_A1": true,
       "timing_source_correction_CR": true,
-      "numeric_A2_lite": false,
-      "actual_forward_calls": 0,
-      "paid_reservation_usd": 0,
+      "numeric_A2_lite": true,
+      "actual_forward_calls": 1,
+      "paid_reservation_usd": "3.74",
       "actual_input_packet": "reports/p011_20261020/c1_inputs_actual_v1",
       "numeric_feasibility_packet": "reports/p011_20261020/c1_numeric_feasibility_v1",
       "source_input_acceptance_report": "f0c47ad56b1f92f3f29b2b8442a6a6ff870cb7dd",
       "metadata_corrected_utc": "2026-10-21T04:03:35.191940+00:00",
       "self_calibration_owner_record": "reports/p011_20261020/c1_self_calibration_preflight_v1/OWNER_DECISION_C1_SELF_CALIBRATION.md",
       "self_calibration_source_CR": false,
-      "owner_measurement_exception": 1
+      "owner_measurement_exception": 1,
+      "current_status": "FAILED_AFTER_FIRST_COMPLETE_CHUNK_NO_RETRY",
+      "actual_completion": false,
+      "failed_result_packet": "reports/p011_20261020/c1_failed_preservation_v1",
+      "actual_A2_report_commit": "0103c6eb11b2ad1e777a705ef50b7e9c8800e346"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
     "last_full_review_read_utc": "2026-10-21T03:18:18.662202+00:00",
@@ -6610,6 +6614,13 @@
       "failed_packet": "reports/p011_20261020/c1_failed_preservation_v1",
       "failed_target": "4413e768e803a9c3e81a5899151ecfde981c77a9",
       "actual_failure_review_request": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1"
+    },
+    "C2_window_engineering": {
+      "packet": "reports/p011_20261020/c2_window_execution_draft_v1",
+      "status": "PREPARED_NOT_RUN_NOT_FULL_RUNTIME",
+      "new_checks": 12,
+      "new_gate_created": false,
+      "actual_calls": 0
     }
   }
 }
