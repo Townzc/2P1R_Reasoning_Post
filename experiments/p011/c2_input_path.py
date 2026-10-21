@@ -49,6 +49,12 @@ def authority(root,binding,review):
                 raise ValueError('Fixed original source or reuse evidence bytes differ')
 
 
+def read_physical_jsonl(path):
+    import json
+    with Path(path).open(encoding='utf-8') as stream:
+        return [json.loads(line) for line in stream if line.strip()]
+
+
 def prepare(root,binding,review):
     """One first reuse projection. No original decoder/scorer/constructor called."""
     root=Path(root);authority(root,binding,review)
@@ -59,8 +65,8 @@ def prepare(root,binding,review):
     out.mkdir()
     try:
         import json
-        values={k:([json.loads(line) for line in (root/v).read_text().splitlines()]
-                   if v.endswith('.jsonl') else read(root/v)) for k,v in FILES.items()}
+        values={k:(read_physical_jsonl(root/v) if v.endswith('.jsonl') else read(root/v))
+                for k,v in FILES.items()}
         for model in ('t15','t72'):
             saved=read(root/f'.local/p010_20261019/r1/teacher_{model}_export_r1/COMPLETED.json')
             if saved.get('provider_stopped') is not True:raise ValueError('Saved old complete/STOPPED evidence required')
