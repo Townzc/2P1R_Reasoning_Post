@@ -1,3 +1,24 @@
+### 2026-10-20 22:50:55 PDT — C1 failed; original evidence preserved, no retry
+
+OriginalC1 terminal2026-10-21T05:37:35.253025UTC, observedCLI failure05:39:30;
+appSTOPPED/owned0 at05:41:41.595295. CLI17981EXIT1CONSUMED, one32-sequence chunk,
+6.573951754s fullcycle; remaining299chunks unattempted. Originalforecast elapsed0
+lower bound2718.733889s/4.06USD exceeds2370s/3.74 reserve. Exactfailedforecast
+elapsed unsaved, not claiming80percentC9.60 exceeded or completeempiricalresults.
+3.74retained, noinvoice/refund/settlementrelease, no model/code/input retry.
+
+Preservation48538EXIT0CONSUMED:76files6195029B/603namedkeys/5present598absent,
+stableoriginalinventory. Stockdirectoryget24888EXIT1CONSUMED wrote0files; only
+reconciledmissingparts copied usingboundedreadonlyclient, source/logincluded.
+No completedcollector/scientificoracle/statistic. Fullraw private; budget/provider
+objects explicitlyprojected with rawandnewSHA; publicarchive679membersreadbackonce.
+Packet target4413e768e803a9c3e81a5899151ecfde981c77a9,11newGitfilechecksDONE. Firstmetadata commit didnotinclude
+ignoredtar.gz; explicitartifactadd beforeanypush, originalpacketbytesunchanged.
+No olderbuilder/test/check repeated. Requestp011-C1-failed-self-calibration-and-preservation-actual-review-r1 pendingactualreview;
+startedpacket22a142historicalunchanged. B71/long31sourceCR pending, C1exception
+not transferable. P010Oct21 19UTCformalfreeze/finalA5 remains independent.
+Read-only navigation misses (auditdir/indexglob/pollscriptname) had no mutations.
+
 ### 2026-10-20 22:38:32 PDT — C1 original call submitted after exact A2
 
 Appap-EWqcTiOBy7VwDucYhICXgC/callfc-01M5EFCS20593539BQ02GTGC1Q, actualsubmission2026-10-21T05:36:53.875954+00:00, execution38d337cd76668182fe7ba5e992dd08cb16b95f5f.

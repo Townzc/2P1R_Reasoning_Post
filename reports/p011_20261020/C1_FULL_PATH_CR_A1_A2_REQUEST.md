@@ -1,3 +1,7 @@
+# Actual C1 original call FAILED after first complete chunk
+
+Admission was accepted and used once. See [preservation review](C1_FAILED_ACTUAL_REVIEW_REQUEST.md). No continuation or replacement authorized. All original historical admission evidence below remains unchanged.
+
 # Final C1 actual A2-lite accepted — 2026-10-21T05:31:57.122171+00:00
 
 Claude0103c6eb/reportSHAfebba88b448eaa6d31882db03c26a29b1ba709f752330bb0d2b2df005b7719f3

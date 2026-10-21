@@ -4467,6 +4467,18 @@
       "actual_SPEC_selected": false,
       "actual_input_consumer_executed": false,
       "new_paid_calls": 0
+    },
+    {
+      "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
+      "scope": "p011-C1-failed-self-calibration-and-preservation-actual-review",
+      "target_commit": "4413e768e803a9c3e81a5899151ecfde981c77a9",
+      "manifest_sha256": "1cac807d969e80fa7352b1a9c7388df7b2a5c8a0ae5603b07dbf45a23341aaad",
+      "request_file": "reports/p011_20261020/C1_FAILED_ACTUAL_REVIEW_REQUEST.md",
+      "status": "ACTUAL_FAILED_CALL_PRESERVATION_REVIEW_PENDING_NO_RETRY",
+      "submitted_utc": "2026-10-21T05:50:55.251082+00:00",
+      "new_paid_calls": 0,
+      "C1_completed": false,
+      "automatic_continuation_allowed": false
     }
   ],
   "p008_v31": {
@@ -6329,7 +6341,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T05:38:32.554883+00:00",
+  "last_updated_utc": "2026-10-21T05:50:55.251082+00:00",
   "p011": {
     "status": "OT3_actual_input_A1_accepted_diagnostic_complete_result_review_pending_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6584,7 +6596,7 @@
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md"
     },
     "C1_actual_A2_current": {
-      "status": "ORIGINAL_CALL_SUBMITTED_ONCE_FULL_RESULT_PENDING",
+      "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",
       "target_commit": "270db4a6fed92d310dd7a263269702bd13ed4ffe",
       "spec_sha256": "416f80bba5cb97162ec170b3f8410082a3f3175b098ad5840e5d6cd6e99395eb",
       "report_sha256": "febba88b448eaa6d31882db03c26a29b1ba709f752330bb0d2b2df005b7719f3",
@@ -6593,7 +6605,11 @@
       "actual_retained_reserve_usd": "3.74",
       "app_id": "ap-EWqcTiOBy7VwDucYhICXgC",
       "call_id": "fc-01M5EFCS20593539BQ02GTGC1Q",
-      "started_packet": "reports/p011_20261020/c1_original_started_v1"
+      "started_packet": "reports/p011_20261020/c1_original_started_v1",
+      "active_scientific_compute": 0,
+      "failed_packet": "reports/p011_20261020/c1_failed_preservation_v1",
+      "failed_target": "4413e768e803a9c3e81a5899151ecfde981c77a9",
+      "actual_failure_review_request": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1"
     }
   }
 }

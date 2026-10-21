@@ -1,3 +1,5 @@
+P011 2026-10-21T05:50:55.251082+00:00: [C1 failed; preserved, no retry](c1_failed_preservation_v1/README.md), [actual review request](C1_FAILED_ACTUAL_REVIEW_REQUEST.md). B and long fullsource requests pending.
+
 P011 2026-10-21T05:38:32.554883+00:00: [C1 original call submitted once](c1_original_started_v1/README.md); fullresult/A3pending.
 
 P011 2026-10-21T05:31:57.122171+00:00: [C1 actual final A2 accepted](review_0103c6eb_C1_full_A2_accepted_v1/README.md), one run subject to fresh entrychecks.
