@@ -1,3 +1,30 @@
+### 2026-10-20 21:33:15 PDT — Long A/D complete path submitted for shared CR
+
+Exact31source targetdb1aff076163606ded08776eca637c043d6c916b, one shared requestp011-long-A-D-complete-path-CR-A1-A2-lite-r1. Full entry/consumer/
+sharedledger/per-jobH100limits/dispatchclaim/full-Ustate/export-childexit/vLLM3300/
+binaryarchive/STOPPED0collection/fullstate-raworacle/frozenP1score/pairedcontrast
+CLI integrated. Original training tokens/plans retained; new consumer not run.
+Original drafts' update/endpoint durations excluded commits; new fullcycle proofs
+include2/3commits and remote acknowledgments, bodytimes remain separate. Export/
+engine/packing/finalization still require exact future allowances and numericCR.
+Native prompt normalization keeps originaltextSHA + nativeNFC SHA, no NFKC/trim.
+No model, original-token re-encoding, scoring, bootstrap, upload or paidreserve.
+
+Initial12newtests:11PASS/1missing-review AttributeError. Explicit ValueError repair
+reran only that failedcase PASS. Then5+2+1+2distinctnewchecks PASS:22total, no old
+successful suite rerun. Final fixture-only nativeEOS mock updated without rerunning
+its earlier method.32newGitfiles verified once; rawdiff context-space warnings
+retained, only excluding diffPASS. Unpublished packet metadata adjusted once to
+bind final integration; original prepublication bytes saved privately, no builder
+or science repeated. Read-only guessed prepare_p011_long_data/old glob path
+failures preserved, no scientific side effects.
+
+C1bounded selfcalibration13source at a253452a already submitted; same C1request
+stillawaits exactshortCR andA2, no SPEC/upload/forward. OT3 narrowerratum remains
+pending; lastHEADa28104:05. Neither blocks this fullpath source review. Actual
+supportable long timing/caps/memory and resulting consumerA1 remain missing;
+C1 exception is not transferable. P010 Oct21 19UTC formal freeze retained.
+
 ### 2026-10-20 21:14:06 PDT — C1 owner-bounded self-calibration submitted
 
 Direct-user-triggered audit read04:05:44 found a2817992. Full non-Z1 read04:07:29
