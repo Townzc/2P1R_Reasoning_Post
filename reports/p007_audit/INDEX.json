@@ -4329,8 +4329,8 @@
       "request_id": "p011-long-A-D-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
-      "target_commit": "eb694d374ec7f780a10d1f14ea3e2a33994725db",
-      "status": "INITIAL_TWO_FAILED_PRE_MODEL_VALIDATION_BASELINE_HELD_DELEGATED_DISPOSITION_PENDING",
+      "target_commit": "f704855dd2c3a2909ab53ea0b94fdd40da749256",
+      "status": "FROZEN_LR_R2_EXACT55_SOURCE_AND_NUMERIC_REVIEW_PENDING",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_conditional_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4444,7 +4444,7 @@
       "formal512_throughput_measured": false,
       "actual_SPEC": true,
       "actual_SPEC_file": "reports/p011_20261020/long_current_runtime_v1/SPEC.json",
-      "spec_sha256": "0007c1062f38d0bdf14c9b1011e8e13faa46120fa01e2b95fc46ff4e09ad57ca",
+      "spec_sha256": "9f675f1c4e92f45f438e251ce926f096e9833868680bb2459e4cd14603e24f7b",
       "source_CR_target": "61989e7b43c3d9d309047cc615b3dc12aba689db",
       "required_numeric_flags": [
         "complete_source_closure_accepted",
@@ -4479,7 +4479,7 @@
       "report_commit": "40bc423e0ab1cc4e5678d48467fcc9d43be103d7",
       "report_sha256": "1842e920d7f712c2b37bc0dbaa8e09f5412314d2ce2389f873674139b25245b1",
       "conditional_packet": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1",
-      "source_appendix_scope": "p011-long-conditional-initial3-adapter-CR",
+      "source_appendix_scope": "p011-long-frozen-LR-r2-complete-path-CR",
       "current_binding": {
         "actual_input_binding_sha256": "cee34dc05189b785fe92e4c6384f8afb28a6ec26d1e60871d8fdbba3ea70deb3",
         "actual_input_directory": "long_inputs_numeric_gold_r1",
@@ -4567,7 +4567,37 @@
       "later_jobs_admitted": false,
       "failure_disposition_request": "p011-long-initial2-rate-validation-failure-disposition-r1",
       "failure_packet": "reports/p011_20261020/long_initial3_plan_validation_failures_v1",
-      "current_paid_dispatch_permitted": false
+      "current_paid_dispatch_permitted": false,
+      "runtime_packet": "reports/p011_20261020/long_lr_r2_runtime_v1",
+      "required_flags": [
+        "complete_source_closure_accepted",
+        "OT3_actual_A1_accepted",
+        "AM_actual_A1_accepted",
+        "endpoint_native_inputs_A1_accepted",
+        "all_original_complete_timing_sources_accepted",
+        "full_state_raw_scoring_window_and_budget_accepted",
+        "remote_paths_traced_to_producers",
+        "current_owner_budget_and_failed_reservations_accepted",
+        "completed_numeric_gold_inputs_and_prior_asset_reuse_accepted",
+        "original32_to_formal512_and_processed_token_scaling_scope_accepted",
+        "new_A_D7200_scoring_cap_with_frozen_per_row_rules_and_full_window_accepted",
+        "plan7_4_mandatory_remaining_budget_disposition_explicitly_accepted",
+        "fullparameter_actual_local_oracle_accepted_after_preentry_disposition",
+        "original_conditional_numeric_report_preserved_and_inherited",
+        "only_F15_A7_and_single_baseline_r2_admitted",
+        "all_L15_L3_students_cancelled_and_later_jobs_not_in_this_SPEC",
+        "exact_delegated_LR_tolerance_frozen_values_and_all_other_checks_accepted",
+        "new_r2_IDs_fences_both_failed_parents_and_reserves_retained",
+        "original_input_upload_receipts_reused_without_old_transfer_or_readback",
+        "actual_F15_full_local_proof_condition_satisfied",
+        "original_jobs_science_limits_and_no_reserve_release_unchanged"
+      ],
+      "allowed_jobs": [
+        "long_A7_S-F15_s17_r2",
+        "long_baseline_S-L15_s17_r2"
+      ],
+      "delegated_repair_decision_sha256": "481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f",
+      "paid_dispatch_authorized": false
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
@@ -6917,7 +6947,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T14:24:42.434514+00:00",
+  "last_updated_utc": "2026-10-21T14:29:32.576574+00:00",
   "p011": {
     "status": "LONG_INITIAL_TWO_FAILED_PRESERVED_STOPPED0_B_ACTUAL_AND_STUDENT_REVIEWS_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -7779,6 +7809,15 @@
       "report_sha256": "481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f",
       "L15_L3_cancelled": true,
       "no_budget_release_or_increase": true
+    },
+    "long_lr_r2": {
+      "status": "EXACT55_SOURCE_NUMERIC_PENDING",
+      "target_commit": "f704855dd2c3a2909ab53ea0b94fdd40da749256",
+      "SPEC_sha256": "9f675f1c4e92f45f438e251ce926f096e9833868680bb2459e4cd14603e24f7b",
+      "original_failed_L15_F15_reserves_retained": true,
+      "r2_models": 0,
+      "r2_registrations": 0,
+      "A6_budget_gap_without_authorized_release_or_increase": true
     }
   }
 }
