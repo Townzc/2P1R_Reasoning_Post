@@ -1,0 +1,55 @@
+{
+  "decision": "PASS-WITH-NOTES",
+  "request_id": "p011-T72-fallback-clean-controls-results-actual-A3-r1",
+  "scope": "p011-T72-fallback-clean-controls-results-actual-A3",
+  "target_commit": "469cbaa0acc839eae3714b5174320354d0d0e5eb",
+  "report_sha256": "032e0c6fb00c26cf431e9094eb782afa45298941faf90a253d68e89ff5192261",
+  "report_commit": "c420555fc939165fceb1f8d2f885fe4acf8d226a",
+  "report_source_path": "audit/claude/20261021x/REPORT_FALLBACK_CLEAN_ACTUAL_A3.md",
+  "report_author": "Claude",
+  "report_git_event": "2026-10-21T21:07:36Z",
+  "first_head_observed_utc": "2026-10-21T21:29:22.017854+00:00",
+  "full_read_confirmed_utc": "2026-10-21T21:30:54.992623+00:00",
+  "required_true_flags": {
+    "complete_two_original_controls_and_unchanged_dose_accepted": true,
+    "independent_token_decode_and_correctness_check_scope_disclosed": true,
+    "all_eight_new_paired_contrasts_and_old_label_reuse_accepted": true,
+    "coverage_exposure_posthoc_and_single_training_seed_limits_disclosed": true,
+    "private_binary_state_and_frozen_scorer_access_limits_disclosed": true
+  },
+  "immutable_packet_bindings": {
+    "ACTUAL_RESULT_BINDING.json": {
+      "bytes": 14813,
+      "sha256": "b3d76d5880d9fbb5e506da88a770860672e83b4d2ebcb7d5e610d2640c021abf"
+    },
+    "MANIFEST.json": {
+      "bytes": 954,
+      "sha256": "4e20e9daaa1b83e71aa1def0a712d3897a4bb4a346222b75ae867c823d4a32b5"
+    },
+    "original_scientific_bytes.tar.gz.part000": {
+      "bytes": 19887359,
+      "sha256": "50b25e337454a2df486019ab64e62f2f33e1c037b26cb04e542b7ceb2dd06aa3"
+    }
+  },
+  "abbreviated_report_hashes_resolved_only_against_the_report_named_fixed_target": true,
+  "independent_review_scope": {
+    "original_native_BPE_decode": 5000,
+    "decoded_and_scoring_rows_mismatches": 0,
+    "independent_answer_extraction_mismatches": 0,
+    "new_symbolic_only_pairs_manually_inspected": 5,
+    "new_symbolic_pairs_equivalent": 4,
+    "known_frozen_scorer_false_positive_rows": 1,
+    "independent_bootstrap_rerun": false,
+    "private_binary_read_by_reviewer": false,
+    "full_independent_symbolic_engine_reexecution_not_claimed": true
+  },
+  "limitations": [
+    "one training seed",
+    "posthoc control selection",
+    "coverage and repeated exposure changed",
+    "frozen scorer false positive retained",
+    "old reference vectors absent from review archive; no independent bootstrap rerun",
+    "private checkpoint/weights/accounting excluded"
+  ],
+  "no_new_model_or_token_decode_score_statistic_or_old_artifact_verification": true
+}

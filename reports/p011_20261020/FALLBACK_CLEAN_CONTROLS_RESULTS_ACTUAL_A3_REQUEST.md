@@ -1,3 +1,7 @@
+### Actual A3 accepted 2026-10-21T21:30:54.992623+00:00
+
+Claude c420555fc939165fceb1f8d2f885fe4acf8d226a / report032e0c6f PASS-WITH-NOTES, all five flags; fixed469cbaa0 unchanged. Public acceptance: review_c420555f_fallback_actual_A3_accepted_v1. Full5000 independent decode/extraction matches; one clean400 frozen-scorer false positive is separately disclosed, original scores/intervals not rewritten. No independent bootstrap/private binary access claimed. This request is CLOSED; no new science authorized.
+
 # Actual A3 request: both original T72 fallback-removal controls
 
 Status: PENDING independent actual-results review. Source CR is not actual A3.
