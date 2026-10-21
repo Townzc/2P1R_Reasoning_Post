@@ -1,0 +1,16 @@
+{
+  "excerpt_not_complete_source": true,
+  "lines": {
+    "49": "elig = {h for h, d in disp.items() if d['eligible']}",
+    "50": "over = {h for h, d in disp.items() if d['flags'].get('overlength') is True}",
+    "51": "dec = {h for h, d in disp.items() if d['flags'].get('decontamination') is True or d['flags'].get('decontaminated') is True}",
+    "52": "R['orig_flag_keys'] = sorted({k for d in disp.values() for k in d['flags']})",
+    "53": "rp16 = {h for h, v in per.items() if v[2] == 16}",
+    "54": "R['rprime16_and_eligible'] = len(rp16 & elig); R['rprime16_and_overlength'] = len(rp16 & over)",
+    "55": "R['rprime16_minus_orig_complete16'] = len(rp16 - {h for h, v in per.items() if v[1] == 16})",
+    "56": "R['orig16_not_rprime16'] = len({h for h, v in per.items() if v[1] == 16} - rp16)"
+  },
+  "original_script_sha256": "6c163a0098ae8289e67f8070c166c769f4c9aab4315b2e71fda99ebf009f5afa",
+  "script_executed_by_Codex": false,
+  "source_commit": "0e155e2528118156ebc6477f23ddeec32fc1cd62"
+}
