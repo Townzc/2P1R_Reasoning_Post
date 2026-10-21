@@ -1,3 +1,9 @@
+### 2026-10-20 23:51:11 PDT — C1 r2 complete candidate submitted
+
+Exact22 source/SPEC targetd18581c10d2a7647ff9ecb1f028eca911b7837cf; one new scoped requestp011-C1-r2-chunk320-complete-path-CR-A1-A2-lite-r1. Journal320/30chunks, original9594 unique sequences/18inputfiles and original completed upload reused; r1failure/3.74reserve/fences retained. No actualGPU/upload/forward/reserve. Worker1500/platform1560/startup600, candidate2.64 historicalfullrate requiresfresh confirmation. New owner accounting protected0/currentavailable minus retainedP011 only; original180/categorycaps unchanged. Fullsource/input/numericA2 stillpending; sourcePASSnotpaidpermission.
+
+14 distinct new checks10+4 PASS once;24newGitfilesverified. Rawdiff24contextwhitespace warnings retained: wholecheckexit2, excludingrawdiffPASS. No old scientific/test/constructor/provider/billing task repeated. B input actualA1 and longnumericgoldowner-boundCR pending; originalfailure and private evidence kept. P010Oct21 19UTC freeze remains.
+
 ### 2026-10-20 23:35:55 PDT — Actual B input preparation; C1 failure review and owner decisions
 
 Claude3f314dac fixed non-Z1 reports fully read06:32:43UTC. B exact71source PASS-WITH-NOTES and C1failed preservation PASS accepted; no C1complete result. Owner records authorize one C1r2 chunk320/reserve<=2.70 and three A-funded engineering preflights totalreserve<=6, require exact CR/A2. New owner accounting protected0/P010prior obligations not subtracted; P011failed3.74 retained and all categorycaps unchanged. Chronology inconsistencies and unseen underlying claude.ai conversation explicitly retained.
