@@ -1,3 +1,5 @@
+P011 engineering 2026-10-21T01:58:25.483119+00:00: [C1 admission/transport draft](reports/p011_20261020/c1_admission_artifacts_draft_v1/README.md),10new checks passed; no actual inputs/model/forward or paid admission. Owner NFC approved; exact SHA addendum remains.
+
 P011 current 2026-10-20T23:39:23.621006+00:00: owner approved A grid252/1008/4032, conditional on exact reuse-path CR. Original4038/4096 gateFAIL preserved; no new filtering/model. New consumer candidate and 11synthetic checks complete, production NOTRUN. AM actualA1 remains pending. See [new exact reuse candidate](reports/p011_20261020/ot3_4032_reuse_preflight_v1/README.md). Earlier owner-pending entries are historical.
 
 P011 current 2026-10-20T23:28:56.460978+00:00: OT3 exhausted its original candidate pool with4038/4096 parents; original gateFAIL preserved, owner scope decision pending. AM1024 common parents complete, actual jointA1 pending. 0P011 model/paid calls. See [actual request](reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md) and [scope options](reports/p011_20261020/OT3_INSUFFICIENT_PARENT_OPTIONS.md). Earlier running/pending-code notes below are historical.

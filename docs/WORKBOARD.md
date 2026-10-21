@@ -1,3 +1,16 @@
+### 2026-10-20 18:58:25 PDT — C1 shared admission and evidence transport draft prepared
+
+Two new modules and10new synthetic/mocked checks passed once0.020s. Full fixed
+review/source/input/timing bindings, fresh D1 protected-floor accounting,
+failed/pending/unknown/unmatched reservations and slots, and create-only evidence
+pack/extract/original completed STOPPED0 proof are prepared. Original C1 sources
+and science are unchanged. Complete Modal/provider integration, actual timing
+and spec plus shared full-path CR/A1/A2-lite still required; no extra code-only
+gate or paid measurement exception. No actual corpus, model, forward or reserve.
+Owner NFC approval is already recorded; only actual owner-SHA addendum pending.
+No old tests/science repeated, no Z1 or external messages. P010 Oct21 19UTC
+formal freeze remains separate. Packet: reports/p011_20261020/c1_admission_artifacts_draft_v1.
+
 ### 2026-10-20 18:39:12 PDT — Direct owner approved the one NFC continuation; exact SHA addendum requested
 
 Owner directly answered “批准此次续作，复用 965 条，复审后执行”. Immutable
