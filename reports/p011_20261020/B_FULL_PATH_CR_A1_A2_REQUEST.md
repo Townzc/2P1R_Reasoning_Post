@@ -1,3 +1,6 @@
+Latest 2026-10-21T08:47:00.549726+00:00: Generation-only exact A2-lite PASS-WITH-NOTES at85bc4260 accepted fromClaude bbf60ab0; fresh08:44:25 rates/D1 saved. One originalupload/entry stillpending atthisentry; Bstudents/B4notadmitted.
+Acceptance: reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1
+
 # Concrete B generation SPEC and current accounting revision — 2026-10-21T07:44:30.984654+00:00
 
 Exact target **85bc4260036c607aae6db10bd3179eab14c91a66**, [candidate](b_generation_runtime_v1/README.md),

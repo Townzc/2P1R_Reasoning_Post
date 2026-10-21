@@ -1,3 +1,6 @@
+Latest 2026-10-21T08:47:00.549726+00:00: ActualA3 PASS accepted from47e80292, originalcomplete packetbf0ca6de. Originalvectors/summary unchanged, allC1workclosed; both3.74+2.64reserves retained. Privatebytes/access and costestimate limitations retained.
+Acceptance: reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1
+
 # C1 r2 complete original-token NLL actual A3 request
 
 Request `p011-C1-r2-complete-original-token-NLL-actual-A3-r1`; scope `p011-C1-r2-complete-original-token-NLL-actual-A3`. Fixed target `bf0ca6de753a1788db31887f9523f4a29ac1bc27`, packet `reports/p011_20261020/c1_r2_complete_results_v1`, manifest `ab609ac33112eaf2484039f5b6bb25a32ce284350af57e2b271acb5944c5c8fc`. Actual independent review is **PENDING**; exact source/A1/A2 acceptance does not substitute for actual A3.

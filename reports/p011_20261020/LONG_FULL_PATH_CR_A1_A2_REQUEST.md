@@ -1,3 +1,6 @@
+Latest 2026-10-21T08:47:00.549726+00:00: Originalcomplete longinputA1 PASS-WITH-NOTES accepted from724ca055. FormalA/Dnumeric/memory/throughput stillpending; engineering subsetsource CR separately accepted.
+Acceptance: reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1
+
 ## Actual input continuation complete; source repair accepted — 2026-10-21T07:24:21.357367+00:00
 
 Fixed target `63e8710fc24c7c5b206be2515976ff4dc57ecc89`: [actual input packet](long_numeric_gold_inputs_actual_v1/README.md),

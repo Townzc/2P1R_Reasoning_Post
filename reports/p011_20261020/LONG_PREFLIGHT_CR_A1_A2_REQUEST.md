@@ -1,3 +1,6 @@
+Latest 2026-10-21T08:47:00.549726+00:00: Exact33-source preflight CR PASS and originalcomplete longinputA1 accepted from724ca055. OneCPU savedtoken subset authorized; actualsubsetA1/concreteSPEC/numericA2 stillrequired. NoGPUpermission.
+Acceptance: reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1
+
 # P011 three-arm engineering preflight: exact source, inputs and numerical review
 
 Request: `p011-long-three-arm-engineering-preflight-CR-A1-A2-lite-r1`.
