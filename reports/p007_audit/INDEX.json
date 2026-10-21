@@ -4330,7 +4330,7 @@
       "scope": "p011-D-F15-pair-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-D-F15-pair-complete-path-CR-A1-A2-lite",
       "target_commit": "687011075c425de058f35133a44284153a4c6159",
-      "status": "EXACT_D62_17FLAGS_ACCEPTED_ORIGINAL_ENTRY_IN_PROGRESS",
+      "status": "EXACT_D62_ACCEPTED_PREENTRY_PUBLICATION_FAILURE_EXCEPTION_PENDING",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_d_pair_predicted_budget_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4624,7 +4624,7 @@
       "r2_endpoint_outputs": 0,
       "actual_D_model_calls": 0,
       "D_numeric_disposition_required": false,
-      "D_paid_permission": true,
+      "D_paid_permission": false,
       "A_new_dispatch_permitted": false,
       "D_appendix_request_file": "reports/p011_20261020/D_F15_PAIR_FULL_PATH_CR_A1_A2_REQUEST.md",
       "prepared_utc": "2026-10-21T17:01:29.401208+00:00",
@@ -4645,7 +4645,8 @@
         "both_D_reservations_sequential80percent_and_full_windows_accepted",
         "all_original_failed_parents_and_reservations_retained",
         "unchanged_frozen_LR_consumption_and_narrow_validator_accepted"
-      ]
+      ],
+      "D_preentry_exception_request": "p011-D-first-preentry-publication-failure-exception-r1"
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
@@ -5185,6 +5186,33 @@
       "submitted_utc": "2026-10-21T18:56:15.908011+00:00",
       "source100_model_and_source101_tail_exception_distinct": true,
       "private_binary_access_not_claimed": true
+    },
+    {
+      "request_id": "p010-final-frozen-technical-evidence-A5-20261021-r1",
+      "scope": "p010-final-frozen-technical-evidence-A5-20261021",
+      "target_commit": "db514956281b7492954a3dbecb429117178491cd",
+      "status": "PENDING_FINAL_FROZEN_VERSION_A5",
+      "request_file": "reports/p010_20261019/FINAL_FREEZE_20261021_A5_REQUEST.md",
+      "result_manifest_sha256": "fbfa3a5d8e09c7895251d842e2cf06b0d5790fe9487d2109510c3a7ecc2f3038",
+      "copy_binding_sha256": "7ea2e7c900b501e98be23b993af46575959b5baf7fe6bd8e85546f92a4d1f8d7",
+      "freeze_status_sha256": "4e472f29e722a6b35b7e78747452413c881846adfd69d9ac872ff79ff1eca7a5",
+      "submitted_utc": "2026-10-21T19:01:51.606166+00:00",
+      "scheduled_cutoff_utc": "2026-10-21T19:00:00+00:00",
+      "actual_write_started_utc": "2026-10-21T19:00:10.760813+00:00",
+      "early_A5_does_not_replace_final": true
+    },
+    {
+      "request_id": "p011-D-first-preentry-publication-failure-exception-r1",
+      "scope": "p011-D-first-preentry-publication-failure-exception",
+      "target_commit": "a3a5da834f7ec726e14370b6c5958cb5537d5558",
+      "status": "PENDING_EXPLICIT_REASONED_PREENTRY_EXCEPTION",
+      "request_file": "reports/p011_20261020/D_PREENTRY_PUBLICATION_FAILURE_EXCEPTION_REQUEST.md",
+      "failure_manifest_sha256": "c0f5ec6e7f325caeacbc9d4fd20b2445f6f7dddd7eae531e704373325a4922f4",
+      "failure_binding_sha256": "d38a4c94b4b23738f7944d4a524a657f7e5031a2c5274de8fd9425c274b9a2d7",
+      "submitted_utc": "2026-10-21T19:01:51.606166+00:00",
+      "new_D_model_calls": 0,
+      "D_reserve_created": "0",
+      "original_uploads_complete": true
     }
   ],
   "p008_v31": {
@@ -6437,7 +6465,7 @@
     }
   },
   "p010": {
-    "status": "seed29_full_results_analysis_A3_pending_two_original_E9_students_running",
+    "status": "ALL_RETAINED_SCIENCE_AND_ACTUAL_A3_DONE_ACTUAL_FINAL_FREEZE_DONE_FINAL_A5_PENDING",
     "plan_commit": "4287537f7733f5c3568ddb11695d47b566ef75fa",
     "packet": "reports/p010_20261019",
     "C7_review": "reports/p010_20261019/C7_Z1_CODE_REVIEW.md",
@@ -6994,7 +7022,7 @@
       "repeated_confirmed_parser_attempts": 0
     },
     "E9_runtime_candidate": "reports/p010_20261019/e9_runtime_v1",
-    "C6_status": "Complete selection actual A3 accepted; complete benchmark exact A2 pending; no new benchmark call",
+    "C6_status": "complete_actual_A3_PASS_WITH_NOTES",
     "C6_benchmark_candidate": "reports/p010_20261019/c6_benchmark_runtime_v1",
     "C6_benchmark_target_commit": "a998d25251422707f65bfc836ad0fcfe69d56a43",
     "latest_review_commit": "87bafe1bdf1a029e25513f5d8f574bf823275294",
@@ -7041,11 +7069,24 @@
       "actual_expense": false,
       "settlement_release_used": false
     },
-    "C6_benchmark_status": "FAILED_STOPPED0_preserved18871_only2500_unattempted_owner_exception_pending",
-    "E3_status": "full_candidate_prepared_not_admitted_or_called_original_scope_D1_pending",
+    "C6_benchmark_status": "original_failure_retained_remaining2500_complete_actual_A3_accepted",
+    "E3_status": "complete_actual_A3_PASS_WITH_NOTES",
     "E3_full_candidate_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
-    "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
+    "C6_remaining_status": "DONE_unique_continuation_and_complete_actual_A3_accepted",
+    "formal_freeze": {
+      "target_commit": "db514956281b7492954a3dbecb429117178491cd",
+      "packet": "reports/p010_20261019/midpoint_freeze_20261021_1200PDT_v1",
+      "manifest_sha256": "fbfa3a5d8e09c7895251d842e2cf06b0d5790fe9487d2109510c3a7ecc2f3038",
+      "copy_binding_sha256": "7ea2e7c900b501e98be23b993af46575959b5baf7fe6bd8e85546f92a4d1f8d7",
+      "scheduled_cutoff_utc": "2026-10-21T19:00:00+00:00",
+      "actual_write_started_utc": "2026-10-21T19:00:10.760813+00:00",
+      "actual_write_completed_utc": "2026-10-21T19:00:11.317436+00:00",
+      "copy_only": true,
+      "final_A5_request": "p010-final-frozen-technical-evidence-A5-20261021-r1",
+      "final_A5_accepted": false
+    },
+    "no_P010_active_compute": true
   },
   "last_updated_utc": "2026-10-21T17:57:19.847303+00:00",
   "p011": {
@@ -8035,7 +8076,7 @@
       "no_new_job_or_paid_permission_created": true
     },
     "D_pair_current": {
-      "status": "EXACT62_ACCEPTED_ORIGINAL_UPLOADS_DONE_ENTRY_BUILDING",
+      "status": "D1_PREENTRY_CLI_FAILED_BEFORE_DISPATCH_EXPLICIT_EXCEPTION_PENDING_D2_HELD",
       "target_commit": "687011075c425de058f35133a44284153a4c6159",
       "packet": "reports/p011_20261020/long_d_pair_predicted_budget_runtime_v1",
       "source_count": 62,
@@ -8044,7 +8085,21 @@
       "current_clis": {
         "D1_model": 16928,
         "D2_upload_completed": 1974
-      }
+      },
+      "actual_model_calls": 0,
+      "original_D1_cli": 16928,
+      "original_D1_cli_state": "EXIT1CONSUMED",
+      "original_D1_app": "ap-PNyeKV72wm9v3mtWRTnRtP",
+      "original_D1_call_id": null,
+      "provider_state": "stopped_owned0",
+      "original_uploads_completed": [
+        "long_D1_S-F15_s17_r1",
+        "long_D2_S-F15_s17_r1"
+      ],
+      "exception_request": "p011-D-first-preentry-publication-failure-exception-r1",
+      "failure_packet": "reports/p011_20261020/d_pair_preentry_publication_failure_v1",
+      "failure_target": "a3a5da834f7ec726e14370b6c5958cb5537d5558",
+      "no_automatic_retry": true
     },
     "B_STUDENTS_LOCAL_AUDIT_REMAINING_CR_ACCEPTED": {
       "status": "EXACT_REVIEW_ACCEPTED_UNEXECUTED_NEXT_STEP",
@@ -8059,6 +8114,7 @@
       "report_sha256": "26d7fe9706770bfe1c81872b0603e045605456407115db9d0521d2a8a5c7f2b2",
       "scope": "p011-D-F15-pair-complete-path-CR-A1-A2-lite",
       "read_utc": "2026-10-21T18:47:10.983310+00:00"
-    }
+    },
+    "A_owner_decision_by_19UTC": "NO_NEW_OWNER_DECISION_OBSERVED_HOLD_CONTINUES_NO_AUTOMATIC_RELEASE_OR_CAP_CHANGE"
   }
 }

@@ -1,3 +1,5 @@
+Current 2026-10-21T19:01:51.606166+00:00: exact corrected62/17flags accepted, but original D1 CLI16928 failed before dispatch at published-HEAD check. D2 held. Both uploads complete; see D_PREENTRY_PUBLICATION_FAILURE_EXCEPTION_REQUEST.md. No model/reservation created; no automatic entry retry.
+
 # D pair predicted-cost clarification: exact narrow review pending
 
 Prepared 2026-10-21T17:52:24.964165+00:00. Fixed target `687011075c425de058f35133a44284153a4c6159`; packet [long_d_pair_predicted_budget_runtime_v1](long_d_pair_predicted_budget_runtime_v1/README.md). Same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, scope `p011-D-F15-pair-complete-path-CR-A1-A2-lite`.

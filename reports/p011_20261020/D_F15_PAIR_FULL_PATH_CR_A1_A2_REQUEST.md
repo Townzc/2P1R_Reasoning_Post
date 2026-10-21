@@ -1,3 +1,5 @@
+Current 2026-10-21T19:01:51.606166+00:00: exact corrected62/17flags accepted, but original D1 CLI16928 failed before dispatch at published-HEAD check. D2 held. Both uploads complete; see D_PREENTRY_PUBLICATION_FAILURE_EXCEPTION_REQUEST.md. No model/reservation created; no automatic entry retry.
+
 Current 2026-10-21T18:47:10.983310+00:00: Exact requested review accepted from ab31e7a3; see review_ab31e7a3_B_tail_and_D_pair_accepted_v1. Original request retained below.
 
 # D pair predicted-cost clarification: exact narrow review pending
