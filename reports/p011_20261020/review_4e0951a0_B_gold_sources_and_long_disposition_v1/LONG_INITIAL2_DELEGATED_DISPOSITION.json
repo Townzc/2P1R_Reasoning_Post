@@ -1,0 +1,60 @@
+{
+  "request_id": "p011-long-initial2-rate-validation-failure-disposition-r1",
+  "scope": "p011-long-initial2-rate-validation-failure-disposition",
+  "target_commit": "141dae026c3dcf1cc20089f153561e53ec03bc9a",
+  "author": "Claude",
+  "authority": "Explicit owner overnight delegation in this chat; concrete reasoned decision in this original report",
+  "report_commit": "4e0951a03ac92bef85b8132868cf4eb6a2bc1f5d",
+  "report_sha256": "481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f",
+  "report_path": "audit/claude/20261021s/DECISION_LONG_INITIAL2_RATE_VALIDATION_FAILURE.md",
+  "local_report_path": "reports/p011_20261020/review_4e0951a0_B_gold_sources_and_long_disposition_v1/DECISION_LONG_INITIAL2_RATE_VALIDATION_FAILURE.md",
+  "report_git_event_utc": "2026-10-21T14:03:27Z",
+  "discovery_utc": "2026-10-21T14:12:45.832415+00:00",
+  "full_read_confirmed_utc": "2026-10-21T14:15:34.798821+00:00",
+  "failure_integrity_decision": "PASS",
+  "decision": "NARROW_REPAIR_PREPARATION_AUTHORIZED_EXACT_SOURCE_AND_NUMERIC_REVIEW_REQUIRED",
+  "new_paid_dispatch_authorized": false,
+  "original_failed_parents_and_reserves_retained": true,
+  "new_logical_ids_and_permanent_fences_required": true,
+  "cancelled_arms": [
+    "S-L15",
+    "S-L3"
+  ],
+  "next_scope": [
+    "S-F15 A7 smoke r2",
+    "1.5B baseline new identity"
+  ],
+  "LR_tolerance_relative_to_peak": "1e-12",
+  "frozen_LR_values_unchanged_and_used_for_training": true,
+  "all_non_LR_checks_unchanged": true,
+  "reviewer_reproduction": {
+    "environment": "Linux CPU glibc libm",
+    "U": 654,
+    "different_positions_per_arm": 19,
+    "difference_reported": "1 ulp",
+    "other_positions_equal_per_arm": 635,
+    "Codex_did_not_repeat": true,
+    "remote_exact_offending_values_not_observed_by_Codex": true
+  },
+  "no_scientific_effect_claim_not_adopted_as_guarantee": true,
+  "single_F15_gate": {
+    "minimum_EOS_fraction": 0.7,
+    "max_accuracy_deficit_vs_baseline_pp": 10,
+    "technical_failure_allowed": false
+  },
+  "later_order": [
+    "A1",
+    "A5",
+    "A6",
+    "A4",
+    "A3",
+    "A2/A8"
+  ],
+  "A6_budget_gap_reported_to_owner": true,
+  "current_A_reserve": "47.66",
+  "hypothetical_F15_plus_baseline_A_reserve": "75.46",
+  "hypothetical_remaining_A": "39.54",
+  "no_release_transfer_or_cap_increase_authorized": true,
+  "D_F15_pair_estimate": "11.21",
+  "D_requires_separate_actual_review": true
+}

@@ -1,0 +1,27 @@
+diff --git a/scripts/p011_b_students_io.py b/scripts/p011_b_students_io.py
+index a27dcc36..93fe7763 100644
+--- a/scripts/p011_b_students_io.py
++++ b/scripts/p011_b_students_io.py
+@@ -19,6 +19,13 @@ from experiments.sft_allocation_midpoint.common import read,dump,sha,digest,veri
+ ROOT=Path(__file__).resolve().parents[1]
+ 
+ 
++def local_audit_assets(model):
++    # The original local base tokenizer cache contains these five files. The
++    # full remote model inventory/receipt remains mandatory for the worker.
++    names=('config.json','tokenizer.json','tokenizer_config.json','vocab.json','merges.txt')
++    return {name:model['files'][name] for name in names}
++
++
+ def expected_records(job):
+     k=path.key(job)
+     if job['kind']=='student':return [k+'/dispatch',*b_student_evidence.expected_record_keys(job['run_id'])]
+@@ -141,7 +148,7 @@ def audit(root,out,spec,job,review):
+             or read(payload/'RESULT.json')!=receipt['result']):
+         raise ValueError('Original complete identity/timing/receipt differs')
+     inputs=path.local_inputs(root,job);verify(inputs,job['local_input_files'])
+-    assets=root/job['model']['local_path'];verify(assets,{n:v for n,v in job['model']['files'].items() if not n.endswith(('.safetensors','.bin'))});cfg=read(assets/'config.json')
++    assets=root/job['model']['local_path'];verify(assets,local_audit_assets(job['model']));cfg=read(assets/'config.json')
+     from transformers import AutoTokenizer
+     tokenizer=AutoTokenizer.from_pretrained(assets,local_files_only=True,trust_remote_code=False,use_fast=True)
+     from experiments.learning_regime_p009.high_throughput_v1 import validate_observed_engine

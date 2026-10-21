@@ -1,0 +1,7 @@
+# B corrected source acceptance and long failed-attempt disposition
+
+Recorded 2026-10-21T14:15:34.798821+00:00; report Git14:03:27UTC, discovery14:12:45UTC, full read/confirmation distinct. Both original non-Z1 reports are copied unchanged. B exact92 source at11a18aaa authorizes one CPU selected-answer input construction; exact96 source at1bf3de6d is accepted but does not authorize models. Actual6400 A3 was previously accepted; actual student input A1 and concrete SPEC numeric review remain required.
+
+Claude independently reproduced19/654 one-ulp LR comparison differences per original arm in Linux. Codex did not recompute the frozen schedule or rerun the experiment. This report authorizes preparation of a narrow peak-relative1e-12 validation tolerance, while training uses unchanged frozen rates and all non-LR checks remain. New r2 identities/fences and exact source/numeric review are required before any new paid run. L15/L3 are cancelled; only F15 smoke and1.5B baseline remain proposed, followed by original gates and category/time constraints. Original two failures and their reservations remain. Reviewer no-scientific-effect language is not adopted as a guarantee.
+
+Under retained failed-reserve accounting, mandatory A6 still cannot fit after the proposed F15/baseline and A1/A5. The reviewer explicitly declined to authorize release or cap changes. This is a real budget gap to report under7.4, not permission to free money or spend more. D remains a separately reviewed paired obligation. P01019UTC formal freeze is independent.
