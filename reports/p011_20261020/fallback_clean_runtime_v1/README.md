@@ -1,0 +1,9 @@
+# T72 K1 saved-fallback removal controls
+
+Direct owner addition; asynchronous review, no prior CR gate. Two original seed17 cells retain387/400 and3117/3200 answers after removing only13/83 saved unverified_fallback=true rows. Original raw answers/token rows retained, no teacher generation or old scoring. Exactly1024updates and2097148supervised tokens; same original frozen LR vector, base1.5B model, optimizer, training function, five500-question endpoints and frozen scalar scorer. Original training and evaluate function ASTs are unchanged. Predictions only log;4400s worker hard timers remain.
+
+The treatment changes coverage and repeat exposure, so even a narrowed teacher gap does not isolate text quality as the sole mechanism. These are exploratory post hoc controls motivated by C1, not preregistered confirmation. Originalseed17 was selected because the requested two cells are originaln400/n3200 K1; no seed29 or added teacher sampling. New pointwise paired question intervals do not represent a population of training seeds.
+
+Budget: two6.18 compute envelopes conservatively counted inside the same new150USD cap as the seven130.10 A/D envelopes;142.46 total maximum compute exposure is not actual expense.8shared slots, dispatch by22:30UTC. Both rows may be prepared, but the ninth concurrent worker must wait for a slot. No priorfailed reservation is deducted as expense. New infrastructure costs still count; no automatic extra arm if unavailable.
+
+Input archive contains16original newly created input/proof files; each member was read back once. Newconstructor93589 EXIT0; sourcepacket25765 EXIT0; six new synthetic/AST checks PASS. A source-only builder's final string substitution missed its exact needle after other new files were written; the previously unwritten Modal file was then completed once. No production or old builder rerun occurred.

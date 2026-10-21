@@ -1,3 +1,7 @@
+### 2026-10-21T20:04:41.666781+00:00 — Owner150 six submitted and fallback controls prepared
+
+Six originalowner jobs A7/A1/A6/baseline/D1/D2 submitted20:02:30–20:02:40UTC app ap-apvW2sCjp2BatOodb2EbcD. A5 originalinputtransfer6251 still active, no duplicateupload. NewT72 K1 cleancontrols source110/actual387and3117 at same2097148targets/1024updates/seed17 prepared, no model yet;6newchecks PASS. Newscience remains exploratory; coverage changes disclosed. Sharednew150/max8/logonlypredictions andasyncCR followdirectowner. Oldfailedreservations notnewexpense. BactualA3 accepted/P010finalA5pending.
+
 ### 2026-10-21T19:53:33.680012+00:00 — Direct owner150 amendment and B actual A3
 
 Direct human instruction supersedes old A hold/default closure, retained-reserve accounting, 80% prediction gates and pre-execution CR. Seven A/D calls prepared with exact original scientific jobs, new immutable IDs, worker16200/9000s, max8, shared new150USD, lastdispatch22:30UTC; source/SPEC in owner150_runtime_v1 and asynchronous request OWNER150_ASYNC_RUNTIME_REVIEW_REQUEST.md. New8checks oncePASS, oldscience/tests not repeated. Compute-envelope130.10 is not expense. Actual dispatch still not performed at this metadata write; latest original receipts are authoritative.
