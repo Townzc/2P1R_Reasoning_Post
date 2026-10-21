@@ -1,0 +1,248 @@
+--- long_training
++++ long_lr_r2_training
+@@ -1,4 +1,4 @@
+-"""Prepared A/D training body; no dispatch or admission is implemented here.
++"""Separate delegated LR r2 training body; no dispatch or admission is implemented here.
+ 
+ The complete runtime must first bind CR/A1/A2-lite, exact model/input/source
+ manifests, per-update cost/deadline journal and final-state storage. No resume,
+@@ -35,6 +35,17 @@
+     return [peak * step / warm if step <= warm else peak * (.1 + .9 * .5 *
+             (1 + math.cos(math.pi * (step - warm) / (updates - warm))))
+             for step in range(1, updates + 1)]
++
++
++def compatible_frozen_rates(rates, updates, arm):
++    """Validate the original saved vector without replacing any of its values."""
++    if (type(rates) is not list or len(rates) != updates
++            or any(type(x) is not float or not math.isfinite(x) for x in rates)):
++        return False
++    expected = learning_rates(updates, arm)
++    tolerance = 1e-12 * ARMS[arm]['peak_lr']
++    return all(abs(actual - computed) <= tolerance
++               for actual, computed in zip(rates, expected))
+ 
+ 
+ def validate_plan(encoded, plan, rates, arm):
+@@ -59,7 +70,7 @@
+             or plan['length_bucket_width'] is not None
+             or plan['presentation_order'] != 'shuffled_full_passes_then_extras'
+             or plan['row_path_ids'] != [r['path_id'] for r in encoded]
+-            or len(plan['updates']) != updates or rates != learning_rates(updates, arm)):
++            or len(plan['updates']) != updates or not compatible_frozen_rates(rates, updates, arm)):
+         raise ValueError('Exact source-built dose/update/order/LR vector differs')
+     stream = []
+     for update in plan['updates']:
+--- long_execution
++++ long_lr_r2_execution
+@@ -14,7 +14,7 @@
+ import traceback
+ 
+ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest, verify
+-from experiments.p011 import long_training as training
++from experiments.p011 import long_lr_r2_training as training
+ from experiments.p011.long_evaluation import sampling, MAX_NEW_TOKENS, BENCHMARK_COUNTS
+ 
+ 
+--- long_evidence
++++ long_lr_r2_evidence
+@@ -11,7 +11,7 @@
+ from experiments.p011.long_protocol import ENDPOINT_BATCH, ENDPOINT_BATCHES, ENGINE_MAX_SEQS, GRAPH_CAPTURE_SIZES
+ 
+ from experiments.sft_allocation_midpoint.common import read, sha, digest
+-from experiments.p011.long_training import ARMS, TARGETS, validate_plan
++from experiments.p011.long_lr_r2_training import ARMS, TARGETS, validate_plan
+ from experiments.p011.long_execution import validate_endpoint, engine_settings
+ from experiments.p011.long_evaluation import MAX_NEW_TOKENS, sampling, scoring_rows
+ from experiments.p011.long_numeric import forecast
+--- long_conditional_path
++++ long_lr_r2_path
+@@ -1,4 +1,4 @@
+-"""Current-owner A/D admission; original science and logical IDs remain fixed.
++"""Delegated narrow frozen-LR r2 admission; original science and failed IDs preserved.
+ 
+ A shared source/input/numeric review covers this path, never per-cell CR. Actual
+ configuration, timing and Claude smoke selection remain data, not self-approval.
+@@ -16,19 +16,22 @@
+ import traceback
+ 
+ from experiments.p011 import c1_admission as shared, c1_outer as lifecycle
+-from experiments.p011 import long_training, long_execution, long_numeric, long_transport, failed_attempt_ledger
++from experiments.p011 import long_lr_r2_training as long_training, long_lr_r2_execution as long_execution
++from experiments.p011 import long_numeric, long_transport, failed_attempt_ledger
+ from experiments.p011.c1_r2 import parent
+ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest, verify
+ 
+ LOCAL=lifecycle.LOCAL
+ STORE=lifecycle.STORE
+-SPEC='reports/p011_20261020/long_conditional_runtime_v1/SPEC.json'
++SPEC='reports/p011_20261020/long_lr_r2_runtime_v1/SPEC.json'
+ ORIGINAL_SPEC='reports/p011_20261020/long_current_runtime_v1/SPEC.json'
+ ORIGINAL_SPEC_SHA='f0e9274459b17b25a9754b863ce88d4ecee5c35fe9804e3ffdd86f8ce92c522b'
+ DISPOSITION='reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/REPORT_LONG_FORMAL_NUMERIC_A2_LITE_AND_7_4_DISPOSITION.md'
+ DISPOSITION_SHA='aac07df3b995480490ff2ba8844745849c06741efe03bf940f8460234d237f0b'
+ F15_PROOF='reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/F15_COMPLETE_READONLY_PROOF.json'
+-INITIAL_JOBS=('long_A7_S-L15_s17_r1','long_A7_S-F15_s17_r1','long_baseline_S-L15_s17_r1')
++INITIAL_JOBS=('long_A7_S-F15_s17_r2','long_baseline_S-L15_s17_r2')
++REPAIR_DECISION='reports/p011_20261020/review_4e0951a0_B_gold_sources_and_long_disposition_v1/DECISION_LONG_INITIAL2_RATE_VALIDATION_FAILURE.md'
++REPAIR_DECISION_SHA='481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f'
+ BUDGET_OWNER_SHA='364aaf6cd70fa9cf1a89902af6dedb33a1b64d7c47e73a12b37b6b97dfb69a2f'
+ LOCAL_INPUT_DIRECTORY='long_inputs_numeric_gold_r1'
+ AUDIT_METADATA_NAMES={'config.json','generation_config.json','tokenizer.json','tokenizer_config.json','special_tokens_map.json','vocab.json','merges.txt','added_tokens.json'}
+@@ -39,8 +42,10 @@
+ 
+ 
+ def logical(job):
++    if (job['kind'],job['cell'],job['arm']) not in (('student','A7','S-F15'),('baseline','baseline','S-L15')):
++        raise ValueError('Only delegated F15 A7 and one native1.5B baseline r2 allowed')
+     prefix='baseline' if job['kind']=='baseline' else job['cell']
+-    return 'long_'+prefix+'_'+job['arm']+'_s17_r1'
++    return 'long_'+prefix+'_'+job['arm']+'_s17_r2'
+ 
+ 
+ def key(job):return 'long/'+logical(job)
+@@ -118,9 +123,12 @@
+ def conditional_evidence(spec,root=None):
+     root=Path(root) if root is not None else Path(__file__).resolve().parents[2]
+     files=spec.get('conditional_evidence_files',{})
+-    if (set(files)!={ORIGINAL_SPEC,DISPOSITION,F15_PROOF}
++    if (set(files)!={ORIGINAL_SPEC,DISPOSITION,F15_PROOF,REPAIR_DECISION}
+             or files.get(ORIGINAL_SPEC)!=ORIGINAL_SPEC_SHA
+             or files.get(DISPOSITION)!=DISPOSITION_SHA
++            or files.get(REPAIR_DECISION)!=REPAIR_DECISION_SHA
++            or spec.get('LR_relative_peak_tolerance')!='1e-12'
++            or spec.get('original_frozen_rate_arrays_unchanged') is not True
+             or spec.get('original_numeric_decision')!='PASS-WITH-CONDITIONS'
+             or spec.get('initial_allowed_jobs')!=list(INITIAL_JOBS)):
+         raise ValueError('Exact unchanged conditional disposition/evidence required')
+@@ -129,10 +137,22 @@
+         if p.is_symlink() or not re.fullmatch(r'[0-9a-f]{64}',str(value)) or sha(p)!=value:
+             raise ValueError('Conditional evidence bytes changed')
+     old=read(root/ORIGINAL_SPEC)
+-    if (not spec.get('jobs') or any(old['jobs'].get(k)!=v for k,v in spec['jobs'].items())
++    if (not spec.get('jobs') or any(old['jobs'].get(k.removesuffix('_r2')+'_r1')!=v for k,v in spec['jobs'].items())
+             or any(v['arm']=='S-L3' for v in spec['jobs'].values())
+             or any(spec['source_files'].get(k)!=v for k,v in old['source_files'].items())):
+         raise ValueError('Original job/source bytes changed or cancelled L3 restored')
++    if set(spec['jobs']) != set(INITIAL_JOBS):
++        raise ValueError('No later jobs or cancelled student arms in r2 SPEC')
++    for name,reserve in (('long_A7_S-L15_s17_r1','26.08'),('long_A7_S-F15_s17_r1','15.63')):
++        b=spec['failed_attempt_bindings'].get(name,{})
++        if b.get('category')!='A' or b.get('reserved_usd')!=reserve:
++            raise ValueError('Both permanent original failures/reserves required')
++    receipts=spec.get('prior_input_receipts',{})
++    if set(receipts)!=set(INITIAL_JOBS):raise ValueError('Exact two original upload receipts required')
++    for name,value in receipts.items():
++        expected=str(Path(LOCAL)/'long_io_r1/upload'/(name.removesuffix('_r2')+'_r1')/'COMPLETED.json')
++        if value.get('path')!=expected or not re.fullmatch(r'[0-9a-f]{64}',str(value.get('sha256',''))):
++            raise ValueError('Original uploaded input receipt identity differs')
+     proof=read(root/F15_PROOF)
+     if (proof.get('complete') is not True or proof.get('engineering_only') is not True
+             or proof.get('no_score_computed') is not True
+@@ -164,7 +184,10 @@
+         prior_failed_C1_sha256=digest(spec['prior_failed_C1']),
+         failed_attempt_bindings_sha256=digest(spec['failed_attempt_bindings']),
+         actual_input_directory=LOCAL_INPUT_DIRECTORY,actual_input_binding_sha256=spec['actual_input_binding_sha256'],
+-        source_appendix_scope='p011-long-conditional-initial3-adapter-CR',
++        source_appendix_scope='p011-long-frozen-LR-r2-complete-path-CR',
++        repair_decision_sha256=REPAIR_DECISION_SHA,
++        prior_input_receipts_sha256=digest(spec['prior_input_receipts']),
++        LR_relative_peak_tolerance='1e-12',
+         original_numeric_spec_sha256=ORIGINAL_SPEC_SHA,original_numeric_report_sha256=DISPOSITION_SHA,
+         original_numeric_decision='PASS-WITH-CONDITIONS',
+         conditional_evidence_files=spec['conditional_evidence_files'],initial_allowed_jobs=list(INITIAL_JOBS))
+@@ -178,8 +201,11 @@
+         'plan7_4_mandatory_remaining_budget_disposition_explicitly_accepted',
+         'fullparameter_actual_local_oracle_accepted_after_preentry_disposition',
+         'original_conditional_numeric_report_preserved_and_inherited',
+-        'only_initial_two_smokes_and_one_baseline_admitted',
+-        'all_L3_jobs_cancelled_and_later_jobs_require_reduced_selection',
++        'only_F15_A7_and_single_baseline_r2_admitted',
++        'all_L15_L3_students_cancelled_and_later_jobs_not_in_this_SPEC',
++        'exact_delegated_LR_tolerance_frozen_values_and_all_other_checks_accepted',
++        'new_r2_IDs_fences_both_failed_parents_and_reserves_retained',
++        'original_input_upload_receipts_reused_without_old_transfer_or_readback',
+         'actual_F15_full_local_proof_condition_satisfied',
+         'original_jobs_science_limits_and_no_reserve_release_unchanged')
+     if any(review.get(k)!=v for k,v in expected.items()) or any(review.get(k) is not True for k in flags):
+@@ -200,19 +226,21 @@
+ 
+ 
+ def selection(job,review):
+-    if job['arm']=='S-L3':raise ValueError('L3 jobs cancelled by delegated disposition')
+-    if logical(job) in INITIAL_JOBS:return None
+-    if not isinstance(review,dict):raise ValueError('Real original smoke decision absent')
+-    value=shared.fixed_report(review)
+-    if (review.get('scope')!='p011-long-reduced-smoke-student-selection'
+-            or review.get('selection_rule_unchanged') is not True
+-            or review.get('conditional_disposition_sha256')!=DISPOSITION_SHA
+-            or review.get('chosen_arm')!=job['arm'] or logical(job) not in review.get('allowed_logical_ids',[])
+-            or review.get('both_retained_smokes_and_single_baseline_A3_accepted') is not True
+-            or review.get('mandatory_order_and_budget_feasibility_explicitly_decided') is not True
+-            or (job['category']=='D' and review.get('D_both_or_none_feasibility_accepted') is not True)):
+-        raise ValueError('Real reduced-smoke A3/Claude selection and budget decision required')
+-    return value
++    if logical(job) not in INITIAL_JOBS:
++        raise ValueError('This r2 SPEC cannot dispatch later selected jobs')
++    return None
++
++
++def initial_pair_budget(spec,records,prior_A):
++    attempted={r['logical_id'] for r in records};total=Decimal(str(prior_A));steps=[]
++    for name in INITIAL_JOBS:
++        if name in attempted:continue
++        reserve=Decimal(str(spec['jobs'][name]['limits']['reserved_usd']))
++        if not reserve.is_finite() or reserve<=0 or reserve>Decimal('.8')*(Decimal('115')-total):
++            raise ValueError('Complete original F15/baseline pair exceeds remaining A budget')
++        steps.append(dict(logical_id=name,prior_A_reserved_usd=str(total),reserved_usd=str(reserve)))
++        total+=reserve
++    return steps
+ 
+ 
+ def budget_check(root,spec,job,budget,records,obs,now):
+@@ -242,7 +270,8 @@
+         p=Path(name)
+         if p.is_absolute() or '..' in p.parts or sha(Path(root)/p)!=value:raise ValueError('Budget bytes differ')
+     initial=long_numeric.forecast(policy(job,now,totals[cat]),job['U'],ENDPOINT_BATCHES,[],[],now)
+-    return dict(category=cat,new_reserved_usd=str(reserve),prior_reserved_usd=totals[cat],
++    pair=initial_pair_budget(spec,records,totals['A'])
++    return dict(initial_pair_sequential_budget=pair,category=cat,new_reserved_usd=str(reserve),prior_reserved_usd=totals[cat],
+         all_attempted_reservations_usd=totals,provider_slots=slots,initial_forecast=initial,
+         protected_usd='0',budget_owner_decision_sha256=BUDGET_OWNER_SHA,not_actual_expense=True)
+ 
+@@ -255,7 +284,9 @@
+     raw=Path(review['local_report_path']).read_bytes()
+     if hashlib.sha256(raw).hexdigest()!=review['report_sha256']:raise ValueError('Report raw bytes differ')
+     upload=read(root/LOCAL/'long_io_r1'/'upload'/job_id/'COMPLETED.json')
+-    if upload['job_sha256']!=digest(job) or upload['all_remote_file_bytes_read_back'] is not True:
++    if (upload['job_sha256']!=digest(job) or upload['all_remote_file_bytes_read_back'] is not True
++            or upload.get('original_input_receipt_sha256')!=spec['prior_input_receipts'][job_id]['sha256']
++            or upload.get('new_remote_input_or_weight_reads')!=0):
+         raise ValueError('Original uploaded job/asset evidence absent')
+     budget=read(budget_file);base=root/LOCAL
+     with (base/'dispatch.lock').open('a+') as lock:
+--- modal_long_conditional
++++ modal_long_lr_r2
+@@ -1,11 +1,11 @@
+ """Only A/D long production entry; absent exact SPEC fails closed before Modal."""
+ from pathlib import Path
+ import modal
+-from experiments.p011 import long_conditional_path as path
++from experiments.p011 import long_lr_r2_path as path
+ from experiments.sft_allocation_midpoint.common import read
+ ROOT=Path(__file__).resolve().parents[2]
+ spec=path.validate(read(ROOT/path.SPEC))
+-app=modal.App('p011-long-A-D')
++app=modal.App('p011-long-frozen-LR-r2')
+ volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
+ image=(modal.Image.debian_slim(python_version='3.12')
+     .pip_install_from_requirements(ROOT/'experiments/learning_regime_p009/requirements_p0.txt')
+@@ -23,7 +23,7 @@
+         volumes={'/evidence':volume})
+     def worker(intent,raw_report):
+         import os,threading
+-        from experiments.p011 import long_conditional_path as run
++        from experiments.p011 import long_lr_r2_path as run
+         if intent['job_id']!=job_id:raise ValueError('Function/job configuration mismatch')
+         def timer(seconds):
+             def hard_stop():
