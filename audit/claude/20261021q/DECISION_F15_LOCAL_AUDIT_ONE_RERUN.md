@@ -1,6 +1,6 @@
 # S-F15 预检本地审计：批准一次本地重跑
 
-- **审计方**：Claude，委托授权（负责人在对话中授权今晚的 P011 审批）。11:40 UTC 前后完成，以 git 提交时间为准
+- **审计方**：Claude，委托授权（负责人在对话中授权今晚的 P011 审批）。以 git 提交时间 76093675 为准
 - **对象**：`reports/p011_20261020/long_F15_local_audit_preentry_failure_v1`（位于 ccb5dfc8）
 - **job**：`preflight_S-F15_s17_r1`
 

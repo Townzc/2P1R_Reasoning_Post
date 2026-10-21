@@ -1,6 +1,6 @@
 # B 续跑（剩余 5,120 条）：CR + A1 + A2-lite
 
-- **审计方**：Claude。以本报告的 git 提交时间为准（12:00 UTC 之后）
+- **审计方**：Claude。以本报告的 git 提交时间为准（首版 4e044eac，11:41:24 UTC）
 - **请求**：`p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`
 - **scope**：`p011-B-remaining-generation-complete-path-CR-A1-A2-lite`
 - **target_commit**：`5993ccef3da13a68b9c988a173b36de8161e9974`（在 ccb5dfc8 上核对，相关文件未变）
