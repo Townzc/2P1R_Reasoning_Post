@@ -1,0 +1,9 @@
+# C2 original-output reuse consumer preparation
+
+Prepared only, pending the single complete C2 path CR/A1/A2-lite. This is not a new leaf-code gate. No actual old corpus has been projected, and no model, tokenizer, decoder, symbolic scorer or training has run.
+
+The new adapter projects original P010 T72/T1.5 RECORD_INDEX values and original P1 saved Boolean row/results for the frozen E1d order. Attempts above four are excluded from C2; unknown verdicts, missing original T72, prompt gaps, conflicting reused T1.5 identities and changed old source bindings block progress. S1 overlap stays eligible. Original native prompt token IDs are reused directly. No raw re-decoding, box re-extraction or old symbolic comparison is called. Existing actual A1/export/provider-complete records must be bound in the full review; public hashes do not imply a reviewer inspected private evidence.
+
+The fixed-path consumer has a global once-only fence, create-only output, retained partial failures and one shared cutoff/local maximum3,600seconds. The future exact full-source report must bind all reuse files, old accepted evidence and a specific finite window. It writes a gold-free GPU projection only when there is a nonempty new missing-attempt queue. Original T72 missing evidence produces explicit blocked metadata, not permission to generate a replacement. The original helper's first400-common rule and bounded extra-output retention remain unchanged.
+
+Thirteen distinct new fake-data checks passed once:8 pure projection checks in0.026seconds and5 consumer checks in0.066seconds. The second command selected only the new consumer test class; imported fixture methods were not rerun. Previous C2 window/execution/evidence/loader/scorer checks are DONE. The complete C2 outer runtime, numeric window/budget, transport, student/evaluation/analysis integration and shared CR remain necessary; no actual admission is asserted.
