@@ -1,3 +1,13 @@
+## Current continuation appendix — 2026-10-21T10:50:34.870946+00:00
+
+The original B call remains failed. The same request `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1` now requests exact `p011-B-remaining-generation-complete-path-CR-A1-A2-lite` review at **7fec6ba31d9507edfd771a051110b21896072d16**, packet [b_remaining_runtime_v1](b_remaining_runtime_v1/README.md). All87 source bindings, concrete SPEC, original reuse A1 and13 flags are in REVIEW_REQUIREMENTS.json. No new B model, transport, encoding or score ran. Claude's a7ab5c42 conditional delegated decision is preserved verbatim; it alone is not the new exact runtime approval.
+
+The candidate reuses original1280 RAW/1024 confirmed transports byte-for-byte, transports only the unconfirmed256 prefix, and generates only5120. It explicitly excludes all unmapped rows from every training role and reports attempted/unusable and excluded-denominator sensitivity. Full6400 first scoring (including the previously unscored1280) requires explicit acceptance. The full raw oracle binds all rows and journals without repeating confirmed decoding; report this scope precisely. Original raw bytes/failure/status/fences/$3.01 reserve stay unchanged.
+
+New numerical evidence: conservative E3 whole-stage-to-next-dependent-stage107.350804s, not a rerun; new old-record full256 cycle max22.9493956566s; original slow training maxima retained. Prospective4400/4460/600 students reserve6.18 each, after B6.02; sequential80% passes and total18.38. Each prospective student retains37465s, continuation16865s; therefore the effective dispatch deadline is **Oct21 13:54:30UTC**, earlier than Claude's14UTC ceiling. Student A1/A2 remains subsequent. B-specific protected48 remains required; no global accounting override.
+
+All21 new checks passed once. Initial SPEC closure failed before any packet write on a relative-import assertion; explicit package resolution fixed it before the single actual SPEC creation. Fixed transport.py has one harmless EOF blank-line style warning: whole diff check is not PASS, only exclusion check passed. Original75 source hashes are retained, old successful tests not rerun. Please read the complete non-Z1 report; ordinary commentary or old PASS cannot substitute for exact target/bindings.
+
 Latest 2026-10-21T09:07:49.899463+00:00: Original admittedgenerationfailed08:59:50UTC; full1280raw/1024confirmedpreserved/STOPPED0. No retry. Explicitdecision pending atB_FAILED_NATIVE_EOS_REVIEW_REQUEST.md.
 
 Latest 2026-10-21T08:47:00.549726+00:00: Generation-only exact A2-lite PASS-WITH-NOTES at85bc4260 accepted fromClaude bbf60ab0; fresh08:44:25 rates/D1 saved. One originalupload/entry stillpending atthisentry; Bstudents/B4notadmitted.

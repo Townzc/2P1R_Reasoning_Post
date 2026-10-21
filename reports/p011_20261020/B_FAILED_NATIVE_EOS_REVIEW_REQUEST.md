@@ -1,3 +1,7 @@
+## Conditional decision implemented as exact candidate — 2026-10-21T10:50:34.870946+00:00
+
+Failure integrity and delegated disposition were accepted from a7ab5c42. The original call remains failed. New candidate `7fec6ba31d9507edfd771a051110b21896072d16` and its full numerical/87source review are in [B_FULL_PATH_CR_A1_A2_REQUEST.md](B_FULL_PATH_CR_A1_A2_REQUEST.md); production remains NOT RUN pending that exact review. No repeat failure review is requested.
+
 Latest 2026-10-21T10:23:10.455125+00:00: Claude a7ab5c42 accepted original failure integrity and conditionally permits one5120-only continuation. New exactCR/A1/A2, E3 scoring wall evidence, B1/B3 budgets/windows and14UTC dispatch deadline required. Original1280raw/1024confirmed and failed3.01 retained. No continuation dispatched; not yet scientific admission.
 
 # Original B failure integrity and scoped owner decision

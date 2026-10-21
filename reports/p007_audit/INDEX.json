@@ -1,6 +1,6 @@
 {
   "schema": "p007_collaboration_index_v2",
-  "as_of_utc": "2026-10-21T09:41:19.518063+00:00",
+  "as_of_utc": "2026-10-21T10:50:34.870946+00:00",
   "working_branch": "codex/icml-acl-2027",
   "default_main_is_historical": true,
   "main": {
@@ -4430,12 +4430,12 @@
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
-      "scope": "p011-B-generation-student-complete-path-CR-A1-A2-lite",
+      "scope": "p011-B-remaining-generation-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
-      "target_commit": "85bc4260036c607aae6db10bd3179eab14c91a66",
-      "status": "ADMITTED_ORIGINAL_GENERATION_FAILED_PRESERVED_NO_RETRY_STUDENTS_NOT_ADMITTED",
+      "target_commit": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "status": "CONDITIONAL_OWNER_DECISION_EXACT87_CONTINUATION_CR_A1_A2_PENDING",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "source_binding_file": "reports/p011_20261020/b_generation_runtime_v1/SOURCE_BINDING.json",
+      "source_binding_file": "reports/p011_20261020/b_remaining_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
         "analyses/completion_contract.py": "ea0bc0ec150e045eafeb8d9d7b02bf04b50a3fa9e235bd0f47a046529b339739",
         "analyses/e017_audit.py": "9747952267e026ba7153fdebfa0e1bb8b009a536f236d521ca102d3b00490b8e",
@@ -4513,7 +4513,7 @@
         "src/real_math_audit.py": "df3675b77c6efca88e9d283d1be06b143bd43ce1fe9cd0695197e789925c9c78",
         "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
       },
-      "manifest_sha256": "7a13b70060bbf4a16f73c6073622b8838c09545f53a2792b29d1e81757a0e027",
+      "manifest_sha256": "a1f4771ad7b2c34b750985a250e9d5daf8c684089c633e9b57254539c215c2d2",
       "submitted_utc": "2026-10-21T05:29:40.100439+00:00",
       "new_distinct_checks": 20,
       "actual_SPEC_selected": true,
@@ -4527,7 +4527,7 @@
       "input_A1_report_commit": "135a4f53196b43f4e31cc4e9ef222530a50b479a",
       "input_A1_report_sha256": "c994da9ca61385a8b55d0e95c202e6cae62ad3a9d4acbbffc73ab7bd5b6be9d4",
       "acceptance_packet_commit": "63e8710fc24c7c5b206be2515976ff4dc57ecc89",
-      "last_updated_utc": "2026-10-21T07:44:30.984654+00:00",
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00",
       "spec_sha256": "9fe8109ff13cfcf7f86900ec66d635a9506697e947c06c77d6fd950b85ee1a79",
       "concrete_generation_packet": "reports/p011_20261020/b_generation_runtime_v1",
       "latest_dispatch_utc": "2026-10-21T09:05:35Z",
@@ -4536,7 +4536,11 @@
       "accepted_record": "reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1/B_GENERATION_A1_A2_ACCEPTED.json",
       "acceptance_read_utc": "2026-10-21T08:43:53.865220+00:00",
       "failure_packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
-      "failure_decision_request": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1"
+      "failure_decision_request": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1",
+      "source_count": 87,
+      "new_continuation_calls": 0,
+      "original_failed_reserve_retained": true,
+      "latest_continuation_dispatch_utc": "2026-10-21T13:54:30+00:00"
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -4692,7 +4696,7 @@
       "scope": "p011-C2-generation-student-complete-path-CR-A1-A2-lite",
       "first_scope": "p011-C2-generation-student-complete-path-CR",
       "target_commit": "f0a1d8aafc98c671f433f838a9ef278e670d848a",
-      "status": "SOURCE_CR_ACCEPTED_ORIGINAL_CPU_INPUT_FAILED_OWNER_EXCEPTION_PENDING",
+      "status": "CLOSED_DELEGATED_BUDGET_INFEASIBLE_NO_GENERATION_OR_STUDENTS",
       "request_file": "reports/p011_20261020/C2_FULL_PATH_CR_A1_A2_REQUEST.md",
       "packet": "reports/p011_20261020/c2_full_path_preflight_v1",
       "manifest_sha256": "b343cb629dc678e3eec4522495ab957e714748c6a231ece2d9bceea5850d8cff",
@@ -4710,13 +4714,19 @@
       "paid_calls": 0,
       "failure_packet": "reports/p011_20261020/c2_original_input_failure_v1",
       "failure_target": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "owner_exception_request": "p011-C2-null-score-original-input-failure-exception-r1"
+      "owner_exception_request": "p011-C2-null-score-original-input-failure-exception-r1",
+      "closure_commit": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "closure_file": "reports/p011_20261020/c2_closed_budget_v1/CLOSURE.json",
+      "original_CPU_failure_retained": true,
+      "new_paid_calls": 0,
+      "owner_action_pending": false,
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     {
       "request_id": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1",
       "scope": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision",
       "target_commit": "14898f087718cdf0b1ba0e1b3f01df94f36aaa13",
-      "status": "FAILURE_INTEGRITY_PASS_CONDITIONAL_CONTINUATION_DECISION_EXACT_REVIEW_AND_FEASIBILITY_REQUIRED",
+      "status": "FAILURE_INTEGRITY_AND_DELEGATED_CONDITIONAL_DISPOSITION_ACCEPTED",
       "request_file": "reports/p011_20261020/B_FAILED_NATIVE_EOS_REVIEW_REQUEST.md",
       "packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
       "manifest_sha256": "155e905de5839bce47818e1e245fd3fea10d7c18eff82de267696e935abe26ce",
@@ -4727,13 +4737,16 @@
       "unattempted_outputs": 5120,
       "new_calls": 0,
       "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/B_FAILED_GENERATION_DELEGATED_DECISION.json",
-      "dispatch_deadline_utc": "2026-10-21T14:00:00+00:00"
+      "dispatch_deadline_utc": "2026-10-21T14:00:00+00:00",
+      "continuation_review_target": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "continuation_not_yet_authorized_by_exact_CR": true,
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     {
       "request_id": "p011-C2-null-score-original-input-failure-exception-r1",
       "scope": "p011-C2-null-score-original-input-failure-exception",
       "target_commit": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "status": "FAILURE_INTEGRITY_ACCEPTED_NUMERIC_FEASIBILITY_REQUIRED_BEFORE_ANY_REPAIR",
+      "status": "CLOSED_DELEGATED_BUDGET_INFEASIBLE_NO_GENERATION_OR_STUDENTS",
       "request_file": "reports/p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md",
       "packet": "reports/p011_20261020/c2_original_input_failure_v1",
       "manifest_sha256": "7ed5c6b9ddf0db4878f5e876d3d06cf2ca0f30d9c174b8e457d417bafa5c7ded",
@@ -4741,7 +4754,13 @@
       "new_model_calls": 0,
       "original_failed_CPU": 5923,
       "original_source_unchanged": true,
-      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/C2_FAILED_INPUT_DELEGATED_DECISION.json"
+      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/C2_FAILED_INPUT_DELEGATED_DECISION.json",
+      "closure_commit": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "closure_file": "reports/p011_20261020/c2_closed_budget_v1/CLOSURE.json",
+      "original_CPU_failure_retained": true,
+      "new_paid_calls": 0,
+      "owner_action_pending": false,
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     }
   ],
   "p008_v31": {
@@ -6872,9 +6891,9 @@
     },
     "B_current": {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
-      "target_commit": "85bc4260036c607aae6db10bd3179eab14c91a66",
-      "source_count": 75,
-      "status": "ACTUAL_INPUT_A1_ACCEPTED_CONCRETE_GENERATION_CR_A2_PENDING",
+      "target_commit": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "source_count": 87,
+      "status": "CONDITIONAL_OWNER_DECISION_EXACT87_CONTINUATION_CR_A1_A2_PENDING",
       "actual_model_calls": 0,
       "actual_SPEC": true,
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
@@ -6896,7 +6915,14 @@
       "failure_packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
       "failure_decision_request": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1",
       "original_generation_reserve_retained_usd": "3.01",
-      "no_retry": true
+      "no_retry": true,
+      "scope": "p011-B-remaining-generation-complete-path-CR-A1-A2-lite",
+      "source_binding_file": "reports/p011_20261020/b_remaining_runtime_v1/SOURCE_BINDING.json",
+      "manifest_sha256": "a1f4771ad7b2c34b750985a250e9d5daf8c684089c633e9b57254539c215c2d2",
+      "new_continuation_calls": 0,
+      "original_failed_reserve_retained": true,
+      "latest_continuation_dispatch_utc": "2026-10-21T13:54:30+00:00",
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     "C1_actual_A2_current": {
       "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",
@@ -7088,7 +7114,7 @@
       "request_id": "p011-C2-generation-student-complete-path-CR-A1-A2-lite-r1",
       "target_commit": "f0a1d8aafc98c671f433f838a9ef278e670d848a",
       "source_count": 78,
-      "status": "SOURCE_CR_ACCEPTED_ORIGINAL_CPU_INPUT_FAILED_OWNER_EXCEPTION_PENDING",
+      "status": "CLOSED_DELEGATED_BUDGET_INFEASIBLE_NO_GENERATION_OR_STUDENTS",
       "actual_SPEC": false,
       "actual_input": false,
       "paid_calls": 0,
@@ -7101,7 +7127,13 @@
       "original_CPU_never_retry": true,
       "failure_packet": "reports/p011_20261020/c2_original_input_failure_v1",
       "failure_target": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "owner_exception_request": "p011-C2-null-score-original-input-failure-exception-r1"
+      "owner_exception_request": "p011-C2-null-score-original-input-failure-exception-r1",
+      "closure_commit": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "closure_file": "reports/p011_20261020/c2_closed_budget_v1/CLOSURE.json",
+      "original_CPU_failure_retained": true,
+      "new_paid_calls": 0,
+      "owner_action_pending": false,
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     "C1_r2_actual_A3": "PASS_CLOSED",
     "latest_acceptance_packet": "reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1",
@@ -7121,7 +7153,7 @@
       "request_id": "p011-C2-null-score-original-input-failure-exception-r1",
       "scope": "p011-C2-null-score-original-input-failure-exception",
       "target_commit": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "status": "FAILURE_INTEGRITY_ACCEPTED_NUMERIC_FEASIBILITY_REQUIRED_BEFORE_ANY_REPAIR",
+      "status": "CLOSED_DELEGATED_BUDGET_INFEASIBLE_NO_GENERATION_OR_STUDENTS",
       "request_file": "reports/p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md",
       "packet": "reports/p011_20261020/c2_original_input_failure_v1",
       "manifest_sha256": "7ed5c6b9ddf0db4878f5e876d3d06cf2ca0f30d9c174b8e457d417bafa5c7ded",
@@ -7129,7 +7161,13 @@
       "new_model_calls": 0,
       "original_failed_CPU": 5923,
       "original_source_unchanged": true,
-      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/C2_FAILED_INPUT_DELEGATED_DECISION.json"
+      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/C2_FAILED_INPUT_DELEGATED_DECISION.json",
+      "closure_commit": "7fec6ba31d9507edfd771a051110b21896072d16",
+      "closure_file": "reports/p011_20261020/c2_closed_budget_v1/CLOSURE.json",
+      "original_CPU_failure_retained": true,
+      "new_paid_calls": 0,
+      "owner_action_pending": false,
+      "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     }
   }
 }

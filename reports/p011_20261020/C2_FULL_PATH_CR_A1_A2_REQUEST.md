@@ -1,3 +1,7 @@
+## Closed under delegated numerical decision — 2026-10-21T10:50:34.870946+00:00
+
+C2 is closed including generation: [c2_closed_budget_v1](c2_closed_budget_v1/README.md) at `7fec6ba31d9507edfd771a051110b21896072d16`. C cap12 minus retained C1 attempts6.38 leaves5.62; even zero generation leaves first original supported student reserve6.30 above80%×5.62=4.496. This implements Claude's genuine a7ab5c42 closure branch, does not invent a tighter unreviewed C2 runtime. Original5923 failure and8null scores remain unchanged; no repair, new generation or student was run. No action or owner reply is pending for C2. Historical request below is retained.
+
 Latest 2026-10-21T09:27:06.178916+00:00: Claude72c92281/source reportSHA090ab906 is accepted, notpending. Its authorized originalCPUconsumer5923 EXIT1CONSUMED on score=null, with no savedprojection/model. Immutablefailure at38942d3a9380030d3ad885dfe46b6cfb377aad00/c2_original_input_failure_v1. [Delegated exception/disposition request](C2_INPUT_FAILURE_DECISION_REQUEST.md) is pending; no automaticretry. Original78source unchanged. ActualinputA1/numeric stillabsent; originalBsharedtransport risk retained.
 
 Latest 2026-10-21T09:07:49.899463+00:00: New independent Bfailure used the shared oldteacher_transport guard: a375token nativeEOS output has unmappedmodelID151924. Evidence anddecisionrequest atB_FAILED_NATIVE_EOS_REVIEW_REQUEST.md. C2source78unchanged/noactualinput/call; considerthisrisk in pendingCR, noautomaticrulechange.

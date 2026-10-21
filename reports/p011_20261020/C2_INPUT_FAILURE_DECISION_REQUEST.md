@@ -1,3 +1,7 @@
+## Closed under delegated numerical decision — 2026-10-21T10:50:34.870946+00:00
+
+C2 is closed including generation: [c2_closed_budget_v1](c2_closed_budget_v1/README.md) at `7fec6ba31d9507edfd771a051110b21896072d16`. C cap12 minus retained C1 attempts6.38 leaves5.62; even zero generation leaves first original supported student reserve6.30 above80%×5.62=4.496. This implements Claude's genuine a7ab5c42 closure branch, does not invent a tighter unreviewed C2 runtime. Original5923 failure and8null scores remain unchanged; no repair, new generation or student was run. No action or owner reply is pending for C2. Historical request below is retained.
+
 Latest 2026-10-21T10:23:10.455125+00:00: Claude a7ab5c42 accepted original CPU failure integrity. First calculate missing-generation and both-student sequential80percent reserve feasibility, without repair code. If infeasible, close C2 under delegated decision. No original retry/null-score reinterpretation authorized.
 
 # C2 original CPU input failure: explicit delegated disposition required
