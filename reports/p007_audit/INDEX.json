@@ -7097,7 +7097,7 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-21T20:55:03.826484+00:00",
+  "last_updated_utc": "2026-10-21T21:10:24.086847+00:00",
   "p011": {
     "status": "DIRECT_OWNER150_INITIAL_SEVEN_PREPARED_ASYNC_CR_B_ACTUAL_A3_ACCEPTED",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -7936,7 +7936,7 @@
       "independent_symbolic_engine_rerun": false,
       "independent_manual_symbolic_pairs": 40
     },
-    "active_scientific_compute": 6,
+    "active_scientific_compute": 5,
     "B_student_inputs": {
       "status": "CONSTRUCTOR_DONE_ACTUAL_A1_PENDING",
       "packet": "reports/p011_20261020/b_student_inputs_actual_v1",
@@ -8151,7 +8151,7 @@
     }
   },
   "p011_owner150_current": {
-    "recorded_utc": "2026-10-21T20:55:03.826484+00:00",
+    "recorded_utc": "2026-10-21T21:10:24.086847+00:00",
     "source_head": "9d6817a6b82a9350d80f3e863273c888f8639433",
     "new_spend_cap_usd": 150,
     "slots": 8,
@@ -8174,7 +8174,7 @@
     "local_baseline_first_collect": "INFRASTRUCTURE_FAILED_BEFORE_ARCHIVE; one authorized retry pending original app STOPPED0",
     "closed_closeout_adapter": "scripts/p011_long_owner_closed_io.py",
     "per_call_adapter": "WITHDRAWN",
-    "optional_admission": "PREPARED_NOT_RUN_ALL_NINE_JOB_ACCOUNTING",
+    "optional_admission": "OLD_OPTIONAL_ENTRY_BLOCKS_NEW_FAILED_PARENT; UPDATE_LEDGER_BEFORE_ANY_OPTIONAL",
     "optional_packet": "reports/p011_20261020/owner_optional_accounting_v1",
     "fallback_n400": "COMPLETE_ACTUAL_A3_PENDING",
     "fallback_n3200": "COMPLETE_ACTUAL_A3_PENDING",
@@ -8182,12 +8182,17 @@
     "fallback_results_target": "469cbaa0acc839eae3714b5174320354d0d0e5eb",
     "fallback_actual_A3_request": "reports/p011_20261020/FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md",
     "fallback_actual_A3_accepted": false,
-    "active_model_jobs": 6,
+    "active_model_jobs": 5,
     "new_epoch_model_attempts": 9,
     "all_P011_model_function_attempts_including_failures_and_engineering": 22,
     "all_P011_scientific_function_attempts_including_failures": 19,
     "all_P011_engineering_function_attempts": 3,
-    "not_successful_model_count": true
+    "not_successful_model_count": true,
+    "A1_original": "FAILED_PROVIDER_PREEMPTION_AND_GUARDED_PLATFORM_REENTRY",
+    "A1_original_failure_preservation": "DONE",
+    "A1_retry": "PREPARED_OWNER_AUTHORIZED_ONCE_NOT_DISPATCHED",
+    "A1_retry_target": "52a8e21c7cfb70cd4fa6ddc4a4f220cce7574d89",
+    "A1_retry_source_count": 69
   },
   "p010_actual_final_A5": {
     "decision": "PASS",

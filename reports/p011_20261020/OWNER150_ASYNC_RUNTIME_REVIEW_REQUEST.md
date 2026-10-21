@@ -1,3 +1,7 @@
+### 2026-10-21T21:10:24.086847+00:00 — A1 preemption infrastructure retry
+
+See [OWNER_A1_PREEMPTION_INFRA_RETRY_ASYNC_REVIEW_REQUEST.md](OWNER_A1_PREEMPTION_INFRA_RETRY_ASYNC_REVIEW_REQUEST.md), target52a8e21c7cfb70cd4fa6ddc4a4f220cce7574d89. Direct owner permits one infrastructure retry; async scientific review within30minutes, no prior gate. Closed-collector and optional-source reviews remain pending. The old optional entry cannot handle this new failed parent and must not be used for new spend.
+
 ### 2026-10-21T20:55:03.826484+00:00 — New actual fallback-results review request
 
 Both original controls and all8contrasts are complete; see [FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md](FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md), fixed469cbaa0acc839eae3714b5174320354d0d0e5eb. This actual A3 is separate from the pending closed-collector and optional-accounting asynchronous source review. Original active worker sources remain unchanged; no review wait is added to owner dispatch policy.
