@@ -1,3 +1,12 @@
+### 2026-10-21 00:24:21 PDT — Completed long inputs; full three-arm engineering source submitted
+
+Claude135a4f53 fixed reports fully read07:07:52UTC: long R1–R3 source37 and owner-bound numericgold CPU CR PASS; B actual400/6400 inputA1 PASS. Exact Git event/self-described/read times, rawSHAs and privacy projections retained. The one authorized CPU continuation61074 completed07:10:22UTC,600new endpoint prompt encodings/3300requests/0trainingencoding/model. Original37318failure/530ephemeral prompts retained. ActualA1 remains pending for the new input packet, with56new compact archive members fully read back once;85file4.22GB inventory and oldOT3/AMtraining archive reuse explicitly distinguish omitted private projections.
+
+All33source three-arm preflight code is now submitted at63e8710fc24c7c5b206be2515976ff4dc57ecc89,13 distinct newchecks PASS once. Two longestnear16k rows/2updates perarm, originalcomputation/fullstate/mmap/export/childexit/V1engine256,32representative original requests. Candidatehistoricalreserves5.95<=owner6, notfreshquote/expense. Source subset construction then actualinput/numericA2 in one sharedrequest; noGPU/upload/reserve. Formal512batch speed unmeasured, no guarantee; formalA/Dmeasurementexceptions0. OriginalC1r1failed3.74 preserved, C1r2 exactA2pending. New45Gitfiles verifiedonce; nooldtasks repeated.
+
+Preparation failures preserved: one read-only wrongA8proofkey beforeCLIstatuswrite; initialnewmetadata closure rejected relativeimport after onlyOWNER_BINDING, then onlymissingtail completed with properresolver. No source/input/model rerun. LocalawakePID absent atcleanup, no signal or inferredreason. P010Oct21 19UTC formalcopyfreeze/finalA5 independent.
+
+
 ### 2026-10-20 23:51:11 PDT — C1 r2 complete candidate submitted
 
 Exact22 source/SPEC targetd18581c10d2a7647ff9ecb1f028eca911b7837cf; one new scoped requestp011-C1-r2-chunk320-complete-path-CR-A1-A2-lite-r1. Journal320/30chunks, original9594 unique sequences/18inputfiles and original completed upload reused; r1failure/3.74reserve/fences retained. No actualGPU/upload/forward/reserve. Worker1500/platform1560/startup600, candidate2.64 historicalfullrate requiresfresh confirmation. New owner accounting protected0/currentavailable minus retainedP011 only; original180/categorycaps unchanged. Fullsource/input/numericA2 stillpending; sourcePASSnotpaidpermission.

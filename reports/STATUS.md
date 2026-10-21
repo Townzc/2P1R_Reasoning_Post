@@ -1,3 +1,5 @@
+P011 current 2026-10-21T07:24:21.357367+00:00: completed long CPU input61074 and B actualinputA1accepted; three-arm engineering preflight exact33source submitted. C1r2 exactreview pending. No active science or newpaidcall; originalC1r1failure/3.74 retained. Currentowner protected0 withoriginal180/categorycaps unchanged. [Live execution](p011_20261020/README.md).
+
 # Current P011 preparation; P010 scheduled freeze remains
 
 See [P011](p011_20261020/README.md). Raw data acquisition and the first exact construction-path CR are underway; no production builder, student or teacher call has run. P010 science remains closed; its Oct21 12PDT freeze/finalA5 is separate from the P011 Oct21 22PDT cutoff.

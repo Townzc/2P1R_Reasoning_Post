@@ -1,3 +1,16 @@
+## Actual generation input A1 accepted — 2026-10-21T07:24:21.357367+00:00
+
+Real Claude135a4f53/reportSHAc994da9ca61385a8b55d0e95c202e6cae62ad3a9d4acbbffc73ab7bd5b6be9d4
+(Git06:41:26/fullread07:07:52) PASS binds originaltarget1d0d1d6d,
+400orderedparents/6400requests/source71. [Acceptance](review_135a4f53_long_source_input_CR_and_B_A1_accepted_v1/README.md)
+is fixed at63e8710fc24c7c5b206be2515976ff4dc57ecc89. Private originalP010requests were not directly accessed by
+reviewer; prompt token reuse is supported by runtimeSHA/matchingprompt and retained
+limitation. No constructor, encoding, scoring or input archive repeated.
+B exact numerical SPEC/timing/D1 and fresh final admission remain pending; no paid
+B call. Original source71's budget/closed-parent handling needs an explicitly reviewed
+narrow update before using currentowner0 and savedC1failedSTOPPED0.
+
+
 # Actual generation input A1 appendix — 2026-10-21T06:35:55.173650+00:00
 
 True sourceCR02e5f944/d60b3cb9 accepted exact71sourcebca90236. Authorized input projection completed once06:34:24UTC; original400 parents/6400 requests,0encoding/model/oldscore reads. Actual packet fixed **1d0d1d6d1ede001949c64d3675b214ecf2feb5f7**, [fullarchive and bindings](b_generation_inputs_actual_v1/README.md). Same shared request: please review actualinputA1, then numerical evidence when supplied. SourcePASS does not admit GPU.

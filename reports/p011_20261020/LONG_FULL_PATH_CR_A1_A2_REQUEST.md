@@ -1,3 +1,33 @@
+## Actual input continuation complete; source repair accepted — 2026-10-21T07:24:21.357367+00:00
+
+Fixed target `63e8710fc24c7c5b206be2515976ff4dc57ecc89`: [actual input packet](long_numeric_gold_inputs_actual_v1/README.md),
+PUBLIC_MANIFEST `f4371a6afe9252a7047f0d83a21fef88718f82357510d637f6a7f11fd404c6c7`.
+Original new CPU61074 EXIT0CONSUMED completed07:10:22UTC;600 prompt encodings saved,
+3300requests/context17243,0training tokenizations/models. Original37318failed and530
+unsaved ephemeral prompts remain. Complete original85file inventory is4220084677bytes;
+new56member compact archive contains all new endpoints and plans/LR/row bindings.
+Full original token archives are reused; private encoded-list projections are not
+misrepresented as new public full binary copies. Actual A1 must state independent
+reconstruction coverage and private access limits.
+
+Claude bde33f28/report7c67c4d4 (Git06:40:25/read07:07:52) accepted exact37source
+R1–R3 and the owner-bound numeric-gold CPU path. Three accurate acceptances are
+published in [review135a4f53](review_135a4f53_long_source_input_CR_and_B_A1_accepted_v1/README.md).
+Original source CR/input construction no longer pending; actual input A1 and formal
+numeric A2 remain pending. Desired actual input scope:
+`p011-long-A-D-complete-runtime-input-A1`, bind ACTUAL_INPUT_BINDING, original37source,
+full endpoint/gold/native prompt roster, lossless original training-token/plan reuse,
+all30 cell/arm B/U/LR proofs, both original accepted data sources and failed-parent
+history. Local constructor checks are not external A1.
+
+[Three-arm engineering source request](LONG_PREFLIGHT_CR_A1_A2_REQUEST.md) is now
+submitted at this fixed target with33source and13newchecks. It has the actual
+owner<=6 reserve exception, but exact source/input/numeric acceptance is still
+required; no GPU started. Formal long source37 retains the conservative oldprotected48
+check; a narrow source update must be reviewed before adopting currentowner0 there.
+No formal SPEC or timing admission is claimed.
+
+
 # Owner CPU exception received — 2026-10-21T06:24:55.157461+00:00
 
 Direct owner reply “批准一次 CPU 续作，复审后执行” is recorded in

@@ -1,3 +1,7 @@
+# Current P011 owner amendment and execution — 2026-10-21T07:24:21.357367+00:00
+
+Designated Claude recorded direct owner accounting/preflight decisions SHA364aaf6c and C1r2 SHAe381630c; currentprotected0, no oldP010double subtraction, original180/A115B20C12D25emergency8 caps/80percent/noautomaticretry unchanged. Three engineeringpreflights totalreserve<=6 and oneC1r2<=2.70 require their exactsource/input/numeric reviews. Direct overnight delegation is saved; no underlyingclaude.ai conversation claim. Read latest privatehandoff. OriginalC1r1failed/3.74 and alloldDONEwork retained. Long CPUinput61074 complete, B actualinputA1accepted, fullpreflight33source submitted; no newGPU. P01019UTCfreeze remains separate. No subagents/externalmessages/Z1.
+
 # Current owner authorization — P011 v1, 2026-10-20
 
 User directly supplied frozen claude/audit e0dee182 P011_PLAN_v1.md and asked Codex to start. See reports/p011_20261020/README.md and private p011 ACTIVE_HANDOFF. New exploratory scope180/A115/B20/C12/D25/emergency8, protected minimum48, no transfers, cutoff Oct21 22PDT. Every new/changed production code path requires real Claude CR before first execution; shared path review rather than per-cell gates. No automatic retry, new scientific arms, external messages or subagents. Preserve old DONE work and unrelated lt002. P010 scheduled Oct21 12PDT freeze/final A5 remains a separate duty. No Z1 reads or AI course interpretation prose.
