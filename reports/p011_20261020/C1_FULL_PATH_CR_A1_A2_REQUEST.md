@@ -1,8 +1,8 @@
 # C1 single complete-path CR / actual input A1 / numeric A2-lite
 
 Request `p011-C1-complete-path-CR-A1-A2-lite-r1`.
-Source target `364868f6ca2cb9579057d59df5b5b50fad662f01`; packet `reports/p011_20261020/c1_full_path_preflight_v1`;
-MANIFEST SHA `6e3172a7afecd402d1e6a8b3de51f20b773db3bc4319680a83fa1db8e4c3e73b`.
+Source target `817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f`; latest binding packet `reports/p011_20261020/c1_full_path_window_addendum_v1`;
+MANIFEST SHA `1ad0723748842e6d856d41696cc383e945bca20606ab2ad09e86c898d94439d8`.
 
 Please review all twelve SOURCE_BINDING files, including the actual new Modal
 entry and full upload/dispatch/worker/collection/readonly-audit path. This is the
@@ -39,3 +39,14 @@ pending, unmatched/unknown slots, original deadlines, C12/180/protected48/80%,
 zero retries, permanent fences and exact report/source/input are all in scope.
 Completed-only collect must never be used for an unknown/failed call. P010 formal
 Oct21 19UTC freeze remains separate. Report strictly non-Z1. Created 2026-10-21T02:44:10.654490+00:00.
+
+Latest pre-review correction 2026-10-21T02:47:38.288229+00:00: use source target `817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f` and
+SOURCE_BINDING in c1_full_path_window_addendum_v1, including for the input-copier
+--code-binding argument. Original full packet364868f6 remains immutable reference.
+Self-review added one shared absolute end-to-end deadline for collect and audit,
+plus upload preservation of the full future result window. Only3new boundary
+checks passed once0.000s; previous9+6 not rerun. Sixnew Gitfiles verified once.
+The same shared request now covers18distinct tests across the implementation
+sequence, not a claim of rerunning18tests on the final build. No actualSPEC,
+input copy, timing basis, acceptance, upload or paid call exists. Final source12
+has only the IO hash changed; all11other source hashes remain unchanged.

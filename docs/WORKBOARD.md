@@ -1,3 +1,14 @@
+### 2026-10-20 19:47:38 PDT — C1 shared-window correction before first independent CR
+
+Latest same-request source target 817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f, c1_full_path_window_addendum_v1.
+Self-review corrected independent local timer limits to a common original
+absolute result deadline for collect/audit; upload leaves the full futurewindow.
+Only IO source changed, other11 hashes unchanged; original364868f6packet remains.
+Three new boundary checks PASS once0.000s; old9+6 not rerun,6new Gitfiles verified.
+No actualSPEC/timing/inputcopy/upload/model/admission. Same shared request and
+original scientific budget/scope. This is an engineering correction before any
+production attempt, not an exception or new gate. Both OT3 reviews still pending.
+
 ### 2026-10-20 19:44:10 PDT — C1 complete source path prepared for the shared review
 
 Fixed source target 364868f6ca2cb9579057d59df5b5b50fad662f01; packet c1_full_path_preflight_v1 and
