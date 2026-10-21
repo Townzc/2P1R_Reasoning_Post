@@ -1,0 +1,7 @@
+# D1/D2 F15 complete runtime candidate — not admitted
+
+Seven new adapters plus unchanged original55 sources form exact62. They cover the D-only forecast, full worker/child, terminal evidence replay, shared admission/ledger, Modal entry, first input transfer / once-only collect-oracle-score, and the original D1–D2 analysis. Original64 updates, B4070922, seed17, native inputs/EOS/context, frozen LR consumption and tolerance, training/scoring functions remain bound to the existing original SPEC and accepted input A1. No original encoding, input constructor, rate-array generation, model or old test ran.
+
+The only new operational estimate counts elapsed once; remaining training uses max(historical proxy, mean of completed observed cycles), endpoints retain the max including the uncalibrated600 proxy, original963 future allowance and1.2 multiplier remain. Training/evidence/scoring function AST comparisons passed in the10 new tests. Hard timers and shared absolute closeout do not reset. Existing failure reservations stay in the shared ledger; B1/B3 original student calls are currently active and count toward provider slots.
+
+The candidate is known to fail the retained conservative pair budget gate. Read BUDGET_DISPOSITION_REQUIRED before reviewing. No D upload, dispatch, reservation or acceptance exists. There is one shared path request, with explicit D appendix and full binding in SOURCE_BINDING / REVIEW_REQUIREMENTS. Old A55 or B100 PASS does not cover this new path.

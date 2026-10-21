@@ -1,0 +1,109 @@
+{
+  "D_cap_usd": "25",
+  "candidate_created_utc": "2026-10-21T16:59:28.847061+00:00",
+  "current_B1_B3_calls_submitted_not_closed": true,
+  "current_retained_P011_reservations_usd": {
+    "A": "75.46",
+    "B": "18.38",
+    "C": "6.38",
+    "D": "0"
+  },
+  "current_retained_P011_total_usd": "100.22",
+  "failed_reservations_released": false,
+  "jobs": {
+    "long_D1_S-F15_s17_r1": {
+      "conservative_full_reserve_80percent_limit_usd": "20.0",
+      "conservative_full_reserve_80percent_pass": true,
+      "initial_projection": {
+        "category": "D",
+        "category_remaining_before_usd": "25",
+        "delegated_forecast_decision_sha256": "bba65b440106c9272d453f61fe719a3c0b878e497576423434ff5ec3ab819820",
+        "elapsed_worker_seconds": 0,
+        "endpoint_batch_max_seconds": 600,
+        "endpoint_batches_left": 7,
+        "endpoint_proxy_is_uncalibrated": true,
+        "engineering_scenario_not_guarantee": true,
+        "expense_or_refund": false,
+        "historical_training_proxy_max_seconds": 10.133040558317878,
+        "measurement_exceptions": 0,
+        "observed_complete_training_count": 0,
+        "observed_complete_training_max_seconds": 0,
+        "observed_complete_training_mean_seconds": 0,
+        "prior_reserved_usd": "0",
+        "projected_total_worker_seconds": 6973.817514878812,
+        "projected_usd": "10.33",
+        "reserved_usd": "11.40",
+        "training_unit_estimate_seconds": 10.133040558317878,
+        "training_updates_left": 64,
+        "uncalibrated_future_seconds": 963
+      },
+      "latest_dispatch_utc": "2026-10-21T22:40:35+00:00",
+      "limits": {
+        "artifact_max_bytes": 50000000000,
+        "closeout_seconds": 14405,
+        "full_result_window_seconds": 22765,
+        "hourly_rate_usd": "4.90720",
+        "platform_seconds": 7760,
+        "reserved_usd": "11.40",
+        "score_seconds": 7200,
+        "startup_seconds": 600,
+        "worker_seconds": 7700
+      },
+      "prior_D_reservations_usd": "0",
+      "projected_cost_80percent_pass": true,
+      "scientific_fields_unchanged": true
+    },
+    "long_D2_S-F15_s17_r1": {
+      "conservative_full_reserve_80percent_limit_usd": "10.880",
+      "conservative_full_reserve_80percent_pass": false,
+      "initial_projection": {
+        "category": "D",
+        "category_remaining_before_usd": "13.60",
+        "delegated_forecast_decision_sha256": "bba65b440106c9272d453f61fe719a3c0b878e497576423434ff5ec3ab819820",
+        "elapsed_worker_seconds": 0,
+        "endpoint_batch_max_seconds": 600,
+        "endpoint_batches_left": 7,
+        "endpoint_proxy_is_uncalibrated": true,
+        "engineering_scenario_not_guarantee": true,
+        "expense_or_refund": false,
+        "historical_training_proxy_max_seconds": 9.56449637926453,
+        "measurement_exceptions": 0,
+        "observed_complete_training_count": 0,
+        "observed_complete_training_max_seconds": 0,
+        "observed_complete_training_mean_seconds": 0,
+        "prior_reserved_usd": "11.40",
+        "projected_total_worker_seconds": 6930.153321927515,
+        "projected_usd": "10.27",
+        "reserved_usd": "11.40",
+        "training_unit_estimate_seconds": 9.56449637926453,
+        "training_updates_left": 64,
+        "uncalibrated_future_seconds": 963
+      },
+      "latest_dispatch_utc": "2026-10-21T22:40:35+00:00",
+      "limits": {
+        "artifact_max_bytes": 50000000000,
+        "closeout_seconds": 14405,
+        "full_result_window_seconds": 22765,
+        "hourly_rate_usd": "4.90720",
+        "platform_seconds": 7760,
+        "reserved_usd": "11.40",
+        "score_seconds": 7200,
+        "startup_seconds": 600,
+        "worker_seconds": 7700
+      },
+      "prior_D_reservations_usd": "11.40",
+      "projected_cost_80percent_pass": true,
+      "scientific_fields_unchanged": true
+    }
+  },
+  "not_measurement": true,
+  "not_paid_admission": true,
+  "old_meter_not_refreshed_for_waiting": true,
+  "pair_budget": {
+    "accepted": false,
+    "message": "Both D full reservations must fit conservative sequential80percent gate",
+    "no_dispatch_or_upload_called": true,
+    "type": "ValueError"
+  },
+  "whole_D_reservation_usd": "22.80"
+}
