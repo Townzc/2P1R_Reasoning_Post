@@ -61,6 +61,8 @@ def generate_inputs(root, binding, review):
     try:
         pack=original_inputs(*(read(root/ORIGINAL_INPUTS[k]) for k in ('roster','source','requests')))
         dump(out/'PACK.json',pack)
+        dump(out/'GPU_PACK.json', {**{k:pack[k] for k in ('ordered400','prompts','rows')},
+            'source':{pid:{'problem':pack['source'][pid]['problem']} for pid in pack['ordered400']}})
         dump(out/'SOURCE.json',{'original_input_files':binding['original_input_files'],
             'owner_B16_sha256':OWNER_SHA,'source_files':binding['source_files']})
         dump(out/'COMPLETED.json',{'ordered400_sha256':digest(pack['ordered400']),

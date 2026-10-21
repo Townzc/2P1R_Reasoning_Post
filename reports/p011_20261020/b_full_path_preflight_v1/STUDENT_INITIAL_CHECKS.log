@@ -1,0 +1,30 @@
+test_B_scope_rejects_C1_exception_and_insufficient_reservation (tests.test_p011_b_student_execution.NewBStudent.test_B_scope_rejects_C1_exception_and_insufficient_reservation) ... ok
+test_all_cycle_maximum_and_original_deadline_are_retained (tests.test_p011_b_student_execution.NewBStudent.test_all_cycle_maximum_and_original_deadline_are_retained) ... ok
+test_block_cycle_includes_forecast_commit_and_remote_block_fences (tests.test_p011_b_student_execution.NewBStudent.test_block_cycle_includes_forecast_commit_and_remote_block_fences) ... ok
+test_endpoint_rejects_dict_or_gold_bearing_rows_before_generation (tests.test_p011_b_student_execution.NewBStudent.test_endpoint_rejects_dict_or_gold_bearing_rows_before_generation) ... ok
+test_full2500_original_endpoint_and_three_commit_cycles (tests.test_p011_b_student_execution.NewBStudent.test_full2500_original_endpoint_and_three_commit_cycles) ... ok
+test_generation_has_no_training_or_C1_measurement_transfer (tests.test_p011_b_student_execution.NewBStudent.test_generation_has_no_training_or_C1_measurement_transfer) ... ok
+test_missing_timing_or_80percent_forecast_blocks_before_work (tests.test_p011_b_student_execution.NewBStudent.test_missing_timing_or_80percent_forecast_blocks_before_work) ... ok
+test_new_readonly_endpoint_oracle_uses_complete_cycles_without_scoring (tests.test_p011_b_student_execution.NewBStudent.test_new_readonly_endpoint_oracle_uses_complete_cycles_without_scoring) ... ERROR
+test_partial_raw_kept_no_ack_no_replay (tests.test_p011_b_student_execution.NewBStudent.test_partial_raw_kept_no_ack_no_replay) ... ok
+test_training_child_not_joined_or_nonzero_never_qualifies_for_vllm (tests.test_p011_b_student_execution.NewBStudent.test_training_child_not_joined_or_nonzero_never_qualifies_for_vllm) ... ok
+
+======================================================================
+ERROR: test_new_readonly_endpoint_oracle_uses_complete_cycles_without_scoring (tests.test_p011_b_student_execution.NewBStudent.test_new_readonly_endpoint_oracle_uses_complete_cycles_without_scoring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p011_b_student_execution.py", line 134, in test_new_readonly_endpoint_oracle_uses_complete_cycles_without_scoring
+    record=root/'eval_acks/greedy/0000.json';wrong=read(record);wrong['count']=255;dump(record,wrong)
+                                                                                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/sft_allocation_midpoint/common.py", line 24, in dump
+    with path.open('x') as f:
+         ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/.local/p011_20261020/r1/tmp5lrlb28j/eval_acks/greedy/0000.json'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.228s
+
+FAILED (errors=1)

@@ -1,0 +1,40 @@
+test_analysis_refuses_foreign_job_or_incomplete_saved_scores (tests.test_p011_b_full_path.NewBWholePath.test_analysis_refuses_foreign_job_or_incomplete_saved_scores) ... ok
+test_generation_projection_separates_gold_and_cannot_repeat (tests.test_p011_b_full_path.NewBWholePath.test_generation_projection_separates_gold_and_cannot_repeat) ... ok
+test_mock_complete_generation_worker_preserves_fence_and_archive (tests.test_p011_b_full_path.NewBWholePath.test_mock_complete_generation_worker_preserves_fence_and_archive) ... ERROR
+test_model_asset_writer_and_gold_free_gpu_input_required (tests.test_p011_b_full_path.NewBWholePath.test_model_asset_writer_and_gold_free_gpu_input_required) ... ok
+test_new_interaction_uses_same_question_draws_and_rejects_order_changes (tests.test_p011_b_full_path.NewBWholePath.test_new_interaction_uses_same_question_draws_and_rejects_order_changes) ... ok
+test_only_true_completed_stopped0_original_job_can_collect (tests.test_p011_b_full_path.NewBWholePath.test_only_true_completed_stopped0_original_job_can_collect) ... ok
+test_partial_dispatch_never_spawns_new_function (tests.test_p011_b_full_path.NewBWholePath.test_partial_dispatch_never_spawns_new_function) ... ok
+test_same_original_result_deadline_and_full_score_window (tests.test_p011_b_full_path.NewBWholePath.test_same_original_result_deadline_and_full_score_window) ... ok
+test_shared_pending_unknown_unmatched_slots_block_B_admission (tests.test_p011_b_full_path.NewBWholePath.test_shared_pending_unknown_unmatched_slots_block_B_admission) ... ok
+test_two_immutable_phase_specs_cannot_replace_generation_with_students (tests.test_p011_b_full_path.NewBWholePath.test_two_immutable_phase_specs_cannot_replace_generation_with_students) ... ERROR
+
+======================================================================
+ERROR: test_mock_complete_generation_worker_preserves_fence_and_archive (tests.test_p011_b_full_path.NewBWholePath.test_mock_complete_generation_worker_preserves_fence_and_archive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p011_b_full_path.py", line 110, in test_mock_complete_generation_worker_preserves_fence_and_archive
+    value=p.worker_body(s,sf,root,intent,raw,store,volume,lambda _:timer,body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/p011/b_path.py", line 214, in worker_body
+    start=time.time();validate(spec);job=spec['jobs'][intent['job_id']];limits=job['limits'];k=key(job)
+                      ^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/p011/b_path.py", line 85, in validate
+    raise ValueError('Exact B identity/assets/input/full-window configuration differs')
+ValueError: Exact B identity/assets/input/full-window configuration differs
+
+======================================================================
+ERROR: test_two_immutable_phase_specs_cannot_replace_generation_with_students (tests.test_p011_b_full_path.NewBWholePath.test_two_immutable_phase_specs_cannot_replace_generation_with_students)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/tests/test_p011_b_full_path.py", line 41, in test_two_immutable_phase_specs_cannot_replace_generation_with_students
+    for phase in ('generation','student'):p.validate(spec(phase))
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/experiments/p011/b_path.py", line 85, in validate
+    raise ValueError('Exact B identity/assets/input/full-window configuration differs')
+ValueError: Exact B identity/assets/input/full-window configuration differs
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.107s
+
+FAILED (errors=2)
