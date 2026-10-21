@@ -1,3 +1,5 @@
+Current 2026-10-21T15:36:31.492037+00:00: original exact55 r2 accepted and attempted once; both failed under unchanged forecast and are STOPPED0. New reasoned disposition requested in LONG_LR_R2_FORECAST_FAILURE_DISPOSITION_REQUEST.md at `3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce`; no retry/new source adopted. Original55 acceptance remains historical, not permission for another call.
+
 Current 2026-10-21T15:16:16.771342+00:00: exact scope `p011-long-A-D-complete-path-CR-A1-A2-lite` PASS accepted from `c8280a7c667c211959a0db5d163436ecf423d4b6` / SHA `06008670fc66d5f8b11330ef04a66511846062f2e762e3d354eb527c46ea4461`. This request is answered for its exact target. Fresh per-entry budget/provider/fences/window pending; no new model at acceptance. See `review_516bc518_B_students_long_LR_r2_accepted_v1`. Earlier chronological requests preserved.
 
 ### 2026-10-21 07:29 PDT — Exact frozen-LR r2 complete path submitted

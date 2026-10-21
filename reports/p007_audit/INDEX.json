@@ -4330,7 +4330,7 @@
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
       "target_commit": "f704855dd2c3a2909ab53ea0b94fdd40da749256",
-      "status": "EXACT_A1_A2_ACCEPTED_FRESH_PAID_ENTRY_GATES_PENDING",
+      "status": "ORIGINAL_EXACT55_R2_ATTEMPTED_AND_FAILED_DELEGATED_DISPOSITION_PENDING",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_conditional_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4601,14 +4601,18 @@
       "current_source_count": 55,
       "current_SPEC_file": "reports/p011_20261020/long_lr_r2_runtime_v1/SPEC.json",
       "current_spec_sha256": "9f675f1c4e92f45f438e251ce926f096e9833868680bb2459e4cd14603e24f7b",
-      "current_source_binding_file": "reports/p011_20261020/long_lr_r2_runtime_v1/SOURCE_BINDING.json"
+      "current_source_binding_file": "reports/p011_20261020/long_lr_r2_runtime_v1/SOURCE_BINDING.json",
+      "new_failure_request": "p011-long-LR-r2-forecast-failure-disposition-r1",
+      "r2_model_calls": 2,
+      "r2_confirmed_partial_updates": 11,
+      "r2_endpoint_outputs": 0
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-B-retained-students-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
-      "target_commit": "0f0d78d3f5c0d38f121b073bbf4e02e7665deabf",
-      "status": "EXACT_A1_A2_ACCEPTED_FRESH_PAID_ENTRY_GATES_PENDING",
+      "target_commit": "3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce",
+      "status": "POST_LONG_R2_FAILED_LEDGER_AND_ORIGINAL_B1_UPLOAD_REUSE_EXACT100_PENDING",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4752,7 +4756,7 @@
       "delegated_failure_erratum_sha256": "fa73636a836a6fef05eb7620eb992cdb7a719003678d306f9c30f57e1e4466e2",
       "actual_new_continuation_calls": 1,
       "original_generation_SPEC_sha256": "9fe8109ff13cfcf7f86900ec66d635a9506697e947c06c77d6fd950b85ee1a79",
-      "current_SPEC_file": "reports/p011_20261020/b_retained_students_runtime_v1/SPEC.json",
+      "current_SPEC_file": "reports/p011_20261020/b_students_post_long_failure_runtime_v1/SPEC.json",
       "original_generation_latest_dispatch_utc": "2026-10-21T09:05:35Z",
       "current_continuation_accepted_record": ".local/p011_20261020/r1/B_REMAINING_PATH_A1_A2_ACCEPTED.json",
       "historical_accepted_record_scope": "original failed generation only; no91-source continuation permission",
@@ -4802,14 +4806,18 @@
       "actual_generation_A3_acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
       "student_input_preparation_authorized": false,
       "future_numeric_requires_all_current_failed_long_parents": true,
-      "runtime_packet": "reports/p011_20261020/b_retained_students_runtime_v1",
+      "runtime_packet": "reports/p011_20261020/b_students_post_long_failure_runtime_v1",
       "source92_accepted": true,
       "prior_source96_accepted": true,
       "new_local_asset_source_delta_pending": true,
-      "current_source_count": 96,
-      "current_spec_sha256": "05b8c123a3ed2b9eb6d7eff110d04fbc47b29ec2ff6f811c201aeeed4e9df7e3",
-      "current_source_binding_file": "reports/p011_20261020/b_retained_students_runtime_v1/SOURCE_BINDING.json",
-      "current_paid_dispatch_permitted": false
+      "current_source_count": 100,
+      "current_spec_sha256": "4270e923e59b230d0e8fbe1f9e95cd34dd5f50d3bdb424b108c028581f4328ab",
+      "current_source_binding_file": "reports/p011_20261020/b_students_post_long_failure_runtime_v1/SOURCE_BINDING.json",
+      "current_paid_dispatch_permitted": false,
+      "current_actual_student_input_A1_accepted": true,
+      "prior_exact96_numeric_report_sha256": "acea0550f12e6600557ccc65b5d0f6ac337a2421e2a5b0331a016aae7121fa18",
+      "original_B1_input_upload_done": true,
+      "student_model_calls": 0
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -5093,6 +5101,17 @@
       "report_commit": "4e0951a03ac92bef85b8132868cf4eb6a2bc1f5d",
       "report_sha256": "481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f",
       "paid_dispatch_authorized": false
+    },
+    {
+      "request_id": "p011-long-LR-r2-forecast-failure-disposition-r1",
+      "scope": "p011-long-LR-r2-forecast-failure-disposition",
+      "target_commit": "3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce",
+      "status": "PENDING_EXPLICIT_REASONED_DELEGATED_DISPOSITION_AND_FAILURE_REVIEW",
+      "request_file": "reports/p011_20261020/LONG_LR_R2_FORECAST_FAILURE_DISPOSITION_REQUEST.md",
+      "manifest_sha256": "8ede80afc6dc0e59f1e04df562a2289b9af358381dfd1f96121444de5c3793e8",
+      "submitted_utc": "2026-10-21T15:36:31.492037+00:00",
+      "automatic_retry_allowed": false,
+      "required_D_scope_disposition_not_inferred": true
     }
   ],
   "p008_v31": {
@@ -7830,26 +7849,51 @@
     "B_students_current": {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-B-retained-students-complete-path-CR-A1-A2-lite",
-      "target_commit": "0f0d78d3f5c0d38f121b073bbf4e02e7665deabf",
-      "status": "EXACT_REVIEW_ACCEPTED_FRESH_ENTRY_PENDING",
-      "source_count": 96,
+      "target_commit": "3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce",
+      "status": "POST_LONG_R2_FAILED_LEDGER_AND_ORIGINAL_B1_UPLOAD_REUSE_EXACT100_PENDING",
+      "source_count": 100,
       "report_sha256": "acea0550f12e6600557ccc65b5d0f6ac337a2421e2a5b0331a016aae7121fa18",
       "acceptance_packet": "reports/p011_20261020/review_516bc518_B_students_long_LR_r2_accepted_v1",
       "new_model_calls": 0,
       "new_reservations_usd": "0",
-      "current_paid_dispatch_permitted": false
+      "current_paid_dispatch_permitted": false,
+      "current_SPEC": "reports/p011_20261020/b_students_post_long_failure_runtime_v1/SPEC.json",
+      "actual_student_input_A1_accepted": true,
+      "original_B1_upload_done": true
     },
     "long_LR_r2_current": {
       "request_id": "p011-long-A-D-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "target_commit": "f704855dd2c3a2909ab53ea0b94fdd40da749256",
-      "status": "EXACT_REVIEW_ACCEPTED_FRESH_ENTRY_PENDING",
+      "status": "ORIGINAL_EXACT55_R2_ATTEMPTED_AND_FAILED_DELEGATED_DISPOSITION_PENDING",
       "source_count": 55,
       "report_sha256": "06008670fc66d5f8b11330ef04a66511846062f2e762e3d354eb527c46ea4461",
       "acceptance_packet": "reports/p011_20261020/review_516bc518_B_students_long_LR_r2_accepted_v1",
-      "new_model_calls": 0,
-      "new_reservations_usd": "0",
-      "current_paid_dispatch_permitted": false
+      "new_model_calls": 2,
+      "new_reservations_usd": "27.80",
+      "current_paid_dispatch_permitted": false,
+      "failed_calls": 2,
+      "confirmed_partial_updates": 11,
+      "endpoint_outputs": 0,
+      "failure_request": "reports/p011_20261020/LONG_LR_R2_FORECAST_FAILURE_DISPOSITION_REQUEST.md",
+      "provider_stopped_owned_zero": true
+    },
+    "latest_actual_execution": {
+      "observed_utc": "2026-10-21T15:36:31.492037+00:00",
+      "actual_scientific_function_attempts_including_failed": 8,
+      "engineering_function_attempts": 3,
+      "total_attempts": 11,
+      "not_successful_model_count": true,
+      "retained_reservations_usd": {
+        "A": "75.46",
+        "B": "6.02",
+        "C": "6.38",
+        "D": "0",
+        "emergency": "0"
+      },
+      "actual_active_scientific_compute": 0,
+      "new_B_student_calls": 0,
+      "failed_reserves_released": false
     }
   }
 }

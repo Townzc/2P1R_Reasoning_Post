@@ -1,3 +1,17 @@
+# Current B students: exact100-source failed-parent append-only admission
+
+Updated 2026-10-21T15:36:31.492037+00:00; target `3e2c1b8f3e4cfc2e076b5e42580d94ae570e74ce`. Same request `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`, scope `p011-B-retained-students-complete-path-CR-A1-A2-lite`. Status `POST_LONG_R2_FAILED_LEDGER_AND_ORIGINAL_B1_UPLOAD_REUSE_EXACT100_PENDING`.
+
+Packet `b_students_post_long_failure_runtime_v1`, SPEC SHA `4270e923e59b230d0e8fbe1f9e95cd34dd5f50d3bdb424b108c028581f4328ab`, requirements SHA `b81b57dc79d397901e72df601ffd6152c156abed55bea1ee3bb3fd264b5f4b0b`, authoritative PUBLIC_MANIFEST SHA `b53dc47f470b75c3003f5954015e689258fb1febb3a6545d88d6b3355ba26c9e`. The inner MANIFEST predates the separate metadata validation receipt; PUBLIC_MANIFEST includes both and is authoritative. Exact100 sources = unchanged original96 +4 narrow adapters. Source map/binding and all16 flags in REVIEW_REQUIREMENTS must be explicitly accepted.
+
+Original actual B student input A1 and numeric PASS acea0550 remains accepted: no input, encoding, archive, old test or score replay. Only changes: add both new failed long r2 originals and full15.63+12.17 reservations, require exact original B1 upload receipt SHA before provider/spawn, and new immutable SPEC routing. Original job objects, scientific training/endpoint/scoring functions, full37465s windows, rates/limits/B16/fallback/P_cov/80percent rules remain unchanged. Five NEW checks pass0.009s. No B student was ever dispatched; this is not a scientific retry or a per-cell gate.
+
+B1 upload60117 EXIT0 is already complete; do not call upload B1 again. B3 upload is not run. The future commands explicitly launch only the original never-used B1/B3 identities under a new accepted current binding. Keep oldB1 budget metadata historical; new fresh evidence is required after exact review, including all retained failed parents/current owner accounting/provider max4/unusedfences/window. Latest both dispatch18:35:35UTC. Candidate B pair remains6.18each at last rate; second80percent margin0.06 has no waiver. All current retained A75.46/B6.02/C6.38=87.86 are reservations, not expenses. No runtime or model started for this candidate.
+
+Original long r2 failure preservation and exact failed bindings are in `long_lr_r2_forecast_failures_v1`; private originals limitation and corrected baseline prose are explicitly disclosed. No new long repair or scope closure is assumed. Long reasoned disposition request is separate.
+
+--- Prior chronological request history ---
+
 Current 2026-10-21T15:16:16.771342+00:00: exact scope `p011-B-retained-students-complete-path-CR-A1-A2-lite` PASS accepted from `516bc51859d84946372121c0469895be747f3809` / SHA `acea0550f12e6600557ccc65b5d0f6ac337a2421e2a5b0331a016aae7121fa18`. This request is answered for its exact target. Fresh per-entry budget/provider/fences/window pending; no new model at acceptance. See `review_516bc518_B_students_long_LR_r2_accepted_v1`. Earlier chronological requests preserved.
 
 ### 2026-10-21 07:25 PDT — Actual B student inputs and numeric candidate submitted
