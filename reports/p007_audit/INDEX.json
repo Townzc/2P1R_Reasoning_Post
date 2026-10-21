@@ -4563,7 +4563,7 @@
       "scope": "p011-B-remaining-generation-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
       "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
-      "status": "REMAINING91_EXACT_CR_A1_A2_ACCEPTED_FRESH_ENTRY_REQUIRED",
+      "status": "GENERATION6400_COMPLETE_STOPPED0_ACTUAL_A3_AND_STUDENT_SOURCE_PENDING",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4705,11 +4705,11 @@
       ],
       "current_owner_protected_usd": "0",
       "delegated_failure_erratum_sha256": "fa73636a836a6fef05eb7620eb992cdb7a719003678d306f9c30f57e1e4466e2",
-      "actual_new_continuation_calls": 0,
+      "actual_new_continuation_calls": 1,
       "original_generation_SPEC_sha256": "9fe8109ff13cfcf7f86900ec66d635a9506697e947c06c77d6fd950b85ee1a79",
       "current_SPEC_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SPEC.json",
       "original_generation_latest_dispatch_utc": "2026-10-21T09:05:35Z",
-      "current_continuation_accepted_record": null,
+      "current_continuation_accepted_record": ".local/p011_20261020/r1/B_REMAINING_PATH_A1_A2_ACCEPTED.json",
       "historical_accepted_record_scope": "original failed generation only; no91-source continuation permission",
       "actual_original_generation_calls": 1,
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
@@ -4727,7 +4727,10 @@
         "new_driver_only": true,
         "actual_student_inputs_run": false,
         "student_models_admitted": false
-      }
+      },
+      "actual_result_request": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
+      "actual_result_target": "19686a28d09cff472027e4a61ba40594c512c7f6",
+      "all6400_local_closeout_complete": true
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -4968,6 +4971,25 @@
       "new_paid_calls": 0,
       "owner_action_pending": false,
       "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
+    },
+    {
+      "request_id": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
+      "scope": "p011-B-complete6400-generation-and-selection-actual-A3",
+      "status": "ACTUAL_A3_PENDING",
+      "target_commit": "19686a28d09cff472027e4a61ba40594c512c7f6",
+      "manifest_sha256": "4f631b9edf3b7353532f01af8d8f13c96083a8dff0a2b0eeb7c1b7aae616f1c6",
+      "request_file": "reports/p011_20261020/B_COMPLETE6400_ACTUAL_A3_REQUEST.md",
+      "result_binding_file": "reports/p011_20261020/b_complete6400_actual_v1/ACTUAL_RESULT_BINDING.json",
+      "required_true_flags": [
+        "independent_original_token_decode_and_correctness_checks_accepted",
+        "all6400_outputs_and_unmapped_exclusions_accepted",
+        "actual_selection_and_Pcov_accepted"
+      ],
+      "submitted_metadata_utc": "2026-10-21T12:39:48.661025+00:00",
+      "all6400_local_closeout_complete": true,
+      "actual_independent_A3_accepted": false,
+      "student_input_admitted": false,
+      "student_models_admitted": false
     }
   ],
   "p008_v31": {
@@ -6830,7 +6852,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T12:27:34.747944+00:00",
+  "last_updated_utc": "2026-10-21T12:39:48.661025+00:00",
   "p011": {
     "status": "C1_ACTUAL_A3_CLOSED_C2_DELEGATED_CLOSED_THREE_ENGINEERING_CALLS_COMPLETE_B91_AND_FORMAL_NUMERIC_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6960,7 +6982,7 @@
     "ot3_NFC_candidate": "10738e624300ff125c59fd127e798bc4e5fbdc85",
     "ot3_NFC_owner_exception_approved": true,
     "ot3_NFC_production_executed": true,
-    "active_scientific_computation": true,
+    "active_scientific_computation": false,
     "c1_execution_draft": {
       "packet": "reports/p011_20261020/c1_execution_draft_v1",
       "status": "PREPARED_NOTRUN",
@@ -7159,7 +7181,7 @@
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
       "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
       "source_count": 91,
-      "status": "REMAINING5120_ORIGINAL_CALL_SUBMITTED",
+      "status": "GENERATION6400_COMPLETE_STOPPED0_ACTUAL_A3_AND_STUDENT_SOURCE_PENDING",
       "actual_model_calls": 0,
       "actual_SPEC": true,
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
@@ -7300,11 +7322,11 @@
       ],
       "current_owner_protected_usd": "0",
       "delegated_failure_erratum_sha256": "fa73636a836a6fef05eb7620eb992cdb7a719003678d306f9c30f57e1e4466e2",
-      "actual_new_continuation_calls": 0,
+      "actual_new_continuation_calls": 1,
       "original_generation_SPEC_sha256": "9fe8109ff13cfcf7f86900ec66d635a9506697e947c06c77d6fd950b85ee1a79",
       "current_SPEC_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SPEC.json",
       "original_generation_latest_dispatch_utc": "2026-10-21T09:05:35Z",
-      "current_continuation_accepted_record": null,
+      "current_continuation_accepted_record": ".local/p011_20261020/r1/B_REMAINING_PATH_A1_A2_ACCEPTED.json",
       "historical_accepted_record_scope": "original failed generation only; no91-source continuation permission",
       "actual_original_generation_calls": 1,
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
@@ -7327,7 +7349,11 @@
         "new_driver_only": true,
         "actual_student_inputs_run": false,
         "student_models_admitted": false
-      }
+      },
+      "actual_result_request": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
+      "actual_result_target": "19686a28d09cff472027e4a61ba40594c512c7f6",
+      "all6400_local_closeout_complete": true,
+      "students_admitted": false
     },
     "C1_actual_A2_current": {
       "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",
@@ -7596,6 +7622,25 @@
     "scientific_call_counter_scope": "4 scientific forward/generation calls (including failed attempts) plus3 engineering preflights; not7 successful scientific models",
     "current_call_counter_source": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/RECEIPT_COUNTERS.json",
     "retained_reservation_snapshot_note": "Existing original INTENT receipts only; A5.95+B3.01+C6.38=15.34 retained; no expense, invoice, refund or release claim",
-    "current_state_metadata_addendum": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1"
+    "current_state_metadata_addendum": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1",
+    "B_complete6400_actual": {
+      "request_id": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
+      "scope": "p011-B-complete6400-generation-and-selection-actual-A3",
+      "status": "ACTUAL_A3_PENDING",
+      "target_commit": "19686a28d09cff472027e4a61ba40594c512c7f6",
+      "manifest_sha256": "4f631b9edf3b7353532f01af8d8f13c96083a8dff0a2b0eeb7c1b7aae616f1c6",
+      "request_file": "reports/p011_20261020/B_COMPLETE6400_ACTUAL_A3_REQUEST.md",
+      "result_binding_file": "reports/p011_20261020/b_complete6400_actual_v1/ACTUAL_RESULT_BINDING.json",
+      "required_true_flags": [
+        "independent_original_token_decode_and_correctness_checks_accepted",
+        "all6400_outputs_and_unmapped_exclusions_accepted",
+        "actual_selection_and_Pcov_accepted"
+      ],
+      "submitted_metadata_utc": "2026-10-21T12:39:48.661025+00:00",
+      "all6400_local_closeout_complete": true,
+      "actual_independent_A3_accepted": false,
+      "student_input_admitted": false,
+      "student_models_admitted": false
+    }
   }
 }

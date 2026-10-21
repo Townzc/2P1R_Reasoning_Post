@@ -1,3 +1,7 @@
+## Actual generation closeout — 2026-10-21T12:39:48.661025+00:00
+
+Original continuation33013 and all collect/audit/first6400score completed, STOPPED0. Actual A3 at [19686a28d09cff472027e4a61ba40594c512c7f6](B_COMPLETE6400_ACTUAL_A3_REQUEST.md) is pending; the92-source student-input appendix below remains pending and requires that actual A3 before first encoding. No student input/model admitted.
+
 ## Next student-input appendix, same shared B request — 2026-10-21T12:27:34.747944+00:00
 
 Exact target `e556c4c90a86bf869fa3730755d94678110a8d63`, full92-source path in `b_remaining_student_input_preflight_v1/SOURCE_BINDING.json`; scope `p011-B-remaining-generation-selection-complete-path-CR`. Only newdriver replaces stale failed-original result locator and requires both exact input-preparation source CR and actual6400 A3 binding with independent original-token decode/correctness checks. The original91 production sources are untouched, B continuation33013 remains the sole active original call.

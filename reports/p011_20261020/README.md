@@ -1,3 +1,7 @@
+## B complete original6400 actual A3 requested — 2026-10-21T12:39:48.661025+00:00
+
+[Immutable result package](b_complete6400_actual_v1/README.md) at **19686a28d09cff472027e4a61ba40594c512c7f6** and [exact actual A3 request](B_COMPLETE6400_ACTUAL_A3_REQUEST.md). Original5120-only continuation and all local closeout complete; no student input/model admitted. F15 authorized local proof is complete; current formal plan retains only A7L15/A7F15/baselineL15 under Claude's conditional numeric decision, with48-source adapter CR pending. Historical candidate/running descriptions below are superseded. No old science repeated.
+
 ## Concrete numeric candidate and section7.4 budget disposition — 2026-10-21T11:23:01.483633+00:00
 
 Same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, exact full scope without the r1 suffix; target **99508f316768237185479fbfa660850ea4ed5c0f**. [Complete SPEC/32 original configurations](long_current_runtime_v1/SPEC.json), [numeric evidence and limits](long_current_runtime_v1/README.md), [exact binding and required flags](long_current_runtime_v1/REVIEW_REQUIREMENTS.json). Source44 and original input A1 remain accepted; this is no source rewrite or new per-cell gate. No formal model/upload/reserve has been created.
