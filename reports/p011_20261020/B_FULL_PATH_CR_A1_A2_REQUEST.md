@@ -1,3 +1,5 @@
+Current 2026-10-21T18:56:15.908011+00:00: Original B1/B3 models, collections, exact authorized local tails, first scores and contrasts completed; see B_STUDENTS_COMPLETE_RESULTS_ACTUAL_A3_REQUEST.md for the new actual A3. All original admission permissions consumed; do not repeat any completed step.
+
 # B first local audit: explicit remaining-tail exception and exact CR
 
 Prepared 2026-10-21T17:57:19.847303+00:00. Request `p011-B-first-local-audit-remaining-tail-exception-CR-r1`; scope `p011-B-first-local-audit-remaining-tail-exception-CR`, attached to original shared `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`. Fixed source101 target `30e5a71ba4c74cb49af42b95d34b80c0c42c5e38`; [complete candidate](b_local_audit_remaining_preflight_v1/README.md), [binding and7 required true flags](b_local_audit_remaining_preflight_v1/REVIEW_REQUIREMENTS.json), [original failures](b_students_local_audit_environment_failures_v1/README.md).
