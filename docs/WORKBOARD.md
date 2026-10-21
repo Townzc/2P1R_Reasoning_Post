@@ -1,3 +1,8 @@
+
+### 2026-10-20 23:29:16 PDT — Direct overnight Claude delegation
+
+Owner delegated tonight's approval matters to existing Claude. Exact direct text, observation time and scope saved in `reports/p011_20261020/OWNER_NIGHT_CLAUDE_DELEGATION_20261021.json` (SHA `1c54eb5ddf5a0b26922722ee2998ea604e2f05e12bc640c92869570811756ae9`). Actual scoped decisions and independent exact audits remain required; no automatic cap/scope increase or repeated DONE work. The one CPU continuation already has direct approval; its exact CR remains pending. Reasoning setting recommendation only; no app setting changed.
+
 ### 2026-10-20 23:24:55 PDT — Direct CPU input exception received
 
 Owner directly replied “批准一次 CPU 续作，复审后执行” to exacte6ce0467proposal.
