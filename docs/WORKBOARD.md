@@ -1,3 +1,23 @@
+### 2026-10-20 22:06:22 PDT — B input/student adapters prepared; no production replay
+
+New target4e8718058135aaae750900f2c41500384f72c8e3 adds the complete input
+consumer adapters and an unchanged-AST P010 training body with a B-specific
+recipe validator. Eight new checks passed once (0.782s); seven newly committed
+files were verified. Existing successful tests, inputs and science were not rerun.
+B K1 retains the first answer only when all16 attempts fail; B K4/K8 exclude
+those unavailable answers and record actual P_cov. More than10% all-failure
+requires disposition before training preparation. Original dose/seed/LR remain.
+Full B entry, shared numeric admission, transport and endpoint integration are
+still pending; no input consumer, encoding, model, score or reservation executed.
+See [adapter packet](../reports/p011_20261020/b_input_student_adapter_draft_v1/README.md).
+
+Long complete source request db1aff07 remains pending. Latest read-only branch
+observation05:05:59UTC still96430ebd, no new report. It occurred about3 seconds
+before the nominal05:06:03 normal slot, after the15-minute minimum; the actual
+timestamp is retained. C1 concrete source/input accepted, actual SPEC+current
+owner budget awaits exact A2; no owner response is outstanding. OT3 actual
+review is closed with dated field-name correction, without reanalysis.
+
 ### 2026-10-20 21:59:00 PDT — Direct current balance received; C1 exact budget sent for A2
 
 Owner answered the current-balance question in this chat. It is current direct
