@@ -1,3 +1,11 @@
+## Complete retained-student source appendix — 2026-10-21T12:45:01.155651+00:00
+
+Same shared B request; target **bf708e6ac81fa91b93e59d56b58a57ded9b0e7fb**, [96-source complete student path](b_retained_students_source_v1/README.md), [exact source/required conclusions](b_retained_students_source_v1/REVIEW_REQUIREMENTS.json), source scope `p011-B-retained-students-complete-path-CR`. Four new adapters preserve the prior92 source entries and original science. Seven new synthetic integration checks passed once0.005s. No actual student input/SPEC/model. This source appendix may be reviewed with the pending92-source input driver and actual6400 A3; their exact bindings remain distinct and unchanged. Source PASS alone grants no paid work.
+
+The new entry permits only B1/B3, validates original model receipt before remote mutations, uploads only new inputs, uses the complete failed-attempt ledger, and checks sequential80percent feasibility of both unattempted students with all reservations retained. Original endpoint/state/scoring/contrast functions and shared absolute windows remain. The future numeric appendix must bind the actual A3 report, actual input manifest/configs/A1, unchanged96-source closure, actual timing and rates, failed-parent bindings and all14 required flags. Prior6.18+6.18 estimates are not current permission; B3 margin0.06 has not been waived.
+
+The92-source student-input appendix at e556c4c9 below remains the exact required authority for its once-only constructor; this new appendix does not replace or restart it. No new per-cell audit request is created.
+
 ## Actual generation closeout — 2026-10-21T12:39:48.661025+00:00
 
 Original continuation33013 and all collect/audit/first6400score completed, STOPPED0. Actual A3 at [19686a28d09cff472027e4a61ba40594c512c7f6](B_COMPLETE6400_ACTUAL_A3_REQUEST.md) is pending; the92-source student-input appendix below remains pending and requires that actual A3 before first encoding. No student input/model admitted.
