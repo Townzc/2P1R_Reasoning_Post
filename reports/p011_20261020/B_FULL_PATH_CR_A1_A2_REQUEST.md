@@ -1,3 +1,9 @@
+## Next student-input appendix, same shared B request — 2026-10-21T12:27:34.747944+00:00
+
+Exact target `e556c4c90a86bf869fa3730755d94678110a8d63`, full92-source path in `b_remaining_student_input_preflight_v1/SOURCE_BINDING.json`; scope `p011-B-remaining-generation-selection-complete-path-CR`. Only newdriver replaces stale failed-original result locator and requires both exact input-preparation source CR and actual6400 A3 binding with independent original-token decode/correctness checks. The original91 production sources are untouched, B continuation33013 remains the sole active original call.
+
+Six new driver checks passed once0.011s. No actual student input, encoder, model or studentSPEC was run. Please include this source appendix with full B path review; do not treat the generation A2 as permission for this CPU constructor. Actual A3/result files will be submitted after completion; missing A3 prevents execution even after source acceptance. No extra per-cell gate.
+
 ## Actual update 2026-10-21T12:14:35.751227+00:00
 
 B91 exact CR/A1/A2 accepted from report0c1a9a1f at3556939f. One5120 continuation plus first6400 scoring only; actual A3 independent token replay still required. Students and their input preparation remain unadmitted.
