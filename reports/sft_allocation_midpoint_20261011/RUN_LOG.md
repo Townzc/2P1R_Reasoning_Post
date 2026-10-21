@@ -2899,3 +2899,7 @@ Metadata correction: this new entry initially used a guessed docs/ log path, cre
 ### 2026-10-21 04:11:43 PDT — P011 original engineering material
 
 Published actualthree-arm32-request/two-update evidence atfdf8bd86c5113c1f716ab749d24f4f2a9faaf8ac;120payload+manifest newly verified once. Three originalmodels/collectionsclosed; two fulloraclespassed; F15 local pre-entry disposition stillpending. No oldmodel/score/oracle/check repeated, no formal512 throughput or peak memoryclaim. Exact timing/numeric source44 appendix follows.
+
+### 2026-10-21 04:23:01 PDT — P011 formal numeric candidate and section7.4
+
+Concrete44-source/32-configuration SPEC at99508f316768237185479fbfa660850ea4ed5c0f,17newGitfilesverifiedonce; no formal call/upload/reserve. Recorded full-cycle scaling and candidate7200 scoring cap explicitly pending exact A2. Initial5 A110.53/remaining4.47 and mandatory totals188.77/157.42/212.21 violate whole-campaign fit; reasoned delegated disposition requested, no cap/transfer/release/cut assumption. F15 local pre-entry disposition stillpending. Metadata helper flat-manifest lookup failed after unsaved profiles; narrow new metadata repair preserved script/log and durable intermediates, no old science rerun. P01019UTCfreeze/finalA5 retained.
