@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "scripts/prepare_p011_ot3_4032_inputs.py", line 226, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "scripts/prepare_p011_ot3_4032_inputs.py", line 193, in main
+    failures = old.encode_and_plan(cells,tokenizer,OUTPUT,'ot3')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scripts/prepare_p011_long_inputs.py", line 299, in encode_and_plan
+    obj = rules.encode_complete(tokenizer, row['question'], row['response'], path_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "experiments/p011/data_contract.py", line 104, in encode_complete
+    raise ValueError('Segmented native chat tokens must recover the exact original text')
+ValueError: Segmented native chat tokens must recover the exact original text
