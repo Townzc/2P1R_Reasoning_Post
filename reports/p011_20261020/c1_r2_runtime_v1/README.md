@@ -1,0 +1,13 @@
+# C1 r2 complete runtime candidate
+
+Prepared 2026-10-21T06:49:30.029609+00:00; no second GPU/model call or reservation. This is a separately authorized logical attempt, with original r1 failure and3.74 reservation retained. Exact new source CR and numeric A2 are pending.
+
+Only journal grouping changes32→320 (300→30 chunks); scientific modelbatch1,9594 unique original sequences, six original group memberships,5214325 input/4589326 supervised tokens, native masks/EOS151643, pinned BF16 base and FP32 NLL remain unchanged. First chunk is hard-timer only under the original bounded exception plus explicit r2 decision. Each whole chunk includes three Volume commits and named acknowledgement; final proof/summary/packing overhead uses the300-second allowance. Newworker1500/platform1560/startup600/load900, candidate reserve2.64 at historical rate. No initial empirical speed claim.
+
+The new parent adapter checks the preserved original failed receipt, actual failed review and three old permanent fences. The original saved STOPPED0 is reused, avoiding a closed-app requery. The original18-file upload and full readback are bound through their original specification; neither is redone. The shared ledger retains all failed/pending/unknown/unmatched reservations and slots. The sole current failed reserve3.74 remains; new candidate6.38 total is reservation arithmetic, not expense.
+
+New budget owner record sets protected0 and uses current owner-attested available funds without subtracting oldP010 obligations again. All P011 attempted reserves and meter growth remain deducted, caps180/A115/B20/C12/D25/emergency8 and80% gate unchanged. Balance/account data stay private. A fresh meter/rate check and independently accepted D1 scope are still required; historical rate is not a current quote.
+
+SOURCE_BINDING has22 transitive runtime/source entries including package initializers and actual owner binding. Original source13 and input/model evidence are unchanged. Ten new runtime checks and four new admission/closure checks passed once. No old test methods, corpus encoding, output scoring, provider reads or models rerun. Private parent/upload file hashes are bound; public hashes do not imply reviewer access to private bytes. Original failed archive/review already published separately.
+
+Raw owner records came from designated Claude's records of direct owner decisions; Codex did not see the underlying claude.ai conversation. Git, self-described and actual read times remain distinct, including inconsistent chronology. Public privacy projections bind originals by SHA. Exact report must accept this limitation and source/input/owner/parent binding; code PASS alone is not paid permission.

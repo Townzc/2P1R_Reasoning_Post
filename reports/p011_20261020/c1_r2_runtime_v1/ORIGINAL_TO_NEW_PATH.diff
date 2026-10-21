@@ -1,0 +1,431 @@
+--- experiments/p011/c1_execution.py
++++ experiments/p011/c1_r2/execution.py
+@@ -10,12 +10,15 @@
+ from pathlib import Path
+ import time
+ 
+-from experiments.p011 import c1_nll, c1_evidence
++from experiments.p011 import c1_nll
++from experiments.p011.c1_r2 import evidence as c1_evidence
+ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest, verify
+ 
+ CATEGORY_CAP = Decimal('12')
+ CUTOFF_EPOCH = 1792645200  # 2026-10-22T05:00:00Z, checked by new boundary test.
+-CHUNK = 32
++CHUNK = 320
++R2_OWNER_SHA = "e381630ccb91dd7fd678cc7abc7f4689d09df5c27286323679ce374566f4714e"
++BUDGET_OWNER_SHA = "364aaf6cd70fa9cf1a89902af6dedb33a1b64d7c47e73a12b37b6b97dfb69a2f"
+ SELF_CALIBRATION = 'owner_approved_in_run_self_calibration'
+ SELF_CALIBRATION_OWNER_SHA = 'a08ba1abec5108b7ed583175151116f6a074626093c51148e783a5c1020506f0'
+ 
+@@ -43,7 +46,7 @@
+             or spec['model']['revision'] != c1_nll.MODEL['revision']
+             or spec['model']['remote_path'] != '/evidence/mp-engineering-20261012-r1/assets/model'
+             or spec['forward'] != {'dtype':'bfloat16','loss_dtype':'float32','attention':'sdpa',
+-                'model_batch_size':1,'journal_chunk_size':32,'use_cache':False,
++                'model_batch_size':1,'journal_chunk_size':320,'use_cache':False,
+                 'training':False,'adapter':False,'original_EOS':151643}):
+         raise ValueError('Frozen base/forward configuration or finite window differs')
+     times=spec['timing']['complete_chunk_seconds']
+@@ -52,7 +55,7 @@
+             or not spec['timing']['source_evidence_files']
+             or spec['timing']['basis_kind'] not in ('actual_C1_complete_chunk',
+                 'independently_accepted_prior_measurement_proxy', SELF_CALIBRATION)
+-            or spec['timing']['target_scope'] != 'C1_sequential32_original_token_forwards_including_FP32_loss'
++            or spec['timing']['target_scope'] != 'C1_sequential320_original_token_forwards_including_FP32_loss'
+             or (spec['timing']['basis_kind']=='independently_accepted_prior_measurement_proxy'
+                 and spec['timing'].get('uncalibrated_proxy_scope_accepted') is not True)):
+         raise ValueError('Actual accepted complete C1-compatible batch timing required')
+@@ -62,7 +65,9 @@
+                 or not isinstance(owner_file,str)
+                 or spec['source_files'].get(owner_file) != SELF_CALIBRATION_OWNER_SHA
+                 or spec['timing'].get('owner_decision_sha256') != SELF_CALIBRATION_OWNER_SHA
+-                or limits['worker_seconds'] > 2400
++                or spec['timing'].get('r2_owner_decision_sha256') != R2_OWNER_SHA
++                or spec.get('budget_owner_decision_sha256') != BUDGET_OWNER_SHA
++                or limits['worker_seconds'] > 1500
+                 or limits['platform_seconds'] != limits['worker_seconds']+60
+                 or limits['startup_seconds'] != 600
+                 or limits['future_allowance_seconds'] != 300
+@@ -75,10 +80,10 @@
+             or reserve < (rate*(limits['startup_seconds']+limits['platform_seconds'])).quantize(
+                 Decimal('.01'),rounding=ROUND_CEILING)):
+         raise ValueError('Whole billed window must fit fixed reservation')
+-    if self_calibrating(spec) and (reserve > 4 or reserve !=
++    if self_calibrating(spec) and (reserve > Decimal("2.70") or reserve !=
+             (rate*(limits['startup_seconds']+limits['platform_seconds'])).quantize(
+                 Decimal('.01'),rounding=ROUND_CEILING)):
+-        raise ValueError('Owner C1 reserve must equal cent-ceiling whole window and be <=4')
++        raise ValueError('Owner C1 reserve must equal cent-ceiling whole window and be <=2.70')
+ 
+ 
+ def initial_admission(spec, elapsed, prior_reserved):
+@@ -191,7 +196,7 @@
+     try:
+         initial=(initial_admission(spec,time.time()-worker_start,prior_reserved)
+                  if self_calibrating(spec) else
+-                 forecast(spec,time.time()-worker_start,(len(keys)+31)//32,[],prior_reserved))
++                 forecast(spec,time.time()-worker_start,(len(keys)+CHUNK-1)//CHUNK,[],prior_reserved))
+         dump(out/'INTENT.json',{'basis':basis,'basis_sha256':basis_sha,'task_ids':keys,
+             'membership_sha256':digest(memberships),'deadline_epoch':deadline_epoch,
+             'forward_retries':0,'chunk_size':CHUNK,'worker_start_epoch':worker_start,
+@@ -218,7 +223,7 @@
+             part=keys[first:first+CHUNK];number=first//CHUNK;chunk=out/'chunks'/f'{number:05d}'
+             f=(initial_admission(spec,time.time()-worker_start,prior_reserved)
+                if self_calibrating(spec) and not times else
+-               forecast(spec,time.time()-worker_start,(len(keys)-first+31)//32,times,prior_reserved))
++               forecast(spec,time.time()-worker_start,(len(keys)-first+CHUNK-1)//CHUNK,times,prior_reserved))
+             if store.get(key+'/claim')!=claim:raise ValueError('Original C1 claim changed')
+             unit=key+f'/chunk/{number:05d}'
+             plan={'first_index':first,'sequence_ids':part,'basis_sha256':basis_sha}
+@@ -257,7 +262,7 @@
+             if self_calibrating(spec):
+                 # Check immediately after the FIRST complete cycle, including
+                 # the final one. Never consume the next chunk if projection fails.
+-                post=forecast(spec,time.time()-worker_start,(len(keys)-first-len(part)+31)//32,
++                post=forecast(spec,time.time()-worker_start,(len(keys)-first-len(part)+CHUNK-1)//CHUNK,
+                               times,prior_reserved)
+                 dump(chunk/'POST_FORECAST.json',post)
+         if time.time()>=deadline_epoch:raise TimeoutError('Original C1 completion deadline reached')
+@@ -270,7 +275,7 @@
+         summary=c1_nll.descriptive_summary(memberships,confirmed)
+         dump(out/'DESCRIPTIVE_SUMMARY.json',summary)
+         dump(out/'ALL_CONFIRMED.json',{'basis_sha256':basis_sha,'unique_sequences':len(keys),
+-            'chunks':(len(keys)+31)//32,'summary_file_sha256':sha(out/'DESCRIPTIVE_SUMMARY.json'),
++            'chunks':(len(keys)+CHUNK-1)//CHUNK,'summary_file_sha256':sha(out/'DESCRIPTIVE_SUMMARY.json'),
+             'elapsed_seconds':time.time()-worker_start,'final_marker_write_excluded_from_elapsed':True,
+             'actual_A3_accepted':False});commit()
+         return {'unique_sequences':len(keys),'original_group_members':sum(map(len,memberships.values())),
+@@ -292,7 +297,7 @@
+     if (timing.get('timing_scope')!='loop_entry_through_all_three_commits_and_remote_chunk_done'
+             or timing.get('final_proof_summary_commit_included') is not False
+             or timing.get('finalization_covered_by_fixed_future_allowance') is not True
+-            or len(cycles)!=(len(keys)+31)//32):
++            or len(cycles)!=(len(keys)+CHUNK-1)//CHUNK):
+         raise ValueError('Complete whole-iteration timing scope required')
+     if (intent['spec_sha256']!=digest(spec) or intent['claim']!=claim
+             or store_records.get(key+'/claim')!=claim):
+@@ -300,7 +305,7 @@
+     initial=read(out/'INITIAL_FORECAST.json')
+     expected_initial=(initial_admission(spec,initial['elapsed_seconds'],intent['prior_reserved_usd'])
+         if self_calibrating(spec) else
+-        forecast(spec,initial['elapsed_seconds'],(len(keys)+31)//32,[],intent['prior_reserved_usd']))
++        forecast(spec,initial['elapsed_seconds'],(len(keys)+CHUNK-1)//CHUNK,[],intent['prior_reserved_usd']))
+     if initial!=expected_initial:
+         raise ValueError('Original initial numeric admission differs')
+     if self_calibrating(spec):
+@@ -310,12 +315,12 @@
+                 or load.get('watchdog_enforced') is not True
+                 or not intent['worker_start_epoch']<=load['load_finished_epoch']<load['load_deadline_epoch']):
+             raise ValueError('Original model load did not finish within900s worker window')
+-    for first in range(0,len(keys),32):
+-        number=first//32;chunk=out/'chunks'/f'{number:05d}'
++    for first in range(0,len(keys),CHUNK):
++        number=first//CHUNK;chunk=out/'chunks'/f'{number:05d}'
+         f=read(chunk/'FORECAST.json');ack=read(chunk/'CONFIRMED.json')
+         expected_f=(initial_admission(spec,f['elapsed_seconds'],intent['prior_reserved_usd'])
+             if self_calibrating(spec) and not times else
+-            forecast(spec,f['elapsed_seconds'],(len(keys)-first+31)//32,times,intent['prior_reserved_usd']))
++            forecast(spec,f['elapsed_seconds'],(len(keys)-first+CHUNK-1)//CHUNK,times,intent['prior_reserved_usd']))
+         if (f!=expected_f
+                 or store_records.get(key+f'/chunk/{number:05d}')!=read(chunk/'INTENT.json')
+                 or store_records.get(key+f'/chunk_done/{number:05d}')!=ack):
+@@ -337,7 +342,7 @@
+         times.append(elapsed)
+         if self_calibrating(spec):
+             post=read(chunk/'POST_FORECAST.json')
+-            if post!=forecast(spec,post['elapsed_seconds'],max(0,(len(keys)-first-32+31)//32),
++            if post!=forecast(spec,post['elapsed_seconds'],max(0,(len(keys)-first-CHUNK+CHUNK-1)//CHUNK),
+                               times,intent['prior_reserved_usd']):
+                 raise ValueError('Immediate post-chunk self-calibration forecast differs')
+     return {**proof,'complete_chunk_seconds':times,'source_claim_provider_outer_checks_still_required':True}
+--- experiments/p011/c1_admission.py
++++ experiments/p011/c1_r2/admission.py
+@@ -10,12 +10,12 @@
+ import math
+ import re
+ 
+-from experiments.p011 import c1_execution
++from experiments.p011.c1_r2 import execution as c1_execution
+ from experiments.sft_allocation_midpoint.common import read, sha, digest
+ 
+ CAPS={k:Decimal(v) for k,v in {'A':'115','B':'20','C':'12','D':'25','emergency':'8'}.items()}
+ PLAN='e0dee182972f9910b707fac68800dcb5a3aff2d3'
+-SCOPE='p011-C1-complete-path-CR-A1-A2-lite'
++SCOPE='p011-C1-r2-chunk320-complete-path-CR-A1-A2-lite'
+ 
+ 
+ def exact_source(spec,root):
+@@ -49,6 +49,10 @@
+     if c1_execution.self_calibrating(spec):
+         expected['owner_decision_sha256']=c1_execution.SELF_CALIBRATION_OWNER_SHA
+         expected['bounded_in_run_self_calibration_accepted']=True
++        expected['r2_owner_decision_sha256']=c1_execution.R2_OWNER_SHA
++        expected['budget_owner_decision_sha256']=c1_execution.BUDGET_OWNER_SHA
++        expected['r1_failed_call_and_reservation_retained']=True
++        expected['original_input_upload_reuse_accepted']=True
+     flags=('complete_input_A1_accepted','complete_source_closure_accepted',
+         'exact_timing_scope_accepted','original_tokens_masks_and_EOS_unchanged',
+         'untouched_base_forward_only','full_result_window_and_budget_accepted')
+@@ -98,12 +102,13 @@
+     totals,slots=accounting(records,containers,states)
+     reserve=Decimal(str(spec['limits']['reserved_usd']))
+     if (budget['all_attempted_reservations_usd']!=totals or slots>=4
+-            or any(x['logical_id']=='C1_original_token_base_forward_r1' for x in records)
++            or any(x['logical_id']=='C1_original_token_base_forward_r2' for x in records)
+             or budget.get('cap_usd')!='12' or budget.get('category')!='C'
+-            or budget.get('overall_cap_usd')!='180' or budget.get('protected_usd')!='48'
++            or budget.get('overall_cap_usd')!='180' or budget.get('protected_usd')!='0'
++            or budget.get('budget_owner_decision_sha256')!=c1_execution.BUDGET_OWNER_SHA
+             or budget.get('reserve_release_used') is not False
+             or budget.get('owner_estimate_used_as_balance') is not False
+-            or budget.get('availability_basis')!='delayed_gross_plus_retained_reserves_conservative_floor'
++            or budget.get('availability_basis')!='owner_current_balance_minus_retained_P011_reserves_and_meter_growth'
+             or not budget['source_evidence_files']):
+         raise ValueError('Shared ledger/category/unused-slot/protected budget differs')
+     # Fresh private billing/accounting evidence, not just an unchecked flag.
+@@ -114,7 +119,7 @@
+     available=Decimal(str(budget['available_after_retained_prior_reserves_usd']))
+     gross=Decimal(str(budget['observed_gross_resource_usd']))
+     if (not available.is_finite() or not gross.is_finite() or gross<0
+-            or available-reserve<48 or sum(Decimal(v) for v in totals.values())+reserve>180):
++            or available-reserve<0 or sum(Decimal(v) for v in totals.values())+reserve>180):
+         raise ValueError('Protected balance/total budget unavailable')
+     if now+spec['limits']['full_result_window_seconds']>c1_execution.CUTOFF_EPOCH:
+         raise ValueError('Whole end-to-end result window misses original cutoff')
+@@ -126,4 +131,4 @@
+         initial=c1_execution.forecast(spec,0,spec['task_inventory']['journal_chunks'],[],totals['C'])
+     return {'category':'C','new_reserved_usd':str(reserve),'prior_reserved_usd':totals['C'],
+         'all_attempted_reservations_usd':totals,'provider_slots':slots,
+-        'initial_forecast':initial,'protected_usd':'48','not_actual_expense':True}
++        'initial_forecast':initial,'protected_usd':'0','not_actual_expense':True}
+--- experiments/p011/c1_outer.py
++++ experiments/p011/c1_r2/outer.py
+@@ -1,4 +1,4 @@
+-"""C1 original-call lifecycle. Prepared only; no actual spec/timing admission.
++"""One separately authorized C1 r2 attempt, pending its exact CR/A2.
+ 
+ The dedicated shared ledger is used by all future P011 entry paths. No caller
+ may reconstruct a missing submission, clear a fence, or retry an unknown call.
+@@ -15,17 +15,19 @@
+ import time
+ import traceback
+ 
+-from experiments.p011 import c1_admission as admission, c1_execution, c1_artifacts
++from experiments.p011.c1_r2 import admission, execution as c1_execution, artifacts as c1_artifacts
++from experiments.p011 import c1_outer as original_lifecycle
++from experiments.p011.c1_r2 import parent
+ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest
+-from scripts.prepare_p011_c1_inputs import load_pack
+-
+-LOGICAL = 'C1_original_token_base_forward_r1'
+-KEY = 'c1/original_token_base_forward_r1'
++from experiments.p011.c1_r2.inputs import load_pack
++
++LOGICAL = 'C1_original_token_base_forward_r2'
++KEY = 'c1/original_token_base_forward_r2'
+ LOCAL = '.local/p011_20261020/r1'
+-REMOTE = '/evidence/p011-20261020/c1_original_token_base_forward_r1'
++REMOTE = '/evidence/p011-20261020/c1_original_token_base_forward_r2'
+ INPUTS = '/evidence/p011-20261020/c1_inputs_r1'
+ STORE = 'p011-once-20261020'
+-SPEC = 'reports/p011_20261020/c1_runtime_v1/SPEC.json'
++SPEC = 'reports/p011_20261020/c1_r2_runtime_v1/SPEC.json'
+ 
+ 
+ def published(root, spec):
+@@ -44,44 +46,6 @@
+         if git('show', head+':'+name) != (root/name).read_bytes():
+             raise ValueError('Runtime source/spec differs from the published commit')
+     return head
+-
+-
+-def ledger(root):
+-    """All categories and all statuses, including pre-spawn/unknown/failed intents."""
+-    base = Path(root)/LOCAL/'dispatch'
+-    if not base.exists():
+-        return []
+-    records = []
+-    for path in sorted(base.iterdir()):
+-        if not path.is_dir() or path.is_symlink():
+-            raise ValueError('Unexpected shared dispatch ledger entry')
+-        value = read(path/'INTENT.json')
+-        if path.name != value['logical_id']:
+-            raise ValueError('Shared dispatch identity differs')
+-        value = dict(value)
+-        # A pre-spawn local intent is still a pending slot, even if its current
+-        # Modal app has already stopped. Only SUBMITTED proves the call identity.
+-        value.pop('app_id', None)
+-        submitted = path/'SUBMITTED.json'
+-        if submitted.exists():
+-            sub = read(submitted)
+-            if (sub['logical_id'] != value['logical_id']
+-                    or not re.fullmatch(r'ap-[A-Za-z0-9]+', sub['app_id'])
+-                    or not re.fullmatch(r'fc-[A-Za-z0-9]+', sub['call_id'])):
+-                raise ValueError('Original submission identity invalid')
+-            value['app_id'] = sub['app_id']
+-        if (path/'PROVIDER_STOPPED0.json').exists():
+-            proof = read(path/'PROVIDER_STOPPED0.json')
+-            result = read(path/'RESULT.json')
+-            if (proof.get('app_id') != value.get('app_id')
+-                    or str(proof.get('state')).lower() != 'stopped'
+-                    or type(proof.get('owned_containers')) is not int
+-                    or proof['owned_containers'] != 0
+-                    or proof['observed_epoch'] < result['finished_epoch']):
+-                raise ValueError('Saved completed STOPPED0 identity/time differs')
+-            value['saved_provider'] = proof
+-        records.append(value)
+-    return records
+ 
+ 
+ def provider(root, records):
+@@ -119,10 +83,10 @@
+     if hashlib.sha256(raw_report.encode()).hexdigest() != review['report_sha256']:
+         raise ValueError('Report must preserve exact UTF8 bytes')
+     budget = read(budget_file)
+-    upload = read(root/LOCAL/'c1_io_r1'/'upload'/'COMPLETED.json')
+-    if (upload.get('spec_file_sha256') != sha(spec_file)
++    upload = parent.original_upload(root,spec)
++    if (upload.get('spec_file_sha256') != spec['reused_input_upload']['original_spec_file_sha256']
+             or upload.get('input_files') != spec['input_files']
+-            or upload.get('source_files') != spec['source_files']
++            or upload.get('source_files') != spec['reused_input_upload']['original_source_files']
+             or upload.get('all_remote_file_bytes_read_back') is not True):
+         raise ValueError('Exact one-time input upload and complete SHA readback required')
+     # Validate the one copied original-token pack again as input to this new path.
+@@ -131,7 +95,8 @@
+     base.mkdir(parents=True, exist_ok=True)
+     with (base/'dispatch.lock').open('a+') as lock:
+         fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
+-        records = ledger(root)
++        records = parent.records_with_failed_parent(root,spec,original_lifecycle.ledger(root))
++        parent.remote_fences(root,spec,store)
+         observed = observation(root, records)
+         checked = admission.fresh_budget(spec, budget, records, observed['containers'],
+             observed['states'], time.time(), root)
+@@ -146,6 +111,7 @@
+             'budget_observed_epoch': budget['observed_epoch'], 'review': clean,
+             'provider_observation': observed, 'dispatch_epoch': time.time(),
+             'prior_attempt_records': records,
++            'original_failed_parent_binding':spec['prior_failed_C1'],
+             'automatic_retry_allowed': False}
+         out.mkdir(parents=True, exist_ok=False)
+         dump(out/'INTENT.json', intent)
+--- scripts/p011_c1_io.py
++++ scripts/p011_c1_r2_io.py
+@@ -1,4 +1,4 @@
+-"""Future C1 upload, completed-call collection and full readonly closure.
++"""C1 r2 completed-call collection and full readonly closure; no upload.
+ 
+ All subcommands are create-only and locally bounded. Partial transfers remain;
+ no whole-command retry, model/tokenizer invocation or recomputed statistics.
+@@ -13,9 +13,9 @@
+ import threading
+ import time
+ 
+-from experiments.p011 import c1_outer as outer, c1_admission, c1_artifacts
++from experiments.p011.c1_r2 import outer, admission as c1_admission, artifacts as c1_artifacts
+ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest
+-from scripts.prepare_p011_c1_inputs import load_pack
++from experiments.p011.c1_r2.inputs import load_pack
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ VOLUME = 'sft-allocation-midpoint-v1'
+@@ -23,13 +23,10 @@
+ 
+ def remaining_io_seconds(mode, spec, now, receipt=None):
+     """Both closeout commands share the original absolute result deadline."""
+-    from experiments.p011.c1_execution import CUTOFF_EPOCH
++    from experiments.p011.c1_r2.execution import CUTOFF_EPOCH
+     if type(now) not in (int, float) or not math.isfinite(now):
+         raise ValueError('Actual finite IO observation time required')
+-    if mode == 'upload':
+-        # Transfer cannot consume the complete prospective result window.
+-        deadline = CUTOFF_EPOCH-spec['limits']['full_result_window_seconds']
+-    elif mode in ('collect', 'audit'):
++    if mode in ('collect', 'audit'):
+         start = receipt['worker_start_epoch']
+         if type(start) not in (int, float) or not math.isfinite(start) or start > now:
+             raise ValueError('Original real worker start required')
+@@ -49,45 +46,6 @@
+     outer.published(root, spec)
+     review = c1_admission.reviewed_path(spec, spec_file, read(review_file))
+     return spec, review
+-
+-
+-def transfer(volume, inputs, out, spec):
+-    from modal.exception import NotFoundError
+-    for name, expected in spec['input_files'].items():
+-        remote = outer.INPUTS.removeprefix('/evidence')+'/'+name
+-        try:
+-            h = hashlib.sha256(); count = 0
+-            for block in volume.read_file(remote): h.update(block); count += len(block)
+-            existing = {'sha256': h.hexdigest(), 'bytes': count}
+-        except (NotFoundError, FileNotFoundError):
+-            existing = None
+-        if existing is not None:
+-            if existing != expected:
+-                raise ValueError('Existing C1 input differs; no overwrite')
+-        else:
+-            with volume.batch_upload(force=False) as batch:
+-                batch.put_file(inputs/name, remote)
+-            h = hashlib.sha256(); count = 0
+-            for block in volume.read_file(remote): h.update(block); count += len(block)
+-            if {'sha256': h.hexdigest(), 'bytes': count} != expected:
+-                raise ValueError('Original uploaded C1 bytes/readback differ')
+-        dump(out/'files'/(name+'.json'), {**expected, 'reused_identical_remote': existing is not None})
+-
+-
+-def upload(root, out, spec, review):
+-    import modal
+-    inputs = root/outer.LOCAL/'c1_inputs_r1'
+-    load_pack(inputs, spec['input_files'], spec['task_inventory'])
+-    volume = modal.Volume.from_name(VOLUME, create_if_missing=False)
+-    store = modal.Dict.from_name(outer.STORE, create_if_missing=True)
+-    intent = {'spec_file_sha256': sha(root/outer.SPEC), 'review': review,
+-        'input_files': spec['input_files'], 'source_files': spec['source_files']}
+-    if not store.put('c1/input_upload_r1', intent, skip_if_exists=True):
+-        raise ValueError('Original input upload already attempted; preserve partial')
+-    dump(out/'UPLOAD_INTENT.json', intent)
+-    transfer(volume, inputs, out, spec)
+-    dump(out/'COMPLETED.json', {**intent, 'all_remote_file_bytes_read_back': True,
+-        'completed_epoch': time.time(), 'model_calls': 0})
+ 
+ 
+ def collect(root, out, spec, review):
+@@ -131,7 +89,7 @@
+ 
+ 
+ def audit(root, out, spec, review):
+-    saved = root/outer.LOCAL/'c1_io_r1'/'collect'
++    saved = root/outer.LOCAL/'c1_io_r2'/'collect'
+     read(saved/'COMPLETED.json')
+     receipt = read(saved/'ORIGINAL_RESULT.json')
+     provider = read(saved/'PROVIDER_STOPPED0.json')
+@@ -167,14 +125,14 @@
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('mode', choices=('upload', 'collect', 'audit'))
++    parser.add_argument('mode', choices=('collect', 'audit'))
+     parser.add_argument('--review', required=True)
+     args = parser.parse_args()
+     spec, review = get_review(ROOT, args.review)
+-    receipt = None if args.mode == 'upload' else read(
++    receipt = read(
+         ROOT/outer.LOCAL/'dispatch'/outer.LOGICAL/'RESULT.json')
+     seconds, deadline = remaining_io_seconds(args.mode, spec, time.time(), receipt)
+-    out = ROOT/outer.LOCAL/'c1_io_r1'/args.mode
++    out = ROOT/outer.LOCAL/'c1_io_r2'/args.mode
+     out.mkdir(parents=True, exist_ok=False)
+     dump(out/'ATTEMPT.json', {'mode': args.mode, 'spec_file_sha256': sha(ROOT/outer.SPEC),
+         'started_epoch': time.time(), 'whole_helper_retry_allowed': False,
+@@ -182,7 +140,7 @@
+     timer = threading.Timer(seconds, lambda: os._exit(124))
+     timer.daemon = True; timer.start()
+     try:
+-        {'upload': upload, 'collect': collect, 'audit': audit}[args.mode](ROOT, out, spec, review)
++        {'collect': collect, 'audit': audit}[args.mode](ROOT, out, spec, review)
+     except BaseException as exc:
+         dump(out/'FAILED.json', {'type': type(exc).__name__, 'message': str(exc),
+             'partial_retained': True, 'whole_helper_retry_allowed': False})
