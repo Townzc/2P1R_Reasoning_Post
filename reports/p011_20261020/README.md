@@ -1,3 +1,5 @@
+P011 engineering 2026-10-21T00:29:56.350406+00:00: [long payload/scoring preparation](long_closeout_draft_v1/README.md),20newsynthetic checks passed; no production model/scoring or new code-only gate. Data4032CR/AMactualA1 pending.
+
 P011 2026-10-21T00:05:03.081618+00:00: [B owner-rule record and leaf update](review_d3f66ec3_B_rule_and_prereview_v1/README.md) fixes first-usable-of16/fallback>10% in the draft; reported direct decision via Claude, formal fullB CR still required. Data A1/4032CR remain pending.
 
 P011 engineering 2026-10-20T23:56:47.210949+00:00: [long worker integration and pinned3B local assets](long_execution_draft_v1/README.md) prepared;14newsynthetic checks passed. No actual model/upload/paid call; exact shared full-path review still required. Count4032 reuse CR and AMactualA1 pending at last observation.

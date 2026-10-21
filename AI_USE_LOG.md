@@ -1,3 +1,21 @@
+### 2026-10-20 17:29:56 PDT — New complete long payload/scoring adapters prepared
+
+New long_evidence verifies architecture-derived parameter order/shapes, complete
+AdamW/RNG/dose, final-state/export/join chain and all3300 original raw endpoints
+with exact remote acknowledgments/forecasts. New long_scoring/long_score_process
+retain unchanged P1 scalar/pool and durable33chunks; proposed33000local seconds
+is an uncalibrated technical window pending full shared CR, not measured time.
+Twenty distinct new tiny/meta/fake-pool checks passed once (11+2+7); no real
+weights/forward/generation/symbolic call, old successful tests or old science
+repeated. Ordering coverage tightened after11checks, only2newchecks exercised it.
+Full outer runtime/source/input/provider transport/actual numeric/CLI still need
+integration; no extra code-only gate or fabricated acceptance. Original dataCR
+and AMactualA1 remain pending at last00:01poll; next normal>=00:35:04UTC.
+Read-only guessed native_oracle path failed without effects. First metadata
+script-construction failed on quote syntax before any script/packet write; its
+missing-script command also failed. New correctly saved builder ran once.
+Original failures preserved; P011paid/reserve0, P010Oct21 19UTCfreeze retained.
+
 ### 2026-10-20 17:05:03 PDT — B owner rule recorded via Claude; data reviews still pending
 
 Actual poll00:01:40UTC found d3f66ec3. Two non-Z1 documents fully read after
