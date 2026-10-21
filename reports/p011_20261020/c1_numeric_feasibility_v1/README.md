@@ -1,0 +1,11 @@
+# C1 numerical feasibility: current reviewed proxy does not fit
+
+New deterministic derivation from both original P009 S1 hosts, all128 complete blocks, under Claude f0c47ad5 prospective conditions. No old timing acquisition, training, scoring or oracle repeated. Original measured intervals include backward/optimizer, guard and commit overhead. They are not measured C1 forwards or guaranteed future-host upper bounds.
+
+Using32×1758 input tokens, maximum measured seconds/processed-token yields 47.193003263817892992 seconds. Adding the reviewer fallback of3×10-second commits and2×1-second store operations gives 79.193003263817892992 seconds/chunk. With300chunks,300future allowance and600startup, historical full-resource rate0.00122044 gives **35.97 USD** initial scenario. Even replacing the scaled training proxy with only the32×0.25=8-second floor gives **18.75 USD**, above C's current9.60 forecast ceiling and12 hard cap. Zero model-load time is used in that lower bound; adding it cannot improve fit. This is neither actual spend nor a fresh quote.
+
+No standalone commit stopwatch was found in the inspected original producer; subtraction cannot turn combined training intervals into measured commit-only time. Token scaling and per-call/commit/store constants remain uncalibrated assumptions. No actual SPEC or reservation is created because the stated scheme fails before dispatch. Current-rate/fresh budget observation is deferred until a genuinely viable candidate exists.
+
+Request within the SAME C1 shared review: assess a source-supported feasible numerical basis or a bounded engineering change that preserves all original answers/masks/EOS, full result checks, C12/80percent/protected48 and no paid-measurement exception. No scope/cap transfer, hidden multiplier cancellation or approval is assumed. Input A1 and source PASS remain accepted; numerical admission remains pending.
+
+TRAINING_TIMING_PROJECTION exposes original complete timing vectors and raw small block records, retaining original file SHA and omitting the private checkpoint locator. This is transparent field projection, not a claim that the reviewer opened private binary state. The failed guessed TRAINING_PROCESS_RESULT path was a read-only preparation error; the actual TRAINING_CHILD_RESULT files were then located. All source and scientific bytes remain unchanged.

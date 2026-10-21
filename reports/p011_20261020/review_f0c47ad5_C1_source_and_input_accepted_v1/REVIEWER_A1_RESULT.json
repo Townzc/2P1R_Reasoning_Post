@@ -1,0 +1,236 @@
+{
+ "manifest_members": 22,
+ "manifest_bad": [],
+ "binding_sha": "54e73b1cb1e69d300ee40423236e2d5d2f91e96e42ad03a81f10191256546006",
+ "binding_equals_copied": true,
+ "copied_vs_original_bad": [],
+ "groups": {
+  "t15_n3200": {
+   "n": 3200,
+   "cfg_n": 3200,
+   "seed": 17,
+   "updates": 1024,
+   "targets": 2097148,
+   "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "eos_token_ids": [
+     151643
+    ],
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "vocab_size": 151936
+   },
+   "enc_sha_ok": true,
+   "rows_sha_ok": true,
+   "unique_problems": 3200,
+   "fallback": 0,
+   "attempts": {
+    "1": 3200
+   },
+   "teachers": {
+    "null": 3200
+   }
+  },
+  "t15_n400": {
+   "n": 400,
+   "cfg_n": 400,
+   "seed": 17,
+   "updates": 1024,
+   "targets": 2097148,
+   "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "eos_token_ids": [
+     151643
+    ],
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "vocab_size": 151936
+   },
+   "enc_sha_ok": true,
+   "rows_sha_ok": true,
+   "unique_problems": 400,
+   "fallback": 0,
+   "attempts": {
+    "1": 400
+   },
+   "teachers": {
+    "null": 400
+   }
+  },
+  "t72_n3200": {
+   "n": 3200,
+   "cfg_n": 3200,
+   "seed": 17,
+   "updates": 1024,
+   "targets": 2097148,
+   "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "eos_token_ids": [
+     151643
+    ],
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "vocab_size": 151936
+   },
+   "enc_sha_ok": true,
+   "rows_sha_ok": true,
+   "unique_problems": 3200,
+   "fallback": 83,
+   "attempts": {
+    "1": 2945,
+    "2": 177,
+    "4": 26,
+    "3": 52
+   },
+   "teachers": {
+    "t72": 3200
+   }
+  },
+  "t72_n400": {
+   "n": 400,
+   "cfg_n": 400,
+   "seed": 17,
+   "updates": 1024,
+   "targets": 2097148,
+   "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "eos_token_ids": [
+     151643
+    ],
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "vocab_size": 151936
+   },
+   "enc_sha_ok": true,
+   "rows_sha_ok": true,
+   "unique_problems": 400,
+   "fallback": 13,
+   "attempts": {
+    "1": 365,
+    "2": 25,
+    "4": 3,
+    "3": 7
+   },
+   "teachers": {
+    "t72": 400
+   }
+  },
+  "t7_n3200": {
+   "n": 3200,
+   "cfg_n": 3200,
+   "seed": 17,
+   "updates": 1024,
+   "targets": 2097148,
+   "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "eos_token_ids": [
+     151643
+    ],
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "vocab_size": 151936
+   },
+   "enc_sha_ok": true,
+   "rows_sha_ok": true,
+   "unique_problems": 3200,
+   "fallback": 82,
+   "attempts": {
+    "1": 2997,
+    "3": 58,
+    "2": 124,
+    "4": 21
+   },
+   "teachers": {
+    "t7": 3200
+   }
+  },
+  "t7_n400": {
+   "n": 400,
+   "cfg_n": 400,
+   "seed": 17,
+   "updates": 1024,
+   "targets": 2097148,
+   "model": {
+    "architecture": "Qwen2ForCausalLM",
+    "eos_token_ids": [
+     151643
+    ],
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "vocab_size": 151936
+   },
+   "enc_sha_ok": true,
+   "rows_sha_ok": true,
+   "unique_problems": 400,
+   "fallback": 12,
+   "attempts": {
+    "1": 368,
+    "3": 11,
+    "2": 19,
+    "4": 2
+   },
+   "teachers": {
+    "t7": 400
+   }
+  }
+ },
+ "structure_bad": {
+  "t15_n3200": 0,
+  "t15_n400": 0,
+  "t72_n3200": 0,
+  "t72_n400": 0,
+  "t7_n3200": 0,
+  "t7_n400": 0
+ },
+ "nested_prefix": {
+  "t15": true,
+  "t7": true,
+  "t72": true
+ },
+ "same_problem_set_and_order": [
+  true,
+  true
+ ],
+ "t15_vs_t7_order_equal": true,
+ "cross_teacher_shared_sequences": {
+  "t15+t72": 1,
+  "t15+t7": 5
+ },
+ "inventory_recomputed": {
+  "unique_sequences": 9594,
+  "members_per_group": {
+   "t15_n3200": 3200,
+   "t15_n400": 400,
+   "t72_n3200": 3200,
+   "t72_n400": 400,
+   "t7_n3200": 3200,
+   "t7_n400": 400
+  },
+  "unique_input_tokens": 5214325,
+  "unique_supervised_tokens": 4589326,
+  "max_sequence_length": 1758,
+  "tasks_sha256": "a1e0a2acdff6681a6bf607490b689710fb3eb6653fbb506f870f1fdb27deb900",
+  "memberships_sha256": "a2454456d0c7738ad628b3c06040892f0e2c1ceb68a6a4e98df9aeb7a00d03a7",
+  "journal_chunks": 300
+ },
+ "inventory_matches_saved": {
+  "unique_sequences": true,
+  "members_per_group": true,
+  "unique_input_tokens": true,
+  "unique_supervised_tokens": true,
+  "max_sequence_length": true,
+  "tasks_sha256": true,
+  "memberships_sha256": true,
+  "journal_chunks": true
+ },
+ "fallback_overlap_t7_t72": 29,
+ "supervised_tokens_per_group": {
+  "t15_n3200": 1494755,
+  "t15_n400": 188446,
+  "t72_n3200": 1529639,
+  "t72_n400": 191865,
+  "t7_n3200": 1566436,
+  "t7_n400": 196278
+ },
+ "prompt_prefix_same_across_teachers": 3200
+}
