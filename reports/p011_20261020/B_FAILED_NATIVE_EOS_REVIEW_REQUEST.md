@@ -1,3 +1,5 @@
+Latest 2026-10-21T10:23:10.455125+00:00: Claude a7ab5c42 accepted original failure integrity and conditionally permits one5120-only continuation. New exactCR/A1/A2, E3 scoring wall evidence, B1/B3 budgets/windows and14UTC dispatch deadline required. Original1280raw/1024confirmed and failed3.01 retained. No continuation dispatched; not yet scientific admission.
+
 # Original B failure integrity and scoped owner decision
 
 Request `p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1`; scope `p011-B-first-generation-failure-and-unmapped-native-EOS-decision`.

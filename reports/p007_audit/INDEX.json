@@ -4597,7 +4597,7 @@
       "scope": "p011-long-three-arm-engineering-preflight-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-three-arm-engineering-preflight-source-CR",
       "target_commit": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "status": "ORIGINAL_ACTUAL_A1_A2_ACCEPTED_NARROW_FAILED_LEDGER_CR_PENDING",
+      "status": "EXACT37_FAILED_LEDGER_A1_A2_ACCEPTED_FRESH_ENTRY_READY",
       "request_file": "reports/p011_20261020/LONG_PREFLIGHT_CR_A1_A2_REQUEST.md",
       "packet": "reports/p011_20261020/long_preflight_failed_ledger_runtime_v1",
       "manifest_sha256": "3dbcdb981e0669edd99aacf0bb2ae61e084fb9ce6c11a29934ea41282a793baf",
@@ -4656,7 +4656,7 @@
       "actual_new_reserved_usd": "0",
       "owner_maximum_three_job_reserve_usd": "6",
       "new_distinct_checks": 13,
-      "accepted_record": "reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1/LONG_PREFLIGHT_SOURCE_CR_ACCEPTED.json",
+      "accepted_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/LONG_PREFLIGHT_FAILED_LEDGER_A1_A2_ACCEPTED.json",
       "acceptance_read_utc": "2026-10-21T08:43:53.865220+00:00",
       "actual_input_packet": "reports/p011_20261020/long_preflight_inputs_actual_v1",
       "spec_sha256": "eb88670f66ca6ebdfa080d9e5b39dc9654e00604be2cf398df31cb4f7d21d7a6",
@@ -4665,8 +4665,10 @@
       "original_actual_A1_A2_report_sha256": "2dd1dc459fb00a0a52190b489de7b2d6db37e092130ba85cfb3a608ee60735c1",
       "actual_subset_A1": true,
       "exact_numeric_A2": true,
-      "new_ledger_source_CR_pending": true,
-      "source_map_erratum": "reports/p011_20261020/LONG_PREFLIGHT_LEDGER_BINDING_ERRATUM.md"
+      "new_ledger_source_CR_pending": false,
+      "source_map_erratum": "reports/p011_20261020/LONG_PREFLIGHT_LEDGER_BINDING_ERRATUM.md",
+      "acceptance_report_sha256": "395b60e24d8d836464b88e9adc690791338d9ff23bb77efbd576bf5b1f02c284",
+      "acceptance_report_commit": "a7ab5c4275424875408da653bdc71d6f00dc0c8c"
     },
     {
       "request_id": "p011-C1-r2-complete-original-token-NLL-actual-A3-r1",
@@ -4714,7 +4716,7 @@
       "request_id": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision-r1",
       "scope": "p011-B-first-generation-failure-and-unmapped-native-EOS-decision",
       "target_commit": "14898f087718cdf0b1ba0e1b3f01df94f36aaa13",
-      "status": "PENDING_FAILURE_INTEGRITY_AND_EXPLICIT_CLAUDE_OWNER_DECISION_NO_CONTINUATION",
+      "status": "FAILURE_INTEGRITY_PASS_CONDITIONAL_CONTINUATION_DECISION_EXACT_REVIEW_AND_FEASIBILITY_REQUIRED",
       "request_file": "reports/p011_20261020/B_FAILED_NATIVE_EOS_REVIEW_REQUEST.md",
       "packet": "reports/p011_20261020/b_generation_failed_preservation_v1",
       "manifest_sha256": "155e905de5839bce47818e1e245fd3fea10d7c18eff82de267696e935abe26ce",
@@ -4723,20 +4725,23 @@
       "raw_outputs_preserved": 1280,
       "confirmed_outputs": 1024,
       "unattempted_outputs": 5120,
-      "new_calls": 0
+      "new_calls": 0,
+      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/B_FAILED_GENERATION_DELEGATED_DECISION.json",
+      "dispatch_deadline_utc": "2026-10-21T14:00:00+00:00"
     },
     {
       "request_id": "p011-C2-null-score-original-input-failure-exception-r1",
       "scope": "p011-C2-null-score-original-input-failure-exception",
       "target_commit": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "status": "PENDING_EXPLICIT_CLAUDE_OWNER_DISPOSITION_AND_EXACT_REPAIR_REVIEW",
+      "status": "FAILURE_INTEGRITY_ACCEPTED_NUMERIC_FEASIBILITY_REQUIRED_BEFORE_ANY_REPAIR",
       "request_file": "reports/p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md",
       "packet": "reports/p011_20261020/c2_original_input_failure_v1",
       "manifest_sha256": "7ed5c6b9ddf0db4878f5e876d3d06cf2ca0f30d9c174b8e457d417bafa5c7ded",
       "submitted_utc": "2026-10-21T09:27:06.178916+00:00",
       "new_model_calls": 0,
       "original_failed_CPU": 5923,
-      "original_source_unchanged": true
+      "original_source_unchanged": true,
+      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/C2_FAILED_INPUT_DELEGATED_DECISION.json"
     }
   ],
   "p008_v31": {
@@ -6958,7 +6963,7 @@
       "scope": "p011-long-three-arm-engineering-preflight-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-three-arm-engineering-preflight-source-CR",
       "target_commit": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "status": "ORIGINAL_ACTUAL_A1_A2_ACCEPTED_NARROW_FAILED_LEDGER_CR_PENDING",
+      "status": "EXACT37_FAILED_LEDGER_A1_A2_ACCEPTED_FRESH_ENTRY_READY",
       "request_file": "reports/p011_20261020/LONG_PREFLIGHT_CR_A1_A2_REQUEST.md",
       "packet": "reports/p011_20261020/long_preflight_failed_ledger_runtime_v1",
       "manifest_sha256": "3dbcdb981e0669edd99aacf0bb2ae61e084fb9ce6c11a29934ea41282a793baf",
@@ -7025,7 +7030,10 @@
       "source_count": 37,
       "spec_sha256": "eb88670f66ca6ebdfa080d9e5b39dc9654e00604be2cf398df31cb4f7d21d7a6",
       "original_actual_A1_A2_report_sha256": "2dd1dc459fb00a0a52190b489de7b2d6db37e092130ba85cfb3a608ee60735c1",
-      "new_ledger_source_CR_pending": true
+      "new_ledger_source_CR_pending": false,
+      "accepted_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/LONG_PREFLIGHT_FAILED_LEDGER_A1_A2_ACCEPTED.json",
+      "acceptance_report_sha256": "395b60e24d8d836464b88e9adc690791338d9ff23bb77efbd576bf5b1f02c284",
+      "acceptance_report_commit": "a7ab5c4275424875408da653bdc71d6f00dc0c8c"
     },
     "C1_r2_current": {
       "request_id": "p011-C1-r2-chunk320-complete-path-CR-A1-A2-lite-r1",
@@ -7113,14 +7121,15 @@
       "request_id": "p011-C2-null-score-original-input-failure-exception-r1",
       "scope": "p011-C2-null-score-original-input-failure-exception",
       "target_commit": "38942d3a9380030d3ad885dfe46b6cfb377aad00",
-      "status": "PENDING_EXPLICIT_CLAUDE_OWNER_DISPOSITION_AND_EXACT_REPAIR_REVIEW",
+      "status": "FAILURE_INTEGRITY_ACCEPTED_NUMERIC_FEASIBILITY_REQUIRED_BEFORE_ANY_REPAIR",
       "request_file": "reports/p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md",
       "packet": "reports/p011_20261020/c2_original_input_failure_v1",
       "manifest_sha256": "7ed5c6b9ddf0db4878f5e876d3d06cf2ca0f30d9c174b8e457d417bafa5c7ded",
       "submitted_utc": "2026-10-21T09:27:06.178916+00:00",
       "new_model_calls": 0,
       "original_failed_CPU": 5923,
-      "original_source_unchanged": true
+      "original_source_unchanged": true,
+      "decision_record": "reports/p011_20261020/review_a7ab5c42_preflight_and_failure_decisions_v1/C2_FAILED_INPUT_DELEGATED_DECISION.json"
     }
   }
 }

@@ -1,3 +1,5 @@
+Latest 2026-10-21T10:23:10.455125+00:00: [exact37 engineering acceptance and B/C2 conditional decisions](review_a7ab5c42_preflight_and_failure_decisions_v1/README.md); [fresh entry evidence](long_preflight_entry_budget_v1/README.md). Formal44-source review remains pending.
+
 P011 2026-10-21T09:41:19.518063+00:00: [formal long44-source current-owner/asset-reuse appendix](LONG_FULL_PATH_CR_A1_A2_REQUEST.md) submitted; original actualinputA1 accepted, exact source/numeric pending. C1 closed, B/C2 failures preserved, no new paid call. P01019UTCfreeze separate.
 
 P011 2026-10-21T09:27:06.178916+00:00: [C1 actualA3 closed, C2 source accepted but originalCPU input failed; delegated disposition pending](C2_INPUT_FAILURE_DECISION_REQUEST.md). [Long actualsubset/numeric accepted; narrow failed-ledger review pending](LONG_PREFLIGHT_CR_A1_A2_REQUEST.md). OriginalBfailed/1280raw preserved, no repeat;0activecompute. P01019UTCfreeze separate.

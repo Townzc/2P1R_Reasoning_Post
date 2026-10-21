@@ -1,3 +1,5 @@
+Latest 2026-10-21T10:23:10.455125+00:00: Exact37 failed-ledger amendment and original actual input/numeric accepted by Claude a7ab5c42, report395b60e2. All11flags and the source-map erratum explicitly covered. Fresh entry budget10:21:42 observed; original three engineering calls remain unused before entry. Formal44-source and formal numeric are separate pending.
+
 Latest binding clarification 2026-10-21T09:44:02.935517+00:00: [dated source-map erratum](LONG_PREFLIGHT_LEDGER_BINDING_ERRATUM.md). Exactcandidate remains37source@38942d3a; inherited top-level33 map is historical. SPEC, SOURCE_BINDING and requirements.binding agree. No source/test/model change.
 
 # Latest narrow failed-ledger addendum — 2026-10-21T09:27:06.178916+00:00

@@ -1,3 +1,11 @@
+### 2026-10-21 03:23:10 PDT - engineering admission accepted; B/C2 conditional decisions received
+
+Claude a7ab5c42 three non-Z1 reports fully read after heading screening; Git10:08:11UTC, report-self10:15/10:25/10:30 and actualread saved distinctly. Exact37-source engineering ledger/SPEC/binding and11flags PASS; original33 and three jobs unchanged. Fresh authenticated billing/rates10:21:42 and first D1 preserve B3.01+C16.38, engineering candidates1.91/2.13/1.91 total5.95. No paidcall before fresh shared-ledger/provider/unused/full-window checks. Formal44 source remains pending.
+
+B failure integrity PASS with conditional5120-only continuation,14UTC deadline, exact new transport/selection/oracle CR and E3 score-wall/B1-B3 reserve/window requirements. No oldraw regeneration or scoring. C2 failure accepted but delegated numeric-first decision requires feasibility of generation+bothstudents before repair; otherwise closeC2. Original eight null scores/oldusablefalse retained, not scientificfalse labels. Reviewer probability estimates not adopted as guarantees, and B-specific preserve48 clause kept explicit.
+
+This turn's guessed root WORKBOARD path and unexpanded scripts/modal* glob failed read-only; actualdocs located withrg. No scientific effect, no repeated successful test or oldmodel/checkpoint/score/CLI. P01019UTC separatefreeze remains due.
+
 ### 2026-10-21 02:41:19 PDT - formal long adapter submitted without repeating science
 
 Four new formal adapters at61989e7b43c3d9d309047cc615b3dc12aba689db adopt current-owner accounting, retain failedB3.01/C1both6.38 through exact saved evidence, select completed61074 inputs, and reuse original engineering asset receipts. Local audit requires pinned tokenizer/config metadata, avoiding absent local1.5B weights; the worker fullweight check stays. Original37 scientific sources, IDs/dose/selection/window unchanged. Exact44-source appendix to the same long request;7newchecks PASS0.016s and16newGitfiles verified once. No formalSPEC, actual model, input copy, weight download, old test or score repeated. Original actualinputA1 remains accepted; a stale mutable INDEX false flag was corrected from the real acceptance, immutable packets unchanged. Long engineering failed-ledger CR and explicit B/C2 failure dispositions remain pending.
