@@ -6,6 +6,7 @@ no whole-command retry, model/tokenizer invocation or recomputed statistics.
 import argparse
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -18,6 +19,28 @@ from scripts.prepare_p011_c1_inputs import load_pack
 
 ROOT = Path(__file__).resolve().parents[1]
 VOLUME = 'sft-allocation-midpoint-v1'
+
+
+def remaining_io_seconds(mode, spec, now, receipt=None):
+    """Both closeout commands share the original absolute result deadline."""
+    from experiments.p011.c1_execution import CUTOFF_EPOCH
+    if type(now) not in (int, float) or not math.isfinite(now):
+        raise ValueError('Actual finite IO observation time required')
+    if mode == 'upload':
+        # Transfer cannot consume the complete prospective result window.
+        deadline = CUTOFF_EPOCH-spec['limits']['full_result_window_seconds']
+    elif mode in ('collect', 'audit'):
+        start = receipt['worker_start_epoch']
+        if type(start) not in (int, float) or not math.isfinite(start) or start > now:
+            raise ValueError('Original real worker start required')
+        deadline = min(CUTOFF_EPOCH, start+spec['limits']['worker_seconds']+
+            spec['limits']['closeout_seconds'])
+    else:
+        raise ValueError('Unknown bounded IO mode')
+    remaining = min(3600, deadline-now)
+    if remaining < 1:
+        raise TimeoutError('Original end-to-end result window is exhausted')
+    return remaining, deadline
 
 
 def get_review(root, review_file):
@@ -148,11 +171,15 @@ def main():
     parser.add_argument('--review', required=True)
     args = parser.parse_args()
     spec, review = get_review(ROOT, args.review)
+    receipt = None if args.mode == 'upload' else read(
+        ROOT/outer.LOCAL/'dispatch'/outer.LOGICAL/'RESULT.json')
+    seconds, deadline = remaining_io_seconds(args.mode, spec, time.time(), receipt)
     out = ROOT/outer.LOCAL/'c1_io_r1'/args.mode
     out.mkdir(parents=True, exist_ok=False)
     dump(out/'ATTEMPT.json', {'mode': args.mode, 'spec_file_sha256': sha(ROOT/outer.SPEC),
-        'started_epoch': time.time(), 'whole_helper_retry_allowed': False})
-    timer = threading.Timer(3600, lambda: os._exit(124))
+        'started_epoch': time.time(), 'whole_helper_retry_allowed': False,
+        'original_absolute_deadline_epoch': deadline, 'remaining_local_seconds': seconds})
+    timer = threading.Timer(seconds, lambda: os._exit(124))
     timer.daemon = True; timer.start()
     try:
         {'upload': upload, 'collect': collect, 'audit': audit}[args.mode](ROOT, out, spec, review)
