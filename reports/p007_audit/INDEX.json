@@ -4157,6 +4157,24 @@
       "addendum_sha256": "d02cc00b0d07ef1378dc6926c66df298625b7355c947ec1d33ca73b6fb68d3a9",
       "acceptance_packet": "reports/p011_20261020/review_c7977d2a_NFC_complete_CR_and_diagnostic_request_v1",
       "full_read_utc": "2026-10-21T02:03:52.369588+00:00"
+    },
+    {
+      "request_id": "p011-OT3-readonly-completeness-diagnostic-CR-r1",
+      "scope": "p011-OT3-readonly-completeness-diagnostic-CR",
+      "target_commit": "980dd073dd597fa511341ee08294695530463d10",
+      "status": "PENDING_EXACT_SHORT_CR",
+      "request_file": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md",
+      "submitted_utc": "2026-10-21T02:11:25.140710+00:00",
+      "source_files": {
+        "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+        "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "scripts/diagnose_p011_ot3_completeness.py": "ef7fe9197ebb2c62464ca7be2ff4a76cc271b1182735c7c37143168b15037c7a"
+      },
+      "manifest_sha256": "78362f33fda7d42d67bce470bbbc96dd5b5775c61bd490c57efa10aa7e05a601",
+      "real_diagnostic_run": false,
+      "owner_report_commit": "c7977d2a31c91234f19fd7e6fb34c8757f3091a0",
+      "owner_report_sha256": "4e8157658c1e521dae9a42323d25226859381dd0a283b7bd38c2a5606567e3a6"
     }
   ],
   "p008_v31": {
@@ -6172,6 +6190,14 @@
       "actual_diagnostic_executed": false,
       "exact_code_review_required": true,
       "selection_change_authorized": false
+    },
+    "ot3_completeness_diagnostic_candidate": {
+      "target_commit": "980dd073dd597fa511341ee08294695530463d10",
+      "packet": "reports/p011_20261020/ot3_completeness_diagnostic_preflight_v1",
+      "request": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md",
+      "status": "PREPARED_NOTRUN_PENDING_CR",
+      "source_count": 4,
+      "new_checks": 12
     }
   }
 }
