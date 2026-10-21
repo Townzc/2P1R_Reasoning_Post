@@ -1,3 +1,9 @@
+### 2026-10-21 00:53:02 PDT — C1 r2 submitted exactly once
+
+Originalr2 CLI83988/appap-yXwx3s2U5RS8MzAQiKH3Lp/callfc-01M5EPT90TNA4HWY95C2RNJQ9A, execution2abf37f6, actualSUBMITTED07:46:36UTC. No originalinputcopy/upload. C2.64new+r1failed3.74=6.38 attempted reservation, notexpense. Snapshot07:51:54 noRESULT/RETURN_ERROR; workerstart notinferred. Fulloriginalsource frozen whileworkeractive. Startedmetadatafixedfc261c882633859799604055bc2927703a3b1385, no fullresult/A3 claim. OriginalCLI mustnotresend; onlytruecompletion+STOPPED0 permitscompletedcollect/audit.
+
+IndependentC2 newoutputoracle/nativeT15loader/savedBooleanadapter prepared atsamecommit;8NEWsyntheticchecksPASS0.126s once/11newGitfilesverified. Covers264newraw fixture/tail8/wholecycle/marker/rawidentity/unknownscore/gold-freeGPU/no replacement.0actualoldcorpus/model/score; fullC2sharedconsumer/scorer/outer/student/analysisCR stillneeded, no newleafgate. EarlierrootINDEX stale status/counter corrected from originalSUBMITTED receipts to2P011calls, not a provider recount. Bnumeric85bc pending/longpreflight63e pending/P01019UTCfreeze independent.
+
 ### 2026-10-21 00:44:30 PDT — C1 r2 exact A2 accepted; B concrete numeric review
 
 Real Claude2dac C1r2 reportSHAf1861f6d read07:41:31, Git07:27/reportaround07:40 distinct. Exact22source/inputreuse/SPEC/all9flags accepted. Necessary07:40fresh rates equal4.3952/hour, candidate2.64<=2.70, failedr1reserve3.74 retained. Private accepted ownerbaseline accounting is not independently verified platform balance; no newownerconfirmation inferred. Originalcopy/upload remainDONE. Actualentry/provider/window stillrequired;0newcall atthis record. Reviewer success probability/sub-half-dollar failure claim not adopted as guarantee.

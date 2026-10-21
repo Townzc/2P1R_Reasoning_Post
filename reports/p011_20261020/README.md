@@ -1,3 +1,5 @@
+P011 2026-10-21T07:53:02.526935+00:00: [C1 r2 submitted once](c1_r2_started_v1/README.md), originalinputupload reused; fullresult stillpending. [C2 newoutput evidence draft](c2_new_output_evidence_draft_v1/README.md), notadmission.
+
 P011 2026-10-21T07:44:30.984654+00:00: [C1 r2 final A2 accepted](review_2dacfd83_C1r2_full_A2_accepted_v1/README.md); fresh entry checks then one call with originalupload reuse. [B concrete generation numeric candidate](b_generation_runtime_v1/README.md) submitted; latestdispatch09:05:35UTC under fullwindow. Long preflight source/actualinput review pending.
 
 Latest 2026-10-21T07:24:21.357367+00:00: [long actual inputs](long_numeric_gold_inputs_actual_v1/README.md) complete and [full three-arm engineering preflight CR](LONG_PREFLIGHT_CR_A1_A2_REQUEST.md) submitted at63e8710fc24c7c5b206be2515976ff4dc57ecc89. B actualinputA1 accepted; C1r2 numericA2 and long input/preflight review pending. No newGPU/reserve; originalC1failure3.74 retained.
