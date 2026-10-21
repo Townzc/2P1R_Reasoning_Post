@@ -4260,6 +4260,30 @@
       "actual_numeric_A2_lite_accepted": false,
       "new_checks_this_revision": 4,
       "new_checks_seconds": 0.036
+    },
+    {
+      "request_id": "p011-OT3-readonly-completeness-diagnostic-actual-review-r1",
+      "scope": "p011-OT3-readonly-completeness-diagnostic-actual-review",
+      "target_commit": "933a503cea8b91ec6ba583c32a868f933b02ee8d",
+      "status": "PENDING_ACTUAL_READONLY_DIAGNOSTIC_RESULT_REVIEW",
+      "request_file": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_ACTUAL_REVIEW_REQUEST.md",
+      "submitted_utc": "2026-10-21T03:28:39.073384+00:00",
+      "packet": "reports/p011_20261020/ot3_completeness_diagnostic_v1",
+      "public_manifest_sha256": "ad33ddce24c1dfd7bebe88bd2884791fc8e88da0293fb2d016e6ce84aaa6d346",
+      "original_manifest_sha256": "cfd63315d0b65a2dd786d1e115fc9f3c618ac3826cb3c01a6456c7caeb42e8d7",
+      "summary_sha256": "440bfdad3c53380ea762364947febb01ac4935335beb15594a75694a2f524dfe",
+      "original_cli": 19683,
+      "actual_completed_utc": "2026-10-21T03:24:57.865744+00:00",
+      "source_target": "980dd073dd597fa511341ee08294695530463d10",
+      "source_files": {
+        "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+        "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+        "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+        "scripts/diagnose_p011_ot3_completeness.py": "ef7fe9197ebb2c62464ca7be2ff4a76cc271b1182735c7c37143168b15037c7a"
+      },
+      "thresholds_triggered": false,
+      "selection_change_authorized": false,
+      "model_calls": 0
     }
   ],
   "p008_v31": {
@@ -6122,9 +6146,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T03:22:45.835841+00:00",
+  "last_updated_utc": "2026-10-21T03:28:39.073384+00:00",
   "p011": {
-    "status": "OT3_actual_input_A1_accepted_readonly_diagnostic_running_C1_actual_A1_and_timing_pending",
+    "status": "OT3_actual_input_A1_accepted_diagnostic_complete_result_review_pending_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6285,13 +6309,17 @@
       "target_commit": "980dd073dd597fa511341ee08294695530463d10",
       "packet": "reports/p011_20261020/ot3_completeness_diagnostic_preflight_v1",
       "request": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md",
-      "status": "CODE_PASS_ACTUAL_ORIGINAL_RUN_ACTIVE",
+      "status": "ACTUAL_COMPLETE_EXIT0_CONSUMED_RESULT_REVIEW_PENDING",
       "source_count": 4,
       "new_checks": 12,
       "actual_session_id": 19683,
       "repeat_allowed": false,
       "acceptance_packet": "reports/p011_20261020/review_d229bb27_OT3_A1_and_diagnostic_CR_accepted_v1",
-      "acceptance_packet_commit": "556f674b03c100eeb52e642ae1e0823b3078be20"
+      "acceptance_packet_commit": "556f674b03c100eeb52e642ae1e0823b3078be20",
+      "result_packet": "reports/p011_20261020/ot3_completeness_diagnostic_v1",
+      "result_target": "933a503cea8b91ec6ba583c32a868f933b02ee8d",
+      "thresholds_triggered": false,
+      "selection_changed": false
     },
     "OT3_NFC_actual_A1_accepted": true,
     "ot3_NFC_actual_packet": {
@@ -6322,6 +6350,6 @@
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
     "last_full_review_read_utc": "2026-10-21T03:18:18.662202+00:00",
-    "active_local_readonly_diagnostic": 1
+    "active_local_readonly_diagnostic": 0
   }
 }

@@ -1,3 +1,25 @@
+### 2026-10-20 20:28:39 PDT — Full OT3 diagnostic complete; actual result review requested
+
+Original19683 EXIT0CONSUMED; complete2026-10-21T03:24:57.865744+00:00,380.7658225seconds.
+All53107parents/849712responses,276446complete/573266incomplete;
+N1–N5=524354/23203/25416/293/0. Rprime rawall16=5190, knowneligible4038,
+unknownlength305, possibleeligibleupper4343. Both predefined report triggers
+FALSE (N2 below10%;rawall16 below8076), eligiblethresholdNOT_MET. Character
+quantiles/t-distribution/parenthistogram/reservoirsamples are original saved
+results, not rerun here. No rulechange/selection/model inference. Original
+4032input unchanged; fullactualA1 alreadyPASS-WITH-NOTES with its limitations.
+
+Single original-byte result publisher EXIT0DIRECT; packetfixed933a503cea8b91ec6ba583c32a868f933b02ee8d,
+9payloadmembers+PUBLIC_MANIFEST,10distinct newGitfiles verified once. Fulljournals
+published; no private43GBDB exported. Actualreviewrequestp011-OT3-readonly-completeness-diagnostic-actual-review-r1
+PENDING, not codePASS/A1transfer. Reviewer must disclose original-text access
+limits. No old constructor/encoding/statistics/test/provider/billing/Papers.
+C1 current12source0c37b5a0 and actualcopy remainDONE, actualA1/timing/numericpending;
+nextnormalC1review03:45:15UTC. P010Oct21 19UTCfreeze retained.
+Boundedawake70593 was already absent atclosure (ps exit1); read-only cleanup
+check raised before any signal. Cause unknown; no claim of intentional kill or
+natural65minuteexpiry. OriginalCLI state already consumed, no repoll/relaunch.
+
 OT3 review packet inventory addendum: final fixed556f674b03c100eeb52e642ae1e0823b3078be20; PUBLIC_MANIFEST
 is authoritative. Original writer captured an empty self-entry, retained unchanged
 with MANIFEST_ERRATUM. Corrected inventory reuses original payload hashes and
