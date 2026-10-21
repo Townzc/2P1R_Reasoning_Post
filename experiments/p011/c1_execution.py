@@ -16,6 +16,12 @@ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest, 
 CATEGORY_CAP = Decimal('12')
 CUTOFF_EPOCH = 1792645200  # 2026-10-22T05:00:00Z, checked by new boundary test.
 CHUNK = 32
+SELF_CALIBRATION = 'owner_approved_in_run_self_calibration'
+SELF_CALIBRATION_OWNER_SHA = 'a08ba1abec5108b7ed583175151116f6a074626093c51148e783a5c1020506f0'
+
+
+def self_calibrating(spec):
+    return spec['timing']['basis_kind'] == SELF_CALIBRATION
 
 
 def validate_spec(spec):
@@ -32,7 +38,7 @@ def validate_spec(spec):
             or not math.isfinite(limits['future_allowance_seconds'])
             or limits['future_allowance_seconds'] < 300
             or type(limits['measurement_exceptions']) is not int
-            or limits['measurement_exceptions'] != 0
+            or limits['measurement_exceptions'] != (1 if self_calibrating(spec) else 0)
             or spec['model']['model_id'] != c1_nll.MODEL['model_id']
             or spec['model']['revision'] != c1_nll.MODEL['revision']
             or spec['model']['remote_path'] != '/evidence/mp-engineering-20261012-r1/assets/model'
@@ -41,21 +47,54 @@ def validate_spec(spec):
                 'training':False,'adapter':False,'original_EOS':151643}):
         raise ValueError('Frozen base/forward configuration or finite window differs')
     times=spec['timing']['complete_chunk_seconds']
-    if (not times or any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in times)
-            or spec['timing']['measurement_basis_accepted'] is not True
+    if (any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in times)
             or spec['timing'].get('whole_chunk_iteration_timing') is not True
             or not spec['timing']['source_evidence_files']
             or spec['timing']['basis_kind'] not in ('actual_C1_complete_chunk',
-                'independently_accepted_prior_measurement_proxy')
+                'independently_accepted_prior_measurement_proxy', SELF_CALIBRATION)
             or spec['timing']['target_scope'] != 'C1_sequential32_original_token_forwards_including_FP32_loss'
             or (spec['timing']['basis_kind']=='independently_accepted_prior_measurement_proxy'
                 and spec['timing'].get('uncalibrated_proxy_scope_accepted') is not True)):
         raise ValueError('Actual accepted complete C1-compatible batch timing required')
+    if self_calibrating(spec):
+        owner_file = spec['timing'].get('owner_decision_file')
+        if (times != [] or spec['timing'].get('measurement_basis_accepted') is not False
+                or not isinstance(owner_file,str)
+                or spec['source_files'].get(owner_file) != SELF_CALIBRATION_OWNER_SHA
+                or spec['timing'].get('owner_decision_sha256') != SELF_CALIBRATION_OWNER_SHA
+                or limits['worker_seconds'] > 2400
+                or limits['platform_seconds'] != limits['worker_seconds']+60
+                or limits['startup_seconds'] != 600
+                or limits['future_allowance_seconds'] != 300
+                or limits.get('model_load_deadline_seconds') != 900):
+            raise ValueError('Exact owner-approved C1-only self-calibration bounds required')
+    elif not times or spec['timing']['measurement_basis_accepted'] is not True:
+        raise ValueError('Original proxy path requires accepted historical measurements')
     rate=Decimal(str(limits['usd_per_second']));reserve=Decimal(str(limits['reserved_usd']))
     if (not rate.is_finite() or rate<=0 or not reserve.is_finite() or reserve<=0
             or reserve < (rate*(limits['startup_seconds']+limits['platform_seconds'])).quantize(
                 Decimal('.01'),rounding=ROUND_CEILING)):
         raise ValueError('Whole billed window must fit fixed reservation')
+    if self_calibrating(spec) and (reserve > 4 or reserve !=
+            (rate*(limits['startup_seconds']+limits['platform_seconds'])).quantize(
+                Decimal('.01'),rounding=ROUND_CEILING)):
+        raise ValueError('Owner C1 reserve must equal cent-ceiling whole window and be <=4')
+
+
+def initial_admission(spec, elapsed, prior_reserved):
+    """Explicit one-run exception: a reserve/window check, never a forecast."""
+    validate_spec(spec)
+    prior=Decimal(str(prior_reserved));reserve=Decimal(str(spec['limits']['reserved_usd']))
+    if (not self_calibrating(spec) or type(elapsed) not in (int,float)
+            or not math.isfinite(elapsed) or not 0<=elapsed<spec['limits']['worker_seconds']
+            or not prior.is_finite() or prior<0 or prior+reserve>CATEGORY_CAP
+            or reserve>Decimal('.8')*(CATEGORY_CAP-prior)):
+        raise ValueError('Owner exception initial reserve/window/category gate failed')
+    return {'elapsed_seconds':elapsed,'timing_basis_kind':SELF_CALIBRATION,
+        'measurement_exceptions':1,'owner_decision_sha256':SELF_CALIBRATION_OWNER_SHA,
+        'forecast_performed':False,'first_chunk_hard_timer_only':True,
+        'prior_reserved_usd':str(prior),'new_reserved_usd':str(reserve),
+        'category':'C','cap_usd':'12','not_actual_expense':True}
 
 
 def forecast(spec, elapsed, batches_left, observed, prior_reserved):
@@ -64,7 +103,9 @@ def forecast(spec, elapsed, batches_left, observed, prior_reserved):
             or type(batches_left) is not int or batches_left<0
             or any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in observed)):
         raise ValueError('Complete real elapsed/batch observations required')
-    all_times=spec['timing']['complete_chunk_seconds']+list(observed)
+    all_times=([] if self_calibrating(spec) else spec['timing']['complete_chunk_seconds'])+list(observed)
+    if not all_times:
+        raise ValueError('No forecast before first complete in-run measurement')
     seconds=1.2*(elapsed+batches_left*max(all_times)+spec['limits']['future_allowance_seconds'])
     rate=Decimal(str(spec['limits']['usd_per_second']))
     money=(rate*(Decimal(str(seconds))+spec['limits']['startup_seconds'])).quantize(
@@ -130,7 +171,7 @@ def load_base(spec,out,deadline_epoch):
 
 
 def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
-             worker_start,deadline_epoch,prior_reserved,loader=load_base):
+             worker_start,deadline_epoch,prior_reserved,loader=load_base,load_timer_factory=None):
     """One invocation after outer claim. No retry/resume; partial remains failed."""
     validate_spec(spec)
     if (not basis or deadline_epoch!=worker_start+spec['limits']['worker_seconds']
@@ -148,17 +189,36 @@ def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
     out=Path(out);out.mkdir(parents=False,exist_ok=False);confirmed={};times=[];cycles=[]
     monotonic_origin=time.monotonic()
     try:
-        initial=forecast(spec,time.time()-worker_start,(len(keys)+31)//32,[],prior_reserved)
+        initial=(initial_admission(spec,time.time()-worker_start,prior_reserved)
+                 if self_calibrating(spec) else
+                 forecast(spec,time.time()-worker_start,(len(keys)+31)//32,[],prior_reserved))
         dump(out/'INTENT.json',{'basis':basis,'basis_sha256':basis_sha,'task_ids':keys,
             'membership_sha256':digest(memberships),'deadline_epoch':deadline_epoch,
             'forward_retries':0,'chunk_size':CHUNK,'worker_start_epoch':worker_start,
             'prior_reserved_usd':str(prior_reserved),'spec_sha256':digest(spec),'claim':claim})
         dump(out/'MEMBERSHIPS.json',memberships);dump(out/'INITIAL_FORECAST.json',initial);commit()
-        model=loader(spec,out,deadline_epoch);commit()
+        load_deadline=min(deadline_epoch,worker_start+900) if self_calibrating(spec) else deadline_epoch
+        load_timer=None
+        if self_calibrating(spec):
+            if load_timer_factory is None or time.time()>=load_deadline:
+                raise ValueError('Original worker-start900s load watchdog required')
+            load_timer=load_timer_factory(load_deadline-time.time())
+        try:
+            model=loader(spec,out,load_deadline)
+            if time.time()>=load_deadline:raise TimeoutError('Original model load deadline exceeded')
+        finally:
+            if load_timer is not None:load_timer.cancel()
+        if self_calibrating(spec):
+            dump(out/'LOAD_WINDOW.json',{'worker_start_epoch':worker_start,
+                'load_deadline_epoch':load_deadline,'load_finished_epoch':time.time(),
+                'watchdog_enforced':True})
+        commit()
         for first in range(0,len(keys),CHUNK):
             cycle_start=time.monotonic()
             part=keys[first:first+CHUNK];number=first//CHUNK;chunk=out/'chunks'/f'{number:05d}'
-            f=forecast(spec,time.time()-worker_start,(len(keys)-first+31)//32,times,prior_reserved)
+            f=(initial_admission(spec,time.time()-worker_start,prior_reserved)
+               if self_calibrating(spec) and not times else
+               forecast(spec,time.time()-worker_start,(len(keys)-first+31)//32,times,prior_reserved))
             if store.get(key+'/claim')!=claim:raise ValueError('Original C1 claim changed')
             unit=key+f'/chunk/{number:05d}'
             plan={'first_index':first,'sequence_ids':part,'basis_sha256':basis_sha}
@@ -194,6 +254,12 @@ def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
                 'remote_chunk_done_included':True,
                 'body_ack_elapsed_seconds':ack['elapsed_seconds']})
             times.append(cycles[-1]['elapsed_seconds'])
+            if self_calibrating(spec):
+                # Check immediately after the FIRST complete cycle, including
+                # the final one. Never consume the next chunk if projection fails.
+                post=forecast(spec,time.time()-worker_start,(len(keys)-first-len(part)+31)//32,
+                              times,prior_reserved)
+                dump(chunk/'POST_FORECAST.json',post)
         if time.time()>=deadline_epoch:raise TimeoutError('Original C1 completion deadline reached')
         # Persist complete timings at finalization. The final proof/summary write
         # is outside the per-chunk scope and must fit the fixed future allowance.
@@ -232,12 +298,25 @@ def check_body(spec,out,tasks,memberships,basis,store_records,key,claim):
             or store_records.get(key+'/claim')!=claim):
         raise ValueError('Original exact source/spec/claim differs')
     initial=read(out/'INITIAL_FORECAST.json')
-    if initial!=forecast(spec,initial['elapsed_seconds'],(len(keys)+31)//32,[],intent['prior_reserved_usd']):
+    expected_initial=(initial_admission(spec,initial['elapsed_seconds'],intent['prior_reserved_usd'])
+        if self_calibrating(spec) else
+        forecast(spec,initial['elapsed_seconds'],(len(keys)+31)//32,[],intent['prior_reserved_usd']))
+    if initial!=expected_initial:
         raise ValueError('Original initial numeric admission differs')
+    if self_calibrating(spec):
+        load=read(out/'LOAD_WINDOW.json')
+        if (load.get('worker_start_epoch')!=intent['worker_start_epoch']
+                or load.get('load_deadline_epoch')!=min(intent['deadline_epoch'],intent['worker_start_epoch']+900)
+                or load.get('watchdog_enforced') is not True
+                or not intent['worker_start_epoch']<=load['load_finished_epoch']<load['load_deadline_epoch']):
+            raise ValueError('Original model load did not finish within900s worker window')
     for first in range(0,len(keys),32):
         number=first//32;chunk=out/'chunks'/f'{number:05d}'
         f=read(chunk/'FORECAST.json');ack=read(chunk/'CONFIRMED.json')
-        if (f!=forecast(spec,f['elapsed_seconds'],(len(keys)-first+31)//32,times,intent['prior_reserved_usd'])
+        expected_f=(initial_admission(spec,f['elapsed_seconds'],intent['prior_reserved_usd'])
+            if self_calibrating(spec) and not times else
+            forecast(spec,f['elapsed_seconds'],(len(keys)-first+31)//32,times,intent['prior_reserved_usd']))
+        if (f!=expected_f
                 or store_records.get(key+f'/chunk/{number:05d}')!=read(chunk/'INTENT.json')
                 or store_records.get(key+f'/chunk_done/{number:05d}')!=ack):
             raise ValueError('Original numeric forecast or confirmed store record differs')
@@ -256,4 +335,9 @@ def check_body(spec,out,tasks,memberships,basis,store_records,key,claim):
                 or (number and start<cycles[number-1]['finished_offset_seconds'])):
             raise ValueError('Actual complete iteration timing differs or excludes acknowledged work')
         times.append(elapsed)
+        if self_calibrating(spec):
+            post=read(chunk/'POST_FORECAST.json')
+            if post!=forecast(spec,post['elapsed_seconds'],max(0,(len(keys)-first-32+31)//32),
+                              times,intent['prior_reserved_usd']):
+                raise ValueError('Immediate post-chunk self-calibration forecast differs')
     return {**proof,'complete_chunk_seconds':times,'source_claim_provider_outer_checks_still_required':True}

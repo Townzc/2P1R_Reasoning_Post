@@ -44,7 +44,11 @@ def reviewed_path(spec,spec_file,review):
         'source_files':spec['source_files'],'input_files':spec['input_files'],
         'original_group_binding_sha256':spec['original_group_binding_sha256'],
         'task_inventory_sha256':digest(spec['task_inventory']),
-        'timing_sha256':digest(spec['timing']),'measurement_exceptions':0}
+        'timing_sha256':digest(spec['timing']),
+        'measurement_exceptions':spec['limits']['measurement_exceptions']}
+    if c1_execution.self_calibrating(spec):
+        expected['owner_decision_sha256']=c1_execution.SELF_CALIBRATION_OWNER_SHA
+        expected['bounded_in_run_self_calibration_accepted']=True
     flags=('complete_input_A1_accepted','complete_source_closure_accepted',
         'exact_timing_scope_accepted','original_tokens_masks_and_EOS_unchanged',
         'untouched_base_forward_only','full_result_window_and_budget_accepted')
@@ -114,7 +118,12 @@ def fresh_budget(spec,budget,records,containers,states,now,root):
         raise ValueError('Protected balance/total budget unavailable')
     if now+spec['limits']['full_result_window_seconds']>c1_execution.CUTOFF_EPOCH:
         raise ValueError('Whole end-to-end result window misses original cutoff')
-    initial=c1_execution.forecast(spec,0,spec['task_inventory']['journal_chunks'],[],totals['C'])
+    if c1_execution.self_calibrating(spec):
+        if Decimal(str(budget.get('usd_per_second','NaN')))!=Decimal(str(spec['limits']['usd_per_second'])):
+            raise ValueError('Fresh exact full-resource rate must bind owner bounded reserve')
+        initial=c1_execution.initial_admission(spec,0,totals['C'])
+    else:
+        initial=c1_execution.forecast(spec,0,spec['task_inventory']['journal_chunks'],[],totals['C'])
     return {'category':'C','new_reserved_usd':str(reserve),'prior_reserved_usd':totals['C'],
         'all_attempted_reservations_usd':totals,'provider_slots':slots,
         'initial_forecast':initial,'protected_usd':'48','not_actual_expense':True}

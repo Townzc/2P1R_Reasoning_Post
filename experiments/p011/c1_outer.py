@@ -212,7 +212,7 @@ def worker_body(spec, spec_file, source_root, intent, raw_report, store, volume,
             'spec_file_sha256': intent['spec_file_sha256'], 'dispatch_sha256': digest(intent)}
         result = c1_execution.run_body(spec, tasks, memberships, out/'payload', basis,
             store, KEY, claim, volume.commit, start, start+spec['limits']['worker_seconds'],
-            intent['budget']['prior_reserved_usd'], loader)
+            intent['budget']['prior_reserved_usd'], loader, load_timer_factory=timer_factory)
         artifact = c1_artifacts.pack(out/'payload')
         volume.commit()
         finished = time.time()
