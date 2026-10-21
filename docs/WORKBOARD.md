@@ -1,3 +1,30 @@
+### 2026-10-20 21:03:35 PDT — OT3 actual review received, narrow attachment correction; B evidence preparation
+
+Known fixedClaude0e155e25 reportSHAf5457a30 read03:58:11.775722UTC after
+filename/heading screening; no new HEAD poll. Git03:39:33/selfaround03:45 separate.
+Report PASS independently confirms849712 response and53107 parent counts,
+complete/N1–N5 classification, all16 histogram and both threshold FALSE results.
+Original report/recount bytes preserved. New read-only script inspection found
+flags.overlength instead of actualany_overlength; structured0 cannot verify
+narrative847. Unused decontamination keys also differ. Same request asks narrow
+dated clarification; no original rerun or production mutation. Full diagnostic
+result closure pending, while acceptedOT3inputA1 remains valid and no additional
+runtime gate is created. Privatefulltext/400chartails/causalinterpretation limits
+retained; Codex did not run reviewer recount or reclassify unknown lengths.
+
+New B read-only evidence adapter checks all6400 rows/25batches, attempts/acks,
+raw/transport byte bindings and full-cycle forecast replay.7NEWsyntheticchecks
+oncePASS0.953s; fixtures do not replay the old worker/tests. Actualoracle/model/
+scorer not run. Full outer/receipt/provider/source/input/budget/window still
+required. Two packets and source/test fixed221159470065a4ce2e8f4456bbe8fab0fe31335e;13newGitfiles verified once.
+Two read-only guessed source paths (teacher_inputs.py/c1_input_binding.py) failed
+before file inventory resolved navigation; no scientific side effects.
+
+INDEX's stale nestedC1input/source flags corrected to the existing realf0c47ad5
+acceptances; no new acceptance or repeatedcopy. C1 numerical A2-lite stillABSENT,
+18.75/35.97 scenarios exceed9.60 gate, no paidforward/SPEC/reservation.
+P0110activecompute/paid/reserve. P010Oct21 19UTC freeze independent and retained.
+
 ### 2026-10-20 20:52:16 PDT — C1 new source/input acceptance, numerical feasibility conflict, independent B preparation
 
 Real Claude f0c47ad5 report SHA6e3ecc69 read03:43:38UTC at observed auditHEAD0e155e25;

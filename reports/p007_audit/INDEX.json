@@ -4272,7 +4272,7 @@
       "request_id": "p011-OT3-readonly-completeness-diagnostic-actual-review-r1",
       "scope": "p011-OT3-readonly-completeness-diagnostic-actual-review",
       "target_commit": "933a503cea8b91ec6ba583c32a868f933b02ee8d",
-      "status": "PENDING_ACTUAL_READONLY_DIAGNOSTIC_RESULT_REVIEW",
+      "status": "REVIEW_PASS_RECEIVED_NARROW_RECOUNT_FIELD_ERRATUM_PENDING",
       "request_file": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_ACTUAL_REVIEW_REQUEST.md",
       "submitted_utc": "2026-10-21T03:28:39.073384+00:00",
       "packet": "reports/p011_20261020/ot3_completeness_diagnostic_v1",
@@ -4290,7 +4290,16 @@
       },
       "thresholds_triggered": false,
       "selection_change_authorized": false,
-      "model_calls": 0
+      "model_calls": 0,
+      "review_report_commit": "0e155e2528118156ebc6477f23ddeec32fc1cd62",
+      "review_report_sha256": "f5457a30805611f37c10d49b8455c70c27078ea0ec658de792926c2f1062da71",
+      "review_report_decision": "PASS",
+      "full_result_review_closed": false,
+      "review_received_packet": "reports/p011_20261020/review_0e155e25_OT3_diagnostic_received_v1",
+      "clarification_packet_commit": "221159470065a4ce2e8f4456bbe8fab0fe31335e",
+      "clarification_requested_utc": "2026-10-21T04:03:35.191940+00:00",
+      "thresholds_independently_confirmed": true,
+      "new_runtime_gate": false
     }
   ],
   "p008_v31": {
@@ -6153,7 +6162,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T03:28:39.073384+00:00",
+  "last_updated_utc": "2026-10-21T04:03:35.191940+00:00",
   "p011": {
     "status": "OT3_actual_input_A1_accepted_diagnostic_complete_result_review_pending_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6274,8 +6283,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T02:59:07.776210+00:00",
-    "last_review_head": "d229bb2764f1a33aa897ab5b31c06e444cd43c44",
+    "last_review_observed_utc": "2026-10-21T03:42:37.662446+00:00",
+    "last_review_head": "0e155e2528118156ebc6477f23ddeec32fc1cd62",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -6316,7 +6325,7 @@
       "target_commit": "980dd073dd597fa511341ee08294695530463d10",
       "packet": "reports/p011_20261020/ot3_completeness_diagnostic_preflight_v1",
       "request": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md",
-      "status": "ACTUAL_COMPLETE_EXIT0_CONSUMED_RESULT_REVIEW_PENDING",
+      "status": "RESULT_REVIEW_PASS_NARROW_RECOUNT_ERRATUM_PENDING",
       "source_count": 4,
       "new_checks": 12,
       "actual_session_id": 19683,
@@ -6326,7 +6335,9 @@
       "result_packet": "reports/p011_20261020/ot3_completeness_diagnostic_v1",
       "result_target": "933a503cea8b91ec6ba583c32a868f933b02ee8d",
       "thresholds_triggered": false,
-      "selection_changed": false
+      "selection_changed": false,
+      "full_result_review_closed": false,
+      "review_received_packet": "reports/p011_20261020/review_0e155e25_OT3_diagnostic_received_v1"
     },
     "OT3_NFC_actual_A1_accepted": true,
     "ot3_NFC_actual_packet": {
@@ -6348,15 +6359,27 @@
       "input_copy": "DONE_EXIT0_CONSUMED",
       "unique_sequences": 9594,
       "chunks": 300,
-      "input_A1": false,
-      "timing_source_correction_CR": false,
+      "input_A1": true,
+      "timing_source_correction_CR": true,
       "numeric_A2_lite": false,
       "actual_forward_calls": 0,
       "paid_reservation_usd": 0,
-      "actual_input_packet": "reports/p011_20261020/c1_inputs_actual_v1"
+      "actual_input_packet": "reports/p011_20261020/c1_inputs_actual_v1",
+      "numeric_feasibility_packet": "reports/p011_20261020/c1_numeric_feasibility_v1",
+      "source_input_acceptance_report": "f0c47ad56b1f92f3f29b2b8442a6a6ff870cb7dd",
+      "metadata_corrected_utc": "2026-10-21T04:03:35.191940+00:00"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
     "last_full_review_read_utc": "2026-10-21T03:18:18.662202+00:00",
-    "active_local_readonly_diagnostic": 0
+    "active_local_readonly_diagnostic": 0,
+    "last_fixed_report_read_utc": "2026-10-21T03:58:11.775722+00:00",
+    "B_generation_evidence_preparation": {
+      "packet": "reports/p011_20261020/b_generation_evidence_draft_v1",
+      "target": "221159470065a4ce2e8f4456bbe8fab0fe31335e",
+      "new_tests_passed": 7,
+      "seconds": 0.953,
+      "actual_oracle_calls": 0,
+      "full_runtime_admitted": false
+    }
   }
 }

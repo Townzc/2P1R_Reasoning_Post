@@ -1,3 +1,33 @@
+## Dated follow-up 2026-10-21T04:03:35.191940+00:00: narrow review-attachment clarification
+
+Original result target933a503c remains immutable. Claude0e155e25 reportSHA
+f5457a30805611f37c10d49b8455c70c27078ea0ec658de792926c2f1062da71 reports PASS;
+raw report and RECOUNT are preserved in
+[review_0e155e25_OT3_diagnostic_received_v1](review_0e155e25_OT3_diagnostic_received_v1/README.md),
+fixed **221159470065a4ce2e8f4456bbe8fab0fe31335e**. Git03:39:33, self-describedaround03:45, actualfullread03:58:11.775722UTC.
+The complete response/parent counts and both threshold checks are confirmed in
+that report. No original diagnostic, scoring, tokenizer or model was rerun.
+
+One narrow discrepancy prevents claiming full independent coverage: recount.py
+line50 reads `flags.overlength`; the recorded original field is
+`flags.any_overlength`. Thus RECOUNT.rprime16_and_overlength=0 does not verify
+narrative847. The unused decontamination set similarly omits the actual
+`decontamination_hit` key. Please retain the original files and supply a dated
+correction using the original saved data, or explicitly delimit this coverage.
+The two prescribed threshold calculations do not use these counter fields.
+Do not reselect/refilter production inputs or change their labels/unknowns.
+Codex has not run the reviewer script or recomputed the original diagnosis.
+
+This is the SAME result-review request, not a new runtime gate. OT3 actual input
+A1 stays accepted, and independent engineering may proceed. Report-specific
+causal truncation/quality interpretations are not independently established;
+private original strings remain unavailable to the external review. Full result
+closure awaits the narrow clarification. C1 source/input are separately accepted;
+C1 numerical A2-lite remains absent, with its concrete feasibility conflict in
+its existing shared request. P010Oct21 19UTC formal freeze remains due.
+
+--- Earlier original result request (historical submission) ---
+
 # Actual read-only completeness diagnosis — independent result review
 
 Request `p011-OT3-readonly-completeness-diagnostic-actual-review-r1`; scope `p011-OT3-readonly-completeness-diagnostic-actual-review`.
