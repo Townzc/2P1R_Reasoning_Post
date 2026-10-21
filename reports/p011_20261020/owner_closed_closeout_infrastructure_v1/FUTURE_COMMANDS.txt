@@ -1,0 +1,5 @@
+# After the original whole app is stopped; each stage once, no duplicate input/model/transfer.
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/p011_long_owner_closed_io.py collect --job JOB --review .local/p011_20261020/r1/OWNER150_EXECUTION_AUTHORIZATION.json
+PYTHONPATH=. .local/midpoint_20261011/data_pipeline/venv/bin/python scripts/p011_long_owner_closed_io.py audit --job JOB --review .local/p011_20261020/r1/OWNER150_EXECUTION_AUTHORIZATION.json
+PYTHONPATH=. .local/p009_20261014/r1/math_verify_env/bin/python scripts/p011_long_owner_closed_io.py score --job JOB --review .local/p011_20261020/r1/OWNER150_EXECUTION_AUTHORIZATION.json
+# Analysis and posthoc smoke use analyze_p011_long_owner_closed.py and report_p011_owner_smoke_posthoc_closed.py, after saved first scores.

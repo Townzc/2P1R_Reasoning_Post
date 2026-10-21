@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/p011_long_owner_call_io.py", line 210, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/p011_long_owner_call_io.py", line 203, in main
+    {'upload':upload,'collect':collect,'audit':audit,'score':score}[args.mode](ROOT,out,spec,job,review)
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/p011_long_owner_call_io.py", line 125, in collect
+    provider=call_quiescence(sub,path.logical(job),info,containers,graph,time.time())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhicetang/Desktop/294_288_project/research_tracks/icml_acl_2027/scripts/p011_long_owner_call_io.py", line 43, in call_quiescence
+    raise ValueError('Every original call node must be successful with actual container identity')
+ValueError: Every original call node must be successful with actual container identity
