@@ -1,3 +1,26 @@
+### 2026-10-20 20:12:36 PDT — C1 true source acceptance, actual input copy, timing correction
+
+Owner asked to read latestC1 and proceed only when admitted. Real Claude
+d229bb2764f1a33aa897ab5b31c06e444cd43c44 source-only PASS-WITH-NOTES read03:00:28UTC;
+reportSHA f62648cfd30fa17421ecbf074b509e605d2bf7cca9c030b5025a11d5acea7515. It authorized the original input copy,
+not GPU/upload. Original94183 EXIT0CONSUMED03:00:37;18files156116537B,
+9594unique/300chunks, no encoding/model/forward. Public actualinput archive
+13683744B/23originalfiles fully read back once. Fixed newtarget0c37b5a07025fbfa71b6b82532d1dc3797813b45 contains
+source acceptance, actual input A1 evidence and the bounded N1 timing correction.
+The correction includes all3commits and remotechunk_done, uses matching replay,
+and retains old body-only ack separately. FournewmockchecksPASS0.036sonce;
+24newGitfiles verified; no old successful tests/science/publisher repeated.
+One sharedC1 request updated; actualA1/newsourceCR/numericA2-lite pending,
+actualSPEC/timingbasis/upload/paid/reserve0. Oldtrainingtiming and reviewer
+estimates not represented as measuredC1. Allsix original memberships retained.
+
+Stylecheck wholefailure is two context-space lines in saved raw SOURCE_DIFF.patch;
+originaldiffbytes retained, only excludingitPASS. Report selftime around03:05
+is later than actualread; Git02:58:04/event/read separately retained. Reviewer
+46passes/1torchmissing not Codex reruns. Other newOT3 report filenames seen,
+not yet read/accepted in this focusedC1 turn. No Z1/provider/billing/Papers,
+subagents or external messages. P010Oct21 19UTC formal freeze preserved.
+
 ### 2026-10-20 19:47:38 PDT — C1 shared-window correction before first independent CR
 
 Latest same-request source target 817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f, c1_full_path_window_addendum_v1.

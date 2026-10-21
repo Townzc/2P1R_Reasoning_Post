@@ -4203,18 +4203,18 @@
       "request_id": "p011-C1-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-C1-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-C1-complete-path-CR",
-      "target_commit": "817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f",
-      "status": "PENDING_SHARED_FULL_PATH_SOURCE_CR_THEN_ACTUAL_A1_NUMERIC",
+      "target_commit": "0c37b5a07025fbfa71b6b82532d1dc3797813b45",
+      "status": "SOURCE_CR_ORIGINAL_ACCEPTED_INPUT_COPY_DONE_PENDING_ACTUAL_A1_TIMING_FIX_CR_NUMERIC",
       "request_file": "reports/p011_20261020/C1_FULL_PATH_CR_A1_A2_REQUEST.md",
       "submitted_utc": "2026-10-21T02:44:10.654490+00:00",
-      "manifest_sha256": "1ad0723748842e6d856d41696cc383e945bca20606ab2ad09e86c898d94439d8",
+      "manifest_sha256": "2e60acba30807740176a1e4f9b39e735b697acbb850615ad0a2d1433a267e6c2",
       "source_files": {
         "experiments/learning_regime_p009/requirements_p0.txt": "375f161f867fe5bcdf846d5423fbdba991be4c7ee189d1dde9b5e52a39337b69",
         "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
         "experiments/p011/c1_admission.py": "9e1e3b449583729bf16e734dc2dd4ac258c3ab04bcc35e66a4e79b8ae388361f",
         "experiments/p011/c1_artifacts.py": "b6404ddd4dc8eb0acf6a9205dfec30ce431467094bad14af1cc29456164ee773",
         "experiments/p011/c1_evidence.py": "75681d883e3f9163ec3cc8d789fa7bf1246aef3c7e0e94d91fc868f88e0ad974",
-        "experiments/p011/c1_execution.py": "1f4c84912d14950779dc1583c7f733ec49989d0e3b1d7ab476d7cd717143a8e6",
+        "experiments/p011/c1_execution.py": "623f9dae3799dad60e0489e8ca5a308223ca80294b774563eb3b3c074c3d62b2",
         "experiments/p011/c1_nll.py": "fe998fe3a210b5730c98273b77db70582297de07fb59bfcd6705e16306317d7a",
         "experiments/p011/c1_outer.py": "524b90daa93f331938185dcd53e90a3c36b187ea1a06043bf8453a58ec1e8b65",
         "experiments/p011/modal_c1.py": "48a87918064b78ae07f6efd8636b7cceda405b636a47392a80579c7384ff8cc0",
@@ -4223,13 +4223,25 @@
         "scripts/prepare_p011_c1_inputs.py": "d2aefd91ad5c03811ffea65a052b7a3923ff773fe266a0a5493bd2409d0c5b2e"
       },
       "original_group_binding_sha256": "54e73b1cb1e69d300ee40423236e2d5d2f91e96e42ad03a81f10191256546006",
-      "actual_input_copy_run": false,
+      "actual_input_copy_run": true,
       "actual_spec_or_timing_selected": false,
       "new_paid_calls": 0,
       "prior_source_target_commit": "364868f6ca2cb9579057d59df5b5b50fad662f01",
-      "source_binding_file": "reports/p011_20261020/c1_full_path_window_addendum_v1/SOURCE_BINDING.json",
-      "last_updated_utc": "2026-10-21T02:47:38.288229+00:00",
-      "new_distinct_checks": 18
+      "source_binding_file": "reports/p011_20261020/c1_whole_iteration_timing_preflight_v1/SOURCE_BINDING.json",
+      "last_updated_utc": "2026-10-21T03:12:36.725360+00:00",
+      "new_distinct_checks": 18,
+      "actual_input_packet": "reports/p011_20261020/c1_inputs_actual_v1",
+      "actual_input_manifest_sha256": "ba38522a3656d05c1b714c4f00670cd613bbdabaa12ab55b6ce0210b1e29ea09",
+      "actual_input_inventory_sha256": "4e589e7f0ef108bb3988df22ed29bca11abc6ae4f4dce421d5cdd1720761e58e",
+      "original_source_CR_accepted_target": "817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f",
+      "source_CR_report_commit": "d229bb2764f1a33aa897ab5b31c06e444cd43c44",
+      "source_CR_report_sha256": "f62648cfd30fa17421ecbf074b509e605d2bf7cca9c030b5025a11d5acea7515",
+      "original_copy_cli": 94183,
+      "new_source_CR_accepted": false,
+      "actual_input_A1_accepted": false,
+      "actual_numeric_A2_lite_accepted": false,
+      "new_checks_this_revision": 4,
+      "new_checks_seconds": 0.036
     }
   ],
   "p008_v31": {
@@ -6092,7 +6104,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T02:47:38.288229+00:00",
+  "last_updated_utc": "2026-10-21T03:12:36.725360+00:00",
   "p011": {
     "status": "OT3_NFC_inputs_complete_actual_A1_and_readonly_diagnostic_CR_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6213,8 +6225,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T02:02:55.450775+00:00",
-    "last_review_head": "c7977d2a31c91234f19fd7e6fb34c8757f3091a0",
+    "last_review_observed_utc": "2026-10-21T02:59:07.776210+00:00",
+    "last_review_head": "d229bb2764f1a33aa897ab5b31c06e444cd43c44",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": false,
@@ -6271,6 +6283,24 @@
       "new_encodings": 9115,
       "native_NFC_change_flags": 5,
       "archive_part_size_note": "reports/p011_20261020/OT3_NFC_ARCHIVE_SIZE_NOTE.md"
-    }
+    },
+    "c1_current": {
+      "target_commit": "0c37b5a07025fbfa71b6b82532d1dc3797813b45",
+      "request_file": "reports/p011_20261020/C1_FULL_PATH_CR_A1_A2_REQUEST.md",
+      "original_source_CR": "PASS-WITH-NOTES",
+      "input_copy": "DONE_EXIT0_CONSUMED",
+      "unique_sequences": 9594,
+      "chunks": 300,
+      "input_A1": false,
+      "timing_source_correction_CR": false,
+      "numeric_A2_lite": false,
+      "actual_forward_calls": 0,
+      "paid_reservation_usd": 0,
+      "actual_input_packet": "reports/p011_20261020/c1_inputs_actual_v1"
+    },
+    "new_OT3_report_filenames_seen_but_not_read_this_C1_turn": [
+      "audit/claude/20261021c/REPORT_DIAGNOSTIC_CR.md",
+      "audit/claude/20261021d/REPORT_A1_OT3_NFC_COMPLETE_INPUTS.md"
+    ]
   }
 }

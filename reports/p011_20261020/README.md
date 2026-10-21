@@ -1,3 +1,5 @@
+P011 2026-10-21T03:12:36.725360+00:00: [C1 actual inputs and timing correction](C1_FULL_PATH_CR_A1_A2_REQUEST.md). Original sourceCR accepted; one input copy DONE9594unique/300chunks. ActualA1/newtiming-sourceCR/numeric remain pending;0forward/upload/paid.
+
 P011 2026-10-21T02:44:10.654490+00:00: [C1 shared full-path review](C1_FULL_PATH_CR_A1_A2_REQUEST.md), source12 and15new checks prepared; actual inputs/timing/paid admission absent. NFC actualA1 and diagnosticCR still pending.
 
 P011 2026-10-21T02:19:20.078375+00:00: [OT3 complete actual A1 request](OT3_NFC_COMPLETE_ACTUAL_A1_REQUEST.md),10080encodings/eightplans/B41813212/U654 complete; no training admission. Read-only diagnostic exactCR remains pending.
