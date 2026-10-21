@@ -1,3 +1,9 @@
+## Actual update 2026-10-21T12:14:35.751227+00:00
+
+F15 one-local-audit disposition57d0fd8e accepted; unchanged audit68434 EXIT0 with proof12:06:27 before absolute12:50:18 deadline. All three original engineering full local proofs now complete; models/collectors unchanged.
+
+Evidence: `reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1`.
+
 ## Original measured evidence now fixed — 2026-10-21T11:11:43.360678+00:00
 
 Exact [three-arm measured packet](long_preflight_measured_evidence_v1/README.md) at **fdf8bd86c5113c1f716ab749d24f4f2a9faaf8ac**:120 members plus manifest, all original32 raw endpoints per arm, complete cycles, terminal-phase/engine/load timings, original claim/fences/receipt/provider, and explicit private-binary projections. All three models and collections are DONE. Two LoRA local full oracles PASS; fullparameter pre-entry failure remains pending the explicit local-only disposition below. This packet does not fabricate that proof or rerun any old state load/oracle.

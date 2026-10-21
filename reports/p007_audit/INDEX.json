@@ -4330,7 +4330,7 @@
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
       "target_commit": "99508f316768237185479fbfa660850ea4ed5c0f",
-      "status": "FORMAL44_SOURCE_INPUT_ACCEPTED_CONCRETE_NUMERIC_AND_MANDATORY_BUDGET_DISPOSITION_PENDING",
+      "status": "CONDITIONAL_NUMERIC_AND_DELEGATED_REDUCTION_RECEIVED_NARROW_ADAPTER_CR_REQUIRED",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_current_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4466,14 +4466,17 @@
       "paid_admission_accepted": false,
       "current_source_acceptance_scope": "source-only exact44; candidateSPEC and numeric/disposition remain pending",
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
-      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json"
+      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json",
+      "report_commit": "02719f84f0e7e359b38e3f2412e499059dfba134",
+      "report_sha256": "aac07df3b995480490ff2ba8844745849c06741efe03bf940f8460234d237f0b",
+      "conditional_packet": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1"
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-B-remaining-generation-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
       "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
-      "status": "REMAINING_5120_CURRENT_OWNER_ERRATUM_91SOURCE_EXACT_CR_A1_A2_PENDING",
+      "status": "REMAINING91_EXACT_CR_A1_A2_ACCEPTED_FRESH_ENTRY_REQUIRED",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4623,7 +4626,11 @@
       "historical_accepted_record_scope": "original failed generation only; no91-source continuation permission",
       "actual_original_generation_calls": 1,
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
-      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json"
+      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json",
+      "report_commit": "3556939f00298e38bcdff2f722748d2aca575b2e",
+      "report_sha256": "0c1a9a1fc335381bdcabe78037e6bc3ca45d0ae922e8ea6f1879cbceb4e1d7ac",
+      "acceptance_packet": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1",
+      "students_admitted": false
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -4772,7 +4779,10 @@
       "preflight_GPU_calls": 3,
       "new_paid_calls_scope": "The three original engineering calls already completed; no further preflight authorized",
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
-      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json"
+      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json",
+      "F15_local_disposition_pending": false,
+      "F15_authorized_local_oracle_complete": true,
+      "F15_complete_proof": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/F15_COMPLETE_READONLY_PROOF.json"
     },
     {
       "request_id": "p011-C1-r2-complete-original-token-NLL-actual-A3-r1",
@@ -6723,7 +6733,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T11:37:22.117960+00:00",
+  "last_updated_utc": "2026-10-21T12:14:35.751227+00:00",
   "p011": {
     "status": "C1_ACTUAL_A3_CLOSED_C2_DELEGATED_CLOSED_THREE_ENGINEERING_CALLS_COMPLETE_B91_AND_FORMAL_NUMERIC_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6844,8 +6854,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T08:39:40.397277+00:00",
-    "last_review_head": "47e80292b9a6369e95e9ab54d0b879d76d4c9593",
+    "last_review_observed_utc": "2026-10-21T12:03:59.686397+00:00",
+    "last_review_head": "02719f84f0e7e359b38e3f2412e499059dfba134",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -6938,7 +6948,7 @@
       "actual_A2_report_commit": "0103c6eb11b2ad1e777a705ef50b7e9c8800e346"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
-    "last_full_review_read_utc": "2026-10-21T08:43:53.865220+00:00",
+    "last_full_review_read_utc": "2026-10-21T12:05:33.524580+00:00",
     "active_local_readonly_diagnostic": 0,
     "last_fixed_report_read_utc": "2026-10-21T03:58:11.775722+00:00",
     "B_generation_evidence_preparation": {
@@ -6954,7 +6964,7 @@
       "target_commit": "99508f316768237185479fbfa660850ea4ed5c0f",
       "source_count": 44,
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "status": "FORMAL44_SOURCE_INPUT_ACCEPTED_CONCRETE_NUMERIC_AND_MANDATORY_BUDGET_DISPOSITION_PENDING",
+      "status": "CONDITIONAL_NUMERIC_AND_DELEGATED_REDUCTION_RECEIVED_NARROW_ADAPTER_CR_REQUIRED",
       "actual_SPEC": true,
       "actual_model_calls": 0,
       "actual_endpoint_prompt_tokenizations": 600,
@@ -6983,8 +6993,8 @@
       "actual_engineering_target": "fdf8bd86c5113c1f716ab749d24f4f2a9faaf8ac",
       "actual_engineering_models_completed": 3,
       "actual_engineering_collections_completed": 3,
-      "actual_engineering_full_local_oracles": 2,
-      "fullparam_local_preentry_disposition_pending": true,
+      "actual_engineering_full_local_oracles": 3,
+      "fullparam_local_preentry_disposition_pending": false,
       "formal512_throughput_measured": false,
       "actual_SPEC_file": "reports/p011_20261020/long_current_runtime_v1/SPEC.json",
       "spec_sha256": "f0e9274459b17b25a9754b863ce88d4ecee5c35fe9804e3ffdd86f8ce92c522b",
@@ -7017,7 +7027,16 @@
       "source_CR_report_sha256": "83d5d8c9a4ad6e63afb9b15a51be2261843c242978ae88b0f9e112782b6830e5",
       "current_source_acceptance_scope": "source-only exact44; candidateSPEC and numeric/disposition remain pending",
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
-      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json"
+      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json",
+      "initial_allowed_jobs": [
+        "long_A7_S-L15_s17_r1",
+        "long_A7_S-F15_s17_r1",
+        "long_baseline_S-L15_s17_r1"
+      ],
+      "all_S_L3_jobs_cancelled_by_delegated_time_disposition": true,
+      "explicit_reasoned_budget_disposition_received": true,
+      "formal_conditional_report_sha256": "aac07df3b995480490ff2ba8844745849c06741efe03bf940f8460234d237f0b",
+      "F15_complete_proof": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1/F15_COMPLETE_READONLY_PROOF.json"
     },
     "B_loader_scoring_prepared": {
       "utc": "2026-10-21T04:39:29.959894+00:00",
@@ -7036,7 +7055,7 @@
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
       "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
       "source_count": 91,
-      "status": "REMAINING_5120_CURRENT_OWNER_ERRATUM_91SOURCE_EXACT_CR_A1_A2_PENDING",
+      "status": "REMAINING91_EXACT_CR_A1_A2_ACCEPTED_FRESH_ENTRY_REQUIRED",
       "actual_model_calls": 0,
       "actual_SPEC": true,
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
@@ -7185,7 +7204,10 @@
       "historical_accepted_record_scope": "original failed generation only; no91-source continuation permission",
       "actual_original_generation_calls": 1,
       "metadata_reconciled_utc": "2026-10-21T11:37:22.117960+00:00",
-      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json"
+      "metadata_reconciliation": "reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json",
+      "remaining_exact_A2_accepted": true,
+      "remaining_report_sha256": "0c1a9a1fc335381bdcabe78037e6bc3ca45d0ae922e8ea6f1879cbceb4e1d7ac",
+      "acceptance_packet": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1"
     },
     "C1_actual_A2_current": {
       "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",

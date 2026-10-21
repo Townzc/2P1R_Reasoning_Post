@@ -1,3 +1,9 @@
+### 2026-10-21 05:15 PDT - B exact acceptance; F15 local proof complete; long conditional scope received
+
+Claude02719f84 three fixed non-Z1 reports fully read12:05:33UTC, file events11:41:37/11:43:29 retained separately. B91 fourteen flags PASS; fresh12:13:04 billing/rates and D1 preserve A5.95/B3.01/C6.38. Candidate3.01 is not yet a reservation; source/input/provider/fence/window entry checks still required. No student admission. F15's explicitly authorized unchanged local audit68434 EXIT0, proof12:06:27 before original12:50:18 deadline; no model/collect/score retry. First failed pre-entry audit remains. Long report PASS-WITH-CONDITIONS reduces initial jobs to L15/F15/A7 and1.5B baseline, cancelsL3 for time, retains later A3/Claude selection/feasibility requirements and possible declared mandatory incompleteness. Existing admission/selection code cannot honestly represent these conditions, so new narrow adapter/exactCR is needed, not a fake PASS. Source44/numerics/science unchanged. P01019UTC freeze remains independent.
+
+One guessed F15 command-document path failed read-only; the fixed source supplied the actual unchanged command. No old test, archive, model, encoding, scoring or completed provider check repeated. Only new acceptance, proof publication and necessary entry budget metadata were prepared.
+
 ### 2026-10-21 03:23:10 PDT - engineering admission accepted; B/C2 conditional decisions received
 
 Claude a7ab5c42 three non-Z1 reports fully read after heading screening; Git10:08:11UTC, report-self10:15/10:25/10:30 and actualread saved distinctly. Exact37-source engineering ledger/SPEC/binding and11flags PASS; original33 and three jobs unchanged. Fresh authenticated billing/rates10:21:42 and first D1 preserve B3.01+C16.38, engineering candidates1.91/2.13/1.91 total5.95. No paidcall before fresh shared-ledger/provider/unused/full-window checks. Formal44 source remains pending.

@@ -1,3 +1,9 @@
+## Actual update 2026-10-21T12:14:35.751227+00:00
+
+B91 exact CR/A1/A2 accepted from report0c1a9a1f at3556939f. One5120 continuation plus first6400 scoring only; actual A3 independent token replay still required. Students and their input preparation remain unadmitted.
+
+Evidence: `reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1`.
+
 ## Current owner erratum appendix — 2026-10-21T11:02:09.540358+00:00
 
 Same request `p011-B-generation-student-complete-path-CR-A1-A2-lite-r1`, exact scope `p011-B-remaining-generation-complete-path-CR-A1-A2-lite`, new target **5993ccef3da13a68b9c988a173b36de8161e9974**. [Current91-source packet](b_remaining_current_runtime_v1/README.md), [exact requirements](b_remaining_current_runtime_v1/REVIEW_REQUIREMENTS.json), [SPEC](b_remaining_current_runtime_v1/SPEC.json).
