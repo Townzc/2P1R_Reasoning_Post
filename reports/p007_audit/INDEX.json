@@ -4049,20 +4049,23 @@
       "request_id": "p011-OT3-deficit-and-AM-complete-input-A1-r1",
       "scope": "p011-OT3-deficit-and-AM-complete-input-A1",
       "target_commit": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
-      "status": "pending",
+      "status": "completed_PASS_WITH_NOTES_AM_A1_OT3_integrity_PASS_original_adequacy_FAIL",
       "request_file": "reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md",
       "submitted_utc": "2026-10-20T23:28:56.460978+00:00",
       "packet_manifest_sha256": {
         "AM": "58d871c6eee9f010c248adcee822ddde64e97146fadc61722ad8fc1945015c59",
         "OT3": "b68bcfc8b05cf701ad18e4ffe595b9add38052fc2d0e81e7d7fb40021e23c1d5"
       },
-      "new_scientific_calls": 0
+      "new_scientific_calls": 0,
+      "review_commit": "63e82f7b8ffc94a4774b561b962ddd1182b0dc4f",
+      "report_sha256": "5d4e9f8316d5221c3da1f267bca85f518c0373ec4c710e47e42f539b6409df7f",
+      "acceptance_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1"
     },
     {
       "request_id": "p011-OT3-4032-confirmed-parent-reuse-construction-CR-r1",
       "scope": "p011-OT3-4032-confirmed-parent-reuse-construction-CR",
       "target_commit": "410c035d8c9b12d5c6e5d98220cec99914c0daeb",
-      "status": "pending_exact_CR_owner_count_amendment_approved",
+      "status": "completed_PASS_WITH_NOTES_CR_actual_A1_follows",
       "request_file": "reports/p011_20261020/OT3_4032_REUSE_CR_REQUEST.md",
       "submitted_utc": "2026-10-20T23:39:57.158501+00:00",
       "packet_manifest_sha256": "ac864839c51b477775715e1169abb5f2818179cd74feefdf45b7f061585ac27c",
@@ -4113,8 +4116,11 @@
         "scripts/prepare_p011_ot3_4032_inputs.py": "4546ffad73a9171804cfa1b3d931ce6ae27b61aa40efdb7d8bfbda84af67ca3a"
       },
       "source_lock_sha256": "0e78298f49b86ee3de7182443eb052da422d14af14f423bceb3f728a1696fdb0",
-      "production_executed": false,
-      "new_scientific_calls": 0
+      "production_executed": true,
+      "new_scientific_calls": 0,
+      "review_commit": "63e82f7b8ffc94a4774b561b962ddd1182b0dc4f",
+      "report_sha256": "5d4e9f8316d5221c3da1f267bca85f518c0373ec4c710e47e42f539b6409df7f",
+      "acceptance_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1"
     }
   ],
   "p008_v31": {
@@ -5977,9 +5983,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T00:05:03.081618+00:00",
+  "last_updated_utc": "2026-10-21T00:52:24.349398+00:00",
   "p011": {
-    "status": "owner_252_1008_4032_approved_exact_reuse_CR_pending_AM_A1_pending",
+    "status": "AM_actual_A1_accepted_4032_CR_accepted_local_consumer_running",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -5997,7 +6003,7 @@
     "exploratory": true,
     "production_construction_run": true,
     "scientific_calls": 0,
-    "pending_path_CR": "p011-OT3-4032-confirmed-parent-reuse-construction-CR-r1",
+    "pending_path_CR": null,
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
     "raw_downloads": "all_complete_and_SHA_verified",
@@ -6013,6 +6019,12 @@
         "session_id": 64426,
         "state": "EXIT0_CONSUMED",
         "eligible": 1024
+      },
+      "ot3_4032": {
+        "session_id": 49691,
+        "state": "ACTIVE_UNCONSUMED",
+        "source_target": "410c035d8c9b12d5c6e5d98220cec99914c0daeb",
+        "repeat_allowed": false
       }
     },
     "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
@@ -6077,7 +6089,11 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T00:01:40.588571+00:00",
-    "last_review_head": "d3f66ec3d34209bf51c0c8768280c3cd42c43502"
+    "last_review_observed_utc": "2026-10-21T00:49:47.540425+00:00",
+    "last_review_head": "63e82f7b8ffc94a4774b561b962ddd1182b0dc4f",
+    "AM_actual_A1_accepted": true,
+    "OT3_original_adequacy": "FAIL",
+    "OT3_4032_actual_A1_accepted": false,
+    "data_review_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1"
   }
 }

@@ -1,3 +1,21 @@
+### 2026-10-20 17:52:24 PDT — Real AM A1 and exact4032 reuse CR accepted; original local consumer started
+
+Claude63e82f7b/reportSHA5d4e9f83 independently accepts AM actualA1 with notes,
+originalOT3 failure integrity with adequacyFAIL retained, and exact410c035d
+4032 reuse path CR. Full report read00:50:59UTC after filename/heading screening;
+Git event00:25:30 and report's around00:40 text are separately preserved.
+Private full SQLite was not externally read; full-pool reconstruction not claimed.
+Original strong all16 completeness selection, missing difficulty, AM answer tags,
+226 extra D1 exposures and source exceptions retained. Abbreviated first3 source
+hashes resolved only through explicitly accepted fixed candidate/SOURCE_BINDING.
+New local consumer49691 started once, firstencoding/planning of saved4032prefix,
+no refilter/generation. Actual new A1 follows completed data; no cloud or reserve.
+Local bounded awake15501/PID66616 for3600seconds only during actual construction.
+Optional reviewer pool-format diagnostic not performed or treated as a gate.
+No old tests/collector/preserver/model repeated. A guessed INDEX shell glob failed
+read-only before using the known actual reports/p007_audit/INDEX.json path.
+P010Oct21 19UTC formalcopyfreeze remains independent; noZ1/externalmessage.
+
 ### 2026-10-20 17:29:56 PDT — New complete long payload/scoring adapters prepared
 
 New long_evidence verifies architecture-derived parameter order/shapes, complete

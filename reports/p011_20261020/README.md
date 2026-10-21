@@ -1,3 +1,5 @@
+P011 2026-10-21T00:52:24.349398+00:00: [AM actual A1 and4032 CR accepted](review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1/README.md). New local consumer49691 running once; actual4032 A1 follows. Original4096 deficit remainsFAIL; no paid/model call.
+
 P011 engineering 2026-10-21T00:29:56.350406+00:00: [long payload/scoring preparation](long_closeout_draft_v1/README.md),20newsynthetic checks passed; no production model/scoring or new code-only gate. Data4032CR/AMactualA1 pending.
 
 P011 2026-10-21T00:05:03.081618+00:00: [B owner-rule record and leaf update](review_d3f66ec3_B_rule_and_prereview_v1/README.md) fixes first-usable-of16/fallback>10% in the draft; reported direct decision via Claude, formal fullB CR still required. Data A1/4032CR remain pending.
