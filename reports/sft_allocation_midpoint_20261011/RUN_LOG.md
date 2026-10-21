@@ -1,3 +1,9 @@
+### 2026-10-20 23:35:55 PDT — Actual B input preparation; C1 failure review and owner decisions
+
+Claude3f314dac fixed non-Z1 reports fully read06:32:43UTC. B exact71source PASS-WITH-NOTES and C1failed preservation PASS accepted; no C1complete result. Owner records authorize one C1r2 chunk320/reserve<=2.70 and three A-funded engineering preflights totalreserve<=6, require exact CR/A2. New owner accounting protected0/P010prior obligations not subtracted; P011failed3.74 retained and all categorycaps unchanged. Chronology inconsistencies and unseen underlying claude.ai conversation explicitly retained.
+
+B original-token input projection ran once exit0 at06:34:24, 400parents6400requests,0encoding/model/oldscore reads. One5member archive/fullreadback and18newGitfiles verified; actualA1/numeric pending same request at1d0d1d6d1ede001949c64d3675b214ecf2feb5f7. Initial ignored tar omitted from a14dbbf4 was detected before remote publication and existingbytes added; no builder rerun. Guessed C1failed REVIEW_REQUIREMENTS path read failed only; no science effect. No oldprovider/billing/tests or finished work repeated. P01019UTCfreeze still due.
+
 
 ### 2026-10-20 23:29:16 PDT — Direct overnight Claude delegation
 

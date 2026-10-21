@@ -1,3 +1,11 @@
+# Actual generation input A1 appendix — 2026-10-21T06:35:55.173650+00:00
+
+True sourceCR02e5f944/d60b3cb9 accepted exact71sourcebca90236. Authorized input projection completed once06:34:24UTC; original400 parents/6400 requests,0encoding/model/oldscore reads. Actual packet fixed **1d0d1d6d1ede001949c64d3675b214ecf2feb5f7**, [fullarchive and bindings](b_generation_inputs_actual_v1/README.md). Same shared request: please review actualinputA1, then numerical evidence when supplied. SourcePASS does not admit GPU.
+
+Independent [new owner records](review_3f314dac_B_CR_C1_failure_owner_records_v1/README.md) retain current-balance/protected0 accounting, original180/categorycaps and all P011 reservations. Concrete B numeric/fullwindow still pending. Full raw privatebalance records remain available to their author; public projections bind originalSHA.
+
+--- Earlier source request ---
+
 # Complete B path: one shared CR/A1/A2-lite request
 
 Submitted 2026-10-21T05:29:40.100439+00:00. Exact target **`bca90236c7be2c2b37f3a207eb23d1f518027290`**.
