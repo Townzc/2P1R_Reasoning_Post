@@ -43,6 +43,7 @@ def validate_spec(spec):
     times=spec['timing']['complete_chunk_seconds']
     if (not times or any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in times)
             or spec['timing']['measurement_basis_accepted'] is not True
+            or spec['timing'].get('whole_chunk_iteration_timing') is not True
             or not spec['timing']['source_evidence_files']
             or spec['timing']['basis_kind'] not in ('actual_C1_complete_chunk',
                 'independently_accepted_prior_measurement_proxy')
@@ -144,7 +145,8 @@ def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
     for k,t in tasks.items():
         if k!=t['sequence_sha256'] or k!=digest({'input_ids':t['input_ids'],'labels':t['labels']}):
             raise ValueError('Frozen original sequence changed')
-    out=Path(out);out.mkdir(parents=False,exist_ok=False);confirmed={};times=[]
+    out=Path(out);out.mkdir(parents=False,exist_ok=False);confirmed={};times=[];cycles=[]
+    monotonic_origin=time.monotonic()
     try:
         initial=forecast(spec,time.time()-worker_start,(len(keys)+31)//32,[],prior_reserved)
         dump(out/'INTENT.json',{'basis':basis,'basis_sha256':basis_sha,'task_ids':keys,
@@ -154,6 +156,7 @@ def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
         dump(out/'MEMBERSHIPS.json',memberships);dump(out/'INITIAL_FORECAST.json',initial);commit()
         model=loader(spec,out,deadline_epoch);commit()
         for first in range(0,len(keys),CHUNK):
+            cycle_start=time.monotonic()
             part=keys[first:first+CHUNK];number=first//CHUNK;chunk=out/'chunks'/f'{number:05d}'
             f=forecast(spec,time.time()-worker_start,(len(keys)-first+31)//32,times,prior_reserved)
             if store.get(key+'/claim')!=claim:raise ValueError('Original C1 claim changed')
@@ -182,8 +185,22 @@ def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
             dump(chunk/'CONFIRMED.json',ack);commit()
             if not store.put(key+f'/chunk_done/{number:05d}',ack,skip_if_exists=True):
                 raise ValueError('C1 complete-chunk acknowledgment already exists')
-            times.append(ack['elapsed_seconds'])
+            # This ends AFTER all three volume commits and the remote completed
+            # acknowledgment. The old ack duration remains a body-only diagnostic.
+            cycle_end=time.monotonic()
+            cycles.append({'chunk':number,'started_offset_seconds':cycle_start-monotonic_origin,
+                'finished_offset_seconds':cycle_end-monotonic_origin,
+                'elapsed_seconds':cycle_end-cycle_start,'volume_commits_included':3,
+                'remote_chunk_done_included':True,
+                'body_ack_elapsed_seconds':ack['elapsed_seconds']})
+            times.append(cycles[-1]['elapsed_seconds'])
         if time.time()>=deadline_epoch:raise TimeoutError('Original C1 completion deadline reached')
+        # Persist complete timings at finalization. The final proof/summary write
+        # is outside the per-chunk scope and must fit the fixed future allowance.
+        dump(out/'COMPLETE_ITERATION_TIMES.json',{'cycles':cycles,
+            'timing_scope':'loop_entry_through_all_three_commits_and_remote_chunk_done',
+            'final_proof_summary_commit_included':False,
+            'finalization_covered_by_fixed_future_allowance':True})
         summary=c1_nll.descriptive_summary(memberships,confirmed)
         dump(out/'DESCRIPTIVE_SUMMARY.json',summary)
         dump(out/'ALL_CONFIRMED.json',{'basis_sha256':basis_sha,'unique_sequences':len(keys),
@@ -196,6 +213,7 @@ def run_body(spec,tasks,memberships,out,basis,store,key,claim,commit,
     except BaseException as exc:
         dump(out/'FAILED.json',{'type':type(exc).__name__,'message':str(exc),
             'basis_sha256':basis_sha,'automatic_retry_allowed':False,
+            'confirmed_complete_iteration_timings':cycles,
             'partial_is_not_a_completed_summary':True});commit();raise
 
 
@@ -204,6 +222,12 @@ def check_body(spec,out,tasks,memberships,basis,store_records,key,claim):
     validate_spec(spec);out=Path(out)
     proof=c1_evidence.check_confirmed_evidence(out,tasks,memberships,basis)
     intent=read(out/'INTENT.json');keys=sorted(tasks);times=[]
+    timing=read(out/'COMPLETE_ITERATION_TIMES.json');cycles=timing['cycles']
+    if (timing.get('timing_scope')!='loop_entry_through_all_three_commits_and_remote_chunk_done'
+            or timing.get('final_proof_summary_commit_included') is not False
+            or timing.get('finalization_covered_by_fixed_future_allowance') is not True
+            or len(cycles)!=(len(keys)+31)//32):
+        raise ValueError('Complete whole-iteration timing scope required')
     if (intent['spec_sha256']!=digest(spec) or intent['claim']!=claim
             or store_records.get(key+'/claim')!=claim):
         raise ValueError('Original exact source/spec/claim differs')
@@ -219,5 +243,17 @@ def check_body(spec,out,tasks,memberships,basis,store_records,key,claim):
             raise ValueError('Original numeric forecast or confirmed store record differs')
         if type(ack['elapsed_seconds']) not in (int,float) or not math.isfinite(ack['elapsed_seconds']) or ack['elapsed_seconds']<=0:
             raise ValueError('Finite positive complete chunk timing required')
-        times.append(ack['elapsed_seconds'])
+        cycle=cycles[number]
+        start=cycle['started_offset_seconds'];end=cycle['finished_offset_seconds']
+        elapsed=cycle['elapsed_seconds']
+        if (cycle.get('chunk')!=number or cycle.get('volume_commits_included')!=3
+                or cycle.get('remote_chunk_done_included') is not True
+                or cycle.get('body_ack_elapsed_seconds')!=ack['elapsed_seconds']
+                or any(type(x) not in (int,float) or not math.isfinite(x) for x in (start,end,elapsed))
+                or not 0<=start<end or elapsed<=0
+                or not math.isclose(elapsed,end-start,rel_tol=0,abs_tol=1e-7)
+                or elapsed<ack['elapsed_seconds']
+                or (number and start<cycles[number-1]['finished_offset_seconds'])):
+            raise ValueError('Actual complete iteration timing differs or excludes acknowledged work')
+        times.append(elapsed)
     return {**proof,'complete_chunk_seconds':times,'source_claim_provider_outer_checks_still_required':True}

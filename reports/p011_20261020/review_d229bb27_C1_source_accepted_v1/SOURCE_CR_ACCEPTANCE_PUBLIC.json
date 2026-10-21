@@ -1,0 +1,43 @@
+{
+  "actual_input_A1_accepted": false,
+  "actual_numeric_A2_lite_accepted": false,
+  "decision": "PASS-WITH-NOTES",
+  "full_read_confirmed_utc": "2026-10-21T03:00:28.436743+00:00",
+  "git_commit_event_utc": "2026-10-21T02:58:04Z",
+  "input_preparation_authorized": true,
+  "notes": [
+    "Future numeric admission must cover excluded commit overhead; reviewer prefers complete-loop timing and short exact source re-review",
+    "Actual timing basis absent; training proxy includes backward/optimizer and misses fixed batch1 overhead unless explicitly addressed",
+    "All future P011 paths must use same dispatch ledger",
+    "Reviewer reported46test passes and1torch-import unavailable; Codex did not rerun them",
+    "Descriptive NLL only; BF16 precision and teacher-selection limitations retained",
+    "Reviewer describes upload/collect/audit as common deadline; exact code has upload prospective cutoff minus fullwindow and collect/audit share original worker deadline"
+  ],
+  "observed_audit_head": "d229bb2764f1a33aa897ab5b31c06e444cd43c44",
+  "original_group_binding_sha256": "54e73b1cb1e69d300ee40423236e2d5d2f91e96e42ad03a81f10191256546006",
+  "original_private_acceptance_file_sha256": "42823d3439395b46250dc1fa274fd5628a3c9d8c09ae9b00eceb2409b54cd54d",
+  "projection": "Only absolute local_report_path removed; original private SHA retained.",
+  "public_report_path": "REPORT_C1_FULL_PATH_SOURCE_CR.md",
+  "report_commit": "d229bb2764f1a33aa897ab5b31c06e444cd43c44",
+  "report_git_path": "audit/claude/20261021e/REPORT_C1_FULL_PATH_SOURCE_CR.md",
+  "report_self_described_time": "2026-10-21 03:05 UTC around (verbatim; later than actual read)",
+  "report_sha256": "f62648cfd30fa17421ecbf074b509e605d2bf7cca9c030b5025a11d5acea7515",
+  "request_id": "p011-C1-complete-path-CR-A1-A2-lite-r1",
+  "scope": "p011-C1-complete-path-CR",
+  "source_files": {
+    "experiments/learning_regime_p009/requirements_p0.txt": "375f161f867fe5bcdf846d5423fbdba991be4c7ee189d1dde9b5e52a39337b69",
+    "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+    "experiments/p011/c1_admission.py": "9e1e3b449583729bf16e734dc2dd4ac258c3ab04bcc35e66a4e79b8ae388361f",
+    "experiments/p011/c1_artifacts.py": "b6404ddd4dc8eb0acf6a9205dfec30ce431467094bad14af1cc29456164ee773",
+    "experiments/p011/c1_evidence.py": "75681d883e3f9163ec3cc8d789fa7bf1246aef3c7e0e94d91fc868f88e0ad974",
+    "experiments/p011/c1_execution.py": "1f4c84912d14950779dc1583c7f733ec49989d0e3b1d7ab476d7cd717143a8e6",
+    "experiments/p011/c1_nll.py": "fe998fe3a210b5730c98273b77db70582297de07fb59bfcd6705e16306317d7a",
+    "experiments/p011/c1_outer.py": "524b90daa93f331938185dcd53e90a3c36b187ea1a06043bf8453a58ec1e8b65",
+    "experiments/p011/modal_c1.py": "48a87918064b78ae07f6efd8636b7cceda405b636a47392a80579c7384ff8cc0",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "scripts/p011_c1_io.py": "21746961f3c365f67506bf0440ae137d2f5ad0009a392191e576521762a565fe",
+    "scripts/prepare_p011_c1_inputs.py": "d2aefd91ad5c03811ffea65a052b7a3923ff773fe266a0a5493bd2409d0c5b2e"
+  },
+  "target_commit": "817f7d67a4f8ea1d23f90bb41f85a6e893e48d9f",
+  "upload_worker_GPU_paid_authorized": false
+}
