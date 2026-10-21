@@ -4126,7 +4126,7 @@
       "request_id": "p011-OT3-confirmed-encoding-NFC-continuation-CR-r1",
       "scope": "p011-OT3-confirmed-encoding-NFC-continuation-CR",
       "target_commit": "10738e624300ff125c59fd127e798bc4e5fbdc85",
-      "status": "pending_direct_owner_exception_and_exact_CR",
+      "status": "code_PASS_WITH_NOTES_pending_direct_owner_and_exact_owner_SHA_addendum",
       "request_file": "reports/p011_20261020/OT3_NFC_CONTINUATION_CR_REQUEST.md",
       "submitted_utc": "2026-10-21T01:00:55.762742+00:00",
       "source_files": {
@@ -4143,7 +4143,11 @@
       "unconfirmed_rows_to_encode": 9115,
       "original_session_state": "49691_EXIT1_CONSUMED",
       "owner_proposal": "reports/p011_20261020/OT3_NFC_CONTINUATION_PROPOSAL.md",
-      "new_scientific_model_calls": 0
+      "new_scientific_model_calls": 0,
+      "code_review_commit": "d85bd142a7a48b46b923b0454fd1eba5bdde7c4a",
+      "code_review_report_sha256": "c506e45821ff0f5a036e1bf8fcaa9b2d47c206cf643fd9e151f31ee7d4ad48a9",
+      "code_review_packet": "reports/p011_20261020/review_d85bd142_NFC_code_conditional_v1",
+      "runtime_admitted": false
     }
   ],
   "p008_v31": {
@@ -6008,7 +6012,7 @@
   },
   "last_updated_utc": "2026-10-21T01:00:55.762742+00:00",
   "p011": {
-    "status": "AM_A1_accepted_OT3_encoding_failure_preserved_NFC_exception_and_CR_pending",
+    "status": "AM_A1_accepted_NFC_code_pass_owner_and_addendum_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6115,8 +6119,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T00:49:47.540425+00:00",
-    "last_review_head": "63e82f7b8ffc94a4774b561b962ddd1182b0dc4f",
+    "last_review_observed_utc": "2026-10-21T01:31:51.091772+00:00",
+    "last_review_head": "d85bd142a7a48b46b923b0454fd1eba5bdde7c4a",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": false,
@@ -6132,6 +6136,8 @@
       "actual_forward_calls": 0,
       "actual_timing_basis_selected": false,
       "new_formal_review_request": false
-    }
+    },
+    "ot3_NFC_code_review": "reports/p011_20261020/review_d85bd142_NFC_code_conditional_v1",
+    "ot3_NFC_runtime_admitted": false
   }
 }

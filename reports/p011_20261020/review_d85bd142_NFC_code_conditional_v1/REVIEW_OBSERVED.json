@@ -1,0 +1,37 @@
+{
+  "scope": "p011-OT3-confirmed-encoding-NFC-continuation-CR",
+  "target_commit": "10738e624300ff125c59fd127e798bc4e5fbdc85",
+  "report_commit": "d85bd142a7a48b46b923b0454fd1eba5bdde7c4a",
+  "report_path": "audit/claude/20261021b/REPORT_NFC_CONTINUATION_CR.md",
+  "report_sha256": "c506e45821ff0f5a036e1bf8fcaa9b2d47c206cf643fd9e151f31ee7d4ad48a9",
+  "commit_event_utc": "2026-10-21T01:15:31Z",
+  "report_self_described_time": "2026-10-21 around01:20UTC",
+  "full_read_confirmed_utc": "2026-10-21T01:32:44.941558+00:00",
+  "commit_author_name": "Claude",
+  "code_decision": "PASS-WITH-NOTES",
+  "runtime_admitted": false,
+  "owner_continuation_sha256": null,
+  "missing": [
+    "direct_owner_failed_constructor_continuation_exception",
+    "auditor_addendum_binding_actual_owner_record_SHA"
+  ],
+  "source_binding_reference": {
+    "path": "reports/p011_20261020/ot3_nfc_continuation_preflight_v1/SOURCE_BINDING.json",
+    "sha256": "b14be1bf1a6bbd71f974d6f1004e23ee90ffeac4b0670224351f17171a0ec3d6",
+    "report_explicitly_accepts_exact_source_binding": true,
+    "abbreviated_hashes_not_report_rewritten": true
+  },
+  "source_files": {
+    "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+    "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+    "experiments/p011/native_nfc_encoding.py": "c2af5621a2917679dca59220b387cc7d60f2669cb4a40a5354607106d740447e",
+    "scripts/prepare_p011_long_inputs.py": "4468a80d82f0a80d6c217d92e54ac41b211dcf943b156432850bffb6405812e1",
+    "scripts/prepare_p011_ot3_4032_inputs.py": "4546ffad73a9171804cfa1b3d931ce6ae27b61aa40efdb7d8bfbda84af67ca3a",
+    "scripts/prepare_p011_ot3_nfc_continuation.py": "c0aae4c117ff7815a552b92124da2e2d8c1bd144441fa6957e603ce36fe3719b"
+  },
+  "reviewer_reexecuted_12_tests": false,
+  "confirmed965_reencoded": false,
+  "new_production_call": false,
+  "new_selection_diagnostic_run": false,
+  "reviewer_selection_risk": "Reviewer recommends owner consider read-only diagnosis of90.8% completeness exclusions before continuation approval; no such diagnosis/selection change is authorized or executed here."
+}

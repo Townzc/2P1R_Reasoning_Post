@@ -1,3 +1,5 @@
+P011 review 2026-10-21T01:33:37.422154+00:00: [NFC code PASS-WITH-NOTES](review_d85bd142_NFC_code_conditional_v1/README.md); direct owner exception and exact owner-SHA addendum remain pending. No continuation executed. Reviewer selection-rule diagnostic suggestion is documented, not performed.
+
 P011 engineering 2026-10-21T01:30:09.459539+00:00: [C1 copy/worker draft](c1_execution_draft_v1/README.md),12new checks passed; real original inputs/model/forward NOTRUN. Full-path timing, entry and review still needed; NFC owner exception and exact CR pending.
 
 P011 2026-10-21T01:00:55.762742+00:00: [native Unicode failure and continuation proposal](OT3_NFC_CONTINUATION_PROPOSAL.md). Original965 encodings preserved; newconsumer49691 failed. Exactnewsource6 `10738e624300ff125c59fd127e798bc4e5fbdc85` awaits direct owner exception and CR. No cloud/model call. [New request](OT3_NFC_CONTINUATION_CR_REQUEST.md).
