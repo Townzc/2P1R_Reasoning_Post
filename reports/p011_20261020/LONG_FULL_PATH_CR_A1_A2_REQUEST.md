@@ -1,3 +1,11 @@
+## Exact conditional initial-three adapter ready — 2026-10-21T12:21:00.498118+00:00
+
+Same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, exact target `eb694d374ec7f780a10d1f14ea3e2a33994725db`; full scope `p011-long-A-D-complete-path-CR-A1-A2-lite`, source appendix `p011-long-conditional-initial3-adapter-CR`.
+
+Please audit `long_conditional_runtime_v1/REVIEW_REQUIREMENTS.json`: exact48-source binding, unchanged three original job objects, honest original PASS-WITH-CONDITIONS report aac07df3, published actual F15 proof, and18 explicit flags. Only the original two A7 smokes plus1.5B baseline exist in this SPEC. Original44 files/32-job SPEC, science, timing, budgets and inputs are unchanged. Future A/D jobs are absent and need real reduced-smoke A3/selection and exact actual job/numeric admission. No fake three-smoke/two-baseline claim. All L3 jobs remain cancelled by your disposition.
+
+New actual SPEC SHA `0007c1062f38d0bdf14c9b1011e8e13faa46120fa01e2b95fc46ff4e09ad57ca`. Nine new authorization checks passed once; no old tests or models were repeated. No formal upload/model/reservation. Conditional original numeric acceptance alone does not execute new adapters. F15 original proof is published at23b8c97b.
+
 ## Actual update 2026-10-21T12:14:35.751227+00:00
 
 Conditional formal numeric/delegated disposition received from02719f84/reportaac07df3; F15 original local proof now complete. Initial permitted jobs are A7 L15/F15 and1.5B baseline; L3 cancelled. Narrow adapter CR is required because old helper rejects PASS-WITH-CONDITIONS and old selection flag asserts three/two. Original report is not normalized toPASS.
