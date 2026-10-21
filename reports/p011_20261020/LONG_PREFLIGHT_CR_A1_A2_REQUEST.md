@@ -1,3 +1,5 @@
+Latest binding clarification 2026-10-21T09:44:02.935517+00:00: [dated source-map erratum](LONG_PREFLIGHT_LEDGER_BINDING_ERRATUM.md). Exactcandidate remains37source@38942d3a; inherited top-level33 map is historical. SPEC, SOURCE_BINDING and requirements.binding agree. No source/test/model change.
+
 # Latest narrow failed-ledger addendum — 2026-10-21T09:27:06.178916+00:00
 
 Same request and finalscope `p011-long-three-arm-engineering-preflight-CR-A1-A2-lite-r1` / `p011-long-three-arm-engineering-preflight-CR-A1-A2-lite`. New exact target **38942d3a9380030d3ad885dfe46b6cfb377aad00**, [37-source candidate](long_preflight_failed_ledger_runtime_v1/README.md), SPEC `eb88670f66ca6ebdfa080d9e5b39dc9654e00604be2cf398df31cb4f7d21d7a6`. Original actualsubsetA1/numeric report72c92281 (SHA2dd1dc45) is accepted; no need to repeat original input construction or scientific/numeric analysis. Only four new ledger/import-adapter files and exact saved-failure binding need the short appended review.
