@@ -4571,10 +4571,10 @@
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
-      "scope": "p011-B-remaining-generation-complete-path-CR-A1-A2-lite",
+      "scope": "p011-B-retained-students-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
-      "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
-      "status": "ACTUAL6400_A3_ACCEPTED_GOLD_CORRECTED92_AND96_SOURCE_REVIEW_PENDING",
+      "target_commit": "0f0d78d3f5c0d38f121b073bbf4e02e7665deabf",
+      "status": "ACTUAL_STUDENT_INPUT_A1_AND_EXACT96_METADATA_FIX_NUMERIC_A2_PENDING",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4677,7 +4677,7 @@
       "actual_input_consumer_executed": true,
       "new_paid_calls": 0,
       "source_target_commit": "bca90236c7be2c2b37f3a207eb23d1f518027290",
-      "actual_input_packet": "reports/p011_20261020/b_generation_inputs_actual_v1",
+      "actual_input_packet": "reports/p011_20261020/b_student_inputs_actual_v1",
       "source_review_commit": "02e5f9443176952bed78d2005b5f04c1238e4fa0",
       "source_review_sha256": "d60b3cb9aff056506e2a2e1ca4a1e52301ff1eb9d73586b1ded42e7304122998",
       "actual_input_A1_accepted": true,
@@ -4767,7 +4767,11 @@
       "actual_generation_A3_report_sha256": "885fce3707f712fc2156170c033b5e51e79072efe56e9174263ea394db6558e4",
       "actual_generation_A3_acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
       "student_input_preparation_authorized": false,
-      "future_numeric_requires_all_current_failed_long_parents": true
+      "future_numeric_requires_all_current_failed_long_parents": true,
+      "runtime_packet": "reports/p011_20261020/b_retained_students_runtime_v1",
+      "source92_accepted": true,
+      "prior_source96_accepted": true,
+      "new_local_asset_source_delta_pending": true
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -5040,14 +5044,17 @@
     {
       "request_id": "p011-long-initial2-rate-validation-failure-disposition-r1",
       "scope": "p011-long-initial2-rate-validation-failure-disposition",
-      "status": "PENDING_EXPLICIT_DELEGATED_DISPOSITION_AND_INDEPENDENT_FAILURE_REVIEW",
+      "status": "DELEGATED_DISPOSITION_RECEIVED_NARROW_REPAIR_PREPARATION_ONLY",
       "target_commit": "141dae026c3dcf1cc20089f153561e53ec03bc9a",
       "request_file": "reports/p011_20261020/LONG_INITIAL3_VALIDATION_FAILURE_DISPOSITION_REQUEST.md",
       "evidence_packet": "reports/p011_20261020/long_initial3_plan_validation_failures_v1",
       "manifest_sha256": "8afff3c26860e50c884826b778c0735e224d04de61cabbd05539beb5d2bc1d27",
       "no_automatic_retry": true,
       "baseline_not_dispatched": true,
-      "failed_attempts_retained": 2
+      "failed_attempts_retained": 2,
+      "report_commit": "4e0951a03ac92bef85b8132868cf4eb6a2bc1f5d",
+      "report_sha256": "481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f",
+      "paid_dispatch_authorized": false
     }
   ],
   "p008_v31": {
@@ -6910,7 +6917,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T13:37:02.758284+00:00",
+  "last_updated_utc": "2026-10-21T14:24:42.434514+00:00",
   "p011": {
     "status": "LONG_INITIAL_TWO_FAILED_PRESERVED_STOPPED0_B_ACTUAL_AND_STUDENT_REVIEWS_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -7031,8 +7038,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T13:25:04.852816+00:00",
-    "last_review_head": "2ce4edae66c3b60b506e2a4de87c3a06c8fb07cb",
+    "last_review_observed_utc": "2026-10-21T14:12:45.832415+00:00",
+    "last_review_head": "4e0951a03ac92bef85b8132868cf4eb6a2bc1f5d",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -7749,6 +7756,29 @@
       "independent_symbolic_engine_rerun": false,
       "independent_manual_symbolic_pairs": 40
     },
-    "active_scientific_compute": 0
+    "active_scientific_compute": 0,
+    "B_student_inputs": {
+      "status": "CONSTRUCTOR_DONE_ACTUAL_A1_PENDING",
+      "packet": "reports/p011_20261020/b_student_inputs_actual_v1",
+      "target": "0f0d78d3f5c0d38f121b073bbf4e02e7665deabf",
+      "unique_new_encodings": 3126,
+      "old_reencodings": 0,
+      "model_calls": 0
+    },
+    "B_retained_students": {
+      "status": "ACTUAL_SPEC_AND_LOCAL_METADATA_DELTA_A1_A2_PENDING",
+      "target": "0f0d78d3f5c0d38f121b073bbf4e02e7665deabf",
+      "allowed_jobs": [
+        "B_B1_s17_r1",
+        "B_B3_s17_r1"
+      ],
+      "actual_reservation_created": false
+    },
+    "long_initial_failure_disposition": {
+      "status": "REPAIR_PREPARATION_AUTHORIZED_EXACT_REVIEW_REQUIRED",
+      "report_sha256": "481620ca0df59ebcc0fd4aa314a7fe32445dd64c1d4e9609a57eeb1a8cd2911f",
+      "L15_L3_cancelled": true,
+      "no_budget_release_or_increase": true
+    }
   }
 }

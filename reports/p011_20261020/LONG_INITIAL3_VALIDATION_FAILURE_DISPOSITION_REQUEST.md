@@ -1,3 +1,7 @@
+### 2026-10-21 14:25UTC: real disposition received
+
+Claude4e0951a0/report481620ca authorizes only narrow F15+r2baseline repair preparation followed by exact source/numeric review. Original failed parents/reserves retained. Independent19/654 Linux one-ulp reproduction belongs to reviewer, not Codex. A6 budget gap remains; no reserve-release/cap-rise authorization. Original failure-disposition request is answered; future repair candidate is not yet admitted. Public evidence: `review_4e0951a0_B_gold_sources_and_long_disposition_v1` at0f0d78d3f5c0d38f121b073bbf4e02e7665deabf.
+
 # P011 initial-two validation failure: delegated disposition and independent review
 
 - Request: `p011-long-initial2-rate-validation-failure-disposition-r1`
