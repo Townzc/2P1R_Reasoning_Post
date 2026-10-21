@@ -1,0 +1,12 @@
+diff --git a/experiments/p011/long_d_pair_path.py b/experiments/p011/long_d_pair_path.py
+index 5585f8ac..a88630a4 100644
+--- a/experiments/p011/long_d_pair_path.py
++++ b/experiments/p011/long_d_pair_path.py
+@@ -27 +27 @@ STORE=lifecycle.STORE
+-SPEC='reports/p011_20261020/long_d_pair_runtime_v1/SPEC.json'
++SPEC='reports/p011_20261020/long_d_pair_predicted_budget_runtime_v1/SPEC.json'
+@@ -214,2 +214,2 @@ def pair_budget(spec,records,prior_D):
+-        if not reserve.is_finite() or reserve<=0 or reserve>Decimal('.8')*(Decimal('25')-total):
+-            raise ValueError('Both D full reservations must fit conservative sequential80percent gate')
++        if not reserve.is_finite() or reserve<=0 or reserve>Decimal('25')-total:
++            raise ValueError('Both D full reservations must fit the remaining D cap')

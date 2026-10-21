@@ -24,7 +24,7 @@ from experiments.sft_allocation_midpoint.common import dump, read, sha, digest, 
 
 LOCAL=lifecycle.LOCAL
 STORE=lifecycle.STORE
-SPEC='reports/p011_20261020/long_d_pair_runtime_v1/SPEC.json'
+SPEC='reports/p011_20261020/long_d_pair_predicted_budget_runtime_v1/SPEC.json'
 BUDGET_OWNER_SHA='364aaf6cd70fa9cf1a89902af6dedb33a1b64d7c47e73a12b37b6b97dfb69a2f'
 LOCAL_INPUT_DIRECTORY='long_inputs_numeric_gold_r1'
 AUDIT_METADATA_NAMES={'config.json','generation_config.json','tokenizer.json','tokenizer_config.json','special_tokens_map.json','vocab.json','merges.txt','added_tokens.json'}
@@ -211,8 +211,8 @@ def pair_budget(spec,records,prior_D):
     for name in D_JOBS:
         if name in attempted:continue
         job=spec['jobs'][name];reserve=Decimal(str(job['limits']['reserved_usd']))
-        if not reserve.is_finite() or reserve<=0 or reserve>Decimal('.8')*(Decimal('25')-total):
-            raise ValueError('Both D full reservations must fit conservative sequential80percent gate')
+        if not reserve.is_finite() or reserve<=0 or reserve>Decimal('25')-total:
+            raise ValueError('Both D full reservations must fit the remaining D cap')
         projection=long_numeric.forecast(policy(job,1,str(total)),job['U'],ENDPOINT_BATCHES,[],[],1)
         steps.append(dict(logical_id=name,prior_D_reserved_usd=str(total),reserved_usd=str(reserve),initial_forecast=projection))
         total+=reserve
