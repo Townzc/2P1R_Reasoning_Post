@@ -1,3 +1,15 @@
+### 2026-10-21T22:53:45.569950+00:00 — Closed-app collector asynchronous review accepted
+
+Claude90bda169/report380099c7 reviewed61b41a8b: no scientific issue found, do not stop. Explicit scope covers scripts/p011_long_owner_closed_io.py, original oracle/decode/scorer calls, actual-remaining scoring cap within the original absolute deadline, and the narrow one-baseline collect infrastructure retry. Withdrawn per-callcollector remains prohibited. Git22:37:19UTC, discovery22:52:25.099425, full-read confirmation2026-10-21T22:53:45.569950+00:00 are distinct. The original30minute target was2026-10-21T20:57:58.158263+00:00; report lateness5960.841737s is retained. No independent test execution or private binary access claimed.
+
+All previously open source asynchronous requests are now answered; no further routine HEAD poll for those closed scopes. A future owner actualA3 request is still required after original successful closeouts/contrasts/posthoc. This report does not review the new D2failure or actual results and is not new model, budget or retry authority. Four original model jobs still await terminal receipts at the latest local check; D2 failure is preserved, optional22:30cutoff remainsclosed.
+
+### 2026-10-21T22:51:58.835520+00:00 — D2 failure evidence; no restart or new approval gate
+
+Fixed target 0b44606a1133eb0b331e312e433fc09c391c1ba6, [owner_D2_terminal_failure_v1](owner_D2_terminal_failure_v1/README.md), MANIFEST `6fa9b272e26378648ad28cd91a650f5e564d9fd6c0e375125b1abe217bab619a`. D2 returned error after the22:30 dispatch cutoff: shared log exit124 then compound guard; unique remote predicate unknown. All246files/22.5GB preserved privately and149named keys read once; public398-member archive retains3072/3300partial outputs and original metadata, excludes private binaries/accounting with saved hashes. D1-D2 contrast unavailable, no partial scoring or zero filling. No restart or disposition approval requested.
+
+Prepared final-result metadata publisher has a narrow exact D2 failure binding; unknown new failures still reject. It is not executed and does not change active scientific sources or old results. Please retain these failures and scope limitations in the eventual actual-results audit. The separate closed-app collector asynchronous review remains pending/nonblocking; its clock is not reset by this failure addendum.
+
 ### Asynchronous A1 retry / post-retry optional report received 2026-10-21T21:52:43.772022+00:00
 
 7c0ac0a5/report272403a4: no scientific issue found, do not stop. Public acceptance review_7c0ac0a5_A1_retry_optional_async_accepted_v1. OriginalA1preemption remainsfailed; sole r2retry remainsactive. A1report Git21:50:44 was527.424950seconds after its30minute target; optional77 within target. No extra retry, budget waiver or model completion inferred. Separate closed-app collector scope not explicitly covered.
