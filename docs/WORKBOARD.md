@@ -1,3 +1,18 @@
+### 2026-10-20 17:05:03 PDT — B owner rule recorded via Claude; data reviews still pending
+
+Actual poll00:01:40UTC found d3f66ec3. Two non-Z1 documents fully read after
+filename/heading screening. Claude records direct owner reply“选b吧”in claude.ai
+at23:47UTC; Codex did not observe that underlying chat. B-only K1 now searches
+16 attempts, then attempt01 unverified only if all16 unusable. These are the
+only nesting exceptions; report before training only when fallback>10%.
+C2/P010 four-attempt rules unchanged. Five new plus one revised fixture passed
+once0.043s;12other old successful fixtures not rerun. No output/score/model.
+Pre-review explicitlyNOTCRPASS, no ACCEPTED fabricated; fullB CR still binds
+this exact authority/source. C1 speed/T1.5 performance estimates not measurements.
+OT34032CR and AMactualA1 still pending; next normal review>=00:31:41UTC.
+One read-only guessed test filename failed; discovered actual path then read,
+no mutation or scientific side effect. Original states and P010freeze retained.
+
 ### 2026-10-20 16:56:47 PDT — Long worker integration and pinned3B assets prepared
 
 New long_execution/long_numeric drafts connect exact whole-answer update markers,

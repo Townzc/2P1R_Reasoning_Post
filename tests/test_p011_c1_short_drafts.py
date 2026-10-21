@@ -141,14 +141,14 @@ class ShortDraft(unittest.TestCase):
         self.assertEqual(out['nesting_conflicts'], [])
         self.assertTrue(set(out['selected_ids']['4']).issubset(out['selected_ids']['8']))
 
-    def test_conflicting_fallback_is_retained_and_reported(self):
+    def test_owner_B16_fifth_attempt_replaces_old_four_attempt_fallback(self):
         ids = [f'p{i}' for i in range(400)]
         records = {f'{p}::attempt{a:02d}': saved(p, a, not (p == 'p0' and a <= 4))
                    for p in ids for a in range(1, 17)}
         out = short.b_selection(ids, records)
-        self.assertEqual(out['selected_ids']['1'][0], 'p0::attempt01')
-        self.assertEqual(out['nesting_conflicts'], ['p0'])
-        self.assertTrue(out['requires_owner_disposition'])
+        self.assertEqual(out['selected_ids']['1'][0], 'p0::attempt05')
+        self.assertEqual(out['nesting_conflicts'], [])
+        self.assertFalse(out['requires_owner_disposition'])
         self.assertFalse(out['training_admitted'])
 
     def test_missing_prefix_does_not_skip_to_later_correct_attempt(self):

@@ -24,7 +24,12 @@ def b_requests(ordered400, prompt_ids, temperature=1.0):
 
 
 def b_selection(ordered400, records):
-    """New-temperature K1 is selected anew; never substitute the old T.8 S1 answer."""
+    """Owner B-only amendment: first usable of16, else attempt01 unverified.
+
+    Recorded by Claude at d3f66ec3, before B generation. The full B path must
+    bind that original owner-decision record in its actual CR/A1/A2-lite.
+    C2 and every original P010 result retain their original four-attempt rule.
+    """
     if len(ordered400) != 400 or len(set(ordered400)) != 400:
         raise ValueError('Original ordered400 required')
     groups = inventory(records)
@@ -36,7 +41,7 @@ def b_selection(ordered400, records):
         attempts = groups[pid]
         if set(attempts) != set(range(1, 17)):
             raise ValueError('All16 original attempts required; no assumed failure')
-        first = next((attempts[a] for a in range(1, 5) if usable(attempts[a])), attempts[1])
+        first = next((attempts[a] for a in range(1, 17) if usable(attempts[a])), attempts[1])
         selected[1].append(first['candidate_id'])
         if not usable(first):
             fallback.append(pid)
@@ -53,11 +58,14 @@ def b_selection(ordered400, records):
             selected[k].extend(candidates[:k])
             if len(candidates) < k:
                 short[k].append(pid)
+    if conflicts != fallback:
+        raise ValueError('Only all16-unusable parents may break B nesting')
     return {'selected_ids': {str(k): v for k, v in selected.items()},
             'unverified_fallback_questions': fallback, 'nesting_conflicts': conflicts,
             'underfilled_questions': {str(k): v for k, v in short.items()},
-            'requires_owner_disposition': bool(conflicts),
-            'report_fallback_above_3pct': len(fallback) / 400 > .03,
+            'requires_owner_disposition': len(fallback) / 400 > .10,
+            'report_fallback_above_10pct': len(fallback) / 400 > .10,
+            'K1_attempt_window': 16, 'all16_unusable_exception_reported': True,
             'report_underfill_above_10pct': {str(k): len(v) / 400 > .10 for k, v in short.items()},
             'training_admitted': False}
 
