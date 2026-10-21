@@ -1,3 +1,9 @@
+## Original measured evidence now fixed — 2026-10-21T11:11:43.360678+00:00
+
+Exact [three-arm measured packet](long_preflight_measured_evidence_v1/README.md) at **fdf8bd86c5113c1f716ab749d24f4f2a9faaf8ac**:120 members plus manifest, all original32 raw endpoints per arm, complete cycles, terminal-phase/engine/load timings, original claim/fences/receipt/provider, and explicit private-binary projections. All three models and collections are DONE. Two LoRA local full oracles PASS; fullparameter pre-entry failure remains pending the explicit local-only disposition below. This packet does not fabricate that proof or rerun any old state load/oracle.
+
+Whole update maxima recorded6.268969214 /4.354440685 /7.637578009 seconds forL15/F15/L3; whole32 endpoint batches60.341567463 /10.159466284 /90.013045967 seconds. Original two-answer update has32541 supervised tokens, while formal updates target about64k. Formal512 throughput and device-memory peak bytes were not measured. These are empirical observations, not certified upper bounds or scientific smoke scores. Concrete source44 numeric SPEC is being prepared with explicit scaling and local scoring-window evidence; it remains unadmitted. Original owner caps, no new measurement exception and all failed reserves remain.
+
 ## Formal44 source accepted; actual numerical appendix follows — 2026-10-21T11:02:09.540358+00:00
 
 Claude a51adc62 exact44-source report SHA83d5d8c9a4ad6e63afb9b15a51be2261843c242978ae88b0f9e112782b6830e5 is truly PASS at61989e7b, with all six source flags. [Saved acceptance](review_a51adc62_long44_and_B_erratum_accepted_v1/README.md) fixed at5993ccef3da13a68b9c988a173b36de8161e9974. No upload, input reconstruction or formal model is admitted. Actual engineering/state/timing/memory, concrete formalSPEC/nine numeric flags and original Claude smoke selection still follow in the same shared request.

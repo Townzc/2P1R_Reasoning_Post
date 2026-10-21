@@ -2895,3 +2895,7 @@ Engineering original entries27955/73153/58991 all realcompleted; uploads91171/62
 Current91-source B appendix at5993ccef3da13a68b9c988a173b36de8161e9974 adopts truea51adc62 protected0 erratum; all failed reserves and original science retained. Four new tests passed once, old successes untouched. Formal44 source accepted, numeric/selection not accepted. Three original engineering models and collections completed; LoRA15/LoRA3 full oracles passed. Fullparameter local audit exited before directory/ATTEMPT because newHEAD was unpushed: operator sequencing failure, no state/model/scoring work. Original evidence preserved and one local-only disposition appended to shared review, no automatic retry. Earlier remoteverify succeeded before a later CLI-record KeyError; only unwritten CLI tail repaired, no repeated remoteverify. P01019UTC freeze/finalA5 retained.
 
 Metadata correction: this new entry initially used a guessed docs/ log path, creating a new file; it was moved to the actual canonical log before push. No existing log or scientific artifact was overwritten.
+
+### 2026-10-21 04:11:43 PDT — P011 original engineering material
+
+Published actualthree-arm32-request/two-update evidence atfdf8bd86c5113c1f716ab749d24f4f2a9faaf8ac;120payload+manifest newly verified once. Three originalmodels/collectionsclosed; two fulloraclespassed; F15 local pre-entry disposition stillpending. No oldmodel/score/oracle/check repeated, no formal512 throughput or peak memoryclaim. Exact timing/numeric source44 appendix follows.
