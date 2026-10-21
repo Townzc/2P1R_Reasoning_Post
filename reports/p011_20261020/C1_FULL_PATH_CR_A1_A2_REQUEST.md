@@ -1,3 +1,21 @@
+# Final C1 actual A2-lite accepted — 2026-10-21T05:31:57.122171+00:00
+
+Claude0103c6eb/reportSHAfebba88b448eaa6d31882db03c26a29b1ba709f752330bb0d2b2df005b7719f3
+PASS-WITH-NOTES binds originaltarget270db4a6/SPEC416f80bb/source13/input18/
+inventory/timing/ownerboundedexception and all six actualflags. Current owner
+attestation and prior-obligation D1 scope expressly accepted FOR C1 ONLY.
+[Accurate acceptance and public privacy projection](review_0103c6eb_C1_full_A2_accepted_v1/README.md).
+The full original rawreport remains private and SHA-bound. No APIbalance reading
+or renewed owner observation claimed. Actual entry must still enforce fresh<=1h
+budget, fullresource rate, sharedledger/provider/unused/fullwindow. One upload and
+one modal_c1::main now permitted when those trueentryconditions fit. No oldcopy/
+tests/science reruns, no source edit. A/D budget scope is separate and unresolved.
+Acceptance metadata first used nonexistent SPEC.original_plan_commit and failed
+before any write; fixed to the exact originalplan string stated by the report,
+original failedscript retained, no production sideeffects.
+
+--- Prior reviewed submission history ---
+
 # Current owner balance received; exact numerical A2 ready for review — 2026-10-21T04:59:00.055460+00:00
 
 Same request and scope; new combined target **`270db4a6fed92d310dd7a263269702bd13ed4ffe`** includes unchanged

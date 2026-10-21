@@ -1,3 +1,5 @@
+P011 2026-10-21T05:31:57.122171+00:00: [C1 actual final A2 accepted](review_0103c6eb_C1_full_A2_accepted_v1/README.md), one run subject to fresh entrychecks.
+
 P011 2026-10-21T05:29:40.100439+00:00: [Complete B shared runtime review](B_FULL_PATH_CR_A1_A2_REQUEST.md),71source/20newchecks; no actualinput/model.
 
 P011 2026-10-21T05:06:22.621094+00:00: [B input and student adapters prepared](b_input_student_adapter_draft_v1/README.md);8newchecks, original training body retained. FullB runtime not yet ready. C1 exactA2 and longsourceCR pending; no new scientific call.
