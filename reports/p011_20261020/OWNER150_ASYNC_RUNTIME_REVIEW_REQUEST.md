@@ -1,3 +1,7 @@
+### 2026-10-21T20:55:03.826484+00:00 — New actual fallback-results review request
+
+Both original controls and all8contrasts are complete; see [FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md](FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md), fixed469cbaa0acc839eae3714b5174320354d0d0e5eb. This actual A3 is separate from the pending closed-collector and optional-accounting asynchronous source review. Original active worker sources remain unchanged; no review wait is added to owner dispatch policy.
+
 # Direct-owner operational amendment: asynchronous complete-path review
 
 The direct human 2026-10-21 12:40 PDT instruction is preserved in owner150_runtime_v1/OWNER_DIRECT_AMENDMENT.txt. It supersedes prior A hold/default closure, category reservations, the 80-percent forecast stop, four slots and pre-execution CR approval. Publish this exact diff and dispatch immediately; Claude review requested within 30 minutes of publication. A scientific correctness bug stops affected work; infrastructure-only failures allow one separately recorded retry.

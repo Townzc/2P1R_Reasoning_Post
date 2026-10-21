@@ -1,3 +1,11 @@
+### 2026-10-21T20:55:03.826484+00:00 — Both fallback controls complete; actual A3 requested
+
+Fixed results 469cbaa0 / fallback_clean_complete_results_v1:6907 original members,19887359B archive,8 new public Git files verified once. Clean400/3200 each1024updates/2097148targets/2500outputs, technicalunknown0. Greedy252/268 of500; sampled1009/1041 of2000. All8 paired comparisons saved; sampled gains vs originalT72 +0.90pp[-1.30,3.10] and+0.20pp[-1.75,2.20]. These do not establish that fallback cleaning mainly explains the teacher gap. Coverage/exposure/posthoc/single-seed and frozen-scorer limits retained. Actual A3 pending exact5flag independent review; no repeated science.
+
+Original clean3200 model56463/collect16400/oracle78273/score31028, new analysis37775/publication98315 all EXIT0CONSUMED. Clean400 original DONE unchanged. Never rerun these calls, scripts or archives. Six original A/D workers remain active; baseline original RESULT is complete but shared app remains active. Wait whole original app STOPPED0 for new closed_io collection; withdrawn call_io never used again. Optional A4→A3→A2/A8 remains unsubmitted, subject to all-nine accounting, fresh necessary cost evidence,8slots and22:30 cutoff. Old owner_hold/80%/failed reservation gates superseded. P010 actual finalA5 closed.
+
+This heartbeat's initial CLI metadata read hit a non-dict value, and an optional-command filename was guessed with .md instead of .txt; both read-only misses were corrected, no scientific operation repeated. Earlier broad display was truncated. Private incident receipt retained. No new tests, billing, provider queries for old jobs or external messages.
+
 ### 2026-10-21T20:34:52.285202+00:00 — Clean400 model completed; optional accounting prepared
 
 Original clean400CLI45170 EXIT0CONSUMED, RESULT finished1792614626.8916326, 1024updates and2500raw. Firstcollector21994 ACTIVE_UNCONSUMED logFALLBACK_N400_FIRST_COLLECT; no oracle/score yet. Original clean3200CLI56463 remains active. All9 submitted, max8; baseline previouslycomplete. Never repeat uploads/inputs/model or consume closedCLI.
