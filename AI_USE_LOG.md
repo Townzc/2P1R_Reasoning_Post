@@ -1,3 +1,14 @@
+### 2026-10-20 21:59:00 PDT — Direct current balance received; C1 exact budget sent for A2
+
+Owner answered the current-balance question in this chat. It is current direct
+attestation, not the old approximate plan value or independent platform read.
+Private rawreply/budget hashes fixed at270db4a6fed92d310dd7a263269702bd13ed4ffe; private balance notpublic.
+Retain latestP010 effective158.17 and grossrevision0.15; candidate3.74 arithmetic
+coversprotected48. Same C1 A2 request now includes exactSPEC and budget evidence;
+independent D1scope acceptance stillrequired. Owner notpending, no repeatquery.
+3newGitfiles verified once; before-publication STATUS.json source-locator fix
+retained privately, no science effects. No actual reserve/upload/model/oldtests.
+
 ### 2026-10-20 21:54:28 PDT — C1 exact source PASS, concrete SPEC; OT3 narrow review closed
 
 Claude96430ebd C1 exact13source PASS and efc4ccd3 OT3 field-name correction

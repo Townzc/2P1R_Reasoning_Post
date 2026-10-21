@@ -1,3 +1,30 @@
+# Current owner balance received; exact numerical A2 ready for review — 2026-10-21T04:59:00.055460+00:00
+
+Same request and scope; new combined target **`270db4a6fed92d310dd7a263269702bd13ed4ffe`** includes unchanged
+SPEC `c1_runtime_v1/SPEC.json` SHA416f80bba5cb97162ec170b3f8410082a3f3175b098ad5840e5d6cd6e99395eb.
+[Current owner budget appendix](c1_owner_balance_budget_addendum_v1/README.md),
+MANIFEST SHA `6e266c97231b593167935dca0a8c91d2f74fd2031a0fe8646c2a3f05d2099d6d`.
+The direct reply to the current-balance question has arrived; **not waiting for
+owner and do not ask again**. Full private attestation and budget retained,
+fileSHA bound publicly. No private balance/account identity is published.
+
+Candidate3.74USD and source/input remain unchanged. Budget fileSHA
+`9e4ad61420fff4f22a5dcea752b759afdf1df0f6bb001d7b57f12d2f9509b5c3`; D1proofSHA `7c2f1d2c79869e58b74ead617791b9a4246459e45731794c3ca1f9f89459b065`;
+owner-current-attestationSHA `9359a21cf935194dbff7e105b8b54ed59f48422289015985cf9af78f9d5b3a26`.
+Current owner attestation replaces the missing-balance state below, not a
+browser/API verification. Entire latestP010 effective158.17 reserve plus0.15
+downward gross revision retained; reported remaining floor covers48+3.74.
+No older closed cost reconstructed or reserve silently released. Please explicitly
+accept this D1 prior-obligation scope and owner-attestation evidence limitation,
+as well as original6flags/exactSPEC/source13/input/owner-exceptionSHA/measurement1.
+If unsupported, identify the specific missing obligation/evidence; no current
+model/upload/reservation exists. Freshness is required again by the actual entry;
+review delay does not waive the original<=1h budget observation rule.
+Original runtime caps and full10260 window unchanged; no new scientific arm,
+retry, source edit, inputcopy, test or oldverification. Source PASS alone is notA2.
+
+--- Prior numerical/source history retained below ---
+
 # Concrete C1 SPEC and numerical A2-lite follow-up — 2026-10-21T04:54:28.152670+00:00
 
 Same request `p011-C1-complete-path-CR-A1-A2-lite-r1`; exact new target **`c30d999394b003c57138067feadb28d380f289c1`**.
