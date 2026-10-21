@@ -1,3 +1,5 @@
+P011 2026-10-21T03:22:45.835841+00:00: [OT3 actual A1 and diagnostic CR accepted](review_d229bb27_OT3_A1_and_diagnostic_CR_accepted_v1/README.md). One authorized read-only diagnostic is active; no new model or paid call. C1 input A1/timing remain pending.
+
 P011 2026-10-21T03:12:36.725360+00:00: [C1 actual inputs and timing correction](C1_FULL_PATH_CR_A1_A2_REQUEST.md). Original sourceCR accepted; one input copy DONE9594unique/300chunks. ActualA1/newtiming-sourceCR/numeric remain pending;0forward/upload/paid.
 
 P011 2026-10-21T02:44:10.654490+00:00: [C1 shared full-path review](C1_FULL_PATH_CR_A1_A2_REQUEST.md), source12 and15new checks prepared; actual inputs/timing/paid admission absent. NFC actualA1 and diagnosticCR still pending.

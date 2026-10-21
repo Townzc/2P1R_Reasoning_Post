@@ -1,3 +1,39 @@
+OT3 review packet inventory addendum: final fixed556f674b03c100eeb52e642ae1e0823b3078be20; PUBLIC_MANIFEST
+is authoritative. Original writer captured an empty self-entry, retained unchanged
+with MANIFEST_ERRATUM. Corrected inventory reuses original payload hashes and
+binds the old flawed manifest as history. Initial9distinct Gitfiles had1duplicate
+manifest comparison; only2new correction files checked once. No originaldata,
+report/scientific source/model or live diagnostic changed. This preparation
+failure is separate from the earlier proof-key guard stop and is fully retained.
+
+### 2026-10-20 20:22:45 PDT — OT3 actual input A1 and read-only diagnostic CR accepted
+
+Fixed Claude reports from already-observed d229bb27 read03:18:18.662202UTC,
+without another branch-head poll. Actual input report68372145/event02:39:16,
+SHAa3d06de72bf4c7afa05fe76d43f496eda08fc6b1e2e9dabec74087700b6ae392, PASS-WITH-NOTES; self-describedaround03:10
+kept distinct. Diagnostic reportd143b4ed/event02:30:56,
+SHA97e514e45607c09b9a1ff3c4b0dda5ce5734bd97d27e27ef8ab933f22d49d986, exact4source980dd073 PASS/all7flags;
+self-describedaround02:35 separate. Public acceptance packetc1b3df45295db133d5fed659e82b99a306f02e81;
+9distinct newGitfiles plus one duplicate manifest comparison. Original report bytes and reviewer resultJSON copied;
+reviewer scripts, dose replay, tokenization and old verifications not executed.
+
+A1 covers10080answers/4032parents/B41813212/U654/amended8grid and965byte reuse.
+No runtime/model/paid admission. Reviewer did not decode withtokenizer or access
+private43GBSQLite/privateacceptance; 252full16orders checked, remaining3780 only
+nestedprefixes. Strongall16selection/difficultyabsence/fiveunclosedthink and
+16–17exposures retained. Both failed parents remainfailed; AMoldA1 unchanged.
+
+One trueCR-admitted local diagnostic19683ACTIVE_UNCONSUMED; source4 unchanged,
+newpermanentfence/output present. Original43GBDB/disposition hashes checked as
+inputs to this new diagnostic, not repeated oldpreserver. No selectionchange,
+encoding/scoring/model/cloud/billing. Fullresult notavailable; no partial scores.
+BoundedlocalcaffeinatePID70593 -i -t3900 only for this actual task, clean whenclosed.
+Initial publication substringguard stopped on assistantmetadata key
+only_fixed_non_Z1_reports_read after2reports copied; unpublishedpartial0da75cf1
+retained, onlyunwrittenmetadata completed, no Z1 data read or science impact.
+C1 copy/timingpublication remainsDONE/0forward; nextC1normal03:45:15UTC.
+P010Oct21 19UTC freeze/finalA5 remains independent. Noexternalposts/subagents.
+
 ### 2026-10-20 20:12:36 PDT — C1 true source acceptance, actual input copy, timing correction
 
 Owner asked to read latestC1 and proceed only when admitted. Real Claude

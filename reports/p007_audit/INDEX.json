@@ -4162,7 +4162,7 @@
       "request_id": "p011-OT3-readonly-completeness-diagnostic-CR-r1",
       "scope": "p011-OT3-readonly-completeness-diagnostic-CR",
       "target_commit": "980dd073dd597fa511341ee08294695530463d10",
-      "status": "PENDING_EXACT_SHORT_CR",
+      "status": "DONE_PASS_READONLY_DIAGNOSTIC_CODE_ONLY",
       "request_file": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md",
       "submitted_utc": "2026-10-21T02:11:25.140710+00:00",
       "source_files": {
@@ -4174,13 +4174,22 @@
       "manifest_sha256": "78362f33fda7d42d67bce470bbbc96dd5b5775c61bd490c57efa10aa7e05a601",
       "real_diagnostic_run": false,
       "owner_report_commit": "c7977d2a31c91234f19fd7e6fb34c8757f3091a0",
-      "owner_report_sha256": "4e8157658c1e521dae9a42323d25226859381dd0a283b7bd38c2a5606567e3a6"
+      "owner_report_sha256": "4e8157658c1e521dae9a42323d25226859381dd0a283b7bd38c2a5606567e3a6",
+      "accepted_utc": "2026-10-21T03:18:18.662202+00:00",
+      "report_commit": "d143b4ed44103b9276c3758e5b1da66c763d4435",
+      "report_sha256": "97e514e45607c09b9a1ff3c4b0dda5ce5734bd97d27e27ef8ab933f22d49d986",
+      "report_git_path": "audit/claude/20261021c/REPORT_DIAGNOSTIC_CR.md",
+      "acceptance_packet": "reports/p011_20261020/review_d229bb27_OT3_A1_and_diagnostic_CR_accepted_v1",
+      "acceptance_packet_commit": "556f674b03c100eeb52e642ae1e0823b3078be20",
+      "model_or_training_admitted": false,
+      "acceptance_packet_manifest": "PUBLIC_MANIFEST.json",
+      "acceptance_packet_manifest_sha256": "716aea597f423780320e46bd233d52ebfba56d1f5bc884467172af4cde08836f"
     },
     {
       "request_id": "p011-OT3-NFC-complete-input-and-dose-A1-r1",
       "scope": "p011-OT3-NFC-complete-input-and-dose-A1",
       "target_commit": "20044d50cee1acbef0b1aa17ed559e8f0311d98a",
-      "status": "PENDING_ACTUAL_INPUT_A1",
+      "status": "DONE_PASS_WITH_NOTES_ACTUAL_INPUT_A1_ONLY",
       "request_file": "reports/p011_20261020/OT3_NFC_COMPLETE_ACTUAL_A1_REQUEST.md",
       "submitted_utc": "2026-10-21T02:19:20.078375+00:00",
       "public_manifest_sha256": "fcf5e0fa969531437549b38f06e6fcca6f01fb69c216ca11da06ab1101d23f19",
@@ -4197,7 +4206,16 @@
       "B": 41813212,
       "U": 654,
       "original_cli_state": "32741_EXIT0_CONSUMED",
-      "new_scientific_model_calls": 0
+      "new_scientific_model_calls": 0,
+      "accepted_utc": "2026-10-21T03:18:18.662202+00:00",
+      "report_commit": "683721454924f056648a01bf15e2eee04884821e",
+      "report_sha256": "a3d06de72bf4c7afa05fe76d43f496eda08fc6b1e2e9dabec74087700b6ae392",
+      "report_git_path": "audit/claude/20261021d/REPORT_A1_OT3_NFC_COMPLETE_INPUTS.md",
+      "acceptance_packet": "reports/p011_20261020/review_d229bb27_OT3_A1_and_diagnostic_CR_accepted_v1",
+      "acceptance_packet_commit": "556f674b03c100eeb52e642ae1e0823b3078be20",
+      "model_or_training_admitted": false,
+      "acceptance_packet_manifest": "PUBLIC_MANIFEST.json",
+      "acceptance_packet_manifest_sha256": "716aea597f423780320e46bd233d52ebfba56d1f5bc884467172af4cde08836f"
     },
     {
       "request_id": "p011-C1-complete-path-CR-A1-A2-lite-r1",
@@ -6104,9 +6122,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T03:12:36.725360+00:00",
+  "last_updated_utc": "2026-10-21T03:22:45.835841+00:00",
   "p011": {
-    "status": "OT3_NFC_inputs_complete_actual_A1_and_readonly_diagnostic_CR_pending",
+    "status": "OT3_actual_input_A1_accepted_readonly_diagnostic_running_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6124,7 +6142,7 @@
     "exploratory": true,
     "production_construction_run": true,
     "scientific_calls": 0,
-    "pending_path_CR": "p011-OT3-confirmed-encoding-NFC-continuation-CR-r1",
+    "pending_path_CR": "p011-C1-complete-path-CR-A1-A2-lite-r1",
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
     "raw_downloads": "all_complete_and_SHA_verified",
@@ -6166,7 +6184,7 @@
     "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
     "independent_leaf_drafts": "reports/p011_20261020/c1_short_generation_drafts_v1",
     "scientific_model_calls": 0,
-    "actual_A1": false,
+    "actual_A1": true,
     "long_runtime_leaf_drafts": "reports/p011_20261020/long_runtime_drafts_v1",
     "actual_data_target": "cf9a12e4f3cfb883b09be603c8aa5d79206c90f3",
     "actual_data_request": "reports/p011_20261020/LONG_DATA_ACTUAL_A1_REQUEST.md",
@@ -6229,8 +6247,8 @@
     "last_review_head": "d229bb2764f1a33aa897ab5b31c06e444cd43c44",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
-    "OT3_4032_actual_A1_accepted": false,
-    "data_review_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1",
+    "OT3_4032_actual_A1_accepted": true,
+    "data_review_packet": "reports/p011_20261020/review_d229bb27_OT3_A1_and_diagnostic_CR_accepted_v1",
     "ot3_NFC_candidate": "10738e624300ff125c59fd127e798bc4e5fbdc85",
     "ot3_NFC_owner_exception_approved": true,
     "ot3_NFC_production_executed": true,
@@ -6259,7 +6277,7 @@
     "ot3_diagnostic_owner_report": {
       "packet": "reports/p011_20261020/review_c7977d2a_NFC_complete_CR_and_diagnostic_request_v1",
       "report_sha256": "4e8157658c1e521dae9a42323d25226859381dd0a283b7bd38c2a5606567e3a6",
-      "actual_diagnostic_executed": false,
+      "actual_diagnostic_executed": true,
       "exact_code_review_required": true,
       "selection_change_authorized": false
     },
@@ -6267,11 +6285,15 @@
       "target_commit": "980dd073dd597fa511341ee08294695530463d10",
       "packet": "reports/p011_20261020/ot3_completeness_diagnostic_preflight_v1",
       "request": "reports/p011_20261020/OT3_COMPLETENESS_DIAGNOSTIC_CR_REQUEST.md",
-      "status": "PREPARED_NOTRUN_PENDING_CR",
+      "status": "CODE_PASS_ACTUAL_ORIGINAL_RUN_ACTIVE",
       "source_count": 4,
-      "new_checks": 12
+      "new_checks": 12,
+      "actual_session_id": 19683,
+      "repeat_allowed": false,
+      "acceptance_packet": "reports/p011_20261020/review_d229bb27_OT3_A1_and_diagnostic_CR_accepted_v1",
+      "acceptance_packet_commit": "556f674b03c100eeb52e642ae1e0823b3078be20"
     },
-    "OT3_NFC_actual_A1_accepted": false,
+    "OT3_NFC_actual_A1_accepted": true,
     "ot3_NFC_actual_packet": {
       "target_commit": "20044d50cee1acbef0b1aa17ed559e8f0311d98a",
       "packet": "reports/p011_20261020/ot3_nfc_inputs_actual_v1",
@@ -6298,9 +6320,8 @@
       "paid_reservation_usd": 0,
       "actual_input_packet": "reports/p011_20261020/c1_inputs_actual_v1"
     },
-    "new_OT3_report_filenames_seen_but_not_read_this_C1_turn": [
-      "audit/claude/20261021c/REPORT_DIAGNOSTIC_CR.md",
-      "audit/claude/20261021d/REPORT_A1_OT3_NFC_COMPLETE_INPUTS.md"
-    ]
+    "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
+    "last_full_review_read_utc": "2026-10-21T03:18:18.662202+00:00",
+    "active_local_readonly_diagnostic": 1
   }
 }
