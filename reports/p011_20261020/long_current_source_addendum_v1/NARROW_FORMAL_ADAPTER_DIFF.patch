@@ -1,0 +1,114 @@
+--- experiments/p011/long_path.py
++++ experiments/p011/long_current_path.py
+@@ -1 +1 @@
+-"""Complete A/D admission and once-only lifecycle; no selected actual SPEC.
++"""Current-owner A/D admission; original science and logical IDs remain fixed.
+@@ -9,0 +10 @@
++import math
+@@ -18 +19,2 @@
+-from experiments.p011 import long_training, long_execution, long_numeric, long_transport
++from experiments.p011 import long_training, long_execution, long_numeric, long_transport, failed_attempt_ledger
++from experiments.p011.c1_r2 import parent
+@@ -23 +25,4 @@
+-SPEC='reports/p011_20261020/long_runtime_v1/SPEC.json'
++SPEC='reports/p011_20261020/long_current_runtime_v1/SPEC.json'
++BUDGET_OWNER_SHA='364aaf6cd70fa9cf1a89902af6dedb33a1b64d7c47e73a12b37b6b97dfb69a2f'
++LOCAL_INPUT_DIRECTORY='long_inputs_numeric_gold_r1'
++AUDIT_METADATA_NAMES={'config.json','generation_config.json','tokenizer.json','tokenizer_config.json','special_tokens_map.json','vocab.json','merges.txt','added_tokens.json'}
+@@ -40,0 +46,4 @@
++            or spec.get('budget_owner_decision_sha256')!=BUDGET_OWNER_SHA
++            or not spec.get('prior_failed_C1') or not spec.get('failed_attempt_bindings')
++            or spec.get('actual_input_directory')!=LOCAL_INPUT_DIRECTORY
++            or not re.fullmatch(r'[0-9a-f]{64}',str(spec.get('actual_input_binding_sha256','')))
+@@ -75,0 +85,9 @@
++        metadata=model.get('local_audit_asset_files',{})
++        prior=model.get('preflight_asset_readback',{})
++        expected_readback=str(Path(LOCAL)/'long_preflight_io_r1/model_uploads'/model['revision']/'COMPLETED.json')
++        if (not {'config.json','generation_config.json','tokenizer.json','tokenizer_config.json'}<=metadata.keys()
++                or not metadata.keys()<=AUDIT_METADATA_NAMES
++                or any(model['files'].get(n)!=v for n,v in metadata.items())
++                or prior.get('path')!=expected_readback
++                or not re.fullmatch(r'[0-9a-f]{64}',str(prior.get('sha256','')))):
++            raise ValueError('Pinned local audit metadata and original preflight asset readback required')
+@@ -106 +124,5 @@
+-        source_files=spec['source_files'],jobs_sha256=digest(spec['jobs']),measurement_exceptions=0)
++        source_files=spec['source_files'],jobs_sha256=digest(spec['jobs']),measurement_exceptions=0,
++        budget_owner_decision_sha256=BUDGET_OWNER_SHA,
++        prior_failed_C1_sha256=digest(spec['prior_failed_C1']),
++        failed_attempt_bindings_sha256=digest(spec['failed_attempt_bindings']),
++        actual_input_directory=LOCAL_INPUT_DIRECTORY,actual_input_binding_sha256=spec['actual_input_binding_sha256'])
+@@ -109 +131,3 @@
+-        'full_state_raw_scoring_window_and_budget_accepted','remote_paths_traced_to_producers')
++        'full_state_raw_scoring_window_and_budget_accepted','remote_paths_traced_to_producers',
++        'current_owner_budget_and_failed_reservations_accepted',
++        'completed_numeric_gold_inputs_and_prior_asset_reuse_accepted')
+@@ -142 +166,3 @@
+-    if (not 0<=now-budget['observed_epoch']<=3600 or slots>=4
++    if (type(now) not in (int,float) or not math.isfinite(now)
++            or type(budget.get('observed_epoch')) not in (int,float) or not math.isfinite(budget['observed_epoch'])
++            or not 0<=now-budget['observed_epoch']<=3600 or slots>=4
+@@ -145 +171,2 @@
+-            or budget.get('overall_cap_usd')!='180' or budget.get('protected_usd')!='48'
++            or budget.get('overall_cap_usd')!='180' or budget.get('protected_usd')!='0'
++            or budget.get('budget_owner_decision_sha256')!=BUDGET_OWNER_SHA
+@@ -148 +175 @@
+-            or budget.get('availability_basis')!='delayed_gross_plus_retained_reserves_conservative_floor'
++            or budget.get('availability_basis')!='owner_current_balance_minus_retained_P011_reserves_and_meter_growth'
+@@ -152 +179,2 @@
+-            or Decimal(str(budget['available_after_retained_prior_reserves_usd']))-reserve<48
++            or (not Decimal(str(budget['available_after_retained_prior_reserves_usd'])).is_finite()
++                or Decimal(str(budget['available_after_retained_prior_reserves_usd']))-reserve<0)
+@@ -164 +192 @@
+-        protected_usd='48',not_actual_expense=True)
++        protected_usd='0',budget_owner_decision_sha256=BUDGET_OWNER_SHA,not_actual_expense=True)
+@@ -179 +207 @@
+-        fcntl.flock(lock.fileno(),fcntl.LOCK_EX);records=lifecycle.ledger(root);obs=observation(root,records)
++        fcntl.flock(lock.fileno(),fcntl.LOCK_EX);records=parent.records_with_failed_parent(root,spec,failed_attempt_ledger.ledger(root,spec));parent.remote_fences(root,spec,store);failed_attempt_ledger.remote_fences(root,spec,store);obs=observation(root,records)
+--- experiments/p011/modal_long.py
++++ experiments/p011/modal_long_current.py
+@@ -4 +4 @@
+-from experiments.p011 import long_path as path
++from experiments.p011 import long_current_path as path
+@@ -26 +26 @@
+-        from experiments.p011 import long_path as run
++        from experiments.p011 import long_current_path as run
+--- scripts/p011_long_io.py
++++ scripts/p011_long_current_io.py
+@@ -14 +14 @@
+-from experiments.p011 import long_path as path,long_transport,long_evidence,long_scoring,long_score_process
++from experiments.p011 import long_current_path as path,long_transport,long_evidence,long_scoring,long_score_process
+@@ -63,0 +64,11 @@
++def reused_assets(root,job):
++    model=job['model'];binding=model['preflight_asset_readback'];p=Path(binding['path'])
++    expected=Path(path.LOCAL)/'long_preflight_io_r1/model_uploads'/model['revision']/'COMPLETED.json'
++    if p!=expected or (Path(root)/p).is_symlink() or sha(Path(root)/p)!=binding['sha256']:
++        raise ValueError('Original complete asset readback binding differs')
++    proof=read(Path(root)/p)
++    if proof!={'model_files':model['files'],'remote_path':model['remote_path'],'all_remote_file_bytes_read_back':True}:
++        raise ValueError('Original complete engineering asset readback required')
++    return binding['sha256']
++
++
+@@ -66 +77,2 @@
+-    source=root/path.LOCAL/'long_inputs_r1'/job['input_directory'];verify(source,job['local_input_files'])
++    source=root/path.LOCAL/path.LOCAL_INPUT_DIRECTORY/job['input_directory'];verify(source,job['local_input_files'])
++    asset_proof=reused_assets(root,job)
+@@ -72,3 +84,4 @@
+-    # Old1.5B bytes are reused and read back; only missing3B assets may upload.
+-    transfer(volume,root/job['model']['local_path'],job['model']['remote_path'].removeprefix('/evidence'),job['model']['files'],out/'assets')
+-    dump(out/'COMPLETED.json',dict(**intent,all_remote_file_bytes_read_back=True,completed_epoch=time.time(),model_calls=0))
++    # Reuse the exact once-only engineering asset transfer/readback. Formal
++    # upload cannot download, upload or reread already verified model weights.
++    dump(out/'COMPLETED.json',dict(**intent,all_remote_file_bytes_read_back=True,
++        asset_readback_file_sha256=asset_proof,completed_epoch=time.time(),model_calls=0))
+@@ -118,2 +131,3 @@
+-    inputs=root/path.LOCAL/'long_inputs_r1'/job['input_directory'];verify(inputs,job['local_input_files'])
+-    assets=root/job['model']['local_path'];verify(assets,job['model']['files']);config=read(assets/'config.json')
++    inputs=root/path.LOCAL/path.LOCAL_INPUT_DIRECTORY/job['input_directory'];verify(inputs,job['local_input_files'])
++    reused_assets(root,job)
++    assets=root/job['model']['local_path'];verify(assets,job['model']['local_audit_asset_files']);config=read(assets/'config.json')
+--- scripts/analyze_p011_long_pair.py
++++ scripts/analyze_p011_long_current_pair.py
+@@ -4 +4 @@
+-from experiments.p011 import long_path as path,long_evaluation
++from experiments.p011 import long_current_path as path,long_evaluation
