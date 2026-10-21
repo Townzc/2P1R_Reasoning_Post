@@ -5179,13 +5179,14 @@
       "request_id": "p011-B-student-complete-results-and-contrasts-actual-A3-r1",
       "scope": "p011-B-student-complete-results-and-contrasts-actual-A3",
       "target_commit": "4d4f0e680c760d6c4125f1c28acd05666e973dbb",
-      "status": "PENDING",
+      "status": "PASS_WITH_NOTES_ACCEPTED",
       "request_file": "reports/p011_20261020/B_STUDENTS_COMPLETE_RESULTS_ACTUAL_A3_REQUEST.md",
       "result_manifest_sha256": "ec81a017120a644d84e3f649ac08585ebd6dc1f6f59803f30004ffb48a554294",
       "actual_result_binding_sha256": "3bad44e5302536084f4d202b9fcc85fae4a0219c8dbfd16ccdc429b1848dad19",
       "submitted_utc": "2026-10-21T18:56:15.908011+00:00",
       "source100_model_and_source101_tail_exception_distinct": true,
-      "private_binary_access_not_claimed": true
+      "private_binary_access_not_claimed": true,
+      "report_sha256": "a893c79e5c742e3c083a8b3ec6e1e3ac244462355f0b096406ee67e04927961d"
     },
     {
       "request_id": "p010-final-frozen-technical-evidence-A5-20261021-r1",
@@ -5205,14 +5206,22 @@
       "request_id": "p011-D-first-preentry-publication-failure-exception-r1",
       "scope": "p011-D-first-preentry-publication-failure-exception",
       "target_commit": "a3a5da834f7ec726e14370b6c5958cb5537d5558",
-      "status": "PENDING_EXPLICIT_REASONED_PREENTRY_EXCEPTION",
+      "status": "EXCEPTION_ACCEPTED_SUBSEQUENT_DIRECT_OWNER_AMENDMENT",
       "request_file": "reports/p011_20261020/D_PREENTRY_PUBLICATION_FAILURE_EXCEPTION_REQUEST.md",
       "failure_manifest_sha256": "c0f5ec6e7f325caeacbc9d4fd20b2445f6f7dddd7eae531e704373325a4922f4",
       "failure_binding_sha256": "d38a4c94b4b23738f7944d4a524a657f7e5031a2c5274de8fd9425c274b9a2d7",
       "submitted_utc": "2026-10-21T19:01:51.606166+00:00",
       "new_D_model_calls": 0,
       "D_reserve_created": "0",
-      "original_uploads_complete": true
+      "original_uploads_complete": true,
+      "report_sha256": "880e9524df7eb6dc3c0edb59e39068ab5ce96ac3adfbba064bec27450f7a0d22"
+    },
+    {
+      "request_id": "p011-owner150-asynchronous-complete-path-CR-r1",
+      "scope": "p011-owner150-asynchronous-complete-path-CR",
+      "status": "ASYNC_REVIEW_REQUESTED_NOT_A_PREEXECUTION_GATE",
+      "request_file": "reports/p011_20261020/OWNER150_ASYNC_RUNTIME_REVIEW_REQUEST.md",
+      "packet": "reports/p011_20261020/owner150_runtime_v1"
     }
   ],
   "p008_v31": {
@@ -7088,9 +7097,9 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-21T17:57:19.847303+00:00",
+  "last_updated_utc": "2026-10-21T19:53:33.680012+00:00",
   "p011": {
-    "status": "B_MODELS_COMPLETED_LOCAL_ORACLE_ENVIRONMENT_EXCEPTION_PENDING_D_NARROW_CR_PENDING_A_OWNER_HOLD",
+    "status": "DIRECT_OWNER150_INITIAL_SEVEN_PREPARED_ASYNC_CR_B_ACTUAL_A3_ACCEPTED",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -7209,8 +7218,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T18:45:48.234206+00:00",
-    "last_review_head": "ab31e7a37cd3c8aaa0879a8aa732b981aad20c3d",
+    "last_review_observed_utc": "2026-10-21T19:43:40.974555+00:00",
+    "last_review_head": "9e7c2444a2f2918a2f2df5e442a76292be953031",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -7962,7 +7971,7 @@
       "A6_budget_gap_without_authorized_release_or_increase": true
     },
     "B_students_current": {
-      "status": "ORIGINAL_MODELS_COLLECTED_LOCAL_ORACLES_FIRST_SCORES_AND_CONTRASTS_DONE_ACTUAL_A3_PENDING",
+      "status": "COMPLETE_ACTUAL_A3_PASS_WITH_NOTES_ACCEPTED",
       "model_calls": 2,
       "completed_original_models": 2,
       "active_models": 0,
@@ -7979,11 +7988,24 @@
         32774
       ],
       "score_calls": 2,
-      "actual_student_A3_accepted": false,
+      "actual_student_A3_accepted": true,
       "remaining_local_audit": "BOTH_AUTHORIZED_TAILS_EXIT0_ORIGINAL_FAILURES_RETAINED",
       "result_packet": "reports/p011_20261020/b_students_complete_results_v1",
       "result_target": "4d4f0e680c760d6c4125f1c28acd05666e973dbb",
-      "result_request": "p011-B-student-complete-results-and-contrasts-actual-A3-r1"
+      "result_request": "p011-B-student-complete-results-and-contrasts-actual-A3-r1",
+      "actual_A3_report_sha256": "a893c79e5c742e3c083a8b3ec6e1e3ac244462355f0b096406ee67e04927961d",
+      "known_frozen_scorer_false_positive": {
+        "answer": "0.00006704",
+        "gold": ".0000672",
+        "affected_rows": [
+          "B1 sample0 math500/176",
+          "B1 sample3 math500/176"
+        ],
+        "saved_sample_correct": 1031,
+        "reviewer_strict_sensitivity_correct": 1029,
+        "denominator": 2000,
+        "saved_scores_unchanged": true
+      }
     },
     "long_LR_r2_current": {
       "request_id": "p011-long-A-D-complete-path-CR-A1-A2-lite-r1",
@@ -8076,7 +8098,7 @@
       "no_new_job_or_paid_permission_created": true
     },
     "D_pair_current": {
-      "status": "D1_PREENTRY_CLI_FAILED_BEFORE_DISPATCH_EXPLICIT_EXCEPTION_PENDING_D2_HELD",
+      "status": "OLD_PREENTRY_EXCEPTION_ACCEPTED_NEW_DIRECT_OWNER150_SUPERSEDES_EXECUTION",
       "target_commit": "687011075c425de058f35133a44284153a4c6159",
       "packet": "reports/p011_20261020/long_d_pair_predicted_budget_runtime_v1",
       "source_count": 62,
@@ -8115,6 +8137,17 @@
       "scope": "p011-D-F15-pair-complete-path-CR-A1-A2-lite",
       "read_utc": "2026-10-21T18:47:10.983310+00:00"
     },
-    "A_owner_decision_by_19UTC": "NO_NEW_OWNER_DECISION_OBSERVED_HOLD_CONTINUES_NO_AUTOMATIC_RELEASE_OR_CAP_CHANGE"
+    "A_owner_decision_by_19UTC": "NEW_DIRECT_OWNER150_INSTRUCTION_RECEIVED_SUPERSEDES_PRIOR_HOLD",
+    "owner150": {
+      "scope": "A_D_shared_new_spending",
+      "cap_usd": 150,
+      "concurrency": 8,
+      "last_dispatch_utc": "2026-10-21T22:30:00Z",
+      "forecast_termination": false,
+      "smoke_after_results": true,
+      "asynchronous_review": true,
+      "packet": "reports/p011_20261020/owner150_runtime_v1",
+      "actual_dispatches": 0
+    }
   }
 }

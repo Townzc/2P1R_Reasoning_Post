@@ -1,3 +1,9 @@
+### 2026-10-21T19:53:33.680012+00:00 — Direct owner150 amendment and B actual A3
+
+Direct human instruction supersedes old A hold/default closure, retained-reserve accounting, 80% prediction gates and pre-execution CR. Seven A/D calls prepared with exact original scientific jobs, new immutable IDs, worker16200/9000s, max8, shared new150USD, lastdispatch22:30UTC; source/SPEC in owner150_runtime_v1 and asynchronous request OWNER150_ASYNC_RUNTIME_REVIEW_REQUEST.md. New8checks oncePASS, oldscience/tests not repeated. Compute-envelope130.10 is not expense. Actual dispatch still not performed at this metadata write; latest original receipts are authoritative.
+
+Claude9e7c2444 actualB A3 PASS-WITH-NOTES accepted with all5flags and original5000decode scope; frozen scorer has two known B1 sampled false-positive rows (1031 original, reviewer strict sensitivity1029), original scores/contrasts unchanged. Reviewer privatebinary/mathverify limits and factual A count note preserved in review_9e7c2444_B_A3_D_exception_A_disposition_v1. D old preentry exception also accepted, then superseded operationally by new direct owner instruction. P010 actual freeze done; finalA5 still pending. No oldmodel/score/bootstrap/upload repeated.
+
 ### 2026-10-21T19:01:51.606166+00:00 — P010 actual freeze; B actual A3 pending; D preentry failure retained
 
 P010 actualcopyfreeze fixeddb514956281b7492954a3dbecb429117178491cd began19:00:10.760813UTC after scheduled19:00:00 and completed19:00:11.323023. New59files/54original byte copies, manifestfbfa3a5d8e09c7895251d842e2cf06b0d5790fe9487d2109510c3a7ecc2f3038; finalA5 requestp010-final-frozen-technical-evidence-A5-20261021-r1. No old science/statistics/rendering or Z1 originals read. Original CRLF reference CSV bytes produce stylewarnings, wholecheck notPASS; no original bytes rewritten. EarlyA5 is not final.
