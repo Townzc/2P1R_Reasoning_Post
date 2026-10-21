@@ -1,3 +1,15 @@
+## Current-owner and artifact-reuse source appendix - 2026-10-21T09:41:19.518063+00:00
+
+Exact source target **`61989e7b43c3d9d309047cc615b3dc12aba689db`**,44-source map in [SOURCE_BINDING](long_current_source_addendum_v1/SOURCE_BINDING.json); [requirements](long_current_source_addendum_v1/REVIEW_REQUIREMENTS.json) and [narrow diff](long_current_source_addendum_v1/NARROW_FORMAL_ADAPTER_DIFF.patch). This is the same shared request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, source scope `p011-long-A-D-complete-path-CR`; no per-cell or new scientific gate.
+
+Please review four new formal adapters and the imported failed-attempt ledger/parent bindings. The original37-source scientific functions, logical IDs, dose, training, endpoint geometry, complete-state/raw/scoring window and smoke selection are unchanged. Current owner accounting adopts recorded364aaf6c/protected0; failed B3.01 and both C1 reserves6.38 remain. No completed RESULT is fabricated for a failed call.
+
+The correct local input is the already complete `long_inputs_numeric_gold_r1` from61074. The original `long_inputs_r1` is failed evidence, not a runnable input. Formal upload reuses exact complete engineering model-upload receipt hashes without re-downloading/uploading/readback of weights; worker full-model verification stays. Local output audit verifies pinned config/tokenizer metadata, not absent local1.5B weights. Seven new synthetic checks passed once;16newGitfiles verified. No input was rebuilt and no model was invoked.
+
+Original actualinput A1 reportdccd0876 at63e8710f remains accepted. The immutable packet's old pending flag is historical. Full source review needs the six explicit flags in REVIEW_REQUIREMENTS, accurate report SHA/target and exact44-source/binding maps. Source acceptance alone cannot run formal A/D: actual measured engineering evidence, concrete SPEC and asset receipts, full numeric admission/freshbudget and original selection remain pending. Measurement exceptions remain0. No actual formal SPEC exists.
+
+The separate three-arm engineering candidate remains at38942d3a with its own already-accepted actualsubset/numeric evidence and pending narrow failed-ledger CR. This appendix does not modify that candidate or block its review.
+
 Latest 2026-10-21T08:47:00.549726+00:00: Originalcomplete longinputA1 PASS-WITH-NOTES accepted from724ca055. FormalA/Dnumeric/memory/throughput stillpending; engineering subsetsource CR separately accepted.
 Acceptance: reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1
 

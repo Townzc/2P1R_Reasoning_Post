@@ -1,3 +1,9 @@
+### 2026-10-21 02:41:19 PDT - formal long adapter submitted without repeating science
+
+Four new formal adapters at61989e7b43c3d9d309047cc615b3dc12aba689db adopt current-owner accounting, retain failedB3.01/C1both6.38 through exact saved evidence, select completed61074 inputs, and reuse original engineering asset receipts. Local audit requires pinned tokenizer/config metadata, avoiding absent local1.5B weights; the worker fullweight check stays. Original37 scientific sources, IDs/dose/selection/window unchanged. Exact44-source appendix to the same long request;7newchecks PASS0.016s and16newGitfiles verified once. No formalSPEC, actual model, input copy, weight download, old test or score repeated. Original actualinputA1 remains accepted; a stale mutable INDEX false flag was corrected from the real acceptance, immutable packets unchanged. Long engineering failed-ledger CR and explicit B/C2 failure dispositions remain pending.
+
+One local handoff write failed before any write under an incompatible python encoding path, then used the supported interpreter/ASCII JSON. A guessed P011-local INDEX path failed read-only; actual shared INDEX was located with rg. No scientific side effect. Saved automation was updated through the app tool, ACTIVE30min; no external messages/subagents/Z1. P01019UTC freeze remains separate.
+
 ### 2026-10-21 02:27:06 PDT — exact reviews accepted; narrow ledger and C2 failure preserved
 
 Claude72c92281/sourceC2SHA090ab906 andlongpreflightSHA2dd1dc45 fullyread09:17:54UTC; Git09:10:09 andself09:05/09:20 distinct. C2source78PASS-WITH-NOTES andoriginal33sourceactualsubset/numericPASS accepted. Longreportprivatebalancephrase hasexplicitpublicprojection/originalSHA; reportBactivecommenthistorical, actualsavedBSTOPPED0retained.
