@@ -1,0 +1,9 @@
+# Two original T72 K1 fallback-removal controls: actual results pending A3
+
+The direct owner requested these post hoc controls after the C1 observation. Remove only saved unverified_fallback=true rows:13/400 and83/3200, retaining387 and3117 original token rows. Both original seed17 workers completed the same1024updates/2097148target dose and original2500-output/500-question five-endpoint evaluation. No original teacher generation, encoding, model, score, or bootstrap was rerun. The true asynchronous source review found no scientific bug; it is not actual-results A3.
+
+RESULTS.json copies all eight new paired contrasts, including unfavorable results. Original P010 T72/T15 Boolean labels are reused unchanged. The new pointwise question bootstrap intervals do not represent a population of training seeds. Removing answers changes coverage and repeated exposure; even a narrower teacher gap would not isolate text quality as its sole cause. These are exploratory controls, not a preregistered causal or equivalence result. Original frozen scorer rules are unchanged, including their previously disclosed numerical-tolerance limitations.
+
+The new split archive copies original raw tokens, decoded/scoring rows, full runtime journals, state/export summaries, all first-score journals, new vectors and contrasts, original call receipts and STOPPED0 proofs. Private checkpoints, weights and admission accounting are excluded using their original saved inventories without rereading those binaries. Local full state/optimizer/RNG/trajectory oracles ran once; external private-binary access is not claimed. Independent audit must disclose actual decode/correctness coverage and inaccessible evidence.
+
+Both controls conservatively share the owner's new150USD budget with A/D; maximum envelopes are not actual expense. The original hard timers and cutoff were preserved. Course-report interpretation remains the owner's responsibility.
