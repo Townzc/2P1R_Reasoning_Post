@@ -1,3 +1,5 @@
+Latest 2026-10-21T09:27:06.178916+00:00: Claude72c92281/source reportSHA090ab906 is accepted, notpending. Its authorized originalCPUconsumer5923 EXIT1CONSUMED on score=null, with no savedprojection/model. Immutablefailure at38942d3a9380030d3ad885dfe46b6cfb377aad00/c2_original_input_failure_v1. [Delegated exception/disposition request](C2_INPUT_FAILURE_DECISION_REQUEST.md) is pending; no automaticretry. Original78source unchanged. ActualinputA1/numeric stillabsent; originalBsharedtransport risk retained.
+
 Latest 2026-10-21T09:07:49.899463+00:00: New independent Bfailure used the shared oldteacher_transport guard: a375token nativeEOS output has unmappedmodelID151924. Evidence anddecisionrequest atB_FAILED_NATIVE_EOS_REVIEW_REQUEST.md. C2source78unchanged/noactualinput/call; considerthisrisk in pendingCR, noautomaticrulechange.
 
 # C2 full generation/student path: shared CR → actual A1 → numeric A2-lite

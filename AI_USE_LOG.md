@@ -4577,3 +4577,12 @@ includingtransportclassandcompletewindow. No sleepownerquestion/externalmessage.
 Original09:05:35latestwindowisnotfuturepermission. C2sharesoldtransport:riskaddedto
 itspendingsourceCR, noC2rule/source/callchanged. Longactualsubset/spec67877fc1
 requestalreadypublished, remainsawaitingfinalA1/numeric; C1actualA3alreadyaccepted.
+
+
+### 2026-10-21 02:27:06 PDT — exact reviews accepted; narrow ledger and C2 failure preserved
+
+Claude72c92281/sourceC2SHA090ab906 andlongpreflightSHA2dd1dc45 fullyread09:17:54UTC; Git09:10:09 andself09:05/09:20 distinct. C2source78PASS-WITH-NOTES andoriginal33sourceactualsubset/numericPASS accepted. Longreportprivatebalancephrase hasexplicitpublicprojection/originalSHA; reportBactivecommenthistorical, actualsavedBSTOPPED0retained.
+
+Beforepaidentry, oldledger foundto requirecompletedRESULT foractualfailedBSTOPPED0. No longupload/call occurred. Fournewledger/importadapters+SPEC37candidate at38942d3a9380030d3ad885dfe46b6cfb377aad00 preservesoriginal33/jobs/inputs/5.95/900seconds andfailedB3.01+C1both6.38. Nine newchecks pass;6initialsuccessnotrepeated, only3failedfixturemethods fixed/rechecked. Original logstylewarning retained, onlyexcludedcheckPASS.29newGitfilescheckedonce. Same sharedrequest now needs narrowexactreview, notnewscientificscope.
+
+OriginalC2CPU5923 EXIT1CONSUMED onscore=null; permanentfence/FAILED/log preserved,noPACK/encoding/score/model. Readonlyindexmetadata8T72nativeEOS/oldusablefalse/nullscore,T15zero;notfalseBooleanorcorrectness. DelegatedClaudeexplicitdisposition requested, nooriginalrerun orsleepownerquestion. OriginalBfailuredecisionstillpending. No freshbilling/provider/Papers/oldtest/model/scoring. Read-only guessedpath/glob failures hadno scienceeffect. P01019UTCfreeze unchanged.

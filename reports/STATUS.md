@@ -1,3 +1,5 @@
+P011 2026-10-21T09:27:06.178916+00:00: [C1 actualA3 closed, C2 source accepted but originalCPU input failed; delegated disposition pending](p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md). [Long actualsubset/numeric accepted; narrow failed-ledger review pending](p011_20261020/LONG_PREFLIGHT_CR_A1_A2_REQUEST.md). OriginalBfailed/1280raw preserved, no repeat;0activecompute. P01019UTCfreeze separate.
+
 P011 current 2026-10-21T07:24:21.357367+00:00: completed long CPU input61074 and B actualinputA1accepted; three-arm engineering preflight exact33source submitted. C1r2 exactreview pending. No active science or newpaidcall; originalC1r1failure/3.74 retained. Currentowner protected0 withoriginal180/categorycaps unchanged. [Live execution](p011_20261020/README.md).
 
 # Current P011 preparation; P010 scheduled freeze remains

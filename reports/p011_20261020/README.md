@@ -1,3 +1,5 @@
+P011 2026-10-21T09:27:06.178916+00:00: [C1 actualA3 closed, C2 source accepted but originalCPU input failed; delegated disposition pending](C2_INPUT_FAILURE_DECISION_REQUEST.md). [Long actualsubset/numeric accepted; narrow failed-ledger review pending](LONG_PREFLIGHT_CR_A1_A2_REQUEST.md). OriginalBfailed/1280raw preserved, no repeat;0activecompute. P01019UTCfreeze separate.
+
 Latest 2026-10-21T08:35:55.599379+00:00: [C2 full78-source path request](C2_FULL_PATH_CR_A1_A2_REQUEST.md) submitted at `f0a1d8aafc98c671f433f838a9ef278e670d848a`. Source review first authorizes one original-output CPU projection; actual inputs/numeric admission are still required. No C2 production work has run. C1r2 complete actualA3, B numeric and long engineering reviews remain pending. P01019UTC formal freeze remains independent.
 
 P011 2026-10-21T08:03:21.245286+00:00: [C1 r2 complete original-token NLL evidence](c1_r2_complete_results_v1/README.md); all9,594sequences locallyverified/STOPPED0, actualA3 pending. B andlongpreflight exactadmission remainpending.

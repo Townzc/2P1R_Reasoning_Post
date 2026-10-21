@@ -1,3 +1,12 @@
+### 2026-10-21 02:27:06 PDT — exact reviews accepted; narrow ledger and C2 failure preserved
+
+Claude72c92281/sourceC2SHA090ab906 andlongpreflightSHA2dd1dc45 fullyread09:17:54UTC; Git09:10:09 andself09:05/09:20 distinct. C2source78PASS-WITH-NOTES andoriginal33sourceactualsubset/numericPASS accepted. Longreportprivatebalancephrase hasexplicitpublicprojection/originalSHA; reportBactivecommenthistorical, actualsavedBSTOPPED0retained.
+
+Beforepaidentry, oldledger foundto requirecompletedRESULT foractualfailedBSTOPPED0. No longupload/call occurred. Fournewledger/importadapters+SPEC37candidate at38942d3a9380030d3ad885dfe46b6cfb377aad00 preservesoriginal33/jobs/inputs/5.95/900seconds andfailedB3.01+C1both6.38. Nine newchecks pass;6initialsuccessnotrepeated, only3failedfixturemethods fixed/rechecked. Original logstylewarning retained, onlyexcludedcheckPASS.29newGitfilescheckedonce. Same sharedrequest now needs narrowexactreview, notnewscientificscope.
+
+OriginalC2CPU5923 EXIT1CONSUMED onscore=null; permanentfence/FAILED/log preserved,noPACK/encoding/score/model. Readonlyindexmetadata8T72nativeEOS/oldusablefalse/nullscore,T15zero;notfalseBooleanorcorrectness. DelegatedClaudeexplicitdisposition requested, nooriginalrerun orsleepownerquestion. OriginalBfailuredecisionstillpending. No freshbilling/provider/Papers/oldtest/model/scoring. Read-only guessedpath/glob failures hadno scienceeffect. P01019UTCfreeze unchanged.
+
+
 ### 2026-10-21 01:35:55 PDT — C2 complete path submitted for shared source review
 
 Exact78-source candidate `f0a1d8aafc98c671f433f838a9ef278e670d848a` covers original-output reuse, bounded missing T1.5 generation, full raw/new-score closure, first-common400 student inputs with old encoding reuse, both original full training/evaluation paths and paired contrasts. Actual input/SPEC/upload/model NOTRUN; source CR first, actual A1/numeric in same request. Current C6.38 attempted reservations retained; no paid feasibility or C1 exception transfer. New25 current distinct synthetic checks passed without rerunning old successes; one historical AST assertion superseded by new preserved-token check. All29newGitfiles verified once. Initial new test import and metadata PYTHONPATH import failures retained; both before their body work. Read-only guessed paths and missing-leading-slash tool rejection had no scientific side effect. B09:05:35 latestdispatch/long33 pending; C1r2 actualA3 pending/fullyclosed; nextsharednormal08:39:24 after unchanged08:09:23 head2dac. P01019UTC freeze remains separate.

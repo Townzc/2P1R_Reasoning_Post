@@ -1,3 +1,15 @@
+# Latest narrow failed-ledger addendum — 2026-10-21T09:27:06.178916+00:00
+
+Same request and finalscope `p011-long-three-arm-engineering-preflight-CR-A1-A2-lite-r1` / `p011-long-three-arm-engineering-preflight-CR-A1-A2-lite`. New exact target **38942d3a9380030d3ad885dfe46b6cfb377aad00**, [37-source candidate](long_preflight_failed_ledger_runtime_v1/README.md), SPEC `eb88670f66ca6ebdfa080d9e5b39dc9654e00604be2cf398df31cb4f7d21d7a6`. Original actualsubsetA1/numeric report72c92281 (SHA2dd1dc45) is accepted; no need to repeat original input construction or scientific/numeric analysis. Only four new ledger/import-adapter files and exact saved-failure binding need the short appended review.
+
+The original B call failed before any preflight entry. Its actualSTOPPED0 has no successful RESULT; old sharedledger reads a nonexistentRESULT. New `failed_attempt_ledger.py` uses exact preserved failure/intent/submitted/provider/namedfences and retains B3.01 plusC1both6.38. No fakeRESULT, proof removal, reserve release, closed-provider repoll, B repair or token-rule change. Original33source files are unchanged. All three jobs are byte-identical as objects: jobsSHA `d87c67f03a65f7d0d76f6b90bf970414b9ac69a205bce57a824bb3fad9539a29`. OriginalA1/rates/windows/modelinputs/2updates/32requests/900seconds/$5.95 remain, with fresh entry D1 still required.
+
+Please bind new SPEC/source37/failed_attempt_bindings_sha256/original_preflight_A1_A2_report_sha256 and all11flags in REVIEW_REQUIREMENTS, including `failed_terminal_ledger_and_original_reservations_accepted` and `original_three_preflight_jobs_unchanged`. The same original logical IDs and fences remain unused; no new paid call or upload. Public Bfailure14898f0 is linked; private dispatch/accounting originalbytes are only SHA-bound, not claimed externally read.
+
+Nine new synthetic methods pass. Initial6passed were not rerun;3fake-fixture write errors were corrected and only those3rerun. Original testlog retains one trailing-space warning: whole stylecheck notPASS, excluding only that historical logPASS.29newGitfiles checked once. Use only new conditional wrapper commands after exact acceptance, never repeat CPUsubset76173 or original source/runtime tools.
+
+--- Original request history ---
+
 Latest 2026-10-21T08:59:20.852728+00:00: original CPU subset DONE once; exact actual-subset A1 and concrete numeric A2-lite requested at fixed `67877fc1c26ad2dac391cd9daa72f74dcf0d8a08`.
 
 The original33-source CR and complete long-input A1 are already accepted from

@@ -1,3 +1,5 @@
+P011 2026-10-21T09:27:06.178916+00:00: [C1 actualA3 closed, C2 source accepted but originalCPU input failed; delegated disposition pending](reports/p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md). [Long actualsubset/numeric accepted; narrow failed-ledger review pending](reports/p011_20261020/LONG_PREFLIGHT_CR_A1_A2_REQUEST.md). OriginalBfailed/1280raw preserved, no repeat;0activecompute. P01019UTCfreeze separate.
+
 P011 2026-10-21T08:03:21.245286+00:00: [C1 r2 complete original-token NLL evidence](reports/p011_20261020/c1_r2_complete_results_v1/README.md); all9,594sequences locallyverified/STOPPED0, actualA3 pending. B andlongpreflight exactadmission remainpending.
 
 P011 2026-10-21T07:44:30.984654+00:00: C1 r2 full A2 accepted, fresh entry evidence ready; [B generation numerical review](reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md) now contains concreteSPEC and originalcompletecycle evidence. No repeat of completed inputs or old runs; P01019UTCfreeze remains separate.
