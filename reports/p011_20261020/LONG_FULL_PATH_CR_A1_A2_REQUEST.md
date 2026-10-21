@@ -1,3 +1,18 @@
+# Owner CPU exception received — 2026-10-21T06:24:55.157461+00:00
+
+Direct owner reply “批准一次 CPU 续作，复审后执行” is recorded in
+[long_numeric_gold_owner_approved_v1](long_numeric_gold_owner_approved_v1/README.md).
+Actual ownerfile SHA `9c02012181100feac80ce29855de189d8436251d8b9aaab875e59347c72cbd21`. Fixed source37 candidate remains
+`e6ce0467ded06b4bd09487e7843f5bf2f6f6924e`; no code/tests/input re-executed.
+Please bind this actual owner SHA in scope
+`p011-long-numeric-gold-input-replacement-CR` with exact source_files,
+input_basis_files and the five true flags specified in REVIEW_REQUIREMENTS.
+Only that genuine fixed CR permits one new CPU attempt; original37318neverretries.
+R1–R3 runtime CR and lateractualA1/A2 still separate conclusions of this SAME
+sharedpath request. R4paidpreflight/C1continuation are NOT authorized.
+
+--- Earlier dated request history ---
+
 # Long A/D review repair — 2026-10-21T06:16:07.619434+00:00
 
 Fixed repair target **`e6ce0467ded06b4bd09487e7843f5bf2f6f6924e`**, exact37source map in

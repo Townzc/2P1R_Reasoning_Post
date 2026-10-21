@@ -4330,7 +4330,7 @@
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
       "target_commit": "e6ce0467ded06b4bd09487e7843f5bf2f6f6924e",
-      "status": "RUNTIME_R1_R3_REPAIR_CR_PENDING_ORIGINAL_CPU_INPUT_FAILED_NEW_OWNER_EXCEPTION_REQUIRED",
+      "status": "RUNTIME_REPAIR_CR_AND_OWNER_APPROVED_CPU_REPLACEMENT_EXACT_CR_PENDING",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/long_runtime_repair_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4395,7 +4395,10 @@
       "original_input_cli": 37318,
       "original_runtime_review": "CHANGES-REQUIRED",
       "input_replacement_scope": "p011-long-numeric-gold-input-replacement-CR",
-      "actual_model_calls": 0
+      "actual_model_calls": 0,
+      "owner_exception_approved": true,
+      "owner_decision_file_sha256": "9c02012181100feac80ce29855de189d8436251d8b9aaab875e59347c72cbd21",
+      "owner_packet": "reports/p011_20261020/long_numeric_gold_owner_approved_v1"
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
@@ -4500,14 +4503,17 @@
     {
       "request_id": "p011-long-numeric-gold-input-replacement-owner-r1",
       "scope": "owner exception for one independent CPU input replacement",
-      "status": "PENDING_DIRECT_OWNER_EXCEPTION_AND_EXACT_INPUT_CR",
+      "status": "DIRECT_OWNER_APPROVED_EXACT_INPUT_CR_STILL_PENDING",
       "target_commit": "e6ce0467ded06b4bd09487e7843f5bf2f6f6924e",
       "proposal_file": "reports/p011_20261020/LONG_NUMERIC_GOLD_INPUT_REPLACEMENT_PROPOSAL.md",
       "proposal_sha256": "a7b730e04fabad23d5ca7cc3b1d2e774e7a3957e32ae3d428783bdbf694e9be2",
       "original_failure_sha256": "ba9838a622cfa73bf68776ad55df87d14c48ab1f6b58800dbfbbc696393c55ff",
       "new_paid_calls": 0,
       "new_CPU_attempts_requested": 1,
-      "submitted_utc": "2026-10-21T06:16:07.619434+00:00"
+      "submitted_utc": "2026-10-21T06:16:07.619434+00:00",
+      "owner_decision_file_sha256": "9c02012181100feac80ce29855de189d8436251d8b9aaab875e59347c72cbd21",
+      "owner_observed_utc": "2026-10-21T06:24:55.157461+00:00",
+      "owner_packet": "reports/p011_20261020/long_numeric_gold_owner_approved_v1"
     }
   ],
   "p008_v31": {
@@ -6370,7 +6376,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T06:16:07.619434+00:00",
+  "last_updated_utc": "2026-10-21T06:24:55.157461+00:00",
   "p011": {
     "status": "OT3_actual_input_A1_accepted_diagnostic_complete_result_review_pending_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6601,7 +6607,7 @@
       "target_commit": "e6ce0467ded06b4bd09487e7843f5bf2f6f6924e",
       "source_count": 37,
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "status": "RUNTIME_R1_R3_REPAIR_CR_PENDING_CPU_INPUT_REPLACEMENT_NOT_AUTHORIZED",
+      "status": "RUNTIME_REPAIR_AND_INPUT_REPLACEMENT_EXACT_CR_PENDING_OWNER_APPROVED",
       "actual_SPEC": false,
       "actual_model_calls": 0,
       "actual_endpoint_prompt_tokenizations": 530,
@@ -6611,7 +6617,9 @@
       "original_input_permission_consumed": true,
       "repair_packet": "reports/p011_20261020/long_runtime_repair_v1",
       "failure_packet": "reports/p011_20261020/long_input_failed_preservation_v1",
-      "owner_exception_pending": true
+      "owner_exception_pending": false,
+      "owner_exception_approved": true,
+      "owner_decision_file_sha256": "9c02012181100feac80ce29855de189d8436251d8b9aaab875e59347c72cbd21"
     },
     "B_loader_scoring_prepared": {
       "utc": "2026-10-21T04:39:29.959894+00:00",

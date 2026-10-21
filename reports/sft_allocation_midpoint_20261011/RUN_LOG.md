@@ -1,3 +1,12 @@
+### 2026-10-20 23:24:55 PDT — Direct CPU input exception received
+
+Owner directly replied “批准一次 CPU 续作，复审后执行” to exacte6ce0467proposal.
+ActualownerfileSHA9c02012181100feac80ce29855de189d8436251d8b9aaab875e59347c72cbd21; eventtime unavailable, observation2026-10-21T06:24:55.157461+00:00
+keptseparate. Newinputscope requiresfixedexactCR binding thisownerSHA,source37,
+oldfailure andfiveflags; no newCPUattemptyet. NoR4/C1exceptiontransfer,0newpaid.
+Source/tests/constructors/oldoutputs unchanged. Publicdatedownerpacket andsame
+INDEXrequest updated; no duplicatequestion. P01019UTC duty retained.
+
 ### 2026-10-20 23:16:07 PDT — Long runtime R1–R3 repaired; original CPU input failed
 
 Claude991591df report86914561 genuineinput-onlyPASS/runtimeCHANGES-REQUIRED.
