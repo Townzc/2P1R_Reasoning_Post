@@ -1,3 +1,18 @@
+### 2026-10-20 18:39:12 PDT — Direct owner approved the one NFC continuation; exact SHA addendum requested
+
+Owner directly answered “批准此次续作，复用 965 条，复审后执行”. Immutable
+OWNER_OT3_NFC_CONTINUATION file SHA 26f14213db6e5ef8d62c1eca6c2fd337ee1bbf73685d4f5f45245f8383e83125,
+packet at a212864f87de5235c5b133db5b08d8beb41ff333, exactly binds original OWNER_EXPECTED_BINDING.
+Recording time is observation time; message-event timestamp not supplied.
+No more owner approval is pending for this one continuation. Claude's d85bd142
+code PASS-WITH-NOTES still needs its promised authentic owner-SHA addendum;
+INDEX existing request updated, no new code-only gate or complete acceptance.
+Reuse965 original bytes; only9115 unconfirmed encode; same10080 identities,
+4032 parents, raw text, rules and budget. Both failed parents retained. No
+consumer/fence/output/model/reserve/test or old encoding invoked. Reviewer
+selection diagnostic suggestion was relayed before reply; not run or treated
+as authorization to refilter/change selection. P010Oct21 19UTC freeze remains.
+
 ### 2026-10-20 18:33:37 PDT — NFC exact code review observed; owner and SHA addendum still pending
 
 RealClaude d85bd142/reportSHAc506e45821ff0f5a036e1bf8fcaa9b2d47c206cf643fd9e151f31ee7d4ad48a9 gives source6/10738e62 codePASS-WITH-NOTES. Git event01:15:31 and self-describedaround01:20 vs fullread2026-10-21T01:32:44.941558+00:00 retained. Sourcebinding abbreviations resolved only via explicitlyaccepted immutableSOURCE_BINDING. OwnerrecordSHA leftunbound; directowner failed-constructor exception and exactreviewaddendum stillneeded, no fullACCEPTED/fence/output/call. Reviewer inspected12testscode but couldnotruntransformers; no retest. Reviewer asksowner consider90.8% completeness-exclusion diagnostic beforeapproval; suggestion/risk not demonstratedruledefect, no diagnostic/refilter/newselection performed. Original965/bothfailures/AM and allsciences unchanged. Poll38143EXIT0CONSUMED, nextnormal2026-10-21T02:02:44.941558+00:00. C1 newdraft07c22c1d/12checks/9Gitfiles andpush7292DONE. NoZ1/subagents/externalmessage/paidwork.

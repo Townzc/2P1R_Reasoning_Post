@@ -4126,7 +4126,7 @@
       "request_id": "p011-OT3-confirmed-encoding-NFC-continuation-CR-r1",
       "scope": "p011-OT3-confirmed-encoding-NFC-continuation-CR",
       "target_commit": "10738e624300ff125c59fd127e798bc4e5fbdc85",
-      "status": "code_PASS_WITH_NOTES_pending_direct_owner_and_exact_owner_SHA_addendum",
+      "status": "owner_approved_code_PASS_WITH_NOTES_pending_exact_owner_SHA_addendum",
       "request_file": "reports/p011_20261020/OT3_NFC_CONTINUATION_CR_REQUEST.md",
       "submitted_utc": "2026-10-21T01:00:55.762742+00:00",
       "source_files": {
@@ -4147,7 +4147,12 @@
       "code_review_commit": "d85bd142a7a48b46b923b0454fd1eba5bdde7c4a",
       "code_review_report_sha256": "c506e45821ff0f5a036e1bf8fcaa9b2d47c206cf643fd9e151f31ee7d4ad48a9",
       "code_review_packet": "reports/p011_20261020/review_d85bd142_NFC_code_conditional_v1",
-      "runtime_admitted": false
+      "runtime_admitted": false,
+      "owner_approval_commit": "a212864f87de5235c5b133db5b08d8beb41ff333",
+      "owner_approval_file": "reports/p011_20261020/ot3_nfc_owner_approval_v1/OWNER_OT3_NFC_CONTINUATION.json",
+      "owner_continuation_sha256": "26f14213db6e5ef8d62c1eca6c2fd337ee1bbf73685d4f5f45245f8383e83125",
+      "owner_binding_addendum_request": "reports/p011_20261020/OT3_NFC_OWNER_SHA_ADDENDUM_REQUEST.md",
+      "owner_approved": true
     }
   ],
   "p008_v31": {
@@ -6012,7 +6017,7 @@
   },
   "last_updated_utc": "2026-10-21T01:00:55.762742+00:00",
   "p011": {
-    "status": "AM_A1_accepted_NFC_code_pass_owner_and_addendum_pending",
+    "status": "AM_A1_accepted_NFC_owner_approved_code_pass_addendum_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6126,7 +6131,7 @@
     "OT3_4032_actual_A1_accepted": false,
     "data_review_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1",
     "ot3_NFC_candidate": "10738e624300ff125c59fd127e798bc4e5fbdc85",
-    "ot3_NFC_owner_exception_approved": false,
+    "ot3_NFC_owner_exception_approved": true,
     "ot3_NFC_production_executed": false,
     "active_scientific_computation": 0,
     "c1_execution_draft": {
@@ -6138,6 +6143,9 @@
       "new_formal_review_request": false
     },
     "ot3_NFC_code_review": "reports/p011_20261020/review_d85bd142_NFC_code_conditional_v1",
-    "ot3_NFC_runtime_admitted": false
+    "ot3_NFC_runtime_admitted": false,
+    "ot3_NFC_owner_record_sha256": "26f14213db6e5ef8d62c1eca6c2fd337ee1bbf73685d4f5f45245f8383e83125",
+    "ot3_NFC_owner_approval_commit": "a212864f87de5235c5b133db5b08d8beb41ff333",
+    "ot3_NFC_addendum_request": "reports/p011_20261020/OT3_NFC_OWNER_SHA_ADDENDUM_REQUEST.md"
   }
 }

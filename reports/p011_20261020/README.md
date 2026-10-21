@@ -1,3 +1,5 @@
+P011 owner decision 2026-10-21T01:39:12.508197+00:00: [one NFC continuation approved](ot3_nfc_owner_approval_v1/README.md). Owner proof fixed `a212864f87de5235c5b133db5b08d8beb41ff333`; [actual owner-SHA addendum request](OT3_NFC_OWNER_SHA_ADDENDUM_REQUEST.md) now supplies the last review binding. No repeated owner question or consumer execution.
+
 P011 review 2026-10-21T01:33:37.422154+00:00: [NFC code PASS-WITH-NOTES](review_d85bd142_NFC_code_conditional_v1/README.md); direct owner exception and exact owner-SHA addendum remain pending. No continuation executed. Reviewer selection-rule diagnostic suggestion is documented, not performed.
 
 P011 engineering 2026-10-21T01:30:09.459539+00:00: [C1 copy/worker draft](c1_execution_draft_v1/README.md),12new checks passed; real original inputs/model/forward NOTRUN. Full-path timing, entry and review still needed; NFC owner exception and exact CR pending.
