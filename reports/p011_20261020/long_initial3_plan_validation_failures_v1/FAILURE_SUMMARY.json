@@ -1,0 +1,102 @@
+{
+  "accepted_exact48_report_sha256": "1842e920d7f712c2b37bc0dbaa8e09f5412314d2ce2389f873674139b25245b1",
+  "all_other1326_named_keys_absent_per_job": true,
+  "baseline_reserved_usd": "0",
+  "baseline_uploaded_but_not_dispatched": true,
+  "created_utc": "2026-10-21T13:18:50.576185+00:00",
+  "execution_commit": "b562e7dc9149efe2adb74b2305548e48ec1694c1",
+  "full_private_admission_bytes_not_independently_read_by_reviewer": true,
+  "jobs": [
+    {
+      "bytes": 1677398,
+      "cli_exit": 1,
+      "confirmed_endpoint_batches": 0,
+      "confirmed_training_updates": 0,
+      "file_count": 5,
+      "job": "long_A7_S-L15_s17_r1",
+      "named_key_count": 1329,
+      "no_successful_result_or_full_oracle": true,
+      "original_cli_session": 3824,
+      "original_failed_terminal": {
+        "app_id": "ap-rE1hkbBooduEG4h4xKjtmZ",
+        "automatic_retry_allowed": false,
+        "finished_epoch": 1792588121.218674,
+        "logical_id": "long_A7_S-L15_s17_r1",
+        "message": "Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_execution.py\", line 260, in child\n    training.validate_plan(encoded, plan, rates, arm)\n  File \"/workspace/experiments/p011/long_training.py\", line 63, in validate_plan\n    raise ValueError('Exact source-built dose/update/order/LR vector differs')\nValueError: Exact source-built dose/update/order/LR vector differs\n",
+        "status": "failed",
+        "traceback": "Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_conditional_path.py\", line 313, in worker_body\n    result=body(job,inputs,out,identity,k,claim,start+limits['worker_seconds'],timing,store,volume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_execution.py\", line 342, in worker_body\n    result,training_times,model_path = joined_training(inputs,out,job['model'],job['arm'],\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_execution.py\", line 297, in joined_training\n    raise RuntimeError('Training child failed or did not exit: '+str(result))\nRuntimeError: Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_execution.py\", line 260, in child\n    training.validate_plan(encoded, plan, rates, arm)\n  File \"/workspace/experiments/p011/long_training.py\", line 63, in validate_plan\n    raise ValueError('Exact source-built dose/update/order/LR vector differs')\nValueError: Exact source-built dose/update/order/LR vector differs\n\n",
+        "type": "RuntimeError"
+      },
+      "original_submission": {
+        "app_id": "ap-rE1hkbBooduEG4h4xKjtmZ",
+        "call_id": "fc-01M5F971TJ3ZYHB1M9WYBRP81C",
+        "logical_id": "long_A7_S-L15_s17_r1",
+        "submitted_epoch": 1792588089.230347
+      },
+      "pre_model_load_failure_from_exact_source_control_flow": true,
+      "present_keys": [
+        "long/long_A7_S-L15_s17_r1/dispatch",
+        "long/long_A7_S-L15_s17_r1/claim",
+        "long/long_A7_S-L15_s17_r1/terminal"
+      ],
+      "provider": {
+        "app_id": "ap-rE1hkbBooduEG4h4xKjtmZ",
+        "observed_epoch": 1792588311.629792,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "retained_reserve_usd": "26.08"
+    },
+    {
+      "bytes": 3443316,
+      "cli_exit": 1,
+      "confirmed_endpoint_batches": 0,
+      "confirmed_training_updates": 0,
+      "file_count": 5,
+      "job": "long_A7_S-F15_s17_r1",
+      "named_key_count": 1329,
+      "no_successful_result_or_full_oracle": true,
+      "original_cli_session": 78911,
+      "original_failed_terminal": {
+        "app_id": "ap-OGPtZyDPyTIvzvPUeJwll2",
+        "automatic_retry_allowed": false,
+        "finished_epoch": 1792588204.6100426,
+        "logical_id": "long_A7_S-F15_s17_r1",
+        "message": "Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_execution.py\", line 260, in child\n    training.validate_plan(encoded, plan, rates, arm)\n  File \"/workspace/experiments/p011/long_training.py\", line 63, in validate_plan\n    raise ValueError('Exact source-built dose/update/order/LR vector differs')\nValueError: Exact source-built dose/update/order/LR vector differs\n",
+        "status": "failed",
+        "traceback": "Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_conditional_path.py\", line 313, in worker_body\n    result=body(job,inputs,out,identity,k,claim,start+limits['worker_seconds'],timing,store,volume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_execution.py\", line 342, in worker_body\n    result,training_times,model_path = joined_training(inputs,out,job['model'],job['arm'],\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_execution.py\", line 297, in joined_training\n    raise RuntimeError('Training child failed or did not exit: '+str(result))\nRuntimeError: Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_execution.py\", line 260, in child\n    training.validate_plan(encoded, plan, rates, arm)\n  File \"/workspace/experiments/p011/long_training.py\", line 63, in validate_plan\n    raise ValueError('Exact source-built dose/update/order/LR vector differs')\nValueError: Exact source-built dose/update/order/LR vector differs\n\n",
+        "type": "RuntimeError"
+      },
+      "original_submission": {
+        "app_id": "ap-OGPtZyDPyTIvzvPUeJwll2",
+        "call_id": "fc-01M5F99EXB4FCFSNXDV0GWV6B9",
+        "logical_id": "long_A7_S-F15_s17_r1",
+        "submitted_epoch": 1792588168.1257322
+      },
+      "pre_model_load_failure_from_exact_source_control_flow": true,
+      "present_keys": [
+        "long/long_A7_S-F15_s17_r1/dispatch",
+        "long/long_A7_S-F15_s17_r1/claim",
+        "long/long_A7_S-F15_s17_r1/terminal"
+      ],
+      "provider": {
+        "app_id": "ap-OGPtZyDPyTIvzvPUeJwll2",
+        "observed_epoch": 1792588311.629792,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "retained_reserve_usd": "15.63"
+    }
+  ],
+  "new_retries_or_repairs_admitted": false,
+  "no_reserve_release": true,
+  "retained_reservations_usd": {
+    "A": "47.66",
+    "B": "6.02",
+    "C": "6.38",
+    "D": "0",
+    "emergency": "0",
+    "total": "60.06"
+  },
+  "spec_sha256": "0007c1062f38d0bdf14c9b1011e8e13faa46120fa01e2b95fc46ff4e09ad57ca"
+}

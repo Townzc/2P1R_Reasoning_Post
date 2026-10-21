@@ -1,0 +1,10 @@
+{
+  "app_id": "ap-rE1hkbBooduEG4h4xKjtmZ",
+  "automatic_retry_allowed": false,
+  "finished_epoch": 1792588121.218674,
+  "logical_id": "long_A7_S-L15_s17_r1",
+  "message": "Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_execution.py\", line 260, in child\n    training.validate_plan(encoded, plan, rates, arm)\n  File \"/workspace/experiments/p011/long_training.py\", line 63, in validate_plan\n    raise ValueError('Exact source-built dose/update/order/LR vector differs')\nValueError: Exact source-built dose/update/order/LR vector differs\n",
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_conditional_path.py\", line 313, in worker_body\n    result=body(job,inputs,out,identity,k,claim,start+limits['worker_seconds'],timing,store,volume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_execution.py\", line 342, in worker_body\n    result,training_times,model_path = joined_training(inputs,out,job['model'],job['arm'],\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_execution.py\", line 297, in joined_training\n    raise RuntimeError('Training child failed or did not exit: '+str(result))\nRuntimeError: Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_execution.py\", line 260, in child\n    training.validate_plan(encoded, plan, rates, arm)\n  File \"/workspace/experiments/p011/long_training.py\", line 63, in validate_plan\n    raise ValueError('Exact source-built dose/update/order/LR vector differs')\nValueError: Exact source-built dose/update/order/LR vector differs\n\n",
+  "type": "RuntimeError"
+}
