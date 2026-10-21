@@ -2903,3 +2903,8 @@ Published actualthree-arm32-request/two-update evidence atfdf8bd86c5113c1f716ab7
 ### 2026-10-21 04:23:01 PDT — P011 formal numeric candidate and section7.4
 
 Concrete44-source/32-configuration SPEC at99508f316768237185479fbfa660850ea4ed5c0f,17newGitfilesverifiedonce; no formal call/upload/reserve. Recorded full-cycle scaling and candidate7200 scoring cap explicitly pending exact A2. Initial5 A110.53/remaining4.47 and mandatory totals188.77/157.42/212.21 violate whole-campaign fit; reasoned delegated disposition requested, no cap/transfer/release/cut assumption. F15 local pre-entry disposition stillpending. Metadata helper flat-manifest lookup failed after unsaved profiles; narrow new metadata repair preserved script/log and durable intermediates, no old science rerun. P01019UTCfreeze/finalA5 retained.
+
+
+### 2026-10-21 04:37:22 PDT — P011 mutable INDEX reconciliation
+
+Corrected stale zero preflight counters and A reservation from the six existing SUBMITTED/INTENT receipts: three scientific forward/generation calls plus three engineering calls; A5.95/B3.01/C6.38 retained, not expense. Concrete formal44 SPEC remains a pending candidate. B91 current SPEC hash/window now distinguished from original failed75-source generation fields. C1 actual A3/C2 closure corrected in current status. Prior values preserved in reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json. No science, provider, old tests/oracle or immutable packet repeated or changed. Original audit targets and review cadence unchanged.
