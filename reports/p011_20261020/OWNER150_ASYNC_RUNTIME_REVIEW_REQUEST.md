@@ -9,3 +9,6 @@ Initial seven: A7/A1/A5/A6 F15 worker16200s; baseline1.5B and D1/D2 F15 worker90
 No original inputs are regenerated. Four completed input receipts and original weight receipts are reused; only A1/A5/A6 previously unuploaded cells transfer. New IDs/fences retain every original failure. Original full state/raw collector/oracle/scorer paths are reused with the amended numerical replay. No publication while entry launches until all submissions or terminal preentry receipts.
 
 Please inspect scientific equivalence, source closure, first seven actual inputs, $150/8-slot hard bounds, forecast-only behavior, original hard timers and appended output evidence. This request is asynchronous, not a blocking pre-execution PASS gate.
+
+
+Dated 2026-10-21T20:10:40.639246+00:00 submission addendum: all initialseven trulySUBMITTED; IDs and times in OWNER150_SUBMISSIONS_2010.json. Original source63 and SPEC unchanged. New `scripts/report_p011_owner_smoke_posthoc.py` only reads future complete frozen A7/baseline results and applies original sampledMATH EOS70%/baseline-10pp/no technicalfailure after the fact; no actual execution yet. This addendum does not reset the original async review clock20:24:08. T72fallback two controls have a separate request; first active, second awaits shared8slot.

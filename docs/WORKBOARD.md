@@ -1,3 +1,7 @@
+### 2026-10-21T20:10:40.639246+00:00 — Owner initialseven and first cleaned T72 student submitted
+
+A5 SUBMITTED20:07:47UTC and T72clean400 SUBMITTED20:07:30; earlier six20:02:30–40 remain originalactivecalls. Sourcepublication unchanged during eachentry→SUBMITTED interval. Clean3200upload23305 DONE, model waits8slot; do not repeat inputs/transfers or initialeight calls. Newposthoc §2 reporter is prepared without running scores/analysis; records actual gates after A7/baseline results and explicit owner preselection. Historical13app actualmetered observations projected once from existing19:46snapshot; previous allowancenotexpense/refund. Allnine totalcompute exposure142.46 is a hard bound, not a spending claim.
+
 ### 2026-10-21T20:04:41.666781+00:00 — Owner150 six submitted and fallback controls prepared
 
 Six originalowner jobs A7/A1/A6/baseline/D1/D2 submitted20:02:30–20:02:40UTC app ap-apvW2sCjp2BatOodb2EbcD. A5 originalinputtransfer6251 still active, no duplicateupload. NewT72 K1 cleancontrols source110/actual387and3117 at same2097148targets/1024updates/seed17 prepared, no model yet;6newchecks PASS. Newscience remains exploratory; coverage changes disclosed. Sharednew150/max8/logonlypredictions andasyncCR followdirectowner. Oldfailedreservations notnewexpense. BactualA3 accepted/P010finalA5pending.
