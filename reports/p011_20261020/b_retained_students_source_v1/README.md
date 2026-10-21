@@ -1,0 +1,13 @@
+# Retained B1/B3 complete student path: source appendix
+
+Same B shared request,96 source entries: prior92 unchanged plus four new adapters. Seven new synthetic integration checks passed once; no old successful test or actual input/model/scoring ran. The source appendix prepares the complete retained student upload, dispatch, full-state/raw oracle, first endpoint scoring and original new-contrast analysis. Actual generation A3 and actual student input A1 are still pending. There is deliberately no invented actual SPEC.
+
+The new entry only accepts B1/B3. Original generation and B2 dispatch are unavailable. All original student training, seed17,1024updates/2097148targets, original500 greedy+4sample endpoints, raw/state proof, frozen scoring and paired contrasts remain in their existing functions. Actual selected rows/P_cov and unmapped exclusions must enter the first exact student input construction; no old P010 tokenization or scoring is repeated.
+
+The current-owner accounting adapter reads the complete shared ledger including explicitly bound failed B and C1 parents and retains every reservation. Before a new student it projects both unattempted retained students through the original sequential80percent gate, in addition to original full-window/current-job checks. It cannot use reserve release or silently drop B3. The original prospective6.18+6.18 afterB6.02 has only0.06 margin at B3's gate; actual rates, input/source, timing and complete windows require exact later numeric acceptance.
+
+Upload validates the original base model asset receipt before any remote fence/input transfer, then transfers only the new input files. No old model weights are transferred or read back again. Each new worker still verifies its complete model when loading; local result oracle uses only config/tokenizer metadata plus its newly collected full training state, not old base weights. The actual base receipt is not a claim of fresh provider observation.
+
+Original source/source-input packets are immutable. The already submitted92-source driver can only construct once after exact sourceCR and actual6400 A3; this96-source appendix does not change that driver or its binding. After actual input construction, append its exact manifest/configs, real A3 report SHA, actual input A1 and complete numeric SPEC to this same shared request. Source PASS alone never authorizes paid students. No separate per-cell review is introduced.
+
+Reflection: one guessed private publisher filename lookup was absent; located existing paths with rg and did not execute any old publisher. The new adapter was inspected before production; original asset validation moved ahead of all remote mutations. All checks use synthetic temporary data only.
