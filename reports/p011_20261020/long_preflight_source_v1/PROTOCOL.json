@@ -1,0 +1,89 @@
+{
+  "actual_new_reserve": "0",
+  "arms": [
+    "S-L15",
+    "S-F15",
+    "S-L3"
+  ],
+  "evaluation": {
+    "choice": "sample0 prompt-length quantiles, one original MATHgreedy replaces shortest MATHsample",
+    "context": 17243,
+    "graph_sizes": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 256,
+    "maximum_new_tokens": 16384,
+    "original_subset_requests": 32,
+    "per_benchmark": 8,
+    "scoring": false
+  },
+  "formal_A_D_measurement_exceptions": 0,
+  "fresh_rates_and_D1_required": true,
+  "historical_rate_candidate_reserves_usd": {
+    "S-F15": "2.13",
+    "S-L15": "1.91",
+    "S-L3": "1.91",
+    "total": "5.95"
+  },
+  "historical_rate_observed_utc": "2026-10-21T04:46:44Z",
+  "initial_scientific_forecast": false,
+  "kind": "owner_authorized_engineering_only",
+  "no_full512request_batch_measurement": true,
+  "no_throughput_upper_bound_or_guarantee": true,
+  "owner_measurement_exception_each": 1,
+  "per_job_limits": {
+    "closeout_seconds": 7200,
+    "full_result_window_seconds": 8760,
+    "latest_dispatch_utc": "2026-10-22T02:34:00Z",
+    "platform_seconds": 960,
+    "startup_seconds": 600,
+    "worker_seconds": 900
+  },
+  "preserved_failed_reservations": {
+    "C1r1": "3.74"
+  },
+  "resources": {
+    "S-F15": {
+      "CPU": 4,
+      "GiB": 96,
+      "H100": 1
+    },
+    "S-L15": {
+      "CPU": 4,
+      "GiB": 32,
+      "H100": 1
+    },
+    "S-L3": {
+      "CPU": 4,
+      "GiB": 32,
+      "H100": 1
+    }
+  },
+  "selection": "Two longest original A8 sequences by descending n_processed then path_id; both at least15000 and at most16384.",
+  "training": {
+    "LR": "original arm function evaluated atU2",
+    "microbatch": 1,
+    "schedule": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "seed": 17,
+    "state_and_export": "same full state serialization/mmap verification/BF16 export; joined child exits0 before vLLM",
+    "updates": 2
+  }
+}

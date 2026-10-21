@@ -1,0 +1,1 @@
+Initial metadata source-closure walk rejected a relative local import after only OWNER_BINDING was written. That original file and failing script are retained. Only missing metadata was completed with explicit relative-import resolution. No production path, input selection, model, test or paid task repeated.
