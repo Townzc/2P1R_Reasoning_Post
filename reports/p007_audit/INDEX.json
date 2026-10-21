@@ -4574,7 +4574,7 @@
       "scope": "p011-B-remaining-generation-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-B-generation-student-complete-path-CR",
       "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
-      "status": "GENERATION6400_COMPLETE_STOPPED0_ACTUAL_A3_AND_STUDENT_SOURCE_PENDING",
+      "status": "ACTUAL6400_A3_ACCEPTED_GOLD_CORRECTED92_AND96_SOURCE_REVIEW_PENDING",
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
       "source_binding_file": "reports/p011_20261020/b_remaining_current_runtime_v1/SOURCE_BINDING.json",
       "source_files": {
@@ -4730,12 +4730,15 @@
       "acceptance_packet": "reports/p011_20261020/review_02719f84_B_accepted_F15_complete_long_conditional_v1",
       "students_admitted": false,
       "next_student_input_source_CR": {
-        "target_commit": "e556c4c90a86bf869fa3730755d94678110a8d63",
+        "target_commit": "11a18aaa279a2c6a1fd3974fd86c004651238f79",
         "scope": "p011-B-remaining-generation-selection-complete-path-CR",
-        "status": "FULL_SOURCE_APPENDIX_PENDING_ACTUAL_GENERATION_A3_ALSO_REQUIRED",
-        "source_binding_file": "reports/p011_20261020/b_remaining_student_input_preflight_v1/SOURCE_BINDING.json",
+        "status": "CORRECTED_EXACT92_SOURCE_REVIEW_PENDING_PRIOR_FIX_REQUIRED",
+        "source_binding_file": "reports/p011_20261020/b_remaining_student_gold_preflight_v1/SOURCE_BINDING.json",
+        "source_binding_sha256": "9371c51a735b88b58e7634f407bb3549c7495a4f8eedbc79c22b313a260dd5c4",
         "source_count": 92,
-        "new_driver_only": true,
+        "prior_FIX_REQUIRED_report_sha256": "3f076ba7fabcac88ac1b11488636f3c4a9892390383fcd279d3c2366b02c2456",
+        "actual_generation_A3_accepted": true,
+        "input_preparation_authorized": false,
         "actual_student_inputs_run": false,
         "student_models_admitted": false
       },
@@ -4743,11 +4746,11 @@
       "actual_result_target": "19686a28d09cff472027e4a61ba40594c512c7f6",
       "all6400_local_closeout_complete": true,
       "retained_student_full_path_appendix": {
-        "target_commit": "bf708e6ac81fa91b93e59d56b58a57ded9b0e7fb",
+        "target_commit": "1bf3de6d8c6187994faf12ffd401a8ce992d562c",
         "scope": "p011-B-retained-students-complete-path-CR",
-        "status": "EXACT96_SOURCE_PENDING_ACTUAL_INPUT_AND_NUMERIC_SUBSEQUENT",
-        "source_binding_file": "reports/p011_20261020/b_retained_students_source_v1/SOURCE_BINDING.json",
-        "source_binding_sha256": "47b442abc17f003c20b9bf7fe062203f505ea968e7cb2f23e8d2b5c2c94c7a2d",
+        "status": "CORRECTED_EXACT96_SOURCE_REVIEW_PENDING_ACTUAL_INPUT_AND_NUMERIC_SUBSEQUENT",
+        "source_binding_file": "reports/p011_20261020/b_retained_students_gold_source_v1/SOURCE_BINDING.json",
+        "source_binding_sha256": "e723639f71b6d8a563dd11a993988ddc35df11a4f720d2479d73984aea2f721d",
         "source_count": 96,
         "required_true_flags": [
           "all96_sources_and_new4_adapters_accepted",
@@ -4757,8 +4760,14 @@
           "original_science_scoring_and_absolute_windows_unchanged"
         ],
         "actual_student_SPEC_exists": false,
-        "student_models_admitted": false
-      }
+        "student_models_admitted": false,
+        "prior_FIX_REQUIRED_report_sha256": "3f076ba7fabcac88ac1b11488636f3c4a9892390383fcd279d3c2366b02c2456"
+      },
+      "actual_generation_A3_accepted": true,
+      "actual_generation_A3_report_sha256": "885fce3707f712fc2156170c033b5e51e79072efe56e9174263ea394db6558e4",
+      "actual_generation_A3_acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
+      "student_input_preparation_authorized": false,
+      "future_numeric_requires_all_current_failed_long_parents": true
     },
     {
       "request_id": "p011-C1-failed-self-calibration-and-preservation-actual-review-r1",
@@ -5003,7 +5012,7 @@
     {
       "request_id": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
       "scope": "p011-B-complete6400-generation-and-selection-actual-A3",
-      "status": "ACTUAL_A3_PENDING",
+      "status": "ACTUAL_A3_PASS_WITH_NOTES_ACCEPTED",
       "target_commit": "19686a28d09cff472027e4a61ba40594c512c7f6",
       "manifest_sha256": "4f631b9edf3b7353532f01af8d8f13c96083a8dff0a2b0eeb7c1b7aae616f1c6",
       "request_file": "reports/p011_20261020/B_COMPLETE6400_ACTUAL_A3_REQUEST.md",
@@ -5015,9 +5024,18 @@
       ],
       "submitted_metadata_utc": "2026-10-21T12:39:48.661025+00:00",
       "all6400_local_closeout_complete": true,
-      "actual_independent_A3_accepted": false,
+      "actual_independent_A3_accepted": true,
       "student_input_admitted": false,
-      "student_models_admitted": false
+      "student_models_admitted": false,
+      "report_sha256": "885fce3707f712fc2156170c033b5e51e79072efe56e9174263ea394db6558e4",
+      "report_commit": "2ce4edae66c3b60b506e2a4de87c3a06c8fb07cb",
+      "report_git_event_utc": "2026-10-21T13:20:44Z",
+      "full_read_confirmed_utc": "2026-10-21T13:33:51.798824+00:00",
+      "accepted_record": ".local/p011_20261020/r1/B_COMPLETE6400_ACTUAL_A3_ACCEPTED.json",
+      "acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
+      "independent_decode_outputs": 6400,
+      "independent_symbolic_engine_rerun": false,
+      "independent_manual_symbolic_pairs": 40
     },
     {
       "request_id": "p011-long-initial2-rate-validation-failure-disposition-r1",
@@ -6892,7 +6910,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T13:21:28.888873+00:00",
+  "last_updated_utc": "2026-10-21T13:37:02.758284+00:00",
   "p011": {
     "status": "LONG_INITIAL_TWO_FAILED_PRESERVED_STOPPED0_B_ACTUAL_AND_STUDENT_REVIEWS_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -7013,8 +7031,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T12:54:27.234115+00:00",
-    "last_review_head": "40bc423e0ab1cc4e5678d48467fcc9d43be103d7",
+    "last_review_observed_utc": "2026-10-21T13:25:04.852816+00:00",
+    "last_review_head": "2ce4edae66c3b60b506e2a4de87c3a06c8fb07cb",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -7107,7 +7125,7 @@
       "actual_A2_report_commit": "0103c6eb11b2ad1e777a705ef50b7e9c8800e346"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
-    "last_full_review_read_utc": "2026-10-21T12:56:17.619534+00:00",
+    "last_full_review_read_utc": "2026-10-21T13:33:51.798824+00:00",
     "active_local_readonly_diagnostic": 0,
     "last_fixed_report_read_utc": "2026-10-21T03:58:11.775722+00:00",
     "B_generation_evidence_preparation": {
@@ -7235,7 +7253,7 @@
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
       "target_commit": "5993ccef3da13a68b9c988a173b36de8161e9974",
       "source_count": 91,
-      "status": "GENERATION6400_COMPLETE_STOPPED0_ACTUAL_A3_AND_STUDENT_SOURCE_PENDING",
+      "status": "ACTUAL6400_A3_ACCEPTED_GOLD_CORRECTED92_AND96_SOURCE_REVIEW_PENDING",
       "actual_model_calls": 0,
       "actual_SPEC": true,
       "request_file": "reports/p011_20261020/B_FULL_PATH_CR_A1_A2_REQUEST.md",
@@ -7395,12 +7413,15 @@
       "continuation_reserved_usd": "3.01",
       "continuation_dispatch_packet": "reports/p011_20261020/b_remaining_dispatched_v1",
       "next_student_input_source_CR": {
-        "target_commit": "e556c4c90a86bf869fa3730755d94678110a8d63",
+        "target_commit": "11a18aaa279a2c6a1fd3974fd86c004651238f79",
         "scope": "p011-B-remaining-generation-selection-complete-path-CR",
-        "status": "FULL_SOURCE_APPENDIX_PENDING_ACTUAL_GENERATION_A3_ALSO_REQUIRED",
-        "source_binding_file": "reports/p011_20261020/b_remaining_student_input_preflight_v1/SOURCE_BINDING.json",
+        "status": "CORRECTED_EXACT92_SOURCE_REVIEW_PENDING_PRIOR_FIX_REQUIRED",
+        "source_binding_file": "reports/p011_20261020/b_remaining_student_gold_preflight_v1/SOURCE_BINDING.json",
+        "source_binding_sha256": "9371c51a735b88b58e7634f407bb3549c7495a4f8eedbc79c22b313a260dd5c4",
         "source_count": 92,
-        "new_driver_only": true,
+        "prior_FIX_REQUIRED_report_sha256": "3f076ba7fabcac88ac1b11488636f3c4a9892390383fcd279d3c2366b02c2456",
+        "actual_generation_A3_accepted": true,
+        "input_preparation_authorized": false,
         "actual_student_inputs_run": false,
         "student_models_admitted": false
       },
@@ -7409,11 +7430,11 @@
       "all6400_local_closeout_complete": true,
       "students_admitted": false,
       "retained_student_full_path_appendix": {
-        "target_commit": "bf708e6ac81fa91b93e59d56b58a57ded9b0e7fb",
+        "target_commit": "1bf3de6d8c6187994faf12ffd401a8ce992d562c",
         "scope": "p011-B-retained-students-complete-path-CR",
-        "status": "EXACT96_SOURCE_PENDING_ACTUAL_INPUT_AND_NUMERIC_SUBSEQUENT",
-        "source_binding_file": "reports/p011_20261020/b_retained_students_source_v1/SOURCE_BINDING.json",
-        "source_binding_sha256": "47b442abc17f003c20b9bf7fe062203f505ea968e7cb2f23e8d2b5c2c94c7a2d",
+        "status": "CORRECTED_EXACT96_SOURCE_REVIEW_PENDING_ACTUAL_INPUT_AND_NUMERIC_SUBSEQUENT",
+        "source_binding_file": "reports/p011_20261020/b_retained_students_gold_source_v1/SOURCE_BINDING.json",
+        "source_binding_sha256": "e723639f71b6d8a563dd11a993988ddc35df11a4f720d2479d73984aea2f721d",
         "source_count": 96,
         "required_true_flags": [
           "all96_sources_and_new4_adapters_accepted",
@@ -7423,9 +7444,14 @@
           "original_science_scoring_and_absolute_windows_unchanged"
         ],
         "actual_student_SPEC_exists": false,
-        "student_models_admitted": false
+        "student_models_admitted": false,
+        "prior_FIX_REQUIRED_report_sha256": "3f076ba7fabcac88ac1b11488636f3c4a9892390383fcd279d3c2366b02c2456"
       },
-      "future_numeric_requires_all_current_failed_long_parents": true
+      "future_numeric_requires_all_current_failed_long_parents": true,
+      "actual_generation_A3_accepted": true,
+      "actual_generation_A3_report_sha256": "885fce3707f712fc2156170c033b5e51e79072efe56e9174263ea394db6558e4",
+      "actual_generation_A3_acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
+      "student_input_preparation_authorized": false
     },
     "C1_actual_A2_current": {
       "status": "ORIGINAL_CALL_FAILED_FIRST_COMPLETE_CHUNK_NO_RETRY",
@@ -7656,7 +7682,7 @@
       "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     "C1_r2_actual_A3": "PASS_CLOSED",
-    "latest_acceptance_packet": "reports/p011_20261020/review_47e80292_B_C1_long_accepted_v1",
+    "latest_acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
     "B_generation_exact_A2": true,
     "long_actual_input_A1": true,
     "long_preflight_source_CR": true,
@@ -7698,7 +7724,7 @@
     "B_complete6400_actual": {
       "request_id": "p011-B-complete6400-generation-and-selection-actual-A3-r1",
       "scope": "p011-B-complete6400-generation-and-selection-actual-A3",
-      "status": "ACTUAL_A3_PENDING",
+      "status": "ACTUAL_A3_PASS_WITH_NOTES_ACCEPTED",
       "target_commit": "19686a28d09cff472027e4a61ba40594c512c7f6",
       "manifest_sha256": "4f631b9edf3b7353532f01af8d8f13c96083a8dff0a2b0eeb7c1b7aae616f1c6",
       "request_file": "reports/p011_20261020/B_COMPLETE6400_ACTUAL_A3_REQUEST.md",
@@ -7710,9 +7736,18 @@
       ],
       "submitted_metadata_utc": "2026-10-21T12:39:48.661025+00:00",
       "all6400_local_closeout_complete": true,
-      "actual_independent_A3_accepted": false,
+      "actual_independent_A3_accepted": true,
       "student_input_admitted": false,
-      "student_models_admitted": false
+      "student_models_admitted": false,
+      "report_sha256": "885fce3707f712fc2156170c033b5e51e79072efe56e9174263ea394db6558e4",
+      "report_commit": "2ce4edae66c3b60b506e2a4de87c3a06c8fb07cb",
+      "report_git_event_utc": "2026-10-21T13:20:44Z",
+      "full_read_confirmed_utc": "2026-10-21T13:33:51.798824+00:00",
+      "accepted_record": ".local/p011_20261020/r1/B_COMPLETE6400_ACTUAL_A3_ACCEPTED.json",
+      "acceptance_packet": "reports/p011_20261020/review_2ce4edae_B_actual_A3_and_source_fix_v1",
+      "independent_decode_outputs": 6400,
+      "independent_symbolic_engine_rerun": false,
+      "independent_manual_symbolic_pairs": 40
     },
     "active_scientific_compute": 0
   }

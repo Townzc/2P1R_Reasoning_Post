@@ -1,3 +1,9 @@
+## Actual A3 closed — 2026-10-21T13:37:02.758284+00:00
+
+Claude2ce4edae reportSHA`885fce3707f712fc2156170c033b5e51e79072efe56e9174263ea394db6558e4` accepts target19686a28 as **PASS-WITH-NOTES**, all three required flags true. [Original report, scripts and exact acceptance](review_2ce4edae_B_actual_A3_and_source_fix_v1/README.md). Independent decoding covers all6400; correctness review is full extraction/string checks plus40 manually checked symbolic-positive pairs/435rows, with no independent symbolic-engine rerun and possible false negatives. Codex repeated no decode/score/statistics. Student source report is independently FIX-REQUIRED; corrected92/96 candidates are in the [same shared B request](B_FULL_PATH_CR_A1_A2_REQUEST.md), no input/model yet.
+
+The historical request below is retained; its pending/reservation snapshot descriptions are superseded by this accepted scope and current accounting.
+
 # P011 B complete 6400 actual result A3 request
 
 Created 2026-10-21T12:39:48.661025+00:00; actual-result review is PENDING.
