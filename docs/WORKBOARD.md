@@ -1,3 +1,15 @@
+### 2026-10-20 19:19:20 PDT — Approved NFC continuation completed; actual full input A1 requested
+
+Original32741EXIT0CONSUMED, event02:16:03UTC;965confirmed byte reuse +9115new =10080,
+4032parents/eightplans/0planningfailures. B41813212/U654;5saved native-text NFC-change
+flags, no reencoding. Unique copy86864EXIT0CONSUMED, archive419240400B/10parts,
+18original-member readback;32publicmembers+PUBLIC_MANIFEST Gitverified once at
+20044d50cee1acbef0b1aa17ed559e8f0311d98a. ActualA1 requestp011-OT3-NFC-complete-input-and-dose-A1-r1 PENDING. Training/model/paidreserve0.
+Both old failures/source6 unchanged, fullsourceSQLite private limitation retained.
+Readonlydiagnostic980dd073/12newchecks remains pending exactCR; no actualdiagnosis.
+LocalawakePID68593 exactargs checked andterminated afterlocalcloseout. Allcode/data
+old successful tests and publishers remain consumed. P01019UTCfreeze still due.
+
 ### 2026-10-20 19:11:25 PDT — Requested OT3 read-only diagnostic exact path prepared
 
 Target980dd073dd597fa511341ee08294695530463d10, source4/manifest78362f33fda7d42d67bce470bbbc96dd5b5775c61bd490c57efa10aa7e05a601. Newdriver directly calls original

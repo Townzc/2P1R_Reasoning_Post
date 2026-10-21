@@ -1,3 +1,5 @@
+P011 2026-10-21T02:19:20.078375+00:00: [OT3 complete actual A1 request](reports/p011_20261020/OT3_NFC_COMPLETE_ACTUAL_A1_REQUEST.md),10080encodings/eightplans/B41813212/U654 complete; no training admission. Read-only diagnostic exactCR remains pending.
+
 P011 2026-10-21T02:05:33.347666+00:00: [Complete NFC CR and diagnostic request](reports/p011_20261020/review_c7977d2a_NFC_complete_CR_and_diagnostic_request_v1/README.md); authorized unique965reuse/9115encoding continuation started, actualA1 not yet complete.
 
 P011 engineering 2026-10-21T01:58:25.483119+00:00: [C1 admission/transport draft](reports/p011_20261020/c1_admission_artifacts_draft_v1/README.md),10new checks passed; no actual inputs/model/forward or paid admission. Owner NFC approved; exact SHA addendum remains.
