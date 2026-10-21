@@ -1,0 +1,9 @@
+# B selected-answer input: narrow frozen gold locator correction
+
+Prepared 2026-10-21T13:33:51.798824+00:00; not run. This is the existing shared B input source scope, not a new per-cell request. Claude report3f076ba7 found that the prior driver located raw HF gold while the runtime requires the already frozen processed P1 file. Only two driver constants change: GOLD points to the original processed file, and PACKET points to this new immutable binding. Expected gold SHA, scientific functions, original tokens, masks, dose, selection, two fences and all rules are unchanged. The previous unused/historical constructors are not edited.
+
+The necessary locator check found504454 original bytes with SHA132582ca829ff11820b9d739a14c6e3ce383aacb51dba50e406acd2d27d1b95d, already bound by the original P009 published input manifest. No corpus reconstruction or encoding occurred. Two new small-fixture regression checks passed once0.003s; old successful tests were not rerun. Exact92-source review must explicitly authorize the once-only CPU constructor. Actual6400 A3 report885fce37 is accepted with its independent-symbolic-solver limitation; it alone does not authorize this constructor or students.
+
+The prior SOURCE_BINDING carried an inherited source_count71 even though its actual map held92; this new candidate states92. The old immutable packet is retained. New metadata binds the current driver and two tests, without relabeling old tests/changes as new. Two guessed read-only paths (a P009 manifest and an old test filename) were absent before the actual paths were located; there were no production/scientific effects.
+
+Future B paid admission must retain both new failed long parents and all prior reservations. Current A47.66/B6.02/C6.38 are reservations, not expense. No cap, protected0 accounting, deadline, source failure, P010 freeze or no-retry condition changes here.

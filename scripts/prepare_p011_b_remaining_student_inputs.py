@@ -9,9 +9,9 @@ from experiments.p011 import b_path, b_student_evidence, c1_admission
 from experiments.sft_allocation_midpoint.common import read, dump, sha, manifest, digest
 
 ROOT=Path(__file__).resolve().parents[1]
-PACKET=Path('reports/p011_20261020/b_remaining_student_input_preflight_v1')
+PACKET=Path('reports/p011_20261020/b_remaining_student_gold_preflight_v1')
 ENDPOINT='.local/p010_20261019/r1/student_inputs_r2/MATH_ENDPOINT.json'
-GOLD='.local/p009_20261014/r1/source_assets_r1/math500/test.jsonl'
+GOLD='.local/p009_20261014/r1/stage0_inputs_r1/math500.jsonl'
 
 
 def actual_generation_A3(root,proof,done,rows,selection,review):
