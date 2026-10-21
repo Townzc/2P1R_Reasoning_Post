@@ -1,3 +1,7 @@
+### 2026-10-21T20:15:04.566209+00:00 — P010 actual final frozen A5 accepted
+
+Claude204beb4d report8bc1d349b0695e5f1106d138fe5782db05bd36af460a055020ab4a618d3d22c3 PASS all5flags, fixeddb514956 freeze. Reviewer checked54originalcopy bindings and58manifestmembers with0mismatch;4local-only source limits and no bootstrap rerun retained. Codex only accepted/copied newreport, no originalscience or freeze repeated. P010 finite work closed. P011 neweight calls stillactive and clean3200 queued.
+
 ### 2026-10-21T20:10:40.639246+00:00 — Owner initialseven and first cleaned T72 student submitted
 
 A5 SUBMITTED20:07:47UTC and T72clean400 SUBMITTED20:07:30; earlier six20:02:30–40 remain originalactivecalls. Sourcepublication unchanged during eachentry→SUBMITTED interval. Clean3200upload23305 DONE, model waits8slot; do not repeat inputs/transfers or initialeight calls. Newposthoc §2 reporter is prepared without running scores/analysis; records actual gates after A7/baseline results and explicit owner preselection. Historical13app actualmetered observations projected once from existing19:46snapshot; previous allowancenotexpense/refund. Allnine totalcompute exposure142.46 is a hard bound, not a spending claim.
