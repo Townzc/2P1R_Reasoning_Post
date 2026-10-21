@@ -1,3 +1,7 @@
+### 2026-10-21T17:57:19.847303+00:00 — B first local oracle continuation prepared, not run
+
+Exact101 candidate at30e5a71ba4c74cb49af42b95d34b80c0c42c5e38 adds only continue_p011_b_student_local_audit.py to unchanged100. Explicit reasoned delegated exception plus7flag exactCR requested for missing-transformers local failures; original models/collections/extractions/failures unchanged, no retry. Four NEW boundary checks PASS0.003s, three existing interpreter readiness checks succeeded without data/model/score;13newGitfiles verified once. Newperjobfence and append-only previously absent proof files retain originalFAILED. Fullstate/decode still required and unexecuted; firstscore latest20:05:44/20:07:47UTC, originalabsolutecloseout03:05:49/03:07:52UTC. No window extension, firstscore/contrast/model0new. D narrowed62 at68701107 pending exactCR after87d2eba3 clarification; Aownerhold/P01019UTC unchanged. No activity or freshbilling/provider.
+
 ### 2026-10-21T17:52:24.964165+00:00 — D budget clarification implemented; B first local audit environment failures
 
 Real D report87d2eba3 atb61b88f8/Git17:31:39/fullread17:46:41 is CHANGES-REQUIRED, explicit predicted-cost80/fullreserve-hardcap clarification. Only one functional check plus immutableSPEC locator changed; exact62 candidate at687011075c425de058f35133a44284153a4c6159, five NEW checks oncePASS0.001s,13newGitfilesverified. D remains exactCR pending,0calls/reserve. OriginalDjobs/limits/963future/600proxy and failedreservations unchanged; Aownerhold/P01019UTC unchanged.
