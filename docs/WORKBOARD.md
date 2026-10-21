@@ -1,3 +1,10 @@
+### 2026-10-21 00:44:30 PDT — C1 r2 exact A2 accepted; B concrete numeric review
+
+Real Claude2dac C1r2 reportSHAf1861f6d read07:41:31, Git07:27/reportaround07:40 distinct. Exact22source/inputreuse/SPEC/all9flags accepted. Necessary07:40fresh rates equal4.3952/hour, candidate2.64<=2.70, failedr1reserve3.74 retained. Private accepted ownerbaseline accounting is not independently verified platform balance; no newownerconfirmation inferred. Originalcopy/upload remainDONE. Actualentry/provider/window stillrequired;0newcall atthis record. Reviewer success probability/sub-half-dollar failure claim not adopted as guarantee.
+
+B new75source/concretegenerationSPEC9fe8109f fixed85bc4260036c607aae6db10bd3179eab14c91a66, same sharedCR/A1/A2request. Original71source/science unchanged,6newchecksPASSonce. All23 original full256 intent intervals max22.1008265s include oldcommit/ack/scoring;49metadataarchive copied/readback once. .8→1.0/wallclock/uncalibratedallowance limitations retained. Candidate1800worker/3.01reserve/1383.0248s forecast only. Full71665s resultwindow requires dispatch byOct21 09:05:35UTC; no shortening to force. BinputA1 alreadytrue, no newinput/paid/upload/reserve. New25Gitfiles checkedonce. Long33preflightCR and actualfullinputA1 pending; P01019UTCfreeze independent.
+
+
 ### 2026-10-21 00:24:21 PDT — Completed long inputs; full three-arm engineering source submitted
 
 Claude135a4f53 fixed reports fully read07:07:52UTC: long R1–R3 source37 and owner-bound numericgold CPU CR PASS; B actual400/6400 inputA1 PASS. Exact Git event/self-described/read times, rawSHAs and privacy projections retained. The one authorized CPU continuation61074 completed07:10:22UTC,600new endpoint prompt encodings/3300requests/0trainingencoding/model. Original37318failure/530ephemeral prompts retained. ActualA1 remains pending for the new input packet, with56new compact archive members fully read back once;85file4.22GB inventory and oldOT3/AMtraining archive reuse explicitly distinguish omitted private projections.

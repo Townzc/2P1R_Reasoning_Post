@@ -1,3 +1,14 @@
+# Exact C1 r2 full A2 accepted — 2026-10-21T07:44:30.984654+00:00
+
+Real Claude2dacfd835503e6ea2021a21951c3b0f199c75b1d/reportSHAf1861f6d49a2a78b70c3633fdeffd155340cf5a1558a63fbf04aa5201f4f831c
+accepts originaltargetd18581c1/source22/SPECc51ace0d/input18/all9flags.
+Git07:27, reportaround07:40 and fullread07:41:31 are separately retained.
+[Actual acceptance](review_2dacfd83_C1r2_full_A2_accepted_v1/README.md) and
+[fresh entry evidence](c1_r2_fresh_budget_v1/README.md) fixed at85bc4260036c607aae6db10bd3179eab14c91a66.
+No input recopy/upload. Originalr1failed3.74 remains. Newrates07:40:28 equalSPEC,
+candidate2.64 withinowner2.70. Entrystill checks fullledger/provider/unused/window.
+No r2dispatch atthis documentation step; actualresultA3 remains later.
+
 # C1 r2: exact complete path CR, reused input A1 and numeric A2-lite
 
 Submitted 2026-10-21T06:51:11.480491+00:00. Target `d18581c10d2a7647ff9ecb1f028eca911b7837cf`. Status **PENDING**. New owner-authorized logical attempt only; no new GPU/forward/upload/reservation.

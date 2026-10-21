@@ -1,3 +1,33 @@
+# Concrete B generation SPEC and current accounting revision — 2026-10-21T07:44:30.984654+00:00
+
+Exact target **85bc4260036c607aae6db10bd3179eab14c91a66**, [candidate](b_generation_runtime_v1/README.md),
+[SPEC](b_generation_runtime_v1/SPEC.json) SHA `9fe8109ff13cfcf7f86900ec66d635a9506697e947c06c77d6fd950b85ee1a79`,
+[75 source entries](b_generation_runtime_v1/SOURCE_BINDING.json),
+[exact required conclusions](b_generation_runtime_v1/REVIEW_REQUIREMENTS.json).
+This is the same shared request, final scope
+`p011-B-generation-student-complete-path-CR-A1-A2-lite`.
+Original71source and completed400parent/6400request inputA1 remain unchanged.
+Three new wrappers adopt explicitowner364aaf6c protected0/currentbaseline accounting,
+fullH100+4CPU+32GiB rates and exact saved failed-C1parent/3fences; no closedapp query.
+Six distinct new checks PASS once; no old scientific or successful tests repeated.
+
+New numeric evidence includes all23 original full256 batch intent-to-next-intent
+intervals, max22.100826501846313s, copied49metadata members with readback.
+This includes storage/remotecompletion and oldsymbolicscoring; do not subtract
+removed scoring time. Original72.280458s setup, .8→1.0 outputdistribution shift,
+wallclock-versus-newmonotonic and uncalibrated600s/20percent limitations explicit.
+Candidate worker1800/platform1860/startup600, reserve3.01 at historical fullrate;
+initial1.2*(25*max+600)=1383.024795s. Not a bound or paid measurement exception.
+
+Full result window71665s retains3600collect+3600audit+62000score+5cleanup;
+**latest dispatch Oct21 09:05:35UTC**. No shortening or reset to force admission.
+Please accept/reject the original complete-cycle interval proxy and all nine
+required flags plus exact SPEC/source/jobs/input/owner bindings. Fresh meter/rates,
+retained P011ledger and originalunused/provider/window gates still precede upload
+and dispatch. C1r1reserve3.74 retained; no actual newBreserve/call/upload.
+This generation SPEC does not admit B1–B3 students or B4. Actual selected-input
+A1 and student numerical appendix remain in the same shared request later.
+
 ## Actual generation input A1 accepted — 2026-10-21T07:24:21.357367+00:00
 
 Real Claude135a4f53/reportSHAc994da9ca61385a8b55d0e95c202e6cae62ad3a9d4acbbffc73ab7bd5b6be9d4
