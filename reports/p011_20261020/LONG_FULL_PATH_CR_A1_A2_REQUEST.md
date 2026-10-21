@@ -1,3 +1,42 @@
+# Long A/D review repair — 2026-10-21T06:16:07.619434+00:00
+
+Fixed repair target **`e6ce0467ded06b4bd09487e7843f5bf2f6f6924e`**, exact37source map in
+[long_runtime_repair_v1/SOURCE_BINDING.json](long_runtime_repair_v1/SOURCE_BINDING.json).
+Same request `p011-long-A-D-complete-path-CR-A1-A2-lite-r1`, source scope
+`p011-long-A-D-complete-path-CR`. This supersedes only prospective runtime/input
+status below; historical original packet/source/failure remain immutable.
+
+Claude991591df explicitly passed original input preparation, but required R1–R3
+runtime changes. The one authorized input CLI37318 then failed on original
+numeric gold. [Partial scope and real report](review_991591df_long_partial_CR_v1/README.md),
+[original failure](long_input_failed_preservation_v1/README.md),
+[repairs and limits](long_runtime_repair_v1/README.md).
+No complete input, actual SPEC, runtime A2, training or long-model call exists.
+
+Please review R1 complete src closure; R2 fullarm96GiB and exact memory-inclusive
+cost/mmapstate; R3 7x512-request geometry, engine256 and shared forecast/oracle.
+Original science/input function ASTs remain unchanged. Thirteen new tests pass
+once; tests are not independent audit. Neither96GiB nor mocks prove realGPUfit.
+Original32batch timing cannot estimate new512batches without explicit evidence.
+
+**Input failure exception is independently required.** The concrete
+[owner proposal](LONG_NUMERIC_GOLD_INPUT_REPLACEMENT_PROPOSAL.md) is currently
+unapproved. New input scope `p011-long-numeric-gold-input-replacement-CR` must
+bind all37sources/input_basis_files, actual ownerfileSHA, original failed proof
+and the five true flags in REVIEW_REQUIREMENTS. It authorizes one newCPUentry
+only, after real owner approval. Original530prompt encodings were ephemeral;
+newentry would encode all600prompts, while reusing original trainingtokens/plans.
+No oldconstructor retry and no falsely claimed prompt reuse. Both original
+BENCHMARKS hashes are checked before newtokenization. All40floatanswers are
+finite integral values per new read-only scalar-domain check, not a rescore.
+
+Actual newinputA1 and numeric/memory/fullwindow/D1 evidence remain appendices to
+this same shared path review. R4 paidpreflight needs a concrete reviewed path,
+explicit owner decision and bounded budget before use; C1-only exception does
+not apply. A/D D1 scope remains unresolved. No automatic reserve release.
+
+--- Historical initial request (superseded prospective state) ---
+
 # Complete A/D long runtime — one shared path CR/A1/A2-lite request
 
 Submitted 2026-10-21T04:33:15.946450+00:00. Exact target **`db1aff076163606ded08776eca637c043d6c916b`**.

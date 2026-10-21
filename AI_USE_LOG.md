@@ -1,3 +1,27 @@
+### 2026-10-20 23:16:07 PDT — Long runtime R1–R3 repaired; original CPU input failed
+
+Claude991591df report86914561 genuineinput-onlyPASS/runtimeCHANGES-REQUIRED.
+Original authorized CPUconsumer37318 EXIT1, numericgold guard atAIME25 row0;
+530prompt encodings onlyephemeral, no savedinput/training/paidcall. Original
+fence/failure/log preserved; new inputreplacementrequires explicitownerexception
+and exactCR. This doesnot alter original OT3/AMinputA1 or frozeninputbytes.
+
+Newcandidatee6ce0467ded06b4bd09487e7843f5bf2f6f6924e exact37source: src dependency closure, fullarm96GiB and
+memory-inclusive rate, newmmapterminalwriter,7endpoint batches6x512+228/engine256;
+worker/forecast/oracle geometryshared. Goldadapter preserves530strings and70
+numericalvalues; newscalar-domaincheck confirms40floatsintegral, no scoring.
+13NEWchecksPASSonce0.713s includingtinyrealCPUtorchstate and3300mockrequests;
+oldsuccessfulchecks/models/inputs/scores/stats notrerun.33newornewclosureGitpaths
+checkedonce. Originalsharedcheckpoint andscience/inputfunctions unchanged.
+Unpublishedbinding/manifest preserved before adding2originalbenchmarkhashes and
+newscalar-domainproof; builder notrerun. Missing root/docs log guesses and broad
+read truncation are readonlynavigation errors, no scientificsideeffect.
+
+R4paidpreflight and A/D D1scope remain unresolved; no C1exceptiontransfer.
+C1originalFAILED32confirmedseq/noresult/C3.74retained; actualpreservationreview
+pending. B71fullpathreviewpending, C2draftonly,0activecompute/awake. No billing,
+provider,Papers,externalpost,subagent orZ1read. P010Oct21 19UTCfreeze remains.
+
 ### 2026-10-20 22:55:57 PDT — C2 independent batch driver prepared; stale counters corrected
 
 Two new C2 modules and12newchecks PASS once0.040s; oldsuccesses notrerun.

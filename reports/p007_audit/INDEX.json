@@ -4329,10 +4329,10 @@
       "request_id": "p011-long-A-D-complete-path-CR-A1-A2-lite-r1",
       "scope": "p011-long-A-D-complete-path-CR-A1-A2-lite",
       "source_CR_scope": "p011-long-A-D-complete-path-CR",
-      "target_commit": "db1aff076163606ded08776eca637c043d6c916b",
-      "status": "FULL_SOURCE_CR_PENDING_ACTUAL_ENDPOINT_INPUT_A1_AND_NUMERIC_FOLLOW_SAME_REQUEST",
+      "target_commit": "e6ce0467ded06b4bd09487e7843f5bf2f6f6924e",
+      "status": "RUNTIME_R1_R3_REPAIR_CR_PENDING_ORIGINAL_CPU_INPUT_FAILED_NEW_OWNER_EXCEPTION_REQUIRED",
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "source_binding_file": "reports/p011_20261020/long_full_path_preflight_v1/SOURCE_BINDING.json",
+      "source_binding_file": "reports/p011_20261020/long_runtime_repair_v1/SOURCE_BINDING.json",
       "source_files": {
         "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
         "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
@@ -4349,36 +4349,53 @@
         "experiments/p011/c1_execution.py": "2fad7192f26ced8c9ab865febfaa3d31ef4baa578682009bc1bbc43906148d06",
         "experiments/p011/c1_nll.py": "fe998fe3a210b5730c98273b77db70582297de07fb59bfcd6705e16306317d7a",
         "experiments/p011/c1_outer.py": "eb750bb48eeec4857ad4bafc0d380aa2eb7b251db2c548bdca8a341a5e6e6a06",
+        "experiments/p011/long_checkpoint.py": "6e71c347bc8824dac0df86e2e2af3a3fb4933019ed79fcea6b28d73faabfb385",
         "experiments/p011/long_evaluation.py": "9dbefc733a55043ca8a010074b8e067e1f2e11256140c2fdb98c2ddb88adecc9",
-        "experiments/p011/long_evidence.py": "32d9d100088bf8e4ee19747a20ca865227ae7c5ae8d93a1eb904369fb500042d",
-        "experiments/p011/long_execution.py": "f235a6b9bc41a65abceaaab658dea5cf4249466189c1d91fe92e44e43df82e98",
+        "experiments/p011/long_evidence.py": "dca47607c41874bbc74d93b4611320275cfa15cd89ff6ef554657b49637785d0",
+        "experiments/p011/long_execution.py": "5a456bb3a1d6d5d214174ffd7a458fcd9f76f01b6a1177530ead954f07855d16",
+        "experiments/p011/long_gold_input.py": "3c50c87e23a9ca405d980a481c1fc402bf857064818b3fa635ad17377c188ee3",
         "experiments/p011/long_numeric.py": "9899a6e02d240654e022fde85daf96cfdd89aecc9f6480f35cc5c6c71ae61ca8",
-        "experiments/p011/long_path.py": "8d3efa86f572fd7d16dd937f6bcdb3689823b64fc399066b896f96a51647e2e8",
+        "experiments/p011/long_path.py": "d3214c2f594e15e29e49444f1eb147588fc28734413d3cd60a1d1635dad23edf",
+        "experiments/p011/long_protocol.py": "0a5400086376cb2abf24595fa37ad1ab91e789ab3a0763fd4f742e9e897f6f7b",
         "experiments/p011/long_score_process.py": "0e433806c57aa27b9ff648b6a27b015793bf879ee2930dbb8eedd98c0aef26cf",
         "experiments/p011/long_scoring.py": "d133f9c0e0bbab5341385fcd5c9bb6672c4da8fdc5b3fc63e4e675d32d603375",
-        "experiments/p011/long_training.py": "52951ab45fd66527d40be4973e6b2d0bc7dfcd651548515129261b0b5712b92a",
+        "experiments/p011/long_training.py": "1d9ad0a1d44f053a10a7d5c99ed949bf732ddec53770e5a623dd4da6e6e99cd4",
         "experiments/p011/long_transport.py": "00098b543745ada1520cd7ea00a60b3683f7e2cfba73231eec91e92d5b62f0f7",
-        "experiments/p011/modal_long.py": "8c3173615d4881d2a8e67a28b540d4a46ff9691dd40952420c7c42f911fe0214",
+        "experiments/p011/modal_long.py": "964342a1512619f4994ed2ba3ad9a6d0b01386efb6aa12d302d1d6014d3bf855",
         "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
         "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
         "scripts/analyze_p011_long_pair.py": "dc13272fd9818696499fd3465a26f6ded44350c44f838ee62e08693cd5e0abf8",
         "scripts/p011_long_io.py": "f3f854c005cb609b664464b5cfc5eba2d1577e1c252753fce5b6b92ca887ce0b",
         "scripts/prepare_p011_c1_inputs.py": "d2aefd91ad5c03811ffea65a052b7a3923ff773fe266a0a5493bd2409d0c5b2e",
-        "scripts/prepare_p011_long_runtime_inputs.py": "52070fa95bee488558cfe4e5578e2302d00a05af3f09009fbfa8cddc0c211478"
+        "scripts/prepare_p011_long_numeric_gold_inputs.py": "8622966f139736d0b9d16d3e82fa5251bc6a555c544fe883b6177840bf7764e1",
+        "scripts/prepare_p011_long_runtime_inputs.py": "52070fa95bee488558cfe4e5578e2302d00a05af3f09009fbfa8cddc0c211478",
+        "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
       },
       "input_basis_files": {
         ".local/p011_20261020/r1/AM_INPUTS_AND_OT3_FAILURE_A1_ACCEPTED.json": "45f2f7ed1f869fbd82cc07b8329730b607b0c72622cd5528caced77b8ec72e44",
         ".local/p011_20261020/r1/OT3_NFC_COMPLETE_INPUTS_A1_ACCEPTED.json": "f009e900fcf692adec0d3925440627bcd962bdf6a7c9cc90e6d47cbfd2876e3d",
         ".local/p011_20261020/r1/am_inputs_r1/MANIFEST.json": "b105f20c3186bdb711d12a596e4b68c39d9a4698eabbd45362258dff955674ab",
         ".local/p011_20261020/r1/ot3_inputs_nfc_r1/MANIFEST.json": "96894f8f72941d3dbe6b8341dca02c4caa44b8b59c51cd92c0f0c5318f389b55",
-        "reports/p011_20261020/long_full_path_preflight_v1/INPUT_CONSUMER_BINDING.json": "ff10dca03b426eac3d6c71baba8abab51d6ea259c1eab50732e6843fcdaeb770"
+        "reports/p011_20261020/long_full_path_preflight_v1/INPUT_CONSUMER_BINDING.json": "ff10dca03b426eac3d6c71baba8abab51d6ea259c1eab50732e6843fcdaeb770",
+        ".local/p011_20261020/r1/LONG_INPUT_FIRST_FAILURE_PRESERVED.json": "ba9838a622cfa73bf68776ad55df87d14c48ab1f6b58800dbfbbc696393c55ff",
+        ".local/p011_20261020/r1/LONG_RUNTIME_INPUT_ATTEMPT.json": "3ed9d7fd97ee4c4bfd0e8b67002b724a3d096894e5e540021eab9841db3f492a",
+        ".local/p011_20261020/r1/long_inputs_r1/FAILED.json": "e1fc745da89d73994ad7fc0323e7751f0d17c8c818874d3cc4b00560828ff01a",
+        ".local/p011_20261020/r1/long_input_consumer_r1.log": "5a628f13b6f4071d59733d66e64cf6d6f9bb3e31c45b666c521556e0d29dc503",
+        ".local/p011_20261020/r1/ot3_inputs_nfc_r1/BENCHMARKS.json": "e98fd237f133cd32fe8c88203f7bfe086be345df845f7486f941acd4e3c546a5",
+        ".local/p011_20261020/r1/am_inputs_r1/BENCHMARKS.json": "e98fd237f133cd32fe8c88203f7bfe086be345df845f7486f941acd4e3c546a5"
       },
-      "manifest_sha256": "d9ebd31be8b695a2d6198c9667546874d4f3e86db2db98d5347b16a0f5e8cdd2",
+      "manifest_sha256": "bef8279d7df759c303b6fd3aa47000c756f62705e39aeb76520aef646b7496a4",
       "new_distinct_checks": 22,
-      "submitted_utc": "2026-10-21T04:33:15.946450+00:00",
+      "submitted_utc": "2026-10-21T06:16:07.619434+00:00",
       "new_paid_calls": 0,
       "actual_SPEC_selected": false,
-      "actual_input_consumer_executed": false
+      "actual_input_consumer_executed": false,
+      "original_input_permission_consumed": true,
+      "original_input_cli": 37318,
+      "original_runtime_review": "CHANGES-REQUIRED",
+      "input_replacement_scope": "p011-long-numeric-gold-input-replacement-CR",
+      "actual_model_calls": 0
     },
     {
       "request_id": "p011-B-generation-student-complete-path-CR-A1-A2-lite-r1",
@@ -4479,6 +4496,18 @@
       "new_paid_calls": 0,
       "C1_completed": false,
       "automatic_continuation_allowed": false
+    },
+    {
+      "request_id": "p011-long-numeric-gold-input-replacement-owner-r1",
+      "scope": "owner exception for one independent CPU input replacement",
+      "status": "PENDING_DIRECT_OWNER_EXCEPTION_AND_EXACT_INPUT_CR",
+      "target_commit": "e6ce0467ded06b4bd09487e7843f5bf2f6f6924e",
+      "proposal_file": "reports/p011_20261020/LONG_NUMERIC_GOLD_INPUT_REPLACEMENT_PROPOSAL.md",
+      "proposal_sha256": "a7b730e04fabad23d5ca7cc3b1d2e774e7a3957e32ae3d428783bdbf694e9be2",
+      "original_failure_sha256": "ba9838a622cfa73bf68776ad55df87d14c48ab1f6b58800dbfbbc696393c55ff",
+      "new_paid_calls": 0,
+      "new_CPU_attempts_requested": 1,
+      "submitted_utc": "2026-10-21T06:16:07.619434+00:00"
     }
   ],
   "p008_v31": {
@@ -6341,7 +6370,7 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T05:55:57.819725+00:00",
+  "last_updated_utc": "2026-10-21T06:16:07.619434+00:00",
   "p011": {
     "status": "OT3_actual_input_A1_accepted_diagnostic_complete_result_review_pending_C1_actual_A1_and_timing_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -6462,8 +6491,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-21T04:05:44.061985+00:00",
-    "last_review_head": "a2817992ffaa8a64f82d0a5cf2cfff964fb0b7ea",
+    "last_review_observed_utc": "2026-10-21T06:00:36.621095+00:00",
+    "last_review_head": "991591df673ca901e0af27c89750b5ed38cd05de",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -6556,7 +6585,7 @@
       "actual_A2_report_commit": "0103c6eb11b2ad1e777a705ef50b7e9c8800e346"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
-    "last_full_review_read_utc": "2026-10-21T03:18:18.662202+00:00",
+    "last_full_review_read_utc": "2026-10-21T06:01:53.190190+00:00",
     "active_local_readonly_diagnostic": 0,
     "last_fixed_report_read_utc": "2026-10-21T03:58:11.775722+00:00",
     "B_generation_evidence_preparation": {
@@ -6569,13 +6598,20 @@
     },
     "long_current": {
       "request_id": "p011-long-A-D-complete-path-CR-A1-A2-lite-r1",
-      "target_commit": "db1aff076163606ded08776eca637c043d6c916b",
-      "source_count": 31,
+      "target_commit": "e6ce0467ded06b4bd09487e7843f5bf2f6f6924e",
+      "source_count": 37,
       "request_file": "reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md",
-      "status": "FULL_SHARED_PATH_CR_PENDING",
+      "status": "RUNTIME_R1_R3_REPAIR_CR_PENDING_CPU_INPUT_REPLACEMENT_NOT_AUTHORIZED",
       "actual_SPEC": false,
       "actual_model_calls": 0,
-      "actual_endpoint_prompt_tokenizations": 0
+      "actual_endpoint_prompt_tokenizations": 530,
+      "saved_endpoint_prompt_encodings": 0,
+      "actual_input_consumer_failed": true,
+      "original_input_cli": 37318,
+      "original_input_permission_consumed": true,
+      "repair_packet": "reports/p011_20261020/long_runtime_repair_v1",
+      "failure_packet": "reports/p011_20261020/long_input_failed_preservation_v1",
+      "owner_exception_pending": true
     },
     "B_loader_scoring_prepared": {
       "utc": "2026-10-21T04:39:29.959894+00:00",
