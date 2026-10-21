@@ -13,6 +13,14 @@
 | all6400_outputs_and_unmapped_exclusions_accepted | **true** |
 | actual_selection_and_Pcov_accepted | **true** |
 
+**绑定**（ACTUAL_RESULT_BINDING 中的完整结果证据，与我解开的归档成员一致）：
+- original_generation_report_sha256：`0c1a9a1fc335381bdcabe78037e6bc3ca45d0ae922e8ea6f1879cbceb4e1d7ac`
+- complete_result_evidence_files：
+  - `.local/p011_20261020/r1/b_remaining_io_r2/audit/B_generation_t10_400x16_r2_continuation/COMPLETE_PROOF.json`：`6c28a7228dcb04c06d5db48ac5cccab8a410237bd9d8243a149bdecc679e72ec`
+  - `.local/p011_20261020/r1/b_remaining_io_r2/score/B_generation_t10_400x16_r2_continuation/COMPLETED.json`：`9dbfe664d8477092e1f5b9ace4c3a8329b73358cdd0ee067a045a02dfb916b33`
+  - `.local/p011_20261020/r1/b_remaining_io_r2/score/B_generation_t10_400x16_r2_continuation/RECORDS.json`：`c3b15d6fb1fc95019221f58e65a560d2a0bb087ca58b84ca2dde27059fb5c77d`
+  - `.local/p011_20261020/r1/b_remaining_io_r2/score/B_generation_t10_400x16_r2_continuation/SELECTION.json`：`30fe800395ce0212d0b6faafb82a273ccbc67d48476e5b57ab4efc5952b0a380`
+
 ## 独立检查（脚本和输出见 `b_a3_scripts/`）
 
 1. **解码（6,400 条全量，独立实现）**：
