@@ -1,0 +1,6 @@
+# Only when new full-epoch upper bound, actual observed charges, slots and time permit.
+# JOB order: long_A4_S-F15_s17_owner_r1, long_A3..., long_A2..., long_A8...
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/record_p011_owner_optional_budget.py --directory .local/p011_20261020/r1/NEW_DATED_OPTIONAL_COST_DIRECTORY
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/prepare_p011_long_owner_optional_transfer.py --job JOB
+PYTHONPATH=. .local/midpoint_20261011/venv/bin/modal run experiments/p011/modal_long_owner_optional.py --jobs JOB --review-json .local/p011_20261020/r1/OWNER150_EXECUTION_AUTHORIZATION.json --budget-json .local/p011_20261020/r1/NEW_DATED_OPTIONAL_COST_DIRECTORY/BUDGET.json
+# During launch through SUBMITTED, do not commit/push. Collect/audit/score each once with p011_long_owner_optional_io.py, original environments and original absolute window.

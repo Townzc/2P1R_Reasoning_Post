@@ -1,3 +1,9 @@
+### 2026-10-21T20:34:52.285202+00:00 — Clean400 model completed; optional accounting prepared
+
+Original clean400CLI45170 EXIT0CONSUMED, RESULT finished1792614626.8916326, 1024updates and2500raw. Firstcollector21994 ACTIVE_UNCONSUMED logFALLBACK_N400_FIRST_COLLECT; no oracle/score yet. Original clean3200CLI56463 remains active. All9 submitted, max8; baseline previouslycomplete. Never repeat uploads/inputs/model or consume closedCLI.
+
+Optional new client packet owner_optional_accounting_v1 prepared,8NEWchecks oncePASS, original63/110 remote scientific sources unchanged. Includes all9 epochs/controls, authenticated new app costs, completed duration only as unbilled upperbound, unknown slots and conservative noncompute allowance. No optional job/billing/transfer yet. Must use new optional path, never old incomplete owner63 ledger for optionals. A4→A3→A2/A8 only if actual newcap/time/8slots permit, lastdispatch22:30. Independent async review request appended; no preapproval gate.
+
 ### 2026-10-21T20:27:22.947185+00:00 — Nine calls submitted; async scientific review accepted; local collector replacement
 
 Direct owner150/max8/hardtimer/log-only forecasts and one infrastructure retry supersede old gates. All seven A/D and both T72-clean controls have real SUBMITTED; clean3200 CLI56463 appap-x6n6dEQqVmVURvoOprDYnX/callfc-01M5G1WXX15KZPS4J44CXZHFXG at20:19:31 used the completed baseline's slot. Never relaunch initial6CLI39170/A5 83201/clean40045170/clean320056463; check original local receipts first. Baseline RESULT completed3300 outputs; shared6app still active for others. No >8 concurrency. New allnine compute exposure142.46 within150, not actual expense; optional jobs must include controls in accounting.
