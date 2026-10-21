@@ -1,3 +1,5 @@
+P011 2026-10-21T01:00:55.762742+00:00: [native Unicode failure and continuation proposal](OT3_NFC_CONTINUATION_PROPOSAL.md). Original965 encodings preserved; newconsumer49691 failed. Exactnewsource6 `10738e624300ff125c59fd127e798bc4e5fbdc85` awaits direct owner exception and CR. No cloud/model call. [New request](OT3_NFC_CONTINUATION_CR_REQUEST.md).
+
 P011 2026-10-21T00:52:24.349398+00:00: [AM actual A1 and4032 CR accepted](review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1/README.md). New local consumer49691 running once; actual4032 A1 follows. Original4096 deficit remainsFAIL; no paid/model call.
 
 P011 engineering 2026-10-21T00:29:56.350406+00:00: [long payload/scoring preparation](long_closeout_draft_v1/README.md),20newsynthetic checks passed; no production model/scoring or new code-only gate. Data4032CR/AMactualA1 pending.

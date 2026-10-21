@@ -1,3 +1,23 @@
+### 2026-10-20 18:00:55 PDT — Native Unicode roundtrip failure preserved; exact continuation proposed
+
+Actual4032consumer49691 EXIT1CONSUMED, failed00:51:57UTC, original965 complete
+raw/encoded rows and6files138654044bytes preserved once. Fixed tokenizer's NFC
+maps two decomposed a+U0304 to U0101 in next train-00033row2455; strict rawtext
+roundtrip rejects it. Unicode-only diagnosis did not encode original/failed rows.
+No model/cloud/scoring/dose/plans. Old4096 deficit and exactsource4 remain.
+New6sourcecandidate10738e62 adds NFC-only verifier and once-only consumer;
+copy965 raw/encodedbytes, encode9115 unconfirmed thenfirstoriginalB/Uplans. No
+NFKC/trim/truncate/reselection or budget changes. Direct newowner exception and
+independent CR pending, not admitted; concrete proposal and fullfailedarchive
+published.12newtestsPASS0.693s once28135; oldsuccessfulchecks not repeated.
+Builder25985 completed originalarchive28509171bytes/full6SHAreadback and new
+packets once. BoundedawakePID66616 terminated after failedconstructor. Newquery
+ps first whitespace comparison safely didnotkill; secondexactargs check did.
+One guessed OPERATIONAL_DETAILS filename read failed only; no scientific effect.
+AM actualA1/4032oldCR accepted63e82f7b; true currentfailure does not revoke AM.
+P011paid/reserve0,0activecompute. NoZ1/subagents/externalmessages. P010Oct21
+19UTCfreeze remains; independent fullruntime/B/C preparation can continue.
+
 ### 2026-10-20 17:52:24 PDT — Real AM A1 and exact4032 reuse CR accepted; original local consumer started
 
 Claude63e82f7b/reportSHA5d4e9f83 independently accepts AM actualA1 with notes,

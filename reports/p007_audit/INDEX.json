@@ -4121,6 +4121,29 @@
       "review_commit": "63e82f7b8ffc94a4774b561b962ddd1182b0dc4f",
       "report_sha256": "5d4e9f8316d5221c3da1f267bca85f518c0373ec4c710e47e42f539b6409df7f",
       "acceptance_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1"
+    },
+    {
+      "request_id": "p011-OT3-confirmed-encoding-NFC-continuation-CR-r1",
+      "scope": "p011-OT3-confirmed-encoding-NFC-continuation-CR",
+      "target_commit": "10738e624300ff125c59fd127e798bc4e5fbdc85",
+      "status": "pending_direct_owner_exception_and_exact_CR",
+      "request_file": "reports/p011_20261020/OT3_NFC_CONTINUATION_CR_REQUEST.md",
+      "submitted_utc": "2026-10-21T01:00:55.762742+00:00",
+      "source_files": {
+        "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+        "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+        "experiments/p011/native_nfc_encoding.py": "c2af5621a2917679dca59220b387cc7d60f2669cb4a40a5354607106d740447e",
+        "scripts/prepare_p011_long_inputs.py": "4468a80d82f0a80d6c217d92e54ac41b211dcf943b156432850bffb6405812e1",
+        "scripts/prepare_p011_ot3_4032_inputs.py": "4546ffad73a9171804cfa1b3d931ce6ae27b61aa40efdb7d8bfbda84af67ca3a",
+        "scripts/prepare_p011_ot3_nfc_continuation.py": "c0aae4c117ff7815a552b92124da2e2d8c1bd144441fa6957e603ce36fe3719b"
+      },
+      "code_manifest_sha256": "5d89938bcefe91608a8fba054ee0f6fc4a816566b859e62bdca724df9fc195f2",
+      "failure_manifest_sha256": "d7d7f1c64ec387cea49c421091cbaba668907da9fb7d674ea42b0e71d785f493",
+      "confirmed_rows_reused": 965,
+      "unconfirmed_rows_to_encode": 9115,
+      "original_session_state": "49691_EXIT1_CONSUMED",
+      "owner_proposal": "reports/p011_20261020/OT3_NFC_CONTINUATION_PROPOSAL.md",
+      "new_scientific_model_calls": 0
     }
   ],
   "p008_v31": {
@@ -5983,9 +6006,9 @@
     "C6_failed_proposal_target_commit": "2311841a6a6f53ea1be3ce2d12fa1068aa2407ad",
     "C6_remaining_status": "full_candidate_only2500_pending_owner_and_A2_original18871_preserved"
   },
-  "last_updated_utc": "2026-10-21T00:52:24.349398+00:00",
+  "last_updated_utc": "2026-10-21T01:00:55.762742+00:00",
   "p011": {
-    "status": "AM_actual_A1_accepted_4032_CR_accepted_local_consumer_running",
+    "status": "AM_A1_accepted_OT3_encoding_failure_preserved_NFC_exception_and_CR_pending",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -6003,7 +6026,7 @@
     "exploratory": true,
     "production_construction_run": true,
     "scientific_calls": 0,
-    "pending_path_CR": null,
+    "pending_path_CR": "p011-OT3-confirmed-encoding-NFC-continuation-CR-r1",
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
     "raw_downloads": "all_complete_and_SHA_verified",
@@ -6022,9 +6045,12 @@
       },
       "ot3_4032": {
         "session_id": 49691,
-        "state": "ACTIVE_UNCONSUMED",
+        "state": "EXIT1_CONSUMED",
         "source_target": "410c035d8c9b12d5c6e5d98220cec99914c0daeb",
-        "repeat_allowed": false
+        "repeat_allowed": false,
+        "failed_utc": "2026-10-21T00:51:57.009625+00:00",
+        "confirmed_rows": 965,
+        "failure": "PINNED_NFC_VS_RAW_TEXT_ROUNDTRIP"
       }
     },
     "data_CR_acceptance": "reports/p011_20261020/review_5c91d0d1_data_CR_accepted_v1",
@@ -6094,6 +6120,10 @@
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": false,
-    "data_review_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1"
+    "data_review_packet": "reports/p011_20261020/review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1",
+    "ot3_NFC_candidate": "10738e624300ff125c59fd127e798bc4e5fbdc85",
+    "ot3_NFC_owner_exception_approved": false,
+    "ot3_NFC_production_executed": false,
+    "active_scientific_computation": 0
   }
 }
