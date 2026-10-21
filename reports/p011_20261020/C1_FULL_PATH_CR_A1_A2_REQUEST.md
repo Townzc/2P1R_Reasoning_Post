@@ -1,3 +1,42 @@
+# C1 owner-bounded self-calibration: exact short CR and A2-lite follow-up
+
+Updated 2026-10-21T04:14:06.485257+00:00. Same shared request `p011-C1-complete-path-CR-A1-A2-lite-r1`.
+Exact new target **`a253452a24368a34532e5c761b7bdb24cd634748`**, [candidate](c1_self_calibration_preflight_v1/README.md).
+SOURCE_BINDING binds13 files: twelve original-path source names, three changed,
+plus the exact owner decision raw record. Eight NEWmockchecks passed once0.056s;
+original copy/source tests/science were not repeated. The saved raw diff has
+context-space style warnings; excluding that immutable diff only, check passed.
+
+Claude's owner record at a2817992 reports a direct choice at04:02UTC,
+“自校准例外 (推荐)”; SHA `a08ba1abec5108b7ed583175151116f6a074626093c51148e783a5c1020506f0`.
+Codex has not seen the underlying conversation. It authorizes one bounded
+C1 self-calibration exception; the record alone does not permit upload/dispatch.
+Original numeric review corrects the prior double-counted proxy. Its estimates
+are neither measurements nor cost guarantees. Full original files and provenance
+are in this packet. Historical input A1 remains accepted; input bytes unchanged.
+
+Please review this exact source13 under `p011-C1-complete-path-CR`, binding
+SOURCE_BINDING and every source_flag in REVIEW_REQUIREMENTS. The initial chunk
+has no proxy forecast. Worker<=2400/platform=worker+60/startup600/load-by900s;
+reserve=ceil_cent(fresh full rate*(startup+platform))<=4 and<=80percent Cremaining.
+After EVERY complete chunk, only current-run whole-cycle measurements feed the
+original1.2/300s forecast; exceed worker-30 or reserve => FAILED/no next chunk.
+Hard process timeout can precede a FAILED artifact; original partials/claim remain.
+C12/180/protect48/one logical attempt/remaining windows and all fences unchanged.
+
+Then numerical A2-lite in the SAME request must bind the actual selected SPEC,
+fresh rate/budget and six original admission flags, plus
+`measurement_exceptions=1`, this owner SHA, and
+`bounded_in_run_self_calibration_accepted=true`. No actual SPEC/rate/reservation,
+upload or forward has been selected/performed. Source PASS alone cannot dispatch.
+The C1-only exception does not admit long A/D or B measurement calls.
+
+The original code/input acceptances remain historical for their exact versions.
+OT3 narrow recount clarification stays in its original actual-result request.
+P010 formal freeze atOct21 19UTC remains independent.
+
+--- Prior exact scope and evidence, retained below ---
+
 # C1 shared review follow-up — source/input accepted; numerical default does not fit
 
 Updated 2026-10-21T03:52:16.552207+00:00. Same request `p011-C1-complete-path-CR-A1-A2-lite-r1`.

@@ -1,3 +1,5 @@
+P011 2026-10-21T04:14:06.485257+00:00: [C1 bounded self-calibration short CR](C1_FULL_PATH_CR_A1_A2_REQUEST.md) submitted ata253452a24368a34532e5c761b7bdb24cd634748; owner exception recorded, numerical admission and paid execution still pending. No repeated input or old tests.
+
 P011 2026-10-21T04:03:35.191940+00:00: [OT3 actual review received; narrow recount clarification pending](OT3_COMPLETENESS_DIAGNOSTIC_ACTUAL_REVIEW_REQUEST.md). [B read-only evidence preparation](b_generation_evidence_draft_v1/README.md),7newchecksPASS; no original work rerun. C1 source/input accepted, numerical A2-lite still pending.
 
 P011 2026-10-21T03:52:16.552207+00:00: [C1 source and actual input accepted; numeric proxy exceeds current gate](C1_FULL_PATH_CR_A1_A2_REQUEST.md). No upload/paid forward. [Independent B journal preparation](b_generation_execution_draft_v1/README.md),7newmockchecksPASS; no old work repeated.

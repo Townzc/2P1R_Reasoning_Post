@@ -1,3 +1,22 @@
+### 2026-10-20 21:14:06 PDT — C1 owner-bounded self-calibration submitted
+
+Direct-user-triggered audit read04:05:44 found a2817992. Full non-Z1 read04:07:29
+preserved Git04:03:14 and reported owner04:02 events separately. Designated Claude
+records owner choice “自校准例外 (推荐)”; Codex has not seen underlying conversation.
+One C1-only<=2400s worker/<=4USD reserve exception still needs exactCR andA2-lite.
+No upload/SPEC/freshbudget/paidforward/reservation. Three source files changed,
+original tokens/inputs/summary/fences unchanged; first-complete-cycle forecast
+uses only this run, load watchdog900s, normal forecast violation FAILED/no retry.
+Eight NEWmockchecks oncePASS0.056s. No old success tests or source/input copy repeated.
+Exactsource13 targeta253452a24368a34532e5c761b7bdb24cd634748;14new Git files checked once. Raw diff context-space
+style warnings retained; only excluding raw diffPASS. Earlier quantitative proxy
+was corrected by reviewer for double-counted overhead; no guarantee inferred.
+Two read-only guessed root WORKBOARD/RUN_LOG and globINDEX navigation failures,
+then bounded actual paths resolved; oversized history read truncated, no mutation.
+Long complete runtime CR remains the priority work immediately following this
+submission; B fullpath preparation continues. OT3 narrowerratum remains pending.
+P010 formalOct21 19UTCfreeze remains independent.0scienceactive/paid/reserve.
+
 ### 2026-10-20 21:03:35 PDT — OT3 actual review received, narrow attachment correction; B evidence preparation
 
 Known fixedClaude0e155e25 reportSHAf5457a30 read03:58:11.775722UTC after
