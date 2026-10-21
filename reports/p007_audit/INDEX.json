@@ -8151,7 +8151,7 @@
     }
   },
   "p011_owner150_current": {
-    "recorded_utc": "2026-10-21T22:06:55.490292+00:00",
+    "recorded_utc": "2026-10-21T22:31:27.565165+00:00",
     "source_head": "9d6817a6b82a9350d80f3e863273c888f8639433",
     "new_spend_cap_usd": 150,
     "slots": 8,
@@ -8175,7 +8175,7 @@
     "local_baseline_first_collect": "INFRASTRUCTURE_FAILED_BEFORE_ARCHIVE; one authorized retry pending original app STOPPED0",
     "closed_closeout_adapter": "scripts/p011_long_owner_closed_io.py",
     "per_call_adapter": "WITHDRAWN",
-    "optional_admission": "A4_NOT_DISPATCHED_HISTORICAL_RATE_RISK_SCREEN_170.46_OVER_150; NOT_ACTUAL_EXPENSE",
+    "optional_admission": "CLOSED_NOT_RUN_OWNER_22_30_DISPATCH_CUTOFF_REACHED",
     "optional_packet": "reports/p011_20261020/owner_optional_post_retry_accounting_v1",
     "fallback_n400": "COMPLETE_ACTUAL_A3_ACCEPTED_WITH_NOTES",
     "fallback_n3200": "COMPLETE_ACTUAL_A3_ACCEPTED_WITH_NOTES",
@@ -8210,7 +8210,17 @@
     "A1_async_report_late_seconds": 527.42495,
     "closed_collector_async_review": "NOT_EXPLICITLY_COVERED_BY_REPORT",
     "D1": "MODEL_COMPLETED_LOCAL_CLOSEOUT_PENDING_SHARED_APP_EXIT",
-    "latest_progress": "reports/p011_20261020/OWNER150_PROGRESS_20261021T2206Z.json"
+    "latest_progress": "reports/p011_20261020/OWNER150_PROGRESS_20261021T2206Z.json",
+    "optional_cells_not_run": [
+      "A4",
+      "A3",
+      "A2",
+      "A8"
+    ],
+    "optional_cutoff_status": "reports/p011_20261020/OWNER150_OPTIONAL_DISPATCH_CUTOFF_20261021.json",
+    "full_state_local_oracle_concurrency": 1,
+    "last_shared_audit_poll_utc": "2026-10-21T22:21:51.839096+00:00",
+    "next_normal_pending_collector_review_utc": "2026-10-21T22:51:51.839096+00:00"
   },
   "p010_actual_final_A5": {
     "decision": "PASS",

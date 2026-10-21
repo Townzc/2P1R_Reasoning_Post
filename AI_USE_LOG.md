@@ -1,3 +1,11 @@
+### 2026-10-21T22:31:27.565165+00:00 — Optional dispatch window closed; original owner jobs continue
+
+The owner's22:30 UTC last-dispatch deadline has passed. A4, A3, A2 and A8 have no dispatch directories and are explicitly NOT_RUN. The bounded local watcher observed no new terminal receipt between the D1 cost screen and22:30:05; the last supported historical-rate A4 risk bound remained $170.46, above the $150 cap. No optional transfer, fresh billing, provider query or model entry was made. This bound is not actual expense; predictive forecasts still do not terminate original workers.
+
+Five original model jobs remain active or awaiting their original terminal receipts: A7, A6, D2, A5 and the single authorized A1r2 retry. Baseline and D1 have complete RESULT records; original shared app closure, first full-state/raw oracle, first score and actual A3 remain outstanding. Original CLI39170/83201/62931 remain ACTIVE_UNCONSUMED; the two finite local watchers74544/54830 are EXIT0CONSUMED. A1r2's log records endpoint-engine initialization22:27:51, which is not a complete result. Future full-state local oracles run one at a time on the24GiB host, with unchanged scientific functions and original absolute deadlines. No new model dispatch after22:30; only original closeout and necessary actual-cost reconciliation remain.
+
+One due read-only audit HEAD check22:21:51 still observed7c0ac0a5, no changed filenames or report reread. Separate closed-app collector asynchronous review remains pending/nonblocking; nextnormal22:51:51/min22:36:51. Source69/77 and both fallback actual A3 reviews remain accepted, and P010 final A5 is closed. Keep automation active until original science, required audits and handoff are closed.
+
 ### 2026-10-21T22:06:55.490292+00:00 — Original D1 completed; optional A4 still above the spending bound
 
 The original D1 model completed at 21:52:48.646031 UTC with 3,300 raw outputs; original RESULT SHA d9c83b6648482de6edd5a9089b59fcb59c80ad4d7c3b94f02abe1402b2b08df0. Five original model jobs remain active at this observation. D1 and baseline collection await the original shared app's complete exit; neither local oracle nor actual A3 is implied. The original shared CLI remains unconsumed because its other calls are still active.
