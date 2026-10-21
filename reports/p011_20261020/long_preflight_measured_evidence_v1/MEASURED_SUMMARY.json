@@ -1,0 +1,354 @@
+{
+  "all_original_models_and_collections_must_not_repeat": true,
+  "arms": [
+    {
+      "actual_provider": {
+        "app_id": "ap-yYWs4hR66xJ8SCB7aXIaDT",
+        "observed_epoch": 1792579270.239805,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "app_id": "ap-yYWs4hR66xJ8SCB7aXIaDT",
+      "arm": "S-L15",
+      "finished_epoch": 1792579181.0153906,
+      "formal512_throughput_measured": false,
+      "full_state_oracle_completed": true,
+      "logical_id": "preflight_S-L15_s17_r1",
+      "memory_peak_bytes_recorded": false,
+      "original_result": {
+        "actual_engine_request_count": 32,
+        "endpoint_batch_seconds": [
+          60.34156746299999
+        ],
+        "engineering_preflight": true,
+        "formal_batch_throughput_is_not_measured": true,
+        "formal_engine_batch_count": 512,
+        "generated_tokens": 41895,
+        "model_export_relative_path": "model_for_vllm",
+        "no_correctness_scoring": true,
+        "not_a_timing_upper_bound": true,
+        "raw_endpoint_count": 32,
+        "scientific_cell_result": false,
+        "tokens_per_whole_batch_second": 694.2975093527197,
+        "training": {
+          "B": 65082,
+          "U": 2,
+          "actual_processed_tokens": 65346,
+          "actual_supervised_tokens": 65082,
+          "encoded_sha256": "b13ef8448e93d06eb89e77337f896779f85fb99b89cc9209ffdf37eaddaa7f97",
+          "engineering_preflight": true,
+          "lr_sha256": "9071ca20bce0498739a3d31114cd6f9accdb53339f7009207886a5d93dd27112",
+          "model_export_sha256": "aab6cce8818b5aac1e48dcf88845003b74eee9b162f415ee11e750042ddca567",
+          "once_pass_tokens": 32541,
+          "plan_sha256": "4c9c0ff40e5c434c3a760263507789b5dbbe9cb595e0480914b3cb25508f9a0c",
+          "q": 2,
+          "scientific_cell_result": false,
+          "terminal_state": {
+            "bytes": 886839093,
+            "file": "state.pt",
+            "identity_sha256": "6ab36f73a3e648e8b16798b5b13b7bd77142e17a0e4d4046f21edfa144eaabe5",
+            "processed_tokens": 65346,
+            "schema": "p011_complete_training_state_v1",
+            "sha256": "ee4bea7314f512ceaa76b466465322f53265e33e226fab49b397251e3996895f",
+            "step": 2,
+            "supervised_tokens": 65082
+          }
+        },
+        "training_update_seconds": [
+          6.268969214000002,
+          5.645481916000001
+        ]
+      },
+      "scientific_cell_result": false,
+      "timing_files": {
+        "ENDPOINT_COMPLETE_CYCLES.json": [
+          {
+            "batch": 0,
+            "body_seconds": 57.707296473000014,
+            "remote_unit_and_done_included": true,
+            "seconds": 60.34156746299999,
+            "volume_commits_included": 3
+          }
+        ],
+        "ENGINE_START_TIMING.json": {
+          "engine_commit_included": true,
+          "seconds": 56.082619264
+        },
+        "MODEL_LOAD_TIMING.json": {
+          "arm": "S-L15",
+          "engineering_preflight": true,
+          "seconds": 12.856746636
+        },
+        "TERMINAL_PHASE_TIMINGS.json": [
+          {
+            "final_volume_commit_included": true,
+            "phase": "terminal_state",
+            "seconds": 17.190915732
+          },
+          {
+            "final_volume_commit_included": true,
+            "phase": "terminal_model_export",
+            "seconds": 40.06750490699999
+          }
+        ],
+        "TRAINING_COMPLETE_CYCLES.json": [
+          {
+            "body_seconds": 3.426187924999997,
+            "remote_unit_and_done_included": true,
+            "seconds": 6.268969214000002,
+            "step": 1,
+            "volume_commits_included": 2
+          },
+          {
+            "body_seconds": 2.7057827470000007,
+            "remote_unit_and_done_included": true,
+            "seconds": 5.645481916000001,
+            "step": 2,
+            "volume_commits_included": 2
+          }
+        ],
+        "TRAINING_PARENT_INTERVAL.json": {
+          "includes_spawn_load_training_state_export_exit_join": true,
+          "seconds": 97.776964067
+        }
+      },
+      "worker_start_epoch": 1792578873.584286
+    },
+    {
+      "actual_provider": {
+        "app_id": "ap-tT4RSQMjJlAkDQMSkBNhyD",
+        "observed_epoch": 1792579719.219674,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "app_id": "ap-tT4RSQMjJlAkDQMSkBNhyD",
+      "arm": "S-F15",
+      "finished_epoch": 1792579599.5844197,
+      "formal512_throughput_measured": false,
+      "full_state_oracle_completed": false,
+      "logical_id": "preflight_S-F15_s17_r1",
+      "memory_peak_bytes_recorded": false,
+      "original_result": {
+        "actual_engine_request_count": 32,
+        "endpoint_batch_seconds": [
+          10.159466284000018
+        ],
+        "engineering_preflight": true,
+        "formal_batch_throughput_is_not_measured": true,
+        "formal_engine_batch_count": 512,
+        "generated_tokens": 27229,
+        "model_export_relative_path": "model_for_vllm",
+        "no_correctness_scoring": true,
+        "not_a_timing_upper_bound": true,
+        "raw_endpoint_count": 32,
+        "scientific_cell_result": false,
+        "tokens_per_whole_batch_second": 2680.1604768237203,
+        "training": {
+          "B": 65082,
+          "U": 2,
+          "actual_processed_tokens": 65346,
+          "actual_supervised_tokens": 65082,
+          "encoded_sha256": "b13ef8448e93d06eb89e77337f896779f85fb99b89cc9209ffdf37eaddaa7f97",
+          "engineering_preflight": true,
+          "lr_sha256": "7e232252bdb9ca43d971e37e8c3f3d7c09604ac5748a5065ddc48796ac27469f",
+          "model_export_sha256": "b78fa74b68e3f013558245d11a24cd5b534fb6da97da5ed94166cd9a0367f785",
+          "once_pass_tokens": 32541,
+          "plan_sha256": "4c9c0ff40e5c434c3a760263507789b5dbbe9cb595e0480914b3cb25508f9a0c",
+          "q": 2,
+          "scientific_cell_result": false,
+          "terminal_state": {
+            "bytes": 18525022033,
+            "file": "state.pt",
+            "identity_sha256": "5e1e9abf2d4e1d2e16da99cb86f15813c2d129ae3a8e0a9820161dd51c97e53f",
+            "processed_tokens": 65346,
+            "schema": "p011_complete_training_state_v1",
+            "sha256": "ffb6c704f2996471500bb9f57f0c083f43d0484827353e861d073b7ddcedb71f",
+            "step": 2,
+            "supervised_tokens": 65082
+          }
+        },
+        "training_update_seconds": [
+          4.354440685,
+          3.56360381
+        ]
+      },
+      "scientific_cell_result": false,
+      "timing_files": {
+        "ENDPOINT_COMPLETE_CYCLES.json": [
+          {
+            "batch": 0,
+            "body_seconds": 8.412329233000008,
+            "remote_unit_and_done_included": true,
+            "seconds": 10.159466284000018,
+            "volume_commits_included": 3
+          }
+        ],
+        "ENGINE_START_TIMING.json": {
+          "engine_commit_included": true,
+          "seconds": 56.435650592
+        },
+        "MODEL_LOAD_TIMING.json": {
+          "arm": "S-F15",
+          "engineering_preflight": true,
+          "seconds": 12.023844006
+        },
+        "TERMINAL_PHASE_TIMINGS.json": [
+          {
+            "final_volume_commit_included": true,
+            "phase": "terminal_state",
+            "seconds": 77.446487356
+          },
+          {
+            "final_volume_commit_included": true,
+            "phase": "terminal_model_export",
+            "seconds": 19.585275285999998
+          }
+        ],
+        "TRAINING_COMPLETE_CYCLES.json": [
+          {
+            "body_seconds": 2.9490746209999976,
+            "remote_unit_and_done_included": true,
+            "seconds": 4.354440685,
+            "step": 1,
+            "volume_commits_included": 2
+          },
+          {
+            "body_seconds": 2.2063531920000017,
+            "remote_unit_and_done_included": true,
+            "seconds": 3.56360381,
+            "step": 2,
+            "volume_commits_included": 2
+          }
+        ],
+        "TRAINING_PARENT_INTERVAL.json": {
+          "includes_spawn_load_training_state_export_exit_join": true,
+          "seconds": 133.279810922
+        }
+      },
+      "worker_start_epoch": 1792578918.9038124
+    },
+    {
+      "actual_provider": {
+        "app_id": "ap-S9DfcWmRjeagDQTPGg27Ht",
+        "observed_epoch": 1792579496.250902,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "app_id": "ap-S9DfcWmRjeagDQTPGg27Ht",
+      "arm": "S-L3",
+      "finished_epoch": 1792579368.3918407,
+      "formal512_throughput_measured": false,
+      "full_state_oracle_completed": true,
+      "logical_id": "preflight_S-L3_s17_r1",
+      "memory_peak_bytes_recorded": false,
+      "original_result": {
+        "actual_engine_request_count": 32,
+        "endpoint_batch_seconds": [
+          90.01304596699998
+        ],
+        "engineering_preflight": true,
+        "formal_batch_throughput_is_not_measured": true,
+        "formal_engine_batch_count": 512,
+        "generated_tokens": 73305,
+        "model_export_relative_path": "model_for_vllm",
+        "no_correctness_scoring": true,
+        "not_a_timing_upper_bound": true,
+        "raw_endpoint_count": 32,
+        "scientific_cell_result": false,
+        "tokens_per_whole_batch_second": 814.3819511104492,
+        "training": {
+          "B": 65082,
+          "U": 2,
+          "actual_processed_tokens": 65346,
+          "actual_supervised_tokens": 65082,
+          "encoded_sha256": "b13ef8448e93d06eb89e77337f896779f85fb99b89cc9209ffdf37eaddaa7f97",
+          "engineering_preflight": true,
+          "lr_sha256": "9071ca20bce0498739a3d31114cd6f9accdb53339f7009207886a5d93dd27112",
+          "model_export_sha256": "d7ac506d9a5a54c302c77ad465a5f387d93992f28b9c0a91c4e3865b47b1393b",
+          "once_pass_tokens": 32541,
+          "plan_sha256": "4c9c0ff40e5c434c3a760263507789b5dbbe9cb595e0480914b3cb25508f9a0c",
+          "q": 2,
+          "scientific_cell_result": false,
+          "terminal_state": {
+            "bytes": 1437488373,
+            "file": "state.pt",
+            "identity_sha256": "7266ca1fb8f31ab536ed3a9333a0625210657c07eb02a175764615446ccdb7d9",
+            "processed_tokens": 65346,
+            "schema": "p011_complete_training_state_v1",
+            "sha256": "0695dd108a3df5c3f4188abb63717ef0229f7363f71f3377c7c32705a074ee65",
+            "step": 2,
+            "supervised_tokens": 65082
+          }
+        },
+        "training_update_seconds": [
+          7.637578009000002,
+          7.161893800000001
+        ]
+      },
+      "scientific_cell_result": false,
+      "timing_files": {
+        "ENDPOINT_COMPLETE_CYCLES.json": [
+          {
+            "batch": 0,
+            "body_seconds": 87.84362397800001,
+            "remote_unit_and_done_included": true,
+            "seconds": 90.01304596699998,
+            "volume_commits_included": 3
+          }
+        ],
+        "ENGINE_START_TIMING.json": {
+          "engine_commit_included": true,
+          "seconds": 55.020345554
+        },
+        "MODEL_LOAD_TIMING.json": {
+          "arm": "S-L3",
+          "engineering_preflight": true,
+          "seconds": 16.388988529000002
+        },
+        "TERMINAL_PHASE_TIMINGS.json": [
+          {
+            "final_volume_commit_included": true,
+            "phase": "terminal_state",
+            "seconds": 18.93872512299999
+          },
+          {
+            "final_volume_commit_included": true,
+            "phase": "terminal_model_export",
+            "seconds": 36.798980109
+          }
+        ],
+        "TRAINING_COMPLETE_CYCLES.json": [
+          {
+            "body_seconds": 5.458590586,
+            "remote_unit_and_done_included": true,
+            "seconds": 7.637578009000002,
+            "step": 1,
+            "volume_commits_included": 2
+          },
+          {
+            "body_seconds": 4.741774714000002,
+            "remote_unit_and_done_included": true,
+            "seconds": 7.161893800000001,
+            "step": 2,
+            "volume_commits_included": 2
+          }
+        ],
+        "TRAINING_PARENT_INTERVAL.json": {
+          "includes_spawn_load_training_state_export_exit_join": true,
+          "seconds": 106.186081672
+        }
+      },
+      "worker_start_epoch": 1792578973.1207497
+    }
+  ],
+  "created_utc": "2026-10-21T11:06:55.390478+00:00",
+  "formal_model_calls": 0,
+  "formal_numerical_admission": false,
+  "full_oracles_completed": 2,
+  "fullparam_local_audit_pending_reason": "pre-entry unpublished HEAD; no audit directory or state read",
+  "measurement_exceptions_for_formal": 0,
+  "original3_collections_completed": true,
+  "original3_engineering_models_completed": true,
+  "reserve_not_actual_expense": true,
+  "total_retained_engineering_reserve_usd": "5.95"
+}

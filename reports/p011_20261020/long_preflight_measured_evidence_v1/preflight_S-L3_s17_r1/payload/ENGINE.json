@@ -1,0 +1,56 @@
+{
+  "actual": {
+    "compilation_level": 3,
+    "cudagraph_capture_sizes": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "cudagraph_mode": "FULL_AND_PIECEWISE",
+    "dtype": "torch.bfloat16",
+    "enable_chunked_prefill": true,
+    "enable_prefix_caching": false,
+    "enforce_eager": false,
+    "gpu_memory_utilization": 0.8,
+    "max_model_len": 17243,
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 256
+  },
+  "model_path": "/evidence/p011-20261020/long_preflight_runs_r1/preflight_S-L3_s17_r1/model_for_vllm",
+  "requested": {
+    "compilation_config": {
+      "cudagraph_capture_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "cudagraph_mode": "FULL_AND_PIECEWISE",
+      "level": 3
+    },
+    "disable_log_stats": true,
+    "dtype": "bfloat16",
+    "enable_chunked_prefill": true,
+    "enable_prefix_caching": false,
+    "enforce_eager": false,
+    "generation_config": "vllm",
+    "gpu_memory_utilization": 0.8,
+    "max_model_len": 17243,
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 256,
+    "seed": 17,
+    "tensor_parallel_size": 1,
+    "trust_remote_code": false
+  }
+}
