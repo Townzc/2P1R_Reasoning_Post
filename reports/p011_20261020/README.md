@@ -1,3 +1,5 @@
+P011 engineering 2026-10-21T01:30:09.459539+00:00: [C1 copy/worker draft](c1_execution_draft_v1/README.md),12new checks passed; real original inputs/model/forward NOTRUN. Full-path timing, entry and review still needed; NFC owner exception and exact CR pending.
+
 P011 2026-10-21T01:00:55.762742+00:00: [native Unicode failure and continuation proposal](OT3_NFC_CONTINUATION_PROPOSAL.md). Original965 encodings preserved; newconsumer49691 failed. Exactnewsource6 `10738e624300ff125c59fd127e798bc4e5fbdc85` awaits direct owner exception and CR. No cloud/model call. [New request](OT3_NFC_CONTINUATION_CR_REQUEST.md).
 
 P011 2026-10-21T00:52:24.349398+00:00: [AM actual A1 and4032 CR accepted](review_63e82f7b_AM_A1_OT3_reuse_CR_accepted_v1/README.md). New local consumer49691 running once; actual4032 A1 follows. Original4096 deficit remainsFAIL; no paid/model call.

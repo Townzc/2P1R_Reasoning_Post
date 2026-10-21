@@ -1,3 +1,7 @@
+### 2026-10-20 18:30:09 PDT — C1 input-copy and bounded worker draft prepared
+
+Two new modules plus12new synthetic/mocked checks passed once1.202s (12685EXIT0CONSUMED). Exact original18-file/six-group copy, untouched base loader, per-sequence fullNLL/chunk fences, complete-only summary and readonly saved-proof/numeric checks prepared. No original corpus load/encoding, real model or forward. Actual timing/spec/Modalentry/outer claim-resource-budget/transport/oracle integration and shared full-path CR remain required. Synthetic900seconds/$1.95 not an actual cap or reservation; no new code-only gate or paid measurement exception. Original leaf/source and NFC6candidate unchanged; pending direct owner exception/CR remains. Several read-only path misses retained in draft README; no scientific effect. P011 paid/reserve0; no Z1/subagents/external messages. P010 Oct21 19UTC freeze remains.
+
 ### 2026-10-20 18:00:55 PDT — Native Unicode roundtrip failure preserved; exact continuation proposed
 
 Actual4032consumer49691 EXIT1CONSUMED, failed00:51:57UTC, original965 complete
