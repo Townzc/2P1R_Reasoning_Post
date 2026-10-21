@@ -1,0 +1,11 @@
+# C1 r2 complete original-token NLL evidence — actual A3 pending
+
+The original r2 call completed all 9,594 unique sequences, representing 10,800 original group memberships, in 30 journal chunks. The untouched pinned Qwen2.5-1.5B base performed teacher-forced forward loss only: no training, generation, tokenization or adapter loading. The once-only collector confirmed the original app STOPPED with owned containers 0; the complete audited read-only proof verified original source/input/review/budget/claim/whole-cycle timing bindings and every saved token-loss record. Local proof is not independent actual A3.
+
+`DESCRIPTIVE_SUMMARY.json` is the original worker's unchanged summary. It preserves all/nonfallback/fallback groups, answer-mean NLL quantiles, token-weighted NLL and perplexity for T1.5/T7/T72 at 400/3200. There are no statistical tests, population/seed claims, accuracy claims or causal mechanism conclusions. Overlapping group memberships reuse the same original sequence forwards. Empty fallback groups remain null, not zero. The original base/token/mask/EOS definition and earlier teacher selection/fallback limitations remain.
+
+Concatenate `archive_parts/evidence.tar.gz.part*` in filename order to recover the exact original worker archive (50,589,568 bytes; original SHA in ARCHIVE). Two parts are at most 40 MiB. The archive contains 19,316 original payload files plus its original member manifest; it was fully extracted and verified once by the reviewed audit. This publication only copies/splits bytes; it does not recompute losses, summaries or statistics.
+
+Named scientific records are preserved; the full original dispatch, raw provider listing and private budget remain private. The public dispatch projection omits prior-attempt records/provider observation, with original SHA retained in PROVENANCE. This does not claim independent external access to the private accounting evidence. The full source/input/claim/result/STOPPED0 and accepted-accounting provenance remain traceable.
+
+Original failed C1 r1 remains failed. Both attempted reservations, $3.74 and $2.64, remain retained; they are not expenses or refunds. No new billing query was needed for this publication. The existing delayed meter is not a final invoice. Actual independent A3 remains required. No retry or further model work is authorized by this packet.
