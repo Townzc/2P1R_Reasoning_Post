@@ -1,0 +1,104 @@
+{
+  "computed_utc": "2026-10-21T15:30:22.485639+00:00",
+  "new_readonly_arithmetic_from_saved_original_metadata_only": true,
+  "original_rates_encoding_scoring_statistics_models_not_recomputed": true,
+  "rejected_runtime_exact_elapsed_and_new_cycle_max_not_saved": true,
+  "jobs": {
+    "long_A7_S-F15_s17_r2": {
+      "worker_start_epoch": 1792596144.8335927,
+      "failed_finished_epoch": 1792596304.3324857,
+      "terminal_elapsed_seconds": 159.49889302253723,
+      "confirmed_updates": 11,
+      "raw_endpoint_outputs": 0,
+      "scoring_performed": false,
+      "training_terminal_state_or_export_present": false,
+      "reserved_usd": "15.63",
+      "initial_frozen_proxy_scenario_seconds": 10643.510615244377,
+      "worker_forecast_limit_seconds": 10770,
+      "zero_new_observation_elapsed_headroom_seconds": 105.40782062968599,
+      "actual_rejected_forecast_not_persisted": true,
+      "failure_message": "Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 267, in child\n    result = training.train_terminal(model,tokenizer,optimizer,encoded,plan,rates,arm,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_lr_r2_training.py\", line 183, in train_terminal\n    journal.begin(f'update_{step:05}', intent)\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 52, in begin\n    projection = self.forecast(len(self.records)-self.cursor, list(self.times))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 266, in <lambda>\n    lambda left, observed: forecast(timing, left, ENDPOINT_BATCHES, observed, [], time.time()))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_numeric.py\", line 44, in forecast\n    raise ValueError('Whole remaining work/result window does not fit original limits')\nValueError: Whole remaining work/result window does not fit original limits\n",
+      "preserved_file_count": 39,
+      "preserved_bytes": 7093704,
+      "named_keys": 1329,
+      "present_keys_count": 25,
+      "provider_stopped0": {
+        "app_id": "ap-PAgSFRyt8IsbJW1FHPcgQR",
+        "observed_epoch": 1792596441.2963378,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "last_confirmed_update": {
+        "cumulative_processed": 716356,
+        "cumulative_supervised": 709209,
+        "gradient_norm": 2.2139089107513428,
+        "indices": [
+          238,
+          1902,
+          1878,
+          2075,
+          1084,
+          575
+        ],
+        "loss": 1.3763989067179359,
+        "lr": 3.3333333333333333e-06,
+        "max_allocated_bytes": 60149533696,
+        "processed_tokens": 73794,
+        "seconds": 4.914895309000002,
+        "step": 11,
+        "supervised_tokens": 73127
+      },
+      "last_saved_successful_forecast": {
+        "category": "A",
+        "category_remaining_before_usd": "67.34",
+        "elapsed_worker_seconds": 145.77977228164673,
+        "endpoint_batch_max_seconds": 162.5514605440003,
+        "endpoint_batches_left": 7,
+        "engineering_scenario_not_guarantee": true,
+        "expense_or_refund": false,
+        "measurement_exceptions": 0,
+        "prior_reserved_usd": "47.66",
+        "projected_total_worker_seconds": 10694.24942536653,
+        "projected_usd": "15.40",
+        "reserved_usd": "15.63",
+        "training_unit_max_seconds": 10.349743051318521,
+        "training_updates_left": 644,
+        "uncalibrated_future_seconds": 963
+      },
+      "failed_update_whole_cycle_series_in_memory_not_saved": true
+    },
+    "long_baseline_S-L15_s17_r2": {
+      "worker_start_epoch": 1792596236.0198889,
+      "failed_finished_epoch": 1792596260.4120302,
+      "terminal_elapsed_seconds": 24.392141342163086,
+      "confirmed_updates": 0,
+      "raw_endpoint_outputs": 0,
+      "scoring_performed": false,
+      "training_terminal_state_or_export_present": false,
+      "reserved_usd": "12.17",
+      "initial_frozen_proxy_scenario_seconds": 9265.506667027199,
+      "worker_forecast_limit_seconds": 9270,
+      "zero_new_observation_elapsed_headroom_seconds": 3.744444144000833,
+      "actual_rejected_forecast_not_persisted": true,
+      "failure_message": "Whole remaining work/result window does not fit original limits",
+      "preserved_file_count": 7,
+      "preserved_bytes": 14539704,
+      "named_keys": 17,
+      "present_keys_count": 3,
+      "provider_stopped0": {
+        "app_id": "ap-s1MjvI40ToO9a8B1d1Yp5u",
+        "observed_epoch": 1792596441.296567,
+        "owned_containers": 0,
+        "state": "stopped"
+      },
+      "before_vllm_model_allocation": true
+    }
+  },
+  "retained_after_attempts_usd": {
+    "A": "75.46",
+    "B": "6.02",
+    "C": "6.38"
+  },
+  "no_reserve_released": true,
+  "B1_upload_completed_B_models_not_started": true
+}

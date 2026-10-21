@@ -1,0 +1,6 @@
+{
+  "automatic_retry_allowed": false,
+  "cloud_failure_not_inferred": true,
+  "message": "Training child failed or did not exit: Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 267, in child\n    result = training.train_terminal(model,tokenizer,optimizer,encoded,plan,rates,arm,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_lr_r2_training.py\", line 183, in train_terminal\n    journal.begin(f'update_{step:05}', intent)\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 52, in begin\n    projection = self.forecast(len(self.records)-self.cursor, list(self.times))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 266, in <lambda>\n    lambda left, observed: forecast(timing, left, ENDPOINT_BATCHES, observed, [], time.time()))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_numeric.py\", line 44, in forecast\n    raise ValueError('Whole remaining work/result window does not fit original limits')\nValueError: Whole remaining work/result window does not fit original limits\n",
+  "type": "RuntimeError"
+}

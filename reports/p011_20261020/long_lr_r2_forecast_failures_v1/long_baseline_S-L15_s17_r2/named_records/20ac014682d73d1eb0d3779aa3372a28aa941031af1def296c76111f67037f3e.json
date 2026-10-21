@@ -1,0 +1,14 @@
+{
+  "key": "long/long_baseline_S-L15_s17_r2/terminal",
+  "observed_epoch": 1792596469.993536,
+  "value": {
+    "app_id": "ap-s1MjvI40ToO9a8B1d1Yp5u",
+    "automatic_retry_allowed": false,
+    "finished_epoch": 1792596260.4120302,
+    "logical_id": "long_baseline_S-L15_s17_r2",
+    "message": "Whole remaining work/result window does not fit original limits",
+    "status": "failed",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/experiments/p011/long_lr_r2_path.py\", line 344, in worker_body\n    result=body(job,inputs,out,identity,k,claim,start+limits['worker_seconds'],timing,store,volume)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_lr_r2_execution.py\", line 366, in worker_body\n    projection=forecast(timing,0,endpoint_batches(len(rows)),training_times,[],time.time())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/experiments/p011/long_numeric.py\", line 44, in forecast\n    raise ValueError('Whole remaining work/result window does not fit original limits')\nValueError: Whole remaining work/result window does not fit original limits\n",
+    "type": "ValueError"
+  }
+}

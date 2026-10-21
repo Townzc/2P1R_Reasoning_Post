@@ -1,0 +1,126 @@
+--- experiments/p011/b_students_path.py
++++ experiments/p011/b_students_post_long_failure_path.py
+@@ -23,7 +23,7 @@
+ BUDGET_OWNER_SHA='364aaf6cd70fa9cf1a89902af6dedb33a1b64d7c47e73a12b37b6b97dfb69a2f'
+ LOCAL=lifecycle.LOCAL
+ STORE=lifecycle.STORE
+-SPEC_FILES={'student':'reports/p011_20261020/b_retained_students_runtime_v1/SPEC.json'}
++SPEC_FILES={'student':'reports/p011_20261020/b_students_post_long_failure_runtime_v1/SPEC.json'}
+ 
+ def spec_path(spec):
+     return SPEC_FILES[spec['phase']]
+@@ -52,7 +52,34 @@
+         else 'b_runtime_student_inputs_r1/'+job['run_id'])
+ 
+ 
++def prior_B1_upload(spec,root):
++    item=spec['prior_B1_input_upload']
++    expected=str(Path(LOCAL)/'b_io_r1/upload/B_B1_s17_r1/COMPLETED.json')
++    if item.get('path')!=expected or not re.fullmatch(r'[0-9a-f]{64}',str(item.get('sha256',''))):
++        raise ValueError('Original completed B1 input upload must be bound')
++    p=Path(root)/expected
++    if p.is_symlink() or sha(p)!=item['sha256']:
++        raise ValueError('Original B1 upload receipt bytes differ')
++    value=read(p)
++    if (value.get('job_sha256')!=digest(spec['jobs']['B_B1_s17_r1'])
++            or value.get('all_remote_file_bytes_read_back') is not True
++            or value.get('model_calls')!=0
++            or value.get('original_base_asset_receipt_sha256')!=ASSET_RECEIPT_SHA
++            or value.get('old_model_assets_not_transferred_or_read_back_again') is not True):
++        raise ValueError('Original B1 upload complete scope differs')
++    return value
++
++
+ def validate(spec):
++    for name,reserve in (('long_A7_S-F15_s17_r2','15.63'),('long_baseline_S-L15_s17_r2','12.17')):
++        binding=spec.get('failed_attempt_bindings',{}).get(name,{})
++        if binding.get('category')!='A' or binding.get('reserved_usd')!=reserve:
++            raise ValueError('Both new failed long r2 parents and reserves required')
++    item=spec.get('prior_B1_input_upload',{})
++    if (item.get('path')!=str(Path(LOCAL)/'b_io_r1/upload/B_B1_s17_r1/COMPLETED.json')
++            or not re.fullmatch(r'[0-9a-f]{64}',str(item.get('sha256','')))
++            or spec.get('prior_actual_B_input_numeric_report_sha256')!='acea0550f12e6600557ccc65b5d0f6ac337a2421e2a5b0331a016aae7121fa18'):
++        raise ValueError('Original actual B input/numeric report and completed B1 upload required')
+     if (spec.get('phase')!='student' or not spec.get('failed_attempt_bindings')
+             or any(not re.fullmatch(r'[0-9a-f]{64}',str(spec.get(n,''))) for n in
+                 ('generation_actual_A3_report_sha256','student_input_CR_report_sha256','student_input_manifest_sha256'))):
+@@ -131,7 +158,9 @@
+         failed_attempt_bindings_sha256=digest(spec['failed_attempt_bindings']),
+         generation_actual_A3_report_sha256=spec['generation_actual_A3_report_sha256'],
+         student_input_CR_report_sha256=spec['student_input_CR_report_sha256'],
+-        student_input_manifest_sha256=spec['student_input_manifest_sha256'])
++        student_input_manifest_sha256=spec['student_input_manifest_sha256'],
++        prior_B1_input_upload_sha256=digest(spec['prior_B1_input_upload']),
++        prior_actual_B_input_numeric_report_sha256=spec['prior_actual_B_input_numeric_report_sha256'])
+     flags=('complete_source_closure_accepted','complete_actual_input_A1_accepted',
+         'original_P010_tokens_seeds_dose_and_endpoint_rules_unchanged',
+         'all_original_complete_timing_sources_accepted','full_state_raw_scoring_window_and_budget_accepted',
+@@ -142,7 +171,9 @@
+         'unmapped_exclusions_and_actual_Pcov_retained',
+         'B1_B3_only_B2_first_cut_accepted',
+         'all_failed_reservations_and_full_two_student_windows_accepted',
+-        'original_base_asset_receipt_reuse_without_weight_transfer_accepted')
++        'original_base_asset_receipt_reuse_without_weight_transfer_accepted',
++        'both_new_long_r2_failed_parents_and_full_reservations_accepted',
++        'original_B1_completed_input_upload_reuse_without_repeat_accepted')
+     if any(review.get(k)!=v for k,v in expected.items()) or any(review.get(k) is not True for k in flags):
+         raise ValueError('True shared B CR/actual A1/numeric A2-lite absent')
+     return result
+@@ -211,6 +242,7 @@
+            publication=published,observation=lifecycle.provider):
+     root=Path(root);execution=publication(root,spec);job=spec['jobs'][job_id]
+     review=read(review_file);clean=reviewed(spec,root/spec_path(spec),review)
++    prior_B1_upload(spec,root)
+     raw=Path(review['local_report_path']).read_bytes()
+     if hashlib.sha256(raw).hexdigest()!=review['report_sha256']:raise ValueError('Report raw bytes differ')
+     upload=read(root/LOCAL/'b_io_r1'/'upload'/job_id/'COMPLETED.json')
+--- experiments/p011/modal_b_students.py
++++ experiments/p011/modal_b_students_post_long_failure.py
+@@ -2,14 +2,14 @@
+ from pathlib import Path
+ import os
+ import modal
+-from experiments.p011 import b_students_path as path
++from experiments.p011 import b_students_post_long_failure_path as path
+ from experiments.sft_allocation_midpoint.common import read
+ ROOT=Path(__file__).resolve().parents[2]
+ phase=os.environ.get('P011_B_PHASE')
+ if phase not in path.SPEC_FILES:raise ValueError('Explicit student immutable SPEC phase required')
+ spec=path.validate(read(ROOT/path.SPEC_FILES[phase]))
+ if spec['phase']!=phase:raise ValueError('Immutable B SPEC phase differs')
+-app=modal.App('p011-B-retained-students')
++app=modal.App('p011-B-students-post-long-failure')
+ volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
+ image=(modal.Image.debian_slim(python_version='3.12')
+     .pip_install_from_requirements(ROOT/'experiments/learning_regime_p009/requirements_p0.txt')
+@@ -27,7 +27,7 @@
+         volumes={'/evidence':volume})
+     def worker(intent,raw_report):
+         import os,threading
+-        from experiments.p011 import b_students_path as run
++        from experiments.p011 import b_students_post_long_failure_path as run
+         if intent['job_id']!=job_id:raise ValueError('Function/job configuration mismatch')
+         def timer(seconds):
+             def hard_stop():
+--- scripts/p011_b_students_io.py
++++ scripts/p011_b_students_post_long_failure_io.py
+@@ -11,7 +11,7 @@
+ import subprocess
+ import threading
+ import time
+-from experiments.p011 import b_students_path as path, long_transport, b_numeric
++from experiments.p011 import b_students_post_long_failure_path as path, long_transport, b_numeric
+ from experiments.p011 import b_generation_evidence, b_generation_loader, b_student_evidence
+ from experiments.p011 import b_scoring,b_score_process,c1_outer as shared
+ from experiments.p010 import student_scoring,student_score_process
+--- scripts/analyze_p011_b_students.py
++++ scripts/analyze_p011_b_students_post_long_failure.py
+@@ -4,7 +4,7 @@
+ import os
+ import threading
+ import time
+-from experiments.p011 import b_students_path as b_path
++from experiments.p011 import b_students_post_long_failure_path as b_path
+ from experiments.sft_allocation_midpoint.common import read,dump,sha,manifest,digest
+ from analyses.p011_b_contrasts import contrast
+ 

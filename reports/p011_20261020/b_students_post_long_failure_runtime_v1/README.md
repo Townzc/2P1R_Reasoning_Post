@@ -1,0 +1,7 @@
+# B students after the two original long r2 failures
+
+The original B input A1/numeric report acea0550 is accepted. Neither B1 nor B3 model ran. B1 upload60117 completed; only its original receipt is reused. Both long r2 attempts later failed under their unchanged forecast; their15.63+12.17 remain fully reserved. Those new exact failed-parent bindings must be included before any B dispatch; old96 SPEC is no longer current for the expanded ledger.
+
+Four narrow adapters add the immutable SPEC locator, both failed-parent requirements and exact B1 receipt binding before any provider observation/spawn. Original96 files remain unchanged. Training, endpoint generation, scoring, masks, dose, all input job objects, timing, budgets, full windows, B2 cut and original seed are unchanged. Five new synthetic integration checks pass; no old successful test or scientific work was rerun. Explicit100source/all16flag review is still pending; no self-admission, new B input, upload retry, model or reservation.
+
+Current retainedA75.46/B6.02/C6.38=87.86 is not an expense. B1/B3 candidates remain6.18each at the last authenticated rate, with original sequential80percent and second-job0.06 margin; no rate-growth exemption. Fresh actual rates/ledger/provider/unused fences/windows still required. A scientific disposition for failed long work remains separate and cannot be inferred from this B-only adapter.

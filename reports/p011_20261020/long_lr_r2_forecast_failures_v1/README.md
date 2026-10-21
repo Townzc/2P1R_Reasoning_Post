@@ -1,0 +1,9 @@
+# Original frozen-LR r2 forecast failures
+
+Both new exact55 reviewed calls failed under the unchanged numeric gate. F15 completed 11 acknowledged updates before the next update forecast rejected; no terminal checkpoint/export or endpoint raw result exists. The baseline completed native constructor checks, then failed the pre-engine forecast before vLLM model allocation. Both original apps are STOPPED with zero owned containers. Each failed call and its full reservation remain; no restart/resume/scoring or complete-result oracle is performed.
+
+The local failure preservation copied each stable original prefix and read its own named records once. Full original admissions and nested dispatch ledgers remain private; their hashes and explicit omission records do not imply reviewer access. All public raw files are original byte copies, except clearly labelled projections and new arithmetic. Existing science inputs/rates and all prior failures remain unchanged.
+
+NEW_FAILURE_OBSERVATIONS computes only a new diagnostic from saved policy/terminal metadata. The baseline initial frozen projection leaves only about 2.6 seconds of elapsed headroom; its real pre-engine path exceeds this. For F15, the failed next forecast and complete-cycle series in memory were not saved. The last accepted forecast and eleven original completed updates are retained; no exact missing runtime quantity is invented and no timing replay is performed.
+
+B1 original input upload completed without any B student model. B1/B3 remain held until this new failed-parent evidence is exactly bound and accepted in their current runtime. Long retry, new limits, reserve release or cap changes are not authorized. Request a real reasoned delegated disposition including the baseline and required D scope; no engineering convenience closure is inferred.

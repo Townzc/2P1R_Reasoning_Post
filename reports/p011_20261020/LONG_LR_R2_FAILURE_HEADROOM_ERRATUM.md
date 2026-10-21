@@ -1,0 +1,3 @@
+# Dated failure-summary arithmetic wording correction
+
+The unchanged long_lr_r2_forecast_failures_v1/README.md says “about 2.6 seconds.” This prose is incorrect. Its original NEW_FAILURE_OBSERVATIONS.json correctly records baseline initial projection9265.506667027199 seconds, forecast limit9270 and remaining elapsed headroom3.744444144000833 seconds. The saved failure terminal elapsed is24.392141342163086 seconds; the precise rejected forecast call time was not persisted. This correction changes no scientific file, timing rule, observed runtime or reservation, and the original packet remains unchanged.
