@@ -5390,6 +5390,30 @@
       "production_inputs_started": false,
       "model_calls": 0,
       "packet": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2"
+    },
+    {
+      "request_id": "p011-final-frozen-numeric-provenance-A5-20261022-r1",
+      "scope": "p011-final-frozen-numeric-provenance-A5-20261022",
+      "status": "PENDING",
+      "target_commit": "6b332b1a700b0f0f1fed299b16bf862b670852e8",
+      "packet": "reports/p011_20261020/final_numeric_freeze_20261022_0500UTC_v1",
+      "manifest_sha256": "f16c6d3c3df78c61a6237e64f3d94dacd2a88fa37de2a78313d53f615a86c371",
+      "copy_binding_sha256": "ff48fac3edf07c35a5c9170d7ca1ee3ceeb77560ae28be737b38b2af9e2e16ef",
+      "technical_target": "da4c00a60814a8692b7c098c7840201dd584876a",
+      "numeric_source_binding_sha256": "2268af77436a9f78d9cdb349ad9e5cdbdf08480bc96833ad623da67248c4dac7",
+      "required_flags": [
+        "real_0500_cutoff_actual_write_and_fixed_copy_manifest_bound",
+        "frozen_T5_T6_original_bytes_and_per_row_numeric_provenance_accepted",
+        "original_actual_A3_failures_NOT_RUN_scoped_D2_and_posthoc_smoke_preserved",
+        "separate_census_forced_and_ext4b_cutoff_status_not_misrepresented",
+        "private_binary_scorer_seed_cost_access_limits_and_sensitivities_preserved",
+        "copy_only_no_repeated_science_and_true_final_A5_not_prior_review"
+      ],
+      "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
+      "actual_write_start_utc": "2026-10-22T05:00:31.903435+00:00",
+      "actual_write_end_utc": "2026-10-22T05:00:31.910207+00:00",
+      "first_remote_publication_utc": null,
+      "request_path": "reports/p011_20261020/P011_FINAL_FREEZE_20261022_A5_REQUEST.md"
     }
   ],
   "p008_v31": {
@@ -7265,7 +7289,7 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-22T04:57:30.027728+00:00",
+  "last_updated_utc": "2026-10-22T05:01:31.769075+00:00",
   "p011": {
     "status": "ORIGINAL_SCIENCE_AND_ACTUAL_A3_CLOSED_NEW_OWNER0205_SOURCE_CR_PENDING_FORMAL05UTC_FREEZE_A5_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -8508,6 +8532,44 @@
       "actual_Bprime": "NOT_CONSTRUCTED",
       "cardinality_amendment": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2/DIRECT_OWNER_CARDINALITY_AMENDMENT.json",
       "superseded_unexecuted_candidate": "2d1d0254b938df494d28814dd0710ff52350a17b"
+    },
+    "actual_final_freeze": {
+      "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
+      "actual_public_write_start_utc": "2026-10-22T05:00:31.903435+00:00",
+      "actual_public_write_end_utc": "2026-10-22T05:00:31.910207+00:00",
+      "packet": "reports/p011_20261020/final_numeric_freeze_20261022_0500UTC_v1",
+      "copied_original_files": 34,
+      "packet_file_count": 39,
+      "copy_binding_sha256": "ff48fac3edf07c35a5c9170d7ca1ee3ceeb77560ae28be737b38b2af9e2e16ef",
+      "manifest_sha256": "f16c6d3c3df78c61a6237e64f3d94dacd2a88fa37de2a78313d53f615a86c371",
+      "new_scientific_computation": false,
+      "final_A5_pending": true,
+      "target_commit": "6b332b1a700b0f0f1fed299b16bf862b670852e8",
+      "new_Git_files_verified_once": 39,
+      "final_A5_request": {
+        "request_id": "p011-final-frozen-numeric-provenance-A5-20261022-r1",
+        "scope": "p011-final-frozen-numeric-provenance-A5-20261022",
+        "status": "PENDING",
+        "target_commit": "6b332b1a700b0f0f1fed299b16bf862b670852e8",
+        "packet": "reports/p011_20261020/final_numeric_freeze_20261022_0500UTC_v1",
+        "manifest_sha256": "f16c6d3c3df78c61a6237e64f3d94dacd2a88fa37de2a78313d53f615a86c371",
+        "copy_binding_sha256": "ff48fac3edf07c35a5c9170d7ca1ee3ceeb77560ae28be737b38b2af9e2e16ef",
+        "technical_target": "da4c00a60814a8692b7c098c7840201dd584876a",
+        "numeric_source_binding_sha256": "2268af77436a9f78d9cdb349ad9e5cdbdf08480bc96833ad623da67248c4dac7",
+        "required_flags": [
+          "real_0500_cutoff_actual_write_and_fixed_copy_manifest_bound",
+          "frozen_T5_T6_original_bytes_and_per_row_numeric_provenance_accepted",
+          "original_actual_A3_failures_NOT_RUN_scoped_D2_and_posthoc_smoke_preserved",
+          "separate_census_forced_and_ext4b_cutoff_status_not_misrepresented",
+          "private_binary_scorer_seed_cost_access_limits_and_sensitivities_preserved",
+          "copy_only_no_repeated_science_and_true_final_A5_not_prior_review"
+        ],
+        "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
+        "actual_write_start_utc": "2026-10-22T05:00:31.903435+00:00",
+        "actual_write_end_utc": "2026-10-22T05:00:31.910207+00:00",
+        "first_remote_publication_utc": null,
+        "request_path": "reports/p011_20261020/P011_FINAL_FREEZE_20261022_A5_REQUEST.md"
+      }
     }
   },
   "p011_owner150_current": {
