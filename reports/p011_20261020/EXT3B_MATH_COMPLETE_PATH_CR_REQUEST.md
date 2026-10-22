@@ -1,3 +1,9 @@
+# Current immutable v2 exact source review — PENDING (2026-10-22T06:30:04.419305+00:00)
+
+Same request/scope; latest target `c1a73d322e65e1ce5c4545befd366e9f8b6787a2` / `reports/p011_20261020/ext3b_math_runtime_preflight_v2` supersedes unexecutedv1.
+SPEC `3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e`, MANIFEST `b5a7129895e5c2ce2833ecb94c433c04e9958371f36cbee883ad7c75519ed7d5`;86exactbindings, same12flags below.
+Only2sourcefiles differ: ownedscorechild import+source snapshot corrected to **ext3b_math_scoring**, plus immutableSPEC locator. Remaining84bindings unchanged. V1 accidentally pointed this child to oldD2-2980driver and would rejectthe newscope; caughtbeforeanyproduction. Oldv1remainsimmutable/noinputormodelcall. Newtargetedchildlocator test1PASS.016s; prior8successfulmethodsnotrepeated. Inspect DIFF_AGAINST_V1 plus originalfullscopepatch/newhelpers; don't use v1PASS forv2. ExactdataCRcf630e86 unaffected, no clockresetforit. Newruntime/source/actualA2 gates stillrequired.
+
 # Exact owner options2+3 full source CR — PENDING
 
 Request: `p011-ext-3B-complete-training-resume-MATH-path-CR-r1`

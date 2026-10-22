@@ -8793,11 +8793,11 @@
       "new3B_runtime_CR": {
         "request_id": "p011-ext-3B-complete-training-resume-MATH-path-CR-r1",
         "scope": "p011-ext-3B-complete-training-resume-MATH-path-CR",
-        "status": "PENDING",
-        "target_commit": "61a14c851d2f5e391bc4d5f91e5d07b50834a0a8",
-        "packet": "reports/p011_20261020/ext3b_math_runtime_preflight_v1",
-        "spec_sha256": "006b01c461f06576349bbaf84f0b3700097c25bf9b81376c781473124affc049",
-        "manifest_sha256": "da17fc9c848d85761af163eb43efd49c0c8631fe619c9267a36418bf69cf0448",
+        "status": "PENDING_V2_UNEXECUTED_CHILD_LOCATOR_CORRECTION",
+        "target_commit": "c1a73d322e65e1ce5c4545befd366e9f8b6787a2",
+        "packet": "reports/p011_20261020/ext3b_math_runtime_preflight_v2",
+        "spec_sha256": "3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e",
+        "manifest_sha256": "b5a7129895e5c2ce2833ecb94c433c04e9958371f36cbee883ad7c75519ed7d5",
         "source_files": {
           "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
           "experiments/learning_regime_p009/math_scoring.py": "d310d7e61b049cdd750f14c65f0ad12551ee45b7eeb0913646a6447a4cbc36fe",
@@ -8819,13 +8819,13 @@
           "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
           "experiments/p011/ext3b_contract.py": "53439cb7ac0ec38538fb76f4912966c14a0f9cdcb4764fb91778cc65b7a3c643",
           "experiments/p011/ext3b_math_scope.py": "31f4c9a94cca190ff18d8b51ec8b57e0d9c66fe225efd493ca1f8fbfe5be9808",
-          "experiments/p011/ext3b_math_score_process.py": "06f3cee376e438dd67362e99f17acb086fbe6e71e19e93010d21af12311e2437",
+          "experiments/p011/ext3b_math_score_process.py": "15b59df179cf8624728283acfee2e53f4e2d935ac94637ca05f10c1dc0648600",
           "experiments/p011/ext3b_math_scoring.py": "601d75ebc39c19aa8bbd55ea9afd03d3392cb967c84c5eaeb84ad1d4fc58ae29",
           "experiments/p011/ext4b_contract.py": "dbd04406217e79d2fd8fc1120ef5f63a3fd5c5b162824f465ebad2a12cbfe34b",
           "experiments/p011/ext4b_encoded.py": "a7f4787d57fe63e2fc45dd851f91c2b4ead52783e3b23fdfca2989b37f688a66",
           "experiments/p011/ext4b_execution.py": "4f31e2567cf0fdfd9bf72f9aa8b1e8d10482b828d398f5c31c134f8fd68a361b",
           "experiments/p011/ext4b_path.py": "e70714a29f08925a0683455e5eae98293935b36f9c9d410e371e3c6b759e446a",
-          "experiments/p011/ext4b_runtime_contract.py": "1e04cc7732dc0cd2505f284d941f388339a1fc4dbae33e23fa2996be9d22b725",
+          "experiments/p011/ext4b_runtime_contract.py": "ef8d40d9dcff59044981cae741bc8e94a587140faf4e57e6fc5dae36f9dbd5fb",
           "experiments/p011/ext4b_training.py": "381c88ce0917e5e9cd6eb30c079f8911fa3d4aa5a8c09eb60a5187e0dec9e681",
           "experiments/p011/failed_attempt_ledger.py": "84f72f1fcf50ac276e03fe5d14b6bcfc90e2f8e1413596f37104c2477f60f1b0",
           "experiments/p011/long_checkpoint.py": "6e71c347bc8824dac0df86e2e2af3a3fb4933019ed79fcea6b28d73faabfb385",
@@ -8901,7 +8901,8 @@
           "single_training_seed_private_binary_missing_cycle_and_descriptive_benchmarks_NOT_RUN_disclosed"
         ],
         "actual_A2_required_before_GPU": true,
-        "production": false
+        "production": false,
+        "superseded_v1": "61a14c851d2f5e391bc4d5f91e5d07b50834a0a8"
       },
       "current_jobs": [
         "long_R9072x1_S-F15_s17",
@@ -9146,5 +9147,5 @@
     "census_original_strict_pool": 4038,
     "census_actual_A3_accepted": false
   },
-  "updated_utc": "2026-10-22T06:26:15.125446+00:00"
+  "updated_utc": "2026-10-22T06:30:04.419305+00:00"
 }

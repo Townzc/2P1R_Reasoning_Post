@@ -1,3 +1,7 @@
+## New3B v2 score-child locator correction before execution — 2026-10-22T06:30:04.419305+00:00
+
+Targetc1a73d322e65e1ce5c4545befd366e9f8b6787a2/SPEC3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e exact86/twochangedbindings, old84unchanged. Originalv1child inadvertently retained old2980scorer; correctedbeforeproduction. One newregressionPASS.016s; old8testsnotrepeated. SamefullCRrequestlatestv2 nowpending, exactnewactualA2stillrequired. PrefixdataCRcf630e86 unaffected/noCPUproduction.90pair45cell/originalscientificfunctions/completeMATHscope unchanged.0models/CPU/awake.
+
 ## Owner options2+3 complete new3B/MATH candidate — 2026-10-22T06:26:15.125446+00:00
 
 Fixed61a14c851d2f5e391bc4d5f91e5d07b50834a0a8/ext3b_math_runtime_preflight_v1 has86exactbindings and12sourceflags pending. New9072/3024prefixdataCRcf630e86 alreadyremoteconfirmed06:17:30.435835 (conservativewriteclock), normal06:47:30/min06:32:30. No prefixproduction/GPU/newbilling/upload. EightnewchecksPASS once; oldtests/scienceunchanged. MATHonlygreedythen4samples/complete500endpointscopedcloseout, originalfulltrainingoracle/decoder/scalar/pairedquestionbootstrap; partialendpointnotzero, failedworkerretained, noresumefollowingfinalcollect.90pair45cellremain. Original4B12096A2superseded.
