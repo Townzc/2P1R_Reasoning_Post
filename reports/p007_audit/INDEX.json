@@ -7360,9 +7360,9 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-22T06:09:58.905401+00:00",
+  "last_updated_utc": "2026-10-22T17:24:46.219756+00:00",
   "p011": {
-    "status": "ORIGINAL_SCIENCE_AND_ACTUAL_A3_CLOSED_NEW_OWNER0205_SOURCE_CR_PENDING_FORMAL05UTC_FREEZE_A5_PENDING",
+    "status": "ALL_AUTHORIZED_FINITE_SCIENCE_REQUIRED_AUDITS_AND_MATERIAL_HANDOFFS_CLOSED",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -7481,8 +7481,8 @@
       "K1_attempt_window": 16,
       "fallback_report_threshold_exclusive": 0.1
     },
-    "last_review_observed_utc": "2026-10-22T02:01:41.898111+00:00",
-    "last_review_head": "7873c88d5713e2328204e54ad0bd6c8ed92cbd43",
+    "last_review_observed_utc": "2026-10-22T17:20:21.785119+00:00",
+    "last_review_head": "4654447b377efb67a52a7d829bcc3d004127950d",
     "AM_actual_A1_accepted": true,
     "OT3_original_adequacy": "FAIL",
     "OT3_4032_actual_A1_accepted": true,
@@ -7490,7 +7490,7 @@
     "ot3_NFC_candidate": "10738e624300ff125c59fd127e798bc4e5fbdc85",
     "ot3_NFC_owner_exception_approved": true,
     "ot3_NFC_production_executed": true,
-    "active_scientific_computation": 2,
+    "active_scientific_computation": 0,
     "c1_execution_draft": {
       "packet": "reports/p011_20261020/c1_execution_draft_v1",
       "status": "PREPARED_NOTRUN",
@@ -7575,7 +7575,7 @@
       "actual_A2_report_commit": "0103c6eb11b2ad1e777a705ef50b7e9c8800e346"
     },
     "actual_A1_scope": "OT3_NFC_4032_and_AM_inputs_only_not_runtime",
-    "last_full_review_read_utc": "2026-10-22T02:06:31.353020+00:00",
+    "last_full_review_read_utc": "2026-10-22T17:20:59.202842+00:00",
     "active_local_readonly_diagnostic": 0,
     "last_fixed_report_read_utc": "2026-10-21T03:58:11.775722+00:00",
     "B_generation_evidence_preparation": {
@@ -8132,7 +8132,7 @@
       "last_updated_utc": "2026-10-21T10:50:34.870946+00:00"
     },
     "C1_r2_actual_A3": "PASS_CLOSED",
-    "latest_acceptance_packet": "reports/p011_20261020/review_7873c88d_owner_actual_A3_accepted_v1",
+    "latest_acceptance_packet": "reports/p011_20261020/review_4654447b_ext3b_actual_A3_accepted_v1",
     "B_generation_exact_A2": true,
     "long_actual_input_A1": true,
     "long_preflight_source_CR": true,
@@ -8199,7 +8199,7 @@
       "independent_symbolic_engine_rerun": false,
       "independent_manual_symbolic_pairs": 40
     },
-    "active_scientific_compute": 2,
+    "active_scientific_compute": 0,
     "B_student_inputs": {
       "status": "CONSTRUCTOR_DONE_ACTUAL_A1_PENDING",
       "packet": "reports/p011_20261020/b_student_inputs_actual_v1",
@@ -9041,13 +9041,13 @@
         "future_budget_upload_entry": "new_budget_DONE_completed_upload_REUSED_two_extra_preentries_SUBMITTED",
         "original_failures_not_erased": true
       },
-      "status": "BOTH_ORIGINAL_CELLS_FULL_LOCAL_SCIENCE_DONE_ACTUAL_A3_PENDING",
+      "status": "COMPLETE_BOTH_ORIGINAL_CELLS_SCIENCE_ACTUAL_A3_AND_MATERIAL_HANDOFF_CLOSED",
       "current_models": [
         {
           "job": "long_R9072x1_S-F15_s17",
           "attempt": 1,
           "original_CLI_session_id": 65815,
-          "status": "ORIGINAL_WORKER_AND_FIRST_LOCAL_SCIENCE_COMPLETED_ACTUAL_A3_PENDING",
+          "status": "ORIGINAL_WORKER_FIRST_LOCAL_SCIENCE_AND_ACTUAL_A3_CLOSED",
           "submission": {
             "app_id": "ap-C1u0UdtuxcYruDaQsUJ8KJ",
             "call_id": "fc-01M5HC9J23R0NRDS80Z2C7PSJF",
@@ -9080,13 +9080,14 @@
           "model_completion_claimed": true,
           "original_CLI_state": "EXIT0_CONSUMED",
           "result_receipt_sha256": "472e60e6beb985ae94dc326f14262af976491620edb3ab709cb713c53600ef94",
-          "local_scientific_closeout_complete": true
+          "local_scientific_closeout_complete": true,
+          "actual_A3_accepted": true
         },
         {
           "job": "long_R3024xE3_S-F15_s17",
           "attempt": 1,
           "original_CLI_session_id": 5828,
-          "status": "ORIGINAL_WORKER_AND_FIRST_LOCAL_SCIENCE_COMPLETED_ACTUAL_A3_PENDING",
+          "status": "ORIGINAL_WORKER_FIRST_LOCAL_SCIENCE_AND_ACTUAL_A3_CLOSED",
           "submission": {
             "app_id": "ap-2Q8XZqJhBkfBwXbZkweO5p",
             "call_id": "fc-01M5HC9N0KBKFCRYRNXQ042QXT",
@@ -9119,15 +9120,17 @@
           "model_completion_claimed": true,
           "original_CLI_state": "EXIT0_CONSUMED",
           "local_scientific_closeout_complete": true,
-          "result_receipt_sha256": "7c663d118e3552dca9cee5e83aba030596324e0abfa15593ef6a874871f43df2"
+          "result_receipt_sha256": "7c663d118e3552dca9cee5e83aba030596324e0abfa15593ef6a874871f43df2",
+          "actual_A3_accepted": true
         }
       ],
       "active_models": 0,
       "latest_local_progress": {
         "record": "reports/p011_20261020/EXT3B_PROGRESS_20261022T1637Z.json",
-        "observed_utc": "2026-10-22T16:38:02.909093+00:00",
+        "observed_utc": "2026-10-22T17:24:46.219756+00:00",
         "both_workers_collectors_and_scientific_closeouts_complete": true,
-        "actual_A3_accepted": false
+        "actual_A3_accepted": true,
+        "material_handoff": "reports/p011_20261020/EXT3B_FINAL_MATERIAL_HANDOFF.md"
       },
       "active_collectors": 0,
       "local_closeout_correction": {
@@ -9185,12 +9188,20 @@
           "single_training_seed_private_binary_full_symbolic_engine_and_original_window_limits_disclosed",
           "exact_four_app_terminal_cost_projection_not_final_invoice_or_budget_release_disclosed"
         ],
-        "status": "PENDING",
-        "first_remote_publication_utc": null
+        "status": "CLOSED_ACCEPTED_A3_PASS",
+        "first_remote_publication_utc": "2026-10-22T16:40:40.821595+00:00",
+        "decision": "PASS",
+        "review_commit": "4654447b377efb67a52a7d829bcc3d004127950d",
+        "report_sha256": "a35bcb29daa66e0f63d4fd17a85b247225a485a6ef919b5fe5781f437f999789",
+        "accepted_utc": "2026-10-22T17:24:46.219756+00:00",
+        "public_review_packet": "reports/p011_20261020/review_4654447b_ext3b_actual_A3_accepted_v1",
+        "seven_flags_accepted": true,
+        "material_handoff": "reports/p011_20261020/EXT3B_FINAL_MATERIAL_HANDOFF.md"
       },
       "terminal_cost_projection": "reports/p011_20261020/EXT3B_TERMINAL_COST_PUBLIC_PROJECTION.json",
       "reported_tagged_four_app_cost_usd": "57.14570794",
-      "not_final_invoice": true
+      "not_final_invoice": true,
+      "final_material_handoff": "reports/p011_20261020/EXT3B_FINAL_MATERIAL_HANDOFF.md"
     },
     "actual_final_freeze": {
       "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
@@ -9588,5 +9599,21 @@
     "forced_actual_results_A3_accepted": true,
     "formal_freeze_status_reference": "p011.actual_final_freeze"
   },
-  "updated_utc": "2026-10-22T13:21:19.209479+00:00"
+  "updated_utc": "2026-10-22T17:24:46.219756+00:00",
+  "p011_finite_execution_final_closeout": {
+    "recorded_utc": "2026-10-22T17:24:46.219756+00:00",
+    "status": "ALL_FINITE_WORK_CLOSED_DELIVERY_PENDING",
+    "actual_A3_target": "13dfdd59c25e80fbfb02fe3fe2eab9dc5b466cf7",
+    "actual_A3_report": "4654447b377efb67a52a7d829bcc3d004127950d",
+    "seven_flags_accepted": true,
+    "material_handoff": "reports/p011_20261020/EXT3B_FINAL_MATERIAL_HANDOFF.md",
+    "active_models": 0,
+    "active_collectors": 0,
+    "active_scientific_CPU": 0,
+    "awake": false,
+    "earlier_required_audits_and_formal_freezes_remain_closed": true,
+    "automation": "ACTIVE_UNTIL_THIS_ORDINARY_DELIVERY_CONFIRMED_THEN_AUTHORIZED_PAUSE",
+    "remaining_science_or_review": [],
+    "new_science_executed": false
+  }
 }

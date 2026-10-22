@@ -1,3 +1,7 @@
+## Actual A3 CLOSED — 2026-10-22T17:24:46.219756+00:00
+
+Claude fixed report `4654447b377efb67a52a7d829bcc3d004127950d`, SHA256 `a35bcb29daa66e0f63d4fd17a85b247225a485a6ef919b5fe5781f437f999789`, explicitly accepts all seven required flags for the original fixed result target. Independent scope: 5000 native decodes/text regions/stops matched; correctness consistency plus 67 manual positive-row equivalence checks; both original intervals reproduced. Private binary/full-symbolic/invoice access is not claimed. Original labels/scores/intervals stay unchanged. See [acceptance](review_4654447b_ext3b_actual_A3_accepted_v1/ACCEPTANCE.json) and [final material handoff](EXT3B_FINAL_MATERIAL_HANDOFF.md). The historical request below is retained; no further review or scientific run is pending.
+
 # P011 matched-dose 3B original results — actual A3 PENDING
 
 Request: `p011-ext-3B-complete-original-results-actual-A3-r1`
