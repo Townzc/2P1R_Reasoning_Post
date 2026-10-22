@@ -8128,7 +8128,12 @@
       "independent_symbolic_engine_rerun": false,
       "independent_manual_symbolic_pairs": 40
     },
-    "active_scientific_compute": 0,
+    "active_scientific_compute": {
+      "models": 0,
+      "CPU": 1,
+      "scope": "new ext4B once-only input construction",
+      "source": "EXT4B_V2_FIRST_INPUT_CONSTRUCTION_LAUNCH/CLI_EXIT"
+    },
     "B_student_inputs": {
       "status": "CONSTRUCTOR_DONE_ACTUAL_A1_PENDING",
       "packet": "reports/p011_20261020/b_student_inputs_actual_v1",
@@ -8490,7 +8495,15 @@
       "forced_model": "NOT_SUBMITTED_YET",
       "census_actual_A3": "CLOSED_PASS_C3437922",
       "active_new_CPU": 0,
-      "active_models": 0
+      "active_models": 0,
+      "forced_latest": {
+        "status": "ORIGINAL_CALL_IMPORT_FAILED_STOPPED_NO_CELL_STARTED",
+        "packet": "reports/p011_20261020/forced_answer_original_import_failure_v1",
+        "model_function_calls_submitted": 1,
+        "successful_worker_claims": 0,
+        "retry_adopted": false,
+        "input_upload_completed": true
+      }
     },
     "ext4b_current": {
       "owner_direct_adoption_utc": "2026-10-22T04:42:54.803617+00:00",
@@ -8502,7 +8515,7 @@
       "data_CR": {
         "request_id": "p011-ext-4B-relaxed-pool-input-construction-CR-r1",
         "scope": "p011-ext-4B-relaxed-pool-input-construction-CR",
-        "status": "PENDING_V2_DIRECT_12096_3024_AMENDMENT",
+        "status": "CLOSED_PASS_WITH_NOTES",
         "target_commit": "583a035a9cd3353f0d71f9ad6d8432d57ef9f4ea",
         "spec_sha256": "acc18dc4a8267b6cf06c0ac34b62829aa537b42b9e180c9d7db0e83954ab143c",
         "manifest_sha256": "f0ba47c553baebb9c3a04a838417b4dccc4217779ef3311ed1a2ec3f23d4181b",
@@ -8514,14 +8527,15 @@
           "equal_exact_Bprime_q_qplus1_whole_schedule_and_scaled_original_LR_accepted",
           "input_construction_only_no_GPU_before_separate_full_runtime_CR_and_actual_A2"
         ],
-        "first_remote_publication_utc": null,
-        "production_inputs_started": false,
+        "first_remote_publication_utc": "2026-10-22T04:51:32.524356+00:00",
+        "production_inputs_started": true,
         "model_calls": 0,
-        "packet": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2"
+        "packet": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2",
+        "accepted_report_sha256": "b08252f61e0acdcd13dfc9c6134b0ca55adde030855080da873bf188a125b3d2"
       },
-      "full_runtime_CR": "PREPARING_NOT_READY",
+      "full_runtime_CR": "PREPARED_NEW_BOUNDARY_TESTS_PASS_NOT_YET_REQUESTED",
       "actual_A2": "NOT_REQUESTED",
-      "inputs": "NOT_RUN",
+      "inputs": "ACTIVE_FIRST_CONSTRUCTOR_32526",
       "models": 0,
       "original_05UTC_freeze_unchanged": true,
       "large_questions": 12096,
@@ -8543,13 +8557,13 @@
       "copy_binding_sha256": "ff48fac3edf07c35a5c9170d7ca1ee3ceeb77560ae28be737b38b2af9e2e16ef",
       "manifest_sha256": "f16c6d3c3df78c61a6237e64f3d94dacd2a88fa37de2a78313d53f615a86c371",
       "new_scientific_computation": false,
-      "final_A5_pending": true,
+      "final_A5_pending": false,
       "target_commit": "6b332b1a700b0f0f1fed299b16bf862b670852e8",
       "new_Git_files_verified_once": 39,
       "final_A5_request": {
         "request_id": "p011-final-frozen-numeric-provenance-A5-20261022-r1",
         "scope": "p011-final-frozen-numeric-provenance-A5-20261022",
-        "status": "PENDING",
+        "status": "CLOSED_PASS_WITH_NOTES",
         "target_commit": "6b332b1a700b0f0f1fed299b16bf862b670852e8",
         "packet": "reports/p011_20261020/final_numeric_freeze_20261022_0500UTC_v1",
         "manifest_sha256": "f16c6d3c3df78c61a6237e64f3d94dacd2a88fa37de2a78313d53f615a86c371",
@@ -8568,7 +8582,9 @@
         "actual_write_start_utc": "2026-10-22T05:00:31.903435+00:00",
         "actual_write_end_utc": "2026-10-22T05:00:31.910207+00:00",
         "first_remote_publication_utc": null,
-        "request_path": "reports/p011_20261020/P011_FINAL_FREEZE_20261022_A5_REQUEST.md"
+        "request_path": "reports/p011_20261020/P011_FINAL_FREEZE_20261022_A5_REQUEST.md",
+        "accepted_report_sha256": "5025676fd8d216c8e5cf20b9adf8c1a88d2bf5d440338bdc8975993d6d927b94",
+        "acceptance_packet": "reports/p011_20261020/review_7b7d9755_ext4b_data_and_P011_final_A5_accepted_v1"
       }
     }
   },
