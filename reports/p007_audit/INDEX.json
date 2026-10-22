@@ -8755,12 +8755,12 @@
       "current_large_questions": 9072,
       "current_small_questions": 3024,
       "new_prefix_source_candidate": "reports/p011_20261020/ext3b_prefix_input_preflight_v1",
-      "new_prefix_production_started": false,
+      "new_prefix_production_started": true,
       "model_calls": 0,
       "new3B_data_CR": {
         "request_id": "p011-ext-3B-prefix-input-reschedule-CR-r1",
         "scope": "p011-ext-3B-prefix-input-reschedule-CR",
-        "status": "PENDING",
+        "status": "PASS",
         "target_commit": "cf630e860bce1a7bc2892d8cd75b57b805c1c4d4",
         "packet": "reports/p011_20261020/ext3b_prefix_input_preflight_v1",
         "spec_sha256": "540c5d5a609feb06d5e2d850a912f0e461326e394f5ff8af59b421ab39856295",
@@ -8788,7 +8788,8 @@
         ],
         "first_remote_publication_utc": "2026-10-22T06:17:30.435835+00:00",
         "production_started": false,
-        "old4B_actual_A2_superseded_not_reused": true
+        "old4B_actual_A2_superseded_not_reused": true,
+        "accepted_report_sha256": "fd985d7a5ac2016d00ea1dbdf3cc8275857be6e30119a122ea904df0c7ab5ca8"
       },
       "new3B_runtime_CR": {
         "request_id": "p011-ext-3B-complete-training-resume-MATH-path-CR-r1",
@@ -8902,12 +8903,78 @@
         ],
         "actual_A2_required_before_GPU": true,
         "production": false,
-        "superseded_v1": "61a14c851d2f5e391bc4d5f91e5d07b50834a0a8"
+        "superseded_v1": "61a14c851d2f5e391bc4d5f91e5d07b50834a0a8",
+        "v1_report_recorded_superseded": "f16a096225ccbb7edd90f91f46b92de052092ba7a8d8c85a24bd6cc36df691d1"
       },
       "current_jobs": [
         "long_R9072x1_S-F15_s17",
         "long_R3024xE3_S-F15_s17"
-      ]
+      ],
+      "new3B_prefix_completed": {
+        "utc": "2026-10-22T06:37:01.340782+00:00",
+        "scope": "P011-ext-3B",
+        "cells": {
+          "long_R9072x1_S-F15_s17": {
+            "questions": 9072,
+            "B": 123808531,
+            "U": 1935,
+            "q": 1,
+            "one_pass_supervised": 123808531,
+            "token_weighted_effective_E": 1.0,
+            "presentation_count_distribution": {
+              "1": 9072
+            },
+            "plan_sha256": "d27e395dab5e3989bee85e43a7605403c22a3a1ad642c5f5413590c88d708649"
+          },
+          "long_R3024xE3_S-F15_s17": {
+            "questions": 3024,
+            "B": 123808531,
+            "U": 1935,
+            "q": 2,
+            "one_pass_supervised": 41282839,
+            "token_weighted_effective_E": 2.9990314135130096,
+            "presentation_count_distribution": {
+              "3": 3020,
+              "2": 4
+            },
+            "plan_sha256": "83e84fb61faf918655285395f824626ef176205379216cc75565c6d568517039"
+          }
+        },
+        "unique_selected_questions": 9072,
+        "strict_subset_questions": 3024,
+        "same_supervised_B_including_EOS": 123808531,
+        "same_optimizer_updates": 1935,
+        "relative_to_original_A7_B": 2.9609906792140244,
+        "original_encoded_prefix_byte_copies": 9072,
+        "new_answer_encodings": 0,
+        "new_endpoint_prompt_encodings": 0,
+        "new_census_scans": 0,
+        "GPU_calls": 0,
+        "actual_A2_accepted": false,
+        "full_runtime_CR_and_actual_A2_still_required": true
+      },
+      "new3B_actual_A2": {
+        "request_id": "p011-ext-3B-actual-input-and-numeric-A2-lite-r1",
+        "scope": "p011-ext-3B-actual-input-and-numeric-A2-lite",
+        "status": "PENDING",
+        "target_commit": "5f1003c5f459ed3f4f1780decae49e2141a37d1a",
+        "packet": "reports/p011_20261020/ext3b_actual_inputs_v1",
+        "source_target": "c1a73d322e65e1ce5c4545befd366e9f8b6787a2",
+        "spec_sha256": "3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e",
+        "manifest_sha256": "9d568ef4d7ca3ea1add7a1410c33ec9077150e271c5771c0b408dd7ae21aae9b",
+        "actual_input_binding_sha256": "fe932aab0c629a5c42c1aa61436736b3ebedf331fd4481b66ac2defb808d169d",
+        "input_manifest_sha256": "afd5fe1bd7e13d28353d28fe4e7b6e2e296babcbc7752dc5cec843bdb7d17bfc",
+        "actual_job_manifest_sha256": "bf556ba4e18ab52b6613d6e86eec207ec6dedab9937accb2b754f94368453a24",
+        "required_flags": [
+          "exact9072_first3024_original_answer_bytes_and_new_prefix_manifest_accepted",
+          "equal_actual_Bprime_q_remainder_scaled_LR_U_and_effective_presentations_accepted",
+          "original_model_context_native3300_bound_inputs_MATH2500_scope_no_gold_upload_accepted",
+          "exact_full_source_SPEC_actual_job_manifest90pair45cell_checkpoint_resume_and_partial_scope_bound"
+        ],
+        "GPU_calls": 0,
+        "first_remote_publication_utc": null
+      },
+      "overnight_direct_delegation": "reports/p011_20261020/OWNER_CLAUDE_NIGHT_REDELEGATION_20261022.json"
     },
     "actual_final_freeze": {
       "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",

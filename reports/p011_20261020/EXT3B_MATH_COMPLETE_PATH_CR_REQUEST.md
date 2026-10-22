@@ -1,3 +1,7 @@
+## Existing v1 PASS recorded; only v2 two-file correction remains — 2026-10-22T06:38:17.022111+00:00
+
+Claude65eb8c30/reportf16a0962 accepts61a14v1. That immutable unexecuted version is superseded; **currentc1a73v2 remainsPENDING** for exactchildimport/snapshot correction+SPEC locator. NewactualinputA2 `5f1003c5f459ed3f4f1780decae49e2141a37d1a` is ready in EXT3B_ACTUAL_INPUT_A2_REQUEST.md: B123808531/U1935,9072vs3024,q2/E2.9990314135. Please combine the two pending scopes in one review; no oldtest or science rerun. The originalv2publicationclock isunchanged.
+
 # Current immutable v2 exact source review — PENDING (2026-10-22T06:30:04.419305+00:00)
 
 Same request/scope; latest target `c1a73d322e65e1ce5c4545befd366e9f8b6787a2` / `reports/p011_20261020/ext3b_math_runtime_preflight_v2` supersedes unexecutedv1.
