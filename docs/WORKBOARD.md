@@ -1,3 +1,11 @@
+## Forced extension actual inputs complete — 2026-10-22T23:19:55.674320+00:00
+
+First constructor CLI58260 and metadata publisher73971 both EXIT0_CONSUMED. New input manifest `9ef71794`: 3,861 continuations / 63,698,292 prefill tokens. Repeated3024: sample1,182 + greedy488; fresh9072: sample1,691 + greedy500. Both required context17,278≤32,768; native EOS/invalid-special exclusions all0. Both paths resolve to saved evaluated attempt-1 outputs and constructor raw digests match saved oracle bindings. The saved 10-ID suffix is copied without encoding. Seven new input/metadata archive members,708,952,603 uncompressed bytes,26,909,135 compressed bytes; full archive readback completed once. No natural decoding/rescoring, old weights upload, GPU or budget admission. Source a7e0a9ce accepted; actual input A2 is next. New cap20USD; A6−A7 DONE.
+
+## Two-cell forced-answer source review accepted — 2026-10-22T23:18:49.273719+00:00
+
+Claude `a7e0a9ce` accepted exact v2 target `87407963` / SPEC `bf5f8ffa` with all six flags. First actual-input constructor has started once; no GPU, upload or fresh budget admission yet. Actual A2 must confirm evaluated attempt-1 payload resolution, selected counts by mode and context ≤32,768 before inference. The requested A6−A7 contrast is already complete and will be reused. Total cap: $20; existing primary results remain unchanged.
+
 ## New forced extension blocked on external source review; requested CPU contrast done — 2026-10-22T22:49:03.647157+00:00
 
 22:48:22.912190 normal sharedHEAD unchanged4654447b after22:33 minimum unchanged; no fetch/re-read or invented approval. New inference source87407963/exact47/v2 remainsPENDING. A6−A7 two new intervals DONE via unchanged accepted functions, public existing_label_contrast_v1, never rerun; skip frozen FUTURE_COMMANDS a6_a7 step. Cap20USD. New constructor/budget/upload/GPU/collect/decode/score/extensionbootstrap NOTRUN.0activeCLI/model/CPU/awake. No new Modal app or charge query. Need real Claude report for this exactsource then one constructor, actual A2, fresh budget/upload/oneGPU. Existing automationPAUSED, not resumed. Future sharedpending review no earlier than23:18:22UTC absent new direct message. Private publishers/meter preparedNOTRUN; originalscienceallclosed.

@@ -5489,7 +5489,7 @@
     {
       "request_id": "p011-forced-answer-ext3b-complete-path-CR-r1",
       "scope": "p011-forced-answer-ext3b-complete-path-CR",
-      "status": "PENDING",
+      "status": "CLOSED_ACCEPTED",
       "target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
       "packet": "reports/p011_20261020/forced_answer_ext3b_preflight_v2",
       "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
@@ -5555,7 +5555,12 @@
       "production_started": false,
       "first_remote_publication_utc": null,
       "new_two_cell_scope_only": true,
-      "supersedes_unexecuted_target": "a6ed5ed01c350e59df5814cc7297ddbe0d6cff93"
+      "supersedes_unexecuted_target": "a6ed5ed01c350e59df5814cc7297ddbe0d6cff93",
+      "decision": "PASS-WITH-NOTES",
+      "review_head": "a7e0a9ce2075ba5026cb6c6c4499d608e365c9aa",
+      "report_sha256": "12f118bb79f573ae4295f852a77ce24b22477d2c7c1c9c0dddce129cee19dc1b",
+      "acceptance_packet": "reports/p011_20261020/review_a7e0a9ce_forced_ext3b_source_accepted_v1",
+      "accepted_utc": "2026-10-22T23:18:16.270970+00:00"
     }
   ],
   "p008_v31": {
@@ -9690,7 +9695,7 @@
   "p011_forced_ext3b_current": {
     "request_id": "p011-forced-answer-ext3b-complete-path-CR-r1",
     "scope": "p011-forced-answer-ext3b-complete-path-CR",
-    "status": "PENDING",
+    "status": "ACTUAL_INPUTS_COMPLETE_A2_NOT_YET_REQUESTED",
     "target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
     "packet": "reports/p011_20261020/forced_answer_ext3b_preflight_v2",
     "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
@@ -9757,10 +9762,26 @@
     "first_remote_publication_utc": null,
     "new_two_cell_scope_only": true,
     "supersedes_unexecuted_target": "a6ed5ed01c350e59df5814cc7297ddbe0d6cff93",
-    "last_audit_head": "4654447b377efb67a52a7d829bcc3d004127950d",
-    "last_audit_head_observed_utc": "2026-10-22T22:48:22.912190+00:00",
-    "source_review_decision": null,
-    "existing_A6_minus_A7_pair_complete": true
+    "last_audit_head": "a7e0a9ce2075ba5026cb6c6c4499d608e365c9aa",
+    "last_audit_head_observed_utc": "2026-10-22T23:17:34.554941+00:00",
+    "source_review_decision": "PASS-WITH-NOTES",
+    "existing_A6_minus_A7_pair_complete": true,
+    "source_acceptance_packet": "reports/p011_20261020/review_a7e0a9ce_forced_ext3b_source_accepted_v1",
+    "input_manifest_sha256": "9ef71794b8ad5858286c37127dd8c40ad55f81407ad34e33673e0a5c931171af",
+    "actual_input_packet": "reports/p011_20261020/forced_answer_ext3b_actual_inputs_v1",
+    "actual_packet_manifest_sha256": "3ecd28d230a2277123cb6fee5021e6542f80db5106c42946c8c07dbe1cf00331",
+    "actual_input_binding_sha256": "e955d711376c99b6d8aa7448dc10529a65aa0dea640d75044143df921beb5c43",
+    "selected_counts": {
+      "long_R3024xE3_S-F15_s17": {
+        "greedy": 488,
+        "sample": 1182
+      },
+      "long_R9072x1_S-F15_s17": {
+        "greedy": 500,
+        "sample": 1691
+      }
+    },
+    "new_gpu_calls": 0
   },
   "p011_forced_ext3b_existing_label_contrast": {
     "status": "COMPLETE_PENDING_INDEPENDENT_NEW_RESULT_REVIEW",

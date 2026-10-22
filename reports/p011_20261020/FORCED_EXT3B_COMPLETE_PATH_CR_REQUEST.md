@@ -1,3 +1,7 @@
+# CLOSED: exact v2 source PASS-WITH-NOTES
+
+Accepted Claude `a7e0a9ce2075ba5026cb6c6c4499d608e365c9aa`, report SHA `12f118bb79f573ae4295f852a77ce24b22477d2c7c1c9c0dddce129cee19dc1b`; all six required flags. See `review_a7e0a9ce_forced_ext3b_source_accepted_v1`. The next separate gate is actual input A2.
+
 # Current v2 candidate supersedes unexecuted v1 — 2026-10-22T22:17:50.031330+00:00
 
 Target `87407963774de2d4f37ed5121d8d9ea60aec2c6d`, SPEC `bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25`, packet `reports/p011_20261020/forced_answer_ext3b_preflight_v2`. Same six required flags and separate owner **$20** cap. Exactly two of47 source bindings change: SPEC locator and entry-slot normalization now explicitly counts this new app if absent from the eventually consistent provider list. New method/four cases PASS; old six successful methods not rerun. Review v1 base plus v2 narrow diff, or v2 final sources. No production inputs or paid run have started.
