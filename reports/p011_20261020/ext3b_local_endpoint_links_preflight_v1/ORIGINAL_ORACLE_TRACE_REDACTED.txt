@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<WORKSPACE>/scripts/p011_ext4b_io.py", line 177, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "<WORKSPACE>/scripts/p011_ext4b_io.py", line 173, in main
+    else:globals()[a.mode](out,LOCAL/'dispatch'/a.attempt_name)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/scripts/p011_ext4b_io.py", line 138, in audit
+    verify(INPUTS,job['local_input_files']);model=Path(job['model']['local_path']);verify(model,job['model']['local_audit_asset_files']);config=read(model/'config.json')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/experiments/sft_allocation_midpoint/common.py", line 45, in verify
+    raise ValueError('Artifact differs: ' + name)
+ValueError: Artifact differs: ENDPOINT_GPU.json

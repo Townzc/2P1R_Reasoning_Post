@@ -1,0 +1,49 @@
+{
+  "observed_utc": "2026-10-22T14:57:10.553615+00:00",
+  "failure": {
+    "utc": "2026-10-22T14:51:18.042955+00:00",
+    "type": "ValueError",
+    "message": "Artifact differs: ENDPOINT_GPU.json",
+    "automatic_retry": false
+  },
+  "original_oracle_CLI39311": "EXIT1_CONSUMED",
+  "cause": "Original verify rejects any symlink even when exact bytes match. Approved prefix constructor intentionally used two endpoint symlinks. No original endpoint bytes changed.",
+  "endpoint_links": {
+    "ENDPOINT_GPU.json": {
+      "declared": {
+        "bytes": 5966514,
+        "sha256": "7737bf920bcdb4faec832a3ce925cbf4f926c2ca03bd37e17e96efe0751aecee"
+      },
+      "observed": {
+        "bytes": 5966514,
+        "sha256": "7737bf920bcdb4faec832a3ce925cbf4f926c2ca03bd37e17e96efe0751aecee",
+        "observation": "first targeted failure diagnosis at14:53; no repeated hash here"
+      },
+      "target": ".local/p011_20261020/r1/ext4b_inputs_r1/ENDPOINT_GPU.json"
+    },
+    "ENDPOINT_LOCAL.json": {
+      "declared": {
+        "bytes": 5742191,
+        "sha256": "f475f77c49036c832b0633971eaa26014f0de1467eb8b1e7e87ff0fc104d966b"
+      },
+      "observed": {
+        "bytes": 5742191,
+        "sha256": "f475f77c49036c832b0633971eaa26014f0de1467eb8b1e7e87ff0fc104d966b"
+      },
+      "target": ".local/p011_20261020/r1/ext4b_inputs_r1/ENDPOINT_LOCAL.json"
+    }
+  },
+  "successful_prefix_reused_next": {
+    "terminal_archive_extraction": true,
+    "local_cloud_journal_consistency": true,
+    "first_three_regular_input_files": true
+  },
+  "scientific_stages_not_started": [
+    "full_training_state_optimizer_RNG_trajectory_oracle",
+    "native_endpoint_decode",
+    "scoring",
+    "analysis"
+  ],
+  "large_extracted_payload_and_failure_kept_in_place": true,
+  "private_full_binary_independently_reviewed": false
+}
