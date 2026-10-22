@@ -1,3 +1,7 @@
+## Two-cell forced-answer probe submitted — 2026-10-22T23:44:30.550920+00:00
+
+Single H100 call `fc-01M5JZZVNRSVY8GX9FZ00DX67K` / app `ap-W1ANBPlELqjkRbTMcrGzY1` submitted 2026-10-22T23:43:54.085540+00:00 after real source and actual A2 approval. One global attempt, two cells sequential,3,861 continuations; no training. Fresh rate4.39520/h, original budget worker10,800s + startup600 + grace60 and1.50 noncompute produce15.49138667USD upper bound under owner20USD, not an invoice. Source/request upload and byte readback completed once. Results are not yet available; CLI5891 is active. Original natural labels and existing A6−A7 contrasts remain unchanged.
+
 ## Forced extension actual A2 accepted — 2026-10-22T23:36:47.730157+00:00
 
 Claude f512a787/report915731fb PASS exact3a7cb7dd/INPUT9ef71794, all4flags and every3,861 request independently checked. Source a7e0a9ce remains accepted. Proceed to one fresh budget admission, one new input upload and one H100 attempt within20USD. All old science and A6−A7 stay DONE. No new model has started yet.
