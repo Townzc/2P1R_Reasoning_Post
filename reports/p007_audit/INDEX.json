@@ -5561,6 +5561,27 @@
       "report_sha256": "12f118bb79f573ae4295f852a77ce24b22477d2c7c1c9c0dddce129cee19dc1b",
       "acceptance_packet": "reports/p011_20261020/review_a7e0a9ce_forced_ext3b_source_accepted_v1",
       "accepted_utc": "2026-10-22T23:18:16.270970+00:00"
+    },
+    {
+      "request_id": "p011-forced-answer-ext3b-actual-input-A2-lite-r1",
+      "scope": "p011-forced-answer-ext3b-actual-input-A2-lite",
+      "status": "PENDING",
+      "target_commit": "3a7cb7dd807c301494ce2a880c7efb0acd631d40",
+      "packet": "reports/p011_20261020/forced_answer_ext3b_actual_inputs_v1",
+      "source_target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
+      "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
+      "input_manifest_sha256": "9ef71794b8ad5858286c37127dd8c40ad55f81407ad34e33673e0a5c931171af",
+      "manifest_sha256": "3ecd28d230a2277123cb6fee5021e6542f80db5106c42946c8c07dbe1cf00331",
+      "binding_sha256": "e955d711376c99b6d8aa7448dc10529a65aa0dea640d75044143df921beb5c43",
+      "required_flags": [
+        "exact_two_saved_export_hashes_original_prompt_generated_ID_roster_and_suffix_accepted",
+        "actual_sample2000_greedy500_selection_exclusions_and_context_prefill_accepted",
+        "actual_manifest_no_labels_gold_old_weights_upload_and_single_attempt_accepted",
+        "separate20_cap_throughput_headroom_and_source_SPEC_binding_accepted"
+      ],
+      "owner_total_cap_usd": "20",
+      "requested_utc": "2026-10-22T23:20:21.716706+00:00",
+      "new_gpu_calls": 0
     }
   ],
   "p008_v31": {
@@ -9695,7 +9716,7 @@
   "p011_forced_ext3b_current": {
     "request_id": "p011-forced-answer-ext3b-complete-path-CR-r1",
     "scope": "p011-forced-answer-ext3b-complete-path-CR",
-    "status": "ACTUAL_INPUTS_COMPLETE_A2_NOT_YET_REQUESTED",
+    "status": "ACTUAL_INPUT_A2_PENDING",
     "target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
     "packet": "reports/p011_20261020/forced_answer_ext3b_preflight_v2",
     "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
@@ -9781,7 +9802,9 @@
         "sample": 1691
       }
     },
-    "new_gpu_calls": 0
+    "new_gpu_calls": 0,
+    "actual_input_target_commit": "3a7cb7dd807c301494ce2a880c7efb0acd631d40",
+    "actual_input_A2_request": "p011-forced-answer-ext3b-actual-input-A2-lite-r1"
   },
   "p011_forced_ext3b_existing_label_contrast": {
     "status": "COMPLETE_PENDING_INDEPENDENT_NEW_RESULT_REVIEW",
@@ -9799,5 +9822,26 @@
     ],
     "no_GPU_or_scoring": true,
     "never_repeat": true
+  },
+  "p011_forced_ext3b_actual_input_A2": {
+    "request_id": "p011-forced-answer-ext3b-actual-input-A2-lite-r1",
+    "scope": "p011-forced-answer-ext3b-actual-input-A2-lite",
+    "status": "PENDING",
+    "target_commit": "3a7cb7dd807c301494ce2a880c7efb0acd631d40",
+    "packet": "reports/p011_20261020/forced_answer_ext3b_actual_inputs_v1",
+    "source_target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
+    "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
+    "input_manifest_sha256": "9ef71794b8ad5858286c37127dd8c40ad55f81407ad34e33673e0a5c931171af",
+    "manifest_sha256": "3ecd28d230a2277123cb6fee5021e6542f80db5106c42946c8c07dbe1cf00331",
+    "binding_sha256": "e955d711376c99b6d8aa7448dc10529a65aa0dea640d75044143df921beb5c43",
+    "required_flags": [
+      "exact_two_saved_export_hashes_original_prompt_generated_ID_roster_and_suffix_accepted",
+      "actual_sample2000_greedy500_selection_exclusions_and_context_prefill_accepted",
+      "actual_manifest_no_labels_gold_old_weights_upload_and_single_attempt_accepted",
+      "separate20_cap_throughput_headroom_and_source_SPEC_binding_accepted"
+    ],
+    "owner_total_cap_usd": "20",
+    "requested_utc": "2026-10-22T23:20:21.716706+00:00",
+    "new_gpu_calls": 0
   }
 }

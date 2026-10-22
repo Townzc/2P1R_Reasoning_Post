@@ -1,3 +1,7 @@
+## Forced extension actual-input A2 requested — 2026-10-22T23:20:21.716706+00:00
+
+Fixed target `3a7cb7dd807c301494ce2a880c7efb0acd631d40` / INPUT_MANIFEST `9ef71794` / source v2 `bf5f8ffa`; all3,861 continuations ready. Only actual-input A2 (four flags) is pending. See FORCED_EXT3B_ACTUAL_INPUT_A2_REQUEST.md for per-mode counts, original attempt1 paths and context17,278. Source CR is closed. New inference/budget/upload remain NOT_RUN; total cap20USD, no owner confirmation needed.
+
 ## Forced extension actual inputs complete — 2026-10-22T23:19:55.674320+00:00
 
 First constructor CLI58260 and metadata publisher73971 both EXIT0_CONSUMED. New input manifest `9ef71794`: 3,861 continuations / 63,698,292 prefill tokens. Repeated3024: sample1,182 + greedy488; fresh9072: sample1,691 + greedy500. Both required context17,278≤32,768; native EOS/invalid-special exclusions all0. Both paths resolve to saved evaluated attempt-1 outputs and constructor raw digests match saved oracle bindings. The saved 10-ID suffix is copied without encoding. Seven new input/metadata archive members,708,952,603 uncompressed bytes,26,909,135 compressed bytes; full archive readback completed once. No natural decoding/rescoring, old weights upload, GPU or budget admission. Source a7e0a9ce accepted; actual input A2 is next. New cap20USD; A6−A7 DONE.
