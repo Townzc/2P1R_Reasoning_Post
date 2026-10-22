@@ -1,3 +1,7 @@
+## New direct-owner two-cell forced-answer probe — 2026-10-22T22:07:49.942645+00:00
+
+Latest direct owner amended total cap to20USD. Source candidate a6ed5ed01c350e59df5814cc7297ddbe0d6cff93,47 source bindings/8 new adapters, six new routing checks PASS; production/inputs/budget/upload/model NOT_RUN. New source CR truly PENDING; no old closed request reopened. Dedicated local root forced_answer_ext3b_r1, store p011-forced-answer-ext3b-20261022-v1. Same seven-cell scientific functions unchanged. Natural extension interval reused by sign reversal, two new forced extension contrasts and two A6−A7 contrasts only. No automatic retry. Original finite automation remains PAUSED; this direct task is active.
+
 ## Extension actual A3 accepted; finite work closed — 2026-10-22T17:24:46.219756+00:00
 
 Claude4654447b377efb67a52a7d829bcc3d004127950d/report SHA `a35bcb29daa66e0f63d4fd17a85b247225a485a6ef919b5fe5781f437f999789` explicitly accepted all seven actual-results flags for fixed13dfdd59. Independent5000 native BPE/text-region/stop checks matched; correctness consistency and67 manual non-string-equal positives (15large/52small), both original10000/seed20261021 intervals reproduced. No independent private binary/full symbolic engine/invoice access claimed. Git17:19:59UTC, discovery2026-10-22T17:20:21.785119+00:00, fullread2026-10-22T17:20:59.202842+00:00 and report self~17:35 remain separate. Only this new report was read; reviewer script was not executed.
