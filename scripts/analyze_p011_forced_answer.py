@@ -5,7 +5,7 @@ from experiments.p011.owner_0205_common import admit, create, read, sha, utc
 from experiments.p011.forced_answer import CELLS, CONTRASTS, joined_labels, question_vectors
 from experiments.p011.long_evaluation import paired_question_interval
 
-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
+SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'
 
 
 def rates(ids,original,forced):
@@ -40,7 +40,11 @@ def main():
                 modes[mode]={'all_rows':rates(ids,original,full),'truncated_rows':rates(truncated,original,full),
                     'truncated_looping':rates([k for k in truncated if old['truncation_diagnostics'][k]['loop']],original,full),
                     'truncated_nonlooping':rates([k for k in truncated if not old['truncation_diagnostics'][k]['loop']],original,full)}
-            cells[cell]={'status':'complete','modes':modes,'natural_rows_reused':2500-len(selected)}
+            proof=read(root/'audit'/cell/'COMPLETE_PROOF.json')
+            cell_input=read(Path(spec['input_output'])/'INPUT_MANIFEST.json')['cells'][cell]
+            cells[cell]={'status':'complete','modes':modes,'natural_rows_reused':2500-len(selected),
+                'forced_box_closure_counts':proof['forced_box_closure_counts'],
+                'backend_length_native_exclusions':cell_input['backend_length_native_exclusions']}
             create(out/(cell+'_FORCED_LABELS.json'),full)
         contrasts={}
         for left,right in CONTRASTS:
@@ -53,7 +57,7 @@ def main():
         create(out/'RESULTS.json',{'cells':cells,'contrasts':contrasts,'bindings':bindings,
             'posthoc_diagnostic':True,'primary_results_replaced':False,'one_fixed_suffix_not_tuned':True,
             'training_seed_population_or_unique_causal_mechanism_claim':False,
-            'scorer_note':'Frozen P1 scalar/pool; a continuation still hitting64 tokens retains length_cap and is incorrect under that frozen policy.',
+            'scorer_note':'Frozen P1 scalar/pool. The adapter scores only the first matched forced box, independently of emitted EOS. True native/backend stops remain separate. Unclosed forced boxes are incorrect; no later box can replace the forced box.',
             'loop_note':'zlib compressed UTF8 bytes of last6000 original answer characters / original UTF8 byte length < .12; descriptive heuristic.'})
         create(out/'COMPLETED.json',{'utc':utc(),'results_sha256':sha(out/'RESULTS.json'),'actual_A3_accepted':False})
     except BaseException as exc:

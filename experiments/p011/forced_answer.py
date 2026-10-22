@@ -3,6 +3,7 @@ from decimal import Decimal, ROUND_FLOOR
 import zlib
 from experiments.p011.owner_0205_common import digest
 from experiments.sft_allocation_midpoint.common import digest as original_digest
+from experiments.learning_regime_p009.math_scoring import escaped
 
 SUFFIX = '\n</think>\n\nFinal answer: \\boxed{'
 CELLS = ('baseline', 'A1r2', 'A5', 'A6', 'A7', 'D1', 'D2')
@@ -27,9 +28,9 @@ def forced_request(raw, decoded, suffix_ids):
             or decoded['raw_record_sha256'] != original_digest(raw)
             or raw['answers'][0]['finish_reason'] != 'length'
             or decoded['backend_finish_reason'] != 'length'
-            or decoded['stop_reason'] not in ('length_cap','native_eos','invalid_special_token')
+            or decoded['stop_reason'] != 'length_cap'
             or len(raw['answers'][0]['token_ids']) != 16384):
-        raise ValueError('Exactly the original verified backend-length16384 row required')
+        raise ValueError('Exactly the original verified native length_cap16384 row required')
     prompt, generated = raw['prompt_token_ids'], raw['answers'][0]['token_ids']
     if any(type(t) is not int or t < 0 for ids in (prompt, generated, suffix_ids) for t in ids):
         raise ValueError('Literal native token IDs only')
@@ -86,8 +87,19 @@ def forced_sampling(eos):
             'detokenize':True,'skip_special_tokens':False,'include_stop_str_in_output':True}
 
 
+def forced_box_segment(text):
+    """Close the already-open forced box; use the frozen scorer's brace escaping."""
+    depth = 1
+    for index, char in enumerate(text):
+        if not escaped(text, index):
+            depth += (char == '{') - (char == '}')
+        if depth == 0:
+            return '\\boxed{' + text[:index+1], index
+    return '\\boxed{' + text, None
+
+
 def decode_continuation(request, item, eos, tokenizer, vocab_size):
-    """Original native EOS/special/cap semantics, with the new explicit64 cap.
+    """Preserve true native stop, then score only the closed forced box.
 
     Only new continuation IDs are decoded; the original16384 IDs are never
     decoded again. The original primary labels are not inputs to this oracle.
@@ -115,8 +127,20 @@ def decode_continuation(request, item, eos, tokenizer, vocab_size):
             raise ValueError('Partial continuation is unknown, never zero')
         stop,visible='length_cap',ids
     text=tokenizer.decode(visible,skip_special_tokens=False,clean_up_tokenization_spaces=False)
-    return {'id':request['id'],'request_sha256':digest(request),'stop_reason':stop,
-        'continuation_text':text,'answer_segment':'\\boxed{'+text,'generated_tokens':len(ids),
+    segment, close = forced_box_segment(text)
+    closed = close is not None
+    # Scoring-only adapter requested by CR8125afea. Never assert that a
+    # synthetic scoring stop was emitted by the backend. An unclosed nested
+    # box must not leak a later inner box into the unchanged last_box scorer.
+    scoring_stop = 'native_eos' if closed else (
+        'invalid_special_token' if stop == 'invalid_special_token' else 'length_cap')
+    category = ('closed_with_native_eos' if stop == 'native_eos' else
+                'closed_without_native_eos') if closed else 'forced_box_unclosed'
+    return {'id':request['id'],'request_sha256':digest(request),'stop_reason':scoring_stop,
+        'scoring_stop_reason':scoring_stop,'native_stop_reason':stop,
+        'forced_box_closed':closed,'forced_box_close_character_index':close,
+        'forced_box_completion_category':category,
+        'continuation_text':text,'answer_segment':segment,'generated_tokens':len(ids),
         'unmapped_model_token_ids':unknown,'raw_record_sha256':digest(item),
         'backend_text_sha256':digest(answer['backend_text']),
         'backend_finish_reason':answer['finish_reason'],'backend_stop_reason':answer['stop_reason']}

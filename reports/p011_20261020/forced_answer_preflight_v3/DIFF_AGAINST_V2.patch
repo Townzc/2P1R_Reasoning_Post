@@ -1,0 +1,127 @@
+diff --git a/experiments/p011/forced_answer.py b/experiments/p011/forced_answer.py
+index a5b9d652..c72ac64b 100644
+--- a/experiments/p011/forced_answer.py
++++ b/experiments/p011/forced_answer.py
+@@ -5,0 +6 @@ from experiments.sft_allocation_midpoint.common import digest as original_digest
++from experiments.learning_regime_p009.math_scoring import escaped
+@@ -30 +31 @@ def forced_request(raw, decoded, suffix_ids):
+-            or decoded['stop_reason'] not in ('length_cap','native_eos','invalid_special_token')
++            or decoded['stop_reason'] != 'length_cap'
+@@ -32 +33 @@ def forced_request(raw, decoded, suffix_ids):
+-        raise ValueError('Exactly the original verified backend-length16384 row required')
++        raise ValueError('Exactly the original verified native length_cap16384 row required')
+@@ -88,0 +90,11 @@ def forced_sampling(eos):
++def forced_box_segment(text):
++    """Close the already-open forced box; use the frozen scorer's brace escaping."""
++    depth = 1
++    for index, char in enumerate(text):
++        if not escaped(text, index):
++            depth += (char == '{') - (char == '}')
++        if depth == 0:
++            return '\\boxed{' + text[:index+1], index
++    return '\\boxed{' + text, None
++
++
+@@ -90 +102 @@ def decode_continuation(request, item, eos, tokenizer, vocab_size):
+-    """Original native EOS/special/cap semantics, with the new explicit64 cap.
++    """Preserve true native stop, then score only the closed forced box.
+@@ -118,2 +130,14 @@ def decode_continuation(request, item, eos, tokenizer, vocab_size):
+-    return {'id':request['id'],'request_sha256':digest(request),'stop_reason':stop,
+-        'continuation_text':text,'answer_segment':'\\boxed{'+text,'generated_tokens':len(ids),
++    segment, close = forced_box_segment(text)
++    closed = close is not None
++    # Scoring-only adapter requested by CR8125afea. Never assert that a
++    # synthetic scoring stop was emitted by the backend. An unclosed nested
++    # box must not leak a later inner box into the unchanged last_box scorer.
++    scoring_stop = 'native_eos' if closed else (
++        'invalid_special_token' if stop == 'invalid_special_token' else 'length_cap')
++    category = ('closed_with_native_eos' if stop == 'native_eos' else
++                'closed_without_native_eos') if closed else 'forced_box_unclosed'
++    return {'id':request['id'],'request_sha256':digest(request),'stop_reason':scoring_stop,
++        'scoring_stop_reason':scoring_stop,'native_stop_reason':stop,
++        'forced_box_closed':closed,'forced_box_close_character_index':close,
++        'forced_box_completion_category':category,
++        'continuation_text':text,'answer_segment':segment,'generated_tokens':len(ids),
+diff --git a/experiments/p011/modal_forced_answer.py b/experiments/p011/modal_forced_answer.py
+index 3c87ab99..f35d4d23 100644
+--- a/experiments/p011/modal_forced_answer.py
++++ b/experiments/p011/modal_forced_answer.py
+@@ -14 +14 @@ ROOT=Path(__file__).resolve().parents[2]
+-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
++SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'
+diff --git a/scripts/analyze_p011_forced_answer.py b/scripts/analyze_p011_forced_answer.py
+index 46af3e4a..a289f9fd 100644
+--- a/scripts/analyze_p011_forced_answer.py
++++ b/scripts/analyze_p011_forced_answer.py
+@@ -8 +8 @@ from experiments.p011.long_evaluation import paired_question_interval
+-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
++SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'
+@@ -43 +43,5 @@ def main():
+-            cells[cell]={'status':'complete','modes':modes,'natural_rows_reused':2500-len(selected)}
++            proof=read(root/'audit'/cell/'COMPLETE_PROOF.json')
++            cell_input=read(Path(spec['input_output'])/'INPUT_MANIFEST.json')['cells'][cell]
++            cells[cell]={'status':'complete','modes':modes,'natural_rows_reused':2500-len(selected),
++                'forced_box_closure_counts':proof['forced_box_closure_counts'],
++                'backend_length_native_exclusions':cell_input['backend_length_native_exclusions']}
+@@ -56 +60 @@ def main():
+-            'scorer_note':'Frozen P1 scalar/pool; a continuation still hitting64 tokens retains length_cap and is incorrect under that frozen policy.',
++            'scorer_note':'Frozen P1 scalar/pool. The adapter scores only the first matched forced box, independently of emitted EOS. True native/backend stops remain separate. Unclosed forced boxes are incorrect; no later box can replace the forced box.',
+diff --git a/scripts/p011_forced_answer_io.py b/scripts/p011_forced_answer_io.py
+index 29e5f7b2..cc56522f 100644
+--- a/scripts/p011_forced_answer_io.py
++++ b/scripts/p011_forced_answer_io.py
+@@ -2,0 +3 @@ import argparse
++from collections import Counter
+@@ -11 +12 @@ from experiments.p011.forced_answer_worker import REMOTE, STORE
+-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
++SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'
+@@ -93 +94 @@ def audit(spec,out,cell):
+-    decoded=[];rows=[]
++    decoded=[];rows=[];closure_counts=Counter()
+@@ -95,0 +97 @@ def audit(spec,out,cell):
++        closure_counts[value['forced_box_completion_category']] += 1
+@@ -97,0 +100,5 @@ def audit(spec,out,cell):
++            'native_stop_reason':value['native_stop_reason'],
++            'backend_finish_reason':value['backend_finish_reason'],
++            'backend_stop_reason':value['backend_stop_reason'],
++            'forced_box_closed':value['forced_box_closed'],
++            'forced_box_completion_category':value['forced_box_completion_category'],
+@@ -102,0 +110,3 @@ def audit(spec,out,cell):
++        'forced_box_closure_counts':{k:closure_counts[k] for k in (
++            'closed_with_native_eos','closed_without_native_eos','forced_box_unclosed')},
++        'scoring_stop_is_adapter_not_backend_EOS_evidence':True,
+diff --git a/scripts/prepare_p011_forced_answer_inputs.py b/scripts/prepare_p011_forced_answer_inputs.py
+index 386f4351..558440dd 100644
+--- a/scripts/prepare_p011_forced_answer_inputs.py
++++ b/scripts/prepare_p011_forced_answer_inputs.py
+@@ -2,0 +3 @@ import argparse
++from collections import Counter
+@@ -43,0 +45,2 @@ def run(spec_path, review_path):
++            exclusions = Counter({f'backend_length_{stop}{ending}':0
++                for stop in ('native_eos','invalid_special_token') for ending in ('','_at_16384')})
+@@ -48 +51,4 @@ def run(spec_path, review_path):
+-                if original['answers'][0]['finish_reason']=='length':
++                if type(labels[row_id]) is not bool:
++                    raise ValueError('Every original row requires its saved known Boolean')
++                native_stop = decoded[row_id]['stop_reason']
++                if native_stop=='length_cap':
+@@ -51 +57 @@ def run(spec_path, review_path):
+-                elif (type(labels[row_id]) is not bool or decoded[row_id]['stop_reason'] not in ('native_eos','length_cap','invalid_special_token')):
++                elif native_stop not in ('native_eos','invalid_special_token'):
+@@ -52,0 +59,4 @@ def run(spec_path, review_path):
++                elif original['answers'][0]['finish_reason']=='length':
++                    exclusions['backend_length_'+native_stop] += 1
++                    if len(original['answers'][0]['token_ids']) == 16384:
++                        exclusions['backend_length_'+native_stop+'_at_16384'] += 1
+@@ -66 +76,3 @@ def run(spec_path, review_path):
+-                'all_natural_labels_reused':True}
++                'all_natural_labels_reused':True,
++                'selection':'saved_native_stop_reason_length_cap_only',
++                'backend_length_native_exclusions':dict(exclusions)}
+diff --git a/scripts/record_p011_forced_answer_budget.py b/scripts/record_p011_forced_answer_budget.py
+index 5ad561ba..af635f2e 100644
+--- a/scripts/record_p011_forced_answer_budget.py
++++ b/scripts/record_p011_forced_answer_budget.py
+@@ -11 +11 @@ from experiments.p011.forced_answer import checked_budget
+-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
++SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'

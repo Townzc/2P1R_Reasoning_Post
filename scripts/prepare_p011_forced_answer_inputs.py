@@ -1,5 +1,6 @@
 """Once-only new diagnostic inputs; reuse original token IDs and natural labels."""
 import argparse
+from collections import Counter
 from pathlib import Path
 from experiments.p011.owner_0205_common import admit, checked_metadata, create, digest, read, sha, utc
 from experiments.p011.forced_answer import CELLS, SUFFIX, expected_math_ids, forced_request, loop_heuristic, original_digest
@@ -41,15 +42,24 @@ def run(spec_path, review_path):
                         raw[row['id']] = row
             if set(raw)!=set(decoded): raise ValueError('Complete original MATH raw-token roster required')
             selected, diagnostics = [], {}
+            exclusions = Counter({f'backend_length_{stop}{ending}':0
+                for stop in ('native_eos','invalid_special_token') for ending in ('','_at_16384')})
             for row_id in sorted(raw):
                 original = raw[row_id]
                 if original_digest(original)!=decoded[row_id]['raw_record_sha256']:
                     raise ValueError('Original raw-to-oracle binding changed')
-                if original['answers'][0]['finish_reason']=='length':
+                if type(labels[row_id]) is not bool:
+                    raise ValueError('Every original row requires its saved known Boolean')
+                native_stop = decoded[row_id]['stop_reason']
+                if native_stop=='length_cap':
                     selected.append(forced_request(original,decoded[row_id],suffix_ids))
                     diagnostics[row_id] = loop_heuristic(decoded[row_id]['answer_text'])
-                elif (type(labels[row_id]) is not bool or decoded[row_id]['stop_reason'] not in ('native_eos','length_cap','invalid_special_token')):
+                elif native_stop not in ('native_eos','invalid_special_token'):
                     raise ValueError('Every unselected row needs its original known Boolean and native stop classification')
+                elif original['answers'][0]['finish_reason']=='length':
+                    exclusions['backend_length_'+native_stop] += 1
+                    if len(original['answers'][0]['token_ids']) == 16384:
+                        exclusions['backend_length_'+native_stop+'_at_16384'] += 1
             cell_root=out/cell
             create(cell_root/'REQUESTS.json',selected)
             create(cell_root/'ORIGINAL_LABELS_AND_GOLD.json',{'labels':labels,
@@ -63,7 +73,9 @@ def run(spec_path, review_path):
                 'model_files':cfg['model_files'],'eos_token_ids':cfg['eos_token_ids'],
                 'required_context':max((len(r['prompt_token_ids'])+64 for r in selected),default=16449),
                 'prefill_tokens':sum(len(r['prompt_token_ids']) for r in selected),
-                'all_natural_labels_reused':True}
+                'all_natural_labels_reused':True,
+                'selection':'saved_native_stop_reason_length_cap_only',
+                'backend_length_native_exclusions':dict(exclusions)}
             if record['required_context']>32768: raise ValueError('Unexpected context exceeds the reviewed model capacity')
             create(cell_root/'COMPLETED.json',record);manifest['cells'][cell]=record
         create(out/'INPUT_MANIFEST.json',manifest)

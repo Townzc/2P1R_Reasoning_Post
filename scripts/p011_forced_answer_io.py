@@ -1,5 +1,6 @@
 """New inputs only; once-only collection/native64 oracle/frozen scorer per cell."""
 import argparse
+from collections import Counter
 import hashlib
 from pathlib import Path
 import subprocess
@@ -8,7 +9,7 @@ from experiments.p011.owner_0205_common import admit, create, digest, read, sha,
 from experiments.p011.forced_answer import CELLS, decode_continuation
 from experiments.p011.forced_answer_worker import REMOTE, STORE
 
-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
+SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'
 
 
 def safe_name(name):
@@ -90,16 +91,25 @@ def audit(spec,out,cell):
         if ack['rows']!=len(part) or sha(file)!=ack['raw_sha256']:raise ValueError('New batch completion binding differs')
         raw.extend(part)
     if len(raw)!=len(requests):raise ValueError('Full selected cell required')
-    decoded=[];rows=[]
+    decoded=[];rows=[];closure_counts=Counter()
     for req,item in zip(requests,raw):
         value=decode_continuation(req,item,cfg['eos_token_ids'],tok,spec['model_vocab_size'])
+        closure_counts[value['forced_box_completion_category']] += 1
         decoded.append(value);rows.append({'id':req['id'],'gold':labels['gold'][req['id']],
             'answer_segment':value['answer_segment'],'stop_reason':value['stop_reason'],
+            'native_stop_reason':value['native_stop_reason'],
+            'backend_finish_reason':value['backend_finish_reason'],
+            'backend_stop_reason':value['backend_stop_reason'],
+            'forced_box_closed':value['forced_box_closed'],
+            'forced_box_completion_category':value['forced_box_completion_category'],
             'request_sha256':digest(req),'raw_text_sha256':digest(value['continuation_text']),
             'region_sha256':digest(value['answer_segment']),'last_think_boundary_present':False})
     create(out/'DECODED.json',decoded);create(out/'SCORING_ROWS.json',rows)
     create(out/'COMPLETE_PROOF.json',{'utc':utc(),'cell':cell,'new_continuations_decoded':len(rows),
         'original16384_token_streams_redecoded':0,'original_training_oracle_repeated':False,
+        'forced_box_closure_counts':{k:closure_counts[k] for k in (
+            'closed_with_native_eos','closed_without_native_eos','forced_box_unclosed')},
+        'scoring_stop_is_adapter_not_backend_EOS_evidence':True,
         'scoring_rows_sha256':sha(out/'SCORING_ROWS.json'),'technical_unknown':0,'actual_A3_accepted':False})
 
 

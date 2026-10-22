@@ -11,7 +11,7 @@ from experiments.p011.forced_answer import CELLS, checked_budget
 from experiments.p011.forced_answer_worker import STORE, REMOTE
 
 ROOT=Path(__file__).resolve().parents[2]
-SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
+SPEC='reports/p011_20261020/forced_answer_preflight_v3/SPEC.json'
 spec=read(ROOT/SPEC)
 app=modal.App('p011-forced-answer-diagnostic-v1')
 volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)

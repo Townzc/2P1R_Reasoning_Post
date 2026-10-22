@@ -1,0 +1,24 @@
+{
+  "distinct_new_methods": 7,
+  "first_run": {
+    "passed": 6,
+    "failed": 1,
+    "elapsed_seconds": 0.017,
+    "log_sha256": "e4d13fdaaeb913e508fac4958b832c9c5f2f64bc5c4ea6f7875f0ff13354e1cd",
+    "failure": "Synthetic expected-correct case passed an invalid empty symbolic result instead of explicit parse_failure status."
+  },
+  "only_failed_method_fix": {
+    "exit_code": 0,
+    "observed_exit_utc": "2026-10-22T03:10:31.854062+00:00",
+    "only_previously_failed_test": "tests.test_p011_forced_v3_scoring_adapter.ForcedV3Regressions.test_closed_at_cap_scores_correct_without_claiming_actual_eos",
+    "six_successful_new_and_all_old_tests_rerun": false,
+    "fixture_fix": "Use explicit parse_failure symbolic fixture to exercise the unchanged normalized-string fallback, rather than an invalid empty symbolic object. No production scorer change."
+  },
+  "fixed_run_seconds": 0.002,
+  "final_all_seven_new_methods_passed": true,
+  "successful_tests_repeated": false,
+  "test_path": "tests/test_p011_forced_v3_scoring_adapter.py",
+  "test_sha256": "9a3dc7f9860115ff35f45609d09352a85b87a861e288a2bb7a417a5202ff72d8",
+  "old_v1_cap_and_v2_selection_tests_historical_superseded_not_rerun": true,
+  "original_scorer_source_unchanged": true
+}

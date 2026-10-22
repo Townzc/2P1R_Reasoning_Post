@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-10-22T03:08:05.109413+00:00",
+  "metadata_builder_error": "KeyError scope before acceptance was written; actual SPEC has no scope field",
+  "prior_cli_exit": {
+    "started_utc": "2026-10-22T03:07:36.430815+00:00",
+    "observed_exit_utc": "2026-10-22T03:07:36.488878+00:00",
+    "exit_code": 1,
+    "command": [
+      ".local/midpoint_20261011/data_pipeline/venv/bin/python",
+      "-u",
+      "scripts/count_p011_ot3_math_pool.py",
+      "--spec",
+      "reports/p011_20261020/ot3_full_math_census_preflight_v1/SPEC.json",
+      "--review",
+      ".local/p011_20261020/r1/OT3_FULL_MATH_CENSUS_CR_ACCEPTED.json"
+    ],
+    "log": ".local/p011_20261020/r1/OT3_FULL_MATH_CENSUS_ORIGINAL_RUN.log"
+  },
+  "original_log_sha256": "d9e6d875466b213925e14494a2fdff432631599d42ec1bdca56930568da2b475",
+  "actual_error": "FileNotFoundError acceptance review before out.mkdir or tokenizer/raw data read",
+  "census_output_directory_absent": true,
+  "scientific_computation_started": false,
+  "science_retry": false,
+  "one_infrastructure_continuation_only": "Complete previously unwritten real PASS receipt; one distinct invocation to start the original unstarted census. Preserve original CLI/log/exit."
+}
