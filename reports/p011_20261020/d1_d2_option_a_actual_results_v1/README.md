@@ -1,0 +1,9 @@
+# D1 and owner-authorized D2 option(a): actual A3 pending
+
+D2 的 worker 在最后一批 AMC 评测时撞上硬计时器（9,000 s）；MATH-500 和 AIME 输出完整，AMC 不完整，未报告。
+
+This packet contains original D1 full3300 results and first complete local state/trajectory/native-output oracle and frozen score, plus D2's first original full training-state oracle and complete2980 MATH/AIME scope. D2's original3072 raw records and training metadata remain in the fixed0b44606a failure archive, referenced by exact manifest; they are not regenerated, recopied from the provider or republished. The92 saved AMC rows are raw only: no decode, score, accuracy, aggregate or contrast;228missing are never zeros. The failed worker remains failed, and the derived training-only view is not a complete worker RESULT.
+
+D2-minus-D1 is MATH500 only. Both sampled mean pass@1 and greedy use original10000 paired-question bootstrap/seed20261021. The greedy adapter repeats one saved bit only at the unchanged four-entry mean interface; no additional model samples exist. AIME24/25 are descriptive only. These are fixed-training-seed conditional question intervals, not training-seed population, mechanism or causal proofs. Original decoder, scalar scorer, symbolic pool and bootstrap functions are unchanged; all saved labels and vectors are preserved.
+
+Original complete endpoint-cycle timings were not saved for failed D2. Saved batch acknowledgments/body times and forecasts are preserved; body times are not claimed to be whole cycles, and exact endpoint-forecast replay is unavailable. Original training/pre-engine checks were executed unchanged. Private checkpoints, exported weights and admission accounting remain excluded using saved inventories; local full-state oracles passed, but external private-binary inspection is not claimed. Independent A3 must disclose actual raw decode/correctness coverage, symbolic-engine limitations and state access. No old science/scoring/bootstrap was repeated by this publisher.
