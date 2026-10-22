@@ -1,0 +1,5 @@
+# Actual owner options2+3 prefix input and numeric evidence
+
+The newly completed9072prefix and first3024subset reuse original12096savedtokenlines and identities byte-for-byte. Prefixhash/selectedindices/newrowmetadata/newq-q+1plans/scaledLR/U/exactB′/effectiveE are bound here. No answerencoding, endpointencoding, census, model oroldscore repeated. Exactdose is inCOMPLETED, not an assumed3.0multiplier. Originalfullyarchivedtokenroster fixedf679fa5c isreferenced; the newprefix bytes are itsfirst9072lines, verifiedonce by constructor andnot rearchived here. Originalendpoints and weights receipts also referenced without recopying oldscientificarchives.
+
+Only newlycreatedmetadata/plans/rates/actualjobs are archived/readbackonce. BothnewsourceCR andactualA2 requiredbeforeGPU. NoPASSclaimed by publication. Per-cell45/pair90costguards/oneproveninfraresume/MATHonly complete500endpointscope unchanged. Originaltraining/native/scalar/pool/bootstrapfunctions unchanged; AIME/AMCNOT_RUN, partialnotzero, four-sampleprimaryrequiresallfourcompleteinbothcells. Privateweights remainrepresented byoriginalreceipts, notindependentexternalbinaryread.
