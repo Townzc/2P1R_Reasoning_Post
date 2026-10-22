@@ -6,12 +6,13 @@ import subprocess
 import time
 from experiments.p011.ext4b_runtime_contract import SPEC,LOCAL,JOBS,review,cost_window
 from experiments.p011.ext4b_path import ACTUAL
-from experiments.p011.owner_0205_common import create,read,sha,utc
+from experiments.p011.owner_0205_common import create,read,sha,utc,digest
+from experiments.p011.provider_slots import shared_slots
 
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--source-review',required=True);p.add_argument('--actual-review',required=True);p.add_argument('--directory',required=True);p.add_argument('--resume-json');a=p.parse_args()
-    review(SPEC,a.source_review,a.actual_review);actual=read(ACTUAL);a2=read(a.actual_review)
+    spec=review(SPEC,a.source_review,a.actual_review);actual=read(ACTUAL);a2=read(a.actual_review)
     if a2['actual_job_manifest_sha256']!=sha(ACTUAL):raise ValueError('Real actual job A2 first')
     resume=read(a.resume_json) if a.resume_json else None
     if not resume and any((LOCAL/'dispatch').glob('*/INTENT.json')):raise ValueError('Initial pair admission already consumed')
@@ -26,7 +27,7 @@ def main():
             receipts.append({'name':name,'started_epoch':started,'observed_epoch':time.time(),'exit':ret.returncode})
             if ret.returncode:raise RuntimeError('Fresh admission read failed; retained, not rerun automatically')
         create(out/'READ_RECEIPTS.json',receipts);rates=read(out/'rates.json');hourly=Decimal(rates['gpu_hour_cost_h100'])+4*Decimal(rates['cpu_hour_cost'])+96*Decimal(rates['mem_gib_hour_cost'])
-        apps=read(out/'apps.json');containers=read(out/'containers.json');slots=max(len(containers),sum(max(1,int(x['Tasks'])) for x in apps if str(x['State']).lower()!='stopped'))
+        apps=read(out/'apps.json');containers=read(out/'containers.json');slots=shared_slots(apps,containers)
         if slots+len(requested)>8:raise ValueError('Shared active/pending/unknown slots exceed8')
         evidence={str(out/n):sha(out/n) for n in ['rates.json','report.json','apps.json','containers.json','READ_RECEIPTS.json']}
         prior=Decimal('0');costs={};tagged=read(out/'report.json')
@@ -50,12 +51,23 @@ def main():
             prior=max(sum(matching),(elapsed+Decimal(660))*Decimal(parent['budget']['hourly_rate_usd'])/3600)
             evidence[a.resume_json]=sha(a.resume_json)
         for job in requested:
-            check=cost_window(hourly,prior,'5')
+            failed=spec['preentry_schema_failures'][job]
+            failed_charges=[Decimal(str(x['cost'])) for x in tagged if x.get('object_id')==failed['app_id']]
+            if any(not x.is_finite() or x<0 for x in failed_charges):raise ValueError('Invalid preentry tagged cost')
+            failed_reported=sum(failed_charges) if failed_charges else None
+            failed_upper=max(failed_reported if failed_reported is not None else Decimal(0),
+                (Decimal(str(failed['entry_seconds']))+60)*max(hourly,Decimal(failed['original_hourly_rate_usd']))/3600)
+            # Missing tagged cost stays null; the full wrapper interval remains charged at the larger GPU rate plus grace.
+            job_prior=prior+failed_upper
+            if resume:job_prior=max(job_prior,prior+Decimal(resume['parent_intent']['budget']['preentry_failed_compute_upper_usd']))
+            check=cost_window(hourly,job_prior,'5')
             # The other cell always retains its entire45USD allowance. No release by completion.
             pair=Decimal(check['cumulative_cell_upper_usd'])+Decimal('45')
             if pair>90:raise ValueError('Two-cell combined hard envelope exceeds90')
             value={'observed_epoch':min(x['started_epoch'] for x in receipts),'requested_job':job,'requested_attempt':2 if resume else 1,
-                'pair_cap_usd':'90','per_cell_cap_usd':'45','hourly_rate_usd':str(hourly),'prior_job_compute_upper_usd':str(prior),
+                'pair_cap_usd':'90','per_cell_cap_usd':'45','hourly_rate_usd':str(hourly),'prior_job_compute_upper_usd':str(job_prior),
+                'preentry_failure_binding_sha256':digest(failed),'preentry_failed_reported_tagged_usd':str(failed_reported) if failed_reported is not None else None,
+                'preentry_failed_compute_upper_usd':str(failed_upper),'preentry_app_id':failed['app_id'],'missing_preentry_charge_is_not_zero':True,
                 'retained_noncompute_usd':'5','other_cell_retained_upper_usd':'45','pair_total_upper_usd':str(pair),
                 'slots_before':slots,'slots_after_requested':slots+len(requested),'evidence_files':evidence,
                 'check':check,'all_extension_app_reported_costs':costs,'known_cell_reported_totals':{k:str(v) for k,v in known_cells.items()},'prior_duration_bound_is_not_invoice':True,

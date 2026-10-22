@@ -1,0 +1,5 @@
+# Two infrastructure failures before first model dispatch
+
+Both original CLI entries exited1 at ext4b_path.submit provider slot parsing (uppercase State/Tasks against actual lowercase fields). Image builds occurred, but no local dispatch directory, INTENT, SUBMITTED, model claim or terminal exists. Six exact named records were read once and are null; the two exact apps were independently observed STOPPED with zero owned containers once. No training, checkpoint, generation or scientific result is present. Original logs and exits are retained; public log projections redact only Modal workspace URLs. No zero-cost claim is made.
+
+The first input transfer/readback of seven files/1,310,176,744 bytes completed once at07:29:00.104096, actual manifest bf556ba4. It must be reused without another upload. This is a proposed one extra CLI entry before each first model dispatch, not a checkpoint resume or a restarted model. New exact repair/source review and unchanged-actual-input carry review plus fresh cumulative budgets are still required.

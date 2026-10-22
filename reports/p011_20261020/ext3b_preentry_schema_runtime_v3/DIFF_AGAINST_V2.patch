@@ -1,0 +1,234 @@
+diff --git a/experiments/p011/ext4b_path.py b/experiments/p011/ext4b_path.py
+index abbcabbe..42fe196f 100644
+--- a/experiments/p011/ext4b_path.py
++++ b/experiments/p011/ext4b_path.py
+@@ -9,7 +9,8 @@ import tarfile
+ import tempfile
+ import time
+ import traceback
+-from experiments.p011.ext4b_runtime_contract import (SPEC,SCOPE,A2_SCOPE,LOCAL,INPUTS,REMOTE,STORE,JOBS,review,cost_window,admit_attempt)
++from experiments.p011.ext4b_runtime_contract import (SPEC,SCOPE,A2_SCOPE,LOCAL,INPUTS,REMOTE,STORE,JOBS,review,cost_window,admit_attempt,actual_origin,entry_cli_directory)
++from experiments.p011.provider_slots import shared_slots
+ from experiments.p011.owner_0205_common import create,read,sha,digest,utc
+ from experiments.sft_allocation_midpoint.common import verify,manifest
+ from experiments.p011 import ext4b_execution
+@@ -34,12 +35,21 @@ def budget_check(budget,job,attempt,now):
+     if (budget['requested_job']!=job or budget['requested_attempt']!=attempt
+             or type(budget['slots_after_requested']) is not int or not 1<=budget['slots_after_requested']<=8):
+         raise ValueError('Exact job/attempt and all unknown/pending shared slots required')
++    failed=read(SPEC)['preentry_schema_failures'][job]
++    preentry=Decimal(budget['preentry_failed_compute_upper_usd'])
++    reported=budget['preentry_failed_reported_tagged_usd']
++    reported=Decimal(reported) if reported is not None else Decimal(0)
++    lower=max(reported,(Decimal(str(failed['entry_seconds']))+60)*max(Decimal(budget['hourly_rate_usd']),Decimal(failed['original_hourly_rate_usd']))/3600)
++    if (budget.get('preentry_failure_binding_sha256')!=digest(failed)
++            or not preentry.is_finite() or not reported.is_finite() or reported<0 or preentry<lower
++            or Decimal(budget['prior_job_compute_upper_usd'])<preentry):
++        raise ValueError('Exact original preentry failure cost must remain charged')
+     check=cost_window(budget['hourly_rate_usd'],budget['prior_job_compute_upper_usd'],budget['retained_noncompute_usd'])
+     pair=Decimal(budget['pair_total_upper_usd'])
+     if (budget['check']!=check or not pair.is_finite()
+             or budget['other_cell_retained_upper_usd']!='45'
+             or pair!=Decimal(check['cumulative_cell_upper_usd'])+Decimal('45') or pair>Decimal('90')
+-            or (attempt==1 and Decimal(budget['prior_job_compute_upper_usd'])!=0)
++            or (attempt==1 and Decimal(budget['prior_job_compute_upper_usd'])!=preentry)
+             or (attempt==2 and Decimal(budget['prior_job_compute_upper_usd'])<=0)):
+         raise ValueError('Combined initial/resume hard envelope differs')
+     return check
+@@ -80,7 +90,8 @@ def terminal_archive(out,maximum,final_step):
+ def submit(root,job_id,attempt,source_review,actual_review,budget_file,store,worker,app_id,resume_file=None):
+     root=Path(root);spec=review(root/SPEC,source_review,actual_review);execution=published(root,spec)
+     actual=read(root/ACTUAL);a2=read(actual_review)
+-    if a2['actual_job_manifest_sha256']!=sha(root/ACTUAL) or actual['spec_sha256']!=sha(root/SPEC):raise ValueError('Exact actual job manifest required')
++    origin=actual_origin(spec)
++    if a2['actual_job_manifest_sha256']!=sha(root/ACTUAL) or actual['spec_sha256']!=origin['spec_sha256']:raise ValueError('Exact unchanged actual job manifest required')
+     job=actual['jobs'][job_id];budget=read(budget_file)
+     if (budget['source_review_sha256']!=sha(source_review) or budget['actual_review_sha256']!=sha(actual_review)
+             or budget['actual_job_manifest_sha256']!=sha(root/ACTUAL)):
+@@ -95,17 +106,26 @@ def submit(root,job_id,attempt,source_review,actual_review,budget_file,store,wor
+         checked=budget_check(budget,job_id,attempt,time.time())
+         cli=str(root/'.local/midpoint_20261011/venv/bin/modal')
+         apps=json.loads(subprocess.check_output([cli,'app','list','--json'],text=True,timeout=60));containers=json.loads(subprocess.check_output([cli,'container','list','--json'],text=True,timeout=60))
+-        slots=max(len(containers),sum(max(1,int(a['Tasks'])) for a in apps if str(a['State']).lower()!='stopped'))
++        slots=shared_slots(apps,containers)
+         if slots>=8:raise ValueError('Fresh shared model slot limit reached')
+         upload=read(root/LOCAL/'upload/COMPLETED.json')
+         if upload['actual_job_manifest_sha256']!=sha(root/ACTUAL) or upload['old_weights_uploaded']!=0:raise ValueError('Exact new-input transfer/readback receipt required')
+         out=root/LOCAL/'dispatch'/name
+         if out.exists() or store.get(name+'/dispatch') is not None:raise ValueError('Permanent attempt fence already exists')
++        cli_directory=entry_cli_directory(spec,job_id,attempt)
++        if attempt==1:
++            parent=spec['preentry_schema_failures'][job_id]
++            if (sha(root/parent['cli_exit_path'])!=parent['cli_exit_sha256']
++                    or sha(root/parent['log_path'])!=parent['log_sha256']
++                    or read(root/LOCAL/'preentry_relaunch_fences'/(job_id+'.json'))['parent_binding_sha256']!=digest(parent)):
++                raise ValueError('Exact failed preentry and one new CLI fence required')
+         if attempt==2 and (root/LOCAL/'collect'/resume['parent_intent']['attempt_name']).exists():raise ValueError('Final scoped preservation/closeout started; no subsequent resume')
+         if attempt==2 and not store.put(job_id+'/single_resume_fence',{'attempt':2,'resume_sha256':sha(resume_file)},skip_if_exists=True):raise ValueError('Only one infrastructure resume is authorized')
+         out.mkdir(parents=True,exist_ok=False)
+         identity=resume['identity'] if resume else {'logical_id':job_id,'arm':'S-F15','job_sha256':digest(job),'input_plan_sha256':job['input_plan_sha256'],'execution':execution,'source_files':spec['source_files']}
+         intent={'job':job_id,'attempt':attempt,'attempt_name':name,'job_spec':job,'identity':identity,'execution':execution,'app_id':app_id,'created_epoch':time.time(),'spec_sha256':sha(root/SPEC),'source_files':spec['source_files'],'source_review':read(source_review),'source_report_text':Path(read(source_review)['local_report_path']).read_text(),'actual_review':a2,'actual_report_text':Path(a2['local_report_path']).read_text(),'actual_job_manifest_sha256':sha(root/ACTUAL),'input_manifest_sha256':actual['input_manifest_sha256'],'budget':budget,'budget_check':checked,'owner_amendment_sha256':spec['direct_owner_amendment']['sha256'],'resume':resume,'provider_slots_at_entry':slots,'maximum_infrastructure_resumes':1}
++        intent['entry_cli_subdirectory']=cli_directory
++        intent['preentry_schema_failure_binding']=spec['preentry_schema_failures'][job_id]
+         create(out/'INTENT.json',intent)
+         if not store.put(name+'/dispatch',intent,skip_if_exists=True):raise ValueError('Remote attempt dispatch already exists')
+         call=worker.with_options(timeout=checked['platform_seconds']).spawn(intent)
+@@ -137,7 +157,7 @@ def worker_body(intent,store,volume,timer_factory):
+         volume.reload();inputs=Path(REMOTE)/'inputs'
+         if sha(inputs/'ACTUAL_JOB_MANIFEST.json')!=intent['actual_job_manifest_sha256']:raise ValueError('Actual A2 manifest changed')
+         actual=read(inputs/'ACTUAL_JOB_MANIFEST.json')
+-        if (actual['jobs'].get(intent['job'])!=job or actual['spec_sha256']!=sha(SPEC)
++        if (actual['jobs'].get(intent['job'])!=job or actual['spec_sha256']!=actual_origin(spec)['spec_sha256']
+                 or intent['actual_review']['actual_job_manifest_sha256']!=intent['actual_job_manifest_sha256']
+                 or intent['actual_review']['input_manifest_sha256']!=actual['input_manifest_sha256']):
+             raise ValueError('Worker exact actual job/input A2 binding differs')
+diff --git a/experiments/p011/ext4b_runtime_contract.py b/experiments/p011/ext4b_runtime_contract.py
+index 83877bbb..879482f2 100644
+--- a/experiments/p011/ext4b_runtime_contract.py
++++ b/experiments/p011/ext4b_runtime_contract.py
+@@ -5,7 +5,7 @@ from experiments.p011.ext4b_contract import OWNER_SHA
+ from experiments.p011.ext3b_contract import LARGE,SMALL
+ from experiments.p011.owner_0205_common import read,sha
+ 
+-SPEC='reports/p011_20261020/ext3b_math_runtime_preflight_v2/SPEC.json'
++SPEC='reports/p011_20261020/ext3b_preentry_schema_runtime_v3/SPEC.json'
+ SCOPE='p011-ext-3B-complete-training-resume-MATH-path-CR'
+ A2_SCOPE='p011-ext-3B-actual-input-and-numeric-A2-lite'
+ LOCAL=Path('.local/p011_20261020/r1/ext3b_runs_r1')
+@@ -60,6 +60,21 @@ def prepared_spec(spec_path):
+     return spec
+ 
+ 
++def actual_origin(spec):
++    """Carry exact completed input bytes; never rewrite or re-upload the manifest."""
++    binding=spec['unchanged_actual_input_binding']
++    if (binding['spec_sha256']!='3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e'
++            or binding['actual_job_manifest_sha256']!='bf556ba4e18ab52b6613d6e86eec207ec6dedab9937accb2b754f94368453a24'
++            or binding['input_manifest_sha256']!='afd5fe1bd7e13d28353d28fe4e7b6e2e296babcbc7752dc5cec843bdb7d17bfc'):
++        raise ValueError('Only the exact completed 9072/3024 input manifest may carry forward')
++    return binding
++
++
++def entry_cli_directory(spec,job,attempt):
++    if job not in JOBS or attempt not in (1,2):raise ValueError('Exact job/attempt required')
++    return 'cli_preentry2' if attempt==1 and job in spec['preentry_schema_failures'] else 'cli'
++
++
+ def review(spec_path, source_review, actual_review=None):
+     spec=prepared_spec(spec_path);cr=read(source_review)
+     if (cr.get('scope')!=SCOPE or cr.get('decision') not in ('PASS','PASS-WITH-NOTES')
+@@ -69,9 +84,12 @@ def review(spec_path, source_review, actual_review=None):
+         raise ValueError('Exact new full training/resume/closeout CR required')
+     if actual_review is not None:
+         a2=read(actual_review)
++        origin=actual_origin(spec)
+         if (a2.get('scope')!=A2_SCOPE or a2.get('decision') not in ('PASS','PASS-WITH-NOTES')
+                 or a2.get('spec_sha256')!=sha(spec_path)
+                 or a2.get('input_manifest_sha256')!=sha(INPUTS/'MANIFEST.json')
++                or a2.get('actual_job_manifest_sha256')!=origin['actual_job_manifest_sha256']
++                or a2.get('unchanged_actual_origin_spec_sha256')!=origin['spec_sha256']
+                 or sha(a2['local_report_path'])!=a2['report_sha256']
+                 or any(a2.get(k) is not True for k in spec['actual_review_flags'])):
+             raise ValueError('Exact actual input/numeric A2-lite required')
+diff --git a/scripts/p011_ext4b_io.py b/scripts/p011_ext4b_io.py
+index 1b23e704..a58ed5c0 100644
+--- a/scripts/p011_ext4b_io.py
++++ b/scripts/p011_ext4b_io.py
+@@ -79,7 +79,9 @@ def collect(out,dispatch):
+     remaining_window(dispatch)
+     intent=read(dispatch/'INTENT.json');sub=read(dispatch/'SUBMITTED.json');job=intent['job_spec'];key=intent['attempt_name']
+     receipt=read(dispatch/'RESULT.json') if (dispatch/'RESULT.json').exists() else None
+-    cli_exit=read(LOCAL/'cli'/key/'CLI_EXIT.json')
++    cli_directory=intent.get('entry_cli_subdirectory','cli')
++    if cli_directory not in ('cli','cli_preentry2'):raise ValueError('Unknown original CLI locator')
++    cli_exit=read(LOCAL/cli_directory/key/'CLI_EXIT.json')
+     if receipt:
+         if receipt.get('status')!='completed' or receipt['job_sha256']!=digest(job) or receipt['app_id']!=sub['app_id'] or cli_exit['exit_code']!=0:raise ValueError('Original successful call/CLI mismatch')
+     elif not (dispatch/'RETURN_ERROR.json').exists() or cli_exit['exit_code']==0:
+diff --git a/scripts/record_p011_ext4b_budget.py b/scripts/record_p011_ext4b_budget.py
+index 157831ce..1bc1cfca 100644
+--- a/scripts/record_p011_ext4b_budget.py
++++ b/scripts/record_p011_ext4b_budget.py
+@@ -6,12 +6,13 @@ import subprocess
+ import time
+ from experiments.p011.ext4b_runtime_contract import SPEC,LOCAL,JOBS,review,cost_window
+ from experiments.p011.ext4b_path import ACTUAL
+-from experiments.p011.owner_0205_common import create,read,sha,utc
++from experiments.p011.owner_0205_common import create,read,sha,utc,digest
++from experiments.p011.provider_slots import shared_slots
+ 
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--source-review',required=True);p.add_argument('--actual-review',required=True);p.add_argument('--directory',required=True);p.add_argument('--resume-json');a=p.parse_args()
+-    review(SPEC,a.source_review,a.actual_review);actual=read(ACTUAL);a2=read(a.actual_review)
++    spec=review(SPEC,a.source_review,a.actual_review);actual=read(ACTUAL);a2=read(a.actual_review)
+     if a2['actual_job_manifest_sha256']!=sha(ACTUAL):raise ValueError('Real actual job A2 first')
+     resume=read(a.resume_json) if a.resume_json else None
+     if not resume and any((LOCAL/'dispatch').glob('*/INTENT.json')):raise ValueError('Initial pair admission already consumed')
+@@ -26,7 +27,7 @@ def main():
+             receipts.append({'name':name,'started_epoch':started,'observed_epoch':time.time(),'exit':ret.returncode})
+             if ret.returncode:raise RuntimeError('Fresh admission read failed; retained, not rerun automatically')
+         create(out/'READ_RECEIPTS.json',receipts);rates=read(out/'rates.json');hourly=Decimal(rates['gpu_hour_cost_h100'])+4*Decimal(rates['cpu_hour_cost'])+96*Decimal(rates['mem_gib_hour_cost'])
+-        apps=read(out/'apps.json');containers=read(out/'containers.json');slots=max(len(containers),sum(max(1,int(x['Tasks'])) for x in apps if str(x['State']).lower()!='stopped'))
++        apps=read(out/'apps.json');containers=read(out/'containers.json');slots=shared_slots(apps,containers)
+         if slots+len(requested)>8:raise ValueError('Shared active/pending/unknown slots exceed8')
+         evidence={str(out/n):sha(out/n) for n in ['rates.json','report.json','apps.json','containers.json','READ_RECEIPTS.json']}
+         prior=Decimal('0');costs={};tagged=read(out/'report.json')
+@@ -50,12 +51,23 @@ def main():
+             prior=max(sum(matching),(elapsed+Decimal(660))*Decimal(parent['budget']['hourly_rate_usd'])/3600)
+             evidence[a.resume_json]=sha(a.resume_json)
+         for job in requested:
+-            check=cost_window(hourly,prior,'5')
++            failed=spec['preentry_schema_failures'][job]
++            failed_charges=[Decimal(str(x['cost'])) for x in tagged if x.get('object_id')==failed['app_id']]
++            if any(not x.is_finite() or x<0 for x in failed_charges):raise ValueError('Invalid preentry tagged cost')
++            failed_reported=sum(failed_charges) if failed_charges else None
++            failed_upper=max(failed_reported if failed_reported is not None else Decimal(0),
++                (Decimal(str(failed['entry_seconds']))+60)*max(hourly,Decimal(failed['original_hourly_rate_usd']))/3600)
++            # Missing tagged cost stays null; the full wrapper interval remains charged at the larger GPU rate plus grace.
++            job_prior=prior+failed_upper
++            if resume:job_prior=max(job_prior,prior+Decimal(resume['parent_intent']['budget']['preentry_failed_compute_upper_usd']))
++            check=cost_window(hourly,job_prior,'5')
+             # The other cell always retains its entire45USD allowance. No release by completion.
+             pair=Decimal(check['cumulative_cell_upper_usd'])+Decimal('45')
+             if pair>90:raise ValueError('Two-cell combined hard envelope exceeds90')
+             value={'observed_epoch':min(x['started_epoch'] for x in receipts),'requested_job':job,'requested_attempt':2 if resume else 1,
+-                'pair_cap_usd':'90','per_cell_cap_usd':'45','hourly_rate_usd':str(hourly),'prior_job_compute_upper_usd':str(prior),
++                'pair_cap_usd':'90','per_cell_cap_usd':'45','hourly_rate_usd':str(hourly),'prior_job_compute_upper_usd':str(job_prior),
++                'preentry_failure_binding_sha256':digest(failed),'preentry_failed_reported_tagged_usd':str(failed_reported) if failed_reported is not None else None,
++                'preentry_failed_compute_upper_usd':str(failed_upper),'preentry_app_id':failed['app_id'],'missing_preentry_charge_is_not_zero':True,
+                 'retained_noncompute_usd':'5','other_cell_retained_upper_usd':'45','pair_total_upper_usd':str(pair),
+                 'slots_before':slots,'slots_after_requested':slots+len(requested),'evidence_files':evidence,
+                 'check':check,'all_extension_app_reported_costs':costs,'known_cell_reported_totals':{k:str(v) for k,v in known_cells.items()},'prior_duration_bound_is_not_invoice':True,
+diff --git a/scripts/run_p011_ext4b_once.py b/scripts/run_p011_ext4b_once.py
+index f647f69a..4d0ab176 100644
+--- a/scripts/run_p011_ext4b_once.py
++++ b/scripts/run_p011_ext4b_once.py
+@@ -10,16 +10,24 @@ import re
+ import subprocess
+ import threading
+ import time
+-from experiments.p011.ext4b_runtime_contract import SPEC,LOCAL,JOBS,review
++from experiments.p011.ext4b_runtime_contract import SPEC,LOCAL,JOBS,review,entry_cli_directory
+ from experiments.p011.ext4b_path import budget_check,published
+-from experiments.p011.owner_0205_common import create,read,utc
++from experiments.p011.owner_0205_common import create,read,utc,sha,digest
+ 
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--job',choices=JOBS,required=True);p.add_argument('--source-review',required=True);p.add_argument('--actual-review',required=True);p.add_argument('--budget-json',required=True);p.add_argument('--attempt',type=int,choices=(1,2),default=1);p.add_argument('--resume-json');a=p.parse_args()
+     spec=review(SPEC,a.source_review,a.actual_review);published(Path.cwd(),spec);check=budget_check(read(a.budget_json),a.job,a.attempt,time.time())
+     if (a.attempt==2)!=bool(a.resume_json):raise ValueError('Exact first versus one resumed attempt required')
+-    name=a.job+f'_attempt{a.attempt}';out=LOCAL/'cli'/name;out.mkdir(parents=True,exist_ok=False)
++    name=a.job+f'_attempt{a.attempt}';cli_directory=entry_cli_directory(spec,a.job,a.attempt)
++    if a.attempt==1:
++        parent=spec['preentry_schema_failures'][a.job]
++        if (sha(parent['cli_exit_path'])!=parent['cli_exit_sha256'] or sha(parent['log_path'])!=parent['log_sha256']
++                or read(parent['cli_exit_path'])['exit_code']!=1 or (LOCAL/'dispatch'/name).exists()):
++            raise ValueError('Exact pre-dispatch schema failure required, never a model retry')
++        fence=LOCAL/'preentry_relaunch_fences'/(a.job+'.json');fence.parent.mkdir(parents=True,exist_ok=True)
++        create(fence,{'utc':utc(),'parent_binding_sha256':digest(parent),'maximum_extra_entries':1,'model_attempt':1})
++    out=LOCAL/cli_directory/name;out.mkdir(parents=True,exist_ok=False)
+     cmd=['.local/midpoint_20261011/venv/bin/modal','run','-m','experiments.p011.modal_ext4b','--job',a.job,'--attempt',str(a.attempt),'--source-review',a.source_review,'--actual-review',a.actual_review,'--budget-json',a.budget_json]
+     if a.resume_json:cmd+=['--resume-json',a.resume_json]
+     start=time.time();deadline=start+check['worker_seconds']+check['startup_seconds']+60

@@ -1,0 +1,11 @@
+# V3: exact pre-dispatch provider schema repair and input carry
+
+The original two v2 entries failed at host-side slot parsing before either INTENT or worker.spawn. Both apps are STOPPED0 and all six dispatch/claim/terminal keys are null. This proposal changes five admission/CLI-locator bindings and adds one shared schema helper; the other81 bindings are unchanged. The helper function body is AST-identical to the six-case-tested metadata adapter, now called by both live entry and future budget reads. It conservatively counts unknown/pending apps and containers.
+
+A create-only preentry_relaunch_fences record and cli_preentry2 directory allow one additional CLI entry for each logical job, while the actual model attempt remains1. Original failed CLI directories are immutable. The collector reads the exact CLI directory saved in the model intent; no successful scientific stage is repeated. The original one checkpoint-based model infrastructure resume remains bounded by45percell and the original absolute result window; a new preentry failure has no automatic relaunch. Explicit delegated review of this disposition is required.
+
+Original actual input/job manifest bf556ba4 and its v2 SPEC3a824/inputafd5 are exact carried bindings. No new data construction, encoding, metadata builder, upload, model weights or old archive readback. Both source16flags and actual-input4carry flags require a fixed new report; f52bba2a numerical approval is inherited only for unchanged bytes.
+
+Fresh budgets charge max(actual tagged preentry cost when available, full failed wrapper interval+60s at the larger original/current H100 rate). Missing tagged costs remain null, not a zero-fee claim. The full first failure upper is retained in every later attempt, in addition to original5noncompute and any real failed model duration. It reduces the next hard timer. First-entry and resumed-model cost checks reject reset/tampered failure bindings. Current historical rate implies roughly7.86h worker remaining, a projection rather than a completion guarantee; greedy MATH first and partial endpoint rules remain.
+
+All training/decoder/scalar/pool/bootstrap source bindings are unchanged; new regressions also check unchanged local oracle, score, timing and archive function bodies. Six NEW methods PASS once; old tests/science not repeated. No v3 production has run.

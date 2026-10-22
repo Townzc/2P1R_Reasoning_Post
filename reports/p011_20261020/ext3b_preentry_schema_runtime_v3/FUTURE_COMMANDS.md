@@ -1,0 +1,10 @@
+# Only after real v3 source and unchanged-actual-input carry approval
+
+R=.local/p011_20261020/r1; PYTHONPATH=.; first inspect original CLI/fences. All original upload/input/actual metadata and failure preservation DONE.
+
+1. Save exact new report as R/EXT3B_PREENTRY_SCHEMA_RUNTIME_CR_ACCEPTED.json (16 source flags) and R/EXT3B_PREENTRY_SCHEMA_A2_CARRY_ACCEPTED.json (four original flags, newSPEC plus unchanged_actual_origin_spec_sha256=3a824522...). No old acceptance file overwritten.
+2. Modalenv scripts/record_p011_ext4b_budget.py --source-review newCR --actual-review newcarry --directory R/ext3b_runs_r1/budget_NEW_UTC once. New genuinely necessary fresh snapshot: old07:07 admission is not reusable for this new entry. Budget script now normalizes lowercase and counts all shared slots, retains both preentry failure costs,45/cell90/pair. This is not a rerun of the completed original budget stage.
+3. DO NOT UPLOAD AGAIN. Original R/ext3b_runs_r1/upload/COMPLETED.json and bf556 actualmanifest remain exact.
+4. Two scripts/run_p011_ext4b_once.py --job long_R9072x1_S-F15_s17 or long_R3024xE3_S-F15_s17 --source-review newCR --actual-review newcarry --budget-json exactnewperjob. Actual model attempt1, one new CLI preentry directory/fence. No Gitmutation from launch until both SUBMITTED or explicit terminal. Any new failure retained, no automatic extra CLI/model.
+5. Original successful model terminal/wholeappSTOPPED0 then p011_ext4b_io.py collect/audit/score once per actualattempt. Local fullstate oracle concurrency1; Modal/data_pipeline/math_verify environments respectively. Collector uses original intent.entry_cli_subdirectory; old failed preentry CLI remains immutable.
+6. Only complete500 endpoints score; four-sample comparison needs all4 inboth. Original analysis/10000questionbootstrap once. Any authorized checkpoint resume uses original once-only protocol, all preentry+model costs retained and absolute window notreset. Final collect prevents laterresume. Final actualA3 required; privatebinary access limits disclosed.

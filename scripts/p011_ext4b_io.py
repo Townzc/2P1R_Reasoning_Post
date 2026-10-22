@@ -79,7 +79,9 @@ def collect(out,dispatch):
     remaining_window(dispatch)
     intent=read(dispatch/'INTENT.json');sub=read(dispatch/'SUBMITTED.json');job=intent['job_spec'];key=intent['attempt_name']
     receipt=read(dispatch/'RESULT.json') if (dispatch/'RESULT.json').exists() else None
-    cli_exit=read(LOCAL/'cli'/key/'CLI_EXIT.json')
+    cli_directory=intent.get('entry_cli_subdirectory','cli')
+    if cli_directory not in ('cli','cli_preentry2'):raise ValueError('Unknown original CLI locator')
+    cli_exit=read(LOCAL/cli_directory/key/'CLI_EXIT.json')
     if receipt:
         if receipt.get('status')!='completed' or receipt['job_sha256']!=digest(job) or receipt['app_id']!=sub['app_id'] or cli_exit['exit_code']!=0:raise ValueError('Original successful call/CLI mismatch')
     elif not (dispatch/'RETURN_ERROR.json').exists() or cli_exit['exit_code']==0:

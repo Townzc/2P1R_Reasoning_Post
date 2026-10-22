@@ -10,16 +10,24 @@ import re
 import subprocess
 import threading
 import time
-from experiments.p011.ext4b_runtime_contract import SPEC,LOCAL,JOBS,review
+from experiments.p011.ext4b_runtime_contract import SPEC,LOCAL,JOBS,review,entry_cli_directory
 from experiments.p011.ext4b_path import budget_check,published
-from experiments.p011.owner_0205_common import create,read,utc
+from experiments.p011.owner_0205_common import create,read,utc,sha,digest
 
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--job',choices=JOBS,required=True);p.add_argument('--source-review',required=True);p.add_argument('--actual-review',required=True);p.add_argument('--budget-json',required=True);p.add_argument('--attempt',type=int,choices=(1,2),default=1);p.add_argument('--resume-json');a=p.parse_args()
     spec=review(SPEC,a.source_review,a.actual_review);published(Path.cwd(),spec);check=budget_check(read(a.budget_json),a.job,a.attempt,time.time())
     if (a.attempt==2)!=bool(a.resume_json):raise ValueError('Exact first versus one resumed attempt required')
-    name=a.job+f'_attempt{a.attempt}';out=LOCAL/'cli'/name;out.mkdir(parents=True,exist_ok=False)
+    name=a.job+f'_attempt{a.attempt}';cli_directory=entry_cli_directory(spec,a.job,a.attempt)
+    if a.attempt==1:
+        parent=spec['preentry_schema_failures'][a.job]
+        if (sha(parent['cli_exit_path'])!=parent['cli_exit_sha256'] or sha(parent['log_path'])!=parent['log_sha256']
+                or read(parent['cli_exit_path'])['exit_code']!=1 or (LOCAL/'dispatch'/name).exists()):
+            raise ValueError('Exact pre-dispatch schema failure required, never a model retry')
+        fence=LOCAL/'preentry_relaunch_fences'/(a.job+'.json');fence.parent.mkdir(parents=True,exist_ok=True)
+        create(fence,{'utc':utc(),'parent_binding_sha256':digest(parent),'maximum_extra_entries':1,'model_attempt':1})
+    out=LOCAL/cli_directory/name;out.mkdir(parents=True,exist_ok=False)
     cmd=['.local/midpoint_20261011/venv/bin/modal','run','-m','experiments.p011.modal_ext4b','--job',a.job,'--attempt',str(a.attempt),'--source-review',a.source_review,'--actual-review',a.actual_review,'--budget-json',a.budget_json]
     if a.resume_json:cmd+=['--resume-json',a.resume_json]
     start=time.time();deadline=start+check['worker_seconds']+check['startup_seconds']+60

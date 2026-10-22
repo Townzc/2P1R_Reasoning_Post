@@ -9,7 +9,8 @@ import tarfile
 import tempfile
 import time
 import traceback
-from experiments.p011.ext4b_runtime_contract import (SPEC,SCOPE,A2_SCOPE,LOCAL,INPUTS,REMOTE,STORE,JOBS,review,cost_window,admit_attempt)
+from experiments.p011.ext4b_runtime_contract import (SPEC,SCOPE,A2_SCOPE,LOCAL,INPUTS,REMOTE,STORE,JOBS,review,cost_window,admit_attempt,actual_origin,entry_cli_directory)
+from experiments.p011.provider_slots import shared_slots
 from experiments.p011.owner_0205_common import create,read,sha,digest,utc
 from experiments.sft_allocation_midpoint.common import verify,manifest
 from experiments.p011 import ext4b_execution
@@ -34,12 +35,21 @@ def budget_check(budget,job,attempt,now):
     if (budget['requested_job']!=job or budget['requested_attempt']!=attempt
             or type(budget['slots_after_requested']) is not int or not 1<=budget['slots_after_requested']<=8):
         raise ValueError('Exact job/attempt and all unknown/pending shared slots required')
+    failed=read(SPEC)['preentry_schema_failures'][job]
+    preentry=Decimal(budget['preentry_failed_compute_upper_usd'])
+    reported=budget['preentry_failed_reported_tagged_usd']
+    reported=Decimal(reported) if reported is not None else Decimal(0)
+    lower=max(reported,(Decimal(str(failed['entry_seconds']))+60)*max(Decimal(budget['hourly_rate_usd']),Decimal(failed['original_hourly_rate_usd']))/3600)
+    if (budget.get('preentry_failure_binding_sha256')!=digest(failed)
+            or not preentry.is_finite() or not reported.is_finite() or reported<0 or preentry<lower
+            or Decimal(budget['prior_job_compute_upper_usd'])<preentry):
+        raise ValueError('Exact original preentry failure cost must remain charged')
     check=cost_window(budget['hourly_rate_usd'],budget['prior_job_compute_upper_usd'],budget['retained_noncompute_usd'])
     pair=Decimal(budget['pair_total_upper_usd'])
     if (budget['check']!=check or not pair.is_finite()
             or budget['other_cell_retained_upper_usd']!='45'
             or pair!=Decimal(check['cumulative_cell_upper_usd'])+Decimal('45') or pair>Decimal('90')
-            or (attempt==1 and Decimal(budget['prior_job_compute_upper_usd'])!=0)
+            or (attempt==1 and Decimal(budget['prior_job_compute_upper_usd'])!=preentry)
             or (attempt==2 and Decimal(budget['prior_job_compute_upper_usd'])<=0)):
         raise ValueError('Combined initial/resume hard envelope differs')
     return check
@@ -80,7 +90,8 @@ def terminal_archive(out,maximum,final_step):
 def submit(root,job_id,attempt,source_review,actual_review,budget_file,store,worker,app_id,resume_file=None):
     root=Path(root);spec=review(root/SPEC,source_review,actual_review);execution=published(root,spec)
     actual=read(root/ACTUAL);a2=read(actual_review)
-    if a2['actual_job_manifest_sha256']!=sha(root/ACTUAL) or actual['spec_sha256']!=sha(root/SPEC):raise ValueError('Exact actual job manifest required')
+    origin=actual_origin(spec)
+    if a2['actual_job_manifest_sha256']!=sha(root/ACTUAL) or actual['spec_sha256']!=origin['spec_sha256']:raise ValueError('Exact unchanged actual job manifest required')
     job=actual['jobs'][job_id];budget=read(budget_file)
     if (budget['source_review_sha256']!=sha(source_review) or budget['actual_review_sha256']!=sha(actual_review)
             or budget['actual_job_manifest_sha256']!=sha(root/ACTUAL)):
@@ -95,17 +106,26 @@ def submit(root,job_id,attempt,source_review,actual_review,budget_file,store,wor
         checked=budget_check(budget,job_id,attempt,time.time())
         cli=str(root/'.local/midpoint_20261011/venv/bin/modal')
         apps=json.loads(subprocess.check_output([cli,'app','list','--json'],text=True,timeout=60));containers=json.loads(subprocess.check_output([cli,'container','list','--json'],text=True,timeout=60))
-        slots=max(len(containers),sum(max(1,int(a['Tasks'])) for a in apps if str(a['State']).lower()!='stopped'))
+        slots=shared_slots(apps,containers)
         if slots>=8:raise ValueError('Fresh shared model slot limit reached')
         upload=read(root/LOCAL/'upload/COMPLETED.json')
         if upload['actual_job_manifest_sha256']!=sha(root/ACTUAL) or upload['old_weights_uploaded']!=0:raise ValueError('Exact new-input transfer/readback receipt required')
         out=root/LOCAL/'dispatch'/name
         if out.exists() or store.get(name+'/dispatch') is not None:raise ValueError('Permanent attempt fence already exists')
+        cli_directory=entry_cli_directory(spec,job_id,attempt)
+        if attempt==1:
+            parent=spec['preentry_schema_failures'][job_id]
+            if (sha(root/parent['cli_exit_path'])!=parent['cli_exit_sha256']
+                    or sha(root/parent['log_path'])!=parent['log_sha256']
+                    or read(root/LOCAL/'preentry_relaunch_fences'/(job_id+'.json'))['parent_binding_sha256']!=digest(parent)):
+                raise ValueError('Exact failed preentry and one new CLI fence required')
         if attempt==2 and (root/LOCAL/'collect'/resume['parent_intent']['attempt_name']).exists():raise ValueError('Final scoped preservation/closeout started; no subsequent resume')
         if attempt==2 and not store.put(job_id+'/single_resume_fence',{'attempt':2,'resume_sha256':sha(resume_file)},skip_if_exists=True):raise ValueError('Only one infrastructure resume is authorized')
         out.mkdir(parents=True,exist_ok=False)
         identity=resume['identity'] if resume else {'logical_id':job_id,'arm':'S-F15','job_sha256':digest(job),'input_plan_sha256':job['input_plan_sha256'],'execution':execution,'source_files':spec['source_files']}
         intent={'job':job_id,'attempt':attempt,'attempt_name':name,'job_spec':job,'identity':identity,'execution':execution,'app_id':app_id,'created_epoch':time.time(),'spec_sha256':sha(root/SPEC),'source_files':spec['source_files'],'source_review':read(source_review),'source_report_text':Path(read(source_review)['local_report_path']).read_text(),'actual_review':a2,'actual_report_text':Path(a2['local_report_path']).read_text(),'actual_job_manifest_sha256':sha(root/ACTUAL),'input_manifest_sha256':actual['input_manifest_sha256'],'budget':budget,'budget_check':checked,'owner_amendment_sha256':spec['direct_owner_amendment']['sha256'],'resume':resume,'provider_slots_at_entry':slots,'maximum_infrastructure_resumes':1}
+        intent['entry_cli_subdirectory']=cli_directory
+        intent['preentry_schema_failure_binding']=spec['preentry_schema_failures'][job_id]
         create(out/'INTENT.json',intent)
         if not store.put(name+'/dispatch',intent,skip_if_exists=True):raise ValueError('Remote attempt dispatch already exists')
         call=worker.with_options(timeout=checked['platform_seconds']).spawn(intent)
@@ -137,7 +157,7 @@ def worker_body(intent,store,volume,timer_factory):
         volume.reload();inputs=Path(REMOTE)/'inputs'
         if sha(inputs/'ACTUAL_JOB_MANIFEST.json')!=intent['actual_job_manifest_sha256']:raise ValueError('Actual A2 manifest changed')
         actual=read(inputs/'ACTUAL_JOB_MANIFEST.json')
-        if (actual['jobs'].get(intent['job'])!=job or actual['spec_sha256']!=sha(SPEC)
+        if (actual['jobs'].get(intent['job'])!=job or actual['spec_sha256']!=actual_origin(spec)['spec_sha256']
                 or intent['actual_review']['actual_job_manifest_sha256']!=intent['actual_job_manifest_sha256']
                 or intent['actual_review']['input_manifest_sha256']!=actual['input_manifest_sha256']):
             raise ValueError('Worker exact actual job/input A2 binding differs')

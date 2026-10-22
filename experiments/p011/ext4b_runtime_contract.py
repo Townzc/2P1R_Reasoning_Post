@@ -5,7 +5,7 @@ from experiments.p011.ext4b_contract import OWNER_SHA
 from experiments.p011.ext3b_contract import LARGE,SMALL
 from experiments.p011.owner_0205_common import read,sha
 
-SPEC='reports/p011_20261020/ext3b_math_runtime_preflight_v2/SPEC.json'
+SPEC='reports/p011_20261020/ext3b_preentry_schema_runtime_v3/SPEC.json'
 SCOPE='p011-ext-3B-complete-training-resume-MATH-path-CR'
 A2_SCOPE='p011-ext-3B-actual-input-and-numeric-A2-lite'
 LOCAL=Path('.local/p011_20261020/r1/ext3b_runs_r1')
@@ -60,6 +60,21 @@ def prepared_spec(spec_path):
     return spec
 
 
+def actual_origin(spec):
+    """Carry exact completed input bytes; never rewrite or re-upload the manifest."""
+    binding=spec['unchanged_actual_input_binding']
+    if (binding['spec_sha256']!='3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e'
+            or binding['actual_job_manifest_sha256']!='bf556ba4e18ab52b6613d6e86eec207ec6dedab9937accb2b754f94368453a24'
+            or binding['input_manifest_sha256']!='afd5fe1bd7e13d28353d28fe4e7b6e2e296babcbc7752dc5cec843bdb7d17bfc'):
+        raise ValueError('Only the exact completed 9072/3024 input manifest may carry forward')
+    return binding
+
+
+def entry_cli_directory(spec,job,attempt):
+    if job not in JOBS or attempt not in (1,2):raise ValueError('Exact job/attempt required')
+    return 'cli_preentry2' if attempt==1 and job in spec['preentry_schema_failures'] else 'cli'
+
+
 def review(spec_path, source_review, actual_review=None):
     spec=prepared_spec(spec_path);cr=read(source_review)
     if (cr.get('scope')!=SCOPE or cr.get('decision') not in ('PASS','PASS-WITH-NOTES')
@@ -69,9 +84,12 @@ def review(spec_path, source_review, actual_review=None):
         raise ValueError('Exact new full training/resume/closeout CR required')
     if actual_review is not None:
         a2=read(actual_review)
+        origin=actual_origin(spec)
         if (a2.get('scope')!=A2_SCOPE or a2.get('decision') not in ('PASS','PASS-WITH-NOTES')
                 or a2.get('spec_sha256')!=sha(spec_path)
                 or a2.get('input_manifest_sha256')!=sha(INPUTS/'MANIFEST.json')
+                or a2.get('actual_job_manifest_sha256')!=origin['actual_job_manifest_sha256']
+                or a2.get('unchanged_actual_origin_spec_sha256')!=origin['spec_sha256']
                 or sha(a2['local_report_path'])!=a2['report_sha256']
                 or any(a2.get(k) is not True for k in spec['actual_review_flags'])):
             raise ValueError('Exact actual input/numeric A2-lite required')
