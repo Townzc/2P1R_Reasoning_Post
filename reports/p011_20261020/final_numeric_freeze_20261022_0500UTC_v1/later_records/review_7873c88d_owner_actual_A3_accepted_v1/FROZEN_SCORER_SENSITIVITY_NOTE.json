@@ -1,0 +1,41 @@
+{
+  "source_report_sha256": "66d7b3e54bd1a0aa658befb8d301b9ebffd0a8aebda6c2186b2189273fd1f180",
+  "original_frozen_scores_labels_vectors_and_intervals_unchanged": true,
+  "reviewer_known_normalization_violations": [
+    {
+      "job": "baseline",
+      "question_id": "math500/179",
+      "endpoint": "sample1"
+    },
+    {
+      "job": "baseline",
+      "question_id": "math500/179",
+      "endpoint": "greedy"
+    }
+  ],
+  "reviewer_reason": "Plane equation scaled or sign-flipped; violates specified A>0 and gcd=1 normalization.",
+  "baseline_saved_sample": {
+    "correct": 1007,
+    "total": 2000
+  },
+  "baseline_saved_greedy": {
+    "correct": 269,
+    "total": 500
+  },
+  "descriptive_one_row_sample_sensitivity_only": {
+    "correct": 1006,
+    "total": 2000,
+    "accuracy": 0.503,
+    "change_pp": -0.05
+  },
+  "descriptive_one_row_greedy_sensitivity_only": {
+    "correct": 268,
+    "total": 500,
+    "accuracy": 0.536,
+    "change_pp": -0.2
+  },
+  "other_reviewed_leniencies": "Base subscripts dropped in A1/A5/A6 and one unsimplified 8/18 in A6; reviewer accepts them as lenient-equivalent and requests no original label changes.",
+  "new_scoring_or_bootstrap": false,
+  "replacement_result": false,
+  "new_sensitivity_confidence_intervals_computed": false
+}

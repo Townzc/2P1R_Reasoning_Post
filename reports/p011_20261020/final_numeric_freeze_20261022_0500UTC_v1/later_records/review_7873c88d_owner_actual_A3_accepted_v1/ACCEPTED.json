@@ -1,0 +1,93 @@
+{
+  "schema": "p011.actual_review_acceptance.v1",
+  "request_id": "p011-owner150-A-D-complete-results-and-original-contrasts-actual-A3-r1",
+  "scope": "p011-owner150-A-D-complete-results-and-original-contrasts-actual-A3",
+  "target_commit": "fe82972a952a151d14d63dd052f00502560ff9c9",
+  "packet": "reports/p011_20261020/owner150_complete_actual_results_v1",
+  "manifest_sha256": "6ddb9969db8ec03962a0c187c19f5b080190081a6bca515114aca5e8c796c9b2",
+  "actual_result_binding_sha256": "b9311fbe8e2b4c1ea31af8d13b18ce69c1bf6e409e66f26fa8a21436365242b7",
+  "report": {
+    "path": "audit/claude/20261022a/REPORT_OWNER150_COMPLETE_ACTUAL_A3.md",
+    "head": "7873c88d5713e2328204e54ad0bd6c8ed92cbd43",
+    "bytes": 4108,
+    "sha256": "66d7b3e54bd1a0aa658befb8d301b9ebffd0a8aebda6c2186b2189273fd1f180",
+    "fetch_started_utc": "2026-10-22T02:01:58.547585+00:00",
+    "fetched_utc": "2026-10-22T02:01:59.238192+00:00",
+    "file_commit": {
+      "author": {
+        "date": "2026-10-22T01:33:37Z",
+        "email": "noreply@anthropic.com",
+        "name": "Claude"
+      },
+      "committer": {
+        "date": "2026-10-22T01:33:37Z",
+        "email": "noreply@anthropic.com",
+        "name": "Claude"
+      },
+      "html_url": "https://github.com/Townzc/2P1R_Reasoning_Post/commit/7873c88d5713e2328204e54ad0bd6c8ed92cbd43",
+      "sha": "7873c88d5713e2328204e54ad0bd6c8ed92cbd43"
+    },
+    "heading_screen_only": true
+  },
+  "reviewer": "Claude",
+  "report_verdict_verbatim": "numbers ACCEPTED (A3 PASS)",
+  "acceptance_status": "PASS_WITH_EXPLICIT_ACCESS_AND_FROZEN_SCORER_NOTES",
+  "flags": {
+    "complete_attempt_specific_training_and_declared_endpoint_scopes_accepted": true,
+    "D2_owner_option_a_math_aime_complete_AMC_incomplete_math_only_contrast_accepted": true,
+    "independent_native_decode_and_correctness_scope_disclosed": true,
+    "all_available_original_paired_contrasts_and_missing_cells_disclosed": true,
+    "posthoc_smoke_direct_owner_preselection_and_single_seed_limits_disclosed": true,
+    "private_binary_and_frozen_scorer_access_limits_disclosed": true
+  },
+  "flag_evidence_verbatim": "All six required flags are true as scoped above, with the access limits stated.",
+  "cost_projection_reconciliation_scope_disclosed": true,
+  "cost_projection_independently_reconciled": false,
+  "cost_scope": "Exact-new-app projection only; reviewer cannot access billing; not an invoice.",
+  "abbreviated_binding_resolution": "Report names target fe82972a, request 91b65ec1, exact packet, MANIFEST 6ddb9969 and ACTUAL_RESULT_BINDING b9311fbe; expanded against the unchanged fixed request, not by editing the report.",
+  "git_event_utc": "2026-10-22T01:33:37Z",
+  "report_self_time_verbatim": "2026-10-22 ~01:45 UTC",
+  "self_time_differs_from_git_event": true,
+  "discovered_utc": "2026-10-22T02:01:41.898111+00:00",
+  "full_text_display": {
+    "report_path": ".local/p011_20261020/r1/review_owner_A3_D2_disclosures_due_20261022T020141Z/REPORT_OWNER150_COMPLETE_ACTUAL_A3.md",
+    "fulltext_display_started_utc": "2026-10-22T02:02:07.604743+00:00",
+    "fulltext_display_finished_utc": "2026-10-22T02:02:07.604928+00:00",
+    "head": "7873c88d5713e2328204e54ad0bd6c8ed92cbd43",
+    "previous_filename_and_heading_nonZ1_screen": true,
+    "reviewer_code_executed": false
+  },
+  "full_read_confirmed_utc": "2026-10-22T02:06:31.353020+00:00",
+  "independent_review_scope": {
+    "native_token_rows_decoded": 16500,
+    "jobs": [
+      "baseline",
+      "A1r2",
+      "A5",
+      "A6",
+      "A7"
+    ],
+    "raw_text_region_stop_mismatches": 0,
+    "non_string_positive_rows": 356,
+    "unique_manual_positive_equivalence_pairs": 65,
+    "primary_paired_contrasts_independently_recomputed": 5,
+    "full_symbolic_engine_rerun": false,
+    "full_symbolic_engine_limit": "math-verify not rerunnable; PyPI blocked",
+    "private_checkpoints_exports_ADMISSION_read": false,
+    "saved_state_optimizer_RNG_oracles_read": false,
+    "collect_records_read": false,
+    "local_oracles_independently_reexecuted": false
+  },
+  "D2_separate_disclosure_contract_closed": false,
+  "D2_scope_note": "The six owner-packet flags do not close the separate D2 source/actual metadata-only disclosure clarification. c97efacb source PASS and c999e0d8 numerical A3 remain retained with those explicit fields pending.",
+  "posthoc_smoke": "FAIL; 22.6% A7 EOS and 35.85pp below baseline; no prospective pass.",
+  "single_training_seed": 17,
+  "question_intervals_not_training_seed_population": true,
+  "causal_claim_adopted": false,
+  "reviewer_loop_heuristic": "zlib ratio on final 6000 characters <0.12; descriptive reviewer analysis, not rerun or adopted as a causal finding",
+  "reviewer_secondary_greedy_intervals": "Retained in original report; not substituted for saved primary contrasts or added to frozen T5/T6.",
+  "Codex_model_decode_score_bootstrap_or_test_reexecution": false,
+  "reviewer_scripts_executed_by_Codex": false,
+  "P011_final_A5": false,
+  "recorded_utc": "2026-10-22T02:06:31.353020+00:00"
+}
