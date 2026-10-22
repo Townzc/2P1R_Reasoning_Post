@@ -5565,7 +5565,7 @@
     {
       "request_id": "p011-forced-answer-ext3b-actual-input-A2-lite-r1",
       "scope": "p011-forced-answer-ext3b-actual-input-A2-lite",
-      "status": "PENDING",
+      "status": "CLOSED_ACCEPTED",
       "target_commit": "3a7cb7dd807c301494ce2a880c7efb0acd631d40",
       "packet": "reports/p011_20261020/forced_answer_ext3b_actual_inputs_v1",
       "source_target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
@@ -5581,7 +5581,12 @@
       ],
       "owner_total_cap_usd": "20",
       "requested_utc": "2026-10-22T23:20:21.716706+00:00",
-      "new_gpu_calls": 0
+      "new_gpu_calls": 0,
+      "decision": "PASS",
+      "review_head": "f512a787094e2d10ab77776e44cbaa0788ea6ada",
+      "report_sha256": "915731fb6e288ff3b3494fbb1d26c57404569da671b465e9cf42f75f26abc63f",
+      "accepted_utc": "2026-10-22T23:36:47.730157+00:00",
+      "acceptance_packet": "reports/p011_20261020/review_f512a787_forced_ext3b_actual_A2_accepted_v1"
     }
   ],
   "p008_v31": {
@@ -9716,7 +9721,7 @@
   "p011_forced_ext3b_current": {
     "request_id": "p011-forced-answer-ext3b-complete-path-CR-r1",
     "scope": "p011-forced-answer-ext3b-complete-path-CR",
-    "status": "ACTUAL_INPUT_A2_PENDING",
+    "status": "SOURCE_AND_ACTUAL_A2_ACCEPTED_PREENTRY",
     "target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
     "packet": "reports/p011_20261020/forced_answer_ext3b_preflight_v2",
     "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
@@ -9783,8 +9788,8 @@
     "first_remote_publication_utc": null,
     "new_two_cell_scope_only": true,
     "supersedes_unexecuted_target": "a6ed5ed01c350e59df5814cc7297ddbe0d6cff93",
-    "last_audit_head": "a7e0a9ce2075ba5026cb6c6c4499d608e365c9aa",
-    "last_audit_head_observed_utc": "2026-10-22T23:17:34.554941+00:00",
+    "last_audit_head": "f512a787094e2d10ab77776e44cbaa0788ea6ada",
+    "last_audit_head_observed_utc": "2026-10-22T23:36:14.290574+00:00",
     "source_review_decision": "PASS-WITH-NOTES",
     "existing_A6_minus_A7_pair_complete": true,
     "source_acceptance_packet": "reports/p011_20261020/review_a7e0a9ce_forced_ext3b_source_accepted_v1",
@@ -9804,7 +9809,8 @@
     },
     "new_gpu_calls": 0,
     "actual_input_target_commit": "3a7cb7dd807c301494ce2a880c7efb0acd631d40",
-    "actual_input_A2_request": "p011-forced-answer-ext3b-actual-input-A2-lite-r1"
+    "actual_input_A2_request": "p011-forced-answer-ext3b-actual-input-A2-lite-r1",
+    "actual_A2_acceptance_packet": "reports/p011_20261020/review_f512a787_forced_ext3b_actual_A2_accepted_v1"
   },
   "p011_forced_ext3b_existing_label_contrast": {
     "status": "COMPLETE_PENDING_INDEPENDENT_NEW_RESULT_REVIEW",
@@ -9826,7 +9832,7 @@
   "p011_forced_ext3b_actual_input_A2": {
     "request_id": "p011-forced-answer-ext3b-actual-input-A2-lite-r1",
     "scope": "p011-forced-answer-ext3b-actual-input-A2-lite",
-    "status": "PENDING",
+    "status": "CLOSED_ACCEPTED",
     "target_commit": "3a7cb7dd807c301494ce2a880c7efb0acd631d40",
     "packet": "reports/p011_20261020/forced_answer_ext3b_actual_inputs_v1",
     "source_target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
@@ -9842,6 +9848,9 @@
     ],
     "owner_total_cap_usd": "20",
     "requested_utc": "2026-10-22T23:20:21.716706+00:00",
-    "new_gpu_calls": 0
+    "new_gpu_calls": 0,
+    "decision": "PASS",
+    "review_head": "f512a787094e2d10ab77776e44cbaa0788ea6ada",
+    "acceptance_packet": "reports/p011_20261020/review_f512a787_forced_ext3b_actual_A2_accepted_v1"
   }
 }

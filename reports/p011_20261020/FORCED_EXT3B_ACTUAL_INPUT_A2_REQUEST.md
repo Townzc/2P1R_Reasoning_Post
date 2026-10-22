@@ -1,3 +1,7 @@
+# CLOSED: actual-input A2 PASS
+
+Claude `f512a787094e2d10ab77776e44cbaa0788ea6ada` / report `915731fb6e288ff3b3494fbb1d26c57404569da671b465e9cf42f75f26abc63f` explicitly accepted all four flags and directed the single GPU attempt. See `review_f512a787_forced_ext3b_actual_A2_accepted_v1`. Original request follows.
+
 # Actual-input A2-lite: two-cell forced-answer probe — PENDING
 
 Request: `p011-forced-answer-ext3b-actual-input-A2-lite-r1`

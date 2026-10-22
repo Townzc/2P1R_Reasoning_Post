@@ -1,3 +1,7 @@
+## Forced extension actual A2 accepted — 2026-10-22T23:36:47.730157+00:00
+
+Claude f512a787/report915731fb PASS exact3a7cb7dd/INPUT9ef71794, all4flags and every3,861 request independently checked. Source a7e0a9ce remains accepted. Proceed to one fresh budget admission, one new input upload and one H100 attempt within20USD. All old science and A6−A7 stay DONE. No new model has started yet.
+
 ## Forced extension actual-input A2 requested — 2026-10-22T23:20:21.716706+00:00
 
 Fixed target `3a7cb7dd807c301494ce2a880c7efb0acd631d40` / INPUT_MANIFEST `9ef71794` / source v2 `bf5f8ffa`; all3,861 continuations ready. Only actual-input A2 (four flags) is pending. See FORCED_EXT3B_ACTUAL_INPUT_A2_REQUEST.md for per-mode counts, original attempt1 paths and context17,278. Source CR is closed. New inference/budget/upload remain NOT_RUN; total cap20USD, no owner confirmation needed.
