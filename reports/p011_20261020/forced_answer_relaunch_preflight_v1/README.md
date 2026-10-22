@@ -1,0 +1,9 @@
+# One delegated forced-answer infrastructure relaunch
+
+Direct owner renewed tonight authority to Claude. Fixed450d94a1 decision1 and later1901fcf7 confirm one new global attempt, original failure costs count within12USD. The2268 training variant was withdrawn; this forced diagnostic is independent of current9072/3024 training. No cap increase, training, input encoding, upload, or repeated original science.
+
+38bindings: original31 immutable scientific/source dependencies plus7new infrastructure/route files. Original worker run, v3native64 decoder, scalar/pool and paired-question analysis are unchanged; analysis file differs only admission/namespace locators. Original input manifest/upload and modelhash binding carry. Newlocalr2 andnewnamedstore keep olddispatch/claim/collectedfailure immutable. Originalremote inputs remaininplace; originalrun/allsevenresults muststillbeabsent before writing, consistent with originalpreclaim failure. No oldrequest/weight transfer or failed app/key query.
+
+The module-qualified launcher imports experiments.p011.modal_forced_answer_retry, whose file is explicitly copied into /workspace. Local declaration import readiness is checked without provider/build/model. Actualnewworker writes an import acknowledgement; startupwatchdog requires it within600s and otherwise stops onlynewownedapp. Independentwhole-costwatchdog keepsrunning even if importprobe blocks; eachprobe<=20s. One localCLI andparentfence prevent anotherrelaunch.
+
+Fresh costs onlyafterexactdiffCR. Originalfailedcomputeupper=max(currenttaggedcharge, originalcompleteCLIinterval+60satmaxoriginal/freshrate). This is a conservative unbilledbound, notinvoice. Retain1.50originalnoncompute plus1.50newnoncompute, deductallfrom12 thenpriceworker+600startup+60grace; original150+20.02allowanceand8slots preserved. Noreset or release. Completedcells only; originalcollect/oracle/score7200 andanalysis route tolocalr2, no uploadmode. ActualA3stillrequired.
