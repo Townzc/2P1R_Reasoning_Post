@@ -1,3 +1,7 @@
+## Actual-input A2 accepted — 2026-10-22T04:28:54.082534+00:00
+
+Claude10c0885f/reporta1d4abf1 explicitly PASS all four A2 flags for fixed2921c7b9; independent9716 request hashes/sets/order/prefill/context0 mismatch. Saved model-export metadata and partial local baseline bytes accepted with mandatory worker remote-byte check; private remote binaries not read by reviewer. Full report and event/read distinctions: `reports/p011_20261020/review_10c0885f_forced_actual_A2_accepted_v1`. Sourcev3/inputs unchanged; constructor70043 and publisher41796 permanentlyDONE. New necessary fresh budget66124 EXIT0CONSUMED: reportedtagged100.02287004 + prior20.02unassigned/delay allowance + new12 reserve =132.04287004 accounted bound, not final invoice. Rate4.39520/h, model slots0, workerhard7940s/startup600/grace60/newnoncompute1.50. Upload/dispatch follow exact one-attempt v3 flow; no new primary score or oldweights upload. Census actualA3 is independently pending normal04:56:09.531755; formal05UTCfreeze remains required.
+
 # Forced-answer v3: actual-input A2-lite
 
 Request: `p011-forced-answer-actual-input-A2-lite-r1`. Scope: `p011-forced-answer-actual-input-A2-lite`. Status: **PENDING**.

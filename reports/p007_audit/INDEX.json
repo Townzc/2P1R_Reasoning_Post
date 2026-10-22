@@ -5318,7 +5318,7 @@
     {
       "request_id": "p011-forced-answer-actual-input-A2-lite-r1",
       "scope": "p011-forced-answer-actual-input-A2-lite",
-      "status": "ACTUAL_INPUT_A2_LITE_PENDING_NO_GPU",
+      "status": "CLOSED_PASS",
       "target_commit": "2921c7b937c5d4d02120013ef710ecd2a55db31a",
       "packet": "reports/p011_20261020/forced_answer_actual_inputs_v1",
       "spec_sha256": "3885bd48aca0feb95ea3ca2ef59b6acc32454b7c2ad7b78f8984443e7a3e811a",
@@ -5332,12 +5332,16 @@
         "actual_prefill_rows_runtime_cost_and_at_most_12_dollar_reserve_accepted"
       ],
       "request_path": "reports/p011_20261020/FORCED_ANSWER_ACTUAL_INPUT_A2_REQUEST.md",
-      "first_remote_publication_utc": null,
+      "first_remote_publication_utc": "2026-10-22T03:56:45.237203+00:00",
       "actual_selected_rows": 9716,
       "prefill_tokens": 160339564,
       "source_CR_accepted": true,
-      "actual_A2_accepted": false,
-      "new_model_calls": 0
+      "actual_A2_accepted": true,
+      "new_model_calls": 0,
+      "accepted_report_sha256": "a1d4abf1b90c668c9de7dcc65e5790a47d947e0d6bf7f5aa0a838b344ce5d6a1",
+      "review_commit": "10c0885f1095f1553caa502fc57bbfd63d354303",
+      "acceptance_packet": "reports/p011_20261020/review_10c0885f_forced_actual_A2_accepted_v1",
+      "accepted_utc": "2026-10-22T04:28:54.082534+00:00"
     },
     {
       "request_id": "p011-OT3-full-math-pool-census-results-actual-A3-r1",
@@ -5355,11 +5359,13 @@
         "independent_review_scope_and_private_raw_access_limits_explicit",
         "no_old_science_repeated_and_no_new_training_authorization"
       ],
-      "first_remote_publication_utc": null,
+      "first_remote_publication_utc": "2026-10-22T04:26:09.531755+00:00",
       "actual_A3_accepted": false,
       "science_complete": true,
       "new_training_authorized": false,
-      "request_path": "reports/p011_20261020/OT3_FULL_MATH_CENSUS_RESULTS_ACTUAL_A3_REQUEST.md"
+      "request_path": "reports/p011_20261020/OT3_FULL_MATH_CENSUS_RESULTS_ACTUAL_A3_REQUEST.md",
+      "normal_review_not_before_utc": "2026-10-22T04:56:09.531755+00:00",
+      "minimum_review_not_before_utc": "2026-10-22T04:41:09.531755+00:00"
     }
   ],
   "p008_v31": {
@@ -8354,7 +8360,7 @@
         {
           "request_id": "p011-forced-answer-actual-input-A2-lite-r1",
           "scope": "p011-forced-answer-actual-input-A2-lite",
-          "status": "ACTUAL_INPUT_A2_LITE_PENDING_NO_GPU",
+          "status": "CLOSED_PASS",
           "target_commit": "2921c7b937c5d4d02120013ef710ecd2a55db31a",
           "packet": "reports/p011_20261020/forced_answer_actual_inputs_v1",
           "spec_sha256": "3885bd48aca0feb95ea3ca2ef59b6acc32454b7c2ad7b78f8984443e7a3e811a",
@@ -8368,12 +8374,16 @@
             "actual_prefill_rows_runtime_cost_and_at_most_12_dollar_reserve_accepted"
           ],
           "request_path": "reports/p011_20261020/FORCED_ANSWER_ACTUAL_INPUT_A2_REQUEST.md",
-          "first_remote_publication_utc": null,
+          "first_remote_publication_utc": "2026-10-22T03:56:45.237203+00:00",
           "actual_selected_rows": 9716,
           "prefill_tokens": 160339564,
           "source_CR_accepted": true,
-          "actual_A2_accepted": false,
-          "new_model_calls": 0
+          "actual_A2_accepted": true,
+          "new_model_calls": 0,
+          "accepted_report_sha256": "a1d4abf1b90c668c9de7dcc65e5790a47d947e0d6bf7f5aa0a838b344ce5d6a1",
+          "review_commit": "10c0885f1095f1553caa502fc57bbfd63d354303",
+          "acceptance_packet": "reports/p011_20261020/review_10c0885f_forced_actual_A2_accepted_v1",
+          "accepted_utc": "2026-10-22T04:28:54.082534+00:00"
         },
         {
           "request_id": "p011-OT3-full-math-pool-census-results-actual-A3-r1",
@@ -8391,11 +8401,13 @@
             "independent_review_scope_and_private_raw_access_limits_explicit",
             "no_old_science_repeated_and_no_new_training_authorization"
           ],
-          "first_remote_publication_utc": null,
+          "first_remote_publication_utc": "2026-10-22T04:26:09.531755+00:00",
           "actual_A3_accepted": false,
           "science_complete": true,
           "new_training_authorized": false,
-          "request_path": "reports/p011_20261020/OT3_FULL_MATH_CENSUS_RESULTS_ACTUAL_A3_REQUEST.md"
+          "request_path": "reports/p011_20261020/OT3_FULL_MATH_CENSUS_RESULTS_ACTUAL_A3_REQUEST.md",
+          "normal_review_not_before_utc": "2026-10-22T04:56:09.531755+00:00",
+          "minimum_review_not_before_utc": "2026-10-22T04:41:09.531755+00:00"
         }
       ],
       "new_production_runs": 1,
@@ -8418,6 +8430,15 @@
       "census_complete": true,
       "census_actual_A3_accepted": false,
       "census_actual_result_target": "af9b56f27f005f1d1fa84fbc1773c8e5a41daa27"
+    },
+    "owner0205_current": {
+      "forced_actual_A2": "CLOSED_PASS_10c0885f",
+      "forced_acceptance_packet": "reports/p011_20261020/review_10c0885f_forced_actual_A2_accepted_v1",
+      "forced_new_budget": "FRESH_PASS_WORKER7940_RESERVE12_ACCOUNTED132.04287004_NOT_INVOICE",
+      "forced_model": "NOT_SUBMITTED_YET",
+      "census_actual_A3": "PENDING_af9b56f2",
+      "active_new_CPU": 0,
+      "active_models": 0
     }
   },
   "p011_owner150_current": {
