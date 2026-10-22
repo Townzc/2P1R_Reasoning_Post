@@ -1,0 +1,18 @@
+{
+  "after_real_source_PASS": [
+    "PYTHONPATH=. .local/midpoint_20261011/data_pipeline/venv/bin/python scripts/prepare_p011_forced_answer_ext3b_inputs.py --spec reports/p011_20261020/forced_answer_ext3b_preflight_v2/SPEC.json --review .local/p011_20261020/r1/FORCED_EXT3B_SOURCE_CR_ACCEPTED.json",
+    "PYTHONPATH=. .local/p009_20261014/r1/analysis_env/bin/python scripts/analyze_p011_forced_answer_ext3b.py a6_a7 --review .local/p011_20261020/r1/FORCED_EXT3B_SOURCE_CR_ACCEPTED.json"
+  ],
+  "after_real_actual_A2": [
+    "PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/record_p011_forced_answer_ext3b_budget.py --review .local/p011_20261020/r1/FORCED_EXT3B_SOURCE_CR_ACCEPTED.json --directory .local/p011_20261020/r1/forced_answer_ext3b_r1/budget_FIRST_UTC",
+    "PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/p011_forced_answer_ext3b_io.py upload --review .local/p011_20261020/r1/FORCED_EXT3B_SOURCE_CR_ACCEPTED.json",
+    "PYTHONPATH=. .local/midpoint_20261011/venv/bin/python scripts/run_p011_forced_answer_ext3b_once.py --review .local/p011_20261020/r1/FORCED_EXT3B_SOURCE_CR_ACCEPTED.json --budget-json .local/p011_20261020/r1/forced_answer_ext3b_r1/budget_FIRST_UTC/BUDGET.json"
+  ],
+  "after_original_terminal": [
+    "collect with Modal environment after whole-app STOPPED0",
+    "audit each complete new cell once with data_pipeline environment",
+    "score each complete new cell once with math_verify environment",
+    "analysis once with analysis_env; terminal tagged cost once; publish JSON+MD"
+  ],
+  "original_done_steps_never_repeated": true
+}

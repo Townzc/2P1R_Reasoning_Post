@@ -3,7 +3,7 @@ from decimal import Decimal, ROUND_FLOOR
 from pathlib import Path
 from experiments.p011.owner_0205_common import read, sha
 
-SPEC = 'reports/p011_20261020/forced_answer_ext3b_preflight_v1/SPEC.json'
+SPEC = 'reports/p011_20261020/forced_answer_ext3b_preflight_v2/SPEC.json'
 SCOPE = 'p011-forced-answer-ext3b-complete-path-CR'
 A2_SCOPE = 'p011-forced-answer-ext3b-actual-input-A2-lite'
 LOCAL = Path('.local/p011_20261020/r1/forced_answer_ext3b_r1')
@@ -11,6 +11,16 @@ INPUTS = LOCAL/'inputs'
 STORE = 'p011-forced-answer-ext3b-20261022-v1'
 REMOTE = '/evidence/p011-forced-answer-ext3b-20261022-v1'
 CELLS = ('long_R3024xE3_S-F15_s17', 'long_R9072x1_S-F15_s17')
+
+
+def entry_slots(apps, containers, current_app):
+    from experiments.p011.provider_slots import shared_slots
+    slots = shared_slots(apps, containers)
+    # A just-created app can be absent from an eventually consistent listing.
+    if current_app not in {r.get('app_id', r.get('App ID')) for r in apps}:
+        slots += 1
+    if slots > 8: raise ValueError('Shared eight-slot ceiling including this pending app')
+    return slots
 
 
 def admit(spec_path, review_path, scope=SCOPE):

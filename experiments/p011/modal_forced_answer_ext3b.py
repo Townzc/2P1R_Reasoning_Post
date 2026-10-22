@@ -7,8 +7,7 @@ import subprocess
 import time
 import modal
 from experiments.p011.owner_0205_common import create, read, sha, utc
-from experiments.p011.forced_answer_ext3b import (admit, actual, SPEC, SCOPE, LOCAL, STORE, REMOTE, CELLS, checked_budget)
-from experiments.p011.provider_slots import shared_slots
+from experiments.p011.forced_answer_ext3b import (admit, actual, SPEC, SCOPE, LOCAL, STORE, REMOTE, CELLS, checked_budget, entry_slots)
 
 ROOT=Path(__file__).resolve().parents[2]
 spec=read(ROOT/SPEC)
@@ -88,8 +87,7 @@ def main(review:str,budget_json:str):
     cli='.local/midpoint_20261011/venv/bin/modal'
     apps=json.loads(subprocess.check_output([cli,'app','list','--json'],text=True,timeout=60))
     containers=json.loads(subprocess.check_output([cli,'container','list','--json'],text=True,timeout=60))
-    slots=shared_slots(apps,containers)
-    if slots>8:raise ValueError('Shared eight-slot ceiling exceeded including this pending app')
+    slots=entry_slots(apps,containers,app.app_id)
     create(LOCAL/'ONE_MODEL_ATTEMPT_FENCE.json',{'utc':utc(),'source_review_sha256':sha(review),'automatic_retry':False})
     out=LOCAL/'dispatch';out.mkdir(parents=True,exist_ok=False)
     store=modal.Dict.from_name(STORE,create_if_missing=True)

@@ -1,0 +1,50 @@
+--- v1/experiments/p011/forced_answer_ext3b.py
++++ v2/experiments/p011/forced_answer_ext3b.py
+@@ -3,7 +3,7 @@
+ from pathlib import Path
+ from experiments.p011.owner_0205_common import read, sha
+ 
+-SPEC = 'reports/p011_20261020/forced_answer_ext3b_preflight_v1/SPEC.json'
++SPEC = 'reports/p011_20261020/forced_answer_ext3b_preflight_v2/SPEC.json'
+ SCOPE = 'p011-forced-answer-ext3b-complete-path-CR'
+ A2_SCOPE = 'p011-forced-answer-ext3b-actual-input-A2-lite'
+ LOCAL = Path('.local/p011_20261020/r1/forced_answer_ext3b_r1')
+@@ -11,6 +11,16 @@
+ STORE = 'p011-forced-answer-ext3b-20261022-v1'
+ REMOTE = '/evidence/p011-forced-answer-ext3b-20261022-v1'
+ CELLS = ('long_R3024xE3_S-F15_s17', 'long_R9072x1_S-F15_s17')
++
++
++def entry_slots(apps, containers, current_app):
++    from experiments.p011.provider_slots import shared_slots
++    slots = shared_slots(apps, containers)
++    # A just-created app can be absent from an eventually consistent listing.
++    if current_app not in {r.get('app_id', r.get('App ID')) for r in apps}:
++        slots += 1
++    if slots > 8: raise ValueError('Shared eight-slot ceiling including this pending app')
++    return slots
+ 
+ 
+ def admit(spec_path, review_path, scope=SCOPE):
+--- v1/experiments/p011/modal_forced_answer_ext3b.py
++++ v2/experiments/p011/modal_forced_answer_ext3b.py
+@@ -7,8 +7,7 @@
+ import time
+ import modal
+ from experiments.p011.owner_0205_common import create, read, sha, utc
+-from experiments.p011.forced_answer_ext3b import (admit, actual, SPEC, SCOPE, LOCAL, STORE, REMOTE, CELLS, checked_budget)
+-from experiments.p011.provider_slots import shared_slots
++from experiments.p011.forced_answer_ext3b import (admit, actual, SPEC, SCOPE, LOCAL, STORE, REMOTE, CELLS, checked_budget, entry_slots)
+ 
+ ROOT=Path(__file__).resolve().parents[2]
+ spec=read(ROOT/SPEC)
+@@ -88,8 +87,7 @@
+     cli='.local/midpoint_20261011/venv/bin/modal'
+     apps=json.loads(subprocess.check_output([cli,'app','list','--json'],text=True,timeout=60))
+     containers=json.loads(subprocess.check_output([cli,'container','list','--json'],text=True,timeout=60))
+-    slots=shared_slots(apps,containers)
+-    if slots>8:raise ValueError('Shared eight-slot ceiling exceeded including this pending app')
++    slots=entry_slots(apps,containers,app.app_id)
+     create(LOCAL/'ONE_MODEL_ATTEMPT_FENCE.json',{'utc':utc(),'source_review_sha256':sha(review),'automatic_retry':False})
+     out=LOCAL/'dispatch';out.mkdir(parents=True,exist_ok=False)
+     store=modal.Dict.from_name(STORE,create_if_missing=True)
