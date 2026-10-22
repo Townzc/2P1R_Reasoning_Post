@@ -1,0 +1,85 @@
+{
+  "source_target": "63f54625de8a730779c86e8817ac872a026951d3",
+  "source_spec_path": "reports/p011_20261020/ot3_full_math_census_preflight_v1/SPEC.json",
+  "source_spec_sha256": "bd1292972bdc5e5b1a939c06b70ed025737cbfe0be358594cdbd60468b2b9497",
+  "source_review_commit": "fa47f456adbd89eb7d851a257d2346ee337a24ca",
+  "source_review_sha256": "b5f532d62b74d66b98e241e93f720aeddb388c0a931d07708582541af0c50f00",
+  "source_acceptance_packet": "reports/p011_20261020/review_8125afea_census_PASS_forced_v2_STOP_v1",
+  "dataset": "open-thoughts/OpenThoughts3-1.2M",
+  "dataset_revision": "61bcf9d4eb38b30295efc2021227a63cc5bb34c8",
+  "original_metadata_bindings": [
+    {
+      "path": ".local/p011_20261020/r1/ot3_inputs_r1/INGESTED.json",
+      "sha256": "0d81be55ae36b0fc1feac0ec7b1db3b27208bfb31930792b44ebd3084b31b2f3"
+    },
+    {
+      "path": ".local/p011_20261020/r1/ot3_inputs_r1/INTENT.json",
+      "sha256": "b9bc6cbf4f393bc35a412dd599998d7aa6a34734bbb76b903fac7fc50c441183"
+    },
+    {
+      "path": "reports/p011_20261020/long_data_preflight_v1/SOURCE_LOCK.json",
+      "sha256": "0e78298f49b86ee3de7182443eb052da422d14af14f423bceb3f728a1696fdb0"
+    }
+  ],
+  "original_readonly_raw_index_bytes": 43113029632,
+  "raw_index_or_parquet_archived_or_rehashed_by_publisher": false,
+  "original_benchmark_binding": {
+    "path": ".local/p011_20261020/r1/ot3_inputs_r1/BENCHMARKS.json",
+    "sha256": "e98fd237f133cd32fe8c88203f7bfe086be345df845f7486f941acd4e3c546a5"
+  },
+  "tokenizer_files_binding": {
+    "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "counts_file_sha256": "a9b9558e3ea368ac381398ffe60b83d7df9e70c8c1ac8d37b801915c6605800c",
+  "counts_canonical_json_sha256": "841c8f2121ed7bbdb61600d8757df42a507eefdd0a3f9b6179a06cb72980b507",
+  "parent_counts_file_sha256": "cb15ecd8601a6eaee9b0a96aa7064269aefd6d279d505cb0fe3fb7bbfb052532",
+  "archive_sha256": "0db7ffeccd90e2d26e1e524724ff6d08c55e09f4e8332925124951b1775c33bf",
+  "archive_bytes": 4996575,
+  "archive_members": 4,
+  "new_archive_full_readback_once": true,
+  "producer_cli": 99882,
+  "original_cli_exit": {
+    "started_utc": "2026-10-22T03:08:11.816838+00:00",
+    "observed_exit_utc": "2026-10-22T04:20:25.062527+00:00",
+    "exit_code": 0,
+    "command": [
+      ".local/midpoint_20261011/data_pipeline/venv/bin/python",
+      "-u",
+      "scripts/count_p011_ot3_math_pool.py",
+      "--spec",
+      "reports/p011_20261020/ot3_full_math_census_preflight_v1/SPEC.json",
+      "--review",
+      ".local/p011_20261020/r1/OT3_FULL_MATH_CENSUS_CR_ACCEPTED.json"
+    ],
+    "log": ".local/p011_20261020/r1/OT3_CENSUS_UNSTARTED_AFTER_METADATA_FIX.log"
+  },
+  "bounded_awake_exit": {
+    "exit_code": 0,
+    "observed_utc": "2026-10-22T04:20:25.063857+00:00",
+    "pid": 24194,
+    "bound_pid": 23981
+  },
+  "earlier_preentry_failure": "Exact preserved CENSUS_PREENTRY_FAILURE.json in source-acceptance packet; occurred before output/tokenizer/raw read.",
+  "actual_review_scope": "p011-OT3-full-math-pool-census-results-actual-A3",
+  "required_result_review_flags": [
+    "fixed_full_math_census_outputs_and_pinned_source_provenance_accepted",
+    "A_group_literal_normalized_counts_and_strict_relaxed_pools_distinguished",
+    "answer_only_lengths_dispersion_overlap_and_K1_one_pass_tokens_not_training_dose_accepted",
+    "independent_review_scope_and_private_raw_access_limits_explicit",
+    "no_old_science_repeated_and_no_new_training_authorization"
+  ],
+  "actual_A3_accepted": false,
+  "review_access_limits": [
+    "New parent summaries use SHA256 identities; original question/answer text and raw SQLite are not republished.",
+    "A reviewer must state whether source/text/normalization and eligibility were independently recomputed or only checked against saved summaries.",
+    "The publisher only copies saved statistics; it does not recompute aggregates, lengths, overlaps, dispersion or K1 token sums."
+  ],
+  "new_model_calls": 0,
+  "old_training_tokens_reencoded": false,
+  "training_selection_or_dose_authorized": false,
+  "census_diagnostic_shuffle_not_future_training_selection_authority": true
+}

@@ -1,0 +1,85 @@
+{
+  "completed_utc": "2026-10-22T04:20:24.803881+00:00",
+  "counts": {
+    "math_rows": 850000,
+    "grouped_questions": 53116,
+    "eligible_responses": 228648,
+    "decontamination_hit_parents": 3,
+    "questions_with_at_least_1_eligible": 30428,
+    "questions_with_at_least_16_eligible": 4046
+  },
+  "different_questions_by_original_A_group_key": 53116,
+  "different_questions_by_exact_raw_text": 53125,
+  "different_questions_by_whitespace_removed_casefold": 53074,
+  "answers_per_A_group_distribution": {
+    "16": 53107,
+    "32": 9
+  },
+  "questions_with_exactly_16_answers": 53107,
+  "original_A_strict_exactly16_all_eligible_questions": 4038,
+  "answer_only_student_token_lengths_no_EOS": {
+    "mean": 15610.356492941177,
+    "median": 16702.0,
+    "p90": 16749.0
+  },
+  "within_A_group_length_dispersion": {
+    "median_max_min_ratio": 1.0948055436830928,
+    "median_population_coefficient_of_variation": 0.023175563385346952,
+    "zero_min_length_questions": 0,
+    "zero_mean_length_questions": 0
+  },
+  "benchmark_question_overlaps": {
+    "math500": {
+      "exact_distinct_raw_questions": 0,
+      "normalized_distinct_questions": 0
+    },
+    "aime24": {
+      "exact_distinct_raw_questions": 0,
+      "normalized_distinct_questions": 0
+    },
+    "aime25": {
+      "exact_distinct_raw_questions": 0,
+      "normalized_distinct_questions": 0
+    },
+    "amc23": {
+      "exact_distinct_raw_questions": 0,
+      "normalized_distinct_questions": 0
+    }
+  },
+  "K1_at_least_one_eligible_diagnostic_prefix": {
+    "8192": {
+      "enough_eligible_questions": true,
+      "one_pass_supervised_tokens_including_EOS": 111550117
+    },
+    "16384": {
+      "enough_eligible_questions": true,
+      "one_pass_supervised_tokens_including_EOS": 223358869
+    },
+    "32768": {
+      "enough_eligible_questions": false,
+      "one_pass_supervised_tokens_including_EOS": null
+    }
+  },
+  "original_A_strict_pool_diagnostic_prefix": {
+    "8192": {
+      "enough_eligible_questions": false,
+      "one_pass_supervised_tokens_including_EOS": null
+    },
+    "16384": {
+      "enough_eligible_questions": false,
+      "one_pass_supervised_tokens_including_EOS": null
+    },
+    "32768": {
+      "enough_eligible_questions": false,
+      "one_pass_supervised_tokens_including_EOS": null
+    }
+  },
+  "selection_note": "Sorted parent keys shuffled with seed20261020; original per-parent seeded row shuffle, first qualified row. One-pass supervised tokens include EOS; not a training dose or new training authorization.",
+  "original_parent_key": "NFKC(question).strip()",
+  "additional_normalization": "remove all Unicode whitespace then casefold; no extra NFKC",
+  "original_eligibility": "boxed completeness, original exact/13-gram decontamination, native total length<=16384; completeness is not correctness",
+  "source": "Existing read-only original raw SQLite index of the exact pinned local parquet ingestion; original metadata/source lock bound in SPEC.",
+  "new_model_calls": 0,
+  "old_training_encoding_or_filter_result_overwritten": false,
+  "elapsed_seconds": 4333.0092183339875
+}
