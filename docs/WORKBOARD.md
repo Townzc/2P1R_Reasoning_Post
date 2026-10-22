@@ -1,3 +1,7 @@
+## Two-cell forced probe v2 pending — 2026-10-22T22:17:50.031330+00:00
+
+Currentsource target 87407963774de2d4f37ed5121d8d9ea60aec2c6d, SPEC bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25,47bindings(twochanged/45unchanged); only slot-entry boundary corrected. Newmethod4casesPASS, prior6notrepeated. V1neverexecuted. Cap20; inputs/CPUanalysis/budget/upload/GPU allNOTRUN. Original finiteautomationPAUSED; currentdirecttaskactive.
+
 ## New direct-owner two-cell forced-answer probe — 2026-10-22T22:07:49.942645+00:00
 
 Latest direct owner amended total cap to20USD. Source candidate a6ed5ed01c350e59df5814cc7297ddbe0d6cff93,47 source bindings/8 new adapters, six new routing checks PASS; production/inputs/budget/upload/model NOT_RUN. New source CR truly PENDING; no old closed request reopened. Dedicated local root forced_answer_ext3b_r1, store p011-forced-answer-ext3b-20261022-v1. Same seven-cell scientific functions unchanged. Natural extension interval reused by sign reversal, two new forced extension contrasts and two A6−A7 contrasts only. No automatic retry. Original finite automation remains PAUSED; this direct task is active.

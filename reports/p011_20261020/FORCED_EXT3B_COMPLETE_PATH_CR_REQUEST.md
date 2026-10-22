@@ -1,3 +1,7 @@
+# Current v2 candidate supersedes unexecuted v1 — 2026-10-22T22:17:50.031330+00:00
+
+Target `87407963774de2d4f37ed5121d8d9ea60aec2c6d`, SPEC `bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25`, packet `reports/p011_20261020/forced_answer_ext3b_preflight_v2`. Same six required flags and separate owner **$20** cap. Exactly two of47 source bindings change: SPEC locator and entry-slot normalization now explicitly counts this new app if absent from the eventually consistent provider list. New method/four cases PASS; old six successful methods not rerun. Review v1 base plus v2 narrow diff, or v2 final sources. No production inputs or paid run have started.
+
 # New direct-owner two-cell forced probe: complete-path CR pending
 
 Target `a6ed5ed01c350e59df5814cc7297ddbe0d6cff93`. SPEC `a538488fe4d03351f960523ef8bdc7a4a5aa36da26983426f45cc736625b30f8`. Packet `reports/p011_20261020/forced_answer_ext3b_preflight_v1`. Latest human cap **$20 total** supersedes initial $12.
