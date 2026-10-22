@@ -1,0 +1,7 @@
+# Actual A3 scope and retained limitations
+
+The fixed05a4e303 report explicitly accepts all seven requested actual-A3 flags. It independently decoded all9716 newly generated continuations using byte-level BPE and its own escaped-brace matcher; saved segments and stop/adapter classification agreed for every row. It independently reproduced allten new contrast intervals. The auditor's script was not executed by Codex, and original science or statistics were not repeated.
+
+The reviewer reports387 non-string-equal positive rows examined by distinct pairs, and16 rows showing scorer leniency. The stated maximum effects are0.2pp on any sampled rate and0.6pp on greedy. These are reviewer-disclosed sensitivity bounds, not new corrected scores, labels or bootstrap calculations. The report does not supply a new independently re-executed full symbolic engine; private checkpoints, binaries and billing were not accessed. Original labels, vectors and intervals remain unchanged.
+
+Original import failure, original input/upload, single delegated relaunch and cumulative11.9995USD upper accounting remain bound; the projection is not an invoice. This acceptance covers technical/numerical evidence. Fixedsuffix/posthoc selection/singletrainingseed and descriptive looping classification remain limitations; it does not adopt descriptive course text as proof of a unique cause or equivalence. Course interpretation remains the owner's work.
