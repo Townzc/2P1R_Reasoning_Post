@@ -1,3 +1,7 @@
+## Owner options2+3 complete new3B/MATH candidate — 2026-10-22T06:26:15.125446+00:00
+
+Fixed61a14c851d2f5e391bc4d5f91e5d07b50834a0a8/ext3b_math_runtime_preflight_v1 has86exactbindings and12sourceflags pending. New9072/3024prefixdataCRcf630e86 alreadyremoteconfirmed06:17:30.435835 (conservativewriteclock), normal06:47:30/min06:32:30. No prefixproduction/GPU/newbilling/upload. EightnewchecksPASS once; oldtests/scienceunchanged. MATHonlygreedythen4samples/complete500endpointscopedcloseout, originalfulltrainingoracle/decoder/scalar/pairedquestionbootstrap; partialendpointnotzero, failedworkerretained, noresumefollowingfinalcollect.90pair45cellremain. Original4B12096A2superseded.
+
 ## New3B source request published for review — 2026-10-22T06:09:58.905401+00:00
 
 Fixedcf630e860bce1a7bc2892d8cd75b57b805c1c4d4/ext3b_prefix_input_preflight_v1 exact12bindings/twonewfiles, sourceCRp011-ext-3B-prefix-input-reschedule-CR-r1 genuinelyPENDING. Data/model production0. Old4BactualA2superseded by direct2+3, notnewscopePASS. ExactnewB/U/E forthcoming onlyafternewdataCR; oldencodings/censusimmutable.

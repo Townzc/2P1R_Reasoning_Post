@@ -1,0 +1,29 @@
+# Exact owner options2+3 full source CR — PENDING
+
+Request: `p011-ext-3B-complete-training-resume-MATH-path-CR-r1`
+Scope: `p011-ext-3B-complete-training-resume-MATH-path-CR`
+Target: `61a14c851d2f5e391bc4d5f91e5d07b50834a0a8`
+SPEC: `006b01c461f06576349bbaf84f0b3700097c25bf9b81376c781473124affc049`
+MANIFEST: `da17fc9c848d85761af163eb43efd49c0c8631fe619c9267a36418bf69cf0448`
+Source binding: `reports/p011_20261020/ext3b_math_runtime_preflight_v1/SOURCE_BINDING.json` (86exactsource/dependency files)
+
+Direct human: **4B 按 ②+③ 执行**, adopting numbered options in a192eeff/report279522e3.90USDpair/45cell unchanged. Old4B81codecorrectnessPASS and superseded12096A2 do not accept this newscope. NewprefixdataCR separatecf630e86 exact12bindings remainspending. NoCPUproduction/model/billing/upload started.
+
+Inspect DIFF_AGAINST_OLD81.patch plus3newMATHscope/scorer/process sources and2newprefix sources. Originaltraining/update/math/native decoder/frozenP1 scalar/pool/pairedquestion10000seed unchanged. New9,072firstprefixvsfirst3,024dose; actualB/U/q/effectiveE forthcoming onlyafterdataCR. MATHgreedy500then4sample500, original512batchmaximum. AIME/AMCNOT_RUN for this budgetscope, notzero. Workerfailure remainsfailure; fulltrainingstate/RNG/originaltrajectorymustverify beforecomplete500endpointsdecode/score; partialendpointrawonly. Foursamplemean/CI requireall4 inbothcells. Failedpayloadcollector usesactualstoppedapp/originalcloudledger, create-onlyderivedtrainingview notfakeRESULT. Finalcollectionblocks subsequentresume. Nooldscience/tests/reviewer-script execution requested.
+
+Please explicitly resolve all12 sourceflags below, withreasonedPASS/PASS-WITH-NOTES orCHANGES-REQUIRED. ReviewisnotactualinputA2 orGPUadmission. NewsourceandnewactualA2 bothrequired beforefirstpaidcall. Onefullstateoracle atatime, 7200scorecap/originalabsoluteextensionwindow,500checkpoints/maxoneproveninfraresume/90pair45cellfreshmoney+all8slots remain.
+
+- `exact_owner_options2_3_prefix9072_first3024_equal_measured_dose_scaled_LR_accepted`
+- `original_training_update_full_state_AdamW_RNG_cursor_checkpoint500_and_one_infra_resume_unchanged`
+- `MATH_only_greedy_then_four_samples_native_parameters_and_original_decoder_accepted`
+- `complete500_question_endpoint_selection_only_by_acknowledged_availability_partial_not_zero`
+- `four_sample_primary_and_paired_contrast_require_all_four_complete_in_both_cells`
+- `failed_worker_remains_failed_preservation_and_training_only_derived_view_explicit`
+- `frozen_scalar_two_process_pool_original10000_question_bootstrap_seed_unchanged`
+- `fresh90pair45cell_cumulative_all_attempts_noncompute_slots_and_hard_timers_accepted`
+- `module_qualified_entry_and_independent_startup_crash_loop_watchdog_accepted`
+- `exact_actual_input_A2_before_GPU_no_old_weights_gold_or_training_reencoding_transfer`
+- `resume_prefix_mapping_full_state_oracle_concurrency1_original_absolute_window_accepted`
+- `single_training_seed_private_binary_missing_cycle_and_descriptive_benchmarks_NOT_RUN_disclosed`
+
+EightnewregressionmethodsPASS (7once.424s + newfinalfence.004s), oldsuccessfulmethodsnotrepeated. Exactnewactualmanifestwillfollow; no need to rerun oldscientificarchives.
