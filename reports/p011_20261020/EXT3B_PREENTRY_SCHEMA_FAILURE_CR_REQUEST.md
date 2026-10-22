@@ -1,3 +1,7 @@
+## CLOSED v3 source/carry — 2026-10-22T08:33:12.901811+00:00
+
+Fixed81ce078ba688ad0adefac8930d5bf7025828ca3e/report1eda14422206558bbfd7c5cae1708d766920d705ba4ff06debb43105ac5613e8 explicitly PASS all16source/all4carry and directs both cells to launch. Source63523da9/SPEC055bcdb7 exact87. Newdatedbudget accounting both failures and shared slots required; original upload reuse, no new scientific construction. Public `reports/p011_20261020/review_81ce078b_ext3b_preentry_v3_accepted_v1`.
+
 # V3 exact 3B pre-dispatch failure disposition + schema repair — PENDING
 
 Prepared 2026-10-22T07:52:41.764120+00:00. Fixed candidate `63523da98cb0325c6a5956d05c251fda6cb0500b`; SPEC `055bcdb79bd28a376175b93b748864165fda5b70bcef8e84349f5549d1a9d094`; MANIFEST `c86b85d49584cf8719aa460aaa6f685f2b5c213eea4b654db489a01074ba5f62`. Current source scope remains `p011-ext-3B-complete-training-resume-MATH-path-CR`; request id adds `-r1`. The actual-input scope remains `p011-ext-3B-actual-input-and-numeric-A2-lite`, now requesting an explicit carry of unchanged fixed5f1003 through this infrastructure repair, not a new numerical reconstruction.

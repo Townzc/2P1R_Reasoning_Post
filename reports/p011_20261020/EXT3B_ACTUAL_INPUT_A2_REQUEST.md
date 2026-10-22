@@ -1,3 +1,7 @@
+## CLOSED v3 source/carry — 2026-10-22T08:33:12.901811+00:00
+
+Fixed81ce078ba688ad0adefac8930d5bf7025828ca3e/report1eda14422206558bbfd7c5cae1708d766920d705ba4ff06debb43105ac5613e8 explicitly PASS all16source/all4carry and directs both cells to launch. Source63523da9/SPEC055bcdb7 exact87. Newdatedbudget accounting both failures and shared slots required; original upload reuse, no new scientific construction. Public `reports/p011_20261020/review_81ce078b_ext3b_preentry_v3_accepted_v1`.
+
 ## New V3 preentry repair / unchanged actual carry — PENDING 2026-10-22T07:52:41.764120+00:00
 
 Fixed `63523da98cb0325c6a5956d05c251fda6cb0500b`, SPEC`055bcdb79bd28a376175b93b748864165fda5b70bcef8e84349f5549d1a9d094`, exact87. See `EXT3B_PREENTRY_SCHEMA_FAILURE_CR_REQUEST.md`; all16source and4actualcarry flags needed. Old numericalA2/sourcev2 PASS preserved, not v3 permission. Both original entries failed before any model dispatch. Completed upload must be reused. No original data/encoding/tests repeated.
