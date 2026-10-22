@@ -15,7 +15,7 @@ from experiments.sft_allocation_midpoint.common import verify,manifest
 from experiments.p011 import ext4b_execution
 from experiments.p011.long_owner_path import terminate_owned_descendants
 
-ACTUAL=Path('.local/p011_20261020/r1/ext4b_runtime_actual_r1/ACTUAL_JOB_MANIFEST.json')
+ACTUAL=Path('.local/p011_20261020/r1/ext3b_runtime_actual_r1/ACTUAL_JOB_MANIFEST.json')
 
 
 def published(root,spec):
@@ -101,10 +101,11 @@ def submit(root,job_id,attempt,source_review,actual_review,budget_file,store,wor
         if upload['actual_job_manifest_sha256']!=sha(root/ACTUAL) or upload['old_weights_uploaded']!=0:raise ValueError('Exact new-input transfer/readback receipt required')
         out=root/LOCAL/'dispatch'/name
         if out.exists() or store.get(name+'/dispatch') is not None:raise ValueError('Permanent attempt fence already exists')
+        if attempt==2 and (root/LOCAL/'collect'/resume['parent_intent']['attempt_name']).exists():raise ValueError('Final scoped preservation/closeout started; no subsequent resume')
         if attempt==2 and not store.put(job_id+'/single_resume_fence',{'attempt':2,'resume_sha256':sha(resume_file)},skip_if_exists=True):raise ValueError('Only one infrastructure resume is authorized')
         out.mkdir(parents=True,exist_ok=False)
         identity=resume['identity'] if resume else {'logical_id':job_id,'arm':'S-F15','job_sha256':digest(job),'input_plan_sha256':job['input_plan_sha256'],'execution':execution,'source_files':spec['source_files']}
-        intent={'job':job_id,'attempt':attempt,'attempt_name':name,'job_spec':job,'identity':identity,'execution':execution,'app_id':app_id,'created_epoch':time.time(),'spec_sha256':sha(root/SPEC),'source_files':spec['source_files'],'source_review':read(source_review),'source_report_text':Path(read(source_review)['local_report_path']).read_text(),'actual_review':a2,'actual_report_text':Path(a2['local_report_path']).read_text(),'actual_job_manifest_sha256':sha(root/ACTUAL),'input_manifest_sha256':actual['input_manifest_sha256'],'budget':budget,'budget_check':checked,'owner_amendment_sha256':spec['owner_report_sha256'],'resume':resume,'provider_slots_at_entry':slots,'maximum_infrastructure_resumes':1}
+        intent={'job':job_id,'attempt':attempt,'attempt_name':name,'job_spec':job,'identity':identity,'execution':execution,'app_id':app_id,'created_epoch':time.time(),'spec_sha256':sha(root/SPEC),'source_files':spec['source_files'],'source_review':read(source_review),'source_report_text':Path(read(source_review)['local_report_path']).read_text(),'actual_review':a2,'actual_report_text':Path(a2['local_report_path']).read_text(),'actual_job_manifest_sha256':sha(root/ACTUAL),'input_manifest_sha256':actual['input_manifest_sha256'],'budget':budget,'budget_check':checked,'owner_amendment_sha256':spec['direct_owner_amendment']['sha256'],'resume':resume,'provider_slots_at_entry':slots,'maximum_infrastructure_resumes':1}
         create(out/'INTENT.json',intent)
         if not store.put(name+'/dispatch',intent,skip_if_exists=True):raise ValueError('Remote attempt dispatch already exists')
         call=worker.with_options(timeout=checked['platform_seconds']).spawn(intent)

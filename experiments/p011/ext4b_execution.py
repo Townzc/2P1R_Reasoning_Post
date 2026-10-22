@@ -17,6 +17,7 @@ from experiments.p011.long_owner_execution import (engine_settings,validate_engi
 from experiments.p011.long_evaluation import sampling
 from experiments.p011.long_protocol import ENDPOINT_BATCH,ENDPOINT_BATCHES,endpoint_batches
 from experiments.p011.ext4b_runtime_contract import STORE
+from experiments.p011.ext3b_math_scope import math_requests,BATCHES
 from experiments.p011.ext4b_encoded import EncodedRows
 from experiments.p011.ext4b_training import ResumableJournal,train_with_checkpoints
 
@@ -78,7 +79,7 @@ def evaluate_with_prefix(llm, constructor, rows, model_eos, out, key, store, com
                 with dest.open('xb') as f:f.write(src.read_bytes())
             prefix.append(name);times.append(cycle['seconds']);cycles.append(cycle)
             continue
-        if parent is not None and any((parent/'completed'/f'eval_{j:04d}.json').exists() for j in range(index+1,ENDPOINT_BATCHES)):
+        if parent is not None and any((parent/'completed'/f'eval_{j:04d}.json').exists() for j in range(index+1,BATCHES)):
             raise ValueError('Non-prefix prior endpoint completion is invalid')
         started=time.monotonic();dump(out/'forecasts'/(name+'.json'),forecast(endpoint_batches(len(rows)-first),list(times)))
         if not store.put(key+'/unit/'+name,intent,skip_if_exists=True):raise RuntimeError('New endpoint unit already attempted')
@@ -225,6 +226,11 @@ def worker_body(job, inputs, out, identity, key, claim, stop, timing, store, vol
     dump(out/'LINUX_CONSTRUCTORS.json',dict(count=len(rows),environment=environment,
         before_vllm_model_allocation=True,all_native_prompt_texts_verified=True))
     volume.commit()
+    rows=math_requests(rows)
+    dump(out/'MATH_SCOPE.json',{'original_bound_inputs':3300,'generated_scope':2500,
+        'order':'greedy500 then sample seeds0,1,2,3 each500','batch_size':ENDPOINT_BATCH,
+        'AIME24_AIME25_AMC23':'NOT_RUN_BY_OWNER_OPTION2','partial_complete_endpoints_authorized':True})
+    volume.commit()
     projection=forecast(timing,0,endpoint_batches(len(rows)),training_times,[],time.time())
     dump(out/'PRE_ENGINE_FORECAST.json',projection)
     llm=LLM(model=model_path,tokenizer=model_path,**engine_settings(job['context']))
@@ -240,7 +246,8 @@ def worker_body(job, inputs, out, identity, key, claim, stop, timing, store, vol
     endpoint_times=evaluate_with_prefix(llm,SamplingParams,rows,job['eos_token_ids'],out,key,store,
         volume.commit,check,lambda n,t:forecast(timing,0,n,training_times,t,time.time()),resume)
     check()
-    value=dict(training=result,raw_endpoint_count=len(rows),unique_questions=600,
+    value=dict(training=result,raw_endpoint_count=len(rows),unique_questions=500,
+        evaluation_scope='MATH500_ONLY_COMPLETE_ENDPOINTS',descriptive_benchmarks='NOT_RUN_BY_OWNER_OPTION2',
         endpoint_batch_seconds=endpoint_times,training_update_seconds=training_times,
         score='NOT_SCORED; full raw oracle and original frozen local scorer required',
         model_export_relative_path='model_for_vllm' if result is not None else None,

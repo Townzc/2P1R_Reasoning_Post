@@ -31,7 +31,7 @@ def main():
     review(SPEC,a.source_review,a.actual_review);evidence=Path(a.evidence_file);text=evidence.read_text()
     classify_evidence(a.failure_class,text,a.evidence_quote)
     name=a.job+'_attempt1';dispatch=LOCAL/'dispatch'/name;intent=read(dispatch/'INTENT.json');error=read(dispatch/'RETURN_ERROR.json');sub=read(dispatch/'SUBMITTED.json')
-    if (dispatch/'RESULT.json').exists() or (LOCAL/'dispatch'/(a.job+'_attempt2')).exists():raise ValueError('Successful parent or second resume forbidden')
+    if (dispatch/'RESULT.json').exists() or (LOCAL/'dispatch'/(a.job+'_attempt2')).exists() or (LOCAL/'collect'/name).exists():raise ValueError('Successful parent or second resume forbidden')
     out=LOCAL/'resume_authorization'/a.job;out.mkdir(parents=True,exist_ok=False);create(out/'ATTEMPT.json',{'utc':utc(),'failure_class':a.failure_class,'no_model_or_binary_download':True})
     try:
         import modal
@@ -66,7 +66,7 @@ def main():
         step,n,record=max(candidates)
         training_complete=all(n in names for n in ['TRAINING_PROCESS_RESULT.json','TRAINING_EXIT.json','MODEL_EXPORT.json','completed/terminal_model_export.json'])
         if training_complete and step!=intent['job_spec']['U']:raise ValueError('Terminal state inconsistency')
-        for batch in range(7):
+        for batch in range(5):
             ack=f'completed/eval_{batch:04d}.json';cycle=f'endpoint_cycles/eval_{batch:04d}.json'
             if ack in names and cycle not in names:raise ValueError('Completed generation without cycle evidence is retained, not repeated')
         failure={'infrastructure_failure_confirmed':True,'classification':a.failure_class,'raw_evidence_path':str(evidence),
@@ -74,6 +74,7 @@ def main():
             'stopped_observed_epoch':observed,'scientific_or_hard_cap_failure':False,'original_error':error,'original_remote_terminal':terminal}
         value={'parent_intent':intent,'parent_claim':claim,'identity':intent['identity'],'checkpoint':remote+'/'+str(Path(n).parent),
             'checkpoint_record':record,'parent_output':remote,'original_timing':timing,'failure':failure,'training_terminal_complete':training_complete,
+            'completed_endpoint_prefix':[f'eval_{i:04d}' for i in range(5) if f'completed/eval_{i:04d}.json' in names],
             'maximum_resumes':1,'checkpoint_binary_downloaded':False,'uncheckpointed_failed_attempt_tail_retained':True,
             'replay_from_checkpoint_may_repeat_uncheckpointed_tail':True,'new_fresh_budget_still_required':True}
         create(out/'RESUME.json',value);create(out/'COMPLETED.json',{'utc':utc(),'resume_sha256':sha(out/'RESUME.json'),'checkpoint_step':step,'not_GPU_authorization_without_fresh_budget':True});print(out/'RESUME.json')

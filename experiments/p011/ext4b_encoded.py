@@ -27,7 +27,7 @@ class EncodedRows(list):
     """Metadata reads never materialize input/label arrays or full-state copies."""
     def __init__(self,file,metadata,count):
         self.file=Path(file);self.metadata=metadata[:count];self.offsets=[]
-        if count not in (3024,12096) or len(self.metadata)!=count:raise ValueError('Exact amended roster required')
+        if count not in (3024,9072) or len(self.metadata)!=count:raise ValueError('Exact amended roster required')
         super().__init__([None]*count)
         with self.file.open('rb') as stream:
             for _ in range(count):

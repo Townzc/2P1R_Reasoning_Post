@@ -1,16 +1,17 @@
 """Fail-closed new extension money/attempt contract, independent of old P011 gates."""
 from decimal import Decimal, ROUND_FLOOR
 from pathlib import Path
-from experiments.p011.ext4b_contract import OWNER_SHA,LARGE,SMALL
+from experiments.p011.ext4b_contract import OWNER_SHA
+from experiments.p011.ext3b_contract import LARGE,SMALL
 from experiments.p011.owner_0205_common import read,sha
 
-SPEC='reports/p011_20261020/ext4b_full_runtime_preflight_v1/SPEC.json'
-SCOPE='p011-ext-4B-complete-training-resume-evaluation-path-CR'
-A2_SCOPE='p011-ext-4B-actual-input-and-numeric-A2-lite'
-LOCAL=Path('.local/p011_20261020/r1/ext4b_runs_r1')
-INPUTS=Path('.local/p011_20261020/r1/ext4b_inputs_r1')
-REMOTE='/evidence/p011-ext-4B-20261022'
-STORE='p011-ext-4B-20261022-v1'
+SPEC='reports/p011_20261020/ext3b_math_runtime_preflight_v1/SPEC.json'
+SCOPE='p011-ext-3B-complete-training-resume-MATH-path-CR'
+A2_SCOPE='p011-ext-3B-actual-input-and-numeric-A2-lite'
+LOCAL=Path('.local/p011_20261020/r1/ext3b_runs_r1')
+INPUTS=Path('.local/p011_20261020/r1/ext3b_inputs_r1')
+REMOTE='/evidence/p011-ext-3B-20261022'
+STORE='p011-ext-3B-20261022-v1'
 JOBS=(LARGE,SMALL)
 PAIR_CAP=Decimal('90')
 CELL_CAP=Decimal('45')
@@ -48,8 +49,12 @@ def prepared_spec(spec_path):
     spec=read(spec_path)
     if (spec['owner_report_sha256']!=OWNER_SHA or spec['jobs']!=list(JOBS)
             or spec['pair_cap_usd']!='90' or spec['per_cell_cap_usd']!='45'
+            or spec['large_questions']!=9072 or spec['small_questions']!=3024
+            or spec['evaluation_scope']!='MATH500_ONLY_COMPLETE_ENDPOINTS'
             or spec['checkpoint_interval_updates']!=500 or spec['maximum_infrastructure_resumes_per_cell']!=1):
         raise ValueError('Exact amended candidate bounds required')
+    amendment=spec['direct_owner_amendment']
+    if sha(amendment['path'])!=amendment['sha256']:raise ValueError('Exact direct options2+3 amendment changed')
     for p,h in spec['source_files'].items():
         if sha(p)!=h:raise ValueError('Extension candidate source changed '+p)
     return spec
