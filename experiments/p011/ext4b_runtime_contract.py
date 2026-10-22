@@ -5,7 +5,7 @@ from experiments.p011.ext4b_contract import OWNER_SHA
 from experiments.p011.ext3b_contract import LARGE,SMALL
 from experiments.p011.owner_0205_common import read,sha
 
-SPEC='reports/p011_20261020/ext3b_math_runtime_preflight_v1/SPEC.json'
+SPEC='reports/p011_20261020/ext3b_math_runtime_preflight_v2/SPEC.json'
 SCOPE='p011-ext-3B-complete-training-resume-MATH-path-CR'
 A2_SCOPE='p011-ext-3B-actual-input-and-numeric-A2-lite'
 LOCAL=Path('.local/p011_20261020/r1/ext3b_runs_r1')

@@ -1,0 +1,397 @@
+diff --git a/experiments/p011/ext4b_encoded.py b/experiments/p011/ext4b_encoded.py
+index 363349a4..c9d9264f 100644
+--- a/experiments/p011/ext4b_encoded.py
++++ b/experiments/p011/ext4b_encoded.py
+@@ -27,7 +27,7 @@ class EncodedRows(list):
+     """Metadata reads never materialize input/label arrays or full-state copies."""
+     def __init__(self,file,metadata,count):
+         self.file=Path(file);self.metadata=metadata[:count];self.offsets=[]
+-        if count not in (3024,12096) or len(self.metadata)!=count:raise ValueError('Exact amended roster required')
++        if count not in (3024,9072) or len(self.metadata)!=count:raise ValueError('Exact amended roster required')
+         super().__init__([None]*count)
+         with self.file.open('rb') as stream:
+             for _ in range(count):
+diff --git a/experiments/p011/ext4b_execution.py b/experiments/p011/ext4b_execution.py
+index 2312f64b..1ac8806e 100644
+--- a/experiments/p011/ext4b_execution.py
++++ b/experiments/p011/ext4b_execution.py
+@@ -17,6 +17,7 @@ from experiments.p011.long_owner_execution import (engine_settings,validate_engi
+ from experiments.p011.long_evaluation import sampling
+ from experiments.p011.long_protocol import ENDPOINT_BATCH,ENDPOINT_BATCHES,endpoint_batches
+ from experiments.p011.ext4b_runtime_contract import STORE
++from experiments.p011.ext3b_math_scope import math_requests,BATCHES
+ from experiments.p011.ext4b_encoded import EncodedRows
+ from experiments.p011.ext4b_training import ResumableJournal,train_with_checkpoints
+ 
+@@ -78,7 +79,7 @@ def evaluate_with_prefix(llm, constructor, rows, model_eos, out, key, store, com
+                 with dest.open('xb') as f:f.write(src.read_bytes())
+             prefix.append(name);times.append(cycle['seconds']);cycles.append(cycle)
+             continue
+-        if parent is not None and any((parent/'completed'/f'eval_{j:04d}.json').exists() for j in range(index+1,ENDPOINT_BATCHES)):
++        if parent is not None and any((parent/'completed'/f'eval_{j:04d}.json').exists() for j in range(index+1,BATCHES)):
+             raise ValueError('Non-prefix prior endpoint completion is invalid')
+         started=time.monotonic();dump(out/'forecasts'/(name+'.json'),forecast(endpoint_batches(len(rows)-first),list(times)))
+         if not store.put(key+'/unit/'+name,intent,skip_if_exists=True):raise RuntimeError('New endpoint unit already attempted')
+@@ -225,6 +226,11 @@ def worker_body(job, inputs, out, identity, key, claim, stop, timing, store, vol
+     dump(out/'LINUX_CONSTRUCTORS.json',dict(count=len(rows),environment=environment,
+         before_vllm_model_allocation=True,all_native_prompt_texts_verified=True))
+     volume.commit()
++    rows=math_requests(rows)
++    dump(out/'MATH_SCOPE.json',{'original_bound_inputs':3300,'generated_scope':2500,
++        'order':'greedy500 then sample seeds0,1,2,3 each500','batch_size':ENDPOINT_BATCH,
++        'AIME24_AIME25_AMC23':'NOT_RUN_BY_OWNER_OPTION2','partial_complete_endpoints_authorized':True})
++    volume.commit()
+     projection=forecast(timing,0,endpoint_batches(len(rows)),training_times,[],time.time())
+     dump(out/'PRE_ENGINE_FORECAST.json',projection)
+     llm=LLM(model=model_path,tokenizer=model_path,**engine_settings(job['context']))
+@@ -240,7 +246,8 @@ def worker_body(job, inputs, out, identity, key, claim, stop, timing, store, vol
+     endpoint_times=evaluate_with_prefix(llm,SamplingParams,rows,job['eos_token_ids'],out,key,store,
+         volume.commit,check,lambda n,t:forecast(timing,0,n,training_times,t,time.time()),resume)
+     check()
+-    value=dict(training=result,raw_endpoint_count=len(rows),unique_questions=600,
++    value=dict(training=result,raw_endpoint_count=len(rows),unique_questions=500,
++        evaluation_scope='MATH500_ONLY_COMPLETE_ENDPOINTS',descriptive_benchmarks='NOT_RUN_BY_OWNER_OPTION2',
+         endpoint_batch_seconds=endpoint_times,training_update_seconds=training_times,
+         score='NOT_SCORED; full raw oracle and original frozen local scorer required',
+         model_export_relative_path='model_for_vllm' if result is not None else None,
+diff --git a/experiments/p011/ext4b_path.py b/experiments/p011/ext4b_path.py
+index 09c6fb7a..abbcabbe 100644
+--- a/experiments/p011/ext4b_path.py
++++ b/experiments/p011/ext4b_path.py
+@@ -15,7 +15,7 @@ from experiments.sft_allocation_midpoint.common import verify,manifest
+ from experiments.p011 import ext4b_execution
+ from experiments.p011.long_owner_path import terminate_owned_descendants
+ 
+-ACTUAL=Path('.local/p011_20261020/r1/ext4b_runtime_actual_r1/ACTUAL_JOB_MANIFEST.json')
++ACTUAL=Path('.local/p011_20261020/r1/ext3b_runtime_actual_r1/ACTUAL_JOB_MANIFEST.json')
+ 
+ 
+ def published(root,spec):
+@@ -101,10 +101,11 @@ def submit(root,job_id,attempt,source_review,actual_review,budget_file,store,wor
+         if upload['actual_job_manifest_sha256']!=sha(root/ACTUAL) or upload['old_weights_uploaded']!=0:raise ValueError('Exact new-input transfer/readback receipt required')
+         out=root/LOCAL/'dispatch'/name
+         if out.exists() or store.get(name+'/dispatch') is not None:raise ValueError('Permanent attempt fence already exists')
++        if attempt==2 and (root/LOCAL/'collect'/resume['parent_intent']['attempt_name']).exists():raise ValueError('Final scoped preservation/closeout started; no subsequent resume')
+         if attempt==2 and not store.put(job_id+'/single_resume_fence',{'attempt':2,'resume_sha256':sha(resume_file)},skip_if_exists=True):raise ValueError('Only one infrastructure resume is authorized')
+         out.mkdir(parents=True,exist_ok=False)
+         identity=resume['identity'] if resume else {'logical_id':job_id,'arm':'S-F15','job_sha256':digest(job),'input_plan_sha256':job['input_plan_sha256'],'execution':execution,'source_files':spec['source_files']}
+-        intent={'job':job_id,'attempt':attempt,'attempt_name':name,'job_spec':job,'identity':identity,'execution':execution,'app_id':app_id,'created_epoch':time.time(),'spec_sha256':sha(root/SPEC),'source_files':spec['source_files'],'source_review':read(source_review),'source_report_text':Path(read(source_review)['local_report_path']).read_text(),'actual_review':a2,'actual_report_text':Path(a2['local_report_path']).read_text(),'actual_job_manifest_sha256':sha(root/ACTUAL),'input_manifest_sha256':actual['input_manifest_sha256'],'budget':budget,'budget_check':checked,'owner_amendment_sha256':spec['owner_report_sha256'],'resume':resume,'provider_slots_at_entry':slots,'maximum_infrastructure_resumes':1}
++        intent={'job':job_id,'attempt':attempt,'attempt_name':name,'job_spec':job,'identity':identity,'execution':execution,'app_id':app_id,'created_epoch':time.time(),'spec_sha256':sha(root/SPEC),'source_files':spec['source_files'],'source_review':read(source_review),'source_report_text':Path(read(source_review)['local_report_path']).read_text(),'actual_review':a2,'actual_report_text':Path(a2['local_report_path']).read_text(),'actual_job_manifest_sha256':sha(root/ACTUAL),'input_manifest_sha256':actual['input_manifest_sha256'],'budget':budget,'budget_check':checked,'owner_amendment_sha256':spec['direct_owner_amendment']['sha256'],'resume':resume,'provider_slots_at_entry':slots,'maximum_infrastructure_resumes':1}
+         create(out/'INTENT.json',intent)
+         if not store.put(name+'/dispatch',intent,skip_if_exists=True):raise ValueError('Remote attempt dispatch already exists')
+         call=worker.with_options(timeout=checked['platform_seconds']).spawn(intent)
+diff --git a/experiments/p011/ext4b_runtime_contract.py b/experiments/p011/ext4b_runtime_contract.py
+index e17c2406..12050412 100644
+--- a/experiments/p011/ext4b_runtime_contract.py
++++ b/experiments/p011/ext4b_runtime_contract.py
+@@ -1,16 +1,17 @@
+ """Fail-closed new extension money/attempt contract, independent of old P011 gates."""
+ from decimal import Decimal, ROUND_FLOOR
+ from pathlib import Path
+-from experiments.p011.ext4b_contract import OWNER_SHA,LARGE,SMALL
++from experiments.p011.ext4b_contract import OWNER_SHA
++from experiments.p011.ext3b_contract import LARGE,SMALL
+ from experiments.p011.owner_0205_common import read,sha
+ 
+-SPEC='reports/p011_20261020/ext4b_full_runtime_preflight_v1/SPEC.json'
+-SCOPE='p011-ext-4B-complete-training-resume-evaluation-path-CR'
+-A2_SCOPE='p011-ext-4B-actual-input-and-numeric-A2-lite'
+-LOCAL=Path('.local/p011_20261020/r1/ext4b_runs_r1')
+-INPUTS=Path('.local/p011_20261020/r1/ext4b_inputs_r1')
+-REMOTE='/evidence/p011-ext-4B-20261022'
+-STORE='p011-ext-4B-20261022-v1'
++SPEC='reports/p011_20261020/ext3b_math_runtime_preflight_v1/SPEC.json'
++SCOPE='p011-ext-3B-complete-training-resume-MATH-path-CR'
++A2_SCOPE='p011-ext-3B-actual-input-and-numeric-A2-lite'
++LOCAL=Path('.local/p011_20261020/r1/ext3b_runs_r1')
++INPUTS=Path('.local/p011_20261020/r1/ext3b_inputs_r1')
++REMOTE='/evidence/p011-ext-3B-20261022'
++STORE='p011-ext-3B-20261022-v1'
+ JOBS=(LARGE,SMALL)
+ PAIR_CAP=Decimal('90')
+ CELL_CAP=Decimal('45')
+@@ -48,8 +49,12 @@ def prepared_spec(spec_path):
+     spec=read(spec_path)
+     if (spec['owner_report_sha256']!=OWNER_SHA or spec['jobs']!=list(JOBS)
+             or spec['pair_cap_usd']!='90' or spec['per_cell_cap_usd']!='45'
++            or spec['large_questions']!=9072 or spec['small_questions']!=3024
++            or spec['evaluation_scope']!='MATH500_ONLY_COMPLETE_ENDPOINTS'
+             or spec['checkpoint_interval_updates']!=500 or spec['maximum_infrastructure_resumes_per_cell']!=1):
+         raise ValueError('Exact amended candidate bounds required')
++    amendment=spec['direct_owner_amendment']
++    if sha(amendment['path'])!=amendment['sha256']:raise ValueError('Exact direct options2+3 amendment changed')
+     for p,h in spec['source_files'].items():
+         if sha(p)!=h:raise ValueError('Extension candidate source changed '+p)
+     return spec
+diff --git a/scripts/analyze_p011_ext4b.py b/scripts/analyze_p011_ext4b.py
+index 03cc3ee7..d5cb5cd2 100644
+--- a/scripts/analyze_p011_ext4b.py
++++ b/scripts/analyze_p011_ext4b.py
+@@ -18,17 +18,17 @@ def main():
+         if intent['job']!=job or intent['job_spec']!=actual['jobs'][job]:raise ValueError('Only exact LARGE-minus-SMALL matched-dose contrast')
+         deadline=min(deadline,time.time()+remaining_window(dispatch,60))
+         sf=LOCAL/'score'/name/'COMPLETED.json';of=LOCAL/'audit'/name/'COMPLETE_PROOF.json';s=read(sf)['saved_score_proof'];o=read(of)
+-        if not s['passed'] or not o['passed'] or s['outputs']!=3300 or o['job_sha256']!=digest(intent['job_spec']):raise ValueError('Both complete original state/native/score proofs required')
++        if not s['passed'] or not o['passed'] or s['outputs'] not in (500,1000,1500,2000,2500) or o['job_sha256']!=digest(intent['job_spec']):raise ValueError('Both original training and complete scoped-endpoint score proofs required')
+         saved.append(s);bindings[job]={'attempt':name,'score_sha256':sha(sf),'oracle_sha256':sha(of)}
+     out=LOCAL/'analysis';out.mkdir(parents=True,exist_ok=False);create(out/'ATTEMPT.json',{'utc':utc(),'bindings':bindings,'retries':0,'absolute_deadline_epoch':deadline})
+     try:
+-        sample=long_evaluation.paired_question_interval(*[s['endpoints']['math500_sample']['question_correct'] for s in saved])
+-        greedy=greedy_interval(*[s['endpoints']['math500_greedy']['question_correct'] for s in saved])
+-        descriptive={label:{'small':saved[0]['endpoints'][label],'large':saved[1]['endpoints'][label],'descriptive_only':True} for label in saved[0]['endpoints'] if label not in ('math500_sample','math500_greedy')}
++        sample=long_evaluation.paired_question_interval(*[s['endpoints']['math500_sample']['question_correct'] for s in saved]) if all('math500_sample' in s['endpoints'] for s in saved) else {'status':'unavailable','reason':'Four complete sample endpoints required in both cells; missing not zero'}
++        greedy=greedy_interval(*[s['endpoints']['math500_greedy']['question_correct'] for s in saved]) if all('math500_greedy' in s['endpoints'] for s in saved) else {'status':'unavailable','reason':'Complete greedy endpoint required in both cells; missing not zero'}
++        descriptive={label:{'small':saved[0]['endpoints'][label],'large':saved[1]['endpoints'].get(label,{'status':'unavailable'}),'descriptive_only':True} for label in saved[0]['endpoints'] if label not in ('math500_sample','math500_greedy')}
+         if time.time()>=deadline:raise TimeoutError('Original extension result window elapsed')
+         create(out/'COMPLETED.json',{'utc':utc(),'contrast':'LARGE_minus_SMALL','sample':sample,'greedy':greedy,'descriptive_endpoints':descriptive,'bindings':bindings,
+             'bootstrap_draws':10000,'bootstrap_seed':20261021,'single_training_seed':17,'question_not_training_seed_population':True,
+-            'greedy_repeated_saved_bit_only_for_original_four_bit_interface':True,'A7_different_pool_descriptive_only_no_recomputed_contrast':True,'actual_A3_accepted':False,'interpretation_written':False})
++            'greedy_repeated_saved_bit_only_for_original_four_bit_interface':True,'A7_different_pool_descriptive_only_no_recomputed_contrast':True,'AIME_AMC':'NOT_RUN_BY_OWNER_OPTION2_SCOPE','endpoint_scope_selected_by_completion_not_outcome':True,'actual_A3_accepted':False,'interpretation_written':False})
+     except BaseException as exc:create(out/'FAILED.json',{'utc':utc(),'type':type(exc).__name__,'message':str(exc),'automatic_retry':False});raise
+ 
+ 
+diff --git a/scripts/p011_ext4b_io.py b/scripts/p011_ext4b_io.py
+index 7e107f96..1b23e704 100644
+--- a/scripts/p011_ext4b_io.py
++++ b/scripts/p011_ext4b_io.py
+@@ -1,4 +1,4 @@
+-"""Only new4B input transfer and complete-result local closes, each fenced once."""
++"""New3B transfer and exact complete-MATH scoped closeout, each fenced once."""
+ import argparse
+ from pathlib import Path
+ import hashlib
+@@ -9,15 +9,21 @@ from experiments.p011 import ext4b_path as path
+ from experiments.p011.ext4b_runtime_contract import review,INPUTS,LOCAL,SPEC,REMOTE,STORE
+ from experiments.p011.ext4b_encoded import EncodedRows
+ from experiments.p011.owner_0205_common import create,read,sha,digest,utc
+-from experiments.p011 import long_owner_evidence as evidence,long_transport,long_scoring,long_score_process
++from experiments.p011 import long_owner_evidence as evidence,long_transport
++from experiments.p011 import ext3b_math_scope as scope,ext3b_math_scoring as long_scoring,ext3b_math_score_process as long_score_process
++from experiments.p011.long_d2_scope import training_view
+ from experiments.p011.c1_outer import closed_provider
+ from experiments.sft_allocation_midpoint.common import verify
+ 
+ 
+ def remaining_window(dispatch,required=0):
+-    intent=read(dispatch/'INTENT.json');receipt=read(dispatch/'RESULT.json')
+-    policy=path.timing(intent['job_spec'],intent,receipt['worker_start_epoch'])
+-    left=policy['result_deadline_epoch']-time.time()
++    intent=read(dispatch/'INTENT.json');saved=LOCAL/'collect'/intent['attempt_name']
++    if (dispatch/'RESULT.json').exists():start=read(dispatch/'RESULT.json')['worker_start_epoch']
++    elif (saved/'DERIVED_LEDGER_VIEW.json').exists():
++        claim=read(saved/'DERIVED_LEDGER_VIEW.json')[intent['attempt_name']+'/claim']
++        start=claim['worker_start_epoch'] if claim else intent['created_epoch']
++    else:start=intent['created_epoch']  # Conservative before first original claim retrieval.
++    policy=path.timing(intent['job_spec'],intent,start);left=policy['result_deadline_epoch']-time.time()
+     if left<=required:raise TimeoutError('Original extension closeout deadline has elapsed')
+     return left
+ 
+@@ -41,55 +47,101 @@ def transfer(spec,out):
+     create(out/'COMPLETED.json',{'utc':utc(),'actual_job_manifest_sha256':sha(path.ACTUAL),'transferred_files':inventory,'old_weights_uploaded':0,'gold_evaluation_payload_uploaded':False})
+ 
+ 
++def failed_payload_once(volume,remote,out,final_step):
++    """Single stream of original failed bytes; keep intermediate states remotely."""
++    base=remote.removeprefix('/evidence').strip('/')
++    def inventory():
++        return sorted([{'path':x.path,'size':x.size,'type':int(x.type),'mtime':x.mtime} for x in volume.iterdir('/'+base,recursive=True)],key=lambda x:x['path'])
++    before=inventory();create(out/'REMOTE_INVENTORY_BEFORE.json',before);members={};excluded=[]
++    if sum(x['size'] for x in before if x['type']==1)>128*1024**3:raise ValueError('Unexpected original failed inventory size')
++    payload=out/'payload';payload.mkdir(exist_ok=False)
++    for item in before:
++        if item['type']!=1:continue
++        full=item['path'].lstrip('/')
++        if not full.startswith(base+'/'):raise ValueError('Foreign inventory path')
++        rel=Path(full[len(base)+1:])
++        if rel.is_absolute() or '..' in rel.parts:raise ValueError('Unsafe preserved payload path')
++        if rel.name=='evidence.tar' or (rel.parts[0].startswith('checkpoint_') and rel.parts[0]!=f'checkpoint_{final_step:04d}' and rel.name=='state.pt'):
++            excluded.append(item);continue
++        target=payload/rel;target.parent.mkdir(parents=True,exist_ok=True);h=hashlib.sha256();size=0
++        with target.open('xb') as stream:
++            for block in volume.read_file('/'+full):stream.write(block);h.update(block);size+=len(block)
++        if size!=item['size']:raise ValueError('Preserved failed file size changed')
++        members[str(rel)]={'bytes':size,'sha256':h.hexdigest()}
++    after=inventory();create(out/'REMOTE_INVENTORY_AFTER.json',after)
++    if before!=after:raise ValueError('Original failed inventory changed during preservation')
++    create(out/'PRESERVED_FILES.json',{'files':members,'not_downloaded_still_remote':excluded,'original_failed_bytes_not_modified':True})
++    return payload
++
++
+ def collect(out,dispatch):
+     import modal
+     remaining_window(dispatch)
+-    intent=read(dispatch/'INTENT.json');receipt=read(dispatch/'RESULT.json');sub=read(dispatch/'SUBMITTED.json');job=intent['job_spec'];key=intent['attempt_name']
+-    if receipt.get('status')!='completed' or receipt['job_sha256']!=digest(job) or receipt['app_id']!=sub['app_id']:raise ValueError('Only a complete original call may collect')
++    intent=read(dispatch/'INTENT.json');sub=read(dispatch/'SUBMITTED.json');job=intent['job_spec'];key=intent['attempt_name']
++    receipt=read(dispatch/'RESULT.json') if (dispatch/'RESULT.json').exists() else None
++    cli_exit=read(LOCAL/'cli'/key/'CLI_EXIT.json')
++    if receipt:
++        if receipt.get('status')!='completed' or receipt['job_sha256']!=digest(job) or receipt['app_id']!=sub['app_id'] or cli_exit['exit_code']!=0:raise ValueError('Original successful call/CLI mismatch')
++    elif not (dispatch/'RETURN_ERROR.json').exists() or cli_exit['exit_code']==0:
++        raise ValueError('Original terminal failed call and consumed CLI evidence required')
+     cli='.local/midpoint_20261011/venv/bin/modal'
+     info=json.loads(subprocess.check_output([cli,'app','info',sub['app_id'],'--json'],text=True,timeout=60));containers=json.loads(subprocess.check_output([cli,'container','list','--json'],text=True,timeout=60))
+     stopped=closed_provider(sub['app_id'],info,containers,time.time());create(out/'PROVIDER_RAW.json',{'app':info,'containers':containers});create(out/'PROVIDER_STOPPED0.json',stopped)
+-    store=modal.Dict.from_name(STORE,create_if_missing=False);raw={};derived={};mapping={}
+-    prefix=receipt['result']['restored_training_prefix_step'];evalprefix=set(receipt['result']['reused_endpoint_prefix']);parent=(intent.get('resume') or {}).get('parent_intent',{}).get('attempt_name')
+-    for wanted in evidence.expected_record_keys(key,'student',job['U']):
++    store=modal.Dict.from_name(STORE,create_if_missing=False);raw={};derived={};mapping={};resume=intent.get('resume')
++    prefix=(job['U'] if resume.get('training_terminal_complete') else resume['checkpoint_record']['step']) if resume else 0
++    evalprefix=set(resume.get('completed_endpoint_prefix',[])) if resume else set();parent=resume['parent_intent']['attempt_name'] if resume else None
++    for wanted in scope.expected_record_keys(key,job['U']):
+         suffix=wanted[len(key)+1:];parts=suffix.split('/');origin=wanted
+         if len(parts)==2 and parent:
+             unit=parts[1]
+             if ((unit.startswith('update_') and int(unit.split('_')[1])<=prefix) or unit in evalprefix
+-                    or (receipt['result'].get('reused_terminal_training') and unit in ('terminal_state','terminal_model_export'))):origin=parent+'/'+suffix
+-        if origin not in raw:
+-            raw[origin]=store.get(origin)
+-            if raw[origin] is None:raise ValueError('Missing actual named record '+origin)
++                    or (resume.get('training_terminal_complete') and unit in ('terminal_state','terminal_model_export'))):origin=parent+'/'+suffix
++        if origin not in raw:raw[origin]=store.get(origin)
+         derived[wanted]=raw[origin];mapping[wanted]=origin
+     for source in [key+'/dispatch']+([parent+'/dispatch',parent+'/terminal'] if parent else []):raw[source]=store.get(source)
+-    if raw[key+'/dispatch']!=intent or derived[key+'/terminal']!=receipt:raise ValueError('Original local/cloud dispatch and terminal differ')
++    if raw[key+'/dispatch']!=intent or (receipt is not None and derived[key+'/terminal']!=receipt):raise ValueError('Original local/cloud dispatch or terminal differs')
++    claim=derived[key+'/claim']
++    if claim and (claim['app_id']!=sub['app_id'] or claim['dispatch_sha256']!=digest(intent)):raise ValueError('Original claim differs')
+     create(out/'ACTUAL_NAMED_RECORDS.json',raw);create(out/'DERIVED_LEDGER_VIEW.json',derived);create(out/'LEDGER_SOURCE_MAP.json',mapping)
+-    create(out/'ORIGINAL_RESULT.json',receipt);create(out/'ORIGINAL_INTENT.json',intent)
+-    volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False);file=out/'evidence.tar'
+-    with file.open('xb') as stream:
+-        for b in volume.read_file((REMOTE+'/runs/'+key+'/evidence.tar').removeprefix('/evidence')):stream.write(b)
+-    if file.stat().st_size!=receipt['artifact']['tar_bytes'] or sha(file)!=receipt['artifact']['tar_sha256']:raise ValueError('Terminal artifact partial or changed')
+-    create(out/'COMPLETED.json',{'utc':utc(),'receipt_sha256':sha(out/'ORIGINAL_RESULT.json'),'new_archive_sha256':sha(file),'actual_named_records':len(raw),'derived_ledger_view_not_fabricated_remote_keys':True})
++    create(out/'ORIGINAL_INTENT.json',intent);create(out/'ORIGINAL_CLI_EXIT.json',cli_exit)
++    volume=modal.Volume.from_name('sft-allocation-midpoint-v1',create_if_missing=False)
++    if receipt:
++        create(out/'ORIGINAL_RESULT.json',receipt);file=out/'evidence.tar';h=hashlib.sha256();size=0
++        with file.open('xb') as stream:
++            for block in volume.read_file((REMOTE+'/runs/'+key+'/evidence.tar').removeprefix('/evidence')):stream.write(block);h.update(block);size+=len(block)
++        if size!=receipt['artifact']['tar_bytes'] or h.hexdigest()!=receipt['artifact']['tar_sha256']:raise ValueError('Terminal archive partial or changed')
++        result={'format':'original_terminal_archive','new_archive_sha256':h.hexdigest(),'receipt_sha256':sha(out/'ORIGINAL_RESULT.json')}
++    else:
++        create(out/'ORIGINAL_RETURN_ERROR.json',read(dispatch/'RETURN_ERROR.json'))
++        if claim:failed_payload_once(volume,REMOTE+'/runs/'+key,out,job['U'])
++        result={'format':'preserved_failed_payload' if claim else 'preclaim_failure_no_payload','failure_remains_failed':True,'complete_MATH_scope_requires_full_training_oracle':True}
++    create(out/'COMPLETED.json',{'utc':utc(),**result,'original_worker_completed':receipt is not None,'actual_named_records':len(raw),'collection_completion_is_not_scientific_success':True})
+ 
+ 
+ def audit(out,dispatch):
+     from transformers import AutoTokenizer
+     remaining_window(dispatch)
+     intent=read(dispatch/'INTENT.json');job=intent['job_spec'];key=intent['attempt_name'];saved=LOCAL/'collect'/key
+-    read(saved/'COMPLETED.json');receipt=read(saved/'ORIGINAL_RESULT.json');ledger=read(saved/'DERIVED_LEDGER_VIEW.json');mapping=read(saved/'LEDGER_SOURCE_MAP.json');raw=read(saved/'ACTUAL_NAMED_RECORDS.json')
++    collected=read(saved/'COMPLETED.json');ledger=read(saved/'DERIVED_LEDGER_VIEW.json');mapping=read(saved/'LEDGER_SOURCE_MAP.json');raw=read(saved/'ACTUAL_NAMED_RECORDS.json')
+     if any(ledger[k]!=raw[origin] for k,origin in mapping.items()) or raw[key+'/dispatch']!=intent:raise ValueError('Actual source mapping changed')
+-    long_transport.extract(saved/'evidence.tar',out/'payload',receipt['artifact'],64*1024**3)
+-    payload=out/'payload';identity=read(payload/'IDENTITY.json');timing=read(payload/'TIMING_POLICY.json')
+-    if identity!=intent['identity'] or read(payload/'CLAIM.json')!=receipt['claim'] or read(payload/'ADMISSION.json')!=intent or timing!=path.timing(job,intent,receipt['worker_start_epoch']):raise ValueError('Scientific identity/admission/timing changed')
+-    attempts,done=evidence.verify_journals(payload,key,'student',job['U'],ledger)
++    claim=ledger[key+'/claim']
++    if claim is None:raise ValueError('No claimed/trained state; no scientific oracle or score authorized')
++    receipt=read(saved/'ORIGINAL_RESULT.json') if collected['original_worker_completed'] else None
++    if receipt:
++        long_transport.extract(saved/'evidence.tar',out/'payload',receipt['artifact'],64*1024**3);payload=out/'payload'
++    else:payload=saved/'payload'
++    identity=read(payload/'IDENTITY.json');timing=read(payload/'TIMING_POLICY.json')
++    if identity!=intent['identity'] or read(payload/'CLAIM.json')!=claim or read(payload/'ADMISSION.json')!=intent or timing!=path.timing(job,intent,claim['worker_start_epoch']):raise ValueError('Scientific identity/admission/timing changed')
++    attempts,done=scope.journals(payload,key,job['U'],ledger)
+     verify(INPUTS,job['local_input_files']);model=Path(job['model']['local_path']);verify(model,job['model']['local_audit_asset_files']);config=read(model/'config.json')
+     rows=EncodedRows(INPUTS/'ENCODED.jsonl',read(INPUTS/'ROW_METADATA.json'),job['questions']);plan=read(INPUTS/(job['logical_id']+'_PLAN.json'));rates=read(INPUTS/'RATES_S-F15.json')
+-    trained=evidence.verify_training(payload,rows,plan,rates,'S-F15',config,identity,attempts,done,timing)
++    view=payload if (payload/'RESULT.json').exists() else training_view(payload,out/'DERIVED_TRAINING_ONLY_VIEW')
++    trained=evidence.verify_training(view,rows,plan,rates,'S-F15',config,identity,attempts,done,timing)
+     tok=AutoTokenizer.from_pretrained(model,local_files_only=True,trust_remote_code=False,use_fast=True)
+-    endpoint=evidence.verify_endpoint(payload,read(INPUTS/'ENDPOINT_LOCAL.json'),job['context'],job['eos_token_ids'],tok,config,attempts,done,timing,trained['training_seconds'])
+-    if read(payload/'RESULT.json')!=receipt['result']:raise ValueError('Returned full result differs')
++    endpoint=scope.endpoint(payload,read(INPUTS/'ENDPOINT_LOCAL.json'),job['context'],job['eos_token_ids'],tok,config,attempts,done,timing,trained['training_seconds'])
++    if receipt and (read(payload/'RESULT.json')!=receipt['result'] or endpoint['outputs_decoded']!=2500):raise ValueError('Returned full MATH result differs')
+     create(out/'SCORING_ROWS.json',endpoint.pop('scoring_rows'));create(out/'DECODED.json',endpoint.pop('decoded'))
+-    create(out/'COMPLETE_PROOF.json',{'utc':utc(),'passed':True,'job_sha256':digest(job),'training':trained,'endpoint':endpoint,'scoring_rows_sha256':sha(out/'SCORING_ROWS.json'),'private_binary_independently_reviewed':False,'original_scientific_functions_unchanged':True,'derived_resume_ledger_source_map':str(saved/'LEDGER_SOURCE_MAP.json'),'actual_A3_accepted':False})
++    create(out/'COMPLETE_PROOF.json',{'utc':utc(),'passed':True,'job_sha256':digest(job),'training':trained,'endpoint':endpoint,'scoring_rows_sha256':sha(out/'SCORING_ROWS.json'),'private_binary_independently_reviewed':False,'original_training_native_scalar_functions_unchanged':True,'derived_resume_ledger_source_map':str(saved/'LEDGER_SOURCE_MAP.json'),'original_worker_completed':collected['original_worker_completed'],'scoped_endpoint_completion_not_worker_success':True,'actual_A3_accepted':False})
+ 
+ 
+ def score(out,dispatch):
+diff --git a/scripts/prepare_p011_ext4b_actual_runtime.py b/scripts/prepare_p011_ext4b_actual_runtime.py
+index 2499a75b..eb2a3b29 100644
+--- a/scripts/prepare_p011_ext4b_actual_runtime.py
++++ b/scripts/prepare_p011_ext4b_actual_runtime.py
+@@ -2,7 +2,7 @@
+ import argparse
+ from pathlib import Path
+ from copy import deepcopy
+-from experiments.p011.ext4b_contract import admit,LARGE,SMALL
++from experiments.p011.ext3b_contract import admit_data,LARGE,SMALL,DATA_SPEC
+ from experiments.p011.ext4b_runtime_contract import prepared_spec,SPEC,INPUTS
+ from experiments.p011.ext4b_path import ACTUAL,published
+ from experiments.p011.owner_0205_common import read,sha,digest,create,utc
+@@ -10,10 +10,10 @@ from experiments.p011.owner_0205_common import read,sha,digest,create,utc
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--data-review',required=True);a=p.parse_args()
+-    admit('reports/p011_20261020/ext4b_relaxed_input_preflight_v2/SPEC.json',a.data_review)
++    admit_data(DATA_SPEC,a.data_review)
+     spec=prepared_spec(SPEC);published(Path.cwd(),spec)
+     complete=read(INPUTS/'COMPLETED.json');inventory=read(INPUTS/'MANIFEST.json')['files']
+-    if (complete['unique_selected_questions']!=12096 or complete['strict_subset_questions']!=3024
++    if (complete['unique_selected_questions']!=9072 or complete['strict_subset_questions']!=3024
+             or complete['GPU_calls']!=0 or complete['actual_A2_accepted'] is not False):
+         raise ValueError('Exact revised data constructor completion required')
+     out=ACTUAL.parent;out.mkdir(parents=True,exist_ok=False);create(out/'ATTEMPT.json',{'utc':utc(),'no_encoding_model':True})
+@@ -23,7 +23,7 @@ def main():
+         base=deepcopy(basis['jobs']['long_A7_S-F15_s17_owner_r1']);rows=read(INPUTS/'ROW_METADATA.json');endpoints=read(INPUTS/'ENDPOINT_GPU.json')
+         names=['ENCODED.jsonl','ROW_METADATA.json','RATES_S-F15.json','ENDPOINT_GPU.json',LARGE+'_PLAN.json',SMALL+'_PLAN.json']
+         files={n:inventory[n] for n in names};jobs={}
+-        for name,count in ((LARGE,12096),(SMALL,3024)):
++        for name,count in ((LARGE,9072),(SMALL,3024)):
+             plan=read(INPUTS/(name+'_PLAN.json'));saved=complete['cells'][name]
+             if (saved['plan_sha256']!=inventory[name+'_PLAN.json']['sha256']
+                     or plan['row_path_ids']!=[r['path_id'] for r in rows[:count]]
+@@ -31,14 +31,14 @@ def main():
+                     or plan['optimizer_updates']!=(plan['supervised_tokens']+63999)//64000
+                     or plan['optimizer_updates']!=complete['same_optimizer_updates']):raise ValueError('Actual nested roster/dose/update count differs')
+             jobs[name]={'logical_id':name,'cell':name,'kind':'student','category':'A','arm':'S-F15','seed':17,
+-                'questions':count,'B':plan['supervised_tokens'],'U':plan['optimizer_updates'],'q':plan['q'],
++                'questions':count,'evaluation_scope':'MATH500_ONLY_COMPLETE_ENDPOINTS','B':plan['supervised_tokens'],'U':plan['optimizer_updates'],'q':plan['q'],
+                 'input_plan_sha256':digest(plan),'input_plan_file_sha256':inventory[name+'_PLAN.json']['sha256'],
+                 'input_files':files,'local_input_files':{**files,'ENDPOINT_LOCAL.json':inventory['ENDPOINT_LOCAL.json']},
+                 'model':base['model'],'context':max(r['required_context'] for r in endpoints),'eos_token_ids':base['eos_token_ids'],
+                 'resources':{'gpu':'H100','cpu':4,'memory_mib':98304},
+                 'limits':{'worker_hard_ceiling_seconds':50400,'score_seconds':7200,'closeout_seconds':14405,
+                           'per_cell_cumulative_cap_usd':'45','pair_cap_usd':'90','checkpoint_interval_updates':500,'maximum_infrastructure_resumes':1}}
+-        value={'schema':'p011_ext4b_actual_jobs_v1','spec_sha256':sha(SPEC),'input_manifest_sha256':sha(INPUTS/'MANIFEST.json'),
++        value={'schema':'p011_ext3b_actual_jobs_v1','spec_sha256':sha(SPEC),'input_manifest_sha256':sha(INPUTS/'MANIFEST.json'),
+             'data_completion_sha256':sha(INPUTS/'COMPLETED.json'),'jobs':jobs,'actual_supervised_Bprime':complete['same_supervised_B_including_EOS'],
+             'same_updates':complete['same_optimizer_updates'],'data_source_review_sha256':sha(a.data_review),
+             'full_source_and_actual_reviews_still_required_before_GPU':True,
+diff --git a/scripts/prepare_p011_ext4b_infra_resume.py b/scripts/prepare_p011_ext4b_infra_resume.py
+index 0daf4850..9abeb49e 100644
+--- a/scripts/prepare_p011_ext4b_infra_resume.py
++++ b/scripts/prepare_p011_ext4b_infra_resume.py
+@@ -31,7 +31,7 @@ def main():
+     review(SPEC,a.source_review,a.actual_review);evidence=Path(a.evidence_file);text=evidence.read_text()
+     classify_evidence(a.failure_class,text,a.evidence_quote)
+     name=a.job+'_attempt1';dispatch=LOCAL/'dispatch'/name;intent=read(dispatch/'INTENT.json');error=read(dispatch/'RETURN_ERROR.json');sub=read(dispatch/'SUBMITTED.json')
+-    if (dispatch/'RESULT.json').exists() or (LOCAL/'dispatch'/(a.job+'_attempt2')).exists():raise ValueError('Successful parent or second resume forbidden')
++    if (dispatch/'RESULT.json').exists() or (LOCAL/'dispatch'/(a.job+'_attempt2')).exists() or (LOCAL/'collect'/name).exists():raise ValueError('Successful parent or second resume forbidden')
+     out=LOCAL/'resume_authorization'/a.job;out.mkdir(parents=True,exist_ok=False);create(out/'ATTEMPT.json',{'utc':utc(),'failure_class':a.failure_class,'no_model_or_binary_download':True})
+     try:
+         import modal
+@@ -66,7 +66,7 @@ def main():
+         step,n,record=max(candidates)
+         training_complete=all(n in names for n in ['TRAINING_PROCESS_RESULT.json','TRAINING_EXIT.json','MODEL_EXPORT.json','completed/terminal_model_export.json'])
+         if training_complete and step!=intent['job_spec']['U']:raise ValueError('Terminal state inconsistency')
+-        for batch in range(7):
++        for batch in range(5):
+             ack=f'completed/eval_{batch:04d}.json';cycle=f'endpoint_cycles/eval_{batch:04d}.json'
+             if ack in names and cycle not in names:raise ValueError('Completed generation without cycle evidence is retained, not repeated')
+         failure={'infrastructure_failure_confirmed':True,'classification':a.failure_class,'raw_evidence_path':str(evidence),
+@@ -74,6 +74,7 @@ def main():
+             'stopped_observed_epoch':observed,'scientific_or_hard_cap_failure':False,'original_error':error,'original_remote_terminal':terminal}
+         value={'parent_intent':intent,'parent_claim':claim,'identity':intent['identity'],'checkpoint':remote+'/'+str(Path(n).parent),
+             'checkpoint_record':record,'parent_output':remote,'original_timing':timing,'failure':failure,'training_terminal_complete':training_complete,
++            'completed_endpoint_prefix':[f'eval_{i:04d}' for i in range(5) if f'completed/eval_{i:04d}.json' in names],
+             'maximum_resumes':1,'checkpoint_binary_downloaded':False,'uncheckpointed_failed_attempt_tail_retained':True,
+             'replay_from_checkpoint_may_repeat_uncheckpointed_tail':True,'new_fresh_budget_still_required':True}
+         create(out/'RESUME.json',value);create(out/'COMPLETED.json',{'utc':utc(),'resume_sha256':sha(out/'RESUME.json'),'checkpoint_step':step,'not_GPU_authorization_without_fresh_budget':True});print(out/'RESUME.json')

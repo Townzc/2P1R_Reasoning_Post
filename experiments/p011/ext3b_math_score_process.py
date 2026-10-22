@@ -19,7 +19,7 @@ import time
 MODULE = 'experiments.p011.ext3b_math_score_process'
 SOURCES = (
     'experiments/p011/ext3b_math_score_process.py',
-    'experiments/p011/long_d2_scope_scoring.py',
+    'experiments/p011/ext3b_math_scoring.py',
 )
 
 
@@ -167,7 +167,7 @@ def owned_worker(root):
         raise ValueError('Owned process group or original input/source binding differs')
     create(root/'CHILD_STARTED.json', dict(pid=os.getpid(), pgid=os.getpgrp(),
         intent_sha256=sha(root/'INTENT.json'), automatic_retry=False))
-    from experiments.p011.long_d2_scope_scoring import score_once
+    from experiments.p011.ext3b_math_scoring import score_once
     score_once(root/'payload', read(root/'ROWS.json'), read(root/'BINDING.json'),
                         intent['local_seconds'])
     create(root/'CHILD_COMPLETED.json', dict(intent_sha256=sha(root/'INTENT.json'),
