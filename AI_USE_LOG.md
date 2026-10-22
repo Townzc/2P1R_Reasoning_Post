@@ -1,3 +1,7 @@
+## New3B source request published for review — 2026-10-22T06:09:58.905401+00:00
+
+Fixedcf630e860bce1a7bc2892d8cd75b57b805c1c4d4/ext3b_prefix_input_preflight_v1 exact12bindings/twonewfiles, sourceCRp011-ext-3B-prefix-input-reschedule-CR-r1 genuinelyPENDING. Data/model production0. Old4BactualA2superseded by direct2+3, notnewscopePASS. ExactnewB/U/E forthcoming onlyafternewdataCR; oldencodings/censusimmutable.
+
 ## Direct owner2+3: approximately3B/MATH priority, unchanged90pair — 2026-10-22T06:09:01.993861+00:00
 
 Newdirect“4B 按 ②+③ 执行” resolves a192eeff/report279522e3 options:9072onepass versusfirst3024~3passes, completeMATH endpointsusableifdescriptiveAIME/AMCcut. Old4B81codePASS-WITH-NOTES doesnotapprove newscope; oldactualA2 superseded/unexecuted. Original12096inputs32526/metadata48193/publication86734/Git23+6/push61880remote05:59:17.928074 permanentlyDONE. Newprefixhelper sourcecandidate preparesone byteprojection andoriginalnewdoseplans,0newencodings/census;5newchecksPASS0.013s, nooldtestsrepeated. FullMATHscoped runtime andnewactualA2 required beforeGPU;90pair45cell unchanged. NoactiveCPU/model/awake. PriorP011finalA5closed,forcedoriginalimportfailurestopped/noautotry. Ownerdecision timestamp ambiguity corrected beforepublication; explicit firstsubsequentclocklabel retained.

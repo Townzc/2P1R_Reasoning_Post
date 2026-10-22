@@ -1,3 +1,7 @@
+## Superseded before GPU by direct owner options2+3 — 2026-10-22T06:09:58.905401+00:00
+
+Old12096/3024inputs retained as completed immutable evidence; no old4Bmodel was launched. New9072/3024 prefixdataCR is EXT3B_PREFIX_INPUT_CONSTRUCTION_CR_REQUEST.md. This request no longer awaits admission and must not be accepted as new3B A2.
+
 # Revised4B actual-input and numeric A2-lite — first real request
 
 Prepared2026-10-22T05:44:58.451369+00:00; fixedactualtarget`f679fa5c28f50b011c1d85a3a689c64997cc53d5` andfullsource`10b74e99bb4b544fac7752d82c51b27a7125b9b8` (source81). This is the revised12096/3024pair; old16128/4032candidate was neverexecuted. DataCR eafd7e71/reportb08252f6 alreadyaccepted, constructor32526 andactualmetadata48193 successfullycompleted once. FullruntimeCR andthisactualA2 bothremain requiredbeforeGPU; metadata/publication isnotacceptance.
