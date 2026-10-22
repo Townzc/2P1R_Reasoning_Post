@@ -1,0 +1,76 @@
+{
+  "recorded_utc": "2026-10-22T14:23:58.078333+00:00",
+  "scope": "P011 separately authorized 9072x1 versus first3024xE3 extension",
+  "source_target": "63523da98cb0325c6a5956d05c251fda6cb0500b",
+  "execution_commit": "ac618aa6c22e9da36350065d89384e99a3c2002d",
+  "large_cell": {
+    "job": "long_R9072x1_S-F15_s17",
+    "attempt": 1,
+    "status": "ORIGINAL_WORKER_COMPLETED_LOCAL_CLOSEOUT_PENDING",
+    "worker_start_epoch": 1792658430.369723,
+    "worker_finished_epoch": 1792678019.1094315,
+    "worker_duration_seconds": 19588.739708423615,
+    "training": {
+      "B": 123808531,
+      "U": 1935,
+      "once_pass_tokens": 123808531,
+      "q": 1,
+      "lr_sha256": "4367619cb9639f5816ba0162527ed864a967ea8b79962fd9ae235d40e3b1a3b6",
+      "encoded_sha256": "267d504c5f6fa98f54f59504be51f0b50c04690675ef44004cf6a98e5b9ec2b8",
+      "plan_sha256": "6672b47005d40b6af94eed713c26199034da6aa7b4cce87f2c726ee6232330b7",
+      "actual_supervised_tokens": 123808531,
+      "actual_processed_tokens": 124815558,
+      "terminal_state": {
+        "schema": "p011_complete_training_state_v1",
+        "file": "state.pt",
+        "bytes": 18525192081,
+        "sha256": "414480d482cd953eee7698cdd7af011dc8516efd7e2941b6ce50d767efb75fca",
+        "identity_sha256": "874a8506cbd847b2f121b928e63a755d294d74d8737324339e7e1aee0ff24a6e",
+        "step": 1935,
+        "supervised_tokens": 123808531,
+        "processed_tokens": 124815558
+      },
+      "model_export_sha256": "45aff7bcb2c71a48765f91f6b8f747afebe26e22a8eb2370fc94c9a1f4b35d01"
+    },
+    "raw_endpoint_count": 2500,
+    "unique_questions": 500,
+    "evaluation_scope": "MATH500_ONLY_COMPLETE_ENDPOINTS",
+    "descriptive_benchmarks": "NOT_RUN_BY_OWNER_OPTION2",
+    "result_sha256": "472e60e6beb985ae94dc326f14262af976491620edb3ab709cb713c53600ef94",
+    "artifact": {
+      "manifest_sha256": "50afa7bd40c9e71ccf232fa0087e0b0d481e2dd371e31b504c50c8650d960f96",
+      "tar_sha256": "414cb543e4580175e285797c7c8fdb3eb802e253e326648ac0bf36043a0a7fb1",
+      "tar_bytes": 22364559360
+    },
+    "artifact_member_count": 5866,
+    "original_model_CLI65815": "EXIT0_CONSUMED",
+    "original_model_CLI_exit_utc": "2026-10-22T14:07:07.634437+00:00",
+    "first_final_collect_CLI94648": "ACTIVE_UNCONSUMED",
+    "first_final_collect_started_utc": "2026-10-22T14:22:16.980724+00:00",
+    "full_local_state_oracle": "NOT_RUN",
+    "first_local_score": "NOT_RUN",
+    "actual_A3": "NOT_REQUESTED",
+    "future_checkpoint_resume": "PERMANENTLY_BARRED_BY_FINAL_COLLECTION"
+  },
+  "small_cell": {
+    "job": "long_R3024xE3_S-F15_s17",
+    "attempt": 1,
+    "original_CLI5828": "ACTIVE_UNCONSUMED",
+    "terminal_receipts_present": false,
+    "last_local_terminal_observation_utc": "2026-10-22T14:20:39.344115+00:00",
+    "evaluation_engine_init_log_utc": "2026-10-22T13:14:53+00:00"
+  },
+  "active_or_pending_original_model_calls": 1,
+  "active_first_collectors": 1,
+  "local_full_state_oracles_active": 0,
+  "local_scores_active": 0,
+  "budget_caps_usd": {
+    "pair": 90,
+    "per_cell": 45
+  },
+  "new_model_upload_encoding_tests_or_old_science_repeats": false,
+  "primary_contrast": "PENDING_BOTH_COMPLETE_FOUR_SAMPLE_ENDPOINTS_AND_FIRST_CLOSEOUT",
+  "missing_or_partial_values_filled_zero": false,
+  "all_existing_source_reviews_closed_no_new_review_clock": true,
+  "cost_limits_not_final_invoice": true
+}
