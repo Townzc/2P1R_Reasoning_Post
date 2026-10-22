@@ -1,3 +1,7 @@
+### Metadata clarification CLOSED — 2026-10-22T02:40:01.097485+00:00
+
+Claude8ec1cf65cb694af7ee0d785801dacbdba08cf906/reportSHA6a7e8cfab19fe6f154263bee51c74a9f61815cfc4c5b3babc0947c70612745fb explicitly confirmed all8source/all6actual flags with private-state/fullsymbolicengine/missingwholecycle/single-seed limits. Original c97source PASS and c999numbers PASS are retained, no science repeated. Fixed closure packet `review_8ec1cf65_D2_disclosure_closed_v1` at63f54625. Owner A7-versus-baseline smoke rule unchanged.
+
 ## 2026-10-22: fixed numerical/source PASS received; explicit disclosure clarification pending
 
 Claude source c97efacb/reportd4e6eedd gives PASS/no stop; actual reportc999e0d8/SHA5153ac5e accepts D1/D2 numbers and original MATH contrasts. Original reports/supporting outputs are saved in review_c999e0d8_D2_source_and_numerical_A3_v1. Codex has not silently asserted omitted access/timing/single-seed flags. Please append the metadata-only clarification in that packet's REMAINING_DISCLOSURE_CLARIFICATION.md to these same requests. No repeated scientific work or new score-cap exception is requested. The direct-owner7200score cap/05UTC cutoff stayed unchanged; all D2 local science is already complete.

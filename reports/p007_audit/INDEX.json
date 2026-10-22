@@ -5227,21 +5227,25 @@
       "request_id": "p011-D2-option-a-local-scope-asynchronous-CR-r1",
       "scope": "p011-D2-option-a-local-scope-asynchronous-CR",
       "target_commit": "942e1dab8bdd6dd9dcd748ca233c2cef6ebd390c",
-      "status": "SOURCE_PASS_NO_STOP_EXPLICIT_DISCLOSURE_CLARIFICATION_PENDING",
+      "status": "CLOSED_ALL_REQUIRED_FLAGS_CONFIRMED_WITH_ACCESS_LIMITS",
       "request_file": "reports/p011_20261020/D2_OPTION_A_LOCAL_SCOPE_ASYNC_REVIEW_REQUEST.md",
       "packet": "reports/p011_20261020/d2_option_a_local_scope_v1",
       "source_count": 69,
-      "submitted_utc": "2026-10-22T00:31:25.610577+00:00"
+      "submitted_utc": "2026-10-22T00:31:25.610577+00:00",
+      "disclosure_report_commit": "8ec1cf65cb694af7ee0d785801dacbdba08cf906",
+      "disclosure_report_sha256": "6a7e8cfab19fe6f154263bee51c74a9f61815cfc4c5b3babc0947c70612745fb"
     },
     {
       "request_id": "p011-D1-D2-option-a-complete-MATH-AIME-and-MATH-contrasts-actual-A3-r1",
       "scope": "p011-D1-D2-option-a-complete-MATH-AIME-and-MATH-contrasts-actual-A3",
       "target_commit": "a4a5768760b134e43d447e51a005d421342d3205",
-      "status": "NUMERICAL_ACTUAL_A3_ACCEPTED_EXPLICIT_DISCLOSURE_CLARIFICATION_PENDING",
+      "status": "CLOSED_ALL_REQUIRED_FLAGS_CONFIRMED_WITH_ACCESS_LIMITS",
       "request_file": "reports/p011_20261020/D1_D2_OPTION_A_RESULTS_ACTUAL_A3_REQUEST.md",
       "result_manifest_sha256": "778a22b61729e66d3ca36af5b4b8b047440a965d89a48c052bf308efaedb42ae",
       "result_binding_sha256": "b5ca8464c1bb10a47e2c91b12d05fde1b9d26e9ecdea1336ccfee76daee5ccee",
-      "submitted_utc": "2026-10-22T00:48:01.268289+00:00"
+      "submitted_utc": "2026-10-22T00:48:01.268289+00:00",
+      "disclosure_report_commit": "8ec1cf65cb694af7ee0d785801dacbdba08cf906",
+      "disclosure_report_sha256": "6a7e8cfab19fe6f154263bee51c74a9f61815cfc4c5b3babc0947c70612745fb"
     },
     {
       "request_id": "p011-owner150-A-D-complete-results-and-original-contrasts-actual-A3-r1",
@@ -5252,6 +5256,50 @@
       "report_sha256": "66d7b3e54bd1a0aa658befb8d301b9ebffd0a8aebda6c2186b2189273fd1f180",
       "review_commit": "7873c88d5713e2328204e54ad0bd6c8ed92cbd43",
       "acceptance_packet": "reports/p011_20261020/review_7873c88d_owner_actual_A3_accepted_v1"
+    },
+    {
+      "request_id": "p011-OT3-full-math-pool-census-CR-r1",
+      "scope": "p011-OT3-full-math-pool-census-CR",
+      "target_commit": "63f54625de8a730779c86e8817ac872a026951d3",
+      "packet": "reports/p011_20261020/ot3_full_math_census_preflight_v1",
+      "spec_sha256": "bd1292972bdc5e5b1a939c06b70ed025737cbfe0be358594cdbd60468b2b9497",
+      "source_binding_sha256": "885768e2b71331bbd8ecf1589f5a54cad1f366c81e313dd54a85826ff12cbaa9",
+      "manifest_sha256": "113b4be838bf96b30f1c44abbaa223658961c26eb8aaa09ce911724ae33d3fe8",
+      "owner_report_commit": "2ac53ce54a3ba4ae37920f2dffb5e40e2ec654df",
+      "owner_report_sha256": "81ac2e124cc995fe11462fb02bf8866b6f04ee944a0857430384bbb7294f1729",
+      "exact_source_count": 4,
+      "required_flags": [
+        "exact_pinned_math_pool_and_original_A_grouping_accepted",
+        "original_eligibility_and_new_literal_normalized_counts_distinguished",
+        "answer_only_lengths_and_seeded_K1_token_mass_not_training_dose_accepted",
+        "no_new_model_or_reencoded_training_inputs"
+      ],
+      "status": "PENDING_REAL_FIRST_SOURCE_CR",
+      "production_started": false,
+      "first_remote_publication_utc": null
+    },
+    {
+      "request_id": "p011-forced-answer-complete-path-CR-r1",
+      "scope": "p011-forced-answer-complete-path-CR",
+      "target_commit": "63f54625de8a730779c86e8817ac872a026951d3",
+      "packet": "reports/p011_20261020/forced_answer_preflight_v1",
+      "spec_sha256": "2a624753ffdb384524c502e659065460d5429b29783588b998cdf884eb8dd59a",
+      "source_binding_sha256": "f85d0e4eb6d744f2dec3fb2090aef7d6647e2e57ab545b6dd6e66a13d2371f14",
+      "manifest_sha256": "b2457210203042d547e4f023e49d9dbd320413daca618b975ed4fa7ad26b7528",
+      "owner_report_commit": "2ac53ce54a3ba4ae37920f2dffb5e40e2ec654df",
+      "owner_report_sha256": "81ac2e124cc995fe11462fb02bf8866b6f04ee944a0857430384bbb7294f1729",
+      "exact_source_count": 31,
+      "required_flags": [
+        "exact_seven_cells_original_checkpoint_and_length_only_tokens_accepted",
+        "fixed_suffix_once_greedy64_no_prompt_or_old_output_reencoding",
+        "natural_labels_reused_no_original_rescore",
+        "native_stop_and_frozen_P1_scalar_pool_including_64cap_policy_accepted",
+        "posthoc_loop_utf8_ratio_and_five_new_contrasts_single_seed_limits_disclosed",
+        "one_shared_attempt_partial_cell_preservation_no_retry_and_hard_cost_timer_accepted"
+      ],
+      "status": "PENDING_REAL_FIRST_SOURCE_CR",
+      "production_started": false,
+      "first_remote_publication_utc": null
     }
   ],
   "p008_v31": {
@@ -7127,9 +7175,9 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-22T02:06:31.353020+00:00",
+  "last_updated_utc": "2026-10-22T02:40:01.097485+00:00",
   "p011": {
-    "status": "ALL_LOCAL_SCIENCE_DONE_OWNER_ACTUAL_A3_ACCEPTED_D2_DISCLOSURE_AND_P011_FINAL_FREEZE_A5_PENDING",
+    "status": "ORIGINAL_SCIENCE_AND_ACTUAL_A3_CLOSED_NEW_OWNER0205_SOURCE_CR_PENDING_FORMAL05UTC_FREEZE_A5_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
     "plan_sha256": "20d919afd4f1d7d1f237042bad5804fff1de20ebeda444cfdbf92f250bb69c22",
     "report_root": "reports/p011_20261020",
@@ -7147,7 +7195,7 @@
     "exploratory": true,
     "production_construction_run": true,
     "scientific_calls": 20,
-    "pending_path_CR": "p011-long-A-D-complete-path-CR-A1-A2-lite-r1 / D exact62 appendix",
+    "pending_path_CR": "p011-OT3-full-math-pool-census-CR / p011-forced-answer-complete-path-CR",
     "P010_scheduled_freeze_utc_unchanged": "2026-10-21T19:00:00Z",
     "data_candidate": "df4d590485a2bb6b8cb2eeb02e8688f64ebd03db",
     "raw_downloads": "all_complete_and_SHA_verified",
@@ -8180,6 +8228,61 @@
       "actual_dispatches": 10,
       "active_models": 0,
       "all_attempts_terminal": true
+    },
+    "owner0205_new_analyses": {
+      "owner_commit": "2ac53ce54a3ba4ae37920f2dffb5e40e2ec654df",
+      "candidate": "63f54625de8a730779c86e8817ac872a026951d3",
+      "requests": [
+        {
+          "request_id": "p011-OT3-full-math-pool-census-CR-r1",
+          "scope": "p011-OT3-full-math-pool-census-CR",
+          "target_commit": "63f54625de8a730779c86e8817ac872a026951d3",
+          "packet": "reports/p011_20261020/ot3_full_math_census_preflight_v1",
+          "spec_sha256": "bd1292972bdc5e5b1a939c06b70ed025737cbfe0be358594cdbd60468b2b9497",
+          "source_binding_sha256": "885768e2b71331bbd8ecf1589f5a54cad1f366c81e313dd54a85826ff12cbaa9",
+          "manifest_sha256": "113b4be838bf96b30f1c44abbaa223658961c26eb8aaa09ce911724ae33d3fe8",
+          "owner_report_commit": "2ac53ce54a3ba4ae37920f2dffb5e40e2ec654df",
+          "owner_report_sha256": "81ac2e124cc995fe11462fb02bf8866b6f04ee944a0857430384bbb7294f1729",
+          "exact_source_count": 4,
+          "required_flags": [
+            "exact_pinned_math_pool_and_original_A_grouping_accepted",
+            "original_eligibility_and_new_literal_normalized_counts_distinguished",
+            "answer_only_lengths_and_seeded_K1_token_mass_not_training_dose_accepted",
+            "no_new_model_or_reencoded_training_inputs"
+          ],
+          "status": "PENDING_REAL_FIRST_SOURCE_CR",
+          "production_started": false,
+          "first_remote_publication_utc": null
+        },
+        {
+          "request_id": "p011-forced-answer-complete-path-CR-r1",
+          "scope": "p011-forced-answer-complete-path-CR",
+          "target_commit": "63f54625de8a730779c86e8817ac872a026951d3",
+          "packet": "reports/p011_20261020/forced_answer_preflight_v1",
+          "spec_sha256": "2a624753ffdb384524c502e659065460d5429b29783588b998cdf884eb8dd59a",
+          "source_binding_sha256": "f85d0e4eb6d744f2dec3fb2090aef7d6647e2e57ab545b6dd6e66a13d2371f14",
+          "manifest_sha256": "b2457210203042d547e4f023e49d9dbd320413daca618b975ed4fa7ad26b7528",
+          "owner_report_commit": "2ac53ce54a3ba4ae37920f2dffb5e40e2ec654df",
+          "owner_report_sha256": "81ac2e124cc995fe11462fb02bf8866b6f04ee944a0857430384bbb7294f1729",
+          "exact_source_count": 31,
+          "required_flags": [
+            "exact_seven_cells_original_checkpoint_and_length_only_tokens_accepted",
+            "fixed_suffix_once_greedy64_no_prompt_or_old_output_reencoding",
+            "natural_labels_reused_no_original_rescore",
+            "native_stop_and_frozen_P1_scalar_pool_including_64cap_policy_accepted",
+            "posthoc_loop_utf8_ratio_and_five_new_contrasts_single_seed_limits_disclosed",
+            "one_shared_attempt_partial_cell_preservation_no_retry_and_hard_cost_timer_accepted"
+          ],
+          "status": "PENDING_REAL_FIRST_SOURCE_CR",
+          "production_started": false,
+          "first_remote_publication_utc": null
+        }
+      ],
+      "new_production_runs": 0,
+      "budget_reserve_ceiling_usd": 12,
+      "worker_max_seconds": 10800,
+      "no_training": true,
+      "old_primary_immutable": true
     }
   },
   "p011_owner150_current": {
@@ -8330,7 +8433,10 @@
     "owner_complete_actual_A3_private_binary_read": false,
     "owner_frozen_scorer_sensitivity_note": "reports/p011_20261020/review_7873c88d_owner_actual_A3_accepted_v1/FROZEN_SCORER_SENSITIVITY_NOTE.json",
     "next_normal_D2_disclosure_review_utc": "2026-10-22T02:31:41.898111+00:00",
-    "baseline_actual_A3": "ACCEPTED_WITH_TWO_NORMALIZATION_VIOLATIONS_DISCLOSED_ORIGINAL_SCORES_UNCHANGED"
+    "baseline_actual_A3": "ACCEPTED_WITH_TWO_NORMALIZATION_VIOLATIONS_DISCLOSED_ORIGINAL_SCORES_UNCHANGED",
+    "D2_actual_A3": "CLOSED_ALL_SIX_FLAGS_WITH_EXPLICIT_ACCESS_AND_TIMING_LIMITS",
+    "D2_source_CR": "CLOSED_ALL_EIGHT_FLAGS_METADATA_ONLY_CLARIFICATION",
+    "new_owner0205_tasks": "NEW_SOURCE_PREPARED_PENDING_REAL_CR_NO_PRODUCTION"
   },
   "p010_actual_final_A5": {
     "decision": "PASS",
