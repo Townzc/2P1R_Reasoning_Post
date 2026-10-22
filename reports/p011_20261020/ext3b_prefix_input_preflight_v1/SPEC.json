@@ -1,0 +1,51 @@
+{
+  "schema": "p011_ext3b_prefix_inputs_v1",
+  "scope": "p011-ext-3B-prefix-input-reschedule-CR",
+  "owner_amendment_sha256": "f5e937e8dabc7bc19eeca141615bd7ca60799fdfbccfa1a0bf08c353c5a1c566",
+  "output": ".local/p011_20261020/r1/ext3b_inputs_r1",
+  "jobs": [
+    "long_R9072x1_S-F15_s17",
+    "long_R3024xE3_S-F15_s17"
+  ],
+  "large_questions": 9072,
+  "small_questions": 3024,
+  "prior_actual_input_commit": "f679fa5c28f50b011c1d85a3a689c64997cc53d5",
+  "prior_actual_input_packet": "reports/p011_20261020/ext4b_actual_inputs_v1",
+  "prior_metadata_bindings": [
+    {
+      "path": ".local/p011_20261020/r1/ext4b_inputs_r1/MANIFEST.json",
+      "sha256": "74aa88e59c5f4608fc657b6a9dddac5b0aa4064f3227d69bf246dac7e3952a80"
+    },
+    {
+      "path": ".local/p011_20261020/r1/ext4b_inputs_r1/COMPLETED.json",
+      "sha256": "f352c1204a9497a40eff52954efdf17e9a5f420dab810b038ea53554110b5be1"
+    },
+    {
+      "path": ".local/p011_20261020/r1/ext4b_inputs_r1/ROW_METADATA.json",
+      "sha256": "21f47a8ab5c323f775c4e417c7a5d16e8514f8f8b93a69f62109b0acc0fb684c"
+    }
+  ],
+  "source_files": {
+    "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+    "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+    "experiments/p011/ext3b_contract.py": "53439cb7ac0ec38538fb76f4912966c14a0f9cdcb4764fb91778cc65b7a3c643",
+    "experiments/p011/ext4b_contract.py": "dbd04406217e79d2fd8fc1120ef5f63a3fd5c5b162824f465ebad2a12cbfe34b",
+    "experiments/p011/long_checkpoint.py": "6e71c347bc8824dac0df86e2e2af3a3fb4933019ed79fcea6b28d73faabfb385",
+    "experiments/p011/long_lr_r2_training.py": "f81f19197866af613369b84428e695ab54d4f3ffda3bb7457bf3fd20c54c5a53",
+    "experiments/p011/native_nfc_encoding.py": "c2af5621a2917679dca59220b387cc7d60f2669cb4a40a5354607106d740447e",
+    "experiments/p011/owner_0205_common.py": "5d3ec2a3dc0b10f712a2373e2c9ac3838af2035cbeef8a0ac8756c15850e26fc",
+    "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c",
+    "scripts/prepare_p011_ext3b_inputs.py": "86dbf2ffad929603df282a20d3fa2ef3ce8e83f5a4165a5e36598eef83b1169f",
+    "scripts/prepare_p011_ext4b_inputs.py": "8f2c0be6af99ade8562ceb182ee4c710a658e9694420653873e716401daaf804"
+  },
+  "required_flags": [
+    "exact_direct_options2_3_and_unchanged_prior12096_prefix9072_first3024_accepted",
+    "no_new_tokenizer_census_raw_selection_or_old_scientific_reexecution",
+    "original_q_qplus1_equal_measured_Bprime_scaled_LR_same_U_and_actual_E_required",
+    "create_only_prefix_bytes_and_metadata_old_originals_immutable_bound",
+    "data_only_new_full_runtime_CR_and_actual_A2_before_any_GPU"
+  ],
+  "no_new_encodings": true,
+  "original500checkpoint90pair45cell_and_new_MATH_scope_runtime_CR_separate": true
+}
