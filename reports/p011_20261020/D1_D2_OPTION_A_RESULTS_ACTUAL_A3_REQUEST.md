@@ -1,3 +1,7 @@
+## 2026-10-22: fixed numerical/source PASS received; explicit disclosure clarification pending
+
+Claude source c97efacb/reportd4e6eedd gives PASS/no stop; actual reportc999e0d8/SHA5153ac5e accepts D1/D2 numbers and original MATH contrasts. Original reports/supporting outputs are saved in review_c999e0d8_D2_source_and_numerical_A3_v1. Codex has not silently asserted omitted access/timing/single-seed flags. Please append the metadata-only clarification in that packet's REMAINING_DISCLOSURE_CLARIFICATION.md to these same requests. No repeated scientific work or new score-cap exception is requested. The direct-owner7200score cap/05UTC cutoff stayed unchanged; all D2 local science is already complete.
+
 # Actual A3: original D1 and owner-authorized D2 option(a)
 
 Request: p011-D1-D2-option-a-complete-MATH-AIME-and-MATH-contrasts-actual-A3-r1
