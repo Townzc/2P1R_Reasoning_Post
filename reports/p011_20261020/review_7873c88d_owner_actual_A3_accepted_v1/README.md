@@ -1,0 +1,9 @@
+# Owner complete-result actual A3 accepted
+
+Claude report 7873c88d / 66d7b3e54bd1a0aa658befb8d301b9ebffd0a8aebda6c2186b2189273fd1f180 explicitly accepts the numerical results at fe82972a, with all six required flags scoped to the report's access limits. The cost flag discloses a public projection, not independent billing reconciliation. Git event 01:33:37 UTC, report self-time approximately 01:45 UTC, discovery 2026-10-22T02:01:41.898111+00:00 and actual full-read confirmation 2026-10-22T02:06:31.353020+00:00 are distinct.
+
+The reviewer independently decoded all 16,500 new native-token rows, manually checked 65 unique non-string positive pairs (356 rows), and reproduced the five primary paired-question contrasts. The full symbolic engine, private checkpoints/exports/ADMISSION, saved state/optimizer/RNG oracle records and collect records were not independently accessed or executed. The original local full oracles remain first-execution records, not external binary verification.
+
+The original posthoc A7 smoke remains FAIL. Frozen scores, vectors, confidence intervals, T5/T6 bytes and original scientific evidence remain unchanged. Two baseline normalization violations and other scorer leniencies are disclosed separately. The arithmetic sensitivity note is not a rescore or replacement result. The reviewer's loop heuristic and secondary greedy intervals remain reviewer-only descriptive support; no causal mechanism or training-seed population claim is adopted, and no reviewer script is run.
+
+The separate D2 metadata-only disclosure clarification is still pending. Its previously accepted numerical A3 and source PASS are not reopened. This owner actual A3 is not P011's formal 05:00 UTC freeze or final A5. Those remain required; P010 final A5 is already closed. Course interpretation remains owner-written.
