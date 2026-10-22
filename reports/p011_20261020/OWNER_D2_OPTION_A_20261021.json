@@ -1,0 +1,37 @@
+{
+  "observed_utc": "2026-10-22T00:20:06.342071+00:00",
+  "source": "Direct owner clarification in current chat; numbered content transcribed with formatting normalized",
+  "reported_owner_decision_local": "2026-10-21T16:37:00-07:00",
+  "reported_owner_decision_utc": "2026-10-21T23:37:00Z",
+  "underlying_exact_event_time_not_independently_observed": true,
+  "prior_short_choice": ".local/p011_20261020/r1/OWNER_D2_OPTION_A_DIRECT_INSTRUCTION.json",
+  "instruction_text": "负责人决定：D2 按方案 (a) 处理（10/21 16:37 PDT）\n背景：D2（long_D2_S-F15_s17_owner_r1）撞上 9,000 s 硬计时器而终止，退出码 124。训练 64 次更新已完整，状态和导出模型都保存了。评测输出已保存 3,072/3,300 条，即 eval_0000–eval_0005；eval_0006 缺失。\n1. 不重跑、不补生成：不派发任何新的模型调用；缺失的 228 条不补，也不按 0 分计。\n2. 状态校验：对保存的 D2 训练状态做一次完整的本地状态/轨迹 oracle，用原函数、原规则。\n3. 评测范围（只用 eval_0000–eval_0005 中已完整的部分）：MATH-500 greedy 500 条 + 4 次采样 2,000 条，共 2,500 条，全部完整，正常解码、评分。AIME24 / AIME25 各 240 条，完整，正常评分，只做描述性报告。AMC23：320 条中只有 92 条。D2 的 AMC 标为未完成（incomplete），不报告准确率，不参与任何汇总或对比。这 92 条保留在原始记录里，不评分。\n4. 对比：主对比 Δ_T^D = D2 − D1，只用 MATH-500。greedy 和 4 次采样平均 pass@1 都算；题目层面配对 bootstrap 10,000 次；评分器、bootstrap 代码和种子都与 D1 和其他格相同。AIME 只做描述性报告，AMC 不做 D1 对 D2 的对比。\n5. 代码：允许写一个窄适配器，只把3,300条全部完整的检查改成按上述范围完整，解码、评分和分析函数一律不变。推送后直接执行，Claude 异步审查。\n6. 时间：oracle 和评分须在 05:00 UTC 冻结前完成，评分上限 7,200 s。\n7. 报告披露：D2 的 worker 在最后一批 AMC 评测时撞上硬计时器（9,000 s）；MATH-500 和 AIME 输出完整，AMC 不完整，未报告。\n8. 完成后提交 A3 请求，由 Claude 独立解码并核对。",
+  "instruction_text_sha256": "04cff38755b65962fff24886d134ac2484dc3267cc45caad42a15b35f10c236d",
+  "job": "long_D2_S-F15_s17_owner_r1",
+  "original_failed_attempt_preserved": true,
+  "new_model_calls_authorized": false,
+  "new_generation_authorized": false,
+  "complete_training_state_oracle_once": true,
+  "scope_counts": {
+    "math500_greedy": 500,
+    "math500_sample": 2000,
+    "aime24_sample": 240,
+    "aime25_sample": 240
+  },
+  "score_total": 2980,
+  "amc23": {
+    "status": "incomplete",
+    "saved": 92,
+    "expected": 320,
+    "scoring_authorized": false,
+    "accuracy_reported": false
+  },
+  "missing_outputs": 228,
+  "missing_as_incorrect": false,
+  "primary_contrast": "D2_minus_D1_MATH500_only",
+  "paired_bootstrap_resamples": 10000,
+  "reuse_original_scoring_decode_analysis_functions": true,
+  "score_cap_seconds": 7200,
+  "local_results_cutoff_utc": "2026-10-22T05:00:00Z",
+  "review_policy": "publish narrow adapter then execute; Claude asynchronous source review; actual A3 after results"
+}

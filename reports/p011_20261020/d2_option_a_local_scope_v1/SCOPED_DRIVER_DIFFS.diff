@@ -1,0 +1,185 @@
+--- experiments/p011/long_scoring.py	2026-10-20 17:27:57
++++ experiments/p011/long_d2_scope_scoring.py	2026-10-21 17:22:17
+@@ -1,4 +1,4 @@
+-"""Prepared P011 full3300 endpoint scoring; unchanged frozen P1 scalar/pool.
++"""D2 option(a) scope-only driver: 2980 complete rows; unchanged frozen P1 scalar/pool.
+ 
+ Requires the complete new outer input/source/runtime admission and raw oracle.
+ No actual production scoring has run. No per-first100 extra audit is introduced.
+@@ -8,20 +8,21 @@
+ import math
+ 
+ from experiments.p010.common import read, sha
+-from experiments.p011.long_evaluation import BENCHMARK_COUNTS
++from experiments.p011.long_evaluation import BENCHMARK_COUNTS as ORIGINAL_BENCHMARK_COUNTS
++BENCHMARK_COUNTS = {k:v for k,v in ORIGINAL_BENCHMARK_COUNTS.items() if k != 'amc23'}
+ from experiments.learning_regime_p009.math_scoring_journal import (
+     create, digest, file_sha, validate_rows, pairs_for, audit_samples,
+ )
+ from experiments.learning_regime_p009.math_scoring_pool import pair_digest
+ from experiments.learning_regime_p009.stage1_s1_scoring import DurableEndpointPool, preserve_pairs
+ 
+-LOCAL_SECONDS = 33000
+-SCENARIO_SECONDS = 1.2*(3300*8+300)
++LOCAL_SECONDS = 7200
++SCENARIO_SECONDS = 1.2*(2980*8+300)
+ 
+ 
+ def groups(rows):
+     return {key:[i for i,r in enumerate(rows) if r['id'].split(':')[0]+'_'+r['id'].split(':')[2]==key]
+-            for key in ('math500_sample','math500_greedy','aime24_sample','aime25_sample','amc23_sample')}
++            for key in ('math500_sample','math500_greedy','aime24_sample','aime25_sample')}
+ 
+ 
+ def checked_rows(rows):
+@@ -30,8 +31,8 @@
+         for b,n in BENCHMARK_COUNTS.items() for i in range(n)
+         for mode,seeds in ([('sample',range(4)),('greedy',[0])] if b=='math500' else [('sample',range(8))])
+         for seed in seeds}
+-    if len(rows)!=3300 or {r['id'] for r in rows}!=expected:
+-        raise ValueError('Exactly all3300 original long endpoints required')
++    if len(rows)!=2980 or {r['id'] for r in rows}!=expected:
++        raise ValueError('Exactly all2980 original long endpoints required')
+     for row in rows:
+         if row['stop_reason'] not in ('native_eos','length_cap','invalid_special_token'):
+             raise ValueError('Only original native long generation stops permitted')
+@@ -47,7 +48,7 @@
+     checked_rows(rows)
+     if ([x['id'] for x in results] != [x['id'] for x in rows]
+             or any(type(x['score'].get('correct')) is not bool for x in results)):
+-        raise ValueError('All3300 ordered Boolean results required; unknown is not zero')
++        raise ValueError('All2980 ordered Boolean results required; unknown is not zero')
+     endpoints={}
+     for label,indices in groups(rows).items():
+         table={}
+@@ -58,7 +59,7 @@
+         correct=sum(sum(v) for v in table.values())
+         endpoints[label]=dict(correct=correct,total=len(indices),question_correct=table,
+             mean_pass_at_one=correct/len(indices),descriptive_only=not label.startswith('math500_'))
+-    return dict(endpoints=endpoints,outputs=3300,primary_mean_pass_at_one=endpoints['math500_sample']['mean_pass_at_one'],
++    return dict(endpoints=endpoints,outputs=2980,primary_mean_pass_at_one=endpoints['math500_sample']['mean_pass_at_one'],
+         greedy_accuracy=endpoints['math500_greedy']['mean_pass_at_one'],bootstrap_performed=False,
+         independent_smoke_selection_performed=False)
+ 
+@@ -69,18 +70,18 @@
+         raise ValueError('Explicit original source/input binding and local window required')
+     root = Path(root); root.mkdir(parents=True, exist_ok=False); started = time.monotonic()
+     create(root/'INTENT.json', dict(binding=binding, ordered_rows_sha256=digest(rows),
+-        row_count=3300, local_seconds=local_seconds, no_automatic_retry=True,
++        row_count=2980, local_seconds=local_seconds, no_automatic_retry=True,
+         outer_owned_process_cap_required=True))
+     create(root/'ROWS.json', rows)
+     pool = None; all_scored = []
+     try:
+         pool = pool_factory(root, started+local_seconds)
+-        for offset in range(0, 3300, 100):
++        for offset in range(0, 2980, 100):
+             if time.monotonic()-started >= local_seconds:
+                 raise TimeoutError('Original local window expired')
+             part = rows[offset:offset+100]; folder = root/'chunks'/f'{offset//100:05d}'
+             new = {key:list(pair) for key,pair in pairs_for(part).items() if pair not in pool.cache}
+-            create(folder/'INTENT.json', dict(start=offset, end=offset+100,
++            create(folder/'INTENT.json', dict(start=offset, end=min(offset+100,len(rows)),
+                 row_ids=[r['id'] for r in part], rows_sha256=digest(part),
+                 new_pair_intents=new, cached_pairs_before=len(pool.cache)))
+             tick = time.monotonic()
+@@ -91,7 +92,7 @@
+                     raise ValueError('Incomplete or reordered scoring output')
+                 create(folder/'RESULT.json', value)
+                 create(folder/'COMPLETED.json', dict(intent_sha256=file_sha(folder/'INTENT.json'),
+-                    result_sha256=file_sha(folder/'RESULT.json'), confirmed_rows=100, technical_unknown=0))
++                    result_sha256=file_sha(folder/'RESULT.json'), confirmed_rows=len(part), technical_unknown=0))
+                 create(folder/'TIMING.json', dict(elapsed_through_completed_seconds=time.monotonic()-tick,
+                                                 timing_write_excluded=True))
+                 all_scored.extend(value['rows'])
+@@ -111,7 +112,7 @@
+         for label,indices in groups(rows).items():
+             create(root/'audit_by_evaluation'/(label+'.json'),
+                 audit_samples([rows[i] for i in indices],[all_scored[i] for i in indices]))
+-        result = dict(**summary, row_count=3300, unique_symbolic_pairs=len(pool.cache),
++        result = dict(**summary, row_count=2980, unique_symbolic_pairs=len(pool.cache),
+             technical_unknown=0, scored_rows_sha256=file_sha(root/'ALL_SCORED_ROWS.json'),
+             samples_sha256=file_sha(root/'AUDIT_SAMPLES.json'),
+             elapsed_before_final_proof_seconds=time.monotonic()-started,
+@@ -134,7 +135,7 @@
+     root = Path(root); checked_rows(rows); intent = read(root/'INTENT.json')
+     if (intent['binding'] != binding or intent['ordered_rows_sha256'] != digest(rows)
+             or intent['local_seconds'] != local_seconds or read(root/'ROWS.json') != rows
+-            or intent['row_count'] != 3300 or intent['no_automatic_retry'] is not True
++            or intent['row_count'] != 2980 or intent['no_automatic_retry'] is not True
+             or intent['outer_owned_process_cap_required'] is not True
+             or (root/'FAILED.json').exists()):
+         raise ValueError('Original scoring input or incomplete job differs')
+@@ -157,19 +158,19 @@
+     if [x['attempt_index'] for x in observed] != list(range(len(observed))):
+         raise ValueError('Duplicate/missing original symbolic attempts')
+     folders = sorted((root/'chunks').glob('*')); all_rows = []; seen = set()
+-    if [p.name for p in folders] != [f'{i:05d}' for i in range(33)]:
+-        raise ValueError('All33 original complete chunks required')
++    if [p.name for p in folders] != [f'{i:05d}' for i in range(30)]:
++        raise ValueError('All30 original complete chunks required')
+     for index, folder in enumerate(folders):
+         part = rows[index*100:(index+1)*100]; start = read(folder/'INTENT.json')
+         done = read(folder/'COMPLETED.json'); value = read(folder/'RESULT.json')
+         new = {k:list(p) for k,p in pairs_for(part).items() if p not in seen}
+         if ((folder/'FAILED.json').exists() or start['rows_sha256'] != digest(part)
+                 or start['row_ids'] != [r['id'] for r in part]
+-                or start['start'] != index*100 or start['end'] != (index+1)*100
++                or start['start'] != index*100 or start['end'] != min((index+1)*100,len(rows))
+                 or start['new_pair_intents'] != new or start['cached_pairs_before'] != len(seen)
+                 or done['intent_sha256'] != file_sha(folder/'INTENT.json')
+                 or done['result_sha256'] != file_sha(folder/'RESULT.json')
+-                or done['confirmed_rows'] != 100 or done['technical_unknown'] != 0
++                or done['confirmed_rows'] != len(part) or done['technical_unknown'] != 0
+                 or [r['id'] for r in value['rows']] != [r['id'] for r in part]):
+             raise ValueError('Original confirmed chunk proof differs')
+         for row, actual in zip(part, value['rows']):
+@@ -187,7 +188,7 @@
+         seen.update(pairs_for(part).values()); all_rows.extend(value['rows'])
+     saved = read(root/'COMPLETED.json'); summary = checked_summary(rows, all_rows)
+     if (read(root/'AUDIT_SAMPLES.json') != audit_samples(rows, all_rows)
+-            or saved['technical_unknown'] != 0 or saved['row_count'] != 3300
++            or saved['technical_unknown'] != 0 or saved['row_count'] != 2980
+             or saved['independent_adjudication_complete'] is not False
+             or saved['independent_A3_pending'] is not True
+             or saved['unchanged_primary_labels'] is not True
+
+--- experiments/p011/long_score_process.py	2026-10-20 17:27:02
++++ experiments/p011/long_d2_scope_score_process.py	2026-10-21 17:22:17
+@@ -16,10 +16,10 @@
+ import sys
+ import time
+ 
+-MODULE = 'experiments.p011.long_score_process'
++MODULE = 'experiments.p011.long_d2_scope_score_process'
+ SOURCES = (
+-    'experiments/p011/long_score_process.py',
+-    'experiments/p011/long_scoring.py',
++    'experiments/p011/long_d2_scope_score_process.py',
++    'experiments/p011/long_d2_scope_scoring.py',
+ )
+ 
+ 
+@@ -81,10 +81,10 @@
+     parent. The small two-file snapshot below is an integrity check between
+     parent and child, not the future full transitive source review.
+     """
+-    if (os.name != 'posix' or not isinstance(rows, list) or len(rows) != 3300
++    if (os.name != 'posix' or not isinstance(rows, list) or len(rows) != 2980
+             or not isinstance(binding, dict) or not binding
+-            or type(local_seconds) is not int or not 0 < local_seconds <= 33000):
+-        raise ValueError('Original3300 rows, explicit binding and bounded POSIX window required')
++            or type(local_seconds) is not int or not 0 < local_seconds <= 7200):
++        raise ValueError('Original2980 rows, explicit binding and bounded POSIX window required')
+     canonical(rows); canonical(binding)
+     sources = {name:sha(name) for name in SOURCES}
+     root = Path(root).resolve()
+@@ -165,7 +165,7 @@
+         raise ValueError('Owned process group or original input/source binding differs')
+     create(root/'CHILD_STARTED.json', dict(pid=os.getpid(), pgid=os.getpgrp(),
+         intent_sha256=sha(root/'INTENT.json'), automatic_retry=False))
+-    from experiments.p011.long_scoring import score_once
++    from experiments.p011.long_d2_scope_scoring import score_once
+     score_once(root/'payload', read(root/'ROWS.json'), read(root/'BINDING.json'),
+                         intent['local_seconds'])
+     create(root/'CHILD_COMPLETED.json', dict(intent_sha256=sha(root/'INTENT.json'),
