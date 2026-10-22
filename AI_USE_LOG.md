@@ -1,3 +1,7 @@
+## New requested existing-label contrast completed — 2026-10-22T22:39:13.231360+00:00
+
+A6−A7 forced: sampled +4.65pp CI[2.3,6.95]; greedy +6.8pp CI[2.2,11.4]. Direct invocation of unchanged already accepted question_vectors /paired_question_interval on the newly requested pair, 10000resamples seed20261021/linear. No new adapter entrypoint, GPU, decode or score executed. This pair's two intervals are permanentlyDONE; skip the a6_a7 command in the frozen FUTURE_COMMANDS, reuse saved result in final new-two-cell analysis. New inference v2 source CR remains pending, source87407963; latestHEADpoll22:33 unchanged4654447b, nextnormal22:48:09. Cap20USD. No claim of independent actual A3 for this new pair yet.
+
 ## Two-cell forced probe v2 pending — 2026-10-22T22:17:50.031330+00:00
 
 Currentsource target 87407963774de2d4f37ed5121d8d9ea60aec2c6d, SPEC bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25,47bindings(twochanged/45unchanged); only slot-entry boundary corrected. Newmethod4casesPASS, prior6notrepeated. V1neverexecuted. Cap20; inputs/CPUanalysis/budget/upload/GPU allNOTRUN. Original finiteautomationPAUSED; currentdirecttaskactive.
