@@ -1,3 +1,7 @@
+## OT3 full census actual A3 closed — 2026-10-22T04:57:30.027728+00:00
+
+Claude c3437922518a950f4340d6795cf230dba0c78115/reporte4a20155e0c18925fe27f7682a7028ae31710143e013f619eb390ade245c4083 accepts fixedaf9b56f2/all5flags. Git04:41:04, self~04:45, discovery04:56:21.196071 and actualfullreadconfirmation separately saved. Independent saved53116parent summaries/850000response and eligibility/K1 checks; no private rawSQLite/text/parquet access or retokenization. Raw-pool lengths/dispersion are not eligible-only variation. Originalscience unchanged. CensusA3 CLOSED; directhuman4B12096/3024/cap90 is separate authority, not inferred fromthisreview. CurrentdataCR583a035a pendingnormal05:21:32.524356/min05:06:32.524356. Forcedoriginalupload26828stillactive, no restart;05UTCfreeze uses honestnewextension/diagnosticstatus.
+
 ## Direct owner revised4B size — 2026-10-22T04:50:41.993329+00:00
 
 Current exactdata candidate583a035a9cd3353f0d71f9ad6d8432d57ef9f4ea:12096 one-pass questions versus first3024 questions matched to measured Bprime using original q/q+1. Pair90USD/percell45 hard caps remain;165Mtokens/80USD only estimates. V1 16128/4032 preserved and neverexecuted. V2 one new cardinality method PASS0.006s; old successful tests not rerun. DataCR pending beforefirstCPUconstructor; fullresume-aware runtimeCR and actualA2 still required beforeGPU. No4B inputs/models/freshbilling. Originalforced upload26828 remainsactive, no duplicate; forcedactualA2accepted10c0885f and budget66124DONE. Original05UTCfreeze unchanged, newextension separatelypending.
