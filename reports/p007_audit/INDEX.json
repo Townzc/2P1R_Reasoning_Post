@@ -5222,6 +5222,16 @@
       "status": "ASYNC_REVIEW_REQUESTED_NOT_A_PREEXECUTION_GATE",
       "request_file": "reports/p011_20261020/OWNER150_ASYNC_RUNTIME_REVIEW_REQUEST.md",
       "packet": "reports/p011_20261020/owner150_runtime_v1"
+    },
+    {
+      "request_id": "p011-D2-option-a-local-scope-asynchronous-CR-r1",
+      "scope": "p011-D2-option-a-local-scope-asynchronous-CR",
+      "target_commit": "942e1dab8bdd6dd9dcd748ca233c2cef6ebd390c",
+      "status": "ASYNC_PENDING_NOT_PREEXECUTION_GATE",
+      "request_file": "reports/p011_20261020/D2_OPTION_A_LOCAL_SCOPE_ASYNC_REVIEW_REQUEST.md",
+      "packet": "reports/p011_20261020/d2_option_a_local_scope_v1",
+      "source_count": 69,
+      "submitted_utc": "2026-10-22T00:31:25.610577+00:00"
     }
   ],
   "p008_v31": {
@@ -7097,7 +7107,7 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-21T21:19:27.938932+00:00",
+  "last_updated_utc": "2026-10-22T00:31:25.610577+00:00",
   "p011": {
     "status": "DIRECT_OWNER150_THREE_MODELS_PENDING_ORIGINAL_SUCCESS_CLOSEOUTS_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -8151,12 +8161,12 @@
     }
   },
   "p011_owner150_current": {
-    "recorded_utc": "2026-10-21T23:36:03.867323+00:00",
+    "recorded_utc": "2026-10-22T00:31:25.610577+00:00",
     "source_head": "9d6817a6b82a9350d80f3e863273c888f8639433",
     "new_spend_cap_usd": 150,
     "slots": 8,
     "actual_submitted": 10,
-    "A5": "SUBMITTED",
+    "A5": "COMPLETED_ORIGINAL_RESULT_LOCAL_CLOSEOUT_ACTIVE",
     "forecast_termination": false,
     "historical_failed_reservations_as_expense": false,
     "fallback_controls": "BOTH_COMPLETE_FIRST_SCORE_AND_ALL_EIGHT_CONTRASTS_DONE",
@@ -8173,7 +8183,7 @@
       "long_D1_S-F15_s17_owner_r1",
       "long_A6_S-F15_s17_owner_r1"
     ],
-    "local_baseline_first_collect": "INFRASTRUCTURE_FAILED_BEFORE_ARCHIVE; one authorized retry pending original app STOPPED0",
+    "local_baseline_first_collect": "ONE_INFRASTRUCTURE_RETRY_COMPLETED_ORACLE_AND_SCORE_DONE",
     "closed_closeout_adapter": "scripts/p011_long_owner_closed_io.py",
     "per_call_adapter": "WITHDRAWN",
     "optional_admission": "CLOSED_NOT_RUN_OWNER_22_30_DISPATCH_CUTOFF_REACHED",
@@ -8184,7 +8194,7 @@
     "fallback_results_target": "469cbaa0acc839eae3714b5174320354d0d0e5eb",
     "fallback_actual_A3_request": "reports/p011_20261020/FALLBACK_CLEAN_CONTROLS_RESULTS_ACTUAL_A3_REQUEST.md",
     "fallback_actual_A3_accepted": true,
-    "active_model_jobs": 3,
+    "active_model_jobs": 0,
     "new_epoch_model_attempts": 10,
     "all_P011_model_function_attempts_including_failures_and_engineering": 23,
     "all_P011_scientific_function_attempts_including_failures": 20,
@@ -8192,7 +8202,7 @@
     "not_successful_model_count": true,
     "A1_original": "FAILED_PROVIDER_PREEMPTION_AND_GUARDED_PLATFORM_REENTRY",
     "A1_original_failure_preservation": "DONE",
-    "A1_retry": "SUBMITTED_ONCE_ACTIVE",
+    "A1_retry": "COMPLETED_ORIGINAL_RESULT_LOCAL_CLOSEOUT_ACTIVE",
     "A1_retry_target": "52a8e21c7cfb70cd4fa6ddc4a4f220cce7574d89",
     "A1_retry_source_count": 69,
     "A1_retry_app": "ap-VD61c2bGrsKepDVfMOvQfL",
@@ -8222,7 +8232,7 @@
     "full_state_local_oracle_concurrency": 1,
     "last_shared_audit_poll_utc": "2026-10-21T22:52:25.099425+00:00",
     "next_normal_pending_collector_review_utc": null,
-    "D2": "FAILED_EXIT124_THEN_COMPOUND_GUARD_NO_COMPLETE_RESULT",
+    "D2": "FAILED_WORKER_OWNER_OPTION_A_LOCAL_COMPLETE_BENCHMARK_SCOPE_AUTHORIZED",
     "D2_failure_target": "0b44606a1133eb0b331e312e433fc09c391c1ba6",
     "D2_failure_packet": "reports/p011_20261020/owner_D2_terminal_failure_v1",
     "D2_failure_preservation": "ALL_ORIGINAL_246_FILES_AND_149_KEYS_DONE",
@@ -8240,7 +8250,19 @@
     "closed_collector_report_late_seconds": 5960.841737,
     "open_source_async_requests": 0,
     "future_owner_actual_A3": "NOT_REQUESTED_UNTIL_ALL_ORIGINAL_CLOSEOUTS_COMPLETE",
-    "A6": "MODEL_COMPLETED_LOCAL_CLOSEOUT_PENDING_SHARED_APP_EXIT"
+    "A6": "MODEL_COMPLETED_LOCAL_CLOSEOUT_PENDING_SHARED_APP_EXIT",
+    "all_original_model_calls_terminal": true,
+    "D2_option_a_source_target": "942e1dab8bdd6dd9dcd748ca233c2cef6ebd390c",
+    "D2_option_a_request": "reports/p011_20261020/D2_OPTION_A_LOCAL_SCOPE_ASYNC_REVIEW_REQUEST.md",
+    "successful_owner_jobs": [
+      "long_baseline_S-L15_s17_owner_r1",
+      "long_D1_S-F15_s17_owner_r1",
+      "long_A6_S-F15_s17_owner_r1",
+      "long_A7_S-F15_s17_owner_r1",
+      "long_A5_S-F15_s17_owner_r1",
+      "long_A1_S-F15_s17_owner_r2"
+    ],
+    "local_closeout_active": true
   },
   "p010_actual_final_A5": {
     "decision": "PASS",
