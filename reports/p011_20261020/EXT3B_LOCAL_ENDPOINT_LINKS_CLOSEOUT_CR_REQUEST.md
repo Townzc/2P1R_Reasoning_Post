@@ -1,3 +1,7 @@
+# CLOSED: exact local endpoint-link source/disposition PASS — 2026-10-22T16:22:32.876112+00:00
+
+All nine requested flags explicitly true in fixed Claude0ebb26a4/report2a4c3254. Acceptance packet: reports/p011_20261020/review_0ebb26a4_ext3b_local_links_accepted_v1. Candidate ebfea411 / SPEC324de0f3 unchanged. This is source/disposition acceptance only; actual results A3 remains future. Original failure is preserved and original scientific functions/deadlines remain. The historical request follows.
+
 # P011 3B local endpoint-link closeout correction — PENDING
 
 Request: `p011-ext-3B-local-endpoint-links-closeout-CR-r1`

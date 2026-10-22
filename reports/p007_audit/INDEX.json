@@ -9041,7 +9041,7 @@
         "future_budget_upload_entry": "new_budget_DONE_completed_upload_REUSED_two_extra_preentries_SUBMITTED",
         "original_failures_not_erased": true
       },
-      "status": "BOTH_ORIGINAL_WORKERS_COMPLETED_LOCAL_LINK_CORRECTION_PENDING",
+      "status": "BOTH_WORKERS_AND_COLLECTORS_COMPLETED_FIRST_LOCAL_ORACLE_ACTIVE",
       "current_models": [
         {
           "job": "long_R9072x1_S-F15_s17",
@@ -9134,7 +9134,7 @@
       },
       "active_collectors": 0,
       "local_closeout_correction": {
-        "status": "PENDING",
+        "status": "ACCEPTED",
         "request_id": "p011-ext-3B-local-endpoint-links-closeout-CR-r1",
         "scope": "p011-ext-3B-local-endpoint-links-closeout-CR",
         "request_path": "reports/p011_20261020/EXT3B_LOCAL_ENDPOINT_LINKS_CLOSEOUT_CR_REQUEST.md",
@@ -9153,12 +9153,20 @@
           "separate_once_only_local_output_fences_no_new_model_upload_encoding_budget_or_retry",
           "actual_results_A3_still_required_private_binary_and_single_seed_limits_retained"
         ],
-        "production_not_run": true,
+        "production_not_run": false,
         "first_remote_publication_utc": "2026-10-22T15:13:40.032433+00:00",
         "original_failed_audit_preserved": true,
         "normal_review_utc": "2026-10-22T15:43:40.032433+00:00",
-        "minimum_review_utc": "2026-10-22T15:28:40.032433+00:00"
-      }
+        "minimum_review_utc": "2026-10-22T15:28:40.032433+00:00",
+        "decision": "PASS",
+        "report_sha256": "2a4c3254c545332f2ccf04ee4e865a8767382bf1b51b44a60797b54d9ff3c5cc",
+        "review_commit": "0ebb26a4b050fbf89f864a08cd1f2592372ec0f7",
+        "accepted_utc": "2026-10-22T16:22:32.876112+00:00",
+        "public_packet": "reports/p011_20261020/review_0ebb26a4_ext3b_local_links_accepted_v1",
+        "large_first_state_native_oracle": "ACTIVE_CLI3280",
+        "actual_results_A3_accepted": false
+      },
+      "active_scientific_CPU": 1
     },
     "actual_final_freeze": {
       "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
