@@ -1,0 +1,411 @@
+{
+ "stats": {
+  "rows": 3300
+ },
+ "per_endpoint": {
+  "math500_sample": {
+   "native_eos": 907,
+   "correct": 641,
+   "length_cap": 1093,
+   "n": 2000,
+   "mean_tokens": 9556.692
+  },
+  "math500_greedy": {
+   "native_eos": 210,
+   "correct": 163,
+   "length_cap": 290,
+   "n": 500,
+   "mean_tokens": 9995.47
+  },
+  "aime24_sample": {
+   "length_cap": 231,
+   "correct": 0,
+   "native_eos": 9,
+   "n": 240,
+   "mean_tokens": 15874.220833333333
+  },
+  "aime25_sample": {
+   "length_cap": 235,
+   "correct": 0,
+   "native_eos": 5,
+   "n": 240,
+   "mean_tokens": 16098.683333333332
+  },
+  "amc23_sample": {
+   "native_eos": 72,
+   "correct": 43,
+   "length_cap": 248,
+   "n": 320,
+   "mean_tokens": 13121.896875
+  }
+ },
+ "mismatches": [],
+ "string_equal_but_scored_false": [],
+ "true_without_string_equality": [
+  [
+   "math500:0023:sample:0",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:sample:2",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:sample:3",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:greedy:0",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0031:sample:0",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:1",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:3",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0036:sample:0",
+   "x = 3, 5, 7",
+   "3, 5, 7"
+  ],
+  [
+   "math500:0067:sample:0",
+   "10\\%",
+   "10"
+  ],
+  [
+   "math500:0067:sample:1",
+   "10\\%",
+   "10"
+  ],
+  [
+   "math500:0067:sample:3",
+   "10\\%",
+   "10"
+  ],
+  [
+   "math500:0067:greedy:0",
+   "10\\%",
+   "10"
+  ],
+  [
+   "math500:0090:sample:3",
+   "1.5",
+   "\\frac{3}{2}"
+  ],
+  [
+   "math500:0090:greedy:0",
+   "1.5",
+   "\\frac{3}{2}"
+  ],
+  [
+   "math500:0106:sample:0",
+   "\\frac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:1",
+   "\\frac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:2",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:3",
+   "\\frac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:greedy:0",
+   "\\frac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0157:sample:0",
+   "\\dfrac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0157:sample:1",
+   "\\frac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0157:sample:2",
+   "\\frac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0157:greedy:0",
+   "\\frac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0198:sample:0",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0198:sample:1",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0198:sample:2",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0198:sample:3",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0227:sample:0",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0227:sample:1",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0227:sample:2",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0227:greedy:0",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0235:sample:0",
+   "\\frac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:2",
+   "\\frac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:3",
+   "\\frac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:greedy:0",
+   "\\frac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0255:sample:2",
+   "E",
+   "\\text{(E)}"
+  ],
+  [
+   "math500:0257:sample:0",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:sample:2",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:greedy:0",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0267:sample:2",
+   "180",
+   "180^\\circ"
+  ],
+  [
+   "math500:0305:sample:0",
+   "\\frac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:1",
+   "\\frac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:2",
+   "\\frac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:greedy:0",
+   "\\frac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0343:sample:0",
+   "58500",
+   "58,500"
+  ],
+  [
+   "math500:0343:sample:3",
+   "58500",
+   "58,500"
+  ],
+  [
+   "math500:0362:sample:2",
+   "\\frac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0362:greedy:0",
+   "\\frac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0383:sample:1",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:sample:3",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:greedy:0",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0388:sample:0",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0388:sample:1",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0388:sample:2",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0388:sample:3",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0388:greedy:0",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0393:sample:0",
+   "\\frac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0393:sample:1",
+   "\\frac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0393:greedy:0",
+   "\\frac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0420:sample:3",
+   "\\begin{pmatrix} \\frac{16}{49} \\\\ \\frac{48}{49} \\\\ \\frac{24}{49} \\end{pmatrix}",
+   "\\begin{pmatrix} 16/49 \\\\ 48/49 \\\\ 24/49 \\end{pmatrix}"
+  ],
+  [
+   "math500:0459:sample:0",
+   "18.90",
+   "\\$18.90"
+  ],
+  [
+   "math500:0459:greedy:0",
+   "18.90",
+   "\\$18.90"
+  ],
+  [
+   "math500:0467:sample:3",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:greedy:0",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0488:sample:0",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:sample:1",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:sample:2",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:greedy:0",
+   "36",
+   "\\$36"
+  ],
+  [
+   "amc23:0002:sample:0",
+   "45^\\circ",
+   "45"
+  ],
+  [
+   "amc23:0002:sample:2",
+   "45^\\circ",
+   "45"
+  ],
+  [
+   "amc23:0002:sample:3",
+   "45^\\circ",
+   "45"
+  ],
+  [
+   "amc23:0002:sample:5",
+   "45^\\circ",
+   "45"
+  ],
+  [
+   "amc23:0002:sample:7",
+   "45^\\circ",
+   "45"
+  ]
+ ]
+}
