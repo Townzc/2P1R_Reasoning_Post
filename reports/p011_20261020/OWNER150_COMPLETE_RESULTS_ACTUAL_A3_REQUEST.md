@@ -1,3 +1,7 @@
+## Technical numeric handoff added; original actualA3 target and clock unchanged
+
+Supplementary copy-only T5/T6 numeric tables: targetda4c00a60814a8692b7c098c7840201dd584876a, packetreports/p011_20261020/technical_numeric_handoff_v1, MANIFESTf9297eeeef3d3b521ca6d74d67c8295fab94165e77bce55f046807c086f1f1d5, SOURCE_BINDINGS2268af77436a9f78d9cdb349ad9e5cdbdf08480bc96833ad623da67248c4dac7. These newly created tables copy saved aggregate JSON fields, with per-row source paths/pointers and exact input hashes. No score, bootstrap, old statistics, decoder or renderer was rerun. They retain missing cells, scopedD2/AMC and scorer sensitivity limits. This supplement does not reset the original actualA3 publication clock (2026-10-22T01:24:08.139886+00:00) or replace targetfe82972a. It is not the real05UTC freeze or finalA5. Numeric provenance for these tables will be required at finalA5 under P011§6/§7.2.
+
 # Actual A3: complete owner-epoch A results, original contrasts and cost projection
 
 Request: p011-owner150-A-D-complete-results-and-original-contrasts-actual-A3-r1
