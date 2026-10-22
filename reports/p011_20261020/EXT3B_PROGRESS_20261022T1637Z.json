@@ -1,0 +1,188 @@
+{
+  "recorded_utc": "2026-10-22T16:38:02.909093+00:00",
+  "actual_result_target": "13dfdd59c25e80fbfb02fe3fe2eab9dc5b466cf7",
+  "publication": {
+    "finished_utc": "2026-10-22T16:35:25.945871+00:00",
+    "packet": "reports/p011_20261020/ext3b_complete_actual_results_v1",
+    "members": 12575,
+    "archive_bytes": 152976830,
+    "parts": 4,
+    "manifest_sha256": "cf575adc815d6831e7ea9192f1ea8f0489ea5584ba489603d994d156710d8970",
+    "binding_sha256": "43f5cfa7688d09eac8525c9119da193a77b3359a416e0cfec67a1edf8f94d112",
+    "actual_A3_pending": true,
+    "never_repeat": true
+  },
+  "saved_results": {
+    "recorded_utc": "2026-10-22T16:34:28.526629+00:00",
+    "cells": {
+      "long_R9072x1_S-F15_s17": {
+        "sample": {
+          "correct": 206,
+          "total": 2000,
+          "mean_pass_at_one": 0.103,
+          "descriptive_only": false
+        },
+        "greedy": {
+          "correct": 0,
+          "total": 500,
+          "mean_pass_at_one": 0.0,
+          "descriptive_only": false
+        },
+        "score_cap_seconds": 7200,
+        "U": 1935,
+        "B": 123808531,
+        "processed": 124815558,
+        "technical_unknown": 0
+      },
+      "long_R3024xE3_S-F15_s17": {
+        "sample": {
+          "correct": 552,
+          "total": 2000,
+          "mean_pass_at_one": 0.276,
+          "descriptive_only": false
+        },
+        "greedy": {
+          "correct": 8,
+          "total": 500,
+          "mean_pass_at_one": 0.016,
+          "descriptive_only": false
+        },
+        "score_cap_seconds": 7200,
+        "U": 1935,
+        "B": 123808531,
+        "processed": 124805091,
+        "technical_unknown": 0
+      }
+    },
+    "analysis": {
+      "utc": "2026-10-22T16:29:41.032521+00:00",
+      "contrast": "LARGE_minus_SMALL",
+      "sample": {
+        "difference_pp": -17.299999999999997,
+        "ci95_pp": [
+          -19.6,
+          -14.899999999999999
+        ],
+        "unit": "paired_question_mean_of_four",
+        "questions": 500,
+        "resamples": 10000,
+        "seed": 20261021,
+        "quantile_method": "linear",
+        "question_order_sha256": "01bf7f9d0da397671907b85c6378a595f58d028c9882b7bc9941512adfaf050b",
+        "training_seed_population_claim": false
+      },
+      "greedy": {
+        "difference_pp": -1.6,
+        "ci95_pp": [
+          -2.8000000000000003,
+          -0.6
+        ],
+        "unit": "paired_question_mean_of_four",
+        "questions": 500,
+        "resamples": 10000,
+        "seed": 20261021,
+        "quantile_method": "linear",
+        "question_order_sha256": "01bf7f9d0da397671907b85c6378a595f58d028c9882b7bc9941512adfaf050b",
+        "training_seed_population_claim": false,
+        "endpoint": "math500_greedy",
+        "actual_model_samples_per_question": 1,
+        "adapter": "repeat each saved greedy bit four times only at unchanged mean/bootstrap interface",
+        "additional_model_samples": 0
+      },
+      "descriptive_endpoints": {},
+      "bindings": {
+        "long_R3024xE3_S-F15_s17": {
+          "attempt": "long_R3024xE3_S-F15_s17_attempt1",
+          "score_sha256": "660ea19cbfa62823a712f8b3f3d5047beec4cbfcd6230f0711eb31bc9090945e",
+          "oracle_sha256": "882ea17e7c8dee47fa51512af6418d5f1aa766a2139d24a52b16610a238da2dc"
+        },
+        "long_R9072x1_S-F15_s17": {
+          "attempt": "long_R9072x1_S-F15_s17_attempt1",
+          "score_sha256": "209b9a6829b309f55bd697933022c15deacb762b3f218ea31256b779f7a20982",
+          "oracle_sha256": "d6f3218ab49cbc0c3ce20ddc244b9433b224a0c4b398fecdcadec119e93b5f77"
+        }
+      },
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 20261021,
+      "single_training_seed": 17,
+      "question_not_training_seed_population": true,
+      "greedy_repeated_saved_bit_only_for_original_four_bit_interface": true,
+      "A7_different_pool_descriptive_only_no_recomputed_contrast": true,
+      "AIME_AMC": "NOT_RUN_BY_OWNER_OPTION2_SCOPE",
+      "endpoint_scope_selected_by_completion_not_outcome": true,
+      "actual_A3_accepted": false,
+      "interpretation_written": false
+    },
+    "actual_A3_accepted": false,
+    "numeric_values_copied_from_saved_proofs_only": true
+  },
+  "terminal_cost_projection": {
+    "completed_utc": "2026-10-22T16:33:49.939158+00:00",
+    "scope": "P011-ext-3B-terminal-cost",
+    "cells": {
+      "long_R9072x1_S-F15_s17": {
+        "completed_model_app": "ap-C1u0UdtuxcYruDaQsUJ8KJ",
+        "failed_preentry_app": "ap-iHx2eJ4OxWVyXZr7HheQUq",
+        "retained_noncompute_allowance_usd": "5",
+        "hard_cell_cap_usd": "45",
+        "observed_tagged_total_usd": "26.70908507"
+      },
+      "long_R3024xE3_S-F15_s17": {
+        "completed_model_app": "ap-2Q8XZqJhBkfBwXbZkweO5p",
+        "failed_preentry_app": "ap-yvStdDNMbPLYi3DfOyCkPV",
+        "retained_noncompute_allowance_usd": "5",
+        "hard_cell_cap_usd": "45",
+        "observed_tagged_total_usd": "30.43662287"
+      }
+    },
+    "reported_tagged_charges_by_unique_app_usd": {
+      "ap-2Q8XZqJhBkfBwXbZkweO5p": "30.43655375",
+      "ap-yvStdDNMbPLYi3DfOyCkPV": "0.00006912",
+      "ap-C1u0UdtuxcYruDaQsUJ8KJ": "26.70900443",
+      "ap-iHx2eJ4OxWVyXZr7HheQUq": "0.00008064"
+    },
+    "observed_known_tagged_total_usd": "57.14570794",
+    "app_ids_without_reported_charge": [],
+    "hard_pair_cap_usd": "90",
+    "hard_per_cell_cap_usd": "45",
+    "retained_noncompute_allowance_is_not_actual_expense": true,
+    "old_failed_reservations_are_not_charges": true,
+    "unattributed_storage_build_egress_and_delayed_costs_not_assumed_zero": true,
+    "final_invoice_available": false,
+    "observed_below_cap_is_not_final_guarantee": true,
+    "original_owner150_and_forced12_not_transferred_or_reconciled_again": true,
+    "private_month_report_not_published_or_independently_reviewed": true,
+    "report_sha256": "2bdf436431d025779ad981a771af6fb504b5928985a59fe8bdeec6ef944393a1",
+    "new_model_or_budget_release": false,
+    "automatic_retry": false
+  },
+  "original_models_collectors_oracles_scores_analysis": "ALL_DONE",
+  "model_calls_added_this_turn": 0,
+  "actual_A3": {
+    "prepared_utc": "2026-10-22T16:38:02.909093+00:00",
+    "request_id": "p011-ext-3B-complete-original-results-actual-A3-r1",
+    "scope": "p011-ext-3B-complete-original-results-actual-A3",
+    "target_commit": "13dfdd59c25e80fbfb02fe3fe2eab9dc5b466cf7",
+    "packet": "reports/p011_20261020/ext3b_complete_actual_results_v1",
+    "request_path": "reports/p011_20261020/EXT3B_COMPLETE_RESULTS_ACTUAL_A3_REQUEST.md",
+    "manifest_sha256": "cf575adc815d6831e7ea9192f1ea8f0489ea5584ba489603d994d156710d8970",
+    "binding_sha256": "43f5cfa7688d09eac8525c9119da193a77b3359a416e0cfec67a1edf8f94d112",
+    "required_flags": [
+      "exact_two_original_attempts_matched_B123808531_U1935_and_source87_local89_accepted",
+      "independent5000_native_token_decode_text_region_stop_and_correctness_coverage_disclosed",
+      "original_frozen_scores_and_two_LARGE_minus_SMALL_paired10000_seed20261021_contrasts_accepted",
+      "original_preentry_failures_local_failed_prefix_and_once_only_continuation_preserved",
+      "MATH_only_AIME_AMC_NOT_RUN_no_missing_zero_or_unregistered_A7_contrast_accepted",
+      "single_training_seed_private_binary_full_symbolic_engine_and_original_window_limits_disclosed",
+      "exact_four_app_terminal_cost_projection_not_final_invoice_or_budget_release_disclosed"
+    ],
+    "status": "PENDING",
+    "first_remote_publication_utc": null
+  },
+  "local_source_review": "CLOSED_0ebb26a4",
+  "all_previous_failures_retained": true,
+  "active_models": 0,
+  "active_scientific_CPU": 0,
+  "active_collectors": 0,
+  "awake": false
+}
