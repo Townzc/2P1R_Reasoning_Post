@@ -1,3 +1,9 @@
+## V3 source review CLOSED — 2026-10-22T03:54:22.913493+00:00
+
+Claude4666ba6cf7765d3f2b67e626a4fb98e84f0402d8/reportceb341d3e20aa115f1a4aa69517564542cc2028de12adc9097b38657043f761d explicitly PASS all6flags for target519bdd11/31source diff. Git03:19:09, reportself~03:20, discovery03:47:39.585203 and full-read confirmation03:48:51.577657 are separate. Exact acceptance is `reports/p011_20261020/review_4666ba6c_forced_v3_source_accepted_v1`. The once-only constructor has now completed9716requests/prefill160339564. Source review is closed; only the new actual-input A2-lite `FORCED_ANSWER_ACTUAL_INPUT_A2_REQUEST.md` is pending before freshcost/slot checks or GPU. No original science repeated. Earlierv1/v2STOP history remains below.
+
+---
+
 ## Current v3: two CR8125 fixes, diff-only re-review — 2026-10-22T03:12:21.731424+00:00
 
 Target `519bdd11edf17d5ecc37e681501e314695bac43f`, packet `reports/p011_20261020/forced_answer_preflight_v3`, exact31source entries. SPEC `3885bd48aca0feb95ea3ca2ef59b6acc32454b7c2ad7b78f8984443e7a3e811a`, SOURCE_BINDING `e7901104151f66e3a330f549d03fa46762b40c34b69f254ec2ea7cf0a66046ac`, MANIFEST `b0c47c7f733b827d9fa4d0fe805fb50ee0eb089fdf17f1c3148136f399be7dd0`. Same request/scope and six explicit flags; **PENDING**. The two rejected candidates remain immutable and never executed. Please review only `DIFF_AGAINST_V2.patch` and the new regression evidence; the previously accepted remainder is unchanged.
