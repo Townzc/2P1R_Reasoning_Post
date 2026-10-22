@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-22T07:12:09.967593+00:00",
+  "original_failed_cli": 46096,
+  "original_failed_exit_receipt": {
+    "started_utc": "2026-10-22T07:07:25.650842+00:00",
+    "finished_utc": "2026-10-22T07:07:29.475137+00:00",
+    "exit_code": 1
+  },
+  "failure": {
+    "utc": "2026-10-22T07:07:29.469868+00:00",
+    "type": "KeyError",
+    "message": "'State'",
+    "automatic_retry": false,
+    "read_receipts": [
+      {
+        "name": "rates",
+        "started_epoch": 1792652845.725826,
+        "observed_epoch": 1792652846.4965801,
+        "exit": 0
+      },
+      {
+        "name": "report",
+        "started_epoch": 1792652846.496583,
+        "observed_epoch": 1792652847.892329,
+        "exit": 0
+      },
+      {
+        "name": "apps",
+        "started_epoch": 1792652847.89233,
+        "observed_epoch": 1792652848.551766,
+        "exit": 0
+      },
+      {
+        "name": "containers",
+        "started_epoch": 1792652848.551767,
+        "observed_epoch": 1792652849.469501,
+        "exit": 0
+      }
+    ]
+  },
+  "original_log_sha256": "0d32ad6782c73fae9b28018f6bac11f7133ae223d4b4e0c097e744d99845df9d",
+  "actual_keys": [
+    "app_id",
+    "created_at",
+    "description",
+    "state",
+    "stopped_at",
+    "tasks"
+  ],
+  "actual_provider_state_counts": {
+    "stopped_zero_tasks": 1
+  },
+  "containers": 0,
+  "models_or_uploads_started_by_failed_budget": false,
+  "known_same_schema_issue_in_forced_budget_helper": true,
+  "original_forced_budget_helper_executed": false,
+  "original_runtime86_and_forced38_unchanged": true
+}
