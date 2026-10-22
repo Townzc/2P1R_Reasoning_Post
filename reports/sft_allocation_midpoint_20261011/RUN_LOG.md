@@ -1,3 +1,7 @@
+## Revised4B full runtime CR published candidate — 2026-10-22T05:38:38.439062+00:00
+
+Fixed10b74e99bb4b544fac7752d82c51b27a7125b9b8/ext4b_full_runtime_preflight_v1, exact81sources (12new runtime files);7newboundariesPASS0.972s, no oldtests/science repeated. Completecheckpoint500/oneinfrastructure resume/90pair45percell cumulativecost/native3300/fulloracle/scorer/contrast path requestp011-ext-4B-complete-training-resume-evaluation-path-CR-r1 is PENDING. Actualinputsconstructor32526 stilloriginalactive; exactinput/jobA2 willfollow withoutextraCPUscience. No4Bmodels ornewbilling. Historical4.9072/h96GiB meanscostwindowabout7.97h, notguaranteedcompletion. Modulequalifiedentry and independentwholeattemptwatchdog prepared. OriginalP011finalA5CLOSED;forcedoriginalimportfailureheldwithoutretry.
+
 ## 4B data CR and true P011 final A5 accepted; forced import failure — 2026-10-22T05:35:27.335723+00:00
 
 Claude eafd7e71/reportb08252f6 explicitly accepts current583a035a12096/3024data construction/all5flags. First originalCPUconstructor32526 is active; no4Bmodel. Exactq/remainder/effectiveE will be saved from its output; fullpathCR+actualA2 remain mandatory beforeGPU. Original500-update checkpoint interval retained; reviewer250 suggestion not silentlyadopted. Newresume/money/native boundary tests7PASS0.972s, no oldtests repeated.
