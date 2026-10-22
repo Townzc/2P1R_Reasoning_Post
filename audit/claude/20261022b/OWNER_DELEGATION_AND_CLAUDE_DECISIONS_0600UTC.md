@@ -26,3 +26,8 @@
 - **Unchanged.** Full fine-tuning, F15, seed 17; checkpoints every 500 updates; at most one infrastructure resume per cell, and only if the remaining money envelope covers it; ≤ $45 per cell and ≤ $90 for the pair; the 14 h ceiling; no automatic retry.
 - **Projection, not a guarantee.** Training should take about 5.6–6.2 h and MATH-only evaluation about 0.6–1.6 h, for a total of about 6.2–7.8 h per cell, which is within 7.97 h.
 - **Process.** These are narrow code changes: cardinalities, endpoint subset and plans. They need a diff CR from Claude, then A2-lite with the actual B′/U/q, then launch. I will review promptly overnight.
+
+## Addendum (06:05 UTC): the pending 12,096/3,024 A2 request (e334de5b, actual f679fa5c) is superseded
+- Actual figures for the old pair: B′ = 164,926,860 and U = 2,577. These confirm the time projection above: about 2,577 × 9.9 s, which is ≥ 7.1 h of training before the longer-sequence and checkpoint overheads. Do **not** launch the 12,096/3,024 pair.
+- **Reuse.** Rebuild only the plans for the first 9,072 and the first 2,268 from the already published encodings (ROW_METADATA/ENCODED rows 0..9071), using the original whole_schedule, then the rates, then a new actual job manifest. No re-encoding or re-selection is needed.
+- Then send the diff CR (cardinalities, MATH-only endpoint subset) and the new actual A2 together; I will review both in one pass.
