@@ -9041,7 +9041,7 @@
         "future_budget_upload_entry": "new_budget_DONE_completed_upload_REUSED_two_extra_preentries_SUBMITTED",
         "original_failures_not_erased": true
       },
-      "status": "R9072_WORKER_COMPLETED_FIRST_COLLECT_ACTIVE_R3024_ORIGINAL_MODEL_ACTIVE",
+      "status": "BOTH_ORIGINAL_WORKERS_COMPLETED_LOCAL_LINK_CORRECTION_PENDING",
       "current_models": [
         {
           "job": "long_R9072x1_S-F15_s17",
@@ -9086,7 +9086,7 @@
           "job": "long_R3024xE3_S-F15_s17",
           "attempt": 1,
           "original_CLI_session_id": 5828,
-          "status": "SUBMITTED_ORIGINAL_CLI_ACTIVE",
+          "status": "ORIGINAL_WORKER_COMPLETED_LOCAL_CLOSEOUT_PENDING",
           "submission": {
             "app_id": "ap-2Q8XZqJhBkfBwXbZkweO5p",
             "call_id": "fc-01M5HC9N0KBKFCRYRNXQ042QXT",
@@ -9114,23 +9114,49 @@
           "entry_cli_subdirectory": "cli_preentry2",
           "original_upload_reused_no_repeat": true,
           "private_intent_sha256": "f99a127218a3a6aa63459ec57a6701e8afd479fb99de72fc6c022acba4b01cd9",
-          "RESULT_present": false,
+          "RESULT_present": true,
           "RETURN_ERROR_present": false,
-          "model_completion_claimed": false
+          "model_completion_claimed": true,
+          "original_CLI_state": "EXIT0_CONSUMED",
+          "local_scientific_closeout_complete": false,
+          "result_receipt_sha256": "7c663d118e3552dca9cee5e83aba030596324e0abfa15593ef6a874871f43df2"
         }
       ],
-      "active_models": 1,
+      "active_models": 0,
       "latest_local_progress": {
-        "record": "reports/p011_20261020/EXT3B_PROGRESS_20261022T1420Z.json",
-        "observed_utc": "2026-10-22T14:20:39.344115+00:00",
-        "large_worker_completed": true,
-        "large_original_CLI": "EXIT0_CONSUMED",
-        "large_first_collect_CLI94648": "ACTIVE_UNCONSUMED",
-        "large_local_oracle_score": "NOT_RUN",
-        "small_original_CLI5828": "ACTIVE_UNCONSUMED",
+        "record": "reports/p011_20261020/EXT3B_PROGRESS_20261022T1509Z.json",
+        "observed_utc": "2026-10-22T15:10:27.985959+00:00",
+        "both_original_workers_completed": true,
+        "large_first_collect_done": true,
+        "large_first_oracle_failed_before_science": true,
+        "small_first_collector78096": "ACTIVE_UNCONSUMED",
         "both_cell_scientific_closeout_complete": false
       },
-      "active_collectors": 1
+      "active_collectors": 1,
+      "local_closeout_correction": {
+        "status": "PENDING",
+        "request_id": "p011-ext-3B-local-endpoint-links-closeout-CR-r1",
+        "scope": "p011-ext-3B-local-endpoint-links-closeout-CR",
+        "request_path": "reports/p011_20261020/EXT3B_LOCAL_ENDPOINT_LINKS_CLOSEOUT_CR_REQUEST.md",
+        "target_commit": "ebfea411bb02b06b09048e182d90ff1a9511f110",
+        "source_count": 89,
+        "spec_sha256": "324de0f3b67f40bf1201238cc58a98dde4a8a8c501e04cc433544183c2b771af",
+        "manifest_sha256": "6e08d1c6dfa3a0e1d9c755e7392461bf50651a617dbd0e0c42a397de4c1a40bc",
+        "required_flags": [
+          "exact89_source_bindings_and_original87_unchanged_accepted",
+          "only_two_declared_endpoint_links_to_fixed_prior_targets_and_exact_bytes_accepted",
+          "exact_pre_science_large_failure_preserved_and_completed_prefix_reused_without_reexecution",
+          "small_first_full_oracle_and_unchanged_actual_inputs_jobs_source_A2_carry_accepted",
+          "original_full_state_optimizer_RNG_trajectory_native_decoder_functions_unchanged",
+          "original_scalar_pool_and_two_original10000_question_bootstrap_seed20261021_unchanged",
+          "original_absolute_closeout_clock_score7200_and_local_oracle_concurrency1_retained",
+          "separate_once_only_local_output_fences_no_new_model_upload_encoding_budget_or_retry",
+          "actual_results_A3_still_required_private_binary_and_single_seed_limits_retained"
+        ],
+        "production_not_run": true,
+        "first_remote_publication_utc": null,
+        "original_failed_audit_preserved": true
+      }
     },
     "actual_final_freeze": {
       "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
