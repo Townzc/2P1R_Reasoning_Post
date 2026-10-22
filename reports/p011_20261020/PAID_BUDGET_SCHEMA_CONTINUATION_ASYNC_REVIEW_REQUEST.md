@@ -1,3 +1,7 @@
+## CLOSED PASS/no stop — 2026-10-22T07:52:41.764120+00:00
+
+Fixed133090f1/report67d6d137 accepted allfour metadata flags. This does not cover the later two live-entry schema failures or proposed v3 runtime repair. See current3B request.
+
 Fixed candidate `09f3eaaa3273d14746e8f1be6439c57a1fec9022`; packet MANIFEST SHA256 `684fcfc0fc4d04ed0a02be746fed65e45afccd406705cd95f0f18bc27e18aea1`.
 
 # Budget metadata schema continuation — asynchronous infrastructure review

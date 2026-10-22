@@ -8794,10 +8794,10 @@
       "new3B_runtime_CR": {
         "request_id": "p011-ext-3B-complete-training-resume-MATH-path-CR-r1",
         "scope": "p011-ext-3B-complete-training-resume-MATH-path-CR",
-        "status": "CLOSED_PASS",
-        "target_commit": "c1a73d322e65e1ce5c4545befd366e9f8b6787a2",
-        "packet": "reports/p011_20261020/ext3b_math_runtime_preflight_v2",
-        "spec_sha256": "3a824522f32a5236cc65dc712bc8821f5cfeb86885dd39eaeec1d07d1f313f9e",
+        "status": "V3_PREENTRY_SCHEMA_REPAIR_PENDING",
+        "target_commit": "63523da98cb0325c6a5956d05c251fda6cb0500b",
+        "packet": "reports/p011_20261020/ext3b_preentry_schema_runtime_v3",
+        "spec_sha256": "055bcdb79bd28a376175b93b748864165fda5b70bcef8e84349f5549d1a9d094",
         "manifest_sha256": "b5a7129895e5c2ce2833ecb94c433c04e9958371f36cbee883ad7c75519ed7d5",
         "source_files": {
           "experiments/learning_regime_p009/__init__.py": "6b2bd9b425d523167ca743adc11f79e00706ec6dba8b5200e0379efc3ca942e5",
@@ -8825,8 +8825,8 @@
           "experiments/p011/ext4b_contract.py": "dbd04406217e79d2fd8fc1120ef5f63a3fd5c5b162824f465ebad2a12cbfe34b",
           "experiments/p011/ext4b_encoded.py": "a7f4787d57fe63e2fc45dd851f91c2b4ead52783e3b23fdfca2989b37f688a66",
           "experiments/p011/ext4b_execution.py": "4f31e2567cf0fdfd9bf72f9aa8b1e8d10482b828d398f5c31c134f8fd68a361b",
-          "experiments/p011/ext4b_path.py": "e70714a29f08925a0683455e5eae98293935b36f9c9d410e371e3c6b759e446a",
-          "experiments/p011/ext4b_runtime_contract.py": "ef8d40d9dcff59044981cae741bc8e94a587140faf4e57e6fc5dae36f9dbd5fb",
+          "experiments/p011/ext4b_path.py": "d4baedc507d762723d88264e880cbae5ec51ab229328b9ea411343eccdeebafc",
+          "experiments/p011/ext4b_runtime_contract.py": "7bf5a1b440ea3ebef89197da46e3d89548cbf4c67ba722ec7817cc8942ea28b7",
           "experiments/p011/ext4b_training.py": "381c88ce0917e5e9cd6eb30c079f8911fa3d4aa5a8c09eb60a5187e0dec9e681",
           "experiments/p011/failed_attempt_ledger.py": "84f72f1fcf50ac276e03fe5d14b6bcfc90e2f8e1413596f37104c2477f60f1b0",
           "experiments/p011/long_checkpoint.py": "6e71c347bc8824dac0df86e2e2af3a3fb4933019ed79fcea6b28d73faabfb385",
@@ -8868,7 +8868,7 @@
           "scripts/analyze_p011_long_lr_r2_pair.py": "aa1263a5638e8a91626879dcfc08c560f5b280baa3e76734cb72d221634d5e13",
           "scripts/analyze_p011_long_owner.py": "1de2bad96c1fcceba002ec90d29634837256edb62a8deff12f491bf56b2ec934",
           "scripts/analyze_p011_long_pair.py": "dc13272fd9818696499fd3465a26f6ded44350c44f838ee62e08693cd5e0abf8",
-          "scripts/p011_ext4b_io.py": "9f43ec1a433b66c8c5c278de63c743c4c185e152849a7c74900495514e1204c2",
+          "scripts/p011_ext4b_io.py": "8d0640ff59ca78ff0713db5406b8094a455f04b6f548b9d5a8185436ff238e7a",
           "scripts/p011_long_conditional_io.py": "546dfd7bb77bc71c795a018792b4bb452926b955aad283c29562ae0d98eb5919",
           "scripts/p011_long_current_io.py": "c6e306edf8ac52c51d9ae758b6e1e77d16c100c273ecc007239a876b5a176821",
           "scripts/p011_long_io.py": "f3f854c005cb609b664464b5cfc5eba2d1577e1c252753fce5b6b92ca887ce0b",
@@ -8882,10 +8882,11 @@
           "scripts/prepare_p011_long_numeric_gold_inputs.py": "8622966f139736d0b9d16d3e82fa5251bc6a555c544fe883b6177840bf7764e1",
           "scripts/prepare_p011_long_owner_transfers.py": "cd8d1feacce5dbb5d3613460f9b743e20346f62a6ae7fbee6baa75fdaf3cd4c2",
           "scripts/prepare_p011_long_runtime_inputs.py": "52070fa95bee488558cfe4e5578e2302d00a05af3f09009fbfa8cddc0c211478",
-          "scripts/record_p011_ext4b_budget.py": "26422c87e6b95be876f677fa3d96aafc947550ec5d47f8875e8445ce926814d7",
-          "scripts/run_p011_ext4b_once.py": "361907fe768fb4f979cd3a8d61c9e2f771476608b967b18d7b3521b0fe437591",
+          "scripts/record_p011_ext4b_budget.py": "f380953d8f1788306184f1e2f29c426d2f679ccf4dba5eae1c1526c69d45ac1c",
+          "scripts/run_p011_ext4b_once.py": "d95c78fa3ba7ae7cb73994dd4994bb4677798fbf7baa765701506bf919def935",
           "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-          "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e"
+          "src/sft_data.py": "8163fe1444622b332615a8249bededbf3e83890e99c4286c6f2520b2b2d1cc9e",
+          "experiments/p011/provider_slots.py": "518986f2014fa8c84f36e9e9021fe216318972624cec263d3298ed9881817684"
         },
         "required_flags": [
           "exact_owner_options2_3_prefix9072_first3024_equal_measured_dose_scaled_LR_accepted",
@@ -8899,7 +8900,11 @@
           "module_qualified_entry_and_independent_startup_crash_loop_watchdog_accepted",
           "exact_actual_input_A2_before_GPU_no_old_weights_gold_or_training_reencoding_transfer",
           "resume_prefix_mapping_full_state_oracle_concurrency1_original_absolute_window_accepted",
-          "single_training_seed_private_binary_missing_cycle_and_descriptive_benchmarks_NOT_RUN_disclosed"
+          "single_training_seed_private_binary_missing_cycle_and_descriptive_benchmarks_NOT_RUN_disclosed",
+          "exact_two_preentry_schema_failures_STOPPED0_null_model_keys_and_one_extra_entry_each_accepted",
+          "shared_actual_provider_schema_parser_at_both_budget_and_entry_and_conservative_unknown_slots_accepted",
+          "unchanged_v2_actual_job_manifest_A2_and_completed_upload_exact_carry_without_reconstruction_accepted",
+          "all_failed_preentry_cost_upper_retained_within90_45_and_any_later_model_resume_no_reset_accepted"
         ],
         "actual_A2_required_before_GPU": true,
         "production": false,
@@ -8907,7 +8912,8 @@
         "v1_report_recorded_superseded": "f16a096225ccbb7edd90f91f46b92de052092ba7a8d8c85a24bd6cc36df691d1",
         "accepted_report_sha256": "cf6a05814a7f6032d8f992c02301abe712a38c50d16661d47ad9b7282e7840e9",
         "accepted_review_commit": "f52bba2a5d83dd98895ac472829f8fa518aa8bb7",
-        "accepted_utc": "2026-10-22T07:06:06.756044+00:00"
+        "accepted_utc": "2026-10-22T07:06:06.756044+00:00",
+        "source_count": 87
       },
       "current_jobs": [
         "long_R9072x1_S-F15_s17",
@@ -8959,7 +8965,7 @@
       "new3B_actual_A2": {
         "request_id": "p011-ext-3B-actual-input-and-numeric-A2-lite-r1",
         "scope": "p011-ext-3B-actual-input-and-numeric-A2-lite",
-        "status": "CLOSED_PASS",
+        "status": "ORIGINAL_NUMERICAL_PASS_PRESERVED_V3_EXACT_CARRY_PENDING",
         "target_commit": "5f1003c5f459ed3f4f1780decae49e2141a37d1a",
         "packet": "reports/p011_20261020/ext3b_actual_inputs_v1",
         "source_target": "c1a73d322e65e1ce5c4545befd366e9f8b6787a2",
@@ -8978,10 +8984,31 @@
         "first_remote_publication_utc": null,
         "accepted_report_sha256": "cf6a05814a7f6032d8f992c02301abe712a38c50d16661d47ad9b7282e7840e9",
         "accepted_review_commit": "f52bba2a5d83dd98895ac472829f8fa518aa8bb7",
-        "accepted_utc": "2026-10-22T07:06:06.756044+00:00"
+        "accepted_utc": "2026-10-22T07:06:06.756044+00:00",
+        "new_source_target": "63523da98cb0325c6a5956d05c251fda6cb0500b",
+        "new_spec_sha256": "055bcdb79bd28a376175b93b748864165fda5b70bcef8e84349f5549d1a9d094",
+        "new_actual_data_constructed": false,
+        "new_upload_allowed": false
       },
       "overnight_direct_delegation": "reports/p011_20261020/OWNER_CLAUDE_NIGHT_REDELEGATION_20261022.json",
-      "fresh_budget_upload_entry": "NOT_RUN"
+      "fresh_budget_upload_entry": "NOT_RUN",
+      "first_input_upload": "COMPLETED_ONCE_13787",
+      "preentry_failures": {
+        "model_calls": 0,
+        "original_entry_sessions": {
+          "55094": "EXIT1_CONSUMED",
+          "4980": "EXIT1_CONSUMED"
+        },
+        "two_failed_apps_STOPPED0": true,
+        "six_model_keys_null": true,
+        "upload_session13787": "EXIT0_CONSUMED",
+        "input_upload_repeat_forbidden": true,
+        "current_target": "63523da98cb0325c6a5956d05c251fda6cb0500b",
+        "current_source_count": 87,
+        "current_spec_sha256": "055bcdb79bd28a376175b93b748864165fda5b70bcef8e84349f5549d1a9d094",
+        "source16_and_actual4carry": "PENDING",
+        "future_budget_upload_entry": "newbudget_NOTRUN_upload_REUSE_entry_NOTRUN"
+      }
     },
     "actual_final_freeze": {
       "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
@@ -9026,7 +9053,7 @@
     "forced_relaunch_current": {
       "request_id": "p011-forced-answer-one-delegated-import-relaunch-CR-r1",
       "scope": "p011-forced-answer-one-delegated-import-relaunch-CR",
-      "status": "CLOSED_PASS_WITH_NOTES",
+      "status": "ORIGINAL_R2_ACTIVE_IMPORT_CONFIRMED",
       "target_commit": "3396e258562f2dc4959d0866a871e46519e37318",
       "packet": "reports/p011_20261020/forced_answer_relaunch_preflight_v1",
       "spec_sha256": "afb57b85cd4c3cace434622e2bfd3adb4f6a8662766bdece3f97505077a34aae",
@@ -9087,16 +9114,20 @@
       "first_remote_publication_utc": null,
       "accepted_report_sha256": "cf6a05814a7f6032d8f992c02301abe712a38c50d16661d47ad9b7282e7840e9",
       "accepted_review_commit": "f52bba2a5d83dd98895ac472829f8fa518aa8bb7",
-      "accepted_utc": "2026-10-22T07:06:06.756044+00:00"
+      "accepted_utc": "2026-10-22T07:06:06.756044+00:00",
+      "app_id": "ap-WqLtFBHmIE7kojeFGmy8k2",
+      "call_id": "fc-01M5H7CH7THFM7PE26SPW7W7AK",
+      "session_id": 25427
     },
     "paid_budget_schema_continuation": {
-      "status": "METADATA_COMPLETE_ASYNC_INFRA_REVIEW_PENDING",
+      "status": "CLOSED_PASS_NO_STOP",
       "request_id": "p011-paid-budget-schema-metadata-continuation-async-CR-r1",
       "packet": "reports/p011_20261020/paid_budget_schema_metadata_continuation_v1",
       "failed_cli": 46096,
       "provider_reads_repeated": false,
       "source_runtime86_and_forced38_unchanged": true,
-      "models": 0
+      "models": 0,
+      "review_commit": "133090f109de5292e000b1e4d13a8850dc669412"
     }
   },
   "p011_owner150_current": {
@@ -9296,5 +9327,5 @@
     "census_original_strict_pool": 4038,
     "census_actual_A3_accepted": false
   },
-  "updated_utc": "2026-10-22T07:12:09.967593+00:00"
+  "updated_utc": "2026-10-22T07:52:41.764120+00:00"
 }

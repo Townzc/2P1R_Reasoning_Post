@@ -1,3 +1,7 @@
+## New V3 preentry repair / unchanged actual carry — PENDING 2026-10-22T07:52:41.764120+00:00
+
+Fixed `63523da98cb0325c6a5956d05c251fda6cb0500b`, SPEC`055bcdb79bd28a376175b93b748864165fda5b70bcef8e84349f5549d1a9d094`, exact87. See `EXT3B_PREENTRY_SCHEMA_FAILURE_CR_REQUEST.md`; all16source and4actualcarry flags needed. Old numericalA2/sourcev2 PASS preserved, not v3 permission. Both original entries failed before any model dispatch. Completed upload must be reused. No original data/encoding/tests repeated.
+
 ## CLOSED: fixed f52bba2a report accepted — 2026-10-22T07:06:06.756044+00:00
 
 See `review_f52bba2a_3B_and_forced_relaunch_accepted_v1` for original report, exact scope/flags and limitations. Fresh budget and slots remain required; this is not an actual result audit.
