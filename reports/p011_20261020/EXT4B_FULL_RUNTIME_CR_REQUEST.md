@@ -1,3 +1,7 @@
+## Actual revised input evidence now available — 2026-10-22T05:44:58.451369+00:00
+
+Fixedf679fa5c28f50b011c1d85a3a689c64997cc53d5/ext4b_actual_inputs_v1, Bprime164926860/U2577 each; source10b74e99/SPEC132b183d unchanged. Please review the complete81source candidate and separate EXT4B_ACTUAL_INPUT_A2_REQUEST together if convenient. Originalfullsource firstremote2026-10-22T05:39:24.846617+00:00/normal2026-10-22T06:09:24.846617+00:00 unchanged. ActualA2 has its own publicationclock. NoGPUadmissionuntilbothtruePASS.
+
 # Revised 4B complete training / resume / evaluation path — real CR request
 
 Prepared 2026-10-22T05:38:38.439062+00:00. Fixed target `10b74e99bb4b544fac7752d82c51b27a7125b9b8`; packet `ext4b_full_runtime_preflight_v1`. Direct owner6304b2a2 plus current12096/3024 amendment, pair≤90USD/percell≤45. Original dataCR eafd7e71 is accepted and its unique constructor32526 is active. This request is for the complete new runtime, not oldscientific source/test reexecution.

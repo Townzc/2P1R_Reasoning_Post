@@ -8130,9 +8130,10 @@
     },
     "active_scientific_compute": {
       "models": 0,
-      "CPU": 1,
-      "scope": "new ext4B once-only input construction",
-      "source": "EXT4B_V2_FIRST_INPUT_CONSTRUCTION_LAUNCH/CLI_EXIT"
+      "CPU": 0,
+      "collector_oracle_score": 0,
+      "archive": 0,
+      "awake": 0
     },
     "B_student_inputs": {
       "status": "CONSTRUCTOR_DONE_ACTUAL_A1_PENDING",
@@ -8639,10 +8640,30 @@
         "data_review": "eafd7e71/reportb08252f6 PASS-WITH-NOTES",
         "actual_A2": "pending actual input completion/publication; required before GPU",
         "models_started": 0,
-        "first_remote_publication_utc": null
+        "first_remote_publication_utc": "2026-10-22T05:39:24.846617+00:00"
       },
-      "actual_A2": "NOT_REQUESTED",
-      "inputs": "ACTIVE_FIRST_CONSTRUCTOR_32526",
+      "actual_A2": {
+        "request_id": "p011-ext-4B-actual-input-and-numeric-A2-lite-r1",
+        "scope": "p011-ext-4B-actual-input-and-numeric-A2-lite",
+        "status": "PENDING",
+        "target_commit": "f679fa5c28f50b011c1d85a3a689c64997cc53d5",
+        "packet": "reports/p011_20261020/ext4b_actual_inputs_v1",
+        "manifest_sha256": "33152b2614c0b2c745d095e990b5d7d00277b12317a697858db166df2bc5e7ef",
+        "actual_input_binding_sha256": "3a75a33dd3787b631a161b9129895c7f29cb6a28c1f06d8a5634b47b47d827bc",
+        "input_manifest_sha256": "74aa88e59c5f4608fc657b6a9dddac5b0aa4064f3227d69bf246dac7e3952a80",
+        "actual_job_manifest_sha256": "a5099f3f4ad4ca91eaefe286e6394659c0ff655c73d7165bb4a333621885d83b",
+        "spec_sha256": "132b183d52149e2378f4d5f83cf0780f12f89e3e242d63f5f7b61d8c57c5d52f",
+        "source_target_commit": "10b74e99bb4b544fac7752d82c51b27a7125b9b8",
+        "required_flags": [
+          "exact12096_first3024_roster_original_eligibility_NFC_cache_reuse_actual_input_manifest_accepted",
+          "equal_measured_Bprime_original_q_qplus1_order_scaled_LR_same_U_and_actual_E_accepted",
+          "exact_original_model_bytes_receipt_native3300_context_no_gold_upload_accepted",
+          "actual_job_manifest_full_source_SPEC_and90pair45cell_checkpoint_resume_limits_bound"
+        ],
+        "first_remote_publication_utc": null,
+        "GPU_started": false
+      },
+      "inputs": "COMPLETED_ONCE",
       "models": 0,
       "original_05UTC_freeze_unchanged": true,
       "large_questions": 12096,
@@ -8650,9 +8671,48 @@
       "large_cell": "long_R12096x1_S-F15_s17",
       "small_cell": "long_R3024xE4_S-F15_s17",
       "estimated_pair_cost_usd_not_admission": 80,
-      "actual_Bprime": "NOT_CONSTRUCTED",
+      "actual_Bprime": 164926860,
       "cardinality_amendment": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2/DIRECT_OWNER_CARDINALITY_AMENDMENT.json",
-      "superseded_unexecuted_candidate": "2d1d0254b938df494d28814dd0710ff52350a17b"
+      "superseded_unexecuted_candidate": "2d1d0254b938df494d28814dd0710ff52350a17b",
+      "actual_U": 2577,
+      "actual_dose_metadata": {
+        "utc": "2026-10-22T05:39:52.307644+00:00",
+        "cells": {
+          "long_R12096x1_S-F15_s17": {
+            "questions": 12096,
+            "Bprime_supervised_including_EOS": 164926860,
+            "one_pass_supervised_including_EOS": 164926860,
+            "q": 1,
+            "remainder_supervised_tokens": 0,
+            "effective_token_weighted_presentations": 1.0,
+            "mean_answer_presentations": 1.0,
+            "q_plus_one_presentations_count": 0,
+            "q_presentations_count": 12096,
+            "U": 2577,
+            "new_statistics_or_scientific_rerun": false
+          },
+          "long_R3024xE4_S-F15_s17": {
+            "questions": 3024,
+            "Bprime_supervised_including_EOS": 164926860,
+            "one_pass_supervised_including_EOS": 41282839,
+            "q": 3,
+            "remainder_supervised_tokens": 41078343,
+            "effective_token_weighted_presentations": 3.9950464647065576,
+            "mean_answer_presentations": 3.994708994708995,
+            "q_plus_one_presentations_count": 3008,
+            "q_presentations_count": 16,
+            "U": 2577,
+            "new_statistics_or_scientific_rerun": false
+          }
+        },
+        "exact_equal_Bprime_and_U": true,
+        "original_A7_B_saved_constant": 41813212,
+        "dose_ratio_to_saved_A7_B": 3.9443719367935666,
+        "short_label_4B_is_approximate": true,
+        "read_only_metadata_from_first_completed_constructor": true,
+        "original_COMPLETED_immutable": true
+      },
+      "input_publication_target": "f679fa5c28f50b011c1d85a3a689c64997cc53d5"
     },
     "actual_final_freeze": {
       "scheduled_cutoff_utc": "2026-10-22T05:00:00+00:00",
