@@ -1,0 +1,3 @@
+# D2 source and actual A3 disclosure closure
+
+The exact new metadata-only report explicitly confirms all8source and6actual flags. Original c97source PASS and c999numeric PASS are retained; no science, decoding, scoring or bootstrap was repeated. Source target942e1dab and actual targeta4a57687 are unchanged. The private state/export/ADMISSION were not independently read, full symbolic engine was not rerun, whole-cycle array is unavailable and intervals condition on training seed17. The original7200s cap/05UTC fences stayed in force. Reporter selftime~02:25 differs from actualGit02:20:08; discovery/read events are separately saved. A7-versus-baseline remains the owner smoke rule.
