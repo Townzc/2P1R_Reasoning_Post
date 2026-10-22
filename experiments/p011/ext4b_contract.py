@@ -5,14 +5,17 @@ from experiments.p011.owner_0205_common import read, sha
 
 OWNER_SHA = '2d5e3e9e0d25614d9a5b1e13e6e5535f620a79f61825c03a1283f75be99bb817'
 POOL_SEED = 'p011-ext-4B-20261022'
-LARGE = 'long_R16128x1_S-F15_s17'
-SMALL = 'long_R4032xE4_S-F15_s17'
+LARGE = 'long_R12096x1_S-F15_s17'
+SMALL = 'long_R3024xE4_S-F15_s17'
 DATA_SCOPE = 'p011-ext-4B-relaxed-pool-input-construction-CR'
 
 
 def admit(spec_path, review_path):
     spec, review = read(spec_path), read(review_path)
     if (spec['owner_report_sha256'] != OWNER_SHA
+            or spec.get('large_questions') != 12096 or spec.get('small_questions') != 3024
+            or spec.get('large_cell') != LARGE or spec.get('small_cell') != SMALL
+            or sha(spec['direct_owner_amendment']['path']) != spec['direct_owner_amendment']['sha256']
             or review.get('scope') != DATA_SCOPE
             or review.get('decision') not in ('PASS', 'PASS-WITH-NOTES')
             or review.get('spec_sha256') != sha(spec_path)
@@ -29,10 +32,10 @@ def admit(spec_path, review_path):
 
 def parent_order(pool):
     ordered = sorted(pool)
-    if len(ordered) != len(set(ordered)) or len(ordered) < 16128:
-        raise ValueError('At least16128 unique relaxed-pool questions required; no shrink')
+    if len(ordered) != len(set(ordered)) or len(ordered) < 12096:
+        raise ValueError('At least12096 unique relaxed-pool questions required; no shrink')
     random.Random(POOL_SEED).shuffle(ordered)
-    return ordered[:16128]
+    return ordered[:12096]
 
 
 def choose_from_cached_census(key, rows, census, prefix_lengths, newline_length, leaked):

@@ -1,0 +1,108 @@
+{
+  "raw_index": ".local/p011_20261020/r1/ot3_inputs_r1/RAW_INDEX.sqlite",
+  "raw_index_bytes": 43113029632,
+  "dataset_revision": "61bcf9d4eb38b30295efc2021227a63cc5bb34c8",
+  "original_metadata_bindings": [
+    {
+      "path": ".local/p011_20261020/r1/ot3_inputs_r1/INGESTED.json",
+      "sha256": "0d81be55ae36b0fc1feac0ec7b1db3b27208bfb31930792b44ebd3084b31b2f3"
+    },
+    {
+      "path": ".local/p011_20261020/r1/ot3_inputs_r1/INTENT.json",
+      "sha256": "b9bc6cbf4f393bc35a412dd599998d7aa6a34734bbb76b903fac7fc50c441183"
+    },
+    {
+      "path": "reports/p011_20261020/long_data_preflight_v1/SOURCE_LOCK.json",
+      "sha256": "0e78298f49b86ee3de7182443eb052da422d14af14f423bceb3f728a1696fdb0"
+    }
+  ],
+  "benchmark_binding": {
+    "path": ".local/p011_20261020/r1/ot3_inputs_r1/BENCHMARKS.json",
+    "sha256": "e98fd237f133cd32fe8c88203f7bfe086be345df845f7486f941acd4e3c546a5"
+  },
+  "tokenizer_path": ".local/exploratory_20261014/r1/inputs/instruct_model",
+  "tokenizer_files": {
+    "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "schema": "p011_ext4b_relaxed_input_v2",
+  "owner_report_sha256": "2d5e3e9e0d25614d9a5b1e13e6e5535f620a79f61825c03a1283f75be99bb817",
+  "owner_commit": "6304b2a2bed4e71c98c97e943d7eb0ef060eba52",
+  "scope": "p011-ext-4B-relaxed-pool-input-construction-CR",
+  "required_flags": [
+    "exact_6304b2a2_plus_direct_amendment_nested_12096_3024_order_accepted",
+    "completed_census_lengths_reused_with_selected_original_eligibility_agreement",
+    "original_NFC_masks_EOS_and_existing_encoded_identity_byte_reuse_accepted",
+    "equal_exact_Bprime_q_qplus1_whole_schedule_and_scaled_original_LR_accepted",
+    "input_construction_only_no_GPU_before_separate_full_runtime_CR_and_actual_A2"
+  ],
+  "source_files": {
+    "experiments/p011/__init__.py": "ef9c51d51d8ce9f6523be02a6d2c80266d431b6dbd25f816249946158789021d",
+    "experiments/p011/data_contract.py": "4bcb6227770d7db845527712ad3b08a26127e96c02ec46439ae0650bc7e42204",
+    "experiments/p011/native_nfc_encoding.py": "c2af5621a2917679dca59220b387cc7d60f2669cb4a40a5354607106d740447e",
+    "experiments/p011/owner_0205_common.py": "5d3ec2a3dc0b10f712a2373e2c9ac3838af2035cbeef8a0ac8756c15850e26fc",
+    "experiments/p011/ext4b_contract.py": "dbd04406217e79d2fd8fc1120ef5f63a3fd5c5b162824f465ebad2a12cbfe34b",
+    "scripts/prepare_p011_ext4b_inputs.py": "8f2c0be6af99ade8562ceb182ee4c710a658e9694420653873e716401daaf804",
+    "experiments/p011/long_lr_r2_training.py": "f81f19197866af613369b84428e695ab54d4f3ffda3bb7457bf3fd20c54c5a53",
+    "experiments/p011/long_checkpoint.py": "6e71c347bc8824dac0df86e2e2af3a3fb4933019ed79fcea6b28d73faabfb385",
+    "experiments/sft_allocation_midpoint/checkpoint.py": "a2509be58dcb85af13624168a5a66c73839030f7a2d429f0b4851e566a6b6e1e",
+    "experiments/sft_allocation_midpoint/common.py": "4063c6d39640752d4946e473fa4b9f5b94c5fa033859f2ac81962a536b21242c"
+  },
+  "output": ".local/p011_20261020/r1/ext4b_inputs_r1",
+  "question_shuffle_seed": "p011-ext-4B-20261022",
+  "large_cell": "long_R12096x1_S-F15_s17",
+  "small_cell": "long_R3024xE4_S-F15_s17",
+  "large_questions": 12096,
+  "small_questions": 3024,
+  "training_seed": 17,
+  "census_counts": {
+    "path": ".local/p011_20261020/r1/ot3_full_math_census_r1/COUNTS.json",
+    "sha256": "a9b9558e3ea368ac381398ffe60b83d7df9e70c8c1ac8d37b801915c6605800c"
+  },
+  "census_completed": {
+    "path": ".local/p011_20261020/r1/ot3_full_math_census_r1/COMPLETED.json",
+    "sha256": "a06c339a03b4fdc7e5640e9f3ba5637d92744e0d55e1b63b1faac8fe88210bd6"
+  },
+  "census_parents": {
+    "path": ".local/p011_20261020/r1/ot3_full_math_census_r1/PARENT_COUNTS.jsonl",
+    "sha256": "cb15ecd8601a6eaee9b0a96aa7064269aefd6d279d505cb0fe3fb7bbfb052532"
+  },
+  "existing_encoding_cache": {
+    "path": ".local/p011_20261020/r1/ot3_inputs_nfc_r1/ENCODED.jsonl",
+    "sha256": "f140e449d6bb35de2254b400a5074cc3fbb4c2d7af30dd682a3a138b46cc84c2",
+    "manifest": {
+      "path": ".local/p011_20261020/r1/ot3_inputs_nfc_r1/MANIFEST.json",
+      "sha256": "96894f8f72941d3dbe6b8341dca02c4caa44b8b59c51cd92c0f0c5318f389b55"
+    }
+  },
+  "endpoint_reuse": {
+    "ENDPOINT_GPU.json": {
+      "path": ".local/p011_20261020/r1/long_inputs_numeric_gold_r1/A7/ENDPOINT_GPU.json",
+      "sha256": "7737bf920bcdb4faec832a3ce925cbf4f926c2ca03bd37e17e96efe0751aecee"
+    },
+    "ENDPOINT_LOCAL.json": {
+      "path": ".local/p011_20261020/r1/long_inputs_numeric_gold_r1/A7/ENDPOINT_LOCAL.json",
+      "sha256": "f475f77c49036c832b0633971eaa26014f0de1467eb8b1e7e87ff0fc104d966b"
+    }
+  },
+  "new_training_scope_authorized_but_GPU_not_admitted_here": true,
+  "per_cell_reserve_usd": "45",
+  "pair_cap_usd": "90",
+  "forced_answer_reserve_separate_usd": "12",
+  "worker_hard_max_seconds": 50400,
+  "resume_after_infrastructure_failure_max": 1,
+  "checkpoints_every_updates": 500,
+  "original_05UTC_freeze_unchanged": true,
+  "original_optional_NOT_RUN_arms_not_reopened": true,
+  "automatic_data_retry": false,
+  "direct_owner_amendment": {
+    "path": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2/DIRECT_OWNER_CARDINALITY_AMENDMENT.json",
+    "sha256": "9871cd75a48b9004b73fdabfa92d955644450abd5b495f0659aac26266291f15"
+  },
+  "superseded_unexecuted_candidate": "2d1d0254b938df494d28814dd0710ff52350a17b",
+  "estimated_token_mass_not_actual": 165000000,
+  "estimated_pair_cost_usd_not_admission": 80
+}

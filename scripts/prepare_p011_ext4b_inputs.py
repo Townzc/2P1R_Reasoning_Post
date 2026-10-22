@@ -1,7 +1,7 @@
 """First new relaxed-pool inputs after exact CR; no model or old census rerun.
 
 The completed census supplies the full eligible-parent set and answer lengths.
-Only selected16128 groups are fetched from the original read-only SQLite index.
+Only selected12096 groups are fetched from the original read-only SQLite index.
 Previously encoded selected identities are byte-copied; only genuinely new
 selected identities reach the pinned NFC encoder. Both cells share one saved
 unique encoding; SMALL is the strict prefix subset. Endpoint bytes are reused.
@@ -69,8 +69,8 @@ def run(spec_path, review):
             'pool_parent_count':len(pool), 'pool_sorted_parent_hashes':[rules.identity(k) for k in sorted(pool)],
             'selected_parent_hashes':[rules.identity(k) for k in selected],
             'question_shuffle_seed':spec['question_shuffle_seed'],
-            'large_questions':16128, 'small_questions':4032,
-            'strict_subset_indices':list(range(4032)), 'A7_excluded_or_prioritized':False,
+            'large_questions':12096, 'small_questions':3024,
+            'strict_subset_indices':list(range(3024)), 'A7_excluded_or_prioritized':False,
             'pool_definition':'Original A grouping with >=1 original-eligible response',
             'source_census_counts_sha256':spec['census_counts']['sha256']})
         from transformers import AutoTokenizer
@@ -135,7 +135,7 @@ def run(spec_path, review):
         create(out/'ROW_METADATA.json', metas)
         budget = sum(x['n_supervised'] for x in metas)
         plans = {}
-        for name, rows in [(LARGE,metas),(SMALL,metas[:4032])]:
+        for name, rows in [(LARGE,metas),(SMALL,metas[:3024])]:
             plan = rules.whole_schedule(rows,budget,17)
             create(out/(name+'_PLAN.json'),plan)
             plans[name] = {'questions':len(rows),'B':budget,'U':plan['optimizer_updates'],'q':plan['q'],
@@ -148,7 +148,7 @@ def run(spec_path, review):
                 raise ValueError('Original native endpoint bytes differ')
             with (out/name).open('xb') as stream:stream.write(data)
         create(out/'COMPLETED.json', {'utc':utc(),'new_scope':'P011-ext-4B','cells':plans,
-            'unique_selected_questions':16128,'strict_subset_questions':4032,
+            'unique_selected_questions':12096,'strict_subset_questions':3024,
             'new_answer_encodings':new_encodings,'exact_existing_encoding_lines_reused':copied,
             'full_census_retokenizations':0,'new_endpoint_prompt_encodings':0,
             'same_supervised_B_including_EOS':budget,'same_optimizer_updates':plans[LARGE]['U'],
