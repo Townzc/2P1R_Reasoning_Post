@@ -48,8 +48,8 @@ def run(spec_path, review_path):
                 if original['answers'][0]['finish_reason']=='length':
                     selected.append(forced_request(original,decoded[row_id],suffix_ids))
                     diagnostics[row_id] = loop_heuristic(decoded[row_id]['answer_text'])
-                elif decoded[row_id]['stop_reason']!='native_eos':
-                    raise ValueError('Non-length technical stop is outside the owner scope')
+                elif (type(labels[row_id]) is not bool or decoded[row_id]['stop_reason'] not in ('native_eos','length_cap','invalid_special_token')):
+                    raise ValueError('Every unselected row needs its original known Boolean and native stop classification')
             cell_root=out/cell
             create(cell_root/'REQUESTS.json',selected)
             create(cell_root/'ORIGINAL_LABELS_AND_GOLD.json',{'labels':labels,

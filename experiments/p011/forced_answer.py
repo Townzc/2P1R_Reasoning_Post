@@ -27,10 +27,9 @@ def forced_request(raw, decoded, suffix_ids):
             or decoded['raw_record_sha256'] != original_digest(raw)
             or raw['answers'][0]['finish_reason'] != 'length'
             or decoded['backend_finish_reason'] != 'length'
-            or decoded['stop_reason'] != 'length_cap'
-            or decoded['unmapped_model_token_ids']
+            or decoded['stop_reason'] not in ('length_cap','native_eos','invalid_special_token')
             or len(raw['answers'][0]['token_ids']) != 16384):
-        raise ValueError('Exactly the original verified 16384-token length-limited row required')
+        raise ValueError('Exactly the original verified backend-length16384 row required')
     prompt, generated = raw['prompt_token_ids'], raw['answers'][0]['token_ids']
     if any(type(t) is not int or t < 0 for ids in (prompt, generated, suffix_ids) for t in ids):
         raise ValueError('Literal native token IDs only')

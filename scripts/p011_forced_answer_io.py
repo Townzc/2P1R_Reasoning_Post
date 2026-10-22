@@ -8,7 +8,7 @@ from experiments.p011.owner_0205_common import admit, create, digest, read, sha,
 from experiments.p011.forced_answer import CELLS, decode_continuation
 from experiments.p011.forced_answer_worker import REMOTE, STORE
 
-SPEC='reports/p011_20261020/forced_answer_preflight_v1/SPEC.json'
+SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
 
 
 def safe_name(name):

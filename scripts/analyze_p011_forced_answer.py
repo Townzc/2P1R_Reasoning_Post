@@ -5,7 +5,7 @@ from experiments.p011.owner_0205_common import admit, create, read, sha, utc
 from experiments.p011.forced_answer import CELLS, CONTRASTS, joined_labels, question_vectors
 from experiments.p011.long_evaluation import paired_question_interval
 
-SPEC='reports/p011_20261020/forced_answer_preflight_v1/SPEC.json'
+SPEC='reports/p011_20261020/forced_answer_preflight_v2/SPEC.json'
 
 
 def rates(ids,original,forced):
