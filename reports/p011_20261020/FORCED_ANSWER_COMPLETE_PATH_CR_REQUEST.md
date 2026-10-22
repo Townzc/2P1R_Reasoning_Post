@@ -1,3 +1,13 @@
+## Current exact candidate v2 — 2026-10-22T02:43:33.637610+00:00
+
+The authoritative forced-answer target is now `e8b66ed83e15cbd7c27194838d1bb9ac63263af5` / `reports/p011_20261020/forced_answer_preflight_v2`: SPEC `f5c59f8f17dee14438b86b25505a026475516f4ab20a2a70a2c8f1ee614714f1`, SOURCE_BINDING `4c044b44043a90b2d71b6dadddbbf813475b36ae14d18a8aacda8c9da7232037`, MANIFEST `37d862dddd440ee6d7cfff33d8d29f186ac4b857dc5e9c7c1d52dcf5991a7153`, exact31source/dependency entries. V1at63f54625 is superseded before any production; keep it as history, do not approve it for execution. The request/scope and six required source flags remain the same.
+
+The only selection correction removes an extra local stop/unmapped-token filter: use exactly original backend `finish_reason==length` with16384originalgeneratedIDs. Original native stop classification and originalknownlabels are retained; no accuracy or outcome selection. Non-length rows reuse their original Booleans without scoring. Six source files differ: protocol, inputselector and four immutableSPEC locators. All original scientific functions unchanged. One new synthetic boundary method covers native/special/unmapped subclasses and passed0.009s; old14tests were not rerun. Newinputs/census/GPU/score/analysis allNOTRUN.
+
+Census remains independently pending at original63f54625/exact4source target and its first remote02:41:59 clock; this forced-candidate update does not delay census review. A real exactv2sourceCR precedes actualinputs; actualA2 precedes anyGPU. $12/3hmaximum/freshremainingcost/8slots/oneattempt gates and fixed64cap/P1/loop/contrast disclosures from the original request below remain.
+
+---
+
 # Fixed forced-answer diagnostic: new owner02:05 scope, first source CR
 
 Request: `p011-forced-answer-complete-path-CR-r1`. Scope: `p011-forced-answer-complete-path-CR`. Status: **PENDING**; no production has started.
