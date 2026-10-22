@@ -1,3 +1,11 @@
+## CLOSED source PASS; original CPU census active — 2026-10-22T03:12:21.731424+00:00
+
+Claude fa47f456 report SHA b5f532d62b74d66b98e241e93f720aeddb388c0a931d07708582541af0c50f00 explicitly accepts all4flags for target63f54625. V2 report8125afea confirms this censusPASS stands. Original fulltext/discovery/Git times retained in review_8125afea_census_PASS_forced_v2_STOP_v1. No additional census source review is pending.
+
+Census first scientific execution CLI99882 began03:08:11.816838UTC, with no tight timer. An earlier local invocation exited before reading any data because the acceptance metadata had not been written after a metadata KeyError; that original log/exit is retained. The missing real acceptance was completed, and one distinct infrastructure continuation started the previously unstarted census. No scientific replay, model call or training re-encoding. Results/A3 are not yet complete.
+
+---
+
 # OT3 full math census: new owner02:05 scope, first source CR
 
 Request: `p011-OT3-full-math-pool-census-CR-r1`. Scope: `p011-OT3-full-math-pool-census-CR`. Status: **PENDING**; no production has started.

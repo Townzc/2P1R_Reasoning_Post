@@ -1,3 +1,15 @@
+## Current v3: two CR8125 fixes, diff-only re-review — 2026-10-22T03:12:21.731424+00:00
+
+Target `519bdd11edf17d5ecc37e681501e314695bac43f`, packet `reports/p011_20261020/forced_answer_preflight_v3`, exact31source entries. SPEC `3885bd48aca0feb95ea3ca2ef59b6acc32454b7c2ad7b78f8984443e7a3e811a`, SOURCE_BINDING `e7901104151f66e3a330f549d03fa46762b40c34b69f254ec2ea7cf0a66046ac`, MANIFEST `b0c47c7f733b827d9fa4d0fe805fb50ee0eb089fdf17f1c3148136f399be7dd0`. Same request/scope and six explicit flags; **PENDING**. The two rejected candidates remain immutable and never executed. Please review only `DIFF_AGAINST_V2.patch` and the new regression evidence; the previously accepted remainder is unchanged.
+
+Fix1 closes the forced outer box with the original escaped-brace convention, truncates its scoring segment, and gives a closed box scoring-only native_eos while separately retaining native/backend stop facts. Unclosed is labelled forced_box_unclosed with an existing incorrect-scoring stop. The frozen last_box/scalar/pool is unchanged. Closed+EOS, closed-withoutEOS and unclosed counts are persisted once and reused.
+
+Fix2 selects saved native length_cap only, preserving the original backend length/16384-ID checks and no unmapped-token filter. Every other original Boolean is reused. Counts of backend-length nativeEOS and invalid-special exclusions, also at16384, are explicit per cell. Six files changed including four immutableSPEC locators;25bindings unchanged. Seven distinct new tests passed; one invalid symbolic test fixture initially failed, and only that failed test was corrected/rerun. All old successful tests remain unrepeated.
+
+No forced CPU inputs, GPU upload/model, score or analysis has run. A real v3 source PASS precedes the once-only input constructor; actual-input A2-lite still precedes freshcost/slot admission and GPU. The original $12/$150/max3h/oneattempt and original05UTC formal freeze duties are unchanged. Census fa47f456 PASS has been accepted separately and its original CPU census is active.
+
+---
+
 ## Current exact candidate v2 — 2026-10-22T02:43:33.637610+00:00
 
 The authoritative forced-answer target is now `e8b66ed83e15cbd7c27194838d1bb9ac63263af5` / `reports/p011_20261020/forced_answer_preflight_v2`: SPEC `f5c59f8f17dee14438b86b25505a026475516f4ab20a2a70a2c8f1ee614714f1`, SOURCE_BINDING `4c044b44043a90b2d71b6dadddbbf813475b36ae14d18a8aacda8c9da7232037`, MANIFEST `37d862dddd440ee6d7cfff33d8d29f186ac4b857dc5e9c7c1d52dcf5991a7153`, exact31source/dependency entries. V1at63f54625 is superseded before any production; keep it as history, do not approve it for execution. The request/scope and six required source flags remain the same.
