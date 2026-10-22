@@ -5366,6 +5366,26 @@
       "request_path": "reports/p011_20261020/OT3_FULL_MATH_CENSUS_RESULTS_ACTUAL_A3_REQUEST.md",
       "normal_review_not_before_utc": "2026-10-22T04:56:09.531755+00:00",
       "minimum_review_not_before_utc": "2026-10-22T04:41:09.531755+00:00"
+    },
+    {
+      "request_id": "p011-ext-4B-relaxed-pool-input-construction-CR-r1",
+      "scope": "p011-ext-4B-relaxed-pool-input-construction-CR",
+      "status": "PENDING_V2_DIRECT_12096_3024_AMENDMENT",
+      "target_commit": "583a035a9cd3353f0d71f9ad6d8432d57ef9f4ea",
+      "spec_sha256": "acc18dc4a8267b6cf06c0ac34b62829aa537b42b9e180c9d7db0e83954ab143c",
+      "manifest_sha256": "f0ba47c553baebb9c3a04a838417b4dccc4217779ef3311ed1a2ec3f23d4181b",
+      "request_path": "reports/p011_20261020/EXT4B_RELAXED_INPUT_CONSTRUCTION_CR_REQUEST.md",
+      "required_flags": [
+        "exact_6304b2a2_plus_direct_amendment_nested_12096_3024_order_accepted",
+        "completed_census_lengths_reused_with_selected_original_eligibility_agreement",
+        "original_NFC_masks_EOS_and_existing_encoded_identity_byte_reuse_accepted",
+        "equal_exact_Bprime_q_qplus1_whole_schedule_and_scaled_original_LR_accepted",
+        "input_construction_only_no_GPU_before_separate_full_runtime_CR_and_actual_A2"
+      ],
+      "first_remote_publication_utc": null,
+      "production_inputs_started": false,
+      "model_calls": 0,
+      "packet": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2"
     }
   ],
   "p008_v31": {
@@ -7241,7 +7261,7 @@
     },
     "no_P010_active_compute": true
   },
-  "last_updated_utc": "2026-10-22T04:22:13.128990+00:00",
+  "last_updated_utc": "2026-10-22T04:50:41.993329+00:00",
   "p011": {
     "status": "ORIGINAL_SCIENCE_AND_ACTUAL_A3_CLOSED_NEW_OWNER0205_SOURCE_CR_PENDING_FORMAL05UTC_FREEZE_A5_PENDING",
     "plan_commit": "e0dee182972f9910b707fac68800dcb5a3aff2d3",
@@ -8355,7 +8375,7 @@
           "source_review_commit": "4666ba6cf7765d3f2b67e626a4fb98e84f0402d8",
           "source_review_sha256": "ceb341d3e20aa115f1a4aa69517564542cc2028de12adc9097b38657043f761d",
           "actual_input_target": "2921c7b937c5d4d02120013ef710ecd2a55db31a",
-          "actual_input_A2_accepted": false
+          "actual_input_A2_accepted": true
         },
         {
           "request_id": "p011-forced-answer-actual-input-A2-lite-r1",
@@ -8425,7 +8445,7 @@
       "forced_CR_accepted": true,
       "forced_actual_inputs_complete": true,
       "forced_actual_input_target": "2921c7b937c5d4d02120013ef710ecd2a55db31a",
-      "forced_actual_A2_accepted": false,
+      "forced_actual_A2_accepted": true,
       "new_model_calls": 0,
       "census_complete": true,
       "census_actual_A3_accepted": false,
@@ -8439,6 +8459,47 @@
       "census_actual_A3": "PENDING_af9b56f2",
       "active_new_CPU": 0,
       "active_models": 0
+    },
+    "ext4b_current": {
+      "owner_direct_adoption_utc": "2026-10-22T04:42:54.803617+00:00",
+      "owner_commit": "6304b2a2bed4e71c98c97e943d7eb0ef060eba52",
+      "scope": "P011-ext-4B",
+      "pair_budget_usd": 90,
+      "per_cell_budget_usd": 45,
+      "forced_diagnostic_budget_separate": true,
+      "data_CR": {
+        "request_id": "p011-ext-4B-relaxed-pool-input-construction-CR-r1",
+        "scope": "p011-ext-4B-relaxed-pool-input-construction-CR",
+        "status": "PENDING_V2_DIRECT_12096_3024_AMENDMENT",
+        "target_commit": "583a035a9cd3353f0d71f9ad6d8432d57ef9f4ea",
+        "spec_sha256": "acc18dc4a8267b6cf06c0ac34b62829aa537b42b9e180c9d7db0e83954ab143c",
+        "manifest_sha256": "f0ba47c553baebb9c3a04a838417b4dccc4217779ef3311ed1a2ec3f23d4181b",
+        "request_path": "reports/p011_20261020/EXT4B_RELAXED_INPUT_CONSTRUCTION_CR_REQUEST.md",
+        "required_flags": [
+          "exact_6304b2a2_plus_direct_amendment_nested_12096_3024_order_accepted",
+          "completed_census_lengths_reused_with_selected_original_eligibility_agreement",
+          "original_NFC_masks_EOS_and_existing_encoded_identity_byte_reuse_accepted",
+          "equal_exact_Bprime_q_qplus1_whole_schedule_and_scaled_original_LR_accepted",
+          "input_construction_only_no_GPU_before_separate_full_runtime_CR_and_actual_A2"
+        ],
+        "first_remote_publication_utc": null,
+        "production_inputs_started": false,
+        "model_calls": 0,
+        "packet": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2"
+      },
+      "full_runtime_CR": "PREPARING_NOT_READY",
+      "actual_A2": "NOT_REQUESTED",
+      "inputs": "NOT_RUN",
+      "models": 0,
+      "original_05UTC_freeze_unchanged": true,
+      "large_questions": 12096,
+      "small_questions": 3024,
+      "large_cell": "long_R12096x1_S-F15_s17",
+      "small_cell": "long_R3024xE4_S-F15_s17",
+      "estimated_pair_cost_usd_not_admission": 80,
+      "actual_Bprime": "NOT_CONSTRUCTED",
+      "cardinality_amendment": "reports/p011_20261020/ext4b_relaxed_input_preflight_v2/DIRECT_OWNER_CARDINALITY_AMENDMENT.json",
+      "superseded_unexecuted_candidate": "2d1d0254b938df494d28814dd0710ff52350a17b"
     }
   },
   "p011_owner150_current": {
