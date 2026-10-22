@@ -1,3 +1,7 @@
+## CLOSED: fixed f52bba2a report accepted — 2026-10-22T07:06:06.756044+00:00
+
+See `review_f52bba2a_3B_and_forced_relaunch_accepted_v1` for original report, exact scope/flags and limitations. Fresh budget and slots remain required; this is not an actual result audit.
+
 # Actual 3B prefix, dose and numeric A2-lite — PENDING
 
 Prepared 2026-10-22T06:38:17.022111+00:00; fixed `5f1003c5f459ed3f4f1780decae49e2141a37d1a`. Direct owner chose ②+③ and now directly delegates tonight's decisions to Claude. The later prefix review1901fcf7 explicitly retains **9,072 / 3,024**, superseding the earlier delegated2,268 variant. Prefix data CR allfiveflagsPASS; constructor7893 and actualmetadata70843 completed once. No tokenization, census, originalendpoint construction or model repeated.
