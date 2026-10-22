@@ -1,0 +1,68 @@
+{
+  "failed_attempts": {
+    "long_A1_S-F15_s17_owner_r1": {
+      "return_error_file": ".local/p011_20261020/r1/dispatch/long_A1_S-F15_s17_owner_r1/RETURN_ERROR.json",
+      "return_error": {
+        "automatic_retry_allowed": false,
+        "message": "Original source/dispatch/report/window differs",
+        "observed_epoch": 1792616067.720754,
+        "type": "ValueError"
+      },
+      "private_original_intent_sha256": "4a9a1527057d9e49e4756d9a6920c62258e0c7843b6072e2d60fc145e238e3da",
+      "public_failure_packet": "reports/p011_20261020/owner_A1_preemption_failure_v1",
+      "target_commit": "52a8e21c7cfb70cd4fa6ddc4a4f220cce7574d89",
+      "manifest_sha256": "fb32507dfd08e67600fb338cf0a2d933ae2d8e293e97c61f12d9f60a23f9b112",
+      "scientific_result_unavailable": true,
+      "not_scored_as_zero": true
+    },
+    "long_D2_S-F15_s17_owner_r1": {
+      "return_error_file": ".local/p011_20261020/r1/dispatch/long_D2_S-F15_s17_owner_r1/RETURN_ERROR.json",
+      "return_error": {
+        "automatic_retry_allowed": false,
+        "message": "Original source/dispatch/report/window differs",
+        "observed_epoch": 1792621978.974111,
+        "type": "ValueError"
+      },
+      "private_original_intent_sha256": "8cc1ba12813c0273ecc5d30106585b9fe3f76ab1a24b97b211df5283337c3c80",
+      "public_failure_packet": "reports/p011_20261020/owner_D2_terminal_failure_v1",
+      "target_commit": "0b44606a1133eb0b331e312e433fc09c391c1ba6",
+      "manifest_sha256": "6fa9b272e26378648ad28cd91a650f5e564d9fd6c0e375125b1abe217bab619a",
+      "complete_worker_result_unavailable": true,
+      "not_scored_as_zero": true,
+      "partial_endpoints_not_used_as_complete_result": true,
+      "no_model_restart_after_dispatch_cutoff": true,
+      "owner_authorized_scoped_result_available": true
+    }
+  },
+  "unavailable_pairs": [
+    {
+      "left": "A1",
+      "right": "A2",
+      "reason": "One or both successful cells absent; not a zero difference"
+    },
+    {
+      "left": "A1",
+      "right": "A3",
+      "reason": "One or both successful cells absent; not a zero difference"
+    },
+    {
+      "left": "A1",
+      "right": "A4",
+      "reason": "One or both successful cells absent; not a zero difference"
+    },
+    {
+      "left": "A8",
+      "right": "A7",
+      "reason": "One or both successful cells absent; not a zero difference"
+    }
+  ],
+  "optional_not_run": [
+    "A4",
+    "A3",
+    "A2",
+    "A8"
+  ],
+  "B2": "NOT_RUN_BUDGET_CUT",
+  "C2": "CLOSED_BY_DELEGATED_BUDGET_DECISION_NO_REPAIR_GENERATION_OR_STUDENT",
+  "D2_original_worker_failed_but_owner_scoped_MATH_AIME_complete": true
+}
