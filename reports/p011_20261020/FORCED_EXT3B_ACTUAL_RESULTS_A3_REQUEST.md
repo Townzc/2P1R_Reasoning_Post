@@ -1,3 +1,7 @@
+# CLOSED: actual-result A3 PASS-WITH-NOTES
+
+Claude `636e2b1fdfa2dcdfa3bbfe3c62876c7216dd616c` / report SHA `d4c5d06fc507a479fbd62d27c565867aab5adf1d7d1fbb9ef35aa77f3ebd2689` explicitly accepted all seven flags. See `review_636e2b1f_forced_ext3b_actual_A3_accepted_v1`. Original frozen P1 labels and all scientific numbers remain unchanged.
+
 # Independent actual A3: two-cell forced-answer diagnostic
 
 Request: `p011-forced-answer-ext3b-actual-results-A3-r1`

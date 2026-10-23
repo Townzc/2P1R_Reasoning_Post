@@ -5591,7 +5591,7 @@
     {
       "request_id": "p011-forced-answer-ext3b-actual-results-A3-r1",
       "scope": "p011-forced-answer-ext3b-actual-results-A3",
-      "status": "PENDING",
+      "status": "CLOSED_ACCEPTED",
       "target_commit": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
       "packet": "reports/p011_20261020/forced_answer_ext3b_actual_results_v1",
       "manifest_sha256": "9fe526fb4e0627d7478f4594f58513245a8de743b3ca2e2a94535f46baddbfcb",
@@ -5611,7 +5611,12 @@
       "reported_tagged_cost_usd": "1.21523750",
       "actual_invoice_claimed": false,
       "all_science_done_once": true,
-      "active_models": 0
+      "active_models": 0,
+      "decision": "PASS-WITH-NOTES",
+      "review_head": "636e2b1fdfa2dcdfa3bbfe3c62876c7216dd616c",
+      "report_sha256": "d4c5d06fc507a479fbd62d27c565867aab5adf1d7d1fbb9ef35aa77f3ebd2689",
+      "acceptance_packet": "reports/p011_20261020/review_636e2b1f_forced_ext3b_actual_A3_accepted_v1",
+      "accepted_utc": "2026-10-23T00:28:06.482768+00:00"
     }
   ],
   "p008_v31": {
@@ -9746,7 +9751,7 @@
   "p011_forced_ext3b_current": {
     "request_id": "p011-forced-answer-ext3b-complete-path-CR-r1",
     "scope": "p011-forced-answer-ext3b-complete-path-CR",
-    "status": "SCIENCE_COMPLETE_ACTUAL_A3_PENDING",
+    "status": "CLOSED_ALL_SCIENCE_AND_ACTUAL_A3_ACCEPTED",
     "target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
     "packet": "reports/p011_20261020/forced_answer_ext3b_preflight_v2",
     "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
@@ -9813,8 +9818,8 @@
     "first_remote_publication_utc": null,
     "new_two_cell_scope_only": true,
     "supersedes_unexecuted_target": "a6ed5ed01c350e59df5814cc7297ddbe0d6cff93",
-    "last_audit_head": "f512a787094e2d10ab77776e44cbaa0788ea6ada",
-    "last_audit_head_observed_utc": "2026-10-22T23:36:14.290574+00:00",
+    "last_audit_head": "636e2b1fdfa2dcdfa3bbfe3c62876c7216dd616c",
+    "last_audit_head_observed_utc": "2026-10-23T00:27:06.616292+00:00",
     "source_review_decision": "PASS-WITH-NOTES",
     "existing_A6_minus_A7_pair_complete": true,
     "source_acceptance_packet": "reports/p011_20261020/review_a7e0a9ce_forced_ext3b_source_accepted_v1",
@@ -9850,7 +9855,10 @@
     "reported_tagged_cost_usd": "1.21523750",
     "cost_is_final_invoice": false,
     "result_target_commit": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
-    "actual_result_A3_request": "p011-forced-answer-ext3b-actual-results-A3-r1"
+    "actual_result_A3_request": "p011-forced-answer-ext3b-actual-results-A3-r1",
+    "actual_result_A3_acceptance_packet": "reports/p011_20261020/review_636e2b1f_forced_ext3b_actual_A3_accepted_v1",
+    "all_new_work_complete": true,
+    "original_result_packet_immutable": true
   },
   "p011_forced_ext3b_existing_label_contrast": {
     "status": "COMPLETE_PENDING_INDEPENDENT_NEW_RESULT_REVIEW",
@@ -9896,7 +9904,7 @@
   "p011_forced_ext3b_actual_results_A3": {
     "request_id": "p011-forced-answer-ext3b-actual-results-A3-r1",
     "scope": "p011-forced-answer-ext3b-actual-results-A3",
-    "status": "PENDING",
+    "status": "CLOSED_ACCEPTED",
     "target_commit": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
     "packet": "reports/p011_20261020/forced_answer_ext3b_actual_results_v1",
     "manifest_sha256": "9fe526fb4e0627d7478f4594f58513245a8de743b3ca2e2a94535f46baddbfcb",
@@ -9916,6 +9924,11 @@
     "reported_tagged_cost_usd": "1.21523750",
     "actual_invoice_claimed": false,
     "all_science_done_once": true,
-    "active_models": 0
+    "active_models": 0,
+    "decision": "PASS-WITH-NOTES",
+    "review_head": "636e2b1fdfa2dcdfa3bbfe3c62876c7216dd616c",
+    "report_sha256": "d4c5d06fc507a479fbd62d27c565867aab5adf1d7d1fbb9ef35aa77f3ebd2689",
+    "acceptance_packet": "reports/p011_20261020/review_636e2b1f_forced_ext3b_actual_A3_accepted_v1",
+    "accepted_utc": "2026-10-23T00:28:06.482768+00:00"
   }
 }

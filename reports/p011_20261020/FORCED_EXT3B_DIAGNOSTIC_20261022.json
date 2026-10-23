@@ -410,5 +410,39 @@
   },
   "source_spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
   "input_manifest_sha256": "9ef71794b8ad5858286c37127dd8c40ad55f81407ad34e33673e0a5c931171af",
-  "actual_result_review_status": "PENDING; no independent actual A3 claimed yet"
+  "actual_result_review_status": "PASS-WITH-NOTES; all seven actual A3 flags accepted",
+  "actual_result_review": {
+    "review_head": "636e2b1fdfa2dcdfa3bbfe3c62876c7216dd616c",
+    "report_sha256": "d4c5d06fc507a479fbd62d27c565867aab5adf1d7d1fbb9ef35aa77f3ebd2689",
+    "review_packet": "reports/p011_20261020/review_636e2b1f_forced_ext3b_actual_A3_accepted_v1",
+    "accepted_utc": "2026-10-23T00:28:06.482768+00:00",
+    "reviewed_result_target": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
+    "reviewed_original_summary_sha256": "b9c9652944d568c4ab8e548c4c6ebb3ab55a8097de068448dd5d4d6657b47e6a",
+    "notes_and_access_limits": {
+      "independent_new_continuations": 3861,
+      "independent_native_stop_and_forced_box_category_mismatches": 0,
+      "non_string_identical_positive_rows_manually_reviewed": 245,
+      "reviewer_approximate_lenient_value_or_format_acceptances": 16,
+      "reviewer_estimated_stricter_policy_accuracy_decrease_pp": {
+        "long_R3024xE3_S-F15_s17": {
+          "sample": 0.15,
+          "greedy": 0.4
+        },
+        "long_R9072x1_S-F15_s17": {
+          "sample": 0.3,
+          "greedy": 1.0
+        }
+      },
+      "estimated_sensitivity_status": "Approximate reviewer disclosure only; not applied, not rescored, no alternative confidence intervals computed",
+      "frozen_P1_labels_and_all_intervals_unchanged": true,
+      "reviewer_independently_recomputed_intervals": 6,
+      "Codex_natural_interval_bootstrap_reexecuted": false,
+      "Codex_A6_A7_bootstrap_reexecuted": false,
+      "private_model_state_binaries_independently_accessed": false,
+      "independent_full_symbolic_engine_run": false,
+      "independent_final_invoice_access": false,
+      "loop_breakdown_flag_accepted": true,
+      "independent_loop_recompression_not_separately_claimed": true
+    }
+  }
 }

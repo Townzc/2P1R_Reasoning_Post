@@ -33,4 +33,6 @@ Only native length_cap rows at 16,384 generated IDs were continued. The fixed 10
 
 Modal reported tagged charge for this new app: 1.21523750 USD, observed 2026-10-23T00:08:44.643524+00:00. This is not a final invoice; unassigned build/storage/egress or billing delay are not assumed zero. Owner hard cap: $20.
 
-Independent actual-result A3 review: pending at publication. Private model/state binaries and a full independent symbolic-engine run are not claimed.
+Independent actual-result A3: **PASS-WITH-NOTES**, Claude `636e2b1f`, all seven flags accepted. The reviewer independently checked all3,861 new continuations, matched native-stop/box-completion categories, manually reviewed245 non-string-identical positive rows, and reproduced all six intervals. Codex did not rerun the saved natural bootstrap or the already-completed A6−A7 pair.
+
+The reviewer identified approximately16 lenient value/format acceptances under the frozen P1 policy. Their rough stricter-policy decreases were0.15/0.4pp (3024, sampled/greedy) and0.3/1.0pp (9072); these are reviewer estimates, not rescored results. All published labels, accuracies and intervals remain unchanged. Private model/state binaries, a full independent symbolic-engine run and final invoice were not independently accessed. See [the actual A3 acceptance](review_636e2b1f_forced_ext3b_actual_A3_accepted_v1/README.md).
