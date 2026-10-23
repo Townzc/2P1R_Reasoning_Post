@@ -5587,6 +5587,31 @@
       "report_sha256": "915731fb6e288ff3b3494fbb1d26c57404569da671b465e9cf42f75f26abc63f",
       "accepted_utc": "2026-10-22T23:36:47.730157+00:00",
       "acceptance_packet": "reports/p011_20261020/review_f512a787_forced_ext3b_actual_A2_accepted_v1"
+    },
+    {
+      "request_id": "p011-forced-answer-ext3b-actual-results-A3-r1",
+      "scope": "p011-forced-answer-ext3b-actual-results-A3",
+      "status": "PENDING",
+      "target_commit": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
+      "packet": "reports/p011_20261020/forced_answer_ext3b_actual_results_v1",
+      "manifest_sha256": "9fe526fb4e0627d7478f4594f58513245a8de743b3ca2e2a94535f46baddbfcb",
+      "binding_sha256": "6ec8c23e8cf29848add3416775b4124307f80c92b79e5ef3c3d863839a5f24e5",
+      "summary_sha256": "b9c9652944d568c4ab8e548c4c6ebb3ab55a8097de068448dd5d4d6657b47e6a",
+      "required_flags": [
+        "exact_new_app_two_cells_saved_checkpoint_input_roster_and_partial_completeness_accepted",
+        "independent_new64_byte_BPE_decode_native_stop_and_first_balanced_box_checks_accepted",
+        "new_P1_labels_correctness_and_unclosed_box_handling_with_review_limits_disclosed_accepted",
+        "all_nonselected_natural_Booleans_and_original_primary_results_preserved_accepted",
+        "SMALL_minus_LARGE_forced_and_A6_minus_A7_forced_question_CIs_and_saved_natural_sign_reversal_accepted",
+        "per_mode_counts_and_same_descriptive_loop_breakdown_accepted",
+        "actual_tagged_cost_20cap_failure_history_posthoc_single_seed_and_access_limits_accepted"
+      ],
+      "requested_utc": "2026-10-23T00:11:05.134241+00:00",
+      "owner_cap_usd": "20",
+      "reported_tagged_cost_usd": "1.21523750",
+      "actual_invoice_claimed": false,
+      "all_science_done_once": true,
+      "active_models": 0
     }
   ],
   "p008_v31": {
@@ -9721,7 +9746,7 @@
   "p011_forced_ext3b_current": {
     "request_id": "p011-forced-answer-ext3b-complete-path-CR-r1",
     "scope": "p011-forced-answer-ext3b-complete-path-CR",
-    "status": "SCIENCE_COMPLETE_ACTUAL_A3_NOT_YET_REQUESTED",
+    "status": "SCIENCE_COMPLETE_ACTUAL_A3_PENDING",
     "target_commit": "87407963774de2d4f37ed5121d8d9ea60aec2c6d",
     "packet": "reports/p011_20261020/forced_answer_ext3b_preflight_v2",
     "spec_sha256": "bf5f8ffa76efe6855c5e11c7c20c78d9582ef1943e43d0d51bffd5bd136b9f25",
@@ -9823,7 +9848,9 @@
     "summary_sha256": "b9c9652944d568c4ab8e548c4c6ebb3ab55a8097de068448dd5d4d6657b47e6a",
     "active_model_calls": 0,
     "reported_tagged_cost_usd": "1.21523750",
-    "cost_is_final_invoice": false
+    "cost_is_final_invoice": false,
+    "result_target_commit": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
+    "actual_result_A3_request": "p011-forced-answer-ext3b-actual-results-A3-r1"
   },
   "p011_forced_ext3b_existing_label_contrast": {
     "status": "COMPLETE_PENDING_INDEPENDENT_NEW_RESULT_REVIEW",
@@ -9865,5 +9892,30 @@
     "decision": "PASS",
     "review_head": "f512a787094e2d10ab77776e44cbaa0788ea6ada",
     "acceptance_packet": "reports/p011_20261020/review_f512a787_forced_ext3b_actual_A2_accepted_v1"
+  },
+  "p011_forced_ext3b_actual_results_A3": {
+    "request_id": "p011-forced-answer-ext3b-actual-results-A3-r1",
+    "scope": "p011-forced-answer-ext3b-actual-results-A3",
+    "status": "PENDING",
+    "target_commit": "5243d5066c217d83ce524fd06e0fc2725f696d6f",
+    "packet": "reports/p011_20261020/forced_answer_ext3b_actual_results_v1",
+    "manifest_sha256": "9fe526fb4e0627d7478f4594f58513245a8de743b3ca2e2a94535f46baddbfcb",
+    "binding_sha256": "6ec8c23e8cf29848add3416775b4124307f80c92b79e5ef3c3d863839a5f24e5",
+    "summary_sha256": "b9c9652944d568c4ab8e548c4c6ebb3ab55a8097de068448dd5d4d6657b47e6a",
+    "required_flags": [
+      "exact_new_app_two_cells_saved_checkpoint_input_roster_and_partial_completeness_accepted",
+      "independent_new64_byte_BPE_decode_native_stop_and_first_balanced_box_checks_accepted",
+      "new_P1_labels_correctness_and_unclosed_box_handling_with_review_limits_disclosed_accepted",
+      "all_nonselected_natural_Booleans_and_original_primary_results_preserved_accepted",
+      "SMALL_minus_LARGE_forced_and_A6_minus_A7_forced_question_CIs_and_saved_natural_sign_reversal_accepted",
+      "per_mode_counts_and_same_descriptive_loop_breakdown_accepted",
+      "actual_tagged_cost_20cap_failure_history_posthoc_single_seed_and_access_limits_accepted"
+    ],
+    "requested_utc": "2026-10-23T00:11:05.134241+00:00",
+    "owner_cap_usd": "20",
+    "reported_tagged_cost_usd": "1.21523750",
+    "actual_invoice_claimed": false,
+    "all_science_done_once": true,
+    "active_models": 0
   }
 }
