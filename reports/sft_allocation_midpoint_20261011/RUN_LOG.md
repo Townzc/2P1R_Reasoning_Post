@@ -1,3 +1,9 @@
+## Two-cell forced-answer results complete — 2026-10-23T00:10:37.756065+00:00
+
+Both cells and3,861 continuations completed once; original CLI5891 exit0 and app STOPPED/tasks0/containers0. Local new64 audits and frozen P1 scores complete, no original16,384-token decode or natural rescoring. Repeated3024: sample934/2000 (46.70%), greedy215/500 (43.00%); fresh9072: sample861/2000 (43.05%), greedy203/500 (40.60%). Forced SMALL−LARGE: sample+3.65pp CI[1.35,5.85], greedy+2.40 CI[-2.20,7.00]. Saved natural+17.30[14.90,19.60] and+1.60[0.60,2.80] are exact sign reversals, not new bootstraps. Existing A6−A7 forced+4.65[2.30,6.95]/+6.80[2.20,11.40] reused. Unclosed boxes small6sample+1greedy, large5+1. Same loop breakdown is in final JSON/MD.
+
+New app reported tagged charge1.21523750USD at00:08:44UTC, not final invoice; unassigned storage/build/egress/billing delays are not assumed zero. Owner cap20USD. First result publisher20574 completed once,2,481 new members/30,878,218 compressed bytes, one complete archive readback. Post-hoc, one training seed, original primary results unchanged; independent actual A3 still pending. See FORCED_EXT3B_DIAGNOSTIC_20261022.json and.md.
+
 ## Two-cell forced-answer probe submitted — 2026-10-22T23:44:30.550920+00:00
 
 Single H100 call `fc-01M5JZZVNRSVY8GX9FZ00DX67K` / app `ap-W1ANBPlELqjkRbTMcrGzY1` submitted 2026-10-22T23:43:54.085540+00:00 after real source and actual A2 approval. One global attempt, two cells sequential,3,861 continuations; no training. Fresh rate4.39520/h, original budget worker10,800s + startup600 + grace60 and1.50 noncompute produce15.49138667USD upper bound under owner20USD, not an invoice. Source/request upload and byte readback completed once. Results are not yet available; CLI5891 is active. Original natural labels and existing A6−A7 contrasts remain unchanged.
