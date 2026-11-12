@@ -1,0 +1,54 @@
+{
+  "sources": {
+    "math": {
+      "repo": "DigitalLearningGmbH/MATH-lighteval",
+      "revision": "0530c78699ea5e8eb5530600900e1f328b48acad",
+      "files": [
+        {
+          "path": "data/train-00000-of-00001.parquet",
+          "bytes": 2992151,
+          "sha256": "eca6e667f4305dd5e5ba09b4fd55e7f3174a0fbe361cdfd4c44758b593a76933",
+          "rows": 7500
+        },
+        {
+          "path": "data/test-00000-of-00001.parquet",
+          "bytes": 1855870,
+          "sha256": "7dca8d6e41af88ecf82f2b5f36eb5530e083aaaa86ee325f62bd5c31535178c6",
+          "rows": 5000
+        }
+      ]
+    },
+    "gsm8k": {
+      "repo": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "files": [
+        {
+          "path": "main/train-00000-of-00001.parquet",
+          "bytes": 2306545,
+          "sha256": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d",
+          "rows": 7473
+        },
+        {
+          "path": "main/test-00000-of-00001.parquet",
+          "bytes": 419088,
+          "sha256": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+          "rows": 1319
+        }
+      ]
+    }
+  },
+  "math500_input_sha256": "aaed2815b191fced2c8bbd17ec90a73076fc3970630ad7ed6d71112b9856d539",
+  "models": [
+    {
+      "family": "qwen",
+      "repo": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+    },
+    {
+      "family": "llama3",
+      "repo": "meta-llama/Llama-3.2-1B",
+      "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08"
+    }
+  ],
+  "status": "Payload ready; full benchmark prompts and base inference await shared-source review"
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T10:30:34.435241+00:00",
-  "stage": "Owner budget transfer accepted; full long GSM admitted",
+  "updated_utc": "2026-11-12T10:54:32.172275+00:00",
+  "stage": "Long GSM and Llama20 probe complete; fullLlamaMATH admitted",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -32,9 +32,9 @@
     "runtime": "Corrected pinned CPU training image built; pip check and LF import passed; GPU training kernel and training not yet run"
   },
   "science": {
-    "model_generation_calls": 8,
+    "model_generation_calls": 10,
     "training_calls": 0,
-    "benchmark_scores": 5,
+    "benchmark_scores": 6,
     "OMI2_filtering_or_scoring": "not started",
     "startup_draws": 80,
     "math_judge_pending": 531,
@@ -67,10 +67,10 @@
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Run the admitted original full long GSM request",
-    "G0 base standard few-shot and Llama portions",
-    "One consolidated G0 MATH judge after complete queues",
-    "Claude combined F4/F5/launcher review before C8"
+    "Finish original Llama Instruct probe; forecast remaining full runs",
+    "Claude one combined source review including standard base and consolidated judge",
+    "Execute standard base and consolidated judge after shared-source review",
+    "Independent10% raw scoring audit; training remains unstarted"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",

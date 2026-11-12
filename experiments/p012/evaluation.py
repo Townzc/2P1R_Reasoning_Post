@@ -37,6 +37,8 @@ def execution_commit() -> str:
 
 
 PROMPTS = {
+    "lm_eval_minerva4": "{problem}",  # Required pre-rendered standard harness input.
+    "lm_eval_gsm4": "{problem}",
     "li_plan": (
         "Solve the following math problem and present the final answer in the "
         "format: Final Answer: {your answer}\nProblem: {problem}\nAnswer:"
@@ -242,6 +244,11 @@ class EvalConfig:
             raise ValueError("Use a registered precision")
         if self.protocol == "li_release_gsm" and self.task != "gsm8k":
             raise ValueError("Released GSM8K contract requires GSM8K")
+        if self.protocol.startswith("lm_eval_") and (self.apply_chat_template or self.chat_template_file):
+            raise ValueError("Standard base evaluation requires the frozen plain few-shot prompt")
+        if self.protocol in {"lm_eval_minerva4", "lm_eval_gsm4"} and self.task != (
+                "math" if self.protocol == "lm_eval_minerva4" else "gsm8k"):
+            raise ValueError("Standard harness task and protocol disagree")
         if self.protocol == "omi2" and (
                 not self.chat_template_file or not self.apply_chat_template
                 or self.template_family == "none"):
@@ -249,6 +256,8 @@ class EvalConfig:
 
 
 def render_prompt_tokens(row: dict, tokenizer: Any, config: EvalConfig) -> list[int]:
+    if config.protocol.startswith("lm_eval_") and "prompt" not in row:
+        raise ValueError("Standard base evaluation requires its pre-rendered harness prompt")
     if "prompt" in row:
         if config.protocol == "omi2":
             raise ValueError("OMI-2 uses the frozen training template, not a pre-rendered override")

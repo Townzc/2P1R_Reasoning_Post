@@ -5152,3 +5152,5 @@ The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objec
 - 2026-11-12: Owner authorized $4 emergency→G0-E transfer, keeping total85/protected4. Codex recorded the decision and admitted the previously frozen long GSM forecast under G0-E8; protocols unchanged.
 
 - 2026-11-12: Codex froze remaining G0 base protocols before any base outputs: standard Minerva4-shot fullMATH5000 and upstream GSM4-shot/seed1234, descriptive official comparison only. Added hash-verified restricted-model cache transport using per-file temporary URLs; no HF token leaves local configuration. Closed08-09 usage reconciled; new cache forecast0.10 admitted.
+
+- 2026-11-12: Codex completed long GSM original1319 evaluation and scoring:825correct,62.5474%,−1.2526pp from Table8; numeric gate passes, independent audit pending. Prepared standard-harness base wrapper with isolated ANTLR4.11 CPU runtime and31 local regression cases passed. New base and combined-judge production await the one shared review. No course prose or external messages.
