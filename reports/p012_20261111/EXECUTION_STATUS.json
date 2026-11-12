@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T20:19:04.291314+00:00",
-  "stage": "Owner pause requested: finish active R1, then pause; G0 and C6 artifacts ready",
+  "updated_utc": "2026-11-12T20:43:08.968214+00:00",
+  "stage": "Owner resumed; R1 interrupted by network loss, detached replacement prepared pending extra retry authorization",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -26,10 +26,10 @@
       "R2_llama_short.yaml",
       "R3_qwen_long.yaml"
     ],
-    "training": "R1 active at source339b8e2e; R2 not started, R3 hold",
+    "training": "R1 interrupted648/1332; no complete checkpoint; proposed detachedreplacement pending. R2 not started; R3hold",
     "launcher": "Dose/config/local-checkpoint fixes implemented;59tests pass",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved",
-    "runtime": "ActualH100 fullSFT running:5329trainingrows,global8,2epochs,1332updates"
+    "runtime": "First remote train ran1229.889seconds, then attached app stopped after local networkloss; provider0tasks"
   },
   "science": {
     "model_generation_calls": 19,
@@ -40,8 +40,10 @@
     "math_judge_pending": 0,
     "independent_result_audit": "original8endpointinitiallabels passed; newjudge/base results pending",
     "judge_model_calls": 1,
-    "active_jobs": 1,
-    "completed_generation_calls": 19
+    "active_jobs": 0,
+    "completed_generation_calls": 19,
+    "successful_training_calls": 0,
+    "failed_training_calls": 1
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -82,7 +84,7 @@
     "601aebd2",
     "54f697e6"
   ],
-  "owner_pause_requested": true,
+  "owner_pause_requested": false,
   "C3": {
     "judge": "four original queues complete,742decisions; newlabels awaiting independent audit",
     "Qwen_base": "fullMATH/GSM scored; MATH10.94%capstop recorded",
@@ -103,7 +105,7 @@
     "five_cells_per_task": true,
     "holdout500_and_nll1000_per_task": true,
     "actual_frozen_row_checks_passed": 24,
-    "pre_C8_review": "packet ready; owner paused before relay"
+    "pre_C8_review": "Concretepacket ee74da6c relayed by async owner request; awaiting actualClaude review"
   },
   "C7": {
     "started": false,
@@ -116,6 +118,7 @@
   "latest_packets": [
     "g0_judged_and_base_v1",
     "c6_training_review_v1",
-    "r1_admission_v1"
+    "r1_admission_v1",
+    "r1_network_interruption_v1"
   ]
 }

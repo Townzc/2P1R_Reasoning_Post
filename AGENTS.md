@@ -1,3 +1,7 @@
+# Owner resumed — 2026-11-12T20:39:16.044985+00:00
+
+Owner said network restored; the earlier pause request is revoked. Continue the already-authorized plan: R1 active, R2 after prospective admission, R3 HOLD; C7/C8 within original scope/budgets and shared-path review rules. Final C6/training review packet ee74da6c is published and an async owner relay request is pending. Do not claim Claude approval before an actual review arrives. Qwen main gate is QwenG0-E plus R1 accuracy and final review, no Llama dependency. No external messages/subagents/new chats. Preserve all original calls and unrelatedlt002.
+
 # P012 owner pause at next milestone — 2026-11-12
 
 Owner requested pause while away without network. Finish already-started R1 training, Qwen base GSM full/CPU scoring and C6 proof; preserve/publish outputs and handoff, then stop. Do not start R2, R1 checkpoint inference, C7/C8, another judge/model run, or further experiments until owner resumes. This supersedes earlier permission to start additional work now. Current exact jobs and completion state are in private ACTIVE_HANDOFF. No external messages or subagents.
