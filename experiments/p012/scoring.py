@@ -13,6 +13,7 @@ from pathlib import Path
 import re
 
 from .evaluation import execution_commit, extract_answer, gsm_numeric_scores, score_answer, sha256_file
+from .judge_collection import judge_id
 from .vendor.li_math import is_equiv
 
 JUDGE_MODEL = "Qwen/Qwen2.5-32B-Instruct"
@@ -87,7 +88,10 @@ def read_manifest(directory: Path) -> tuple[dict, dict]:
 
 
 def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
-                     judge_dir: Path | None = None) -> dict:
+                     judge_dir: Path | None = None, judge_inputs_path: Path | None = None,
+                     judge_group: str | None = None) -> dict:
+    if (judge_inputs_path is None) != (judge_group is None) or (judge_group is not None and judge_dir is None):
+        raise ValueError("A grouped judge needs the generation directory, combined inputs, and cell name")
     code_commit = execution_commit()
     manifest, complete = read_manifest(generation_dir)
     if sha256_file(input_path) != manifest["input_sha256"]:
@@ -137,15 +141,36 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
                     "n": 1, "apply_chat_template": False}
         if any(cfg.get(k) != v for k, v in required.items()):
             raise ValueError("Judge configuration differs from the frozen release contract")
-        if jm["input_sha256"] != hashlib.sha256(judge_payload).hexdigest():
-            raise ValueError("Judge input hash mismatch")
+        original_to_combined = {r["id"]: r["id"] for r in judge_inputs}
+        expected_judge_ids = set(original_to_combined)
+        if judge_inputs_path is None:
+            if jm["input_sha256"] != hashlib.sha256(judge_payload).hexdigest():
+                raise ValueError("Judge input hash mismatch")
+        else:
+            if jm["input_sha256"] != sha256_file(judge_inputs_path):
+                raise ValueError("Combined judge input hash mismatch")
+            collection = [json.loads(line) for line in judge_inputs_path.read_text().splitlines() if line.strip()]
+            by_combined_id = {r["id"]: r for r in collection}
+            if len(by_combined_id) != len(collection):
+                raise ValueError("Duplicate combined judge input ID")
+            expected_judge_ids = set(by_combined_id)
+            original_to_combined = {r["id"]: judge_id(judge_group, r["id"]) for r in judge_inputs}
+            actual_group_ids = {id_ for id_ in expected_judge_ids if json.loads(id_)[0] == judge_group}
+            if actual_group_ids != set(original_to_combined.values()):
+                raise ValueError("Combined judge group has missing or extra rows")
+            for row in judge_inputs:
+                combined_id = original_to_combined[row["id"]]
+                if by_combined_id[combined_id] != (row | {"id": combined_id}):
+                    raise ValueError("Combined judge prompt differs from the original score queue")
+        all_judged = {}
         for line in (judge_dir / "raw.jsonl").read_text().splitlines():
             row = json.loads(line)
-            if row["draw"] != 0 or row["id"] in judged:
+            if row["draw"] != 0 or row["id"] in all_judged:
                 raise ValueError("Duplicate judge response")
-            judged[row["id"]] = judge_decision(row["text"])
-        if set(judged) != {r["id"] for r in judge_inputs} or jc["draws"] != len(judge_inputs):
+            all_judged[row["id"]] = judge_decision(row["text"])
+        if set(all_judged) != expected_judge_ids or jc["draws"] != len(expected_judge_ids):
             raise ValueError("Incomplete judge response set")
+        judged = {original_id: all_judged[combined_id] for original_id, combined_id in original_to_combined.items()}
     judge_complete = not judge_inputs or judge_dir is not None
     for label in labels:
         key = json.dumps((label["id"], label["draw"]), separators=(",", ":"))
@@ -191,6 +216,8 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
         "extraction_sha256": sha256_file(Path(__file__).with_name("evaluation.py")),
         "li_normalization_sha256": sha256_file(Path(__file__).parent / "vendor/li_math.py"),
         "judge_raw_sha256": sha256_file(judge_dir / "raw.jsonl") if judge_dir else None,
+        "judge_collection_input_sha256": sha256_file(judge_inputs_path) if judge_inputs_path else None,
+        "judge_group": judge_group,
         "labels_sha256": sha256_file(output_dir / "labels.jsonl"),
         "judge_inputs_sha256": hashlib.sha256(judge_payload).hexdigest(),
     }, indent=2) + "\n")
@@ -202,8 +229,10 @@ def main() -> None:
     for name in ("inputs", "generation", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--judge", type=Path)
+    parser.add_argument("--judge-inputs", type=Path)
+    parser.add_argument("--judge-group")
     a = parser.parse_args()
-    print(json.dumps(score_generation(a.inputs, a.generation, a.output, a.judge)))
+    print(json.dumps(score_generation(a.inputs, a.generation, a.output, a.judge, a.judge_inputs, a.judge_group)))
 
 
 if __name__ == "__main__":

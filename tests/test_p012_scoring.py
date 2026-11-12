@@ -7,6 +7,7 @@ from experiments.p012.evaluation import EvalConfig, sha256_file
 from experiments.p012.scoring import (
     JUDGE_MODEL, judge_decision, jsonl_bytes, label_response, score_generation,
 )
+from experiments.p012.judge_collection import merge_queues
 
 
 @pytest.fixture(autouse=True)
@@ -134,3 +135,41 @@ def test_omi2_gsm_summary_reports_the_strict_and_fallback_difference(tmp_path):
     assert summary["fallback_gain_pp"] == 40
     assert summary["correct_by_path"] == {"strict_numeric": 1, "math_verify_fallback": 2}
     assert summary["format_compliance"] == 0.8
+
+
+def test_one_judge_load_preserves_colliding_question_ids_across_cells(tmp_path):
+    config = EvalConfig("fixture", "fixed", "li_release_math500", "math", "qwen")
+    parents, queues = {}, {}
+    for cell in ("short", "long"):
+        source, directory = save_generation(tmp_path,
+            [{"id": "same_question", "problem": "fixture", "gold": "3"}],
+            [("same_question", 0, r"\boxed{2}")], config, name=cell)
+        queue = tmp_path / (cell + "_scores")
+        score_generation(source, directory, queue)
+        parents[cell] = (source, directory)
+        queues[cell] = queue
+    combined = tmp_path / "combined"
+    assert merge_queues(queues, combined)["rows"] == 2
+    rows = [json.loads(x) for x in (combined / "inputs.jsonl").read_text().splitlines()]
+    assert rows[0]["id"] != rows[1]["id"]
+    judge_config = EvalConfig(JUDGE_MODEL, "fixed", "li_judge", "math", "qwen",
+        max_tokens=20, temperature=0, top_k=1, dtype="float16", apply_chat_template=False)
+    _, judge_dir = save_generation(tmp_path, rows,
+        [(rows[0]["id"], 0, "True"), (rows[1]["id"], 0, "False")], judge_config, name="combined_judge")
+    for cell, expected in (("short", 1.0), ("long", 0.0)):
+        result = score_generation(*parents[cell], tmp_path / (cell + "_judged"),
+                                  judge_dir, combined / "inputs.jsonl", cell)
+        assert result["accuracy_with_judge"] == expected
+    with pytest.raises(ValueError, match="missing or extra"):
+        score_generation(*parents["short"], tmp_path / "wrong_group", judge_dir,
+                         combined / "inputs.jsonl", "unknown")
+    # Even a self-consistent changed aggregate manifest must not replace the
+    # original per-cell judge prompt with another problem/answer.
+    rows[0]["prompt"] = "substituted prompt"
+    (combined / "inputs.jsonl").write_bytes(jsonl_bytes(rows))
+    manifest = json.loads((judge_dir / "MANIFEST.json").read_text())
+    manifest["input_sha256"] = sha256_file(combined / "inputs.jsonl")
+    (judge_dir / "MANIFEST.json").write_text(json.dumps(manifest))
+    with pytest.raises(ValueError, match="prompt differs"):
+        score_generation(*parents["short"], tmp_path / "wrong_prompt", judge_dir,
+                         combined / "inputs.jsonl", "short")

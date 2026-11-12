@@ -1,3 +1,7 @@
+## P012 combined pre-C8 source review ready — 2026-11-12 PST
+
+[Review packet](../reports/p012_20261111/pre_c8_review_v1/README.md) covers F4/F5, eval/train Modal transport and merged judge queues.60 unique relevant local cases pass. Four real tokenizers at0/4shot match actual LF prompt tokens in both pinned environments. PyArrow21 fixes the NumPy1.26 import conflict. No training/C8/judge model run. Five full G0 endpoints are preserved; the long GSM first20 timing probe remains queued without a container. Independent raw-result review remains pending.
+
 ## P012 public checkpoint progress — 2026-11-12 PST
 
 [UWNSL short results](../reports/p012_20261111/g0_uw_short_v1/README.md): GSM8K949/1319 (71.95%),+0.248pp from the paper; numeric gate passed. MATH244/500 exact,231 pending judge. Long MATH500 generation complete:183 exact,96 pending judge,245 length caps; long GSM timing probe is queued. F4/F5 candidate has52 unique passing local cases; actual training/evaluation template token parity is next. No training or C8 execution.

@@ -1,0 +1,65 @@
+{
+  "versions": {
+    "transformers": "4.56.2",
+    "torch": "2.8.0",
+    "tokenizers": "0.22.1",
+    "vllm": "0.11.0"
+  },
+  "evaluation_source_sha256": "2018424a273b98747d68f7b0f4315902f25e9e7c0b08da8d6c4b40c2702f7fbc",
+  "template_sha256": {
+    "qwen": "c1f15e219803e13967754ca30b2071029a24870f2c794a315d50121154c385a8",
+    "llama3": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b"
+  },
+  "checks": [
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "shots": 0,
+      "prompt_tokens": 59,
+      "passed": true
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "shots": 4,
+      "prompt_tokens": 231,
+      "passed": true
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "shots": 0,
+      "prompt_tokens": 59,
+      "passed": true
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "shots": 4,
+      "prompt_tokens": 231,
+      "passed": true
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "shots": 0,
+      "prompt_tokens": 50,
+      "passed": true
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "shots": 4,
+      "prompt_tokens": 222,
+      "passed": true
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "shots": 0,
+      "prompt_tokens": 50,
+      "passed": true
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "shots": 4,
+      "prompt_tokens": 222,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "model_execution": false
+}

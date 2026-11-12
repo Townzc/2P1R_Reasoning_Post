@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T08:44:25.909353+00:00",
-  "stage": "Pretrained Qwen and short checkpoint complete; long MATH complete; long GSM cost probe queued",
+  "updated_utc": "2026-11-12T09:06:09.990155+00:00",
+  "stage": "Five Qwen G0 endpoints complete; long GSM timing probe queued; combined pre-C8 review prepared",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -18,7 +18,7 @@
     "claude_review": "020017ae; owner permits direct G0-E after fixes",
     "gpu_execution": "First20 passed; full MATH500/GSM8K raw and initial scoring complete",
     "relevant_fix_tests_passed": 39,
-    "main_grid": "F4/F5 candidate prepared,52 unique local cases pass; shared review pending"
+    "main_grid": "F4/F5 candidate ready; actual training/evaluation prompt-token parity passed for all4models at0/4shot"
   },
   "C4": {
     "configs": [
@@ -27,9 +27,9 @@
       "R3_qwen_long.yaml"
     ],
     "training": "not started",
-    "launcher": "G0 prepared; shared launcher review before C8",
+    "launcher": "Shared eval/train/judge source review packet prepared in pre_c8_review_v1",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved",
-    "runtime": "Pinned training image installed; PyArrow import conflict fixed in candidate lock; real LF template parity pending"
+    "runtime": "Corrected pinned CPU training image built; pip check and LF import passed; GPU training kernel and training not yet run"
   },
   "science": {
     "model_generation_calls": 7,
@@ -38,7 +38,8 @@
     "OMI2_filtering_or_scoring": "not started",
     "startup_draws": 80,
     "math_judge_pending": 531,
-    "independent_result_audit": "pending"
+    "independent_result_audit": "pending; raw archives published",
+    "judge_model_calls": 0
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -60,10 +61,10 @@
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "UWNSL short then long public checkpoints",
+    "Complete queued long GSM timing probe and forecast full1319",
     "G0 base standard few-shot and Llama portions",
-    "Consolidated G0 MATH judge",
-    "F4/F5 and launcher review before C8"
+    "One consolidated G0 MATH judge after complete queues",
+    "Claude combined F4/F5/launcher review before C8"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",

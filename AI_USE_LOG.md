@@ -5144,3 +5144,5 @@ The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objec
 - 2026-11-12: Codex prepared a CPU-only training runtime and actual LLaMA-Factory template export/parity check for P012 F4. No training or course prose. G0-T environment reserve $0.35; runtime results pending.
 
 - 2026-11-12: Codex archived UWNSL short raw outputs and scores, implemented candidate F4 required training-template export and F5 strict-plus-math-verify GSM metrics, and repaired the training PyArrow pin.52 unique affected local cases pass after fixing numeric text handling. Two startup/import failures are retained. Real template parity and the combined pre-C8 review remain pending; no training or course prose.
+
+- 2026-11-12: Codex completed actual LF/evaluation template parity for four tokenizers at0/4shot, prepared the standard LF Modal training wrapper and namespaced consolidated judge adapter, and published the combined pre-C8 source review packet.60 unique relevant local test cases pass; no training or judge model call. Long MATH raw outputs and initial labels are preserved. Long GSM timing probe remains in provider queue. No course prose or external messages.

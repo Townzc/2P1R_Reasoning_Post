@@ -1,3 +1,7 @@
+# P012 current milestone — 2026-11-12 PST
+
+Modal Berkeley authentication is complete. Qwen pretrained MATH/GSM and UWNSL short MATH/GSM plus long MATH have original raw artifacts and first-pass scores.531 MATH judge requests remain; no final Li MATH scores. Long GSM timing probe original replacement CLI56191 is queued; never submit it again. See private ACTIVE_HANDOFF for exact request/outputs. Combined F4/F5/Modal train-eval/judge candidate is at reports/p012_20261111/pre_c8_review_v1; actual LF/eval template parity passed. Await real Claude review before C8; no training or C8 has run. All old experiments stay closed. No external messages, new chats or subagents.
+
 # Current P012 authorization — 2026-11-11 PST
 
 The owner supplied P012 v1 (`claude/audit` 2e481b7d), amendment 1 (cbaa41fd), and review/amendment 2 (020017ae). Execute on `codex/icml-acl-2027`; current packet: `reports/p012_20261111/README.md`, status: `EXECUTION_STATUS.json`, local continuation notes: `.local/p012_20261111/ACTIVE_HANDOFF.md`.

@@ -1,3 +1,4 @@
+# Public copy: local temporary path redacted; original retained privately.
 ......................................F......F......                     [100%]
 =================================== FAILURES ===================================
 _ test_omi2_gsm_retains_both_score_paths[\\text{18}-18-True-False-True-math_verify_fallback] _
@@ -24,7 +25,7 @@ E       assert False is True
 tests/test_p012_scoring.py:119: AssertionError
 _______ test_omi2_gsm_summary_reports_the_strict_and_fallback_difference _______
 
-tmp_path = PosixPath('/private/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/pytest-of-zhicetang/pytest-100/test_omi2_gsm_summary_reports_0')
+tmp_path = PosixPath('<pytest-temp>')
 
     def test_omi2_gsm_summary_reports_the_strict_and_fallback_difference(tmp_path):
         config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen", chat_template_file="fixture.jinja")
