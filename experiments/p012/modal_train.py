@@ -1,6 +1,6 @@
 """Review candidate: run the pinned standard LLaMA-Factory CLI on Modal.
 
-Invoke as `modal run -m experiments.p012.modal_train`. This module does not
+Invoke as `modal run --detach -m experiments.p012.modal_train`. This module does not
 choose data, change training doses, retry failures, or implement an optimizer.
 """
 from __future__ import annotations
@@ -58,15 +58,19 @@ def train(request: dict) -> dict:
     (inputs / "dataset_info.json").write_text(json.dumps({request["dataset"]["name"]: {
         "file_name": "examples.jsonl", "columns": {"prompt": "problem", "response": "solution"}}}, indent=2) + "\n")
     config = dict(request["config"], dataset_dir=str(inputs), output_dir=str(work / "checkpoint"),
-                  overwrite_output_dir=False, skip_memory_metrics=False)
+                  overwrite_output_dir=False)
     (work / "config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
     # Store the dataset once, while binding its complete bytes in the request.
     manifest = dict(request)
     manifest["dataset"] = {k: v for k, v in request["dataset"].items() if k != "jsonl"}
     manifest.update(effective_config=config, data_validation=data_check,
         installed_lf_source=origin,
-        runtime_overrides={"dataset_dir": "container path", "output_dir": "unique persistent-volume path",
-                           "skip_memory_metrics": "false: standard Trainer memory accounting"},
+        runtime_overrides={"dataset_dir": "container path", "output_dir": "unique persistent-volume path"},
+        memory_monitoring="Trainer memory tracking disabled by its default; nvidia-smi sampled every30seconds",
+        gradient_checkpointing="LLaMA-Factory default enabled; no override",
+        loss_weighting=("T1: batch8 token mean per update; replaces accumulation of four batch2 means" if request["cell"] else
+                        "R3 held: unchanged registered global8" if request.get("long_cot") else
+                        "T2: short reproduction uses batch2 xacc8=16, per public checkpoint model card"),
         versions={p: importlib.metadata.version(p) for p in
                   ("llamafactory", "torch", "transformers", "datasets", "accelerate", "flash-attn", "pyarrow")})
     (work / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
@@ -75,6 +79,14 @@ def train(request: dict) -> dict:
     (work / "HARDWARE.txt").write_text(gpu.stdout)
     status = {"run_id": request["run_id"], "success": False, "gpu": "H100", "cpu": 4, "memory_MiB": 32768}
     volume.commit()
+    # Sampling is outside Python's training process; unlike Trainer's memory
+    # tracker it does not run a busy GIL-holding peak-monitor thread.
+    monitor_file = (work / "GPU_MEMORY_30S.csv").open("x")
+    monitor_file.write("timestamp,index,memory_total_MiB,memory_used_MiB,gpu_utilization_percent\n")
+    monitor_file.flush()
+    monitor = subprocess.Popen(["nvidia-smi", "--query-gpu=timestamp,index,memory.total,memory.used,utilization.gpu",
+                                "--format=csv,noheader,nounits", "--loop=30"], stdout=monitor_file,
+                               stderr=subprocess.STDOUT)
     try:
         with (work / "training.log").open("x") as log:
             command = [str(Path(sys.executable).with_name("llamafactory-cli")), "train", str(work / "config.yaml")]
@@ -100,6 +112,20 @@ def train(request: dict) -> dict:
         status["success"] = False
         (work / "ERROR.txt").write_text(traceback.format_exc())
     finally:
+        monitor.terminate()
+        try:
+            monitor.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            monitor.kill()
+            monitor.wait()
+        monitor_file.close()
+        import csv
+        samples = list(csv.DictReader((work / "GPU_MEMORY_30S.csv").open()))
+        used = [float(row["memory_used_MiB"].strip()) for row in samples
+                if row.get("memory_used_MiB") and row["memory_used_MiB"].strip().replace(".", "", 1).isdigit()]
+        (work / "GPU_MEMORY_SUMMARY.json").write_text(json.dumps({"sampling_interval_seconds": 30,
+            "samples": len(used), "peak_gpu_memory_MiB_sampled": max(used) if used else None,
+            "not_an_instantaneous_peak_measurement": True}, indent=2) + "\n")
         status["function_seconds"] = time.monotonic() - started
         (work / "STATUS.json").write_text(json.dumps(status, indent=2) + "\n")
         volume.commit()

@@ -89,7 +89,7 @@ def read_manifest(directory: Path) -> tuple[dict, dict]:
 
 def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
                      judge_dir: Path | None = None, judge_inputs_path: Path | None = None,
-                     judge_group: str | None = None) -> dict:
+                     judge_group: str | None = None, li_math_verify: bool = False) -> dict:
     if (judge_inputs_path is None) != (judge_group is None) or (judge_group is not None and judge_dir is None):
         raise ValueError("A grouped judge needs the generation directory, combined inputs, and cell name")
     code_commit = execution_commit()
@@ -104,6 +104,8 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
         raise ValueError("Each input needs an explicit gold answer")
     config = manifest["config"]
     n, protocol, task = config["n"], config["protocol"], config["task"]
+    if li_math_verify and (protocol != "li_release_math500" or task != "math" or n != 1 or judge_dir is not None):
+        raise ValueError("T3 is greedy Li MATH-500 exact-or-math-verify, without an LLM judge")
     expected = {(r["id"], draw) for r in inputs for draw in range(n)}
     seen, labels, judge_inputs = set(), [], []
     stats = {"stopped_on_terminator": 0, "length_capped": 0, "string_stop": 0,
@@ -117,6 +119,11 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
             seen.add(key)
             original = by_id[raw["id"]]
             label = label_response(raw["text"], original["gold"], protocol, task)
+            if li_math_verify:
+                apply_verify = not label["correct"] and label["answer"] is not None
+                verified = score_answer(label["answer"], original["gold"], "math") if apply_verify else False
+                label.update(math_verify_applied=apply_verify, math_verify_correct=bool(verified),
+                             correct_exact_or_math_verify=label["correct"] or bool(verified), needs_judge=False)
             label.update({"id": raw["id"], "draw": raw["draw"]})
             labels.append(label)
             for stat in ("stopped_on_terminator", "length_capped", "string_stop"):
@@ -176,7 +183,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
         key = json.dumps((label["id"], label["draw"]), separators=(",", ":"))
         label["judge_applied"] = key in judged
         label["judge_decision"] = judged.get(key)
-        if protocol in LI_MATH:
+        if protocol in LI_MATH and not li_math_verify:
             label["correct_with_judge"] = (
                 judged[key] is True if key in judged else
                 None if label["needs_judge"] else label["correct"])
@@ -189,11 +196,18 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
                "length_cap_rate": stats["length_capped"] / count,
                "mean_completion_tokens": stats["completion_tokens"] / count,
                "counts": stats, "judge_requests": len(judge_inputs)}
-    if protocol in LI_MATH:
+    if protocol in LI_MATH and not li_math_verify:
         summary.update({"judge_complete": judge_complete,
             "judge_unparsed": sum(value is None for value in judged.values()),
             "accuracy_with_judge": sum(r["correct_with_judge"] is True for r in labels) / count
                 if judge_complete else None})
+    if li_math_verify:
+        union = sum(r["correct_exact_or_math_verify"] for r in labels)
+        exact = sum(r["correct"] for r in labels)
+        summary.update(accuracy_exact=exact / count, accuracy_exact_or_math_verify=union / count,
+            primary_metric="li_exact_or_math_verify", primary_accuracy=union / count,
+            math_verify_gain_count=union - exact, math_verify_gain_pp=100 * (union - exact) / count,
+            LLM_judge_used=False, gate_threshold_pp=3)
     if protocol == "omi2" and task == "gsm8k":
         strict_correct = sum(r["strict_numeric_correct"] for r in labels)
         fallback_correct = sum(r["score_path"] == "math_verify_fallback" for r in labels)
@@ -222,6 +236,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
         "judge_raw_sha256": sha256_file(judge_dir / "raw.jsonl") if judge_dir else None,
         "judge_collection_input_sha256": sha256_file(judge_inputs_path) if judge_inputs_path else None,
         "judge_group": judge_group,
+        "li_math_verify_gate_mode": li_math_verify,
         "labels_sha256": sha256_file(output_dir / "labels.jsonl"),
         "judge_inputs_sha256": hashlib.sha256(judge_payload).hexdigest(),
     }, indent=2) + "\n")
@@ -235,8 +250,9 @@ def main() -> None:
     parser.add_argument("--judge", type=Path)
     parser.add_argument("--judge-inputs", type=Path)
     parser.add_argument("--judge-group")
+    parser.add_argument("--li-math-verify", action="store_true")
     a = parser.parse_args()
-    print(json.dumps(score_generation(a.inputs, a.generation, a.output, a.judge, a.judge_inputs, a.judge_group)))
+    print(json.dumps(score_generation(a.inputs, a.generation, a.output, a.judge, a.judge_inputs, a.judge_group, a.li_math_verify)))
 
 
 if __name__ == "__main__":

@@ -38,8 +38,9 @@ def validate_training_request(request: dict) -> dict:
         raise ValueError("Use the registered training-family template")
     if config["template"] != model["family"]:
         raise ValueError("Training template differs from the frozen model family")
-    if config["per_device_train_batch_size"] * config["gradient_accumulation_steps"] != 8:
-        raise ValueError("Effective single-GPU batch must be eight")
+    effective_batch = 8 if cell or long_cot else 16
+    if config["per_device_train_batch_size"] * config["gradient_accumulation_steps"] != effective_batch:
+        raise ValueError("Effective batch must match the registered phase: " + str(effective_batch))
     payload = dataset["jsonl"].encode()
     if hashlib.sha256(payload).hexdigest() != dataset["sha256"]:
         raise ValueError("Training data hash mismatch")

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T20:43:08.968214+00:00",
-  "stage": "Owner resumed; R1 interrupted by network loss, detached replacement prepared pending extra retry authorization",
+  "updated_utc": "2026-11-12T21:11:50.506137+00:00",
+  "stage": "T1/T2/T3 implemented after accepted e10a4bf5; preparing batch16R1 and Lcostprobe",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -26,19 +26,19 @@
       "R2_llama_short.yaml",
       "R3_qwen_long.yaml"
     ],
-    "training": "R1 interrupted648/1332; no complete checkpoint; proposed detachedreplacement pending. R2 not started; R3hold",
+    "training": "OldR1 interrupted; extra restart approved withnewbatch16. OldR2 stopped as owner-supersededbatch8; preserveartifacts.",
     "launcher": "Dose/config/local-checkpoint fixes implemented;59tests pass",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved",
     "runtime": "First remote train ran1229.889seconds, then attached app stopped after local networkloss; provider0tasks"
   },
   "science": {
     "model_generation_calls": 19,
-    "training_calls": 1,
+    "training_calls": 2,
     "benchmark_scores": 10,
     "OMI2_filtering_or_scoring": "C5/C6 complete",
     "startup_draws": 80,
     "math_judge_pending": 0,
-    "independent_result_audit": "original8endpointinitiallabels passed; newjudge/base results pending",
+    "independent_result_audit": "Original8 initiallabels plus742judge decisions and6319Qwenbase outputs fully accepted,0differences",
     "judge_model_calls": 1,
     "active_jobs": 0,
     "completed_generation_calls": 19,
@@ -82,7 +82,8 @@
   "accepted_reviews": [
     "020017ae",
     "601aebd2",
-    "54f697e6"
+    "54f697e6",
+    "e10a4bf5"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -105,15 +106,15 @@
     "five_cells_per_task": true,
     "holdout500_and_nll1000_per_task": true,
     "actual_frozen_row_checks_passed": 24,
-    "pre_C8_review": "Concretepacket ee74da6c relayed by async owner request; awaiting actualClaude review"
+    "pre_C8_review": "Accepted e10a4bf5; T1/T2 fixes do notneedre-review"
   },
   "C7": {
     "started": false,
-    "NLL_implementation": "outstanding"
+    "NLL_implementation": "Owner requests parallelimplementation andonecode review"
   },
   "C8": {
     "started": false,
-    "gate": "final shared review and QwenG0-E plusR1 accuracy gate; owner must resume first"
+    "gate": "Lcostprobe authorizednow; wholeTier1training+evalforecast<=30; fullQwenrelease additionallyR1bothaccuracygates"
   },
   "latest_packets": [
     "g0_judged_and_base_v1",

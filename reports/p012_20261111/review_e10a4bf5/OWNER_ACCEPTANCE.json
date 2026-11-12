@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-12T21:11:50.501091+00:00",
+  "review_commit": "e10a4bf5",
+  "review_file": "audit/claude/20261112c/REVIEW_ee74da6c_C6_launcher.md",
+  "scope": "C5/C6 and training/checkpoint validation plus full G0judge/base results accepted",
+  "T1": {
+    "main_per_device": 8,
+    "main_accumulation": 1,
+    "effective_batch": 8,
+    "gradient_checkpointing": "default enabled",
+    "loss_weighting_change": "8sample token mean replaces accumulation of four2sample means; disclose",
+    "memory": "Trainer tracker removed; nvidia-smi every30seconds",
+    "L_probe": "QwenbaseMATHseed17; mayrunparallelR1 beforeaccuracygate",
+    "Tier1_forecast_gate_usd": 30,
+    "forecast_includes": "training and evaluation"
+  },
+  "T2": {
+    "R1_R2_per_device": 2,
+    "R1_R2_accumulation": 8,
+    "effective_batch": 16,
+    "authority": "Public checkpoint model card supersedes amendmentM3 inference",
+    "launch": "modal run --detach",
+    "R3": "hold; priorrecipeunchanged"
+  },
+  "T3": {
+    "R1_R2_MATH": "Li exact and exact OR mathverify; union gate<=3pp; no LLMjudge"
+  },
+  "additional_R1_retry": "owner explicitly approved",
+  "Llama_standard_base": "fullendpointsunrun; do notcomplete",
+  "C7": "prepare during firsttraining and send one review",
+  "release_Qwen": "R1 bothbenchmarkgates AND Tier1forecast<=30; MATHfirst"
+}

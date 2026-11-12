@@ -35,6 +35,23 @@ def save_generation(tmp_path, inputs, outputs, config, name="generation"):
     return source, directory
 
 
+def test_T3_union_keeps_exact_separate_and_does_not_enqueue_a_judge(tmp_path):
+    config = EvalConfig("fixture", "fixed", "li_release_math500", "math", "qwen")
+    inputs = [{"id": "a", "problem": "A", "gold": r"\sqrt{2}"},
+              {"id": "b", "problem": "B", "gold": "2"},
+              {"id": "c", "problem": "C", "gold": "4"}]
+    outputs = [("a", 0, r"\boxed{\frac{\sqrt{8}}{2}}"), ("b", 0, r"\boxed{2}"),
+               ("c", 0, "Final Answer: 4")]
+    source, directory = save_generation(tmp_path, inputs, outputs, config)
+    result = score_generation(source, directory, tmp_path / "T3", li_math_verify=True)
+    assert result["accuracy_exact"] == 1/3
+    assert result["accuracy_exact_or_math_verify"] == result["primary_accuracy"] == 2/3
+    assert result["math_verify_gain_count"] == 1 and result["judge_requests"] == 0
+    assert result["LLM_judge_used"] is False
+    assert (tmp_path / "T3/judge_inputs.jsonl").read_bytes() == b""
+    assert "accuracy_with_judge" not in result
+
+
 def test_sampled_accuracy_keeps_question_and_draw_identity(tmp_path):
     config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen", n=2, temperature=0.7)
     inputs = [{"id": "a", "problem": "2+0", "gold": "2"},

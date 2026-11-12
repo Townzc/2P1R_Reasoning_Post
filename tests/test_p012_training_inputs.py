@@ -74,5 +74,16 @@ def test_wrong_cell_dose_and_silent_truncation_are_rejected():
         validate_training_request(request)
     request = request_fixture()
     request["config"].update(per_device_train_batch_size=1, gradient_accumulation_steps=8)
+    with pytest.raises(ValueError, match="Effective batch"):
+        validate_training_request(request)
+
+
+def test_old_microbatch_shapes_rejected_after_owner_amendment():
+    request = request_fixture("P")
+    request["config"].update(per_device_train_batch_size=2, gradient_accumulation_steps=4)
     with pytest.raises(ValueError, match="recipe"):
+        validate_training_request(request)
+    request = request_fixture()
+    request["config"]["gradient_accumulation_steps"] = 4
+    with pytest.raises(ValueError, match="Effective batch"):
         validate_training_request(request)
