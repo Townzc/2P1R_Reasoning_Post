@@ -1,0 +1,28 @@
+{
+  "authority": {
+    "commit": "020017aeb2f4904fa1652d8ea970edbf3069ddd5",
+    "path": "audit/claude/20261111c/CR_C2_C4_295091d9.md",
+    "section": "3.3"
+  },
+  "frozen_before_P012_results": true,
+  "delta_SFT_primary": {
+    "definition": "P minus pretrained baseline",
+    "models": "base and Instruct use the same four fixed examples as conversation turns",
+    "prompt": "same training template and OMI-2 prompt",
+    "decoding_and_scoring": "same as the corresponding trained evaluation",
+    "fewshot_examples": "from outside the selected parent pool; frozen with C6",
+    "math_endpoint": "MATH-500 only",
+    "gsm8k_endpoint": "full GSM8K test",
+    "budget_subitem": "capability",
+    "budget_cap_usd": 4
+  },
+  "delta_SFT_secondary": {
+    "shots": 0,
+    "template": "same training template",
+    "role": "secondary; base zero-shot is not the capability baseline and is not used to test H0"
+  },
+  "other_main_contrasts": "full MATH test 5000 remains the primary endpoint",
+  "G0_protocol": "published Li protocols only; li_plan excluded from reported numbers",
+  "anchors": "only matched benchmark/protocol comparisons have a numeric gate; unmatched base few-shot is descriptive",
+  "judge_batching": "merge pending G0 MATH judge queues before loading Qwen-32B; no per-model judge load"
+}

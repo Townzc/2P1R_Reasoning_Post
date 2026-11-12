@@ -15,6 +15,7 @@ import json
 import os
 from pathlib import Path
 import re
+import time
 from typing import Any
 
 from .vendor.li_math import last_boxed_only_string, remove_boxed
@@ -55,6 +56,32 @@ PROMPTS = {
         "(and only answer) inside \\boxed{}.\n\n{problem}"
     ),
 }
+
+TEMPLATE_STOP_WORDS = {
+    "qwen": ("<|im_end|>",),
+    "llama3": ("<|eot_id|>", "<|eom_id|>"),
+    "none": (),
+}
+LLAMA_G0_DATE = "26 Jul 2024"
+
+
+def termination_tokens(tokenizer: Any, generation_eos: int | list[int] | None,
+                       template_family: str) -> dict:
+    """F1: include training-template terminators even for base initializations."""
+    if template_family not in TEMPLATE_STOP_WORDS:
+        raise ValueError("Unknown template family")
+    native_ids = set()
+    for eos in (tokenizer.eos_token_id, generation_eos):
+        native_ids.update(eos if isinstance(eos, list) else [eos])
+    native_ids.discard(None)
+    template_ids = {}
+    for word in TEMPLATE_STOP_WORDS[template_family]:
+        ids = tokenizer.encode(word, add_special_tokens=False)
+        if len(ids) != 1 or ids[0] == tokenizer.unk_token_id:
+            raise ValueError(f"Template terminator is not one known token: {word}")
+        template_ids[word] = ids[0]
+    return {"native_eos_ids": sorted(native_ids), "template_terminator_ids": template_ids,
+            "stop_token_ids": sorted(native_ids | set(template_ids.values()))}
 
 
 def prompt_text(problem: str, protocol: str) -> str:
@@ -135,15 +162,21 @@ def score_answer(answer: str | None, gold: str, task: str) -> bool:
     return bool(parsed_gold and parsed_answer and verify(parsed_gold, parsed_answer))
 
 
-def stop_flags(token_ids: list[int], eos_ids: set[int], finish_reason: str,
-               stop_reason: str | int | None, max_tokens: int) -> dict[str, bool]:
-    # A string stop, tokenizer special token, and a native EOS are separate facts.
-    native_eos = bool(token_ids and token_ids[-1] in eos_ids)
-    native_eos = native_eos or (isinstance(stop_reason, int) and stop_reason in eos_ids)
-    return {"native_eos": native_eos,
+def stop_flags(token_ids: list[int], stop_ids: set[int], finish_reason: str,
+               stop_reason: str | int | None, max_tokens: int) -> dict:
+    # Classify the actual finish event. The raw final token and stop_reason are
+    # also retained, including a terminator emitted exactly at a length limit.
+    last_terminator = token_ids[-1] if token_ids and token_ids[-1] in stop_ids else None
+    terminator = stop_reason if isinstance(stop_reason, int) and stop_reason in stop_ids else None
+    if stop_reason is None:
+        terminator = last_terminator
+    stopped = finish_reason == "stop" and terminator is not None
+    return {"stopped_on_terminator": stopped,
+            "stop_token_id": terminator if stopped else None,
+            "last_token_terminator_id": last_terminator,
             "length_capped": finish_reason == "length",
             "at_token_limit": len(token_ids) >= max_tokens,
-            "string_stop": isinstance(stop_reason, str)}
+            "string_stop": finish_reason == "stop" and isinstance(stop_reason, str)}
 
 
 @dataclass(frozen=True)
@@ -152,6 +185,7 @@ class EvalConfig:
     revision: str
     protocol: str
     task: str
+    template_family: str
     max_tokens: int = 16384
     max_model_len: int = 32768
     temperature: float = 0.0
@@ -160,7 +194,7 @@ class EvalConfig:
     dtype: str = "bfloat16"
     n: int = 1
     seed: int = 17
-    batch_size: int = 16
+    batch_size: int = 1024
     apply_chat_template: bool = True
     chat_template_file: str | None = None
     stop_strings: tuple[str, ...] = ()
@@ -168,6 +202,8 @@ class EvalConfig:
     def validate(self) -> None:
         if self.protocol not in PROMPTS or self.task not in {"math", "gsm8k"}:
             raise ValueError("Unknown evaluation contract")
+        if self.template_family not in TEMPLATE_STOP_WORDS:
+            raise ValueError("template_family must be qwen, llama3 or none")
         if not self.revision or self.revision in {"main", "master"}:
             raise ValueError("Pin a model revision")
         if self.max_model_len <= self.max_tokens or self.batch_size < 1:
@@ -182,6 +218,22 @@ class EvalConfig:
             raise ValueError("Released GSM8K contract requires GSM8K")
 
 
+def render_prompt_tokens(row: dict, tokenizer: Any, config: EvalConfig) -> list[int]:
+    if "prompt" in row:
+        if config.apply_chat_template:
+            raise ValueError("Pre-rendered prompt requires chat template disabled")
+        if config.template_family == "llama3" and not row["prompt"].startswith("<|begin_of_text|>"):
+            raise ValueError("Llama pre-rendered few-shot prompt must include its BOS")
+        return tokenizer.encode(row["prompt"], add_special_tokens=False)
+    if config.apply_chat_template:
+        messages = row.get("messages") or [{"role": "user", "content": prompt_text(row["problem"], config.protocol)}]
+        kwargs = {"date_string": LLAMA_G0_DATE} if config.template_family == "llama3" and not config.chat_template_file else {}
+        return tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, **kwargs)
+    if config.template_family == "llama3":
+        raise ValueError("Plain Llama input must be explicitly pre-rendered with BOS")
+    return tokenizer.encode(prompt_text(row["problem"], config.protocol), add_special_tokens=False)
+
+
 def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
     """Generation only. Scores are a separate operation after raw bytes exist.
 
@@ -191,6 +243,7 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
     """
     config.validate()
     code_commit = execution_commit()
+    started = time.monotonic()
     rows = [json.loads(line) for line in input_path.read_text().splitlines() if line.strip()]
     if not rows or len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Input IDs must be unique and nonempty")
@@ -206,23 +259,21 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
         tokenizer.chat_template = Path(config.chat_template_file).read_text()
     if config.apply_chat_template and not tokenizer.chat_template:
         raise ValueError("Supply the frozen training-family template for a base tokenizer")
-    eos = tokenizer.eos_token_id
-    eos_ids = set(eos if isinstance(eos, list) else [eos]) - {None}
-    # Include the model's native EOS list (e.g. Llama eot + end_of_text).
     from transformers import GenerationConfig
     generation_config = GenerationConfig.from_pretrained(config.model, revision=config.revision)
-    geos = generation_config.eos_token_id
-    eos_ids.update((geos if isinstance(geos, list) else [geos]))
-    eos_ids.discard(None)
+    termination = termination_tokens(tokenizer, generation_config.eos_token_id, config.template_family)
+    stop_ids = set(termination["stop_token_ids"])
     params = SamplingParams(n=config.n, temperature=config.temperature,
                             top_p=config.top_p, top_k=config.top_k, max_tokens=config.max_tokens,
                             seed=config.seed, stop=list(config.stop_strings) or None,
-                            stop_token_ids=sorted(eos_ids), ignore_eos=False,
+                            stop_token_ids=sorted(stop_ids), ignore_eos=False,
                             include_stop_str_in_output=False)
     manifest = {"config": asdict(config), "code_commit": code_commit,
                 "input_sha256": sha256_file(input_path),
                 "source_sha256": sha256_file(Path(__file__)),
-                "input_rows": len(rows), "native_eos_ids": sorted(eos_ids),
+                "input_rows": len(rows), **termination,
+                "chat_template_date_string": LLAMA_G0_DATE if config.template_family == "llama3" and config.apply_chat_template and not config.chat_template_file else None,
+                "model_load_seconds": time.monotonic() - started,
                 "chat_template": tokenizer.chat_template,
                 "versions": {p: importlib.metadata.version(p) for p in ("vllm", "transformers", "torch")}}
     (output_dir / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
@@ -231,19 +282,13 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
             batch = rows[start:start + config.batch_size]
             prompts = []
             for row in batch:
-                if "prompt" in row:
-                    if config.apply_chat_template:
-                        raise ValueError("Pre-rendered prompt requires chat template disabled")
-                    tokens = tokenizer.encode(row["prompt"], add_special_tokens=False)
-                elif config.apply_chat_template:
-                    messages = row.get("messages") or [{"role": "user", "content": prompt_text(row["problem"], config.protocol)}]
-                    tokens = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True)
-                else:
-                    tokens = tokenizer.encode(prompt_text(row["problem"], config.protocol), add_special_tokens=False)
+                tokens = render_prompt_tokens(row, tokenizer, config)
                 if len(tokens) + config.max_tokens > config.max_model_len:
                     raise ValueError(f"Context would truncate input/output for {row['id']}")
                 prompts.append({"prompt_token_ids": tokens})
+            block_started = time.monotonic()
             generated = llm.generate(prompts, params, use_tqdm=False)
+            block_seconds = time.monotonic() - block_started
             if len(generated) != len(batch):
                 raise RuntimeError("Missing request output")
             for row, prompt, result in zip(batch, prompts, generated, strict=True):
@@ -260,12 +305,20 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
                               "token_ids": ids, "text": completion.text,
                               "finish_reason": completion.finish_reason,
                               "stop_reason": completion.stop_reason,
-                              **stop_flags(ids, eos_ids, completion.finish_reason,
+                              **stop_flags(ids, stop_ids, completion.finish_reason,
                                            completion.stop_reason, config.max_tokens)}
                     raw.write(json.dumps(record, ensure_ascii=False) + "\n")
                 raw.flush()
+            with (output_dir / "timing.jsonl").open("a") as timing:
+                timing.write(json.dumps({"start": start, "requests": len(batch),
+                    "seconds": block_seconds,
+                    "prompt_tokens": sum(len(p["prompt_token_ids"]) for p in prompts),
+                    "completion_tokens": sum(len(c.token_ids) for g in generated for c in g.outputs)}) + "\n")
+            print(json.dumps({"completed_requests": start + len(batch), "total_requests": len(rows),
+                              "block_seconds": block_seconds}), flush=True)
     (output_dir / "GENERATION_COMPLETE.json").write_text(json.dumps({
         "requests": len(rows), "draws": len(rows) * config.n,
+        "elapsed_seconds": time.monotonic() - started,
         "raw_sha256": sha256_file(output_dir / "raw.jsonl")}) + "\n")
 
 

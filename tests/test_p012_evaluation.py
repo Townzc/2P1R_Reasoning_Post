@@ -48,11 +48,14 @@ def test_symbolic_equality_and_wrong_answer():
 
 def test_stop_reason_is_not_synonymous_with_eos():
     assert stop_flags([10, 11], {99}, "stop", "Problem:", 2) == {
-        "native_eos": False, "length_capped": False,
+        "stopped_on_terminator": False, "stop_token_id": None,
+        "last_token_terminator_id": None, "length_capped": False,
         "at_token_limit": True, "string_stop": True}
-    assert stop_flags([10, 99], {99}, "length", None, 2)["native_eos"]
-    assert stop_flags([10], {99}, "stop", 99, 2)["native_eos"]
-    assert not stop_flags([10], {99}, "stop", None, 2)["native_eos"]
+    capped = stop_flags([10, 99], {99}, "length", None, 2)
+    assert not capped["stopped_on_terminator"] and capped["length_capped"]
+    assert capped["last_token_terminator_id"] == 99
+    assert stop_flags([10], {99}, "stop", 99, 2)["stopped_on_terminator"]
+    assert not stop_flags([10], {99}, "stop", None, 2)["stopped_on_terminator"]
 
 
 def test_prompt_preserves_tex_and_literal_placeholders():
@@ -64,6 +67,6 @@ def test_prompt_preserves_tex_and_literal_placeholders():
 
 def test_invalid_decode_contracts_fail_before_loading_model():
     for overrides in ({"revision": "main"}, {"n": 4}, {"max_model_len": 16384}):
-        fields = {"model": "candidate", "revision": "fixed", "protocol": "omi2", "task": "math"}
+        fields = {"model": "candidate", "revision": "fixed", "protocol": "omi2", "task": "math", "template_family": "qwen"}
         with pytest.raises(ValueError):
             EvalConfig(**(fields | overrides)).validate()

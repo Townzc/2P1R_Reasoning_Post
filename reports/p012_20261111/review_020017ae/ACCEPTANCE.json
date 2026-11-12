@@ -1,0 +1,30 @@
+{
+  "review_commit": "020017aeb2f4904fa1652d8ea970edbf3069ddd5",
+  "review_path": "audit/claude/20261111c/CR_C2_C4_295091d9.md",
+  "review_sha256": "4cc78a3f21f129624914b1b67adfdc3781d6594df8d6bdcb4d6fd305f56846eb",
+  "accepted_utc": "2026-11-12T07:02:52.627780+00:00",
+  "direct_owner_instruction": "Fix F1-F3 and start Qwen G0-E without re-review. First model: 20 questions and S1-S4 before full evaluation. F4/F5 and Modal launcher reviewed together before C8.",
+  "F1": "Required template_family; native EOS union template terminators; exclusive finish-event categories and actual stop_token_id. Four real tokenizers tested.",
+  "F2": "Default Llama chat-template rendering passes date_string=26 Jul 2024; manifest records it.",
+  "F3": "Default and active G0 config batch_size=1024; blocks still saved separately.",
+  "S4": "Pre-rendered prompts never add special tokens; Llama pre-rendered input requires explicit BOS.",
+  "other_instrumentation": "Model-load and block timing for measured startup/campaign cost forecasts.",
+  "not_yet_implemented": [
+    "F4",
+    "F5"
+  ],
+  "R3_memory_fallback": {
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "effective_batch": 8,
+    "approved_before_results": true,
+    "used": false
+  },
+  "test_results": {
+    "selected_cases": 39,
+    "passed": 39,
+    "actual_tokenizer_cases": 4,
+    "initial_failure": "F2 real-template test found local jinja2 missing; installed pinned 3.1.6 and reran that test successfully",
+    "no_model_calls": true
+  }
+}

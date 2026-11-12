@@ -23,7 +23,7 @@ def save_generation(tmp_path, inputs, outputs, config, name="generation"):
     for id_, draw, text in outputs:
         raw.append({"id": id_, "draw": draw, "text": text,
                     "prompt_token_ids": [1, 2], "token_ids": [3, 4, 99],
-                    "native_eos": True, "length_capped": False,
+                    "stopped_on_terminator": True, "stop_token_id": 99, "length_capped": False,
                     "string_stop": False, "finish_reason": "stop"})
     (directory / "raw.jsonl").write_bytes(jsonl_bytes(raw))
     (directory / "MANIFEST.json").write_text(json.dumps({
@@ -35,7 +35,7 @@ def save_generation(tmp_path, inputs, outputs, config, name="generation"):
 
 
 def test_sampled_accuracy_keeps_question_and_draw_identity(tmp_path):
-    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", n=2, temperature=0.7)
+    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen", n=2, temperature=0.7)
     inputs = [{"id": "a", "problem": "2+0", "gold": "2"},
               {"id": "b", "problem": "1+1", "gold": "2"}]
     # Interleaved input IDs and draw order must not change the result.
@@ -50,7 +50,7 @@ def test_sampled_accuracy_keeps_question_and_draw_identity(tmp_path):
 
 
 def test_li_exact_and_judge_are_separate_and_missing_format_is_not_judged(tmp_path):
-    config = EvalConfig("fixture", "fixed", "li_release_math500", "math")
+    config = EvalConfig("fixture", "fixed", "li_release_math500", "math", "qwen")
     inputs = [{"id": "a", "problem": "A", "gold": r"\frac{1}{2}"},
               {"id": "b", "problem": "B", "gold": "3"},
               {"id": "c", "problem": "C", "gold": "4"}]
@@ -62,7 +62,7 @@ def test_li_exact_and_judge_are_separate_and_missing_format_is_not_judged(tmp_pa
     assert first["judge_requests"] == 1
     assert first["accuracy_with_judge"] is None
     pending = [json.loads(x) for x in (tmp_path / "exact/judge_inputs.jsonl").read_text().splitlines()]
-    judge_config = EvalConfig(JUDGE_MODEL, "fixed", "li_judge", "math",
+    judge_config = EvalConfig(JUDGE_MODEL, "fixed", "li_judge", "math", "qwen",
         max_tokens=20, temperature=0, top_k=1, dtype="float16", apply_chat_template=False)
     _, judge_dir = save_generation(tmp_path, pending, [(pending[0]["id"], 0, "True")],
                                    judge_config, name="judge")
@@ -78,7 +78,7 @@ def test_li_exact_and_judge_are_separate_and_missing_format_is_not_judged(tmp_pa
     [("a", 0, r"\boxed{2}"), ("unknown", 0, r"\boxed{2}")],
 ])
 def test_missing_duplicate_or_unknown_answers_cannot_be_scored(tmp_path, outputs):
-    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", n=2, temperature=0.7)
+    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen", n=2, temperature=0.7)
     source, directory = save_generation(tmp_path, [{"id": "a", "problem": "x", "gold": "2"}], outputs, config)
     with pytest.raises(ValueError):
         score_generation(source, directory, tmp_path / "invalid")
@@ -86,7 +86,7 @@ def test_missing_duplicate_or_unknown_answers_cannot_be_scored(tmp_path, outputs
 
 
 def test_changed_raw_output_is_rejected(tmp_path):
-    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k")
+    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen")
     source, directory = save_generation(tmp_path, [{"id": "a", "problem": "x", "gold": "2"}],
                                         [("a", 0, r"\boxed{2}")], config)
     with (directory / "raw.jsonl").open("a") as f:

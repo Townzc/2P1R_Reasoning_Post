@@ -1,3 +1,7 @@
+## P012 F1–F3 completed; Qwen G0-E authorized — 2026-11-11 PST
+
+[Review acceptance and amendment 2](../reports/p012_20261111/review_020017ae/README.md) implement Claude 020017ae. All 39 relevant tests pass, including real tokenizer stops and the fixed Llama date. Next: first Qwen model, 20-question S1–S4 check, then full G0-E. Modal credential renewal is in progress. F4/F5 and the launcher are reviewed once before C8. No P012 model output exists at this milestone.
+
 ## P012 C1 complete; first-use review prepared — 2026-11-11 PST
 
 See [the P012 packet](../reports/p012_20261111/README.md). C1 fixes assets, versions, 133 file hashes, UWNSL collections, OMI-2 prompt and the live Tinker model list. Official Llama access passes. C2 and C4 configs are candidates with 40 passing local tests; [Claude review](../reports/p012_20261111/C2_C4_CODE_REVIEW_REQUEST.md) is next. Model execution and data construction have not started. Main MATH uses full test 5000; budgets and schedule follow v1 plus amendment 1. Historical work below stays closed.

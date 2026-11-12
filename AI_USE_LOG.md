@@ -5112,3 +5112,9 @@ Created standard-tool C2 generation/scoring candidates, verbatim licensed Li nor
 The review packet identifies the published Li MATH/GSM protocol differences, benchmark alignment for official anchors, and a proposed matching-protocol pretrained baseline for delta_SFT. These are pre-result decisions for Claude. One first-use review per shared path follows P012 section 12; old per-cell machinery is not resumed. Course prose and external correspondence remain the owner's responsibility.
 
 Publication checks: packet/source SHA bindings and credential/private-path scan passed. The staged whitespace check passed outside the verbatim vendor file; its single original trailing-space line was retained to preserve source bytes. vLLM 0.11.0 primary source confirms the generation_config="vllm" option used by the candidate.
+
+### 2026-11-11 PST — P012 review 020017ae accepted and required fixes
+
+Read Claude's C2/C4 review and the owner's direct execution authorization. Implemented F1 template-aware stop IDs and exclusive finish categories, F2 fixed Llama template date, and F3 batch size 1024 with block timing. Added explicit BOS enforcement for pre-rendered Llama input. Four pinned real tokenizers confirm template stop IDs. Of 39 selected tests, 38 initially passed; the remaining real-template case lacked local jinja2. Installing the already GPU-pinned jinja2 3.1.6 fixed that environment issue and the affected case passed. The initial record remains preserved.
+
+Accepted the three protocol decisions and recorded amendment 2 before any P012 result. F4/F5 and the Modal launcher remain for one C8 review; no new review is required before Qwen G0-E. The Modal token was expired; renewal is awaiting the owner's Berkeley device authentication. No model call, training or benchmark scoring has run at this milestone. No course prose or external message was sent.

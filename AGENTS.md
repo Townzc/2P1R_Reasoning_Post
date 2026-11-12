@@ -1,9 +1,9 @@
 # Current P012 authorization — 2026-11-11 PST
 
-The owner supplied P012 v1 (`claude/audit` 2e481b7d) and amendment 1 (cbaa41fd). Execute on `codex/icml-acl-2027`; current packet: `reports/p012_20261111/README.md`, status: `EXECUTION_STATUS.json`, local continuation notes: `.local/p012_20261111/ACTIVE_HANDOFF.md`.
+The owner supplied P012 v1 (`claude/audit` 2e481b7d), amendment 1 (cbaa41fd), and review/amendment 2 (020017ae). Execute on `codex/icml-acl-2027`; current packet: `reports/p012_20261111/README.md`, status: `EXECUTION_STATUS.json`, local continuation notes: `.local/p012_20261111/ACTIVE_HANDOFF.md`.
 
 - C1 assets and toolchain pins are complete. Official Llama 1B/3B base and Instruct access passed; use official revisions. Tinker capability query returned no Llama-3.2-3B and no Qwen2.5; the M2 LoRA branch is not activated.
-- C2 evaluation/scoring and C4 configuration candidates have 40 passing synthetic tests. Claude first-use review and the three pre-result protocol decisions are pending. No P012 generation, training, benchmark scoring or OMI-2 construction has run.
+- Claude review 020017ae is accepted. F1–F3 and S4 fixes have 39 passing relevant tests, including the four actual tokenizers. The owner authorizes Qwen G0-E directly, first 20 questions with S1–S4 before full evaluation; no second review of these fixes. Active configs and amendment 2: `reports/p012_20261111/review_020017ae/`. F4/F5 and the Modal launcher go to one review before C8. No P012 model execution has run as of this acceptance milestone.
 - Follow v1 §12: standard pinned tools, one manifest per batch, one Claude review per new shared code path; no RunGuard, claim/receipt framework or per-cell review rounds. One recorded infrastructure retry is allowed; scientific failures do not retry. No kill timers.
 - Modal cap $85, protected $4; subcaps G0-E 4, G0-T 10, capability 4, Tier 1 30, Tier 2 22, E2 3, emergency 12. No transfers; forecast at most 80% of remaining subcap, including unsettled reserves. First Qwen base/MATH grid is the cost probe. Tinker fallback <=$60 only if needed; E4 <=$80 after OH decision. Conditional E1 uses actual savings after 11/15.
 - Main MATH endpoint and decontamination use full test 5000; sampled secondary MATH uses MATH-500. Global batch 8; P/K8/K4/R 1024 updates, L 128. Report sample presentations, tokens and costs distinctly.

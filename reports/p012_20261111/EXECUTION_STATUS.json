@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-12T06:21:02.983966+00:00",
-  "stage": "C1 complete; C2 and C4 configuration candidates await first-use Claude review",
-  "plan": "P012 v1 plus amendment 1",
+  "updated_utc": "2026-11-12T07:12:46.855027+00:00",
+  "stage": "F1-F3 complete; first Qwen G0-E authorized; Modal credential renewal pending",
+  "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -13,10 +13,11 @@
     "OMI2_main_train_shards": 32
   },
   "C2": {
-    "code": "candidate",
+    "code": "review accepted with F1-F3 implemented",
     "unique_local_tests_passed": 40,
-    "claude_review": "pending",
-    "gpu_execution": "not started"
+    "claude_review": "020017ae; owner permits direct G0-E after fixes",
+    "gpu_execution": "not started",
+    "relevant_fix_tests_passed": 39
   },
   "C4": {
     "configs": [
@@ -25,7 +26,8 @@
       "R3_qwen_long.yaml"
     ],
     "training": "not started",
-    "launcher": "not yet implemented"
+    "launcher": "not yet implemented",
+    "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved"
   },
   "science": {
     "model_generation_calls": 0,
@@ -53,10 +55,10 @@
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Claude first-use code review and pre-result protocol decisions",
-    "GPU environment and launch-path preparation; measured cost forecast",
-    "Qwen G0-E, then G0-T",
-    "C5/C6 construction after shared-path review"
+    "Complete Modal credential renewal and verify target account",
+    "Publish F1-F3 commit; prepare first 20 Qwen inputs and runtime",
+    "Run S1-S4 on 20 questions, then full Qwen G0-E after checks and cost forecast",
+    "F4/F5 plus Modal launcher: one review before C8"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",

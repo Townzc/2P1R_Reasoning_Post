@@ -99,7 +99,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
     n, protocol, task = config["n"], config["protocol"], config["task"]
     expected = {(r["id"], draw) for r in inputs for draw in range(n)}
     seen, labels, judge_inputs = set(), [], []
-    stats = {"native_eos": 0, "length_capped": 0, "string_stop": 0,
+    stats = {"stopped_on_terminator": 0, "length_capped": 0, "string_stop": 0,
              "unclassified_stop": 0, "completion_tokens": 0, "prompt_tokens_per_response_sum": 0}
     with (generation_dir / "raw.jsonl").open() as raw_file:
         for line in raw_file:
@@ -112,10 +112,10 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
             label = label_response(raw["text"], original["gold"], protocol, task)
             label.update({"id": raw["id"], "draw": raw["draw"]})
             labels.append(label)
-            for stat in ("native_eos", "length_capped", "string_stop"):
+            for stat in ("stopped_on_terminator", "length_capped", "string_stop"):
                 stats[stat] += int(raw[stat])
             stats["unclassified_stop"] += int(raw["finish_reason"] == "stop" and
-                                             not raw["native_eos"] and not raw["string_stop"])
+                                             not raw["stopped_on_terminator"] and not raw["string_stop"])
             stats["completion_tokens"] += len(raw["token_ids"])
             stats["prompt_tokens_per_response_sum"] += len(raw["prompt_token_ids"])
             if label["needs_judge"]:
@@ -157,7 +157,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
                "protocol": protocol, "task": task, "metric": labels[0]["metric"],
                "accuracy": sum(r["correct"] for r in labels) / count,
                "format_compliance": sum(r["format_compliant"] for r in labels) / count,
-               "native_eos_rate": stats["native_eos"] / count,
+               "terminator_stop_rate": stats["stopped_on_terminator"] / count,
                "length_cap_rate": stats["length_capped"] / count,
                "mean_completion_tokens": stats["completion_tokens"] / count,
                "counts": stats, "judge_requests": len(judge_inputs)}
