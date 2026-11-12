@@ -1,0 +1,94 @@
+{
+  "math": [
+    {
+      "id": "math/f7fcffd67df06f8e84e0521363fd030732646e2f2af626785140e1b4e3207a20",
+      "task": "math",
+      "key": "A sequence $(a_n)$ is defined as follows: $a_1 = 1,$ $a_2 = \\frac{1}{2},$ and\n\\[a_n = \\frac{1 - a_{n - 1}}{2a_{n - 2}}\\]for all $n \\ge 3.$  Find $a_{120}.$",
+      "problem": "A sequence $(a_n)$ is defined as follows: $a_1 = 1,$ $a_2 = \\frac{1}{2},$ and\n\\[a_n = \\frac{1 - a_{n - 1}}{2a_{n - 2}}\\]for all $n \\ge 3.$  Find $a_{120}.$",
+      "gold": "\\frac{20}{41}",
+      "source_index": 4672,
+      "level": "Level 5",
+      "official_solution": "We compute the first few terms:\n\\[a_1 = 1, \\quad a_2 = \\frac{1}{2}, \\quad a_3 = \\frac{1}{4}, \\quad a_4 = \\frac{3}{4}, \\quad a_5 = \\frac{1}{2}, \\quad a_6 = \\frac{1}{3}, \\quad a_7 = \\frac{2}{3}, \\quad a_8 = \\frac{1}{2}.\\]The sequence appears to be converging to $\\frac{1}{2}.$  In fact, every third term appears to be $\\frac{1}{2}.$  So we can define a new sequence $(b_n)$ where $b_n = 2a_n - 1.$  Then $a_n = \\frac{b_n + 1}{2}.$  Substituting, we get\n\\[\\frac{b_n + 1}{2} = \\frac{1 - \\frac{1 + b_{n - 1}}{2}}{2 \\cdot \\frac{1 + b_{n - 2}}{2}}.\\]This simplifies to\n\\[b_n = -\\frac{b_{n - 1} + b_{n - 2}}{b_{n - 2} + 1}.\\]Note that $b_1 = 1,$ $b_2 = 0,$ and $b_3 = -\\frac{1}{2}.$\n\nSuppose $b_n = 0.$  Then\n\\begin{align*}\nb_{n + 1} &= -\\frac{b_n + b_{n - 1}}{b_{n - 1} + 1} = -\\frac{b_{n - 1}}{b_{n - 1} + 1}, \\\\\nb_{n + 2} &= -\\frac{b_{n + 1} + b_n}{b_n + 1} = -b_{n + 1} = \\frac{b_{n - 1}}{b_{n - 1} + 1}, \\\\\nb_{n + 3} &= -\\frac{b_{n + 2} + b_{n + 1}}{b_{n + 1} + 1} = 0, \\\\\nb_{n + 4} &= -\\frac{b_{n + 2}}{b_{n + 2} + 1} = \\frac{b_{n + 1}}{1 - b_{n + 1}}.\n\\end{align*}This tells us if $b_n = 0,$ then $b_{n + 3} = 0.$  Hence, $b_{3m - 1} = 0$ for all $m \\ge 1.$\n\nFurthermore, if $b_{n + 1} = -\\frac{1}{k},$ then\n\\[b_{n + 4} = \\frac{b_{n + 1}}{1 - b_{n + 1}} = \\frac{-1/k}{1 + 1/k} = -\\frac{1}{k + 1}.\\]Hence, $b_6 = -\\frac{1}{3},$ $b_9 = -\\frac{1}{4},$ $b_{12} = -\\frac{1}{5},$ and so on.  In general,\n\\[b_{3m} = -\\frac{1}{m + 1}.\\]Then\n\\[a_{3m} = \\frac{b_{3m} + 1}{2} = \\frac{-1/(m + 1) + 1}{2} = \\frac{m}{2(m + 1)}.\\]In particular,\n\\[a_{120} = \\frac{40}{2(40 + 1)} = \\boxed{\\frac{20}{41}}.\\]",
+      "difficulty_proxy_characters": 1588
+    },
+    {
+      "id": "math/ae59baf1310a30e2002fa1a6ea4db1808bce69c50dbd4a5fe3a89d2f1abc22b9",
+      "task": "math",
+      "key": "By a proper divisor of a natural number we mean a positive integral divisor other than 1 and the number itself. A natural number greater than 1 will be called nice if it is equal to the product of its distinct proper divisors. What is the sum of the first ten nice numbers?",
+      "problem": "By a proper divisor of a natural number we mean a positive integral divisor other than 1 and the number itself. A natural number greater than 1 will be called nice if it is equal to the product of its distinct proper divisors. What is the sum of the first ten nice numbers?\n",
+      "gold": "182",
+      "source_index": 5240,
+      "level": "Level 5",
+      "official_solution": "Let $p(n)$ denote the product of the distinct proper divisors of $n$. A number $n$ is nice in one of two instances:\nIt has exactly two distinct prime divisors.\nIf we let $n = pq$, where $p,q$ are the prime factors, then its proper divisors are $p$ and $q$, and $p(n) = p \\cdot q = n$.\nIt is the cube of a prime number.\nIf we let $n=p^3$ with $p$ prime, then its proper divisors are $p$ and $p^2$, and $p(n) = p \\cdot p^2 =n$.\nWe now show that the above are the only two cases. Suppose that another nice number existed that does not fall into one of these two categories. Then we can either express it in the form $n = pqr$ (with $p,q$ prime and $r > 1$) or $n = p^e$ (with $e \\neq 3$). In the former case, it suffices to note that $p(n) \\ge (pr) \\cdot (qr) = pqr^2 > pqr = n$.\nIn the latter case, then $p(n) = p \\cdot p^2 \\cdots p^{(e-1)} = p^{(e-1)e/2}$.\nFor $p(n) = n$, we need $p^{(e-1)e/2} = p^e \\Longrightarrow e^2 - e = 2e \\Longrightarrow$ $e = 0 or e = 3$.\nSince $e \\neq 3$, in the case $e = 0 \\Longrightarrow n = 1$ does not work.\nThus, listing out the first ten numbers to fit this form, $2 \\cdot 3 = 6,\\ 2^3 = 8,\\ 2 \\cdot 5 = 10,$ $\\ 2 \\cdot 7 = 14,\\ 3 \\cdot 5 = 15,\\ 3 \\cdot 7 = 21,$ $\\ 2 \\cdot 11 = 22,\\ 2 \\cdot 13 = 26,$ $\\ 3^3 = 27,\\ 3 \\cdot 11 = 33$. Summing these yields $\\boxed{182}$.",
+      "difficulty_proxy_characters": 1301
+    },
+    {
+      "id": "math/160f37aa07a4fea1dc1d7e7dddc4cfe8b745e9115e0c463946078553193cb535",
+      "task": "math",
+      "key": "Two identical CDs regularly cost a total of $\\$28.$ What is the cost in dollars of five of these CDs?",
+      "problem": "Two identical CDs regularly cost a total of $\\$28.$ What is the cost in dollars of five of these CDs?",
+      "gold": "70",
+      "source_index": 6228,
+      "level": "Level 2",
+      "official_solution": "In general, 5 CDs will cost $\\frac{5}{2}$ times as much as 2 CDs.  Thus the desired cost is $28\\cdot \\frac{5}{2} = \\boxed{70}$ dollars.",
+      "difficulty_proxy_characters": 135
+    },
+    {
+      "id": "math/68eb2315ad2f42609889fea5ddf6ab2ac2054ccf7e0f95085e7e9e6208b219bc",
+      "task": "math",
+      "key": "A plane is uniquely determined by three non-collinear points. What is the maximum possible number of planes that can be determined by 12 points in space?",
+      "problem": "A plane is uniquely determined by three non-collinear points. What is the maximum possible number of planes that can be determined by 12 points in space?",
+      "gold": "220",
+      "source_index": 2254,
+      "level": "Level 3",
+      "official_solution": "There are $\\binom{12}{3} = \\boxed{220}$ ways to pick any 3 points, which we assume to determine a unique plane.",
+      "difficulty_proxy_characters": 111
+    }
+  ],
+  "gsm8k": [
+    {
+      "id": "gsm8k/74b6f24335a979c924ec2bde750e0fa6d1c6475115a80f3cbf7878b9d85834dc",
+      "task": "gsm8k",
+      "key": "Randy walks his dog twice a day.  After each walk, he wipes his dog's paws off with a baby wipe.  The baby wipes come 120 wipes per pack.  How many packs will he need to make sure he has enough wipes for 360 days?",
+      "problem": "Randy walks his dog twice a day.  After each walk, he wipes his dog's paws off with a baby wipe.  The baby wipes come 120 wipes per pack.  How many packs will he need to make sure he has enough wipes for 360 days?",
+      "gold": "6",
+      "source_index": 2056,
+      "level": null,
+      "official_solution": "He uses 2 wipes a day and the pack of baby wipes come 120 wipes per pack so they will last 120/2 = 60 days\nHe needs enough to last for 360 days and 1 pack will last 60 days so he needs 360/60 = <<360/60=6>>6 packs\n#### 6",
+      "difficulty_proxy_characters": 220
+    },
+    {
+      "id": "gsm8k/cded550fbb3746bfe225afd476602b2b00af73dbd06c8cdeb12b5c4704196514",
+      "task": "gsm8k",
+      "key": "Greg and Katie went to Mrs. Scarlet's gold store to have their gold chests opened. They realized Greg had four times less gold than Katie when Mrs. Scarlet opened the chests. If the total amount of gold is 100, how much gold does Greg have?",
+      "problem": "Greg and Katie went to Mrs. Scarlet's gold store to have their gold chests opened. They realized Greg had four times less gold than Katie when Mrs. Scarlet opened the chests. If the total amount of gold is 100, how much gold does Greg have?",
+      "gold": "20",
+      "source_index": 2261,
+      "level": null,
+      "official_solution": "Let's say Greg had x number of golds.\nKatie had 4*x = 4x\nThe total number of gold they all had is Katie's 4x+x gold for Gref = 5x\nIf the total amount of gold, which was 100 = 5x\nThen x = 100/5=<<100/5=20>>20\nGreg had x = 20 gold\n#### 20",
+      "difficulty_proxy_characters": 236
+    },
+    {
+      "id": "gsm8k/5ffe45eb4b6c5b7ec8638a47dba362158cc0a12203901a866c33346caeb10b01",
+      "task": "gsm8k",
+      "key": "Tim and Donna will celebrate their 20th wedding anniversary in 2025.  They started dating 3 years before they got married and met 2 years before that.  When did they meet?",
+      "problem": "Tim and Donna will celebrate their 20th wedding anniversary in 2025.  They started dating 3 years before they got married and met 2 years before that.  When did they meet?",
+      "gold": "2000",
+      "source_index": 1661,
+      "level": null,
+      "official_solution": "They'll celebrate their 20th wedding anniversary in 2025 which means they got married in 2025-20 = <<2025-20=2005>>2005\nThey started dating 3 years before they got married in 2005 which means they started dating in 2005-3 = 2002\nAnd they met 2 years before they started dating which means they met in 2002-2 = 2000\n#### 2000",
+      "difficulty_proxy_characters": 324
+    },
+    {
+      "id": "gsm8k/e8e3ab1ccd109525d94e65d5f4756346f421a302a354ac40a9b1224a0df628f4",
+      "task": "gsm8k",
+      "key": "Adam needs a new laptop and has two choices. The first laptop is $500, and the second laptop is 3 times as costly as the first laptop. How much would Adam have to spend if he decides to buy both?",
+      "problem": "Adam needs a new laptop and has two choices. The first laptop is $500, and the second laptop is 3 times as costly as the first laptop. How much would Adam have to spend if he decides to buy both?",
+      "gold": "2,000",
+      "source_index": 2259,
+      "level": null,
+      "official_solution": "The second laptop costs $500*3=$<<500*3=1500>>1500.\nAdam needs to spend $1500+$500=$<<1500+500=2000>>2000 for both.\n#### 2,000",
+      "difficulty_proxy_characters": 126
+    }
+  ]
+}
