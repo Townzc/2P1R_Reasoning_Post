@@ -45,11 +45,16 @@ def test_nll_masks_prompt_and_counts_response_eos_after_causal_shift():
 
 
 def test_nll_primary_is_token_weighted_not_mean_of_sequence_means():
-    records = [{"parent_id": "a", "solution_hash": "1", "target_tokens": 2, "nll_sum": 2.0},
-               {"parent_id": "a", "solution_hash": "2", "target_tokens": 8, "nll_sum": 24.0}]
+    records = [{"parent_id": "a", "solution_hash": "1", "target_tokens": 2, "nll_sum": 2.0,
+                "solution_chars": len("解答\n")},
+               {"parent_id": "a", "solution_hash": "2", "target_tokens": 8, "nll_sum": 24.0,
+                "solution_chars": len("answer ")}]
     result = aggregate_nll(records)
     assert result["mean_per_token_nll"] == 2.6
     assert result["mean_per_solution_nll"] == 2.0
+    assert result["solution_chars"] == 10
+    assert result["nll_per_char"] == 2.6
+    assert result["cross_family_metric"] == "nll_per_char"
     with pytest.raises(ValueError):
         aggregate_nll(records + [records[0]])
     with pytest.raises(ValueError):

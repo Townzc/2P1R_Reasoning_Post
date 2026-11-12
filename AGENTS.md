@@ -1,3 +1,7 @@
+# C7 accepted07b56e49; N1 required; execute first group — 2026-11-12T21:58:47.595709+00:00
+
+Owner accepted07b56e49 C7 review. Addsolution_chars andaggregate nll_per_char,retainpertokenNLL,thenexecute withoutre-review. C7cap4,priority8NLL >8fourshotgreedy >8holdoutpass8 >4Instructzeroshot >4basezeroshot. FirstQwenbaseMATHgroup measurescost. Ifmandatoryclasses1-3exceed4STOPandreport; neverreducequestions/draws. Optionalclasses4/5canbeomittedforbudget. MainTier1remainsSTOPforcost; thisC7approvaldoesnotwaivemaincostgate. R2trained651.87756s,evalpairCLIs76744MATH/88856GSMactive; source41c3627e, admissione7539d85pushEXIT0consumed.
+
 # Tier 1 cost gate STOP; G0-T continues — 2026-11-12T21:39:50.388005+00:00
 
 AcceptedT1Lprobecomplete: training128updates44.9309s,function88.44397s,sampledpeak66149MiB. Fullgreedy5000 complete42.88%(2144),MATH500subset41.8%(209); sampled4complete32.1%(642/2000),49.2%caps. ForecastentireTier1=49.56withoutmargin /63.99with25%compute+30spertail, above30. STOP allremainingmain-gridcalls. Lactualreusepreserved. No cheaperGPUstarted; needownerdecisionafterregisteredstop. R1/R2G0Tcontinuesauthorized. C7packetcb9a63ed asyncownerrelaypendingactualClaudereview; noC7GPU.

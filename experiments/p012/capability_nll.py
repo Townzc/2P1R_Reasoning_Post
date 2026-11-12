@@ -67,17 +67,21 @@ def validate_encoded(source: list[int], target: list[int], ids: list[int], label
 def aggregate_nll(records: list[dict]) -> dict:
     if not records or len({(r["parent_id"], r["solution_hash"]) for r in records}) != len(records):
         raise ValueError("Empty or duplicate NLL records")
-    if any(r["target_tokens"] <= 0 or not math.isfinite(r["nll_sum"]) or r["nll_sum"] < 0 for r in records):
+    if any(r["target_tokens"] <= 0 or r["solution_chars"] <= 0 or not math.isfinite(r["nll_sum"]) or r["nll_sum"] < 0 for r in records):
         raise ValueError("Invalid teacher-forcing loss")
     count = sum(r["target_tokens"] for r in records)
+    chars = sum(r["solution_chars"] for r in records)
     total = math.fsum(r["nll_sum"] for r in records)
     return {"solutions": len(records), "target_tokens": count, "nll_sum": total,
             "mean_per_token_nll": total / count,
+            "solution_chars": chars, "nll_per_char": total / chars,
+            "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
             "mean_per_solution_nll": math.fsum(r["nll_sum"] / r["target_tokens"] for r in records) / len(records),
             "primary_metric": "mean_per_token_nll", "units": "nats",
             "prompt_tokens_scored": 0, "template_terminator_scored": True,
             "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
-            "cross_family_interpretation": "Per-token NLL uses each family's tokenizer; token units differ across families."}
+            "cross_family_metric": "nll_per_char",
+            "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer."}
 
 
 def run_nll(request: dict, output: Path, snapshot: Path) -> dict:
@@ -129,6 +133,7 @@ def run_nll(request: dict, output: Path, snapshot: Path) -> dict:
                 raise ValueError("Nonfinite teacher-forcing loss")
             record = {"parent_id": row["parent_id"], "solution_hash": row["solution_hash"],
                       "input_tokens": len(ids), "target_tokens": count, "nll_sum": loss * count,
+                      "solution_chars": len(row["solution"]),
                       "mean_token_nll": loss,
                       "input_ids_sha256": hashlib.sha256(json.dumps(ids).encode()).hexdigest(),
                       "labels_sha256": hashlib.sha256(json.dumps(labels).encode()).hexdigest()}
