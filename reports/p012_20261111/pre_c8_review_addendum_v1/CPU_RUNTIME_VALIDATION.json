@@ -1,0 +1,76 @@
+{
+  "code_commit": "6e168e1497d720b8bd665bac67340866f31b9d28",
+  "installed_harness_source": {
+    "subdirectory": "lm-evaluation-harness",
+    "url": "https://github.com/Small-Model-Gap/Small-Model-Learnability-Gap.git",
+    "vcs_info": {
+      "commit_id": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+      "requested_revision": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+      "vcs": "git"
+    }
+  },
+  "harness_math_utils_sha256": "59604119822c2d48f48b01152c07ad04c24099620153b8a1eac4218256ce1c6c",
+  "wrapper_sha256": "d979555456941da48a3e9e4b7f0c74397841f4ba267969090bbfcc148f12e20e",
+  "versions": {
+    "lm_eval": "0.4.5",
+    "antlr4-python3-runtime": "4.11.0",
+    "sympy": "1.14.0",
+    "transformers": "4.56.2",
+    "datasets": "3.2.0"
+  },
+  "reference_example_scores": [
+    0,
+    1,
+    1,
+    1
+  ],
+  "three_numeric_reference_and_one_negative_checks_passed": true,
+  "purpose": "synthetic integration validation",
+  "benchmark_results": false,
+  "checks": [
+    {
+      "model": {
+        "family": "qwen",
+        "repo": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+      },
+      "task": "math",
+      "prompt_tokens": 645,
+      "heldout_gold_invariance": true,
+      "exact_token_parity": true
+    },
+    {
+      "model": {
+        "family": "llama3",
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08"
+      },
+      "task": "math",
+      "prompt_tokens": 620,
+      "heldout_gold_invariance": true,
+      "exact_token_parity": true
+    },
+    {
+      "model": {
+        "family": "qwen",
+        "repo": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+      },
+      "task": "gsm8k",
+      "prompt_tokens": 146,
+      "heldout_gold_invariance": true,
+      "exact_token_parity": true
+    },
+    {
+      "model": {
+        "family": "llama3",
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08"
+      },
+      "task": "gsm8k",
+      "prompt_tokens": 147,
+      "heldout_gold_invariance": true,
+      "exact_token_parity": true
+    }
+  ]
+}
