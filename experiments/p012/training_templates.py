@@ -19,6 +19,9 @@ def export_and_check(assets: Path, models: list[dict]) -> dict:
     from llamafactory.hparams import DataArguments
     from transformers import AutoTokenizer
 
+    if len(models) != 4 or sorted(m["family"] for m in models) != ["llama3", "llama3", "qwen", "qwen"]:
+        raise ValueError("Check all four main-grid tokenizers")
+
     distribution = importlib.metadata.distribution("llamafactory")
     origin = json.loads(distribution.read_text("direct_url.json"))
     if origin.get("vcs_info", {}).get("commit_id") != LI_COMMIT:
@@ -67,4 +70,32 @@ def export_and_check(assets: Path, models: list[dict]) -> dict:
                          ("llamafactory", "transformers", "torch", "tokenizers", "flash-attn")},
             "templates": templates, "template_sha256": {
                 k: hashlib.sha256(v.encode()).hexdigest() for k, v in templates.items()},
+            "checks": checks, "all_passed": True, "model_execution": False}
+
+
+def check_evaluation_environment(assets: Path, models: list[dict], reference: dict) -> dict:
+    """Replay LF reference IDs in the exact production evaluation environment."""
+    from transformers import AutoTokenizer
+    if not reference["all_passed"] or len(reference["checks"]) != 8:
+        raise ValueError("Eight completed reference cases are required")
+    tokenizers = {m["repo"]: AutoTokenizer.from_pretrained(assets / m["directory"],
+                    local_files_only=True) for m in models}
+    checks = []
+    for case in reference["checks"]:
+        family = case["family"]
+        tokenizer = tokenizers[case["model"]]
+        tokenizer.chat_template = reference["templates"][family]
+        config = EvalConfig(case["model"], case["revision"], "omi2", "math", family,
+                            chat_template_file=family + ".jinja")
+        config.validate()
+        ids = render_prompt_tokens({"problem": case["problem"], "messages": case["messages"]},
+                                   tokenizer, config)
+        if ids != case["training_prompt_token_ids"]:
+            raise AssertionError("Evaluation environment differs from the actual LF prompt IDs")
+        checks.append({"model": case["model"], "shots": case["shots"],
+                       "prompt_tokens": len(ids), "passed": True})
+    return {"versions": {p: importlib.metadata.version(p) for p in
+                         ("transformers", "torch", "tokenizers", "vllm")},
+            "evaluation_source_sha256": sha256_file(Path(__file__).with_name("evaluation.py")),
+            "template_sha256": reference["template_sha256"],
             "checks": checks, "all_passed": True, "model_execution": False}

@@ -147,12 +147,38 @@ def numeric_answer(text: str | None) -> Fraction | None:
         return None
 
 
+def gsm_numeric_scores(answer: str | None, gold: str) -> dict:
+    """F5: retain strict equality and a separate numeric math-verify fallback."""
+    a, b = numeric_answer(answer), numeric_answer(gold)
+    strict = a is not None and b is not None and a == b
+    result = {"strict_numeric_correct": strict, "math_verify_fallback_used": False,
+              "math_verify_fallback_correct": None, "format_compliant": a is not None,
+              "correct": strict, "score_path": "strict_numeric" if strict else "incorrect"}
+    if strict:
+        return result
+    if answer is None:
+        return result | {"score_path": "invalid_format"}
+    from math_verify import LatexExtractionConfig, parse, verify
+    kwargs = {"extraction_config": [LatexExtractionConfig()], "fallback_mode": "no_fallback"}
+    parsed_gold = parse("$" + gold + "$", **kwargs)
+    parsed_answer = parse("$" + answer + "$", **kwargs)
+    # A boxed prose answer such as "18 dollars" may parse into a symbolic
+    # product. GSM answers must be numeric scalars; symbols/text are invalid.
+    numeric = bool(parsed_answer) and all(
+        getattr(value, "is_number", False) is True or numeric_answer(str(value)) is not None
+        for value in parsed_answer)
+    fallback = bool(numeric and parsed_gold and verify(parsed_gold, parsed_answer))
+    return result | {"math_verify_fallback_used": True,
+        "math_verify_fallback_correct": fallback, "format_compliant": numeric,
+        "correct": fallback,
+        "score_path": "math_verify_fallback" if fallback else "incorrect" if numeric else "invalid_format"}
+
+
 def score_answer(answer: str | None, gold: str, task: str) -> bool:
     if answer is None:
         return False
     if task == "gsm8k":
-        a, b = numeric_answer(answer), numeric_answer(gold)
-        return a is not None and b is not None and a == b
+        return gsm_numeric_scores(answer, gold)["correct"]
     if task != "math":
         raise ValueError(task)
     from math_verify import LatexExtractionConfig, parse, verify
@@ -216,10 +242,16 @@ class EvalConfig:
             raise ValueError("Use a registered precision")
         if self.protocol == "li_release_gsm" and self.task != "gsm8k":
             raise ValueError("Released GSM8K contract requires GSM8K")
+        if self.protocol == "omi2" and (
+                not self.chat_template_file or not self.apply_chat_template
+                or self.template_family == "none"):
+            raise ValueError("OMI-2 requires an exported training-family chat_template_file")
 
 
 def render_prompt_tokens(row: dict, tokenizer: Any, config: EvalConfig) -> list[int]:
     if "prompt" in row:
+        if config.protocol == "omi2":
+            raise ValueError("OMI-2 uses the frozen training template, not a pre-rendered override")
         if config.apply_chat_template:
             raise ValueError("Pre-rendered prompt requires chat template disabled")
         if config.template_family == "llama3" and not row["prompt"].startswith("<|begin_of_text|>"):
@@ -242,6 +274,10 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
     completion. This wrapper does not choose examples from any test split.
     """
     config.validate()
+    # Read the required export before paying to load a model.
+    template_text = Path(config.chat_template_file).read_text() if config.chat_template_file else None
+    if template_text is not None and not template_text.strip():
+        raise ValueError("The exported training template is empty")
     code_commit = execution_commit()
     started = time.monotonic()
     rows = [json.loads(line) for line in input_path.read_text().splitlines() if line.strip()]
@@ -255,8 +291,8 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
               max_model_len=config.max_model_len, trust_remote_code=False,
               gpu_memory_utilization=0.85, seed=config.seed)
     tokenizer = llm.get_tokenizer()
-    if config.chat_template_file:
-        tokenizer.chat_template = Path(config.chat_template_file).read_text()
+    if template_text is not None:
+        tokenizer.chat_template = template_text
     if config.apply_chat_template and not tokenizer.chat_template:
         raise ValueError("Supply the frozen training-family template for a base tokenizer")
     from transformers import GenerationConfig
@@ -275,6 +311,7 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
                 "chat_template_date_string": LLAMA_G0_DATE if config.template_family == "llama3" and config.apply_chat_template and not config.chat_template_file else None,
                 "model_load_seconds": time.monotonic() - started,
                 "chat_template": tokenizer.chat_template,
+                "chat_template_sha256": hashlib.sha256(template_text.encode()).hexdigest() if template_text is not None else None,
                 "versions": {p: importlib.metadata.version(p) for p in ("vllm", "transformers", "torch")}}
     (output_dir / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n")
     with (output_dir / "raw.jsonl").open("x") as raw:

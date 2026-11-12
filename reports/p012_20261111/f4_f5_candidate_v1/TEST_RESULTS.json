@@ -1,0 +1,14 @@
+{
+  "initial_run": {
+    "passed": 50,
+    "failed": 2
+  },
+  "cause": "math-verify represents text-wrapped numeric answers as number-named symbols; numeric-format guard initially rejected them",
+  "fix": "Accept a parsed numeric scalar or a value whose entire string passes the original strict numeric parser. Text units remain invalid.",
+  "affected_fixtures_rerun": {
+    "passed": 10,
+    "deselected": 7
+  },
+  "unique_cases_now_passed": 52,
+  "real_factory_and_eval_environment_parity": "pending"
+}

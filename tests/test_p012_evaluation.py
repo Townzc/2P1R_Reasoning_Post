@@ -67,6 +67,17 @@ def test_prompt_preserves_tex_and_literal_placeholders():
 
 def test_invalid_decode_contracts_fail_before_loading_model():
     for overrides in ({"revision": "main"}, {"n": 4}, {"max_model_len": 16384}):
-        fields = {"model": "candidate", "revision": "fixed", "protocol": "omi2", "task": "math", "template_family": "qwen"}
+        fields = {"model": "candidate", "revision": "fixed", "protocol": "omi2", "task": "math", "template_family": "qwen", "chat_template_file": "fixed.jinja"}
         with pytest.raises(ValueError):
             EvalConfig(**(fields | overrides)).validate()
+
+
+@pytest.mark.parametrize("overrides", [
+    {"chat_template_file": None}, {"apply_chat_template": False}, {"template_family": "none"},
+])
+def test_omi2_cannot_bypass_the_training_template(overrides):
+    fields = {"model": "candidate", "revision": "fixed", "protocol": "omi2", "task": "math",
+              "template_family": "qwen", "chat_template_file": "fixed.jinja"}
+    EvalConfig(**fields).validate()
+    with pytest.raises(ValueError, match="training-family"):
+        EvalConfig(**(fields | overrides)).validate()

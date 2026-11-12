@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 import re
 
-from .evaluation import execution_commit, extract_answer, score_answer, sha256_file
+from .evaluation import execution_commit, extract_answer, gsm_numeric_scores, score_answer, sha256_file
 from .vendor.li_math import is_equiv
 
 JUDGE_MODEL = "Qwen/Qwen2.5-32B-Instruct"
@@ -59,6 +59,9 @@ def gsm_release_equal(answer: str | None, gold: str) -> bool:
 def label_response(text: str, gold: str, protocol: str, task: str) -> dict:
     answer = extract_answer(text, protocol)
     needs_judge = False
+    if protocol == "omi2" and task == "gsm8k":
+        return {"answer": answer, **gsm_numeric_scores(answer, gold),
+                "metric": "numeric_equality_then_math_verify", "needs_judge": False}
     if protocol in LI_MATH:
         correct = answer is not None and is_equiv(answer, gold)
         metric = "li_normalized_exact"
@@ -166,6 +169,14 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
             "judge_unparsed": sum(value is None for value in judged.values()),
             "accuracy_with_judge": sum(r["correct_with_judge"] is True for r in labels) / count
                 if judge_complete else None})
+    if protocol == "omi2" and task == "gsm8k":
+        strict_correct = sum(r["strict_numeric_correct"] for r in labels)
+        fallback_correct = sum(r["score_path"] == "math_verify_fallback" for r in labels)
+        summary.update({"accuracy_strict_numeric": strict_correct / count,
+            "accuracy_with_math_verify_fallback": summary["accuracy"],
+            "fallback_gain_pp": 100 * fallback_correct / count,
+            "correct_by_path": {"strict_numeric": strict_correct, "math_verify_fallback": fallback_correct},
+            "fallback_evaluations": sum(r["math_verify_fallback_used"] for r in labels)})
     output_dir.mkdir(parents=True, exist_ok=False)
     (output_dir / "labels.jsonl").write_bytes(jsonl_bytes(labels))
     (output_dir / "judge_inputs.jsonl").write_bytes(judge_payload)

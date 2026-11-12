@@ -1,0 +1,43 @@
+......................................F......F......                     [100%]
+=================================== FAILURES ===================================
+_ test_omi2_gsm_retains_both_score_paths[\\text{18}-18-True-False-True-math_verify_fallback] _
+
+answer = '\\text{18}', gold = '18', correct = True, strict = False
+format_ok = True, path = 'math_verify_fallback'
+
+    @pytest.mark.parametrize("answer,gold,correct,strict,format_ok,path", [
+        ("18", "18", True, True, True, "strict_numeric"),
+        (r"\$18", "18", True, False, True, "math_verify_fallback"),
+        (r"\text{18}", "18", True, False, True, "math_verify_fallback"),
+        (r"\sqrt{324}", "18", True, False, True, "math_verify_fallback"),
+        (r"18\%", "18", False, False, True, "incorrect"),
+        (r"18\%", "0.18", True, False, True, "math_verify_fallback"),
+        ("18 dollars", "18", False, False, False, "invalid_format"),
+        (r"\text{18 dollars}", "18", False, False, False, "invalid_format"),
+        ("19", "18", False, False, True, "incorrect"),
+    ])
+    def test_omi2_gsm_retains_both_score_paths(answer, gold, correct, strict, format_ok, path):
+        label = label_response("\\boxed{" + answer + "}", gold, "omi2", "gsm8k")
+>       assert label["correct"] is correct
+E       assert False is True
+
+tests/test_p012_scoring.py:119: AssertionError
+_______ test_omi2_gsm_summary_reports_the_strict_and_fallback_difference _______
+
+tmp_path = PosixPath('/private/var/folders/3r/yx35kfqd06vgsrtg86cfrrlh0000gn/T/pytest-of-zhicetang/pytest-100/test_omi2_gsm_summary_reports_0')
+
+    def test_omi2_gsm_summary_reports_the_strict_and_fallback_difference(tmp_path):
+        config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen", chat_template_file="fixture.jinja")
+        inputs = [{"id": str(i), "problem": "fixture", "gold": "18"} for i in range(5)]
+        outputs = [(str(i), 0, "\\boxed{" + answer + "}") for i, answer in
+                   enumerate(["18", r"\$18", r"\text{18}", "18 dollars", r"18\%"])]
+        source, directory = save_generation(tmp_path, inputs, outputs, config)
+        summary = score_generation(source, directory, tmp_path / "f5_scores")
+>       assert summary["accuracy"] == summary["accuracy_with_math_verify_fallback"] == 0.6
+E       assert 0.4 == 0.6
+
+tests/test_p012_scoring.py:132: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_p012_scoring.py::test_omi2_gsm_retains_both_score_paths[\\text{18}-18-True-False-True-math_verify_fallback]
+FAILED tests/test_p012_scoring.py::test_omi2_gsm_summary_reports_the_strict_and_fallback_difference
+2 failed, 50 passed in 1.79s

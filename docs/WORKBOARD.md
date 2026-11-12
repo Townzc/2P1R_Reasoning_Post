@@ -1,3 +1,7 @@
+## P012 public checkpoint progress — 2026-11-12 PST
+
+[UWNSL short results](../reports/p012_20261111/g0_uw_short_v1/README.md): GSM8K949/1319 (71.95%),+0.248pp from the paper; numeric gate passed. MATH244/500 exact,231 pending judge. Long MATH500 generation complete:183 exact,96 pending judge,245 length caps; long GSM timing probe is queued. F4/F5 candidate has52 unique passing local cases; actual training/evaluation template token parity is next. No training or C8 execution.
+
 ## P012 first full Qwen results — 2026-11-12 PST
 
 [S1–S4 passed](../reports/p012_20261111/g0_first20_pass_v1/README.md). [Full Qwen Instruct results](../reports/p012_20261111/g0_qwen_instruct_v1/README.md): MATH-500 normalized exact 232/500, 204 pending judge; GSM8K 903/1319. Raw archives and labels are available for independent 10% review. Modal reports $0.54724234 for this new work; retain $0.10 for unsettled usage. Public UWNSL short-checkpoint pair is admitted next. G0/C8 are not complete; previous stages below are historical.

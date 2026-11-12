@@ -5142,3 +5142,5 @@ The original full500 CLI86183 and GSM1319 CLI28351 each completed once. Original
 The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objects, including CPU import validation. Closed-run forecasts are replaced by these reported costs and $0.10 remains reserved for delayed/noncompute charges. The next UWNSL short-checkpoint pair uses measured task-specific timing, a 2x generation margin, and an admitted combined forecast. No scientific settings changed in response to the observed scores.
 
 - 2026-11-12: Codex prepared a CPU-only training runtime and actual LLaMA-Factory template export/parity check for P012 F4. No training or course prose. G0-T environment reserve $0.35; runtime results pending.
+
+- 2026-11-12: Codex archived UWNSL short raw outputs and scores, implemented candidate F4 required training-template export and F5 strict-plus-math-verify GSM metrics, and repaired the training PyArrow pin.52 unique affected local cases pass after fixing numeric text handling. Two startup/import failures are retained. Real template parity and the combined pre-C8 review remain pending; no training or course prose.

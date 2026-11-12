@@ -101,3 +101,36 @@ def test_released_gsm_metric_and_judge_rule_are_preserved():
     assert not label_response(r"\boxed{1.0}", "1", "li_release_gsm", "gsm8k")["correct"]
     assert judge_decision("True then False") is True
     assert judge_decision("true") is None
+
+
+@pytest.mark.parametrize("answer,gold,correct,strict,format_ok,path", [
+    ("18", "18", True, True, True, "strict_numeric"),
+    (r"\$18", "18", True, False, True, "math_verify_fallback"),
+    (r"\text{18}", "18", True, False, True, "math_verify_fallback"),
+    (r"\sqrt{324}", "18", True, False, True, "math_verify_fallback"),
+    (r"18\%", "18", False, False, True, "incorrect"),
+    (r"18\%", "0.18", True, False, True, "math_verify_fallback"),
+    ("18 dollars", "18", False, False, False, "invalid_format"),
+    (r"\text{18 dollars}", "18", False, False, False, "invalid_format"),
+    ("19", "18", False, False, True, "incorrect"),
+])
+def test_omi2_gsm_retains_both_score_paths(answer, gold, correct, strict, format_ok, path):
+    label = label_response("\\boxed{" + answer + "}", gold, "omi2", "gsm8k")
+    assert label["correct"] is correct
+    assert label["strict_numeric_correct"] is strict
+    assert label["format_compliant"] is format_ok
+    assert label["score_path"] == path
+
+
+def test_omi2_gsm_summary_reports_the_strict_and_fallback_difference(tmp_path):
+    config = EvalConfig("fixture", "fixed", "omi2", "gsm8k", "qwen", chat_template_file="fixture.jinja")
+    inputs = [{"id": str(i), "problem": "fixture", "gold": "18"} for i in range(5)]
+    outputs = [(str(i), 0, "\\boxed{" + answer + "}") for i, answer in
+               enumerate(["18", r"\$18", r"\text{18}", "18 dollars", r"18\%"])]
+    source, directory = save_generation(tmp_path, inputs, outputs, config)
+    summary = score_generation(source, directory, tmp_path / "f5_scores")
+    assert summary["accuracy"] == summary["accuracy_with_math_verify_fallback"] == 0.6
+    assert summary["accuracy_strict_numeric"] == 0.2
+    assert summary["fallback_gain_pp"] == 40
+    assert summary["correct_by_path"] == {"strict_numeric": 1, "math_verify_fallback": 2}
+    assert summary["format_compliance"] == 0.8
