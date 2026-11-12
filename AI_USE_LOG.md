@@ -5134,3 +5134,9 @@ Use the single permitted infrastructure replacement on H100, preserving input or
 ### 2026-11-11 PST — first P012 model output and S1–S4 pass
 
 H100 replacement completed 20 fixed MATH questions / 80 sampled draws in 124.01 function seconds (54.69 generation seconds). S1–S4 passed: 79 terminator stops, one length cap, zero unclassified stops; all four-draw groups varied; no special-token tails; native versus pre-rendered prompt tokens and actual saved inputs agreed. No startup accuracy was computed. Raw attempt archive, hardware, timings and checks are published in g0_first20_pass_v1. Measured timing with a 2x generation margin admits full MATH-500 greedy within G0-E while retaining prior reservations.
+
+### 2026-11-12 PST — complete pretrained Qwen G0-E pair
+
+The original full500 CLI86183 and GSM1319 CLI28351 each completed once. Original scoring ran once per dataset through the accepted scorer. MATH normalized exact is 232/500, with 204 pending model-judge requests, 21 length caps and one string stop. GSM8K flexible-extract is 903/1319 with six caps. Neither contains unclassified stops. Complete raw outputs, input/config/source bindings, logs, and per-item labels are published for independent 10% result audit; that independent audit has not yet run. No pooled MATH judge has been loaded.
+
+The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objects, including CPU import validation. Closed-run forecasts are replaced by these reported costs and $0.10 remains reserved for delayed/noncompute charges. The next UWNSL short-checkpoint pair uses measured task-specific timing, a 2x generation margin, and an admitted combined forecast. No scientific settings changed in response to the observed scores.

@@ -1,3 +1,7 @@
+## P012 first full Qwen results — 2026-11-12 PST
+
+[S1–S4 passed](../reports/p012_20261111/g0_first20_pass_v1/README.md). [Full Qwen Instruct results](../reports/p012_20261111/g0_qwen_instruct_v1/README.md): MATH-500 normalized exact 232/500, 204 pending judge; GSM8K 903/1319. Raw archives and labels are available for independent 10% review. Modal reports $0.54724234 for this new work; retain $0.10 for unsettled usage. Public UWNSL short-checkpoint pair is admitted next. G0/C8 are not complete; previous stages below are historical.
+
 ## P012 F1–F3 completed; Qwen G0-E authorized — 2026-11-11 PST
 
 [Review acceptance and amendment 2](../reports/p012_20261111/review_020017ae/README.md) implement Claude 020017ae. All 39 relevant tests pass, including real tokenizer stops and the fixed Llama date. Next: first Qwen model, 20-question S1–S4 check, then full G0-E. Modal credential renewal is in progress. F4/F5 and the launcher are reviewed once before C8. No P012 model output exists at this milestone.
