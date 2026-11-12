@@ -5130,3 +5130,7 @@ Prepared source-hash-verified MATH-500 and GSM8K inputs in original order. The f
 Pinned Linux evaluation image built successfully and pip check passed. The three Qwen/UWNSL cloud snapshots match every frozen C1 file digest. The first L4 request stayed queued for over six minutes with backlog 1 and no runners or running inputs; Modal's stop prompt confirmed zero running containers. Cancelled that app and preserved its terminal CLI log. No model generation occurred on that attempt.
 
 Use the single permitted infrastructure replacement on H100, preserving input order, token budget, model revision, precision, sampling seed and all scientific settings. Only the transport GPU resource and its status label change. Replacement forecast $1.03515 fits the remaining G0-E allowance while retaining all $1.0953 earlier reservations. No budget-timer or automatic retry is added.
+
+### 2026-11-11 PST — first P012 model output and S1–S4 pass
+
+H100 replacement completed 20 fixed MATH questions / 80 sampled draws in 124.01 function seconds (54.69 generation seconds). S1–S4 passed: 79 terminator stops, one length cap, zero unclassified stops; all four-draw groups varied; no special-token tails; native versus pre-rendered prompt tokens and actual saved inputs agreed. No startup accuracy was computed. Raw attempt archive, hardware, timings and checks are published in g0_first20_pass_v1. Measured timing with a 2x generation margin admits full MATH-500 greedy within G0-E while retaining prior reservations.

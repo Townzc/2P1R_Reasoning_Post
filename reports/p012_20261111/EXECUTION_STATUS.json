@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T07:24:09.759285+00:00",
-  "stage": "Modal authorized; first 20 inputs and launch path ready; runtime not started",
+  "updated_utc": "2026-11-12T07:48:03.559720+00:00",
+  "stage": "First Qwen 20-question S1-S4 passed; full MATH-500 greedy admitted",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -16,7 +16,7 @@
     "code": "review accepted with F1-F3 implemented",
     "unique_local_tests_passed": 40,
     "claude_review": "020017ae; owner permits direct G0-E after fixes",
-    "gpu_execution": "not started",
+    "gpu_execution": "H100 first 20 / 80 draws completed; S1-S4 passed",
     "relevant_fix_tests_passed": 39
   },
   "C4": {
@@ -30,10 +30,11 @@
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved"
   },
   "science": {
-    "model_generation_calls": 0,
+    "model_generation_calls": 1,
     "training_calls": 0,
     "benchmark_scores": 0,
-    "OMI2_filtering_or_scoring": "not started"
+    "OMI2_filtering_or_scoring": "not started",
+    "startup_draws": 80
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -51,14 +52,14 @@
     "tinker_teacher_fallback_cap": 60,
     "tinker_E4_cap": 80,
     "M2_40_carveout_activated": false,
-    "unit_costs_measured": false
+    "unit_costs_measured": true
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Build pinned evaluation image and cache verified Qwen Instruct weights",
-    "Run first 20-question S1-S4 check",
-    "Use measured timing to forecast full Qwen G0-E",
-    "F4/F5 plus Modal launcher: one review before C8"
+    "Full Qwen Instruct MATH-500 greedy",
+    "Continue Qwen G0-E within remaining budget",
+    "Merge G0 MATH judge queues once",
+    "F4/F5 and launcher review before C8"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
