@@ -1,0 +1,10 @@
+{
+  "affected_input": "Frozen qwen_gsm8k.jsonl and llama3_gsm8k.jsonl; actual GSM8K test0755 contains literal Unicode separators",
+  "physical_rows": 1319,
+  "str_splitlines_rows": 1321,
+  "discovered_before_full_model_call": true,
+  "raw_input_changed": false,
+  "prompt_or_scoring_contract_changed": false,
+  "repair": "Read JSONL as physical file lines; do not split JSON string contents at U+2028/U+2029",
+  "previous_completed_outputs": "Retained; no generation or score rerun"
+}

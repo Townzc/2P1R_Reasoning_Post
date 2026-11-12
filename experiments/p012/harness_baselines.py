@@ -188,7 +188,7 @@ def score(inputs: Path, generation: Path, output: Path) -> dict:
     expected_protocol = "lm_eval_minerva4" if config.task == "math" else "lm_eval_gsm4"
     if config.protocol != expected_protocol or config.n != 1 or config.temperature != 0:
         raise ValueError("Not the frozen greedy base protocol")
-    rows = [json.loads(line) for line in inputs.read_text().splitlines()]
+    rows = [json.loads(line) for line in inputs.open() if line.strip()]
     by_id = {r["id"]: r for r in rows}
     if len(by_id) != len(rows):
         raise ValueError("Duplicate input IDs")

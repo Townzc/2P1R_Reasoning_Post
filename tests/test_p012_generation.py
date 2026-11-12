@@ -38,7 +38,9 @@ def test_raw_tokens_and_stop_causes_survive_round_trip(tmp_path, monkeypatch):
     monkeypatch.setitem(sys.modules, "transformers", SimpleNamespace(GenerationConfig=SimpleNamespace(
         from_pretrained=lambda *a, **kw: SimpleNamespace(eos_token_id=[98, 99]))))
     source = tmp_path / "inputs.jsonl"
-    source.write_text(json.dumps({"id": "a", "problem": "1+0"}) + "\n")
+    # A real GSM8K question contains a literal Unicode paragraph separator.
+    # It remains inside one JSONL record and must reach the tokenizer intact.
+    source.write_text(json.dumps({"id": "a", "problem": "1+\u20280"}, ensure_ascii=False) + "\n")
     template_file = tmp_path / "training.jinja"
     template_file.write_text("frozen synthetic template")
     config = EvalConfig("fixture", "fixed", "omi2", "math", "qwen", max_tokens=2,

@@ -96,7 +96,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
     manifest, complete = read_manifest(generation_dir)
     if sha256_file(input_path) != manifest["input_sha256"]:
         raise ValueError("Input hash mismatch")
-    inputs = [json.loads(x) for x in input_path.read_text().splitlines() if x.strip()]
+    inputs = [json.loads(x) for x in input_path.open() if x.strip()]
     by_id = {r["id"]: r for r in inputs}
     if not inputs or len(by_id) != len(inputs):
         raise ValueError("Input IDs must be unique and nonempty")
@@ -149,7 +149,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
         else:
             if jm["input_sha256"] != sha256_file(judge_inputs_path):
                 raise ValueError("Combined judge input hash mismatch")
-            collection = [json.loads(line) for line in judge_inputs_path.read_text().splitlines() if line.strip()]
+            collection = [json.loads(line) for line in judge_inputs_path.open() if line.strip()]
             by_combined_id = {r["id"]: r for r in collection}
             if len(by_combined_id) != len(collection):
                 raise ValueError("Duplicate combined judge input ID")
@@ -163,7 +163,7 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
                 if by_combined_id[combined_id] != (row | {"id": combined_id}):
                     raise ValueError("Combined judge prompt differs from the original score queue")
         all_judged = {}
-        for line in (judge_dir / "raw.jsonl").read_text().splitlines():
+        for line in (judge_dir / "raw.jsonl").open():
             row = json.loads(line)
             if row["draw"] != 0 or row["id"] in all_judged:
                 raise ValueError("Duplicate judge response")

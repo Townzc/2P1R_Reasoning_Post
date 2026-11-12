@@ -309,7 +309,9 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
         raise ValueError("The exported training template is empty")
     code_commit = execution_commit()
     started = time.monotonic()
-    rows = [json.loads(line) for line in input_path.read_text().splitlines() if line.strip()]
+    # JSON strings may contain literal Unicode line separators. JSONL records
+    # are separated by physical newlines, not every character in splitlines().
+    rows = [json.loads(line) for line in input_path.open() if line.strip()]
     if not rows or len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Input IDs must be unique and nonempty")
     if (config.protocol.startswith("lm_eval_") or config.protocol == "omi2") and config.batch_size < len(rows):

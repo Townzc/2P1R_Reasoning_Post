@@ -32,7 +32,7 @@ def prepare(assets: Path, metadata_path: Path, output: Path) -> dict:
                          "sha256": digest, "bytes": len(payload)}
         return path
 
-    math = [json.loads(s) for s in source("HuggingFaceH4/MATH-500", "test.jsonl").read_text().splitlines()]
+    math = [json.loads(s) for s in source("HuggingFaceH4/MATH-500", "test.jsonl").open()]
     math_rows = [{"id": r["unique_id"], "problem": r["problem"], "gold": r["answer"],
                   "source_index": i} for i, r in enumerate(math)]
     gsm = pq.read_table(source("openai/gsm8k", "main/test-00000-of-00001.parquet")).to_pylist()
@@ -66,8 +66,8 @@ def check_startup(inputs: Path, generation: Path, tokenizer_path: Path) -> dict:
     config.validate()
     if config.n != 4 or config.temperature <= 0:
         raise ValueError("S2 requires four sampled draws")
-    rows = [json.loads(s) for s in inputs.read_text().splitlines()]
-    raw = [json.loads(s) for s in (generation / "raw.jsonl").read_text().splitlines()]
+    rows = [json.loads(s) for s in inputs.open()]
+    raw = [json.loads(s) for s in (generation / "raw.jsonl").open()]
     if len(rows) != 20 or complete["requests"] != 20 or complete["draws"] != 80:
         raise ValueError("Startup check requires exactly 20 questions and 80 draws")
     expected = {(r["id"], d) for r in rows for d in range(4)}
