@@ -1,3 +1,8 @@
+# Tier 1 cost gate STOP; G0-T continues — 2026-11-12T21:39:50.388005+00:00
+
+AcceptedT1Lprobecomplete: training128updates44.9309s,function88.44397s,sampledpeak66149MiB. Fullgreedy5000 complete42.88%(2144),MATH500subset41.8%(209); sampled4complete32.1%(642/2000),49.2%caps. ForecastentireTier1=49.56withoutmargin /63.99with25%compute+30spertail, above30. STOP allremainingmain-gridcalls. Lactualreusepreserved. No cheaperGPUstarted; needownerdecisionafterregisteredstop. R1/R2G0Tcontinuesauthorized. C7packetcb9a63ed asyncownerrelaypendingactualClaudereview; noC7GPU.
+Earlier entries below are historical where superseded.
+
 # Owner accepted e10a4bf5 / T1-T3 — 2026-11-12T21:07:31.205921+00:00
 
 Owner accepted final pre-C8 review e10a4bf5 and approved additional detached R1 restart. Fix T1/T2/T3 then execute without another review. T2: R1/R2 short reproduction batch2 xacc8=16, about666updates; remove Trainer memory tracking. T1: main batch8 xacc1=8, registered1024/128updates unchanged; no memory tracker; nvidia-smi sampling every30seconds; default gradient checkpointing enabled. Every training call uses modal run --detach. T3: R1/R2 MATH report exact and exact OR mathverify; gate uses union, no more32Bjudge loads. Llama base standard full endpoints stay unrun.

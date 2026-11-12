@@ -1,0 +1,73 @@
+{
+  "utc": "2026-11-12T21:36:52.680836+00:00",
+  "owner_gate": "e10a4bf5: Tier1 training+evaluation <=30; otherwise stop",
+  "decision": "STOP_REMAINING_TIER1",
+  "tier1_settings": 8,
+  "tier1_cells": 40,
+  "training_updates": 33792,
+  "completed_cell": "Qwen2.5-1.5B base x MATH x L x seed17",
+  "seconds_per_training_update": 0.35102265625,
+  "training_function_seconds": 88.44397298,
+  "sampled_memory": {
+    "sampling_interval_seconds": 30,
+    "samples": 3,
+    "peak_gpu_memory_MiB_sampled": 66149.0,
+    "not_an_instantaneous_peak_measurement": true
+  },
+  "measured_evaluation": {
+    "greedy": {
+      "function_seconds": 219.10869832999998,
+      "generation_seconds": 150.482693396,
+      "completion_tokens": 3515732,
+      "non_generation_seconds": 68.62600493399998
+    },
+    "sampled4": {
+      "function_seconds": 331.91841096900004,
+      "generation_seconds": 267.13348080500003,
+      "completion_tokens": 4533876,
+      "non_generation_seconds": 64.784930164
+    },
+    "first20": {
+      "function_seconds": 74.012722786,
+      "generation_seconds": 2.6911362550000035,
+      "completion_tokens": 5495,
+      "non_generation_seconds": 71.321586531
+    }
+  },
+  "forecast_scenarios": [
+    {
+      "compute_margin": 1,
+      "tail_seconds_per_call": 0,
+      "training_usd": 16.606873149441068,
+      "evaluation_usd": 32.95306027439975,
+      "total_usd_excluding_storage": 49.55993342384082
+    },
+    {
+      "compute_margin": 1.25,
+      "tail_seconds_per_call": 30,
+      "training_usd": 21.678697921096624,
+      "evaluation_usd": 42.31041844539307,
+      "total_usd_excluding_storage": 63.9891163664897
+    }
+  ],
+  "projection_basis": "Same measured H100 seconds/update for all models/tasks; task-specific evaluation request counts. MATH generation per response is a proxy for unmeasured GSM and other checkpoints. No assumed speedup from smaller models, shorter GSM answers, or stronger stopping after more training. Executed L calls use actual durations, not projections.",
+  "unknowns": "Other checkpoints can terminate earlier; GSM and Llama throughput not measured for this grid. These unknown savings are not budget authorization.",
+  "current_probe_runtime_estimate_usd_not_invoice": 0.8268802441035688,
+  "current_probe_accounted_with30s_per_call_and_storage0_10_usd": 1.0670219107702354,
+  "official_rates_source": "https://modal.com/pricing",
+  "hourly_total_rates": {
+    "training_H100_cpu4_ram32": 4.3952,
+    "evaluation_H100_cpu2_ram12": 4.1406
+  },
+  "only_remaining_main_cell_calls": 0,
+  "R1_R2_G0T": "Independent authorized reproduction work continues",
+  "cheaper_GPU_reference": {
+    "A100_80GB_gpu_only_per_second": 0.000694,
+    "H100_gpu_only_per_second": 0.001097,
+    "A100_80GB_training_total_per_hour": 2.9427839999999996,
+    "required_training_speed_relative_to_H100_for_cost_saving": 0.6697912228376649,
+    "L40S_memory_GiB": 48,
+    "observed_training_memory_GiB": 64.5986328125,
+    "decision": "No cheaper-GPU job started; A10080 can fit the observed allocation but its throughput remains unmeasured. L40S cannot hold the measured training allocation."
+  }
+}
