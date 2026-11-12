@@ -49,6 +49,8 @@ def training_config(model: str, revision: str, family: str, dataset: str,
     }
     if not cell:
         config["eval_steps"] = 100
+    else:
+        config["save_strategy"] = "no"
     return config
 
 

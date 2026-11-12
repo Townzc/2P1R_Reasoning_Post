@@ -12,6 +12,7 @@ def test_registered_exposure_and_batch(cell):
     assert config["val_size"] == 0
     assert config["num_train_epochs"] == dose["epochs"]
     assert config["packing"] is False and config["train_on_prompt"] is False
+    assert config["save_strategy"] == "no"
 
 
 def test_reproduction_keeps_published_validation_split():
@@ -21,6 +22,7 @@ def test_reproduction_keeps_published_validation_split():
     assert config["eval_steps"] == 100
     assert config["learning_rate"] == 1e-5
     assert config["seed"] == 42 and config["data_seed"] is None
+    assert "save_strategy" not in config and config["save_steps"] == 1000
 
 
 def test_long_grid_cannot_be_enabled_accidentally():

@@ -235,6 +235,8 @@ class EvalConfig:
     apply_chat_template: bool = True
     chat_template_file: str | None = None
     stop_strings: tuple[str, ...] = ()
+    training_run_id: str | None = None
+    checkpoint_manifest_sha256: str | None = None
 
     def validate(self) -> None:
         if self.protocol not in PROMPTS or self.task not in {"math", "gsm8k"}:
@@ -243,6 +245,12 @@ class EvalConfig:
             raise ValueError("template_family must be qwen, llama3 or none")
         if not self.revision or self.revision in {"main", "master"}:
             raise ValueError("Pin a model revision")
+        if self.training_run_id is not None or self.checkpoint_manifest_sha256 is not None or self.model.startswith("/"):
+            if not re.fullmatch(r"[a-z0-9_]+", self.training_run_id or "") or not re.fullmatch(
+                    r"[a-f0-9]{64}", self.checkpoint_manifest_sha256 or ""):
+                raise ValueError("Local evaluation requires the training run and checkpoint manifest hash")
+            if self.model != f"/p012/training/{self.training_run_id}/checkpoint":
+                raise ValueError("Use the named run's final checkpoint directory")
         if self.max_model_len <= self.max_tokens or self.batch_size < 1:
             raise ValueError("Reserve context space for prompts")
         if self.n < 1 or (self.temperature == 0 and self.n != 1):
@@ -306,10 +314,17 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
         raise ValueError("Input IDs must be unique and nonempty")
     if (config.protocol.startswith("lm_eval_") or config.protocol == "omi2") and config.batch_size < len(rows):
         raise ValueError("Submit the complete base/main-grid endpoint in one generation batch")
+    checkpoint_evidence = None
+    if config.training_run_id is not None:
+        from .checkpoints import verify_checkpoint
+        checkpoint_evidence = verify_checkpoint(config.model, config.training_run_id, config.checkpoint_manifest_sha256)
+        if checkpoint_evidence["initialization_revision"] != config.revision:
+            raise ValueError("Local model initialization differs from the requested revision")
     output_dir.mkdir(parents=True, exist_ok=False)
     from vllm import LLM, SamplingParams
-    llm = LLM(model=config.model, revision=config.revision,
-              tokenizer_revision=config.revision, dtype=config.dtype,
+    hub_revision = None if checkpoint_evidence is not None else config.revision
+    llm = LLM(model=config.model, revision=hub_revision,
+              tokenizer_revision=hub_revision, dtype=config.dtype,
               generation_config="vllm",
               max_model_len=config.max_model_len, trust_remote_code=False,
               gpu_memory_utilization=0.85, seed=config.seed)
@@ -319,7 +334,7 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
     if config.apply_chat_template and not tokenizer.chat_template:
         raise ValueError("Supply the frozen training-family template for a base tokenizer")
     from transformers import GenerationConfig
-    generation_config = GenerationConfig.from_pretrained(config.model, revision=config.revision)
+    generation_config = GenerationConfig.from_pretrained(config.model, revision=hub_revision)
     termination = termination_tokens(tokenizer, generation_config.eos_token_id, config.template_family)
     stop_ids = set(termination["stop_token_ids"])
     params = SamplingParams(n=config.n, temperature=config.temperature,
@@ -333,6 +348,7 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
                 "input_rows": len(rows), **termination,
                 "chat_template_date_string": LLAMA_G0_DATE if config.template_family == "llama3" and config.apply_chat_template and not config.chat_template_file else None,
                 "model_load_seconds": time.monotonic() - started,
+                "checkpoint_verification": checkpoint_evidence,
                 "chat_template": tokenizer.chat_template,
                 "chat_template_sha256": hashlib.sha256(template_text.encode()).hexdigest() if template_text is not None else None,
                 "versions": {p: importlib.metadata.version(p) for p in ("vllm", "transformers", "torch")}}

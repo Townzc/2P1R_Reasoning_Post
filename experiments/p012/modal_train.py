@@ -129,7 +129,10 @@ def main(request: str, output: str):
         z.extractall(destination)
     (destination / "CHECKPOINT_LOCATION.json").write_text(json.dumps({
         "volume": "p012-g0-assets-results-20261111", "path": result["checkpoint_path"],
-        "independent_full_weight_backup": "pending; do not delete the persistent volume"}, indent=2) + "\n")
+        "retention": ("Main grid: remove only after raw evaluation output publication and review; headline checkpoints through 2026-12-14" if spec["cell"] else
+                      "Reproduction: preserve; independent full-weight backup pending"),
+        "independent_full_weight_backup_required": spec["cell"] is None,
+        "deletion_performed": False}, indent=2) + "\n")
     print(json.dumps(result["status"]))
     if not result["status"]["success"]:
         raise SystemExit(1)

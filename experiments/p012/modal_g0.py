@@ -129,10 +129,12 @@ def generate(request: dict) -> dict:
         raise ValueError("Missing execution source commit")
     EvalConfig(**request["config"]).validate()
     for relative, expected in request["source_sha256"].items():
-        if relative not in {"evaluation.py", "scoring.py", "modal_g0.py", "g0_tools.py"}:
+        if relative not in {"evaluation.py", "scoring.py", "modal_g0.py", "g0_tools.py", "checkpoints.py"}:
             raise ValueError("Unexpected source binding")
         if digest(Path("/workspace/experiments/p012") / relative) != expected:
             raise ValueError("Uploaded execution source differs from frozen request")
+    if request["config"].get("training_run_id") and "checkpoints.py" not in request["source_sha256"]:
+        raise ValueError("Bind the checkpoint verification source for local evaluation")
     work = Path("/p012/runs") / run_id
     work.mkdir(parents=True, exist_ok=False)
     (work / "REQUEST.json").write_text(json.dumps(request, indent=2) + "\n")

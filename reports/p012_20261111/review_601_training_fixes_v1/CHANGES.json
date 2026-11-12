@@ -1,0 +1,14 @@
+{
+  "review": "601aebd2",
+  "authorized_to_run_R1_R2_after_fixes": true,
+  "changes": [
+    "Validate explicit cell, registered dose, full non-path training config, seed, family and full-template lengths.",
+    "Main-grid save_strategy=no; R1/R2 retain published checkpoint settings.",
+    "Before local checkpoint load verify root final weights/tokenizer/config against bound CHECKPOINT_FILES.json and successful training status.",
+    "Record initialization revision, training run and verified final weight hashes in generation manifest.",
+    "D5 retention policy recorded; no checkpoint deletion."
+  ],
+  "tests_passed": 59,
+  "R3": "hold",
+  "C6_final_review": "still required before C8"
+}
