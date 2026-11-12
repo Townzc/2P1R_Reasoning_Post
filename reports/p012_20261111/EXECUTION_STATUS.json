@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T09:14:32.881928+00:00",
-  "stage": "Five full G0 endpoints and long GSM cost probe complete; full long GSM exceeds current budget admission",
+  "updated_utc": "2026-11-12T10:30:34.435241+00:00",
+  "stage": "Owner budget transfer accepted; full long GSM admitted",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -46,31 +46,28 @@
     "modal_total_cap": 85,
     "modal_protected": 4,
     "subcaps": {
-      "G0_E": 4,
+      "G0_E": 8,
       "G0_T": 10,
       "capability": 4,
       "Tier1": 30,
       "Tier2": 22,
       "E2": 3,
-      "emergency": 12
+      "emergency": 8
     },
     "batch_forecast_threshold_fraction_of_remaining": 0.8,
     "tinker_teacher_fallback_cap": 60,
     "tinker_E4_cap": 80,
     "M2_40_carveout_activated": false,
     "unit_costs_measured": true,
-    "pending_owner_proposal": {
-      "G0_E_cap": 8,
-      "emergency_cap": 8,
-      "total_cap": 85,
-      "protected": 4,
-      "approved": false,
-      "reason": "Full longGSM forecast3.15882 exceeds current remaining-subcap admission threshold1.16617"
+    "owner_authorized_transfer": {
+      "from": "emergency",
+      "to": "G0_E",
+      "usd": 4
     }
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Owner budget decision before full long GSM; no full longGSM launched",
+    "Run the admitted original full long GSM request",
     "G0 base standard few-shot and Llama portions",
     "One consolidated G0 MATH judge after complete queues",
     "Claude combined F4/F5/launcher review before C8"

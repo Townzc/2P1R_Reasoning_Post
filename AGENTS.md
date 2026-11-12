@@ -1,3 +1,7 @@
+# P012 budget authorization — 2026-11-12 PST
+
+Owner explicitly approved moving $4 emergency→G0-E: G0-E cap $8, emergency cap $8; Modal total $85 and protected $4 unchanged. All scientific protocols and other subcaps stay fixed. Continue G0-E, including the admitted full long GSM evaluation. Old $4 G0-E/pending-budget statements below are historical. Technical decision: reports/p012_20261111/budget_adjustment_20261112/. No other transfers authorized.
+
 # P012 current milestone — 2026-11-12 PST
 
 Modal Berkeley authentication is complete. Qwen pretrained MATH/GSM and UWNSL short MATH/GSM plus long MATH have original raw artifacts and first-pass scores.531 MATH judge requests remain; no final Li MATH scores. Long GSM timing probe original replacement CLI56191 is COMPLETE/EXIT0; never submit it again. Full1319forecast$3.15882 exceeds current$1.16617admission. Owner budget transfer proposal is pending; do not launch full longGSM without that decision. No activejobs remain. See private ACTIVE_HANDOFF for exact request/outputs. Combined F4/F5/Modal train-eval/judge candidate is at reports/p012_20261111/pre_c8_review_v1; actual LF/eval template parity passed. Await real Claude review before C8; no training or C8 has run. All old experiments stay closed. No external messages, new chats or subagents.

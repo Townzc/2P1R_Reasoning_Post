@@ -5148,3 +5148,5 @@ The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objec
 - 2026-11-12: Codex completed actual LF/evaluation template parity for four tokenizers at0/4shot, prepared the standard LF Modal training wrapper and namespaced consolidated judge adapter, and published the combined pre-C8 source review packet.60 unique relevant local test cases pass; no training or judge model call. Long MATH raw outputs and initial labels are preserved. Long GSM timing probe remains in provider queue. No course prose or external messages.
 
 - 2026-11-12: Original long GSM timing probe completed once, without diagnostic accuracy. Frozen full1319forecast$3.15882 fails current$1.16617admission; no fullrun launched. Owner budget proposal retains total85/protected4 and requires explicit approval. All active execution CLIs are complete.
+
+- 2026-11-12: Owner authorized $4 emergency→G0-E transfer, keeping total85/protected4. Codex recorded the decision and admitted the previously frozen long GSM forecast under G0-E8; protocols unchanged.
