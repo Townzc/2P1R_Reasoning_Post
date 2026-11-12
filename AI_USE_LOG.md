@@ -5150,3 +5150,5 @@ The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objec
 - 2026-11-12: Original long GSM timing probe completed once, without diagnostic accuracy. Frozen full1319forecast$3.15882 fails current$1.16617admission; no fullrun launched. Owner budget proposal retains total85/protected4 and requires explicit approval. All active execution CLIs are complete.
 
 - 2026-11-12: Owner authorized $4 emergency→G0-E transfer, keeping total85/protected4. Codex recorded the decision and admitted the previously frozen long GSM forecast under G0-E8; protocols unchanged.
+
+- 2026-11-12: Codex froze remaining G0 base protocols before any base outputs: standard Minerva4-shot fullMATH5000 and upstream GSM4-shot/seed1234, descriptive official comparison only. Added hash-verified restricted-model cache transport using per-file temporary URLs; no HF token leaves local configuration. Closed08-09 usage reconciled; new cache forecast0.10 admitted.

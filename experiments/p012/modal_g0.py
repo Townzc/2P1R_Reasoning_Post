@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import base64
 import io
 import json
 import os
@@ -12,6 +13,7 @@ import sys
 import time
 import traceback
 import zipfile
+import urllib.request
 
 import modal
 
@@ -52,6 +54,59 @@ def cache_model(spec: dict) -> dict:
         checked.append(item["path"])
     receipt = {"repo": spec["repo"], "revision": spec["revision"], "files_checked": checked,
                "elapsed_seconds": time.monotonic() - started}
+    saved = Path("/p012/cache_receipts")
+    saved.mkdir(exist_ok=True)
+    (saved / (spec["revision"] + ".json")).write_text(json.dumps(receipt, indent=2) + "\n")
+    volume.commit()
+    return receipt
+
+
+@app.function(image=image, volumes={"/p012": volume}, cpu=1, memory=4096,
+              timeout=86400, retries=0, max_containers=1, scaledown_window=2,
+              include_source=False)
+def cache_authorized_snapshot(payload: dict) -> dict:
+    """Cache C1 files using local small files and file-scoped download URLs.
+
+    The HF token stays on the local machine. Temporary URLs are not logged or
+    included in receipts; every resulting file must match its frozen C1 hash.
+    """
+    started = time.monotonic()
+    spec = payload["spec"]
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", spec["repo"]):
+        raise ValueError("Invalid model repo")
+    if not re.fullmatch(r"[a-f0-9]{40}", spec["revision"]):
+        raise ValueError("Pin a model revision")
+    snapshot = Path("/p012/hf") / ("models--" + spec["repo"].replace("/", "--")) / "snapshots" / spec["revision"]
+    checked = []
+    for item in spec["files"]:
+        relative = Path(item["path"])
+        if relative.is_absolute() or ".." in relative.parts:
+            raise ValueError("Invalid asset path")
+        path = snapshot / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not path.exists():
+            transfer = payload["transfers"][item["path"]]
+            temporary = path.with_name(path.name + ".partial")
+            try:
+                with temporary.open("wb") as output:
+                    if "base64" in transfer:
+                        output.write(base64.b64decode(transfer["base64"], validate=True))
+                    else:
+                        with urllib.request.urlopen(transfer["url"], timeout=120) as response:
+                            while block := response.read(8 * 1024 * 1024):
+                                output.write(block)
+                if temporary.stat().st_size != item["bytes"] or digest(temporary) != item["sha256"]:
+                    raise ValueError("Downloaded model asset differs from C1")
+                temporary.rename(path)
+            except Exception as error:
+                # Network errors can contain temporary URLs. Preserve only the
+                # error type and public filename in remote logs.
+                raise RuntimeError(f"Asset transfer failed: {item['path']} ({type(error).__name__})") from None
+        if path.stat().st_size != item["bytes"] or digest(path) != item["sha256"]:
+            raise ValueError("Cached model asset differs from C1")
+        checked.append(item["path"])
+    receipt = {"repo": spec["repo"], "revision": spec["revision"], "files_checked": checked,
+               "elapsed_seconds": time.monotonic() - started, "hf_token_transferred": False}
     saved = Path("/p012/cache_receipts")
     saved.mkdir(exist_ok=True)
     (saved / (spec["revision"] + ".json")).write_text(json.dumps(receipt, indent=2) + "\n")
@@ -123,7 +178,7 @@ def main(request: str, output: str, prepare: bool = False):
     if destination.exists():
         raise ValueError("Use a new output path; old attempts are immutable")
     if prepare:
-        result = cache_model.remote(spec)
+        result = cache_authorized_snapshot.remote(spec) if "transfers" in spec else cache_model.remote(spec)
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(json.dumps(result, indent=2) + "\n")
         print(json.dumps(result))

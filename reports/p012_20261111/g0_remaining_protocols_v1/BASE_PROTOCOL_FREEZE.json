@@ -1,0 +1,58 @@
+{
+  "frozen_utc": "2026-11-12T10:39:50.475599+00:00",
+  "before_any_P012_base_results": true,
+  "base_models": [
+    "Qwen/Qwen2.5-1.5B",
+    "meta-llama/Llama-3.2-1B"
+  ],
+  "harness_runtime_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+  "math": {
+    "dataset": "DigitalLearningGmbH/MATH-lighteval",
+    "revision": "0530c78699ea5e8eb5530600900e1f328b48acad",
+    "test_questions": 5000,
+    "task": "minerva_math",
+    "task_config": "Li fixed release, lm_eval/tasks/minerva_math/minerva_math_algebra.yaml",
+    "fewshot": 4,
+    "examples": "unchanged fixed list_fewshot_samples()",
+    "metric": "unmodified minerva_math.utils.process_results; no LLM judge",
+    "antlr_runtime": "4.11.0 in isolated CPU scoring environment"
+  },
+  "gsm8k": {
+    "dataset": "openai/gsm8k",
+    "revision": "740312add88f781978c0658806c59bc2815b9866",
+    "test_questions": 1319,
+    "task_config_url": "https://raw.githubusercontent.com/EleutherAI/lm-evaluation-harness/6d2abda4fd171e68a8789330c4149e37c1ca0bda/lm_eval/tasks/gsm8k/gsm8k.yaml",
+    "task_config_sha256": "442b817bc83138ec89bd30ea9d6b4acac977dfc4653c177ad778f354c8543d29",
+    "fewshot_override": 4,
+    "fewshot_seed": 1234,
+    "examples": "stock ContextSampler, original training-row order; freeze all resulting prompts once for both model families",
+    "metrics": [
+      "strict-match",
+      "flexible-extract"
+    ],
+    "primary_metric": "flexible-extract"
+  },
+  "common": {
+    "chat_template": false,
+    "llama_explicit_bos": true,
+    "temperature": 0,
+    "max_tokens": 16384,
+    "max_model_len": 32768,
+    "generation_seed": 17,
+    "official_anchor_gate": false,
+    "anchor_reason": "Exact official prompt/examples are not matched; report standard-protocol measurements descriptively",
+    "not_the_main_Delta_SFT_baseline": true
+  },
+  "llama_instruct": {
+    "protocols": [
+      "li_release_math500",
+      "li_release_gsm"
+    ],
+    "native_chat_template_date": "26 Jul 2024",
+    "benchmarks": [
+      "MATH-500",
+      "GSM8K test1319"
+    ],
+    "same_existing_G0_paths": true
+  }
+}
