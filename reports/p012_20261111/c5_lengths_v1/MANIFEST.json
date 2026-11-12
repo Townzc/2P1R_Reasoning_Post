@@ -1,0 +1,29 @@
+{
+  "code_commit": "cdbbd3f52f54ceb9ca30c1c1562b0fa22a5c358b",
+  "source_sha256": "56e0efa14edad92dbadc4041c2485fbec6b8226f6ead1bb0a6a88e21907d8d47",
+  "collection_database_sha256": "062d41b021a6da982e859cd7e8cd729b15ae0d6220b5a8f9ab1d5bc26d711d25",
+  "family_equivalence": {
+    "qwen": {
+      "members": [
+        "Qwen__Qwen2.5-1.5B",
+        "Qwen__Qwen2.5-1.5B-Instruct"
+      ],
+      "backend_equivalent_without_postprocessor": true,
+      "backend_config_sha256": "bc3eeb5d24e044f937170085e9dd623765a55ed336b8e1c462f7ac7bf3654426",
+      "template_sha256": "c1f15e219803e13967754ca30b2071029a24870f2c794a315d50121154c385a8",
+      "assistant_suffix": "<|im_end|>\n"
+    },
+    "llama3": {
+      "members": [
+        "meta-llama__Llama-3.2-1B",
+        "meta-llama__Llama-3.2-1B-Instruct"
+      ],
+      "backend_equivalent_without_postprocessor": true,
+      "backend_config_sha256": "2b1fcec8414c85ba3facb5aae88433b03aff0dea2cafbd00371450a0188bd353",
+      "template_sha256": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b",
+      "assistant_suffix": "<|eot_id|>"
+    }
+  },
+  "maximum_training_tokens": 4096,
+  "method": "source and target encoded separately, matching LLaMA-Factory encode_oneturn; no truncation; efficient_eos=False for both fixed templates"
+}
