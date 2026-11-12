@@ -1,3 +1,7 @@
+# P012 owner pause at next milestone — 2026-11-12
+
+Owner requested pause while away without network. Finish already-started R1 training, Qwen base GSM full/CPU scoring and C6 proof; preserve/publish outputs and handoff, then stop. Do not start R2, R1 checkpoint inference, C7/C8, another judge/model run, or further experiments until owner resumes. This supersedes earlier permission to start additional work now. Current exact jobs and completion state are in private ACTIVE_HANDOFF. No external messages or subagents.
+
 # P012 latest owner decisions — 2026-11-12
 
 D4 approved: main-grid eval max4096/context8192. D5 approved: main checkpoints removable after raw outputs published and audit passed; headline checkpoints retained through12/14, no independent backup for main. UWNSL1Bshort empty; owner authorized only3Bshort alternative check, forecast1.858809>0.8 so skipped. Four original queues judged once, complete. Qwenbase MATH5000 original complete, cap547/5000=10.94%; Llamabase MATH20 cap6/20=30%; B1 stops further calls on those affected paths, preserve and score existing output. C5 actual collection complete; C6 CPU and R1/R2 preparations continue under accepted601aebd2/54f697e6; R3 HOLD. Private ACTIVE_HANDOFF is current. No external messages/subagents/new chats; budget8/8,total85/protected4 unchanged. Earlier pending owner questions below are resolved.

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T11:07:45.233821+00:00",
-  "stage": "All8 Li Instruct/checkpoint endpoints complete; base/judge sharedreview pending",
+  "updated_utc": "2026-11-12T20:19:04.291314+00:00",
+  "stage": "Owner pause requested: finish active R1, then pause; G0 and C6 artifacts ready",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -26,22 +26,22 @@
       "R2_llama_short.yaml",
       "R3_qwen_long.yaml"
     ],
-    "training": "not started",
-    "launcher": "Combined review source fae6656d; base/judge addendum actual CPU validation passed",
+    "training": "R1 active at source339b8e2e; R2 not started, R3 hold",
+    "launcher": "Dose/config/local-checkpoint fixes implemented;59tests pass",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved",
-    "runtime": "Corrected pinned CPU training image built; pip check and LF import passed; GPU training kernel and training not yet run"
+    "runtime": "ActualH100 fullSFT running:5329trainingrows,global8,2epochs,1332updates"
   },
   "science": {
-    "model_generation_calls": 12,
-    "training_calls": 0,
-    "benchmark_scores": 8,
-    "OMI2_filtering_or_scoring": "not started",
+    "model_generation_calls": 19,
+    "training_calls": 1,
+    "benchmark_scores": 10,
+    "OMI2_filtering_or_scoring": "C5/C6 complete",
     "startup_draws": 80,
-    "math_judge_pending": 742,
-    "independent_result_audit": "pending; raw archives published",
-    "judge_model_calls": 0,
-    "active_jobs": 0,
-    "completed_generation_calls": 12
+    "math_judge_pending": 0,
+    "independent_result_audit": "original8endpointinitiallabels passed; newjudge/base results pending",
+    "judge_model_calls": 1,
+    "active_jobs": 1,
+    "completed_generation_calls": 19
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -76,5 +76,46 @@
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
     "Public UWNSL collections were read anonymously with canonical collection slugs after authenticated collection access returned 403; fine-grained model-read token scope was unchanged."
+  ],
+  "accepted_reviews": [
+    "020017ae",
+    "601aebd2",
+    "54f697e6"
+  ],
+  "owner_pause_requested": true,
+  "C3": {
+    "judge": "four original queues complete,742decisions; newlabels awaiting independent audit",
+    "Qwen_base": "fullMATH/GSM scored; MATH10.94%capstop recorded",
+    "Llama_base": "both20questionprobes30%caps; no full endpoints",
+    "public_Llama_short": "1B unavailable; allowed3B skipped becauseforecast>0.8"
+  },
+  "C5": {
+    "complete": true,
+    "scanned_rows": 13972791,
+    "correct_unique_solutions": 2659413,
+    "all_length_checked": true,
+    "math_eligible_parents": 6623,
+    "gsm8k_eligible_parents": 7397,
+    "teacher_fallback_triggered": false
+  },
+  "C6": {
+    "complete": true,
+    "five_cells_per_task": true,
+    "holdout500_and_nll1000_per_task": true,
+    "actual_frozen_row_checks_passed": 24,
+    "pre_C8_review": "packet ready; owner paused before relay"
+  },
+  "C7": {
+    "started": false,
+    "NLL_implementation": "outstanding"
+  },
+  "C8": {
+    "started": false,
+    "gate": "final shared review and QwenG0-E plusR1 accuracy gate; owner must resume first"
+  },
+  "latest_packets": [
+    "g0_judged_and_base_v1",
+    "c6_training_review_v1",
+    "r1_admission_v1"
   ]
 }
