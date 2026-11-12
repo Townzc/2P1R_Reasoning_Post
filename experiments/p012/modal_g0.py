@@ -59,7 +59,7 @@ def cache_model(spec: dict) -> dict:
     return receipt
 
 
-@app.function(image=image, volumes={"/p012": volume}, gpu="L4", cpu=2, memory=12288,
+@app.function(image=image, volumes={"/p012": volume}, gpu="H100", cpu=2, memory=12288,
               timeout=86400, retries=0, max_containers=1, scaledown_window=2,
               include_source=False)
 def generate(request: dict) -> dict:
@@ -88,7 +88,7 @@ def generate(request: dict) -> dict:
     (work / "HARDWARE.txt").write_text(hardware.stdout)
     env = dict(os.environ, P012_CODE_COMMIT=request["code_commit"], HF_HUB_OFFLINE="1",
                TRANSFORMERS_OFFLINE="1")
-    status = {"run_id": run_id, "success": False, "gpu": "L4", "cpu": 2, "memory_MiB": 12288}
+    status = {"run_id": run_id, "success": False, "gpu": "H100", "cpu": 2, "memory_MiB": 12288}
     try:
         # A fresh process releases vLLM workers between calls; no custom training loop.
         with (work / "generation.log").open("x") as log:

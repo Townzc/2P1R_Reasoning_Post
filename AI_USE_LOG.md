@@ -5124,3 +5124,9 @@ Accepted the three protocol decisions and recorded amendment 2 before any P012 r
 The owner completed Berkeley device authentication. Modal credentials were refreshed privately and the workspace ID matched the supplied account. The first expired browser flow completed no authorization; the replacement flow succeeded. No credentials or account identifier enter the public packet.
 
 Prepared source-hash-verified MATH-500 and GSM8K inputs in original order. The first 20 MATH questions are frozen as an n=4 diagnostic; full greedy evaluation remains separate. Six new checks cover real startup failure conditions and pass. Added a minimal Modal transport using a frozen standard vLLM environment, CPU asset caching and L4 generation, preserving each attempt and disabling automatic retries. Fresh rate-based startup forecast is $0.9953 within G0-E. No GPU/model call has run at this source milestone; shared launcher review remains before C8 as directly authorized.
+
+### 2026-11-11 PST — P012 first GPU queue replacement
+
+Pinned Linux evaluation image built successfully and pip check passed. The three Qwen/UWNSL cloud snapshots match every frozen C1 file digest. The first L4 request stayed queued for over six minutes with backlog 1 and no runners or running inputs; Modal's stop prompt confirmed zero running containers. Cancelled that app and preserved its terminal CLI log. No model generation occurred on that attempt.
+
+Use the single permitted infrastructure replacement on H100, preserving input order, token budget, model revision, precision, sampling seed and all scientific settings. Only the transport GPU resource and its status label change. Replacement forecast $1.03515 fits the remaining G0-E allowance while retaining all $1.0953 earlier reservations. No budget-timer or automatic retry is added.
