@@ -92,9 +92,10 @@ def collect(assets: Path, manifests: Path, output: Path) -> dict:
                 continue
             solution = row["solution"] if task == "math" else row["answer"]
             gold = extract_answer(solution, "li_release_math500") if task == "math" else solution.rsplit("####", 1)[-1].strip()
-            if not gold:
-                raise ValueError("Canonical training solution has no gold answer")
-            if key in rows and normalized(rows[key]["gold"]) != normalized(gold):
+            # Pool correctness is checked against OMI's expected_answer, as
+            # registered. A missing box in an original human solution must not
+            # discard an otherwise eligible OMI training problem.
+            if key in rows and rows[key]["gold"] and gold and not answer_correct(rows[key]["gold"], gold):
                 raise ValueError("Duplicate canonical question has conflicting gold answers")
             rows.setdefault(key, {"id": question_id(task, key), "task": task, "key": key,
                 "problem": row[field], "gold": gold, "source_index": index,
@@ -102,7 +103,10 @@ def collect(assets: Path, manifests: Path, output: Path) -> dict:
                 "difficulty_proxy_characters": len(solution)})
         # Freeze the four out-of-pool demonstrations before OMI quality/length
         # filtering or any model results. Main pool RNG is not consumed here.
-        demo_keys = sorted(rows, key=lambda k: hashlib.sha256((k + "p012-baseline").encode()).hexdigest())[:4]
+        demo_keys = sorted((k for k in rows if rows[k]["gold"]),
+                           key=lambda k: hashlib.sha256((k + "p012-baseline").encode()).hexdigest())[:4]
+        if len(demo_keys) != 4:
+            raise ValueError("Four canonical demonstrations with explicit gold answers are required")
         demonstrations[task] = [rows[k] for k in demo_keys]
         for key in demo_keys:
             del rows[key]
@@ -110,6 +114,7 @@ def collect(assets: Path, manifests: Path, output: Path) -> dict:
         parents.update({value["id"]: value for value in rows.values()})
         decontamination[task] = {"test_questions": len(splits["test"]), "train_rows": len(splits["train"]),
             "removed_counts": dict(Counter(r["reason"] for r in removed)), "removed": removed,
+            "candidate_official_solutions_without_boxed_gold": sum(not r["gold"] for r in rows.values()),
             "unique_candidates_after_demo_reservation": len(rows), "demonstrations_reserved": 4}
     write_json(output / "DECONTAMINATION.json", decontamination)
     write_json(output / "DEMONSTRATIONS.json", demonstrations)

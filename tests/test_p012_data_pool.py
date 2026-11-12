@@ -30,6 +30,8 @@ def test_real_parquet_collection_keeps_reserved_questions_out_and_deduplicates(t
         field = "problem" if task == "math" else "question"
         response = "solution" if task == "math" else "answer"
         train = [{field: f"Synthetic {task} problem {i}: add one and one", response: r"\boxed{2}" if task == "math" else "1+1=2. #### 2"} for i in range(6)]
+        if task == "math":
+            train[0][response] = "The sum is two."  # OMI still supplies a checked expected_answer.
         test = [{field: "Exact heldout question", response: r"\boxed{2}" if task == "math" else "#### 2"}]
         files = [save(slug, f"{folder}/train-00000-of-00001.parquet", train + test),
                  save(slug, f"{folder}/test-00000-of-00001.parquet", test)]
