@@ -1,0 +1,48 @@
+{
+  "run_id": "r1_b16_gsm8k_greedy_20261112_v1",
+  "code_commit": "cb9a63ed67b734d66a39c48f8ea88353df41a8cb",
+  "config": {
+    "model": "/p012/training/r1_qwen_instruct_short_b16_s42_20261112_v4/checkpoint",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "protocol": "li_release_gsm",
+    "task": "gsm8k",
+    "max_tokens": 16384,
+    "max_model_len": 32768,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 1024,
+    "apply_chat_template": true,
+    "chat_template_file": null,
+    "stop_strings": [
+      "Q:",
+      "</s>",
+      "<|im_end|>",
+      "<|eot_id|>",
+      "<|start_header_id|>user<|end_header_id|>"
+    ],
+    "template_family": "qwen",
+    "training_run_id": "r1_qwen_instruct_short_b16_s42_20261112_v4",
+    "checkpoint_manifest_sha256": "f576b7940a0e1f2bab340bf3aed550a67f5fa76147be53e900f03d62c7bc4a0e"
+  },
+  "input_sha256": "2f983997bb10cb9fab985bea9132fd6fe3c8123624ee4327e89f0a4bdbadf070",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "461a8b4169b78b1f7c37eab37053e075d7e035e150d3e31d43777fe4c84bb1ee",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "checkpoints.py": "89b3049da91b7e696c1f803fdecc4a9669e772e5691c3e06d57c8d0379a88240"
+  },
+  "forecast": {
+    "subcap": "G0-T",
+    "cap_usd": 10,
+    "accounted_before_usd": 4.13598246096626,
+    "forecast_usd": 0.27690588538895167,
+    "admitted": true,
+    "basis": "Matching public short checkpoint on same architecture/protocol: observed non-generation overhead plus twice measured generation time and30seconds tail."
+  },
+  "score_contract": "T3: MATH Li exact and exact OR math-verify; no LLM judge. GSM published flexible extraction."
+}
