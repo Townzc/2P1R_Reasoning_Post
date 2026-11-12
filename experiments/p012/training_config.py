@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-import yaml
 
 LI_COMMIT = "1863f15a7c58b8a69fb1d18235ea85bca26d0484"
 CELLS = {"P": (4096, 1, 2), "K8": (512, 8, 2),
@@ -64,6 +63,7 @@ def grid_dose(cell: str) -> dict:
 
 
 def main() -> None:
+    import yaml
     p = argparse.ArgumentParser()
     for name in ("model", "revision", "family", "dataset", "dataset-dir", "output-dir", "yaml"):
         p.add_argument("--" + name, required=True)
