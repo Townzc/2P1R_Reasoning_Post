@@ -1,3 +1,17 @@
+# Current P012 authorization — 2026-11-11 PST
+
+The owner supplied P012 v1 (`claude/audit` 2e481b7d) and amendment 1 (cbaa41fd). Execute on `codex/icml-acl-2027`; current packet: `reports/p012_20261111/README.md`, status: `EXECUTION_STATUS.json`, local continuation notes: `.local/p012_20261111/ACTIVE_HANDOFF.md`.
+
+- C1 assets and toolchain pins are complete. Official Llama 1B/3B base and Instruct access passed; use official revisions. Tinker capability query returned no Llama-3.2-3B and no Qwen2.5; the M2 LoRA branch is not activated.
+- C2 evaluation/scoring and C4 configuration candidates have 40 passing synthetic tests. Claude first-use review and the three pre-result protocol decisions are pending. No P012 generation, training, benchmark scoring or OMI-2 construction has run.
+- Follow v1 §12: standard pinned tools, one manifest per batch, one Claude review per new shared code path; no RunGuard, claim/receipt framework or per-cell review rounds. One recorded infrastructure retry is allowed; scientific failures do not retry. No kill timers.
+- Modal cap $85, protected $4; subcaps G0-E 4, G0-T 10, capability 4, Tier 1 30, Tier 2 22, E2 3, emergency 12. No transfers; forecast at most 80% of remaining subcap, including unsettled reserves. First Qwen base/MATH grid is the cost probe. Tinker fallback <=$60 only if needed; E4 <=$80 after OH decision. Conditional E1 uses actual savings after 11/15.
+- Main MATH endpoint and decontamination use full test 5000; sampled secondary MATH uses MATH-500. Global batch 8; P/K8/K4/R 1024 updates, L 128. Report sample presentations, tokens and costs distinctly.
+- Course writing remains the owner's task. Produce code, technical records, numeric tables and figures. External correspondence remains draft-only. Publish ordinary code/evidence milestones only to the assigned branch; no force push, outside messages, new chats or subagents.
+- All old completed experiments and automations remain closed. Preserve unrelated `reports/lt002_followup_20260929/` and immutable historical artifacts. Earlier dated entries below are historical and do not override P012.
+
+--- Earlier dated authorizations ---
+
 # Current P011 owner amendment and execution — 2026-10-21T07:24:21.357367+00:00
 
 Designated Claude recorded direct owner accounting/preflight decisions SHA364aaf6c and C1r2 SHAe381630c; currentprotected0, no oldP010double subtraction, original180/A115B20C12D25emergency8 caps/80percent/noautomaticretry unchanged. Three engineeringpreflights totalreserve<=6 and oneC1r2<=2.70 require their exactsource/input/numeric reviews. Direct overnight delegation is saved; no underlyingclaude.ai conversation claim. Read latest privatehandoff. OriginalC1r1failed/3.74 and alloldDONEwork retained. Long CPUinput61074 complete, B actualinputA1accepted, fullpreflight33source submitted; no newGPU. P01019UTCfreeze remains separate. No subagents/externalmessages/Z1.

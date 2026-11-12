@@ -1,0 +1,108 @@
+{
+  "repository": "https://github.com/Small-Model-Gap/Small-Model-Learnability-Gap",
+  "commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+  "files": [
+    {
+      "path": "LLaMA-Factory/exp/MATH_short_CoT.yaml",
+      "sha256": "fccd67d9da5b2c7d62ca806c76ddb6ccbe150fcde77cbf28f9ea3b974a2b239f"
+    },
+    {
+      "path": "LLaMA-Factory/exp/MATH_long_CoT.yaml",
+      "sha256": "81b1dff2b9e6952ba2d5c5aafe99684813b608a329c4b90243b3be341f1f514c"
+    },
+    {
+      "path": "LLaMA-Factory/data/dataset_info.json",
+      "sha256": "ebc61f562630d55f37e4df5169e73f30e142c20a2555dfa139ccf4007c8414d7"
+    },
+    {
+      "path": "LLaMA-Factory/src/llamafactory/hparams/data_args.py",
+      "sha256": "09629546f34fb59344dd1adf03645bd61697080526d9d7252c125247ecb864ce"
+    },
+    {
+      "path": "LLaMA-Factory/src/llamafactory/hparams/model_args.py",
+      "sha256": "667ad7e97a9b8be0df82d3a6ce325e058aa174ef8574226bd670601c08603c53"
+    },
+    {
+      "path": "LLaMA-Factory/src/llamafactory/hparams/parser.py",
+      "sha256": "d5bcb46117f8d384b4f05033f46bbc8d20cf2940b7b326a52a502962bb43f2ab"
+    },
+    {
+      "path": "LLaMA-Factory/src/llamafactory/data/template.py",
+      "sha256": "5d5759146a87a44e603a94f57aa4d2f5b7ef900f8d4cd146d1ed89a0b44456a3"
+    },
+    {
+      "path": "LLaMA-Factory/setup.py",
+      "sha256": "c4eef842b573c128aa2e01ea40bb3674e9180f3fec2c668fd3b6d2655da7c7d6"
+    },
+    {
+      "path": "lm-evaluation-harness/pyproject.toml",
+      "sha256": "b5bcfe9ccac6313bc77a3bf6afe0628c8123e1c537e78e2ba2f5d307bed215fd"
+    },
+    {
+      "path": "lm-evaluation-harness/test.sh",
+      "sha256": "16ada95ebe29698b1b5d78e74c4b41eefb2a1a8de43e5453679eb9e8670a8463"
+    },
+    {
+      "path": "lm-evaluation-harness/math_metric_llm_eval_general.py",
+      "sha256": "918832a4089edae70d6bddb006143890b927586d107adfe249caac306d336421"
+    },
+    {
+      "path": "lm-evaluation-harness/math_metric_gsm8k.py",
+      "sha256": "f9fe995042c23a88336e51846907597ae4d5780b003974740958b25d2df7971e"
+    },
+    {
+      "path": "lm-evaluation-harness/lm_eval/filters/extraction.py",
+      "sha256": "916ddbef4c9c9f1f73ade7ef7f378bcce32d782c96beff0701703c75a5a526f9"
+    },
+    {
+      "path": "lm-evaluation-harness/lm_eval/tasks/hendrycks_math_500/hendrycks_math_500.yaml",
+      "sha256": "cb46eac60011968827ba744fe77cf1df1a13142821196a4f53787479073f1a93"
+    },
+    {
+      "path": "lm-evaluation-harness/lm_eval/tasks/hendrycks_math/hendrycks_math_algebra.yaml",
+      "sha256": "cb207747e0e7a80dce3410c80fa30b940d5a3654489761e46b4cbb1022fcdae5"
+    },
+    {
+      "path": "lm-evaluation-harness/lm_eval/tasks/gsm8k/gsm8k-cot-zeroshot.yaml",
+      "sha256": "a7afa54c1eb652dcca6ebb6d3a6cf634556151939078668940387be4fa4eb351"
+    }
+  ],
+  "transformers_defaults_source": {
+    "url": "https://github.com/huggingface/transformers/blob/v4.49.0/src/transformers/training_args.py",
+    "git_blob_sha": "6afdfb33249fe016dcfc8d66394235dbf4d4b686",
+    "sha256": "b8533e2e8996208a5b8f00b5c69eeb613a2cd707002634efeed136567ce47ed1"
+  },
+  "fixed_defaults": {
+    "optim": "adamw_torch",
+    "warmup_steps": 0,
+    "warmup_ratio": 0,
+    "weight_decay": 0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1,
+    "seed": 42,
+    "data_seed": null,
+    "packing": false,
+    "train_on_prompt": false,
+    "disable_gradient_checkpointing": false,
+    "use_reentrant_gc": true
+  },
+  "explicit_overrides": {
+    "main_grid_seed": [
+      17,
+      29
+    ],
+    "main_grid_data_seed": "same as training seed",
+    "physical_batch": "1 GPU x per-device 2 x accumulation 4 = global 8; release assumes 4 GPUs x 2 x 1",
+    "distributed_optimizer": "single GPU; no DeepSpeed ZeRO-3",
+    "R3_cutoff_len": "16384 per amendment; released YAML 8192",
+    "main_cutoff_len": 4096,
+    "main_val_size": "0; 500 distinct holdout parents selected before grid, no 1% row removal",
+    "main_epochs": "P/K8/K4/L 2, R 16",
+    "output_handling": "new output directory; overwrite disabled; keep at most two periodic checkpoints",
+    "preprocessing_workers": "4 instead of 32; not a training hyperparameter",
+    "generation_context": "32768 context reserves full input plus <=16384 generated tokens; release launcher specifies 16000 for both",
+    "judge_parallelism": "single device candidate; release uses tensor parallel 4; judge FP16/greedy/20 preserved"
+  }
+}

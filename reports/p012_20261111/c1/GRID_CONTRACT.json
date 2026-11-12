@@ -1,0 +1,117 @@
+{
+  "main_models": [
+    {
+      "repo": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+    },
+    {
+      "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    {
+      "repo": "meta-llama/Llama-3.2-1B",
+      "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08"
+    },
+    {
+      "repo": "meta-llama/Llama-3.2-1B-Instruct",
+      "revision": "9213176726f574b556790deb65791e0c5aa438b6"
+    }
+  ],
+  "tasks": [
+    "math",
+    "gsm8k"
+  ],
+  "cells": {
+    "P": {
+      "parents": 4096,
+      "paths_per_parent": 1,
+      "distinct_rows": 4096,
+      "epochs": 2,
+      "presentations": 8192,
+      "effective_batch": 8,
+      "expected_updates": 1024,
+      "constraint": "sample_presentations",
+      "equal_tokens_or_flops_claimed": false
+    },
+    "K8": {
+      "parents": 512,
+      "paths_per_parent": 8,
+      "distinct_rows": 4096,
+      "epochs": 2,
+      "presentations": 8192,
+      "effective_batch": 8,
+      "expected_updates": 1024,
+      "constraint": "sample_presentations",
+      "equal_tokens_or_flops_claimed": false
+    },
+    "K4": {
+      "parents": 1024,
+      "paths_per_parent": 4,
+      "distinct_rows": 4096,
+      "epochs": 2,
+      "presentations": 8192,
+      "effective_batch": 8,
+      "expected_updates": 1024,
+      "constraint": "sample_presentations",
+      "equal_tokens_or_flops_claimed": false
+    },
+    "R": {
+      "parents": 512,
+      "paths_per_parent": 1,
+      "distinct_rows": 512,
+      "epochs": 16,
+      "presentations": 8192,
+      "effective_batch": 8,
+      "expected_updates": 1024,
+      "constraint": "sample_presentations",
+      "equal_tokens_or_flops_claimed": false
+    },
+    "L": {
+      "parents": 512,
+      "paths_per_parent": 1,
+      "distinct_rows": 512,
+      "epochs": 2,
+      "presentations": 1024,
+      "effective_batch": 8,
+      "expected_updates": 128,
+      "constraint": "sample_presentations",
+      "equal_tokens_or_flops_claimed": false
+    }
+  },
+  "tier1_seed": 17,
+  "tier2_seed": 29,
+  "tier2_required_cells": [
+    "P",
+    "K8",
+    "R",
+    "L"
+  ],
+  "primary_math": "full MATH test, 5000 questions, greedy; MATH-500 subset also reported",
+  "secondary_sampling": {
+    "n": 4,
+    "temperature": 0.7,
+    "top_p": 1.0,
+    "math": "MATH-500 only",
+    "gsm8k": "full test, 1319"
+  },
+  "decontamination_math": "full MATH test 5000; only MATH train parents permitted",
+  "contrasts": {
+    "SFT": "P - pretrained baseline (v1 definition); matching the main evaluation protocol is a proposed clarification pending Claude review",
+    "data": "P - L",
+    "PR": "P - R",
+    "PK": "P - K8",
+    "KR": "K8 - R"
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20261111,
+    "unit": "question, paired"
+  },
+  "clear_effect": {
+    "min_abs_percentage_points": 3,
+    "confidence_interval": "95% paired bootstrap excludes zero",
+    "two_seeds": "same direction"
+  },
+  "resource_unit": "sample presentations; token counts and actual cost separately recorded",
+  "data_cost_claim": "existing data inventory composition; no acquisition-cost inference"
+}

@@ -1,3 +1,7 @@
+P012 2026-11-11 PST: [C1 inventory and C2/C4 review packet](reports/p012_20261111/README.md). Official Llama access passed; no Tinker Llama-3.2-3B. Six model checkpoints and the pinned data assets are downloaded; 40 local tests pass. [First-use review and protocol decisions](reports/p012_20261111/C2_C4_CODE_REVIEW_REQUEST.md) precede G0. No P012 model result yet.
+
+Earlier work:
+
 P011 2026-10-21T09:41:19.518063+00:00: [formal long44-source current-owner/asset-reuse appendix](reports/p011_20261020/LONG_FULL_PATH_CR_A1_A2_REQUEST.md) submitted; original actualinputA1 accepted, exact source/numeric pending. C1 closed, B/C2 failures preserved, no new paid call. P01019UTCfreeze separate.
 
 P011 2026-10-21T09:27:06.178916+00:00: [C1 actualA3 closed, C2 source accepted but originalCPU input failed; delegated disposition pending](reports/p011_20261020/C2_INPUT_FAILURE_DECISION_REQUEST.md). [Long actualsubset/numeric accepted; narrow failed-ledger review pending](reports/p011_20261020/LONG_PREFLIGHT_CR_A1_A2_REQUEST.md). OriginalBfailed/1280raw preserved, no repeat;0activecompute. P01019UTCfreeze separate.

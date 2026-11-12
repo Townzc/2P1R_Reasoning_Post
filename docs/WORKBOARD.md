@@ -1,3 +1,7 @@
+## P012 C1 complete; first-use review prepared — 2026-11-11 PST
+
+See [the P012 packet](../reports/p012_20261111/README.md). C1 fixes assets, versions, 133 file hashes, UWNSL collections, OMI-2 prompt and the live Tinker model list. Official Llama access passes. C2 and C4 configs are candidates with 40 passing local tests; [Claude review](../reports/p012_20261111/C2_C4_CODE_REVIEW_REQUEST.md) is next. Model execution and data construction have not started. Main MATH uses full test 5000; budgets and schedule follow v1 plus amendment 1. Historical work below stays closed.
+
 ## Two-cell forced-answer diagnostic fully closed — 2026-10-23T00:28:06.482768+00:00
 
 Real actual A3 Claude636e2b1f/reportd4c5d06f PASS-WITH-NOTES accepted all7flags exact5243d506. Independent new3861 byte-BPE/native-stop/first-box completion categories agree;245 positive non-string-identical rows manually reviewed; all6 requested intervals externally reproduced. Approximately16 frozen-P1 lenient value/format cases disclosed with reviewer rough sensitivity; original labels/accuracies/CI unchanged. Codex did not execute reviewer scripts, rescore, repeat new statistics or rerun saved natural/A6 comparisons. Private binaries/full independent symbolic engine/final invoice not independently accessed. All source/actual-input/result reviews closed,0activeGPU/CPU/CLI/awake. New app reported tagged cost1.21523750USD under the20USD admission envelope, not invoice. Final JSON/MD add acceptance metadata; immutable result packet is not rebuilt. Original automation remains PAUSED.

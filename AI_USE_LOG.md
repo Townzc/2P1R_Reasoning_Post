@@ -5101,3 +5101,14 @@ Concrete44-source/32-configuration SPEC at99508f316768237185479fbfa660850ea4ed5c
 ### 2026-10-21 04:37:22 PDT — P011 mutable INDEX reconciliation
 
 Corrected stale zero preflight counters and A reservation from the six existing SUBMITTED/INTENT receipts: three scientific forward/generation calls plus three engineering calls; A5.95/B3.01/C6.38 retained, not expense. Concrete formal44 SPEC remains a pending candidate. B91 current SPEC hash/window now distinguished from original failed75-source generation fields. C1 actual A3/C2 closure corrected in current status. Prior values preserved in reports/p011_20261020/index_current_state_reconciliation_20261021_v1/CHANGES.json. No science, provider, old tests/oracle or immutable packet repeated or changed. Original audit targets and review cadence unchanged.
+
+
+### 2026-11-11 PST — P012 C1 and first-use code candidates
+
+Applied owner-supplied v1 and amendment 1; read GPT Pro handoff at 80919cfc and pinned primary reference code at 1863f15a. C1 records official Llama access, all four main model revisions, UWNSL short/long data and two public Qwen SFT checkpoints, canonical 6-dataset/24-model collections, full MATH/GSM assets, the OMI-2 prompt and 32 main-train shards. 133 downloaded asset hash records match pinned Hub metadata. Account credentials were created with explicit owner approval and stored privately; no credential or account identifier is in this packet. The live Tinker API lists 38 entries with no Llama-3.2-3B or Qwen2.5, so M2's conditional $40 track does not start. The successful capability response preceded a local SDK cleanup TypeError; public collection API access was corrected to an anonymous read without widening token scope.
+
+Created standard-tool C2 generation/scoring candidates, verbatim licensed Li normalization helpers, separate dependency locks and three G0 training YAMLs. 40 synthetic tests passed. G0 seed/default provenance was then corrected to 42/data_seed=None and the 7 affected configuration tests passed. The copied upstream string escape emits one Python 3.12 SyntaxWarning; its behavior and text were retained. No benchmark output, teacher filtering, model generation, training or GPU run occurred.
+
+The review packet identifies the published Li MATH/GSM protocol differences, benchmark alignment for official anchors, and a proposed matching-protocol pretrained baseline for delta_SFT. These are pre-result decisions for Claude. One first-use review per shared path follows P012 section 12; old per-cell machinery is not resumed. Course prose and external correspondence remain the owner's responsibility.
+
+Publication checks: packet/source SHA bindings and credential/private-path scan passed. The staged whitespace check passed outside the verbatim vendor file; its single original trailing-space line was retained to preserve source bytes. vLLM 0.11.0 primary source confirms the generation_config="vllm" option used by the candidate.

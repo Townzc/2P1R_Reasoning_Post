@@ -1,0 +1,40 @@
+{
+  "target_platform": "Linux x86_64, Python 3.11, CUDA; separate training/evaluation environments",
+  "training": {
+    "llamafactory": "0.9.2.dev0",
+    "source_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+    "torch": "2.5.1",
+    "transformers": "4.49.0",
+    "flash_attn": "2.7.4.post1",
+    "lock": "experiments/p012/requirements-train.lock"
+  },
+  "evaluation": {
+    "vllm": "0.11.0",
+    "torch": "2.8.0",
+    "transformers": "4.56.2",
+    "math_verify": "0.8.0",
+    "lm_eval": "0.4.5",
+    "lm_eval_source_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+    "lock": "experiments/p012/requirements-eval.lock"
+  },
+  "dependency_resolution": "both locks resolved for Linux/Python 3.11; GPU image build/import and timing not yet run",
+  "local_validation": {
+    "python": "3.12.14",
+    "packages": {
+      "tinker": "0.38.0",
+      "huggingface-hub": "0.36.0",
+      "transformers": "4.57.6",
+      "tokenizers": "0.22.2",
+      "math-verify": "0.8.0",
+      "pytest": "8.4.2",
+      "pyarrow": "21.0.0",
+      "pyyaml": "6.0.3"
+    }
+  },
+  "locks_sha256": {
+    "requirements-train.in": "37d0a830fc58f6c5ee1b23f764359902c0b390d0b498f3d7c1e7b7d50c3661ce",
+    "requirements-train.lock": "42b5ea0f2e9533cb3adb054604a8a7acb7ddd93bebd3c05c24d7e782348edadd",
+    "requirements-eval.in": "421efd27ffd434f7f6bd55ad337e29d2bc6988197250f6638f96e5cc32520097",
+    "requirements-eval.lock": "db1e3598939f5760966a48fc80fabf76c61636d1ccf46eb290e7add8d87c3615"
+  }
+}

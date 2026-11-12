@@ -1,0 +1,65 @@
+{
+  "updated_utc": "2026-11-12T06:21:02.983966+00:00",
+  "stage": "C1 complete; C2 and C4 configuration candidates await first-use Claude review",
+  "plan": "P012 v1 plus amendment 1",
+  "C1": {
+    "assets_and_versions": "complete",
+    "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
+    "mirror_fallback": "not needed",
+    "tinker_supported_entries": 38,
+    "tinker_llama_3_2_3b_available": false,
+    "tinker_qwen2_5_available": false,
+    "M2_decision": "no Tinker 3B branch; retain conditional Modal E1",
+    "OMI2_main_train_shards": 32
+  },
+  "C2": {
+    "code": "candidate",
+    "unique_local_tests_passed": 40,
+    "claude_review": "pending",
+    "gpu_execution": "not started"
+  },
+  "C4": {
+    "configs": [
+      "R1_qwen_short.yaml",
+      "R2_llama_short.yaml",
+      "R3_qwen_long.yaml"
+    ],
+    "training": "not started",
+    "launcher": "not yet implemented"
+  },
+  "science": {
+    "model_generation_calls": 0,
+    "training_calls": 0,
+    "benchmark_scores": 0,
+    "OMI2_filtering_or_scoring": "not started"
+  },
+  "budget_usd": {
+    "modal_total_cap": 85,
+    "modal_protected": 4,
+    "subcaps": {
+      "G0_E": 4,
+      "G0_T": 10,
+      "capability": 4,
+      "Tier1": 30,
+      "Tier2": 22,
+      "E2": 3,
+      "emergency": 12
+    },
+    "batch_forecast_threshold_fraction_of_remaining": 0.8,
+    "tinker_teacher_fallback_cap": 60,
+    "tinker_E4_cap": 80,
+    "M2_40_carveout_activated": false,
+    "unit_costs_measured": false
+  },
+  "retry": "one infrastructure retry, recorded; scientific failure does not retry",
+  "next": [
+    "Claude first-use code review and pre-result protocol decisions",
+    "GPU environment and launch-path preparation; measured cost forecast",
+    "Qwen G0-E, then G0-T",
+    "C5/C6 construction after shared-path review"
+  ],
+  "operational_notes": [
+    "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
+    "Public UWNSL collections were read anonymously with canonical collection slugs after authenticated collection access returned 403; fine-grained model-read token scope was unchanged."
+  ]
+}
