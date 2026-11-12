@@ -1,0 +1,44 @@
+{
+  "run_id": "c7_qwen_base_math_baseline4_20261112_v1",
+  "code_commit": "1df818d578164c7911a8dbbfc872bc6a88bc88ea",
+  "config": {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "protocol": "omi2",
+    "task": "math",
+    "template_family": "qwen",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 500,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/qwen.jinja",
+    "stop_strings": [],
+    "training_run_id": null,
+    "checkpoint_manifest_sha256": null
+  },
+  "input_sha256": "555027a6501c3a11fa4ffe4a183c250b230bff2ccb6e45a74f015df08615b5ce",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "461a8b4169b78b1f7c37eab37053e075d7e035e150d3e31d43777fe4c84bb1ee",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa"
+  },
+  "forecast": {
+    "subcap": "C7 capability",
+    "cap_usd": 4,
+    "accounted_before_usd": 0.08124140924346335,
+    "reserved_holdout8_usd": 1.5143903341409959,
+    "forecast_usd": 0.25254763684879084,
+    "threshold_usd": 1.9234946052924327,
+    "admitted": true,
+    "basis": "NLL provision302seconds at H1002CPU16GiB rate. Generation reserved at full4096token caps for all responses, using measured L token throughput with25% time margin and110seconds startup/tail each. Actual untrained four-shot throughput will replace the proxy."
+  },
+  "authority": "Accepted07b56e49: first Qwen base MATH mandatory group, primary4shotbaseline",
+  "C7_prepared_manifest_sha256": "c31a8550baa773c0eaff30f8b5ed87c769beb9308d38103efce20a1773ba9ba6"
+}
