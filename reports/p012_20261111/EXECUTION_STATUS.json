@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T09:06:09.990155+00:00",
-  "stage": "Five Qwen G0 endpoints complete; long GSM timing probe queued; combined pre-C8 review prepared",
+  "updated_utc": "2026-11-12T09:14:32.881928+00:00",
+  "stage": "Five full G0 endpoints and long GSM cost probe complete; full long GSM exceeds current budget admission",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -32,14 +32,15 @@
     "runtime": "Corrected pinned CPU training image built; pip check and LF import passed; GPU training kernel and training not yet run"
   },
   "science": {
-    "model_generation_calls": 7,
+    "model_generation_calls": 8,
     "training_calls": 0,
     "benchmark_scores": 5,
     "OMI2_filtering_or_scoring": "not started",
     "startup_draws": 80,
     "math_judge_pending": 531,
     "independent_result_audit": "pending; raw archives published",
-    "judge_model_calls": 0
+    "judge_model_calls": 0,
+    "active_jobs": 0
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -57,11 +58,19 @@
     "tinker_teacher_fallback_cap": 60,
     "tinker_E4_cap": 80,
     "M2_40_carveout_activated": false,
-    "unit_costs_measured": true
+    "unit_costs_measured": true,
+    "pending_owner_proposal": {
+      "G0_E_cap": 8,
+      "emergency_cap": 8,
+      "total_cap": 85,
+      "protected": 4,
+      "approved": false,
+      "reason": "Full longGSM forecast3.15882 exceeds current remaining-subcap admission threshold1.16617"
+    }
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Complete queued long GSM timing probe and forecast full1319",
+    "Owner budget decision before full long GSM; no full longGSM launched",
     "G0 base standard few-shot and Llama portions",
     "One consolidated G0 MATH judge after complete queues",
     "Claude combined F4/F5/launcher review before C8"
