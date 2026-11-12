@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T07:12:46.855027+00:00",
-  "stage": "F1-F3 complete; first Qwen G0-E authorized; Modal credential renewal pending",
+  "updated_utc": "2026-11-12T07:24:09.759285+00:00",
+  "stage": "Modal authorized; first 20 inputs and launch path ready; runtime not started",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -26,7 +26,7 @@
       "R3_qwen_long.yaml"
     ],
     "training": "not started",
-    "launcher": "not yet implemented",
+    "launcher": "G0 prepared; shared launcher review before C8",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved"
   },
   "science": {
@@ -55,9 +55,9 @@
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Complete Modal credential renewal and verify target account",
-    "Publish F1-F3 commit; prepare first 20 Qwen inputs and runtime",
-    "Run S1-S4 on 20 questions, then full Qwen G0-E after checks and cost forecast",
+    "Build pinned evaluation image and cache verified Qwen Instruct weights",
+    "Run first 20-question S1-S4 check",
+    "Use measured timing to forecast full Qwen G0-E",
     "F4/F5 plus Modal launcher: one review before C8"
   ],
   "operational_notes": [
