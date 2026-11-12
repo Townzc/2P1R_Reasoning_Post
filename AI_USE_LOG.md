@@ -5156,3 +5156,5 @@ The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objec
 - 2026-11-12: Codex completed long GSM original1319 evaluation and scoring:825correct,62.5474%,−1.2526pp from Table8; numeric gate passes, independent audit pending. Prepared standard-harness base wrapper with isolated ANTLR4.11 CPU runtime and31 local regression cases passed. New base and combined-judge production await the one shared review. No course prose or external messages.
 
 - 2026-11-12: Standard-base synthetic CPU integration passed in the actual isolated runtime. First LlamaMATH500 launch was rejected before model load by stale copied source SHA; recorded stopped24s app plus30s cost reserve and one corrected infrastructure replacement, with science/input unchanged. Combined review addendum now includes real runtime evidence.
+
+- 2026-11-12: Codex prepared fixed32B judge file hashes and a singleH200 resource route for the combined pending review; FP16 and32K context unchanged. No judge load or base benchmark call. Pricing read from Modal official page; final admission awaits completed queues and current reserves.

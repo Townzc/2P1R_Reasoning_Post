@@ -1,0 +1,19 @@
+{
+  "utc": "2026-11-12T10:59:50.182503+00:00",
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "fp16_weight_file_bytes": 65527841856,
+  "one_32768_token_KV_cache_bytes": 8589934592,
+  "gpu": "H200",
+  "reason": "32B FP16weights plus32K KV cache, activation buffers andCUDA graphs need additional memory headroom; maintain frozen precision/context",
+  "cpu": 2,
+  "memory_MiB": 12288,
+  "hourly_forecast_usd": 4.7302,
+  "pricing_source": "https://modal.com/pricing",
+  "pricing_gpu_usd_per_second": 0.001261,
+  "cpu_hourly_per_core_conservative": 0.0473,
+  "memory_hourly_per_GiB_conservative": 0.008,
+  "model_loading_or_generation_started": false,
+  "admission": "Prepare final count-based forecast after all LiMATH queues exist; shared path review required first",
+  "single_consolidated_load": true
+}

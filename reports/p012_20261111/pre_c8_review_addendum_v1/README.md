@@ -9,3 +9,7 @@ The standard Minerva scorer requires ANTLR4.11; math-verify requires4.13.2. moda
 modal_g0.py additionally supports locally authorized file-scoped downloads for Llama. The HF token stays on the local machine; remote files must match C1 SHA256 and the receipt excludes temporary URLs. All three cloud caches passed. Local protocol regression tests:31passed (2new cases,29existing). Actual CPU validation passed at source6e168e14: fixed harness1863f15a,ANTLR4.11,SymPy1.14,TF4.56.2; four real-tokenizer cases, three correct numeric references, one incorrect-answer reference, and both GSM filters. The stock interval reference scores0; its metric is unchanged. Evidence: CPU_RUNTIME_VALIDATION.json.
 
 Built with Llama.
+
+The consolidated32B judge is routed to one H200 through the same launcher. Frozen FP16 weights occupy65.53GB and one32K KV cache8GiB, before activation/graph buffers. H200 provides memory headroom while keeping precision/context/decoding unchanged. Exact file hashes and resource pricing are included; no judge load has occurred.
+
+For overlapping source files, this addendum SOURCE_MANIFEST.json replaces the older snapshot in pre_c8_review_v1. Unchanged training/template evidence remains in the original packet. The scope is one shared review; ordinary Instruct cells do not need separate reviews.

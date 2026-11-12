@@ -141,9 +141,12 @@ def generate(request: dict) -> dict:
     hardware = subprocess.run(["nvidia-smi", "--query-gpu=name,memory.total,driver_version",
                                "--format=csv,noheader"], capture_output=True, text=True, check=True)
     (work / "HARDWARE.txt").write_text(hardware.stdout)
+    gpu = "H200" if request["config"]["protocol"] == "li_judge" else "H100"
+    if gpu not in hardware.stdout:
+        raise ValueError("Actual GPU differs from the forecast resource")
     env = dict(os.environ, P012_CODE_COMMIT=request["code_commit"], HF_HUB_OFFLINE="1",
                TRANSFORMERS_OFFLINE="1")
-    status = {"run_id": run_id, "success": False, "gpu": "H100", "cpu": 2, "memory_MiB": 12288}
+    status = {"run_id": run_id, "success": False, "gpu": gpu, "cpu": 2, "memory_MiB": 12288}
     try:
         # A fresh process releases vLLM workers between calls; no custom training loop.
         with (work / "generation.log").open("x") as log:
@@ -183,7 +186,10 @@ def main(request: str, output: str, prepare: bool = False):
         destination.write_text(json.dumps(result, indent=2) + "\n")
         print(json.dumps(result))
         return
-    result = generate.remote(spec)
+    # 32B FP16 weights plus a 32K KV cache need more room than the small-model
+    # H100 allocation. Keep the same precision, decoding and single judge load.
+    worker = generate.with_options(gpu="H200") if spec["config"]["protocol"] == "li_judge" else generate
+    result = worker.remote(spec)
     destination.mkdir(parents=True)
     archive = destination / "artifacts.zip"
     archive.write_bytes(result["archive"])
