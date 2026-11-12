@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T11:05:59.033868+00:00",
-  "stage": "All4 LiMATH generations complete; fullLlamaGSM active; sharedsource review pending",
+  "updated_utc": "2026-11-12T11:07:45.233821+00:00",
+  "stage": "All8 Li Instruct/checkpoint endpoints complete; base/judge sharedreview pending",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -34,14 +34,14 @@
   "science": {
     "model_generation_calls": 12,
     "training_calls": 0,
-    "benchmark_scores": 7,
+    "benchmark_scores": 8,
     "OMI2_filtering_or_scoring": "not started",
     "startup_draws": 80,
     "math_judge_pending": 742,
     "independent_result_audit": "pending; raw archives published",
     "judge_model_calls": 0,
-    "active_jobs": 1,
-    "completed_generation_calls": 11
+    "active_jobs": 0,
+    "completed_generation_calls": 12
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -68,10 +68,10 @@
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Complete original LlamaGSM1319 and score saved output",
-    "Claude one combined shared-source review atfae6656d",
-    "Standardbase4-shotMATH5000/GSM1319 and one consolidatedLiMATH judge after review",
-    "Independent10% raw scoring audits before G0 determination"
+    "Claude onecombined sharedsource reviewatfae6656d",
+    "Standardbase4-shotMATH5000/GSM1319 and oneconsolidatedLiMATHjudge afterreview",
+    "Independent10% rawscoring audits; G0determination",
+    "G0-T after applicable source/result gates"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",

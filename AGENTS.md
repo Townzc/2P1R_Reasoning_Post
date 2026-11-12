@@ -1,3 +1,11 @@
+# Current P012 state — 2026-11-12 03:10 PST
+
+All 8 Li Instruct/public-checkpoint endpoints have original raw outputs and initial scores. All execution CLIs are complete; no model jobs remain. Four MATH queues contain 742 pending judge rows. G0-E is not complete: standard base few-shot evaluation and the consolidated judge are new shared paths awaiting the one real Claude review required by P012 section 12. Review source is fae6656d, combining reports/p012_20261111/pre_c8_review_addendum_v1 with pre_c8_review_v1. An async request for the owner to relay this packet is pending; do not fabricate review approval. Instruct execution already authorized by 020017ae is complete. No G0-T, C8 or main-grid baseline calls.
+
+Current results and budget: reports/p012_20261111/g0_completion_handoff_final_v1/. G0-E cap $8, emergency $8, total $85, protected $4. Reported snapshot $3.21473239, including completed-run unsettled and late reserves $3.65463864. Full Llama MATH source-hash failure was repaired exactly once before any model load; original attempts retained. Do not resubmit completed calls. Private ACTIVE_HANDOFF has exact paths. No external messages, new chats or subagents; old experiments remain closed. Preserve unrelated lt002.
+
+Earlier milestones below are historical.
+
 # P012 budget authorization — 2026-11-12 PST
 
 Owner explicitly approved moving $4 emergency→G0-E: G0-E cap $8, emergency cap $8; Modal total $85 and protected $4 unchanged. All scientific protocols and other subcaps stay fixed. Continue G0-E, including the admitted full long GSM evaluation. Old $4 G0-E/pending-budget statements below are historical. Technical decision: reports/p012_20261111/budget_adjustment_20261112/. No other transfers authorized.
