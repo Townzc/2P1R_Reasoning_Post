@@ -103,7 +103,8 @@ def validate_runtime(payload: dict, output: Path) -> dict:
             text = ("<|begin_of_text|>" if model["family"] == "llama3" else "") + prompt
             config = EvalConfig(model["repo"], model["revision"],
                 "lm_eval_minerva4" if task_name == "math" else "lm_eval_gsm4", task_name,
-                model["family"], apply_chat_template=False)
+                model["family"], apply_chat_template=False,
+                max_tokens=2048, max_model_len=8192, batch_size=5000)
             config.validate()
             tokens = render_prompt_tokens({"prompt": text}, tokenizer, config)
             assert tokens == tokenizer.encode(text, add_special_tokens=False)
@@ -156,7 +157,8 @@ def prepare(payload: dict, output: Path) -> dict:
                     for r in common]
             config = EvalConfig(model["repo"], model["revision"],
                 "lm_eval_minerva4" if task_name == "math" else "lm_eval_gsm4", task_name,
-                family, apply_chat_template=False, stop_strings=tuple(task.config.generation_kwargs["until"]))
+                family, apply_chat_template=False, max_tokens=2048, max_model_len=8192,
+                batch_size=5000, stop_strings=tuple(task.config.generation_kwargs["until"]))
             config.validate()
             lengths = [len(render_prompt_tokens(row, tokenizer, config)) for row in rows]
             if max(lengths) + config.max_tokens > config.max_model_len:

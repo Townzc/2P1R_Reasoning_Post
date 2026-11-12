@@ -1,3 +1,7 @@
+# P012 new owner authorization — 2026-11-12
+
+Reviews 601aebd2 and 54f697e6 are accepted. Implement B1/B2 and confirm J1, then execute without re-review. All8 completed endpoint labels passed independent full review. Base2048/8192, alltestquestions inonebatch, first20thenfull; caprate>5% stops that path andreport. C5/C6 CPU canstartnow; R1/R2 after specifiedF5/checkpoint/train fixes; R3 hold. C6 andtrainlauncher modifications go to onefinalpre-C8review. Qwen4settings maystartafterQwenG0-E+R1pass, withoutLlama. ExactUWNSLLlamashortrepo foundempty; noweights inanyhistory; ownerquestionpending aboutfourvsfivejudgequeues. Do notinventcheckpoint. D4/D5 ownerquestionspending. Budget8/8,total85/protected4unchanged. Old pending-code-review statements below superseded. Noexternalmessages/subagents/newchats; preserveoldartifactsandunrelatedlt002.
+
 # Current P012 state — 2026-11-12 03:10 PST
 
 All 8 Li Instruct/public-checkpoint endpoints have original raw outputs and initial scores. All execution CLIs are complete; no model jobs remain. Four MATH queues contain 742 pending judge rows. G0-E is not complete: standard base few-shot evaluation and the consolidated judge are new shared paths awaiting the one real Claude review required by P012 section 12. Review source is fae6656d, combining reports/p012_20261111/pre_c8_review_addendum_v1 with pre_c8_review_v1. An async request for the owner to relay this packet is pending; do not fabricate review approval. Instruct execution already authorized by 020017ae is complete. No G0-T, C8 or main-grid baseline calls.

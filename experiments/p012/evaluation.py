@@ -154,12 +154,21 @@ def gsm_numeric_scores(answer: str | None, gold: str) -> dict:
     a, b = numeric_answer(answer), numeric_answer(gold)
     strict = a is not None and b is not None and a == b
     result = {"strict_numeric_correct": strict, "math_verify_fallback_used": False,
+              "percent_stripped_used": False, "percent_stripped_correct": False,
               "math_verify_fallback_correct": None, "format_compliant": a is not None,
               "correct": strict, "score_path": "strict_numeric" if strict else "incorrect"}
     if strict:
         return result
     if answer is None:
         return result | {"score_path": "invalid_format"}
+    # Review 601aebd2: GSM percentage questions can have bare-number golds.
+    stripped = re.sub(r"(?:\\%|%)\s*$", "", answer).strip()
+    if stripped != answer.strip():
+        value = numeric_answer(stripped)
+        percent_correct = value is not None and b is not None and value == b
+        result.update(percent_stripped_used=True, percent_stripped_correct=percent_correct)
+        if percent_correct:
+            return result | {"correct": True, "format_compliant": True, "score_path": "percent_stripped"}
     from math_verify import LatexExtractionConfig, parse, verify
     kwargs = {"extraction_config": [LatexExtractionConfig()], "fallback_mode": "no_fallback"}
     parsed_gold = parse("$" + gold + "$", **kwargs)
@@ -246,6 +255,9 @@ class EvalConfig:
             raise ValueError("Released GSM8K contract requires GSM8K")
         if self.protocol.startswith("lm_eval_") and (self.apply_chat_template or self.chat_template_file):
             raise ValueError("Standard base evaluation requires the frozen plain few-shot prompt")
+        if self.protocol.startswith("lm_eval_") and (
+                self.max_tokens != 2048 or self.max_model_len != 8192 or self.temperature != 0 or self.n != 1):
+            raise ValueError("Base B1 requires greedy 2048 output / 8192 context")
         if self.protocol in {"lm_eval_minerva4", "lm_eval_gsm4"} and self.task != (
                 "math" if self.protocol == "lm_eval_minerva4" else "gsm8k"):
             raise ValueError("Standard harness task and protocol disagree")
@@ -292,6 +304,8 @@ def run_vllm(config: EvalConfig, input_path: Path, output_dir: Path) -> None:
     rows = [json.loads(line) for line in input_path.read_text().splitlines() if line.strip()]
     if not rows or len({r["id"] for r in rows}) != len(rows):
         raise ValueError("Input IDs must be unique and nonempty")
+    if (config.protocol.startswith("lm_eval_") or config.protocol == "omi2") and config.batch_size < len(rows):
+        raise ValueError("Submit the complete base/main-grid endpoint in one generation batch")
     output_dir.mkdir(parents=True, exist_ok=False)
     from vllm import LLM, SamplingParams
     llm = LLM(model=config.model, revision=config.revision,

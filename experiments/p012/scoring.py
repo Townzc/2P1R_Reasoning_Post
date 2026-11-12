@@ -197,10 +197,14 @@ def score_generation(input_path: Path, generation_dir: Path, output_dir: Path,
     if protocol == "omi2" and task == "gsm8k":
         strict_correct = sum(r["strict_numeric_correct"] for r in labels)
         fallback_correct = sum(r["score_path"] == "math_verify_fallback" for r in labels)
+        percent_correct = sum(r["score_path"] == "percent_stripped" for r in labels)
         summary.update({"accuracy_strict_numeric": strict_correct / count,
-            "accuracy_with_math_verify_fallback": summary["accuracy"],
+            "accuracy_with_percent_and_math_verify_fallback": summary["accuracy"],
             "fallback_gain_pp": 100 * fallback_correct / count,
-            "correct_by_path": {"strict_numeric": strict_correct, "math_verify_fallback": fallback_correct},
+            "percent_stripped_gain_pp": 100 * percent_correct / count,
+            "correct_by_path": {"strict_numeric": strict_correct, "percent_stripped": percent_correct,
+                                "math_verify_fallback": fallback_correct},
+            "percent_stripped_evaluations": sum(r["percent_stripped_used"] for r in labels),
             "fallback_evaluations": sum(r["math_verify_fallback_used"] for r in labels)})
     output_dir.mkdir(parents=True, exist_ok=False)
     (output_dir / "labels.jsonl").write_bytes(jsonl_bytes(labels))

@@ -43,6 +43,8 @@ def digest(path: Path) -> str:
               include_source=False)
 def cache_model(spec: dict) -> dict:
     from huggingface_hub import snapshot_download
+    if not spec["files"] or not any(f["path"].endswith(".safetensors") for f in spec["files"]):
+        raise ValueError("The pinned repository has no model weights")
     started = time.monotonic()
     path = Path(snapshot_download(spec["repo"], revision=spec["revision"], token=False,
                                  allow_patterns=[f["path"] for f in spec["files"]]))
