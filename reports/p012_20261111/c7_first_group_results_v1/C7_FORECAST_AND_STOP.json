@@ -1,0 +1,249 @@
+{
+  "utc": "2026-11-12T22:17:22.631727+00:00",
+  "review": "07b56e49",
+  "cap_usd": 4,
+  "decision": "STOP_REMAINING_C7_MANDATORY_FORECAST_EXCEEDS_CAP",
+  "executed_group": "Qwen2.5-1.5B base x MATH",
+  "measured_function_seconds": {
+    "nll1000": 40.113063763,
+    "baseline4_500": 116.08759805700001,
+    "holdout500_n8": 419.342726607
+  },
+  "forecast_scenarios": [
+    {
+      "time_margin": 1,
+      "tail_seconds": 0,
+      "class1_NLL8_usd": 0.37183847394770686,
+      "class2_fourshot_greedy8_usd": 1.4640246518517035,
+      "class3_holdout_pass8_usd": 3.858512208419876,
+      "mandatory_total_usd": 5.694375334219286,
+      "class4_Instruct_zeroshot4_upper_forecast_usd": 1.352447886115192,
+      "class5_base_zeroshot4_upper_forecast_usd": 1.352447886115192,
+      "all_endpoints_usd": 8.399271106449671
+    },
+    {
+      "time_margin": 1.25,
+      "tail_seconds": 30,
+      "class1_NLL8_usd": 0.7312709401237678,
+      "class2_fourshot_greedy8_usd": 1.9447635403895263,
+      "class3_holdout_pass8_usd": 4.859831519651593,
+      "mandatory_total_usd": 7.535866000164887,
+      "class4_Instruct_zeroshot4_upper_forecast_usd": 1.7554785702151539,
+      "class5_base_zeroshot4_upper_forecast_usd": 1.7554785702151539,
+      "all_endpoints_usd": 11.046823140595194
+    }
+  ],
+  "actual_runtime_cost_estimate_usd_not_invoice": 0.6623139209945075,
+  "accounted_runtime_plus30_usd": 0.7660855209945074,
+  "late_reserve_usd": 0.1,
+  "projection_basis": "Measured Qwen base MATH rates for all unmeasured initializations/tasks. NLL1000 and holdout500n8 retain equal counts; GSM baseline scales generation to1319questions. No smaller-model or shorter-GSM speedups assumed. Completed calls use observed durations.",
+  "specific_unknowns": "Unmeasured models/tasks may terminate earlier and use less generation time; their savings are not assumed for admission.",
+  "optional_projection_basis": "All outputs reach4096tokens at measured baseline token throughput; an upper-volume projection, not a measured zero-shot result.",
+  "mandatory_endpoints": [
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "math",
+      "endpoint": "nll",
+      "status": "complete"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "math",
+      "endpoint": "baseline4",
+      "status": "complete"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "math",
+      "endpoint": "holdout8",
+      "status": "complete"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "gsm8k",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "gsm8k",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "gsm8k",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "math",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "math",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "math",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "nll",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "baseline4",
+      "status": "unrun_cost_gate"
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "holdout8",
+      "status": "unrun_cost_gate"
+    }
+  ],
+  "optional_endpoints": [
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "math",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 5
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "task": "gsm8k",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 5
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "math",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 4
+    },
+    {
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 4
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 5
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 5
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 4
+    },
+    {
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "baseline0",
+      "status": "unrun_cost_gate",
+      "priority": 4
+    }
+  ],
+  "samples_reduced": false,
+  "questions_reduced": false,
+  "active_model_jobs": 0
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T21:11:50.506137+00:00",
-  "stage": "T1/T2/T3 implemented after accepted e10a4bf5; preparing batch16R1 and Lcostprobe",
+  "updated_utc": "2026-11-12T22:19:10.856924+00:00",
+  "stage": "R1 and R2 PASS; Tier1 and remaining C7 STOP at their registered cost gates; zero active model jobs",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -18,7 +18,7 @@
     "claude_review": "020017ae; owner permits direct G0-E after fixes",
     "gpu_execution": "First20 passed; full MATH500/GSM8K raw and initial scoring complete",
     "relevant_fix_tests_passed": 39,
-    "main_grid": "F4/F5 candidate ready; actual training/evaluation prompt-token parity passed for all4models at0/4shot"
+    "main_grid": "F4/F5, launcher, training/evaluation template parity and C6 accepted; T1/T2/T3 accepted e10a4bf5 and verified07b56e49"
   },
   "C4": {
     "configs": [
@@ -26,24 +26,23 @@
       "R2_llama_short.yaml",
       "R3_qwen_long.yaml"
     ],
-    "training": "OldR1 interrupted; extra restart approved withnewbatch16. OldR2 stopped as owner-supersededbatch8; preserveartifacts.",
-    "launcher": "Dose/config/local-checkpoint fixes implemented;59tests pass",
+    "training": "R1 and R2 batch16 complete and both gates PASS; R3 HOLD",
+    "launcher": "T1/T2 implemented;55 relevant tests at0c09271a; accepted07b56e49",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved",
-    "runtime": "First remote train ran1229.889seconds, then attached app stopped after local networkloss; provider0tasks"
+    "runtime": "All completed jobs detached; final weights independently backed up and hash verified"
   },
   "science": {
-    "model_generation_calls": 19,
-    "training_calls": 2,
-    "benchmark_scores": 10,
-    "OMI2_filtering_or_scoring": "C5/C6 complete",
-    "startup_draws": 80,
-    "math_judge_pending": 0,
-    "independent_result_audit": "Original8 initiallabels plus742judge decisions and6319Qwenbase outputs fully accepted,0differences",
-    "judge_model_calls": 1,
+    "completed_generation_calls": 28,
+    "successful_training_calls": 3,
+    "failed_training_runs": 1,
+    "superseded_training_runs": 1,
+    "completed_NLL_calls": 1,
     "active_jobs": 0,
-    "completed_generation_calls": 19,
-    "successful_training_calls": 0,
-    "failed_training_calls": 1
+    "raw_inventory": "RUN_INVENTORY_CURRENT.json",
+    "R1_gate": "PASS",
+    "R2_gate": "PASS",
+    "latest_results_independent_numeric_review": "Raw artifacts published for the original planned checks",
+    "prior_G0_independent_audit": "e10a4bf5 accepted"
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -66,14 +65,15 @@
       "from": "emergency",
       "to": "G0_E",
       "usd": 4
-    }
+    },
+    "latest_accounting": "budget_22utc_v1/RECONCILIATION.json"
   },
-  "retry": "one infrastructure retry, recorded; scientific failure does not retry",
+  "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Claude onecombined sharedsource reviewatfae6656d",
-    "Standardbase4-shotMATH5000/GSM1319 and oneconsolidatedLiMATHjudge afterreview",
-    "Independent10% rawscoring audits; G0determination",
-    "G0-T after applicable source/result gates"
+    "Owner/Claude decision on Tier1 resource/budget/scope after the registered cost stop",
+    "Owner decision on C7 required endpoint cost above4; preserve all fixed questions and draws unless explicitly revised",
+    "Planned independent checks of newly published R1/R2/L/C7 raw evidence",
+    "R3 remains held"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -83,11 +83,12 @@
     "020017ae",
     "601aebd2",
     "54f697e6",
-    "e10a4bf5"
+    "e10a4bf5",
+    "07b56e49"
   ],
   "owner_pause_requested": false,
   "C3": {
-    "judge": "four original queues complete,742decisions; newlabels awaiting independent audit",
+    "judge": "Four original queues complete,742decisions; all prior G0 results independently accepted e10a4bf5",
     "Qwen_base": "fullMATH/GSM scored; MATH10.94%capstop recorded",
     "Llama_base": "both20questionprobes30%caps; no full endpoints",
     "public_Llama_short": "1B unavailable; allowed3B skipped becauseforecast>0.8"
@@ -109,17 +110,30 @@
     "pre_C8_review": "Accepted e10a4bf5; T1/T2 fixes do notneedre-review"
   },
   "C7": {
-    "started": false,
-    "NLL_implementation": "Owner requests parallelimplementation andonecode review"
+    "started": true,
+    "review": "07b56e49 accepted; N1 implemented and9 tests pass",
+    "first_group": "Qwen base MATH complete: NLL,4shotgreedy,holdout500n8",
+    "remaining_mandatory_endpoints": 21,
+    "optional_zero_shot_unrun": 8,
+    "mandatory_forecast_no_margin_usd": 5.694375334219286,
+    "mandatory_forecast_with_margin_usd": 7.535866000164887,
+    "status": "STOP_CAP4"
   },
   "C8": {
-    "started": false,
-    "gate": "Lcostprobe authorizednow; wholeTier1training+evalforecast<=30; fullQwenrelease additionallyR1bothaccuracygates"
+    "started": true,
+    "completed_cells": [
+      "Qwen base MATH L seed17"
+    ],
+    "remaining_grid": "STOP_CAP30",
+    "R1_accuracy_gate": "PASS",
+    "forecast_no_margin_usd": 49.55993342384082,
+    "forecast_with_margin_usd": 63.9891163664897
   },
   "latest_packets": [
-    "g0_judged_and_base_v1",
-    "c6_training_review_v1",
-    "r1_admission_v1",
-    "r1_network_interruption_v1"
+    "r1_b16_results_v1",
+    "r2_b16_results_v1",
+    "l_cost_probe_v1",
+    "c7_first_group_results_v1",
+    "budget_22utc_v1"
   ]
 }

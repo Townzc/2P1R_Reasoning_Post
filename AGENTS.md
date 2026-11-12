@@ -1,3 +1,9 @@
+# Current P012 outcome — 2026-11-12T22:20:37.484136+00:00
+
+R1 andR2 short-chain batch16reproductions bothPASS underacceptedT3. R1MATH51.2/GSM72.6308;R2MATH33.4/GSM51.4784. Finalweights independentlybackedupwithallhashesmatched. AlljobsDONE; noactiveGPU/CPU orCLI.
+RemainingTier1STOP per e10a4bf5: wholeforecast49.56nomargin/63.99with25%time+30stails >cap30. OnlyQwenbaseMATHLseed17completed; retainandreuse. C7review07b56e49accepted,N1implemented; firstQwenbaseMATHgroupcomplete(NLL,baseline4,pass8). Mandatoryclasses1-3forecast5.69nomargin/7.54buffered >cap4, soSTOPremaining21mandatoryand8optionalendpoints. Noquestion/draw reductions andnoother7NLLlaunched. Theseareowner-requiredcoststops; neitherisapendingcodereview. Needownerresource/budget/scope revisionbeforemorecalls. R3HOLD. Noexternalmessages,newchats,subagentsoroldexperiments.
+Packets: reports/p012_20261111/{r1_b16_results_v1,r2_b16_results_v1,l_cost_probe_v1,c7_first_group_results_v1,budget_22utc_v1}. CurrentaccountedP012includingreserves12.21045248,totalcap85/protected4. Closedbilling21-22readonce; no repeatqueries. PrivatehandoffhasoriginalcallIDsandexactpaths.
+
 # C7 accepted07b56e49; N1 required; execute first group — 2026-11-12T21:58:47.595709+00:00
 
 Owner accepted07b56e49 C7 review. Addsolution_chars andaggregate nll_per_char,retainpertokenNLL,thenexecute withoutre-review. C7cap4,priority8NLL >8fourshotgreedy >8holdoutpass8 >4Instructzeroshot >4basezeroshot. FirstQwenbaseMATHgroup measurescost. Ifmandatoryclasses1-3exceed4STOPandreport; neverreducequestions/draws. Optionalclasses4/5canbeomittedforbudget. MainTier1remainsSTOPforcost; thisC7approvaldoesnotwaivemaincostgate. R2trained651.87756s,evalpairCLIs76744MATH/88856GSMactive; source41c3627e, admissione7539d85pushEXIT0consumed.
