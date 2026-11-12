@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-12T10:54:32.172275+00:00",
-  "stage": "Long GSM and Llama20 probe complete; fullLlamaMATH admitted",
+  "updated_utc": "2026-11-12T11:05:59.033868+00:00",
+  "stage": "All4 LiMATH generations complete; fullLlamaGSM active; sharedsource review pending",
   "plan": "P012 v1 plus amendments 1 and 2",
   "C1": {
     "assets_and_versions": "complete",
@@ -27,20 +27,21 @@
       "R3_qwen_long.yaml"
     ],
     "training": "not started",
-    "launcher": "Shared eval/train/judge source review packet prepared in pre_c8_review_v1",
+    "launcher": "Combined review source fae6656d; base/judge addendum actual CPU validation passed",
     "config_review": "020017ae accepted; R3 memory fallback 1 x 8 approved",
     "runtime": "Corrected pinned CPU training image built; pip check and LF import passed; GPU training kernel and training not yet run"
   },
   "science": {
-    "model_generation_calls": 10,
+    "model_generation_calls": 12,
     "training_calls": 0,
-    "benchmark_scores": 6,
+    "benchmark_scores": 7,
     "OMI2_filtering_or_scoring": "not started",
     "startup_draws": 80,
-    "math_judge_pending": 531,
+    "math_judge_pending": 742,
     "independent_result_audit": "pending; raw archives published",
     "judge_model_calls": 0,
-    "active_jobs": 0
+    "active_jobs": 1,
+    "completed_generation_calls": 11
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -67,10 +68,10 @@
   },
   "retry": "one infrastructure retry, recorded; scientific failure does not retry",
   "next": [
-    "Finish original Llama Instruct probe; forecast remaining full runs",
-    "Claude one combined source review including standard base and consolidated judge",
-    "Execute standard base and consolidated judge after shared-source review",
-    "Independent10% raw scoring audit; training remains unstarted"
+    "Complete original LlamaGSM1319 and score saved output",
+    "Claude one combined shared-source review atfae6656d",
+    "Standardbase4-shotMATH5000/GSM1319 and one consolidatedLiMATH judge after review",
+    "Independent10% raw scoring audits before G0 determination"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
