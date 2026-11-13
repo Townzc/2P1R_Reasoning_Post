@@ -1,3 +1,13 @@
+# Accepted8bbf06a7 and owner-approved A5 — 2026-11-13T20:54:26.800158+00:00
+
+Tinker/bridge review ACCEPTED. T1guard implemented (bothfrozenwrapperforms); T2newlocalpathsrelative. B1alpha32/B2sevenmodules(no lm_head) implemented. LfirstbridgeB3:36929536trainableparams,adapterfirst20differsfrombase,fullLcap<=25percent beforeotherfour. Optional8questionPEFTparitynotrequired. No lowerLRbridgeextension. Actualpredictioncommit8bbf06a7ef19f56ace1b23dde4607b02bc10b389 recordedbeforeformalT/bridge/A5 scoring. Tformalnowauthorized withoutre-review: allpremeasurements thenpermodelL,P,R,K8,K4. T-MATHfirst,thenplannedseed29/GSMwithinlimits. Tsmokeoutputsneverrescored.
+
+OwnerapprovedA5-1twoQwenInstructbaseline0(MATH500/GSM1319); A5-2newL64,L128,L256,K8s,Rs forbase/InstructMATHseed17; A5-3E4,E8 immediatelyafter; QwenGSMwaitsforA5. OnlyCELLSexpanded inmaintraining/evalpath, frozenC6nestedsubsets. A5exploratoryexcludedH0–H3. 31config/inputtestsPASS; all5638C7messagesunchanged. ActualC6holdoutproblemsraw,training/NLLwrapped; guardrejectsalreadywrappedtrain/NLLorcanonicalOMI withoutmessages.
+
+Batchadmission reports/p012_20261111/review_8bbf06a7: actualModal70.15; accounted20.6342; A5all14train/eval+two0shot10.2558,bridgeconditionalall5+first20pair5.1553 =>36.0452<66.15PASS. Softcapsreportandcontinue. Nextcallsusingapprovedsharedpaths; no sourceeditsduringModalupload. Original10mainQwenMATH and12C7Qwenendpointsalreadycompleteandindependentlyaudited (50klabels,6minorreviewerdisagreements; originalunchanged). R3/E2hold.
+
+Directclearcommunication; externaldraft-only; no newchats/subagents. Preserveunrelatedlt002 andeveryoriginalattempt. Earlierpending-review/phase-stopstatements superseded. Newcallstatein .local/p012_20261111/amendment5_v1/; keepalloriginalsessionIDsandneverreplaycompletedcalls.
+
 # Current P012 handoff — 2026-11-13T20:20:07.864751+00:00
 
 Both Qwen1.5B MATH settings (10 seed17 cells) and all12 Qwen C7 mandatory endpoints are COMPLETE and published at7c34f3d6. Base L reused. MATH5000 accuracy P/K8/R/K4/L: base42.06/40.12/33.14/41.34/42.88; Instruct42.94/41.00/32.72/41.88/42.88. Per-cell cap/loop/normal-termination diagnostics and original tokens/labels are in result packets. All3 T-smokes20updates/20questions complete, unscored; token-price upper0.257311USD. No active model calls. Original CLIs allconsumedEXIT0; no reruns.

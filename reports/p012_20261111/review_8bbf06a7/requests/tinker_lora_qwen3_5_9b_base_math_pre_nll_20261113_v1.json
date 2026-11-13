@@ -1,0 +1,64 @@
+{
+  "run_id": "tinker_lora_qwen3_5_9b_base_math_pre_nll_20261113_v1",
+  "mode": "nll",
+  "model": "Qwen/Qwen3.5-9B-Base",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-9B-Base",
+    "revision": "68c46c4b3498877f3ef123c856ecfde50c39f404",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-9B-Base",
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 3126,
+        "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807196,
+        "sha256": "fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16713,
+        "sha256": "3891e840d7dc5fca0af33d3a25083a735e36fe06214e3f707024820cb6b9f89c"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 17,
+  "rank": 32,
+  "learning_rate": 0.00047297908091376354,
+  "source_sha256": "67be58c2f607f1e68693ed6bc6b6c69b9593732cfe5acf0e852286fa4118de1e",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 1.463,
+    "prefill": 0.3,
+    "sample": 0.807
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Owner accepted8bbf06a7; T1T2fixed; registeredpretrainingmeasurements",
+  "code_commit": "60ad43c8d5725099cacfcda7d1f861ffc8592ddd",
+  "accepted_review_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "dataset": {
+    "path": ".local/p012_20261111/c6_frozen_v1/math/nll1000.jsonl",
+    "sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df"
+  },
+  "forecast": {
+    "admitted": true,
+    "buffered_upper_usd": 0.8032036050000002,
+    "basis": "Fullinputtokens + max4096outputtokensforeachdraw,25percentmargin+.05reserve",
+    "T_MATH_cap": 230,
+    "T_total_cap": 340,
+    "protected_Tinker_credit": 400
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-13T20:19:27.299202+00:00",
-  "stage": "Qwen base/Instruct MATH all10 cells and Qwen C7 all12 endpoints complete; T-smoke complete; formal T/bridge waits combined review",
+  "updated_utc": "2026-11-13T20:54:26.800158+00:00",
+  "stage": "8bbf06a7 accepted; T1T2/B1B2 applied; formalT, bridgeL andA5 admitted",
   "plan": "P012 v1 plus owner-approved amendments1\u20134",
   "C1": {
     "assets_and_versions": "complete",
@@ -77,10 +77,9 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Publish combined Tinker/bridge review packet with actual smoke evidence",
-    "Claude combined review and prediction freeze before formal T post-training scoring",
-    "Continue authorized Qwen GSM/Llama blocks using measured forecast and actual-balance rule",
-    "R3/E2 remain held"
+    "Tpretraining thenLPRK8K4",
+    "A5-1andA5-2 thenA5-3 beforeQwenGSM",
+    "BridgeL B3checks thenremainingfour"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -92,7 +91,8 @@
     "54f697e6",
     "e10a4bf5",
     "07b56e49",
-    "7abcc305"
+    "7abcc305",
+    "8bbf06a7"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -158,57 +158,38 @@
     "amendment4_completed_budget_v1"
   ],
   "latest_authorization": {
-    "commit": "77a2520e",
-    "amendments": [
-      3,
-      4
-    ],
+    "commit": "8bbf06a7",
     "owner_approved": true,
-    "status": "CURRENT_BATCH_COMPLETE",
-    "budget": {
-      "authority": "Owner explicitly approved 77a2520e Amendment3+4",
-      "utc": "2026-11-13T19:44:31.574518+00:00",
-      "actual_modal_credit_balance_usd": 77.82,
-      "balance_source": "Modal dashboard tangzhice visible Credits $77.82, 2026-11-13T19:45Z",
-      "accounted_P012_usd": 12.081525979999999,
-      "next_batch_buffered_usd": 11.752394125422407,
-      "hard_threshold_usd": 73.82,
-      "hard_test": "accounted + next batch buffered <= actual current balance - 4",
-      "admitted": true,
-      "forecasts_usd": {
-        "full_train": 0.6715888165978111,
-        "L_train": 0.19160199654225551,
-        "math5000_greedy": 0.34951940149486044,
-        "nll": 0.0928613615543292,
-        "baseline_math": 0.20140510712319937,
-        "baseline_gsm": 0.32511259658045794,
-        "holdout8": 0.6373975325656056
-      },
-      "margin": "25% elapsed time + 30s per function +0.02 per training save",
-      "soft_caps": {
-        "G0E": 5,
-        "G0T": 6,
-        "Tier1": 33.5,
-        "C7": 7.5,
-        "Tier2": 25,
-        "bridge": 4
-      },
-      "reserved_batch": "9 Qwen MATH training+greedy endpoints and remaining9 Qwen C7 mandatory endpoints; completed base MATH L and C7 group reused",
-      "old_stops_superseded": true,
-      "C7_zero_shot": "NOT_RUN per Amendment3"
-    }
+    "amendment": 5,
+    "Tinker_and_bridge_review": "ACCEPTED_AFTER_FIXES_NO_REREVIEW",
+    "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
     "instruct_math": "ALL5_COMPLETE",
     "C7_Qwen": "ALL12_ENDPOINTS_COMPLETE",
     "T_smoke": "ALL3_MODELS20STEPS20QUESTIONS_COMPLETE",
-    "formal_T_and_bridge": "WAIT_ONE_COMBINED_REVIEW; no formal model calls",
+    "formal_T_and_bridge": "AUTHORIZED_AFTER8bbf06a7FIXES",
     "tier1_all_math_upper_usd": 37.48942762131322,
     "tier1_planning_cap_usd": 33.5,
     "soft_cap_exceeded_in_conservative_all_math_extrapolation": true,
     "action": "REPORT_AND_CONTINUE; admitted batch within hard balance gate",
     "active_model_jobs": 0,
     "soft_cap_exceeded_in_task_adjusted_forecast": true
+  },
+  "A5": {
+    "approved": true,
+    "cells": [
+      "L64",
+      "L128",
+      "L256",
+      "K8s",
+      "Rs",
+      "E4",
+      "E8"
+    ],
+    "models": "OnlytwoQwenMATHinitializations",
+    "seed": 17,
+    "exploratory_excluded_H0_H3": true
   }
 }
