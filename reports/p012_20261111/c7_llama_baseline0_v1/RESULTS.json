@@ -1,0 +1,106 @@
+{
+  "endpoint": "baseline0",
+  "settings": [
+    {
+      "run_id": "c7_llama_instruct_math_baseline0_20261113_v1",
+      "initialization": "instruct",
+      "task": "math",
+      "config": {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "protocol": "omi2",
+        "task": "math",
+        "template_family": "llama3",
+        "max_tokens": 4096,
+        "max_model_len": 8192,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "top_k": -1,
+        "dtype": "bfloat16",
+        "n": 1,
+        "seed": 17,
+        "batch_size": 500,
+        "apply_chat_template": true,
+        "chat_template_file": "/workspace/experiments/p012/templates/llama3.jinja",
+        "stop_strings": [],
+        "training_run_id": null,
+        "checkpoint_manifest_sha256": null
+      },
+      "input_sha256": "1f9808fcfa5c96e8c2f5bf91c662cd872b41437f2b2879e02e70ddabb772db3d",
+      "metrics": {
+        "responses": 500,
+        "correct": 89,
+        "accuracy": 0.178,
+        "length_cap_count": 68,
+        "length_cap_rate": 0.136,
+        "loop_count": 7,
+        "capped_loop_count": 7,
+        "normally_terminated_count": 432,
+        "normally_terminated_correct": 89,
+        "normally_terminated_accuracy": 0.20601851851851852
+      },
+      "status": {
+        "run_id": "c7_llama_instruct_math_baseline0_20261113_v1",
+        "success": true,
+        "gpu": "H100",
+        "cpu": 2,
+        "memory_MiB": 12288,
+        "returncode": 0,
+        "function_seconds": 75.79873864
+      },
+      "raw_sha256": "2e43aeacf3c447fb60ba5aba39621e544beacef4b18b19f1c08aa01157580b35",
+      "labels_sha256": "35be7b10fe37e4f6fe10567593aa10cf3ce252d0cfd8153ac6eed2c848984ebc"
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_baseline0_20261113_v1",
+      "initialization": "instruct",
+      "task": "gsm8k",
+      "config": {
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "protocol": "omi2",
+        "task": "gsm8k",
+        "template_family": "llama3",
+        "max_tokens": 4096,
+        "max_model_len": 8192,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "top_k": -1,
+        "dtype": "bfloat16",
+        "n": 1,
+        "seed": 17,
+        "batch_size": 1319,
+        "apply_chat_template": true,
+        "chat_template_file": "/workspace/experiments/p012/templates/llama3.jinja",
+        "stop_strings": [],
+        "training_run_id": null,
+        "checkpoint_manifest_sha256": null
+      },
+      "input_sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+      "metrics": {
+        "responses": 1319,
+        "correct": 63,
+        "accuracy": 0.047763457164518575,
+        "length_cap_count": 0,
+        "length_cap_rate": 0.0,
+        "loop_count": 0,
+        "capped_loop_count": 0,
+        "normally_terminated_count": 1319,
+        "normally_terminated_correct": 63,
+        "normally_terminated_accuracy": 0.047763457164518575
+      },
+      "status": {
+        "run_id": "c7_llama_instruct_gsm8k_baseline0_20261113_v1",
+        "success": true,
+        "gpu": "H100",
+        "cpu": 2,
+        "memory_MiB": 12288,
+        "returncode": 0,
+        "function_seconds": 63.030644976000005
+      },
+      "raw_sha256": "18dec8091fca27cec7129cb61357545a7255648f299f577f8049f6a3011417ff",
+      "labels_sha256": "9bc0e2da31cfb38c36e59e9c743d7fb568b77679c5760cdcece615b6de369500"
+    }
+  ],
+  "audit_status": "Independent result audit pending"
+}
