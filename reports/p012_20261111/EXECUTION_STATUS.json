@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-13T22:48:21.501956+00:00",
-  "stage": "T4 and five main settings complete; Modal stopped at next-batch budget gate;10 T training originals active",
+  "updated_utc": "2026-11-13T23:56:46.080020+00:00",
+  "stage": "Tier1 complete; Tier2 and A6 paired arms active",
   "plan": "P012 v1 plus owner-approved amendments1\u20135",
   "C1": {
     "assets_and_versions": "complete",
@@ -97,10 +97,10 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Await owner decision on Modal accounting correction; no new dependent calls before approval",
-    "Continue10 original T training calls and evaluate their checkpoints within existing reservation",
-    "Apply independent completed-result audit when received; remaining bridge4 stay stopped",
-    "Resume C7 holdout8 then remaining Llama settings after prospective hard-gate admission"
+    "Finish Tier2 P/R/L then K8 within each workspace",
+    "Complete9B A6-2 paired arms then A6-3",
+    "Complete originalT and second seeds; GSM afterMATH if budget",
+    "Submit next independent numeric review packet"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -180,11 +180,8 @@
     "amendment4_completed_budget_v1"
   ],
   "latest_authorization": {
-    "commit": "8bbf06a7",
-    "owner_approved": true,
-    "amendment": 5,
-    "Tinker_and_bridge_review": "ACCEPTED_AFTER_FIXES_NO_REREVIEW",
-    "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389"
+    "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+    "second_workspace": "b886b64cea2603f876ab1776325e24a26df55ba8"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -237,20 +234,19 @@
     "results": "modal_lora_bridge_l_s17_v1/RESULTS.json"
   },
   "current_20261113_late": {
-    "Qwen_main_seed17_settings_completed": 4,
-    "A5": "complete; exploratory, excluded H0-H3",
-    "T_L_cells_completed": [
-      "4b",
-      "9b",
-      "9b_base"
-    ],
-    "T_9B_P_R": "Training/greedy/scoring complete; published e6047bcd",
-    "T_other_P_R": "4B and9B-Base original P/R active",
-    "Llama": "Base MATH5 training/evaluation/scoring complete; C7 NLL4 andbaseline4 complete; holdout8 unsubmitted at budget gate",
-    "T_K8_K4": "Allsix originals active"
+    "authoritative": true,
+    "supersedes_older_phase_stops": true,
+    "Tier1_complete_cells": 40,
+    "Llama_C7_complete": true,
+    "Qwen_Tier2_workspace": "townzc",
+    "Llama_Tier2_workspace": "tangzhice",
+    "T9B_seed17_complete": true,
+    "T9B_seed29_active": true,
+    "A6_2_9B_paired_data_frozen": true,
+    "A6_2_9B_training_active": true,
+    "A6_3_unstarted": true,
+    "independent_result_review_next": true,
+    "raw_outputs_immutable": true
   },
-  "pending_owner_actions": {
-    "results_audit": "91b650c5/results_review_20261113_v1; raw-output audit and bridge disposition",
-    "budget_rule": "e6047bcd/modal_next_gate_20261113_v1; current hardgate48.922>44.21; proposal preserves85/4"
-  }
+  "pending_owner_actions": []
 }

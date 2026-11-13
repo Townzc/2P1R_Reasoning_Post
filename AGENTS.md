@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-13T23:56:46.080020+00:00
+
+A6 and second-workspace addendum approved at 18f64e2d and b886b64c. Both profiles work. townzc uses GitHub login; tangzhice uses Berkeley Google. Credentials only in private Modal configuration. Every new Modal invocation must set MODAL_PROFILE explicitly. Both use H100!; townzc first-use hashes, images, rates and hardware all passed.
+
+Tier1 all40 cells COMPLETE and published (latest e52630dd). Llama Instruct MATH K4 original v1 was preempted before any raw output; one authorized infrastructure retry v2 completed, originals retained. All Llama C7 mandatory measurements plus two approved Instruct0shot are complete. New result audit is being prepared; independent authorized execution continues. T9B seed17 all5 cells complete; seed29 P/R/L/K8 now active. Original T reservation after reconciliation and new seed29 admission $173.55118, before later admissions. A6 budgets separate50/35, combined T425, protected325.
+
+A6-2 9B M512 construction completed all3self-checks; frozen pair published. Short and long training started, each128updates. Their generation+training+evaluation and future4B construction are reserved at $16.7822 of A6-2$50. A6-3 follows completion of9B paired arms; noA6-3 or4Bconstruction submitted yet. Prediction18f before allA6 scoring; ordinary Tprediction8bb remains unchanged.
+
+Modal Tier2 all32 train+eval endpoints ADMITTED: Llama on tangzhice, Qwen on townzc. P/R/L launched for Llama all4settings and Qwen MATH. Qwen GSM P/R/L next; K8 afterP/R/L; Instructbridge afterQwenTier2. Current actual balance observations38.47/29.96, protected4/2. Independent ledgers in llama_tier2_admission_v1 and qwen_tier2_admission_v1. Do not double charge an evaluation already reserved with training.
+
+Original CLI IDs persist in private amendment6_v1/LAUNCHES_1..6 and earlier amendment5 logs. Never replay completed calls. All Modal production detached. Do not edit experiments/p012 during image upload until Created Function. No new subagents/chats, external messages, R3/E2 or extra Modal exploratory cells. Preserve unrelated lt002 and every original artifact. The earlier entries below are historical.
+
 # Current P012 — 2026-11-13T23:08:48.245135+00:00
 
 Owner approved amendment6 `18f64e2df34944da9b8fc6378609ccbdeed1c587` and result audit `d2db987a476b25055b912755021d2d44fd4e347c`. Modal sole gate: unsettled + next buffered batch <= actual balance -$4; cumulative85cap canceled; no topup. Llama remainingTier1/pass8 first, Tier2P/R/L(Qwen thenLlama), Tier2K8, thenInstructbridge. BasebridgeL retained; otherbasebridgecells canceled. Add first-boxed diagnostic wherevercap>20percent, registered scores unchanged. No new Modal exploratory cells.
