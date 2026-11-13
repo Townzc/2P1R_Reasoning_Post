@@ -113,8 +113,8 @@ def normalize_batch(datums):
 def generation_messages(row):
     if row.get('messages'):
         return row['messages']
-    # The frozen C6 wrapper and evaluation wrapper encode the LaTeX slash
-    # differently. Detect their shared instruction prefix without rewriting it.
+    # Reject an already wrapped problem by its instruction prefix;
+    # frozen conversation messages are used directly above.
     if row['problem'].startswith(PROMPTS['omi2'].split('\\', 1)[0]):
         raise ValueError('T-1: already wrapped problem; use the frozen C7 conversation file')
     return [{'role':'user','content':prompt_text(row['problem'],'omi2')}]
