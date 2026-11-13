@@ -1,0 +1,190 @@
+{
+  "code_commit": "bad4d13f5337ca17025b3a95d2bc10d751d7985d",
+  "training_requests": [
+    {
+      "run_id": "qwen_base_gsm8k_p_s17_20261113_v1",
+      "initialization": "base",
+      "cell": "P",
+      "dataset_sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1093
+    },
+    {
+      "run_id": "qwen_base_gsm8k_k8_s17_20261113_v1",
+      "initialization": "base",
+      "cell": "K8",
+      "dataset_sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 8,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 726
+    },
+    {
+      "run_id": "qwen_base_gsm8k_r_s17_20261113_v1",
+      "initialization": "base",
+      "cell": "R",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 16,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 520
+    },
+    {
+      "run_id": "qwen_base_gsm8k_k4_s17_20261113_v1",
+      "initialization": "base",
+      "cell": "K4",
+      "dataset_sha256": "64d6e6efddcd754bd3c7711175cb7b7cea2a2238083d9e1a59ff24065dcb7765",
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 4,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 752
+    },
+    {
+      "run_id": "qwen_base_gsm8k_l_s17_20261113_v1",
+      "initialization": "base",
+      "cell": "L",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 2,
+        "presentations": 1024,
+        "effective_batch": 8,
+        "expected_updates": 128,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 520
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_p_s17_20261113_v1",
+      "initialization": "instruct",
+      "cell": "P",
+      "dataset_sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1093
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_k8_s17_20261113_v1",
+      "initialization": "instruct",
+      "cell": "K8",
+      "dataset_sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 8,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 726
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_r_s17_20261113_v1",
+      "initialization": "instruct",
+      "cell": "R",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 16,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 520
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_k4_s17_20261113_v1",
+      "initialization": "instruct",
+      "cell": "K4",
+      "dataset_sha256": "64d6e6efddcd754bd3c7711175cb7b7cea2a2238083d9e1a59ff24065dcb7765",
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 4,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 752
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_l_s17_20261113_v1",
+      "initialization": "instruct",
+      "cell": "L",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 2,
+        "presentations": 1024,
+        "effective_batch": 8,
+        "expected_updates": 128,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 520
+    }
+  ],
+  "evaluation_input_sha256": "5a9a4e2cae969a72cf7a71f6ce66059039c0f9e694ef689ab7d5fc86080f3176",
+  "evaluation_source_C7_sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+  "evaluation_questions": 1319,
+  "operation": "Drop frozen C7messages field, retain originalid/problem/gold unchanged for accepted main0shotrenderer",
+  "admitted": false
+}

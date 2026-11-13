@@ -1,0 +1,154 @@
+{
+  "run_id": "qwen_base_gsm8k_l_s17_20261113_v1",
+  "code_commit": "f6376e66ff3887c0cfa5e7bd7b2cb6b183d21b55",
+  "cell": "L",
+  "long_cot": false,
+  "model": {
+    "repo": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "type": "model",
+    "downloaded_utc": "2026-11-12T05:51:37.701000+00:00",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "path": "README.md",
+        "bytes": 3850,
+        "sha256": "84cc3bdbfd781149913126b70981cf1e341176fe4bc9d878601a83f18b035ddf"
+      },
+      {
+        "path": "config.json",
+        "bytes": 684,
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 138,
+        "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 3087467144,
+        "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 7228,
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "family": "qwen"
+  },
+  "dataset": {
+    "name": "gsm8k_l",
+    "sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+    "rows": 512
+  },
+  "config": {
+    "model_name_or_path": "Qwen/Qwen2.5-1.5B",
+    "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "stage": "sft",
+    "do_train": true,
+    "finetuning_type": "full",
+    "flash_attn": "fa2",
+    "dataset": "gsm8k_l",
+    "dataset_dir": "inputs",
+    "template": "qwen",
+    "cutoff_len": 4096,
+    "packing": false,
+    "train_on_prompt": false,
+    "preprocessing_num_workers": 4,
+    "max_samples": 10000,
+    "output_dir": "checkpoint",
+    "overwrite_output_dir": false,
+    "logging_steps": 1,
+    "save_steps": 1000,
+    "save_total_limit": 2,
+    "plot_loss": true,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "num_train_epochs": 2,
+    "lr_scheduler_type": "cosine",
+    "bf16": true,
+    "optim": "adamw_torch",
+    "warmup_ratio": 0.0,
+    "warmup_steps": 0,
+    "weight_decay": 0.0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "seed": 17,
+    "data_seed": 17,
+    "report_to": "none",
+    "ddp_timeout": 180000000,
+    "val_size": 0.0,
+    "eval_strategy": "no",
+    "per_device_eval_batch_size": 1,
+    "save_strategy": "no"
+  },
+  "length_report": {
+    "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+    "rows": 512,
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "cutoff_len": 4096,
+    "llamafactory_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+    "preflight_sha256": "d4905878eb0aaa99e4cb1541f1b3f322851ad8be67495f89967aaf572fe14eb1",
+    "maximum_full_tokens": 520,
+    "over_cutoff_rows": 0,
+    "basis": "Frozen C5 full-template counts for every row; actual C6 preprocessing parity bound by SHA256"
+  },
+  "source_sha256": {
+    "modal_train.py": "96bdb16d423ab496f7647cf74a091fa73dad0a2e6cdd9d3d24686a030864a6f0",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "training_inputs.py": "74816a4f5d49e554f58228a6e2bc2ad6480ab71aa4c46ad64df1b09bd4147b40",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+    "modal_training_runtime.py": "7015deb5ec560d43e5a4021b3dcf65e12b52cf4cf9f7c83dee3f2783598d3f1e",
+    "requirements-train.lock": "6d0a22a526735660d8445ccbebcb51ac5c6a45ccae34fa4d5c8bff18ed3b38fa"
+  },
+  "forecast": {
+    "admitted": true,
+    "batch_total_train_eval_buffered_usd": 3.876882042,
+    "forecast_usd": 0.2032554222222222,
+    "admission_sha256": "a8142ed7cb873ded7834b41e77646d7b9651c0d8218d9713c9820da8b5734584"
+  },
+  "owner_authority": "Owner-approved A4; starts after A5-1/2/3 per approvedA5; same accepted training path",
+  "launch_mode": "modal run --detach -m experiments.p012.modal_train",
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_source": {
+    "frozen_manifest_sha256": "c9e9916f23164e6977959c0686ca51389863ac651ed10e22eabc55533ab9e8a9",
+    "accepted_review": "e10a4bf5"
+  },
+  "task": "gsm8k",
+  "track": "tier1_full_finetuning"
+}
