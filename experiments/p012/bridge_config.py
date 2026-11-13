@@ -1,20 +1,19 @@
-"""A4 Modal LoRA bridge configuration; formal execution awaits one review."""
+"""A4 Modal LoRA bridge configuration, accepted with B-1/B-2 at 8bbf06a7."""
 from __future__ import annotations
 import copy
 from .training_config import training_config
 from .training_inputs import validate_training_request
 
 BRIDGE_LR = 5e-4 * (2000 / 1536) ** .0775
-# LF's shorthand "all" excludes lm_head. Enumerate it to implement the owner's
-# all-linear requirement and Tinker's train_unembed=True. Do not merge adapters
-# into this model's tied embedding/output weights; evaluate with vLLM LoRA.
-TARGETS = 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj,lm_head'
+# B-2: vLLM0.11 cannot load lm_head LoRA for Qwen's tied embedding/output head.
+# Keep adapters unmerged and record this difference from Tinker train_unembed.
+TARGETS = 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj'
 
 
 def bridge_config(model, revision, dataset, cell):
     cfg=training_config(model,revision,'qwen',dataset,'inputs','checkpoint',17,cell)
     cfg.update(finetuning_type='lora',learning_rate=BRIDGE_LR,lora_rank=32,
-               lora_alpha=64,lora_dropout=0.0,lora_target=TARGETS)
+               lora_alpha=32,lora_dropout=0.0,lora_target=TARGETS)
     return cfg
 
 
@@ -29,6 +28,8 @@ def validate_bridge_request(request):
     converted['config'].update(finetuning_type='full',learning_rate=1e-5)
     checked=validate_training_request(converted)
     checked.update(track='modal_lora_bridge',rank=32,learning_rate=BRIDGE_LR,
-                   lora_alpha=64,alpha_basis='Pinned LLaMA-Factory default rank*2',
-                   target_modules=TARGETS.split(','),merge_performed=False)
+                   lora_alpha=32,alpha_basis='B-1: cookbook alpha32; based on documentation, not confirmed by server',
+                   target_modules=TARGETS.split(','),merge_performed=False,
+                   expected_trainable_parameters=36929536,
+                   tinker_difference='B-2: no lm_head adapter; Tinker uses train_unembed=True')
     return checked

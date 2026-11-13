@@ -31,7 +31,7 @@ def verify_adapter(bridge, model, revision):
     actual={str(f.relative_to(path)) for f in path.rglob('*') if f.is_file()}
     if actual!=seen or not {'adapter_config.json','adapter_model.safetensors'}<=seen:raise ValueError('Incomplete adapter')
     cfg=json.loads((path/'adapter_config.json').read_text())
-    if cfg['r']!=32 or cfg['lora_alpha']!=64 or set(cfg['target_modules'])!=set(TARGETS.split(',')):raise ValueError('Different LoRA configuration')
+    if cfg['r']!=32 or cfg['lora_alpha']!=32 or set(cfg['target_modules'])!=set(TARGETS.split(',')):raise ValueError('Different LoRA configuration')
     return {'track':'modal_lora_bridge','training_run_id':bridge['run_id'],
             'initialization_repo':model,'initialization_revision':revision,
             'adapter_manifest_sha256':bridge['manifest_sha256'],'all_files_verified':sorted(seen),'merged':False}

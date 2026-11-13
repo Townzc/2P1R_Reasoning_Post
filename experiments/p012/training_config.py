@@ -6,7 +6,11 @@ from pathlib import Path
 
 LI_COMMIT = "1863f15a7c58b8a69fb1d18235ea85bca26d0484"
 CELLS = {"P": (4096, 1, 2), "K8": (512, 8, 2),
-         "K4": (1024, 4, 2), "R": (512, 1, 16), "L": (512, 1, 2)}
+         "K4": (1024, 4, 2), "R": (512, 1, 16), "L": (512, 1, 2),
+         # Owner-approved A5 exploratory supplements; excluded from H0–H3.
+         "L64": (64, 1, 2), "L128": (128, 1, 2), "L256": (256, 1, 2),
+         "K8s": (64, 8, 2), "Rs": (64, 1, 16),
+         "E4": (2048, 1, 4), "E8": (1024, 1, 8)}
 
 
 def training_config(model: str, revision: str, family: str, dataset: str,

@@ -15,7 +15,7 @@ from pathlib import Path
 import re
 import time
 
-from .evaluation import prompt_text, sha256_file
+from .evaluation import PROMPTS, prompt_text, sha256_file
 from .training_config import CELLS, grid_dose
 
 MODELS = ('Qwen/Qwen3.5-4B', 'Qwen/Qwen3.5-9B', 'Qwen/Qwen3.5-9B-Base')
@@ -30,6 +30,8 @@ def write_json(path, obj):
 
 def read_rows(spec):
     path = Path(spec['path'])
+    if path.is_absolute():
+        raise ValueError('T-2: use repository-relative input paths')
     if sha256_file(path) != spec['sha256']:
         raise ValueError('Input bytes differ from frozen manifest')
     return [json.loads(x) for x in path.open() if x.strip()]
@@ -50,6 +52,8 @@ def load_renderer(request):
     from transformers import AutoTokenizer
     from tinker_cookbook import renderers, hyperparam_utils
     asset = request['asset']; root = Path(asset['path'])
+    if root.is_absolute():
+        raise ValueError('T-2: use a repository-relative tokenizer asset path')
     for f in asset['files']:
         if sha256_file(root/f['path']) != f['sha256']:
             raise ValueError('Tokenizer/config asset changed')
@@ -106,6 +110,16 @@ def normalize_batch(datums):
     return result, count
 
 
+def generation_messages(row):
+    if row.get('messages'):
+        return row['messages']
+    # The frozen C6 wrapper and evaluation wrapper encode the LaTeX slash
+    # differently. Detect their shared instruction prefix without rewriting it.
+    if row['problem'].startswith(PROMPTS['omi2'].split('\\', 1)[0]):
+        raise ValueError('T-1: already wrapped problem; use the frozen C7 conversation file')
+    return [{'role':'user','content':prompt_text(row['problem'],'omi2')}]
+
+
 def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, temperature=0.0, seed=17):
     import tinker
     output.mkdir(exist_ok=False)
@@ -117,7 +131,7 @@ def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, tempera
     usage={'prefill_tokens_uncached_upper':0,'completion_tokens':0,'prompt_cache_hit_tokens':0}
     def one(item):
         i,row=item
-        messages=row.get('messages') or [{'role':'user','content':prompt_text(row['problem'],'omi2')}]
+        messages=generation_messages(row)
         prompt=renderer.build_generation_prompt(messages)
         hf=tokenizer.apply_chat_template(messages,add_generation_prompt=True,enable_thinking=False,return_dict=False)
         if prompt.to_ints()!=hf or prompt.length+4096>8192:raise ValueError('Generation prefix/context mismatch')

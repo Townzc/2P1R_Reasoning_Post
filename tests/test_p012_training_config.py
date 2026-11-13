@@ -2,11 +2,15 @@ import pytest
 from experiments.p012.training_config import training_config, grid_dose, CELLS
 
 
-@pytest.mark.parametrize("cell", list(CELLS))
-def test_registered_exposure_and_batch(cell):
+@pytest.mark.parametrize("cell,presentations,updates", [
+    ("P",8192,1024),("K8",8192,1024),("K4",8192,1024),("R",8192,1024),("L",1024,128),
+    ("L64",128,16),("L128",256,32),("L256",512,64),
+    ("K8s",1024,128),("Rs",1024,128),("E4",8192,1024),("E8",8192,1024),
+])
+def test_registered_exposure_and_batch(cell, presentations, updates):
     dose = grid_dose(cell)
-    assert dose["presentations"] == (1024 if cell == "L" else 8192)
-    assert dose["expected_updates"] == (128 if cell == "L" else 1024)
+    assert dose["presentations"] == presentations
+    assert dose["expected_updates"] == updates
     config = training_config("fixed-model", "fixed-sha", "qwen", "frozen-data", "inputs", "new-output", 17, cell)
     assert config["per_device_train_batch_size"] * config["gradient_accumulation_steps"] == 8
     assert (config["per_device_train_batch_size"], config["gradient_accumulation_steps"]) == (8, 1)

@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-13T20:52:04.620017+00:00",
+  "authority": "Owner accepted8bbf06a7 review andA5",
+  "observed_actual_Modal_balance": 70.15,
+  "accounted_with_reserves": 20.634162806005687,
+  "forecast_A5_all14train_plus14greedy_plus2baseline0": 10.25575191111111,
+  "forecast_bridge_all5train_plus5greedy_plus2first20": 5.155326711111111,
+  "combined_next_batch_buffered": 15.41107862222222,
+  "hard_rhs": 66.15,
+  "hard_lhs": 36.045241428227904,
+  "admitted": true,
+  "per_A5_training_forecast": {
+    "L64": 0.1417226222222222,
+    "L128": 0.1505130222222222,
+    "L256": 0.1680938222222222,
+    "K8s": 0.2032554222222222,
+    "Rs": 0.2032554222222222,
+    "E4": 0.6955178222222221,
+    "E8": 0.6955178222222221
+  },
+  "per_full_math_eval_forecast": 0.37,
+  "per_first20_eval_forecast": 0.16,
+  "margin": "50s training startup +.36s/update,25percent time,30s tails,.02 checkpointstorage;greedy .37 fromactualtwo settings;baseline0 .22/.34",
+  "phase_caps_soft": true,
+  "bridge_soft_cap4_exceeded": true,
+  "phase_action": "Report andcontinue; bridge other4conditionalonB3",
+  "sequence": [
+    "A5-1andA5-2",
+    "A5-3",
+    "QwenGSM"
+  ],
+  "bridge_L_gate": {
+    "trainable_parameters": 36929536,
+    "adapter_changes_first20": true,
+    "full_L_cap_rate_at_most": 0.25
+  }
+}
