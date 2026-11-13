@@ -1,0 +1,160 @@
+{
+  "run_id": "tier2_qwen_base_gsm8k_k8_s29_20261113_v1",
+  "code_commit": "3e7f3f9a09aa2c5a8863cb9df8a5c3b08515782f",
+  "cell": "K8",
+  "long_cot": false,
+  "model": {
+    "repo": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "type": "model",
+    "downloaded_utc": "2026-11-12T05:51:37.701000+00:00",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "path": "README.md",
+        "bytes": 3850,
+        "sha256": "84cc3bdbfd781149913126b70981cf1e341176fe4bc9d878601a83f18b035ddf"
+      },
+      {
+        "path": "config.json",
+        "bytes": 684,
+        "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 138,
+        "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 3087467144,
+        "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 7228,
+        "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "family": "qwen"
+  },
+  "dataset": {
+    "name": "gsm8k_k8",
+    "sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+    "rows": 4096
+  },
+  "config": {
+    "model_name_or_path": "Qwen/Qwen2.5-1.5B",
+    "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "stage": "sft",
+    "do_train": true,
+    "finetuning_type": "full",
+    "flash_attn": "fa2",
+    "dataset": "gsm8k_k8",
+    "dataset_dir": "inputs",
+    "template": "qwen",
+    "cutoff_len": 4096,
+    "packing": false,
+    "train_on_prompt": false,
+    "preprocessing_num_workers": 4,
+    "max_samples": 10000,
+    "output_dir": "checkpoint",
+    "overwrite_output_dir": false,
+    "logging_steps": 1,
+    "save_steps": 1000,
+    "save_total_limit": 2,
+    "plot_loss": true,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "num_train_epochs": 2,
+    "lr_scheduler_type": "cosine",
+    "bf16": true,
+    "optim": "adamw_torch",
+    "warmup_ratio": 0.0,
+    "warmup_steps": 0,
+    "weight_decay": 0.0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "seed": 29,
+    "data_seed": 29,
+    "report_to": "none",
+    "ddp_timeout": 180000000,
+    "val_size": 0.0,
+    "eval_strategy": "no",
+    "per_device_eval_batch_size": 1,
+    "save_strategy": "no"
+  },
+  "length_report": {
+    "dataset_sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+    "rows": 4096,
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "cutoff_len": 4096,
+    "llamafactory_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+    "preflight_sha256": "d4905878eb0aaa99e4cb1541f1b3f322851ad8be67495f89967aaf572fe14eb1",
+    "maximum_full_tokens": 726,
+    "over_cutoff_rows": 0,
+    "basis": "Frozen C5 full-template counts for every row; actual C6 preprocessing parity bound by SHA256"
+  },
+  "source_sha256": {
+    "modal_train.py": "96bdb16d423ab496f7647cf74a091fa73dad0a2e6cdd9d3d24686a030864a6f0",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "training_inputs.py": "74816a4f5d49e554f58228a6e2bc2ad6480ab71aa4c46ad64df1b09bd4147b40",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+    "modal_training_runtime.py": "7015deb5ec560d43e5a4021b3dcf65e12b52cf4cf9f7c83dee3f2783598d3f1e",
+    "requirements-train.lock": "6d0a22a526735660d8445ccbebcb51ac5c6a45ccae34fa4d5c8bff18ed3b38fa"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.5185745388283928,
+    "reserved_evaluation_usd": 0.19260295056131396,
+    "admission_file": "reports/p012_20261111/qwen_tier2_admission_v1/ADMISSION.json",
+    "admission_sha256": "dbe71e09efca5a1dc6ea3e6a4b43b839892f557edf3f4413d876860ea7210981",
+    "hard_lhs": 12.946226374194055,
+    "hard_rhs": 27.96,
+    "workspace": "townzc"
+  },
+  "owner_authority": "Owner-approved A4; starts after A5-1/2/3 per approvedA5; same accepted training path",
+  "launch_mode": "modal run --detach -m experiments.p012.modal_train",
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 8,
+    "distinct_rows": 4096,
+    "epochs": 2,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_source": {
+    "frozen_manifest_sha256": "c9e9916f23164e6977959c0686ca51389863ac651ed10e22eabc55533ab9e8a9",
+    "accepted_review": "e10a4bf5"
+  },
+  "task": "gsm8k",
+  "track": "tier2_full_finetuning",
+  "workspace": "townzc",
+  "authority": "Owner-approved amendment6 andb886b64c workspace allocation; Tier2 seed29 P/R/L beforeK8; noK4"
+}
