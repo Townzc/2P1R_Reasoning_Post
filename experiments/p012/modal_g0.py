@@ -116,7 +116,7 @@ def cache_authorized_snapshot(payload: dict) -> dict:
     return receipt
 
 
-@app.function(image=image, volumes={"/p012": volume}, gpu="H100", cpu=2, memory=12288,
+@app.function(image=image, volumes={"/p012": volume}, gpu="H100!", cpu=2, memory=12288,
               timeout=86400, retries=0, max_containers=1, scaledown_window=2,
               include_source=False)
 def generate(request: dict) -> dict:

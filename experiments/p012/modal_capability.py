@@ -21,7 +21,7 @@ REQUIRED_SOURCES = {"capability_nll.py", "modal_capability.py", "modal_training_
                     "training_config.py", "evaluation.py", "data_pool.py", "requirements-train.lock"}
 
 
-@app.function(image=image, volumes={"/p012": volume}, gpu="H100", cpu=2, memory=16384,
+@app.function(image=image, volumes={"/p012": volume}, gpu="H100!", cpu=2, memory=16384,
               timeout=86400, retries=0, max_containers=1, scaledown_window=2, include_source=False)
 def measure(request: dict) -> dict:
     from huggingface_hub import snapshot_download

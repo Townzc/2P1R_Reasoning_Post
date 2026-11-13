@@ -27,7 +27,7 @@ app = modal.App("p012-standard-training-20261111")
 image = training_image.env({"HF_HUB_CACHE": "/p012/hf", "TRANSFORMERS_OFFLINE": "1"})
 
 
-@app.function(image=image, volumes={"/p012": volume}, gpu="H100", cpu=4, memory=32768,
+@app.function(image=image, volumes={"/p012": volume}, gpu="H100!", cpu=4, memory=32768,
               timeout=86400, retries=0, max_containers=1, scaledown_window=2,
               include_source=False)
 def train(request: dict) -> dict:
