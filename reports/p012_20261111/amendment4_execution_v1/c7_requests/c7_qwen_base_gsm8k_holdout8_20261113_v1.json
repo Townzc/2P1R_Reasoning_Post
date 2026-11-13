@@ -1,0 +1,40 @@
+{
+  "run_id": "c7_qwen_base_gsm8k_holdout8_20261113_v1",
+  "code_commit": "d3a7735b00ca873e85c597f355c18a1e456acf60",
+  "config": {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "protocol": "omi2",
+    "task": "gsm8k",
+    "template_family": "qwen",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.7,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 8,
+    "seed": 17,
+    "batch_size": 1319,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/qwen.jinja",
+    "stop_strings": [],
+    "training_run_id": null,
+    "checkpoint_manifest_sha256": null
+  },
+  "input_sha256": "eed937e8836f2b84f4c2c7b6f13047f411a6d15193ab82840fdf41121c227950",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa"
+  },
+  "forecast": {
+    "admitted": true,
+    "subcap": "C7",
+    "forecast_usd": 0.6373975325656056,
+    "batch_admission_sha256": "acd0b45ea8d265fef651499cc9f2e7113ce976f6fb13895ad0cec08a97d9ef1f"
+  },
+  "authority": "77a2520e owner-approved C7 Qwen mandatory only; reviewed07b56e49",
+  "C7_prepared_manifest_sha256": "c31a8550baa773c0eaff30f8b5ed87c769beb9308d38103efce20a1773ba9ba6"
+}
