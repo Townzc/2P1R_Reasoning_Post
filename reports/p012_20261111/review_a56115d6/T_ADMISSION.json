@@ -1,0 +1,144 @@
+{
+  "utc": "2026-11-13T21:43:34.321270+00:00",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "owner_policy": "MeasuredTinkersamplingtokens times1.5; 9BBase training released; originalpredictionsstay8bbf06a7",
+  "pre_buffered_reserved_usd": 21.31769462875,
+  "prior_smoke_reserved_usd": 0.87024933,
+  "seed_diagnostic_buffered_usd": 0.08080425899999999,
+  "v2_pass8_forecasts": [
+    {
+      "key": "9b_base",
+      "raw_sha256": "4cecdc561c99666fabf2b0757c117abe2d5bcd436e238ca4e96d3d13fd5daff3",
+      "estimation": "Pooleddistinctv1question/output token sequences meanlength times4000draws, exactfullprefill; times1.5 peracceptedreviewtable",
+      "estimated_completion_tokens": 2755254.9476135042,
+      "prefill_tokens_uncached_upper": 7579896,
+      "estimated_token_usd": 4.497459542724098,
+      "buffered_usd": 6.746189314086147,
+      "distinct_question_output_sequences": 859
+    },
+    {
+      "key": "4b",
+      "raw_sha256": "4162835f29877c6052dda23d4de3467e31bf833a2387a179f9f0599d8db9df48",
+      "estimation": "Pooleddistinctv1question/output token sequences meanlength times4000draws, exactfullprefill; times1.5 peracceptedreviewtable",
+      "estimated_completion_tokens": 6123734.265734266,
+      "prefill_tokens_uncached_upper": 387896,
+      "estimated_token_usd": 6.282358617062935,
+      "buffered_usd": 9.423537925594403,
+      "distinct_question_output_sequences": 1144
+    },
+    {
+      "key": "9b",
+      "raw_sha256": "f4f53110b19730d42b3a788107510749f21681315b4ee3adb1114d9125957b2d",
+      "estimation": "Pooleddistinctv1question/output token sequences meanlength times4000draws, exactfullprefill; times1.5 peracceptedreviewtable",
+      "estimated_completion_tokens": 5520138.554216867,
+      "prefill_tokens_uncached_upper": 387896,
+      "estimated_token_usd": 4.571120613253012,
+      "buffered_usd": 6.856680919879519,
+      "distinct_question_output_sequences": 1328
+    }
+  ],
+  "greedy_forecasts": {
+    "9b_base": {
+      "reference_run_id": "tinker_lora_qwen3_5_9b_base_math_pre_baseline4_20261113_v1",
+      "reference_raw_sha256": "d53cf719b1c3884c7d9eaf746a2a0fdc56e6351b2ebdca1403b3854bb860deb7",
+      "measured_completion_tokens_per500": 292639,
+      "estimated_completion_tokens_full5000": 2926390,
+      "exact_full_greedy_prefill_tokens": 525003,
+      "estimated_token_usd": 2.51909763,
+      "buffered_usd": 3.778646445,
+      "basis": "Measuredfrozenbaselineoutputtokens scaled500to5000 plusactualfull0shotprefill, times1.5; refreshafterfirstposttraininggreedy"
+    },
+    "4b": {
+      "reference_run_id": "tinker_lora_qwen3_5_4b_math_pre_baseline0_20261113_v1",
+      "reference_raw_sha256": "b2aec8565015beb68ab1338d098cbc9f52dc4bc277a5f48b13b251cc04447ff9",
+      "measured_completion_tokens_per500": 521511,
+      "estimated_completion_tokens_full5000": 5215110,
+      "exact_full_greedy_prefill_tokens": 525003,
+      "estimated_token_usd": 5.41443654,
+      "buffered_usd": 8.121654809999999,
+      "basis": "Measuredfrozenbaselineoutputtokens scaled500to5000 plusactualfull0shotprefill, times1.5; refreshafterfirstposttraininggreedy"
+    },
+    "9b": {
+      "reference_run_id": "tinker_lora_qwen3_5_9b_math_pre_baseline0_20261113_v1",
+      "reference_raw_sha256": "d4c7a33f57e34832b32b6d261abffa60f6487791e9873a18a7f255dd82962677",
+      "measured_completion_tokens_per500": 565849,
+      "estimated_completion_tokens_full5000": 5658490,
+      "exact_full_greedy_prefill_tokens": 525003,
+      "estimated_token_usd": 4.723902330000001,
+      "buffered_usd": 7.085853495000002,
+      "basis": "Measuredfrozenbaselineoutputtokens scaled500to5000 plusactualfull0shotprefill, times1.5; refreshafterfirstposttraininggreedy"
+    }
+  },
+  "priority_runs": [
+    {
+      "run_id": "tinker_lora_qwen3_5_4b_math_l_s17_20261113_v1",
+      "key": "4b",
+      "cell": "L",
+      "training_and_storage_usd": 0.542006615,
+      "reserved_greedy_usd": 8.121654809999999
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_4b_math_p_s17_20261113_v1",
+      "key": "4b",
+      "cell": "P",
+      "training_and_storage_usd": 3.3930819024999996,
+      "reserved_greedy_usd": 8.121654809999999
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_4b_math_r_s17_20261113_v1",
+      "key": "4b",
+      "cell": "R",
+      "training_and_storage_usd": 3.2860529200000004,
+      "reserved_greedy_usd": 8.121654809999999
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_math_l_s17_20261113_v1",
+      "key": "9b",
+      "cell": "L",
+      "training_and_storage_usd": 0.9281623850000001,
+      "reserved_greedy_usd": 7.085853495000002
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_math_p_s17_20261113_v1",
+      "key": "9b",
+      "cell": "P",
+      "training_and_storage_usd": 6.587759597500001,
+      "reserved_greedy_usd": 7.085853495000002
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_math_r_s17_20261113_v1",
+      "key": "9b",
+      "cell": "R",
+      "training_and_storage_usd": 6.375299080000001,
+      "reserved_greedy_usd": 7.085853495000002
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_base_math_l_s17_20261113_v1",
+      "key": "9b_base",
+      "cell": "L",
+      "training_and_storage_usd": 0.9281623850000001,
+      "reserved_greedy_usd": 3.778646445
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_base_math_p_s17_20261113_v1",
+      "key": "9b_base",
+      "cell": "P",
+      "training_and_storage_usd": 6.587759597500001,
+      "reserved_greedy_usd": 3.778646445
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_base_math_r_s17_20261113_v1",
+      "key": "9b_base",
+      "cell": "R",
+      "training_and_storage_usd": 6.375299080000001,
+      "reserved_greedy_usd": 3.778646445
+    }
+  ],
+  "combined_reserved_usd": 137.25720418981007,
+  "T_MATH_planning_cap": 230,
+  "T_total_hard_cap": 340,
+  "initial_credit": 750,
+  "protected_credit": 400,
+  "admitted": true,
+  "supersedes_worst_output_reservations": "T_PRIORITY_LPR_ADMISSION and PENDING_ADMISSION; preserveoriginalinflightrequests, accountusingnewownerpolicy"
+}
