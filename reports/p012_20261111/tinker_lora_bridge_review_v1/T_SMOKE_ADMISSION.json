@@ -1,0 +1,14 @@
+{
+  "total_buffered_upper_usd": 0.8702493299999999,
+  "cap_usd": 5,
+  "max_generation_per_model": 81920,
+  "training_prefix": "First20 of fullL128update cosine schedule; not cosine-to-zero at20",
+  "loss_normalization": "Sum of assistant/EOS losses divided by target tokens across whole batch8",
+  "test_checks": [
+    "All512 rows of each model:HF/rendering/parity/mask/length",
+    "Batch8weights sumto1",
+    "Same tokenizer special tokens in Base"
+  ],
+  "formal_status": "WAIT_COMBINED_CLAUDE_REVIEW",
+  "posttraining_scoring": "Not executed before prediction freeze; smoke never counted as result"
+}
