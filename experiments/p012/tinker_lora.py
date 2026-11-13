@@ -130,20 +130,22 @@ def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, tempera
          'protocol':'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
          'top_p':1.0,'top_k':-1,'max_tokens':4096,'max_model_len':8192,'seed':seed}
     write_json(output/'MANIFEST.json',{'config':cfg,'input_sha256':input_spec['sha256'],
-        'track':'tinker_lora','renderer':RENDERER,'stop_sequences':renderer.get_stop_sequences()})
+        'track':'tinker_lora','renderer':RENDERER,'stop_sequences':renderer.get_stop_sequences(),
+        'sampling_policy':'One SDK sample per call; seed=seed+question_index*n+draw_index'})
     usage={'prefill_tokens_uncached_upper':0,'completion_tokens':0,'prompt_cache_hit_tokens':0}
     def one(item):
-        i,row=item
+        i,row,j=item
         messages=generation_messages(row)
         prompt=renderer.build_generation_prompt(messages)
         hf=tokenizer.apply_chat_template(messages,add_generation_prompt=True,enable_thinking=False,return_dict=False)
         if prompt.to_ints()!=hf or prompt.length+4096>8192:raise ValueError('Generation prefix/context mismatch')
-        response=client.sample(prompt,num_samples=n,sampling_params=tinker.SamplingParams(
-            max_tokens=4096,temperature=temperature,top_p=1,top_k=-1,seed=seed+i,
+        draw_seed=seed+i*n+j
+        response=client.sample(prompt,num_samples=1,sampling_params=tinker.SamplingParams(
+            max_tokens=4096,temperature=temperature,top_p=1,top_k=-1,seed=draw_seed,
             stop=renderer.get_stop_sequences())).result()
-        if len(response.sequences)!=n:raise ValueError('Missing samples')
+        if len(response.sequences)!=1:raise ValueError('Missing samples')
         records=[]
-        for j,seq in enumerate(response.sequences):
+        for seq in response.sequences:
             if seq.stop_reason not in ('length','stop'):raise ValueError('Unknown termination')
             tokens=seq.tokens
             records.append({'id':row['id'],'draw':j,'text':tokenizer.decode(tokens,skip_special_tokens=False),
@@ -151,15 +153,17 @@ def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, tempera
                 'stop_reason':tokens[-1] if tokens and tokens[-1] in renderer.get_stop_sequences() else None,
                 'tinker_stop_reason':seq.stop_reason,'stopped_on_terminator':seq.stop_reason=='stop',
                 'length_capped':seq.stop_reason=='length','string_stop':False,
-                'sequence_id':seq.sequence_id,'sampling_seed':seed+i})
-        return records, prompt.length*n, response.prompt_cache_hit_tokens
+                'sequence_id':seq.sequence_id,'sampling_seed':draw_seed})
+        return records, prompt.length, response.prompt_cache_hit_tokens
     with (output/'raw.jsonl').open('x') as f, ThreadPoolExecutor(max_workers=concurrency) as pool:
-        for records,pre,cached in pool.map(one,enumerate(rows)):
+        jobs=((i,row,j) for i,row in enumerate(rows) for j in range(n))
+        for records,pre,cached in pool.map(one,jobs):
             usage['prefill_tokens_uncached_upper']+=pre;usage['prompt_cache_hit_tokens']+=cached
             for record in records:
                 usage['completion_tokens']+=len(record['token_ids']);f.write(json.dumps(record,ensure_ascii=False)+'\n')
             f.flush()
     write_json(output/'GENERATION_COMPLETE.json',{'requests':len(rows),'draws':len(rows)*n,
+               'sdk_sample_calls':len(rows)*n,
                'raw_sha256':sha256_file(output/'raw.jsonl')})
     write_json(output/'USAGE.json',usage)
     return usage
