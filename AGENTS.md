@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-13T23:08:48.245135+00:00
+
+Owner approved amendment6 `18f64e2df34944da9b8fc6378609ccbdeed1c587` and result audit `d2db987a476b25055b912755021d2d44fd4e347c`. Modal sole gate: unsettled + next buffered batch <= actual balance -$4; cumulative85cap canceled; no topup. Llama remainingTier1/pass8 first, Tier2P/R/L(Qwen thenLlama), Tier2K8, thenInstructbridge. BasebridgeL retained; otherbasebridgecells canceled. Add first-boxed diagnostic wherevercap>20percent, registered scores unchanged. No new Modal exploratory cells.
+
+A6-2M512 lengthcontrol andA6-3E4/E8/L64 authorized, exploratory excludedH0-H3. A6prediction18f64e2d must precede anyA6 scoring. Data construction explicitly exempt from pre-run review, requires3selfchecks. Toriginal340 + A6caps50/35 =425, protected325. PriorityA6-2 9B, A6-3 9B, A6-2 4B/Base, A6-3 4B; originalT continuesparallel. Current Llama admission: 15.7123+20.2416<=43.16. Status details andoriginal IDs in privateamendment6; neverresubmitcompletedcalls. Result audit accepts original91b650c5 only, lateraddendum pendingnextaudit. No newsubagents/chats/externalmessages.
+
+Earlier entries below are historical.
+
 # Current P012 — 2026-11-13T22:48:21.501956+00:00
 
 T4 repair is complete and published. All three v2 endpoints passed4000unique seeds and the required diversity check before scoring: Base99.4%,4B90.0%,9B99.8%. Corrected pass@1/pass@8:65.125/93.0%,79.325/95.2%,89.725/95.4%. All v1 sampled metrics are superseded; original evidence remains immutable. Accepted reviewa56115d6, prediction8bbf06a7 unchanged.
