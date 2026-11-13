@@ -11,3 +11,5 @@ All 11 original endpoints are complete. Frozen C7 conversations, renderer parity
 The original pass@8 outputs and their observed scores are preserved in the ZIPs. Their independent-draw interpretation is invalid: 9B-Base has251/500 questions with all8 token sequences identical and crossed review T4. The approved first8-question diagnostic is complete: original distinct-output counts were1/3/1/4/3/1/1/2, whereas all8 separately seeded single-sample calls differed on everyquestion. The diagnostic scored noanswers and replaced nooutputs. The repairedpass8 path is prepared for review.
 
 4B and9B did not cross the majority-identical threshold; their L/P/R training proceeds. 9B-Base training remains held pending the diagnostic decision. These results are separate from the Modal full-finetuning grid.
+
+Updatea56115d6: threev1sampledmetrics are superseded and excluded fromcurrentaggregates; v2replacement runs are authorized witha4,000unique-seed and>=80percentseven-distinct check. 9BBase training isreleased and LPRrunning. Earlierholdstatements above are historical.

@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-13T21:50:18.909524+00:00
+
+Owner acceptedT4review a56115d6. Samplingfix approved; neutralT1guardcomment applied. Everyv2mustverify4000uniqueseeds and>=80percentquestions with>=7distinctoutputs BEFOREscoring; failurestop/report. Allthreev1pass1/pass8 removedfromaggregates, originalraw/scoresretained. 9BBaseformaltrainingRELEASED, no needwaitv2. T-samplingforecasts measuredtokensx1.5; current9LPR+greedy+3repairs+completedpre/smokereservation137.2572, below230planning/340hard, protected400ofinitial750. Predictions8bbf06a7unchanged.
+
+A5-1/2/3 ALLCOMPLETE, published8203d5c1/a2354fff includingallrawZIPs. Base P/E4/E8/R MATH42.06/37.36/37.06/33.14; Instruct42.94/37.64/36.02/32.72. A5exploratoryexcludedH0-H3. BaseGSMall5traincomplete; originalfivegreedyactive, IDsLAUNCHES_8. AftercompleteupdateforecastandrunInstructGSM. Modaladmissiona5c9d79448.3281<=58.55-4 withbridgeinflight/conditionalreserved. BridgefullLoriginalstillactive; missingexecsessionID, usefiles; neverresubmit. B3fullcap>25stopsother4.
+
+T9BLtrain+5000greedycomplete; CPUscore3915active with8bbpredictionrecord. T4BLtraincomplete, greedy56306active. T9BBasev2pass8original36818active; whenPASSfirstcheckthenCPUscoreandlaunch4Bv2then9Bv2. BaseL/P/Rtraining66205/86857/84728 active. OtheroriginalTtrain4BP42541/4BR99799/9BP68326/9BR94083 active. All launches persistedLAUNCHES_4..8; T9BLgreedy57604COMPLETE/EXIT0consumed. Currentreviewhasno pendingownerapproval. No newchats/subagents/externalmessages, no R3/E2, no reruns ofcompletedcalls.
+
 # Current P012 — 2026-11-13T21:29:16.787699+00:00
 
 Owner approved T4 64-response diagnostic. Complete: original n8 unique counts1/3/1/4/3/1/1/2 vs independentseed n1 all8. Costupper .053869506, noanswersscored. Allthree original Tpass8 independent-draw metrics invalid, rawretained. Fixed perdraw n1/unique seeds code0519677e; two meaningful regressiontests PASS. ActualClaude review requested for packet9d1079c8; do notrunv2 untilreview. 9BBaseformalheld. Independent4B/9BLPR originaltrainingactive, IDs inprivateLAUNCHES_4; greedyunchangedandmaycontinue.
