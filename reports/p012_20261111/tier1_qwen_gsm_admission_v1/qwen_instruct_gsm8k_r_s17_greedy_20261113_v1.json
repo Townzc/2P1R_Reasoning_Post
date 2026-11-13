@@ -1,0 +1,44 @@
+{
+  "run_id": "qwen_instruct_gsm8k_r_s17_greedy_20261113_v1",
+  "code_commit": "5fdaba3a67ad33e53cb211dcaf3a886ca29ebe0f",
+  "config": {
+    "model": "/p012/training/qwen_instruct_gsm8k_r_s17_20261113_v1/checkpoint",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "protocol": "omi2",
+    "task": "gsm8k",
+    "template_family": "qwen",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 1319,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/qwen.jinja",
+    "stop_strings": [],
+    "training_run_id": "qwen_instruct_gsm8k_r_s17_20261113_v1",
+    "checkpoint_manifest_sha256": "aee4735330c9096679f8ce8bafcfac7aedd2be61ad6b9836072ce4a8bb2ddc26"
+  },
+  "input_sha256": "5a9a4e2cae969a72cf7a71f6ce66059039c0f9e694ef689ab7d5fc86080f3176",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "checkpoints.py": "89b3049da91b7e696c1f803fdecc4a9669e772e5691c3e06d57c8d0379a88240"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.16166043765303792,
+    "batch_admission_sha256": "a2ebe39c5b7dbb8254ea76e769b0dd7336c7d2c023b7aa615cb4cd17aea4a583",
+    "batch_train_eval_buffered_usd": 3.31780084005285
+  },
+  "input_source": {
+    "canonical_prepared_source_sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+    "transformation": "Retain all1319frozenid/problem/gold unchanged; dropC7messages foracceptedmain0shotrenderer"
+  },
+  "authority": "Owner-approvedA4 Tier1, QwenGSMaftercompletedA5; unchangedgreedy4096/8192"
+}
