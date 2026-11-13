@@ -1,0 +1,70 @@
+{
+  "models": [
+    {
+      "model_key": "4b",
+      "completed_questions": 500,
+      "all8_token_identical": 195,
+      "all8_identical_fraction": 0.39,
+      "distinct_sequence_count_histogram": {
+        "3": 70,
+        "2": 142,
+        "1": 195,
+        "4": 43,
+        "7": 9,
+        "5": 26,
+        "6": 15
+      },
+      "sequence_ids_distinct_within_each_question": true,
+      "sampling_temperature": 0.7,
+      "sampling_num_samples": 8,
+      "seed_rule": "17+question_index shared across n8 request",
+      "majority_identical_guard": false,
+      "raw_sha256": "4162835f29877c6052dda23d4de3467e31bf833a2387a179f9f0599d8db9df48",
+      "source_complete": true
+    },
+    {
+      "model_key": "9b",
+      "completed_questions": 500,
+      "all8_token_identical": 111,
+      "all8_identical_fraction": 0.222,
+      "distinct_sequence_count_histogram": {
+        "5": 31,
+        "6": 20,
+        "3": 115,
+        "2": 155,
+        "4": 63,
+        "1": 111,
+        "7": 5
+      },
+      "sequence_ids_distinct_within_each_question": true,
+      "sampling_temperature": 0.7,
+      "sampling_num_samples": 8,
+      "seed_rule": "17+question_index shared across n8 request",
+      "majority_identical_guard": false,
+      "raw_sha256": "f4f53110b19730d42b3a788107510749f21681315b4ee3adb1114d9125957b2d",
+      "source_complete": true
+    },
+    {
+      "model_key": "9b_base",
+      "completed_questions": 500,
+      "all8_token_identical": 251,
+      "all8_identical_fraction": 0.502,
+      "distinct_sequence_count_histogram": {
+        "1": 251,
+        "3": 74,
+        "4": 18,
+        "2": 157
+      },
+      "sequence_ids_distinct_within_each_question": true,
+      "sampling_temperature": 0.7,
+      "sampling_num_samples": 8,
+      "seed_rule": "17+question_index shared across n8 request",
+      "majority_identical_guard": true,
+      "raw_sha256": "4cecdc561c99666fabf2b0757c117abe2d5bcd436e238ca4e96d3d13fd5daff3",
+      "source_complete": true
+    }
+  ],
+  "formal_posttraining_calls": 0,
+  "affected_9B_Base_training": "HELD_T4",
+  "cause": "Unknown; duplicate outputs alone do not establish dependent sampling. OfficialSDK documents num_samples as independent. Need fixed-input seed diagnostic before treating 9BBase pass8 as validated."
+}
