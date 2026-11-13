@@ -1,3 +1,9 @@
+# Current P012 — 2026-11-13T21:29:16.787699+00:00
+
+Owner approved T4 64-response diagnostic. Complete: original n8 unique counts1/3/1/4/3/1/1/2 vs independentseed n1 all8. Costupper .053869506, noanswersscored. Allthree original Tpass8 independent-draw metrics invalid, rawretained. Fixed perdraw n1/unique seeds code0519677e; two meaningful regressiontests PASS. ActualClaude review requested for packet9d1079c8; do notrunv2 untilreview. 9BBaseformalheld. Independent4B/9BLPR originaltrainingactive, IDs inprivateLAUNCHES_4; greedyunchangedandmaycontinue.
+
+A5-1andA5-2complete/public0519677e; A5-3E4/E8fouroriginaldetachedtrainjobsactive (82127/65661/48128/17730), thenevalandQwenGSM. BaseL64/L128/L256caps81.94/90.82/99.38percent; explorationexcludedH0-H3. BridgeL originalfull5000greedyactive; B3params/adapterloadPASS, fullcap>25percent stopsother4. Nootherbridgecalls. CurrentconservativeModalreservation47.7898 <=63.02-4; updatedadmissionpublished944d1a75. Tpriority LPR sixruns+worstgreedy184.0022 totalreserve, plusdiagnosticbuffer. Alloriginalsimmutable.
+
 # Accepted8bbf06a7 and owner-approved A5 — 2026-11-13T20:54:26.800158+00:00
 
 Tinker/bridge review ACCEPTED. T1guard implemented (bothfrozenwrapperforms); T2newlocalpathsrelative. B1alpha32/B2sevenmodules(no lm_head) implemented. LfirstbridgeB3:36929536trainableparams,adapterfirst20differsfrombase,fullLcap<=25percent beforeotherfour. Optional8questionPEFTparitynotrequired. No lowerLRbridgeextension. Actualpredictioncommit8bbf06a7ef19f56ace1b23dde4607b02bc10b389 recordedbeforeformalT/bridge/A5 scoring. Tformalnowauthorized withoutre-review: allpremeasurements thenpermodelL,P,R,K8,K4. T-MATHfirst,thenplannedseed29/GSMwithinlimits. Tsmokeoutputsneverrescored.

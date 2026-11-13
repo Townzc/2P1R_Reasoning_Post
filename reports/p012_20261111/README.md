@@ -1,3 +1,9 @@
+# Current P012 — 2026-11-13T21:29:16.787699+00:00
+
+Owner approved T4 64-response diagnostic. Complete: original n8 unique counts1/3/1/4/3/1/1/2 vs independentseed n1 all8. Costupper .053869506, noanswersscored. Allthree original Tpass8 independent-draw metrics invalid, rawretained. Fixed perdraw n1/unique seeds code0519677e; two meaningful regressiontests PASS. ActualClaude review requested for packet9d1079c8; do notrunv2 untilreview. 9BBaseformalheld. Independent4B/9BLPR originaltrainingactive, IDs inprivateLAUNCHES_4; greedyunchangedandmaycontinue.
+
+A5-1andA5-2complete/public0519677e; A5-3E4/E8fouroriginaldetachedtrainjobsactive (82127/65661/48128/17730), thenevalandQwenGSM. BaseL64/L128/L256caps81.94/90.82/99.38percent; explorationexcludedH0-H3. BridgeL originalfull5000greedyactive; B3params/adapterloadPASS, fullcap>25percent stopsother4. Nootherbridgecalls. CurrentconservativeModalreservation47.7898 <=63.02-4; updatedadmissionpublished944d1a75. Tpriority LPR sixruns+worstgreedy184.0022 totalreserve, plusdiagnosticbuffer. Alloriginalsimmutable.
+
 # Current P012 results — 2026-11-13
 
 Both Qwen × MATH settings are complete (seed 17, full MATH test 5,000, greedy 4,096/8,192). Base L reuses the accepted probe. All Qwen C7 mandatory endpoints and all three authorized Tinker smokes are complete.

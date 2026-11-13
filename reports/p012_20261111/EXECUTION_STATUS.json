@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-13T20:54:26.800158+00:00",
-  "stage": "8bbf06a7 accepted; T1T2/B1B2 applied; formalT, bridgeL andA5 admitted",
-  "plan": "P012 v1 plus owner-approved amendments1\u20134",
+  "updated_utc": "2026-11-13T21:29:16.787699+00:00",
+  "stage": "A5-1/2complete; A5-3andT4B/9BLPRactive; T4independent-drawrepairreviewpending",
+  "plan": "P012 v1 plus owner-approved amendments1\u20135",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -37,13 +37,14 @@
     "failed_training_runs": 1,
     "superseded_training_runs": 1,
     "completed_NLL_calls": 4,
-    "active_jobs": 0,
+    "active_jobs": 7,
     "raw_inventory": "RUN_INVENTORY_CURRENT.json",
     "R1_gate": "PASS",
     "R2_gate": "PASS",
-    "latest_results_independent_numeric_review": "New Tier1/C7 evidence published; independent audit pending",
+    "latest_results_independent_numeric_review": "Original10mainQwenMATH and12C7Qwenendpoints accepted8bbf06a7; newA5/Tpreawaitaudit",
     "prior_G0_independent_audit": "e10a4bf5 accepted",
-    "Tinker_smoke_calls": 3
+    "Tinker_smoke_calls": 3,
+    "latest_additional_inventory": "review_8bbf06a7/LIVE_BATCH_STATUS.json"
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -72,14 +73,17 @@
     "tinker_protected": 400,
     "tinker_smoke_cap": 5,
     "accounted_including_reserves": 20.634162806005687,
-    "observed_modal_actual_balance": 70.15,
-    "Tier1_measured_task_adjusted_forecast": 34.30481151934195
+    "observed_modal_actual_balance": 63.02,
+    "Tier1_measured_task_adjusted_forecast": 34.30481151934195,
+    "current_modal_batch_reserved_usd": 47.78980535984948,
+    "current_budget_admission": "review_8bbf06a7/A5_3_ADMISSION_REFRESH.json"
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Tpretraining thenLPRK8K4",
-    "A5-1andA5-2 thenA5-3 beforeQwenGSM",
-    "BridgeL B3checks thenremainingfour"
+    "A5-3fourgreedyendpoints aftertraining, thenQwenGSM",
+    "FinishbridgeLfullandapplyB3cap25percent gate",
+    "T4repairClaude review9d1079c8; nofixedpass8or9BBaseformaltrainingyet",
+    "T4B/9BLPRthenK8thenK4 withactualbudgetadmission"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -191,5 +195,12 @@
     "models": "OnlytwoQwenMATHinitializations",
     "seed": 17,
     "exploratory_excluded_H0_H3": true
+  },
+  "T4": {
+    "diagnostic": "COMPLETE, originaluniquecounts1/3/1/4/3/1/1/2 vsdistinctseedall8",
+    "original_pass8_independent_interpretation": "INVALID; originalsretained",
+    "repair_review": "9d1079c8",
+    "9BBase": "HELD",
+    "4B_9B": "LPRtrainingactive"
   }
 }
