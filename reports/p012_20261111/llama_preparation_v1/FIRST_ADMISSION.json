@@ -1,0 +1,262 @@
+{
+  "utc": "2026-11-13T22:22:31.560695+00:00",
+  "observed_Modal_balance": 52.04,
+  "protected_balance": 4,
+  "prior_admission": "tier1_qwen_gsm_admission_v1/INSTRUCT_ADMISSION.json",
+  "prior_accounted_and_reserved": 42.93450067441769,
+  "completed_bridge_full_L_runtime_with_tail": 3.398593717087684,
+  "replaced_bridge_inflight_reserve": 8.15179589019005,
+  "completed_Instruct_GSM": [
+    {
+      "run_id": "qwen_instruct_gsm8k_k4_s17_20261113_v1",
+      "seconds": 274.338621703,
+      "accounted_with_tail_storage": 0.39156364169695157
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_k4_s17_greedy_20261113_v1",
+      "seconds": 110.509558418,
+      "accounted_with_tail_storage": 0.1616094104404363
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_k8_s17_20261113_v1",
+      "seconds": 283.060374916,
+      "accounted_with_tail_storage": 0.4022119332863342
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_k8_s17_greedy_20261113_v1",
+      "seconds": 95.690229167,
+      "accounted_with_tail_storage": 0.14456471191357784
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_l_s17_20261113_v1",
+      "seconds": 65.484564203,
+      "accounted_with_tail_storage": 0.13657604349584043
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_l_s17_greedy_20261113_v1",
+      "seconds": 81.874467534,
+      "accounted_with_tail_storage": 0.128674283408689
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_p_s17_20261113_v1",
+      "seconds": 301.525832962,
+      "accounted_with_tail_storage": 0.42475620584293955
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_p_s17_greedy_20261113_v1",
+      "seconds": 113.090425484,
+      "accounted_with_tail_storage": 0.16457783771084733
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_r_s17_20261113_v1",
+      "seconds": 275.00780794900004,
+      "accounted_with_tail_storage": 0.39238064374929027
+    },
+    {
+      "run_id": "qwen_instruct_gsm8k_r_s17_greedy_20261113_v1",
+      "seconds": 99.654039601,
+      "accounted_with_tail_storage": 0.14912375454775015
+    }
+  ],
+  "accounted_usd": 40.67733696740798,
+  "next_batch": [
+    {
+      "run_id": "llama_base_math_p_s17_20261113_v1",
+      "kind": "training",
+      "training_forecast": 0.6785419612849299,
+      "evaluation_reserved": 0.4400981735693921,
+      "forecast_usd": 1.118640134854322,
+      "training_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_p_s17_20261113_v1/result/STATUS.json",
+          "seconds": 403.577399767
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_p_s17_20261113_v1/result/STATUS.json",
+          "seconds": 407.516392542
+        }
+      ],
+      "evaluation_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_p_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 282.110887282
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_p_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 211.537263834
+        }
+      ]
+    },
+    {
+      "run_id": "llama_base_math_k8_s17_20261113_v1",
+      "kind": "training",
+      "training_forecast": 0.6737659935364294,
+      "evaluation_reserved": 0.40046705731970944,
+      "forecast_usd": 1.0742330508561388,
+      "training_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_k8_s17_20261113_v1/result/STATUS.json",
+          "seconds": 394.56937067499996
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_k8_s17_20261113_v1/result/STATUS.json",
+          "seconds": 404.386890559
+        }
+      ],
+      "evaluation_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_k8_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 214.915083907
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_k8_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 254.545410105
+        }
+      ]
+    },
+    {
+      "run_id": "llama_base_math_r_s17_20261113_v1",
+      "kind": "training",
+      "training_forecast": 0.6879480035234167,
+      "evaluation_reserved": 0.3241323307827775,
+      "forecast_usd": 1.0120803343061942,
+      "training_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_r_s17_20261113_v1/result/STATUS.json",
+          "seconds": 413.67979845
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_r_s17_20261113_v1/result/STATUS.json",
+          "seconds": 396.21797613499996
+        }
+      ],
+      "evaluation_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_r_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 201.45068653200002
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_r_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 162.515370069
+        }
+      ]
+    },
+    {
+      "run_id": "llama_base_math_k4_s17_20261113_v1",
+      "kind": "training",
+      "training_forecast": 0.684298324729216,
+      "evaluation_reserved": 0.3428492055419377,
+      "forecast_usd": 1.0271475302711537,
+      "training_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_k4_s17_20261113_v1/result/STATUS.json",
+          "seconds": 405.343015292
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_k4_s17_20261113_v1/result/STATUS.json",
+          "seconds": 411.28830888699997
+        }
+      ],
+      "evaluation_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_base_math_k4_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 214.469234401
+        },
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_k4_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 211.547713781
+        }
+      ]
+    },
+    {
+      "run_id": "llama_base_math_l_s17_20261113_v1",
+      "kind": "training",
+      "training_forecast": 0.19004959497920942,
+      "evaluation_reserved": 0.3495194014948604,
+      "forecast_usd": 0.5395689964740698,
+      "training_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_l_s17_20261113_v1/result/STATUS.json",
+          "seconds": 87.426745891
+        }
+      ],
+      "evaluation_reference": [
+        {
+          "path": ".local/p012_20261111/tier1_math_v1/qwen_instruct_math_l_s17_greedy_20261113_v1/result/STATUS.json",
+          "seconds": 202.618268939
+        },
+        {
+          "path": ".local/p012_20261111/main_eval/qwen_base_math_L_greedy_v1/result/STATUS.json",
+          "seconds": 219.10869832999998
+        }
+      ]
+    },
+    {
+      "run_id": "c7_llama_base_math_nll_20261113_v1",
+      "kind": "nll",
+      "forecast_usd": 0.10357929361632294,
+      "reference": [
+        {
+          "path": ".local/p012_20261111/c7/qwen_base_math_nll_v1/result/STATUS.json",
+          "seconds": 40.113063763
+        },
+        {
+          "path": ".local/p012_20261111/c7/c7_qwen_instruct_math_nll_20261113_v2/result/STATUS.json",
+          "seconds": 47.564237025000004
+        }
+      ]
+    },
+    {
+      "run_id": "c7_llama_instruct_math_nll_20261113_v1",
+      "kind": "nll",
+      "forecast_usd": 0.10357929361632294,
+      "reference": [
+        {
+          "path": ".local/p012_20261111/c7/qwen_base_math_nll_v1/result/STATUS.json",
+          "seconds": 40.113063763
+        },
+        {
+          "path": ".local/p012_20261111/c7/c7_qwen_instruct_math_nll_20261113_v2/result/STATUS.json",
+          "seconds": 47.564237025000004
+        }
+      ]
+    },
+    {
+      "run_id": "c7_llama_base_gsm8k_nll_20261113_v1",
+      "kind": "nll",
+      "forecast_usd": 0.08410826825322625,
+      "reference": [
+        {
+          "path": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_nll_20261113_v1/result/STATUS.json",
+          "seconds": 28.955448641
+        },
+        {
+          "path": ".local/p012_20261111/c7/c7_qwen_instruct_gsm8k_nll_20261113_v1/result/STATUS.json",
+          "seconds": 34.111460649
+        }
+      ]
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_nll_20261113_v1",
+      "kind": "nll",
+      "forecast_usd": 0.08410826825322625,
+      "reference": [
+        {
+          "path": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_nll_20261113_v1/result/STATUS.json",
+          "seconds": 28.955448641
+        },
+        {
+          "path": ".local/p012_20261111/c7/c7_qwen_instruct_gsm8k_nll_20261113_v1/result/STATUS.json",
+          "seconds": 34.111460649
+        }
+      ]
+    }
+  ],
+  "next_batch_buffered_usd": 5.147045170500977,
+  "hard_lhs": 45.824382137908955,
+  "hard_rhs": 48.04,
+  "admitted": true,
+  "forecast_basis": "Per-cell maximum observed Qwen MATH seconds, times1.25 plus30-second tail; no speed credit for Llama size. Four C7 NLL calls use maximum corresponding-task Qwen seconds. All trained-model evaluations reserved.",
+  "subcaps": "Soft under approved A4",
+  "bridge_disposition": "L failed B-3; other four remain unstarted and unreserved"
+}

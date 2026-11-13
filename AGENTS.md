@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-13T22:24:26.051096+00:00
+
+T4 repair accepted at a56115d6 is complete. All three v2 endpoints passed the unique-seed and diversity checks before scoring. Fractions with at least seven distinct outputs: 9B-Base 99.4%, 4B 90.0%, 9B 99.8%. Pass@1/pass@8: 65.125/93.0%, 79.325/95.2%, 89.725/95.4%. All three v1 metrics are superseded and excluded; original raw evidence remains immutable.
+
+All four Qwen main settings (MATH/GSM8K × base/Instruct, seed17) and all A5 supplements are complete. Newly published packets include the Instruct GSM setting and all three Tinker L cells. Tinker P/R jobs continue, with 9B P/R training complete and their greedy requests ready. The prediction commit remains 8bbf06a7.
+
+The Modal LoRA bridge L failed B-3: 4999/5000 length caps (99.98%), 4203 loops, one normal termination; accuracy 42.18%. Other four bridge cells stay unstarted and STOPPED pending an amended protocol. No automatic bridge recipe change. The original full-L call is complete; never replay it.
+
+Next admitted batches: Llama base MATH five cells plus four C7 NLL measurements (Modal total accounting plus buffered batch 45.8244 <= observed52.04 - protected4); Tinker K8 then K4 for each model (combined reservation190.6054, below230 planning and340 hard). Requests use existing reviewed code and frozen data. Other Llama requests are prepared but unadmitted. Track each original CLI in private LAUNCHES_10 and subsequent files. No external messages, new chats/subagents, R3/E2, or repeated completed calls.
+
+Historical entries follow; this entry supersedes earlier running or pending statements.
+
 # Current P012 — 2026-11-13T21:50:18.909524+00:00
 
 Owner acceptedT4review a56115d6. Samplingfix approved; neutralT1guardcomment applied. Everyv2mustverify4000uniqueseeds and>=80percentquestions with>=7distinctoutputs BEFOREscoring; failurestop/report. Allthreev1pass1/pass8 removedfromaggregates, originalraw/scoresretained. 9BBaseformaltrainingRELEASED, no needwaitv2. T-samplingforecasts measuredtokensx1.5; current9LPR+greedy+3repairs+completedpre/smokereservation137.2572, below230planning/340hard, protected400ofinitial750. Predictions8bbf06a7unchanged.

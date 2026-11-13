@@ -5,6 +5,7 @@ Each endpoint uses the original500frozenquestions, eight separatelyseeded draws,
 | Model | pass@1 | pass@8 | Unique seeds | Questions with ≥7 distinct draws |
 |---|---:|---:|---:|---:|
 | Qwen/Qwen3.5-4B | 79.325% | 95.20% | 4000 | 90.00% |
+| Qwen/Qwen3.5-9B | 89.725% | 95.40% | 4000 | 99.80% |
 | Qwen/Qwen3.5-9B-Base | 65.125% | 93.00% | 4000 | 99.40% |
 
 First-run admission requires4,000unique seeds and>=80%questions with>=7distinctoutputs. Rawoutputs, checks, usage and labels are in the permodel evidence ZIPs. Only completedv2endpoints appear in this table.

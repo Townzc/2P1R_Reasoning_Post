@@ -1,0 +1,76 @@
+{
+  "track": "modal_lora_bridge",
+  "model": "Qwen/Qwen2.5-1.5B",
+  "cell": "L",
+  "seed": 17,
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 2109,
+    "accuracy": 0.4218,
+    "length_cap_count": 4999,
+    "length_cap_rate": 0.9998,
+    "loop_count": 4203,
+    "capped_loop_count": 4203,
+    "normally_terminated_count": 1,
+    "normally_terminated_correct": 1,
+    "normally_terminated_accuracy": 1.0
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 206,
+    "accuracy": 0.412,
+    "length_cap_count": 500,
+    "length_cap_rate": 1.0,
+    "loop_count": 421,
+    "capped_loop_count": 421,
+    "normally_terminated_count": 0,
+    "normally_terminated_correct": 0,
+    "normally_terminated_accuracy": null
+  },
+  "expected_and_logged_trainable_parameters": 36929536,
+  "first20": {
+    "same20input_ids_and_prompt_tokens": true,
+    "changed_token_sequences": 20,
+    "adapter_terminator_stops": 0,
+    "base_terminator_stops": 2,
+    "adapter_length_caps": 20,
+    "base_length_caps": 18,
+    "pass": true
+  },
+  "B3_full_cap_threshold": 0.25,
+  "B3_pass": false,
+  "remaining_bridge_cells": "STOP: P, K8, R, K4 remain unstarted; requires an amended bridge protocol",
+  "prediction_freeze": {
+    "review_and_prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+    "prediction_path": "audit/claude/20261113b/PRED_T_TRACK_AND_BRIDGE_v1.md",
+    "prediction_file_sha256": "2389c81ba6f2d09491b0cb2a0c16b47e86769704d5c98d5117dcc81242bbea44",
+    "A5_path": "audit/claude/20261113b/AUDIT_tier1_qwen_math_s17_AND_A5_PROPOSED.md",
+    "A5_file_sha256": "a62aa896027fc0dee4de6edda1be494e66e382bf69e41c2ef268aa418bde1ee4",
+    "recorded_before_any_formal_T_or_bridge_or_A5_run_utc": "2026-11-13T20:51:11.320739+00:00",
+    "owner_approved_A5": true,
+    "formal_runs_so_far": 0,
+    "score_after_freeze": true
+  },
+  "generation_request_prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "training_status": {
+    "run_id": "modal_lora_bridge_qwen_base_math_l_s17_20261113_v1",
+    "success": true,
+    "gpu": "H100",
+    "cpu": 4,
+    "memory_MiB": 32768,
+    "returncode": 0,
+    "function_seconds": 79.581026023
+  },
+  "evaluation_status": {
+    "run_id": "modal_lora_bridge_qwen_base_math_l_s17_greedy_20261113_v1",
+    "success": true,
+    "gpu": "H100",
+    "cpu": 2,
+    "memory_MiB": 12288,
+    "returncode": 0,
+    "function_seconds": 2924.870642302
+  },
+  "raw_sha256": "4c30b6e267a4e67ef5620cad1395d77c9dbe178505b2de07a8d26595cdbf53f4",
+  "labels_sha256": "4a21919fa007f67648228af880c21c298dc92449fcc176a5656951a79be8b29c",
+  "audit_status": "Independent result audit pending"
+}

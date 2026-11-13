@@ -1,0 +1,93 @@
+{
+  "run_id": "c7_llama_instruct_math_nll_20261113_v1",
+  "code_commit": "d20890749d629f7e2c09b1743fe0fc8c56e0c8ba",
+  "task": "math",
+  "model": {
+    "repo": "meta-llama/Llama-3.2-1B-Instruct",
+    "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "bytes": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "README.md",
+        "bytes": 41742,
+        "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+      },
+      {
+        "path": "USE_POLICY.md",
+        "bytes": 6021,
+        "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+      },
+      {
+        "path": "config.json",
+        "bytes": 877,
+        "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 189,
+        "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 2471645608,
+        "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+      },
+      {
+        "path": "original/params.json",
+        "bytes": 220,
+        "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+      },
+      {
+        "path": "original/tokenizer.model",
+        "bytes": 2183982,
+        "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "bytes": 296,
+        "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 9085657,
+        "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 54528,
+        "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+      }
+    ],
+    "family": "llama3"
+  },
+  "dataset": {
+    "sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df"
+  },
+  "frozen_c6_manifest_sha256": "c9e9916f23164e6977959c0686ca51389863ac651ed10e22eabc55533ab9e8a9",
+  "source_sha256": {
+    "capability_nll.py": "6b27e80d4f301888fbf99c10dbd30f107a24f74be3a97df4ee585e8bec2c4ed5",
+    "modal_capability.py": "530a92c90360d92eca4d8d238a12b34cec5dfac6cb559e8f4a6af0603e01e24e",
+    "modal_training_runtime.py": "7015deb5ec560d43e5a4021b3dcf65e12b52cf4cf9f7c83dee3f2783598d3f1e",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "data_pool.py": "365cd493b48c3e69926b6541e2229abc0cc95f327028ebe179b834bc49d0c398",
+    "requirements-train.lock": "6d0a22a526735660d8445ccbebcb51ac5c6a45ccae34fa4d5c8bff18ed3b38fa",
+    "templates/llama3.jinja": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.10357929361632294,
+    "reserved_evaluation_usd": 0,
+    "admission_sha256": "c33a62b43264cc37a324fe7bb37aac3516f56e2accd14ea91a2e030e40f0b623",
+    "batch_train_eval_NLL_buffered_usd": 5.147045170500977,
+    "Modal_balance_observed": 52.04,
+    "hard_lhs": 45.824382137908955,
+    "hard_rhs": 48.04
+  },
+  "authority": "Accepted 07b56e49 C7 plus owner-approved A4; NLL first; same frozen 1000 teacher solutions",
+  "launch_mode": "modal run --detach -m experiments.p012.modal_capability"
+}

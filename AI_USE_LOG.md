@@ -1,3 +1,7 @@
+
+## 2026-11-13T22:24:26.051096+00:00 P012 technical execution
+
+Codex executed accepted T4 repair, checked all12000 unique per-endpoint sampling seeds before scoring, retained superseded originals, and published corrected technical evidence. It completed Qwen Instruct GSM and the third T LoRA L cell. The full Modal bridge L triggered B3; four remaining bridge cells remain unstarted. CPU-only preparation produced unchanged-path Llama and T K8/K4 requests with prospective accounting. No course prose or external messages.
 ## Two-cell forced-answer diagnostic fully closed — 2026-10-23T00:28:06.482768+00:00
 
 Real actual A3 Claude636e2b1f/reportd4c5d06f PASS-WITH-NOTES accepted all7flags exact5243d506. Independent new3861 byte-BPE/native-stop/first-box completion categories agree;245 positive non-string-identical rows manually reviewed; all6 requested intervals externally reproduced. Approximately16 frozen-P1 lenient value/format cases disclosed with reviewer rough sensitivity; original labels/accuracies/CI unchanged. Codex did not execute reviewer scripts, rescore, repeat new statistics or rerun saved natural/A6 comparisons. Private binaries/full independent symbolic engine/final invoice not independently accessed. All source/actual-input/result reviews closed,0activeGPU/CPU/CLI/awake. New app reported tagged cost1.21523750USD under the20USD admission envelope, not invoice. Final JSON/MD add acceptance metadata; immutable result packet is not rebuilt. Original automation remains PAUSED.

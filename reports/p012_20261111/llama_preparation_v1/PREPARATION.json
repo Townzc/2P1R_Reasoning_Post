@@ -1,0 +1,531 @@
+{
+  "code_commit": "d20890749d629f7e2c09b1743fe0fc8c56e0c8ba",
+  "C6_manifest_sha256": "c9e9916f23164e6977959c0686ca51389863ac651ed10e22eabc55533ab9e8a9",
+  "C7_manifest_sha256": "c31a8550baa773c0eaff30f8b5ed87c769beb9308d38103efce20a1773ba9ba6",
+  "training": [
+    {
+      "run_id": "llama_base_math_p_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "cell": "P",
+      "dataset_sha256": "06767f89c8393e7c167e42b04987273f21711e5fe5f14977516f55d12077ffac",
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_base_math_k8_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "cell": "K8",
+      "dataset_sha256": "f28e7560bae02c7055619941b0e9a757bfc3f8402ddb62af316e079587386a77",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 8,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_base_math_r_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "cell": "R",
+      "dataset_sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 16,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_base_math_k4_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "cell": "K4",
+      "dataset_sha256": "5e56b9b7bc376a0d406cbc051a9ef8b437afd144f7efef39615ed126cee51a96",
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 4,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_base_math_l_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "cell": "L",
+      "dataset_sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 2,
+        "presentations": 1024,
+        "effective_batch": 8,
+        "expected_updates": 128,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_base_gsm8k_p_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "cell": "P",
+      "dataset_sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 990
+    },
+    {
+      "run_id": "llama_base_gsm8k_k8_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "cell": "K8",
+      "dataset_sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 8,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 698
+    },
+    {
+      "run_id": "llama_base_gsm8k_r_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "cell": "R",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 16,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 464
+    },
+    {
+      "run_id": "llama_base_gsm8k_k4_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "cell": "K4",
+      "dataset_sha256": "64d6e6efddcd754bd3c7711175cb7b7cea2a2238083d9e1a59ff24065dcb7765",
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 4,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 720
+    },
+    {
+      "run_id": "llama_base_gsm8k_l_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "cell": "L",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 2,
+        "presentations": 1024,
+        "effective_batch": 8,
+        "expected_updates": 128,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 464
+    },
+    {
+      "run_id": "llama_instruct_math_p_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "cell": "P",
+      "dataset_sha256": "06767f89c8393e7c167e42b04987273f21711e5fe5f14977516f55d12077ffac",
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_instruct_math_k8_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "cell": "K8",
+      "dataset_sha256": "f28e7560bae02c7055619941b0e9a757bfc3f8402ddb62af316e079587386a77",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 8,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_instruct_math_r_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "cell": "R",
+      "dataset_sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 16,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_instruct_math_k4_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "cell": "K4",
+      "dataset_sha256": "5e56b9b7bc376a0d406cbc051a9ef8b437afd144f7efef39615ed126cee51a96",
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 4,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_instruct_math_l_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "cell": "L",
+      "dataset_sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 2,
+        "presentations": 1024,
+        "effective_batch": 8,
+        "expected_updates": 128,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 1930
+    },
+    {
+      "run_id": "llama_instruct_gsm8k_p_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "cell": "P",
+      "dataset_sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 990
+    },
+    {
+      "run_id": "llama_instruct_gsm8k_k8_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "cell": "K8",
+      "dataset_sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 8,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 698
+    },
+    {
+      "run_id": "llama_instruct_gsm8k_r_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "cell": "R",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 16,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 464
+    },
+    {
+      "run_id": "llama_instruct_gsm8k_k4_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "cell": "K4",
+      "dataset_sha256": "64d6e6efddcd754bd3c7711175cb7b7cea2a2238083d9e1a59ff24065dcb7765",
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 4,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 720
+    },
+    {
+      "run_id": "llama_instruct_gsm8k_l_s17_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "cell": "L",
+      "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 1,
+        "distinct_rows": 512,
+        "epochs": 2,
+        "presentations": 1024,
+        "effective_batch": 8,
+        "expected_updates": 128,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "maximum_full_tokens": 464
+    }
+  ],
+  "capability": [
+    {
+      "run_id": "c7_llama_base_math_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "nll",
+      "source_request": ".local/p012_20261111/c7/qwen_base_math_nll_v1/request.json",
+      "input_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df",
+      "questions": 500,
+      "solutions": 1000
+    },
+    {
+      "run_id": "c7_llama_base_math_baseline4_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "baseline4",
+      "input_sha256": "555027a6501c3a11fa4ffe4a183c250b230bff2ccb6e45a74f015df08615b5ce",
+      "questions": 500,
+      "shots": 4,
+      "maximum_prompt_tokens": 2545
+    },
+    {
+      "run_id": "c7_llama_base_math_holdout8_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "endpoint": "holdout8",
+      "input_sha256": "f4f08f94ea9e05b99f53d6fd04fb921978fb9f36393f34bc4478e35c9d574ad8",
+      "questions": 500,
+      "shots": 4,
+      "maximum_prompt_tokens": 2270
+    },
+    {
+      "run_id": "c7_llama_base_gsm8k_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "nll",
+      "source_request": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_nll_20261113_v1/request.json",
+      "input_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6",
+      "questions": 500,
+      "solutions": 1000
+    },
+    {
+      "run_id": "c7_llama_base_gsm8k_baseline4_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "baseline4",
+      "input_sha256": "be3e8e76d829218690b40dbf71fcd2f284f2451efbdb8ae34a5581b7c2bd4ca1",
+      "questions": 1319,
+      "shots": 4,
+      "maximum_prompt_tokens": 861
+    },
+    {
+      "run_id": "c7_llama_base_gsm8k_holdout8_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "endpoint": "holdout8",
+      "input_sha256": "eed937e8836f2b84f4c2c7b6f13047f411a6d15193ab82840fdf41121c227950",
+      "questions": 500,
+      "shots": 4,
+      "maximum_prompt_tokens": 822
+    },
+    {
+      "run_id": "c7_llama_instruct_math_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "nll",
+      "source_request": ".local/p012_20261111/c7/qwen_base_math_nll_v1/request.json",
+      "input_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df",
+      "questions": 500,
+      "solutions": 1000
+    },
+    {
+      "run_id": "c7_llama_instruct_math_baseline4_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "baseline4",
+      "input_sha256": "555027a6501c3a11fa4ffe4a183c250b230bff2ccb6e45a74f015df08615b5ce",
+      "questions": 500,
+      "shots": 4,
+      "maximum_prompt_tokens": 2545
+    },
+    {
+      "run_id": "c7_llama_instruct_math_holdout8_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "holdout8",
+      "input_sha256": "339e695efbc7346b221960916fe2841a0a0d4c1ca1f8341ec8fdf324e760ff8f",
+      "questions": 500,
+      "shots": 0,
+      "maximum_prompt_tokens": 514
+    },
+    {
+      "run_id": "c7_llama_instruct_math_baseline0_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "endpoint": "baseline0",
+      "input_sha256": "1f9808fcfa5c96e8c2f5bf91c662cd872b41437f2b2879e02e70ddabb772db3d",
+      "questions": 500,
+      "shots": 0,
+      "maximum_prompt_tokens": 789
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "nll",
+      "source_request": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_nll_20261113_v1/request.json",
+      "input_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6",
+      "questions": 500,
+      "solutions": 1000
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_baseline4_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "baseline4",
+      "input_sha256": "be3e8e76d829218690b40dbf71fcd2f284f2451efbdb8ae34a5581b7c2bd4ca1",
+      "questions": 1319,
+      "shots": 4,
+      "maximum_prompt_tokens": 861
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_holdout8_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "holdout8",
+      "input_sha256": "fb2afd258d18731f85701e9ffc630b491f449c66bc0d68f9cef18c4dde766a2e",
+      "questions": 500,
+      "shots": 0,
+      "maximum_prompt_tokens": 179
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_baseline0_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "endpoint": "baseline0",
+      "input_sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+      "questions": 1319,
+      "shots": 0,
+      "maximum_prompt_tokens": 218
+    }
+  ],
+  "admitted": false,
+  "scope": "Owner-approved Tier 1 and C7; no new execution path; unique pending requests only"
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-13T21:50:18.909524+00:00",
-  "stage": "A5complete; QwenbaseGSMgreedyandT-LPRactive; T4repairacceptedandrunning",
+  "updated_utc": "2026-11-13T22:24:26.051096+00:00",
+  "stage": "T4 repair complete; Qwen seed17 four settings complete; bridge B3 stop; admitted Llama/T continuation",
   "plan": "P012 v1 plus owner-approved amendments1\u20135",
   "C1": {
     "assets_and_versions": "complete",
@@ -77,16 +77,18 @@
     "observed_modal_actual_balance": 58.55,
     "Tier1_measured_task_adjusted_forecast": 34.30481151934195,
     "current_modal_batch_reserved_usd": 48.32808166659763,
-    "current_budget_admission": "tier1_qwen_gsm_admission_v1/ADMISSION.json",
+    "current_budget_admission": "llama_preparation_v1/FIRST_ADMISSION.json",
     "tinker_current_reserved_usd": 137.25720418981007,
-    "tinker_sampling_forecast": "Measuredtokens x1.5, accepted a56115d6"
+    "tinker_sampling_forecast": "Measuredtokens x1.5, accepted a56115d6",
+    "T_total_reserved_with_K8_K4": 190.60543523731008,
+    "T_current_admission": "tinker_k8_k4_admission_v1/ADMISSION.json"
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Completeandcheck3Tinkerpass8v2 sequentially",
-    "FinishQwenbaseGSMthenInstructGSM usingupdatedactualforecast",
-    "CompleteTpriorityLPRthenK8thenK4",
-    "FinishbridgeLfull; stopotherfourifcap>25percent"
+    "Execute the already-admitted Llama base MATH and C7 NLL batch",
+    "Run original T9B P/R greedy; submit T K8 then K4 using measured-token budgets",
+    "Reconcile complete settings and admit later C7/Llama/seed29 work under the same hard rules",
+    "Keep remaining bridge cells stopped under B3"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -205,6 +207,34 @@
     "runtime_check": "4000uniqueseeds; >=80percentquestions with>=7distinctoutputs",
     "v1": "allthreeSUPERSEDED; metrics excluded",
     "v2": "9BBase active, then4Bthen9B",
-    "9BBase_training": "released; LPRactive"
+    "9BBase_training": "released; LPRactive",
+    "status": "Three v2 endpoints complete, checks PASS and scored; v1 metrics superseded",
+    "accepted_review": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+    "first_run_diversity": {
+      "9b_base": 0.994,
+      "4b": 0.9,
+      "9b": 0.998
+    },
+    "results": "tinker_lora_pass8_v2/RESULTS.json"
+  },
+  "bridge": {
+    "status": "B3_STOP",
+    "full_L_caps": 4999,
+    "questions": 5000,
+    "other_four": "unstarted; no amended recipe authorized",
+    "results": "modal_lora_bridge_l_s17_v1/RESULTS.json"
+  },
+  "current_20261113_late": {
+    "Qwen_main_seed17_settings_completed": 4,
+    "A5": "complete; exploratory, excluded H0-H3",
+    "T_L_cells_completed": [
+      "4b",
+      "9b",
+      "9b_base"
+    ],
+    "T_9B_P_R": "training complete; greedy requests ready",
+    "T_other_P_R": "original training active",
+    "Llama": "20 training and14 C7 requests prepared; base MATH5+NLL4 admitted, not yet launched at this snapshot",
+    "T_K8_K4": "six cells admitted, not yet launched at this snapshot"
   }
 }
