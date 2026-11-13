@@ -1,0 +1,177 @@
+{
+  "endpoints": [
+    {
+      "run_id": "c7_llama_base_gsm8k_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "gsm8k",
+      "summary": {
+        "solutions": 1000,
+        "target_tokens": 139416,
+        "nll_sum": 142926.83060878515,
+        "mean_per_token_nll": 1.0251824081080017,
+        "solution_chars": 468180,
+        "nll_per_char": 0.3052817946276756,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 1.0658412925601006,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 20.695519169,
+        "model": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "raw_sha256": "2e6707ea10b1b93e6d65c0c0e18db7cf3f936dbb7b71c2540ec0dea4a255949f",
+        "input_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6",
+        "template_sha256": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b",
+        "code_commit": "d20890749d629f7e2c09b1743fe0fc8c56e0c8ba",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "status": {
+        "success": true,
+        "run_id": "c7_llama_base_gsm8k_nll_20261113_v1",
+        "gpu": "H100",
+        "cpu": 2,
+        "memory_MiB": 16384,
+        "function_seconds": 32.796701104
+      },
+      "dataset_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6"
+    },
+    {
+      "run_id": "c7_llama_base_math_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B",
+      "task": "math",
+      "summary": {
+        "solutions": 1000,
+        "target_tokens": 292415,
+        "nll_sum": 255411.21395763755,
+        "mean_per_token_nll": 0.8734545558799567,
+        "solution_chars": 791433,
+        "nll_per_char": 0.3227199446543644,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.942218557715416,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 12.351586317,
+        "model": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "raw_sha256": "37da8036b055c3f98a37f2dc30f5ff50783f2c294c304ffd7182a5ff93fccc1c",
+        "input_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df",
+        "template_sha256": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b",
+        "code_commit": "d20890749d629f7e2c09b1743fe0fc8c56e0c8ba",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "status": {
+        "success": true,
+        "run_id": "c7_llama_base_math_nll_20261113_v1",
+        "gpu": "H100",
+        "cpu": 2,
+        "memory_MiB": 16384,
+        "function_seconds": 21.332541084
+      },
+      "dataset_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df"
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "gsm8k",
+      "summary": {
+        "solutions": 1000,
+        "target_tokens": 139416,
+        "nll_sum": 84448.11501984298,
+        "mean_per_token_nll": 0.6057275708659191,
+        "solution_chars": 468180,
+        "nll_per_char": 0.1803753150921504,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.6345164019912481,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 20.966373978,
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "raw_sha256": "5911d61b118adb9a50ab253afd2fe751dae706d412c47afad31a94a2140ab459",
+        "input_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6",
+        "template_sha256": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b",
+        "code_commit": "d20890749d629f7e2c09b1743fe0fc8c56e0c8ba",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "status": {
+        "success": true,
+        "run_id": "c7_llama_instruct_gsm8k_nll_20261113_v1",
+        "gpu": "H100",
+        "cpu": 2,
+        "memory_MiB": 16384,
+        "function_seconds": 32.245785276999996
+      },
+      "dataset_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6"
+    },
+    {
+      "run_id": "c7_llama_instruct_math_nll_20261113_v1",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "task": "math",
+      "summary": {
+        "solutions": 1000,
+        "target_tokens": 292415,
+        "nll_sum": 158552.75313968956,
+        "mean_per_token_nll": 0.5422182621947902,
+        "solution_chars": 791433,
+        "nll_per_char": 0.20033629269905293,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.5772545565962791,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 22.791021544,
+        "model": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "raw_sha256": "7af217be2f174bcf80aeb792ab9b767460e4ee1cc79db659de472fe4b510d096",
+        "input_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df",
+        "template_sha256": "4b6dc2858f867f486adf9321b72a8d5847246984273dc7a32de3e3eff0e7b57b",
+        "code_commit": "d20890749d629f7e2c09b1743fe0fc8c56e0c8ba",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "status": {
+        "success": true,
+        "run_id": "c7_llama_instruct_math_nll_20261113_v1",
+        "gpu": "H100",
+        "cpu": 2,
+        "memory_MiB": 16384,
+        "function_seconds": 35.883472599
+      },
+      "dataset_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df"
+    }
+  ],
+  "audit_status": "Independent results audit pending"
+}

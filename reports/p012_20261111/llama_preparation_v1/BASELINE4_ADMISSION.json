@@ -1,0 +1,77 @@
+{
+  "utc": "2026-11-13T22:28:14.095208+00:00",
+  "observed_Modal_balance": 51.77,
+  "protected": 4,
+  "prior_base_accounting_usd": 40.67733696740798,
+  "Llama_first_batch": [
+    {
+      "run_id": "llama_base_math_p_s17_20261113_v1",
+      "accounted_and_reserved": 1.118640134854322
+    },
+    {
+      "run_id": "llama_base_math_k8_s17_20261113_v1",
+      "accounted_and_reserved": 1.0742330508561388
+    },
+    {
+      "run_id": "llama_base_math_r_s17_20261113_v1",
+      "accounted_and_reserved": 1.0120803343061942
+    },
+    {
+      "run_id": "llama_base_math_k4_s17_20261113_v1",
+      "accounted_and_reserved": 1.0271475302711537
+    },
+    {
+      "run_id": "llama_base_math_l_s17_20261113_v1",
+      "accounted_and_reserved": 0.48848692181783726
+    },
+    {
+      "run_id": "c7_llama_base_math_nll_20261113_v1",
+      "accounted_and_reserved": 0.059437378959596006
+    },
+    {
+      "run_id": "c7_llama_instruct_math_nll_20261113_v1",
+      "accounted_and_reserved": 0.07628574088379768
+    },
+    {
+      "run_id": "c7_llama_base_gsm8k_nll_20261113_v1",
+      "accounted_and_reserved": 0.07271160246719822
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_nll_20261113_v1",
+      "accounted_and_reserved": 0.07207370315240189
+    }
+  ],
+  "accounted_and_inflight_reserved_usd": 45.67843336497662,
+  "new_runs": [
+    {
+      "run_id": "c7_llama_base_math_baseline4_20261113_v1",
+      "reference_run_id": "qwen_base_math_baseline4_v1",
+      "reference_seconds": 116.08759805700001,
+      "forecast_usd": 0.2014051071231994
+    },
+    {
+      "run_id": "c7_llama_instruct_math_baseline4_20261113_v1",
+      "reference_run_id": "c7_qwen_instruct_math_baseline4_20261113_v2",
+      "reference_seconds": 80.253206374,
+      "forecast_usd": 0.1498857035806196
+    },
+    {
+      "run_id": "c7_llama_base_gsm8k_baseline4_20261113_v1",
+      "reference_run_id": "c7_qwen_base_gsm8k_baseline4_20261113_v1",
+      "reference_seconds": 81.524386195,
+      "forecast_usd": 0.15171328940243647
+    },
+    {
+      "run_id": "c7_llama_instruct_gsm8k_baseline4_20261113_v1",
+      "reference_run_id": "c7_qwen_instruct_gsm8k_baseline4_20261113_v1",
+      "reference_seconds": 99.440389222,
+      "forecast_usd": 0.17747127625437958
+    }
+  ],
+  "next_batch_buffered_usd": 0.680475376360635,
+  "hard_lhs": 46.35890874133725,
+  "hard_rhs": 47.77,
+  "admitted": true,
+  "forecast_basis": "Matching completed Qwen endpoint seconds x1.25 +30-second tail",
+  "shared_path": "Reviewed C7 OMI-2 conversation and existing vLLM evaluation; no new path"
+}
