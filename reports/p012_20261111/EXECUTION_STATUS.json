@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-13T22:24:26.051096+00:00",
-  "stage": "T4 repair complete; Qwen seed17 four settings complete; bridge B3 stop; admitted Llama/T continuation",
+  "updated_utc": "2026-11-13T22:48:21.501956+00:00",
+  "stage": "T4 and five main settings complete; Modal stopped at next-batch budget gate;10 T training originals active",
   "plan": "P012 v1 plus owner-approved amendments1\u20135",
   "C1": {
     "assets_and_versions": "complete",
@@ -32,20 +32,29 @@
     "runtime": "All completed jobs detached; final weights independently backed up and hash verified"
   },
   "science": {
-    "completed_generation_calls": 71,
-    "successful_training_calls": 34,
     "failed_training_runs": 1,
     "superseded_training_runs": 1,
-    "completed_NLL_calls": 7,
-    "active_jobs": 15,
     "raw_inventory": "RUN_INVENTORY_CURRENT.json",
     "R1_gate": "PASS",
     "R2_gate": "PASS",
-    "latest_results_independent_numeric_review": "Original10mainQwenMATH and12C7Qwenendpoints accepted8bbf06a7; newA5/Tpreawaitaudit",
+    "latest_results_independent_numeric_review": "Original Qwen MATH/C7 coverage recorded at8bbf06a7; new A5, GSM, T and Llama packets await91b650c5 plus addendum audit",
     "prior_G0_independent_audit": "e10a4bf5 accepted",
     "Tinker_smoke_calls": 3,
     "latest_additional_inventory": "review_a56115d6/LIVE_BATCH_STATUS.json",
-    "superseded_Tinker_pass8_v1": 3
+    "superseded_Tinker_pass8_v1": 3,
+    "legacy_counter_snapshot": {
+      "completed_generation_calls": 71,
+      "successful_training_calls": 34,
+      "completed_NLL_calls": 7,
+      "active_jobs": 15
+    },
+    "main_seed17_cells_complete": 25,
+    "Modal_successful_training_calls": 42,
+    "T_formal_training_calls_complete": 5,
+    "T_smoke_calls": 3,
+    "NLL_calls_complete": 11,
+    "active_T_training_calls": 10,
+    "active_Modal_calls": 0
   },
   "budget_usd": {
     "modal_total_cap": 85,
@@ -66,7 +75,7 @@
       "to": "G0_E",
       "usd": 4
     },
-    "latest_accounting": "amendment4_completed_budget_v1/RECONCILIATION.json",
+    "latest_accounting": "modal_next_gate_20261113_v1/POST_BATCH_RECONCILIATION.json",
     "phase_caps": "SOFT",
     "modal_total_cap_status": "Planning total; sole hard stop uses actual credit balance minus4",
     "hard_stop": "accounted + next_batch_buffered > actual_modal_credit_balance - 4",
@@ -77,18 +86,21 @@
     "observed_modal_actual_balance": 58.55,
     "Tier1_measured_task_adjusted_forecast": 34.30481151934195,
     "current_modal_batch_reserved_usd": 48.32808166659763,
-    "current_budget_admission": "llama_preparation_v1/FIRST_ADMISSION.json",
+    "current_budget_admission": "modal_next_gate_20261113_v1/RECONCILIATION_AND_PROPOSAL.json",
     "tinker_current_reserved_usd": 137.25720418981007,
     "tinker_sampling_forecast": "Measuredtokens x1.5, accepted a56115d6",
     "T_total_reserved_with_K8_K4": 190.60543523731008,
-    "T_current_admission": "tinker_k8_k4_admission_v1/ADMISSION.json"
+    "T_current_admission": "tinker_k8_k4_admission_v1/ADMISSION.json",
+    "new_Modal_calls": "STOP pending owner decision on accounting correction; existing admitted calls continue",
+    "Modal_observed_balance": 47.16,
+    "Modal_accounted_with_tail_reserves": 46.369614566935326
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Execute the already-admitted Llama base MATH and C7 NLL batch",
-    "Run original T9B P/R greedy; submit T K8 then K4 using measured-token budgets",
-    "Reconcile complete settings and admit later C7/Llama/seed29 work under the same hard rules",
-    "Keep remaining bridge cells stopped under B3"
+    "Await owner decision on Modal accounting correction; no new dependent calls before approval",
+    "Continue10 original T training calls and evaluate their checkpoints within existing reservation",
+    "Apply independent completed-result audit when received; remaining bridge4 stay stopped",
+    "Resume C7 holdout8 then remaining Llama settings after prospective hard-gate admission"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -232,9 +244,13 @@
       "9b",
       "9b_base"
     ],
-    "T_9B_P_R": "training complete; greedy requests ready",
-    "T_other_P_R": "original training active",
-    "Llama": "20 training and14 C7 requests prepared; base MATH5+NLL4 admitted, not yet launched at this snapshot",
-    "T_K8_K4": "six cells admitted, not yet launched at this snapshot"
+    "T_9B_P_R": "Training/greedy/scoring complete; published e6047bcd",
+    "T_other_P_R": "4B and9B-Base original P/R active",
+    "Llama": "Base MATH5 training/evaluation/scoring complete; C7 NLL4 andbaseline4 complete; holdout8 unsubmitted at budget gate",
+    "T_K8_K4": "Allsix originals active"
+  },
+  "pending_owner_actions": {
+    "results_audit": "91b650c5/results_review_20261113_v1; raw-output audit and bridge disposition",
+    "budget_rule": "e6047bcd/modal_next_gate_20261113_v1; current hardgate48.922>44.21; proposal preserves85/4"
   }
 }

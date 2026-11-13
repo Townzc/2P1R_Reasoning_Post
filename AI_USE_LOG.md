@@ -5176,3 +5176,7 @@ The complete 07–08 UTC billing interval reports $0.54724234 for new P012 objec
 - 2026-11-13T21:29:16.787699+00:00 Codex: implemented accepted8bbf06a7 fixes and ownerA5; published A5-1/2, Tpremeasurements, originalrawscores. Approved T4 diagnostic confirms n8correlation; prepared独立seed n1 repair with2regressiontests and requestedClaude review9d1079c8. No course-report prose or externalmessages. A5-3/Tprioritytraining andbridgeLfullcontinue.
 
 - 2026-11-13T21:50:18.909524+00:00 Codex: owner acceptedClaudea56115d6. Appliedcommentcorrection, removedthreev1passmetricsfromaggregates, preparedruntimeindependencechecks, admittedmeasured-tokenx1.5 TbudgetandstartedBasev2/BaseLPR. A5all14supplementalendpointscomplete; QwenbaseGSMfivecheckpointscompleteandgreedyactive. No externalmessages oracademicprose.
+
+## 2026-11-13T22:48:21.501956+00:00: P012 next-batch closeout
+
+Codex completed all original Modal calls, published Llama base MATH and frozen baseline failures, retained every raw artifact, and assembled the result-audit addendum. It documented the literal A4 budget stop and proposed an85/4-preserving accounting correction; no unadmitted Modal call followed. Ten previously admitted T training originals continue. No course writing or external sending.

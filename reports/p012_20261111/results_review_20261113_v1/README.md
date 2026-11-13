@@ -29,3 +29,5 @@ The original Qwen MATH main-grid results were independently reviewed at8bbf06a7 
 | c7_llama_nll_v1 | [README](../c7_llama_nll_v1/README.md) |
 
 Implementation references: accepted sampling review `a56115d6`, track/bridge review and frozen prediction `8bbf06a7`; owner-approved A4 at77a2520e and A5 in8bbf06a7. New calls not represented by this immutable manifest belong in a later result packet. Built with Llama.
+
+Later completed batches: [result addendum](ADDENDUM.md), separately frozen by `ADDENDUM_MANIFEST.json`. The original manifest remains unchanged.

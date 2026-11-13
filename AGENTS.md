@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-13T22:48:21.501956+00:00
+
+T4 repair is complete and published. All three v2 endpoints passed4000unique seeds and the required diversity check before scoring: Base99.4%,4B90.0%,9B99.8%. Corrected pass@1/pass@8:65.125/93.0%,79.325/95.2%,89.725/95.4%. All v1 sampled metrics are superseded; original evidence remains immutable. Accepted reviewa56115d6, prediction8bbf06a7 unchanged.
+
+Five main seed17 settings are complete: all four Qwen settings plus Llama base MATH. Llama P/K8/R/K4/L:6.40/6.72/3.80/6.16/4.46%; all raw outputs and termination diagnostics are published. Llama C7 NLL4 andfour-shot4 are complete. Base four-shot MATH0/500 andGSM4/1319 have99.8%/100% caps; flag the degenerate baseline when interpreting delta-SFT. No protocol changes or reruns. A5 allcomplete and remains exploratory, excluded H0-H3.
+
+All Modal calls are COMPLETE; provider snapshot shows50 recent apps stopped and0tasks. NEW Modal calls STOP under the literal A4 hard gate. Owner decision is pending on `modal_next_gate_20261113_v1` (proposed accounting correction,85total/4protected unchanged). Latest balance47.16; after-batch accounting and both formulas are in POST_BATCH_RECONCILIATION.json. Do not execute unadmitted Llama/C7/Tier2 calls before that decision.
+
+Tinker10original training calls remain active:4B P/R,9B-Base P/R, andK8/K4 for allthree models. Originals are in private LAUNCHES_4,7,12. Allthree L and9B P/R training+greedy+scoring arecomplete. Future greedy evaluations of these active training runs are already included in the190.6054reservation; no newseed29 started. Remaining bridge4 STOP afterLcap99.98%,4203loops. No bridge recipe change is authorized.
+
+Result audit91b650c5 plus its new ADDENDUM is pending; it does not block otherwise authorized T execution. No externalmessages,newchats/subagents,R3/E2 or repeated completed model calls. Historical entries follow.
+
 # Current P012 — 2026-11-13T22:24:26.051096+00:00
 
 T4 repair accepted at a56115d6 is complete. All three v2 endpoints passed the unique-seed and diversity checks before scoring. Fractions with at least seven distinct outputs: 9B-Base 99.4%, 4B 90.0%, 9B 99.8%. Pass@1/pass@8: 65.125/93.0%, 79.325/95.2%, 89.725/95.4%. All three v1 metrics are superseded and excluded; original raw evidence remains immutable.
