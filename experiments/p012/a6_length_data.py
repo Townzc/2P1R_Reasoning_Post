@@ -72,6 +72,7 @@ def self_check(short, long, order, tests, tokenizer, renderer):
 
 def run(request, output):
     import tinker
+    from tinker_cookbook import renderers
     if request["authority_commit"] != AUTHORITY or request["prediction_commit"] != AUTHORITY:
         raise ValueError("A6 authority/prediction freeze missing")
     if not request["forecast"]["admitted"] or sha256_file(Path(__file__)) != request["source_sha256"]:
@@ -100,12 +101,27 @@ def run(request, output):
     service = tinker.ServiceClient(display_name=request["run_id"])
     usage = {"prefill_tokens_uncached_upper": 0, "completion_tokens": 0,
              "prompt_cache_hit_tokens": 0, "upper_token_cost_usd": 0.0}
+    recovered = {}
+    if request.get("resume_raw"):
+        saved = read_rows(request["resume_raw"])
+        for r in saved:
+            key = (r["question_number"] - 1, r["attempt"])
+            if key in recovered or r["id"] != rows[key[0]]["parent_id"]:
+                raise ValueError("Recovered attempts are duplicated or mismatched")
+            if r["sampling_seed"] != 17 + (key[0] + 1) * 4 + key[1]:
+                raise ValueError("Recovered attempt seed differs")
+            recovered[key] = r
+        # A resumption is permitted only when every previously submitted call was saved.
+        if len(saved) != request["resume_raw"]["submitted_calls_verified"]:
+            raise ValueError("Cannot resume with missing original responses")
     selected, skipped, attempts = [], [], []
     prices = request["prices_per_million"]
     try:
         sampler = service.create_sampling_client(base_model=request["model"]).result()
         def sample(item):
             i, attempt = item
+            if item in recovered:
+                return recovered[item]
             row = rows[i]
             messages = [{"role": "user", "content": row["problem"]}]
             if row["problem"] != prompt_text(row["raw_problem"], "omi2"):
@@ -141,16 +157,21 @@ def run(request, output):
                 for attempt in range(1, 5):
                     if not pending:
                         break
-                    expected = request["forecast"]["measured_cost_per_sample_usd"] * 1.5 * len(pending)
-                    if usage["upper_token_cost_usd"] + expected > request["forecast"]["teacher_generation_cap_usd"]:
+                    new_calls = sum((i, attempt) not in recovered for i in pending)
+                    expected = request["forecast"]["measured_cost_per_sample_usd"] * 1.5 * new_calls
+                    prior_paid = request.get("resume_raw", {}).get("prior_cost_usd", 0)
+                    if max(prior_paid, usage["upper_token_cost_usd"]) + expected > request["forecast"]["teacher_generation_cap_usd"]:
                         raise ValueError("STOP: next measured-token x1.5 batch exceeds teacher generation reservation")
                     write_json(output / f"ADMISSION_{cursor:04d}_{attempt}.json", {
                         "used_usd": usage["upper_token_cost_usd"], "next_buffered_usd": expected,
                         "cap_usd": request["forecast"]["teacher_generation_cap_usd"],
                         "question_numbers": [i + 1 for i in pending]})
                     next_pending = []
-                    for record in pool.map(sample, [(i, attempt) for i in pending]):
+                    records = list(pool.map(sample, [(i, attempt) for i in pending]))
+                    # Persist the complete returned wave before any eligibility checks.
+                    for record in records:
                         raw.write(json.dumps(record, ensure_ascii=False) + "\n"); raw.flush()
+                    for record in records:
                         i = record["question_number"] - 1
                         usage["prefill_tokens_uncached_upper"] += len(record["prompt_token_ids"])
                         usage["completion_tokens"] += len(record["token_ids"])
@@ -163,8 +184,13 @@ def run(request, output):
                             provenance={"teacher": request["model"], "sequence_id": record["sequence_id"],
                                         "question_number": i + 1, "attempt": attempt, "sampling_seed": record["sampling_seed"]})
                         long_row.pop("training_tokens", None)
-                        _, rendered = rendered_datum(long_row, tokenizer, renderer)
-                        full_tokens = len(rendered["input_token_ids"])
+                        # Measure before applying the training helper's4096-token guard:
+                        # overlong generated candidates are rejected, not training rows.
+                        mi, _ = renderer.build_supervised_example(
+                            [{"role": "user", "content": long_row["problem"]},
+                             {"role": "assistant", "content": solution}],
+                            train_on_what=renderers.TrainOnWhat.LAST_ASSISTANT_MESSAGE)
+                        full_tokens = mi.length
                         correct = score_answer(last_boxed(solution), rows[i]["gold"], "math")
                         eligible = record["finish_reason"] == "stop" and correct and full_tokens <= 2300
                         label = {"id": record["id"], "question_number": i + 1, "attempt": attempt,
