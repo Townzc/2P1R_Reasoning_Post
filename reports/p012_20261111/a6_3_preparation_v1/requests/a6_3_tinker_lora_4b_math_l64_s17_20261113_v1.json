@@ -1,0 +1,96 @@
+{
+  "run_id": "a6_3_tinker_lora_4b_math_l64_s17_20261113_v1",
+  "mode": "train",
+  "model": "Qwen/Qwen3.5-4B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-4B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3161,
+        "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 17,
+  "rank": 32,
+  "learning_rate": 0.0004905250962784578,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 0.737,
+    "prefill": 0.33,
+    "sample": 1.005
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Owner-approved A6-3 frozenA5files, unchanged Tinker training/evaluation paths;9B threecells after9B pairedlengtharms,4B later",
+  "code_commit": "d85499489513f0ad0cf85bc25c1ba513b1d1ad47",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+  "dataset": {
+    "path": ".local/p012_20261111/a5_frozen_v1/math/L64.jsonl",
+    "sha256": "50991feb2b7f754be31dd54c5c421eab5c9df536d41f224b8ed10fb891ad2afa"
+  },
+  "forecast": {
+    "admitted": false,
+    "training_buffered_usd": 0.1471551025,
+    "reserved_greedy_usd": 4.264492949999999,
+    "forecast_usd": 4.4116480524999995,
+    "A6_3_cap_usd": 35,
+    "A6_total_cap_usd": 85,
+    "combined_T_cap_usd": 425,
+    "sampling_rule": "same-model measuredL greedy tokens x1.5"
+  },
+  "cell": "L64",
+  "sampling_concurrency": 32,
+  "dose": {
+    "parents": 64,
+    "paths_per_parent": 1,
+    "distinct_rows": 64,
+    "epochs": 2,
+    "presentations": 128,
+    "effective_batch": 8,
+    "expected_updates": 16,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "authority_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+  "track": "tinker_lora",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "A6_group": "A6-3",
+  "cpu_counts": {
+    "full_training_input_tokens": 51186,
+    "full_supervised_target_tokens": 39388,
+    "maximum_sequence_tokens": 1223,
+    "every_row_renderer_and_mask_verified": true,
+    "A5_frozen_manifest_sha256": "9ef237cbfafe8a87f53108d428c7043d89c72b5ece568a71129b45fcf52dc491"
+  }
+}
