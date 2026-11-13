@@ -1,0 +1,57 @@
+{
+  "run_id": "llama_instruct_math_k4_s17_greedy_20261113_v2",
+  "code_commit": "eb4ce3163bd070b9c3d77d800dab55245d38f37d",
+  "config": {
+    "model": "/p012/training/llama_instruct_math_k4_s17_20261113_v1/checkpoint",
+    "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+    "protocol": "omi2",
+    "task": "math",
+    "template_family": "llama3",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 5000,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/llama3.jinja",
+    "stop_strings": [],
+    "training_run_id": "llama_instruct_math_k4_s17_20261113_v1",
+    "checkpoint_manifest_sha256": "46e647727bcbc4f35e2bf6021b019ca06e30799ec1e52050f75189377101c5bc"
+  },
+  "input_sha256": "19019b07cca9bedc519149cef9fad8765cc40cb0fc1129b28485dab0d750848d",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "checkpoints.py": "89b3049da91b7e696c1f803fdecc4a9669e772e5691c3e06d57c8d0379a88240"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.5627374406211704,
+    "reserved_evaluation_usd": 0,
+    "admission_file": "reports/p012_20261111/llama_tier2_admission_v1/ADMISSION.json",
+    "admission_sha256": "ff30fb9d41872313896cd703c61683bca3b4260917d5aa2d027ee63a4d4de066",
+    "hard_lhs": 26.874969017857822,
+    "hard_rhs": 34.47,
+    "workspace": "tangzhice"
+  },
+  "input_source": {
+    "canonical_prepared_source_sha256": "7f0743c1b064e107bcebfd175e6e73f7351fdb433216eb279c336f470cc5500b",
+    "transformation": "Keep frozen IDs and bare questions; boxed gold from canonical human solution; discard plain-harness prompts. H4 subset IDs preserved."
+  },
+  "authority": "Owner-approved A4 Tier1; unchanged reviewed main evaluation; five-cell batch evaluation already reserved",
+  "workspace": "tangzhice",
+  "workspace_assignment_authority": "b886b64cea2603f876ab1776325e24a26df55ba8",
+  "infrastructure_retry": {
+    "number": 1,
+    "reason": "Modalcontainerpreemption; automaticcloudrestartblockedbysafeexclusiveoutputdirectory",
+    "original_run_id": "llama_instruct_math_k4_s17_greedy_20261113_v1",
+    "original_request_sha256": "f4279749afc32e721dfd9c3ade33adf2a21fa9ba682a8c3fa8fa9aa38a773cd7",
+    "original_checkpoint_and_inputs_unchanged": true
+  }
+}

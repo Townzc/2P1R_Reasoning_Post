@@ -1,0 +1,168 @@
+{
+  "run_id": "tier2_llama_base_math_k8_s29_20261113_v1",
+  "code_commit": "eb4ce3163bd070b9c3d77d800dab55245d38f37d",
+  "cell": "K8",
+  "long_cot": false,
+  "model": {
+    "repo": "meta-llama/Llama-3.2-1B",
+    "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "bytes": 7712,
+        "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+      },
+      {
+        "path": "README.md",
+        "bytes": 41239,
+        "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+      },
+      {
+        "path": "USE_POLICY.md",
+        "bytes": 6021,
+        "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+      },
+      {
+        "path": "config.json",
+        "bytes": 843,
+        "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 185,
+        "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 2471645608,
+        "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+      },
+      {
+        "path": "original/params.json",
+        "bytes": 220,
+        "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+      },
+      {
+        "path": "original/tokenizer.model",
+        "bytes": 2183982,
+        "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+      },
+      {
+        "path": "special_tokens_map.json",
+        "bytes": 301,
+        "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 9085657,
+        "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 50500,
+        "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+      }
+    ],
+    "family": "llama3"
+  },
+  "dataset": {
+    "name": "math_k8",
+    "sha256": "f28e7560bae02c7055619941b0e9a757bfc3f8402ddb62af316e079587386a77",
+    "rows": 4096
+  },
+  "config": {
+    "model_name_or_path": "meta-llama/Llama-3.2-1B",
+    "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+    "stage": "sft",
+    "do_train": true,
+    "finetuning_type": "full",
+    "flash_attn": "fa2",
+    "dataset": "math_k8",
+    "dataset_dir": "inputs",
+    "template": "llama3",
+    "cutoff_len": 4096,
+    "packing": false,
+    "train_on_prompt": false,
+    "preprocessing_num_workers": 4,
+    "max_samples": 10000,
+    "output_dir": "checkpoint",
+    "overwrite_output_dir": false,
+    "logging_steps": 1,
+    "save_steps": 1000,
+    "save_total_limit": 2,
+    "plot_loss": true,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 1e-05,
+    "num_train_epochs": 2,
+    "lr_scheduler_type": "cosine",
+    "bf16": true,
+    "optim": "adamw_torch",
+    "warmup_ratio": 0.0,
+    "warmup_steps": 0,
+    "weight_decay": 0.0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "seed": 29,
+    "data_seed": 29,
+    "report_to": "none",
+    "ddp_timeout": 180000000,
+    "val_size": 0.0,
+    "eval_strategy": "no",
+    "per_device_eval_batch_size": 1,
+    "save_strategy": "no"
+  },
+  "length_report": {
+    "dataset_sha256": "f28e7560bae02c7055619941b0e9a757bfc3f8402ddb62af316e079587386a77",
+    "rows": 4096,
+    "model": "meta-llama/Llama-3.2-1B",
+    "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+    "cutoff_len": 4096,
+    "llamafactory_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+    "preflight_sha256": "d4905878eb0aaa99e4cb1541f1b3f322851ad8be67495f89967aaf572fe14eb1",
+    "maximum_full_tokens": 1930,
+    "over_cutoff_rows": 0,
+    "basis": "Frozen C5 full-template counts for every row; actual C6 preprocessing parity bound by SHA256"
+  },
+  "source_sha256": {
+    "modal_train.py": "96bdb16d423ab496f7647cf74a091fa73dad0a2e6cdd9d3d24686a030864a6f0",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "training_inputs.py": "74816a4f5d49e554f58228a6e2bc2ad6480ab71aa4c46ad64df1b09bd4147b40",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+    "modal_training_runtime.py": "7015deb5ec560d43e5a4021b3dcf65e12b52cf4cf9f7c83dee3f2783598d3f1e",
+    "requirements-train.lock": "6d0a22a526735660d8445ccbebcb51ac5c6a45ccae34fa4d5c8bff18ed3b38fa"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.5381822661846511,
+    "reserved_evaluation_usd": 0.5720404430649597,
+    "admission_file": "reports/p012_20261111/llama_tier2_admission_v1/ADMISSION.json",
+    "admission_sha256": "ff30fb9d41872313896cd703c61683bca3b4260917d5aa2d027ee63a4d4de066",
+    "hard_lhs": 26.874969017857822,
+    "hard_rhs": 34.47,
+    "workspace": "tangzhice"
+  },
+  "owner_authority": "Owner-approved A4 main Tier 1; accepted e10a4bf5 batch8 and existing C6/preprocessing; R2 gate passed",
+  "launch_mode": "modal run --detach -m experiments.p012.modal_train",
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 8,
+    "distinct_rows": 4096,
+    "epochs": 2,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_source": {
+    "frozen_manifest_sha256": "c9e9916f23164e6977959c0686ca51389863ac651ed10e22eabc55533ab9e8a9",
+    "accepted_review": "e10a4bf5"
+  },
+  "task": "math",
+  "track": "tier2_full_finetuning",
+  "workspace": "tangzhice",
+  "authority": "Owner-approved amendment6 andb886b64c workspace allocation; Tier2 seed29 P/R/L beforeK8; noK4"
+}

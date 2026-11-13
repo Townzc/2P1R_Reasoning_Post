@@ -1,0 +1,162 @@
+{
+  "run_id": "modal_lora_bridge_qwen_instruct_math_l_s17_20261113_v1",
+  "code_commit": "eb4ce3163bd070b9c3d77d800dab55245d38f37d",
+  "cell": "L",
+  "long_cot": false,
+  "model": {
+    "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "type": "model",
+    "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "path": "README.md",
+        "bytes": 4917,
+        "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+      },
+      {
+        "path": "config.json",
+        "bytes": 660,
+        "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 242,
+        "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 3087467144,
+        "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 7305,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "family": "qwen"
+  },
+  "dataset": {
+    "name": "math_l",
+    "sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3",
+    "rows": 512
+  },
+  "config": {
+    "model_name_or_path": "Qwen/Qwen2.5-1.5B-Instruct",
+    "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "stage": "sft",
+    "do_train": true,
+    "finetuning_type": "lora",
+    "flash_attn": "fa2",
+    "dataset": "math_l",
+    "dataset_dir": "inputs",
+    "template": "qwen",
+    "cutoff_len": 4096,
+    "packing": false,
+    "train_on_prompt": false,
+    "preprocessing_num_workers": 4,
+    "max_samples": 10000,
+    "output_dir": "checkpoint",
+    "overwrite_output_dir": false,
+    "logging_steps": 1,
+    "save_steps": 1000,
+    "save_total_limit": 2,
+    "plot_loss": true,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0005103340076039325,
+    "num_train_epochs": 2,
+    "lr_scheduler_type": "cosine",
+    "bf16": true,
+    "optim": "adamw_torch",
+    "warmup_ratio": 0.0,
+    "warmup_steps": 0,
+    "weight_decay": 0.0,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "max_grad_norm": 1.0,
+    "seed": 17,
+    "data_seed": 17,
+    "report_to": "none",
+    "ddp_timeout": 180000000,
+    "val_size": 0.0,
+    "eval_strategy": "no",
+    "per_device_eval_batch_size": 1,
+    "save_strategy": "no",
+    "lora_rank": 32,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "lora_target": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj"
+  },
+  "length_report": {
+    "dataset_sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3",
+    "rows": 512,
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "cutoff_len": 4096,
+    "llamafactory_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+    "preflight_sha256": "d4905878eb0aaa99e4cb1541f1b3f322851ad8be67495f89967aaf572fe14eb1",
+    "maximum_full_tokens": 2097,
+    "over_cutoff_rows": 0,
+    "basis": "Frozen C5 full-template counts for every row; actual C6 preprocessing parity bound by SHA256"
+  },
+  "source_sha256": {
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "training_inputs.py": "74816a4f5d49e554f58228a6e2bc2ad6480ab71aa4c46ad64df1b09bd4147b40",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+    "modal_training_runtime.py": "7015deb5ec560d43e5a4021b3dcf65e12b52cf4cf9f7c83dee3f2783598d3f1e",
+    "requirements-train.lock": "6d0a22a526735660d8445ccbebcb51ac5c6a45ccae34fa4d5c8bff18ed3b38fa",
+    "modal_bridge.py": "2194262211505bbf0acee1d9b5e8d7728d53ce24eccb5530a443dabc626b700b",
+    "bridge_config.py": "6e2340bc43f97b4c16bd17285be7793616272500b93acb6ac4678e41cf2ab5cd"
+  },
+  "forecast": {
+    "admitted": false,
+    "awaiting_Qwen_Tier2_and_townzc_budget": true,
+    "conditional_on_full_L_cap_lte_25percent": false
+  },
+  "owner_authority": "Owner-approved A6 substitutesonlymodelname/revision; b886b64c assigns allfivecells to townzc afterQwenTier2; Lfullcap<=25percentbeforeotherfour",
+  "launch_mode": "modal run --detach -m experiments.p012.modal_bridge",
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_source": {
+    "frozen_manifest_sha256": "c9e9916f23164e6977959c0686ca51389863ac651ed10e22eabc55533ab9e8a9",
+    "accepted_review": "e10a4bf5"
+  },
+  "track": "modal_lora_bridge",
+  "accepted_review_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "known_Tinker_difference": "Sevenattention/MLP modules; no lm_head adapter versusTinkertrain_unembedTrue",
+  "alpha_basis": "Documentedcookbook32; notconfirmedbyserver",
+  "workspace": "townzc"
+}

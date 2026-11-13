@@ -1,0 +1,45 @@
+{
+  "run_id": "c7_llama_instruct_gsm8k_baseline0_20261113_v1",
+  "code_commit": "eb4ce3163bd070b9c3d77d800dab55245d38f37d",
+  "config": {
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+    "protocol": "omi2",
+    "task": "gsm8k",
+    "template_family": "llama3",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 1319,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/llama3.jinja",
+    "stop_strings": [],
+    "training_run_id": null,
+    "checkpoint_manifest_sha256": null
+  },
+  "input_sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.13446222683041667,
+    "reserved_evaluation_usd": 0,
+    "admission_file": "reports/p012_20261111/llama_tier2_admission_v1/ADMISSION.json",
+    "admission_sha256": "ff30fb9d41872313896cd703c61683bca3b4260917d5aa2d027ee63a4d4de066",
+    "hard_lhs": 26.874969017857822,
+    "hard_rhs": 34.47,
+    "workspace": "tangzhice"
+  },
+  "authority": "Accepted 07b56e49 C7 and owner-approved A4; Instruct baseline0 additionally required by approved A5-1",
+  "C7_prepared_manifest_sha256": "c31a8550baa773c0eaff30f8b5ed87c769beb9308d38103efce20a1773ba9ba6",
+  "workspace": "tangzhice"
+}

@@ -18,8 +18,10 @@ def bridge_config(model, revision, dataset, cell):
 
 
 def validate_bridge_request(request):
-    if request['model']['repo']!='Qwen/Qwen2.5-1.5B' or request['config']['seed']!=17:
-        raise ValueError('Bridge is Qwen1.5B base seed17 only')
+    # A6 substitutes the pinned Instruct checkpoint. The base entry remains
+    # valid for reading the immutable original L attempt, not for new runs.
+    if request['model']['repo'] not in ('Qwen/Qwen2.5-1.5B', 'Qwen/Qwen2.5-1.5B-Instruct') or request['config']['seed']!=17:
+        raise ValueError('Bridge requires an approved Qwen1.5B checkpoint andseed17')
     if request['config']!=bridge_config(request['model']['repo'],request['model']['revision'],
                                        request['dataset']['name'],request['cell']):
         raise ValueError('Bridge differs from frozen LoRA recipe')
