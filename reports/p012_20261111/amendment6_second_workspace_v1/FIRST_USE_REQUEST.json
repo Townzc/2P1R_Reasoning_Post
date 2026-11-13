@@ -1,0 +1,195 @@
+{
+  "workspace": "townzc",
+  "authority_commit": "b886b64cea2603f876ab1776325e24a26df55ba8",
+  "training_versions": {
+    "llamafactory": "0.9.2.dev0",
+    "torch": "2.5.1",
+    "transformers": "4.49.0",
+    "datasets": "3.2.0",
+    "accelerate": "1.2.1",
+    "flash-attn": "2.7.4.post1",
+    "pyarrow": "21.0.0"
+  },
+  "evaluation_versions": {
+    "vllm": "0.11.0",
+    "transformers": "4.56.2",
+    "torch": "2.8.0"
+  },
+  "llamafactory_commit": "1863f15a7c58b8a69fb1d18235ea85bca26d0484",
+  "reference_hardware": "NVIDIA H100 80GB HBM3, 81559 MiB, 610.57.04\n",
+  "models": [
+    {
+      "repo": "Qwen/Qwen2.5-1.5B",
+      "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+      "type": "model",
+      "downloaded_utc": "2026-11-12T05:51:37.701000+00:00",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "README.md",
+          "bytes": 3850,
+          "sha256": "84cc3bdbfd781149913126b70981cf1e341176fe4bc9d878601a83f18b035ddf"
+        },
+        {
+          "path": "config.json",
+          "bytes": 684,
+          "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 138,
+          "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 3087467144,
+          "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 7228,
+          "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ]
+    },
+    {
+      "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "type": "model",
+      "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "README.md",
+          "bytes": 4917,
+          "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+        },
+        {
+          "path": "config.json",
+          "bytes": 660,
+          "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+        },
+        {
+          "path": "generation_config.json",
+          "bytes": 242,
+          "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        {
+          "path": "model.safetensors",
+          "bytes": 3087467144,
+          "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ]
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "name": "math_P",
+      "sha256": "06767f89c8393e7c167e42b04987273f21711e5fe5f14977516f55d12077ffac"
+    },
+    {
+      "name": "math_R",
+      "sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3"
+    },
+    {
+      "name": "math_L",
+      "sha256": "591cdb97282af217573aa21a912b41bf4e380ca6378db6d87129e0a4f0c01cf3"
+    },
+    {
+      "name": "math_K8",
+      "sha256": "f28e7560bae02c7055619941b0e9a757bfc3f8402ddb62af316e079587386a77"
+    },
+    {
+      "name": "gsm8k_P",
+      "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377"
+    },
+    {
+      "name": "gsm8k_R",
+      "sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a"
+    },
+    {
+      "name": "gsm8k_L",
+      "sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a"
+    },
+    {
+      "name": "gsm8k_K8",
+      "sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00"
+    },
+    {
+      "name": "math5000",
+      "sha256": "19019b07cca9bedc519149cef9fad8765cc40cb0fc1129b28485dab0d750848d"
+    },
+    {
+      "name": "gsm8k1319",
+      "sha256": "5a9a4e2cae969a72cf7a71f6ce66059039c0f9e694ef689ab7d5fc86080f3176"
+    }
+  ],
+  "source_sha256": {
+    "modal_workspace_check.py": "55e7ba1167f67f8e4924ee46c3c152591fa2a6e58d7469e5c38578d89ed857c1",
+    "modal_training_runtime.py": "7015deb5ec560d43e5a4021b3dcf65e12b52cf4cf9f7c83dee3f2783598d3f1e",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "requirements-train.lock": "6d0a22a526735660d8445ccbebcb51ac5c6a45ccae34fa4d5c8bff18ed3b38fa",
+    "requirements-eval.lock": "db1e3598939f5760966a48fc80fabf76c61636d1ccf46eb290e7add8d87c3615",
+    "modal_train.py": "96bdb16d423ab496f7647cf74a091fa73dad0a2e6cdd9d3d24686a030864a6f0",
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe"
+  },
+  "forecast": {
+    "admitted": true,
+    "observed_actual_balance": 30,
+    "protected_balance": 2,
+    "unsettled_prior": 0,
+    "two_CPU_cache_plus_H100_and_CPU_checks_buffered_usd": 0.8,
+    "hard_lhs": 0.8,
+    "hard_rhs": 28
+  },
+  "pricing_match": {
+    "cpu_hour_cost": "0.04730",
+    "cpu_hour_cost_sandbox": "0.141900",
+    "gpu_hour_cost_h100": "3.95000"
+  },
+  "utc": "2026-11-13T23:24:56.853014+00:00"
+}
