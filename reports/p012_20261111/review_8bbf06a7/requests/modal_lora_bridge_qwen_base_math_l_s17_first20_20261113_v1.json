@@ -1,0 +1,55 @@
+{
+  "run_id": "modal_lora_bridge_qwen_base_math_l_s17_first20_20261113_v1",
+  "code_commit": "daec6fb25661680d9c61ec258446063b899a135c",
+  "config": {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "protocol": "omi2",
+    "task": "math",
+    "template_family": "qwen",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 20,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/qwen.jinja",
+    "stop_strings": [],
+    "training_run_id": null,
+    "checkpoint_manifest_sha256": null
+  },
+  "input_sha256": "ed8a57b4f8145b50e759ee3a99df9cba4a170d35b8d6e35a63b3875499a81194",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "bridge_evaluation.py": "46370f540616a99806f66d16f9a0dc73e14a3b3b456fd03087ba959ee7632471",
+    "bridge_config.py": "d48e494cadec8ea7a19c6bc5b34ee16e27814b5ac61a7adcb00a327a230472e7",
+    "modal_bridge_evaluation.py": "61a1a1d4ff1aedcd38f49e8cd5c0a75daba4b79f20fae6782a9b6eb57855054e",
+    "training_config.py": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+    "training_inputs.py": "74816a4f5d49e554f58228a6e2bc2ad6480ab71aa4c46ad64df1b09bd4147b40"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.16,
+    "batch_admission_sha256": "cdf654cf90f6fecfbc43e00970228620182ff77152ddd5a81ca70b26bd7fa476"
+  },
+  "input_source": {
+    "canonical_prepared_source_sha256": "7f0743c1b064e107bcebfd175e6e73f7351fdb433216eb279c336f470cc5500b",
+    "transformation": "Keep frozen IDs and bare questions; boxed gold from canonical human solution; discard plain-harness prompts. H4 subset IDs preserved."
+  },
+  "track": "modal_lora_bridge",
+  "accepted_review_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "bridge": {
+    "run_id": "modal_lora_bridge_qwen_base_math_l_s17_20261113_v1",
+    "path": "/p012/training/modal_lora_bridge_qwen_base_math_l_s17_20261113_v1/checkpoint",
+    "manifest_sha256": "509f3e732d8f867397384d5321d271ea1db9fc42705b653345546bbaa1104995"
+  },
+  "authority": "Owner-approved8bbf06a7 A5/B3; sameacceptedgeneration/scoring"
+}
