@@ -1,0 +1,44 @@
+{
+  "run_id": "qwen_instruct_math_p_s17_greedy_20261113_v1",
+  "code_commit": "b069a7a7b34d56921355870e7b819f519bd72684",
+  "config": {
+    "model": "/p012/training/qwen_instruct_math_p_s17_20261113_v1/checkpoint",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "protocol": "omi2",
+    "task": "math",
+    "template_family": "qwen",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 5000,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/qwen.jinja",
+    "stop_strings": [],
+    "training_run_id": "qwen_instruct_math_p_s17_20261113_v1",
+    "checkpoint_manifest_sha256": "3c3e5f5aafe2f489315ea16d94f5c8a11e8a5ead294c673f02ba97316e9dbc99"
+  },
+  "input_sha256": "19019b07cca9bedc519149cef9fad8765cc40cb0fc1129b28485dab0d750848d",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "checkpoints.py": "89b3049da91b7e696c1f803fdecc4a9669e772e5691c3e06d57c8d0379a88240"
+  },
+  "forecast": {
+    "admitted": true,
+    "subcap": "Tier1",
+    "forecast_usd": 0.34951940149486044,
+    "batch_admission_sha256": "acd0b45ea8d265fef651499cc9f2e7113ce976f6fb13895ad0cec08a97d9ef1f"
+  },
+  "input_source": {
+    "canonical_prepared_source_sha256": "7f0743c1b064e107bcebfd175e6e73f7351fdb433216eb279c336f470cc5500b",
+    "transformation": "Keep frozen IDs and bare questions; boxed gold from canonical human solution; discard plain-harness prompts. H4 subset IDs preserved."
+  },
+  "authority": "Owner approved77a2520e main greedy only; reviewed shared evaluation path"
+}
