@@ -120,8 +120,11 @@ def generation_messages(row):
     return [{'role':'user','content':prompt_text(row['problem'],'omi2')}]
 
 
-def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, temperature=0.0, seed=17):
+def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, temperature=0.0, seed=17,
+             concurrency=32):
     import tinker
+    if not isinstance(concurrency, int) or not 1 <= concurrency <= 64:
+        raise ValueError('Sampling concurrency must be between1and64')
     output.mkdir(exist_ok=False)
     cfg={'model':client.model_path if getattr(client,'model_path',None) else 'tinker_lora',
          'protocol':'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
@@ -150,7 +153,7 @@ def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, tempera
                 'length_capped':seq.stop_reason=='length','string_stop':False,
                 'sequence_id':seq.sequence_id,'sampling_seed':seed+i})
         return records, prompt.length*n, response.prompt_cache_hit_tokens
-    with (output/'raw.jsonl').open('x') as f, ThreadPoolExecutor(max_workers=8) as pool:
+    with (output/'raw.jsonl').open('x') as f, ThreadPoolExecutor(max_workers=concurrency) as pool:
         for records,pre,cached in pool.map(one,enumerate(rows)):
             usage['prefill_tokens_uncached_upper']+=pre;usage['prompt_cache_hit_tokens']+=cached
             for record in records:
@@ -229,13 +232,15 @@ def run(request, output):
                     tests=read_rows(request['evaluation'])
                     if len(tests)!=20:raise ValueError('T-smoke requires exactly20 questions')
                     sampler=service.create_sampling_client(model_path=saved.path).result()
-                    usage['sampling']=generate(sampler,tokenizer,renderer,tests,request['evaluation'],output/'generation')
+                    usage['sampling']=generate(sampler,tokenizer,renderer,tests,request['evaluation'],output/'generation',
+                                               concurrency=request.get('sampling_concurrency',32))
         elif mode=='generate':
             tests=read_rows(request['evaluation']);n=request['n'];temperature=.7 if n==8 else 0.0
             if n not in (1,8) or (n==8 and len(tests)!=500):raise ValueError('Unregistered evaluation dose')
             kwargs={'model_path':request['sampler_path']} if request.get('sampler_path') else {'base_model':request['model']}
             sampler=service.create_sampling_client(**kwargs).result()
-            usage['sampling']=generate(sampler,tokenizer,renderer,tests,request['evaluation'],output/'generation',n,temperature,request['seed'])
+            usage['sampling']=generate(sampler,tokenizer,renderer,tests,request['evaluation'],output/'generation',n,temperature,request['seed'],
+                                       request.get('sampling_concurrency',32))
         else:raise ValueError('Unknown mode')
         prices=request['prices_per_million'];cost=usage['training_input_tokens']*prices['train']/1e6
         if usage['sampling']:
