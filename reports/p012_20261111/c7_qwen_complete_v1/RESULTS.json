@@ -1,0 +1,318 @@
+{
+  "settings": [
+    {
+      "initialization": "base",
+      "task": "math",
+      "NLL": {
+        "solutions": 1000,
+        "target_tokens": 308814,
+        "nll_sum": 168527.26967802644,
+        "mean_per_token_nll": 0.5457241889228676,
+        "solution_chars": 791433,
+        "nll_per_char": 0.21293940191782051,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.5962409504055977,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 26.835685076,
+        "model": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "raw_sha256": "7c8266f47a978d8788341f6e204bcfd7d0b09da0d5579f3e4b2f93e1b32373c9",
+        "input_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df",
+        "template_sha256": "c1f15e219803e13967754ca30b2071029a24870f2c794a315d50121154c385a8",
+        "code_commit": "e6183b90b39d1003376ad017712a1624bf84ab5d",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "baseline4": {
+        "questions": 500,
+        "responses": 500,
+        "draws_per_question": 1,
+        "protocol": "omi2",
+        "task": "math",
+        "metric": "math_verify",
+        "accuracy": 0.266,
+        "format_compliance": 0.694,
+        "terminator_stop_rate": 0.606,
+        "length_cap_rate": 0.394,
+        "mean_completion_tokens": 1698.64,
+        "counts": {
+          "stopped_on_terminator": 303,
+          "length_capped": 197,
+          "string_stop": 0,
+          "unclassified_stop": 0,
+          "completion_tokens": 849320,
+          "prompt_tokens_per_response_sum": 948970
+        },
+        "judge_requests": 0
+      },
+      "pass8": {
+        "questions": 500,
+        "responses": 4000,
+        "pass_at_1": 0.1905,
+        "pass_at_8": 0.564,
+        "estimator": "For n=8, pass@1=c/8; pass@8=1[c>0]. Mean over questions.",
+        "input_sha256": "f4f08f94ea9e05b99f53d6fd04fb921978fb9f36393f34bc4478e35c9d574ad8",
+        "labels_sha256": "beae4d051ef9f1cc0c3ee0bd9e95c23e6369adf8b2755e669528863e40619556",
+        "generation_manifest_sha256": "aeefed587e9576103249cf02da3be4b06f6cb4bdda011f89e05795b6fde5770e"
+      },
+      "endpoints": {
+        "nll": ".local/p012_20261111/c7/qwen_base_math_nll_v1",
+        "baseline4": ".local/p012_20261111/c7/qwen_base_math_baseline4_v1",
+        "holdout8": ".local/p012_20261111/c7/qwen_base_math_holdout8_v1"
+      },
+      "reused_old_first_group": true
+    },
+    {
+      "initialization": "base",
+      "task": "gsm8k",
+      "NLL": {
+        "solutions": 1000,
+        "target_tokens": 156269,
+        "nll_sum": 91587.19076423347,
+        "mean_per_token_nll": 0.5860867527419608,
+        "solution_chars": 468180,
+        "nll_per_char": 0.1956238856085981,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.6175742135792971,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 19.493981744,
+        "model": "Qwen/Qwen2.5-1.5B",
+        "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+        "raw_sha256": "a03535e810c67275a4caec0ea0624834c71863213415e2bb6d9c40596b3d2739",
+        "input_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6",
+        "template_sha256": "c1f15e219803e13967754ca30b2071029a24870f2c794a315d50121154c385a8",
+        "code_commit": "f80f5eb737901b45f907d55695f186a7ba37d3f9",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "baseline4": {
+        "questions": 1319,
+        "responses": 1319,
+        "draws_per_question": 1,
+        "protocol": "omi2",
+        "task": "gsm8k",
+        "metric": "numeric_equality_then_math_verify",
+        "accuracy": 0.6520090978013646,
+        "format_compliance": 0.9893858984078847,
+        "terminator_stop_rate": 0.9893858984078847,
+        "length_cap_rate": 0.01061410159211524,
+        "mean_completion_tokens": 180.17437452615619,
+        "counts": {
+          "stopped_on_terminator": 1305,
+          "length_capped": 14,
+          "string_stop": 0,
+          "unclassified_stop": 0,
+          "completion_tokens": 237650,
+          "prompt_tokens_per_response_sum": 1092538
+        },
+        "judge_requests": 0,
+        "accuracy_strict_numeric": 0.6520090978013646,
+        "accuracy_with_percent_and_math_verify_fallback": 0.6520090978013646,
+        "fallback_gain_pp": 0.0,
+        "percent_stripped_gain_pp": 0.0,
+        "correct_by_path": {
+          "strict_numeric": 860,
+          "percent_stripped": 0,
+          "math_verify_fallback": 0
+        },
+        "percent_stripped_evaluations": 1,
+        "fallback_evaluations": 449
+      },
+      "pass8": {
+        "questions": 500,
+        "responses": 4000,
+        "pass_at_1": 0.588,
+        "pass_at_8": 0.928,
+        "estimator": "For n=8, pass@1=c/8; pass@8=1[c>0]. Mean over questions.",
+        "input_sha256": "eed937e8836f2b84f4c2c7b6f13047f411a6d15193ab82840fdf41121c227950",
+        "labels_sha256": "7c5762590841e7a86613755eb686f7f4c28359722b6aa4a459ea441668635706",
+        "generation_manifest_sha256": "0c46efbfd28613b34977755866a231e6294fe958d1f51e8a7d0e8c1f8af42bb8"
+      },
+      "endpoints": {
+        "nll": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_nll_20261113_v1",
+        "baseline4": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_baseline4_20261113_v1",
+        "holdout8": ".local/p012_20261111/c7/c7_qwen_base_gsm8k_holdout8_20261113_v1"
+      },
+      "reused_old_first_group": false
+    },
+    {
+      "initialization": "instruct",
+      "task": "math",
+      "NLL": {
+        "solutions": 1000,
+        "target_tokens": 308814,
+        "nll_sum": 149350.16402725875,
+        "mean_per_token_nll": 0.48362497823045186,
+        "solution_chars": 791433,
+        "nll_per_char": 0.18870853758594694,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.5109778496697545,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 36.057575819,
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "raw_sha256": "a0a0505f5e76993dd995a6de8a98946161da1fedf93eb4400854f6ba45de2adb",
+        "input_sha256": "ad9c6a97b03e95a43c3fd383a2aa83cf33057409772e6e1335447d66763276df",
+        "template_sha256": "c1f15e219803e13967754ca30b2071029a24870f2c794a315d50121154c385a8",
+        "code_commit": "166818290071512e5ee4ec6f92fae4ff468577ec",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "baseline4": {
+        "questions": 500,
+        "responses": 500,
+        "draws_per_question": 1,
+        "protocol": "omi2",
+        "task": "math",
+        "metric": "math_verify",
+        "accuracy": 0.362,
+        "format_compliance": 0.904,
+        "terminator_stop_rate": 0.926,
+        "length_cap_rate": 0.074,
+        "mean_completion_tokens": 515.464,
+        "counts": {
+          "stopped_on_terminator": 463,
+          "length_capped": 37,
+          "string_stop": 0,
+          "unclassified_stop": 0,
+          "completion_tokens": 257732,
+          "prompt_tokens_per_response_sum": 948970
+        },
+        "judge_requests": 0
+      },
+      "pass8": {
+        "questions": 500,
+        "responses": 4000,
+        "pass_at_1": 0.552,
+        "pass_at_8": 0.838,
+        "estimator": "For n=8, pass@1=c/8; pass@8=1[c>0]. Mean over questions.",
+        "input_sha256": "339e695efbc7346b221960916fe2841a0a0d4c1ca1f8341ec8fdf324e760ff8f",
+        "labels_sha256": "cbeeaf1886084748558a18bfb409260b2af7771064958de80ec5065165180ff6",
+        "generation_manifest_sha256": "a6a809ec3d7a4052edd97db5a2316bd87801762993d7684bb45c550dedcd3564"
+      },
+      "endpoints": {
+        "nll": ".local/p012_20261111/c7/c7_qwen_instruct_math_nll_20261113_v2",
+        "baseline4": ".local/p012_20261111/c7/c7_qwen_instruct_math_baseline4_20261113_v2",
+        "holdout8": ".local/p012_20261111/c7/c7_qwen_instruct_math_holdout8_20261113_v1"
+      },
+      "reused_old_first_group": false
+    },
+    {
+      "initialization": "instruct",
+      "task": "gsm8k",
+      "NLL": {
+        "solutions": 1000,
+        "target_tokens": 156269,
+        "nll_sum": 79767.73780249059,
+        "mean_per_token_nll": 0.5104514510394934,
+        "solution_chars": 468180,
+        "nll_per_char": 0.17037835405718013,
+        "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+        "mean_per_solution_nll": 0.5340803287178278,
+        "primary_metric": "mean_per_token_nll",
+        "units": "nats",
+        "prompt_tokens_scored": 0,
+        "template_terminator_scored": true,
+        "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+        "cross_family_metric": "nll_per_char",
+        "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer.",
+        "elapsed_seconds": 23.125530216999998,
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "raw_sha256": "509edb3a544bc769f0bf5b3de4ff550e2ebcc5373790092d8df57486f159b090",
+        "input_sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6",
+        "template_sha256": "c1f15e219803e13967754ca30b2071029a24870f2c794a315d50121154c385a8",
+        "code_commit": "f80f5eb737901b45f907d55695f186a7ba37d3f9",
+        "versions": {
+          "torch": "2.5.1",
+          "transformers": "4.49.0",
+          "llamafactory": "0.9.2.dev0"
+        }
+      },
+      "baseline4": {
+        "questions": 1319,
+        "responses": 1319,
+        "draws_per_question": 1,
+        "protocol": "omi2",
+        "task": "gsm8k",
+        "metric": "numeric_equality_then_math_verify",
+        "accuracy": 0.5951478392721758,
+        "format_compliance": 0.959059893858984,
+        "terminator_stop_rate": 0.9954510993176648,
+        "length_cap_rate": 0.004548900682335102,
+        "mean_completion_tokens": 143.08188021228204,
+        "counts": {
+          "stopped_on_terminator": 1313,
+          "length_capped": 6,
+          "string_stop": 0,
+          "unclassified_stop": 0,
+          "completion_tokens": 188725,
+          "prompt_tokens_per_response_sum": 1092538
+        },
+        "judge_requests": 0,
+        "accuracy_strict_numeric": 0.5951478392721758,
+        "accuracy_with_percent_and_math_verify_fallback": 0.5951478392721758,
+        "fallback_gain_pp": 0.0,
+        "percent_stripped_gain_pp": 0.0,
+        "correct_by_path": {
+          "strict_numeric": 785,
+          "percent_stripped": 0,
+          "math_verify_fallback": 0
+        },
+        "percent_stripped_evaluations": 0,
+        "fallback_evaluations": 483
+      },
+      "pass8": {
+        "questions": 500,
+        "responses": 4000,
+        "pass_at_1": 0.65925,
+        "pass_at_8": 0.952,
+        "estimator": "For n=8, pass@1=c/8; pass@8=1[c>0]. Mean over questions.",
+        "input_sha256": "fb2afd258d18731f85701e9ffc630b491f449c66bc0d68f9cef18c4dde766a2e",
+        "labels_sha256": "93d24a778c9de6f76b4f8931c2e3a7da8b68bf59dfc1dfba4d1f3311b39750dd",
+        "generation_manifest_sha256": "a206bd0b090570d6edcb2c4c4632b32d4ea7b83d69b1a5750d98ac62d6b3bf90"
+      },
+      "endpoints": {
+        "nll": ".local/p012_20261111/c7/c7_qwen_instruct_gsm8k_nll_20261113_v1",
+        "baseline4": ".local/p012_20261111/c7/c7_qwen_instruct_gsm8k_baseline4_20261113_v1",
+        "holdout8": ".local/p012_20261111/c7/c7_qwen_instruct_gsm8k_holdout8_20261113_v1"
+      },
+      "reused_old_first_group": false
+    }
+  ],
+  "completed_endpoints": 12,
+  "new_successful_calls": 9,
+  "failed_attempts_preserved": [
+    "c7_qwen_instruct_math_nll_20261113_v1: H200 upgrade rejected before forward",
+    "c7_qwen_instruct_math_baseline4_20261113_v1: local source upload race before GPU"
+  ],
+  "optional_zero_shot": "NOT_RUN per Amendment3",
+  "Llama_C7": "NOT_RUN yet; retained for next block"
+}

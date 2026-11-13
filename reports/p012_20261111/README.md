@@ -1,3 +1,25 @@
+# Current P012 results — 2026-11-13
+
+Both Qwen × MATH settings are complete (seed 17, full MATH test 5,000, greedy 4,096/8,192). Base L reuses the accepted probe. All Qwen C7 mandatory endpoints and all three authorized Tinker smokes are complete.
+
+| Initialization | P | K8 | R | K4 | L |
+|---|---:|---:|---:|---:|---:|
+| base | 42.06% | 40.12% | 33.14% | 41.34% | 42.88% |
+| Instruct | 42.94% | 41.00% | 32.72% | 41.88% | 42.88% |
+
+- [Base evidence and termination diagnostics](tier1_qwen_base_math_s17_v1/README.md)
+- [Instruct evidence and termination diagnostics](tier1_qwen_instruct_math_s17_v1/README.md)
+- [Complete Qwen C7 results](c7_qwen_complete_v1/README.md)
+- [Tinker / LoRA bridge review packet](tinker_lora_bridge_review_v1/README.md): formal execution awaits the single combined review required by Amendment 4.
+
+R is 9.74pp below L for base and 10.16pp below L for Instruct, while R has fewer truncated outputs. P differs from L by -0.82pp and +0.06pp respectively. These are first-seed observations; the registered two-seed decision remains pending.
+
+Amendments 3 and 4 are approved at `claude/audit` 77a2520e. Phase budgets are soft. The sole hard budget condition is accounted cost plus the buffered next batch exceeding actual Modal credit balance minus $4. The current completed batch passed admission; the previous phase-cost stops below are superseded.
+
+---
+
+Historical milestones follow.
+
 # Latest results — 2026-11-12
 
 R1 and R2 both pass the registered reproduction gates. Remaining Tier 1 and C7 are stopped at their separate owner-defined cost gates. All submitted model jobs are complete; final R1/R2 weights have independent, SHA256-verified copies.

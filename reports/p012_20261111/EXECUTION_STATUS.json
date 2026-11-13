@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-12T22:19:10.856924+00:00",
-  "stage": "R1 and R2 PASS; Tier1 and remaining C7 STOP at their registered cost gates; zero active model jobs",
-  "plan": "P012 v1 plus amendments 1 and 2",
+  "updated_utc": "2026-11-13T20:14:57.740801+00:00",
+  "stage": "Qwen base/Instruct MATH all10 cells and Qwen C7 all12 endpoints complete; T-smoke complete; formal T/bridge waits combined review",
+  "plan": "P012 v1 plus owner-approved amendments1\u20134",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -32,33 +32,31 @@
     "runtime": "All completed jobs detached; final weights independently backed up and hash verified"
   },
   "science": {
-    "completed_generation_calls": 28,
-    "successful_training_calls": 3,
+    "completed_generation_calls": 43,
+    "successful_training_calls": 12,
     "failed_training_runs": 1,
     "superseded_training_runs": 1,
-    "completed_NLL_calls": 1,
+    "completed_NLL_calls": 4,
     "active_jobs": 0,
     "raw_inventory": "RUN_INVENTORY_CURRENT.json",
     "R1_gate": "PASS",
     "R2_gate": "PASS",
-    "latest_results_independent_numeric_review": "Raw artifacts published for the original planned checks",
-    "prior_G0_independent_audit": "e10a4bf5 accepted"
+    "latest_results_independent_numeric_review": "New Tier1/C7 evidence published; independent audit pending",
+    "prior_G0_independent_audit": "e10a4bf5 accepted",
+    "Tinker_smoke_calls": 3
   },
   "budget_usd": {
     "modal_total_cap": 85,
     "modal_protected": 4,
     "subcaps": {
-      "G0_E": 8,
-      "G0_T": 10,
-      "capability": 4,
-      "Tier1": 30,
-      "Tier2": 22,
-      "E2": 3,
-      "emergency": 8
+      "G0_E": 5,
+      "G0_T": 6,
+      "capability": 7.5,
+      "Tier1": 33.5,
+      "Tier2": 25,
+      "bridge": 4,
+      "emergency": 4
     },
-    "batch_forecast_threshold_fraction_of_remaining": 0.8,
-    "tinker_teacher_fallback_cap": 60,
-    "tinker_E4_cap": 80,
     "M2_40_carveout_activated": false,
     "unit_costs_measured": true,
     "owner_authorized_transfer": {
@@ -66,14 +64,20 @@
       "to": "G0_E",
       "usd": 4
     },
-    "latest_accounting": "budget_22utc_v1/RECONCILIATION.json"
+    "latest_accounting": "budget_22utc_v1/RECONCILIATION.json",
+    "phase_caps": "SOFT",
+    "modal_total_cap_status": "Planning total; sole hard stop uses actual credit balance minus4",
+    "hard_stop": "accounted + next_batch_buffered > actual_modal_credit_balance - 4",
+    "tinker_total_cap": 340,
+    "tinker_protected": 400,
+    "tinker_smoke_cap": 5
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Owner/Claude decision on Tier1 resource/budget/scope after the registered cost stop",
-    "Owner decision on C7 required endpoint cost above4; preserve all fixed questions and draws unless explicitly revised",
-    "Planned independent checks of newly published R1/R2/L/C7 raw evidence",
-    "R3 remains held"
+    "Publish combined Tinker/bridge review packet with actual smoke evidence",
+    "Claude combined review and prediction freeze before formal T post-training scoring",
+    "Continue authorized Qwen GSM/Llama blocks using measured forecast and actual-balance rule",
+    "R3/E2 remain held"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -84,7 +88,8 @@
     "601aebd2",
     "54f697e6",
     "e10a4bf5",
-    "07b56e49"
+    "07b56e49",
+    "7abcc305"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -113,28 +118,40 @@
     "started": true,
     "review": "07b56e49 accepted; N1 implemented and9 tests pass",
     "first_group": "Qwen base MATH complete: NLL,4shotgreedy,holdout500n8",
-    "remaining_mandatory_endpoints": 21,
+    "remaining_mandatory_endpoints": 12,
     "optional_zero_shot_unrun": 8,
     "mandatory_forecast_no_margin_usd": 5.694375334219286,
     "mandatory_forecast_with_margin_usd": 7.535866000164887,
-    "status": "STOP_CAP4"
+    "status": "QWEN_COMPLETE; LLAMA_NOT_RUN",
+    "completed_Qwen_endpoints": 12
   },
   "C8": {
     "started": true,
     "completed_cells": [
-      "Qwen base MATH L seed17"
+      "Qwen base MATH P seed17",
+      "Qwen base MATH K8 seed17",
+      "Qwen base MATH R seed17",
+      "Qwen base MATH K4 seed17",
+      "Qwen base MATH L seed17",
+      "Qwen Instruct MATH P seed17",
+      "Qwen Instruct MATH K8 seed17",
+      "Qwen Instruct MATH R seed17",
+      "Qwen Instruct MATH K4 seed17",
+      "Qwen Instruct MATH L seed17"
     ],
-    "remaining_grid": "STOP_CAP30",
-    "R1_accuracy_gate": "PASS",
-    "forecast_no_margin_usd": 49.55993342384082,
-    "forecast_with_margin_usd": 63.9891163664897
+    "remaining_grid": "Authorized next blocks: Qwen GSM, then Llama;30 Tier1 cells remain",
+    "R1_accuracy_gate": "PASS"
   },
   "latest_packets": [
     "r1_b16_results_v1",
     "r2_b16_results_v1",
     "l_cost_probe_v1",
     "c7_first_group_results_v1",
-    "budget_22utc_v1"
+    "budget_22utc_v1",
+    "tier1_qwen_base_math_s17_v1",
+    "tier1_qwen_instruct_math_s17_v1",
+    "c7_qwen_complete_v1",
+    "tinker_lora_bridge_review_v1"
   ],
   "latest_authorization": {
     "commit": "77a2520e",
@@ -143,7 +160,7 @@
       4
     ],
     "owner_approved": true,
-    "status": "ADMITTED_QWEN_MATH_AND_C7",
+    "status": "CURRENT_BATCH_COMPLETE",
     "budget": {
       "authority": "Owner explicitly approved 77a2520e Amendment3+4",
       "utc": "2026-11-13T19:44:31.574518+00:00",
@@ -179,13 +196,14 @@
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
-    "instruct_math": "ALL5_TRAINED; L_GREEDY_ACTIVE; other4 admitted",
+    "instruct_math": "ALL5_COMPLETE",
     "C7_Qwen": "ALL12_ENDPOINTS_COMPLETE",
     "T_smoke": "ALL3_MODELS20STEPS20QUESTIONS_COMPLETE",
     "formal_T_and_bridge": "WAIT_COMBINED_REVIEW",
     "tier1_all_math_upper_usd": 37.48942762131322,
     "tier1_planning_cap_usd": 33.5,
     "soft_cap_exceeded_in_conservative_all_math_extrapolation": true,
-    "action": "REPORT_AND_CONTINUE; admitted batch within hard balance gate"
+    "action": "REPORT_AND_CONTINUE; admitted batch within hard balance gate",
+    "active_model_jobs": 0
   }
 }
