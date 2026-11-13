@@ -1,3 +1,15 @@
+# Current P012 handoff — 2026-11-13T20:20:07.864751+00:00
+
+Both Qwen1.5B MATH settings (10 seed17 cells) and all12 Qwen C7 mandatory endpoints are COMPLETE and published at7c34f3d6. Base L reused. MATH5000 accuracy P/K8/R/K4/L: base42.06/40.12/33.14/41.34/42.88; Instruct42.94/41.00/32.72/41.88/42.88. Per-cell cap/loop/normal-termination diagnostics and original tokens/labels are in result packets. All3 T-smokes20updates/20questions complete, unscored; token-price upper0.257311USD. No active model calls. Original CLIs allconsumedEXIT0; no reruns.
+
+Combined Tinker/bridge code and real-smoke review packet: reports/p012_20261111/tinker_lora_bridge_review_v1. Formal T (including pre-training measurements) and Modal bridge await ONE actual Claude review. Prediction file must precede scoring trained T outputs. T-smoke is engineering-only and is never a scientific result. No formal bridge GPU or T forward-only NLL run yet. No R3/E2.
+
+Amendments3+4 approved at77a2520e supersede historical phase-cost stops and80percent rule. Phasecaps SOFT. Current observed Modalcredits70.15, accounted20.634162806 inclreserves; next2QwenGSM buffered7.753764084 passes20.634+7.754<70.15-4, but notsubmitted. Full40 Tier1 task-adjustedforecast34.3048>33.5SOFT; reportandcontinue. Recheckactualbalance before nextbatch. Currentpacket amendment4_completed_budget_v1. Nextcoreblock QwenGSM thenLlama/C7Llama; Tier2aftermeasuredforecast. No furtherownerbudgetapprovalneeded unless soleactualbalancehardtestfails. T/bridge review is separate from authorized main-grid continuation.
+
+Communication: direct, clear conclusions and concrete judgments supported by evidence. Avoid defensive disclaimers and vague qualifiers; identify a specific unknown when uncertain. External messages are draft-only; the owner sends them. No external sends, new chats, subagents or old experiments. Course prose stays with the owner. Preserve unrelated reports/lt002_followup_20260929/ and every original attempt. Never repeat completed model calls.
+
+Earlier entries below are historical where superseded.
+
 # P012 Amendment 3 + 4 APPROVED — 2026-11-13T19:44:31.574518+00:00
 
 Owner explicitly approved claude/audit77a2520e. Old Tier1 $30/C7 $4 stops and phase80% rule are superseded. Phase caps soft: report and continue. Sole hard budget condition: accounted + buffered next batch > actual Modal balance - $4. Current visiblebalance77.82; admitted batch 11.7524. G0 passed. Run Qwen base MATH P,K8,R,K4 (reuseL), then Instruct all5, greedyonly4096/8192. Eachcell report caprate, loopingresponsecount and normaltermination accuracy. No caprate stop. Complete Qwen C7 NLL→4shot→pass8 inparallel; reusefirstgroup, optional0shot omitted. Tinker Qwen3.5 4B/9B/9BBase LoRA + Modal1.5BbaseLoRAbridge implementation, T-smoke<=5 authorized before combinedreview; formalT/bridge awaitsreview. Predictionfreeze before posttraining T scoring. R3/E2hold. Noexternalmessages, chats,subagents; preserve unrelatedlt002. Prior statements below historical.

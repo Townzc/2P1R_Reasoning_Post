@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-13T20:14:57.740801+00:00",
+  "updated_utc": "2026-11-13T20:19:27.299202+00:00",
   "stage": "Qwen base/Instruct MATH all10 cells and Qwen C7 all12 endpoints complete; T-smoke complete; formal T/bridge waits combined review",
   "plan": "P012 v1 plus owner-approved amendments1\u20134",
   "C1": {
@@ -64,13 +64,16 @@
       "to": "G0_E",
       "usd": 4
     },
-    "latest_accounting": "budget_22utc_v1/RECONCILIATION.json",
+    "latest_accounting": "amendment4_completed_budget_v1/RECONCILIATION.json",
     "phase_caps": "SOFT",
     "modal_total_cap_status": "Planning total; sole hard stop uses actual credit balance minus4",
     "hard_stop": "accounted + next_batch_buffered > actual_modal_credit_balance - 4",
     "tinker_total_cap": 340,
     "tinker_protected": 400,
-    "tinker_smoke_cap": 5
+    "tinker_smoke_cap": 5,
+    "accounted_including_reserves": 20.634162806005687,
+    "observed_modal_actual_balance": 70.15,
+    "Tier1_measured_task_adjusted_forecast": 34.30481151934195
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
@@ -151,7 +154,8 @@
     "tier1_qwen_base_math_s17_v1",
     "tier1_qwen_instruct_math_s17_v1",
     "c7_qwen_complete_v1",
-    "tinker_lora_bridge_review_v1"
+    "tinker_lora_bridge_review_v1",
+    "amendment4_completed_budget_v1"
   ],
   "latest_authorization": {
     "commit": "77a2520e",
@@ -199,11 +203,12 @@
     "instruct_math": "ALL5_COMPLETE",
     "C7_Qwen": "ALL12_ENDPOINTS_COMPLETE",
     "T_smoke": "ALL3_MODELS20STEPS20QUESTIONS_COMPLETE",
-    "formal_T_and_bridge": "WAIT_COMBINED_REVIEW",
+    "formal_T_and_bridge": "WAIT_ONE_COMBINED_REVIEW; no formal model calls",
     "tier1_all_math_upper_usd": 37.48942762131322,
     "tier1_planning_cap_usd": 33.5,
     "soft_cap_exceeded_in_conservative_all_math_extrapolation": true,
     "action": "REPORT_AND_CONTINUE; admitted batch within hard balance gate",
-    "active_model_jobs": 0
+    "active_model_jobs": 0,
+    "soft_cap_exceeded_in_task_adjusted_forecast": true
   }
 }

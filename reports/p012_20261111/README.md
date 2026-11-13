@@ -10,6 +10,7 @@ Both Qwen × MATH settings are complete (seed 17, full MATH test 5,000, greedy 4
 - [Base evidence and termination diagnostics](tier1_qwen_base_math_s17_v1/README.md)
 - [Instruct evidence and termination diagnostics](tier1_qwen_instruct_math_s17_v1/README.md)
 - [Complete Qwen C7 results](c7_qwen_complete_v1/README.md)
+- [Current balance, accounting and measured forecast](amendment4_completed_budget_v1/README.md)
 - [Tinker / LoRA bridge review packet](tinker_lora_bridge_review_v1/README.md): formal execution awaits the single combined review required by Amendment 4.
 
 R is 9.74pp below L for base and 10.16pp below L for Instruct, while R has fewer truncated outputs. P differs from L by -0.82pp and +0.06pp respectively. These are first-seed observations; the registered two-seed decision remains pending.

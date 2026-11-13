@@ -1,0 +1,101 @@
+{
+  "utc": "2026-11-13T20:15:43.359729+00:00",
+  "models": [
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "track": "tinker_lora",
+      "seed": 17,
+      "rank": 32,
+      "cell": "L",
+      "smoke_updates": 20,
+      "full_L_schedule_updates": 128,
+      "learning_rate": 0.0004905250962784578,
+      "last_loss": 0.4413906931877136,
+      "generation_requests": 20,
+      "termination_counts": {
+        "stop": 20
+      },
+      "usage": {
+        "training_input_tokens": 65528,
+        "sampling": {
+          "prefill_tokens_uncached_upper": 1744,
+          "completion_tokens": 5010,
+          "prompt_cache_hit_tokens": 0
+        },
+        "upper_token_cost_usd": 0.053904706000000004,
+        "includes_cache_discount": false,
+        "storage_not_in_token_cost": true
+      },
+      "raw_sha256": "4d7d268b068da9a7b9db51ec1ec94a5d6f91b408c4908f0e2ddf20e1f6ee8e14",
+      "archive": "qwen3_5_4b_smoke_evidence.zip",
+      "smoke_accuracy": "NOT_SCORED; engineering evidence only",
+      "checks": "source/input/output hashes,20steps,20unique questions,finite losses,first160frozen row indices,token usage and length stop consistency passed"
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B-Base",
+      "track": "tinker_lora",
+      "seed": 17,
+      "rank": 32,
+      "cell": "L",
+      "smoke_updates": 20,
+      "full_L_schedule_updates": 128,
+      "learning_rate": 0.00047297908091376354,
+      "last_loss": 0.4198707342147827,
+      "generation_requests": 20,
+      "termination_counts": {
+        "stop": 19,
+        "length": 1
+      },
+      "usage": {
+        "training_input_tokens": 65528,
+        "sampling": {
+          "prefill_tokens_uncached_upper": 1744,
+          "completion_tokens": 8678,
+          "prompt_cache_hit_tokens": 0
+        },
+        "upper_token_cost_usd": 0.10339381000000002,
+        "includes_cache_discount": false,
+        "storage_not_in_token_cost": true
+      },
+      "raw_sha256": "b8dd412ab18b0ce61ff99f539fc0d4c6821b82354d6fc63fa83ac93f109b95b9",
+      "archive": "qwen3_5_9b_base_smoke_evidence.zip",
+      "smoke_accuracy": "NOT_SCORED; engineering evidence only",
+      "checks": "source/input/output hashes,20steps,20unique questions,finite losses,first160frozen row indices,token usage and length stop consistency passed"
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "track": "tinker_lora",
+      "seed": 17,
+      "rank": 32,
+      "cell": "L",
+      "smoke_updates": 20,
+      "full_L_schedule_updates": 128,
+      "learning_rate": 0.00047297908091376354,
+      "last_loss": 0.4237269163131714,
+      "generation_requests": 20,
+      "termination_counts": {
+        "stop": 20
+      },
+      "usage": {
+        "training_input_tokens": 65528,
+        "sampling": {
+          "prefill_tokens_uncached_upper": 1744,
+          "completion_tokens": 4488,
+          "prompt_cache_hit_tokens": 0
+        },
+        "upper_token_cost_usd": 0.10001248000000001,
+        "includes_cache_discount": false,
+        "storage_not_in_token_cost": true
+      },
+      "raw_sha256": "547f4484bd2126797f567b39369bcf2869ed9ba167f71a0f77c8e55d54ac92ad",
+      "archive": "qwen3_5_9b_smoke_evidence.zip",
+      "smoke_accuracy": "NOT_SCORED; engineering evidence only",
+      "checks": "source/input/output hashes,20steps,20unique questions,finite losses,first160frozen row indices,token usage and length stop consistency passed"
+    }
+  ],
+  "combined_token_cost_upper_usd": 0.25731099600000007,
+  "cost_basis": "Recorded tokens times frozen official rates; prefill charged fully without cache discount; storage excluded; not a provider invoice",
+  "source_commit": "4b55fa44",
+  "formal_T_runs": 0,
+  "bridge_model_calls": 0
+}
