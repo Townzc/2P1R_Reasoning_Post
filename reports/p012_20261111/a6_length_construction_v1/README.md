@@ -1,0 +1,7 @@
+# A6 exploratory answer-length construction
+
+Owner-approved amendment6 `18f64e2d` explicitly exempts this data path from prior review. The existing scorer, renderer, training and evaluation implementations are reused. M512 selects the first512 eligible parents in the frozen training4096 order, with greedy first and at most three independent0.7 attempts. Numbering in the seed formula is one-based:17+question_number*4+attempt_number. Each answer must terminate normally, score correctly under the registered last-boxed metric and fit2300 full training tokens. End tokens are stripped and re-added only by the renderer.
+
+Each processing window has at most16 new questions and never more than the remaining512 slots, preventing generation beyond the selected boundary. Each attempt is saved before scoring. Admission uses measured0shot token cost x1.5; teacher generation reservation$3 each, within A6-2$50. 9B is admitted first;4B is prepared only. Data freeze requires matching ordered512-question sets, correct answers without thinking/end markers and exact plus13gram test/holdout disjointness. Any failure stops before publication/training. OriginalT340 plusA6-2/3 limits50/35 gives combined425, protected325.
+
+Every raw attempt, selected attempt, skipped parent, file hash and full/supervised token distribution is preserved. Both arms have1024 presentations and128updates; different supervision-token totals will be reported. These results are exploratory and excluded fromH0-H3.
