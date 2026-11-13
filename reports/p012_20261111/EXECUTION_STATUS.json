@@ -135,5 +135,46 @@
     "l_cost_probe_v1",
     "c7_first_group_results_v1",
     "budget_22utc_v1"
-  ]
+  ],
+  "latest_authorization": {
+    "commit": "77a2520e",
+    "amendments": [
+      3,
+      4
+    ],
+    "owner_approved": true,
+    "status": "ADMITTED_QWEN_MATH_AND_C7",
+    "budget": {
+      "authority": "Owner explicitly approved 77a2520e Amendment3+4",
+      "utc": "2026-11-13T19:44:31.574518+00:00",
+      "actual_modal_credit_balance_usd": 77.82,
+      "balance_source": "Modal dashboard tangzhice visible Credits $77.82, 2026-11-13T19:45Z",
+      "accounted_P012_usd": 12.081525979999999,
+      "next_batch_buffered_usd": 11.752394125422407,
+      "hard_threshold_usd": 73.82,
+      "hard_test": "accounted + next batch buffered <= actual current balance - 4",
+      "admitted": true,
+      "forecasts_usd": {
+        "full_train": 0.6715888165978111,
+        "L_train": 0.19160199654225551,
+        "math5000_greedy": 0.34951940149486044,
+        "nll": 0.0928613615543292,
+        "baseline_math": 0.20140510712319937,
+        "baseline_gsm": 0.32511259658045794,
+        "holdout8": 0.6373975325656056
+      },
+      "margin": "25% elapsed time + 30s per function +0.02 per training save",
+      "soft_caps": {
+        "G0E": 5,
+        "G0T": 6,
+        "Tier1": 33.5,
+        "C7": 7.5,
+        "Tier2": 25,
+        "bridge": 4
+      },
+      "reserved_batch": "9 Qwen MATH training+greedy endpoints and remaining9 Qwen C7 mandatory endpoints; completed base MATH L and C7 group reused",
+      "old_stops_superseded": true,
+      "C7_zero_shot": "NOT_RUN per Amendment3"
+    }
+  }
 }
