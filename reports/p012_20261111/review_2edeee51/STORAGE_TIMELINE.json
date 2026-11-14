@@ -1,0 +1,45 @@
+{
+  "utc": "2026-11-14T23:45:28.987660+00:00",
+  "events": [
+    {
+      "event": "Owner reported Paid already enabled and authorized one export-only recovery",
+      "evidence": "APPROVAL.json",
+      "approval_sha256": "b3178020e83a385957b6963a2560b72a14a75208155d2239600e263bf0a12cb3"
+    },
+    {
+      "event": "R-1 actual storage query before export",
+      "utc": "2026-11-14T23:24:28.764780+00:00",
+      "checkpoint_count": 100,
+      "size_bytes": 69026859912,
+      "API_rate": 0.0,
+      "admission_basis": "Explicit owner paid-storage declaration, as specified by R-1"
+    },
+    {
+      "event": "Export-only operation succeeded",
+      "utc": "2026-11-14T23:24:51.837970+00:00",
+      "new_training_updates": 0
+    },
+    {
+      "event": "Three NLL attempts rejected with402 free-checkpoint limit before any forward tokens",
+      "utc": "2026-11-14T23:25:23Z",
+      "evidence": "NLL_RETRY.json",
+      "token_cost_usd": 0
+    },
+    {
+      "event": "Console visibly remained Free; explicitly authorized Paid selection saved successfully",
+      "utc": "2026-11-14T23:28Z",
+      "observation": "Paid Current; Settings saved; auto-reload remained off; no payment card added"
+    },
+    {
+      "event": "Paid verified by API",
+      "utc": "2026-11-14T23:28:36.269300+00:00",
+      "API_rate": 0.1
+    },
+    {
+      "event": "One NLL infrastructure retry each",
+      "utc": "2026-11-14T23:29:11Z",
+      "evidence": "NLL_RETRY.json"
+    }
+  ],
+  "conclusion": "E8 export succeeded before the actual Paid switch. The initial owner report and actual account setting differed. All subsequent new training clients are after the verified Paid switch. The historical approval and receipts are preserved, not rewritten."
+}
