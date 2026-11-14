@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-14T23:54:00.642488+00:00; E8 delivered, GSM training active
+
+Recovery review2edeee51 is fully implemented. E8 export succeeded exactly once withzero newupdates; fullMATH5000result2512/5000=50.24%,caps2.30%,loops53,normal2512/4885. E4=55.32%. Both plus10newGSMmeasurements are frozen in reviewpacketb97b8beb4c597aaaf1a8eaacca5955eefbeafd3d: results_aftere9f0ebdd_v1/README.md,12endpoints,24595scoredoutputs,3000NLLrecords. Owner has been asked to returnClaude review. PassedA7/e9outputs excluded; do not rerun stats/scoring.
+
+Paid storage was actually enabled23:28UTC after initialownerreport differed fromconsole. Exacttimeline andactualAPIrate0.1 are public inreview_2edeee51. All100originalcheckpoints,identity,size,TTLunchanged; newE8sampler is101st. USD30reserve countedonceinsideT340/combined485. Zero-tokenNLL402failures are preserved; oneinfrastructure retryeach completed.All3NLLnowdone.
+
+Only current controller is detachedPID65827, private t_gsm_v1/TRAINING_QUEUE.json, source tinker_gsm_training_v1/continue.py. It owns27authorizedGSMcells and uses unchangedscientificrunner/scorer. ThreeLseed17callsPID66483/66485/66487are running withfirstupdatesverified,correctmodels/rank32. Queue:L/P/R/K8/K4seed17,thenL/P/R/K8seed29,3modelsparallel. Readlive state;neverduplicatecalls/scoring/publication or editactivehelpers. Finite8hperbatch,noautomaticretry. NLLcontroller65632complete; E8controller65914finishedinE8_complete_L64_budget_hold; oldercontrollersmustnotrestart.
+
+L64 is not started. MeasuredE8settlement givesA6-3current32.160172,nextL64buffer4.411648,total36.571820>cap35. Owner questionpending:proposala19ce04d transfersUSD2fromcompletedA6-2(cap50->48)toA6-3(cap35->37),combined485unchanged. Awaitexplicitdecision; donot treatelapsedtimeasapproval. 4BGSMpass8holds4000unscoredoutputs:343/500>=7distinct,12/500alleightidentical(the latter6–9tokens). Controllerreused80%guardfromthreeMATHv2repairs;combinedClaudeauditmustresolveGSMscope/disposition. Trainingisindependentundera561§3.
+
+Currentallaccounted+reserved426.819941/485,originalT320.216011/340;GSM90.468665/105. Budgetpointerpoints toGSMledgers/0001.json and willadvanceundercontroller; originalTpointeralwaysoriginalTonly. Sharedbudget/Gitlocksthroughpush. Preserveunrelatedlt002,credentials,rawoutputs,frozenpredictions,failedattempts. No newModalwork,courseprose,externalmessages orsubagents. Earlierentriesbelowarehistorical.
+
 # Current P012 — 2026-11-14T23:37:11.878907+00:00; E8 exported, paid storage verified, original GSM admitted
 
 Owner accepted2edeee5169c9a05213a0264e57aae96dcad30727 and authorized exactly one E8 export-only recovery. R-1 implemented,14tests/realCPUpreflight passed. Export succeeded once with0newupdates; receipt9f5ab445 binds originalstate046b588f and new sampler0a26c1d5. Do not replay export or E8training. All original failed bytes remain unchanged. The console was actually Free despite earlier owner belief; explicitly authorized Paid switch was saved23:28UTC,APIeffective rate0.1verified. No checkpoints deleted,no topup,noautoreload. USD30storage reserved once insideT340/combined485.

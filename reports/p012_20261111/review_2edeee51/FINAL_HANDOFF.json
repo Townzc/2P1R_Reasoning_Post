@@ -1,0 +1,81 @@
+{
+  "utc": "2026-11-14T23:54:00.642488+00:00",
+  "review_package_commit": "b97b8beb4c597aaaf1a8eaacca5955eefbeafd3d",
+  "review_package": "reports/p012_20261111/results_aftere9f0ebdd_v1/README.md",
+  "accepted_recovery_review": "2edeee5169c9a05213a0264e57aae96dcad30727",
+  "E8": {
+    "status": "completed_published_pending_independent_result_audit",
+    "MATH5000_correct": 2512,
+    "MATH5000_accuracy": 0.5024,
+    "length_cap_rate": 0.023,
+    "loops": 53,
+    "new_updates_during_export": 0,
+    "export_attempts": 1
+  },
+  "storage": {
+    "paid_verified": true,
+    "reserve_usd": 30,
+    "original_checkpoints_preserved": 100,
+    "original_expiries_unchanged": true,
+    "current_count_after_export": 101
+  },
+  "NLL": "all_three_complete_published",
+  "GSM_controller": {
+    "pid": 65827,
+    "status": "running",
+    "source": "reports/p012_20261111/tinker_gsm_training_v1/continue.py",
+    "state": ".local/p012_20261111/t_gsm_v1/TRAINING_QUEUE.json"
+  },
+  "L64": {
+    "status": "not_started_awaiting_owner_budget_decision",
+    "proposal_commit": "a19ce04d287bfa559fb2672d074b205af0396dcd",
+    "projected_A6_3_usd": 36.5718199065,
+    "existing_cap_usd": 35,
+    "proposal": "TransferUSD2 from completedA6-2:50->48,A6-3:35->37; combined485unchanged"
+  },
+  "GSM_4b_pass8": {
+    "status": "held_unscored_pending_combined_result_review",
+    "outputs": 4000,
+    "seven_distinct_fraction": 0.686,
+    "all_eight_identical_questions": 12,
+    "threshold_scope": "80% specified for3MATHv2repairs,reused byGSMcontroller; reviewapplicability"
+  },
+  "budget": {
+    "original_T_accounted_and_reserved_usd": 320.2160105872501,
+    "A6_2_accounted_and_reserved_usd": 38.430015023,
+    "A6_3_accounted_and_reserved_usd": 32.160171854,
+    "pre_A7_accounted_and_reserved_usd": 390.8061974642501,
+    "A7_accounted_and_reserved_usd": 36.013743688000005,
+    "combined_reserved_usd": 426.81994115225007,
+    "caps_usd": {
+      "original_T": 340,
+      "A6-2": 50,
+      "A6-3": 35,
+      "A7": 60,
+      "combined": 485
+    }
+  },
+  "first_GSM_batch": [
+    {
+      "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+      "updates_observed": 14,
+      "expected_updates": 128,
+      "model": "Qwen/Qwen3.5-4B",
+      "rank": 32
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+      "updates_observed": 40,
+      "expected_updates": 128,
+      "model": "Qwen/Qwen3.5-9B",
+      "rank": 32
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+      "updates_observed": 33,
+      "expected_updates": 128,
+      "model": "Qwen/Qwen3.5-9B-Base",
+      "rank": 32
+    }
+  ]
+}
