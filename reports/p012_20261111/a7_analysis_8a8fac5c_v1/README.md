@@ -34,3 +34,5 @@
 4. 4B concise seed17 greedy使用一次基础设施重试；其4510条未完成原输出独立保存在infrastructure_interruption_8a_v1，从未混入本次评分。新完整5000输出使用同一已完成训练权重和同一协议。失败费用仍计入A7。
 
 [输入清单](INPUT_MANIFEST.json) · [来源定位](SOURCE_LOCATIONS.json) · [原始统计输出](RESULTS_NUMERIC.json) · [带数据说明的结果](RESULTS.json) · [运行记录](RUN_RECEIPT.json)
+
+[交付核对](DELIVERY_CHECK.json)验证了75,000条输出的全部15个绑定、首次运行记录与输入冻结提交；bootstrap未重跑、标签未改动。[队列与账目](CONTINUATION_STATUS.json)记录A7已完成、A6-3继续执行。

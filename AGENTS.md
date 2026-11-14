@@ -1,10 +1,12 @@
-# Current P012 — 2026-11-14T08:35:37.186117+00:00; recovery healthy, A7 13/15 ready
+# Current P012 — 2026-11-14T08:59:20.299721+00:00; A7 complete, first numerical review ready
 
-Both detached controllers survived the conversation transition and all three active trainings made verified progress. A7_RECOVERY_QUEUE PID51565 owns 9B/4B concise seed29, then complete15-input freeze and one accepted A7 analysis. A6_3_RECOVERY_QUEUE PID51566 owns E4 recovery, then E8 and L64 only within35. Never duplicate these calls or edit active helpers. Read recovery_health_20261114_v1/STATUS.json and live private states.
+All15 A7 endpoints are complete. Existing controller51565 completed and published the first accepted analysis once at b8edefb7f3a57d7d70128cecba3a36a4ae9f1d51, after full input freeze5cae5aab. Packet: reports/p012_20261111/a7_analysis_8a8fac5c_v1. INPUT_MANIFEST binds15 endpoints/75000 outputs; NEW_ENDPOINTS_FOR_REVIEW includes only6 unaudited A7 endpoints/30000 outputs. Local delivery verification passed all hashes, training/data/seed bindings, original output identity and point-estimate arithmetic. No second bootstrap or re-scoring. Return first output/full manifest to Claude under8a8fac5c; independent numeric audit is pending.
 
-4B concise seed17 full greedy retry is complete:71.26%,5000 outputs,published bb083771. All13 complete analysis endpoints/65000 raw outputs pass the accepted evidence reader; two concise29 endpoints remain. The first real A7 statistics are not yet run. The existing controller publishes a7_analysis_8a8fac5c_v1 and private A7_NEXT_REVIEW.json after all15; then return the output/full manifest to Claude for independent numerical review. Accepted8a8fac5c, bootstrap core and4B40-row data limitation remain binding.
+New concise29 results:9B81.26%,4B70.22%. 9B two-seed contrasts:long-short19.70pp,long-concise10.24pp,concise-short9.46pp; intervals and all fixed contrasts are in the packet. Interpret primarily9B;4B M512 long has40/512answer-only rows. All results exploratory outsideH0-H3. Frozen data/labels/predictions and bootstrap core are unchanged. Earlier95e52770 six endpoints and both concise constructions remain accepted8a8fac5c.
 
-Accounted plus reserved: A7 USD38.176855/60, A6-3 USD29.231542/35, combined USD305.585757/485, including failures. No new Modal/GSM jobs. Preserve originals, unrelated lt002, shared locks, credential privacy and draft-only external correspondence. Earlier entries are historical.
+Only A6_3_RECOVERY_QUEUE PID51566 remains active;E4 PID51589 at354/1024 updates. Read its private state in amendment7_v1 and packet CONTINUATION_STATUS.json. It owns E4 recovery, then E8 recovery after settlement, and L64 only within35. No further retries. Never duplicate owned calls or edit active helpers. A7_RECOVERY_QUEUE is complete; do not restart or rerun analysis.
+
+Accounted plus reserved, including failures:A7 USD36.013744/60,A6-3 USD29.231542/35,combined USD303.422646/485. Shared budget/Git publication locks remain required through push. Preserve archived failed attempts, unrelatedlt002, private credentials and draft-only external correspondence. No new Modal/GSM jobs. Earlier entries below are historical.
 
 # Current P012 — 2026-11-14T08:03:53.670006+00:00; accepted8a8fac5c and detached recovery
 

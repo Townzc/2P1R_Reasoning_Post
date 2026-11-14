@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-14T08:35:37.186117+00:00",
-  "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
+  "updated_utc": "2026-11-14T08:59:20.299721+00:00",
+  "stage": "Main72 cells audited; all15 A7 analysis inputs complete and first accepted exploratory analysis published; independent numeric review pending; A6-3 continues",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -51,7 +51,7 @@
       "6af18b7263cdafa1c6c34efb89fdea763d74d21e",
       "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4"
     ],
-    "pending_numeric_review": "Six new A7 endpoints and first15-endpoint analysis go into the next packet; accepted8a8fac5c and earlier outputs are excluded.",
+    "pending_numeric_review": "First A7 numerical output/full15-input manifest and6 new A7 endpoints/30000 outputs; accepted8a8fac5c and earlier outputs excluded",
     "registered_analysis_real_data_execution": "SUCCESS; accepted169754c4;13tests;run3a2984e3",
     "raw_outputs_immutable": true
   },
@@ -82,14 +82,12 @@
     "tinker_protected_from_initial750": 265,
     "tinker_sampling_admission": "measured token cost x1.5",
     "A7_cap": 60,
-    "A7_accounted_and_reserved": 38.176854885
+    "A7_accounted_and_reserved": 36.013743688
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Complete authorized A7 recovery and seed29 through A7_RECOVERY_QUEUE",
-    "Once15endpoints are complete,freeze full manifest and run accepted A7 adapter without changing bootstrap core",
-    "Send first full A7 numerical output and full manifest for independent review",
-    "Continue sequential A6-3 infrastructure recovery; preserve35cap and charge all failed costs"
+    "Return first A7 output and full input manifest for independent numerical review under8a8fac5c",
+    "Continue A6-3 E4 recovery, settle costs, then E8; L64 only if existing35 cap permits"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -193,7 +191,8 @@
     "review_8a8fac5c",
     "infrastructure_interruption_8a_v1",
     "a7_1_concise_seed29_admission_v1",
-    "recovery_health_20261114_v1"
+    "recovery_health_20261114_v1",
+    "a7_analysis_8a8fac5c_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -304,7 +303,9 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    "Return Claude numerical review of a7_analysis_8a8fac5c_v1; authorized A6-3 queue continues"
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -324,12 +325,12 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-14T08:35:37.186117+00:00",
+    "as_of_utc": "2026-11-14T08:59:20.299721+00:00",
     "original_T": 199.74734518875007,
     "A6_2": 38.430015023,
     "A6_3": 29.231542280999996,
-    "A7": 38.176854885,
-    "combined": 305.5857573777501,
+    "A7": 36.013743688,
+    "combined": 303.42264618075006,
     "caps": {
       "original_T": 340,
       "A6-2": 50,
@@ -342,7 +343,7 @@
       "sha256": "bfc522ada9c5349e0b8b9fe954dc1fdc57c2bef1c8d228bc16c7b265217d1adb",
       "value_field": "combined_reserved_usd"
     },
-    "current_snapshot": "recovery_health_20261114_v1/STATUS.json",
+    "current_snapshot": "a7_analysis_8a8fac5c_v1/CONTINUATION_STATUS.json",
     "note": "Completed token-cost upper bounds plus outstanding reservations; originalT remains a conservative published reservation. Not a provider invoice."
   },
   "interpretation_correction_53a565da": {
@@ -350,24 +351,31 @@
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "recovery_health_20261114_v1/STATUS.json",
-  "background_status": "recovery_health_20261114_v1/STATUS.json",
+  "finite_continuation_queues": "a7_analysis_8a8fac5c_v1/CONTINUATION_STATUS.json",
+  "background_status": "a7_analysis_8a8fac5c_v1/CONTINUATION_STATUS.json",
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
     "A7_2": "All4seed29 M512 endpoints complete;4Blong numeric review follows in first A7 analysis packet",
-    "A7_1": "All three concise seed17 endpoints published; two concise seed29 trainings active in detached recovery queue.",
+    "A7_1": "All5 concise arms complete, published and bound to the first A7 analysis",
     "data_report": "a7_1_concise_data_v1/DATA_REPORT.json",
     "posthoc_full_data_audit": "passed8a8fac5c;1024rows and1026attempts",
     "exploratory_excluded_H0_H3": true,
     "new_endpoints_require_prescore_utc": true,
     "pending_review": {
+      "status": "pending",
+      "packet_commit": "b8edefb7f3a57d7d70128cecba3a36a4ae9f1d51",
+      "scope": "First A7 analysis/full15-input manifest and6 previously unreviewed endpoints/30000 outputs"
+    },
+    "analysis_adapter": "Accepted8a8fac5c adapter executed once after15 inputs; unchanged bootstrap core; first output b8edefb7",
+    "analysis_ready_endpoints": 15,
+    "data_interpretation": "review_8a8fac5c/DATA_CHARACTERISTIC.json",
+    "first_analysis_output": "a7_analysis_8a8fac5c_v1/RESULTS_NUMERIC.json",
+    "full_input_manifest": "a7_analysis_8a8fac5c_v1/INPUT_MANIFEST.json",
+    "prior_packet_review": {
       "status": "passed",
       "commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4"
-    },
-    "analysis_adapter": "accepted8a8fac5c; constant filled; unchanged core; full execution queued after15ready inputs",
-    "analysis_ready_endpoints": 13,
-    "data_interpretation": "review_8a8fac5c/DATA_CHARACTERISTIC.json"
+    }
   },
   "future_prediction_record_requirement": "A7 prediction records bind22890560 withISO8601UTC andrawSHA; older frozen records retained",
   "infrastructure_recovery_8a": {
@@ -377,9 +385,9 @@
     "retry_count_per_affected_call": 1,
     "no_additional_retry_authorized": true,
     "method": "Independent process sessions; stdin DEVNULL,log files; controllers observed PPID1",
-    "active": "A7 concise29 9B/4B; A6-3 E4",
-    "later": "A6-3 E8 thenL64 only within35",
-    "completed": "4B concise17 full greedy retry,5000 outputs,71.26%,bb083771",
+    "active": "A6-3 E4",
+    "later": "A6-3 E8 then L64 only within35",
+    "completed": "A7 recovered4Bconcise17 plus bothseed29 endpoints and first full analysis complete",
     "survived_conversation_transition": true
   }
 }

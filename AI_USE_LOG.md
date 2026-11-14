@@ -1,3 +1,7 @@
+## P012 first A7 analysis and review delivery — 2026-11-14T08:59:20.299721+00:00
+
+Codex verified recovery continuity and completed the authorized A7 queue. After all15 frozen endpoints became available, the accepted8a8fac5c adapter ran once using the unchanged bootstrap core. The complete input manifest was published before execution. The review package binds75000 outputs and identifies6 new endpoints/30000 outputs for independent scoring. Delivery checks passed; first independent numerical review remains pending. A6-3 continues under its existing cap. No frozen labels/data/predictions, new scientific settings, course prose or external messages were introduced.
+
 ## P012 recovery verification — 2026-11-14T08:35:37.186117+00:00
 
 Codex checked detached process continuity, verified live update progress and budgets, and validated13 published A7 analysis endpoints/65000 outputs using the accepted evidence reader. No new scoring, statistics, model calls, scientific settings or external messages were introduced by this check. The existing authorized queues continue.
