@@ -1,0 +1,105 @@
+{
+  "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+  "mode": "train",
+  "model": "Qwen/Qwen3.5-4B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-4B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3161,
+        "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 17,
+  "rank": 32,
+  "learning_rate": 0.0004905250962784578,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 0.737,
+    "prefill": 0.33,
+    "sample": 1.005
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Original owner-approved A4 T-GSM; unchanged training/evaluation paths after A7.",
+  "code_commit": "cc271d612cfe8492e50d82e737d898a5c393e6ec",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "dataset": {
+    "path": "reports/p012_20261111/tinker_gsm_preparation_v1/inputs/P.jsonl",
+    "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377"
+  },
+  "forecast": {
+    "admitted": true,
+    "training_buffered_usd": 2.0017548,
+    "reserved_greedy_usd": 0.51084387,
+    "sampling_reference": {
+      "key": "4b",
+      "reference_run": "tinker_lora_qwen3_5_4b_gsm8k_pre_baseline0_20261114_v1",
+      "reference_usage_sha256": "18e074c07cbc09395efb29eaaa2d65a910aada034b3fc9b70a9fabf7cf24e86e",
+      "measured_completion_tokens": 297194,
+      "exact_posttraining_prefill_tokens": 126917,
+      "question_count": 1319,
+      "buffered_greedy_usd": 0.51084387,
+      "basis": "Same-model measured GSM completion tokens plus exact posttraining prompts; entire token cost times 1.5.",
+      "base_reference_format_note": null
+    },
+    "T_GSM_cap_usd": 105,
+    "original_T_cap_usd": 340,
+    "combined_cap_usd": 485,
+    "admission_file": "reports/p012_20261111/tinker_gsm_training_v1/ADMISSION.json",
+    "admission_sha256": "db5ad887612ab1335614e7f19b0f00c0df7cb7243fff2a5fa12d1c0c4e660230"
+  },
+  "cell": "P",
+  "sampling_concurrency": 32,
+  "dose": {
+    "parents": 4096,
+    "paths_per_parent": 1,
+    "distinct_rows": 4096,
+    "epochs": 2,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "original_track_review_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "track": "tinker_lora",
+  "task": "gsm8k",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "cpu_counts": {
+    "full_training_input_tokens": 2064320,
+    "maximum_sequence_tokens": 1100,
+    "all_rows_renderer_and_mask_verified": true
+  }
+}
