@@ -1,0 +1,71 @@
+{
+  "utc": "2026-11-14T23:52:25.903768+00:00",
+  "review_ready": "reports/p012_20261111/results_aftere9f0ebdd_v1",
+  "review_endpoints": 12,
+  "scored_outputs": 24595,
+  "NLL_records": 3000,
+  "held_unscored_outputs": 4000,
+  "E8": {
+    "correct": 2512,
+    "questions": 5000,
+    "accuracy": 0.5024,
+    "training_retry_count": 1,
+    "export_only_recovery_count": 1,
+    "new_recovery_training_steps": 0
+  },
+  "NLL_status": "complete",
+  "GSM_queue": {
+    "status": "running",
+    "controller_pid": 65827,
+    "events": [
+      {
+        "utc": "2026-11-14T23:33:39.263298+00:00",
+        "stage": "waiting_for_three_reserved_NLL"
+      },
+      {
+        "utc": "2026-11-14T23:51:31.475389+00:00",
+        "stage": "budget_reconciled",
+        "GSM_usd": 90.46866539850001,
+        "original_T_usd": 320.2160105872501,
+        "all_tracks_usd": 426.81994115225007,
+        "commit": "aba08a3c1de6db667ca581437012597e435bf0f9"
+      },
+      {
+        "utc": "2026-11-14T23:51:31.493596+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+        "pid": 66483
+      },
+      {
+        "utc": "2026-11-14T23:51:31.507004+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+        "pid": 66485
+      },
+      {
+        "utc": "2026-11-14T23:51:31.520016+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+        "pid": 66487
+      }
+    ],
+    "automatic_retry": false
+  },
+  "L64_status": "not_started_pending_owner_budget_transfer_decision",
+  "L64_proposal_commit": "a19ce04d287bfa559fb2672d074b205af0396dcd",
+  "budget": {
+    "original_T_accounted_and_reserved_usd": 320.2160105872501,
+    "A6_2_accounted_and_reserved_usd": 38.430015023,
+    "A6_3_accounted_and_reserved_usd": 32.160171854,
+    "pre_A7_accounted_and_reserved_usd": 390.8061974642501,
+    "A7_accounted_and_reserved_usd": 36.013743688000005,
+    "combined_reserved_usd": 426.81994115225007,
+    "caps_usd": {
+      "original_T": 340,
+      "A6-2": 50,
+      "A6-3": 35,
+      "A7": 60,
+      "combined": 485
+    }
+  }
+}
