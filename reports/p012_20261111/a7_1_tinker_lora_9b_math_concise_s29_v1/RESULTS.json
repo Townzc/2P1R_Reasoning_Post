@@ -1,0 +1,109 @@
+{
+  "track": "tinker_lora",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "A7_group": "A7-1",
+  "model": "Qwen/Qwen3.5-9B",
+  "arm": "concise",
+  "cell": "L",
+  "seed": 29,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "rank": 32,
+  "learning_rate": 0.00047297908091376354,
+  "dataset": {
+    "path": "reports/p012_20261111/a7_1_concise_data_v1/9b/concise.jsonl",
+    "sha256": "090ef4576c05498e2a35bfd7ccd2e621bbee418cba2156d55d06a074b60819f9"
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 4063,
+    "accuracy": 0.8126,
+    "length_cap_count": 143,
+    "length_cap_rate": 0.0286,
+    "loop_count": 10,
+    "capped_loop_count": 10,
+    "normally_terminated_count": 4857,
+    "normally_terminated_correct": 4061,
+    "normally_terminated_accuracy": 0.8361128268478485
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 406,
+    "accuracy": 0.812,
+    "length_cap_count": 24,
+    "length_cap_rate": 0.048,
+    "loop_count": 0,
+    "capped_loop_count": 0,
+    "normally_terminated_count": 476,
+    "normally_terminated_correct": 404,
+    "normally_terminated_accuracy": 0.8487394957983193
+  },
+  "training_run_id": "a7_1_tinker_lora_9b_math_concise_s29_20261113_v1",
+  "training_request_sha256": "ecd2b59baa7ae2c0d819e251a51133e4afcb0533974b0012209a27d3e8e0a81d",
+  "training_usage": {
+    "training_input_tokens": 377682,
+    "sampling": null,
+    "upper_token_cost_usd": 0.552548766,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 2530906,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 2.1999420420000004,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "training_complete": {
+    "success": true,
+    "seconds": 512.0292305839248,
+    "smoke_is_not_scientific_result": false
+  },
+  "evaluation_complete": {
+    "success": true,
+    "seconds": 720.0791477500461,
+    "smoke_is_not_scientific_result": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+    "code_commit": "e3a4de395af708c617f170d84a56fb7628cc5676",
+    "utc": "2026-11-14T08:48:02.996806+00:00",
+    "raw_sha256": "a47639866ccafadb36a11d54e80f1ae074f325d488dd6f7702d42307c4bc5e2e"
+  },
+  "raw_sha256": "a47639866ccafadb36a11d54e80f1ae074f325d488dd6f7702d42307c4bc5e2e",
+  "labels_sha256": "8e9d77bebbc3bce47caec4c92ac4cd028235e20e228705d111266d49ff330302",
+  "independent_numeric_audit": "pending",
+  "data_interpretation": {
+    "authority_commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+    "four_b_M512_long": {
+      "rows": 512,
+      "answer_only_rows": 40,
+      "answer_only_fraction": 0.078125,
+      "description": "40 rows contain only a boxed answer and no reasoning; these are valid frozen4B zero-shot outputs under A6 rules.",
+      "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8"
+    },
+    "nine_b_M512_long": {
+      "rows": 512,
+      "answer_only_rows": 0,
+      "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6"
+    },
+    "interpretation": "SC-1 andSC-2 interpretation prioritizes the9B group;4B is a repetition with this data limitation. The40answer-only4B rows gain reasoning in concise,so length direction is reversed for those rows.",
+    "frozen_data_and_labels_unchanged": true,
+    "frozen_predictions_unchanged": true
+  }
+}
