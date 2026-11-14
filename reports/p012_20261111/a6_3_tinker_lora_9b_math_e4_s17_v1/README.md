@@ -2,4 +2,6 @@
 
 MATH5000: 3119/5000 = 62.38%. MATH500: 62.00%. Caps: 2.48%; loops: 68; normal-termination accuracy: 3119/4876.
 
-Seed17; dose and full/supervised token counts are recorded inRESULTS.json. Prediction 18f64e2d preceded scoring. Exploratory, excluded from H0–H3. All raw outputs, labels, termination flags and training evidence are in evidence.zip. Independent numerical audit pending.
+Seed17; dose and full/supervised token counts are recorded inRESULTS.json. Prediction 18f64e2d preceded scoring. Exploratory, excluded from H0–H3. All raw outputs, labels, termination flags and training evidence are in evidence.zip. Independent numerical audit passed at `72575b42a1d2ca80004d9114c0bcc2f6b66da26c`.
+
+Independent numerical audit **passed** at `72575b42a1d2ca80004d9114c0bcc2f6b66da26c`. Audit metadata was updated; original numerical results and evidence archives are unchanged. `RESULTS_before72575b42.json` preserves the reviewed result bytes.

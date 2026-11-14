@@ -1,6 +1,6 @@
 # New results after accepted46694f51 audit
 
-Fourteen new endpoints,70,000 raw outputs. All original raw/label archive members match the recorded hashes. This packet requests numerical verification under P012 section12; no new training, scoring or statistical method is introduced. The accepted main-grid analysis and prior38 endpoints require no repeat review.
+Fourteen new endpoints,70,000 raw outputs. All original raw/label archive members match the recorded hashes. This packet passed independent numerical verification at `72575b42a1d2ca80004d9114c0bcc2f6b66da26c` under P012 section12; no new training, scoring or statistical method is introduced. The accepted main-grid analysis and prior38 endpoints require no repeat review.
 
 | Model / track | Cell | Seed | MATH5000 | Cap rate | Loops | Normal-termination correct / denominator |
 |---|---|---:|---:|---:|---:|---:|
@@ -24,3 +24,5 @@ The four Instruct bridge cells follow the accepted L gate; L itself was accepted
 The newly approved cross-teacher pair is frozen at46694f51 in ../review_46694f51/. Its4B M512 construction and the Base pair are now running under ../a6_2_base_and_4b_admission_v1/. Those future endpoints are outside this review packet. Review does not pause authorized execution.
 
 The registered analysis annotations are metadata only: ../registered_analysis_169754c4_v1/AUDIT_ANNOTATION.json proves unchanged numerical settings and links the original output hash. Every Llama base SFT table is labeled relative to a degenerate baseline; Qwen Instruct MATH shows both4-shot and0-shot deltas.
+
+Accepted audit: [72575b42](https://github.com/Townzc/2P1R_Reasoning_Post/blob/72575b42a1d2ca80004d9114c0bcc2f6b66da26c/audit/claude/20261113h/AUDIT_778dec3f_14_endpoints.md). All70,000 outputs were independently rescored. Every endpoint differs by at most two labels under independent scoring; registered labels remain unchanged. `ENDPOINTS_original_778dec3f.json` preserves the original review bindings; the current manifest updates only result-annotation hashes.

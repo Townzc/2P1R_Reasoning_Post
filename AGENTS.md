@@ -1,3 +1,11 @@
+# Current P012 — accepted72575b42
+
+The14 endpoints/70,000 outputs at778dec3f PASSED audit72575b42a1d2ca80004d9114c0bcc2f6b66da26c. Result JSON audit statuses and the current endpoint manifest are annotated; original result bytes and original manifest retained. No labels or numeric fields changed. All5Instruct bridge cells now independently accepted. The auditor's4000-replicate exploratory intervals remain separate from the10000-replicate main analysis. One-setting bridge agreement does not eliminate output-head/learning-rate differences generally.
+
+The finite A6-2 controller40432/PID40023 remains RUNNING; never duplicate its jobs or edit its helpers. Basepair is now fully complete and published:short70.14%,long87.66%, pending next numeric review.4B M512 is still constructing. New9B predictions46694 remain frozen. Original4B seed17 K8/K4 training complete; their existing reserved fullgreedy requests are now prepared in review_a56115d6/requests. Launch once after publication, outside the A6 controller. Later original4B seed29 admission requires a fresh combined ledger: the running A6 accounting helper still reads the204.695789 originalT reservation from the9B-Base admission. Coordinate any new originalT reservation before changing that accounting; do not silently understate combined reservations.
+
+No owner approval is pending. New numeric result packets should include only outputs outside72575b42. Preserve all originals, credentials privacy and unrelatedlt002. Earlier entries below are historical.
+
 # Current P012 — 2026-11-14T03:21:32.385796+00:00
 
 Accepted audit46694f51 is applied and all numerical fields are unchanged. New14-endpoint/70,000-output packet778dec3f is published and asynchronously sent to the owner for Claude numerical review; all prior accepted endpoints are excluded. Instruct bridge all5 complete;9B and9B-Base originalMATH seed29 all4 complete;9B A6-3 E4/E8/L64 complete. Only4B seed17 K8/K4 remain original active training calls. Do not replay originals.
