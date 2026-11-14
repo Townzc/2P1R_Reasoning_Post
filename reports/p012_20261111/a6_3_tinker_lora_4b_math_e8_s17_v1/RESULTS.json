@@ -1,0 +1,116 @@
+{
+  "track": "tinker_lora",
+  "A6_group": "A6-3",
+  "arm": null,
+  "model": "Qwen/Qwen3.5-4B",
+  "cell": "E8",
+  "seed": 17,
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 1024,
+    "paths_per_parent": 1,
+    "distinct_rows": 1024,
+    "epochs": 8,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_sha256": "3a1d77f0f02ed715018363d849fcf8855cc70929ab8b070e871c3d00a010888b",
+  "training_token_counts": {
+    "full_training_input_tokens": 3471504,
+    "full_supervised_target_tokens": 2632584,
+    "maximum_sequence_tokens": 2100,
+    "every_row_renderer_and_mask_verified": true,
+    "A5_frozen_manifest_sha256": "9ef237cbfafe8a87f53108d428c7043d89c72b5ece568a71129b45fcf52dc491"
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 2512,
+    "accuracy": 0.5024,
+    "length_cap_count": 115,
+    "length_cap_rate": 0.023,
+    "loop_count": 53,
+    "capped_loop_count": 46,
+    "normally_terminated_count": 4885,
+    "normally_terminated_correct": 2512,
+    "normally_terminated_accuracy": 0.5142272262026613
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 240,
+    "accuracy": 0.48,
+    "length_cap_count": 14,
+    "length_cap_rate": 0.028,
+    "loop_count": 6,
+    "capped_loop_count": 6,
+    "normally_terminated_count": 486,
+    "normally_terminated_correct": 240,
+    "normally_terminated_accuracy": 0.49382716049382713
+  },
+  "training_usage": {
+    "training_input_tokens": 3471504,
+    "sampling": null,
+    "upper_token_cost_usd": 2.558498448,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 2274434,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 2.45905716,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "training_complete": {
+    "success": true,
+    "smoke_is_not_scientific_result": false,
+    "recovered_after_completed_training": true,
+    "updates": 1024,
+    "completed_utc": "2026-11-14T23:24:51.837970+00:00",
+    "export_recovery": {
+      "accepted_recovery_review_commit": "2edeee5169c9a05213a0264e57aae96dcad30727",
+      "source_state_path": "tinker://046b588f-ba73-57e8-88b8-d527973c5d4a:train:0/weights/final",
+      "exported_sampler_path": "tinker://0a26c1d5-75df-5601-8784-0b6d36fff545:train:0/sampler_weights/final_export_recovery",
+      "receipt_sha256": "b7742d0cc2fe711519fadcf2e3aad9f24ffb86886b4c665b3096e2e8d9a4cb19",
+      "exported_weights_info_sha256": "5781b6c47b98e9b930b37e74df0ed023d116829625df856c787e3833dffb4954",
+      "preserved_partial_usage_sha256": "d9ab3f30a49e9dbc01e374da219d85fc73178240cd34b3a166924adde79dca55",
+      "new_training_updates": 0,
+      "training_retry_count": 1,
+      "export_only_recovery_count": 1,
+      "weight_identity_basis": "Platform restore/export semantics and remote identity, not a weight-byte hash."
+    }
+  },
+  "evaluation_complete": {
+    "success": true,
+    "seconds": 789.5984758329578,
+    "smoke_is_not_scientific_result": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+    "code_commit": "62cb81c746f5b2369d0d15d284a026561a61fecc",
+    "utc": "2026-11-14T23:41:59.364084+00:00",
+    "raw_sha256": "71721a812491adbd69e1032e0ce6b72262d2850a9a166d1a9a727c56e333804f"
+  },
+  "raw_sha256": "71721a812491adbd69e1032e0ce6b72262d2850a9a166d1a9a727c56e333804f",
+  "labels_sha256": "dfcbce0f974ceeafc8d3ba4606d7c0ef1377a46e969a3298aa551e10c57788a3",
+  "independent_result_audit": "pending",
+  "infrastructure_recovery": {
+    "accepted_recovery_review_commit": "2edeee5169c9a05213a0264e57aae96dcad30727",
+    "source_state_path": "tinker://046b588f-ba73-57e8-88b8-d527973c5d4a:train:0/weights/final",
+    "exported_sampler_path": "tinker://0a26c1d5-75df-5601-8784-0b6d36fff545:train:0/sampler_weights/final_export_recovery",
+    "receipt_sha256": "b7742d0cc2fe711519fadcf2e3aad9f24ffb86886b4c665b3096e2e8d9a4cb19",
+    "exported_weights_info_sha256": "5781b6c47b98e9b930b37e74df0ed023d116829625df856c787e3833dffb4954",
+    "preserved_partial_usage_sha256": "d9ab3f30a49e9dbc01e374da219d85fc73178240cd34b3a166924adde79dca55",
+    "new_training_updates": 0,
+    "training_retry_count": 1,
+    "export_only_recovery_count": 1,
+    "weight_identity_basis": "Platform restore/export semantics and remote identity, not a weight-byte hash."
+  }
+}
