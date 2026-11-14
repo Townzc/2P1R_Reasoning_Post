@@ -1,0 +1,55 @@
+{
+  "utc": "2026-11-14T05:00:19.357389+00:00",
+  "accepted_review_commit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
+  "queues": [
+    {
+      "name": "A6-2 follow-ups",
+      "status": "running",
+      "scope": "Base pair already accepted; four new arms on frozen4B M512",
+      "existing_controller": true
+    },
+    {
+      "name": "Original4B seed29",
+      "status": "running",
+      "scope": "Finish existing P/R/L/K8 training, reserved greedy, unchanged scoring and publication",
+      "training_admission_commit": "09d531e0",
+      "new_training_calls": 0,
+      "current_L_greedy_request_commit": "905976b1",
+      "source_sha256": {
+        "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+        "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+        "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+        ".local/p012_20261111/amendment6_v1/prepare_t_post_any.py": "5e155916a2d81d8ad4678d91f8ffe66a988380e085da849695a9adb0d899070d",
+        ".local/p012_20261111/amendment6_v1/publish_t_seed29_cell.py": "41f7ed5e2823f38035c4935544bce4144938aa3dd4d3d7912eaac13049b0dad9",
+        ".local/p012_20261111/amendment5_v1/score_endpoint.py": "97382992ee3b518ba832f934ac4ce9c1787852682889d5467d8d98cdf389cf60"
+      }
+    },
+    {
+      "name": "A6-3 4B",
+      "status": "waiting_for_A6_2",
+      "scope": "E4,E8,L64, frozen A5 data, seed17, existing reviewed runner",
+      "authority_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+      "prerequisite": "All fourA6-2 follow-up arms published; existing A6-2 controller completes",
+      "admission": "E4/E8 first; L64 only after actual-plus-reserved A6-3<=35 and combined<=425",
+      "planned_buffered_batches_usd": [
+        15.16537641,
+        4.4116480525
+      ],
+      "source_sha256": {
+        "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+        "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+        "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+        ".local/p012_20261111/amendment6_v1/admit_a6_prepared.py": "297f5af0c09c6ec2f81f85cf9260f4ccb9dd208a75982177fe9b87a44b483a9a",
+        ".local/p012_20261111/amendment6_v1/prepare_t_post_any.py": "5e155916a2d81d8ad4678d91f8ffe66a988380e085da849695a9adb0d899070d",
+        ".local/p012_20261111/amendment6_v1/score_a6.py": "4e4a207041c0aeca14ace7682d2e5a8c2982c4b7d255f3f1fd3f184dd52af702",
+        ".local/p012_20261111/amendment6_v1/publish_a6_cell.py": "944e686a5499e3d62b0cbd8b2f76a7183090fc871ae01ce56fd22a51b81ae6bb"
+      }
+    }
+  ],
+  "finite_deadline_hours_per_new_controller": 8,
+  "automatic_experiment_retries": 0,
+  "new_scientific_paths": false,
+  "new_budget_authorization": false,
+  "new_Modal_calls": 0,
+  "manual_duplicate_calls_prohibited": true
+}

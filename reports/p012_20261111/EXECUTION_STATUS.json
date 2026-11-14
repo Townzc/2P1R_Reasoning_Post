@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T04:55:10.457055+00:00",
+  "updated_utc": "2026-11-14T05:00:19.357389+00:00",
   "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
   "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
   "C1": {
@@ -73,10 +73,10 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Finish original 4B seed29 P/R/K8 training and all four already-reserved full greedy evaluations; L evaluation is active",
-    "Complete four A6-2 arms on the frozen 4B M512 data; Base pair already accepted by 53a565da",
-    "After required A6-2 arms complete, reconcile and admit 4B A6-3 E4/E8/L64 under the USD35 cap",
-    "Submit only new 4B M512/four-arm and seed29 results for numerical audit; do not repeat accepted endpoints"
+    "Finite A6-2 queue publishes four new M512/cross-teacher results; existing Base pair remains accepted53a565da",
+    "Finite original4B seed29 queue continues P/R/K8 training, all reserved greedy endpoints, scoring and publication",
+    "Finite 4B A6-3 queue waits for A6-2 completion, then admits E4/E8 and later L64 only when reconciled budget gates pass",
+    "Next independent numerical packet includes new 4B M512/four arms and completed 4B seed29/A6-3 results only"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -257,11 +257,13 @@
     "A6_2_4B_M512_complete": true,
     "A6_2_four_followup_arms_active": true,
     "T4B_seed29_L_training_complete": true,
-    "T4B_seed29_L_full_greedy_active": true
+    "T4B_seed29_L_full_greedy_active": true,
+    "A6_2_four_followup_training_complete": true,
+    "A6_3_4B_queued_after_A6_2": true
   },
   "pending_owner_actions": [],
   "A6_2_finite_continuation": {
-    "status": "running; Base pair complete and accepted; 4B M512 frozen; four follow-up arms active",
+    "status": "running; all four follow-up training calls complete and full greedy evaluations active",
     "arms": [
       "9B-Base short on9B M512",
       "9B-Base long on9B M512",
@@ -302,5 +304,6 @@
     "retracted": "Low per-token training loss implies little parameter or behavioral change",
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
-  }
+  },
+  "finite_continuation_queues": "review_53a565da/CONTINUATION_QUEUES.json"
 }

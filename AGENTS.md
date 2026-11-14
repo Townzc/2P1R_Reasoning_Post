@@ -1,3 +1,11 @@
+# Current continuation ownership — 2026-11-14T05:00:19.357389+00:00
+
+Accepted53a565da is fully applied; no owner approval is pending. Three finite CPU controllers now own continuation. Read their private state before any manual action: A6_2_FINITE_QUEUE.json (CLI10392/PID41284), T4B_SEED29_FINITE_QUEUE.json (CLI19321/PID43486), and A6_3_4B_FINITE_QUEUE.json (CLI20221/PID43615). Do not duplicate training, evaluation, scoring or publishing, and do not edit their helpers while active. The new controllers invoke unchanged reviewed scientific paths, have an eight-hour finite deadline, and zero automatic experiment retries.
+
+The original4B seed29 controller owns existing P/R/L/K8 and their reserved greedy/score/publication; L evaluation already runs underCLI60442. The A6-3 4B controller waits for all four A6-2 follow-ups and the existing controller's complete state. It then admits E4/E8 first, and L64 only as actual+reserved costs fit A6-3USD35 and combinedUSD425. No new budget, Modal job, data, prediction or scientific setting. All admissions/publications use shared locks and the current originalT ledger pointer.
+
+Next result audit excludes the Basepair and4B seed17K8/K4 already accepted53; include only newly completed4B M512/four arms,4Bseed29 and4BA6-3. The existing six-arm A6-2 controller's final aggregate needs an audit-scope annotation after completion because two of its arms are already accepted. Original raw and result bytes must stay preserved. Earlier entries below are historical.
+
 # Current P012 — 2026-11-14T04:55:10.457055+00:00; accepted 53a565da
 
 Audit 53a565dadcd648c50ac1ac2a3c08f5c69da123d0 accepts all four endpoints from fce5e186 (20,000 outputs). Individual and aggregate audit annotations are published in 905976b1; numeric values, raw/label archives, and original RESULT files are preserved. No review remains pending for those four. Correction: low per-token loss does not establish small parameter or behavioral change; do not directly compare long/short per-token losses. The original 46694 cross-teacher predictions stay frozen; see review_53a565da and the correction sidecar in review_46694f51.
