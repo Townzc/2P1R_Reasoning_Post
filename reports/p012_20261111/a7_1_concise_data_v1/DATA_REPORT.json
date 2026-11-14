@@ -1,0 +1,389 @@
+{
+  "utc": "2026-11-14T07:16:05.319648+00:00",
+  "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "datasets": [
+    {
+      "teacher": "Qwen/Qwen3.5-9B",
+      "concise_sha256": "090ef4576c05498e2a35bfd7ccd2e621bbee418cba2156d55d06a074b60819f9",
+      "fallback_rows": 0,
+      "attempts": 513,
+      "template_sha256": "49ff0226bd8a455675c5440a25ab1b8b0ef7f176befeb4380038e57d3ee6b66f",
+      "usage": {
+        "prefill_tokens_uncached_upper": 447528,
+        "completion_tokens": 143047,
+        "prompt_cache_hit_tokens": 38400,
+        "upper_token_cost_usd": 0.249697329,
+        "returned_calls": 513,
+        "submitted_calls": 513
+      },
+      "frozen_long_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6",
+      "frozen_short_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d"
+    },
+    {
+      "teacher": "Qwen/Qwen3.5-4B",
+      "concise_sha256": "d60568ff56b7a8d486b6a24da05453d2e2f22b1432037813064d9f244e5f8a22",
+      "fallback_rows": 0,
+      "attempts": 513,
+      "template_sha256": "49ff0226bd8a455675c5440a25ab1b8b0ef7f176befeb4380038e57d3ee6b66f",
+      "usage": {
+        "prefill_tokens_uncached_upper": 411307,
+        "completion_tokens": 127947,
+        "prompt_cache_hit_tokens": 33920,
+        "upper_token_cost_usd": 0.264318045,
+        "returned_calls": 513,
+        "submitted_calls": 513
+      },
+      "frozen_long_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8",
+      "frozen_short_sha256": "55dc02f35c3d546e9b6df0b04fa31dde4f40ffb2e33b08c7562730fd2130e1d9"
+    }
+  ],
+  "student_tokenizers": [
+    {
+      "student": "Qwen/Qwen3.5-9B",
+      "teacher": "Qwen/Qwen3.5-9B",
+      "arms": {
+        "short": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 197943,
+            "mean": 386.607421875,
+            "min": 107,
+            "max": 1122,
+            "p10": 184,
+            "median": 342,
+            "p90": 651
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 197431,
+            "mean": 385.607421875,
+            "min": 106,
+            "max": 1121,
+            "p10": 183,
+            "median": 341,
+            "p90": 650
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 151347,
+            "mean": 295.599609375,
+            "min": 60,
+            "max": 1012,
+            "p10": 115,
+            "median": 259,
+            "p90": 505
+          }
+        },
+        "long": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 429963,
+            "mean": 839.771484375,
+            "min": 208,
+            "max": 2298,
+            "p10": 378,
+            "median": 698,
+            "p90": 1556
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 429451,
+            "mean": 838.771484375,
+            "min": 207,
+            "max": 2297,
+            "p10": 377,
+            "median": 697,
+            "p90": 1555
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 383367,
+            "mean": 748.763671875,
+            "min": 141,
+            "max": 2176,
+            "p10": 313,
+            "median": 622,
+            "p90": 1444
+          }
+        },
+        "concise": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 189353,
+            "mean": 369.830078125,
+            "min": 104,
+            "max": 1109,
+            "p10": 171,
+            "median": 313,
+            "p90": 673
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 188841,
+            "mean": 368.830078125,
+            "min": 103,
+            "max": 1108,
+            "p10": 170,
+            "median": 312,
+            "p90": 672
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 142757,
+            "mean": 278.822265625,
+            "min": 57,
+            "max": 1023,
+            "p10": 107,
+            "median": 231,
+            "p90": 558
+          }
+        }
+      },
+      "concise_to_OMI_supervised_ratio": 0.9432430110937118,
+      "concise_to_long_supervised_ratio": 0.3723768608148328,
+      "SC_3a_range_0_7_to_1_3": true
+    },
+    {
+      "student": "Qwen/Qwen3.5-4B",
+      "teacher": "Qwen/Qwen3.5-4B",
+      "arms": {
+        "short": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 201606,
+            "mean": 393.76171875,
+            "min": 107,
+            "max": 1122,
+            "p10": 185,
+            "median": 343,
+            "p90": 666
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 201094,
+            "mean": 392.76171875,
+            "min": 106,
+            "max": 1121,
+            "p10": 184,
+            "median": 342,
+            "p90": 665
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 153172,
+            "mean": 299.1640625,
+            "min": 60,
+            "max": 1012,
+            "p10": 115,
+            "median": 261,
+            "p90": 521
+          }
+        },
+        "long": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 394370,
+            "mean": 770.25390625,
+            "min": 54,
+            "max": 2270,
+            "p10": 243,
+            "median": 624,
+            "p90": 1542
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 393858,
+            "mean": 769.25390625,
+            "min": 53,
+            "max": 2269,
+            "p10": 242,
+            "median": 623,
+            "p90": 1541
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 345936,
+            "mean": 675.65625,
+            "min": 6,
+            "max": 2057,
+            "p10": 185,
+            "median": 540,
+            "p90": 1419
+          }
+        },
+        "concise": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 176275,
+            "mean": 344.287109375,
+            "min": 97,
+            "max": 1081,
+            "p10": 160,
+            "median": 302,
+            "p90": 611
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 175763,
+            "mean": 343.287109375,
+            "min": 96,
+            "max": 1080,
+            "p10": 159,
+            "median": 301,
+            "p90": 610
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 127841,
+            "mean": 249.689453125,
+            "min": 50,
+            "max": 809,
+            "p10": 92,
+            "median": 213,
+            "p90": 471
+          }
+        }
+      },
+      "concise_to_OMI_supervised_ratio": 0.8346238215861906,
+      "concise_to_long_supervised_ratio": 0.3695510152166875,
+      "SC_3a_range_0_7_to_1_3": true
+    },
+    {
+      "student": "Qwen/Qwen3.5-9B-Base",
+      "teacher": "Qwen/Qwen3.5-9B",
+      "arms": {
+        "short": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 197943,
+            "mean": 386.607421875,
+            "min": 107,
+            "max": 1122,
+            "p10": 184,
+            "median": 342,
+            "p90": 651
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 197431,
+            "mean": 385.607421875,
+            "min": 106,
+            "max": 1121,
+            "p10": 183,
+            "median": 341,
+            "p90": 650
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 151347,
+            "mean": 295.599609375,
+            "min": 60,
+            "max": 1012,
+            "p10": 115,
+            "median": 259,
+            "p90": 505
+          }
+        },
+        "long": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 429963,
+            "mean": 839.771484375,
+            "min": 208,
+            "max": 2298,
+            "p10": 378,
+            "median": 698,
+            "p90": 1556
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 429451,
+            "mean": 838.771484375,
+            "min": 207,
+            "max": 2297,
+            "p10": 377,
+            "median": 697,
+            "p90": 1555
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 383367,
+            "mean": 748.763671875,
+            "min": 141,
+            "max": 2176,
+            "p10": 313,
+            "median": 622,
+            "p90": 1444
+          }
+        },
+        "concise": {
+          "full_tokens": {
+            "n": 512,
+            "sum": 189353,
+            "mean": 369.830078125,
+            "min": 104,
+            "max": 1109,
+            "p10": 171,
+            "median": 313,
+            "p90": 673
+          },
+          "input_tokens": {
+            "n": 512,
+            "sum": 188841,
+            "mean": 368.830078125,
+            "min": 103,
+            "max": 1108,
+            "p10": 170,
+            "median": 312,
+            "p90": 672
+          },
+          "supervised_tokens": {
+            "n": 512,
+            "sum": 142757,
+            "mean": 278.822265625,
+            "min": 57,
+            "max": 1023,
+            "p10": 107,
+            "median": 231,
+            "p90": 558
+          }
+        }
+      },
+      "concise_to_OMI_supervised_ratio": 0.9432430110937118,
+      "concise_to_long_supervised_ratio": 0.3723768608148328,
+      "SC_3a_range_0_7_to_1_3": true
+    }
+  ],
+  "checks": [
+    {
+      "teacher": "Qwen/Qwen3.5-9B",
+      "all_prompt_token_hashes_match_preflight": true,
+      "all_attempt_seeds_and_temperatures_match": true,
+      "first_eligible_and_fallback_selection_verified": true,
+      "all_pre_score_records_have_utc_and_raw_hash": true,
+      "all512_question_order_gold_unchanged": true
+    },
+    {
+      "teacher": "Qwen/Qwen3.5-4B",
+      "all_prompt_token_hashes_match_preflight": true,
+      "all_attempt_seeds_and_temperatures_match": true,
+      "first_eligible_and_fallback_selection_verified": true,
+      "all_pre_score_records_have_utc_and_raw_hash": true,
+      "all512_question_order_gold_unchanged": true
+    }
+  ],
+  "actual_rendered_rows_checked": 4608,
+  "cpu_row_checks_sha256": "f511845e9db3b0a8012c2ea588689735f530f437f01b693e94ccc6fe4dff018a",
+  "training_requests_prepared": [
+    "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+    "a7_1_tinker_lora_9b_math_concise_s29_20261113_v1",
+    "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+    "a7_1_tinker_lora_4b_math_concise_s29_20261113_v1",
+    "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1"
+  ],
+  "training_not_started": true,
+  "report_required_before_training": true,
+  "source_publication_commit": "213ee3e5abbd08c8d25f7cf0678a1e4b2dd670f5",
+  "constructor_source_sha256": "ce3d1cff9f24fc430558e9d18bfabf63dcc8a717b1c8ad44b2c709bb4bf0051e",
+  "source_commit_note": "Construction REQUEST.code_commit records preparation base67c155e5; authoritative new-source publication is213ee3e5, before both launches. REQUEST and original evidence are preserved."
+}

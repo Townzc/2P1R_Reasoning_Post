@@ -1,0 +1,100 @@
+{
+  "run_id": "a7_1_tinker_lora_9b_math_concise_s29_20261113_v1",
+  "mode": "train",
+  "model": "Qwen/Qwen3.5-9B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-9B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3126,
+        "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 29,
+  "rank": 32,
+  "learning_rate": 0.00047297908091376354,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 1.463,
+    "prefill": 0.3,
+    "sample": 0.807
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Owner-approved amendment7 A7-1; same-teacher concise data reported before training",
+  "code_commit": "2f1cebf8ddf7e3462c9540a332207d983f38fe74",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "dataset": {
+    "path": "reports/p012_20261111/a7_1_concise_data_v1/9b/concise.jsonl",
+    "sha256": "090ef4576c05498e2a35bfd7ccd2e621bbee418cba2156d55d06a074b60819f9"
+  },
+  "forecast": {
+    "admitted": false,
+    "training_buffered_usd": 0.7906859575,
+    "reserved_greedy_usd": 6.867266247000001,
+    "forecast_usd": 7.657952204500001,
+    "sampling_reference": ".local/p012_20261111/a6_runs_v1/a6_2_tinker_lora_9b_math_long_s17_greedy_20261113_v1/result/USAGE.json",
+    "sampling_reference_sha256": "3b5db9882bdfb8f9be0c611856e77a1d286c65ec8a9bd1101d04f81496eca361",
+    "sampling_rule": "Conservative maximum of same-model completed own-M512 short/long token cost x1.5",
+    "seed29_forecast_refresh": "Use completed same-concise seed17 token cost x1.5 before seed29 admission",
+    "A7_cap_usd": 60,
+    "combined_T_cap_usd": 485
+  },
+  "cell": "L",
+  "sampling_concurrency": 32,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "cpu_counts": {
+    "full_training_input_tokens": 377682,
+    "full_supervised_target_tokens": 285514,
+    "maximum_sequence_tokens": 1109,
+    "every_row_renderer_and_mask_verified": true,
+    "actual_rows": 512,
+    "student_tokenizer_checked": "Qwen/Qwen3.5-9B",
+    "cpu_row_checks_sha256": "f511845e9db3b0a8012c2ea588689735f530f437f01b693e94ccc6fe4dff018a"
+  },
+  "A7_group": "A7-1",
+  "A7_arm": "concise"
+}
