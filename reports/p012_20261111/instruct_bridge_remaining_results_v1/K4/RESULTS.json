@@ -1,0 +1,101 @@
+{
+  "track": "modal_lora_bridge",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "workspace": "townzc",
+  "cell": "K4",
+  "seed": 17,
+  "dose": {
+    "parents": 1024,
+    "paths_per_parent": 4,
+    "distinct_rows": 4096,
+    "epochs": 2,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 2057,
+    "accuracy": 0.4114,
+    "length_cap_count": 551,
+    "length_cap_rate": 0.1102,
+    "loop_count": 448,
+    "capped_loop_count": 435,
+    "normally_terminated_count": 4449,
+    "normally_terminated_correct": 2057,
+    "normally_terminated_accuracy": 0.46235109013261405
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 200,
+    "accuracy": 0.4,
+    "length_cap_count": 58,
+    "length_cap_rate": 0.116,
+    "loop_count": 50,
+    "capped_loop_count": 49,
+    "normally_terminated_count": 442,
+    "normally_terminated_correct": 200,
+    "normally_terminated_accuracy": 0.45248868778280543
+  },
+  "training_run_id": "modal_lora_bridge_qwen_instruct_math_k4_s17_20261113_v1",
+  "evaluation_run_id": "modal_lora_bridge_qwen_instruct_math_k4_s17_greedy_20261113_v1",
+  "training_status": {
+    "run_id": "modal_lora_bridge_qwen_instruct_math_k4_s17_20261113_v1",
+    "success": true,
+    "gpu": "H100",
+    "cpu": 4,
+    "memory_MiB": 32768,
+    "returncode": 0,
+    "function_seconds": 418.08936640099995
+  },
+  "evaluation_status": {
+    "run_id": "modal_lora_bridge_qwen_instruct_math_k4_s17_greedy_20261113_v1",
+    "success": true,
+    "gpu": "H100",
+    "cpu": 2,
+    "memory_MiB": 12288,
+    "returncode": 0,
+    "function_seconds": 630.180546691
+  },
+  "checkpoint_verification": {
+    "track": "modal_lora_bridge",
+    "training_run_id": "modal_lora_bridge_qwen_instruct_math_k4_s17_20261113_v1",
+    "initialization_repo": "Qwen/Qwen2.5-1.5B-Instruct",
+    "initialization_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "adapter_manifest_sha256": "43f609c76f614151bde71c8c19dea292acb3cfa1cee94471beb71cc58eef08c4",
+    "all_files_verified": [
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "added_tokens.json",
+      "all_results.json",
+      "merges.txt",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "train_results.json",
+      "trainer_log.jsonl",
+      "trainer_state.json",
+      "training_args.bin",
+      "training_loss.png",
+      "vocab.json"
+    ],
+    "merged": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+    "model_change_authority_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+    "L_gate_independent_audit_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+    "note": "Instruct follow-up under A6; original frozen bridge prediction described base",
+    "utc": "2026-11-14T02:55:38.984265+00:00",
+    "raw_sha256": "3dd5ac9090e5fed553505923fdfde6aea75d4b169ad08255bac4193b2cf2198f"
+  },
+  "raw_sha256": "3dd5ac9090e5fed553505923fdfde6aea75d4b169ad08255bac4193b2cf2198f",
+  "labels_sha256": "1a1da284080fb6fcc648cecfc9c8b2bda1f6e2433c7b6ec89bff7b2233941f58",
+  "training_parameter_count": 36929536,
+  "independent_numeric_audit": "pending",
+  "main_full_finetuning_statistics": "Separate bridge; not merged"
+}
