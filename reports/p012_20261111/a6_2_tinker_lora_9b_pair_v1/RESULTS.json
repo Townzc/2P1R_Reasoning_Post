@@ -1,0 +1,53 @@
+{
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+  "same_ordered_512_questions": true,
+  "presentations_per_arm": 1024,
+  "updates_per_arm": 128,
+  "seed": 17,
+  "arms": [
+    {
+      "arm": "short",
+      "source": "reports/p012_20261111/a6_2_tinker_lora_9b_math_short_s17_v1/RESULTS.json",
+      "source_sha256": "9dd4742d464f13f551c51a045ab4d10779636912302285178f0a77df0907a7e1",
+      "metrics": {
+        "responses": 5000,
+        "correct": 3610,
+        "accuracy": 0.722,
+        "length_cap_count": 200,
+        "length_cap_rate": 0.04,
+        "loop_count": 113,
+        "capped_loop_count": 112,
+        "normally_terminated_count": 4800,
+        "normally_terminated_correct": 3610,
+        "normally_terminated_accuracy": 0.7520833333333333
+      },
+      "supervised_tokens": 302694,
+      "training_input_tokens": 394862,
+      "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d"
+    },
+    {
+      "arm": "long",
+      "source": "reports/p012_20261111/a6_2_tinker_lora_9b_math_long_s17_v1/RESULTS.json",
+      "source_sha256": "3d2b73d7069c503c53229cd899913025d01aadf4d2d8f5826339808d4a506e04",
+      "metrics": {
+        "responses": 5000,
+        "correct": 4557,
+        "accuracy": 0.9114,
+        "length_cap_count": 338,
+        "length_cap_rate": 0.0676,
+        "loop_count": 4,
+        "capped_loop_count": 2,
+        "normally_terminated_count": 4662,
+        "normally_terminated_correct": 4548,
+        "normally_terminated_accuracy": 0.9755469755469756
+      },
+      "supervised_tokens": 766734,
+      "training_input_tokens": 858902,
+      "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6"
+    }
+  ],
+  "long_minus_short_pp": 18.94,
+  "independent_audit": "pending"
+}

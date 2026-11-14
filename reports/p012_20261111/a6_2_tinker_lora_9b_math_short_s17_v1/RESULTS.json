@@ -1,0 +1,90 @@
+{
+  "track": "tinker_lora",
+  "A6_group": "A6-2",
+  "arm": "short",
+  "model": "Qwen/Qwen3.5-9B",
+  "cell": "L",
+  "seed": 17,
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d",
+  "training_token_counts": {
+    "full_training_input_tokens": 394862,
+    "full_supervised_target_tokens": 302694,
+    "maximum_sequence_tokens": 1122,
+    "every_row_renderer_and_mask_verified": true,
+    "construction_manifest_sha256": "e9fbd12b1c39faa60f9e6eaa3cde5e6f3a830e06e72ccd5952cbafd5a1f278d2"
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 3610,
+    "accuracy": 0.722,
+    "length_cap_count": 200,
+    "length_cap_rate": 0.04,
+    "loop_count": 113,
+    "capped_loop_count": 112,
+    "normally_terminated_count": 4800,
+    "normally_terminated_correct": 3610,
+    "normally_terminated_accuracy": 0.7520833333333333
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 369,
+    "accuracy": 0.738,
+    "length_cap_count": 20,
+    "length_cap_rate": 0.04,
+    "loop_count": 9,
+    "capped_loop_count": 9,
+    "normally_terminated_count": 480,
+    "normally_terminated_correct": 369,
+    "normally_terminated_accuracy": 0.76875
+  },
+  "training_usage": {
+    "training_input_tokens": 394862,
+    "sampling": null,
+    "upper_token_cost_usd": 0.5776831060000001,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 2469533,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 2.150414031,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "training_complete": {
+    "success": true,
+    "seconds": 624.6892631668597,
+    "smoke_is_not_scientific_result": false
+  },
+  "evaluation_complete": {
+    "success": true,
+    "seconds": 509.886821083026,
+    "smoke_is_not_scientific_result": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+    "code_commit": "94891aaf6b78e2a19d989b7c0b635131e3ea980b",
+    "utc": "2026-11-14T00:19:46.606184+00:00",
+    "raw_sha256": "d5b1f5679b90be6fb952ef6443f46fa2f39cf83709ca8ac0ad1974705f3e6ab5"
+  },
+  "raw_sha256": "d5b1f5679b90be6fb952ef6443f46fa2f39cf83709ca8ac0ad1974705f3e6ab5",
+  "labels_sha256": "7e5017630cf44ed4e57715f316140ba9be3a58206912c0eb0147c988726be9c0",
+  "independent_result_audit": "pending"
+}
