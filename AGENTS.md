@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-14T03:00:31.232232+00:00
+
+Numeric audit 46694f515ff2c6d1f78931761f3f8e47dd0de2cb PASSED: all72 main cells, first two-seed analysis, and38 newer endpoints accepted. Main RESULTS.json is annotated; original numerical output and receipt remain preserved. No bootstrap rerun. Every Llama base SFT table must say 相对退化基线 (nonterminating baseline); Qwen Instruct MATH must show4-shot and0-shot together. New owner-approved9B cross-long and matched-short arms use4B M512,128updates,seed17,fullMATH5000,exploratory within A6-2USD50. Their predictions are frozen at46694; preserve18f for previousA6 arms.
+
+Instruct bridge all5 cells complete: P41.84,K841.64,R32.68,K441.14,L42.96 percent. New4 raw endpoints in instruct_bridge_remaining_results_v1 await next numeric audit; L already accepted. No further Modal calls planned. Completed4-cell cost upper5.960597 versus reserved5.727682; difference0.232915 is recorded. Original credits/protection unchanged; never repeat a billing subtraction.
+
+All9B/Base seed29 training and9B A6-3 E4/E8 training complete. Ten already-reserved greedy calls launched once, recorded in private LAUNCHES_21.json. 4B seed17 P/R training complete; K8/K4 still original active calls, no retry. After9B A6-3 evaluations finish, admit Basepair and4B construction from request_refreshed_pending.json. Its USD3 reserve already exists. All3construction checks before freezing4B M512 or training the four downstream4B/cross arms. Current T reservation204.695789,A6-2 prior12.860185,A6-3 initial22.473337; reconcile actuals, separate caps340/50/35,combined425. New data/request preparation is CPU-only and uses unchanged reviewed model paths.
+
+Preserve originals, lt002, credentials privacy and same-workspace/GPU pairing. Explicit MODAL_PROFILE for any Modal call; always detached, no source edits during upload. No new subagents/chats, external messages or course-report prose. Earlier entries are historical.
+
 # Current P012 — 2026-11-14T00:56:50.388894+00:00
 
 Review169754c427d8e2b748fb925e03d31bbabcf8ab9d accepted304cc5ee38 endpoints/M512/K4 recovery and authorized analysis afterA1-A6. All6 implemented;13 synthetic tests pass including the3 identity-swap negatives. First real main-grid analysis succeeded at3a2984e3. Results/inputbindings/reproduction source index580 paths in registered_analysis_169754c4_v1. Do not rerun completed statistics. Its numerical audit and35+3 newer endpoint audit are next; no code re-review required. All72 main cells complete.
