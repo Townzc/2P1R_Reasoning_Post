@@ -1,0 +1,47 @@
+{
+  "run_id": "tier2_llama_base_math_r_s29_greedy_20261113_v1",
+  "code_commit": "511247a496454ce88e652fb59a63f2d01841d26c",
+  "config": {
+    "model": "/p012/training/tier2_llama_base_math_r_s29_20261113_v1/checkpoint",
+    "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+    "protocol": "omi2",
+    "task": "math",
+    "template_family": "llama3",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 29,
+    "batch_size": 5000,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/llama3.jinja",
+    "stop_strings": [],
+    "training_run_id": "tier2_llama_base_math_r_s29_20261113_v1",
+    "checkpoint_manifest_sha256": "2784e8769ef51a8c2f51c7881ade67589e2be13032cd16a1e251ab85b975a9c1"
+  },
+  "input_sha256": "19019b07cca9bedc519149cef9fad8765cc40cb0fc1129b28485dab0d750848d",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "checkpoints.py": "89b3049da91b7e696c1f803fdecc4a9669e772e5691c3e06d57c8d0379a88240"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.4428461128319373,
+    "admission_file": "reports/p012_20261111/llama_tier2_admission_v1/ADMISSION.json",
+    "admission_sha256": "ff30fb9d41872313896cd703c61683bca3b4260917d5aa2d027ee63a4d4de066",
+    "workspace": "tangzhice",
+    "basis": "Already reserved with training; no added endpoint"
+  },
+  "input_source": {
+    "canonical_prepared_source_sha256": "7f0743c1b064e107bcebfd175e6e73f7351fdb433216eb279c336f470cc5500b",
+    "transformation": "Keep frozen IDs and bare questions; boxed gold from canonical human solution; discard plain-harness prompts. H4 subset IDs preserved."
+  },
+  "workspace": "tangzhice",
+  "authority": "Approved Tier2 seed29, unchanged reviewed main evaluation, already reserved with training"
+}
