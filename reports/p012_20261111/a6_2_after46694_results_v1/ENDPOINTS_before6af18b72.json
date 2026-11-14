@@ -1,0 +1,451 @@
+{
+  "new_endpoints": 4,
+  "raw_outputs": 30000,
+  "independent_numeric_audit": "Two Base endpoints accepted53a565da; four new endpoints pending",
+  "rows": [
+    {
+      "run_id": "a6_2_tinker_lora_9b_base_math_short_s17_20261113_v1",
+      "model": "Qwen/Qwen3.5-9B-Base",
+      "arm": "short",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 3507,
+        "accuracy": 0.7014,
+        "length_cap_count": 222,
+        "length_cap_rate": 0.0444,
+        "loop_count": 122,
+        "capped_loop_count": 118,
+        "normally_terminated_count": 4778,
+        "normally_terminated_correct": 3507,
+        "normally_terminated_accuracy": 0.7339891167852658
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 353,
+        "accuracy": 0.706,
+        "length_cap_count": 30,
+        "length_cap_rate": 0.06,
+        "loop_count": 10,
+        "capped_loop_count": 9,
+        "normally_terminated_count": 470,
+        "normally_terminated_correct": 353,
+        "normally_terminated_accuracy": 0.7510638297872341
+      },
+      "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d",
+      "question_set_teacher": "Qwen/Qwen3.5-9B",
+      "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_base_math_short_s17_v1/RESULTS.json",
+      "result_sha256": "db0f43b1ca03411181817610f7e5bcb15bd9170b03f9b8c82a54bb20974586a3",
+      "evidence_path": "reports/p012_20261111/a6_2_tinker_lora_9b_base_math_short_s17_v1/evidence.zip",
+      "evidence_sha256": "fde2a20fa19544cdc3d5c0cf8b4cb7a72906c0670941c1467238e5303a7e4c9b",
+      "independent_numeric_audit": "passed",
+      "accepted_review_commit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0"
+    },
+    {
+      "run_id": "a6_2_tinker_lora_9b_base_math_long_s17_20261113_v1",
+      "model": "Qwen/Qwen3.5-9B-Base",
+      "arm": "long",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 4383,
+        "accuracy": 0.8766,
+        "length_cap_count": 452,
+        "length_cap_rate": 0.0904,
+        "loop_count": 7,
+        "capped_loop_count": 6,
+        "normally_terminated_count": 4548,
+        "normally_terminated_correct": 4378,
+        "normally_terminated_accuracy": 0.9626209322779243
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 437,
+        "accuracy": 0.874,
+        "length_cap_count": 52,
+        "length_cap_rate": 0.104,
+        "loop_count": 0,
+        "capped_loop_count": 0,
+        "normally_terminated_count": 448,
+        "normally_terminated_correct": 436,
+        "normally_terminated_accuracy": 0.9732142857142857
+      },
+      "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6",
+      "question_set_teacher": "Qwen/Qwen3.5-9B",
+      "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_base_math_long_s17_v1/RESULTS.json",
+      "result_sha256": "ca3b994f45272e950bdebf98d73304a44315b289e760be529673839ea65740f8",
+      "evidence_path": "reports/p012_20261111/a6_2_tinker_lora_9b_base_math_long_s17_v1/evidence.zip",
+      "evidence_sha256": "0dae9d698f30ab323ff186c511fb535090de8c0fcdda9e62bffcf2456c8cfa07",
+      "independent_numeric_audit": "passed",
+      "accepted_review_commit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0"
+    },
+    {
+      "run_id": "a6_2_tinker_lora_4b_math_short_s17_20261113_v1",
+      "model": "Qwen/Qwen3.5-4B",
+      "arm": "short",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 3270,
+        "accuracy": 0.654,
+        "length_cap_count": 382,
+        "length_cap_rate": 0.0764,
+        "loop_count": 223,
+        "capped_loop_count": 219,
+        "normally_terminated_count": 4618,
+        "normally_terminated_correct": 3270,
+        "normally_terminated_accuracy": 0.7080987440450411
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 322,
+        "accuracy": 0.644,
+        "length_cap_count": 47,
+        "length_cap_rate": 0.094,
+        "loop_count": 23,
+        "capped_loop_count": 22,
+        "normally_terminated_count": 453,
+        "normally_terminated_correct": 322,
+        "normally_terminated_accuracy": 0.7108167770419426
+      },
+      "dataset_sha256": "55dc02f35c3d546e9b6df0b04fa31dde4f40ffb2e33b08c7562730fd2130e1d9",
+      "question_set_teacher": "Qwen/Qwen3.5-4B",
+      "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_4b_math_short_s17_v1/RESULTS.json",
+      "result_sha256": "19b9b7943edada05a6ebcc1d7817b02693a835f1cb022031dbd29bc0081b4e14",
+      "evidence_path": "reports/p012_20261111/a6_2_tinker_lora_4b_math_short_s17_v1/evidence.zip",
+      "evidence_sha256": "8c09fb108da2b5c0c9196d1bedf8d2e3b95fba069347853813d6015c7b171798",
+      "independent_numeric_audit": "pending",
+      "accepted_review_commit": null
+    },
+    {
+      "run_id": "a6_2_tinker_lora_4b_math_long_s17_20261113_v1",
+      "model": "Qwen/Qwen3.5-4B",
+      "arm": "long",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 4378,
+        "accuracy": 0.8756,
+        "length_cap_count": 339,
+        "length_cap_rate": 0.0678,
+        "loop_count": 10,
+        "capped_loop_count": 9,
+        "normally_terminated_count": 4661,
+        "normally_terminated_correct": 4378,
+        "normally_terminated_accuracy": 0.9392834155760567
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 437,
+        "accuracy": 0.874,
+        "length_cap_count": 39,
+        "length_cap_rate": 0.078,
+        "loop_count": 0,
+        "capped_loop_count": 0,
+        "normally_terminated_count": 461,
+        "normally_terminated_correct": 437,
+        "normally_terminated_accuracy": 0.9479392624728851
+      },
+      "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8",
+      "question_set_teacher": "Qwen/Qwen3.5-4B",
+      "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_4b_math_long_s17_v1/RESULTS.json",
+      "result_sha256": "9739141a8a51ed652c66526e97ed7c805022a3d3d1c1497854a342834a468064",
+      "evidence_path": "reports/p012_20261111/a6_2_tinker_lora_4b_math_long_s17_v1/evidence.zip",
+      "evidence_sha256": "43cdf372e8e4872156d4b08d2ced1b7bbb839d540a985b47e1641f23b790ff0e",
+      "independent_numeric_audit": "pending",
+      "accepted_review_commit": null
+    },
+    {
+      "run_id": "a6_2_tinker_lora_9b_math_short_4b_m512_s17_20261113_v1",
+      "model": "Qwen/Qwen3.5-9B",
+      "arm": "short_4b_m512",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 3503,
+        "accuracy": 0.7006,
+        "length_cap_count": 260,
+        "length_cap_rate": 0.052,
+        "loop_count": 137,
+        "capped_loop_count": 134,
+        "normally_terminated_count": 4740,
+        "normally_terminated_correct": 3503,
+        "normally_terminated_accuracy": 0.7390295358649789
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 354,
+        "accuracy": 0.708,
+        "length_cap_count": 25,
+        "length_cap_rate": 0.05,
+        "loop_count": 11,
+        "capped_loop_count": 11,
+        "normally_terminated_count": 475,
+        "normally_terminated_correct": 354,
+        "normally_terminated_accuracy": 0.7452631578947368
+      },
+      "dataset_sha256": "55dc02f35c3d546e9b6df0b04fa31dde4f40ffb2e33b08c7562730fd2130e1d9",
+      "question_set_teacher": "Qwen/Qwen3.5-4B",
+      "prediction_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_math_short_4b_m512_s17_v1/RESULTS.json",
+      "result_sha256": "1c4d89d450e181f0288f5bfb18778dcd7546473700a8c4f5eeaf128c8e30b7a6",
+      "evidence_path": "reports/p012_20261111/a6_2_tinker_lora_9b_math_short_4b_m512_s17_v1/evidence.zip",
+      "evidence_sha256": "f429d246f050b280c86560607cca8742a9b4d433723998a8f1fbb6be1bf65638",
+      "independent_numeric_audit": "pending",
+      "accepted_review_commit": null
+    },
+    {
+      "run_id": "a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_20261113_v1",
+      "model": "Qwen/Qwen3.5-9B",
+      "arm": "cross_long_4b_m512",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 4507,
+        "accuracy": 0.9014,
+        "length_cap_count": 266,
+        "length_cap_rate": 0.0532,
+        "loop_count": 4,
+        "capped_loop_count": 3,
+        "normally_terminated_count": 4734,
+        "normally_terminated_correct": 4506,
+        "normally_terminated_accuracy": 0.9518377693282636
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 450,
+        "accuracy": 0.9,
+        "length_cap_count": 30,
+        "length_cap_rate": 0.06,
+        "loop_count": 2,
+        "capped_loop_count": 1,
+        "normally_terminated_count": 470,
+        "normally_terminated_correct": 450,
+        "normally_terminated_accuracy": 0.9574468085106383
+      },
+      "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8",
+      "question_set_teacher": "Qwen/Qwen3.5-4B",
+      "prediction_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_v1/RESULTS.json",
+      "result_sha256": "53ac9c96fe05380a9a215501cbe85f377aaeaaa750ec1e64edc66bf889df036c",
+      "evidence_path": "reports/p012_20261111/a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_v1/evidence.zip",
+      "evidence_sha256": "ba28bda3ac38ac02f884bc088f3ed3ed5aaa0813967da8d22662b850a6299e19",
+      "independent_numeric_audit": "pending",
+      "accepted_review_commit": null
+    }
+  ],
+  "budget": {
+    "components": [
+      {
+        "run_id": "a6_2_tinker_lora_9b_m512_20261113_v2",
+        "group": "A6-2",
+        "kind": "construction",
+        "complete": true,
+        "usd": 1.0973367210000002,
+        "usage_sha256": "447e087ccc8ff05cf89256aadca3f8531fe1d741aa22e6b03fcab3de5640d7ef"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_m512_20261113_v1",
+        "group": "A6-2",
+        "kind": "construction",
+        "complete": true,
+        "usd": 1.2190130399999999,
+        "usage_sha256": "75625932618d8e921068cb05eb7127bc086a306be84684b8f0611c8788206688"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_long_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.6805466920000001,
+        "usage_sha256": "5a1ec3e33a7b4c0b6ea3db7933c72e8f34467d619620999aa68f1c85337d5bd2"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_long_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 5.444649855,
+        "usage_sha256": "438ac18936f02ba56faa104ccefe5feeeb6ab937bc93eec56b95cce767056dac"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_short_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.396412556,
+        "usage_sha256": "03895480849ccdef3f90c950905f2863e4642629ba42332b7a304e59d683f493"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_short_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 3.37398102,
+        "usage_sha256": "e6cc9126fb568d6d1b3ab55bddcf01551f1640d42eee346f14163db128d6dd5f"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_long_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.3565736260000003,
+        "usage_sha256": "36e3c6e659b842af6351ec02f5f856c4fb5b1505a65255de66d99dba45b5d996"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_long_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.861454673000001,
+        "usage_sha256": "0e8641148f8e861929728aaad557c3444d670f10d222d401310ef5e2168aed36"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_short_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.677683106,
+        "usage_sha256": "a4a9c074019e13cafc990cfa744a6a8bd8c438f34b74ddc2716b7e0ba467dab1"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_short_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.1824018970000005,
+        "usage_sha256": "bed6ba941c24b201049081004fa8c39a4325e1cce4864d5baa8bd981998f987f"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.2524285080000002,
+        "usage_sha256": "da0254db0cadd9e744e19581eadb6633ca65c7e37e43ad50ccba678431956bff"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.102245213,
+        "usage_sha256": "1cdbb98a65981c9dabf282807ceac7a8fcfd4b613f7a8a3c5d08ae4679d7474e"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_long_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.3565736260000003,
+        "usage_sha256": "36e3c6e659b842af6351ec02f5f856c4fb5b1505a65255de66d99dba45b5d996"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_long_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.5781774980000005,
+        "usage_sha256": "3b5db9882bdfb8f9be0c611856e77a1d286c65ec8a9bd1101d04f81496eca361"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_4b_m512_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.688401044,
+        "usage_sha256": "84fd25eab4006f26b5b59e44ebc2ec5717a306e0ee73698786f52e83da963222"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_4b_m512_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.334038811,
+        "usage_sha256": "00b4ff7f32a57076522721e7709796ae79da44979a11eb52e609c99c4e118c57"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.677683106,
+        "usage_sha256": "a4a9c074019e13cafc990cfa744a6a8bd8c438f34b74ddc2716b7e0ba467dab1"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.150414031,
+        "usage_sha256": "88bfd19220412267c88d5cc3787475fb42e75bb2abf03ee131d4a2851e32ae99"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e4_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": true,
+        "usd": 5.242562039999999,
+        "usage_sha256": "81400bf8d83756312f7ff3e912f7ad59de8697653120ddb50960763ae56c78fa"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e4_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 1.989662052,
+        "usage_sha256": "a53285dc74c0f381e07ef5207f2b47546024a05187a96df41d5f62020a88c8bc"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e8_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": true,
+        "usd": 5.178810351999999,
+        "usage_sha256": "bc451b240d2249839e92a784c764674d0eb936abbc6ce80fdcf2b73b2494d3ee"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e8_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 1.8102861270000001,
+        "usage_sha256": "98a73b4f25a7a26fefc282806aeb39346239acadb8eb591d01671dab2e1d1312"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_l64_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.174885118,
+        "usage_sha256": "224b86926b1bc40e52c8ed548606548ad08ffb8a0d3cbd7ed1cb014e9d000034"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_l64_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.634288003,
+        "usage_sha256": "b365ff7f58e96059002707836cf0b857424e6578249d980bdd512f5b70397964"
+      }
+    ],
+    "A6_2_accounted_and_reserved_usd": 38.430015023,
+    "A6_3_accounted_and_reserved_usd": 17.030493692,
+    "original_T_reserved_usd": 199.74734518875007,
+    "combined_reserved_usd": 255.20785390375008,
+    "original_T_ledger_source": {
+      "path": "reports/p012_20261111/tinker_lora_4b_seed29_admission_v1/ADMISSION.json",
+      "sha256": "bfc522ada9c5349e0b8b9fe954dc1fdc57c2bef1c8d228bc16c7b265217d1adb",
+      "value_field": "combined_reserved_usd"
+    },
+    "caps_usd": {
+      "A6-2": 50,
+      "A6-3": 35,
+      "original_T": 340,
+      "combined": 425
+    }
+  },
+  "total_endpoints": 6,
+  "previously_accepted_endpoints": 2,
+  "new_raw_outputs": 20000,
+  "previously_accepted_raw_outputs": 10000,
+  "current_review_packet": "results_after53a565da_v1"
+}
