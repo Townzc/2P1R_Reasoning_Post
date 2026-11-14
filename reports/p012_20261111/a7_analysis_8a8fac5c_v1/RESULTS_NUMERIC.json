@@ -1,0 +1,740 @@
+{
+  "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "accepted_analysis_review_commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "models": {
+    "9b": {
+      "comparisons": {
+        "long_minus_short": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 18.94,
+              "lower95_pp": 17.76,
+              "upper95_pp": 20.16,
+              "ci_excludes_zero": true,
+              "draws_sha256": "a4d32eb841e4e4e5650d63e5a9e12487d433e0e43f04489c0c0bc1d70d1c3c4a"
+            },
+            "29": {
+              "n_questions": 5000,
+              "delta_pp": 20.46,
+              "lower95_pp": 19.24,
+              "upper95_pp": 21.7,
+              "ci_excludes_zero": true,
+              "draws_sha256": "8545f8430ff8dc5b0a81a4f58d4831fd7f848b41766f2f63fdd843b240893627"
+            }
+          },
+          "seed_mean": {
+            "n_questions": 5000,
+            "delta_pp": 19.7,
+            "lower95_pp": 18.66,
+            "upper95_pp": 20.75,
+            "ci_excludes_zero": true,
+            "draws_sha256": "8e4bf8f65af9b721f62a7f93f89ba365828c884e6e5a3e2d08709d887cc1554f"
+          },
+          "same_nonzero_direction": true
+        },
+        "long_minus_concise": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 10.52,
+              "lower95_pp": 9.5,
+              "upper95_pp": 11.58,
+              "ci_excludes_zero": true,
+              "draws_sha256": "733f936c86468433ff843e74c1fb98b4267d7ec9530c99aaabedf62a4d958bec"
+            },
+            "29": {
+              "n_questions": 5000,
+              "delta_pp": 9.959999999999999,
+              "lower95_pp": 8.959999999999999,
+              "upper95_pp": 10.979999999999999,
+              "ci_excludes_zero": true,
+              "draws_sha256": "cc4e2b1972c453067ff19dd4a6c73ddf0f0e6a9c103898c08af72d143cf21592"
+            }
+          },
+          "seed_mean": {
+            "n_questions": 5000,
+            "delta_pp": 10.24,
+            "lower95_pp": 9.42,
+            "upper95_pp": 11.06,
+            "ci_excludes_zero": true,
+            "draws_sha256": "7272364a6bf0d3d9e0ba07748347d4290a164f8946fe5acc56d7607dda29bf66"
+          },
+          "same_nonzero_direction": true
+        },
+        "concise_minus_short": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 8.42,
+              "lower95_pp": 7.16,
+              "upper95_pp": 9.66,
+              "ci_excludes_zero": true,
+              "draws_sha256": "78ec00f7cd10039fa84c87d7616d9fbff18bbcb301c90ffda2c09fbeefca659a"
+            },
+            "29": {
+              "n_questions": 5000,
+              "delta_pp": 10.5,
+              "lower95_pp": 9.22,
+              "upper95_pp": 11.799999999999999,
+              "ci_excludes_zero": true,
+              "draws_sha256": "e89630bf45eabba1abc6440fed7c2cfca37c9504d21b399dd35026386cc82871"
+            }
+          },
+          "seed_mean": {
+            "n_questions": 5000,
+            "delta_pp": 9.46,
+            "lower95_pp": 8.450000000000001,
+            "upper95_pp": 10.48,
+            "ci_excludes_zero": true,
+            "draws_sha256": "5dfbf9d795e97320e7ef2206e49d8a5cdb40558e54aab0ff20ebf1ae89075b33"
+          },
+          "same_nonzero_direction": true
+        }
+      },
+      "endpoints": {
+        "17": {
+          "short": {
+            "accuracy": 0.722,
+            "termination": {
+              "responses": 5000,
+              "correct": 3610,
+              "accuracy": 0.722,
+              "length_cap_count": 200,
+              "length_cap_rate": 0.04,
+              "loop_count": 113,
+              "capped_loop_count": 112,
+              "normally_terminated_count": 4800,
+              "normally_terminated_correct": 3610,
+              "normally_terminated_accuracy": 0.7520833333333333
+            },
+            "normal_output_tokens": {
+              "count": 4800,
+              "sum": 1650333,
+              "mean": 343.819375
+            },
+            "binding": {
+              "run_id": "a6_2_tinker_lora_9b_math_short_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B",
+              "arm": "short",
+              "seed": 17,
+              "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d",
+              "updates": 128,
+              "archive_sha256": "08e83ebd46134f11ad2657ef51acd1ab432cc6e721b58f689c3f4ba50db02064",
+              "raw_sha256": "d5b1f5679b90be6fb952ef6443f46fa2f39cf83709ca8ac0ad1974705f3e6ab5",
+              "labels_sha256": "7e5017630cf44ed4e57715f316140ba9be3a58206912c0eb0147c988726be9c0"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "long": {
+            "accuracy": 0.9114,
+            "termination": {
+              "responses": 5000,
+              "correct": 4557,
+              "accuracy": 0.9114,
+              "length_cap_count": 338,
+              "length_cap_rate": 0.0676,
+              "loop_count": 4,
+              "capped_loop_count": 2,
+              "normally_terminated_count": 4662,
+              "normally_terminated_correct": 4548,
+              "normally_terminated_accuracy": 0.9755469755469756
+            },
+            "normal_output_tokens": {
+              "count": 4662,
+              "sum": 4093466,
+              "mean": 878.049335049335
+            },
+            "binding": {
+              "run_id": "a6_2_tinker_lora_9b_math_long_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B",
+              "arm": "long",
+              "seed": 17,
+              "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6",
+              "updates": 128,
+              "archive_sha256": "6dcdecf34a81d371f85fe27f0954ad4732881620b9a818032a30a228a59d10d8",
+              "raw_sha256": "6bfd2861180c35ea0b2ed561c39dcd702903e105a14bab9653ffea715bfbc931",
+              "labels_sha256": "536095d061216bc3bdae39b8bbbcd126fd5f51006bc4914fcfca3598d01107a5"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "concise": {
+            "accuracy": 0.8062,
+            "termination": {
+              "responses": 5000,
+              "correct": 4031,
+              "accuracy": 0.8062,
+              "length_cap_count": 88,
+              "length_cap_rate": 0.0176,
+              "loop_count": 6,
+              "capped_loop_count": 6,
+              "normally_terminated_count": 4912,
+              "normally_terminated_correct": 4031,
+              "normally_terminated_accuracy": 0.82064332247557
+            },
+            "normal_output_tokens": {
+              "count": 4912,
+              "sum": 1805626,
+              "mean": 367.59486970684037
+            },
+            "binding": {
+              "run_id": "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B",
+              "arm": "concise",
+              "seed": 17,
+              "dataset_sha256": "090ef4576c05498e2a35bfd7ccd2e621bbee418cba2156d55d06a074b60819f9",
+              "updates": 128,
+              "archive_sha256": "4f81294ecabf15be7bc412609399657e26f0d00d7089b80fb73524b5a3af0a64",
+              "raw_sha256": "c507197f6381dd18b264a83620e2a0f6f45c996bd3fd32110cd45fe8a4bbcfea",
+              "labels_sha256": "9eb65bd53d3f6bfa0028b8914519c842ef90f44b7a73bc3060e40fe1dca137cb"
+            },
+            "first_boxed_diagnostic": null
+          }
+        },
+        "29": {
+          "short": {
+            "accuracy": 0.7076,
+            "termination": {
+              "responses": 5000,
+              "correct": 3538,
+              "accuracy": 0.7076,
+              "length_cap_count": 204,
+              "length_cap_rate": 0.0408,
+              "loop_count": 117,
+              "capped_loop_count": 114,
+              "normally_terminated_count": 4796,
+              "normally_terminated_correct": 3538,
+              "normally_terminated_accuracy": 0.737698081734779
+            },
+            "normal_output_tokens": {
+              "count": 4796,
+              "sum": 1658464,
+              "mean": 345.8015012510425
+            },
+            "binding": {
+              "run_id": "a7_2_tinker_lora_9b_math_short_s29_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B",
+              "arm": "short",
+              "seed": 29,
+              "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d",
+              "updates": 128,
+              "archive_sha256": "be6c839af89440d512a7ed41252369441d0900f47b83caf1cc7891d5fa9b763d",
+              "raw_sha256": "95de9f21e92b0331f050af381238031cb74a5b146746171a2cbd49a5a4544edc",
+              "labels_sha256": "fefea2bc7d9d3e536179e3d21e430f9022802be807442238bccd7a24b348c97e"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "long": {
+            "accuracy": 0.9122,
+            "termination": {
+              "responses": 5000,
+              "correct": 4561,
+              "accuracy": 0.9122,
+              "length_cap_count": 317,
+              "length_cap_rate": 0.0634,
+              "loop_count": 6,
+              "capped_loop_count": 3,
+              "normally_terminated_count": 4683,
+              "normally_terminated_correct": 4556,
+              "normally_terminated_accuracy": 0.9728806320734572
+            },
+            "normal_output_tokens": {
+              "count": 4683,
+              "sum": 4160234,
+              "mean": 888.3694213111254
+            },
+            "binding": {
+              "run_id": "a7_2_tinker_lora_9b_math_long_s29_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B",
+              "arm": "long",
+              "seed": 29,
+              "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6",
+              "updates": 128,
+              "archive_sha256": "e3e935b3c865bdb95bf18367dbeb15ce769cf95e40d709d52061a0a7360a5d4b",
+              "raw_sha256": "00d2e77b797276ab928f6215a2d20848fff7a081ee2cf5580172e3b5a3a4b465",
+              "labels_sha256": "77f7ddbc311e49eee51b609f11e70db10e3b22ce248868b49295e56c8f70a458"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "concise": {
+            "accuracy": 0.8126,
+            "termination": {
+              "responses": 5000,
+              "correct": 4063,
+              "accuracy": 0.8126,
+              "length_cap_count": 143,
+              "length_cap_rate": 0.0286,
+              "loop_count": 10,
+              "capped_loop_count": 10,
+              "normally_terminated_count": 4857,
+              "normally_terminated_correct": 4061,
+              "normally_terminated_accuracy": 0.8361128268478485
+            },
+            "normal_output_tokens": {
+              "count": 4857,
+              "sum": 1945178,
+              "mean": 400.4896026353716
+            },
+            "binding": {
+              "run_id": "a7_1_tinker_lora_9b_math_concise_s29_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B",
+              "arm": "concise",
+              "seed": 29,
+              "dataset_sha256": "090ef4576c05498e2a35bfd7ccd2e621bbee418cba2156d55d06a074b60819f9",
+              "updates": 128,
+              "archive_sha256": "dd934c055d0fd23c3c92216edd64adac7797b7b37490233738580b48662a7d5a",
+              "raw_sha256": "a47639866ccafadb36a11d54e80f1ae074f325d488dd6f7702d42307c4bc5e2e",
+              "labels_sha256": "8e9d77bebbc3bce47caec4c92ac4cd028235e20e228705d111266d49ff330302"
+            },
+            "first_boxed_diagnostic": null
+          }
+        }
+      }
+    },
+    "4b": {
+      "comparisons": {
+        "long_minus_short": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 22.16,
+              "lower95_pp": 20.86,
+              "upper95_pp": 23.46,
+              "ci_excludes_zero": true,
+              "draws_sha256": "e2f004f32541a972308d1adb9270fdadd12405f5a864d774c173d9b9e1ac9910"
+            },
+            "29": {
+              "n_questions": 5000,
+              "delta_pp": 23.919999999999998,
+              "lower95_pp": 22.58,
+              "upper95_pp": 25.259999999999998,
+              "ci_excludes_zero": true,
+              "draws_sha256": "d25daaeed9baffc6fe7dae7feb4127abd7e05cb80f0837d2a35778a8e203a41f"
+            }
+          },
+          "seed_mean": {
+            "n_questions": 5000,
+            "delta_pp": 23.04,
+            "lower95_pp": 21.92,
+            "upper95_pp": 24.14,
+            "ci_excludes_zero": true,
+            "draws_sha256": "92ade5867fad8afd6abb515385f5e3c10deebad101b28bae0f4bad910d0a0599"
+          },
+          "same_nonzero_direction": true
+        },
+        "long_minus_concise": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 16.3,
+              "lower95_pp": 15.040000000000001,
+              "upper95_pp": 17.54,
+              "ci_excludes_zero": true,
+              "draws_sha256": "b5b5e60eb1f3bddc8e237c378206ffe8bef383f5e6bc0b69708c3074388a1eae"
+            },
+            "29": {
+              "n_questions": 5000,
+              "delta_pp": 17.119999999999997,
+              "lower95_pp": 15.920000000000002,
+              "upper95_pp": 18.38,
+              "ci_excludes_zero": true,
+              "draws_sha256": "d7dcafb8dad46d5884ca156067b9b19a06a16d464414d8e5c8f74de7e98eae71"
+            }
+          },
+          "seed_mean": {
+            "n_questions": 5000,
+            "delta_pp": 16.71,
+            "lower95_pp": 15.709999999999999,
+            "upper95_pp": 17.71,
+            "ci_excludes_zero": true,
+            "draws_sha256": "7c73b077c25a145fa2dc98799ae81b3a98e2cc43a028b278cb4fd7a5d4b75f7a"
+          },
+          "same_nonzero_direction": true
+        },
+        "concise_minus_short": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 5.86,
+              "lower95_pp": 4.54,
+              "upper95_pp": 7.180000000000001,
+              "ci_excludes_zero": true,
+              "draws_sha256": "04e38592e311502e349380ff6b80dacf1ba0cb5b512fbd1ac39f0e9eb3827c10"
+            },
+            "29": {
+              "n_questions": 5000,
+              "delta_pp": 6.800000000000001,
+              "lower95_pp": 5.4399999999999995,
+              "upper95_pp": 8.16,
+              "ci_excludes_zero": true,
+              "draws_sha256": "5f96d8e63e773d6ba7dce31fad8f477550b80cca5e989856a9b6d6c294f73aad"
+            }
+          },
+          "seed_mean": {
+            "n_questions": 5000,
+            "delta_pp": 6.329999999999999,
+            "lower95_pp": 5.29,
+            "upper95_pp": 7.35,
+            "ci_excludes_zero": true,
+            "draws_sha256": "316946a8cb37099aa7531a03f54d1f7e7548bf99ede9e50c5dfbd2c75ef46e7e"
+          },
+          "same_nonzero_direction": true
+        }
+      },
+      "endpoints": {
+        "17": {
+          "short": {
+            "accuracy": 0.654,
+            "termination": {
+              "responses": 5000,
+              "correct": 3270,
+              "accuracy": 0.654,
+              "length_cap_count": 382,
+              "length_cap_rate": 0.0764,
+              "loop_count": 223,
+              "capped_loop_count": 219,
+              "normally_terminated_count": 4618,
+              "normally_terminated_correct": 3270,
+              "normally_terminated_accuracy": 0.7080987440450411
+            },
+            "normal_output_tokens": {
+              "count": 4618,
+              "sum": 1620134,
+              "mean": 350.83022953659594
+            },
+            "binding": {
+              "run_id": "a6_2_tinker_lora_4b_math_short_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-4B",
+              "arm": "short",
+              "seed": 17,
+              "dataset_sha256": "55dc02f35c3d546e9b6df0b04fa31dde4f40ffb2e33b08c7562730fd2130e1d9",
+              "updates": 128,
+              "archive_sha256": "8c09fb108da2b5c0c9196d1bedf8d2e3b95fba069347853813d6015c7b171798",
+              "raw_sha256": "95092205be30ee6f99466a1c9d8999c7ebd1ade9055ebd3a7eb90e00d17abc5f",
+              "labels_sha256": "90074aa4e2af81a370a78bba7004d7d85f7f09ca60edd2311bf369b280b4c668"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "long": {
+            "accuracy": 0.8756,
+            "termination": {
+              "responses": 5000,
+              "correct": 4378,
+              "accuracy": 0.8756,
+              "length_cap_count": 339,
+              "length_cap_rate": 0.0678,
+              "loop_count": 10,
+              "capped_loop_count": 9,
+              "normally_terminated_count": 4661,
+              "normally_terminated_correct": 4378,
+              "normally_terminated_accuracy": 0.9392834155760567
+            },
+            "normal_output_tokens": {
+              "count": 4661,
+              "sum": 3856629,
+              "mean": 827.4252306372023
+            },
+            "binding": {
+              "run_id": "a6_2_tinker_lora_4b_math_long_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-4B",
+              "arm": "long",
+              "seed": 17,
+              "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8",
+              "updates": 128,
+              "archive_sha256": "43cdf372e8e4872156d4b08d2ced1b7bbb839d540a985b47e1641f23b790ff0e",
+              "raw_sha256": "8f11dd2300e98284aa65db6e9d9ecb970694a9ed3dd00ef78c857b9e0145605d",
+              "labels_sha256": "47232ccf5b33b6a18ab55a2035dccc2c1351b51500bb2ac55a03ffe461ce1539"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "concise": {
+            "accuracy": 0.7126,
+            "termination": {
+              "responses": 5000,
+              "correct": 3563,
+              "accuracy": 0.7126,
+              "length_cap_count": 100,
+              "length_cap_rate": 0.02,
+              "loop_count": 23,
+              "capped_loop_count": 21,
+              "normally_terminated_count": 4900,
+              "normally_terminated_correct": 3563,
+              "normally_terminated_accuracy": 0.7271428571428571
+            },
+            "normal_output_tokens": {
+              "count": 4900,
+              "sum": 1674982,
+              "mean": 341.83306122448977
+            },
+            "binding": {
+              "run_id": "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-4B",
+              "arm": "concise",
+              "seed": 17,
+              "dataset_sha256": "d60568ff56b7a8d486b6a24da05453d2e2f22b1432037813064d9f244e5f8a22",
+              "updates": 128,
+              "archive_sha256": "a0c552dbebb6700cf246d4cda8e9dca8906ee017bbbddaa14ec400b9e5e3dc9e",
+              "raw_sha256": "4d803622ad3aa93fcb44cb4224b67e896816f9c41a6ddfca382c1e3f7415a9b4",
+              "labels_sha256": "035f34de82f36beefa9204f3a39b0ae0525f00a1fdc347b015acd28250fafbcf"
+            },
+            "first_boxed_diagnostic": null
+          }
+        },
+        "29": {
+          "short": {
+            "accuracy": 0.6342,
+            "termination": {
+              "responses": 5000,
+              "correct": 3171,
+              "accuracy": 0.6342,
+              "length_cap_count": 328,
+              "length_cap_rate": 0.0656,
+              "loop_count": 208,
+              "capped_loop_count": 205,
+              "normally_terminated_count": 4672,
+              "normally_terminated_correct": 3171,
+              "normally_terminated_accuracy": 0.6787243150684932
+            },
+            "normal_output_tokens": {
+              "count": 4672,
+              "sum": 1526186,
+              "mean": 326.66652397260276
+            },
+            "binding": {
+              "run_id": "a7_2_tinker_lora_4b_math_short_s29_20261113_v1",
+              "model": "Qwen/Qwen3.5-4B",
+              "arm": "short",
+              "seed": 29,
+              "dataset_sha256": "55dc02f35c3d546e9b6df0b04fa31dde4f40ffb2e33b08c7562730fd2130e1d9",
+              "updates": 128,
+              "archive_sha256": "a1addde6d682e2acf04771068d0ee0508a17336f41a3d227778de7a5ed8c2afb",
+              "raw_sha256": "10f618b747502f8aa1bad6eb2cf78374fac5b3d0d4b432345610feda5aaf70f5",
+              "labels_sha256": "f4bfaad422b96c983a8765295af2648ac214d0ae3ec3cfb82d4a980047baba34"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "long": {
+            "accuracy": 0.8734,
+            "termination": {
+              "responses": 5000,
+              "correct": 4367,
+              "accuracy": 0.8734,
+              "length_cap_count": 381,
+              "length_cap_rate": 0.0762,
+              "loop_count": 13,
+              "capped_loop_count": 11,
+              "normally_terminated_count": 4619,
+              "normally_terminated_correct": 4363,
+              "normally_terminated_accuracy": 0.9445767482138991
+            },
+            "normal_output_tokens": {
+              "count": 4619,
+              "sum": 3820737,
+              "mean": 827.1783935916865
+            },
+            "binding": {
+              "run_id": "a7_2_tinker_lora_4b_math_long_s29_20261113_v1",
+              "model": "Qwen/Qwen3.5-4B",
+              "arm": "long",
+              "seed": 29,
+              "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8",
+              "updates": 128,
+              "archive_sha256": "40b74d395f4f0941fadc4dd75ba624d4d29f62d4afe642c27a8d1e8f12ad6dbf",
+              "raw_sha256": "f93357f75e3ffeb1b5c103f587e643f606c9e2c437e94c103e9ea98f441c8eba",
+              "labels_sha256": "9f09eec29788e81867cb033ce5a6b9618c473ce2a809d0cec4273ec8eee31956"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "concise": {
+            "accuracy": 0.7022,
+            "termination": {
+              "responses": 5000,
+              "correct": 3511,
+              "accuracy": 0.7022,
+              "length_cap_count": 69,
+              "length_cap_rate": 0.0138,
+              "loop_count": 8,
+              "capped_loop_count": 8,
+              "normally_terminated_count": 4931,
+              "normally_terminated_correct": 3511,
+              "normally_terminated_accuracy": 0.7120259582234841
+            },
+            "normal_output_tokens": {
+              "count": 4931,
+              "sum": 1635057,
+              "mean": 331.5873048063273
+            },
+            "binding": {
+              "run_id": "a7_1_tinker_lora_4b_math_concise_s29_20261113_v1",
+              "model": "Qwen/Qwen3.5-4B",
+              "arm": "concise",
+              "seed": 29,
+              "dataset_sha256": "d60568ff56b7a8d486b6a24da05453d2e2f22b1432037813064d9f244e5f8a22",
+              "updates": 128,
+              "archive_sha256": "763611d6ef48d03846b482eb554074d8d3a113c58cc6f1d89d3e34d4ad843fca",
+              "raw_sha256": "a638504c7d756e6ae8b756a5128d5b9261134d5d4e9c2870a4c9b02c9374f571",
+              "labels_sha256": "3d8d2a30c35e7c06d41d4dc5e4396c51d4c26602176236a6b2d9f21747d431e1"
+            },
+            "first_boxed_diagnostic": null
+          }
+        }
+      }
+    },
+    "9b_base": {
+      "comparisons": {
+        "long_minus_short": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 17.52,
+              "lower95_pp": 16.32,
+              "upper95_pp": 18.72,
+              "ci_excludes_zero": true,
+              "draws_sha256": "8c62a02ad42e2c37a9e1a83ca547623eb256b5066f62c00bb175cee5cdf9c818"
+            }
+          }
+        },
+        "long_minus_concise": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 11.219999999999999,
+              "lower95_pp": 10.100000000000001,
+              "upper95_pp": 12.36,
+              "ci_excludes_zero": true,
+              "draws_sha256": "3acd45674672821b995b46cad8155dc0b1ee8d876821935da101fa5e16f7cd72"
+            }
+          }
+        },
+        "concise_minus_short": {
+          "by_seed": {
+            "17": {
+              "n_questions": 5000,
+              "delta_pp": 6.3,
+              "lower95_pp": 5.04,
+              "upper95_pp": 7.580000000000001,
+              "ci_excludes_zero": true,
+              "draws_sha256": "043e0aaa71f96539f16b5a17fde8f80a7ceb8c9dc0a13ac6b2330973369472d1"
+            }
+          }
+        }
+      },
+      "endpoints": {
+        "17": {
+          "short": {
+            "accuracy": 0.7014,
+            "termination": {
+              "responses": 5000,
+              "correct": 3507,
+              "accuracy": 0.7014,
+              "length_cap_count": 222,
+              "length_cap_rate": 0.0444,
+              "loop_count": 122,
+              "capped_loop_count": 118,
+              "normally_terminated_count": 4778,
+              "normally_terminated_correct": 3507,
+              "normally_terminated_accuracy": 0.7339891167852658
+            },
+            "normal_output_tokens": {
+              "count": 4778,
+              "sum": 1599859,
+              "mean": 334.8386354123064
+            },
+            "binding": {
+              "run_id": "a6_2_tinker_lora_9b_base_math_short_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B-Base",
+              "arm": "short",
+              "seed": 17,
+              "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d",
+              "updates": 128,
+              "archive_sha256": "fde2a20fa19544cdc3d5c0cf8b4cb7a72906c0670941c1467238e5303a7e4c9b",
+              "raw_sha256": "d001a04767351dd12601a8bcd48f75872dc55c8e6dc9a3ed8ddc3527f14f7b37",
+              "labels_sha256": "92a5e0663abb9d6647b214559163f991b9fe5fc218ce98e8f3e5b4e5eb886467"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "long": {
+            "accuracy": 0.8766,
+            "termination": {
+              "responses": 5000,
+              "correct": 4383,
+              "accuracy": 0.8766,
+              "length_cap_count": 452,
+              "length_cap_rate": 0.0904,
+              "loop_count": 7,
+              "capped_loop_count": 6,
+              "normally_terminated_count": 4548,
+              "normally_terminated_correct": 4378,
+              "normally_terminated_accuracy": 0.9626209322779243
+            },
+            "normal_output_tokens": {
+              "count": 4548,
+              "sum": 3977547,
+              "mean": 874.570580474934
+            },
+            "binding": {
+              "run_id": "a6_2_tinker_lora_9b_base_math_long_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B-Base",
+              "arm": "long",
+              "seed": 17,
+              "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6",
+              "updates": 128,
+              "archive_sha256": "0dae9d698f30ab323ff186c511fb535090de8c0fcdda9e62bffcf2456c8cfa07",
+              "raw_sha256": "0d545ca5698e9d02c87f8236dcc2ee6dcdd654c2d0e4d6f2e89a0b7529e96436",
+              "labels_sha256": "467354c6c3320fc4e7ea1fb92b6c2dc1fa730d5dc0c2cbf0b37e78cf22449152"
+            },
+            "first_boxed_diagnostic": null
+          },
+          "concise": {
+            "accuracy": 0.7644,
+            "termination": {
+              "responses": 5000,
+              "correct": 3822,
+              "accuracy": 0.7644,
+              "length_cap_count": 105,
+              "length_cap_rate": 0.021,
+              "loop_count": 10,
+              "capped_loop_count": 9,
+              "normally_terminated_count": 4895,
+              "normally_terminated_correct": 3822,
+              "normally_terminated_accuracy": 0.7807967313585291
+            },
+            "normal_output_tokens": {
+              "count": 4895,
+              "sum": 1741182,
+              "mean": 355.7062308478039
+            },
+            "binding": {
+              "run_id": "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1",
+              "model": "Qwen/Qwen3.5-9B-Base",
+              "arm": "concise",
+              "seed": 17,
+              "dataset_sha256": "090ef4576c05498e2a35bfd7ccd2e621bbee418cba2156d55d06a074b60819f9",
+              "updates": 128,
+              "archive_sha256": "f39c46295aed72bd0e1bbd9caf645978f4401946f6e24cc7e660cc8ee7db0c21",
+              "raw_sha256": "477191e3978699a5d0353df007d9c73cdbf1d84fe5a621e9550e64a68de651c3",
+              "labels_sha256": "646a528c5d484560bf4238176748fbacb29a9b36a483fc384d40c2b2b4605ac0"
+            },
+            "first_boxed_diagnostic": null
+          }
+        }
+      }
+    }
+  },
+  "policy": {
+    "replicates": 10000,
+    "seed": 20261111,
+    "generator": "PCG64",
+    "numpy_version": "2.5.4",
+    "quantile_method": "linear",
+    "unit": "question",
+    "order": "sorted frozen question ID",
+    "interval": "pointwise percentile 95%, conditional on observed seeds",
+    "seed_uncertainty": "Mean CI measures question sampling only; two training seeds do not estimate training-seed uncertainty"
+  },
+  "core_source_sha256": "b6973ad67c8eff3cec08806a553754911113944a044c9248bdb45aa1ac8d0b06",
+  "interpretation": "Question-paired intervals conditional on the observed seeds. All three fixed contrasts are reported; no main-grid hypothesis classification.",
+  "input_manifest_sha256": "94fb90461e86e844360d5a4396bf025c4303cda43f11c57a9e88fcd60800e8a5"
+}
