@@ -1,0 +1,551 @@
+{
+  "utc": "2026-11-14T08:03:53.670006+00:00",
+  "queues": [
+    {
+      "private_state": ".local/p012_20261111/amendment7_v1/A7_RECOVERY_QUEUE.json",
+      "utc": "2026-11-14T08:01:49.644311+00:00",
+      "controller_pid": 51565,
+      "status": "running",
+      "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+      "accepted_analysis_review": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+      "finite_training_runs": [
+        "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+        "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+        "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1",
+        "a7_1_tinker_lora_9b_math_concise_s29_20261113_v1",
+        "a7_1_tinker_lora_4b_math_concise_s29_20261113_v1"
+      ],
+      "infrastructure_retries": 1,
+      "events": [
+        {
+          "utc": "2026-11-14T08:01:49.644679+00:00",
+          "stage": "detached_controller_started",
+          "ppid": 1,
+          "process_group": 51565
+        },
+        {
+          "utc": "2026-11-14T08:01:52.916369+00:00",
+          "stage": "retry_admitted",
+          "commit": "d384783b1058d253772152e4b15b2bf7ba539351"
+        },
+        {
+          "utc": "2026-11-14T08:01:52.929082+00:00",
+          "stage": "launched",
+          "run_id": "a7_1_tinker_lora_4b_math_concise_s17_greedy_20261113_v1",
+          "pid": 51610,
+          "independent_process_session": true,
+          "request_sha256": "4f248a36c0cadaa7da1fe2d87886c1129268f4645d0b993e4b14a13f6f0b38b4"
+        }
+      ],
+      "updated_utc": "2026-11-14T08:01:52.929082+00:00"
+    },
+    {
+      "private_state": ".local/p012_20261111/amendment7_v1/A6_3_RECOVERY_QUEUE.json",
+      "utc": "2026-11-14T08:01:49.644018+00:00",
+      "controller_pid": 51566,
+      "status": "running",
+      "finite_training_runs": [
+        "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+        "a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+        "a6_3_tinker_lora_4b_math_l64_s17_20261113_v1"
+      ],
+      "one_retry_each": [
+        "E4",
+        "E8"
+      ],
+      "events": [
+        {
+          "utc": "2026-11-14T08:01:49.644626+00:00",
+          "stage": "detached_controller_started",
+          "ppid": 1,
+          "process_group": 51566
+        },
+        {
+          "utc": "2026-11-14T08:01:51.405300+00:00",
+          "stage": "retry_admitted",
+          "run_id": "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+          "commit": "84acb96dbb46edee76e6646e632328b96eb235f4"
+        },
+        {
+          "utc": "2026-11-14T08:01:51.423328+00:00",
+          "stage": "launched",
+          "run_id": "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+          "pid": 51589,
+          "independent_process_session": true,
+          "request_sha256": "d40e81c1cb9dd5ff7a2e3e114eb63d63c7e78ba8f9bea1def31a4c7f438c5eab"
+        }
+      ],
+      "updated_utc": "2026-11-14T08:01:51.423328+00:00"
+    }
+  ],
+  "budget": {
+    "prior_components": [
+      {
+        "run_id": "a6_2_tinker_lora_9b_m512_20261113_v2",
+        "group": "A6-2",
+        "kind": "construction",
+        "complete": true,
+        "usd": 1.0973367210000002,
+        "usage_sha256": "447e087ccc8ff05cf89256aadca3f8531fe1d741aa22e6b03fcab3de5640d7ef"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_m512_20261113_v1",
+        "group": "A6-2",
+        "kind": "construction",
+        "complete": true,
+        "usd": 1.2190130399999999,
+        "usage_sha256": "75625932618d8e921068cb05eb7127bc086a306be84684b8f0611c8788206688"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_long_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.6805466920000001,
+        "usage_sha256": "5a1ec3e33a7b4c0b6ea3db7933c72e8f34467d619620999aa68f1c85337d5bd2"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_long_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 5.444649855,
+        "usage_sha256": "438ac18936f02ba56faa104ccefe5feeeb6ab937bc93eec56b95cce767056dac"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_short_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.396412556,
+        "usage_sha256": "03895480849ccdef3f90c950905f2863e4642629ba42332b7a304e59d683f493"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_4b_math_short_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 3.37398102,
+        "usage_sha256": "e6cc9126fb568d6d1b3ab55bddcf01551f1640d42eee346f14163db128d6dd5f"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_long_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.3565736260000003,
+        "usage_sha256": "36e3c6e659b842af6351ec02f5f856c4fb5b1505a65255de66d99dba45b5d996"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_long_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.861454673000001,
+        "usage_sha256": "0e8641148f8e861929728aaad557c3444d670f10d222d401310ef5e2168aed36"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_short_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.677683106,
+        "usage_sha256": "a4a9c074019e13cafc990cfa744a6a8bd8c438f34b74ddc2716b7e0ba467dab1"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_base_math_short_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.1824018970000005,
+        "usage_sha256": "bed6ba941c24b201049081004fa8c39a4325e1cce4864d5baa8bd981998f987f"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.2524285080000002,
+        "usage_sha256": "da0254db0cadd9e744e19581eadb6633ca65c7e37e43ad50ccba678431956bff"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_cross_long_4b_m512_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.102245213,
+        "usage_sha256": "1cdbb98a65981c9dabf282807ceac7a8fcfd4b613f7a8a3c5d08ae4679d7474e"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_long_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.3565736260000003,
+        "usage_sha256": "36e3c6e659b842af6351ec02f5f856c4fb5b1505a65255de66d99dba45b5d996"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_long_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.5781774980000005,
+        "usage_sha256": "3b5db9882bdfb8f9be0c611856e77a1d286c65ec8a9bd1101d04f81496eca361"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_4b_m512_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.688401044,
+        "usage_sha256": "84fd25eab4006f26b5b59e44ebc2ec5717a306e0ee73698786f52e83da963222"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_4b_m512_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.334038811,
+        "usage_sha256": "00b4ff7f32a57076522721e7709796ae79da44979a11eb52e609c99c4e118c57"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_s17_20261113_v1",
+        "group": "A6-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.677683106,
+        "usage_sha256": "a4a9c074019e13cafc990cfa744a6a8bd8c438f34b74ddc2716b7e0ba467dab1"
+      },
+      {
+        "run_id": "a6_2_tinker_lora_9b_math_short_s17_greedy_20261113_v1",
+        "group": "A6-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.150414031,
+        "usage_sha256": "88bfd19220412267c88d5cc3787475fb42e75bb2abf03ee131d4a2851e32ae99"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": false,
+        "usd": 3.3382674499999996,
+        "usage_sha256": null
+      },
+      {
+        "run_id": "a6_3_tinker_lora_4b_math_e4_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": false,
+        "usd": 4.264492949999999,
+        "usage_sha256": null
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e4_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": true,
+        "usd": 5.242562039999999,
+        "usage_sha256": "81400bf8d83756312f7ff3e912f7ad59de8697653120ddb50960763ae56c78fa"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e4_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 1.989662052,
+        "usage_sha256": "a53285dc74c0f381e07ef5207f2b47546024a05187a96df41d5f62020a88c8bc"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e8_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": true,
+        "usd": 5.178810351999999,
+        "usage_sha256": "bc451b240d2249839e92a784c764674d0eb936abbc6ce80fdcf2b73b2494d3ee"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_e8_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 1.8102861270000001,
+        "usage_sha256": "98a73b4f25a7a26fefc282806aeb39346239acadb8eb591d01671dab2e1d1312"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_l64_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.174885118,
+        "usage_sha256": "224b86926b1bc40e52c8ed548606548ad08ffb8a0d3cbd7ed1cb014e9d000034"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_9b_math_l64_s17_greedy_20261113_v1",
+        "group": "A6-3",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.634288003,
+        "usage_sha256": "b365ff7f58e96059002707836cf0b857424e6578249d980bdd512f5b70397964"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "interrupted_attempt0",
+        "complete": false,
+        "usd": 2.536274213,
+        "scientific_result": false,
+        "automatic_infrastructure_retry_used": 0,
+        "original_directory": ".local/p012_20261111/a6_runs_v1/a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+        "archive_directory": ".local/p012_20261111/interruption_8a_v1/a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+        "request_sha256": "6c3b18c21f3453d74de99eafaa89104968614f2ee3b44a8a06333a49c1cad12b",
+        "inventory_sha256": "f4526599fccaaa110792fdbf2ddcbe739bba9a141944da4e11b30f5dd98e4275",
+        "files": {
+          "request.json": "6c3b18c21f3453d74de99eafaa89104968614f2ee3b44a8a06333a49c1cad12b",
+          "request_pending.json": "12525362449ca64403d786d4ab619bca1b7439c858bf1c2cdb7d32ac1a6ec9b1",
+          "result/RENDER_SAMPLES.json": "ada5bd6bcb2895a3f596dae1ce35f54df05172f5a927ac35d3e4139cd4525987",
+          "result/REQUEST.json": "6c3b18c21f3453d74de99eafaa89104968614f2ee3b44a8a06333a49c1cad12b",
+          "result/ROW_ORDER.json": "8ea7618cccc2c3bdd6adf4dc7b94e00052d9c1f3d6b7597f1cac7b849e725b7f",
+          "result/SERVER_MODEL_INFO.json": "1e98750fd33072e0ea0c23f4b82a9d6b9e65a1f440c8c00892da6521b64d9c52",
+          "result/VERSIONS.json": "501528afbd46582433899eec52f175ac5aa9e28f1e1abc4a0ae2b30d54292f55",
+          "result/train_loss.jsonl": "32bf973e0fc2c3ad33d93b41785e612425132d20c5f88d7f178133ab0a4061fd",
+          "run.log": "65a730c04d2414e31b380603605dfc3e4fb5fc7ec13241b93e1fe3278b98ce15"
+        },
+        "details": {
+          "completed_logged_updates": 1001,
+          "planned_updates": 1024,
+          "logged_input_tokens": 3437417,
+          "charged_input_tokens_upper": 3441349,
+          "maximum_unlogged_updates": 1,
+          "bound_basis": "Reviewed loop awaits both forward/backward and optimizer before logging; at most the next one update was submitted.",
+          "saved_state_available": false
+        },
+        "evidence_archive": "reports/p012_20261111/infrastructure_interruption_8a_v1/evidence/a6_3_tinker_lora_4b_math_e4_s17_20261113_v1.zip",
+        "evidence_archive_sha256": "61744304320271b92a3f411013574a26087283332ebfd16e30804b078b01f9d3"
+      },
+      {
+        "run_id": "a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+        "group": "A6-3",
+        "kind": "interrupted_attempt0",
+        "complete": false,
+        "usd": 2.062013976,
+        "scientific_result": false,
+        "automatic_infrastructure_retry_used": 0,
+        "original_directory": ".local/p012_20261111/a6_runs_v1/a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+        "archive_directory": ".local/p012_20261111/interruption_8a_v1/a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+        "request_sha256": "3b2d459be2737160f9b292e8039a605c6be89e9ffdc504e569d7c4863eae2aa2",
+        "inventory_sha256": "450e0b9236395201354cfadccff7bd3943daf3da2925ea9c081968153f9c5479",
+        "files": {
+          "request.json": "3b2d459be2737160f9b292e8039a605c6be89e9ffdc504e569d7c4863eae2aa2",
+          "request_pending.json": "73865d73fc88b695ab875ba5a08cb50d9a1fdd76bbdc976fde8d2c72b599fec5",
+          "result/RENDER_SAMPLES.json": "ada5bd6bcb2895a3f596dae1ce35f54df05172f5a927ac35d3e4139cd4525987",
+          "result/REQUEST.json": "3b2d459be2737160f9b292e8039a605c6be89e9ffdc504e569d7c4863eae2aa2",
+          "result/ROW_ORDER.json": "c65790c7c7801decfa2bf610f6b19a6ba79b9408005cc6e98a09b115f6141d7b",
+          "result/SERVER_MODEL_INFO.json": "14ef3ad5132a800fa52880cc3baacfd56f06426c65bd4284627b8d21cbd59b60",
+          "result/VERSIONS.json": "501528afbd46582433899eec52f175ac5aa9e28f1e1abc4a0ae2b30d54292f55",
+          "result/train_loss.jsonl": "600410f99857b4c47131c48b5e0a75c356f015d17372382aec1ed8f3aa8c555e",
+          "run.log": "df4b11d95617237da815834fd3d1deb67460c82727157cc4108f6e88b0e695db"
+        },
+        "details": {
+          "completed_logged_updates": 824,
+          "planned_updates": 1024,
+          "logged_input_tokens": 2794551,
+          "charged_input_tokens_upper": 2797848,
+          "maximum_unlogged_updates": 1,
+          "bound_basis": "Reviewed loop awaits both forward/backward and optimizer before logging; at most the next one update was submitted.",
+          "saved_state_available": false
+        },
+        "evidence_archive": "reports/p012_20261111/infrastructure_interruption_8a_v1/evidence/a6_3_tinker_lora_4b_math_e8_s17_20261113_v1.zip",
+        "evidence_archive_sha256": "a55bb91a82a949b1ccab00cb655d1c06e72e57461bc68f86e2debaf4823a3662"
+      }
+    ],
+    "A7_components": [
+      {
+        "run_id": "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+        "group": "A7-1",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.35907466199999993,
+        "usage_sha256": "563dee669863ec75e66235649214bd88c97de820a61201293c494aca21607c97"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_4b_math_concise_s17_greedy_20261113_v1",
+        "group": "A7-1",
+        "kind": "evaluation",
+        "complete": false,
+        "usd": 8.166974782499999,
+        "usage_sha256": null
+      },
+      {
+        "run_id": "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1",
+        "group": "A7-1",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.652548766,
+        "usage_sha256": "9104da2c2dc7e3349ab4e17027ff4df8dac4efaa1872aa0ec0653be48438a957"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_9b_base_math_concise_s17_greedy_20261113_v1",
+        "group": "A7-1",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 1.909709334,
+        "usage_sha256": "8ba7f0595a0ec5bdbf4bad20381deee04b8efb35c908afca0ce4259918df0b48"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+        "group": "A7-1",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.652548766,
+        "usage_sha256": "9104da2c2dc7e3349ab4e17027ff4df8dac4efaa1872aa0ec0653be48438a957"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_9b_math_concise_s17_greedy_20261113_v1",
+        "group": "A7-1",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 1.905522618,
+        "usage_sha256": "a281c03ff9316fd64605d852a3f0c09ab0bc9bc0303c75939fc8916d9bde18f5"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_4b_math_long_s29_20261113_v1",
+        "group": "A7-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.6805466920000001,
+        "usage_sha256": "5a1ec3e33a7b4c0b6ea3db7933c72e8f34467d619620999aa68f1c85337d5bd2"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_4b_math_long_s29_greedy_20261113_v1",
+        "group": "A7-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 5.581470555,
+        "usage_sha256": "c8e593c998cca80c8355888af614421ff7246251e9c8874aff8cdee0c9c8bba1"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_4b_math_short_s29_20261113_v1",
+        "group": "A7-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.396412556,
+        "usage_sha256": "03895480849ccdef3f90c950905f2863e4642629ba42332b7a304e59d683f493"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_4b_math_short_s29_greedy_20261113_v1",
+        "group": "A7-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 3.05727336,
+        "usage_sha256": "9ec8eb5074beb91e0331f14dd81da1c88a42377137ba0549c3073523256d9b7d"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_9b_math_long_s29_20261113_v1",
+        "group": "A7-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 1.3565736260000003,
+        "usage_sha256": "36e3c6e659b842af6351ec02f5f856c4fb5b1505a65255de66d99dba45b5d996"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_9b_math_long_s29_greedy_20261113_v1",
+        "group": "A7-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 4.562644362,
+        "usage_sha256": "e4591e0a78590041345aa5d23c9b478ade69d0432d1f9f349c6e9632b4f5e358"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_9b_math_short_s29_20261113_v1",
+        "group": "A7-2",
+        "kind": "training",
+        "complete": true,
+        "usd": 0.677683106,
+        "usage_sha256": "a4a9c074019e13cafc990cfa744a6a8bd8c438f34b74ddc2716b7e0ba467dab1"
+      },
+      {
+        "run_id": "a7_2_tinker_lora_9b_math_short_s29_greedy_20261113_v1",
+        "group": "A7-2",
+        "kind": "evaluation",
+        "complete": true,
+        "usd": 2.170197636,
+        "usage_sha256": "5216b0735bcf6c5656033c689152ac0de476b8bf8f5fa9f413736feccd3a5492"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_4b_concise_20261113_v1",
+        "group": "A7-1",
+        "kind": "construction",
+        "complete": true,
+        "usd": 0.264318045,
+        "usage_sha256": "9af39b8611845d4538274074744941ff696f17fc325382cc3ce9cab7d1f91f33"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_9b_concise_20261113_v1",
+        "group": "A7-1",
+        "kind": "construction",
+        "complete": true,
+        "usd": 0.249697329,
+        "usage_sha256": "d4d885665b0d057f72b1ebc7858fad1f073b897f3a81a5b3c65cd3bd7f337811"
+      },
+      {
+        "run_id": "a7_1_tinker_lora_4b_math_concise_s17_greedy_20261113_v1",
+        "group": "A7",
+        "kind": "interrupted_attempt0",
+        "complete": false,
+        "usd": 3.9571805099999997,
+        "scientific_result": false,
+        "automatic_infrastructure_retry_used": 0,
+        "original_directory": ".local/p012_20261111/a7_runs_v1/a7_1_tinker_lora_4b_math_concise_s17_greedy_20261113_v1",
+        "archive_directory": ".local/p012_20261111/interruption_8a_v1/a7_1_tinker_lora_4b_math_concise_s17_greedy_20261113_v1",
+        "request_sha256": "95afc38e30fea7c224b80a21afaf848999e1313a007b9b67d90c409ebf90ddc9",
+        "inventory_sha256": "43b23504655fc17e75d22cd46a67d0f2a945352b4ed648b35323fcecfc102630",
+        "files": {
+          "request.json": "95afc38e30fea7c224b80a21afaf848999e1313a007b9b67d90c409ebf90ddc9",
+          "result/REQUEST.json": "95afc38e30fea7c224b80a21afaf848999e1313a007b9b67d90c409ebf90ddc9",
+          "result/VERSIONS.json": "501528afbd46582433899eec52f175ac5aa9e28f1e1abc4a0ae2b30d54292f55",
+          "result/generation/MANIFEST.json": "0a0a9f6266a18b61ed07f5d308047632cbc7f7c4c8dafa271f03cb55409d2300",
+          "result/generation/raw.jsonl": "6868c05f9cc935ad5715292ca697c7fd873f4a39d533d848290d9a464b636e7e",
+          "run.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "details": {
+          "saved_outputs": 4510,
+          "planned_outputs": 5000,
+          "saved_prefill_tokens": 470391,
+          "saved_completion_tokens": 1758064,
+          "charged_prefill_tokens_upper": 525003,
+          "charged_completion_tokens_upper": 3765104,
+          "unpersisted_outputs": 490,
+          "bound_basis": "Ordered pool.map can buffer later responses. Count every unsaved request at4096tokens,not merely32inflight requests.",
+          "saved_training_checkpoint_preserved": true
+        },
+        "evidence_archive": "reports/p012_20261111/infrastructure_interruption_8a_v1/evidence/a7_1_tinker_lora_4b_math_concise_s17_greedy_20261113_v1.zip",
+        "evidence_archive_sha256": "898d8a28caf09ff80c105320ab915ead17f9d5e9fe0e9c6e5d36eac8c57f0787"
+      }
+    ],
+    "original_T_accounted_and_reserved_usd": 199.74734518875007,
+    "A6_2_accounted_and_reserved_usd": 38.430015023,
+    "A6_3_accounted_and_reserved_usd": 29.231542280999996,
+    "pre_A7_accounted_and_reserved_usd": 267.4089024927501,
+    "A7_accounted_and_reserved_usd": 36.6003767055,
+    "combined_reserved_usd": 304.00927919825006,
+    "original_T_ledger_source": {
+      "path": "reports/p012_20261111/tinker_lora_4b_seed29_admission_v1/ADMISSION.json",
+      "sha256": "bfc522ada9c5349e0b8b9fe954dc1fdc57c2bef1c8d228bc16c7b265217d1adb",
+      "value_field": "combined_reserved_usd"
+    },
+    "caps_usd": {
+      "original_T": 340,
+      "A6-2": 50,
+      "A6-3": 35,
+      "A7": 60,
+      "combined": 485
+    },
+    "legacy_queue_bound": "Existing queues retain pre-A7 cap425; their cap425 plus separateA7 cap60 guarantees combined485."
+  },
+  "analysis_ready_endpoints": 12,
+  "analysis_total_endpoints": 15,
+  "bootstrap_core_unchanged": "b6973ad67c8eff3cec08806a553754911113944a044c9248bdb45aa1ac8d0b06",
+  "infrastructure_preservation_commit": "39b03d38dbad6d497166e2d96d24c044ec62d8fc",
+  "detached_source_commit": "fb53de71d4cd4f9930e158460eacb5dca0ee2869"
+}

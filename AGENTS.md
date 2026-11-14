@@ -1,3 +1,17 @@
+# Current P012 — 2026-11-14T08:03:53.670006+00:00; accepted8a8fac5c and detached recovery
+
+Audit8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4 PASSED all six95e52770endpoints/30000outputs,both concise full constructions,and the A7 analysis adapter. Accepted constant is filled;12tests pass; bootstrapcore SHA remainsb6973ad67c8eff3cec08806a553754911113944a044c9248bdb45aa1ac8d0b06. Numeric output must wait for all15endpoints;12are ready. No further pre-use approval is pending. The first real analysis output plus full manifest must be sent for numeric review. Use review_8a8fac5c records.
+
+All A7 RESULTS/readmes carry the data note:4B M512 long has40/512answer-only rows;9B has0. InterpretSC-1/SC-2 primarily with9B,4B as a repetition with this limitation. No frozen data,labels,predictions,or raw archives changed. T4B two-seed predictions copied from audit:T1/T8failed;T2/T2b/T3/T4/T5passed.
+
+On this turn original local processes and tool-session handles were gone. A6-3 E4 stopped at1001updates,E8 at824,no savedstate;4Bconcise17greedy at4510outputs. Cause unknown. All originalbytes are preserved at39b03d38,publicinfrastructure_interruption_8a_v1; privateoriginaldirs moved intact into interruption_8a_v1. Failure upperbounds areA6E4USD2.536274213,E8USD2.062013976,A7greedyUSD3.957180510,including possible unlogged/unsaved calls. Both accounting helpers now include these immutable failure costs once. Do not restore archived dirs over new attempts or replay completed calls.
+
+Only two controllers are current: A7_RECOVERY_QUEUE PID51565 and A6_3_RECOVERY_QUEUE PID51566,under privateamendment7_v1. Both use independent POSIXsessions,stdinDEVNULL/logfiles,and were observed withPPID1; children also use independent sessions. OldA7_1/A6_3 state files are historical dead-process snapshots,not active owners. A7greedy retryadmissiond384783b launchedPID51610; E4retryadmission84acb96d launchedPID51589. One infrastructure retry per affected call; no further retries. Never edit active helpers or duplicate owned calls.
+
+A7controller completes the4Bconcise17retry,then admits/runs9B+4Bconcise29 using measuredcostx1.5. It then invokes privateprepare_and_run_a7_analysis.py to freeze15public archive/data/request bindings,execute the accepted adapter once,and publish a7_analysis_8a8fac5c_v1 plus A7_NEXT_REVIEW.json. A7-2 all4are complete. A6controller retriesE4,settles it,then retriesE8 if<=35;L64comes last only if<=35. OriginalT4B seed29 all4 complete and accepted. No newModal orGSM calls.
+
+Current accounted+reserved: A6-329.231542/35,A736.600377/60,combined304.009279/485. Failurecosts are already included. SharedBUDGET_ADMISSION.lock andGIT_PUBLICATION.lock throughpush remain required. Preserve unrelatedlt002,all originals,and privatecredentials. Draft-only external correspondence;no courseprose orsubagents. Earlier entries below are historical.
+
 # Current P012 — 2026-11-14T07:35:27.190465+00:00; next review95e52770
 
 Amendment7 is approved and active. The next packet95e527707444b5e1cefd0a7e7628b7be7ce5ee33 contains six new endpoints/30,000outputs: original4B P/R/K8 seed29; A7-2 9B short/long seed29 and4B short seed29. It also includes both concise datasets/all1024selected rows and1026attempts for the mandated posthoc full review. The owner has been asked asynchronously to returnClaude's review commit. All previous6af/53accepted outputs are excluded. Frozen report465bf2c1 was delivered before concise training. No original outputs or predictions changed.
