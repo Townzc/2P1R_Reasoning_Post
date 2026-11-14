@@ -1,0 +1,46 @@
+{
+  "utc": "2026-11-14T00:12:48.472010+00:00",
+  "authority_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+  "workspace_authority": "b886b64cea2603f876ab1776325e24a26df55ba8",
+  "workspace": "townzc",
+  "observed_actual_balance": 23.39,
+  "protected_balance": 2,
+  "unsettled_upper_usd": 12.946226374194055,
+  "unsettled_basis": "Conservatively retain the ENTIRE earlier preflight+16-cell Tier2 reservation despite already settled portions. No tangzhice cost included.",
+  "next_batch": [
+    {
+      "kind": "train",
+      "source_status": ".local/p012_20261111/bridge_runs_v1/modal_lora_bridge_qwen_base_math_l_s17_20261113_v1/result/STATUS.json",
+      "source_sha256": "3dc9095a23957da8076ed595b9dfd852535600da30f8cef26abddc42e43e4c15",
+      "measured_reference_seconds": 79.581026023,
+      "forecast_usd": 0.17807615471398944
+    },
+    {
+      "kind": "initial20",
+      "source_status": ".local/p012_20261111/bridge_runs_v1/modal_lora_bridge_initial_base_math_first20_s17_20261113_v1/result/STATUS.json",
+      "source_sha256": "f8aa6d9607d5dbbbadad8e0367a8b34fa3b67a57adfef4f9e2ab13a93aa3e9ad",
+      "measured_reference_seconds": 65.457385786,
+      "forecast_usd": 0.1286136290227471
+    },
+    {
+      "kind": "adapted20",
+      "source_status": ".local/p012_20261111/bridge_runs_v1/modal_lora_bridge_qwen_base_math_l_s17_first20_20261113_v1/result/STATUS.json",
+      "source_sha256": "36d9c0b1255f80a2ea37a35379f6e4333f0de215c6a8e0644b10f8cb836eeb62",
+      "measured_reference_seconds": 139.448356765,
+      "forecast_usd": 0.23499106459068023
+    },
+    {
+      "kind": "full5000",
+      "source_status": ".local/p012_20261111/bridge_runs_v1/modal_lora_bridge_qwen_base_math_l_s17_greedy_20261113_v1/result/STATUS.json",
+      "source_sha256": "c8e69f7754088e15fa9b659a332a182016472ef929df051d8f0b07f098102687",
+      "measured_reference_seconds": 2924.870642302,
+      "forecast_usd": 4.239615896359604
+    }
+  ],
+  "next_batch_buffered_usd": 4.781296744687021,
+  "hard_lhs": 17.727523118881074,
+  "hard_rhs": 21.39,
+  "admitted": true,
+  "launch_after_all_16_Qwen_Tier2_evaluations_complete": true,
+  "remaining_four_bridge_cells_unadmitted": true
+}
