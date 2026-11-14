@@ -1,0 +1,39 @@
+{
+  "track": "tinker_lora",
+  "task": "gsm8k",
+  "pretraining": true,
+  "run_id": "tinker_lora_qwen3_5_4b_gsm8k_pre_baseline0_20261114_v1",
+  "model": "Qwen/Qwen3.5-4B",
+  "seed": 17,
+  "input": {
+    "path": "reports/p012_20261111/tinker_gsm_preparation_v1/inputs/gsm8k_baseline0.jsonl",
+    "sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+    "task": "gsm8k"
+  },
+  "termination": {
+    "responses": 1319,
+    "correct": 868,
+    "accuracy": 0.6580742987111448,
+    "length_cap_count": 6,
+    "length_cap_rate": 0.004548900682335102,
+    "loop_count": 2,
+    "capped_loop_count": 2,
+    "normally_terminated_count": 1313,
+    "normally_terminated_correct": 867,
+    "normally_terminated_accuracy": 0.6603198781416603
+  },
+  "usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 126917,
+      "completion_tokens": 297194,
+      "prompt_cache_hit_tokens": 3584
+    },
+    "upper_token_cost_usd": 0.34056257999999995,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "raw_sha256": "0fcf747820ae09ebd8763cb61099bebd5c44f5fe5c1718bd1ec690f17785a4b6",
+  "labels_sha256": "ab1820351d130083ebeef3ad23cb202ec17bd5bfecd126dc457ed2d37a3f6292",
+  "independent_numeric_audit": "pending"
+}
