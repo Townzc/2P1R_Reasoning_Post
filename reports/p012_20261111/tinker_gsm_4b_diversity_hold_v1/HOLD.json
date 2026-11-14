@@ -1,0 +1,44 @@
+{
+  "utc": "2026-11-14T23:34:53.064565+00:00",
+  "status": "held_before_scoring",
+  "run_id": "tinker_lora_qwen3_5_4b_gsm8k_pre_holdout8_20261114_v1",
+  "review_rule_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "first_run_check": {
+    "run_id": "tinker_lora_qwen3_5_4b_gsm8k_pre_holdout8_20261114_v1",
+    "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+    "unique_sampling_seeds": 4000,
+    "questions_with_at_least7_distinct_outputs": 343,
+    "fraction": 0.686,
+    "threshold": 0.8,
+    "histogram": {
+      "4": 31,
+      "2": 22,
+      "5": 25,
+      "8": 289,
+      "7": 54,
+      "1": 12,
+      "3": 21,
+      "6": 46
+    },
+    "raw_sha256": "01f2dddfbc64f91d14ebdfa13770180526a78749c124178aec30edd462afb3e5",
+    "PASS": false
+  },
+  "request_sha256": "0cca48ade620b175ed248951a37bd9ee29a008d57c2da05a5b818e61a6da7455",
+  "raw_outputs": 4000,
+  "questions": 500,
+  "retry_calls": 0,
+  "labels_created": false,
+  "training_independent_authority": "a56115d6 section3: stop applies to sampling endpoint; training can continue independently",
+  "usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 383840,
+      "completion_tokens": 873630,
+      "prompt_cache_hit_tokens": 44288
+    },
+    "upper_token_cost_usd": 1.0046653499999998,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evidence_sha256": "cdef18b9bd27edd5743afa86115c420fef7dc20e2b1b6b5212d5b9832bc3ef45"
+}
