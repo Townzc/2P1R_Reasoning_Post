@@ -1,0 +1,91 @@
+{
+  "track": "tinker_lora",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "A7_group": "A7-2",
+  "model": "Qwen/Qwen3.5-9B",
+  "arm": "long",
+  "cell": "L",
+  "seed": 29,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "rank": 32,
+  "learning_rate": 0.00047297908091376354,
+  "dataset": {
+    "path": ".local/p012_20261111/a6_length_v1/a6_2_tinker_lora_9b_m512_20261113_v2/result/long.jsonl",
+    "sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6"
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 4561,
+    "accuracy": 0.9122,
+    "length_cap_count": 317,
+    "length_cap_rate": 0.0634,
+    "loop_count": 6,
+    "capped_loop_count": 3,
+    "normally_terminated_count": 4683,
+    "normally_terminated_correct": 4556,
+    "normally_terminated_accuracy": 0.9728806320734572
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 455,
+    "accuracy": 0.91,
+    "length_cap_count": 35,
+    "length_cap_rate": 0.07,
+    "loop_count": 1,
+    "capped_loop_count": 0,
+    "normally_terminated_count": 465,
+    "normally_terminated_correct": 454,
+    "normally_terminated_accuracy": 0.9763440860215054
+  },
+  "training_run_id": "a7_2_tinker_lora_9b_math_long_s29_20261113_v1",
+  "training_request_sha256": "bf240d9f2842ef52a83ecf7c3c10a3743e55eee731ee50b91576dd95198d2708",
+  "training_usage": {
+    "training_input_tokens": 858902,
+    "sampling": null,
+    "upper_token_cost_usd": 1.2565736260000002,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 5458666,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 4.562644362,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "training_complete": {
+    "success": true,
+    "seconds": 574.1628373330459,
+    "smoke_is_not_scientific_result": false
+  },
+  "evaluation_complete": {
+    "success": true,
+    "seconds": 1139.1102008330636,
+    "smoke_is_not_scientific_result": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+    "code_commit": "e3dd43ca1c52fc7194f43748fa2d40313c47fc50",
+    "utc": "2026-11-14T07:31:01.838510+00:00",
+    "raw_sha256": "00d2e77b797276ab928f6215a2d20848fff7a081ee2cf5580172e3b5a3a4b465"
+  },
+  "raw_sha256": "00d2e77b797276ab928f6215a2d20848fff7a081ee2cf5580172e3b5a3a4b465",
+  "labels_sha256": "77f7ddbc311e49eee51b609f11e70db10e3b22ce248868b49295e56c8f70a458",
+  "independent_numeric_audit": "pending"
+}

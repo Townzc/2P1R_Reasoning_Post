@@ -87,5 +87,23 @@
   },
   "raw_sha256": "c507197f6381dd18b264a83620e2a0f6f45c996bd3fd32110cd45fe8a4bbcfea",
   "labels_sha256": "9eb65bd53d3f6bfa0028b8914519c842ef90f44b7a73bc3060e40fe1dca137cb",
-  "independent_numeric_audit": "pending"
+  "independent_numeric_audit": "pending",
+  "data_interpretation": {
+    "authority_commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+    "four_b_M512_long": {
+      "rows": 512,
+      "answer_only_rows": 40,
+      "answer_only_fraction": 0.078125,
+      "description": "40 rows contain only a boxed answer and no reasoning; these are valid frozen4B zero-shot outputs under A6 rules.",
+      "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8"
+    },
+    "nine_b_M512_long": {
+      "rows": 512,
+      "answer_only_rows": 0,
+      "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6"
+    },
+    "interpretation": "SC-1 andSC-2 interpretation prioritizes the9B group;4B is a repetition with this data limitation. The40answer-only4B rows gain reasoning in concise,so length direction is reversed for those rows.",
+    "frozen_data_and_labels_unchanged": true,
+    "frozen_predictions_unchanged": true
+  }
 }

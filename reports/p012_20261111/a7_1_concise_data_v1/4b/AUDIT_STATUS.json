@@ -1,0 +1,40 @@
+{
+  "utc": "2026-11-14T07:51:23.237997+00:00",
+  "status": "passed",
+  "kind": "posthoc_full_construction_audit",
+  "accepted_review_commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+  "selected_rows": 512,
+  "attempts": 513,
+  "fallbacks": 0,
+  "all_attempts_and_selected_rows_independently_checked": true,
+  "frozen_files_unchanged": {
+    "FALLBACKS.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "REQUEST.json": "e0e519715d4ebc75e0cca76efd8c42e936a2ef4f43a29f3a3d01db9383e1c807",
+    "USAGE.json": "9af39b8611845d4538274074744941ff696f17fc325382cc3ce9cab7d1f91f33",
+    "PROMPT_TEMPLATE.txt": "49ff0226bd8a455675c5440a25ab1b8b0ef7f176befeb4380038e57d3ee6b66f",
+    "PREDICTION_FREEZE.json": "e91e2612348eb0a77b556881f77ddc5aa349a0c58c77862adffdd5d0d8a32c0a",
+    "COMPLETE.json": "423c2a349289293f09ceb4ce8e8cc1a456606c63afffa0f1fd3b41f298ab5b04",
+    "construction_evidence.zip": "8399e5fc5886befad7e0532d8cb1aad1b3ee0483ee19fa3f25350825f579ffcb",
+    "MANIFEST.json": "0ee157a1f4a366b45faa5ccb1d849ec7d0cecd5d092f6705237bae8522d05d91",
+    "SELECTIONS.json": "ea2bae46a82a175780adf74da77571eb1565f97d4a3ce1ab10df37ee0f0bb2c1",
+    "concise.jsonl": "d60568ff56b7a8d486b6a24da05453d2e2f22b1432037813064d9f244e5f8a22"
+  },
+  "data_interpretation": {
+    "authority_commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+    "four_b_M512_long": {
+      "rows": 512,
+      "answer_only_rows": 40,
+      "answer_only_fraction": 0.078125,
+      "description": "40 rows contain only a boxed answer and no reasoning; these are valid frozen4B zero-shot outputs under A6 rules.",
+      "dataset_sha256": "bf4dd2d417518ca73db17ce67fa9652ba90653f69f211f7039956538cfc6f0b8"
+    },
+    "nine_b_M512_long": {
+      "rows": 512,
+      "answer_only_rows": 0,
+      "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6"
+    },
+    "interpretation": "SC-1 andSC-2 interpretation prioritizes the9B group;4B is a repetition with this data limitation. The40answer-only4B rows gain reasoning in concise,so length direction is reversed for those rows.",
+    "frozen_data_and_labels_unchanged": true,
+    "frozen_predictions_unchanged": true
+  }
+}

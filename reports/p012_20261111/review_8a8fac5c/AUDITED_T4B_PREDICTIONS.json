@@ -1,0 +1,57 @@
+{
+  "source_commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+  "copied_from_independent_audit": true,
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "model": "Qwen/Qwen3.5-4B",
+  "seeds": [
+    17,
+    29
+  ],
+  "verdicts": {
+    "T1": "failed",
+    "T2": "passed",
+    "T2b": "passed",
+    "T3": "passed",
+    "T4": "passed",
+    "T5": "passed",
+    "T8": "failed"
+  },
+  "two_seed_mean_pp": {
+    "P_minus_L": {
+      "estimate": -5.51,
+      "ci95": [
+        -6.45,
+        -4.56
+      ]
+    },
+    "L_minus_R": {
+      "estimate": 19.33,
+      "ci95": [
+        18.24,
+        20.4
+      ]
+    },
+    "P_minus_R": {
+      "estimate": 13.82,
+      "ci95": [
+        12.79,
+        14.84
+      ]
+    },
+    "P_minus_K8": {
+      "estimate": 1.59,
+      "ci95": [
+        0.66,
+        2.51
+      ]
+    },
+    "K8_minus_R": {
+      "estimate": 12.23,
+      "ci95": [
+        11.21,
+        13.24
+      ]
+    }
+  },
+  "loss_inference": "No inference about parameter movement from per-token loss; T2b is a prediction about loss values only."
+}

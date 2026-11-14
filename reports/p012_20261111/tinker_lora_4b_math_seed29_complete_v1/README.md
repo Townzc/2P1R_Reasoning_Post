@@ -8,3 +8,5 @@ Separate LoRA / Tinker track. All four already-admitted original training runs a
 | P | 60.94% | 5.80% | 177 | 3047/4710 |
 | R | 46.80% | 3.04% | 73 | 2340/4848 |
 | K8 | 59.18% | 6.62% | 219 | 2959/4669 |
+
+All four seed29 endpoints accepted: L at6af18b72,P/R/K8 at8a8fac5c.
