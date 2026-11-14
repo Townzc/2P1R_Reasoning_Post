@@ -1,3 +1,7 @@
+## Original T-GSM continuation and E8 storage recovery preparation — 2026-11-14T22:26:01.975011+00:00
+
+Codex launched the original authorized GSM pretraining sampling queue using unchanged reviewed scientific paths and reserved the complete11pre endpoints. All frozen inputs passed CPU checks. It inspected the E8 completed-state export failure, retained original evidence, prepared a zero-update export path and passed9identity tests. Paid storage and the extra recovery remain pending owner approval; the new export path awaits first-use review. No checkpoint deletion, retraining, label modification or external message occurred.
+
 ## A7 independent audit acceptance — 2026-11-14T22:08:12.242080+00:00
 
 Codex recorded Claude e9f0ebdd acceptance of six endpoints and the first A7 analysis, preserving all frozen input/result bindings with acceptance sidecars. Seven prediction verdicts and4510 exact-match retry overlap are copied from the auditor; no labels or statistics were recomputed.

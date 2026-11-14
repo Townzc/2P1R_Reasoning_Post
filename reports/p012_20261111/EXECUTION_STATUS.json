@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-14T22:08:12.242080+00:00",
-  "stage": "A7 fully audited; A6-3 E4 complete, E8 checkpoint export stopped at Tinker free storage limit; T-GSM preparation active",
+  "updated_utc": "2026-11-14T22:26:01.975011+00:00",
+  "stage": "A7 fully audited; original T-GSM baseline/pass8 queue running; E4 complete; E8 completed-state sampler export waits on storage and recovery approval",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -74,21 +74,26 @@
     },
     "modal_phase_caps": "soft; report and continue within workspace hard gate",
     "tinker_original_cap": 340,
-    "tinker_original_reserved": 199.74734518875007,
+    "tinker_original_reserved": 226.94576690792107,
     "A6_2_cap": 50,
     "A6_2_accounted_and_reserved": 38.430015023,
     "A6_3_cap": 35,
-    "A6_3_reserved": 29.231542280999996,
+    "A6_3_reserved": 34.605232256,
     "tinker_combined_cap": 485,
     "tinker_protected_from_initial750": 265,
     "tinker_sampling_admission": "measured token cost x1.5",
     "A7_cap": 60,
-    "A7_accounted_and_reserved": 36.013743688
+    "A7_accounted_and_reserved": 36.013743688,
+    "T_GSM_cap": 105,
+    "T_GSM_pre_reserved": 27.198421719171,
+    "storage_proposed_not_approved": 30
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Resolve E8 sampler export from saved final training checkpoint without repeating training",
-    "Continue A6-3 and original T-GSM under existing budgets; combine newly completed results for review"
+    "Existing T-GSM sampling queue continues independently",
+    "After storage disposition, run reserved three NLL endpoints",
+    "After explicit owner permission and first-use review, export E8 sampler from saved final state; never repeat1024updates",
+    "Continue L64 and original T-GSM training after existing gates; combine fresh results for audit"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -195,7 +200,10 @@
     "a7_1_concise_seed29_admission_v1",
     "recovery_health_20261114_v1",
     "a7_analysis_8a8fac5c_v1",
-    "review_e9f0ebdd"
+    "review_e9f0ebdd",
+    "tinker_gsm_preparation_v1",
+    "tinker_gsm_pre_admission_v1",
+    "e8_storage_export_recovery_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -306,7 +314,10 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    "Decide paid checkpoint storage reserve30 within existing T340/combined485 and extra zero-update E8 export",
+    "Return Claude first-use audit of98525373 E8 export-only path"
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -326,12 +337,12 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-14T08:59:20.299721+00:00",
-    "original_T": 199.74734518875007,
+    "as_of_utc": "2026-11-14T22:26:01.975011+00:00",
+    "original_T": 226.94576690792107,
     "A6_2": 38.430015023,
-    "A6_3": 29.231542280999996,
+    "A6_3": 34.605232256,
     "A7": 36.013743688,
-    "combined": 303.42264618075006,
+    "combined": 335.99475787492105,
     "caps": {
       "original_T": 340,
       "A6-2": 50,
@@ -340,11 +351,11 @@
       "combined": 485
     },
     "original_T_ledger": {
-      "path": "reports/p012_20261111/tinker_lora_4b_seed29_admission_v1/ADMISSION.json",
-      "sha256": "bfc522ada9c5349e0b8b9fe954dc1fdc57c2bef1c8d228bc16c7b265217d1adb",
+      "path": "reports/p012_20261111/tinker_gsm_pre_admission_v1/ADMISSION.json",
+      "sha256": "7400c6d90ae2de17cf23f3ab4fcab98d745d6745f620ab68eb6e2a3e40b7132f",
       "value_field": "combined_reserved_usd"
     },
-    "current_snapshot": "a7_analysis_8a8fac5c_v1/CONTINUATION_STATUS.json",
+    "current_snapshot": "review_e9f0ebdd/CONTINUATION_AFTER_ACCEPTANCE.json",
     "note": "Completed token-cost upper bounds plus outstanding reservations; originalT remains a conservative published reservation. Not a provider invoice."
   },
   "interpretation_correction_53a565da": {
@@ -352,8 +363,8 @@
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "a7_analysis_8a8fac5c_v1/CONTINUATION_STATUS.json",
-  "background_status": "a7_analysis_8a8fac5c_v1/CONTINUATION_STATUS.json",
+  "finite_continuation_queues": "review_e9f0ebdd/CONTINUATION_AFTER_ACCEPTANCE.json",
+  "background_status": "review_e9f0ebdd/CONTINUATION_AFTER_ACCEPTANCE.json",
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
