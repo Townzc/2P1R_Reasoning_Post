@@ -2,7 +2,12 @@
   "utc": "2026-11-14T03:53:14.176481+00:00",
   "exploratory": true,
   "excluded_from_H0_H3": true,
-  "independent_numeric_audit": "pending",
+  "independent_numeric_audit": {
+    "status": "passed",
+    "accepted_review_commit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
+    "source_path": "audit/claude/20261113i/AUDIT_fce5e186_4_endpoints.md",
+    "reviewed_output_commit": "fce5e186"
+  },
   "source_prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
   "same_512_questions_and_order": true,
   "same_model_seed_rank_lr_dose": true,
@@ -574,7 +579,7 @@
         "equal_tokens_or_flops_claimed": false
       },
       "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_base_math_short_s17_v1/RESULTS.json",
-      "result_sha256": "e97f1ffc8ec51ab230c8c79d477c033a49ec1e7dcfd9548f3b445081168ab9f0",
+      "result_sha256": "db0f43b1ca03411181817610f7e5bcb15bd9170b03f9b8c82a54bb20974586a3",
       "raw_sha256": "d001a04767351dd12601a8bcd48f75872dc55c8e6dc9a3ed8ddc3527f14f7b37",
       "labels_sha256": "92a5e0663abb9d6647b214559163f991b9fe5fc218ce98e8f3e5b4e5eb886467"
     },
@@ -1143,10 +1148,12 @@
         "equal_tokens_or_flops_claimed": false
       },
       "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_base_math_long_s17_v1/RESULTS.json",
-      "result_sha256": "58936f55f1e0693247152ed777aa286e05f6bb7118ba3584fa7989eae43e9d56",
+      "result_sha256": "ca3b994f45272e950bdebf98d73304a44315b289e760be529673839ea65740f8",
       "raw_sha256": "0d545ca5698e9d02c87f8236dcc2ee6dcdd654c2d0e4d6f2e89a0b7529e96436",
       "labels_sha256": "467354c6c3320fc4e7ea1fb92b6c2dc1fa730d5dc0c2cbf0b37e78cf22449152"
     }
   ],
-  "interpretation": "The9B-generated solution package transfers to9B-Base on the same M512. Answer length and solution source/content change together."
+  "interpretation": "The9B-generated solution package transfers to9B-Base on the same M512. Answer length and solution source/content change together.",
+  "loss_interpretation": "Low per-token loss does not establish small parameter or behavioral change; short and long per-token losses are not directly comparable.",
+  "interpretation_review_commit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0"
 }

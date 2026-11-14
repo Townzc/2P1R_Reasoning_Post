@@ -1,0 +1,91 @@
+{
+  "track": "tinker_lora",
+  "A6_group": "A6-2",
+  "arm": "short",
+  "model": "Qwen/Qwen3.5-9B-Base",
+  "cell": "L",
+  "seed": 17,
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_sha256": "7f6dd97fc3a58276f607f6123b82c36413b6eb62a626d334add404796eca943d",
+  "training_token_counts": {
+    "full_training_input_tokens": 394862,
+    "full_supervised_target_tokens": 302694,
+    "maximum_sequence_tokens": 1122,
+    "every_row_renderer_and_mask_verified": true,
+    "construction_manifest_sha256": "e9fbd12b1c39faa60f9e6eaa3cde5e6f3a830e06e72ccd5952cbafd5a1f278d2",
+    "tokenizer_student_model": "Qwen/Qwen3.5-9B-Base"
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 3507,
+    "accuracy": 0.7014,
+    "length_cap_count": 222,
+    "length_cap_rate": 0.0444,
+    "loop_count": 122,
+    "capped_loop_count": 118,
+    "normally_terminated_count": 4778,
+    "normally_terminated_correct": 3507,
+    "normally_terminated_accuracy": 0.7339891167852658
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 353,
+    "accuracy": 0.706,
+    "length_cap_count": 30,
+    "length_cap_rate": 0.06,
+    "loop_count": 10,
+    "capped_loop_count": 9,
+    "normally_terminated_count": 470,
+    "normally_terminated_correct": 353,
+    "normally_terminated_accuracy": 0.7510638297872341
+  },
+  "training_usage": {
+    "training_input_tokens": 394862,
+    "sampling": null,
+    "upper_token_cost_usd": 0.5776831060000001,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 2509171,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 2.1824018970000005,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "training_complete": {
+    "success": true,
+    "seconds": 540.0217573749833,
+    "smoke_is_not_scientific_result": false
+  },
+  "evaluation_complete": {
+    "success": true,
+    "seconds": 597.8237074168865,
+    "smoke_is_not_scientific_result": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+    "code_commit": "bffee894f9c17b85a2e59447e0c9b40db97f0421",
+    "utc": "2026-11-14T03:32:39.591675+00:00",
+    "raw_sha256": "d001a04767351dd12601a8bcd48f75872dc55c8e6dc9a3ed8ddc3527f14f7b37"
+  },
+  "raw_sha256": "d001a04767351dd12601a8bcd48f75872dc55c8e6dc9a3ed8ddc3527f14f7b37",
+  "labels_sha256": "92a5e0663abb9d6647b214559163f991b9fe5fc218ce98e8f3e5b4e5eb886467",
+  "independent_result_audit": "pending"
+}
