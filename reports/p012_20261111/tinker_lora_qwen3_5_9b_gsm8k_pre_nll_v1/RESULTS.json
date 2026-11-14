@@ -1,0 +1,37 @@
+{
+  "run_id": "tinker_lora_qwen3_5_9b_gsm8k_pre_nll_20261114_v1",
+  "model": "Qwen/Qwen3.5-9B",
+  "task": "gsm8k",
+  "pretraining": true,
+  "records": 1000,
+  "parents": 500,
+  "nll": {
+    "solutions": 1000,
+    "target_tokens": 159297,
+    "nll_sum": 104641.71870806476,
+    "mean_per_token_nll": 0.6568969830446572,
+    "solution_chars": 468180,
+    "nll_per_char": 0.2235074516383971,
+    "character_count_convention": "Unicode code points in the original teacher solution, including whitespace; excludes prompt and template suffix",
+    "mean_per_solution_nll": 0.6881622980192362,
+    "primary_metric": "mean_per_token_nll",
+    "units": "nats",
+    "prompt_tokens_scored": 0,
+    "template_terminator_scored": true,
+    "conditioning": "zero-shot OMI-2 training prefix for both base and Instruct",
+    "cross_family_metric": "nll_per_char",
+    "cross_family_interpretation": "Use character-normalized NLL across model families; retain per-token NLL within each tokenizer."
+  },
+  "usage": {
+    "training_input_tokens": 254257,
+    "sampling": null,
+    "upper_token_cost_usd": 0.37197799100000006,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "input": {
+    "path": "reports/p012_20261111/tinker_gsm_preparation_v1/inputs/nll1000.jsonl",
+    "sha256": "87898eb508661110245f6450b168ef2726008c06d35bed40e2847d5ccc777ef6"
+  },
+  "independent_numeric_audit": "pending"
+}
