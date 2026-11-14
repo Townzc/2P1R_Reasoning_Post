@@ -1,0 +1,93 @@
+{
+  "track": "tinker_lora",
+  "model": "Qwen/Qwen3.5-9B",
+  "cell": "R",
+  "seed": 29,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 16,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 2851,
+    "accuracy": 0.5702,
+    "length_cap_count": 86,
+    "length_cap_rate": 0.0172,
+    "loop_count": 38,
+    "capped_loop_count": 33,
+    "normally_terminated_count": 4914,
+    "normally_terminated_correct": 2851,
+    "normally_terminated_accuracy": 0.5801790801790802
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 275,
+    "accuracy": 0.55,
+    "length_cap_count": 8,
+    "length_cap_rate": 0.016,
+    "loop_count": 1,
+    "capped_loop_count": 1,
+    "normally_terminated_count": 492,
+    "normally_terminated_correct": 275,
+    "normally_terminated_accuracy": 0.5589430894308943
+  },
+  "pretraining_baseline_comparisons": {
+    "baseline4": {
+      "accuracy": 0.918,
+      "n": 500,
+      "raw_sha256": "11815f30bf10a07a60661c4fb037e9f9f0b7a5eb98cca85e48f79ad5b8d670f9",
+      "delta_SFT_pp_on_same_MATH500": -36.8
+    },
+    "baseline0": {
+      "accuracy": 0.912,
+      "n": 500,
+      "raw_sha256": "d4c7a33f57e34832b32b6d261abffa60f6487791e9873a18a7f255dd82962677",
+      "delta_SFT_pp_on_same_MATH500": -36.199999999999996
+    }
+  },
+  "training_usage": {
+    "training_input_tokens": 3404128,
+    "sampling": null,
+    "upper_token_cost_usd": 4.980239264000001,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 2176670,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 1.91407359,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "training_complete": {
+    "success": true,
+    "seconds": 4940.114217167022,
+    "smoke_is_not_scientific_result": false
+  },
+  "evaluation_complete": {
+    "success": true,
+    "seconds": 926.7981783330906,
+    "smoke_is_not_scientific_result": false
+  },
+  "prediction_before_score": {
+    "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+    "code_commit": "3929e3c0ec0ae474ce367a5cd552d0daecf3a08f",
+    "raw_sha256": "2854b11b5931b627826ba3bd3f920b567aa4a86c41228670f929d07951a18f29"
+  },
+  "training_run_id": "tinker_lora_qwen3_5_9b_math_r_s29_20261113_v1",
+  "raw_sha256": "2854b11b5931b627826ba3bd3f920b567aa4a86c41228670f929d07951a18f29",
+  "labels_sha256": "63be1a76df077cb9eb45667714dea1b3de9f69464977a4440332eed9ca78ba13",
+  "main_full_finetuning_statistics": "Separate TinkerLoRA track; notmerged",
+  "audit_status": "Await independent numeric audit; originals retained"
+}
