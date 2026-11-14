@@ -1,0 +1,115 @@
+{
+  "run_id": "a6_3_tinker_lora_4b_math_e8_s17_greedy_20261113_v1",
+  "mode": "generate",
+  "model": "Qwen/Qwen3.5-4B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-4B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3161,
+        "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 17,
+  "rank": 32,
+  "learning_rate": 0.0004905250962784578,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 0.737,
+    "prefill": 0.33,
+    "sample": 1.005
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Owner-approved A6-3 frozenA5files, unchanged Tinker training/evaluation paths;9B threecells after9B pairedlengtharms,4B later",
+  "code_commit": "c4f13f6813f7db94cb57721646915f695622cf15",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+  "forecast": {
+    "admitted": true,
+    "reserved_greedy_usd": 4.264492949999999,
+    "admission_file": "reports/p012_20261111/recovery_8a_a6_3_tinker_lora_4b_math_e8_s17_20261113_v1/ADMISSION.json",
+    "admission_sha256": "06fa50aa01c1dd0e18c0e9741c363d232a488e6c62be367d0104f1a4bb3acc5a",
+    "sampling_rule": "Measured token cost x1.5, already reserved with training"
+  },
+  "sampling_concurrency": 32,
+  "authority_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+  "track": "tinker_lora",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "A6_group": "A6-3",
+  "cpu_counts": {
+    "full_training_input_tokens": 3471504,
+    "full_supervised_target_tokens": 2632584,
+    "maximum_sequence_tokens": 2100,
+    "every_row_renderer_and_mask_verified": true,
+    "A5_frozen_manifest_sha256": "9ef237cbfafe8a87f53108d428c7043d89c72b5ece568a71129b45fcf52dc491"
+  },
+  "infrastructure_retry": {
+    "attempt": 1,
+    "maximum": 1,
+    "original_request_sha256": "3b2d459be2737160f9b292e8039a605c6be89e9ffdc504e569d7c4863eae2aa2",
+    "original_evidence_archive": "reports/p012_20261111/infrastructure_interruption_8a_v1/evidence/a6_3_tinker_lora_4b_math_e8_s17_20261113_v1.zip",
+    "original_evidence_sha256": "a55bb91a82a949b1ccab00cb655d1c06e72e57461bc68f86e2debaf4823a3662",
+    "failure_cost_upper_usd": 2.062013976,
+    "failure_ledger_sha256": "d314129a168912330d8b8bf152e6ba0356cfb175e230968c1cef375045b32022"
+  },
+  "n": 1,
+  "sampler_path": "tinker://0a26c1d5-75df-5601-8784-0b6d36fff545:train:0/sampler_weights/final_export_recovery",
+  "evaluation": {
+    "path": ".local/p012_20261111/main_eval/inputs_v1/math5000.jsonl",
+    "sha256": "19019b07cca9bedc519149cef9fad8765cc40cb0fc1129b28485dab0d750848d",
+    "task": "math"
+  },
+  "training_evidence": {
+    "run_id": "a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+    "updates": 1024,
+    "train_loss_sha256": "25cda24345f1b2188cd1b988b2763941342c8d53599822c812e58096677160ad",
+    "row_order_sha256": "c65790c7c7801decfa2bf610f6b19a6ba79b9408005cc6e98a09b115f6141d7b",
+    "state_manifest_sha256": "d841fef6e7ba97979218ef24933b9803ad9358aefc167982abdab8b1ac23ff7b",
+    "sampler_manifest_sha256": "5d0a14b3f870681bbc5a7d969fa9366a8dc6cb1e5aa53727ad1a3c051eb56de1",
+    "input_token_count_verified": true,
+    "export_recovery": {
+      "accepted_recovery_review_commit": "2edeee5169c9a05213a0264e57aae96dcad30727",
+      "source_state_path": "tinker://046b588f-ba73-57e8-88b8-d527973c5d4a:train:0/weights/final",
+      "exported_sampler_path": "tinker://0a26c1d5-75df-5601-8784-0b6d36fff545:train:0/sampler_weights/final_export_recovery",
+      "receipt_sha256": "b7742d0cc2fe711519fadcf2e3aad9f24ffb86886b4c665b3096e2e8d9a4cb19",
+      "exported_weights_info_sha256": "5781b6c47b98e9b930b37e74df0ed023d116829625df856c787e3833dffb4954",
+      "preserved_partial_usage_sha256": "d9ab3f30a49e9dbc01e374da219d85fc73178240cd34b3a166924adde79dca55",
+      "new_training_updates": 0,
+      "training_retry_count": 1,
+      "export_only_recovery_count": 1,
+      "weight_identity_basis": "Platform restore/export semantics and remote identity, not a weight-byte hash."
+    },
+    "export_recovery_binding_sha256": "b0cd55af594fd1756374903ae0ebb06e287a649d0ef1f857669f5ac379ec5aa3"
+  }
+}
