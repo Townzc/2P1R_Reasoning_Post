@@ -5135,6 +5135,29 @@
       "n_settings": 8
     }
   },
-  "interpretation": "Registered contrasts and derived L-R reported for both seeds. Noticeable uses the A-5 frozen mean-CI rule. H0-H3 interpretation and first real-data numeric output await independent audit; no automatic hypothesis reclassification.",
-  "input_manifest_sha256": "105c270febbbb53d9589b4479a5baa932ab371a69d36f666dd94b35a0248777b"
+  "interpretation": "Independent numerical audit passed at 46694f515ff2c6d1f78931761f3f8e47dd0de2cb. Registered contrasts and derived L-R retain their original numeric values. L-R is not independently preregistered. Apply reporting_requirements to all SFT tables. Audit section3 records the independent H0-H3 interpretation.",
+  "input_manifest_sha256": "105c270febbbb53d9589b4479a5baa932ab371a69d36f666dd94b35a0248777b",
+  "independent_numeric_audit": {
+    "status": "passed",
+    "accepted_review_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+    "source_path": "audit/claude/20261113g/AUDIT_313f2dd5_two_seed_analysis.md",
+    "original_numeric_results_sha256": "c63a08137fd867a8e8ad5abd226d0da877493014a9cba97300fb85194bb572c9",
+    "reviewed_output_commit": "313f2dd5",
+    "numerical_recomputation_performed_for_this_annotation": false
+  },
+  "reporting_requirements": {
+    "llama_base_gsm8k": {
+      "SFT_label": "Δ_SFT（相对退化基线 / relative to a nonterminating baseline）",
+      "interpretation": "The baseline does not terminate; this contrast is not a valid measure of SFT benefit."
+    },
+    "llama_base_math": {
+      "SFT_label": "Δ_SFT（相对退化基线 / relative to a nonterminating baseline）",
+      "interpretation": "The baseline does not terminate; this contrast is not a valid measure of SFT benefit."
+    },
+    "qwen_instruct_math": {
+      "SFT_presentation": "Always show the 4-shot and 0-shot paired contrasts together.",
+      "baseline4_delta_pp": 5.2,
+      "baseline0_delta_pp": -12.4
+    }
+  }
 }

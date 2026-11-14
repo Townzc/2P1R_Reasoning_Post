@@ -1,6 +1,6 @@
 # Registered two-seed main-grid analysis
 
-A-1 through A-6 from accepted review169754c4 are implemented. Thirteen synthetic tests passed; the three identity swaps fail as required. The first real-data run completed successfully at3a2984e3. All72 main cells and12 paired baselines are included. Results await the independent numerical check promised in review section7.
+A-1 through A-6 from accepted review169754c4 are implemented. Thirteen synthetic tests passed; the three identity swaps fail as required. The first real-data run completed successfully at3a2984e3. All72 main cells and12 paired baselines are included. Independent numerical audit **passed** at `46694f515ff2c6d1f78931761f3f8e47dd0de2cb`. The auditor independently reproduced all headline values and bootstrap hashes. The original numerical artifact and execution receipt are retained; the current JSON adds audit/reporting metadata only.
 
 | Setting | P-L, pp [95% CI] | L-R, pp [95% CI] | P-K8, pp [95% CI] | P-L noticeable |
 |---|---:|---:|---:|---|
@@ -28,10 +28,27 @@ The character-normalized NLL association is the primary cross-family interpretat
 
 INPUT_MANIFEST.json binds every local input by SHA256, including the training manifest, checkpoint inventory, generation manifest, raw responses, registered labels, termination summary and required first-box diagnostic. SOURCE_LOCATIONS.json maps all580 bound paths to public files or exact members of public ZIPs; restore those relative paths before running the command in RUN_RECEIPT.json. Check archive and member hashes. Install the pinned analysis/requirements-p012.txt. No API key or model call is needed.
 
-The code review is complete; this request concerns the first real output and its bindings. Independently recompute headline points and paired intervals as promised in169754c4 section7. Also audit the35 endpoints in ../results_and_analysis_review_20261113_v2/addendum_after304_v1/, which were explicitly outside169754c4. Three later endpoints are linked below; previously accepted38 endpoints need no repeat review.
+The first real analysis, its bindings, and the35+3 additional endpoints below passed audit46694f51. The previously accepted38 endpoints remain covered by169754c4. These are separate accepted batches.
 
 - Instruct bridgeL: ../instruct_bridge_l_results_v1/
 - A6-3 9B L64: ../a6_3_tinker_lora_9b_math_l64_s17_v1/
 - Original Tinker9B-Base L seed29: ../tinker_lora_qwen3_5_9b_base_math_l_s29_v1/
 
 The Tinker/A6/bridge endpoints remain separate from this full-finetuning analysis. Built with Llama.
+
+## Paired SFT contrasts (two-seed means)
+
+Values below are read from the unchanged registered output. Each interval conditions on the two observed training seeds.
+
+| Setting | Δ_SFT vs 4-shot, pp [95% CI] | Δ_SFT vs 0-shot, pp [95% CI] | Baseline interpretation |
+|---|---:|---:|---|
+| llama_base_gsm8k — 相对退化基线 | +30.86 [+28.70, +33.06] | — | 相对退化基线（不终止）；不能解释为 SFT 收益大小 |
+| llama_base_math — 相对退化基线 | +5.50 [+4.00, +7.10] | — | 相对退化基线（不终止）；不能解释为 SFT 收益大小 |
+| llama_instruct_gsm8k | +12.85 [+10.24, +15.50] | +46.89 [+44.35, +49.43] | Paired protocol-specific baseline |
+| llama_instruct_math | +15.20 [+11.50, +19.00] | +10.80 [+6.60, +14.80] | Paired protocol-specific baseline |
+| qwen_base_gsm8k | +4.51 [+2.01, +6.94] | — | Paired protocol-specific baseline |
+| qwen_base_math | +15.10 [+11.20, +19.10] | — | Paired protocol-specific baseline |
+| qwen_instruct_gsm8k | +10.96 [+8.45, +13.50] | +11.41 [+8.72, +14.22] | Paired protocol-specific baseline |
+| qwen_instruct_math | +5.20 [+1.10, +9.40] | -12.40 [-16.50, -8.30] | Both baselines must be shown together |
+
+`RUN_RECEIPT.json` and `ARTIFACT_MANIFEST_original_313f2dd5.json` describe the original run and publication. `AUDIT_ANNOTATION.json` links the original and annotated artifacts; no statistics or labels were recomputed.

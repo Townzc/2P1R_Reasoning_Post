@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-14T02:56:31.337442+00:00",
+  "accepted_review_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+  "source_path": "audit/claude/20261113g/AUDIT_313f2dd5_two_seed_analysis.md",
+  "source_sha256": "a96d4894ff09ea58866193a17736ba61d1c5a0452db82b177a4adcd379d54cca",
+  "independent_numeric_audit": "passed",
+  "new_endpoint_count_accepted": 38,
+  "owner_approved_new_arms": [
+    "9B cross-long using 4B M512",
+    "9B short using the same 4B M512 questions"
+  ],
+  "training_updates": 128,
+  "seed": 17,
+  "evaluation": "full MATH test 5000 greedy",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "budget_bucket": "A6-2, existing USD50 cap",
+  "prediction_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+  "predictions": [
+    {
+      "contrast": "9B cross-long minus same-question 9B short",
+      "prediction_pp_at_least": 5,
+      "confidence": 0.6
+    },
+    {
+      "contrast": "9B self-long minus 9B cross-long, respective full MATH5000 evaluations",
+      "prediction_pp_at_least": 3,
+      "confidence": 0.55
+    }
+  ],
+  "source_generation": "4B M512 construction follows the existing A6 recipe and three mandatory self-checks"
+}
