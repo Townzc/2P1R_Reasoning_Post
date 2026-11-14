@@ -1,0 +1,59 @@
+{
+  "track": "modal_lora_bridge",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "workspace": "townzc",
+  "cell": "L",
+  "seed": 17,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "MATH5000": {
+    "responses": 5000,
+    "correct": 2148,
+    "accuracy": 0.4296,
+    "length_cap_count": 462,
+    "length_cap_rate": 0.0924,
+    "loop_count": 383,
+    "capped_loop_count": 371,
+    "normally_terminated_count": 4538,
+    "normally_terminated_correct": 2148,
+    "normally_terminated_accuracy": 0.47333627148523577
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 210,
+    "accuracy": 0.42,
+    "length_cap_count": 52,
+    "length_cap_rate": 0.104,
+    "loop_count": 46,
+    "capped_loop_count": 43,
+    "normally_terminated_count": 448,
+    "normally_terminated_correct": 210,
+    "normally_terminated_accuracy": 0.46875
+  },
+  "raw_sha256": "589d380e556475a06f42a6215d92ee1875bba0eee50c03702a4460016317d4bd",
+  "labels_sha256": "4165c293db25586a50b4eab2ca1d4e40acfa03638cf711137018682618b84cad",
+  "training_run_id": "modal_lora_bridge_qwen_instruct_math_l_s17_20261113_v1",
+  "evaluation_run_id": "modal_lora_bridge_qwen_instruct_math_l_s17_greedy_20261113_v1",
+  "checkpoint_manifest_sha256": "3354083e192836b72a98df88df7947a59f733667dace4fc42dbcf8373b70271d",
+  "B3_full_cap_gate_pass": true,
+  "B3_first20": "instruct_bridge_l_first20_v1/CHECKS.json",
+  "prediction_before_score": {
+    "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+    "owner_A6_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+    "utc": "2026-11-14T00:49:30.746837+00:00",
+    "raw_sha256": "589d380e556475a06f42a6215d92ee1875bba0eee50c03702a4460016317d4bd",
+    "interpretation": "Original prediction describes base bridge; this Instruct model follows A6 and is reported separately"
+  },
+  "independent_numeric_audit": "pending",
+  "main_full_finetuning_statistics": "separate bridge; not merged"
+}

@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-14T00:56:50.388894+00:00
+
+Review169754c427d8e2b748fb925e03d31bbabcf8ab9d accepted304cc5ee38 endpoints/M512/K4 recovery and authorized analysis afterA1-A6. All6 implemented;13 synthetic tests pass including the3 identity-swap negatives. First real main-grid analysis succeeded at3a2984e3. Results/inputbindings/reproduction source index580 paths in registered_analysis_169754c4_v1. Do not rerun completed statistics. Its numerical audit and35+3 newer endpoint audit are next; no code re-review required. All72 main cells complete.
+
+Instruct bridgeL COMPLETE:42.96%,462/5000caps9.24%;allB3 checksPASS. RemainingP/R/K8/K4 now ADMITTED in townzc:unsettled8.959778 +next5.727682=14.687460 <=actual19.43-2. Closed23-24 billing3.68459598 was subtracted ONCE from recomputed all-completed charge upper12.644374; do not deduct it again fromthe residual. Requests in instruct_bridge_v1. Launch detached, then bindeach trainedadapterinventory for the already-reserved fullgreedy evaluation. No furtherfirst20 required. No edits inexperiments/p012 untilCreatedFunction.
+
+A6-3 9B L64 complete/scored/published71.28%;E4/E8 active. T9B-Base L29 complete70.12%;other9B/Base29 originals active. 4B seed17P/R/K8/K4 logs have stalled around941/974/509/508 for20minutes asof00:51UTC; nofailure orreplay. Keep originalcalls. A6-2Basepair requests preparedandunadmitted;4Bconstruction has request_refreshed_pending.json withcurrentfixedsource. Their prioritygate is9BA6-3 completion. OriginalT andA6 caps unchanged.
+
+Profiletownzc configured0600, defaulttangzhice unchanged. No credentials inpublicartifacts. Ordinary commits/push authorized; noforcepush,newchats/subagents,externalmessages orcourseprose. Preservelt002 andalloriginalattempts. Earlier entries are historical.
+
 # Current P012 — 2026-11-14T00:35:17.923777+00:00
 
 All72 main cells are complete and published locally:40 seed17 +32 seed29. The final Qwen Instruct GSMK8 seed29 cell uses training/evaluationv2 after the preserved915step preemption. New result addendum freezes35 endpoints (32 Tier2,2 A6-2 9B arms,1 T9B L29). Review169754c4 accepts the38-endpoint304cc5ee packet, M512 andK4 recovery. Owner authorizes real analysis afterA1-A6 with no re-review. A1-A6 are implemented and13 synthetic tests pass; input manifest is being prepared. Run with accepted_analysis_review_commit169754c427d8e2b748fb925e03d31bbabcf8ab9d. The35-endpointaddendum and first real numeric output need the next result audit. All model paths remain authorized.
