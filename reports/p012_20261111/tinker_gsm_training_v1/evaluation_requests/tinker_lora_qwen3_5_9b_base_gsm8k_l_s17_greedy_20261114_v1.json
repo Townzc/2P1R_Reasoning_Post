@@ -1,0 +1,104 @@
+{
+  "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_greedy_20261114_v1",
+  "mode": "generate",
+  "model": "Qwen/Qwen3.5-9B-Base",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-9B-Base",
+    "revision": "68c46c4b3498877f3ef123c856ecfde50c39f404",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-9B-Base",
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 3126,
+        "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807196,
+        "sha256": "fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16713,
+        "sha256": "3891e840d7dc5fca0af33d3a25083a735e36fe06214e3f707024820cb6b9f89c"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 17,
+  "rank": 32,
+  "learning_rate": 0.00047297908091376354,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 1.463,
+    "prefill": 0.3,
+    "sample": 0.807
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Original owner-approved A4 T-GSM; unchanged training/evaluation paths after A7.",
+  "code_commit": "50cfb0947fcc114ab7424f53e5443e59e50f5e98",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "forecast": {
+    "admitted": true,
+    "training_buffered_usd": 0.5598611325,
+    "reserved_greedy_usd": 0.2803373235,
+    "sampling_reference": {
+      "key": "9b_base",
+      "reference_run": "tinker_lora_qwen3_5_9b_base_gsm8k_pre_baseline4_20261114_v1",
+      "reference_usage_sha256": "120f8190be09a2900861ca6c301a611de1b7eef0612cf06b294eb495caa09722",
+      "measured_completion_tokens": 184407,
+      "exact_posttraining_prefill_tokens": 126917,
+      "question_count": 1319,
+      "buffered_greedy_usd": 0.2803373235,
+      "basis": "Same-model measured GSM completion tokens plus exact posttraining prompts; entire token cost times 1.5.",
+      "base_reference_format_note": "Base uses its authorized 4-shot pretraining completion lengths; posttraining prompt is the fixed OMI-2 prompt."
+    },
+    "T_GSM_cap_usd": 105,
+    "original_T_cap_usd": 340,
+    "combined_cap_usd": 485,
+    "admission_file": "reports/p012_20261111/tinker_gsm_training_v1/ADMISSION.json",
+    "admission_sha256": "db5ad887612ab1335614e7f19b0f00c0df7cb7243fff2a5fa12d1c0c4e660230"
+  },
+  "original_track_review_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "sampling_concurrency": 32,
+  "track": "tinker_lora",
+  "task": "gsm8k",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "cpu_counts": {
+    "full_training_input_tokens": 251462,
+    "maximum_sequence_tokens": 512,
+    "all_rows_renderer_and_mask_verified": true
+  },
+  "n": 1,
+  "sampler_path": "tinker://3e02dbb3-aa17-5733-9a8a-0244ef996120:train:0/sampler_weights/final",
+  "evaluation": {
+    "path": "reports/p012_20261111/tinker_gsm_preparation_v1/inputs/gsm8k1319.jsonl",
+    "sha256": "5a9a4e2cae969a72cf7a71f6ce66059039c0f9e694ef689ab7d5fc86080f3176",
+    "task": "gsm8k"
+  },
+  "training_evidence": {
+    "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+    "cell": "L",
+    "seed": 17,
+    "model": "Qwen/Qwen3.5-9B-Base",
+    "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+    "updates": 128,
+    "request_sha256": "4bef6b5c8ca05b386dd83a53a0f205d58c5bea7aa8e099e3599507458336eed8",
+    "train_loss_sha256": "2c3b4f333c66c692882f5ac6614c68eab3f985125b4e173d2de03b2686484e2d",
+    "row_order_sha256": "1862aaf97d37e727500f4b65bebe05f27ca4f0978953ec20a5a2a022ae09800e",
+    "sampler_manifest_sha256": "1d903e9b60a5bc4621c79aee5327175b0964b9d19a151c8b78259e6cf1a8cab7",
+    "state_manifest_sha256": "80b0aeb547b19d449492989b5de4899c7fedd2588dbf87f261a582e416a27aec"
+  }
+}
