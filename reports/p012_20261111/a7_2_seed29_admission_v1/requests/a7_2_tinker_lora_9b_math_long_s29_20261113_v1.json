@@ -1,0 +1,105 @@
+{
+  "run_id": "a7_2_tinker_lora_9b_math_long_s29_20261113_v1",
+  "mode": "train",
+  "model": "Qwen/Qwen3.5-9B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-9B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3126,
+        "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 29,
+  "rank": 32,
+  "learning_rate": 0.00047297908091376354,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 1.463,
+    "prefill": 0.3,
+    "sample": 0.807
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Owner-approved amendment7 A7-2; same frozen A6-2 own-teacher M512 recipe, training seed29",
+  "code_commit": "16210e6679fd3fdcd140fb141224e639a89c9973",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "dataset": {
+    "path": ".local/p012_20261111/a6_length_v1/a6_2_tinker_lora_9b_m512_20261113_v2/result/long.jsonl",
+    "sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6"
+  },
+  "forecast": {
+    "admitted": true,
+    "training_buffered_usd": 1.6707170325000003,
+    "reserved_greedy_usd": 6.867266247000001,
+    "forecast_usd": 8.5379832795,
+    "sampling_reference": ".local/p012_20261111/a6_runs_v1/a6_2_tinker_lora_9b_math_long_s17_greedy_20261113_v1/result/USAGE.json",
+    "sampling_reference_sha256": "3b5db9882bdfb8f9be0c611856e77a1d286c65ec8a9bd1101d04f81496eca361",
+    "sampling_rule": "Measured matching seed17 arm full5000 token cost x1.5",
+    "A7_cap_usd": 60,
+    "combined_T_cap_usd": 485,
+    "admission_file": "reports/p012_20261111/a7_2_seed29_admission_v1/ADMISSION.json",
+    "admission_sha256": "e84c1f60b88a2603dca2afeda703bbd05299a27178ffa0d34722277a7b45cf66"
+  },
+  "cell": "L",
+  "sampling_concurrency": 32,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "cpu_counts": {
+    "full_training_input_tokens": 858902,
+    "full_supervised_target_tokens": 766734,
+    "maximum_sequence_tokens": 2298,
+    "every_row_renderer_and_mask_verified": true,
+    "construction_manifest_sha256": "e9fbd12b1c39faa60f9e6eaa3cde5e6f3a830e06e72ccd5952cbafd5a1f278d2"
+  },
+  "A7_group": "A7-2",
+  "A7_arm": "long",
+  "seed17_reference": {
+    "run_id": "a6_2_tinker_lora_9b_math_long_s17_20261113_v1",
+    "request_sha256": "bbb9d17853d7d066a63412702af23118e0f040b0a2351ea428df5656ab9797b5",
+    "dataset_sha256": "2d597318d53c922400089a9e14df58c13c906854ad629468b51cce17118252c6",
+    "training_source_unchanged": true
+  }
+}
