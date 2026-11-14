@@ -51,6 +51,17 @@ def preflight(plan):
     return req
 
 
+def storage_receipt(usage, paid_enabled):
+    """Keep aggregate usage only; organization and user identifiers stay private."""
+    count = sum(row['checkpoint_count'] for row in usage['data'])
+    size = sum(row['size_bytes'] for row in usage['data'])
+    return {'observed_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'checkpoint_count': count, 'size_bytes': size,
+            'effective_rate_usd_per_gigabyte_month': usage['effective_rate_usd_per_gigabyte_month'],
+            'paid_checkpoint_storage_enabled_by_owner': paid_enabled is True,
+            'admitted': paid_enabled is True or (count < 100 and size < 100_000_000_000)}
+
+
 def export(plan, approval):
     req=preflight(plan)
     require(approval.get('owner_approved_export_only') is True, 'Owner export approval required')
@@ -60,17 +71,27 @@ def export(plan, approval):
     require(approval.get('export_source_sha256')==digest(__file__), 'Source not approved')
     require(approval.get('storage_available') is True, 'Storage disposition required')
     import tinker
+    usage = tinker.AdminClient().get_current_checkpoint_storage_usage().result().model_dump(mode='json')
+    storage = storage_receipt(usage, approval.get('paid_checkpoint_storage_enabled_by_owner'))
+    out = Path(plan['output'])
+    out.parent.mkdir(parents=True, exist_ok=True)
+    receipt_path = out.parent / ('STORAGE_PREFLIGHT_' + datetime.datetime.now(
+        datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ') + '.json')
+    with receipt_path.open('x') as f:
+        json.dump(storage, f, indent=2); f.write('\n')
+    require(storage['admitted'], 'Free storage limit reached; no export attempt made')
     rest=tinker.RestClient()
     info=rest.get_weights_info_by_tinker_path(plan['expected_state_path']).result().model_dump(mode='json')
     require(info['base_model']==req['model'] and info['is_lora'] and info['lora_rank']==32,
             'Remote checkpoint identity mismatch')
     for flag in ['train_mlp','train_attn','train_unembed']:
         require(info[flag] is True, 'Remote target layers changed')
-    out=Path(plan['output']);out.mkdir(parents=True,exist_ok=False)
+    out.mkdir(parents=True,exist_ok=False)
     def write(name,value):
         with (out/name).open('x') as f:json.dump(value,f,indent=2);f.write('\n')
     started=datetime.datetime.now(datetime.timezone.utc).isoformat()
     write('PLAN.json',plan);write('APPROVAL.json',approval);write('WEIGHTS_INFO.json',info)
+    write('STORAGE_PREFLIGHT.json', storage)
     service=tinker.ServiceClient(display_name='P012 E8 completed-state sampler export')
     try:
         client=service.create_training_client_from_state(plan['expected_state_path']).result()
