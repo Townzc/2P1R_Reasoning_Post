@@ -1,0 +1,379 @@
+{
+  "utc": "2026-11-14T07:32:48.038981+00:00",
+  "queues": [
+    {
+      "private_state": ".local/p012_20261111/amendment6_v1/T4B_SEED29_FINITE_QUEUE.json",
+      "started_utc": "2026-11-14T04:57:23.372761+00:00",
+      "controller_pid": 43486,
+      "status": "complete",
+      "finite_training_runs": [
+        "tinker_lora_qwen3_5_4b_math_l_s29_20261113_v1",
+        "tinker_lora_qwen3_5_4b_math_p_s29_20261113_v1",
+        "tinker_lora_qwen3_5_4b_math_r_s29_20261113_v1",
+        "tinker_lora_qwen3_5_4b_math_k8_s29_20261113_v1"
+      ],
+      "admission_commit": "09d531e0",
+      "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+      "new_training_calls": 0,
+      "automatic_experiment_retries": 0,
+      "new_scientific_paths": false,
+      "source_sha256": {
+        "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+        "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+        "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+        ".local/p012_20261111/amendment6_v1/prepare_t_post_any.py": "5e155916a2d81d8ad4678d91f8ffe66a988380e085da849695a9adb0d899070d",
+        ".local/p012_20261111/amendment6_v1/publish_t_seed29_cell.py": "41f7ed5e2823f38035c4935544bce4144938aa3dd4d3d7912eaac13049b0dad9",
+        ".local/p012_20261111/amendment5_v1/score_endpoint.py": "97382992ee3b518ba832f934ac4ce9c1787852682889d5467d8d98cdf389cf60"
+      },
+      "events": [
+        {
+          "utc": "2026-11-14T04:57:23.393613+00:00",
+          "stage": "controller_started",
+          "existing_l_greedy_session": 60442
+        },
+        {
+          "utc": "2026-11-14T04:58:46.061958+00:00",
+          "stage": "result_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_l_s29_20261113_v1",
+          "commit": "0e7c6bae6a08e2c843aa11223188ca6477846ef2"
+        },
+        {
+          "utc": "2026-11-14T06:59:22.920201+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_p_s29_greedy_20261113_v1",
+          "commit": "cd08256a3ae12b6919a3894b7e5aa3dacba86773"
+        },
+        {
+          "utc": "2026-11-14T06:59:22.932686+00:00",
+          "stage": "evaluation_launched",
+          "run_id": "tinker_lora_qwen3_5_4b_math_p_s29_greedy_20261113_v1",
+          "pid": 48172
+        },
+        {
+          "utc": "2026-11-14T06:59:34.682883+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_k8_s29_greedy_20261113_v1",
+          "commit": "16210e6679fd3fdcd140fb141224e639a89c9973"
+        },
+        {
+          "utc": "2026-11-14T06:59:34.697135+00:00",
+          "stage": "evaluation_launched",
+          "run_id": "tinker_lora_qwen3_5_4b_math_k8_s29_greedy_20261113_v1",
+          "pid": 48201
+        },
+        {
+          "utc": "2026-11-14T07:11:55.756463+00:00",
+          "stage": "result_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_p_s29_20261113_v1",
+          "commit": "a1cdd5508f995c95078a4a928f4d3a63c2916649"
+        },
+        {
+          "utc": "2026-11-14T07:12:16.216903+00:00",
+          "stage": "result_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_k8_s29_20261113_v1",
+          "commit": "20be695a8841daa403de57b9f21562cd9b819758"
+        },
+        {
+          "utc": "2026-11-14T07:16:38.207207+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_r_s29_greedy_20261113_v1",
+          "commit": "37aca9abd6a10b054faf4553de72640e7b79f84f"
+        },
+        {
+          "utc": "2026-11-14T07:16:38.220705+00:00",
+          "stage": "evaluation_launched",
+          "run_id": "tinker_lora_qwen3_5_4b_math_r_s29_greedy_20261113_v1",
+          "pid": 49133
+        },
+        {
+          "utc": "2026-11-14T07:27:03.743820+00:00",
+          "stage": "result_published",
+          "run_id": "tinker_lora_qwen3_5_4b_math_r_s29_20261113_v1",
+          "commit": "acd0e6d9d7ac65e08398605a6d010b5f655d8784"
+        },
+        {
+          "utc": "2026-11-14T07:27:05.437918+00:00",
+          "stage": "all_four_complete",
+          "commit": "bab8abcf6f55d327b4690849f12878bf96c2935e"
+        }
+      ],
+      "spawned_processes": [
+        {
+          "run_dir": ".local/p012_20261111/tinker_formal_v1/tinker_lora_qwen3_5_4b_math_p_s29_greedy_20261113_v1",
+          "pid": 48172,
+          "request_sha256": "7f89a300a2776d945e35a3930ff9fc0f21efc05fc023102082dd0abf4ca6f680"
+        },
+        {
+          "run_dir": ".local/p012_20261111/tinker_formal_v1/tinker_lora_qwen3_5_4b_math_k8_s29_greedy_20261113_v1",
+          "pid": 48201,
+          "request_sha256": "4a14c25887f1dc37317589dca937c6f66cb7251e0bd1ebaa6424e469b7b9f80b"
+        },
+        {
+          "run_dir": ".local/p012_20261111/tinker_formal_v1/tinker_lora_qwen3_5_4b_math_r_s29_greedy_20261113_v1",
+          "pid": 49133,
+          "request_sha256": "793138c2c84d65e3a1dd83b63599f855f0a4c84214e2878a348ff45f33ffe79d"
+        }
+      ],
+      "updated_utc": "2026-11-14T07:27:05.437918+00:00"
+    },
+    {
+      "private_state": ".local/p012_20261111/amendment6_v1/A6_3_4B_FINITE_QUEUE.json",
+      "started_utc": "2026-11-14T04:59:11.456440+00:00",
+      "controller_pid": 43615,
+      "status": "running",
+      "authority_commit": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
+      "finite_training_runs": [
+        "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+        "a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+        "a6_3_tinker_lora_4b_math_l64_s17_20261113_v1"
+      ],
+      "automatic_experiment_retries": 0,
+      "new_scientific_paths": false,
+      "source_sha256": {
+        "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+        "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+        "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+        ".local/p012_20261111/amendment6_v1/admit_a6_prepared.py": "297f5af0c09c6ec2f81f85cf9260f4ccb9dd208a75982177fe9b87a44b483a9a",
+        ".local/p012_20261111/amendment6_v1/prepare_t_post_any.py": "5e155916a2d81d8ad4678d91f8ffe66a988380e085da849695a9adb0d899070d",
+        ".local/p012_20261111/amendment6_v1/score_a6.py": "4e4a207041c0aeca14ace7682d2e5a8c2982c4b7d255f3f1fd3f184dd52af702",
+        ".local/p012_20261111/amendment6_v1/publish_a6_cell.py": "944e686a5499e3d62b0cbd8b2f76a7183090fc871ae01ce56fd22a51b81ae6bb"
+      },
+      "pending_request_sha256": {
+        "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1": "12525362449ca64403d786d4ab619bca1b7439c858bf1c2cdb7d32ac1a6ec9b1",
+        "a6_3_tinker_lora_4b_math_e8_s17_20261113_v1": "73865d73fc88b695ab875ba5a08cb50d9a1fdd76bbdc976fde8d2c72b599fec5",
+        "a6_3_tinker_lora_4b_math_l64_s17_20261113_v1": "f7c61776dff063cf3d834d263c771253cffe2c5e0b29441d0c7d41585081b916"
+      },
+      "events": [
+        {
+          "utc": "2026-11-14T04:59:11.460095+00:00",
+          "stage": "controller_started_waiting_for_A6_2"
+        },
+        {
+          "utc": "2026-11-14T05:18:33.655723+00:00",
+          "stage": "batch_admitted",
+          "batch": "a6_3_4b_e4_e8_admission_v1",
+          "commit": "ac747eb5e7b55e146604bc97cd83e6ca4f5e5fe4",
+          "buffered_usd": 15.165376409999999
+        },
+        {
+          "utc": "2026-11-14T05:18:33.670078+00:00",
+          "stage": "launched",
+          "run_id": "a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+          "pid": 44462
+        },
+        {
+          "utc": "2026-11-14T05:18:33.684636+00:00",
+          "stage": "launched",
+          "run_id": "a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+          "pid": 44464
+        }
+      ],
+      "spawned_processes": [
+        {
+          "run_dir": ".local/p012_20261111/a6_runs_v1/a6_3_tinker_lora_4b_math_e4_s17_20261113_v1",
+          "pid": 44462,
+          "request_sha256": "6c3b18c21f3453d74de99eafaa89104968614f2ee3b44a8a06333a49c1cad12b"
+        },
+        {
+          "run_dir": ".local/p012_20261111/a6_runs_v1/a6_3_tinker_lora_4b_math_e8_s17_20261113_v1",
+          "pid": 44464,
+          "request_sha256": "3b2d459be2737160f9b292e8039a605c6be89e9ffdc504e569d7c4863eae2aa2"
+        }
+      ],
+      "updated_utc": "2026-11-14T05:18:33.684636+00:00"
+    },
+    {
+      "private_state": ".local/p012_20261111/amendment7_v1/A7_2_FINITE_QUEUE.json",
+      "started_utc": "2026-11-14T07:11:56.608449+00:00",
+      "controller_pid": 48834,
+      "status": "running",
+      "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+      "finite_training_runs": [
+        "a7_2_tinker_lora_9b_math_short_s29_20261113_v1",
+        "a7_2_tinker_lora_9b_math_long_s29_20261113_v1",
+        "a7_2_tinker_lora_4b_math_short_s29_20261113_v1",
+        "a7_2_tinker_lora_4b_math_long_s29_20261113_v1"
+      ],
+      "automatic_experiment_retries": 0,
+      "source_sha256": {
+        "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+        "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+        "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+        ".local/p012_20261111/amendment7_v1/prepare_a7_post.py": "79a7140ebd6b7148f739ba9236162785827cef356a580b0f116d2cccb8bb3119",
+        ".local/p012_20261111/amendment7_v1/score_a7.py": "cfaa10971b8796daa0cf9a190428a05f11dd2a420985dc7a5caa2647875b17b5",
+        ".local/p012_20261111/amendment7_v1/publish_a7_cell.py": "fb4e3d0d7f5aa513b34633a897dbcff64c91b139e5eab81e8b5ef47a4279c550"
+      },
+      "events": [
+        {
+          "utc": "2026-11-14T07:11:56.608556+00:00",
+          "stage": "controller_started"
+        },
+        {
+          "utc": "2026-11-14T07:11:58.174198+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "a7_2_tinker_lora_9b_math_short_s29_greedy_20261113_v1",
+          "commit": "8abff6660efb38c30b76026b4389976b485b081a"
+        },
+        {
+          "utc": "2026-11-14T07:11:58.187491+00:00",
+          "stage": "launched",
+          "run_id": "a7_2_tinker_lora_9b_math_short_s29_greedy_20261113_v1",
+          "pid": 48859,
+          "request_sha256": "7a53fdd9b71ebb279b5b88125ff37cdfdeacb11b7e218c80e955a7ef4d5a0bce"
+        },
+        {
+          "utc": "2026-11-14T07:11:59.782492+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "a7_2_tinker_lora_9b_math_long_s29_greedy_20261113_v1",
+          "commit": "4a6973c23d54ce00220e623583c9031ada9b2980"
+        },
+        {
+          "utc": "2026-11-14T07:11:59.795550+00:00",
+          "stage": "launched",
+          "run_id": "a7_2_tinker_lora_9b_math_long_s29_greedy_20261113_v1",
+          "pid": 48882,
+          "request_sha256": "cecd8051f1147c1fd564b3f66de83a8fdc760e212d765986cd074c6ef3589474"
+        },
+        {
+          "utc": "2026-11-14T07:19:31.934561+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "a7_2_tinker_lora_4b_math_short_s29_greedy_20261113_v1",
+          "commit": "57de37000b30c42bcfac5ed833f74d729c7a4382"
+        },
+        {
+          "utc": "2026-11-14T07:19:31.952186+00:00",
+          "stage": "launched",
+          "run_id": "a7_2_tinker_lora_4b_math_short_s29_greedy_20261113_v1",
+          "pid": 49265,
+          "request_sha256": "25099ee5c8a91c17fefedba958f72612b71f1587942be18ed148771ba6c4ea57"
+        },
+        {
+          "utc": "2026-11-14T07:22:24.400769+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "a7_2_tinker_lora_4b_math_long_s29_greedy_20261113_v1",
+          "commit": "a225357a45ee42f1fc7d2e7234d5bb5a800adc11"
+        },
+        {
+          "utc": "2026-11-14T07:22:24.419386+00:00",
+          "stage": "launched",
+          "run_id": "a7_2_tinker_lora_4b_math_long_s29_greedy_20261113_v1",
+          "pid": 49391,
+          "request_sha256": "325edae04016db933e9ae222ab95afaf5b66be96af8f8b550975174fc0ec479d"
+        },
+        {
+          "utc": "2026-11-14T07:23:36.456109+00:00",
+          "stage": "result_published",
+          "run_id": "a7_2_tinker_lora_9b_math_short_s29_20261113_v1",
+          "commit": "7f5d36da4a517e998cbeab61aca30b01b3304a04"
+        },
+        {
+          "utc": "2026-11-14T07:30:31.737387+00:00",
+          "stage": "result_published",
+          "run_id": "a7_2_tinker_lora_4b_math_short_s29_20261113_v1",
+          "commit": "e3dd43ca1c52fc7194f43748fa2d40313c47fc50"
+        },
+        {
+          "utc": "2026-11-14T07:31:55.564801+00:00",
+          "stage": "result_published",
+          "run_id": "a7_2_tinker_lora_9b_math_long_s29_20261113_v1",
+          "commit": "f22a649384153ee1f6010a418a27f798dacf18dd"
+        }
+      ],
+      "updated_utc": "2026-11-14T07:31:55.564801+00:00"
+    },
+    {
+      "private_state": ".local/p012_20261111/amendment7_v1/A7_1_FINITE_QUEUE.json",
+      "started_utc": "2026-11-14T07:22:26.048668+00:00",
+      "controller_pid": 49392,
+      "status": "running",
+      "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+      "finite_training_runs": [
+        "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+        "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+        "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1",
+        "a7_1_tinker_lora_9b_math_concise_s29_20261113_v1",
+        "a7_1_tinker_lora_4b_math_concise_s29_20261113_v1"
+      ],
+      "automatic_experiment_retries": 0,
+      "source_sha256": {
+        "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+        "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+        "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+        ".local/p012_20261111/amendment7_v1/prepare_a7_post.py": "79a7140ebd6b7148f739ba9236162785827cef356a580b0f116d2cccb8bb3119",
+        ".local/p012_20261111/amendment7_v1/score_a7.py": "cfaa10971b8796daa0cf9a190428a05f11dd2a420985dc7a5caa2647875b17b5",
+        ".local/p012_20261111/amendment7_v1/publish_a7_cell.py": "fb4e3d0d7f5aa513b34633a897dbcff64c91b139e5eab81e8b5ef47a4279c550",
+        ".local/p012_20261111/amendment7_v1/admit_a7_concise.py": "b7536da6d68ef20bfb4df53bc818c84ca7b6d122a8ea216c96c0ffe4f6eb38c3",
+        ".local/p012_20261111/amendment7_v1/a7_ops.py": "8de2ba919cddb3b398f2f562474932e6711d246f463e60ce79bee2a893ac7a7e",
+        ".local/p012_20261111/amendment7_v1/a7_accounting.py": "17e00a93de173bf175c8a422df08dbbd3941d856fa67f79d49e77832527e7971"
+      },
+      "events": [
+        {
+          "utc": "2026-11-14T07:22:26.048816+00:00",
+          "stage": "controller_started"
+        },
+        {
+          "utc": "2026-11-14T07:22:27.636993+00:00",
+          "stage": "batch_admitted",
+          "seed": 17,
+          "commit": "fd78a182ad208066d4f4954dd537a0ed5ba24ca7",
+          "batch_usd": 24.331638281500002,
+          "A7_next_usd": 51.27770324150001,
+          "combined_next_usd": 321.65093355525005,
+          "runs": [
+            "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+            "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+            "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1"
+          ]
+        },
+        {
+          "utc": "2026-11-14T07:22:27.651781+00:00",
+          "stage": "launched",
+          "run_id": "a7_1_tinker_lora_9b_math_concise_s17_20261113_v1",
+          "pid": 49421,
+          "request_sha256": "c36684a24b81cb8f1fef2a43f245af6e096c4bc7316a5b57fff6809860333c9b"
+        },
+        {
+          "utc": "2026-11-14T07:22:27.665740+00:00",
+          "stage": "launched",
+          "run_id": "a7_1_tinker_lora_4b_math_concise_s17_20261113_v1",
+          "pid": 49423,
+          "request_sha256": "5ec43d0badaf1206d22059a34058c4e4e3baaaaf5e3213c6909406afa57cc065"
+        },
+        {
+          "utc": "2026-11-14T07:22:27.679633+00:00",
+          "stage": "launched",
+          "run_id": "a7_1_tinker_lora_9b_base_math_concise_s17_20261113_v1",
+          "pid": 49425,
+          "request_sha256": "ca094ab19edba30fd9e248c73a45756d1272edcaba8ed9e2bc0dc1a71b2ec2f7"
+        },
+        {
+          "utc": "2026-11-14T07:28:39.803291+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "a7_1_tinker_lora_9b_base_math_concise_s17_greedy_20261113_v1",
+          "commit": "9d4c78cc8bbb80731fdf4a52059ea9da970ac71b"
+        },
+        {
+          "utc": "2026-11-14T07:28:39.822110+00:00",
+          "stage": "launched",
+          "run_id": "a7_1_tinker_lora_9b_base_math_concise_s17_greedy_20261113_v1",
+          "pid": 49819,
+          "request_sha256": "0ccba03f0da09016bde8a480e3ebc7c4cec3a2097d8f46facb18a128b346c9ef"
+        },
+        {
+          "utc": "2026-11-14T07:32:01.577139+00:00",
+          "stage": "evaluation_request_published",
+          "run_id": "a7_1_tinker_lora_9b_math_concise_s17_greedy_20261113_v1",
+          "commit": "219adb9b0659c6b7bcaf65d64583424534a09779"
+        },
+        {
+          "utc": "2026-11-14T07:32:01.592862+00:00",
+          "stage": "launched",
+          "run_id": "a7_1_tinker_lora_9b_math_concise_s17_greedy_20261113_v1",
+          "pid": 50032,
+          "request_sha256": "31a2a5979870fee1b6a388b09f63e4f9a09d4e75f825556944c4deaab0f6f1f9"
+        }
+      ],
+      "updated_utc": "2026-11-14T07:32:01.592862+00:00"
+    }
+  ]
+}
