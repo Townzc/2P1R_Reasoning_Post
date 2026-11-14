@@ -1,3 +1,27 @@
+# Current P012 — 2026-11-14T00:35:17.923777+00:00
+
+All72 main cells are complete and published locally:40 seed17 +32 seed29. The final Qwen Instruct GSMK8 seed29 cell uses training/evaluationv2 after the preserved915step preemption. New result addendum freezes35 endpoints (32 Tier2,2 A6-2 9B arms,1 T9B L29). Original review304cc5ee remains pending; do not run analysis/p012_registered.py on real data before actualClaude approval. All model paths remain authorized.
+
+Instruct bridgeL training andinitial20 complete, trainable params36,929,536 and128updates verified. Adapted20 request is bound to CHECKPOINT_FILES.json; run it, compare token outputs with initial20, then full5000 only if B3 passes. Four-call budget already reserved. Other4 remain unadmitted until fullL cap<=25percent and new workspace admission. Always explicit MODAL_PROFILE=townzc; no source edits during Modal image upload.
+
+A6-3 9B E4/E8 active;L64 training complete and greedy prepared. OriginalT 9B-Base L29 training complete and greedy prepared. 4B seed17 and 9B/Base seed29 originals continue; never replay completed/expiredCLI calls. A6-2 4B/Base follow completion of9B A6-3. Prior balances, separate ledgers and425combined T budget remain authoritative. Config is0600;defaultprofiletangzhice. No credentials in public files.
+
+Earlier entries below are historical snapshots.
+
+# Current P012 — 2026-11-14T00:29:03.491038+00:00
+
+New numeric review + first-use registered analysis review requested at304cc5ee; actualClaude review pending. Only analysis/p012_registered.py real-data execution waits. Seven synthetic tests pass. Do not fabricate approval or execute the new analysis before it arrives. All model paths remain authorized.
+
+Tier1 all40 complete. Tier2 all32 training configurations run; final evaluations finishing. Qwen Instruct GSMK8 seed29v1 was preempted at915steps; eight original files recovered, no weights. One unchanged authorized retryv2 completed training; use v2 for this cell's evaluation and publication. Its additional training/tail reserve0.525235 is in qwen_tier2_k8_preemption_v1. Original v1 remains immutable. First Llama Instruct MATHK4 seed17 likewise uses its completed evaluationv2.
+
+A6-2 9B paired M512 complete: short72.20%,long91.14% on5000. Same512 questions and1024presentations; supervisedtokens302694/766734; source/content andlength bothdiffer. Exploratory, excludedH0-H3; auditpending. A6-3 9B E4/E8/L64 active, admitted22.473337 of35. A6-2 measured+reserved12.860185 of50; originalT reservation204.695789; combined240.029311of425. A6-3 per-row admitted=false inADMISSION is inheritedpreparationmetadata; top-level and actualrequest true are authoritative; correctionnote preservesoriginalSHA.
+
+T9B and9B-Base seed17 all5cells published; bothseed29 P/R/L/K8 active,9B Lalreadycomplete. Original4B P/R/K8/K4 remain active and slow; neverreplay. A6next after9B A6-3:4B construction/pair andBasepair(using9B M512), then4B E4/E8/L64 bystagedbudget. The prepared4B construction request still has old a6_length_data.py SHA; refreshbeforeadmission/launch, withoutchangingfixeddatarecipe.
+
+Instruct bridgeL on townzc is admitted but unstarted until all16 QwenTier2 evaluations complete, including K8v2. Four-call reserve4.781297 includestrain,unadapted20,adapted20,full5000. Full cap<=25% and B-3 before otherfour; they remainunadmitted. Latesttownzcactual22.54/protected2; combinedconservativeunsettled+bridge+retry18.252758<=20.54. Tangzhiceprotected4. Always use explicit MODAL_PROFILE. townzc uses GitHublogin, tangzhice BerkeleyGoogle; credentialconfig0600/defaulttangzhice.
+
+Original sessions are in private amendment6_v1/LAUNCHES_1..15. CLI_CONSUMED_2 has39closed and14oldsessionIDs expired despite saved successfulcloudSTATUS; missingCLI IDs do not authorize reruns. Closed23-24billing readonce foreachworkspace; priorpartial23report is superseded, notadditive. New helpers:prepare_tier2_eval handlesv2;publish_tier2_setting maps theQwenGSMK8recovery andrequiresfirst-box diagnosticswhenneeded;prepare_t_post_any andscore_a6 preserveprediction18f (ordinaryT8bb). Sourceuploads mustfinishbeforeeditingexperiments/p012. No newsubagents/chats/externalmessages,R3/E2 or extraModalexploration. Earlier entries are historical.
+
 # Current P012 — 2026-11-13T23:56:46.080020+00:00
 
 A6 and second-workspace addendum approved at 18f64e2d and b886b64c. Both profiles work. townzc uses GitHub login; tangzhice uses Berkeley Google. Credentials only in private Modal configuration. Every new Modal invocation must set MODAL_PROFILE explicitly. Both use H100!; townzc first-use hashes, images, rates and hardware all passed.

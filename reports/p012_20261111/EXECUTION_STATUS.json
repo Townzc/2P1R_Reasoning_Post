@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-13T23:56:46.080020+00:00",
-  "stage": "Tier1 complete; Tier2 and A6 paired arms active",
-  "plan": "P012 v1 plus owner-approved amendments1\u20135",
+  "updated_utc": "2026-11-14T00:35:17.923777+00:00",
+  "stage": "All72 main cells complete; result/analysis review pending; Tinker and Instruct bridge continue",
+  "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -32,75 +32,51 @@
     "runtime": "All completed jobs detached; final weights independently backed up and hash verified"
   },
   "science": {
-    "failed_training_runs": 1,
-    "superseded_training_runs": 1,
-    "raw_inventory": "RUN_INVENTORY_CURRENT.json",
-    "R1_gate": "PASS",
-    "R2_gate": "PASS",
-    "latest_results_independent_numeric_review": "Original Qwen MATH/C7 coverage recorded at8bbf06a7; new A5, GSM, T and Llama packets await91b650c5 plus addendum audit",
-    "prior_G0_independent_audit": "e10a4bf5 accepted",
-    "Tinker_smoke_calls": 3,
-    "latest_additional_inventory": "review_a56115d6/LIVE_BATCH_STATUS.json",
-    "superseded_Tinker_pass8_v1": 3,
-    "legacy_counter_snapshot": {
-      "completed_generation_calls": 71,
-      "successful_training_calls": 34,
-      "completed_NLL_calls": 7,
-      "active_jobs": 15
-    },
-    "main_seed17_cells_complete": 25,
-    "Modal_successful_training_calls": 42,
-    "T_formal_training_calls_complete": 5,
-    "T_smoke_calls": 3,
-    "NLL_calls_complete": 11,
-    "active_T_training_calls": 10,
-    "active_Modal_calls": 0
+    "main_seed17_cells_complete": 40,
+    "main_seed29_cells_complete": 32,
+    "main_grid_total_complete": 72,
+    "independent_audits_accepted": [
+      "8bbf06a7 (specified original Qwen coverage)",
+      "d2db987a (original91b650c5 only)"
+    ],
+    "pending_numeric_review": "304cc5ee plus addendum_after304_v1",
+    "registered_analysis_real_data_execution": "await first-use Claude review",
+    "raw_outputs_immutable": true
   },
   "budget_usd": {
-    "modal_total_cap": 85,
-    "modal_protected": 4,
-    "subcaps": {
-      "G0_E": 5,
-      "G0_T": 6,
-      "capability": 7.5,
-      "Tier1": 33.5,
-      "Tier2": 25,
-      "bridge": 4,
-      "emergency": 4
+    "modal_rule": "unsettled reserve + next buffered batch <= actual workspace balance - protected balance",
+    "modal_cumulative_cap": null,
+    "modal_no_topup": true,
+    "workspace_ledgers": {
+      "tangzhice": {
+        "protected": 4,
+        "latest_admission": "llama_tier2_admission_v1/ADMISSION.json"
+      },
+      "townzc": {
+        "protected": 2,
+        "latest_observed_balance": 22.54,
+        "conservative_reserved_including_bridge_and_retry": 18.252758328,
+        "latest_admission": "qwen_tier2_k8_preemption_v1/ADMISSION.json"
+      }
     },
-    "M2_40_carveout_activated": false,
-    "unit_costs_measured": true,
-    "owner_authorized_transfer": {
-      "from": "emergency",
-      "to": "G0_E",
-      "usd": 4
-    },
-    "latest_accounting": "modal_next_gate_20261113_v1/POST_BATCH_RECONCILIATION.json",
-    "phase_caps": "SOFT",
-    "modal_total_cap_status": "Planning total; sole hard stop uses actual credit balance minus4",
-    "hard_stop": "accounted + next_batch_buffered > actual_modal_credit_balance - 4",
-    "tinker_total_cap": 340,
-    "tinker_protected": 400,
-    "tinker_smoke_cap": 5,
-    "accounted_including_reserves": 20.634162806005687,
-    "observed_modal_actual_balance": 58.55,
-    "Tier1_measured_task_adjusted_forecast": 34.30481151934195,
-    "current_modal_batch_reserved_usd": 48.32808166659763,
-    "current_budget_admission": "modal_next_gate_20261113_v1/RECONCILIATION_AND_PROPOSAL.json",
-    "tinker_current_reserved_usd": 137.25720418981007,
-    "tinker_sampling_forecast": "Measuredtokens x1.5, accepted a56115d6",
-    "T_total_reserved_with_K8_K4": 190.60543523731008,
-    "T_current_admission": "tinker_k8_k4_admission_v1/ADMISSION.json",
-    "new_Modal_calls": "STOP pending owner decision on accounting correction; existing admitted calls continue",
-    "Modal_observed_balance": 47.16,
-    "Modal_accounted_with_tail_reserves": 46.369614566935326
+    "modal_phase_caps": "soft; report and continue within workspace hard gate",
+    "tinker_original_cap": 340,
+    "tinker_original_reserved": 204.69578933025,
+    "A6_2_cap": 50,
+    "A6_2_accounted_and_reserved": 12.860184982,
+    "A6_3_cap": 35,
+    "A6_3_reserved": 22.473336628,
+    "tinker_combined_cap": 425,
+    "tinker_protected_from_initial750": 325,
+    "tinker_sampling_admission": "measured token cost x1.5"
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Finish Tier2 P/R/L then K8 within each workspace",
-    "Complete9B A6-2 paired arms then A6-3",
-    "Complete originalT and second seeds; GSM afterMATH if budget",
-    "Submit next independent numeric review packet"
+    "Publish all32 Tier2 results and result-review addendum",
+    "Bridge adapted20 verification then fullL;other4conditional onB3 andbudget",
+    "Complete A6-3 9B;then A6-2 4B/Base andA6-3 4B",
+    "Continue originalT seed17/29;GSMafterMATH withinbudget",
+    "Run registered statistics only after actualClaude first-use review"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -143,29 +119,22 @@
     "started": true,
     "review": "07b56e49 accepted; N1 implemented and9 tests pass",
     "first_group": "Qwen base MATH complete: NLL,4shotgreedy,holdout500n8",
-    "remaining_mandatory_endpoints": 12,
-    "optional_zero_shot_unrun": 8,
+    "remaining_mandatory_endpoints": 0,
+    "optional_zero_shot_unrun": 4,
     "mandatory_forecast_no_margin_usd": 5.694375334219286,
     "mandatory_forecast_with_margin_usd": 7.535866000164887,
-    "status": "QWEN_COMPLETE; LLAMA_NOT_RUN",
-    "completed_Qwen_endpoints": 12
+    "status": "All24 mandatory endpoints complete; four Instruct0shot endpoints complete",
+    "completed_Qwen_endpoints": 12,
+    "completed_Llama_endpoints": 12
   },
   "C8": {
     "started": true,
-    "completed_cells": [
-      "Qwen base MATH P seed17",
-      "Qwen base MATH K8 seed17",
-      "Qwen base MATH R seed17",
-      "Qwen base MATH K4 seed17",
-      "Qwen base MATH L seed17",
-      "Qwen Instruct MATH P seed17",
-      "Qwen Instruct MATH K8 seed17",
-      "Qwen Instruct MATH R seed17",
-      "Qwen Instruct MATH K4 seed17",
-      "Qwen Instruct MATH L seed17"
-    ],
-    "remaining_grid": "Authorized next blocks: Qwen GSM, then Llama;30 Tier1 cells remain",
-    "R1_accuracy_gate": "PASS"
+    "remaining_grid": "None:40 seed17 and32 seed29 complete",
+    "R1_accuracy_gate": "PASS",
+    "complete_counts": {
+      "seed17": 40,
+      "seed29": 32
+    }
   },
   "latest_packets": [
     "r1_b16_results_v1",
@@ -193,7 +162,6 @@
     "tier1_planning_cap_usd": 33.5,
     "soft_cap_exceeded_in_conservative_all_math_extrapolation": true,
     "action": "REPORT_AND_CONTINUE; admitted batch within hard balance gate",
-    "active_model_jobs": 0,
     "soft_cap_exceeded_in_task_adjusted_forecast": true
   },
   "A5": {
@@ -215,7 +183,7 @@
     "review": "ACCEPTEDa56115d6",
     "runtime_check": "4000uniqueseeds; >=80percentquestions with>=7distinctoutputs",
     "v1": "allthreeSUPERSEDED; metrics excluded",
-    "v2": "9BBase active, then4Bthen9B",
+    "v2": "Allthree complete;independencechecks passed",
     "9BBase_training": "released; LPRactive",
     "status": "Three v2 endpoints complete, checks PASS and scored; v1 metrics superseded",
     "accepted_review": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
@@ -227,11 +195,10 @@
     "results": "tinker_lora_pass8_v2/RESULTS.json"
   },
   "bridge": {
-    "status": "B3_STOP",
-    "full_L_caps": 4999,
-    "questions": 5000,
-    "other_four": "unstarted; no amended recipe authorized",
-    "results": "modal_lora_bridge_l_s17_v1/RESULTS.json"
+    "base_L": "retained;cap4999/5000;other4canceled byA6",
+    "instruct_L": "training128 andinitial20 complete;adapted20 prepared;full5000 alreadyreserved",
+    "instruct_other4": "unadmitted;requireB3pass andfullLcap<=25percent",
+    "workspace": "townzc"
   },
   "current_20261113_late": {
     "authoritative": true,
@@ -243,10 +210,26 @@
     "T9B_seed17_complete": true,
     "T9B_seed29_active": true,
     "A6_2_9B_paired_data_frozen": true,
-    "A6_2_9B_training_active": true,
-    "A6_3_unstarted": true,
+    "A6_2_9B_training_active": false,
+    "A6_3_unstarted": false,
     "independent_result_review_next": true,
-    "raw_outputs_immutable": true
+    "raw_outputs_immutable": true,
+    "Tier2_completed_generation_endpoints": 32,
+    "Tier2_total": 32,
+    "A6_2_9B_complete": true,
+    "A6_2_9B_short_accuracy": 0.722,
+    "A6_2_9B_long_accuracy": 0.9114,
+    "A6_3_9B_active": true,
+    "bridge_instruct_L": "training andinitial20 complete;adapted20 next",
+    "registered_analysis": "await actualClaude first-use review304cc5ee",
+    "Tier2_complete_cells": 32
   },
-  "pending_owner_actions": []
+  "pending_owner_actions": [
+    {
+      "kind": "independent_results_and_first_use_analysis_review",
+      "commit": "304cc5ee",
+      "path": "reports/p012_20261111/results_and_analysis_review_20261113_v2/README.md",
+      "execution_dependency": "Only new registered analysis script waits; authorized model work continues"
+    }
+  ]
 }
