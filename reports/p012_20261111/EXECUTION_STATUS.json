@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T03:00:31.232232+00:00",
+  "updated_utc": "2026-11-14T03:21:32.385796+00:00",
   "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
   "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
   "C1": {
@@ -73,10 +73,9 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Finish already-reserved9B/Base seed29,4B P/R andA6-3 E4/E8 greedy evaluations",
-    "After9B A6-3 completes: admit existing Basepair and4B M512 construction; do not duplicate its USD3 reserve",
-    "Freeze4B M512 after all3checks; prepare4Bpair and matched9B cross-long/short arms withprediction46694f51",
-    "Keep original4B K8/K4 training calls; then complete original4Bseed29 priority work"
+    "Finite A6-2 queue continues Basepair evaluation and4B construction, then four matched4B/9B arms after self-checks andbudget admission",
+    "Independently audit only14 newendpoints inresults_after46694_v1 at778dec3f",
+    "Original4B K8/K4 remain active; seed29 and4B A6-3 retain their later admission gates"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -151,7 +150,9 @@
     "amendment4_completed_budget_v1",
     "review_46694f51",
     "registered_analysis_169754c4_v1",
-    "instruct_bridge_remaining_results_v1"
+    "instruct_bridge_remaining_results_v1",
+    "results_after46694_v1",
+    "a6_2_base_and_4b_admission_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -214,7 +215,7 @@
     "Qwen_Tier2_workspace": "townzc",
     "Llama_Tier2_workspace": "tangzhice",
     "T9B_seed17_complete": true,
-    "T9B_seed29_active": true,
+    "T9B_seed29_active": false,
     "A6_2_9B_paired_data_frozen": true,
     "A6_2_9B_training_active": false,
     "A6_3_unstarted": false,
@@ -225,10 +226,40 @@
     "A6_2_9B_complete": true,
     "A6_2_9B_short_accuracy": 0.722,
     "A6_2_9B_long_accuracy": 0.9114,
-    "A6_3_9B_active": true,
+    "A6_3_9B_active": false,
     "bridge_instruct_L": "All5 bridge cells complete; L accepted46694f51",
     "registered_analysis": "Independent numeric audit PASS46694f51; original values unchanged",
-    "Tier2_complete_cells": 32
+    "Tier2_complete_cells": 32,
+    "T9B_Base_seed29_complete": true,
+    "T9B_seed29_complete": true,
+    "A6_3_9B_complete": true,
+    "A6_2_Base_pair_active": true,
+    "A6_2_4B_M512_active": true
   },
-  "pending_owner_actions": []
+  "pending_owner_actions": [
+    {
+      "kind": "independent_numeric_review",
+      "commit": "778dec3f",
+      "path": "reports/p012_20261111/results_after46694_v1/README.md",
+      "scope": "14 newendpoints;70000 raw outputs",
+      "execution_dependency": "Does not pause the authorized finite A6-2 queue"
+    }
+  ],
+  "A6_2_finite_continuation": {
+    "status": "running",
+    "arms": [
+      "9B-Base short on9B M512",
+      "9B-Base long on9B M512",
+      "4B short on4B M512",
+      "4B long on4B M512",
+      "9B short on4B M512",
+      "9B cross-long on4B M512"
+    ],
+    "new_9B_prediction_commit": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+    "gate": "All3 construction checks; every actual row token/mask check; A6-2 cap50 andcombined425; published frozen requests before launch",
+    "automatic_experiment_retries": 0,
+    "new_scientific_runner_paths": false,
+    "completed_outputs": "Existing scorer, unchanged raw originals, individual public result archives and final six-arm packet",
+    "excluded_from_H0_H3": true
+  }
 }
