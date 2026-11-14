@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T07:23:49.907137+00:00",
+  "updated_utc": "2026-11-14T07:35:27.190465+00:00",
   "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
@@ -81,7 +81,7 @@
     "tinker_protected_from_initial750": 265,
     "tinker_sampling_admission": "measured token cost x1.5",
     "A7_cap": 60,
-    "A7_accounted_and_reserved": 50.222279831
+    "A7_accounted_and_reserved": 45.637685393
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
@@ -186,7 +186,9 @@
     "a7_1_construction_admission_v1",
     "a7_1_concise_data_v1",
     "a7_1_concise_seed17_admission_v1",
-    "a7_execution_status_v1"
+    "a7_execution_status_v1",
+    "a7_analysis_candidate_v1",
+    "results_after6af18b72_and_a7_data_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -278,7 +280,7 @@
     "A6_2_Base_long_accuracy": 0.8766,
     "T4B_K8_K4_training_complete": true,
     "T4B_seed17_all5_complete": true,
-    "T4B_seed29_active": true,
+    "T4B_seed29_active": false,
     "A6_2_4B_M512_complete": true,
     "A6_2_four_followup_arms_active": false,
     "T4B_seed29_L_training_complete": true,
@@ -293,9 +295,26 @@
     "A6_3_4B_L64_waiting_budget": true,
     "A6_2_four_followup_audit": "passed6af18b72",
     "A6_2_4B_M512_posthoc_audit": "passed6af18b72",
-    "T4B_seed29_L_audit": "passed6af18b72"
+    "T4B_seed29_L_audit": "passed6af18b72",
+    "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "utc": "2026-11-14T07:35:27.190465+00:00",
+      "packet_commit": "95e527707444b5e1cefd0a7e7628b7be7ce5ee33",
+      "packet_path": "reports/p012_20261111/results_after6af18b72_and_a7_data_v1/README.md",
+      "new_endpoints": 6,
+      "raw_outputs": 30000,
+      "concise_rows": 1024,
+      "construction_attempts": 1026,
+      "analysis_candidate_commit": "98b060c15a9ffdc6978dfe5155d70bee91741918",
+      "analysis_contract_checks_passed": 12,
+      "owner_notified": true,
+      "status": "Awaiting Claude review commit",
+      "blocks_authorized_training": false,
+      "blocks_new_statistical_adapter_real_execution": true
+    }
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -315,12 +334,12 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-14T07:23:49.907137+00:00",
+    "as_of_utc": "2026-11-14T07:35:27.190465+00:00",
     "original_T": 199.74734518875007,
     "A6_2": 38.430015023,
     "A6_3": 32.19587010199999,
-    "A7": 50.222279831,
-    "combined": 320.59551014475005,
+    "A7": 45.637685393,
+    "combined": 316.0109157067501,
     "caps": {
       "original_T": 340,
       "A6-2": 50,
@@ -351,7 +370,22 @@
     "data_report": "a7_1_concise_data_v1/DATA_REPORT.json",
     "posthoc_full_data_audit": "pending;1024rows and1026attempts",
     "exploratory_excluded_H0_H3": true,
-    "new_endpoints_require_prescore_utc": true
+    "new_endpoints_require_prescore_utc": true,
+    "pending_review": {
+      "utc": "2026-11-14T07:35:27.190465+00:00",
+      "packet_commit": "95e527707444b5e1cefd0a7e7628b7be7ce5ee33",
+      "packet_path": "reports/p012_20261111/results_after6af18b72_and_a7_data_v1/README.md",
+      "new_endpoints": 6,
+      "raw_outputs": 30000,
+      "concise_rows": 1024,
+      "construction_attempts": 1026,
+      "analysis_candidate_commit": "98b060c15a9ffdc6978dfe5155d70bee91741918",
+      "analysis_contract_checks_passed": 12,
+      "owner_notified": true,
+      "status": "Awaiting Claude review commit",
+      "blocks_authorized_training": false,
+      "blocks_new_statistical_adapter_real_execution": true
+    }
   },
-  "future_prediction_record_requirement": "review_6af18b72/FORWARD_RECORDING_REQUIREMENTS.json"
+  "future_prediction_record_requirement": "A7 prediction records bind22890560 withISO8601UTC andrawSHA; older frozen records retained"
 }
