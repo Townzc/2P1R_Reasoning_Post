@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-14T04:55:10.457055+00:00; accepted 53a565da
+
+Audit 53a565dadcd648c50ac1ac2a3c08f5c69da123d0 accepts all four endpoints from fce5e186 (20,000 outputs). Individual and aggregate audit annotations are published in 905976b1; numeric values, raw/label archives, and original RESULT files are preserved. No review remains pending for those four. Correction: low per-token loss does not establish small parameter or behavioral change; do not directly compare long/short per-token losses. The original 46694 cross-teacher predictions stay frozen; see review_53a565da and the correction sidecar in review_46694f51.
+
+4B M512 is frozen at 4545e365 after all three checks (512 of 572 processed parents). Four follow-up arms were admitted at ff01f612 within A6-2 USD50 and combined USD425. The existing finite A6-2 controller CLI10392/PID41284 owns those arms and their scoring/publication. Three are already evaluating; 4B long training is finishing. Never duplicate its jobs or edit its helpers while active. Base pair is complete and accepted53; any final six-arm aggregate must distinguish the four new outputs from the two already accepted Base outputs.
+
+Original 4B seed29 P/R/K8 are still training under09d531e0. L128 training is complete and its published fullgreedy request is running once: CLI60442, private LAUNCHES_25.json, request commit905976b1. After P/R/K8 COMPLETE, use existing prepare_t_post_any.py for reserved greedy, then score_endpoint.py and publish_t_seed29_cell.py. No new approval is required. Later4B A6-3 admission waits for A6-2 required arms and its USD35 cap. Budget snapshot is in EXECUTION_STATUS.json and review_53a565da/CONTINUATION_STATUS.json. Use BUDGET_ADMISSION.lock and GIT_PUBLICATION.lock plus ORIGINAL_T_LEDGER_CURRENT.json for concurrent accounting/publication.
+
+No new Modal calls. Preserve originals, unrelated lt002, credential privacy and draft-only correspondence. Earlier entries are historical.
+
 # Current P012 — 2026-11-14T04:14:49.877544+00:00
 
 Audit72575b42 accepts all14 endpoints from778dec3f; current audit flags are passed, original numbers and artifacts preserved. New4-endpoint packetfce5e186 is awaiting Claude numeric review:9B-Base M512 short70.14%,long87.66%,and4B K858.64%,K460.30%. The paired Base difference is+17.52pp; same512questions,128updates,seed17. Original4B seed17 is now all5complete(P60.06,K858.64,K460.30,R46.56,L65.60). Do not replay any completed call.

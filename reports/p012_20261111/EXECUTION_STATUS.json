@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T04:14:49.877544+00:00",
+  "updated_utc": "2026-11-14T04:55:10.457055+00:00",
   "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
   "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
   "C1": {
@@ -73,10 +73,10 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Finish original4B seed29 P/R/L/K8; prepare already-reserved greedy evaluations once each training completes",
-    "Finite A6-2 queue: finish4B M512 and four4B/cross-teacher arms",
-    "AfterA6-2 required arms complete, reconcile and admit4B A6-3 E4/E8/L64 underUSD35",
-    "Numerical audit of fce5e186; do not repeat accepted14 endpoints"
+    "Finish original 4B seed29 P/R/K8 training and all four already-reserved full greedy evaluations; L evaluation is active",
+    "Complete four A6-2 arms on the frozen 4B M512 data; Base pair already accepted by 53a565da",
+    "After required A6-2 arms complete, reconcile and admit 4B A6-3 E4/E8/L64 under the USD35 cap",
+    "Submit only new 4B M512/four-arm and seed29 results for numerical audit; do not repeat accepted endpoints"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -93,7 +93,8 @@
     "a56115d6",
     "169754c427d8e2b748fb925e03d31bbabcf8ab9d",
     "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
-    "72575b42a1d2ca80004d9114c0bcc2f6b66da26c"
+    "72575b42a1d2ca80004d9114c0bcc2f6b66da26c",
+    "53a565dadcd648c50ac1ac2a3c08f5c69da123d0"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -159,13 +160,17 @@
     "results_after72575b42_v1",
     "a6_2_tinker_lora_9b_base_pair_v1",
     "tinker_lora_4b_math_seed17_complete_v1",
-    "tinker_lora_4b_seed29_admission_v1"
+    "tinker_lora_4b_seed29_admission_v1",
+    "review_53a565da",
+    "a6_2_4b_m512_and_cross_teacher_preparation_v1",
+    "a6_2_4b_and_cross_teacher_admission_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
     "second_workspace": "b886b64cea2603f876ab1776325e24a26df55ba8",
     "numeric_audit_and_cross_teacher": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
-    "14_endpoint_numeric_audit": "72575b42a1d2ca80004d9114c0bcc2f6b66da26c"
+    "14_endpoint_numeric_audit": "72575b42a1d2ca80004d9114c0bcc2f6b66da26c",
+    "four_endpoint_numeric_audit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -227,7 +232,7 @@
     "A6_2_9B_paired_data_frozen": true,
     "A6_2_9B_training_active": false,
     "A6_3_unstarted": false,
-    "independent_result_review_next": "Only endpoints completed after46694f51 scope",
+    "independent_result_review_next": "4B M512 and four new A6-2 arms; original 4B seed29 outputs. Base M512 pair and 4B seed17 K8/K4 already accepted53a565da.",
     "raw_outputs_immutable": true,
     "Tier2_completed_generation_endpoints": 32,
     "Tier2_total": 32,
@@ -242,25 +247,21 @@
     "T9B_seed29_complete": true,
     "A6_3_9B_complete": true,
     "A6_2_Base_pair_active": false,
-    "A6_2_4B_M512_active": true,
+    "A6_2_4B_M512_active": false,
     "A6_2_Base_pair_complete": true,
     "A6_2_Base_short_accuracy": 0.7014,
     "A6_2_Base_long_accuracy": 0.8766,
     "T4B_K8_K4_training_complete": true,
     "T4B_seed17_all5_complete": true,
-    "T4B_seed29_active": true
+    "T4B_seed29_active": true,
+    "A6_2_4B_M512_complete": true,
+    "A6_2_four_followup_arms_active": true,
+    "T4B_seed29_L_training_complete": true,
+    "T4B_seed29_L_full_greedy_active": true
   },
-  "pending_owner_actions": [
-    {
-      "kind": "independent_numeric_review",
-      "commit": "fce5e186",
-      "path": "reports/p012_20261111/results_after72575b42_v1/README.md",
-      "scope": "4 new endpoints;20000 raw outputs;Base M512 pair plus4B K8/K4",
-      "execution_dependency": "Authorized4B seed29 andA6 queue continue"
-    }
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
-    "status": "running;Basepaircomplete,4B M512 constructionactive",
+    "status": "running; Base pair complete and accepted; 4B M512 frozen; four follow-up arms active",
     "arms": [
       "9B-Base short on9B M512",
       "9B-Base long on9B M512",
@@ -278,16 +279,28 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
+    "as_of_utc": "2026-11-14T04:55:10.457055+00:00",
     "original_T": 199.74734518875007,
-    "A6_2": 21.938298284000002,
+    "A6_2": 45.804972765500004,
     "A6_3": 17.030493692,
-    "combined": 238.71613716475008,
+    "combined": 262.5828116462501,
     "caps": [
       340,
       50,
       35,
       425
     ],
-    "ledger": "tinker_lora_4b_seed29_admission_v1/ADMISSION.json"
+    "original_T_ledger": {
+      "path": "reports/p012_20261111/tinker_lora_4b_seed29_admission_v1/ADMISSION.json",
+      "sha256": "bfc522ada9c5349e0b8b9fe954dc1fdc57c2bef1c8d228bc16c7b265217d1adb",
+      "value_field": "combined_reserved_usd"
+    },
+    "A6_2_latest_admission": "a6_2_4b_and_cross_teacher_admission_v1/ADMISSION.json",
+    "note": "Completed actuals plus outstanding admitted reservations; no new admission in this snapshot."
+  },
+  "interpretation_correction_53a565da": {
+    "retracted": "Low per-token training loss implies little parameter or behavioral change",
+    "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
+    "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   }
 }
