@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-14T06:44:02.909663+00:00",
+  "updated_utc": "2026-11-14T07:23:49.907137+00:00",
   "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
-  "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
+  "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -36,11 +36,21 @@
     "main_seed29_cells_complete": 32,
     "main_grid_total_complete": 72,
     "independent_audits_accepted": [
-      "8bbf06a7 (specified original Qwen coverage)",
-      "d2db987a (original91b650c5 only)",
-      "169754c4 (38-endpoint304cc5ee packet, M512, K4 recovery)"
+      "020017ae",
+      "601aebd2",
+      "54f697e6",
+      "e10a4bf5",
+      "07b56e49",
+      "7abcc305",
+      "8bbf06a7",
+      "a56115d6",
+      "169754c427d8e2b748fb925e03d31bbabcf8ab9d",
+      "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
+      "72575b42a1d2ca80004d9114c0bcc2f6b66da26c",
+      "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
+      "6af18b7263cdafa1c6c34efb89fdea763d74d21e"
     ],
-    "pending_numeric_review": "35-endpointaddendum +3laterendpoints +firstreal72cellanalysis",
+    "pending_numeric_review": "Only newly completed original4B seed29 P/R/K8, A6-3 4B, and A7 endpoints; previously accepted outputs excluded",
     "registered_analysis_real_data_execution": "SUCCESS; accepted169754c4;13tests;run3a2984e3",
     "raw_outputs_immutable": true
   },
@@ -62,21 +72,24 @@
     },
     "modal_phase_caps": "soft; report and continue within workspace hard gate",
     "tinker_original_cap": 340,
-    "tinker_original_reserved": 204.69578933025,
+    "tinker_original_reserved": 199.74734518875007,
     "A6_2_cap": 50,
-    "A6_2_accounted_and_reserved": 12.860184982,
+    "A6_2_accounted_and_reserved": 38.430015023,
     "A6_3_cap": 35,
-    "A6_3_reserved": 22.473336628,
-    "tinker_combined_cap": 425,
-    "tinker_protected_from_initial750": 325,
-    "tinker_sampling_admission": "measured token cost x1.5"
+    "A6_3_reserved": 32.19587010199999,
+    "tinker_combined_cap": 485,
+    "tinker_protected_from_initial750": 265,
+    "tinker_sampling_admission": "measured token cost x1.5",
+    "A7_cap": 60,
+    "A7_accounted_and_reserved": 50.222279831
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Continue existing original4B seed29 P/R/K8 training and reserved greedy through its finite controller",
-    "Continue existing A6-3 4B E4/E8; admit L64 only under the unchanged reconciled budget gate",
-    "Next numeric review includes only newly completed P/R/K8 andA6-3 endpoints; L29 and allA6-2 arms are already accepted",
-    "Same-source short controls andA6-2 second seeds await owner decision andClaude amendment7; do not launch"
+    "Continue existing original4B seed29 P/R/K8 and A6-3 queues without interruption",
+    "A7-2 controller finishes four launched seed29 M512 short/long arms",
+    "A7-1 controller finishes seed17 concise9B/4B/Base,then admits9B/4Bseed29 from measured sampling costs",
+    "Assemble posthoc full concise-data review and only new endpoint evidence for Claude",
+    "Prepare A7 two-seed joint-question-bootstrap evidence; retain existing mainH0-H3 results unchanged"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -168,7 +181,12 @@
     "a6_2_after46694_results_v1",
     "a6_3_4b_e4_e8_admission_v1",
     "results_after53a565da_v1",
-    "review_6af18b72"
+    "review_6af18b72",
+    "a7_2_seed29_admission_v1",
+    "a7_1_construction_admission_v1",
+    "a7_1_concise_data_v1",
+    "a7_1_concise_seed17_admission_v1",
+    "a7_execution_status_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -176,7 +194,8 @@
     "numeric_audit_and_cross_teacher": "46694f515ff2c6d1f78931761f3f8e47dd0de2cb",
     "14_endpoint_numeric_audit": "72575b42a1d2ca80004d9114c0bcc2f6b66da26c",
     "four_endpoint_numeric_audit": "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
-    "five_endpoint_and_4B_M512_audit": "6af18b7263cdafa1c6c34efb89fdea763d74d21e"
+    "five_endpoint_and_4B_M512_audit": "6af18b7263cdafa1c6c34efb89fdea763d74d21e",
+    "A7": "2289056089f9ff3467d490efe93a92a07effb063"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -238,7 +257,7 @@
     "A6_2_9B_paired_data_frozen": true,
     "A6_2_9B_training_active": false,
     "A6_3_unstarted": false,
-    "independent_result_review_next": "Only original4B seed29 P/R/K8 andA6-3 4B endpoints completed afterf6785133",
+    "independent_result_review_next": "Only newly completed original4B seed29 P/R/K8, A6-3 4B, and A7 endpoints; previously accepted outputs excluded",
     "raw_outputs_immutable": true,
     "Tier2_completed_generation_endpoints": 32,
     "Tier2_total": 32,
@@ -296,39 +315,43 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-14T05:21:09.914670+00:00",
+    "as_of_utc": "2026-11-14T07:23:49.907137+00:00",
     "original_T": 199.74734518875007,
     "A6_2": 38.430015023,
     "A6_3": 32.19587010199999,
-    "combined": 270.37323031375007,
-    "caps": [
-      340,
-      50,
-      35,
-      425
-    ],
+    "A7": 50.222279831,
+    "combined": 320.59551014475005,
+    "caps": {
+      "original_T": 340,
+      "A6-2": 50,
+      "A6-3": 35,
+      "A7": 60,
+      "combined": 485
+    },
     "original_T_ledger": {
       "path": "reports/p012_20261111/tinker_lora_4b_seed29_admission_v1/ADMISSION.json",
       "sha256": "bfc522ada9c5349e0b8b9fe954dc1fdc57c2bef1c8d228bc16c7b265217d1adb",
       "value_field": "combined_reserved_usd"
     },
-    "current_snapshot": "results_after53a565da_v1/BUDGET_SNAPSHOT.json",
-    "note": "Completed actual token-cost upper bounds plus outstanding reservations; not a provider invoice."
+    "current_snapshot": "reports/p012_20261111/a7_execution_status_v1/BUDGET_SNAPSHOT.json",
+    "note": "Completed token-cost upper bounds plus outstanding reservations; originalT remains a conservative published reservation. Not a provider invoice."
   },
   "interpretation_correction_53a565da": {
     "retracted": "Low per-token training loss implies little parameter or behavioral change",
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "review_53a565da/CONTINUATION_QUEUES.json",
-  "background_status": "results_after53a565da_v1/BACKGROUND_STATUS.json",
+  "finite_continuation_queues": "reports/p012_20261111/a7_execution_status_v1/BACKGROUND_STATUS.json",
+  "background_status": "reports/p012_20261111/a7_execution_status_v1/BACKGROUND_STATUS.json",
   "amendment7_status": {
-    "authorized": false,
-    "awaits": "Owner decision andClaude amendment7 with frozen predictions",
-    "proposed_only": [
-      "Same-source short-answer controls",
-      "A6-2 second training seed"
-    ]
+    "authorized": true,
+    "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
+    "A7_2": "Four seed29 short/long arms launched; finite continuation active",
+    "A7_1": "Both512-row concise datasets complete,zero fallbacks; report465bf2c1 delivered; three seed17 arms launched; two seed29 arms follow measured-cost admission",
+    "data_report": "a7_1_concise_data_v1/DATA_REPORT.json",
+    "posthoc_full_data_audit": "pending;1024rows and1026attempts",
+    "exploratory_excluded_H0_H3": true,
+    "new_endpoints_require_prescore_utc": true
   },
   "future_prediction_record_requirement": "review_6af18b72/FORWARD_RECORDING_REQUIREMENTS.json"
 }
