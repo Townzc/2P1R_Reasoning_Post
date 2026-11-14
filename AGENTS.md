@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-14T08:35:37.186117+00:00; recovery healthy, A7 13/15 ready
+
+Both detached controllers survived the conversation transition and all three active trainings made verified progress. A7_RECOVERY_QUEUE PID51565 owns 9B/4B concise seed29, then complete15-input freeze and one accepted A7 analysis. A6_3_RECOVERY_QUEUE PID51566 owns E4 recovery, then E8 and L64 only within35. Never duplicate these calls or edit active helpers. Read recovery_health_20261114_v1/STATUS.json and live private states.
+
+4B concise seed17 full greedy retry is complete:71.26%,5000 outputs,published bb083771. All13 complete analysis endpoints/65000 raw outputs pass the accepted evidence reader; two concise29 endpoints remain. The first real A7 statistics are not yet run. The existing controller publishes a7_analysis_8a8fac5c_v1 and private A7_NEXT_REVIEW.json after all15; then return the output/full manifest to Claude for independent numerical review. Accepted8a8fac5c, bootstrap core and4B40-row data limitation remain binding.
+
+Accounted plus reserved: A7 USD38.176855/60, A6-3 USD29.231542/35, combined USD305.585757/485, including failures. No new Modal/GSM jobs. Preserve originals, unrelated lt002, shared locks, credential privacy and draft-only external correspondence. Earlier entries are historical.
+
 # Current P012 — 2026-11-14T08:03:53.670006+00:00; accepted8a8fac5c and detached recovery
 
 Audit8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4 PASSED all six95e52770endpoints/30000outputs,both concise full constructions,and the A7 analysis adapter. Accepted constant is filled;12tests pass; bootstrapcore SHA remainsb6973ad67c8eff3cec08806a553754911113944a044c9248bdb45aa1ac8d0b06. Numeric output must wait for all15endpoints;12are ready. No further pre-use approval is pending. The first real analysis output plus full manifest must be sent for numeric review. Use review_8a8fac5c records.

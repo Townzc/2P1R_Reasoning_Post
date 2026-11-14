@@ -1,3 +1,7 @@
+## P012 recovery verification — 2026-11-14T08:35:37.186117+00:00
+
+Codex checked detached process continuity, verified live update progress and budgets, and validated13 published A7 analysis endpoints/65000 outputs using the accepted evidence reader. No new scoring, statistics, model calls, scientific settings or external messages were introduced by this check. The existing authorized queues continue.
+
 
 ## 2026-11-13T22:24:26.051096+00:00 P012 technical execution
 
