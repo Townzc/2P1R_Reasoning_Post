@@ -1,6 +1,6 @@
 # Current P012 — 2026-11-14T00:35:17.923777+00:00
 
-All72 main cells are complete and published locally:40 seed17 +32 seed29. The final Qwen Instruct GSMK8 seed29 cell uses training/evaluationv2 after the preserved915step preemption. New result addendum freezes35 endpoints (32 Tier2,2 A6-2 9B arms,1 T9B L29). Original review304cc5ee remains pending; do not run analysis/p012_registered.py on real data before actualClaude approval. All model paths remain authorized.
+All72 main cells are complete and published locally:40 seed17 +32 seed29. The final Qwen Instruct GSMK8 seed29 cell uses training/evaluationv2 after the preserved915step preemption. New result addendum freezes35 endpoints (32 Tier2,2 A6-2 9B arms,1 T9B L29). Review169754c4 accepts the38-endpoint304cc5ee packet, M512 andK4 recovery. Owner authorizes real analysis afterA1-A6 with no re-review. A1-A6 are implemented and13 synthetic tests pass; input manifest is being prepared. Run with accepted_analysis_review_commit169754c427d8e2b748fb925e03d31bbabcf8ab9d. The35-endpointaddendum and first real numeric output need the next result audit. All model paths remain authorized.
 
 Instruct bridgeL training andinitial20 complete, trainable params36,929,536 and128updates verified. Adapted20 request is bound to CHECKPOINT_FILES.json; run it, compare token outputs with initial20, then full5000 only if B3 passes. Four-call budget already reserved. Other4 remain unadmitted until fullL cap<=25percent and new workspace admission. Always explicit MODAL_PROFILE=townzc; no source edits during Modal image upload.
 

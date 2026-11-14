@@ -1,0 +1,12 @@
+# Accepted analysis review 169754c4: implementation and policy
+
+Authority: `169754c427d8e2b748fb925e03d31bbabcf8ab9d`, section7. The owner authorized real-data execution after A-1 through A-6, without another code review. This record precedes the first two-seed statistical run.
+
+1. A-1: each trained endpoint binds a training manifest and checkpoint inventory by SHA256. Cell, actual training/data seed, initialization repository, task-specific dataset name and accepted C6 hash, and planned update count are checked. Generation must identify that training run and the same checkpoint and training-manifest hashes. Sampling seed is not a training-seed check. Untrained baselines must identify the matching pretrained model. Three required swapped-cell, swapped-initialization and swapped-training-seed tests raise errors.
+2. A-2: four-shot remains the primary SFT baseline. Instruct settings also report paired SFT against zero-shot. Both baseline accuracies and termination statistics are shown, with the higher paired baseline identified. G0 Li scores are hash-bound read-only references and do not enter paired differences.
+3. A-3: L-R is computed with the same paired bootstrap, labelled derived from PR-data and not independently preregistered.
+4. A-4: all72 cells, including seed17 K4, and every measured C7/A5 baseline bind termination summaries. Above20% caps, first-box diagnostic accuracy is carried alongside the unchanged registered metric. Missing baseline termination summaries use the existing accepted summarizer; missing required diagnostics use the existing A6 diagnostic path.
+5. A-5: noticeable means the absolute two-seed mean is at least3pp, its joint question-bootstrap95% interval excludes0, and both seed estimates have the same nonzero sign. Per-seed intervals and flags remain visible. The interval estimates question sampling conditional on two seeds, not variation across training seeds. This rule was frozen in169754c4 before this analysis.
+6. A-6: every setting requires capability notes. Both Llama base settings flag conversation nontermination; Llama Instruct GSM8K flags answer-only prompting. All four H1 correlations remain reported; negative NLL per character is the primary interpretation across families.
+
+Thirteen synthetic tests pass. Raw generations and registered labels remain unchanged. The first real output and its input bindings will be sent for the independent numerical check promised in review section7.

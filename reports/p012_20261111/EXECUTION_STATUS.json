@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T00:35:17.923777+00:00",
+  "updated_utc": "2026-11-14T00:48:54.090550+00:00",
   "stage": "All72 main cells complete; result/analysis review pending; Tinker and Instruct bridge continue",
   "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
   "C1": {
@@ -37,10 +37,11 @@
     "main_grid_total_complete": 72,
     "independent_audits_accepted": [
       "8bbf06a7 (specified original Qwen coverage)",
-      "d2db987a (original91b650c5 only)"
+      "d2db987a (original91b650c5 only)",
+      "169754c4 (38-endpoint304cc5ee packet, M512, K4 recovery)"
     ],
-    "pending_numeric_review": "304cc5ee plus addendum_after304_v1",
-    "registered_analysis_real_data_execution": "await first-use Claude review",
+    "pending_numeric_review": "addendum_after304_v1:35 endpoints; first real analysis output once produced",
+    "registered_analysis_real_data_execution": "Authorized afterA1-A6;13 synthetic tests passed; manifest preparation in progress",
     "raw_outputs_immutable": true
   },
   "budget_usd": {
@@ -90,7 +91,8 @@
     "07b56e49",
     "7abcc305",
     "8bbf06a7",
-    "a56115d6"
+    "a56115d6",
+    "169754c427d8e2b748fb925e03d31bbabcf8ab9d"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -221,15 +223,8 @@
     "A6_2_9B_long_accuracy": 0.9114,
     "A6_3_9B_active": true,
     "bridge_instruct_L": "training andinitial20 complete;adapted20 next",
-    "registered_analysis": "await actualClaude first-use review304cc5ee",
+    "registered_analysis": "169754c4 accepted;A1-A6 implemented;13 tests pass;first real run next",
     "Tier2_complete_cells": 32
   },
-  "pending_owner_actions": [
-    {
-      "kind": "independent_results_and_first_use_analysis_review",
-      "commit": "304cc5ee",
-      "path": "reports/p012_20261111/results_and_analysis_review_20261113_v2/README.md",
-      "execution_dependency": "Only new registered analysis script waits; authorized model work continues"
-    }
-  ]
+  "pending_owner_actions": []
 }
