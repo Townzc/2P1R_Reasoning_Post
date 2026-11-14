@@ -1,0 +1,92 @@
+{
+  "note": "Existing evidence for frozen comparisons; these are not new endpoints in the current review count. Historical pending fields inside immutable original results are not a request to repeat prior accepted audits.",
+  "references": [
+    {
+      "label": "9B_own_long",
+      "reference_only": true,
+      "result_path": "reports/p012_20261111/a6_2_tinker_lora_9b_math_long_s17_v1/RESULTS.json",
+      "result_sha256": "3d2b73d7069c503c53229cd899913025d01aadf4d2d8f5826339808d4a506e04",
+      "archive_path": "reports/p012_20261111/a6_2_tinker_lora_9b_math_long_s17_v1/evidence.zip",
+      "archive_sha256": "6dcdecf34a81d371f85fe27f0954ad4732881620b9a818032a30a228a59d10d8",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 4557,
+        "accuracy": 0.9114,
+        "length_cap_count": 338,
+        "length_cap_rate": 0.0676,
+        "loop_count": 4,
+        "capped_loop_count": 2,
+        "normally_terminated_count": 4662,
+        "normally_terminated_correct": 4548,
+        "normally_terminated_accuracy": 0.9755469755469756
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 456,
+        "accuracy": 0.912,
+        "length_cap_count": 39,
+        "length_cap_rate": 0.078,
+        "loop_count": 0,
+        "capped_loop_count": 0,
+        "normally_terminated_count": 461,
+        "normally_terminated_correct": 454,
+        "normally_terminated_accuracy": 0.9848156182212582
+      }
+    },
+    {
+      "label": "4B_L_seed17",
+      "reference_only": true,
+      "result_path": "reports/p012_20261111/tinker_lora_qwen3_5_4b_math_l_s17_v1/RESULTS.json",
+      "result_sha256": "d36e25674741e52cc6e6eca4590c1b511c97657557eb547046e9f23681db1da9",
+      "archive_path": "reports/p012_20261111/tinker_lora_qwen3_5_4b_math_l_s17_v1/evidence.zip",
+      "archive_sha256": "09038dbb08f6cb8c15a7cd9d918b413d86aee3efa0d1169253263c982e0c43ca",
+      "MATH5000": {
+        "responses": 5000,
+        "correct": 3280,
+        "accuracy": 0.656,
+        "length_cap_count": 263,
+        "length_cap_rate": 0.0526,
+        "loop_count": 167,
+        "capped_loop_count": 163,
+        "normally_terminated_count": 4737,
+        "normally_terminated_correct": 3280,
+        "normally_terminated_accuracy": 0.69242136373232
+      },
+      "MATH500": {
+        "responses": 500,
+        "correct": 317,
+        "accuracy": 0.634,
+        "length_cap_count": 30,
+        "length_cap_rate": 0.06,
+        "loop_count": 21,
+        "capped_loop_count": 20,
+        "normally_terminated_count": 470,
+        "normally_terminated_correct": 317,
+        "normally_terminated_accuracy": 0.674468085106383
+      }
+    },
+    {
+      "label": "4B_pre_0shot",
+      "reference_only": true,
+      "archive_path": "reports/p012_20261111/tinker_lora_pre_math_v1/4b_evidence.zip",
+      "archive_sha256": "d4f7a5b09f4a435ef535712736c5b8ab26faa2173892e1b6c294f117901d9684",
+      "termination_member": "baseline0/TERMINATION.json",
+      "raw_member": "baseline0/result/generation/raw.jsonl",
+      "labels_member": "baseline0/scores/labels.jsonl",
+      "MATH500": {
+        "responses": 500,
+        "correct": 409,
+        "accuracy": 0.818,
+        "length_cap_count": 36,
+        "length_cap_rate": 0.072,
+        "loop_count": 1,
+        "capped_loop_count": 1,
+        "normally_terminated_count": 464,
+        "normally_terminated_correct": 409,
+        "normally_terminated_accuracy": 0.8814655172413793
+      },
+      "raw_sha256": "b2aec8565015beb68ab1338d098cbc9f52dc4bc277a5f48b13b251cc04447ff9",
+      "labels_sha256": "9fb0e6cfd1f454cc8ab14c473dd95762ee5da56f8c4f97cde8429e7fcd10f9da"
+    }
+  ]
+}
