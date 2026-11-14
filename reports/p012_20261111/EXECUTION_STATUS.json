@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-14T03:47:36.533079+00:00",
+  "updated_utc": "2026-11-14T04:14:49.877544+00:00",
   "stage": "All72 main-grid cells and first two-seed analysis independently audited; exploratory follow-ups continue",
   "plan": "P012 v1 plus owner-approved amendments1–6 and second-workspace addendum",
   "C1": {
@@ -73,10 +73,10 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Launch already-reserved4B K8/K4 full5000 greedy evaluations",
-    "Finite A6-2 queue continues4B M512 construction and four follow-up arms under existing caps",
-    "Next numeric review covers outputs outside72575b42; no repeated review of accepted14",
-    "Reconcile originalT and A6 ledgers before later4B seed29 andA6-3 admissions"
+    "Finish original4B seed29 P/R/L/K8; prepare already-reserved greedy evaluations once each training completes",
+    "Finite A6-2 queue: finish4B M512 and four4B/cross-teacher arms",
+    "AfterA6-2 required arms complete, reconcile and admit4B A6-3 E4/E8/L64 underUSD35",
+    "Numerical audit of fce5e186; do not repeat accepted14 endpoints"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -155,7 +155,11 @@
     "instruct_bridge_remaining_results_v1",
     "results_after46694_v1",
     "a6_2_base_and_4b_admission_v1",
-    "review_72575b42"
+    "review_72575b42",
+    "results_after72575b42_v1",
+    "a6_2_tinker_lora_9b_base_pair_v1",
+    "tinker_lora_4b_math_seed17_complete_v1",
+    "tinker_lora_4b_seed29_admission_v1"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -242,11 +246,21 @@
     "A6_2_Base_pair_complete": true,
     "A6_2_Base_short_accuracy": 0.7014,
     "A6_2_Base_long_accuracy": 0.8766,
-    "T4B_K8_K4_training_complete": true
+    "T4B_K8_K4_training_complete": true,
+    "T4B_seed17_all5_complete": true,
+    "T4B_seed29_active": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "kind": "independent_numeric_review",
+      "commit": "fce5e186",
+      "path": "reports/p012_20261111/results_after72575b42_v1/README.md",
+      "scope": "4 new endpoints;20000 raw outputs;Base M512 pair plus4B K8/K4",
+      "execution_dependency": "Authorized4B seed29 andA6 queue continue"
+    }
+  ],
   "A6_2_finite_continuation": {
-    "status": "running",
+    "status": "running;Basepaircomplete,4B M512 constructionactive",
     "arms": [
       "9B-Base short on9B M512",
       "9B-Base long on9B M512",
@@ -260,6 +274,20 @@
     "automatic_experiment_retries": 0,
     "new_scientific_runner_paths": false,
     "completed_outputs": "Existing scorer, unchanged raw originals, individual public result archives and final six-arm packet",
-    "excluded_from_H0_H3": true
+    "excluded_from_H0_H3": true,
+    "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
+  },
+  "Tinker_current_reservation": {
+    "original_T": 199.74734518875007,
+    "A6_2": 21.938298284000002,
+    "A6_3": 17.030493692,
+    "combined": 238.71613716475008,
+    "caps": [
+      340,
+      50,
+      35,
+      425
+    ],
+    "ledger": "tinker_lora_4b_seed29_admission_v1/ADMISSION.json"
   }
 }

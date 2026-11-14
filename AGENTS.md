@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-14T04:14:49.877544+00:00
+
+Audit72575b42 accepts all14 endpoints from778dec3f; current audit flags are passed, original numbers and artifacts preserved. New4-endpoint packetfce5e186 is awaiting Claude numeric review:9B-Base M512 short70.14%,long87.66%,and4B K858.64%,K460.30%. The paired Base difference is+17.52pp; same512questions,128updates,seed17. Original4B seed17 is now all5complete(P60.06,K858.64,K460.30,R46.56,L65.60). Do not replay any completed call.
+
+4B seed29 P/R/L/K8 are admitted and launched once under09d531e0. Original CLI IDs inLAUNCHES_24: P45450,R91751,L39297,K835949. On COMPLETE, useprepare_t_post_any.py for already-reserved greedy, then score_endpoint.py andpublish_t_seed29_cell.py. Same frozen8bb prediction, originalT track. Prior costs were reconciled once; newbatch27.332764,originalT199.747345,A6-2 21.938298,A6-3 17.030494,combined238.716137. Caps340/50/35,combined425.
+
+The A6-2 finite controller was restarted at a safe idle checkpoint solely for ledger coordination; no paid call stopped or replayed. Current controller CLI10392/PID41284, stateA6_2_FINITE_QUEUE.json. It owns only the Basepair and four4B/cross arms; Basepair is published,4B M512 is still constructing. Its dynamic originalT source isORIGINAL_T_LEDGER_CURRENT.json, now pointing to published09d531e0 admission. SharedBUDGET_ADMISSION.lock andGIT_PUBLICATION.lock serialize bookkeeping; use these locks for concurrent admissions/publication. Never start a second A6 controller or edit its helpers while active. Newcross predictions46694; existingBase/4B predictions18f. All scientific training/evaluation/scoring sources remain unchanged. New4B A6-3 admission waits for the A6-2 required arms and itsUSD35gate; GSM follows originalT MATH if time permits.
+
+No new Modal calls or extra approvals required. Pending numeric reviewfce5e186 does not block authorized work. Keep unrelatedlt002, all originals and credentials private. Earlier entries below are historical; old controller40432/PID40023 is stopped and superseded, not an experiment retry.
+
 # Current P012 — accepted72575b42
 
 The14 endpoints/70,000 outputs at778dec3f PASSED audit72575b42a1d2ca80004d9114c0bcc2f6b66da26c. Result JSON audit statuses and the current endpoint manifest are annotated; original result bytes and original manifest retained. No labels or numeric fields changed. All5Instruct bridge cells now independently accepted. The auditor's4000-replicate exploratory intervals remain separate from the10000-replicate main analysis. One-setting bridge agreement does not eliminate output-head/learning-rate differences generally.
