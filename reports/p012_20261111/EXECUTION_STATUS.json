@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-14T08:59:20.299721+00:00",
-  "stage": "Main72 cells audited; all15 A7 analysis inputs complete and first accepted exploratory analysis published; independent numeric review pending; A6-3 continues",
+  "updated_utc": "2026-11-14T22:08:12.242080+00:00",
+  "stage": "A7 fully audited; A6-3 E4 complete, E8 checkpoint export stopped at Tinker free storage limit; T-GSM preparation active",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -49,9 +49,10 @@
       "72575b42a1d2ca80004d9114c0bcc2f6b66da26c",
       "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
       "6af18b7263cdafa1c6c34efb89fdea763d74d21e",
-      "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4"
+      "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+      "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a"
     ],
-    "pending_numeric_review": "First A7 numerical output/full15-input manifest and6 new A7 endpoints/30000 outputs; accepted8a8fac5c and earlier outputs excluded",
+    "pending_numeric_review": "New A6-3 and forthcoming T-GSM only; all A7 analysis and6 endpoints acceptede9f0ebdd",
     "registered_analysis_real_data_execution": "SUCCESS; accepted169754c4;13tests;run3a2984e3",
     "raw_outputs_immutable": true
   },
@@ -86,8 +87,8 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Return first A7 output and full input manifest for independent numerical review under8a8fac5c",
-    "Continue A6-3 E4 recovery, settle costs, then E8; L64 only if existing35 cap permits"
+    "Resolve E8 sampler export from saved final training checkpoint without repeating training",
+    "Continue A6-3 and original T-GSM under existing budgets; combine newly completed results for review"
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -107,7 +108,8 @@
     "72575b42a1d2ca80004d9114c0bcc2f6b66da26c",
     "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
     "6af18b7263cdafa1c6c34efb89fdea763d74d21e",
-    "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4"
+    "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
+    "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -192,7 +194,8 @@
     "infrastructure_interruption_8a_v1",
     "a7_1_concise_seed29_admission_v1",
     "recovery_health_20261114_v1",
-    "a7_analysis_8a8fac5c_v1"
+    "a7_analysis_8a8fac5c_v1",
+    "review_e9f0ebdd"
   ],
   "latest_authorization": {
     "A6": "18f64e2df34944da9b8fc6378609ccbdeed1c587",
@@ -303,9 +306,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    "Return Claude numerical review of a7_analysis_8a8fac5c_v1; authorized A6-3 queue continues"
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -363,9 +364,8 @@
     "exploratory_excluded_H0_H3": true,
     "new_endpoints_require_prescore_utc": true,
     "pending_review": {
-      "status": "pending",
-      "packet_commit": "b8edefb7f3a57d7d70128cecba3a36a4ae9f1d51",
-      "scope": "First A7 analysis/full15-input manifest and6 previously unreviewed endpoints/30000 outputs"
+      "status": "passed",
+      "commit": "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a"
     },
     "analysis_adapter": "Accepted8a8fac5c adapter executed once after15 inputs; unchanged bootstrap core; first output b8edefb7",
     "analysis_ready_endpoints": 15,
@@ -375,7 +375,8 @@
     "prior_packet_review": {
       "status": "passed",
       "commit": "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4"
-    }
+    },
+    "prediction_audit": "All7passed;review_e9f0ebdd/PREDICTION_AUDIT.json"
   },
   "future_prediction_record_requirement": "A7 prediction records bind22890560 withISO8601UTC andrawSHA; older frozen records retained",
   "infrastructure_recovery_8a": {
@@ -385,7 +386,7 @@
     "retry_count_per_affected_call": 1,
     "no_additional_retry_authorized": true,
     "method": "Independent process sessions; stdin DEVNULL,log files; controllers observed PPID1",
-    "active": "A6-3 E4",
+    "active": "No active recovery controller; E8 training completed1024 and savedstate, samplerexport failed at free storage quota",
     "later": "A6-3 E8 then L64 only within35",
     "completed": "A7 recovered4Bconcise17 plus bothseed29 endpoints and first full analysis complete",
     "survived_conversation_transition": true

@@ -1,3 +1,7 @@
+## A7 independent audit acceptance — 2026-11-14T22:08:12.242080+00:00
+
+Codex recorded Claude e9f0ebdd acceptance of six endpoints and the first A7 analysis, preserving all frozen input/result bindings with acceptance sidecars. Seven prediction verdicts and4510 exact-match retry overlap are copied from the auditor; no labels or statistics were recomputed.
+
 ## P012 first A7 analysis and review delivery — 2026-11-14T08:59:20.299721+00:00
 
 Codex verified recovery continuity and completed the authorized A7 queue. After all15 frozen endpoints became available, the accepted8a8fac5c adapter ran once using the unchanged bootstrap core. The complete input manifest was published before execution. The review package binds75000 outputs and identifies6 new endpoints/30000 outputs for independent scoring. Delivery checks passed; first independent numerical review remains pending. A6-3 continues under its existing cap. No frozen labels/data/predictions, new scientific settings, course prose or external messages were introduced.

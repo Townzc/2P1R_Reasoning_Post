@@ -36,3 +36,9 @@
 [输入清单](INPUT_MANIFEST.json) · [来源定位](SOURCE_LOCATIONS.json) · [原始统计输出](RESULTS_NUMERIC.json) · [带数据说明的结果](RESULTS.json) · [运行记录](RUN_RECEIPT.json)
 
 [交付核对](DELIVERY_CHECK.json)验证了75,000条输出的全部15个绑定、首次运行记录与输入冻结提交；bootstrap未重跑、标签未改动。[队列与账目](CONTINUATION_STATUS.json)记录A7已完成、A6-3继续执行。
+
+## 独立数值复核已通过
+
+Claude `e9f0ebdd167aa012f1d2fe9e308002949e3ee48a` 已接受全部6个新端点和A7首次分析，90个值（含抽样序列哈希）零差异；修订7七条预测全部成立。4B concise seed17重试的4510道重合题文本、token及种子完全一致，按一次合规基础设施重试记录。标签保持原样。
+
+[接受记录](../review_e9f0ebdd/ACCEPTANCE.json) · [预测判定](../review_e9f0ebdd/PREDICTION_AUDIT.json)。输入清单及其绑定的15个RESULTS文件未改；首次运行时的分析说明输出保留为RESULTS_beforee9f0ebdd.json，当前RESULTS.json只新增本次审查标记。

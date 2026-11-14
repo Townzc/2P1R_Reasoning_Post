@@ -1,3 +1,11 @@
+# Current P012 — accepted e9f0ebdd; A7 fully audited, storage fault under inspection
+
+Owner accepts e9f0ebdd167aa012f1d2fe9e308002949e3ee48a. Six new A7 endpoints and first analysis passed;90 numeric values including draw hashes match;all7 predictions pass. Per-endpoint AUDIT_STATUS sidecars preserve all15 frozen RESULT hashes. Analysis RESULTS now names e9; original annotated output is preserved. No rerun or label change.
+
+A6-3 E4 completed55.32% at20b7d289. E8 retry completed all1024 updates and saved its final training state, then sampler export failed because Tinker reached100 free checkpoints (64.29GiB). Recovery controller stopped;no active model process. E8 has already used one infrastructure training retry; preserve its complete training and failed export, never repeat training. Storage/zero-update export disposition is under preparation. GSM8K is explicitly authorized after A7 by the latest owner instruction; unchanged-path CPU preparation is running. No additional scientific amendment. Preserve all existing checkpoints until storage disposition is concrete.
+
+No new Modal work. Shared budget and publication locks apply. Preserve unrelatedlt002, original bytes, private credentials and draft-only external correspondence. Earlier entries below are historical.
+
 # Current P012 — 2026-11-14T08:59:20.299721+00:00; A7 complete, first numerical review ready
 
 All15 A7 endpoints are complete. Existing controller51565 completed and published the first accepted analysis once at b8edefb7f3a57d7d70128cecba3a36a4ae9f1d51, after full input freeze5cae5aab. Packet: reports/p012_20261111/a7_analysis_8a8fac5c_v1. INPUT_MANIFEST binds15 endpoints/75000 outputs; NEW_ENDPOINTS_FOR_REVIEW includes only6 unaudited A7 endpoints/30000 outputs. Local delivery verification passed all hashes, training/data/seed bindings, original output identity and point-estimate arithmetic. No second bootstrap or re-scoring. Return first output/full manifest to Claude under8a8fac5c; independent numeric audit is pending.
