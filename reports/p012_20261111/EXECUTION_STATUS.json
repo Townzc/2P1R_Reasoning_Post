@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-15T02:28:28.668636+00:00",
-  "stage": "b0d31d3a seven endpoints accepted; original GSM queue continues; final review waits for all27",
-  "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
+  "updated_utc": "2026-11-15T03:10:10.635440+00:00",
+  "stage": "A8 approved: GSM reduced and3R active;22 Modal cells prepared pending required source review",
+  "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -50,9 +50,11 @@
       "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
       "6af18b7263cdafa1c6c34efb89fdea763d74d21e",
       "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
-      "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a"
+      "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a",
+      "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
+      "b0d31d3a6793aff81735d1ca636f113f27e5af2d"
     ],
-    "pending_numeric_review": "New A6-3 and forthcoming T-GSM only; all A7 analysis and6 endpoints acceptede9f0ebdd",
+    "pending_numeric_review": "4B GSM P plus retained R and conditional K8; all earlier b0 endpoints accepted. A8 Modal outputs not yet generated.",
     "registered_analysis_real_data_execution": "SUCCESS; accepted169754c4;13tests;run3a2984e3",
     "raw_outputs_immutable": true
   },
@@ -63,18 +65,20 @@
     "workspace_ledgers": {
       "tangzhice": {
         "protected": 4,
-        "latest_admission": "llama_tier2_admission_v1/ADMISSION.json"
+        "latest_admission": "llama_tier2_admission_v1/ADMISSION.json",
+        "latest_observed_balance": 29.05,
+        "latest_balance_receipt": "amendment8_modal_review_v1/MODAL_BALANCES.json"
       },
       "townzc": {
         "protected": 2,
-        "latest_observed_balance": 19.43,
-        "conservative_reserved_including_bridge_and_retry": 14.687460157589964,
-        "latest_admission": "instruct_bridge_remaining_admission_v1/ADMISSION.json"
+        "latest_observed_balance": 13.74,
+        "latest_admission": "instruct_bridge_remaining_admission_v1/ADMISSION.json",
+        "latest_balance_receipt": "amendment8_modal_review_v1/MODAL_BALANCES.json"
       }
     },
     "modal_phase_caps": "soft; report and continue within workspace hard gate",
     "tinker_original_cap": 340,
-    "tinker_original_reserved": 319.25032302525005,
+    "tinker_original_reserved": 269.36052944025005,
     "A6_2_cap": 48,
     "A6_2_accounted_and_reserved": 38.430015023,
     "A6_3_cap": 38,
@@ -88,13 +92,19 @@
     "T_GSM_pre_reserved": 27.198421719171,
     "storage_reserved": 30,
     "storage_included_in_original_T": true,
-    "account_billing_settings": "owner_only"
+    "account_billing_settings": "owner_only",
+    "A8_cap": 40,
+    "A8_accounted_and_reserved": 0,
+    "tinker_combined_accounted_and_reserved": 379.62427899225,
+    "T_GSM_accounted_and_reserved": 39.6131842515,
+    "cancelled_GSM_reserve_released": 47.25012729749999
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Continue the unchanged original27 GSM training cells; no replay of completed calls.",
-    "Once all27 are complete, deliver remaining22 endpoints for one independent result review with complete grid/baseline bindings for Claude G1-G3 comparison.",
-    "Preserve accepted4B capability exclusions and owner-only account/billing rule. No new amendment or owner decision pending."
+    "Return Claude source review for f7fcccff; no additional budget approval is needed.",
+    "Keep3 retained T-GSM R running; gate each K8 on P-R>=3pp and release any skipped reserve.",
+    "After accepted source diff and refreshed budget gate, run A10 then B7 then C5; audit A first.",
+    "Tinker A8 T4 remains unstarted until reviewed A passes Claude section5 decision."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -209,278 +219,19 @@
     "e8_storage_export_recovery_v1",
     "review_46e98da5",
     "results_after46e98da5_v1",
-    "review_b0d31d3a"
+    "review_b0d31d3a",
+    "amendment8_gsm_reduction_v1",
+    "amendment8_modal_review_v1",
+    "amendment8_status_v1"
   ],
   "latest_authorization": {
-    "utc": "2026-11-15T02:28:28.668636+00:00",
-    "accepted_review_commit": "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
-    "accepted_endpoint_count": 7,
-    "E8_recovery_audit": "passed",
-    "frozen_results_and_labels_unchanged": true,
-    "L64": {
-      "controller_pid": 68537,
-      "status": "complete",
-      "events": [
-        {
-          "utc": "2026-11-15T01:19:11.167274+00:00",
-          "stage": "launched",
-          "run_id": "a6_3_tinker_lora_4b_math_l64_s17_20261113_v1",
-          "pid": 68539
-        },
-        {
-          "utc": "2026-11-15T01:23:23.043451+00:00",
-          "stage": "evaluation_request_published",
-          "commit": "273b97a3d5365e6ec14347db6736a1ee8d121dd0"
-        },
-        {
-          "utc": "2026-11-15T01:23:23.061160+00:00",
-          "stage": "launched",
-          "run_id": "a6_3_tinker_lora_4b_math_l64_s17_greedy_20261113_v1",
-          "pid": 68757
-        },
-        {
-          "utc": "2026-11-15T01:39:57.313801+00:00",
-          "stage": "result_published",
-          "commit": "5072bc47a9351cb6c84fafe1f65d119f6ac73395",
-          "accuracy": 0.6692
-        }
-      ],
-      "automatic_retry": false
-    },
-    "GSM_queue": {
-      "status": "running",
-      "controller_pid": 65827,
-      "events": [
-        {
-          "utc": "2026-11-14T23:33:39.263298+00:00",
-          "stage": "waiting_for_three_reserved_NLL"
-        },
-        {
-          "utc": "2026-11-14T23:51:31.475389+00:00",
-          "stage": "budget_reconciled",
-          "GSM_usd": 90.46866539850001,
-          "original_T_usd": 320.2160105872501,
-          "all_tracks_usd": 426.81994115225007,
-          "commit": "aba08a3c1de6db667ca581437012597e435bf0f9"
-        },
-        {
-          "utc": "2026-11-14T23:51:31.493596+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
-          "pid": 66483
-        },
-        {
-          "utc": "2026-11-14T23:51:31.507004+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
-          "pid": 66485
-        },
-        {
-          "utc": "2026-11-14T23:51:31.520016+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
-          "pid": 66487
-        },
-        {
-          "utc": "2026-11-14T23:59:04.259172+00:00",
-          "stage": "evaluation_prepared",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_greedy_20261114_v1",
-          "commit": "50cfb0947fcc114ab7424f53e5443e59e50f5e98"
-        },
-        {
-          "utc": "2026-11-14T23:59:04.274102+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_greedy_20261114_v1",
-          "pid": 66740
-        },
-        {
-          "utc": "2026-11-14T23:59:15.955788+00:00",
-          "stage": "evaluation_prepared",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_greedy_20261114_v1",
-          "commit": "01b6f8314934b869b266e7b6e1b6b90a7e49cbec"
-        },
-        {
-          "utc": "2026-11-14T23:59:15.971289+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_greedy_20261114_v1",
-          "pid": 66765
-        },
-        {
-          "utc": "2026-11-15T00:01:09.266918+00:00",
-          "stage": "published",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
-          "commit": "2f94909a643235777743c05d1d6752f5e8476c6a"
-        },
-        {
-          "utc": "2026-11-15T00:07:12.935343+00:00",
-          "stage": "published",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
-          "commit": "db55f653a7192525ba98e2a79ad22b7f043abccd"
-        },
-        {
-          "utc": "2026-11-15T00:13:56.464205+00:00",
-          "stage": "evaluation_prepared",
-          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_greedy_20261114_v1",
-          "commit": "4a668270f3064bd8b94739e92aa820ff1e7a557f"
-        },
-        {
-          "utc": "2026-11-15T00:13:56.480268+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_greedy_20261114_v1",
-          "pid": 67102
-        },
-        {
-          "utc": "2026-11-15T00:17:40.436337+00:00",
-          "stage": "published",
-          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
-          "commit": "97ddca2be433b041f528fa6750d59074a025fe8c"
-        },
-        {
-          "utc": "2026-11-15T00:17:42.108656+00:00",
-          "stage": "budget_reconciled",
-          "GSM_usd": 89.50297783650001,
-          "original_T_usd": 319.25032302525005,
-          "all_tracks_usd": 425.85425359025004,
-          "commit": "b285d82590f64b69114b41930f22b73718d88d5f"
-        },
-        {
-          "utc": "2026-11-15T00:17:42.124633+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
-          "pid": 67197
-        },
-        {
-          "utc": "2026-11-15T00:17:42.137238+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1",
-          "pid": 67199
-        },
-        {
-          "utc": "2026-11-15T00:17:42.149349+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
-          "pid": 67201
-        },
-        {
-          "utc": "2026-11-15T01:04:37.315615+00:00",
-          "stage": "evaluation_prepared",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_greedy_20261114_v1",
-          "commit": "73f949f68baa12b9f63fce9d402dee024c976de7"
-        },
-        {
-          "utc": "2026-11-15T01:04:37.331855+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_greedy_20261114_v1",
-          "pid": 68024
-        },
-        {
-          "utc": "2026-11-15T01:06:30.995788+00:00",
-          "stage": "published",
-          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
-          "commit": "fd63758228e480bce2057d741c745307de2cebc2"
-        },
-        {
-          "utc": "2026-11-15T01:17:43.385335+00:00",
-          "stage": "evaluation_prepared",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_greedy_20261114_v1",
-          "commit": "d99bed890568f393b4e9879df27b0ac4eb2a05b8"
-        },
-        {
-          "utc": "2026-11-15T01:17:43.402747+00:00",
-          "stage": "launched",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_greedy_20261114_v1",
-          "pid": 68483
-        },
-        {
-          "utc": "2026-11-15T01:19:37.011936+00:00",
-          "stage": "published",
-          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1",
-          "commit": "9a7fac8f50f3eb09c9b2bf4a68c2dd2546131e9f"
-        }
-      ],
-      "automatic_retry": false
-    },
-    "4B_annotation_queue": {
-      "status": "running",
-      "controller_pid": 68792,
-      "events": [
-        {
-          "utc": "2026-11-15T01:23:29.822701+00:00",
-          "stage": "started",
-          "scope": "Nine original4BGSMcells; metadata and README only, no model calls"
-        },
-        {
-          "utc": "2026-11-15T01:23:31.402543+00:00",
-          "stage": "annotated",
-          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
-          "commit": "b84563ff1fdcb275e7a2ffc3a642fc75d9326f88"
-        }
-      ]
-    },
-    "4B_GSM_pass8": {
-      "status": "independent_result_audit_passed_b0d31d3a; descriptive_only",
-      "pass_at_1": 0.66275,
-      "pass_at_8": 0.932,
-      "new_sampling_calls": 0,
-      "eligible_for_pretraining_capability": false
-    },
-    "budget": {
-      "original_T_accounted_and_reserved_usd": 319.25032302525005,
-      "A6_2_accounted_and_reserved_usd": 38.430015023,
-      "A6_3_accounted_and_reserved_usd": 35.819990841,
-      "pre_A7_accounted_and_reserved_usd": 393.50032888925006,
-      "A7_accounted_and_reserved_usd": 36.013743688,
-      "combined_reserved_usd": 429.51407257725003,
-      "caps_usd": {
-        "original_T": 340,
-        "A6-2": 48,
-        "A6-3": 38,
-        "A7": 60,
-        "combined": 485
-      },
-      "legacy_reported_caps_usd": {
-        "original_T": 340,
-        "A6-2": 50,
-        "A6-3": 35,
-        "A7": 60,
-        "combined": 485
-      }
-    },
-    "budget_policy": {
-      "path": "reports/p012_20261111/review_46e98da5/BUDGET_POLICY.json",
-      "sha256": "d3a5b238f1a280f9f433e848e959bf86c0ffa2e915227d8807b74fcda36c8dd4"
-    },
-    "account_and_billing_settings": "Owner only; use read-only API rate/usage checks; stop and report if a setting change is needed.",
-    "next_result_review": {
-      "scope": "review_b0d31d3a/NEXT_REVIEW_SCOPE.json",
-      "gate": "All original27 GSM training endpoints complete",
-      "new_endpoint_count": 22,
-      "Claude_predictions": [
-        "G1",
-        "G2",
-        "G3"
-      ],
-      "status": "waiting_for_original_queue_completion; no owner decision pending"
-    },
-    "L64_result": {
-      "responses": 5000,
-      "correct": 3346,
-      "accuracy": 0.6692,
-      "length_cap_count": 396,
-      "length_cap_rate": 0.0792,
-      "loop_count": 262,
-      "capped_loop_count": 259,
-      "normally_terminated_count": 4604,
-      "normally_terminated_correct": 3346,
-      "normally_terminated_accuracy": 0.7267593397046047
-    },
-    "last_result_review": {
-      "packet_commit": "dee3b53cd4f57c4e35c21ad542f22750d2f5c26b",
-      "accepted_review_commit": "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
-      "status": "passed",
-      "endpoints": 7,
-      "outputs": 15595
-    }
+    "utc": "2026-11-15T03:10:10.635440+00:00",
+    "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "previous_result_audit": "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
+    "GSM_queue": "amendment8_status_v1/CONTINUATION_STATUS.json",
+    "modal_source_review_commit": "f7fcccff804aceb2fcd1a3e1882f326cf954b80a",
+    "modal_source_review_status": "pending",
+    "T_group_status": "not_started_conditional_on_A_result_audit"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -581,7 +332,14 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "kind": "relay_Claude_source_review",
+      "commit": "f7fcccff804aceb2fcd1a3e1882f326cf954b80a",
+      "reason": "A8 section4: new CELLS andmax_samples require source diff review",
+      "new_funding_decision_required": false
+    }
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -601,29 +359,41 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-15T02:28:28.668636+00:00",
-    "original_T": 319.25032302525005,
+    "utc": "2026-11-15T03:10:10.635440+00:00",
+    "ledger": {
+      "path": "reports/p012_20261111/amendment8_gsm_reduction_v1/ledgers/0002.json",
+      "sha256": "9f1f2b33fb5e0ee60e3d98f5d5698453173c74828ceedd7c0557144f8d7c6c66",
+      "value_field": "combined_reserved_usd"
+    },
+    "GSM": 39.6131842515,
+    "original_T": 269.36052944025005,
     "A6_2": 38.430015023,
     "A6_3": 35.819990841,
     "A7": 36.013743688,
-    "combined": 429.51407257725003,
+    "A8_Tinker": 0,
+    "combined": 379.62427899225,
     "caps": {
       "original_T": 340,
-      "A6-2": 48,
-      "A6-3": 38,
+      "A6_2": 48,
+      "A6_3": 38,
       "A7": 60,
+      "A8": 40,
       "combined": 485
     },
-    "current_snapshot": "review_b0d31d3a/CONTINUATION_STATUS.json",
-    "note": "Completed token-cost upper bounds plus outstanding reservations; includes storage reserve USD30 once. Not a provider invoice."
+    "storage_reserved_once_inside_original_T": 30,
+    "cancelled_reservations_released": 47.25012729749999,
+    "A8_T_not_admitted": true,
+    "modal_balance_receipt": "../amendment8_modal_review_v1/MODAL_BALANCES.json",
+    "modal_next22_forecast": 20.83136656423816,
+    "modal_source_review_pending": true
   },
   "interpretation_correction_53a565da": {
     "retracted": "Low per-token training loss implies little parameter or behavioral change",
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "review_b0d31d3a/CONTINUATION_STATUS.json",
-  "background_status": "review_b0d31d3a/CONTINUATION_STATUS.json",
+  "finite_continuation_queues": "amendment8_status_v1/CONTINUATION_STATUS.json",
+  "background_status": "amendment8_status_v1/CONTINUATION_STATUS.json",
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
@@ -648,7 +418,7 @@
     },
     "prediction_audit": "All7passed;review_e9f0ebdd/PREDICTION_AUDIT.json"
   },
-  "future_prediction_record_requirement": "A7 prediction records bind22890560 withISO8601UTC andrawSHA; older frozen records retained",
+  "future_prediction_record_requirement": "A8 endpoints: ISO8601 UTC and rawSHA bind5e1f9128 before scoring; original T-GSM8bb predictions retained; frozen historical records unchanged",
   "infrastructure_recovery_8a": {
     "preserved": "infrastructure_interruption_8a_v1/FAILURES.json",
     "original_bytes_unchanged": true,
@@ -660,5 +430,19 @@
     "later": "A6-3 E8 then L64 only within35",
     "completed": "A7 recovered4Bconcise17 plus bothseed29 endpoints and first full analysis complete",
     "survived_conversation_transition": true
+  },
+  "amendment8": {
+    "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "deviation_exposure": 5,
+    "original_GSM_cells": 27,
+    "cancelled_before_launch": 15,
+    "GSM_current_complete": 6,
+    "GSM_retained_R_active": 3,
+    "K8_condition": "P-R>=3pp per model",
+    "G1": "not_assessed",
+    "Modal_prepared": 22,
+    "Modal_started": 0,
+    "Tinker_T_started": 0,
+    "source_review_pending": "f7fcccff804aceb2fcd1a3e1882f326cf954b80a"
   }
 }

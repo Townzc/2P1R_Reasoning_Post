@@ -1,0 +1,116 @@
+{
+  "utc": "2026-11-15T03:10:10.635440+00:00",
+  "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+  "controller": {
+    "status": "running",
+    "controller_pid": 71326,
+    "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "policy_sha256": "8d51be3313f8f88e5e8c224d4a976abcf966bb67e751eb691a3119594ee7b937",
+    "events": [
+      {
+        "utc": "2026-11-15T02:48:59.562126+00:00",
+        "stage": "adopted_existing_queue",
+        "completed_before_decision": [
+          "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1"
+        ],
+        "adopted_running_calls": [
+          {
+            "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_greedy_20261114_v1",
+            "pid": 70855
+          }
+        ]
+      },
+      {
+        "utc": "2026-11-15T02:49:02.606388+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+        "commit": "784e8be0073433fc33e2b631c012a974995bcf54"
+      },
+      {
+        "utc": "2026-11-15T02:49:04.280479+00:00",
+        "stage": "annotated",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+        "commit": "86bcd4e2a6100614ef5eeacbe99c067546d2c5cd"
+      },
+      {
+        "utc": "2026-11-15T02:49:04.281222+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1"
+      },
+      {
+        "utc": "2026-11-15T02:49:05.841132+00:00",
+        "stage": "budget_reconciled",
+        "commit": "d9d9fee3f9d9fe11d24a7d4ae1d24d51768a14ff",
+        "GSM_usd": 39.6131842515,
+        "original_T_usd": 269.36052944025005,
+        "all_tracks_usd": 379.62427899225,
+        "cumulative_released_usd": 47.25012729749999
+      },
+      {
+        "utc": "2026-11-15T02:49:05.859104+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+        "pid": 71394
+      },
+      {
+        "utc": "2026-11-15T02:49:05.872655+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1",
+        "pid": 71396
+      },
+      {
+        "utc": "2026-11-15T02:49:05.885889+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1",
+        "pid": 71398
+      }
+    ],
+    "automatic_retry": false
+  },
+  "original_controller_status": "superseded; PID65827 and annotation PID68792 stopped without signaling any model call",
+  "R_progress": [
+    {
+      "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+      "pid": 71394,
+      "process_alive": true,
+      "latest_step": 131,
+      "expected_updates": 1024,
+      "training_request_sha256": "18c368a22dbb0dace5ef424421fe847080f643dd3e270b7c648d7eaf1e48cfb3"
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1",
+      "pid": 71396,
+      "process_alive": true,
+      "latest_step": 290,
+      "expected_updates": 1024,
+      "training_request_sha256": "059c42605e9fad0a0c0422d5e0c85dc5bcf804ec4214f98fe50ad45e463e3224"
+    },
+    {
+      "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1",
+      "pid": 71398,
+      "process_alive": true,
+      "latest_step": 476,
+      "expected_updates": 1024,
+      "training_request_sha256": "4bc7c777a9ffc84d30b7730270fcc247c1a575c48aa6924e29c2028fc4ff12b0"
+    }
+  ],
+  "GSM_complete_total": 6,
+  "GSM_previously_audited": 5,
+  "new_P4B": {
+    "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+    "correct": 1133,
+    "responses": 1319,
+    "accuracy": 0.8589840788476119,
+    "result_sha256": "d1327ca676867e3212ea9f8396c0a5a949cea8a2c86301aec66cf60f15e0bbcf",
+    "independent_result_audit": "pending with retained R and any admitted K8"
+  },
+  "cancelled15_never_started": true,
+  "K8": "conditional; per model P-R>=3pp; pending",
+  "no_model_calls_killed": true,
+  "modal_A8_calls_started": 0,
+  "Tinker_A8_T_calls_started": 0
+}
