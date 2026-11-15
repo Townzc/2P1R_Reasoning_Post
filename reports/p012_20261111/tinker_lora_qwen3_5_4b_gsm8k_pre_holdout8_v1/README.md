@@ -1,3 +1,5 @@
+独立结果审查已通过：`b0d31d3a6793aff81735d1ca636f113f27e5af2d`。当前状态见 `AUDIT_STATUS.json`；冻结结果与原标签保持不变。
+
 # Tinker4B GSM8K holdout sampling: existing outputs scored
 
 pass@1 66.275%; pass@8 93.20%. Correctdraws 2651/4000.
