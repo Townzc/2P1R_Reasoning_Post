@@ -1,3 +1,5 @@
+**Disposition46e98da5:** released for scoring; original4000outputs scored once without regeneration. Results: ../tinker_lora_qwen3_5_4b_gsm8k_pre_holdout8_v1/. Historical hold evidence remains unchanged.
+
 # 4B GSM8K pass@8: diversity guard hold
 
 All 4,000 outputs were generated through the reviewed independent single-sample path with 4,000 distinct seeds. 343/500 questions (68.6%) have at least seven distinct token sequences, below the80% runtime guard in a56115d6. Twelve questions have one distinct output. Original outputs are preserved; no scoring, replacement or repeat calls have occurred.

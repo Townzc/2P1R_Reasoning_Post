@@ -1,3 +1,5 @@
+4B GSM8K interpretation (46e98da5):0-shotincludes543/1319answer-only outputs. Use4-shot92.19%as pretraining reference. The subsequently scored4Bholdoutpass@1/pass@8is not used as pretraining capability because40.5%ofoutputsareanswer-only.
+
 **审查通过：46e98da5。** 12 个端点与 E8 仅导出恢复均通过；原始输出、标签、冻结 RESULTS 和输入清单保持不变，当前状态见 AUDIT_STATUS.json。GSM8K 的87条评分差异来自百分号处理，按原冻结 Codex 标签。
 
 # E8 恢复结果与新增 GSM8K 测量：下一轮独立审查
