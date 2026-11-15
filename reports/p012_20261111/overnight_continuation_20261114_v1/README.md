@@ -1,0 +1,7 @@
+# Existing overnight queues: scope and local-host dependency
+
+The three existing controllers remain active and detached from the chat turn. They run on the local Mac, so the remaining queue is not independent of host sleep or connectivity. Modal detached calls already submitted run remotely; advancing to the next call still requires the local controller. Tinker training is a local loop that submits each forward/backward and optimizer step to the remote service.
+
+At this check the Mac is on AC power. No queue-specific caffeinate process exists. Existing desktop-app sleep assertions should not be treated as a queue guarantee. The owner should keep the Mac connected to power and the internet, with the lid open, and run `caffeinate -is -t 43200` in a terminal left open. This supplies a temporary 12-hour sleep assertion; it does not change persistent power settings. Display sleep is allowed. The assistant has not executed that command or changed power settings.
+
+Only the previously admitted C, T01–T04 and reduced GSM8K work continues. Existing failures produce a stopped state and an error record, with no automatic experiment replay. Anything outside the approved rules remains stopped for the owner in the morning. Budgets, source hashes, data, evaluation protocols and checkpoint retention remain as approved. The exact reviewed T02 R-1 source transition is already part of the authorized queue.

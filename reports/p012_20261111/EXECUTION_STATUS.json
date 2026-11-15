@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T07:23:13.107897+00:00",
-  "stage": "A8_A_B_audited_C_and_T_continue_T02_R1_waiting",
+  "updated_utc": "2026-11-15T07:27:51.967869+00:00",
+  "stage": "authorized_overnight_queues_running_local_host_awake_and_network_required",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -345,7 +345,13 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "action": "keep_local_Mac_awake_connected_and_lid_open",
+      "reason": "All queue controllers and Tinker step loops run locally",
+      "suggested_command": "caffeinate -is -t 43200"
+    }
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -1034,5 +1040,13 @@
     "T02": "waiting for B/C and exact R-1 patch",
     "all_A8_checkpoints_retained": true,
     "new_experiments": 0
+  },
+  "overnight_policy_reference": "reports/p012_20261111/overnight_continuation_20261114_v1/POLICY_AND_HOST_CHECK.json",
+  "overnight_host_dependency": {
+    "local_host_awake_required": true,
+    "network_required": true,
+    "currently_on_AC": true,
+    "owner_keepawake_command": "caffeinate -is -t 43200",
+    "assistant_executed_keepawake_command": false
   }
 }

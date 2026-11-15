@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-15T07:27:51.967869+00:00; overnight authorized scope and host dependency
+
+Owner is offline overnight. Continue only existing C, T01–T04 and reduced GSM8K queues under their approved rules; no new approval is required for those calls. Anything outside the rules must stop with its reason/evidence recorded for morning owner handling. Do not expand experiments, replay calls, migrate execution, or change account/billing/storage/power settings. The exact reviewed T02 R-1 patch remains authorized; it is not a new settings change.
+
+Verified all three detached controllers alive and parent PID1: BC79497, T80440, GSM71326. These are LOCAL Mac processes. They survive a chat-turn end but require the Mac awake and online. Modal --detach protects an already submitted remote call, not the rest of the local queue. Tinker local Python submits each training step. Mac is on AC; no queue-specific caffeinate process exists. Owner needs power, network and open lid, and may run caffeinate -is -t43200 in a terminal left open for a temporary12-hour assertion. Assistant has not started it or changed settings. Do not claim cloud-independent orchestration or guaranteed overnight completion.
+
+Existing controllers record failed/stopped states and do not automatically replay experiments. Source hashes are unchanged. Combined Tinker accounted/reserved USD411.005838/485; A8 USD33.990063/40. Keep all A8 checkpoints. B audit19af6f32 remains accepted; original labels immutable. No external sends, course prose or subagents. Shared budget/Git locks through push; preserve unrelatedlt002. Host and policy receipt: overnight_continuation_20261114_v1/POLICY_AND_HOST_CHECK.json. Earlier entries are historical.
+
 # Current P012 — 2026-11-15T07:23:13.107897+00:00; B audit accepted, C/T continue
 
 Review 19af6f32186dbdc3f5286858abafa96b125256c3 accepts all seven B endpoints / 9,233 outputs in ee18042c. Additive endpoint/packet AUDIT_STATUS sidecars preserve frozen RESULTS, archives, labels and input manifest. B verdict under A8 section5: holds,6/7 hits,mean residual+0.57pp. Keep the accompanying comparison: K>1 RMSE registered2.44pp versus beta=1 2.09pp and beta=0 6.56pp. B01 gsm8k/test/0744 is the sole disagreement; preserve the original Codex incorrect label. No rescoring or new analysis is required.
