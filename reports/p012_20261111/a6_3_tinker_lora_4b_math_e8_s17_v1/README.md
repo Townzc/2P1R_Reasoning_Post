@@ -1,3 +1,5 @@
+**Independent audit passed:** `46e98da59753315694ebc4a0699f0b7c6c37a9c5`. Frozen RESULT/label/archive bytes are unchanged; `AUDIT_STATUS.json` records current acceptance.
+
 # A6-3 Tinker LoRA Qwen/Qwen3.5-4B: E8
 
 MATH5000: 2512/5000 = 50.24%. MATH500: 48.00%. Caps: 2.30%; loops: 53; normal-termination accuracy: 2512/4885.

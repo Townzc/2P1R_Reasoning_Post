@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-15T01:21:25.847183+00:00",
+  "accepted_review_commit": "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
+  "model": "Qwen/Qwen3.5-4B",
+  "task": "gsm8k",
+  "primary_pretraining_reference": "baseline4",
+  "baseline4": {
+    "path": "reports/p012_20261111/tinker_lora_qwen3_5_4b_gsm8k_pre_baseline4_v1/RESULTS.json",
+    "sha256": "3da07a89263148e3a7aa84e1fa17c2fbbda5c89e39940923a1056a76e04191a8",
+    "correct": 1216,
+    "questions": 1319,
+    "accuracy": 0.9219105382865808
+  },
+  "baseline0": {
+    "path": "reports/p012_20261111/tinker_lora_qwen3_5_4b_gsm8k_pre_baseline0_v1/RESULTS.json",
+    "sha256": "b7f5a2ac944a372e6f77d471ffd553e0d4fdc51b3820731963c66a49526f218c",
+    "answer_only_questions": 543,
+    "questions": 1319,
+    "eligible_for_pretraining_capability": false,
+    "interpretation": "0-shot65.81% includes543/1319answer-only outputs. Use4-shot92.19% as pretraining reference."
+  },
+  "holdout8": {
+    "answer_only_fraction_audited": 0.405,
+    "pass_at_1_eligible_for_pretraining_capability": false,
+    "pass_at_8_eligible_for_pretraining_capability": false,
+    "interpretation": "Report only as output-format-affected descriptive measurements;40.5%answer-only outputs."
+  },
+  "general_pass8_rule": {
+    "distinct_sampling_seeds_required": true,
+    "distinct_sequence_ids_required": true,
+    "record_all_eight_identical_question_count": true,
+    "stop_if_all_eight_identical_fraction_greater_than": 0.5,
+    "eighty_percent_rule_scope": "Only the three MATHv2repair endpoints froma56115d6"
+  }
+}
