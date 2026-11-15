@@ -1,0 +1,196 @@
+{
+  "utc": "2026-11-15T05:11:11.822821+00:00",
+  "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+  "base_commit": "d3723b7eb804420e09121b5f7269ddf300d8678a",
+  "base_training_config_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+  "candidate_training_config_sha256": "845af0841bc22aabecf5589b20b7d80d72659aebab622b40832107a5661dec4c",
+  "runner_source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "new_tuple": [
+    1024,
+    2,
+    4
+  ],
+  "rows": [
+    {
+      "run_id": "a8_t01_tinker_lora_4b_math_p2048_k2_e2_s17_v1",
+      "prediction": {
+        "cell": [
+          2048,
+          2,
+          2
+        ],
+        "C": 1.0,
+        "steps": 1024,
+        "pred": 59.96999999999999,
+        "se": 0.5713196031016217,
+        "alt_N": 60.5,
+        "alt_P": 55.89333333333333
+      },
+      "dose": {
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "dataset_sha256": "c439f4c154c24f4f147109c7f32805a1ed741cb30addc581fc47851ba8223184",
+      "archive_member": "candidate/P2048_K2.jsonl",
+      "request_sha256": "644bac7d4138357d0c2fb71bb35588796d87a18318cbfeccd9f70c5df83845bd",
+      "training_input_tokens": 3507148,
+      "supervised_target_tokens": 2651860,
+      "max_sequence_tokens": 2100,
+      "all_rows_mask_and_renderer_verified": true,
+      "order_sha256": "4adc57c03f009c0ad862f7f82ed5c7de3bbae8d5a890a64b9d5feefa8eb5f782",
+      "dataset_rows": 4096,
+      "admitted": false,
+      "training_buffered_usd": 3.330960095,
+      "reserved_greedy_usd": 4.7674145475,
+      "forecast_usd": 8.0983746425,
+      "A8_cap_usd": 40,
+      "combined_T_cap_usd": 485,
+      "sampling_rule": "maximum same-model main-grid MATH measured token cost x1.5",
+      "storage": "Global USD30 reserve remains counted once; training buffer includes0.10 per arm."
+    },
+    {
+      "run_id": "a8_t02_tinker_lora_4b_math_p1024_k2_e4_s17_v1",
+      "prediction": {
+        "cell": [
+          1024,
+          2,
+          4
+        ],
+        "C": 1.0,
+        "steps": 1024,
+        "pred": 55.36333333333333,
+        "se": 0.5436292386360395,
+        "alt_N": 55.89333333333334,
+        "alt_P": 51.28666666666667
+      },
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 2,
+        "distinct_rows": 2048,
+        "epochs": 4,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "dataset_sha256": "50eaa6943e02c4133ce780182bfad665cb4ac27659be2caef808d9b4802d165c",
+      "archive_member": "candidate/P1024_K2.jsonl",
+      "request_sha256": "d4bfea30ddd2ddf12b4de27ea754c4e99b82b47ba4d64f80ca1eca63d2e59017",
+      "training_input_tokens": 3453764,
+      "supervised_target_tokens": 2614844,
+      "max_sequence_tokens": 2100,
+      "all_rows_mask_and_renderer_verified": true,
+      "order_sha256": "bfa7d4d214ca475786ebbe9e036c906a46b25d83cacc379708c65aed79d2655f",
+      "dataset_rows": 2048,
+      "admitted": false,
+      "training_buffered_usd": 3.281780085,
+      "reserved_greedy_usd": 4.7674145475,
+      "forecast_usd": 8.049194632499999,
+      "A8_cap_usd": 40,
+      "combined_T_cap_usd": 485,
+      "sampling_rule": "maximum same-model main-grid MATH measured token cost x1.5",
+      "storage": "Global USD30 reserve remains counted once; training buffer includes0.10 per arm."
+    },
+    {
+      "run_id": "a8_t03_tinker_lora_4b_math_p4096_k1_e1_s17_v1",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 66.94333333333333,
+        "se": 0.6394357118883762,
+        "alt_N": 66.94333333333333,
+        "alt_P": 66.94333333333333
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 1,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "dataset_sha256": "06767f89c8393e7c167e42b04987273f21711e5fe5f14977516f55d12077ffac",
+      "archive_member": "candidate/P4096_K1.jsonl",
+      "request_sha256": "96170239a6170d5ac6c8c1157a60c58e74859aa03c37c39271ad629d59f8b837",
+      "training_input_tokens": 1760153,
+      "supervised_target_tokens": 1335701,
+      "max_sequence_tokens": 2100,
+      "all_rows_mask_and_renderer_verified": true,
+      "order_sha256": "f3602c11c832230aea71d85043210e928daa3e808a7153d1c5a72d9aacd7e99c",
+      "dataset_rows": 4096,
+      "admitted": false,
+      "training_buffered_usd": 1.72154095125,
+      "reserved_greedy_usd": 4.7674145475,
+      "forecast_usd": 6.488955498749999,
+      "A8_cap_usd": 40,
+      "combined_T_cap_usd": 485,
+      "sampling_rule": "maximum same-model main-grid MATH measured token cost x1.5",
+      "storage": "Global USD30 reserve remains counted once; training buffer includes0.10 per arm."
+    },
+    {
+      "run_id": "a8_t04_tinker_lora_4b_math_p4096_k2_e2_s17_v1",
+      "prediction": {
+        "cell": [
+          4096,
+          2,
+          2
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 58.133333333333326,
+        "se": 0.6413778874661612,
+        "alt_N": 58.663333333333334,
+        "alt_P": 54.056666666666665
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "distinct_rows": 8192,
+        "epochs": 2,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "dataset_sha256": "a8d85dd11411a43678d1849a0303ff51100d1ae12ae70607974c5d769290261d",
+      "archive_member": "candidate/P4096_K2.jsonl",
+      "request_sha256": "1c616d8f9fac26de51789a213232f4b47330db41a891e626c9cda731cff36022",
+      "training_input_tokens": 7040568,
+      "supervised_target_tokens": 5342760,
+      "max_sequence_tokens": 2100,
+      "all_rows_mask_and_renderer_verified": true,
+      "order_sha256": "80e1c601050847370b741e1068ab419ce9366715d3fda6fb38633f401fdd71c8",
+      "dataset_rows": 8192,
+      "admitted": false,
+      "training_buffered_usd": 6.586123269999999,
+      "reserved_greedy_usd": 4.7674145475,
+      "forecast_usd": 11.353537817499998,
+      "A8_cap_usd": 40,
+      "combined_T_cap_usd": 485,
+      "sampling_rule": "maximum same-model main-grid MATH measured token cost x1.5",
+      "storage": "Global USD30 reserve remains counted once; training buffer includes0.10 per arm."
+    }
+  ],
+  "total_forecast_usd": 33.990062591249995,
+  "A8_cap_usd": 40,
+  "admitted": false,
+  "model_calls": 0,
+  "gate": "Source accepted AND Claude A-group verdict >= partially holds AND current budget pass"
+}
