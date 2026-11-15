@@ -1,0 +1,88 @@
+{
+  "utc": "2026-11-15T06:02:03.144986+00:00",
+  "checks": [
+    {
+      "path": "p010-20261019/assets/t72/model-00001-of-00037.safetensors",
+      "classification": "downloaded_model_weight_cache",
+      "passed": true
+    },
+    {
+      "path": "p011-20261020/runs/example/model_for_vllm/model.safetensors",
+      "classification": "trained_model_weights",
+      "passed": true
+    },
+    {
+      "path": "p011-ext-3B-20261022/runs/example/checkpoint_0500/state.pt",
+      "classification": "training_state",
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/eval/logits.pt",
+      "classification": "keep_evaluation_or_uncertain_pt",
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/runs/checkpoint_0500/scores.pt",
+      "classification": "keep_evaluation_or_uncertain_pt",
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/unknown/model.safetensors",
+      "classification": "keep_uncertain_safetensors",
+      "passed": true
+    },
+    {
+      "path": "p012-20261111/runs/x/merged/model.safetensors",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "path": "p010-20261019-other/x/merged/model.safetensors",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/../p012/x/merged/model.safetensors",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "path": "/p010-20261019/x/merged/model.safetensors",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/runs/evidence.tar",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/runs/checkpoint_0500/manifest.json",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "path": "p010-20261019/runs/results.jsonl",
+      "classification": null,
+      "passed": true
+    },
+    {
+      "name": "below1TiB_fixed_reserve",
+      "passed": true
+    },
+    {
+      "name": "first_full_day_threshold_0.1",
+      "passed": true
+    },
+    {
+      "name": "first_full_day_threshold_0.100001",
+      "passed": true
+    },
+    {
+      "name": "closed_day_missing_receipt_stops_new_admission",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "no_remote_mutations_in_tests": true
+}
