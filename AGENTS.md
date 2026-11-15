@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-15T07:23:13.107897+00:00; B audit accepted, C/T continue
+
+Review 19af6f32186dbdc3f5286858abafa96b125256c3 accepts all seven B endpoints / 9,233 outputs in ee18042c. Additive endpoint/packet AUDIT_STATUS sidecars preserve frozen RESULTS, archives, labels and input manifest. B verdict under A8 section5: holds,6/7 hits,mean residual+0.57pp. Keep the accompanying comparison: K>1 RMSE registered2.44pp versus beta=1 2.09pp and beta=0 6.56pp. B01 gsm8k/test/0744 is the sole disagreement; preserve the original Codex incorrect label. No rescoring or new analysis is required.
+
+C is 1/5 complete, C02 active at this snapshot, under BC controller79497. T controller80440 and reduced GSM71326 remain healthy. T01/T03/T04 train normally. T02 remains correctly unstarted under b24f787a R-1: live61163c22 until all B/C calls complete and zero active Modal apps, then controller applies exact845af084, publishes source/receipt and refreshed request, rechecks budget/storage and starts once. Do not manually patch, edit active controllers, duplicate calls or run freeze_grid.py. Group C gets its own result packet when five endpoints finish; T and reduced GSM follow their existing group completion obligations.
+
+Tinker combined accounted/reserved USD411.005838/485, A8 USD33.990063/40. Canonical helper review_204ad0ae/current_budget.py includes storage once. Retain ALL A8 checkpoints per204ad0ae and19af6f32; report near900GiB. Historical cleanup remains complete. No new experiment, account change, external send, course prose or subagent. Shared budget/Git locks through push; preserve unrelatedlt002. No owner action pending. Latest snapshot: review_19af6f32/CURRENT_STATUS.json. Earlier entries are historical.
+
 # Current P012 — 2026-11-15T07:14:59.764463+00:00; B complete, independent packet ready
 
 User requested B-first publication without waiting for C/T. All seven B endpoints are complete with 9,233 raw outputs; packet reports/p012_20261111/amendment8_B_results_review_v1 is ready for Claude independent scoring and frozen A8 section 5 criteria. All R-2 bindings pass; B07 used 16,384 examples and 4,096 updates. Do not rescore frozen labels or repeat accepted A endpoints. B audit pending; no approval gate blocks C/T.

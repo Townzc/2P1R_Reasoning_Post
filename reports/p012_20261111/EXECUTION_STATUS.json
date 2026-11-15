@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T07:14:59.764463+00:00",
-  "stage": "A8_B_complete_review_ready_C_and_T_continue_T02_R1_waiting",
+  "updated_utc": "2026-11-15T07:23:13.107897+00:00",
+  "stage": "A8_A_B_audited_C_and_T_continue_T02_R1_waiting",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -132,7 +132,8 @@
     "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
     "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
     "204ad0ae932f90579cc285ff41483e6b295007a4",
-    "b24f787a4c92eab9993eb03702df161a6c64c989"
+    "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "19af6f32186dbdc3f5286858abafa96b125256c3"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -344,13 +345,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    {
-      "action": "relay_completed_B_packet_for_Claude_result_review",
-      "packet": "reports/p012_20261111/amendment8_B_results_review_v1/README.md",
-      "scope": "7 new B endpoints / 9233 outputs; C and T continue independently"
-    }
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -931,7 +926,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/amendment8_B_results_review_v1/QUEUE_STATUS_AT_PACKAGE.json",
+  "current_status_reference": "reports/p012_20261111/review_19af6f32/CURRENT_STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1026,5 +1021,18 @@
         }
       }
     }
+  },
+  "current_19af6f32": {
+    "accepted_review_commit": "19af6f32186dbdc3f5286858abafa96b125256c3",
+    "B_endpoints_accepted": 7,
+    "raw_outputs": 9233,
+    "B_verdict": "holds",
+    "hits": 6,
+    "mean_residual_pp": 0.57,
+    "scoring_disagreement": "B01 gsm8k/test/0744; preserve existing label",
+    "C_complete": 1,
+    "T02": "waiting for B/C and exact R-1 patch",
+    "all_A8_checkpoints_retained": true,
+    "new_experiments": 0
   }
 }
