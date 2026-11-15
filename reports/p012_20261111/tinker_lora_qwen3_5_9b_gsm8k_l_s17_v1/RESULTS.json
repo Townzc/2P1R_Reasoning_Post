@@ -1,0 +1,73 @@
+{
+  "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+  "model": "Qwen/Qwen3.5-9B",
+  "task": "gsm8k",
+  "track": "tinker_lora",
+  "cell": "L",
+  "seed": 17,
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 512,
+    "paths_per_parent": 1,
+    "distinct_rows": 512,
+    "epochs": 2,
+    "presentations": 1024,
+    "effective_batch": 8,
+    "expected_updates": 128,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+  "GSM8K": {
+    "responses": 1319,
+    "correct": 1222,
+    "accuracy": 0.9264594389689158,
+    "length_cap_count": 2,
+    "length_cap_rate": 0.001516300227445034,
+    "loop_count": 1,
+    "capped_loop_count": 1,
+    "normally_terminated_count": 1317,
+    "normally_terminated_correct": 1222,
+    "normally_terminated_accuracy": 0.9278663629460896
+  },
+  "training_evidence": {
+    "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+    "cell": "L",
+    "seed": 17,
+    "model": "Qwen/Qwen3.5-9B",
+    "dataset_sha256": "929ded680eef7305c0c0cce4f06b0843ae2b2420103ff2357c0b64b271ac8c2a",
+    "updates": 128,
+    "request_sha256": "475897c7a0aefdc37efd992ce4c34fc172c6965d88652d434350fedf8366545e",
+    "train_loss_sha256": "97d7bd5d57e944eaa673e3b68c50908f52b429fc50dbec1c146a12d8c78b816b",
+    "row_order_sha256": "1862aaf97d37e727500f4b65bebe05f27ca4f0978953ec20a5a2a022ae09800e",
+    "sampler_manifest_sha256": "9032d9df72b9e1eafce51c57b844b6de2bd84fb63103cdec732cd6eb57f7c4a8",
+    "state_manifest_sha256": "28b06cd4d2b72d104b88feb968289e862120326009f0f37a968824d7b50eda80"
+  },
+  "training_usage": {
+    "training_input_tokens": 251462,
+    "sampling": null,
+    "upper_token_cost_usd": 0.367888906,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 126917,
+      "completion_tokens": 230309,
+      "prompt_cache_hit_tokens": 3584
+    },
+    "upper_token_cost_usd": 0.22393446300000003,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "prediction_before_score": {
+    "utc": "2026-11-15T00:01:05.983613+00:00",
+    "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+    "raw_sha256": "523bd8237f2688c62da21e008d37d200eed9aa1ab2e24a96ceda978831eda3b0"
+  },
+  "raw_sha256": "523bd8237f2688c62da21e008d37d200eed9aa1ab2e24a96ceda978831eda3b0",
+  "labels_sha256": "7cb2c5177b2c7186f158ea9a8beb832e26b47b7b6d70e6c004fbc89a72d6d26e",
+  "independent_result_audit": "pending"
+}
