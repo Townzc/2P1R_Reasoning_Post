@@ -52,10 +52,10 @@ class ExportRecoveryIdentityTests(unittest.TestCase):
 
 
 class StorageAdmissionTests(unittest.TestCase):
-    def receipt(self, count=99, size=99_999_999_999, paid=False):
+    def receipt(self, count=99, size=99_999_999_999, paid=False, rate=0.0):
         return storage_receipt({'data': [{'checkpoint_count': count, 'size_bytes': size,
                                          'user_email': 'private@example.invalid'}],
-                                'effective_rate_usd_per_gigabyte_month': 0.0}, paid)
+                                'effective_rate_usd_per_gigabyte_month': rate}, paid)
 
     def test_free_below_both_limits(self):
         self.assertTrue(self.receipt()['admitted'])
@@ -66,9 +66,16 @@ class StorageAdmissionTests(unittest.TestCase):
     def test_free_byte_limit(self):
         self.assertFalse(self.receipt(size=100_000_000_000)['admitted'])
 
-    def test_explicit_paid_declaration_admits_full_storage(self):
-        self.assertTrue(self.receipt(count=100, size=110_000_000_000, paid=True)['admitted'])
-        self.assertFalse(self.receipt(count=100, paid='true')['admitted'])
+    def test_owner_declaration_cannot_override_free_api_rate(self):
+        self.assertFalse(self.receipt(count=100, paid=True)['admitted'])
+
+    def test_api_paid_rate_admits_without_owner_declaration(self):
+        self.assertTrue(self.receipt(count=100, size=110_000_000_000, rate=0.1)['admitted'])
+
+    def test_invalid_api_rate_fails_closed(self):
+        for rate in [-0.1, float('nan'), float('inf')]:
+            with self.assertRaises(ValueError):
+                self.receipt(rate=rate)
 
     def test_receipt_has_no_user_identifiers(self):
         self.assertNotIn('user_email', str(self.receipt()))

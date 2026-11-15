@@ -55,11 +55,15 @@ def storage_receipt(usage, paid_enabled):
     """Keep aggregate usage only; organization and user identifiers stay private."""
     count = sum(row['checkpoint_count'] for row in usage['data'])
     size = sum(row['size_bytes'] for row in usage['data'])
+    rate = usage['effective_rate_usd_per_gigabyte_month']
+    require(isinstance(rate, (int, float)) and 0 <= rate < float('inf'), 'Invalid storage API rate')
     return {'observed_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
             'checkpoint_count': count, 'size_bytes': size,
-            'effective_rate_usd_per_gigabyte_month': usage['effective_rate_usd_per_gigabyte_month'],
+            'effective_rate_usd_per_gigabyte_month': rate,
             'paid_checkpoint_storage_enabled_by_owner': paid_enabled is True,
-            'admitted': paid_enabled is True or (count < 100 and size < 100_000_000_000)}
+            'paid_storage_verified_by_api': rate > 0,
+            'admission_basis': 'API rate and aggregate usage; owner declaration is documentary only',
+            'admitted': rate > 0 or (count < 100 and size < 100_000_000_000)}
 
 
 def export(plan, approval):
