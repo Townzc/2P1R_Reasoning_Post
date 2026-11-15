@@ -1,0 +1,109 @@
+{
+  "run_id": "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_greedy_20261114_v1",
+  "mode": "generate",
+  "model": "Qwen/Qwen3.5-4B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-4B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3161,
+        "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 17,
+  "rank": 32,
+  "learning_rate": 0.0004905250962784578,
+  "source_sha256": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "prices_per_million": {
+    "train": 0.737,
+    "prefill": 0.33,
+    "sample": 1.005
+  },
+  "price_source": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "authority": "Original owner-approved A4 T-GSM; unchanged training/evaluation paths after A7.",
+  "code_commit": "199460d107cdca312a02c85ee340a5ced723cc51",
+  "accepted_review_commit": "a56115d6ceee49d0bb5495f9be3579e0cace8daa",
+  "prediction_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "forecast": {
+    "admitted": true,
+    "training_buffered_usd": 1.9660010875,
+    "reserved_greedy_usd": 0.51084387,
+    "sampling_reference": {
+      "key": "4b",
+      "reference_run": "tinker_lora_qwen3_5_4b_gsm8k_pre_baseline0_20261114_v1",
+      "reference_usage_sha256": "18e074c07cbc09395efb29eaaa2d65a910aada034b3fc9b70a9fabf7cf24e86e",
+      "measured_completion_tokens": 297194,
+      "exact_posttraining_prefill_tokens": 126917,
+      "question_count": 1319,
+      "buffered_greedy_usd": 0.51084387,
+      "basis": "Same-model measured GSM completion tokens plus exact posttraining prompts; entire token cost times 1.5.",
+      "base_reference_format_note": null
+    },
+    "T_GSM_cap_usd": 105,
+    "original_T_cap_usd": 340,
+    "combined_cap_usd": 485,
+    "admission_file": "reports/p012_20261111/tinker_gsm_training_v1/ADMISSION.json",
+    "admission_sha256": "db5ad887612ab1335614e7f19b0f00c0df7cb7243fff2a5fa12d1c0c4e660230"
+  },
+  "sampling_concurrency": 32,
+  "original_track_review_commit": "8bbf06a7ef19f56ace1b23dde4607b02bc10b389",
+  "track": "tinker_lora",
+  "task": "gsm8k",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "cpu_counts": {
+    "full_training_input_tokens": 2025510,
+    "maximum_sequence_tokens": 745,
+    "all_rows_renderer_and_mask_verified": true
+  },
+  "n": 1,
+  "sampler_path": "tinker://ee7357eb-d84c-5408-9d15-b74013df3d26:train:0/sampler_weights/final",
+  "evaluation": {
+    "path": "reports/p012_20261111/tinker_gsm_preparation_v1/inputs/gsm8k1319.jsonl",
+    "sha256": "5a9a4e2cae969a72cf7a71f6ce66059039c0f9e694ef689ab7d5fc86080f3176",
+    "task": "gsm8k"
+  },
+  "training_evidence": {
+    "run_id": "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_20261114_v1",
+    "cell": "K8",
+    "seed": 17,
+    "model": "Qwen/Qwen3.5-4B",
+    "dataset_sha256": "b1aab92b26e9b6b2906192458fcd052d940198fb3f875edea8cf4f5933e90a00",
+    "updates": 1024,
+    "request_sha256": "4f912bcccfc9f105650b3d8751a45b9cc50e9be8225acf334b99d8ddff098bf5",
+    "train_loss_sha256": "0a0e6474b438a743d712c8c96d617ec20e5c0b40235b813d7f8cb8fd664b97c3",
+    "row_order_sha256": "c9a738d4c5f34fb51ee9db1e11850840b006d4ab7d71beebdfa312a87f5fc272",
+    "sampler_manifest_sha256": "8590664abba1af353b6fbec4e455e33f68f486867dbdef7e2f5eead1b3b080a5",
+    "state_manifest_sha256": "c482e57cbf036ffc0dd74fa0bc12a6d39184f425366dbc485b5f6a6e89fadfb5"
+  }
+}
