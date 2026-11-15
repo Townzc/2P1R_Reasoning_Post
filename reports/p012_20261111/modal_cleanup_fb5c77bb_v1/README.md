@@ -29,3 +29,9 @@ Downloaded assets, logs, evaluation outputs, tokenizer/configuration files and m
 ## Deletion procedure
 
 DELETION_MANIFEST.json and the complete verification receipts are published before deletion. cleanup_weights.py rechecks public archive identities, remote manifests, exact file sizes and active application paths for each run. It removes only the listed .safetensors leaf paths with recursive=False, then relists the run directory and checks every retained regular file for unchanged size and mtime. Deletion receipts will be added after execution.
+
+## Execution receipt
+
+All 36 authorized files were removed after manifest publication8f78f7f9, freeing124.255230GiB. AFTER_INVENTORY_CHECKS.json compares every listed path: removed paths exactly equal the published manifest, no other previous files disappeared. All retained files are unchanged apart from ongoing A8 writes. Per-run before/after directory listings are in the workspace DELETION_RECEIPT files.
+
+After-cleanup balances: tangzhice USD28.08, townzc USD13.74. Closed daily net storage costs remain0/0.76402148 and0/0. R-1 storage reserve is0.76402148×10+1=USD8.6402148. A new closed billing day reflecting cleanup is not yet available; no unobserved saving is credited. A remains admitted; B/C await completion/accounting of A and their current gate.

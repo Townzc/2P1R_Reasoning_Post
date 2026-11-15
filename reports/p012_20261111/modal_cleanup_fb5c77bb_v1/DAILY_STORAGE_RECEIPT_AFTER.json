@@ -1,0 +1,50 @@
+{
+  "utc": "2026-11-15T05:13:53.290149+00:00",
+  "authority_commit": "fb5c77bbf5a46c5d30843fb9f00a94aef1255dfa",
+  "daily_timezone": "UTC as labelled in UI; observed on11/14PST",
+  "dates": [
+    "2026-11-13",
+    "2026-11-14"
+  ],
+  "workspaces": {
+    "tangzhice": {
+      "url": "https://modal.com/settings/tangzhice/usage?tab=usage",
+      "daily_net_usd": {
+        "2026-11-13": 0,
+        "2026-11-14": 0.76402148
+      },
+      "month_metered_storage_usd": 27.66150268,
+      "month_free_storage_deduction_usd": 26.8974812,
+      "month_net_storage_usd": 0.7640214800000003,
+      "current_balance_usd": 28.08,
+      "readout": "Nov14UItooltip0.76; exact0.76402148 reconciles SVG bar and monthlygross-minus-free. Nov13zero; townzctwo days andmonthzero.",
+      "UI_observed": "After cleanup: usage chart, Nov13/14 closedUTCdays; current credit indicator."
+    },
+    "townzc": {
+      "url": "https://modal.com/settings/townzc/usage?tab=usage",
+      "daily_net_usd": {
+        "2026-11-13": 0,
+        "2026-11-14": 0
+      },
+      "month_metered_storage_usd": 0.29789554,
+      "month_free_storage_deduction_usd": 0.29789554,
+      "month_net_storage_usd": 0.0,
+      "current_balance_usd": 13.74,
+      "readout": "Nov14UItooltip0.76; exact0.76402148 reconciles SVG bar and monthlygross-minus-free. Nov13zero; townzctwo days andmonthzero.",
+      "UI_observed": "After cleanup: usage chart, Nov13/14 closedUTCdays; current credit indicator."
+    }
+  },
+  "cli_report_limitation": "report returns app CPU/GPU/memory/egress only; no volume rows. Daily net read from authenticated usage chart.",
+  "observed_after_deletion": true,
+  "storage_billing_update": "Closed daily charges unchanged at this read; deletion savings are not yet represented by a newly closed day.",
+  "R1": {
+    "daily_net_usd": 0.76402148,
+    "selection": "maximum of the last two closed daily net charges",
+    "until_date_PST": "2026-11-24",
+    "days": 10,
+    "extra_usd": 1,
+    "storage_reserve_usd": 8.6402148,
+    "B_C_admitted": false,
+    "next": "Reconcile A completed actual costs and remaining reservations; reread balance at B admission."
+  }
+}
