@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T06:23:47.164403+00:00",
-  "stage": "A8_A_complete_review_pending_BC_all12_admitted_running_historical_cleanup_complete",
+  "updated_utc": "2026-11-15T06:45:33.541706+00:00",
+  "stage": "A8_A_audited_T01_T03_T04_training_T02_waits_BC_patch_BC_and_GSM_continue",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -102,10 +102,11 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Claude review A00bbe962 and pending T source5d89ba21; both required before T starts.",
-    "Continue admitted B01-B07 then C01-C05 on tangzhice H100! under controller79497; package results by group when complete.",
-    "Continue remaining4B and9B GSM K8; package all7 new reduced-GSM endpoints together after completion.",
-    "Check first full UTC volume-storage day11/16 after11/17 00:00 UTC before later new admissions."
+    "Continue the existing finite T queue; T02 waits for all B/C calls then the accepted one-tuple patch.",
+    "B/C continue under controller79497; deliver result packets by group.",
+    "Complete remaining GSM K8 and deliver the seven unreviewed reduced-GSM endpoints together.",
+    "Retain all A8 checkpoints; report near900GiB Modal volume usage. No additional experiments.",
+    "First complete post-cleanup UTC storage day11/16 must be checked after11/17 00:00 UTC before later new Modal admissions."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -129,7 +130,9 @@
     "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a",
     "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
     "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
-    "ff567d06ba39fd1052a72c558e69dbe98f09dd24"
+    "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
+    "204ad0ae932f90579cc285ff41483e6b295007a4",
+    "b24f787a4c92eab9993eb03702df161a6c64c989"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -227,7 +230,10 @@
     "amendment8_status_v1",
     "review_ff567d06",
     "modal_cleanup_fb5c77bb_v1",
-    "amendment8_tinker_review_v1"
+    "amendment8_tinker_review_v1",
+    "amendment8_A_results_review_v1",
+    "review_204ad0ae",
+    "amendment8_T_admission_v1"
   ],
   "latest_authorization": {
     "utc": "2026-11-15T05:48:31.325840+00:00",
@@ -338,16 +344,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    {
-      "kind": "relay_Claude_A_results_and_T_source_review",
-      "A_results_commit": "00bbe9629840438936de46b0af179611fd0b90be",
-      "A_results_path": "reports/p012_20261111/amendment8_A_results_review_v1/README.md",
-      "T_source_commit": "5d89ba21ad73bed2773ad2d2705dff9b9ef84aac",
-      "reason": "A8 section5 conditional T verdict and section4 new T parameter source approval",
-      "T_not_started": true
-    }
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -928,7 +925,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/review_ff567d06/CURRENT_STATUS.json",
+  "current_status_reference": "reports/p012_20261111/review_204ad0ae/CURRENT_STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -949,5 +946,23 @@
     "BC_admitted_cells": 12,
     "BC_controller_pid": 79497,
     "A_results_commit": "00bbe9629840438936de46b0af179611fd0b90be"
+  },
+  "current_204ad0ae": {
+    "accepted_result_review_commit": "204ad0ae932f90579cc285ff41483e6b295007a4",
+    "accepted_T_source_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "A_verdict": "partially_holds",
+    "A8_T_admission_commit": "9b65c51ed55f27b2f80f4f46fa51a6f3756794b5",
+    "T_controller_pid": 80440,
+    "T_training_now": [
+      "T01",
+      "T03",
+      "T04"
+    ],
+    "T02": "queued; apply accepted845af084 after B/C completes",
+    "A8_usd": 33.990062591249995,
+    "combined_usd": 411.00583849500003,
+    "all_A8_checkpoints_retained": true,
+    "report_volume_near_GiB": 900,
+    "canonical_budget_helper": "reports/p012_20261111/review_204ad0ae/current_budget.py"
   }
 }
