@@ -1,8 +1,8 @@
 """Freeze only new reduced-GSM endpoints; no model calls, re-scoring or bootstrap."""
 from pathlib import Path
 import datetime, hashlib, json, shutil, subprocess, sys, zipfile
-sys.path.insert(0,'reports/p012_20261111/review_46e98da5')
-from current_budget import accounting
+sys.path.insert(0,'reports/p012_20261111/review_204ad0ae')
+from current_budget import accounting, enforce
 from a7_ops import lock
 P=Path('reports/p012_20261111');L=Path('.local/p012_20261111')
 OUT=P/'results_afterb0d31d3a_A8_gsm_v1'
@@ -76,7 +76,8 @@ def main():
         'new_endpoint_count':len(entries),'new_outputs':len(entries)*1319,'previous_accepted_reference_only':existing,
         'G1':'not assessed; K4 cancelled by owner after seeing5/27 results','G2_G3':'Independent review requested; preserve original8bb predictions and46e baseline restriction',
         'new_model_calls_or_rescoring':0,'new_bootstrap_runs':0})
-    with lock('BUDGET_ADMISSION.lock'):write(OUT/'BUDGET_SNAPSHOT.json',accounting())
+    with lock('BUDGET_ADMISSION.lock'):
+        snapshot=accounting();enforce(snapshot);write(OUT/'BUDGET_SNAPSHOT.json',snapshot)
     (OUT/'README.md').write_text('# Reduced Tinker GSM8K: new endpoints after b0d31d3a\n\n'
         f'The owner-reduced queue is complete. This packet requests independent review of {len(entries)} new endpoints / {len(entries)*1319} outputs. The five accepted training endpoints are reference-only. All runs use Tinker LoRA, seed17, unchanged frozen data and scoring; exploratory outsideH0–H3.\n\n'
         '| Endpoint | Correct | Accuracy | Capped | Loops | Normal correct/n |\n|---|---:|---:|---:|---:|---:|\n'+'\n'.join(table)+'\n\n'

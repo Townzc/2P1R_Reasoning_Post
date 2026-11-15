@@ -1,0 +1,57 @@
+{
+  "utc": "2026-11-15T05:26:41.509548+00:00",
+  "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+  "rule": "100*(P_correct-R_correct) >= 3*1319",
+  "models": {
+    "Qwen/Qwen3.5-4B": {
+      "P_correct": 1133,
+      "R_correct": 955,
+      "questions": 1319,
+      "P_minus_R_pp": 13.495072024260804,
+      "eligible": true,
+      "candidate_run": "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_20261114_v1",
+      "P": {
+        "path": "reports/p012_20261111/tinker_lora_qwen3_5_4b_gsm8k_p_s17_v1/RESULTS.json",
+        "sha256": "d1327ca676867e3212ea9f8396c0a5a949cea8a2c86301aec66cf60f15e0bbcf"
+      },
+      "R": {
+        "path": "reports/p012_20261111/tinker_lora_qwen3_5_4b_gsm8k_r_s17_v1/RESULTS.json",
+        "sha256": "b4f7dc7379d2c16a69add1d97251250400fbee0bf11b6f12d7e6f3ae90564e9e"
+      }
+    },
+    "Qwen/Qwen3.5-9B": {
+      "P_correct": 1212,
+      "R_correct": 1104,
+      "questions": 1319,
+      "P_minus_R_pp": 8.188021228203183,
+      "eligible": true,
+      "candidate_run": "tinker_lora_qwen3_5_9b_gsm8k_k8_s17_20261114_v1",
+      "P": {
+        "path": "reports/p012_20261111/tinker_lora_qwen3_5_9b_gsm8k_p_s17_v1/RESULTS.json",
+        "sha256": "0638888100bed236b638ea0564978a50d780742a29f420d75ada6a2ca55afbd8"
+      },
+      "R": {
+        "path": "reports/p012_20261111/tinker_lora_qwen3_5_9b_gsm8k_r_s17_v1/RESULTS.json",
+        "sha256": "b019825fd0fba36889432f377edd70fedfcad21bb6d8edb64e65a20d0016084e"
+      }
+    },
+    "Qwen/Qwen3.5-9B-Base": {
+      "P_correct": 1214,
+      "R_correct": 1109,
+      "questions": 1319,
+      "P_minus_R_pp": 7.960576194086429,
+      "eligible": true,
+      "candidate_run": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1",
+      "P": {
+        "path": "reports/p012_20261111/tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_v1/RESULTS.json",
+        "sha256": "2533afe81142d9ca412e1f0c6670599f26e5fc5a29dc853035d6bdc2b74860eb"
+      },
+      "R": {
+        "path": "reports/p012_20261111/tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_v1/RESULTS.json",
+        "sha256": "161d777e03aa7bf94d0b322baa93c5a1ce853d0942a5a828e8b211f735e4a49a"
+      }
+    }
+  },
+  "selection_is_outcome_conditional": true,
+  "G1": "not_assessed_K4_cancelled"
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T07:27:51.967869+00:00",
-  "stage": "authorized_overnight_queues_running_local_host_awake_and_network_required",
+  "updated_utc": "2026-11-15T08:59:19.370364+00:00",
+  "stage": "A8_C_and_reduced_GSM_complete_review_ready_T02_R1_passed_T_remaining_three_running",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -347,9 +347,13 @@
   },
   "pending_owner_actions": [
     {
-      "action": "keep_local_Mac_awake_connected_and_lid_open",
-      "reason": "All queue controllers and Tinker step loops run locally",
-      "suggested_command": "caffeinate -is -t 43200"
+      "action": "relay_C_and_reduced_GSM_result_packets_for_independent_review",
+      "packets": [
+        "reports/p012_20261111/amendment8_C_results_review_v1/README.md",
+        "reports/p012_20261111/results_afterb0d31d3a_A8_gsm_v1/README.md"
+      ],
+      "can_wait_until_morning": true,
+      "blocks_existing_T_queue": false
     }
   ],
   "A6_2_finite_continuation": {
@@ -932,7 +936,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/review_19af6f32/CURRENT_STATUS.json",
+  "current_status_reference": "reports/p012_20261111/night_progress_20261115_v1/CURRENT_STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1047,6 +1051,24 @@
     "network_required": true,
     "currently_on_AC": true,
     "owner_keepawake_command": "caffeinate -is -t 43200",
-    "assistant_executed_keepawake_command": false
+    "assistant_executed_keepawake_command": false,
+    "owner_keepawake_command_observed_running": true,
+    "caffeinate_pid": 83568,
+    "sleep_assertions_active": true,
+    "remaining_seconds": 38717
+  },
+  "current_night_progress_20261115": {
+    "C_complete": 5,
+    "GSM_retained_complete": 12,
+    "T_complete": 1,
+    "T02_R1": "passed; started07:55:21UTC after all B/C completed",
+    "T_remaining": [
+      "T01",
+      "T02",
+      "T04"
+    ],
+    "canonical_combined_Tinker_usd": 406.83853608425005,
+    "C_packet": "reports/p012_20261111/amendment8_C_results_review_v1",
+    "GSM_packet": "reports/p012_20261111/results_afterb0d31d3a_A8_gsm_v1"
   }
 }

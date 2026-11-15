@@ -1,0 +1,76 @@
+{
+  "decision_recorded_utc": "2026-11-15T02:47:49.647275+00:00",
+  "owner_instruction_first_local_observation_utc": "2026-11-15T02:38:31.752050+00:00",
+  "decision_timezone": "America/Los_Angeles",
+  "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+  "owner_approved": true,
+  "deviation_from": "P012 amendment4 original27 Tinker GSM8K cells",
+  "observed_results_at_decision": 5,
+  "original_grid_size": 27,
+  "completed_before_decision": [
+    "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+    "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1"
+  ],
+  "running_calls_at_suspension": [
+    {
+      "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_greedy_20261114_v1",
+      "pid": 70855
+    }
+  ],
+  "owner_reason": "\u4efb\u52a1\u5df2\u5230\u9876\u4e14\u7b97\u529b\u6539\u7528\u4e8e\u89c4\u5f8b\u9a8c\u8bc1",
+  "G1": "not_assessed_K4_cancelled",
+  "G2_G3": "continue_assessment_per_A8",
+  "retained_L_and_P": [
+    "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+    "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1"
+  ],
+  "retained_R": [
+    "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1"
+  ],
+  "conditional_K8": [
+    "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_k8_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1"
+  ],
+  "cancelled": [
+    "tinker_lora_qwen3_5_4b_gsm8k_k4_s17_20261114_v1",
+    "tinker_lora_qwen3_5_4b_gsm8k_l_s29_20261114_v1",
+    "tinker_lora_qwen3_5_4b_gsm8k_p_s29_20261114_v1",
+    "tinker_lora_qwen3_5_4b_gsm8k_r_s29_20261114_v1",
+    "tinker_lora_qwen3_5_4b_gsm8k_k8_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_k4_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_l_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_p_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_r_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_gsm8k_k8_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_k4_s17_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_l_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_p_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_r_s29_20261114_v1",
+    "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s29_20261114_v1"
+  ],
+  "K8_rule": "P - R greedy accuracy point estimate >=3 percentage points, independently per model, seed17",
+  "K8_integer_rule": "100*(P_correct-R_correct)>=3*1319",
+  "no_running_model_call_cancellation": true,
+  "T_group_status": "not_started; requires A-group result audit and Claude A8 section5 decision",
+  "A8_Tinker_cap_usd": 40,
+  "combined_Tinker_cap_usd": 485,
+  "reused_source_hashes": {
+    "experiments/p012/tinker_lora.py": "050a9f43d81c7a610dfc9ca30c901103e145fff28384d2efd1f13247fc60f5ee",
+    "experiments/p012/scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "experiments/p012/termination_summary.py": "21f869258be53f4b0d192fd7bcb5f8813dd4cda2cf790fc035c70251140a6c6d",
+    ".local/p012_20261111/amendment5_v1/score_endpoint.py": "97382992ee3b518ba832f934ac4ce9c1787852682889d5467d8d98cdf389cf60",
+    "reports/p012_20261111/tinker_gsm_training_v1/continue.py": "3404db6a39578ad412326f8f9e00580f8eeae3efccad3302701962ffc9fb0cd7",
+    "reports/p012_20261111/review_46e98da5/annotate_4b_gsm.py": "f4f31b5a6bb2ceb54e8f4bab40fe6409ae99d49ad3a84e79c9fb6d8ae68412f4",
+    "reports/p012_20261111/amendment8_gsm_reduction_v1/continue.py": "e0697d87e1353bce0cdbdd24fbb92536ea458f67cff000ab089182d7b9073c34"
+  }
+}
