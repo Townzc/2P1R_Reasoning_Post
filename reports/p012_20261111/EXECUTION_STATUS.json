@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T05:48:31.325840+00:00",
-  "stage": "A8 source accepted and A active; authorized L/K4 cleanup complete; B/C prepared behind post-A gate; T source review pending",
+  "updated_utc": "2026-11-15T06:10:32.774775+00:00",
+  "stage": "A8_A09_complete_A10_running_historical_cleanup_complete_BC_pending_fresh_admission",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -102,11 +102,10 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Complete ordered A09/A10; stop/report submission failure or any A10 interruption without retry.",
-    "Package all ten A endpoints with R-2 and frozen predictions; send A group for independent review first.",
-    "After A completes, reread original workspace balance, reconcile API net usage and R-1 storage reserve, then admit B and funded C prefix.",
-    "Await conditional T source review for5d89ba21 and Claude A-group verdict before any T execution.",
-    "Three conditional T-GSM K8 are active; package seven new endpoints when the reduced queue completes."
+    "Finish A10 and package A-group outputs for Claude independent audit and conditional T verdict.",
+    "After A completion, refresh actual balance and billing, apply84404ebe storage reserve, admit B then funded C prefix.",
+    "Existing three GSM K8 continue; no K4 or seed29 starts.",
+    "T source review and A verdict both required before T."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -927,5 +926,22 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/review_ff567d06/CURRENT_STATUS.json"
+  "current_status_reference": "reports/p012_20261111/review_ff567d06/CURRENT_STATUS.json",
+  "current_84404ebe": {
+    "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
+    "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
+    "deleted_files": 112,
+    "deleted_GiB": 514.4089684039354,
+    "post_cleanup_GiB": 704.7329996041954,
+    "V_prime_GiB": 796.1492119822651,
+    "storage_reserve_usd": 1,
+    "first_full_UTC_day_guard": {
+      "UTC_day": "2026-11-16",
+      "available_after_UTC_date": "2026-11-17",
+      "expected_net_usd": 0.0,
+      "stop_new_admissions_if_actual_exceeds_expected_by_usd": 0.1,
+      "status": "not_yet_complete; read authenticated usage UI or provider API once closed"
+    },
+    "receipt": "reports/p012_20261111/modal_cleanup_84404ebe_v1/DELETION_RECEIPT.json"
+  }
 }

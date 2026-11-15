@@ -20,6 +20,28 @@ def net_usage(summary):
     return float(Decimal(summary['metered_cost'])+sum((Decimal(v) for k,v in summary['adjustments'].items() if k!='credits'),Decimal(0)))
 
 
+def storage_reserve(now=None):
+    now=now or datetime.datetime.now(datetime.timezone.utc)
+    receipt=P/'modal_cleanup_84404ebe_v1/STORAGE_RESERVE.json'
+    storage=read(receipt)
+    assert storage['authority_commit']=='84404ebe3ef55e5409f7f13cd94019f989d2444c'
+    assert storage['cleanup_complete'] and storage['inventory_verified']
+    assert storage['V_prime_GiB']>=storage['post_cleanup_total_GiB']
+    daily=max(0,storage['V_prime_GiB']-1024)*0.09/30
+    assert abs(daily-storage['expected_daily_net_usd'])<1e-9
+    guard=storage['first_full_UTC_day_guard']
+    if now.date()>=datetime.date.fromisoformat(guard['available_after_UTC_date']):
+        # The next fully closed UTC day must be read before any later admission.
+        # Missing receipts fail closed; an owner's declaration is not a billing observation.
+        bill=read(P/'modal_cleanup_84404ebe_v1/FIRST_FULL_DAY_BILLING_CHECK.json')
+        assert bill['workspace']=='tangzhice' and bill['UTC_day']==guard['UTC_day']
+        assert bill['source'] in ('authenticated_usage_UI','provider_billing_API')
+        assert bill['observed_net_volume_storage_usd']<=daily+0.10, 'Post-cleanup storage over prediction by more than $0.10'
+    days=(datetime.date(2026,11,24)-now.astimezone(ZoneInfo('America/Los_Angeles')).date()).days
+    assert days>0
+    return daily,days,daily*days+1,receipt
+
+
 def main():
     observed=read(Path(sys.argv[1]))
     assert observed['workspace']=='tangzhice' and observed['source']=='authenticated_UI_credit_indicator'
@@ -43,12 +65,7 @@ def main():
     new_usage=net_usage(summary)-net_usage(before)
     reflected=initial-observed['balance_usd']
     unsettled=max(0,new_usage-reflected)
-    storage=read(P/'modal_cleanup_fb5c77bb_v1/DAILY_STORAGE_RECEIPT_AFTER.json')
-    assert storage['observed_after_deletion']
-    days=(datetime.date(2026,11,24)-datetime.datetime.now(ZoneInfo("America/Los_Angeles")).date()).days
-    assert days>0
-    daily=max(storage['workspaces']['tangzhice']['daily_net_usd'].values())
-    reserve=daily*days+1
+    daily,days,reserve,storage_receipt=storage_reserve()
     manifest=read(P/'amendment8_modal_review_v1/CANDIDATE_MANIFEST.json')
     selected=[x for x in manifest['cells'] if x['group'] in ('B','C')]
     rhs=observed['balance_usd']-4
@@ -67,7 +84,8 @@ def main():
             'usage_reflected_in_balance_usd':reflected,'unsettled_usd':unsettled,
             'unsettled_basis':'max(0, API net usage increase excluding credit payments - UI balance decrease); no active apps',
             'storage_daily_net_usd':daily,'days_to_Nov24':days,'storage_plus_lag_reserve_usd':reserve,
-            'storage_receipt':{'path':str(P/'modal_cleanup_fb5c77bb_v1/DAILY_STORAGE_RECEIPT_AFTER.json'),'sha256':sha(P/'modal_cleanup_fb5c77bb_v1/DAILY_STORAGE_RECEIPT_AFTER.json')},
+            'storage_authority_commit':'84404ebe3ef55e5409f7f13cd94019f989d2444c',
+            'storage_receipt':{'path':str(storage_receipt),'sha256':sha(storage_receipt)},
             'next_batch_forecast_usd':sum(x['total_forecast_usd'] for x in selected),
             'hard_lhs_usd':unsettled+reserve+sum(x['total_forecast_usd'] for x in selected),'hard_rhs_usd':rhs,
             'admitted':True,'retained_runs':[x['run_id'] for x in selected],

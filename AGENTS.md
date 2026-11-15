@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-15T06:10:32.774775+00:00; 84404ebe historical cleanup complete
+
+Owner84404ebe3ef55e5409f7f13cd94019f989d2444c supersedes earlier storage R-1. Published manifestd46bf25f preceded exact deletion112 historical weight/state files in the three authorized old-volume roots,514.408968GiB. Full before/after inventories prove no other removed paths and all173270 retained regular files unchanged in size/mtime; no tar opened. Do not repeat deletion. Main P/K8/R and other P012 weights remain. A8 weights remain until endpoint audit.
+
+Post-cleanup tangzhice704.732999GiB; conservative V′796.149212GiB includes all22 A8 checkpoint allowances and1GiB future non-checkpoint data. Official pricing confirms1TiB/month free,$0.09/GiB/month. R-1 storage reserve now$1. First full post-cleanup UTC day11/16 must be checked after11/17 00:00 UTC; actual net above prediction+$0.10 stops new admissions.11/15 partial day expected<=0.46. Use modal_cleanup_84404ebe_v1/STORAGE_RESERVE.json and updated review_ff567d06/admit_BC.py; old8.6402148reserve is historical. No account/billing changes.
+
+A controller74800 still owns A01→A10;9 completed, A10 running with32768examples8192updates. No failures/retries. Source stays61163c22 and acceptedff567d06. A10 failure stops; never rerun freeze_grid.py. After A complete run package_A.py and send A first; refresh UIbalance+APIbilling then admit/launch prepared B/C on tangzhice H100! only. B/C not yet admitted. T source5d89ba21 and A verdict BOTH still pending; user84404reply was cleanup authorization, not T source acceptance. Do not apply T candidate while Modal pins611.
+
+Three GSM K8 are active under71326 after allthree P−R>=3pp; original reduced queue continues unchanged. No cancelled K4/seed29 restarts. Shared budget/Git locks throughpush; preserve credentials, unrelatedlt002, frozen results. No external sends, course prose or subagents. Earlier entries historical.
+
 # Current P012 — 2026-11-15T05:22:26.896503+00:00; ff567d06 applied, A active, authorized cleanup complete
 
 A8 source review ff567d06ba39fd1052a72c558e69dbe98f09dd24 is accepted. Live training_config.py is exact61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696, source commit7883df08. Group A admitted4251175a; finite detached controller PID74800 owns A01→A10, private amendment8_v1/A_QUEUE.json. Read live state; do not duplicate calls or edit continue_A.py. At this snapshot 5/10 full endpoints are published. Every endpoint has verified R-2 global_step and Num examples. All failures stop, no automatic retry, especially A09/A10 submission and A10 interruption. Never rerun freeze_grid.py.

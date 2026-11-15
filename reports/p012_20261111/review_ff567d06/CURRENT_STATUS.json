@@ -1,5 +1,5 @@
 {
-  "utc": "2026-11-15T05:48:31.325840+00:00",
+  "utc": "2026-11-15T06:10:32.774775+00:00",
   "accepted_source_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
   "cleanup_authority_commit": "fb5c77bbf5a46c5d30843fb9f00a94aef1255dfa",
   "source_commit": "7883df08f0526ed020188ded2a236081f243c8da",
@@ -284,6 +284,39 @@
         "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1",
         "pid": 78035,
         "request_sha256": "d9549f51ddb22d7dc7c8b3dd32f3bc8545fafaf420be13596c02a5e00c3cb1f6"
+      },
+      {
+        "utc": "2026-11-15T05:53:19.476234+00:00",
+        "stage": "training_complete",
+        "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1",
+        "global_step": 4096,
+        "expected_updates": 4096,
+        "Num_examples": 16384,
+        "expected_P_times_K": 16384,
+        "trainer_state_sha256": "5573a6c2474759d1a8d87baeffa5dc1afd25a6d9397882213720f8ead96b00ff",
+        "training_log_sha256": "033f56e4180561590c490e299c70633ed36387f92065a1974efd0dd5fc13d173",
+        "passed": true
+      },
+      {
+        "utc": "2026-11-15T05:53:21.347664+00:00",
+        "stage": "launched",
+        "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_greedy_20261114_v1",
+        "pid": 78399,
+        "request_sha256": "d4a0853f9f5c10ee23a8f9d9280be8d1f5d730fcf38ad7e8186fd9a5c58e7afe"
+      },
+      {
+        "utc": "2026-11-15T05:55:16.271280+00:00",
+        "stage": "result_published",
+        "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1",
+        "commit": "b9cfa38993e10346d4a190fc066f2240630def05",
+        "accuracy": 0.41015921152388174
+      },
+      {
+        "utc": "2026-11-15T05:55:16.465353+00:00",
+        "stage": "launched",
+        "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
+        "pid": 78490,
+        "request_sha256": "635c186c30e5373c8a63373c0a9e59a988e1ad7ad3bf06888f77d806617e86f0"
       }
     ]
   },
@@ -466,5 +499,186 @@
   "B_C_storage_reserve_usd": 8.6402148,
   "T_source_review_packet": "5d89ba21ad73bed2773ad2d2705dff9b9ef84aac",
   "T_started": false,
-  "T_forecast_usd": 33.99006259125
+  "T_forecast_usd": 33.99006259125,
+  "cleanup_addendum_authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
+  "historical_cleanup_manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
+  "historical_cleanup_receipt": "reports/p012_20261111/modal_cleanup_84404ebe_v1/DELETION_RECEIPT.json",
+  "historical_cleanup_deleted_GiB": 514.4089684039354,
+  "storage_gate_authority": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
+  "storage_plus_lag_reserve_usd": 1,
+  "storage_reserve_receipt": "reports/p012_20261111/modal_cleanup_84404ebe_v1/STORAGE_RESERVE.json",
+  "GSM_queue": {
+    "status": "running",
+    "controller_pid": 71326,
+    "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "policy_sha256": "8d51be3313f8f88e5e8c224d4a976abcf966bb67e751eb691a3119594ee7b937",
+    "events": [
+      {
+        "utc": "2026-11-15T02:48:59.562126+00:00",
+        "stage": "adopted_existing_queue",
+        "completed_before_decision": [
+          "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1"
+        ],
+        "adopted_running_calls": [
+          {
+            "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_greedy_20261114_v1",
+            "pid": 70855
+          }
+        ]
+      },
+      {
+        "utc": "2026-11-15T02:49:02.606388+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+        "commit": "784e8be0073433fc33e2b631c012a974995bcf54"
+      },
+      {
+        "utc": "2026-11-15T02:49:04.280479+00:00",
+        "stage": "annotated",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+        "commit": "86bcd4e2a6100614ef5eeacbe99c067546d2c5cd"
+      },
+      {
+        "utc": "2026-11-15T02:49:04.281222+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1"
+      },
+      {
+        "utc": "2026-11-15T02:49:05.841132+00:00",
+        "stage": "budget_reconciled",
+        "commit": "d9d9fee3f9d9fe11d24a7d4ae1d24d51768a14ff",
+        "GSM_usd": 39.6131842515,
+        "original_T_usd": 269.36052944025005,
+        "all_tracks_usd": 379.62427899225,
+        "cumulative_released_usd": 47.25012729749999
+      },
+      {
+        "utc": "2026-11-15T02:49:05.859104+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+        "pid": 71394
+      },
+      {
+        "utc": "2026-11-15T02:49:05.872655+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1",
+        "pid": 71396
+      },
+      {
+        "utc": "2026-11-15T02:49:05.885889+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1",
+        "pid": 71398
+      },
+      {
+        "utc": "2026-11-15T03:35:00.821169+00:00",
+        "stage": "evaluation_prepared",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_greedy_20261114_v1",
+        "commit": "f229825d965ad619f7b16c515b51aeee25981bc4"
+      },
+      {
+        "utc": "2026-11-15T03:35:00.838697+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_greedy_20261114_v1",
+        "pid": 72891
+      },
+      {
+        "utc": "2026-11-15T03:36:53.748295+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1",
+        "commit": "bdd3ec745b95e11168fc584cda2a1ec8c7db17ba"
+      },
+      {
+        "utc": "2026-11-15T03:36:53.749071+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1"
+      },
+      {
+        "utc": "2026-11-15T04:03:47.935324+00:00",
+        "stage": "evaluation_prepared",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_greedy_20261114_v1",
+        "commit": "fe63ca92ea327926d734cb3304722c3cabab05cf"
+      },
+      {
+        "utc": "2026-11-15T04:03:47.954165+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_greedy_20261114_v1",
+        "pid": 73551
+      },
+      {
+        "utc": "2026-11-15T04:05:50.815636+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1",
+        "commit": "81308904effb0c6552d15ffbe629079a6980e07f"
+      },
+      {
+        "utc": "2026-11-15T04:05:50.816417+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1"
+      },
+      {
+        "utc": "2026-11-15T05:24:35.186522+00:00",
+        "stage": "evaluation_prepared",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_greedy_20261114_v1",
+        "commit": "f9e4a1e0b88f3f7165c6f81f08ce0d55063e5295"
+      },
+      {
+        "utc": "2026-11-15T05:24:35.204021+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_greedy_20261114_v1",
+        "pid": 77227
+      },
+      {
+        "utc": "2026-11-15T05:26:39.907092+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+        "commit": "7c67450918fdc9cca272ae59d8dca8a021de05a7"
+      },
+      {
+        "utc": "2026-11-15T05:26:41.505723+00:00",
+        "stage": "annotated",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+        "commit": "65aa2542745aba141ddb5f3bfbacd479cdb8a8ca"
+      },
+      {
+        "utc": "2026-11-15T05:26:41.506301+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1"
+      },
+      {
+        "utc": "2026-11-15T05:26:44.712194+00:00",
+        "stage": "budget_reconciled",
+        "commit": "53e7639dfcde43fa8a4710ab01c164c86122e32f",
+        "GSM_usd": 37.004681163,
+        "original_T_usd": 266.7520263517501,
+        "all_tracks_usd": 377.01577590375007,
+        "cumulative_released_usd": 47.25012729749999
+      },
+      {
+        "utc": "2026-11-15T05:26:44.731353+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_20261114_v1",
+        "pid": 77366
+      },
+      {
+        "utc": "2026-11-15T05:26:44.745582+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_k8_s17_20261114_v1",
+        "pid": 77368
+      },
+      {
+        "utc": "2026-11-15T05:26:44.760456+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1",
+        "pid": 77370
+      }
+    ],
+    "automatic_retry": false
+  },
+  "BC_status": "prepared; wait A completion then fresh balance admission",
+  "T_status": "source review5d89ba21 and Claude A-group verdict pending; not started"
 }
