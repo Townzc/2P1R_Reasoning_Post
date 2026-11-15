@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-15T01:42:02.243792+00:00; L64 complete, next result review ready
+
+Accepted review 46e98da59753315694ebc4a0699f0b7c6c37a9c5 is implemented. All 12 previous endpoints and E8 export recovery passed; frozen results, labels, and archive hashes remain unchanged. New packet dee3b53cd4f57c4e35c21ad542f22750d2f5c26b at results_after46e98da5_v1 contains 7 endpoints / 15595 outputs: original 4B L64, released 4B GSM pass@8, and newly completed GSM training cells. Independent result review is pending; older accepted results are excluded. Do not rescore or rerun completed calls.
+
+L64 controller 68537 is complete: 16 original updates, full MATH 5000, accuracy 66.92%. A6-3 latest cap is USD38; A6-2 cap is USD48. Original T340, A7 60, combined485, storage reserve30 are unchanged. Use review_46e98da5/current_budget.py for current cap metadata. Latest accounted plus reserved total is USD429.514073. Old cached 35/50 metadata is historical; do not edit the active GSM helper.
+
+Original 27-cell GSM controller PID65827 remains active; consult t_gsm_v1/TRAINING_QUEUE.json. Five results are published and 4B P seed17 is training. Annotation-only watcher PID68792 attaches accepted baseline notes to the nine 4B GSM cells. Never duplicate owned calls or edit active helpers. Shared budget and Git publication locks remain mandatory through push.
+
+4B GSM pass@1=66.275%, pass@8=93.20% are descriptive only: 40.5% answer-only, ineligible as pretraining capability. Use 4-shot1216/1319=92.19%; 0-shot has543/1319 answer-only. Existing4000 outputs were scored without resampling. All4000 seeds and sequenceIDs differ; 12/500 questions have eight identical outputs. The80% diversity threshold applies only to three MATH v2 repair endpoints; other endpoints stop when a strict majority has eight identical outputs.
+
+Account and billing settings are owner-only. Storage admission uses actual API rate/usage; owner statements are record-only. Guard has16 passing tests. Preserve all checkpoints and TTLs. No new Modal work, course prose, external messages, subagents, or retries. Preserve unrelated lt002 and private credentials. Earlier entries are historical.
+
 # Current P012 — 2026-11-15T01:28:00.792488+00:00; review46e98da5 accepted, L64 evaluation active
 
 User accepted46e98da59753315694ebc4a0699f0b7c6c37a9c5. All12b97b8bebendpoints andE8exportrecovery passed. AdditiveAUDIT_STATUSsidecars andACCEPTANCEe0428bd6 preserveallfrozenRESULT/inputmanifest/archive/labels hashes. KeepCodexGSMlabels:87auditdifferencesonlypercentstripping. Do not re-scoreaccepted12orA7.

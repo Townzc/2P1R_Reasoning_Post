@@ -5218,3 +5218,7 @@ Completed E8 fullMATH5000 once:2512correct,115caps,53loops; published originalou
 ## 2026-11-15T01:28:00.792488+00:00 — applied46e98da5 and launched originalL64
 
 Accepted12endpoints/E8recovery withhash-boundsidecars,keepingfrozenRESULTS,labels,inputsandarchivesunchanged. Scoredexisting4BGSMPass8outputswithoutregeneration:66.275%/93.20%;metadataexcludesbothfrompretrainingcapabilityandselects4-shotreference. Addedper-endpointuniqueseed/sequencechecksandscoped80%guardtothreeMATHrepairs. ChangedstorageadmissiontoreadAPIrate/usageonly;16tests pass;account/billingmutationsowner-only. AppliedlatestA6-3cap38(firsttransferleavesA6-2cap48),combined485unchanged;L64admittedand16updatescomplete,fullMATH5000evaluationrunning. Existing27GSMqueueuntouched;annotation-onlywatcheraddsaccepted4Bbaselinefootnotes. No newscientificrunner/scorer/bootstraporcourse-reportprose.
+
+## 2026-11-15T01:42:02.243792+00:00 — L64 completion and next result review
+
+Completed the authorized original L64 using unchanged training/scoring paths: 66.92% on full MATH5000. Published 7 new endpoints / 15595 outputs at dee3b53cd4f57c4e35c21ad542f22750d2f5c26b, with complete input, training, sampler, raw-output, label, and prediction bindings. Verified prior12 accepted hashes remain unchanged. Existing4B GSM pass8 was scored without new sampling; capability exclusions are explicit. Updated current caps and operational pointers; original27 GSM queue and annotation watcher continue. No new bootstrap, account/billing mutation, external message, or course-report prose.

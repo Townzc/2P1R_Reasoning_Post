@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T01:28:00.792488+00:00",
-  "stage": "46e98da5 accepted; L64 evaluation and original GSM queue active",
+  "updated_utc": "2026-11-15T01:42:02.243792+00:00",
+  "stage": "46e98da5 applied; L64 complete; next result packet published; original GSM queue active",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -74,11 +74,11 @@
     },
     "modal_phase_caps": "soft; report and continue within workspace hard gate",
     "tinker_original_cap": 340,
-    "tinker_original_reserved": 226.94576690792107,
-    "A6_2_cap": 50,
+    "tinker_original_reserved": 319.25032302525005,
+    "A6_2_cap": 48,
     "A6_2_accounted_and_reserved": 38.430015023,
-    "A6_3_cap": 35,
-    "A6_3_reserved": 34.605232256,
+    "A6_3_cap": 38,
+    "A6_3_reserved": 35.819990841,
     "tinker_combined_cap": 485,
     "tinker_protected_from_initial750": 265,
     "tinker_sampling_admission": "measured token cost x1.5",
@@ -86,13 +86,15 @@
     "A7_accounted_and_reserved": 36.013743688,
     "T_GSM_cap": 105,
     "T_GSM_pre_reserved": 27.198421719171,
-    "storage_proposed_not_approved": 30
+    "storage_reserved": 30,
+    "storage_included_in_original_T": true,
+    "account_billing_settings": "owner_only"
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Complete originalL64MATH5000greedy and deliver nextresultpacketwithreleased4Bpass8andnewGSMcells.",
-    "Continue27GSMcells; annotateall4BGSMtableswith4-shotreference andanswer-only0-shotnote.",
-    "UseAPIstorage readingsonly; account/billing mutationsreservedfortheowner."
+    "Return Claude review for the new result packet; keep original 27 GSM cells running.",
+    "Apply accepted 4B GSM interpretation to all newly published 4B tables.",
+    "Use API storage rate and usage. Account or billing changes are owner-only."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -202,17 +204,19 @@
     "review_e9f0ebdd",
     "tinker_gsm_preparation_v1",
     "tinker_gsm_pre_admission_v1",
-    "e8_storage_export_recovery_v1"
+    "e8_storage_export_recovery_v1",
+    "review_46e98da5",
+    "results_after46e98da5_v1"
   ],
   "latest_authorization": {
-    "utc": "2026-11-15T01:28:00.792488+00:00",
+    "utc": "2026-11-15T01:42:02.243792+00:00",
     "accepted_review_commit": "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
     "accepted_endpoint_count": 12,
     "E8_recovery_audit": "passed",
     "frozen_results_and_labels_unchanged": true,
     "L64": {
       "controller_pid": 68537,
-      "status": "running",
+      "status": "complete",
       "events": [
         {
           "utc": "2026-11-15T01:19:11.167274+00:00",
@@ -230,6 +234,12 @@
           "stage": "launched",
           "run_id": "a6_3_tinker_lora_4b_math_l64_s17_greedy_20261113_v1",
           "pid": 68757
+        },
+        {
+          "utc": "2026-11-15T01:39:57.313801+00:00",
+          "stage": "result_published",
+          "commit": "5072bc47a9351cb6c84fafe1f65d119f6ac73395",
+          "accuracy": 0.6692
         }
       ],
       "automatic_retry": false
@@ -414,10 +424,10 @@
     "budget": {
       "original_T_accounted_and_reserved_usd": 319.25032302525005,
       "A6_2_accounted_and_reserved_usd": 38.430015023,
-      "A6_3_accounted_and_reserved_usd": 36.562388886,
-      "pre_A7_accounted_and_reserved_usd": 394.2427269342501,
-      "A7_accounted_and_reserved_usd": 36.013743688000005,
-      "combined_reserved_usd": 430.25647062225005,
+      "A6_3_accounted_and_reserved_usd": 35.819990841,
+      "pre_A7_accounted_and_reserved_usd": 393.50032888925006,
+      "A7_accounted_and_reserved_usd": 36.013743688,
+      "combined_reserved_usd": 429.51407257725003,
       "caps_usd": {
         "original_T": 340,
         "A6-2": 48,
@@ -437,7 +447,26 @@
       "path": "reports/p012_20261111/review_46e98da5/BUDGET_POLICY.json",
       "sha256": "d3a5b238f1a280f9f433e848e959bf86c0ffa2e915227d8807b74fcda36c8dd4"
     },
-    "account_and_billing_settings": "Owner only; use read-only API rate/usage checks; stop and report if a setting change is needed."
+    "account_and_billing_settings": "Owner only; use read-only API rate/usage checks; stop and report if a setting change is needed.",
+    "next_result_review": {
+      "commit": "dee3b53cd4f57c4e35c21ad542f22750d2f5c26b",
+      "path": "reports/p012_20261111/results_after46e98da5_v1/README.md",
+      "endpoint_count": 7,
+      "raw_outputs": 15595,
+      "status": "awaiting independent result review; does not pause authorized GSM queue"
+    },
+    "L64_result": {
+      "responses": 5000,
+      "correct": 3346,
+      "accuracy": 0.6692,
+      "length_cap_count": 396,
+      "length_cap_rate": 0.0792,
+      "loop_count": 262,
+      "capped_loop_count": 259,
+      "normally_terminated_count": 4604,
+      "normally_terminated_correct": 3346,
+      "normally_terminated_accuracy": 0.7267593397046047
+    }
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -538,7 +567,14 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "action": "Return Claude independent result review commit",
+      "packet_commit": "dee3b53cd4f57c4e35c21ad542f22750d2f5c26b",
+      "packet": "reports/p012_20261111/results_after46e98da5_v1/README.md",
+      "blocks_authorized_GSM": false
+    }
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -558,34 +594,29 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-14T22:26:01.975011+00:00",
-    "original_T": 226.94576690792107,
+    "as_of_utc": "2026-11-15T01:42:02.243792+00:00",
+    "original_T": 319.25032302525005,
     "A6_2": 38.430015023,
-    "A6_3": 34.605232256,
+    "A6_3": 35.819990841,
     "A7": 36.013743688,
-    "combined": 335.99475787492105,
+    "combined": 429.51407257725003,
     "caps": {
       "original_T": 340,
-      "A6-2": 50,
-      "A6-3": 35,
+      "A6-2": 48,
+      "A6-3": 38,
       "A7": 60,
       "combined": 485
     },
-    "original_T_ledger": {
-      "path": "reports/p012_20261111/tinker_gsm_pre_admission_v1/ADMISSION.json",
-      "sha256": "7400c6d90ae2de17cf23f3ab4fcab98d745d6745f620ab68eb6e2a3e40b7132f",
-      "value_field": "combined_reserved_usd"
-    },
-    "current_snapshot": "review_e9f0ebdd/CONTINUATION_AFTER_ACCEPTANCE.json",
-    "note": "Completed token-cost upper bounds plus outstanding reservations; originalT remains a conservative published reservation. Not a provider invoice."
+    "current_snapshot": "review_46e98da5/DELIVERY_STATUS.json",
+    "note": "Completed token-cost upper bounds plus outstanding reservations; includes storage reserve USD30 once. Not a provider invoice."
   },
   "interpretation_correction_53a565da": {
     "retracted": "Low per-token training loss implies little parameter or behavioral change",
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "review_e9f0ebdd/CONTINUATION_AFTER_ACCEPTANCE.json",
-  "background_status": "review_e9f0ebdd/CONTINUATION_AFTER_ACCEPTANCE.json",
+  "finite_continuation_queues": "review_46e98da5/DELIVERY_STATUS.json",
+  "background_status": "review_46e98da5/DELIVERY_STATUS.json",
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
