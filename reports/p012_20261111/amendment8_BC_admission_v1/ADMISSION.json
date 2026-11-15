@@ -1,0 +1,848 @@
+{
+  "utc": "2026-11-15T06:21:55.135148+00:00",
+  "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+  "accepted_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
+  "actual_balance": {
+    "utc": "2026-11-15T06:21:03.291553+00:00",
+    "workspace": "tangzhice",
+    "source": "authenticated_UI_credit_indicator",
+    "balance_usd": 23.68,
+    "monthly_net_usage_usd": 66.09,
+    "source_url": "https://modal.com/settings/tangzhice/usage?tab=usage"
+  },
+  "protected_usd": 4,
+  "monthly_net_usage_increase_since_A_admission_usd": 5.790000000000006,
+  "usage_reflected_in_balance_usd": 5.370000000000001,
+  "unsettled_usd": 0.42000000000000526,
+  "unsettled_basis": "max(0, API net usage increase excluding credit payments - UI balance decrease); no active apps",
+  "storage_daily_net_usd": 0.0,
+  "days_to_Nov24": 10,
+  "storage_plus_lag_reserve_usd": 1.0,
+  "storage_authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
+  "storage_receipt": {
+    "path": "reports/p012_20261111/modal_cleanup_84404ebe_v1/STORAGE_RESERVE.json",
+    "sha256": "24e66005173ea932dbd4b4c9eafa3aa290aa434f32239834d54b0d5da41df92f"
+  },
+  "next_batch_forecast_usd": 10.540032305833668,
+  "hard_lhs_usd": 11.960032305833673,
+  "hard_rhs_usd": 19.68,
+  "admitted": true,
+  "retained_runs": [
+    "a8_b01_llama_instruct_gsm8k_p2048_k1_e2_s17_20261114_v1",
+    "a8_b02_llama_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+    "a8_b03_llama_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+    "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+    "a8_b05_llama_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+    "a8_b06_llama_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1",
+    "a8_b07_llama_instruct_gsm8k_p4096_k4_e2_s17_20261114_v1",
+    "a8_c01_qwen_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+    "a8_c02_qwen_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+    "a8_c03_qwen_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+    "a8_c04_qwen_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+    "a8_c05_qwen_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1"
+  ],
+  "pruned_C_tail": [],
+  "total_A_compute_billed_usd": 5.53209775,
+  "A_apps": [
+    {
+      "run_id": "a8_a01_llama_base_gsm8k_p1024_k1_e2_s17_20261114_v1",
+      "app_id": "ap-A7vkKsbecju3qFkiQTwfzx",
+      "billed_usd": 0.11479003,
+      "billing_rows": [
+        {
+          "object_id": "ap-A7vkKsbecju3qFkiQTwfzx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-A7vkKsbecju3qFkiQTwfzx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.10315226"
+        },
+        {
+          "object_id": "ap-A7vkKsbecju3qFkiQTwfzx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00495072"
+        },
+        {
+          "object_id": "ap-A7vkKsbecju3qFkiQTwfzx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00668698"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a01_llama_base_gsm8k_p1024_k1_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-UZszKQbEJTEx6FOfbYtjjW",
+      "billed_usd": 0.10122658000000001,
+      "billing_rows": [
+        {
+          "object_id": "ap-UZszKQbEJTEx6FOfbYtjjW",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-UZszKQbEJTEx6FOfbYtjjW",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.09655576"
+        },
+        {
+          "object_id": "ap-UZszKQbEJTEx6FOfbYtjjW",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00232230"
+        },
+        {
+          "object_id": "ap-UZszKQbEJTEx6FOfbYtjjW",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00234834"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a02_llama_base_gsm8k_p2048_k1_e2_s17_20261114_v1",
+      "app_id": "ap-icYaRsG9f8ylNKMSUb2c8K",
+      "billed_usd": 0.19357374,
+      "billing_rows": [
+        {
+          "object_id": "ap-icYaRsG9f8ylNKMSUb2c8K",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-icYaRsG9f8ylNKMSUb2c8K",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.17396614"
+        },
+        {
+          "object_id": "ap-icYaRsG9f8ylNKMSUb2c8K",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00833276"
+        },
+        {
+          "object_id": "ap-icYaRsG9f8ylNKMSUb2c8K",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.01127477"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a02_llama_base_gsm8k_p2048_k1_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-KTHV7yXwkOwmsyvLvcBI8p",
+      "billed_usd": 0.10582362000000001,
+      "billing_rows": [
+        {
+          "object_id": "ap-KTHV7yXwkOwmsyvLvcBI8p",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-KTHV7yXwkOwmsyvLvcBI8p",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.10095218"
+        },
+        {
+          "object_id": "ap-KTHV7yXwkOwmsyvLvcBI8p",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00241774"
+        },
+        {
+          "object_id": "ap-KTHV7yXwkOwmsyvLvcBI8p",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00245352"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a03_llama_base_gsm8k_p512_k2_e2_s17_20261114_v1",
+      "app_id": "ap-E8xF28b2VBNXk7TLVh98lm",
+      "billed_usd": 0.13673957,
+      "billing_rows": [
+        {
+          "object_id": "ap-E8xF28b2VBNXk7TLVh98lm",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-E8xF28b2VBNXk7TLVh98lm",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.12288884"
+        },
+        {
+          "object_id": "ap-E8xF28b2VBNXk7TLVh98lm",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00588622"
+        },
+        {
+          "object_id": "ap-E8xF28b2VBNXk7TLVh98lm",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00796444"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a03_llama_base_gsm8k_p512_k2_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-jmDMdohmDMkTiLzjlenZci",
+      "billed_usd": 0.0920141,
+      "billing_rows": [
+        {
+          "object_id": "ap-jmDMdohmDMkTiLzjlenZci",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-jmDMdohmDMkTiLzjlenZci",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.08777833"
+        },
+        {
+          "object_id": "ap-jmDMdohmDMkTiLzjlenZci",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00210224"
+        },
+        {
+          "object_id": "ap-jmDMdohmDMkTiLzjlenZci",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00213335"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a04_llama_base_gsm8k_p512_k4_e2_s17_20261114_v1",
+      "app_id": "ap-fwkWIuG6xrpoQDobKgwWZi",
+      "billed_usd": 0.16333944,
+      "billing_rows": [
+        {
+          "object_id": "ap-fwkWIuG6xrpoQDobKgwWZi",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-fwkWIuG6xrpoQDobKgwWZi",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.14679435"
+        },
+        {
+          "object_id": "ap-fwkWIuG6xrpoQDobKgwWZi",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00703126"
+        },
+        {
+          "object_id": "ap-fwkWIuG6xrpoQDobKgwWZi",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00951376"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a04_llama_base_gsm8k_p512_k4_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-Y7NTvD43K2wShBsfzBXynl",
+      "billed_usd": 0.10725209000000001,
+      "billing_rows": [
+        {
+          "object_id": "ap-Y7NTvD43K2wShBsfzBXynl",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-Y7NTvD43K2wShBsfzBXynl",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.10231489"
+        },
+        {
+          "object_id": "ap-Y7NTvD43K2wShBsfzBXynl",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00245038"
+        },
+        {
+          "object_id": "ap-Y7NTvD43K2wShBsfzBXynl",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00248664"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a05_llama_base_gsm8k_p2048_k2_e2_s17_20261114_v1",
+      "app_id": "ap-DoVh7Hl2MswzgR7u25inHv",
+      "billed_usd": 0.31798439,
+      "billing_rows": [
+        {
+          "object_id": "ap-DoVh7Hl2MswzgR7u25inHv",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-DoVh7Hl2MswzgR7u25inHv",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.28577495"
+        },
+        {
+          "object_id": "ap-DoVh7Hl2MswzgR7u25inHv",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.01368826"
+        },
+        {
+          "object_id": "ap-DoVh7Hl2MswzgR7u25inHv",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.01852111"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a05_llama_base_gsm8k_p2048_k2_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-ry3JdVnc0u0Vi95MMufkNg",
+      "billed_usd": 0.09564251,
+      "billing_rows": [
+        {
+          "object_id": "ap-ry3JdVnc0u0Vi95MMufkNg",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-ry3JdVnc0u0Vi95MMufkNg",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.09123973"
+        },
+        {
+          "object_id": "ap-ry3JdVnc0u0Vi95MMufkNg",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00218513"
+        },
+        {
+          "object_id": "ap-ry3JdVnc0u0Vi95MMufkNg",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00221747"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a06_llama_base_gsm8k_p4096_k1_e1_s17_20261114_v1",
+      "app_id": "ap-1hwi9J9am4EQG3oZLiuoMx",
+      "billed_usd": 0.15628513,
+      "billing_rows": [
+        {
+          "object_id": "ap-1hwi9J9am4EQG3oZLiuoMx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-1hwi9J9am4EQG3oZLiuoMx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.14045458"
+        },
+        {
+          "object_id": "ap-1hwi9J9am4EQG3oZLiuoMx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00672760"
+        },
+        {
+          "object_id": "ap-1hwi9J9am4EQG3oZLiuoMx",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00910288"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a06_llama_base_gsm8k_p4096_k1_e1_s17_greedy_20261114_v1",
+      "app_id": "ap-THAv32HgAxfhcUZ4AgNsbS",
+      "billed_usd": 0.09661386,
+      "billing_rows": [
+        {
+          "object_id": "ap-THAv32HgAxfhcUZ4AgNsbS",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-THAv32HgAxfhcUZ4AgNsbS",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.09216636"
+        },
+        {
+          "object_id": "ap-THAv32HgAxfhcUZ4AgNsbS",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00220733"
+        },
+        {
+          "object_id": "ap-THAv32HgAxfhcUZ4AgNsbS",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00223999"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a07_llama_base_gsm8k_p4096_k1_e4_s17_20261114_v1",
+      "app_id": "ap-AVQvE1JVNIm1puxkgUEmLS",
+      "billed_usd": 0.46393802,
+      "billing_rows": [
+        {
+          "object_id": "ap-AVQvE1JVNIm1puxkgUEmLS",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "7E-8"
+        },
+        {
+          "object_id": "ap-AVQvE1JVNIm1puxkgUEmLS",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.41694460"
+        },
+        {
+          "object_id": "ap-AVQvE1JVNIm1puxkgUEmLS",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.01997112"
+        },
+        {
+          "object_id": "ap-AVQvE1JVNIm1puxkgUEmLS",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.02702223"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a07_llama_base_gsm8k_p4096_k1_e4_s17_greedy_20261114_v1",
+      "app_id": "ap-vaniZjR15VytOLXpqQiTFk",
+      "billed_usd": 0.10479699999999999,
+      "billing_rows": [
+        {
+          "object_id": "ap-vaniZjR15VytOLXpqQiTFk",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-vaniZjR15VytOLXpqQiTFk",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.09997168"
+        },
+        {
+          "object_id": "ap-vaniZjR15VytOLXpqQiTFk",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00239545"
+        },
+        {
+          "object_id": "ap-vaniZjR15VytOLXpqQiTFk",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00242969"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a08_llama_base_gsm8k_p4096_k2_e2_s17_20261114_v1",
+      "app_id": "ap-DilGQ5FLOVi42f192Z4eX1",
+      "billed_usd": 0.50066919,
+      "billing_rows": [
+        {
+          "object_id": "ap-DilGQ5FLOVi42f192Z4eX1",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "0.00008814"
+        },
+        {
+          "object_id": "ap-DilGQ5FLOVi42f192Z4eX1",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.44987604"
+        },
+        {
+          "object_id": "ap-DilGQ5FLOVi42f192Z4eX1",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.02154849"
+        },
+        {
+          "object_id": "ap-DilGQ5FLOVi42f192Z4eX1",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.02915652"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a08_llama_base_gsm8k_p4096_k2_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-xYhfM8fZsHSAjmg7Xt0IDK",
+      "billed_usd": 0.09431316000000001,
+      "billing_rows": [
+        {
+          "object_id": "ap-xYhfM8fZsHSAjmg7Xt0IDK",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-xYhfM8fZsHSAjmg7Xt0IDK",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.08997157"
+        },
+        {
+          "object_id": "ap-xYhfM8fZsHSAjmg7Xt0IDK",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00215476"
+        },
+        {
+          "object_id": "ap-xYhfM8fZsHSAjmg7Xt0IDK",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00218665"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1",
+      "app_id": "ap-1am7FnRBJAifQRlt9b8nWa",
+      "billed_usd": 0.8376746899999999,
+      "billing_rows": [
+        {
+          "object_id": "ap-1am7FnRBJAifQRlt9b8nWa",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "0.00014449"
+        },
+        {
+          "object_id": "ap-1am7FnRBJAifQRlt9b8nWa",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.75269482"
+        },
+        {
+          "object_id": "ap-1am7FnRBJAifQRlt9b8nWa",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.03605313"
+        },
+        {
+          "object_id": "ap-1am7FnRBJAifQRlt9b8nWa",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.04878225"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-cVwAtrm2JBjceu2phxjFho",
+      "billed_usd": 0.10351479000000001,
+      "billing_rows": [
+        {
+          "object_id": "ap-cVwAtrm2JBjceu2phxjFho",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-cVwAtrm2JBjceu2phxjFho",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.09874963"
+        },
+        {
+          "object_id": "ap-cVwAtrm2JBjceu2phxjFho",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00236499"
+        },
+        {
+          "object_id": "ap-cVwAtrm2JBjceu2phxjFho",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00239999"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
+      "app_id": "ap-vUWbhh3HiFT2T4kHOJTQE5",
+      "billed_usd": 1.6630934800000001,
+      "billing_rows": [
+        {
+          "object_id": "ap-vUWbhh3HiFT2T4kHOJTQE5",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "0.00024202"
+        },
+        {
+          "object_id": "ap-vUWbhh3HiFT2T4kHOJTQE5",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "1.49441682"
+        },
+        {
+          "object_id": "ap-vUWbhh3HiFT2T4kHOJTQE5",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.07158130"
+        },
+        {
+          "object_id": "ap-vUWbhh3HiFT2T4kHOJTQE5",
+          "description": "p012-standard-training-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.09685334"
+        }
+      ]
+    },
+    {
+      "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_greedy_20261114_v1",
+      "app_id": "ap-pmou6a05GCM2Bf32HlKauP",
+      "billed_usd": 0.08281236,
+      "billing_rows": [
+        {
+          "object_id": "ap-pmou6a05GCM2Bf32HlKauP",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Network Egress",
+          "cost": "1.8E-7"
+        },
+        {
+          "object_id": "ap-pmou6a05GCM2Bf32HlKauP",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "H100",
+          "cost": "0.07900018"
+        },
+        {
+          "object_id": "ap-pmou6a05GCM2Bf32HlKauP",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "CPU",
+          "cost": "0.00189200"
+        },
+        {
+          "object_id": "ap-pmou6a05GCM2Bf32HlKauP",
+          "description": "p012-g0-e-20261111",
+          "environment": "main",
+          "interval_start": "2026-11-15T00:00:00",
+          "resource": "Memory",
+          "cost": "0.00192000"
+        }
+      ]
+    }
+  ],
+  "monthly_summary": {
+    "metered_cost": "93.17105140",
+    "billed_cost": "0E-8",
+    "adjustments": {
+      "reservation_adjustment": "-0E-8",
+      "free_storage": "-26.89748120",
+      "credits": "-66.20000000",
+      "plan_cost": "0E-8",
+      "network_egress_allowance": "-0.07357020"
+    },
+    "metered_cost_breakdown": {
+      "ephemeral_apps": "65.43697127",
+      "llm_tokens": "0E-8",
+      "volumes": "27.66150268",
+      "network_egress": "0.07357020"
+    }
+  },
+  "active_apps": [],
+  "T_admitted": false,
+  "automatic_retries": false
+}
