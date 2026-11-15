@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T06:45:33.541706+00:00",
-  "stage": "A8_A_audited_T01_T03_T04_training_T02_waits_BC_patch_BC_and_GSM_continue",
+  "updated_utc": "2026-11-15T07:14:59.764463+00:00",
+  "stage": "A8_B_complete_review_ready_C_and_T_continue_T02_R1_waiting",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -344,7 +344,13 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "action": "relay_completed_B_packet_for_Claude_result_review",
+      "packet": "reports/p012_20261111/amendment8_B_results_review_v1/README.md",
+      "scope": "7 new B endpoints / 9233 outputs; C and T continue independently"
+    }
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -925,7 +931,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/review_204ad0ae/CURRENT_STATUS.json",
+  "current_status_reference": "reports/p012_20261111/amendment8_B_results_review_v1/QUEUE_STATUS_AT_PACKAGE.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -964,5 +970,61 @@
     "all_A8_checkpoints_retained": true,
     "report_volume_near_GiB": 900,
     "canonical_budget_helper": "reports/p012_20261111/review_204ad0ae/current_budget.py"
+  },
+  "amendment8_B_handoff": {
+    "utc": "2026-11-15T07:14:59.764463+00:00",
+    "packet": "reports/p012_20261111/amendment8_B_results_review_v1",
+    "B_complete": 7,
+    "C_complete": 0,
+    "T02_R1": {
+      "status": "correctly_waiting_for_BC_completion",
+      "started": false,
+      "accepted_source_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+      "A_result_release_commit": "204ad0ae932f90579cc285ff41483e6b295007a4",
+      "current_live_source_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "accepted_candidate_sha256": "845af0841bc22aabecf5589b20b7d80d72659aebab622b40832107a5661dec4c",
+      "request_source_sha256": "845af0841bc22aabecf5589b20b7d80d72659aebab622b40832107a5661dec4c",
+      "public_and_private_request_identical": true,
+      "patch_receipt_not_yet_created": true,
+      "sequence": "Wait for all B/C results and no active Modal apps; apply exact candidate; publish source and T02_PATCH_RECEIPT; refresh T02 request code commit; recheck budget/storage; start once",
+      "active_controller_source_sha256": "2cfa356d41017fcdeb47b7abbdb04d430a737592650f75467d6f8b512720865f"
+    },
+    "controllers": {
+      "BC": {
+        "pid": 79497,
+        "alive": true,
+        "status": "running",
+        "last_event": {
+          "utc": "2026-11-15T07:13:55.464813+00:00",
+          "stage": "launched",
+          "run_id": "a8_c01_qwen_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+          "pid": 81808,
+          "request_sha256": "833c4b31fd0a4e986d1d0d2050d526c2f826dd7b0787106c860f71318e60d5d2"
+        }
+      },
+      "T": {
+        "pid": 80440,
+        "alive": true,
+        "status": "running",
+        "last_event": {
+          "utc": "2026-11-15T06:42:27.346057+00:00",
+          "stage": "launched",
+          "run_id": "a8_t04_tinker_lora_4b_math_p4096_k2_e2_s17_v1",
+          "pid": 80577,
+          "request_sha256": "a5fb6e88a5aa29974cf5a469808da7279fe1831d55aa7cafc1aa797baf6fc61f",
+          "actual_training_config_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696"
+        }
+      },
+      "GSM": {
+        "pid": 71326,
+        "alive": true,
+        "status": "running",
+        "last_event": {
+          "utc": "2026-11-15T06:50:07.806463+00:00",
+          "stage": "published",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_k8_s17_20261114_v1"
+        }
+      }
+    }
   }
 }

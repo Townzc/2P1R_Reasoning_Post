@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-15T07:14:59.764463+00:00; B complete, independent packet ready
+
+User requested B-first publication without waiting for C/T. All seven B endpoints are complete with 9,233 raw outputs; packet reports/p012_20261111/amendment8_B_results_review_v1 is ready for Claude independent scoring and frozen A8 section 5 criteria. All R-2 bindings pass; B07 used 16,384 examples and 4,096 updates. Do not rescore frozen labels or repeat accepted A endpoints. B audit pending; no approval gate blocks C/T.
+
+Existing controllers BC79497, T80440 and reduced GSM71326 are alive. B/C has moved into C01. T01/T03/T04 continue; T02 is correctly unstarted under b24f787a R-1. Source remains61163c22 while C runs; T02 request binds exact845af084 candidate. Its controller alone waits for B/C completion and zero active Modal apps, publishes the source patch and T02_PATCH_RECEIPT, refreshes the request code commit, then checks budget/storage and starts T02 once. Do not manually patch, edit active controllers or duplicate calls. Never run freeze_grid.py.
+
+Current combined Tinker accounted/reserved USD411.005838/485, including A8 USD33.990063/40 and the storage reserve once. Canonical helper remains review_204ad0ae/current_budget.py. Retain ALL A8 checkpoints per204ad0ae; report near900GiB. Historical cleanup is complete. First full post-cleanup UTC billing day11/16 remains a future read after11/17 00:00UTC. No new experiments, account changes, external sends, course prose or subagents. Shared budget/Git locks through push; preserve unrelatedlt002. Latest snapshot: amendment8_B_results_review_v1/QUEUE_STATUS_AT_PACKAGE.json. Earlier entries are historical.
+
 # Current P012 — 2026-11-15T06:45:33.541706+00:00; A accepted, T released and running
 
 Review 204ad0ae932f90579cc285ff41483e6b295007a4 accepts all 10 A endpoints / 13,190 original labels with zero disagreements. Additive AUDIT_STATUS sidecars preserve frozen results and archives. A8 verdict: partially holds, 7/10 hits, mean residual +1.25pp. Source review b24f787a4c92eab9993eb03702df161a6c64c989 also passed. Both T gates are now satisfied; no owner action is pending.
