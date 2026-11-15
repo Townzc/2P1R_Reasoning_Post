@@ -26,6 +26,9 @@ CELLS.update({
     "A8_P4096_K8_E2": (4096, 8, 2),
 })
 
+# A8 conditional Tinker T group; activation requires Claude A-group verdict.
+CELLS.update({"A8_P1024_K2_E4": (1024, 2, 4)})
+
 
 def training_config(model: str, revision: str, family: str, dataset: str,
                     dataset_dir: str, output_dir: str, seed: int | None = None,
