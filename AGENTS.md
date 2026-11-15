@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-15T10:32:34.885745+00:00; T2/4 published, remaining original queue active
+
+User requested latest T progress and full-group review when complete. T01 fullMATH60.02%(3001/5000) and T03 61.32%(3066/5000) are published UNREVIEWED. Verification of all10,000 saved outputs/labels, frozen inputs, complete row order, cosine schedule and sampler/state binding passed. T02 and T04 are still training under80440, no errors/partialusage or rules exception. Continue that original queue; no duplicate calls or active-source changes. T02 R-1 remains independently accepted by e84611a7.
+
+Prepared mechanical packet builder amendment8_T_review_preparation_v1/package_T.py. --check-published verifies completed endpoints without making a review packet. Normal execution requires queue complete plus exactly4original result events, then creates amendment8_T_results_review_v1. No model/scoring/statistical calls. Full packet NOT yet created; no background packaging process was started. After all4 finish, execute builder, verify/publish and ask owner to relayClaude. Never replace old labels or submit partial group as complete.
+
+Current Tinker accounted/reservedUSD404.285305/485; A8USD29.841110/40. Ownercaffeinate83568 active, remaining33122seconds; local host still needs openlid,power,network. Night rule: outside existing rules stop/log/wait for owner. Retain A8 checkpoints, no extra experiments/settings changes/external sends/course prose/subagents. Shared locks throughpush; preserve unrelatedlt002. Current receipt amendment8_T_review_preparation_v1/CURRENT_CHECKS.json. Earlier entries historical.
+
 # Current P012 — 2026-11-15T09:12:37.990773+00:00; C/GSM audit accepted, T continues
 
 Review e84611a756c67fab41095db0e632cb48593dca86 accepts C5 plus reducedGSM7,15,828outputs. All22 A8 Modal endpoints and all12 retained Tinker GSM endpoints now audited. Additive AUDIT_STATUS sidecars preserve every frozen result/archive/label/inputmanifest hash. C holds:4/5hits,mean−0.15pp; Modal17/22hits; SL-5/SL-7hold. Keep fixed-alternative comparison: allModal K>1 RMSE registered2.57pp,beta=1 1.79pp,beta=0 7.59pp. C01/C04 gsm8k/test/0041 original incorrect labels remain. GSM7 zero disagreements; G2fails,G3holds,G1notassessed. ReducedGSM descriptive selection and4B capability restriction remain.
