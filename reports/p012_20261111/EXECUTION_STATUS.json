@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-14T23:54:00.642488+00:00",
-  "stage": "E8 result delivered; original GSM grid training active",
+  "updated_utc": "2026-11-15T01:28:00.792488+00:00",
+  "stage": "46e98da5 accepted; L64 evaluation and original GSM queue active",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -90,9 +90,9 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Original27GSMcells continue throughPID65827,with measuredbudget reconciliation and frozenpredictions before scoring.",
-    "Accept next independent review without repeating passedA7results.",
-    "L64 remains unstarted until budget decision."
+    "Complete originalL64MATH5000greedy and deliver nextresultpacketwithreleased4Bpass8andnewGSMcells.",
+    "Continue27GSMcells; annotateall4BGSMtableswith4-shotreference andanswer-only0-shotnote.",
+    "UseAPIstorage readingsonly; account/billing mutationsreservedfortheowner."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -205,55 +205,227 @@
     "e8_storage_export_recovery_v1"
   ],
   "latest_authorization": {
-    "utc": "2026-11-14T23:54:00.642488+00:00",
-    "review_package_commit": "b97b8beb4c597aaaf1a8eaacca5955eefbeafd3d",
-    "review_package": "reports/p012_20261111/results_aftere9f0ebdd_v1/README.md",
-    "accepted_recovery_review": "2edeee5169c9a05213a0264e57aae96dcad30727",
-    "E8": {
-      "status": "completed_published_pending_independent_result_audit",
-      "MATH5000_correct": 2512,
-      "MATH5000_accuracy": 0.5024,
-      "length_cap_rate": 0.023,
-      "loops": 53,
-      "new_updates_during_export": 0,
-      "export_attempts": 1
-    },
-    "storage": {
-      "paid_verified": true,
-      "reserve_usd": 30,
-      "original_checkpoints_preserved": 100,
-      "original_expiries_unchanged": true,
-      "current_count_after_export": 101
-    },
-    "NLL": "all_three_complete_published",
-    "GSM_controller": {
-      "pid": 65827,
-      "status": "running",
-      "source": "reports/p012_20261111/tinker_gsm_training_v1/continue.py",
-      "state": ".local/p012_20261111/t_gsm_v1/TRAINING_QUEUE.json"
-    },
+    "utc": "2026-11-15T01:28:00.792488+00:00",
+    "accepted_review_commit": "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
+    "accepted_endpoint_count": 12,
+    "E8_recovery_audit": "passed",
+    "frozen_results_and_labels_unchanged": true,
     "L64": {
-      "status": "not_started_awaiting_owner_budget_decision",
-      "proposal_commit": "a19ce04d287bfa559fb2672d074b205af0396dcd",
-      "projected_A6_3_usd": 36.5718199065,
-      "existing_cap_usd": 35,
-      "proposal": "TransferUSD2 from completedA6-2:50->48,A6-3:35->37; combined485unchanged"
+      "controller_pid": 68537,
+      "status": "running",
+      "events": [
+        {
+          "utc": "2026-11-15T01:19:11.167274+00:00",
+          "stage": "launched",
+          "run_id": "a6_3_tinker_lora_4b_math_l64_s17_20261113_v1",
+          "pid": 68539
+        },
+        {
+          "utc": "2026-11-15T01:23:23.043451+00:00",
+          "stage": "evaluation_request_published",
+          "commit": "273b97a3d5365e6ec14347db6736a1ee8d121dd0"
+        },
+        {
+          "utc": "2026-11-15T01:23:23.061160+00:00",
+          "stage": "launched",
+          "run_id": "a6_3_tinker_lora_4b_math_l64_s17_greedy_20261113_v1",
+          "pid": 68757
+        }
+      ],
+      "automatic_retry": false
     },
-    "GSM_4b_pass8": {
-      "status": "held_unscored_pending_combined_result_review",
-      "outputs": 4000,
-      "seven_distinct_fraction": 0.686,
-      "all_eight_identical_questions": 12,
-      "threshold_scope": "80% specified for3MATHv2repairs,reused byGSMcontroller; reviewapplicability"
+    "GSM_queue": {
+      "status": "running",
+      "controller_pid": 65827,
+      "events": [
+        {
+          "utc": "2026-11-14T23:33:39.263298+00:00",
+          "stage": "waiting_for_three_reserved_NLL"
+        },
+        {
+          "utc": "2026-11-14T23:51:31.475389+00:00",
+          "stage": "budget_reconciled",
+          "GSM_usd": 90.46866539850001,
+          "original_T_usd": 320.2160105872501,
+          "all_tracks_usd": 426.81994115225007,
+          "commit": "aba08a3c1de6db667ca581437012597e435bf0f9"
+        },
+        {
+          "utc": "2026-11-14T23:51:31.493596+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+          "pid": 66483
+        },
+        {
+          "utc": "2026-11-14T23:51:31.507004+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+          "pid": 66485
+        },
+        {
+          "utc": "2026-11-14T23:51:31.520016+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+          "pid": 66487
+        },
+        {
+          "utc": "2026-11-14T23:59:04.259172+00:00",
+          "stage": "evaluation_prepared",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_greedy_20261114_v1",
+          "commit": "50cfb0947fcc114ab7424f53e5443e59e50f5e98"
+        },
+        {
+          "utc": "2026-11-14T23:59:04.274102+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_greedy_20261114_v1",
+          "pid": 66740
+        },
+        {
+          "utc": "2026-11-14T23:59:15.955788+00:00",
+          "stage": "evaluation_prepared",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_greedy_20261114_v1",
+          "commit": "01b6f8314934b869b266e7b6e1b6b90a7e49cbec"
+        },
+        {
+          "utc": "2026-11-14T23:59:15.971289+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_greedy_20261114_v1",
+          "pid": 66765
+        },
+        {
+          "utc": "2026-11-15T00:01:09.266918+00:00",
+          "stage": "published",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+          "commit": "2f94909a643235777743c05d1d6752f5e8476c6a"
+        },
+        {
+          "utc": "2026-11-15T00:07:12.935343+00:00",
+          "stage": "published",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+          "commit": "db55f653a7192525ba98e2a79ad22b7f043abccd"
+        },
+        {
+          "utc": "2026-11-15T00:13:56.464205+00:00",
+          "stage": "evaluation_prepared",
+          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_greedy_20261114_v1",
+          "commit": "4a668270f3064bd8b94739e92aa820ff1e7a557f"
+        },
+        {
+          "utc": "2026-11-15T00:13:56.480268+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_greedy_20261114_v1",
+          "pid": 67102
+        },
+        {
+          "utc": "2026-11-15T00:17:40.436337+00:00",
+          "stage": "published",
+          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+          "commit": "97ddca2be433b041f528fa6750d59074a025fe8c"
+        },
+        {
+          "utc": "2026-11-15T00:17:42.108656+00:00",
+          "stage": "budget_reconciled",
+          "GSM_usd": 89.50297783650001,
+          "original_T_usd": 319.25032302525005,
+          "all_tracks_usd": 425.85425359025004,
+          "commit": "b285d82590f64b69114b41930f22b73718d88d5f"
+        },
+        {
+          "utc": "2026-11-15T00:17:42.124633+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+          "pid": 67197
+        },
+        {
+          "utc": "2026-11-15T00:17:42.137238+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1",
+          "pid": 67199
+        },
+        {
+          "utc": "2026-11-15T00:17:42.149349+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
+          "pid": 67201
+        },
+        {
+          "utc": "2026-11-15T01:04:37.315615+00:00",
+          "stage": "evaluation_prepared",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_greedy_20261114_v1",
+          "commit": "73f949f68baa12b9f63fce9d402dee024c976de7"
+        },
+        {
+          "utc": "2026-11-15T01:04:37.331855+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_greedy_20261114_v1",
+          "pid": 68024
+        },
+        {
+          "utc": "2026-11-15T01:06:30.995788+00:00",
+          "stage": "published",
+          "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
+          "commit": "fd63758228e480bce2057d741c745307de2cebc2"
+        },
+        {
+          "utc": "2026-11-15T01:17:43.385335+00:00",
+          "stage": "evaluation_prepared",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_greedy_20261114_v1",
+          "commit": "d99bed890568f393b4e9879df27b0ac4eb2a05b8"
+        },
+        {
+          "utc": "2026-11-15T01:17:43.402747+00:00",
+          "stage": "launched",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_greedy_20261114_v1",
+          "pid": 68483
+        },
+        {
+          "utc": "2026-11-15T01:19:37.011936+00:00",
+          "stage": "published",
+          "run_id": "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1",
+          "commit": "9a7fac8f50f3eb09c9b2bf4a68c2dd2546131e9f"
+        }
+      ],
+      "automatic_retry": false
+    },
+    "4B_annotation_queue": {
+      "status": "running",
+      "controller_pid": 68792,
+      "events": [
+        {
+          "utc": "2026-11-15T01:23:29.822701+00:00",
+          "stage": "started",
+          "scope": "Nine original4BGSMcells; metadata and README only, no model calls"
+        },
+        {
+          "utc": "2026-11-15T01:23:31.402543+00:00",
+          "stage": "annotated",
+          "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+          "commit": "b84563ff1fdcb275e7a2ffc3a642fc75d9326f88"
+        }
+      ]
+    },
+    "4B_GSM_pass8": {
+      "status": "scored_existing_outputs_pending_next_result_review",
+      "pass_at_1": 0.66275,
+      "pass_at_8": 0.932,
+      "new_sampling_calls": 0,
+      "eligible_for_pretraining_capability": false
     },
     "budget": {
-      "original_T_accounted_and_reserved_usd": 320.2160105872501,
+      "original_T_accounted_and_reserved_usd": 319.25032302525005,
       "A6_2_accounted_and_reserved_usd": 38.430015023,
-      "A6_3_accounted_and_reserved_usd": 32.160171854,
-      "pre_A7_accounted_and_reserved_usd": 390.8061974642501,
+      "A6_3_accounted_and_reserved_usd": 36.562388886,
+      "pre_A7_accounted_and_reserved_usd": 394.2427269342501,
       "A7_accounted_and_reserved_usd": 36.013743688000005,
-      "combined_reserved_usd": 426.81994115225007,
+      "combined_reserved_usd": 430.25647062225005,
       "caps_usd": {
+        "original_T": 340,
+        "A6-2": 48,
+        "A6-3": 38,
+        "A7": 60,
+        "combined": 485
+      },
+      "legacy_reported_caps_usd": {
         "original_T": 340,
         "A6-2": 50,
         "A6-3": 35,
@@ -261,29 +433,11 @@
         "combined": 485
       }
     },
-    "first_GSM_batch": [
-      {
-        "run_id": "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
-        "updates_observed": 14,
-        "expected_updates": 128,
-        "model": "Qwen/Qwen3.5-4B",
-        "rank": 32
-      },
-      {
-        "run_id": "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
-        "updates_observed": 40,
-        "expected_updates": 128,
-        "model": "Qwen/Qwen3.5-9B",
-        "rank": 32
-      },
-      {
-        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
-        "updates_observed": 33,
-        "expected_updates": 128,
-        "model": "Qwen/Qwen3.5-9B-Base",
-        "rank": 32
-      }
-    ]
+    "budget_policy": {
+      "path": "reports/p012_20261111/review_46e98da5/BUDGET_POLICY.json",
+      "sha256": "d3a5b238f1a280f9f433e848e959bf86c0ffa2e915227d8807b74fcda36c8dd4"
+    },
+    "account_and_billing_settings": "Owner only; use read-only API rate/usage checks; stop and report if a setting change is needed."
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -384,10 +538,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    "Return Claude review of b97b8beb (12endpoints,24595scoredoutputs,3000NLLrecords,E8receipts,4BGSMunscoreddiversityscope).",
-    "Decide a19ce04d USD2 A6-2->A6-3 transfer for originalL64; no L64 training yet."
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [

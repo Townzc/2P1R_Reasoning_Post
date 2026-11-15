@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-15T01:28:00.792488+00:00; review46e98da5 accepted, L64 evaluation active
+
+User accepted46e98da59753315694ebc4a0699f0b7c6c37a9c5. All12b97b8bebendpoints andE8exportrecovery passed. AdditiveAUDIT_STATUSsidecars andACCEPTANCEe0428bd6 preserveallfrozenRESULT/inputmanifest/archive/labels hashes. KeepCodexGSMlabels:87auditdifferencesonlypercentstripping. Do not re-scoreaccepted12orA7.
+
+NEW STANDING ACCOUNT RULE: account andbilling settings are owner-only. Use read-onlyAPIrate/count/bytes; ifsettingsmustchange,stopandreport. Ownerdeclarationisrecordonly,cannotoverrideAPI. Exportguardfixedaccordingly;16testspass(CHECKS_final.json),noexportreplayed. LateststorageAPIrate0.1,107checkpoints. All existingTTLpreserved.
+
+Owner authorizedL64 and explicitlysetA6-3cap38, superseding37. FirstapprovedUSD2transferleavesA6-2cap48. Overall485,originalT340,storage30remainfixed. Use review_46e98da5/current_budget.py ascapoverlay; donoteditlivelegacyaccounting/GSMhelpers(their35/50capmetadataishistorical,theGSMenforced105/340/485capsunchanged). L64admitted786c9964,controllerPID68537,private l64_after46e98da5_v1/QUEUE.json.16updatescomplete; fullMATH5000evaluationPID68757running. Itwillscores/publishusingunchangedhelpers.Noextra retries.
+
+4BGSMpass8wasreleasedby46: existing4000outputs scoredonceat321482f2,pass@1=.66275,pass@8=.932.40.5%answer-onlyoutputs; neither metric istrainingpre-capability. Use4-shot1216/1319=92.19%as4BGSMreference;0-shot543/1319answer-only. Do not resample.80%diversityguardonlyfor3MATHv2repairendpoints;otherscheckunique4000seedsandsequenceIDs,andstoponlyifstrictmajorityofquestionshave8identicaloutputs. GSMall-identicalcounts4B12/500,9B0,Base0. Policiesandchecks inreview_46e98da5.
+
+Original27GSMcontrollerPID65827continues:3Lcomplete,9B/BasePcomplete,4BPstilltraining. Do notduplicatecalls or editactivehelpers. Annotation-onlywatcherPID68792,review_46e98da5/ANNOTATION_QUEUE.json,addsacceptedbaselinepolicytoall9published4BGSMcells;nomodelcalls andnoRESULT/labelmutations. Nextresultreviewmustincludeonlyunreviewed4Bpass8,newGSMcells,andL64whencomplete;excludeaccepted12andolderA7. Sharedbudget/Gitlocksthroughpush. Preserveunrelatedlt002,credentials,frozenpredictionsandfailedattempts. No newModalwork,courseprose,externalmessages orsubagents. Earlierentriesarehistorical.
+
 # Current P012 — 2026-11-14T23:54:00.642488+00:00; E8 delivered, GSM training active
 
 Recovery review2edeee51 is fully implemented. E8 export succeeded exactly once withzero newupdates; fullMATH5000result2512/5000=50.24%,caps2.30%,loops53,normal2512/4885. E4=55.32%. Both plus10newGSMmeasurements are frozen in reviewpacketb97b8beb4c597aaaf1a8eaacca5955eefbeafd3d: results_aftere9f0ebdd_v1/README.md,12endpoints,24595scoredoutputs,3000NLLrecords. Owner has been asked to returnClaude review. PassedA7/e9outputs excluded; do not rerun stats/scoring.
