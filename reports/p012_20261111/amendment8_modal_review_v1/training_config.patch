@@ -1,0 +1,20 @@
+--- a/experiments/p012/training_config.py
++++ b/experiments/p012/training_config.py
+@@ -13,0 +14,14 @@
++
++# A8 exploratory Modal parameter tuples; Tinker T group remains gated.
++CELLS.update({
++    "A8_P512_K2_E2": (512, 2, 2),
++    "A8_P512_K4_E2": (512, 4, 2),
++    "A8_P1024_K1_E2": (1024, 1, 2),
++    "A8_P2048_K1_E2": (2048, 1, 2),
++    "A8_P2048_K2_E2": (2048, 2, 2),
++    "A8_P4096_K1_E1": (4096, 1, 1),
++    "A8_P4096_K1_E4": (4096, 1, 4),
++    "A8_P4096_K2_E2": (4096, 2, 2),
++    "A8_P4096_K4_E2": (4096, 4, 2),
++    "A8_P4096_K8_E2": (4096, 8, 2),
++})
+@@ -35 +49 @@
+-        "preprocessing_num_workers": 4, "max_samples": 10000,
++        "preprocessing_num_workers": 4, "max_samples": max(10000, CELLS[cell][0] * CELLS[cell][1]) if cell else 10000,

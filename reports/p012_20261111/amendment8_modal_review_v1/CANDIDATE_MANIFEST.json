@@ -1,0 +1,3753 @@
+{
+  "utc": "2026-11-15T02:57:36.471885+00:00",
+  "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+  "status": "Pending source review; no new Modal training started",
+  "base_training_config_sha256": "d47bd9cfa81beabe7c3e6c8104651e44d90dc5de65e5208d4ed9f9acbb4b67fe",
+  "candidate_training_config_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+  "cells": [
+    {
+      "group": "A",
+      "index": 1,
+      "run_id": "a8_a01_llama_base_gsm8k_p1024_k1_e2_s17_20261114_v1",
+      "cell": "A8_P1024_K1_E2",
+      "P": 1024,
+      "K": 1,
+      "E": 2,
+      "steps": 256,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          1024,
+          1,
+          2
+        ],
+        "C": 0.25,
+        "steps": 256,
+        "pred": 21.076573161485975,
+        "se": 0.819884196862617,
+        "alt_N": 21.076573161485975,
+        "alt_P": 21.076573161485975
+      },
+      "dataset": {
+        "archive_member": "candidate/P1024_K1.jsonl",
+        "sha256": "b25e4be82c21bfa206fde1b18e7747c0333df913139d489e4b9a58885d747b8d",
+        "rows": 1024,
+        "parents": 1024,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 231053,
+          "qwen": 258916
+        },
+        "maximum_full_tokens": {
+          "llama3": 540,
+          "qwen": 562
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a01_llama_base_gsm8k_p1024_k1_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a01_llama_base_gsm8k_p1024_k1_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 1024,
+        "paths_per_parent": 1,
+        "distinct_rows": 1024,
+        "epochs": 2,
+        "presentations": 2048,
+        "effective_batch": 8,
+        "expected_updates": 256,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.23940867947838385,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.43781299197838386,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 45.44950672045543,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 2,
+      "run_id": "a8_a02_llama_base_gsm8k_p2048_k1_e2_s17_20261114_v1",
+      "cell": "A8_P2048_K1_E2",
+      "P": 2048,
+      "K": 1,
+      "E": 2,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          2048,
+          1,
+          2
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 26.11827141774071,
+        "se": 0.9143842207776562,
+        "alt_N": 26.11827141774071,
+        "alt_P": 26.11827141774071
+      },
+      "dataset": {
+        "archive_member": "candidate/P2048_K1.jsonl",
+        "sha256": "7414d474563fca7e8b431d07219e4f5f8a2e6895d1c5a1c1363e9f15d1c3b9ed",
+        "rows": 2048,
+        "parents": 2048,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 468195,
+          "qwen": 524591
+        },
+        "maximum_full_tokens": {
+          "llama3": 601,
+          "qwen": 669
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a02_llama_base_gsm8k_p2048_k1_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a02_llama_base_gsm8k_p2048_k1_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 2048,
+        "paths_per_parent": 1,
+        "distinct_rows": 2048,
+        "epochs": 2,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.3105975651372853,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.5090018776372853,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 92.09675615111526,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 3,
+      "run_id": "a8_a03_llama_base_gsm8k_p512_k2_e2_s17_20261114_v1",
+      "cell": "A8_P512_K2_E2",
+      "P": 512,
+      "K": 2,
+      "E": 2,
+      "steps": 256,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          512,
+          2,
+          2
+        ],
+        "C": 0.25,
+        "steps": 256,
+        "pred": 19.080111195350014,
+        "se": 0.8026488232739222,
+        "alt_N": 21.076573161485975,
+        "alt_P": 15.5420773313116
+      },
+      "dataset": {
+        "archive_member": "candidate/P512_K2.jsonl",
+        "sha256": "b289233a56ed6ec70111dd5e68249dd3c50c5a4ec6d2e62b7395422952f7a12e",
+        "rows": 1024,
+        "parents": 512,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 230634,
+          "qwen": 258177
+        },
+        "maximum_full_tokens": {
+          "llama3": 526,
+          "qwen": 571
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a03_llama_base_gsm8k_p512_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a03_llama_base_gsm8k_p512_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 2,
+        "distinct_rows": 1024,
+        "epochs": 2,
+        "presentations": 2048,
+        "effective_batch": 8,
+        "expected_updates": 256,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.23928289769746325,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.43768721019746326,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 45.36708691497414,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 4,
+      "run_id": "a8_a04_llama_base_gsm8k_p512_k4_e2_s17_20261114_v1",
+      "cell": "A8_P512_K4_E2",
+      "P": 512,
+      "K": 4,
+      "E": 2,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          512,
+          4,
+          2
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 22.12534748546879,
+        "se": 0.8700475748801642,
+        "alt_N": 26.11827141774071,
+        "alt_P": 15.049279757391965
+      },
+      "dataset": {
+        "archive_member": "candidate/P512_K4.jsonl",
+        "sha256": "990754e7b8af728f2f044cbce4b3d5cde3064ddbcf7dcb75bad17f3e9111433f",
+        "rows": 2048,
+        "parents": 512,
+        "paths_per_parent": 4,
+        "full_tokens_per_epoch": {
+          "llama3": 462533,
+          "qwen": 517589
+        },
+        "maximum_full_tokens": {
+          "llama3": 698,
+          "qwen": 726
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a04_llama_base_gsm8k_p512_k4_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a04_llama_base_gsm8k_p512_k4_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 4,
+        "distinct_rows": 2048,
+        "epochs": 2,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.3088978600213602,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.5073021725213602,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 90.98300689422952,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 5,
+      "run_id": "a8_a05_llama_base_gsm8k_p2048_k2_e2_s17_20261114_v1",
+      "cell": "A8_P2048_K2_E2",
+      "P": 2048,
+      "K": 2,
+      "E": 2,
+      "steps": 1024,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          2048,
+          2,
+          2
+        ],
+        "C": 1.0,
+        "steps": 1024,
+        "pred": 29.163507707859495,
+        "se": 0.9774018588680742,
+        "alt_N": 31.15996967399545,
+        "alt_P": 25.625473843821077
+      },
+      "dataset": {
+        "archive_member": "candidate/P2048_K2.jsonl",
+        "sha256": "87463ef6a4328bc1e57c78ac32c4db31d41543a5c6d0245091133f561277e495",
+        "rows": 4096,
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 935611,
+          "qwen": 1048330
+        },
+        "maximum_full_tokens": {
+          "llama3": 601,
+          "qwen": 669
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a05_llama_base_gsm8k_p2048_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a05_llama_base_gsm8k_p2048_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.45091359595064207,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.6493179084506421,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 184.04027834406838,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 6,
+      "run_id": "a8_a06_llama_base_gsm8k_p4096_k1_e1_s17_20261114_v1",
+      "cell": "A8_P4096_K1_E1",
+      "P": 4096,
+      "K": 1,
+      "E": 1,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 31.652767247915087,
+        "se": 1.1723990200660384,
+        "alt_N": 31.652767247915087,
+        "alt_P": 31.652767247915087
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K1.jsonl",
+        "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+        "rows": 4096,
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 939756,
+          "qwen": 1052791
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a06_llama_base_gsm8k_p4096_k1_e1_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a06_llama_base_gsm8k_p4096_k1_e1_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 1,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 1,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.31110279362723614,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.5095071061272362,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 92.42781231489813,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 7,
+      "run_id": "a8_a07_llama_base_gsm8k_p4096_k1_e4_s17_20261114_v1",
+      "cell": "A8_P4096_K1_E4",
+      "P": 4096,
+      "K": 1,
+      "E": 4,
+      "steps": 2048,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          4
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 30.667172100075817,
+        "se": 1.1203947834165384,
+        "alt_N": 30.667172100075817,
+        "alt_P": 30.667172100075817
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K1.jsonl",
+        "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+        "rows": 4096,
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 939756,
+          "qwen": 1052791
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a07_llama_base_gsm8k_p4096_k1_e4_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a07_llama_base_gsm8k_p4096_k1_e4_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 4,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 4,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.7342681276756114,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 0.9326724401756115,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 369.71124925959253,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 8,
+      "run_id": "a8_a08_llama_base_gsm8k_p4096_k2_e2_s17_20261114_v1",
+      "cell": "A8_P4096_K2_E2",
+      "P": 4096,
+      "K": 2,
+      "E": 2,
+      "steps": 2048,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          2,
+          2
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 34.20520596411423,
+        "se": 1.2064152607607423,
+        "alt_N": 36.201667930250196,
+        "alt_P": 30.667172100075817
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K2.jsonl",
+        "sha256": "76e0eab74daf74f32a0c74fb9aa9797fd6ecc486c0dae9c7a5e878b9649419b2",
+        "rows": 8192,
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 1880998,
+          "qwen": 2106991
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a08_llama_base_gsm8k_p4096_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_a08_llama_base_gsm8k_p4096_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "distinct_rows": 8192,
+        "epochs": 2,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.8481352333259781,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 1.046539545825978,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 370.0035543453806,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 9,
+      "run_id": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1",
+      "cell": "A8_P4096_K4_E2",
+      "P": 4096,
+      "K": 4,
+      "E": 2,
+      "steps": 4096,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          4,
+          2
+        ],
+        "C": 4.0,
+        "steps": 4096,
+        "pred": 37.25044225423301,
+        "se": 1.3739369918287165,
+        "alt_N": 41.24336618650493,
+        "alt_P": 30.17437452615618
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K4.jsonl",
+        "sha256": "dbe2b845662b6ae8618d13069c55d9392f9f7b18fd3773a98a0404604e875c4f",
+        "rows": 16384,
+        "parents": 4096,
+        "paths_per_parent": 4,
+        "full_tokens_per_epoch": {
+          "llama3": 3764238,
+          "qwen": 4216432
+        },
+        "maximum_full_tokens": {
+          "llama3": 1072,
+          "qwen": 1104
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 16384,
+        "output_dir": "/p012/training/a8_a09_llama_base_gsm8k_p4096_k4_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 4,
+        "distinct_rows": 16384,
+        "epochs": 2,
+        "presentations": 32768,
+        "effective_batch": 8,
+        "expected_updates": 4096,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 1.6403168375815282,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 1.8387211500815281,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 740.4481234971792,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "A",
+      "index": 10,
+      "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
+      "cell": "A8_P4096_K8_E2",
+      "P": 4096,
+      "K": 8,
+      "E": 2,
+      "steps": 8192,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          8,
+          2
+        ],
+        "C": 8.0,
+        "steps": 8192,
+        "pred": 40.29567854435179,
+        "se": 1.5894992849592307,
+        "alt_N": 46.28506444275967,
+        "alt_P": 29.681576952236544
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K8.jsonl",
+        "sha256": "240d8a1211583372ef82f3696cf41589ea39b4f6610b55b6d780b777ae9cc89b",
+        "rows": 32768,
+        "parents": 4096,
+        "paths_per_parent": 8,
+        "full_tokens_per_epoch": {
+          "llama3": 7529677,
+          "qwen": 8434025
+        },
+        "maximum_full_tokens": {
+          "llama3": 1072,
+          "qwen": 1104
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41239,
+            "sha256": "7dc455178a8c7c21f9cfe0aef0808a92e78ade6e58e04c18354c668934b929ea"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 843,
+            "sha256": "bfb5d39c327ee5c3a65e3574596ff30b052a445cfc59a25bdf3b4c0c5a44f4d2"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 185,
+            "sha256": "da81b0dd4001a8e19fb5840d2b524f6957f44ddde6f5c3fe32b1f36cef5205bf"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "68a2e4be76fa709455a60272fba8e512c02d81c46e6c671cc9449e374fd6809a"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1df36ad4278fc38db158ddbf5799f99d383d6b96cc2d190fc0b45fa09c6f0011"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 301,
+            "sha256": "cc2e013b7545f183ef03e079a3c91c6f364fa37e4068c512d7dd843e59024535"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 50500,
+            "sha256": "8004530facf809ac432114de2a4dcc65fcb632da5ec16d666091aeb6a2ee444a"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B",
+        "model_revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 32768,
+        "output_dir": "/p012/training/a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 8,
+        "distinct_rows": 32768,
+        "epochs": 2,
+        "presentations": 65536,
+        "effective_batch": 8,
+        "expected_updates": 8192,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 3.2243675429090044,
+      "evaluation_forecast_usd": 0.1984043125,
+      "total_forecast_usd": 3.4227718554090045,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007868239186758957,
+        "fixed_billing_overhead_usd": 0.09073681248888885,
+        "scaled_training_runtime_seconds": 1481.1324908759407,
+        "largest_observed_evaluation_bill_usd": 0.13111945
+      }
+    },
+    {
+      "group": "B",
+      "index": 1,
+      "run_id": "a8_b01_llama_instruct_gsm8k_p2048_k1_e2_s17_20261114_v1",
+      "cell": "A8_P2048_K1_E2",
+      "P": 2048,
+      "K": 1,
+      "E": 2,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          2048,
+          1,
+          2
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 50.17690169320193,
+        "se": 1.1215618211112786,
+        "alt_N": 50.17690169320193,
+        "alt_P": 50.17690169320193
+      },
+      "dataset": {
+        "archive_member": "candidate/P2048_K1.jsonl",
+        "sha256": "7414d474563fca7e8b431d07219e4f5f8a2e6895d1c5a1c1363e9f15d1c3b9ed",
+        "rows": 2048,
+        "parents": 2048,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 468195,
+          "qwen": 524591
+        },
+        "maximum_full_tokens": {
+          "llama3": 601,
+          "qwen": 669
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b01_llama_instruct_gsm8k_p2048_k1_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_b01_llama_instruct_gsm8k_p2048_k1_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 2048,
+        "paths_per_parent": 1,
+        "distinct_rows": 2048,
+        "epochs": 2,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.29641863013657965,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 0.5155139176365796,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 82.50138589218903,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "B",
+      "index": 2,
+      "run_id": "a8_b02_llama_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+      "cell": "A8_P512_K4_E2",
+      "P": 512,
+      "K": 4,
+      "E": 2,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          512,
+          4,
+          2
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 45.80490270406874,
+        "se": 1.101462683067104,
+        "alt_N": 50.17690169320193,
+        "alt_P": 40.19459186252211
+      },
+      "dataset": {
+        "archive_member": "candidate/P512_K4.jsonl",
+        "sha256": "990754e7b8af728f2f044cbce4b3d5cde3064ddbcf7dcb75bad17f3e9111433f",
+        "rows": 2048,
+        "parents": 512,
+        "paths_per_parent": 4,
+        "full_tokens_per_epoch": {
+          "llama3": 462533,
+          "qwen": 517589
+        },
+        "maximum_full_tokens": {
+          "llama3": 698,
+          "qwen": 726
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b02_llama_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_b02_llama_instruct_gsm8k_p512_k4_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 4,
+        "distinct_rows": 2048,
+        "epochs": 2,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.2948960137760015,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 0.5139913012760015,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 81.50367586341561,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "B",
+      "index": 3,
+      "run_id": "a8_b03_llama_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+      "cell": "A8_P2048_K2_E2",
+      "P": 2048,
+      "K": 2,
+      "E": 2,
+      "steps": 1024,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          2048,
+          2,
+          2
+        ],
+        "C": 1.0,
+        "steps": 1024,
+        "pred": 49.48193075562295,
+        "se": 1.129673058047959,
+        "alt_N": 51.66793025018954,
+        "alt_P": 46.67677533484964
+      },
+      "dataset": {
+        "archive_member": "candidate/P2048_K2.jsonl",
+        "sha256": "87463ef6a4328bc1e57c78ac32c4db31d41543a5c6d0245091133f561277e495",
+        "rows": 4096,
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 935611,
+          "qwen": 1048330
+        },
+        "maximum_full_tokens": {
+          "llama3": 601,
+          "qwen": 669
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b03_llama_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_b03_llama_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.4221154243428634,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 0.6412107118428634,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 164.86550295491597,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "B",
+      "index": 4,
+      "run_id": "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+      "cell": "A8_P4096_K1_E1",
+      "P": 4096,
+      "K": 1,
+      "E": 1,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 55.168056608541825,
+        "se": 1.3108202540234335,
+        "alt_N": 55.168056608541825,
+        "alt_P": 55.168056608541825
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K1.jsonl",
+        "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+        "rows": 4096,
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 939756,
+          "qwen": 1052791
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 1,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 1,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.29687121991666665,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 0.5159665074166666,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 82.79795,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "B",
+      "index": 5,
+      "run_id": "a8_b05_llama_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+      "cell": "A8_P4096_K1_E4",
+      "P": 4096,
+      "K": 1,
+      "E": 4,
+      "steps": 2048,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          4
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 48.16780389183726,
+        "se": 1.275099860290296,
+        "alt_N": 48.16780389183726,
+        "alt_P": 48.16780389183726
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K1.jsonl",
+        "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+        "rows": 4096,
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 939756,
+          "qwen": 1052791
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b05_llama_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_b05_llama_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 4,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 4,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.6759478343333334,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 0.8950431218333333,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 331.1918,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "B",
+      "index": 6,
+      "run_id": "a8_b06_llama_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1",
+      "cell": "A8_P4096_K2_E2",
+      "P": 4096,
+      "K": 2,
+      "E": 2,
+      "steps": 2048,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          2,
+          2
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 50.97295931261057,
+        "se": 1.305998070190558,
+        "alt_N": 53.15895880717716,
+        "alt_P": 48.16780389183726
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K2.jsonl",
+        "sha256": "76e0eab74daf74f32a0c74fb9aa9797fd6ecc486c0dae9c7a5e878b9649419b2",
+        "rows": 8192,
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 1880998,
+          "qwen": 2106991
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b06_llama_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_b06_llama_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "distinct_rows": 8192,
+        "epochs": 2,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.7902331289531845,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 1.0093284164531846,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 331.4536504243655,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "B",
+      "index": 7,
+      "run_id": "a8_b07_llama_instruct_gsm8k_p4096_k4_e2_s17_20261114_v1",
+      "cell": "A8_P4096_K4_E2",
+      "P": 4096,
+      "K": 4,
+      "E": 2,
+      "steps": 4096,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          4,
+          2
+        ],
+        "C": 4.0,
+        "steps": 4096,
+        "pred": 50.27798837503159,
+        "se": 1.4552020336306895,
+        "alt_N": 54.64998736416477,
+        "alt_P": 44.66767753348497
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K4.jsonl",
+        "sha256": "dbe2b845662b6ae8618d13069c55d9392f9f7b18fd3773a98a0404604e875c4f",
+        "rows": 16384,
+        "parents": 4096,
+        "paths_per_parent": 4,
+        "full_tokens_per_epoch": {
+          "llama3": 3764238,
+          "qwen": 4216432
+        },
+        "maximum_full_tokens": {
+          "llama3": 1072,
+          "qwen": 1104
+        }
+      },
+      "model": {
+        "repo": "meta-llama/Llama-3.2-1B-Instruct",
+        "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "files": [
+          {
+            "path": "LICENSE.txt",
+            "bytes": 7712,
+            "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35"
+          },
+          {
+            "path": "README.md",
+            "bytes": 41742,
+            "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93"
+          },
+          {
+            "path": "USE_POLICY.md",
+            "bytes": 6021,
+            "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201"
+          },
+          {
+            "path": "config.json",
+            "bytes": 877,
+            "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 189,
+            "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 2471645608,
+            "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f"
+          },
+          {
+            "path": "original/params.json",
+            "bytes": 220,
+            "sha256": "1d616a44f3cdac29b9288cf14718b76eb1bed56ed38be1f7e39b06ed139e3733"
+          },
+          {
+            "path": "original/tokenizer.model",
+            "bytes": 2183982,
+            "sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55"
+          },
+          {
+            "path": "special_tokens_map.json",
+            "bytes": 296,
+            "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 9085657,
+            "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 54528,
+            "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e"
+          }
+        ],
+        "family": "llama3"
+      },
+      "config": {
+        "model_name_or_path": "meta-llama/Llama-3.2-1B-Instruct",
+        "model_revision": "9213176726f574b556790deb65791e0c5aa438b6",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_b07_llama_instruct_gsm8k_p4096_k4_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "llama3",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 16384,
+        "output_dir": "/p012/training/a8_b07_llama_instruct_gsm8k_p4096_k4_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 4,
+        "distinct_rows": 16384,
+        "epochs": 2,
+        "presentations": 32768,
+        "effective_batch": 8,
+        "expected_updates": 4096,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 1.5244425064428841,
+      "evaluation_forecast_usd": 0.21909528749999999,
+      "total_forecast_usd": 1.7435377939428842,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0007048463643754337,
+        "fixed_billing_overhead_usd": 0.09110854542222223,
+        "scaled_training_runtime_seconds": 663.3023672359634,
+        "largest_observed_evaluation_bill_usd": 0.14767223
+      }
+    },
+    {
+      "group": "C",
+      "index": 1,
+      "run_id": "a8_c01_qwen_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+      "cell": "A8_P512_K4_E2",
+      "P": 512,
+      "K": 4,
+      "E": 2,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          512,
+          4,
+          2
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 66.868840030326,
+        "se": 1.0407837084402958,
+        "alt_N": 69.24437705332322,
+        "alt_P": 61.89032095021481
+      },
+      "dataset": {
+        "archive_member": "candidate/P512_K4.jsonl",
+        "sha256": "990754e7b8af728f2f044cbce4b3d5cde3064ddbcf7dcb75bad17f3e9111433f",
+        "rows": 2048,
+        "parents": 512,
+        "paths_per_parent": 4,
+        "full_tokens_per_epoch": {
+          "llama3": 462533,
+          "qwen": 517589
+        },
+        "maximum_full_tokens": {
+          "llama3": 698,
+          "qwen": 726
+        }
+      },
+      "model": {
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "type": "model",
+        "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+        "files": [
+          {
+            "path": ".gitattributes",
+            "bytes": 1519,
+            "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4917,
+            "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+          },
+          {
+            "path": "config.json",
+            "bytes": 660,
+            "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 242,
+            "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+          },
+          {
+            "path": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 3087467144,
+            "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 7031645,
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 7305,
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+          },
+          {
+            "path": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ],
+        "family": "qwen"
+      },
+      "config": {
+        "model_name_or_path": "Qwen/Qwen2.5-1.5B-Instruct",
+        "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_c01_qwen_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "qwen",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_c01_qwen_instruct_gsm8k_p512_k4_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 512,
+        "paths_per_parent": 4,
+        "distinct_rows": 2048,
+        "epochs": 2,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.3719820684132986,
+      "evaluation_forecast_usd": 0.24438401250000003,
+      "total_forecast_usd": 0.6163660809132987,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0010717757387877184,
+        "fixed_billing_overhead_usd": 0.08296554946666668,
+        "scaled_training_runtime_seconds": 138.6848332158491,
+        "largest_observed_evaluation_bill_usd": 0.16790321000000002
+      }
+    },
+    {
+      "group": "C",
+      "index": 2,
+      "run_id": "a8_c02_qwen_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+      "cell": "A8_P2048_K2_E2",
+      "P": 2048,
+      "K": 2,
+      "E": 2,
+      "steps": 1024,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          2048,
+          2,
+          2
+        ],
+        "C": 1.0,
+        "steps": 1024,
+        "pred": 69.28228455900936,
+        "se": 1.0300838104278762,
+        "alt_N": 70.47005307050796,
+        "alt_P": 66.79302501895376
+      },
+      "dataset": {
+        "archive_member": "candidate/P2048_K2.jsonl",
+        "sha256": "87463ef6a4328bc1e57c78ac32c4db31d41543a5c6d0245091133f561277e495",
+        "rows": 4096,
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 935611,
+          "qwen": 1048330
+        },
+        "maximum_full_tokens": {
+          "llama3": 601,
+          "qwen": 669
+        }
+      },
+      "model": {
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "type": "model",
+        "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+        "files": [
+          {
+            "path": ".gitattributes",
+            "bytes": 1519,
+            "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4917,
+            "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+          },
+          {
+            "path": "config.json",
+            "bytes": 660,
+            "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 242,
+            "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+          },
+          {
+            "path": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 3087467144,
+            "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 7031645,
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 7305,
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+          },
+          {
+            "path": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ],
+        "family": "qwen"
+      },
+      "config": {
+        "model_name_or_path": "Qwen/Qwen2.5-1.5B-Instruct",
+        "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_c02_qwen_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "qwen",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_c02_qwen_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 2048,
+        "paths_per_parent": 2,
+        "distinct_rows": 4096,
+        "epochs": 2,
+        "presentations": 8192,
+        "effective_batch": 8,
+        "expected_updates": 1024,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.589008546790059,
+      "evaluation_forecast_usd": 0.24438401250000003,
+      "total_forecast_usd": 0.8333925592900591,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0010717757387877184,
+        "fixed_billing_overhead_usd": 0.08296554946666668,
+        "scaled_training_runtime_seconds": 280.8936650608322,
+        "largest_observed_evaluation_bill_usd": 0.16790321000000002
+      }
+    },
+    {
+      "group": "C",
+      "index": 3,
+      "run_id": "a8_c03_qwen_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+      "cell": "A8_P4096_K1_E1",
+      "P": 4096,
+      "K": 1,
+      "E": 1,
+      "steps": 512,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "C": 0.5,
+        "steps": 512,
+        "pred": 72.92140510487744,
+        "se": 1.1790339869054782,
+        "alt_N": 72.92140510487744,
+        "alt_P": 72.92140510487744
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K1.jsonl",
+        "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+        "rows": 4096,
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 939756,
+          "qwen": 1052791
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "type": "model",
+        "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+        "files": [
+          {
+            "path": ".gitattributes",
+            "bytes": 1519,
+            "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4917,
+            "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+          },
+          {
+            "path": "config.json",
+            "bytes": 660,
+            "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 242,
+            "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+          },
+          {
+            "path": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 3087467144,
+            "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 7031645,
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 7305,
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+          },
+          {
+            "path": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ],
+        "family": "qwen"
+      },
+      "config": {
+        "model_name_or_path": "Qwen/Qwen2.5-1.5B-Instruct",
+        "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_c03_qwen_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "qwen",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_c03_qwen_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 1,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 1,
+        "presentations": 4096,
+        "effective_batch": 8,
+        "expected_updates": 512,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 0.3755831538425851,
+      "evaluation_forecast_usd": 0.24438401250000003,
+      "total_forecast_usd": 0.6199671663425852,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0010717757387877184,
+        "fixed_billing_overhead_usd": 0.08296554946666668,
+        "scaled_training_runtime_seconds": 141.0444814767576,
+        "largest_observed_evaluation_bill_usd": 0.16790321000000002
+      }
+    },
+    {
+      "group": "C",
+      "index": 4,
+      "run_id": "a8_c04_qwen_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+      "cell": "A8_P4096_K1_E4",
+      "P": 4096,
+      "K": 1,
+      "E": 4,
+      "steps": 2048,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          1,
+          4
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 68.0187010361385,
+        "se": 1.1598248456018618,
+        "alt_N": 68.0187010361385,
+        "alt_P": 68.0187010361385
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K1.jsonl",
+        "sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+        "rows": 4096,
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "full_tokens_per_epoch": {
+          "llama3": 939756,
+          "qwen": 1052791
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "type": "model",
+        "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+        "files": [
+          {
+            "path": ".gitattributes",
+            "bytes": 1519,
+            "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4917,
+            "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+          },
+          {
+            "path": "config.json",
+            "bytes": 660,
+            "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 242,
+            "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+          },
+          {
+            "path": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 3087467144,
+            "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 7031645,
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 7305,
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+          },
+          {
+            "path": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ],
+        "family": "qwen"
+      },
+      "config": {
+        "model_name_or_path": "Qwen/Qwen2.5-1.5B-Instruct",
+        "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_c04_qwen_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "qwen",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_c04_qwen_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 4,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 1,
+        "distinct_rows": 4096,
+        "epochs": 4,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 1.0213318048703404,
+      "evaluation_forecast_usd": 0.24438401250000003,
+      "total_forecast_usd": 1.2657158173703404,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0010717757387877184,
+        "fixed_billing_overhead_usd": 0.08296554946666668,
+        "scaled_training_runtime_seconds": 564.1779259070304,
+        "largest_observed_evaluation_bill_usd": 0.16790321000000002
+      }
+    },
+    {
+      "group": "C",
+      "index": 5,
+      "run_id": "a8_c05_qwen_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1",
+      "cell": "A8_P4096_K2_E2",
+      "P": 4096,
+      "K": 2,
+      "E": 2,
+      "steps": 2048,
+      "workspace": "tangzhice",
+      "GPU": "H100!",
+      "seed": 17,
+      "exploratory": true,
+      "excluded_from_H0_H3": true,
+      "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+      "prediction": {
+        "cell": [
+          4096,
+          2,
+          2
+        ],
+        "C": 2.0,
+        "steps": 2048,
+        "pred": 70.5079605761941,
+        "se": 1.1715393051445209,
+        "alt_N": 71.69572908769271,
+        "alt_P": 68.0187010361385
+      },
+      "dataset": {
+        "archive_member": "candidate/P4096_K2.jsonl",
+        "sha256": "76e0eab74daf74f32a0c74fb9aa9797fd6ecc486c0dae9c7a5e878b9649419b2",
+        "rows": 8192,
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "full_tokens_per_epoch": {
+          "llama3": 1880998,
+          "qwen": 2106991
+        },
+        "maximum_full_tokens": {
+          "llama3": 990,
+          "qwen": 1093
+        }
+      },
+      "model": {
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "type": "model",
+        "downloaded_utc": "2026-11-12T05:51:55.672862+00:00",
+        "files": [
+          {
+            "path": ".gitattributes",
+            "bytes": 1519,
+            "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4917,
+            "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+          },
+          {
+            "path": "config.json",
+            "bytes": 660,
+            "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+          },
+          {
+            "path": "generation_config.json",
+            "bytes": 242,
+            "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+          },
+          {
+            "path": "merges.txt",
+            "bytes": 1671839,
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+          },
+          {
+            "path": "model.safetensors",
+            "bytes": 3087467144,
+            "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+          },
+          {
+            "path": "tokenizer.json",
+            "bytes": 7031645,
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+          },
+          {
+            "path": "tokenizer_config.json",
+            "bytes": 7305,
+            "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+          },
+          {
+            "path": "vocab.json",
+            "bytes": 2776833,
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+          }
+        ],
+        "family": "qwen"
+      },
+      "config": {
+        "model_name_or_path": "Qwen/Qwen2.5-1.5B-Instruct",
+        "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "stage": "sft",
+        "do_train": true,
+        "finetuning_type": "full",
+        "flash_attn": "fa2",
+        "dataset": "a8_c05_qwen_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1",
+        "dataset_dir": "inputs",
+        "template": "qwen",
+        "cutoff_len": 4096,
+        "packing": false,
+        "train_on_prompt": false,
+        "preprocessing_num_workers": 4,
+        "max_samples": 10000,
+        "output_dir": "/p012/training/a8_c05_qwen_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1/checkpoint",
+        "overwrite_output_dir": false,
+        "logging_steps": 1,
+        "save_steps": 1000,
+        "save_total_limit": 2,
+        "plot_loss": true,
+        "per_device_train_batch_size": 8,
+        "gradient_accumulation_steps": 1,
+        "learning_rate": 1e-05,
+        "num_train_epochs": 2,
+        "lr_scheduler_type": "cosine",
+        "bf16": true,
+        "optim": "adamw_torch",
+        "warmup_ratio": 0.0,
+        "warmup_steps": 0,
+        "weight_decay": 0.0,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "adam_epsilon": 1e-08,
+        "max_grad_norm": 1.0,
+        "seed": 17,
+        "data_seed": 17,
+        "report_to": "none",
+        "ddp_timeout": 180000000,
+        "val_size": 0.0,
+        "eval_strategy": "no",
+        "per_device_eval_batch_size": 1,
+        "save_strategy": "no"
+      },
+      "dose": {
+        "parents": 4096,
+        "paths_per_parent": 2,
+        "distinct_rows": 8192,
+        "epochs": 2,
+        "presentations": 16384,
+        "effective_batch": 8,
+        "expected_updates": 2048,
+        "constraint": "sample_presentations",
+        "equal_tokens_or_flops_claimed": false
+      },
+      "source_candidate_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
+      "admitted": false,
+      "training_forecast_usd": 1.1256148990158708,
+      "evaluation_forecast_usd": 0.24438401250000003,
+      "total_forecast_usd": 1.3699989115158708,
+      "forecast_inputs": {
+        "seconds_per_update_per_mean_token": 0.0010717757387877184,
+        "fixed_billing_overhead_usd": 0.08296554946666668,
+        "scaled_training_runtime_seconds": 564.5554589110184,
+        "largest_observed_evaluation_bill_usd": 0.16790321000000002
+      }
+    }
+  ]
+}
