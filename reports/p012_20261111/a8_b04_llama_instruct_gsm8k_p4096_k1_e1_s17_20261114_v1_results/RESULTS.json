@@ -1,0 +1,72 @@
+{
+  "run_id": "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+  "group": "B",
+  "cell": "A8_P4096_K1_E1",
+  "model": "meta-llama/Llama-3.2-1B-Instruct",
+  "seed": 17,
+  "task": "gsm8k",
+  "track": "A8_exploratory_full_finetuning",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 4096,
+    "paths_per_parent": 1,
+    "distinct_rows": 4096,
+    "epochs": 1,
+    "presentations": 4096,
+    "effective_batch": 8,
+    "expected_updates": 512,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "metrics": {
+    "responses": 1319,
+    "correct": 673,
+    "accuracy": 0.510235026535254,
+    "length_cap_count": 12,
+    "length_cap_rate": 0.009097801364670205,
+    "loop_count": 10,
+    "capped_loop_count": 10,
+    "normally_terminated_count": 1307,
+    "normally_terminated_correct": 673,
+    "normally_terminated_accuracy": 0.5149196633511859
+  },
+  "R2": {
+    "global_step": 512,
+    "expected_updates": 512,
+    "Num_examples": 4096,
+    "expected_P_times_K": 4096,
+    "trainer_state_sha256": "a53b51786dff1c86b37a167f3d28797512e85d2018528c331451aee016a56f71",
+    "training_log_sha256": "352cc27df817a81d05ec33fdb217420fcc823cee3adeec173d297fcfdf489fbd",
+    "passed": true
+  },
+  "prediction_before_score": {
+    "utc": "2026-11-15T06:41:36.359795+00:00",
+    "prediction_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "accepted_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
+    "raw_sha256": "dea39dd6018289fe428150f3517299efd3a954e534ca2b1a8c08ee8237b1941a",
+    "training_run_id": "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+    "prediction": {
+      "cell": [
+        4096,
+        1,
+        1
+      ],
+      "C": 0.5,
+      "steps": 512,
+      "pred": 55.168056608541825,
+      "se": 1.3108202540234335,
+      "alt_N": 55.168056608541825,
+      "alt_P": 55.168056608541825
+    }
+  },
+  "data_sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+  "accepted_source_review": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
+  "training_run_id": "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+  "evaluation_run_id": "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_greedy_20261114_v1",
+  "checkpoint_files_sha256": "eb72f48389ce848efa3d348159fe304b0cf31fdeacc90d3a31a8e3c155fd3dac",
+  "raw_sha256": "dea39dd6018289fe428150f3517299efd3a954e534ca2b1a8c08ee8237b1941a",
+  "labels_sha256": "2dcc4d926296d98f2a51cd4faaefb2b391e3832c412fb6ea17f3e5a97a1e9814",
+  "independent_result_audit": "pending",
+  "weights_retained_until_result_audit": true
+}
