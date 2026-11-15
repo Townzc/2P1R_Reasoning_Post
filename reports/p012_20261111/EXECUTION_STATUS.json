@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T08:59:19.370364+00:00",
-  "stage": "A8_C_and_reduced_GSM_complete_review_ready_T02_R1_passed_T_remaining_three_running",
+  "updated_utc": "2026-11-15T09:12:37.990773+00:00",
+  "stage": "Modal_A8_all22_and_reduced_GSM_all12_audited_T_remaining_three_continue",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -133,7 +133,8 @@
     "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
     "204ad0ae932f90579cc285ff41483e6b295007a4",
     "b24f787a4c92eab9993eb03702df161a6c64c989",
-    "19af6f32186dbdc3f5286858abafa96b125256c3"
+    "19af6f32186dbdc3f5286858abafa96b125256c3",
+    "e84611a756c67fab41095db0e632cb48593dca86"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -345,17 +346,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    {
-      "action": "relay_C_and_reduced_GSM_result_packets_for_independent_review",
-      "packets": [
-        "reports/p012_20261111/amendment8_C_results_review_v1/README.md",
-        "reports/p012_20261111/results_afterb0d31d3a_A8_gsm_v1/README.md"
-      ],
-      "can_wait_until_morning": true,
-      "blocks_existing_T_queue": false
-    }
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -936,7 +927,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/night_progress_20261115_v1/CURRENT_STATUS.json",
+  "current_status_reference": "reports/p012_20261111/review_e84611a7/CURRENT_STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1070,5 +1061,26 @@
     "canonical_combined_Tinker_usd": 406.83853608425005,
     "C_packet": "reports/p012_20261111/amendment8_C_results_review_v1",
     "GSM_packet": "reports/p012_20261111/results_afterb0d31d3a_A8_gsm_v1"
+  },
+  "current_e84611a7": {
+    "accepted_review_commit": "e84611a756c67fab41095db0e632cb48593dca86",
+    "new_endpoints_accepted": 12,
+    "new_outputs": 15828,
+    "C_verdict": "holds",
+    "C_hits": 4,
+    "C_total": 5,
+    "C_mean_residual_pp": -0.15,
+    "Modal_total_hits": 17,
+    "Modal_total": 22,
+    "SL_5": "holds",
+    "SL_7": "holds",
+    "Tinker_GSM_predictions": {
+      "G1": "not_assessed_K4_cancelled",
+      "G2": "does_not_hold",
+      "G3": "holds"
+    },
+    "T02_R1": "passed",
+    "T03": "published_unreviewed",
+    "all_A8_checkpoints_retained": true
   }
 }

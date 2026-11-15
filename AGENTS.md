@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-15T09:12:37.990773+00:00; C/GSM audit accepted, T continues
+
+Review e84611a756c67fab41095db0e632cb48593dca86 accepts C5 plus reducedGSM7,15,828outputs. All22 A8 Modal endpoints and all12 retained Tinker GSM endpoints now audited. Additive AUDIT_STATUS sidecars preserve every frozen result/archive/label/inputmanifest hash. C holds:4/5hits,mean−0.15pp; Modal17/22hits; SL-5/SL-7hold. Keep fixed-alternative comparison: allModal K>1 RMSE registered2.57pp,beta=1 1.79pp,beta=0 7.59pp. C01/C04 gsm8k/test/0041 original incorrect labels remain. GSM7 zero disagreements; G2fails,G3holds,G1notassessed. ReducedGSM descriptive selection and4B capability restriction remain.
+
+T02 R-1 independently accepted. T80440 healthy; T03 published61.32% but UNREVIEWED, to be included with complete four-arm T packet. T01/T02/T04 continue. Do not repeat T03, edit active runner/controller, expand experiments or run freeze_grid.py. No owner decision pending. Night policy remains: only existing authorized queue; outside rules stop/log/wait for owner. All A8 checkpoints retained; report near900GiB. No account/storage/power setting changes.
+
+Owner-run caffeinate83568 stillalive; Mac requires openlid/power/network. Canonical Tinker accounted/reservedUSD406.838536/485, usingreview_204ad0ae/current_budget.py. Shared budget/Git locks throughpush; no external sends, course prose or subagents. Preserve unrelatedlt002. Current snapshot review_e84611a7/CURRENT_STATUS.json. Earlier entries historical.
+
 # Current P012 — 2026-11-15T08:59:19.370364+00:00; C/GSM complete, T02 R-1 passed
 
 C group5/5 complete,6,595outputs; all22 A8 Modal endpoints now complete. New independent packet amendment8_C_results_review_v1 binds C and accepted A/B references for SL-5/SL-7. Reduced Tinker GSM finished12/12 retained cells; packet results_afterb0d31d3a_A8_gsm_v1 contains only7new endpoints/9,233outputs, with5accepted references. Independent reviews pending and can wait until morning; they do not block existing T. G1 remains unassessed; G2/G3 follow8bb. Preserve4B GSM capability restriction. No new rescore/fit/bootstrap.
