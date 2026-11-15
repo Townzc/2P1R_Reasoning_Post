@@ -12,6 +12,20 @@ CELLS = {"P": (4096, 1, 2), "K8": (512, 8, 2),
          "K8s": (64, 8, 2), "Rs": (64, 1, 16),
          "E4": (2048, 1, 4), "E8": (1024, 1, 8)}
 
+# A8 exploratory Modal parameter tuples; Tinker T group remains gated.
+CELLS.update({
+    "A8_P512_K2_E2": (512, 2, 2),
+    "A8_P512_K4_E2": (512, 4, 2),
+    "A8_P1024_K1_E2": (1024, 1, 2),
+    "A8_P2048_K1_E2": (2048, 1, 2),
+    "A8_P2048_K2_E2": (2048, 2, 2),
+    "A8_P4096_K1_E1": (4096, 1, 1),
+    "A8_P4096_K1_E4": (4096, 1, 4),
+    "A8_P4096_K2_E2": (4096, 2, 2),
+    "A8_P4096_K4_E2": (4096, 4, 2),
+    "A8_P4096_K8_E2": (4096, 8, 2),
+})
+
 
 def training_config(model: str, revision: str, family: str, dataset: str,
                     dataset_dir: str, output_dir: str, seed: int | None = None,
@@ -32,7 +46,7 @@ def training_config(model: str, revision: str, family: str, dataset: str,
         "flash_attn": "fa2", "dataset": dataset, "dataset_dir": dataset_dir,
         "template": family, "cutoff_len": 16384 if long_cot else (4096 if cell else 8192),
         "packing": False, "train_on_prompt": False,
-        "preprocessing_num_workers": 4, "max_samples": 10000,
+        "preprocessing_num_workers": 4, "max_samples": max(10000, CELLS[cell][0] * CELLS[cell][1]) if cell else 10000,
         "output_dir": output_dir, "overwrite_output_dir": False,
         "logging_steps": 1, "save_steps": 1000, "save_total_limit": 2,
         "plot_loss": True, "per_device_train_batch_size": 8 if cell else 2,
