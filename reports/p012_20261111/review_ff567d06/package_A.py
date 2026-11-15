@@ -24,6 +24,9 @@ def main():
         tr=L/'amendment8_modal_runs_v1'/name;ev=tr.with_name(result['evaluation_run_id'])
         request=read(tr/'request.json');ereq=read(ev/'request.json')
         assert result['prediction_before_score']['prediction']==pred['llama_base_gsm8k']['rows'][i]
+        assert result['prediction_before_score']['prediction_commit']==AUTH
+        assert datetime.datetime.fromisoformat(result['prediction_before_score']['utc']).tzinfo is not None
+        assert result['model']=='meta-llama/Llama-3.2-1B'
         for path in [folder/'RESULTS.json',folder/'evidence.zip']:
             assert subprocess.check_output(['git','hash-object',str(path)],text=True).strip()==subprocess.check_output(['git','rev-parse','HEAD:'+str(path)],text=True).strip()
         with zipfile.ZipFile(folder/'evidence.zip') as z:
@@ -32,7 +35,8 @@ def main():
             for role,member in {'raw':'evaluation/generation/raw.jsonl','labels':'scores/labels.jsonl',
                 'training_manifest':'training/MANIFEST.json','checkpoint_manifest':'training/CHECKPOINT_FILES.json',
                 'trainer_state':'training/checkpoint/trainer_state.json','training_log':'training/training.log',
-                'training_input':'training/inputs/examples.jsonl','prediction_before_score':'PREDICTION_BEFORE_SCORE.json'}.items():
+                'training_input':'training/inputs/examples.jsonl','prediction_before_score':'PREDICTION_BEFORE_SCORE.json',
+                'hardware':'training/HARDWARE.txt'}.items():
                 b=z.read(member);members[role]={'archive':str(folder/'evidence.zip'),'archive_sha256':sha(folder/'evidence.zip'),'member':member,'sha256':digest(b)}
             assert members['raw']['sha256']==result['raw_sha256'] and members['labels']['sha256']==result['labels_sha256']
             raw=[json.loads(x) for x in z.read(members['raw']['member']).splitlines()]
@@ -45,6 +49,8 @@ def main():
             training=json.loads(z.read(members['training_manifest']['member']))
             assert training['cell']==result['cell'] and training['dose']==result['dose']==request['dose']
             assert training['model']==request['model'] and training['config']['seed']==17
+            assert training['source_sha256']==request['source_sha256']
+            assert 'H100' in z.read(members['hardware']['member']).decode()
             assert training['dataset']['sha256']==members['training_input']['sha256']==result['data_sha256']
             assert len(z.read(members['training_input']['member']).splitlines())==result['dose']['distinct_rows']
             state=json.loads(z.read(members['trainer_state']['member']))
