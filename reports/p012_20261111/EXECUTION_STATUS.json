@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T10:32:34.885745+00:00",
-  "stage": "T_two_of_four_published_remaining_two_continue_review_builder_prepared",
+  "updated_utc": "2026-11-15T19:58:15.470396+00:00",
+  "stage": "authorized_overnight_queues_complete_T_four_endpoint_review_ready",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -346,7 +346,13 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    {
+      "action": "relay_complete_T_group_packet_for_Claude_review",
+      "packet": "reports/p012_20261111/amendment8_T_results_review_v1/README.md",
+      "scope": "4 original endpoints / 20000 outputs; frozen A8 §5 and SL-8; previous A/B/C/GSM accepted results reference-only"
+    }
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -927,7 +933,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/amendment8_T_review_preparation_v1/CURRENT_CHECKS.json",
+  "current_status_reference": "reports/p012_20261111/amendment8_T_results_review_v1/COMPLETION_AND_CHECKS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1046,7 +1052,9 @@
     "owner_keepawake_command_observed_running": true,
     "caffeinate_pid": 83568,
     "sleep_assertions_active": true,
-    "remaining_seconds": 38717
+    "remaining_seconds": 38717,
+    "queue_complete_no_keepawake_needed": true,
+    "caffeinate_observed_running_now": false
   },
   "current_night_progress_20261115": {
     "C_complete": 5,
@@ -1084,14 +1092,21 @@
     "all_A8_checkpoints_retained": true
   },
   "T_review_preparation": {
-    "completed_endpoints": 2,
-    "verified_outputs": 10000,
+    "completed_endpoints": 4,
+    "verified_outputs": 20000,
     "builder": "reports/p012_20261111/amendment8_T_review_preparation_v1/package_T.py",
-    "full_packet_created": false,
+    "full_packet_created": true,
     "background_packager_started": false,
-    "pending_runs": [
-      "a8_t02_tinker_lora_4b_math_p1024_k2_e4_s17_v1",
-      "a8_t04_tinker_lora_4b_math_p4096_k2_e2_s17_v1"
-    ]
+    "pending_runs": [],
+    "full_packet": "reports/p012_20261111/amendment8_T_results_review_v1"
+  },
+  "T_final_review": {
+    "packet": "reports/p012_20261111/amendment8_T_results_review_v1",
+    "complete": 4,
+    "raw_outputs": 20000,
+    "independent_result_audit": "pending",
+    "A8_accounted_usd": 23.758422101,
+    "combined_accounted_and_reserved_usd": 398.20261724675004,
+    "controller_normal_completion_utc": "2026-11-15T15:38:50.189451+00:00"
   }
 }
