@@ -1,3 +1,17 @@
+# Current P012 — 2026-11-15T05:22:26.896503+00:00; ff567d06 applied, A active, authorized cleanup complete
+
+A8 source review ff567d06ba39fd1052a72c558e69dbe98f09dd24 is accepted. Live training_config.py is exact61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696, source commit7883df08. Group A admitted4251175a; finite detached controller PID74800 owns A01→A10, private amendment8_v1/A_QUEUE.json. Read live state; do not duplicate calls or edit continue_A.py. At this snapshot 5/10 full endpoints are published. Every endpoint has verified R-2 global_step and Num examples. All failures stop, no automatic retry, especially A09/A10 submission and A10 interruption. Never rerun freeze_grid.py.
+
+Owner cleanup fb5c77bb is complete, public manifest8f78f7f9 preceded deletion; receiptsa7dfeb91. Exactly36 safetensors files from24 accepted main-grid L/K4 runs deleted,124.255230GiB freed (101.251952 tangzhice,23.003278 townzc). Whole-volume relisting confirms no other deleted paths. Do not restore/retrain them. Main P/K8/R, other P012 weights, historical780.299GiB volume, caches and all evidence retained. A8 weights remain until Claude endpoint audit. Further b/c/f deletion requires owner decision. No account/billing changes.
+
+After-cleanup UI balances28.08/13.74; last closedUTCNov13/14 storage net0/0.76402148 and0/0. R-1 reserve0.76402148×10+1=8.6402148. B/C not admitted:12 pending full requests pass CPU validation; continue_BC.py is prepared but NOT running. After A completes, reconcile actual/unsettled costs and refresh original balance, apply B/C gate and cut C05 backwards only if needed. All22 A/B/C remain tangzhice/H100! per seed17 workspace rule. No workspace switching.
+
+T candidate package5d89ba21 prepared and owner asked to relay Claude; sole runtime diff adds(1024,2,4), full MATH inputs/render checks, forecast33.990063 withinA8cap40. Candidate NOT applied. T requires both source acceptance AND Claude A-group verdict at least partially holds, plus current budget/storage gate. Applying candidate live while Modal controller runs would violate pinned source; do not do it. package_A.py prepares full10-result review only after A complete; A group audit first.
+
+Reduced Tinker GSM queue PID71326 continues unchanged, private gsm_reduction_20261114_v1/QUEUE.json.4B P,9B R,Base R published;4B R nearingcompletion. Controller waits three R then admits eachK8 onlyifP−R>=3pp, otherwise releases reserve.15 cancellations and47.250127reserve release already recorded. G1 unassessed. Preserve4B GSM capability restrictions. Allother accepted audits/frozen labels unchanged.
+
+Latest T ledger includes originalT269.360529 andcombined379.624279; consult pointer after GSM controller settlement. CapsT340,A6-2 48,A6-3 38,A7 60,A8 40,total485,storage30once. Use shared budget/Git locks throughpush; no credential output, external sends, course prose or subagents. Preserve unrelated lt002. Earlier entries historical.
+
 # Current P012 — 2026-11-15T03:10:10.635440+00:00; A8 approved, GSM reduced, Modal source review pending
 
 Read reports/p012_20261111/amendment8_status_v1/README.md first. Owner approved5e1f9128180f1dcd222fc1e33fe691ec01030f38. This supersedes earlier27-cell GSM completion and no-new-Modal notes. Existing b0d31d3a seven-endpoint acceptance remains valid; frozen data, labels, RESULTS and previous audit sidecars are unchanged.
