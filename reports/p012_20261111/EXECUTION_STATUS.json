@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T01:42:02.243792+00:00",
-  "stage": "46e98da5 applied; L64 complete; next result packet published; original GSM queue active",
+  "updated_utc": "2026-11-15T02:28:28.668636+00:00",
+  "stage": "b0d31d3a seven endpoints accepted; original GSM queue continues; final review waits for all27",
   "plan": "P012 v1 plus owner-approved amendments1-7 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -92,9 +92,9 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Return Claude review for the new result packet; keep original 27 GSM cells running.",
-    "Apply accepted 4B GSM interpretation to all newly published 4B tables.",
-    "Use API storage rate and usage. Account or billing changes are owner-only."
+    "Continue the unchanged original27 GSM training cells; no replay of completed calls.",
+    "Once all27 are complete, deliver remaining22 endpoints for one independent result review with complete grid/baseline bindings for Claude G1-G3 comparison.",
+    "Preserve accepted4B capability exclusions and owner-only account/billing rule. No new amendment or owner decision pending."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -115,7 +115,9 @@
     "53a565dadcd648c50ac1ac2a3c08f5c69da123d0",
     "6af18b7263cdafa1c6c34efb89fdea763d74d21e",
     "8a8fac5c8ae75170e5c505f4215b5f1f9f0948d4",
-    "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a"
+    "e9f0ebdd167aa012f1d2fe9e308002949e3ee48a",
+    "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
+    "b0d31d3a6793aff81735d1ca636f113f27e5af2d"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -206,12 +208,13 @@
     "tinker_gsm_pre_admission_v1",
     "e8_storage_export_recovery_v1",
     "review_46e98da5",
-    "results_after46e98da5_v1"
+    "results_after46e98da5_v1",
+    "review_b0d31d3a"
   ],
   "latest_authorization": {
-    "utc": "2026-11-15T01:42:02.243792+00:00",
-    "accepted_review_commit": "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
-    "accepted_endpoint_count": 12,
+    "utc": "2026-11-15T02:28:28.668636+00:00",
+    "accepted_review_commit": "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
+    "accepted_endpoint_count": 7,
     "E8_recovery_audit": "passed",
     "frozen_results_and_labels_unchanged": true,
     "L64": {
@@ -415,7 +418,7 @@
       ]
     },
     "4B_GSM_pass8": {
-      "status": "scored_existing_outputs_pending_next_result_review",
+      "status": "independent_result_audit_passed_b0d31d3a; descriptive_only",
       "pass_at_1": 0.66275,
       "pass_at_8": 0.932,
       "new_sampling_calls": 0,
@@ -449,11 +452,15 @@
     },
     "account_and_billing_settings": "Owner only; use read-only API rate/usage checks; stop and report if a setting change is needed.",
     "next_result_review": {
-      "commit": "dee3b53cd4f57c4e35c21ad542f22750d2f5c26b",
-      "path": "reports/p012_20261111/results_after46e98da5_v1/README.md",
-      "endpoint_count": 7,
-      "raw_outputs": 15595,
-      "status": "awaiting independent result review; does not pause authorized GSM queue"
+      "scope": "review_b0d31d3a/NEXT_REVIEW_SCOPE.json",
+      "gate": "All original27 GSM training endpoints complete",
+      "new_endpoint_count": 22,
+      "Claude_predictions": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "status": "waiting_for_original_queue_completion; no owner decision pending"
     },
     "L64_result": {
       "responses": 5000,
@@ -466,6 +473,13 @@
       "normally_terminated_count": 4604,
       "normally_terminated_correct": 3346,
       "normally_terminated_accuracy": 0.7267593397046047
+    },
+    "last_result_review": {
+      "packet_commit": "dee3b53cd4f57c4e35c21ad542f22750d2f5c26b",
+      "accepted_review_commit": "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
+      "status": "passed",
+      "endpoints": 7,
+      "outputs": 15595
     }
   },
   "amendment4_progress": {
@@ -567,14 +581,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    {
-      "action": "Return Claude independent result review commit",
-      "packet_commit": "dee3b53cd4f57c4e35c21ad542f22750d2f5c26b",
-      "packet": "reports/p012_20261111/results_after46e98da5_v1/README.md",
-      "blocks_authorized_GSM": false
-    }
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -594,7 +601,7 @@
     "budget_coordination": "Atomic pointer to current originalT ledger; serialized budget admissions and Git publication"
   },
   "Tinker_current_reservation": {
-    "as_of_utc": "2026-11-15T01:42:02.243792+00:00",
+    "as_of_utc": "2026-11-15T02:28:28.668636+00:00",
     "original_T": 319.25032302525005,
     "A6_2": 38.430015023,
     "A6_3": 35.819990841,
@@ -607,7 +614,7 @@
       "A7": 60,
       "combined": 485
     },
-    "current_snapshot": "review_46e98da5/DELIVERY_STATUS.json",
+    "current_snapshot": "review_b0d31d3a/CONTINUATION_STATUS.json",
     "note": "Completed token-cost upper bounds plus outstanding reservations; includes storage reserve USD30 once. Not a provider invoice."
   },
   "interpretation_correction_53a565da": {
@@ -615,8 +622,8 @@
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "review_46e98da5/DELIVERY_STATUS.json",
-  "background_status": "review_46e98da5/DELIVERY_STATUS.json",
+  "finite_continuation_queues": "review_b0d31d3a/CONTINUATION_STATUS.json",
+  "background_status": "review_b0d31d3a/CONTINUATION_STATUS.json",
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",

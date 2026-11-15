@@ -1,3 +1,15 @@
+# Current P012 — 2026-11-15T02:28:28.668636+00:00; b0d31d3a accepted, original GSM queue active
+
+Review b0d31d3a6793aff81735d1ca636f113f27e5af2d accepts all7 dee3b53c endpoints / 15595 outputs. Applied at43aa1a2cf9b831cb0b0da658149bc9412518d1c2. Every endpoint and packet has an AUDIT_STATUS sidecar; frozen RESULTS, input manifest, archives, and labels keep their original hashes. Current audit acceptance is in the sidecars, not historical pending flags inside frozen result files. Keep Codex labels; reviewer19 differences were one known math/test/4127 and18 percentage-normalization cases. No re-score, rerun, new amendment, or owner decision.
+
+4B GSM pass@1 andpass@8 remain descriptive only, excluded from pretraining capability. Use4-shot1216/1319 as4B GSM reference;0-shot543/1319 answer-only note remains. Existing4000 independent-seed outputs are now accepted. Preserve all interpretation sidecars. The80% diversity threshold still applies only to three MATH v2 repair endpoints.
+
+Original27 GSM controller PID65827 is running. At this snapshot5/27 endpoints are published;4B P seed17 is at976/1024 updates and continues normally. Annotation-only watcher PID68792 remains active. No active helper/source edits or duplicate model calls. See private t_gsm_v1/TRAINING_QUEUE.json and review_46e98da5/ANNOTATION_QUEUE.json. L64 is complete and now independently accepted66.92%; its controller is finished.
+
+Next result review waits for all27 original GSM endpoints. Send only the remaining22 unreviewed endpoints (29018 outputs), with all27 grid endpoints and frozen baselines bound for Claude to assess G1–G3 from8bbf06a7. Do not judge G1–G3 now. Exact scope and frozen prediction copy: review_b0d31d3a/NEXT_REVIEW_SCOPE.json. K4 exists only atseed17;seed29 remainsP/K8/R/L, no additional cells authorized. Base results are included but have no frozen G1–G3 prediction.
+
+Budget caps stay originalT340, A6-2 USD48, A6-3 USD38, A7 USD60, combinedUSD485, withstorageUSD30 reserved once. Use review_46e98da5/current_budget.py; legacy35/50 metadata is historical. Latest accounted plus reserved totalUSD429.514073. Account/billing settings are owner-only; storage admission uses API rate/usage. Preserve all checkpoints and TTLs. Shared budget/Git locks through push; preserve unrelatedlt002 and credentials. No new Modal work, course prose, external messages, subagents, or retries. Earlier entries are historical.
+
 # Current P012 — 2026-11-15T01:42:02.243792+00:00; L64 complete, next result review ready
 
 Accepted review 46e98da59753315694ebc4a0699f0b7c6c37a9c5 is implemented. All 12 previous endpoints and E8 export recovery passed; frozen results, labels, and archive hashes remain unchanged. New packet dee3b53cd4f57c4e35c21ad542f22750d2f5c26b at results_after46e98da5_v1 contains 7 endpoints / 15595 outputs: original 4B L64, released 4B GSM pass@8, and newly completed GSM training cells. Independent result review is pending; older accepted results are excluded. Do not rescore or rerun completed calls.

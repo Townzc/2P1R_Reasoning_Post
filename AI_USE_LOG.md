@@ -5222,3 +5222,7 @@ Accepted12endpoints/E8recovery withhash-boundsidecars,keepingfrozenRESULTS,label
 ## 2026-11-15T01:42:02.243792+00:00 — L64 completion and next result review
 
 Completed the authorized original L64 using unchanged training/scoring paths: 66.92% on full MATH5000. Published 7 new endpoints / 15595 outputs at dee3b53cd4f57c4e35c21ad542f22750d2f5c26b, with complete input, training, sampler, raw-output, label, and prediction bindings. Verified prior12 accepted hashes remain unchanged. Existing4B GSM pass8 was scored without new sampling; capability exclusions are explicit. Updated current caps and operational pointers; original27 GSM queue and annotation watcher continue. No new bootstrap, account/billing mutation, external message, or course-report prose.
+
+## 2026-11-15T02:28:28.668636+00:00 — accepted b0d31d3a
+
+Applied the independent seven-endpoint review through additive audit sidecars and README status notes. Verified frozen result/archive/input hashes, unchanged original labels, previous12 accepted bindings, and unchanged scientific sources. Retained4B GSM capability exclusions. Recorded final GSM review scope: remaining22 endpoints after all27 original cells complete, with frozen8bb G1–G3 for Claude comparison. Existing training and annotation controllers remain active; no new model calls, scoring, bootstrap, account/billing changes, or external messages were initiated. No new owner decision is pending.
