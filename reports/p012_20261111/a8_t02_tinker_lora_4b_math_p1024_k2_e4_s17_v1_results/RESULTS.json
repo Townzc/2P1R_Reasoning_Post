@@ -1,0 +1,92 @@
+{
+  "run_id": "a8_t02_tinker_lora_4b_math_p1024_k2_e4_s17_v1",
+  "model": "Qwen/Qwen3.5-4B",
+  "task": "math",
+  "track": "Tinker_LoRA_A8_exploratory",
+  "cell": "A8_P1024_K2_E4",
+  "seed": 17,
+  "dose": {
+    "parents": 1024,
+    "paths_per_parent": 2,
+    "distinct_rows": 2048,
+    "epochs": 4,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "MATH": {
+    "responses": 5000,
+    "correct": 2774,
+    "accuracy": 0.5548,
+    "length_cap_count": 127,
+    "length_cap_rate": 0.0254,
+    "loop_count": 74,
+    "capped_loop_count": 60,
+    "normally_terminated_count": 4873,
+    "normally_terminated_correct": 2774,
+    "normally_terminated_accuracy": 0.5692591832546686
+  },
+  "dataset_sha256": "50eaa6943e02c4133ce780182bfad665cb4ac27659be2caef808d9b4802d165c",
+  "prediction_before_score": {
+    "utc": "2026-11-15T11:19:59.584991+00:00",
+    "prediction_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "accepted_source_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "A_result_release_commit": "204ad0ae932f90579cc285ff41483e6b295007a4",
+    "raw_sha256": "f955cb6e0288df14650420ed9534608a91dcef25e46827b04c90db98d5693d47",
+    "prediction": {
+      "cell": [
+        1024,
+        2,
+        4
+      ],
+      "C": 1.0,
+      "steps": 1024,
+      "pred": 55.36333333333333,
+      "se": 0.5436292386360395,
+      "alt_N": 55.89333333333334,
+      "alt_P": 51.28666666666667
+    },
+    "training_run_id": "a8_t02_tinker_lora_4b_math_p1024_k2_e4_s17_v1"
+  },
+  "training_evidence": {
+    "run_id": "a8_t02_tinker_lora_4b_math_p1024_k2_e4_s17_v1",
+    "cell": "A8_P1024_K2_E4",
+    "seed": 17,
+    "model": "Qwen/Qwen3.5-4B",
+    "dataset_sha256": "50eaa6943e02c4133ce780182bfad665cb4ac27659be2caef808d9b4802d165c",
+    "updates": 1024,
+    "request_sha256": "b18a0bfea05053029eb0bc59f122bd66888b6af431dc08c6b891da1a87ab0c29",
+    "train_loss_sha256": "330e63e09b25832fb3acd324dba999c0c20ae869cf3084e278d6ee806208e11c",
+    "row_order_sha256": "8ea7618cccc2c3bdd6adf4dc7b94e00052d9c1f3d6b7597f1cac7b849e725b7f",
+    "sampler_manifest_sha256": "d0e506426c421fb9065d7b1bde5795eae92315902f20dab35867d6d5604888f5",
+    "state_manifest_sha256": "240d8bc4da7cbab4dfbf4dad201e4819836d18c5da95b0a4b30e19d60a2fc8be",
+    "each_epoch_complete_permutation": true
+  },
+  "training_usage": {
+    "training_input_tokens": 3453764,
+    "sampling": null,
+    "upper_token_cost_usd": 2.545424068,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 2311234,
+      "prompt_cache_hit_tokens": 75136
+    },
+    "upper_token_cost_usd": 2.4960411600000003,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "accepted_source_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+  "A_result_release_commit": "204ad0ae932f90579cc285ff41483e6b295007a4",
+  "raw_sha256": "f955cb6e0288df14650420ed9534608a91dcef25e46827b04c90db98d5693d47",
+  "labels_sha256": "caf2c41bf325d1be909bc0402059e5b9fad1e109dfb5f5a741829eefaebbb509",
+  "independent_result_audit": "pending"
+}
