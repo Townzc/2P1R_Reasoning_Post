@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-15T06:23:47.164403+00:00; A complete, B/C admitted and active
+
+A8 A01–A10 allcomplete,10endpoints13190outputs, every R-2 check passes. A09=16384examples4096updates;A10=32768examples8192updates,accuracy590/1319=44.730857%. No A09/A10 submission failure or retry. Result packet00bbe9629840438936de46b0af179611fd0b90be at amendment8_A_results_review_v1 is pushed and ownerasked to relayClaude. Await independent results andA8section5 T verdict. All A8 weights remain until endpoint audit. Do not score/retrain/repackage these frozen outputs.
+
+Owner84404 historical cleanup complete:112files514.408968GiB,manifestd46bf25f beforedelete,receipt0b663882. Remaining historicalvolume265.889789GiB, all173270retainedfiles size/mtimeunchanged;no taropened. Main P/K8/R andotherP012weights retained. NewR1 reserve$1 from V′796.149212GiB<1024. First completeUTCbillingday11/16 must bechecked after11/17 00:00UTC;>prediction+$0.10 stopsnewadmissions. No account/billingsettingschanges.
+
+B/C all12 admitted425abba0432cc889aa8fc5e0881fc740e3caaef4, nocuts. Freshbalance23.68,unsettled0.42,reserve1,nextbatch10.540032 =>11.960032<=19.68. Aactual20-app compute5.532098. Detachedcontroller79497 ownsB01→B07→C01→C05; firstB01 launched79498. Read privateamendment8_v1/BC_QUEUE.json. No otherModalqueueactive. Allon tangzhice/H100!, source61163c22/sourcecommit7883df08/acceptedff567d06. Neveredit activecontinue_BC.py orapply Tcandidate; neverrerunfreeze_grid.py. Anycallfailure stopswithoutretry. R-2 requiredforall especiallyB07. Deliver B,C resultpackets bygroupaftercompletion.
+
+T source5d89ba21 stillpending; cleanup84404 didnotapproveit. T requiresbothsourceacceptance ANDClaudeAverdict>=partiallyholds plusfreshbudget/storage. Ownerhas combinedreviewrequest. GSMcontroller71326continues remaining4B/9B K8;9B-BaseK8 nowpublished. Keepreduced12-cellplan, noK4/seed29starts;new7endpoints goinonepacketwhenallcomplete. Ledgerpointer remainscanonical; sharedbudget/Gitlocksthroughpush. Preservecredentials, frozenresults, unrelatedlt002. Noexternalmessages, courseprose orsubagents. Earlierentrieshistorical.
+
 # Current P012 — 2026-11-15T06:10:32.774775+00:00; 84404ebe historical cleanup complete
 
 Owner84404ebe3ef55e5409f7f13cd94019f989d2444c supersedes earlier storage R-1. Published manifestd46bf25f preceded exact deletion112 historical weight/state files in the three authorized old-volume roots,514.408968GiB. Full before/after inventories prove no other removed paths and all173270 retained regular files unchanged in size/mtime; no tar opened. Do not repeat deletion. Main P/K8/R and other P012 weights remain. A8 weights remain until endpoint audit.

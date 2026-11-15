@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T06:10:32.774775+00:00",
-  "stage": "A8_A09_complete_A10_running_historical_cleanup_complete_BC_pending_fresh_admission",
+  "updated_utc": "2026-11-15T06:23:47.164403+00:00",
+  "stage": "A8_A_complete_review_pending_BC_all12_admitted_running_historical_cleanup_complete",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -102,10 +102,10 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Finish A10 and package A-group outputs for Claude independent audit and conditional T verdict.",
-    "After A completion, refresh actual balance and billing, apply84404ebe storage reserve, admit B then funded C prefix.",
-    "Existing three GSM K8 continue; no K4 or seed29 starts.",
-    "T source review and A verdict both required before T."
+    "Claude review A00bbe962 and pending T source5d89ba21; both required before T starts.",
+    "Continue admitted B01-B07 then C01-C05 on tangzhice H100! under controller79497; package results by group when complete.",
+    "Continue remaining4B and9B GSM K8; package all7 new reduced-GSM endpoints together after completion.",
+    "Check first full UTC volume-storage day11/16 after11/17 00:00 UTC before later new admissions."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -340,10 +340,12 @@
   },
   "pending_owner_actions": [
     {
-      "kind": "relay_Claude_T_source_review",
-      "commit": "5d89ba21ad73bed2773ad2d2705dff9b9ef84aac",
-      "reason": "A8 section4 andff567d06 N-1; one new tuple and full MATH data",
-      "T_still_requires_A_group_verdict": true
+      "kind": "relay_Claude_A_results_and_T_source_review",
+      "A_results_commit": "00bbe9629840438936de46b0af179611fd0b90be",
+      "A_results_path": "reports/p012_20261111/amendment8_A_results_review_v1/README.md",
+      "T_source_commit": "5d89ba21ad73bed2773ad2d2705dff9b9ef84aac",
+      "reason": "A8 section5 conditional T verdict and section4 new T parameter source approval",
+      "T_not_started": true
     }
   ],
   "A6_2_finite_continuation": {
@@ -942,6 +944,10 @@
       "stop_new_admissions_if_actual_exceeds_expected_by_usd": 0.1,
       "status": "not_yet_complete; read authenticated usage UI or provider API once closed"
     },
-    "receipt": "reports/p012_20261111/modal_cleanup_84404ebe_v1/DELETION_RECEIPT.json"
+    "receipt": "reports/p012_20261111/modal_cleanup_84404ebe_v1/DELETION_RECEIPT.json",
+    "BC_admission_commit": "425abba0432cc889aa8fc5e0881fc740e3caaef4",
+    "BC_admitted_cells": 12,
+    "BC_controller_pid": 79497,
+    "A_results_commit": "00bbe9629840438936de46b0af179611fd0b90be"
   }
 }

@@ -1,12 +1,12 @@
 {
-  "utc": "2026-11-15T06:10:32.774775+00:00",
+  "utc": "2026-11-15T06:23:47.164403+00:00",
   "accepted_source_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
   "cleanup_authority_commit": "fb5c77bbf5a46c5d30843fb9f00a94aef1255dfa",
   "source_commit": "7883df08f0526ed020188ded2a236081f243c8da",
   "training_config_sha256": "61163c22d2e3d37c0bf2592cf7d95ea5569cf2acf6c5cb24606a14ab87bb7696",
   "A_queue": {
     "utc": "2026-11-15T04:56:18.805280+00:00",
-    "status": "running",
+    "status": "A_complete_B_C_storage_gate_pending_T_not_started",
     "controller_pid": 74800,
     "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
     "accepted_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
@@ -317,6 +317,37 @@
         "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
         "pid": 78490,
         "request_sha256": "635c186c30e5373c8a63373c0a9e59a988e1ad7ad3bf06888f77d806617e86f0"
+      },
+      {
+        "utc": "2026-11-15T06:19:02.072558+00:00",
+        "stage": "training_complete",
+        "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
+        "global_step": 8192,
+        "expected_updates": 8192,
+        "Num_examples": 32768,
+        "expected_P_times_K": 32768,
+        "trainer_state_sha256": "2e11c06eb9588cc4e60da91e15bf6d567bb40a126fcc211b4945df33120fcc37",
+        "training_log_sha256": "e6c0969f35e8c56e80480f940ff2aa2dc2af7393656cc03636062bf5915b39ce",
+        "passed": true
+      },
+      {
+        "utc": "2026-11-15T06:19:03.775966+00:00",
+        "stage": "launched",
+        "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_greedy_20261114_v1",
+        "pid": 79212,
+        "request_sha256": "36d2b8b360656a37943e2be3fd5430cc4b955328fb1f37db6818e418976eeec9"
+      },
+      {
+        "utc": "2026-11-15T06:20:47.022615+00:00",
+        "stage": "result_published",
+        "run_id": "a8_a10_llama_base_gsm8k_p4096_k8_e2_s17_20261114_v1",
+        "commit": "8a4f2f9a58af6abd1abbdf5863cc796fa28dac0d",
+        "accuracy": 0.4473085670962851
+      },
+      {
+        "utc": "2026-11-15T06:20:47.023338+00:00",
+        "stage": "complete",
+        "endpoints": 10
       }
     ]
   },
@@ -675,10 +706,85 @@
         "stage": "launched",
         "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1",
         "pid": 77370
+      },
+      {
+        "utc": "2026-11-15T06:12:28.123746+00:00",
+        "stage": "evaluation_prepared",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_greedy_20261114_v1",
+        "commit": "b50b0a562f97cc4b9573b5cb386118d667cf3e39"
+      },
+      {
+        "utc": "2026-11-15T06:12:28.145771+00:00",
+        "stage": "launched",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_greedy_20261114_v1",
+        "pid": 79032
+      },
+      {
+        "utc": "2026-11-15T06:14:21.735785+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1",
+        "commit": "c903f9d3b8b0958c050a3fa0f93f5cca790f10ca"
+      },
+      {
+        "utc": "2026-11-15T06:14:21.736567+00:00",
+        "stage": "published",
+        "run_id": "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1"
       }
     ],
     "automatic_retry": false
   },
-  "BC_status": "prepared; wait A completion then fresh balance admission",
-  "T_status": "source review5d89ba21 and Claude A-group verdict pending; not started"
+  "BC_status": "all12 admitted425abba0; controller79497 running B01 then B02-B07 C01-C05",
+  "T_status": "source review5d89ba21 and Claude A-group verdict pending; not started",
+  "BC_queue": {
+    "utc": "2026-11-15T06:22:21.476206+00:00",
+    "status": "running",
+    "controller_pid": 79497,
+    "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
+    "accepted_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
+    "automatic_retry": false,
+    "events": [
+      {
+        "utc": "2026-11-15T06:22:21.476692+00:00",
+        "stage": "adopted_approved_BC_policy",
+        "ordered_runs": [
+          "a8_b01_llama_instruct_gsm8k_p2048_k1_e2_s17_20261114_v1",
+          "a8_b02_llama_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+          "a8_b03_llama_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+          "a8_b04_llama_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+          "a8_b05_llama_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+          "a8_b06_llama_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1",
+          "a8_b07_llama_instruct_gsm8k_p4096_k4_e2_s17_20261114_v1",
+          "a8_c01_qwen_instruct_gsm8k_p512_k4_e2_s17_20261114_v1",
+          "a8_c02_qwen_instruct_gsm8k_p2048_k2_e2_s17_20261114_v1",
+          "a8_c03_qwen_instruct_gsm8k_p4096_k1_e1_s17_20261114_v1",
+          "a8_c04_qwen_instruct_gsm8k_p4096_k1_e4_s17_20261114_v1",
+          "a8_c05_qwen_instruct_gsm8k_p4096_k2_e2_s17_20261114_v1"
+        ]
+      },
+      {
+        "utc": "2026-11-15T06:22:21.488066+00:00",
+        "stage": "launched",
+        "run_id": "a8_b01_llama_instruct_gsm8k_p2048_k1_e2_s17_20261114_v1",
+        "pid": 79498,
+        "request_sha256": "5e11c452c642bcfdf39f41ffba4dc77bf2070f64f82ebf6d0746bb17bd738c49"
+      }
+    ]
+  },
+  "A_result_review_packet": {
+    "commit": "00bbe9629840438936de46b0af179611fd0b90be",
+    "path": "reports/p012_20261111/amendment8_A_results_review_v1/README.md",
+    "endpoints": 10,
+    "raw_outputs": 13190,
+    "independent_result_audit": "pending"
+  },
+  "BC_admission": {
+    "commit": "425abba0432cc889aa8fc5e0881fc740e3caaef4",
+    "path": "reports/p012_20261111/amendment8_BC_admission_v1/ADMISSION.json",
+    "actual_balance_usd": 23.68,
+    "A_actual_compute_usd": 5.53209775,
+    "next_batch_forecast_usd": 10.540032305833668,
+    "hard_lhs_usd": 11.960032305833673,
+    "hard_rhs_usd": 19.68,
+    "pruned_C_tail": []
+  }
 }
