@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-15T19:58:15.470396+00:00",
-  "stage": "authorized_overnight_queues_complete_T_four_endpoint_review_ready",
+  "updated_utc": "2026-11-15T20:09:33.346314+00:00",
+  "stage": "amendment8_complete_and_independently_audited",
   "plan": "P012 v1 plus owner-approved amendments1-8 and second-workspace addendum",
   "C1": {
     "assets_and_versions": "complete",
@@ -102,11 +102,9 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Continue the existing finite T queue; T02 waits for all B/C calls then the accepted one-tuple patch.",
-    "B/C continue under controller79497; deliver result packets by group.",
-    "Complete remaining GSM K8 and deliver the seven unreviewed reduced-GSM endpoints together.",
-    "Retain all A8 checkpoints; report near900GiB Modal volume usage. No additional experiments.",
-    "First complete post-cleanup UTC storage day11/16 must be checked after11/17 00:00 UTC before later new Modal admissions."
+    "Amendment 8 is complete and independently audited; no experiment or automatic restart is queued.",
+    "Retain all A8 checkpoints and existing Tinker TTLs; report near 900 GiB of Modal volumes.",
+    "Before any separately authorized later Modal admission, read the first complete post-cleanup UTC storage day 11/16 after 11/17 00:00 UTC and apply 84404ebe."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -134,7 +132,9 @@
     "204ad0ae932f90579cc285ff41483e6b295007a4",
     "b24f787a4c92eab9993eb03702df161a6c64c989",
     "19af6f32186dbdc3f5286858abafa96b125256c3",
-    "e84611a756c67fab41095db0e632cb48593dca86"
+    "e84611a756c67fab41095db0e632cb48593dca86",
+    "4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065",
+    "2121b7cb789e31a46e00692d5d5f88907850b75f"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -346,13 +346,7 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [
-    {
-      "action": "relay_complete_T_group_packet_for_Claude_review",
-      "packet": "reports/p012_20261111/amendment8_T_results_review_v1/README.md",
-      "scope": "4 original endpoints / 20000 outputs; frozen A8 §5 and SL-8; previous A/B/C/GSM accepted results reference-only"
-    }
-  ],
+  "pending_owner_actions": [],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -405,8 +399,8 @@
     "requirement": "Do not infer parameter movement from loss or directly compare long/short per-token losses. Preserve original frozen cross-teacher predictions.",
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
-  "finite_continuation_queues": "review_ff567d06/CURRENT_STATUS.json",
-  "background_status": "review_ff567d06/CURRENT_STATUS.json",
+  "finite_continuation_queues": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
+  "background_status": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
@@ -449,19 +443,79 @@
     "deviation_exposure": 5,
     "original_GSM_cells": 27,
     "cancelled_before_launch": 15,
-    "GSM_current_complete": 9,
+    "GSM_current_complete": 12,
     "GSM_retained_R_active": 0,
     "K8_condition": "P-R>=3pp per model",
     "G1": "not_assessed",
     "Modal_prepared": 22,
-    "Modal_started": 9,
-    "Tinker_T_started": 0,
+    "Modal_started": 22,
+    "Tinker_T_started": 4,
     "source_review_pending": null,
-    "GSM_conditional_K8_active": 3,
-    "Modal_completed": 8,
+    "GSM_conditional_K8_active": 0,
+    "Modal_completed": 22,
     "accepted_source_review": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
-    "T_source_review_pending": "5d89ba21ad73bed2773ad2d2705dff9b9ef84aac",
-    "cleanup_freed_GiB": 124.25522974133492
+    "T_source_review_pending": null,
+    "cleanup_freed_GiB": 124.25522974133492,
+    "status": "complete_and_audited",
+    "GSM_all_retained_audited": true,
+    "Modal_audited": 22,
+    "Tinker_T_completed": 4,
+    "Tinker_T_audited": 4,
+    "accepted_T_source_review": "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "final_review_commit": "2121b7cb789e31a46e00692d5d5f88907850b75f",
+    "summary": {
+      "status": "complete_and_audited",
+      "endpoints": 26,
+      "audited_endpoints": 26,
+      "prediction_hits": 20,
+      "raw_outputs": 49018,
+      "groups": [
+        {
+          "group": "A",
+          "endpoints": 10,
+          "hits": 7,
+          "verdict": "partially_holds",
+          "accepted_review_commit": "204ad0ae932f90579cc285ff41483e6b295007a4",
+          "audit_status_path": "reports/p012_20261111/amendment8_A_results_review_v1/AUDIT_STATUS.json",
+          "audit_status_sha256": "fa8db194ad13b890e31196aa09ea03bb25c5c987d7840441f15b057365cae7e7"
+        },
+        {
+          "group": "B",
+          "endpoints": 7,
+          "hits": 6,
+          "verdict": "holds",
+          "accepted_review_commit": "19af6f32186dbdc3f5286858abafa96b125256c3",
+          "audit_status_path": "reports/p012_20261111/amendment8_B_results_review_v1/AUDIT_STATUS.json",
+          "audit_status_sha256": "51819c567f2f9336383b6906517638f911a091870d2415d3bbe2385c11f481ca"
+        },
+        {
+          "group": "C",
+          "endpoints": 5,
+          "hits": 4,
+          "verdict": "holds",
+          "accepted_review_commit": "e84611a756c67fab41095db0e632cb48593dca86",
+          "audit_status_path": "reports/p012_20261111/amendment8_C_results_review_v1/AUDIT_STATUS.json",
+          "audit_status_sha256": "c4c079dd159d53d10885a4c76a630d8d77f3bda9501bcce325711d5656e05339"
+        },
+        {
+          "group": "T",
+          "endpoints": 4,
+          "hits": 3,
+          "verdict": "partially_holds",
+          "accepted_review_commit": "2121b7cb789e31a46e00692d5d5f88907850b75f",
+          "independent_endpoint_review_commit": "4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065",
+          "audit_status_path": "reports/p012_20261111/amendment8_T_results_review_v1/AUDIT_STATUS.json",
+          "audit_status_sha256": "8c5d18d00f7e09a4565ab80f08f628e2fb6b5fb93431aa513d630b45cb3130f5"
+        }
+      ],
+      "SL_5": "holds",
+      "SL_7": "holds",
+      "SL_8": "does_not_hold",
+      "exploratory": true,
+      "excluded_from_H0_H3": true
+    },
+    "all_A8_checkpoints": "retain",
+    "new_experiments_authorized": false
   },
   "current_ff567d06": {
     "utc": "2026-11-15T05:48:31.325840+00:00",
@@ -933,7 +987,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/amendment8_T_results_review_v1/COMPLETION_AND_CHECKS.json",
+  "current_status_reference": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1044,17 +1098,19 @@
   },
   "overnight_policy_reference": "reports/p012_20261111/overnight_continuation_20261114_v1/POLICY_AND_HOST_CHECK.json",
   "overnight_host_dependency": {
-    "local_host_awake_required": true,
-    "network_required": true,
+    "local_host_awake_required": false,
+    "network_required": false,
     "currently_on_AC": true,
     "owner_keepawake_command": "caffeinate -is -t 43200",
     "assistant_executed_keepawake_command": false,
-    "owner_keepawake_command_observed_running": true,
+    "owner_keepawake_command_observed_running": false,
     "caffeinate_pid": 83568,
-    "sleep_assertions_active": true,
-    "remaining_seconds": 38717,
+    "sleep_assertions_active": false,
+    "remaining_seconds": 0,
     "queue_complete_no_keepawake_needed": true,
-    "caffeinate_observed_running_now": false
+    "caffeinate_observed_running_now": false,
+    "scope": "Completed A8 and reduced GSM queues",
+    "observation_reference": "reports/p012_20261111/amendment8_T_results_review_v1/COMPLETION_AND_CHECKS.json"
   },
   "current_night_progress_20261115": {
     "C_complete": 5,
@@ -1104,9 +1160,37 @@
     "packet": "reports/p012_20261111/amendment8_T_results_review_v1",
     "complete": 4,
     "raw_outputs": 20000,
-    "independent_result_audit": "pending",
+    "independent_result_audit": "passed",
     "A8_accounted_usd": 23.758422101,
     "combined_accounted_and_reserved_usd": 398.20261724675004,
-    "controller_normal_completion_utc": "2026-11-15T15:38:50.189451+00:00"
-  }
+    "controller_normal_completion_utc": "2026-11-15T15:38:50.189451+00:00",
+    "accepted_review_commit": "2121b7cb789e31a46e00692d5d5f88907850b75f",
+    "independent_endpoint_review_commit": "4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065",
+    "verdict": {
+      "status": "partially_holds",
+      "hits": 3,
+      "total": 4,
+      "mean_residual_pp": -1.31,
+      "SL_8": "does_not_hold",
+      "comparison_K_gt_1_RMSE_pp": {
+        "registered_rule": 0.14,
+        "beta_1": 0.41,
+        "beta_0": 4.2
+      },
+      "E_eq_2": {
+        "hits": 2,
+        "total": 2,
+        "mean_residual_pp": 0.13
+      },
+      "E_ne_2": {
+        "hits": 1,
+        "total": 2,
+        "E4_hit": true,
+        "E1_hit": false
+      },
+      "source_of_numeric_summary": "Accepted independent reviews; no new local fit or bootstrap"
+    },
+    "audit_status": "reports/p012_20261111/amendment8_T_results_review_v1/AUDIT_STATUS.json"
+  },
+  "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json"
 }

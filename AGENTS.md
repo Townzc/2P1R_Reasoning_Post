@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-15T20:09:33.346314+00:00; Amendment 8 complete and independently audited
+
+Owner accepted review 2121b7cb789e31a46e00692d5d5f88907850b75f, confirming the same four T endpoints independently audited in 4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065. T: 20,000 outputs, 3/4 frozen prediction hits, partially holds, mean residual −1.31 pp; SL-8 does not hold. Six scoring disagreements on two known questions retain the existing Codex labels. All 72 T bindings and frozen-file hashes verified; additive AUDIT_STATUS sidecars supersede historical pending fields without editing results or labels.
+
+All 26 A8 endpoints are complete and audited: A 7/10, B 6/7, C 4/5, T 3/4; total 20/26 prediction hits. SL-5/SL-7 hold. All 12 retained Tinker GSM endpoints were already audited; G2 fails, G3 holds, G1 not assessed. All A8 work remains exploratory outside H0–H3. Current canonical closeout: reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json.
+
+All authorized BC, T and reduced GSM queues are complete; controllers exited. No further automatic work, new experiment, retry, source change or checkpoint deletion is authorized. Retain ALL A8 checkpoints and existing Tinker TTLs. No local keep-awake requirement remains for this completed scope. Never restart controllers or run freeze_grid.py. Future separately authorized Modal admission must first check UTC 11/16 storage charges after 11/17 00:00 UTC under 84404ebe; report near 900 GiB. No account, billing, storage or power setting changes.
+
+Final A8 T accounting USD 23.758422/40; combined Tinker accounted plus retained reserves USD 398.202617/485, including storage reserve 30 once. No owner action pending. No external sends, course prose or subagents; preserve unrelated lt002. Shared Git lock through push. Earlier entries are historical snapshots superseded by this acceptance.
+
 # Current P012 — 2026-11-15T19:58:15.470396+00:00; all T complete, full review packet ready
 
 User requested checking T02/T04 and running the prepared packet builder once allfour finish. T01/T02/T03/T04 are fully complete,20,000rawoutputs; controller80440 completed normally2026-11-15 15:38:50UTC(07:38:50PST). Results60.02/55.48/61.32/58.34percent, all UNREVIEWED. Eight original calls only(fourtrain/foureval),zero duplicates or stopped events. The unchanged prepared package_T.py ran successfully and created amendment8_T_results_review_v1;72publicbindings and4,608updates verified, all frozen labels preserved. Owner should relay full packet for Claude independent scoring, frozenA8§5 andSL-8. No earlier accepted A/B/C/GSM re-audit.

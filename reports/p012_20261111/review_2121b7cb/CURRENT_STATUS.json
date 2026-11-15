@@ -1,0 +1,177 @@
+{
+  "utc": "2026-11-15T20:09:33.346314+00:00",
+  "stage": "amendment8_complete_and_independently_audited",
+  "accepted_review_commit": "2121b7cb789e31a46e00692d5d5f88907850b75f",
+  "amendment8": {
+    "status": "complete_and_audited",
+    "endpoints": 26,
+    "audited_endpoints": 26,
+    "prediction_hits": 20,
+    "raw_outputs": 49018,
+    "groups": [
+      {
+        "group": "A",
+        "endpoints": 10,
+        "hits": 7,
+        "verdict": "partially_holds",
+        "accepted_review_commit": "204ad0ae932f90579cc285ff41483e6b295007a4",
+        "audit_status_path": "reports/p012_20261111/amendment8_A_results_review_v1/AUDIT_STATUS.json",
+        "audit_status_sha256": "fa8db194ad13b890e31196aa09ea03bb25c5c987d7840441f15b057365cae7e7"
+      },
+      {
+        "group": "B",
+        "endpoints": 7,
+        "hits": 6,
+        "verdict": "holds",
+        "accepted_review_commit": "19af6f32186dbdc3f5286858abafa96b125256c3",
+        "audit_status_path": "reports/p012_20261111/amendment8_B_results_review_v1/AUDIT_STATUS.json",
+        "audit_status_sha256": "51819c567f2f9336383b6906517638f911a091870d2415d3bbe2385c11f481ca"
+      },
+      {
+        "group": "C",
+        "endpoints": 5,
+        "hits": 4,
+        "verdict": "holds",
+        "accepted_review_commit": "e84611a756c67fab41095db0e632cb48593dca86",
+        "audit_status_path": "reports/p012_20261111/amendment8_C_results_review_v1/AUDIT_STATUS.json",
+        "audit_status_sha256": "c4c079dd159d53d10885a4c76a630d8d77f3bda9501bcce325711d5656e05339"
+      },
+      {
+        "group": "T",
+        "endpoints": 4,
+        "hits": 3,
+        "verdict": "partially_holds",
+        "accepted_review_commit": "2121b7cb789e31a46e00692d5d5f88907850b75f",
+        "independent_endpoint_review_commit": "4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065",
+        "audit_status_path": "reports/p012_20261111/amendment8_T_results_review_v1/AUDIT_STATUS.json",
+        "audit_status_sha256": "8c5d18d00f7e09a4565ab80f08f628e2fb6b5fb93431aa513d630b45cb3130f5"
+      }
+    ],
+    "SL_5": "holds",
+    "SL_7": "holds",
+    "SL_8": "does_not_hold",
+    "exploratory": true,
+    "excluded_from_H0_H3": true
+  },
+  "T_verdict": {
+    "status": "partially_holds",
+    "hits": 3,
+    "total": 4,
+    "mean_residual_pp": -1.31,
+    "SL_8": "does_not_hold",
+    "comparison_K_gt_1_RMSE_pp": {
+      "registered_rule": 0.14,
+      "beta_1": 0.41,
+      "beta_0": 4.2
+    },
+    "E_eq_2": {
+      "hits": 2,
+      "total": 2,
+      "mean_residual_pp": 0.13
+    },
+    "E_ne_2": {
+      "hits": 1,
+      "total": 2,
+      "E4_hit": true,
+      "E1_hit": false
+    },
+    "source_of_numeric_summary": "Accepted independent reviews; no new local fit or bootstrap"
+  },
+  "Tinker_GSM_all_12_retained_endpoints_audited": true,
+  "Tinker_GSM_predictions": {
+    "G1": "not_assessed_K4_cancelled",
+    "G2": "does_not_hold",
+    "G3": "holds"
+  },
+  "controllers": {
+    "T": {
+      "controller_pid": 80440,
+      "recorded_status": "complete",
+      "process_alive": false,
+      "final_event": {
+        "utc": "2026-11-15T15:38:50.189451+00:00",
+        "stage": "all_four_T_endpoints_complete",
+        "endpoints": 4
+      }
+    },
+    "BC": {
+      "controller_pid": 79497,
+      "recorded_status": "BC_complete_T_waits_Claude_A_verdict",
+      "process_alive": false,
+      "final_event": {
+        "utc": "2026-11-15T07:55:00.034088+00:00",
+        "stage": "complete",
+        "endpoints": 12
+      }
+    },
+    "GSM": {
+      "controller_pid": 71326,
+      "recorded_status": "complete",
+      "process_alive": false,
+      "final_event": {
+        "utc": "2026-11-15T08:35:50.913261+00:00",
+        "stage": "reduced_GSM_queue_complete",
+        "completed": [
+          "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_20261114_v1",
+          "tinker_lora_qwen3_5_4b_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_4b_gsm8k_p_s17_20261114_v1",
+          "tinker_lora_qwen3_5_4b_gsm8k_r_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_p_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_r_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_k8_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_l_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_p_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_r_s17_20261114_v1"
+        ],
+        "selected_K8": [
+          "tinker_lora_qwen3_5_4b_gsm8k_k8_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_gsm8k_k8_s17_20261114_v1",
+          "tinker_lora_qwen3_5_9b_base_gsm8k_k8_s17_20261114_v1"
+        ]
+      }
+    }
+  },
+  "Tinker_budget": {
+    "A8_accounted_and_reserved_usd": 23.758422101,
+    "combined_reserved_usd": 398.20261724675004,
+    "caps_usd": {
+      "original_T": 340,
+      "A6-2": 48,
+      "A6-3": 38,
+      "A7": 60,
+      "combined": 485,
+      "A8": 40
+    },
+    "global_paid_storage_reserve_usd_included_once_in_original_T": 30,
+    "canonical_budget_helper": "reports/p012_20261111/review_204ad0ae/current_budget.py",
+    "observed_utc": "2026-11-15T20:09:33.346314+00:00",
+    "basis": "Existing upper-token accounting plus retained reserves; not an invoice or cash balance"
+  },
+  "Modal_idle_last_observed": {
+    "utc": "2026-11-15T19:56:17.024566+00:00",
+    "workspaces": {
+      "tangzhice": [],
+      "townzc": []
+    },
+    "purpose": "Read-only post-completion check; no applications or settings changed."
+  },
+  "Tinker_storage_last_observed": {
+    "observed_utc": "2026-11-15T19:56:22.102222+00:00",
+    "checkpoint_count": 135,
+    "size_bytes": 91928265102,
+    "effective_rate_usd_per_gigabyte_month": 0.1,
+    "paid_checkpoint_storage_enabled_by_owner": true,
+    "paid_storage_verified_by_api": true,
+    "admission_basis": "API rate and aggregate usage; owner declaration is documentary only",
+    "admitted": true
+  },
+  "checkpoint_retention": "Retain all A8 checkpoints and existing Tinker TTLs; no deletion authorized.",
+  "remaining_autostart_work_in_this_scope": [],
+  "pending_owner_actions": [],
+  "new_experiments_authorized": false,
+  "local_host_awake_required_for_completed_scope": false,
+  "future_Modal_admission_guard": "Before any separately authorized later Modal admission, read UTC 2026-11-16 storage net charges after 2026-11-17T00:00:00Z; apply 84404ebe threshold. Report if volumes approach 900 GiB.",
+  "source_of_numeric_summary": "Accepted independent reviews; original frozen results and labels preserved."
+}
