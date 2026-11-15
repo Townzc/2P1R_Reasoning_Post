@@ -73,7 +73,6 @@ def export(plan, approval):
     require(len(review)==40 and all(c in '0123456789abcdef' for c in review), 'Recovery review required')
     require(approval.get('plan_sha256')==plan['_plan_sha256'], 'Approval belongs to another plan')
     require(approval.get('export_source_sha256')==digest(__file__), 'Source not approved')
-    require(approval.get('storage_available') is True, 'Storage disposition required')
     import tinker
     usage = tinker.AdminClient().get_current_checkpoint_storage_usage().result().model_dump(mode='json')
     storage = storage_receipt(usage, approval.get('paid_checkpoint_storage_enabled_by_owner'))
