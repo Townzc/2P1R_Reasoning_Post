@@ -1,0 +1,293 @@
+{
+ "frozen_at": "2026-11-20",
+ "seen_before_freezing": "all audited results through 2121b7cb; no Amendment 9 output exists",
+ "part_R_seed29_of_missed_cells": [
+  {
+   "id": "R01",
+   "setting": "llama_base_gsm8k",
+   "cell": [
+    4096,
+    1,
+    1
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "a8_prediction": 31.65,
+   "band_pp": 4.0,
+   "seed17_measured": 26.99,
+   "seed17_residual": -4.66,
+   "subjective": {
+    "same_sign": 0.85,
+    "outside_band": 0.65,
+    "point": 27.5
+   }
+  },
+  {
+   "id": "R02",
+   "setting": "llama_instruct_gsm8k",
+   "cell": [
+    4096,
+    1,
+    1
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "a8_prediction": 55.17,
+   "band_pp": 4.0,
+   "seed17_measured": 51.02,
+   "seed17_residual": -4.15,
+   "subjective": {
+    "same_sign": 0.85,
+    "outside_band": 0.55,
+    "point": 51.5
+   }
+  },
+  {
+   "id": "R03",
+   "setting": "qwen_instruct_gsm8k",
+   "cell": [
+    4096,
+    1,
+    1
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "a8_prediction": 72.92,
+   "band_pp": 4.0,
+   "seed17_measured": 68.61,
+   "seed17_residual": -4.31,
+   "subjective": {
+    "same_sign": 0.85,
+    "outside_band": 0.55,
+    "point": 69.3
+   }
+  },
+  {
+   "id": "R04",
+   "setting": "tinker_4b_math",
+   "cell": [
+    4096,
+    1,
+    1
+   ],
+   "seed": 29,
+   "platform": "tinker",
+   "a8_prediction": 66.94,
+   "band_pp": 2.5,
+   "seed17_measured": 61.32,
+   "seed17_residual": -5.62,
+   "subjective": {
+    "same_sign": 0.9,
+    "outside_band": 0.8,
+    "point": 61.8
+   }
+  },
+  {
+   "id": "R05",
+   "setting": "llama_base_gsm8k",
+   "cell": [
+    4096,
+    2,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "a8_prediction": 34.21,
+   "band_pp": 4.0,
+   "seed17_measured": 38.36,
+   "seed17_residual": 4.15,
+   "subjective": {
+    "same_sign": 0.85,
+    "outside_band": 0.45,
+    "point": 37.8
+   }
+  },
+  {
+   "id": "R06",
+   "setting": "llama_base_gsm8k",
+   "cell": [
+    4096,
+    8,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "a8_prediction": 40.3,
+   "band_pp": 4.0,
+   "seed17_measured": 44.73,
+   "seed17_residual": 4.43,
+   "subjective": {
+    "same_sign": 0.9,
+    "outside_band": 0.55,
+    "point": 44.3
+   }
+  }
+ ],
+ "part_R_question": "A miss replicates if the seed-29 residual (measured minus a8_prediction) has the sign of seed17_residual and lies outside +-band_pp.",
+ "part_M_cells": [
+  {
+   "id": "M01",
+   "setting": "llama_base_gsm8k",
+   "cell": [
+    2048,
+    2,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 2
+  },
+  {
+   "id": "M02",
+   "setting": "llama_instruct_gsm8k",
+   "cell": [
+    2048,
+    2,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 2
+  },
+  {
+   "id": "M03",
+   "setting": "qwen_instruct_gsm8k",
+   "cell": [
+    2048,
+    2,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 2
+  },
+  {
+   "id": "M04",
+   "setting": "qwen_base_gsm8k",
+   "cell": [
+    2048,
+    2,
+    2
+   ],
+   "seed": 17,
+   "platform": "modal",
+   "priority": 4,
+   "eq1_prediction": 68.37,
+   "sample_count_prediction": 69.71,
+   "frozen_interval": [
+    67.2,
+    72.2
+   ]
+  },
+  {
+   "id": "M05",
+   "setting": "qwen_base_gsm8k",
+   "cell": [
+    2048,
+    2,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 4,
+   "eq1_prediction": 68.37,
+   "sample_count_prediction": 69.71,
+   "frozen_interval": [
+    67.2,
+    72.2
+   ]
+  },
+  {
+   "id": "M06",
+   "setting": "llama_base_gsm8k",
+   "cell": [
+    1024,
+    4,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 5
+  },
+  {
+   "id": "M07",
+   "setting": "llama_instruct_gsm8k",
+   "cell": [
+    1024,
+    4,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 5
+  },
+  {
+   "id": "M08",
+   "setting": "qwen_instruct_gsm8k",
+   "cell": [
+    1024,
+    4,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 5
+  },
+  {
+   "id": "M09",
+   "setting": "qwen_base_gsm8k",
+   "cell": [
+    1024,
+    4,
+    2
+   ],
+   "seed": 29,
+   "platform": "modal",
+   "priority": 5
+  }
+ ],
+ "part_M_predictions": [
+  {
+   "id": "M-1",
+   "claim": "Two-seed mean of (2048,2,2) minus P is not noticeable (registered criterion) in all four GSM8K settings",
+   "confidence": 0.7
+  },
+  {
+   "id": "M-2",
+   "claim": "Two-seed mean of (1024,4,2) minus P lies in [-4.5,+0.5] pp in all four GSM8K settings",
+   "confidence": 0.6
+  },
+  {
+   "id": "M-3",
+   "claim": "Qwen base GSM8K (2048,2,2): each seed lies in [67.2,72.2] percent",
+   "confidence": 0.75
+  },
+  {
+   "id": "M-4",
+   "claim": "Two-seed means are ordered (2048,2,2) > (1024,4,2) > (512,8,2) in at least three of four GSM8K settings",
+   "confidence": 0.7
+  }
+ ],
+ "modal_run_order": [
+  "R01",
+  "R02",
+  "R03",
+  "R05",
+  "M01",
+  "M02",
+  "M03",
+  "R06",
+  "M04",
+  "M05",
+  "M06",
+  "M07",
+  "M08",
+  "M09"
+ ],
+ "budget": {
+  "modal_cap_usd": 24,
+  "modal_untouched_reserve_usd": 6,
+  "tinker_R04_cap_usd": 10,
+  "tinker_logiqa_stage0_cap_usd": 20
+ }
+}
