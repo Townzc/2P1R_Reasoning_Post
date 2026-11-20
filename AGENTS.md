@@ -1,3 +1,13 @@
+# Current P012 — 2026-11-20T22:31:03.367422+00:00; Amendment 9 authorized and admitted
+
+Owner authorized ecda09143c135a64512fec346fe13d38002c7951. Integration3af1e7f merged, then current audit ecda0914 merged at b95c631e. All old A8 results and audit status remain frozen. New scope: Modal R/M14 in exact A9 order; Tinker R04 seed29; LogiQA2.0 evaluation/sampling pilot only, no training. All exploratory outside H0–H3.
+
+Current balances: tangzhice16.96, townzc13.74, Tinker408.36. API usage reconciled; no direct API remaining-balance field. Main Modal credential routine renewal succeeded. No account/billing settings changes. Nov16 UTC net total/storage0 verified from authenticated UI; storage guard passed. Modal forecast10.922647/24 (7.419986 tangzhice,3.502662 townzc), protection4/2. R04 forecast7.289851/10; T0 reserve20; combinedTinker425.492468/485 includes storage30 once.
+
+Canonical admission reports/p012_20261111/amendment9_admission_v1. R/M scientific source unchanged at b95c631e; only frozen request JSON parameters change. No new R/M controller or stats path. Start R01 and R04 with existing reviewed launchers; proceed Modal order after verified completions. No duplicated calls. Every endpoint requires timestamped ecda0914 binding before score and independent audit. New T0 source/scorer exempt prereview by A9section4, full postaudit; NEVER publish LogiQA source passages/options or prompt tokens. Source data pinned955e1d3d, train12567/test1572.
+
+Retain checkpoints until accepted endpoint review; A8 retained. Do not restart old controllers or freeze_grid.py. Existing budget/Git locks throughpush. No external sends, course prose or subagents; preserve unrelatedlt002. Local Tinker submits steps and requires awake+online host; no power-setting changes. Earlier entries historical.
+
 # Current P012 — 2026-11-15T20:09:33.346314+00:00; Amendment 8 complete and independently audited
 
 Owner accepted review 2121b7cb789e31a46e00692d5d5f88907850b75f, confirming the same four T endpoints independently audited in 4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065. T: 20,000 outputs, 3/4 frozen prediction hits, partially holds, mean residual −1.31 pp; SL-8 does not hold. Six scoring disagreements on two known questions retain the existing Codex labels. All 72 T bindings and frozen-file hashes verified; additive AUDIT_STATUS sidecars supersede historical pending fields without editing results or labels.
