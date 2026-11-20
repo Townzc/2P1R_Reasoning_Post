@@ -1,0 +1,80 @@
+{
+  "run_id": "a9_r01_llama_base_gsm8k_p4096_k1_e1_s29_20261120_v1",
+  "A9_id": "R01",
+  "cell": "A8_P4096_K1_E1",
+  "model": "meta-llama/Llama-3.2-1B",
+  "seed": 29,
+  "task": "gsm8k",
+  "track": "A9_exploratory_full_finetuning",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 4096,
+    "paths_per_parent": 1,
+    "distinct_rows": 4096,
+    "epochs": 1,
+    "presentations": 4096,
+    "effective_batch": 8,
+    "expected_updates": 512,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "metrics": {
+    "responses": 1319,
+    "correct": 365,
+    "accuracy": 0.2767247915087187,
+    "length_cap_count": 15,
+    "length_cap_rate": 0.011372251705837756,
+    "loop_count": 12,
+    "capped_loop_count": 12,
+    "normally_terminated_count": 1304,
+    "normally_terminated_correct": 365,
+    "normally_terminated_accuracy": 0.2799079754601227
+  },
+  "R2": {
+    "global_step": 512,
+    "expected_updates": 512,
+    "Num_examples": 4096,
+    "expected_P_times_K": 4096,
+    "trainer_state_sha256": "717044fac3c851f56b3eb50f70b430ea4f22205e678655d9b0a15b9f6932acd2",
+    "training_log_sha256": "0d88c14d91fe556edf2dad56ce69d0203418bcef27a6e135370e8bc0dab8d4b4",
+    "passed": true
+  },
+  "prediction_before_score": {
+    "utc": "2026-11-20T22:37:52.605832+00:00",
+    "prediction_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+    "accepted_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "raw_sha256": "316542572f3bf902d7ce6adca429e6827ad25615d7b61e7baa2988f13fd8bcaa",
+    "training_run_id": "a9_r01_llama_base_gsm8k_p4096_k1_e1_s29_20261120_v1",
+    "prediction": {
+      "id": "R01",
+      "setting": "llama_base_gsm8k",
+      "cell": [
+        4096,
+        1,
+        1
+      ],
+      "seed": 29,
+      "platform": "modal",
+      "a8_prediction": 31.65,
+      "band_pp": 4.0,
+      "seed17_measured": 26.99,
+      "seed17_residual": -4.66,
+      "subjective": {
+        "same_sign": 0.85,
+        "outside_band": 0.65,
+        "point": 27.5
+      }
+    }
+  },
+  "data_sha256": "3be09142476d2a07aef9a5f98e4bfa0236056e81540728a0f09aaad8063ee377",
+  "accepted_source_review": "b24f787a4c92eab9993eb03702df161a6c64c989",
+  "source_commit": "b95c631e0e4f15418c35e84e10ae066efc59a3fb",
+  "training_run_id": "a9_r01_llama_base_gsm8k_p4096_k1_e1_s29_20261120_v1",
+  "evaluation_run_id": "a9_r01_llama_base_gsm8k_p4096_k1_e1_s29_greedy_20261120_v1",
+  "checkpoint_files_sha256": "413dc3e99c90f87a7f31ba4fc97647184ca9f211fd39a6ebea333bda6b6ab66d",
+  "raw_sha256": "316542572f3bf902d7ce6adca429e6827ad25615d7b61e7baa2988f13fd8bcaa",
+  "labels_sha256": "db4857cdb5890a45ef6cbd86a8955e343c91a46b654a0f566b75b5de93b3413c",
+  "independent_result_audit": "pending",
+  "weights_retained_until_result_audit": true
+}
