@@ -1,7 +1,10 @@
 """Synthetic identity and decision-boundary checks; no real-data statistics."""
 import copy
 import importlib.util
+import json
+import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 spec=importlib.util.spec_from_file_location('a9_candidate',Path(__file__).with_name('a9_analysis.py'))
@@ -82,6 +85,71 @@ class Checks(unittest.TestCase):
 
     def test_unreviewed_real_analysis_blocked(self):
         with self.assertRaisesRegex(ValueError,'awaits accepted review'):a9.analyze({})
+
+    def catalog(self):
+        return json.loads(a9.CATALOG_PATH.read_text())
+
+    def unit_manifest(self):
+        return {'units':['R01'], 'endpoints':{'R01:17':{}, 'R01:29':{}}}
+
+    def test_complete_selected_unit_allowed(self):
+        self.assertEqual(a9.select_units(self.unit_manifest(),self.catalog(),set()),['R01'])
+
+    def test_missing_units_rejected(self):
+        m=self.unit_manifest();m.pop('units')
+        with self.assertRaisesRegex(ValueError,'nonempty'):a9.select_units(m,self.catalog(),set())
+
+    def test_missing_endpoint_within_unit_rejected(self):
+        m=self.unit_manifest();m['endpoints'].pop('R01:29')
+        with self.assertRaisesRegex(ValueError,'complete selected units'):a9.select_units(m,self.catalog(),set())
+
+    def test_extra_endpoint_rejected(self):
+        m=self.unit_manifest();m['endpoints']['R02:17']={}
+        with self.assertRaisesRegex(ValueError,'complete selected units'):a9.select_units(m,self.catalog(),set())
+
+    def test_unknown_unit_rejected(self):
+        m=self.unit_manifest();m['units']=['R07']
+        with self.assertRaisesRegex(ValueError,'Unknown'):a9.select_units(m,self.catalog(),set())
+
+    def test_duplicate_unit_rejected(self):
+        m=self.unit_manifest();m['units']=['R01','R01']
+        with self.assertRaisesRegex(ValueError,'Duplicate unit'):a9.select_units(m,self.catalog(),set())
+
+    def test_previously_run_unit_rejected(self):
+        with self.assertRaisesRegex(ValueError,'already analyzed'):
+            a9.select_units(self.unit_manifest(),self.catalog(),{'R01'})
+
+    def test_prior_result_cannot_be_omitted(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);(root/'one').mkdir();(root/'one/RESULTS.json').write_text('{}')
+            with patch.object(a9,'RUNS_DIR',root):
+                with self.assertRaisesRegex(ValueError,'Missing or unregistered'):
+                    a9.prior_results({'prior_results':[]})
+
+    def test_prediction_and_manifest_modified_together_rejected(self):
+        changed='e'*64
+        m={'accepted_analysis_review_commit':a9.ACCEPTED_REVIEW,'authority_commit':a9.AUTHORITY,
+           'catalog_sha256':a9.CATALOG_SHA,'prediction_sha256':changed}
+        def fake_sha(p):
+            return changed if Path(p)==a9.PRED_PATH else a9.CATALOG_SHA if Path(p)==a9.CATALOG_PATH else a9.CORE_SHA
+        with patch.object(a9,'sha',side_effect=fake_sha):
+            with self.assertRaisesRegex(ValueError,'Prediction binding'):a9.analyze(m)
+
+    def test_partial_aggregate_is_null_with_missing_units(self):
+        out=a9.aggregate({'R01':{'same_sign':True,'miss_replicates':True}}, {})
+        self.assertIsNone(out['single_epoch_all_same_sign'])
+        self.assertEqual(out['missing_units']['single_epoch_all_same_sign'],['R02','R03','R04'])
+        self.assertTrue(all(x is None for x in out['M_predictions'].values()))
+
+    def test_M3_needs_only_qwen_base(self):
+        out=a9.aggregate({}, {'qwen_base_gsm8k':{'accuracy_pct_by_seed':{'PK2':{'17':68.,'29':69.}}}})
+        self.assertTrue(out['M_predictions']['M-3']);self.assertIsNone(out['M_predictions']['M-1'])
+
+    def test_complete_R_aggregate(self):
+        R={f'R{i:02d}':{'same_sign':True,'miss_replicates':i<=3,'mean_residual_pp':4} for i in range(1,7)}
+        out=a9.aggregate(R,{})
+        self.assertTrue(out['single_epoch_all_same_sign']);self.assertTrue(out['single_epoch_at_least3_misses_repeat'])
+        self.assertTrue(out['interaction_failure_trigger']);self.assertEqual(out['missing_units']['interaction_failure_trigger'],[])
 
 
 if __name__=='__main__':unittest.main()

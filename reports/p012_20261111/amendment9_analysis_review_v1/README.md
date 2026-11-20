@@ -9,3 +9,7 @@ All44 endpoint identities bind training run/model/revision/seed/cell/data/dose; 
 R residuals use the authoritative rounded A8 predictions in A9_PREDICTIONS.json; same-sign follows the frozen seed17 sign and outside-band is strict. Mean residuals and per-question seed29−17 intervals use full-precision accuracy. M calls the accepted paired two-seed bootstrap unchanged and reports all3noticeable criteria. No significance claim is made from seed dispersion. M1 is not an equivalence test. Every result is exploratory outsideH0–H3.
 
 Pending result packages remain independently auditable while this analysis waits. Existing R/M/R04 and T0 queues continue; this review does not gate training.
+
+## Acceptance f1ee77b7
+
+R-1/R-2 implemented; 26 synthetic checks pass. Formal runs select exact complete units, bind every existing prior result, and use a fixed once-only registry with an exclusive output and file lock. Aggregate verdicts remain null with missing-unit lists until their inputs exist. Prediction bytes are pinned to ecda0914. K8_minus_P is included under N-1. Bootstrap core and frozen catalog are unchanged. The complete source diff is DIFF_FROM_3c797422.patch; each staged output and complete input manifest will receive independent numerical review.

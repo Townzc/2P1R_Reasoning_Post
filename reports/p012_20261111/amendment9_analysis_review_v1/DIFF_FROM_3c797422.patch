@@ -1,0 +1,197 @@
+diff --git a/reports/p012_20261111/amendment9_analysis_review_v1/a9_analysis.py b/reports/p012_20261111/amendment9_analysis_review_v1/a9_analysis.py
+index 2e5e6981..52fcaed1 100644
+--- a/reports/p012_20261111/amendment9_analysis_review_v1/a9_analysis.py
++++ b/reports/p012_20261111/amendment9_analysis_review_v1/a9_analysis.py
+@@ -1 +1 @@
+-"""Candidate A9 evidence adapter. No real statistical run before Claude review.
++"""A9 evidence adapter accepted at f1ee77b7 with R-1 and R-2 applied.
+@@ -5,0 +6 @@ import argparse
++import fcntl
+@@ -15 +16 @@ AUTHORITY = 'ecda09143c135a64512fec346fe13d38002c7951'
+-ACCEPTED_REVIEW = None
++ACCEPTED_REVIEW = 'f1ee77b77b8a29d9a6dd47efadf46eb1987e7b8d'
+@@ -16,0 +18 @@ CATALOG_SHA = '623bb25809b133a1fc1f5dea591d622b22545d10b57164bba66cf1af1743f9ca'
++PRED_SHA = 'fa3d186069b672c683f6300c174597124af8f970201aacf8bf050b9e57cac3b2'
+@@ -19,0 +22 @@ PRED_PATH = Path('audit/claude/20261120a/A9_PREDICTIONS.json')
++RUNS_DIR = Path('reports/p012_20261111/amendment9_analysis_runs_v1')
+@@ -128,0 +132,61 @@ def replication(seed17_accuracy, seed29_accuracy, frozen):
++def unit_keys(catalog):
++    units = {f'R{i:02d}': {f'R{i:02d}:{seed}' for seed in (17, 29)} for i in range(1, 7)}
++    units.update({'M:'+setting: {f'M:{setting}:{arm}:{seed}'
++                  for arm in ('P', 'PK2', 'K4', 'K8') for seed in (17, 29)} for setting in MODEL_KEYS})
++    require(set().union(*units.values()) == set(catalog), 'Unit catalog does not cover exactly44 endpoints')
++    return units
++
++
++def select_units(manifest, catalog, consumed):
++    units = manifest.get('units')
++    require(isinstance(units, list) and bool(units), 'Require nonempty analysis units')
++    require(len(units) == len(set(units)), 'Duplicate unit in this run')
++    mapping = unit_keys(catalog)
++    require(set(units) <= set(mapping), 'Unknown analysis unit')
++    require(not set(units) & set(consumed), 'Unit already analyzed in a formal run')
++    expected = set().union(*(mapping[u] for u in units))
++    require(set(manifest['endpoints']) == expected, 'Endpoints must exactly match complete selected units')
++    return units
++
++
++def prior_results(manifest):
++    specs = manifest.get('prior_results', [])
++    paths = [Path(x['path']) for x in specs]
++    require(len(paths) == len(set(paths)), 'Duplicate prior result')
++    require(set(paths) == set(RUNS_DIR.glob('*/RESULTS.json')), 'Missing or unregistered prior result')
++    R, M, consumed = {}, {}, set()
++    for spec in specs:
++        prior = json.loads(bound_file(spec).read_text())
++        require((prior['authority_commit'], prior['accepted_analysis_review_commit'], prior['catalog_sha256'],
++                 prior['prediction_sha256'], prior['bootstrap_core_sha256']) ==
++                (AUTHORITY, ACCEPTED_REVIEW, CATALOG_SHA, PRED_SHA, CORE_SHA), 'Prior analysis identity changed')
++        units = prior['units']
++        require(len(units) == len(set(units)) and not set(units) & consumed, 'Duplicate previously analyzed unit')
++        require(set(units) == set(prior['R']) | {'M:'+x for x in prior['M']}, 'Prior unit/output mismatch')
++        consumed.update(units); R.update(prior['R']); M.update(prior['M'])
++    return R, M, consumed
++
++
++def aggregate(R, M):
++    missing = {}
++    def decide(name, required, available, fn):
++        absent = sorted(set(required)-set(available)); missing[name] = absent
++        return None if absent else bool(fn())
++    all_m = {'M:'+s for s in MODEL_KEYS}; available_m = {'M:'+s for s in M}
++    single = ['R01', 'R02', 'R03', 'R04']
++    result = {
++        'single_epoch_all_same_sign': decide('single_epoch_all_same_sign', single, R,
++            lambda: all(R[x]['same_sign'] for x in single)),
++        'single_epoch_at_least3_misses_repeat': decide('single_epoch_at_least3_misses_repeat', single, R,
++            lambda: sum(R[x]['miss_replicates'] for x in single)>=3),
++        'interaction_failure_trigger': decide('interaction_failure_trigger', ['R05', 'R06'], R,
++            lambda: all(R[x]['same_sign'] and R[x]['mean_residual_pp']>=3 for x in ['R05', 'R06'])),
++        'M_predictions': {
++            'M-1': decide('M-1', all_m, available_m, lambda: all(not x['PK2_minus_P']['noticeable'] for x in M.values())),
++            'M-2': decide('M-2', all_m, available_m, lambda: all(-4.5<=x['K4_minus_P']['seed_mean']['delta_pp']<=.5 for x in M.values())),
++            'M-3': decide('M-3', ['M:qwen_base_gsm8k'], available_m,
++                lambda: all(67.2<=v<=72.2 for v in M['qwen_base_gsm8k']['accuracy_pct_by_seed']['PK2'].values())),
++            'M-4': decide('M-4', all_m, available_m, lambda: sum(x['PK2_gt_K4_gt_K8'] for x in M.values())>=3)}}
++    return dict(result, missing_units=missing)
++
++
+@@ -134 +198 @@ def analyze(manifest):
+-    require(manifest['authority_commit']==AUTHORITY and manifest['prediction_sha256']==sha(PRED_PATH), 'Prediction binding changed')
++    require(manifest['authority_commit']==AUTHORITY and manifest['prediction_sha256']==sha(PRED_PATH)==PRED_SHA, 'Prediction binding changed')
+@@ -136,2 +200,3 @@ def analyze(manifest):
+-    require(set(manifest['endpoints'])==set(catalog),'Require all44 endpoint bindings')
+-    data={key:read_endpoint(manifest['endpoints'][key],expected) for key,expected in catalog.items()}
++    previous_R, previous_M, consumed = prior_results(manifest)
++    units = select_units(manifest, catalog, consumed)
++    data={key:read_endpoint(spec,catalog[key]) for key,spec in manifest['endpoints'].items()}
+@@ -140,0 +206,2 @@ def analyze(manifest):
++        if frozen['id'] not in units:
++            continue
+@@ -146,0 +214,2 @@ def analyze(manifest):
++        if 'M:'+setting not in units:
++            continue
+@@ -151,0 +221 @@ def analyze(manifest):
++            'K8_minus_P':two_seed_contrast(arms['K8'],arms['P']),
+@@ -153,4 +222,0 @@ def analyze(manifest):
+-    verdicts={'M-1':all(not x['PK2_minus_P']['noticeable'] for x in M.values()),
+-              'M-2':all(-4.5<=x['K4_minus_P']['seed_mean']['delta_pp']<=.5 for x in M.values()),
+-              'M-3':all(67.2<=v<=72.2 for v in M['qwen_base_gsm8k']['accuracy_pct_by_seed']['PK2'].values()),
+-              'M-4':sum(x['PK2_gt_K4_gt_K8'] for x in M.values())>=3}
+@@ -159,4 +225,3 @@ def analyze(manifest):
+-            'policy':POLICY,'R':R,'M':M,'M_predictions':verdicts,
+-            'single_epoch_all_same_sign':all(R[x]['same_sign'] for x in ['R01','R02','R03','R04']),
+-            'single_epoch_at_least3_misses_repeat':sum(R[x]['miss_replicates'] for x in ['R01','R02','R03','R04'])>=3,
+-            'interaction_failure_trigger':all(R[x]['same_sign'] and R[x]['mean_residual_pp']>=3 for x in ['R05','R06']),
++            'prediction_sha256':PRED_SHA,'units':units,'prior_results':manifest.get('prior_results',[]),
++            'available_units':sorted(consumed | set(units)), 'policy':POLICY,'R':R,'M':M,
++            **aggregate({**previous_R, **R}, {**previous_M, **M}),
+@@ -170,3 +235,10 @@ if __name__=='__main__':
+-    args=parser.parse_args();manifest=json.loads(args.manifest.read_text());manifest['_file_sha256']=sha(args.manifest)
+-    result=analyze(manifest)
+-    with args.output.open('x') as f:json.dump(result,f,indent=2);f.write('\n')
++    args=parser.parse_args()
++    require(not args.output.is_absolute() and args.output.parent.parent==RUNS_DIR and
++            args.output.name=='RESULTS.json', 'Formal output must use the fixed A9 run registry')
++    RUNS_DIR.mkdir(exist_ok=True)
++    with Path('.local/p012_20261111/amendment9_v1/ANALYSIS_RUN.lock').open('a') as lock:
++        fcntl.flock(lock, fcntl.LOCK_EX)
++        require(not args.output.exists(), 'Formal output already exists')
++        manifest=json.loads(args.manifest.read_text());manifest['_file_sha256']=sha(args.manifest)
++        result=analyze(manifest)
++        with args.output.open('x') as f:json.dump(result,f,indent=2);f.write('\n')
+diff --git a/reports/p012_20261111/amendment9_analysis_review_v1/test_a9_analysis.py b/reports/p012_20261111/amendment9_analysis_review_v1/test_a9_analysis.py
+index 4a6ff610..a53a1e38 100644
+--- a/reports/p012_20261111/amendment9_analysis_review_v1/test_a9_analysis.py
++++ b/reports/p012_20261111/amendment9_analysis_review_v1/test_a9_analysis.py
+@@ -3,0 +4,2 @@ import importlib.util
++import json
++import tempfile
+@@ -4,0 +7 @@ import unittest
++from unittest.mock import patch
+@@ -85,0 +89,65 @@ class Checks(unittest.TestCase):
++    def catalog(self):
++        return json.loads(a9.CATALOG_PATH.read_text())
++
++    def unit_manifest(self):
++        return {'units':['R01'], 'endpoints':{'R01:17':{}, 'R01:29':{}}}
++
++    def test_complete_selected_unit_allowed(self):
++        self.assertEqual(a9.select_units(self.unit_manifest(),self.catalog(),set()),['R01'])
++
++    def test_missing_units_rejected(self):
++        m=self.unit_manifest();m.pop('units')
++        with self.assertRaisesRegex(ValueError,'nonempty'):a9.select_units(m,self.catalog(),set())
++
++    def test_missing_endpoint_within_unit_rejected(self):
++        m=self.unit_manifest();m['endpoints'].pop('R01:29')
++        with self.assertRaisesRegex(ValueError,'complete selected units'):a9.select_units(m,self.catalog(),set())
++
++    def test_extra_endpoint_rejected(self):
++        m=self.unit_manifest();m['endpoints']['R02:17']={}
++        with self.assertRaisesRegex(ValueError,'complete selected units'):a9.select_units(m,self.catalog(),set())
++
++    def test_unknown_unit_rejected(self):
++        m=self.unit_manifest();m['units']=['R07']
++        with self.assertRaisesRegex(ValueError,'Unknown'):a9.select_units(m,self.catalog(),set())
++
++    def test_duplicate_unit_rejected(self):
++        m=self.unit_manifest();m['units']=['R01','R01']
++        with self.assertRaisesRegex(ValueError,'Duplicate unit'):a9.select_units(m,self.catalog(),set())
++
++    def test_previously_run_unit_rejected(self):
++        with self.assertRaisesRegex(ValueError,'already analyzed'):
++            a9.select_units(self.unit_manifest(),self.catalog(),{'R01'})
++
++    def test_prior_result_cannot_be_omitted(self):
++        with tempfile.TemporaryDirectory() as d:
++            root=Path(d);(root/'one').mkdir();(root/'one/RESULTS.json').write_text('{}')
++            with patch.object(a9,'RUNS_DIR',root):
++                with self.assertRaisesRegex(ValueError,'Missing or unregistered'):
++                    a9.prior_results({'prior_results':[]})
++
++    def test_prediction_and_manifest_modified_together_rejected(self):
++        changed='e'*64
++        m={'accepted_analysis_review_commit':a9.ACCEPTED_REVIEW,'authority_commit':a9.AUTHORITY,
++           'catalog_sha256':a9.CATALOG_SHA,'prediction_sha256':changed}
++        def fake_sha(p):
++            return changed if Path(p)==a9.PRED_PATH else a9.CATALOG_SHA if Path(p)==a9.CATALOG_PATH else a9.CORE_SHA
++        with patch.object(a9,'sha',side_effect=fake_sha):
++            with self.assertRaisesRegex(ValueError,'Prediction binding'):a9.analyze(m)
++
++    def test_partial_aggregate_is_null_with_missing_units(self):
++        out=a9.aggregate({'R01':{'same_sign':True,'miss_replicates':True}}, {})
++        self.assertIsNone(out['single_epoch_all_same_sign'])
++        self.assertEqual(out['missing_units']['single_epoch_all_same_sign'],['R02','R03','R04'])
++        self.assertTrue(all(x is None for x in out['M_predictions'].values()))
++
++    def test_M3_needs_only_qwen_base(self):
++        out=a9.aggregate({}, {'qwen_base_gsm8k':{'accuracy_pct_by_seed':{'PK2':{'17':68.,'29':69.}}}})
++        self.assertTrue(out['M_predictions']['M-3']);self.assertIsNone(out['M_predictions']['M-1'])
++
++    def test_complete_R_aggregate(self):
++        R={f'R{i:02d}':{'same_sign':True,'miss_replicates':i<=3,'mean_residual_pp':4} for i in range(1,7)}
++        out=a9.aggregate(R,{})
++        self.assertTrue(out['single_epoch_all_same_sign']);self.assertTrue(out['single_epoch_at_least3_misses_repeat'])
++        self.assertTrue(out['interaction_failure_trigger']);self.assertEqual(out['missing_units']['interaction_failure_trigger'],[])
++
