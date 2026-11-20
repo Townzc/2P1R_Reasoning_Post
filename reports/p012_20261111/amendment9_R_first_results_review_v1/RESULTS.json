@@ -1,0 +1,225 @@
+{
+  "utc": "2026-11-20T23:03:58.172089+00:00",
+  "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+  "endpoints": [
+    {
+      "id": "R01",
+      "model": "meta-llama/Llama-3.2-1B",
+      "seed": 29,
+      "P": 4096,
+      "K": 1,
+      "E": 1,
+      "examples": 4096,
+      "updates": 512,
+      "workspace": "tangzhice",
+      "metrics": {
+        "responses": 1319,
+        "correct": 365,
+        "accuracy": 0.2767247915087187,
+        "length_cap_count": 15,
+        "length_cap_rate": 0.011372251705837756,
+        "loop_count": 12,
+        "capped_loop_count": 12,
+        "normally_terminated_count": 1304,
+        "normally_terminated_correct": 365,
+        "normally_terminated_accuracy": 0.2799079754601227
+      },
+      "R2_passed": true,
+      "independent_audit": "pending",
+      "endpoint_results": "reports/p012_20261111/a9_r01_llama_base_gsm8k_p4096_k1_e1_s29_20261120_v1_results/RESULTS.json",
+      "frozen_prediction": {
+        "id": "R01",
+        "setting": "llama_base_gsm8k",
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "seed": 29,
+        "platform": "modal",
+        "a8_prediction": 31.65,
+        "band_pp": 4.0,
+        "seed17_measured": 26.99,
+        "seed17_residual": -4.66,
+        "subjective": {
+          "same_sign": 0.85,
+          "outside_band": 0.65,
+          "point": 27.5
+        }
+      },
+      "point_replication": {
+        "accuracy_percent": 27.67247915087187,
+        "residual_pp": -3.9775208491281298,
+        "same_sign": true,
+        "outside_band": false,
+        "miss_replicates": false
+      }
+    },
+    {
+      "id": "R02",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "seed": 29,
+      "P": 4096,
+      "K": 1,
+      "E": 1,
+      "examples": 4096,
+      "updates": 512,
+      "workspace": "tangzhice",
+      "metrics": {
+        "responses": 1319,
+        "correct": 685,
+        "accuracy": 0.5193328278999242,
+        "length_cap_count": 17,
+        "length_cap_rate": 0.01288855193328279,
+        "loop_count": 14,
+        "capped_loop_count": 14,
+        "normally_terminated_count": 1302,
+        "normally_terminated_correct": 685,
+        "normally_terminated_accuracy": 0.5261136712749616
+      },
+      "R2_passed": true,
+      "independent_audit": "pending",
+      "endpoint_results": "reports/p012_20261111/a9_r02_llama_instruct_gsm8k_p4096_k1_e1_s29_20261120_v1_results/RESULTS.json",
+      "frozen_prediction": {
+        "id": "R02",
+        "setting": "llama_instruct_gsm8k",
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "seed": 29,
+        "platform": "modal",
+        "a8_prediction": 55.17,
+        "band_pp": 4.0,
+        "seed17_measured": 51.02,
+        "seed17_residual": -4.15,
+        "subjective": {
+          "same_sign": 0.85,
+          "outside_band": 0.55,
+          "point": 51.5
+        }
+      },
+      "point_replication": {
+        "accuracy_percent": 51.93328278999242,
+        "residual_pp": -3.2367172100075834,
+        "same_sign": true,
+        "outside_band": false,
+        "miss_replicates": false
+      }
+    },
+    {
+      "id": "R03",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "seed": 29,
+      "P": 4096,
+      "K": 1,
+      "E": 1,
+      "examples": 4096,
+      "updates": 512,
+      "workspace": "townzc",
+      "metrics": {
+        "responses": 1319,
+        "correct": 907,
+        "accuracy": 0.6876421531463229,
+        "length_cap_count": 19,
+        "length_cap_rate": 0.014404852160727824,
+        "loop_count": 16,
+        "capped_loop_count": 16,
+        "normally_terminated_count": 1300,
+        "normally_terminated_correct": 907,
+        "normally_terminated_accuracy": 0.6976923076923077
+      },
+      "R2_passed": true,
+      "independent_audit": "pending",
+      "endpoint_results": "reports/p012_20261111/a9_r03_qwen_instruct_gsm8k_p4096_k1_e1_s29_20261120_v1_results/RESULTS.json",
+      "frozen_prediction": {
+        "id": "R03",
+        "setting": "qwen_instruct_gsm8k",
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "seed": 29,
+        "platform": "modal",
+        "a8_prediction": 72.92,
+        "band_pp": 4.0,
+        "seed17_measured": 68.61,
+        "seed17_residual": -4.31,
+        "subjective": {
+          "same_sign": 0.85,
+          "outside_band": 0.55,
+          "point": 69.3
+        }
+      },
+      "point_replication": {
+        "accuracy_percent": 68.7642153146323,
+        "residual_pp": -4.155784685367706,
+        "same_sign": true,
+        "outside_band": true,
+        "miss_replicates": true
+      }
+    },
+    {
+      "id": "R05",
+      "model": "meta-llama/Llama-3.2-1B",
+      "seed": 29,
+      "P": 4096,
+      "K": 2,
+      "E": 2,
+      "examples": 8192,
+      "updates": 2048,
+      "workspace": "tangzhice",
+      "metrics": {
+        "responses": 1319,
+        "correct": 475,
+        "accuracy": 0.3601213040181956,
+        "length_cap_count": 5,
+        "length_cap_rate": 0.0037907505686125853,
+        "loop_count": 4,
+        "capped_loop_count": 4,
+        "normally_terminated_count": 1314,
+        "normally_terminated_correct": 475,
+        "normally_terminated_accuracy": 0.3614916286149163
+      },
+      "R2_passed": true,
+      "independent_audit": "pending",
+      "endpoint_results": "reports/p012_20261111/a9_r05_llama_base_gsm8k_p4096_k2_e2_s29_20261120_v1_results/RESULTS.json",
+      "frozen_prediction": {
+        "id": "R05",
+        "setting": "llama_base_gsm8k",
+        "cell": [
+          4096,
+          2,
+          2
+        ],
+        "seed": 29,
+        "platform": "modal",
+        "a8_prediction": 34.21,
+        "band_pp": 4.0,
+        "seed17_measured": 38.36,
+        "seed17_residual": 4.15,
+        "subjective": {
+          "same_sign": 0.85,
+          "outside_band": 0.45,
+          "point": 37.8
+        }
+      },
+      "point_replication": {
+        "accuracy_percent": 36.01213040181956,
+        "residual_pp": 1.8021304018195607,
+        "same_sign": true,
+        "outside_band": false,
+        "miss_replicates": false
+      }
+    }
+  ],
+  "outputs": 5276,
+  "source_manifest": "reports/p012_20261111/amendment9_admission_v1/SOURCE_MANIFEST.json",
+  "source_changes": [],
+  "bootstrap_analysis": "pending accepted A9 adapter review and full44 inputs; no real run yet",
+  "independent_result_audit": "pending",
+  "exploratory": true,
+  "excluded_from_H0_H3": true
+}
