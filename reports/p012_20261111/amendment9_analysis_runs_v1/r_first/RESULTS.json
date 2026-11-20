@@ -1,0 +1,169 @@
+{
+  "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+  "accepted_analysis_review_commit": "f1ee77b77b8a29d9a6dd47efadf46eb1987e7b8d",
+  "input_manifest_sha256": "c6b2dba0d84ec98690fd6bdfc5651147d462663bbfcfc8a7adca48ac2fd8162b",
+  "catalog_sha256": "623bb25809b133a1fc1f5dea591d622b22545d10b57164bba66cf1af1743f9ca",
+  "bootstrap_core_sha256": "b6973ad67c8eff3cec08806a553754911113944a044c9248bdb45aa1ac8d0b06",
+  "prediction_sha256": "fa3d186069b672c683f6300c174597124af8f970201aacf8bf050b9e57cac3b2",
+  "units": [
+    "R01",
+    "R02",
+    "R03",
+    "R05"
+  ],
+  "prior_results": [],
+  "available_units": [
+    "R01",
+    "R02",
+    "R03",
+    "R05"
+  ],
+  "policy": {
+    "replicates": 10000,
+    "seed": 20261111,
+    "generator": "PCG64",
+    "numpy_version": "2.5.4",
+    "quantile_method": "linear",
+    "unit": "question",
+    "order": "sorted frozen question ID",
+    "interval": "pointwise percentile 95%, conditional on observed seeds",
+    "noticeable": "abs(two-seed mean)>=3pp AND its joint question CI excludes0 AND both seeds have the same nonzero sign",
+    "policy_freeze_commit": "169754c427d8e2b748fb925e03d31bbabcf8ab9d",
+    "seed_uncertainty": "Mean CI measures question sampling only; two training seeds do not estimate training-seed uncertainty",
+    "primary_SFT_baseline": "baseline4",
+    "H1_primary_interpretation": "negative teacher NLL per character; pass@k is compromised in three annotated settings"
+  },
+  "R": {
+    "R01": {
+      "seed17_accuracy_pct": 26.990144048521607,
+      "seed29_accuracy_pct": 27.672479150871872,
+      "a8_prediction_pct": 31.65,
+      "seed17_residual_pp": -4.6598559514783915,
+      "seed29_residual_pp": -3.977520849128126,
+      "mean_residual_pp": -4.318688400303259,
+      "same_sign": true,
+      "outside_band": false,
+      "miss_replicates": false,
+      "interpretation": "same_direction_within_band",
+      "seed29_minus_seed17": {
+        "n_questions": 1319,
+        "delta_pp": 0.6823351023502654,
+        "lower95_pp": -1.6679302501895377,
+        "upper95_pp": 3.0326004548900682,
+        "abs_delta_at_least_3pp": false,
+        "ci_excludes_zero": false,
+        "draws_sha256": "60aa7a172d5bb73770ee3a8d76af2fd7e4ea1fda1a42ca5f362f29e0431d1c2f"
+      }
+    },
+    "R02": {
+      "seed17_accuracy_pct": 51.0235026535254,
+      "seed29_accuracy_pct": 51.93328278999242,
+      "a8_prediction_pct": 55.17,
+      "seed17_residual_pp": -4.146497346474604,
+      "seed29_residual_pp": -3.2367172100075834,
+      "mean_residual_pp": -3.6916072782410936,
+      "same_sign": true,
+      "outside_band": false,
+      "miss_replicates": false,
+      "interpretation": "same_direction_within_band",
+      "seed29_minus_seed17": {
+        "n_questions": 1319,
+        "delta_pp": 0.9097801364670205,
+        "lower95_pp": -1.6698256254738422,
+        "upper95_pp": 3.4874905231235784,
+        "abs_delta_at_least_3pp": false,
+        "ci_excludes_zero": false,
+        "draws_sha256": "d98513a10b5f6eee96c14c118736c92fef85f0121f77babf4b57357e773d1b08"
+      }
+    },
+    "R03": {
+      "seed17_accuracy_pct": 68.6125852918878,
+      "seed29_accuracy_pct": 68.7642153146323,
+      "a8_prediction_pct": 72.92,
+      "seed17_residual_pp": -4.307414708112205,
+      "seed29_residual_pp": -4.155784685367706,
+      "mean_residual_pp": -4.231599696739956,
+      "same_sign": true,
+      "outside_band": true,
+      "miss_replicates": true,
+      "interpretation": "repeated_miss",
+      "seed29_minus_seed17": {
+        "n_questions": 1319,
+        "delta_pp": 0.1516300227445034,
+        "lower95_pp": -2.122820318423048,
+        "upper95_pp": 2.501895375284306,
+        "abs_delta_at_least_3pp": false,
+        "ci_excludes_zero": false,
+        "draws_sha256": "d6aa7c6f5295d717e5ea3fe332795150f45fcb35231a1668fda7af1de1265c4f"
+      }
+    },
+    "R05": {
+      "seed17_accuracy_pct": 38.36239575435936,
+      "seed29_accuracy_pct": 36.01213040181956,
+      "a8_prediction_pct": 34.21,
+      "seed17_residual_pp": 4.152395754359361,
+      "seed29_residual_pp": 1.8021304018195607,
+      "mean_residual_pp": 2.977263078089461,
+      "same_sign": true,
+      "outside_band": false,
+      "miss_replicates": false,
+      "interpretation": "same_direction_within_band",
+      "seed29_minus_seed17": {
+        "n_questions": 1319,
+        "delta_pp": -2.350265352539803,
+        "lower95_pp": -4.852160727824109,
+        "upper95_pp": 0.0758150113722517,
+        "abs_delta_at_least_3pp": false,
+        "ci_excludes_zero": false,
+        "draws_sha256": "ea53e7a6471b508586015e1926011885a76ac988770bf01e290ecfcc051f5760"
+      }
+    }
+  },
+  "M": {},
+  "single_epoch_all_same_sign": null,
+  "single_epoch_at_least3_misses_repeat": null,
+  "interaction_failure_trigger": null,
+  "M_predictions": {
+    "M-1": null,
+    "M-2": null,
+    "M-3": null,
+    "M-4": null
+  },
+  "missing_units": {
+    "single_epoch_all_same_sign": [
+      "R04"
+    ],
+    "single_epoch_at_least3_misses_repeat": [
+      "R04"
+    ],
+    "interaction_failure_trigger": [
+      "R06"
+    ],
+    "M-1": [
+      "M:llama_base_gsm8k",
+      "M:llama_instruct_gsm8k",
+      "M:qwen_base_gsm8k",
+      "M:qwen_instruct_gsm8k"
+    ],
+    "M-2": [
+      "M:llama_base_gsm8k",
+      "M:llama_instruct_gsm8k",
+      "M:qwen_base_gsm8k",
+      "M:qwen_instruct_gsm8k"
+    ],
+    "M-3": [
+      "M:qwen_base_gsm8k"
+    ],
+    "M-4": [
+      "M:llama_base_gsm8k",
+      "M:llama_instruct_gsm8k",
+      "M:qwen_base_gsm8k",
+      "M:qwen_instruct_gsm8k"
+    ]
+  },
+  "predictor_refit_performed": false,
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "independent_numeric_audit": "pending",
+  "M1_limitation": "No noticeable difference does not establish equivalence; intervals condition on observed training seeds."
+}
