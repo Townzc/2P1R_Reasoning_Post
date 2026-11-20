@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-20T22:54:45.968500+00:00",
+  "updated_utc": "2026-11-20T23:10:35.007993+00:00",
   "stage": "amendment9_authorized_R_M_and_LogiQA",
   "plan": "P012 v1 plus owner-approved amendments1-9",
   "C1": {
@@ -1194,7 +1194,7 @@
   },
   "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json",
   "amendment9_current": {
-    "utc": "2026-11-20T22:54:45.968500+00:00",
+    "utc": "2026-11-20T23:10:35.007993+00:00",
     "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
     "Modal": [
       {
@@ -1232,26 +1232,26 @@
         "run_id": "a9_r05_llama_base_gsm8k_p4096_k2_e2_s29_20261120_v1",
         "workspace": "tangzhice",
         "train_launched": true,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M01",
         "run_id": "a9_m01_llama_base_gsm8k_p2048_k2_e2_s29_20261120_v1",
         "workspace": "tangzhice",
-        "train_launched": false,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_launched": true,
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M02",
         "run_id": "a9_m02_llama_instruct_gsm8k_p2048_k2_e2_s29_20261120_v1",
         "workspace": "tangzhice",
-        "train_launched": false,
+        "train_launched": true,
         "train_complete": false,
         "eval_launched": false,
         "eval_complete": false,
@@ -1340,7 +1340,7 @@
     ],
     "R04": {
       "run_id": "a9_r04_tinker_lora_4b_math_p4096_k1_e1_s29_20261120_v1",
-      "last_completed_update": 202,
+      "last_completed_update": 340,
       "expected_updates": 512,
       "train_complete": false
     },
@@ -1348,13 +1348,24 @@
       "complete": true,
       "outputs": 5544,
       "result_commit": "bc3f0bbe275ec105509b413c8fb4e54f5d2ee803",
-      "independent_audit": "pending",
+      "independent_audit": "passed_04b1049f",
       "new_training_authorized": false
     },
     "analysis_adapter": {
       "review_package_commit": "3c797422edaf7288f0680b44338d7b0c9b2eefb9",
-      "review_pending": true,
-      "real_statistics_not_run": true
+      "accepted_review_commit": "f1ee77b77b8a29d9a6dd47efadf46eb1987e7b8d",
+      "review_pending": false,
+      "formal_runs": [
+        {
+          "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r_first/RESULTS.json",
+          "units": [
+            "R01",
+            "R02",
+            "R03",
+            "R05"
+          ]
+        }
+      ]
     },
     "R_M_scientific_source_changed": false,
     "local_Tinker_requires_awake_online_host": true,

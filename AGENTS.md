@@ -1,8 +1,8 @@
-# Current P012 — 2026-11-20T22:54:45.968500+00:00; A9 active, LogiQA pilot complete
+# Current P012 — 2026-11-20T23:10:35.007993+00:00; A9 active, LogiQA pilot complete
 
 Owner ecda0914 scope continues: Modal exact fourteen-cell order and Tinker R04; no new experiments. Current receipt reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json, scoped budget BUDGET_CURRENT.json. R/M source unchanged from accepted b95c631e. Use only existing reviewed train/eval/scoring entrypoints and frozen A9 request parameters. Publish each endpoint and timestamped ecda binding before scoring. Retain checkpoints until accepted result audit; all A8 retained.
 
-LogiQA all5,544 outputs complete, packet bc3f0bbe pending full independent audit; original prompts/source/private prompt tokens remain private. Three frozen continuation conditions pass, but no full generation or training extension is authorized. Existing analysis adapter package3c797422 awaits Claude prereview; no real A9 bootstrap before acceptance. Core unchanged.
+LogiQA all5,544 outputs complete and independently accepted at04b1049f with zero label disagreements; original prompts/source/private prompt tokens remain private. Three frozen continuation conditions pass, but no full generation or training extension is authorized. Analysis adapter accepted atf1ee77b7 with R-1/R-2 applied,26checks pass. First formal unitsR01/R02/R03/R05 ran once; packet1ad5895c awaits independent numerical review. Use the fixed once-only registry, bind prior results, never rerun a consumed unit. Core unchanged.
 
 Current R04 local process submits Tinker steps and requires awake/online host. Modal --detach protects submitted cloud calls only; queue advancement is through this active Codex task, no new controller. On exception inspect and record; no scientific retries. Never restart old controllers or freeze_grid.py. No account/billing/power changes, external messages, course prose or subagents. Preserve unrelated lt002. Shared Git/budget locks remain. Earlier status entries are historical.
 
