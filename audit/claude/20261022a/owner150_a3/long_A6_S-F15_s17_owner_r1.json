@@ -1,0 +1,341 @@
+{
+ "stats": {
+  "rows": 3300
+ },
+ "per_endpoint": {
+  "math500_sample": {
+   "native_eos": 980,
+   "correct": 677,
+   "length_cap": 1020,
+   "n": 2000,
+   "mean_tokens": 12726.537
+  },
+  "math500_greedy": {
+   "length_cap": 484,
+   "correct": 15,
+   "native_eos": 16,
+   "n": 500,
+   "mean_tokens": 15960.39
+  },
+  "aime24_sample": {
+   "length_cap": 223,
+   "correct": 0,
+   "native_eos": 17,
+   "n": 240,
+   "mean_tokens": 16086.104166666666
+  },
+  "aime25_sample": {
+   "length_cap": 214,
+   "correct": 0,
+   "native_eos": 26,
+   "n": 240,
+   "mean_tokens": 16005.958333333334
+  },
+  "amc23_sample": {
+   "native_eos": 80,
+   "correct": 45,
+   "length_cap": 240,
+   "n": 320,
+   "mean_tokens": 14903.265625
+  }
+ },
+ "mismatches": [],
+ "string_equal_but_scored_false": [],
+ "true_without_string_equality": [
+  [
+   "math500:0000:sample:1",
+   "(3, \\pi/2)",
+   "\\left( 3, \\frac{\\pi}{2} \\right)"
+  ],
+  [
+   "math500:0007:sample:3",
+   "90",
+   "90^\\circ"
+  ],
+  [
+   "math500:0023:sample:0",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:sample:1",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:sample:2",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:sample:3",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0031:sample:0",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:2",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:3",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:greedy:0",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0099:sample:0",
+   "\\begin{pmatrix} -\\dfrac{1}{3} \\\\ \\dfrac{2}{3} \\\\ \\dfrac{5}{3} \\end{pmatrix}",
+   "\\begin{pmatrix} -1/3 \\\\ 2/3 \\\\ 5/3 \\end{pmatrix}"
+  ],
+  [
+   "math500:0106:sample:1",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:2",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0127:sample:1",
+   "4210",
+   "4210_{5}"
+  ],
+  [
+   "math500:0146:sample:2",
+   "\\dfrac{1}{\\sqrt{3}}",
+   "\\frac{\\sqrt{3}}{3}"
+  ],
+  [
+   "math500:0157:sample:3",
+   "\\dfrac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0165:sample:1",
+   "\\dfrac{8}{18}",
+   "\\frac{4}{9}"
+  ],
+  [
+   "math500:0181:sample:2",
+   "\\dfrac{1}{\\sqrt{3}}",
+   "\\frac{\\sqrt{3}}{3}"
+  ],
+  [
+   "math500:0227:sample:1",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0233:sample:0",
+   "30",
+   "30^\\circ"
+  ],
+  [
+   "math500:0233:sample:2",
+   "30",
+   "30^\\circ"
+  ],
+  [
+   "math500:0233:sample:3",
+   "30",
+   "30^\\circ"
+  ],
+  [
+   "math500:0235:sample:0",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:1",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:3",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0255:sample:0",
+   "E",
+   "\\text{(E)}"
+  ],
+  [
+   "math500:0255:sample:1",
+   "E",
+   "\\text{(E)}"
+  ],
+  [
+   "math500:0255:sample:2",
+   "E",
+   "\\text{(E)}"
+  ],
+  [
+   "math500:0257:sample:0",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:sample:2",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0260:sample:2",
+   "120",
+   "120^\\circ"
+  ],
+  [
+   "math500:0261:sample:3",
+   "76",
+   "76^\\circ"
+  ],
+  [
+   "math500:0267:sample:1",
+   "180",
+   "180^\\circ"
+  ],
+  [
+   "math500:0267:sample:2",
+   "180",
+   "180^\\circ"
+  ],
+  [
+   "math500:0296:sample:3",
+   "B",
+   "\\text{(B)}"
+  ],
+  [
+   "math500:0305:sample:0",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:1",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:2",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0343:sample:0",
+   "58500",
+   "58,500"
+  ],
+  [
+   "math500:0362:sample:0",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0362:sample:2",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0362:sample:3",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0383:sample:0",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:sample:1",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:sample:2",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:greedy:0",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0388:sample:1",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0393:sample:0",
+   "\\dfrac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0393:sample:1",
+   "\\dfrac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0393:sample:2",
+   "\\dfrac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0393:sample:3",
+   "\\dfrac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0399:sample:0",
+   "326.50",
+   "326.5"
+  ],
+  [
+   "math500:0467:sample:0",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:sample:1",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:sample:2",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:sample:3",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0488:sample:2",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:sample:3",
+   "36",
+   "\\$36"
+  ],
+  [
+   "amc23:0009:sample:3",
+   "\\dfrac{4}{1}",
+   "4"
+  ]
+ ]
+}

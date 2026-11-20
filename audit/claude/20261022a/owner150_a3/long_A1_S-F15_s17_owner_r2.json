@@ -1,0 +1,436 @@
+{
+ "stats": {
+  "rows": 3300
+ },
+ "per_endpoint": {
+  "math500_sample": {
+   "native_eos": 1189,
+   "correct": 670,
+   "length_cap": 811,
+   "n": 2000,
+   "mean_tokens": 12168.865
+  },
+  "math500_greedy": {
+   "native_eos": 294,
+   "correct": 160,
+   "length_cap": 206,
+   "n": 500,
+   "mean_tokens": 12445.438
+  },
+  "aime24_sample": {
+   "length_cap": 197,
+   "correct": 4,
+   "native_eos": 43,
+   "n": 240,
+   "mean_tokens": 15644.375
+  },
+  "aime25_sample": {
+   "native_eos": 41,
+   "correct": 1,
+   "length_cap": 199,
+   "n": 240,
+   "mean_tokens": 15508.433333333332
+  },
+  "amc23_sample": {
+   "native_eos": 116,
+   "correct": 34,
+   "length_cap": 204,
+   "n": 320,
+   "mean_tokens": 14649.059375
+  }
+ },
+ "mismatches": [],
+ "string_equal_but_scored_false": [],
+ "true_without_string_equality": [
+  [
+   "math500:0000:sample:1",
+   "(3, \\pi/2)",
+   "\\left( 3, \\frac{\\pi}{2} \\right)"
+  ],
+  [
+   "math500:0007:greedy:0",
+   "90",
+   "90^\\circ"
+  ],
+  [
+   "math500:0023:sample:2",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0023:sample:3",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0030:sample:0",
+   "52",
+   "52_8"
+  ],
+  [
+   "math500:0030:sample:2",
+   "52",
+   "52_8"
+  ],
+  [
+   "math500:0030:sample:3",
+   "52",
+   "52_8"
+  ],
+  [
+   "math500:0030:greedy:0",
+   "52",
+   "52_8"
+  ],
+  [
+   "math500:0031:sample:0",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:1",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:2",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:sample:3",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0031:greedy:0",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0099:sample:1",
+   "\\begin{pmatrix} -\\dfrac{1}{3} \\\\ \\dfrac{2}{3} \\\\ \\dfrac{5}{3} \\end{pmatrix}",
+   "\\begin{pmatrix} -1/3 \\\\ 2/3 \\\\ 5/3 \\end{pmatrix}"
+  ],
+  [
+   "math500:0102:sample:3",
+   "(b + 2)(a + 5)",
+   "(a+5)(b+2)"
+  ],
+  [
+   "math500:0106:sample:0",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:1",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:2",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:3",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:greedy:0",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0127:sample:3",
+   "4210_5",
+   "4210_{5}"
+  ],
+  [
+   "math500:0157:sample:0",
+   "\\dfrac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0157:sample:1",
+   "\\dfrac{6}{5}",
+   "\\frac65"
+  ],
+  [
+   "math500:0198:sample:1",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0198:greedy:0",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0227:sample:0",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0227:sample:1",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0227:sample:2",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0233:sample:0",
+   "30",
+   "30^\\circ"
+  ],
+  [
+   "math500:0233:sample:2",
+   "30",
+   "30^\\circ"
+  ],
+  [
+   "math500:0235:sample:0",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:1",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:3",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0255:sample:2",
+   "E",
+   "\\text{(E)}"
+  ],
+  [
+   "math500:0257:sample:0",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:sample:1",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:sample:2",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:sample:3",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0257:greedy:0",
+   "864",
+   "864 \\mbox{ inches}^2"
+  ],
+  [
+   "math500:0261:sample:1",
+   "76",
+   "76^\\circ"
+  ],
+  [
+   "math500:0261:sample:3",
+   "76",
+   "76^\\circ"
+  ],
+  [
+   "math500:0261:greedy:0",
+   "76",
+   "76^\\circ"
+  ],
+  [
+   "math500:0267:sample:0",
+   "180",
+   "180^\\circ"
+  ],
+  [
+   "math500:0267:sample:1",
+   "180",
+   "180^\\circ"
+  ],
+  [
+   "math500:0267:sample:3",
+   "180",
+   "180^\\circ"
+  ],
+  [
+   "math500:0281:sample:2",
+   "36",
+   "36^\\circ"
+  ],
+  [
+   "math500:0305:sample:0",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:1",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:3",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:greedy:0",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0340:sample:2",
+   "55",
+   "55^\\circ"
+  ],
+  [
+   "math500:0343:sample:0",
+   "58500",
+   "58,500"
+  ],
+  [
+   "math500:0343:sample:1",
+   "58500",
+   "58,500"
+  ],
+  [
+   "math500:0358:greedy:0",
+   "\\text{Ellipse}",
+   "\\text{ellipse}"
+  ],
+  [
+   "math500:0362:sample:0",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0362:sample:3",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0362:greedy:0",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0383:sample:0",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:sample:1",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:sample:2",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:sample:3",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0383:greedy:0",
+   "[-2, 7]",
+   "x \\in [-2,7]"
+  ],
+  [
+   "math500:0393:sample:0",
+   "\\dfrac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0433:sample:0",
+   "\\dfrac{57}{160}",
+   ".35625"
+  ],
+  [
+   "math500:0433:sample:3",
+   "\\dfrac{57}{160}",
+   ".35625"
+  ],
+  [
+   "math500:0467:sample:1",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:sample:2",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:sample:3",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0467:greedy:0",
+   "15",
+   "15\\mbox{ cm}^2"
+  ],
+  [
+   "math500:0488:sample:0",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:sample:1",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:sample:2",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:sample:3",
+   "36",
+   "\\$36"
+  ],
+  [
+   "math500:0488:greedy:0",
+   "36",
+   "\\$36"
+  ],
+  [
+   "aime24:0007:sample:4",
+   "25",
+   "\\boxed{25}"
+  ],
+  [
+   "aime24:0007:sample:6",
+   "25",
+   "\\boxed{25}"
+  ],
+  [
+   "aime24:0026:sample:5",
+   "55",
+   "\\boxed{55}"
+  ],
+  [
+   "aime24:0026:sample:7",
+   "55",
+   "\\boxed{55}"
+  ]
+ ]
+}

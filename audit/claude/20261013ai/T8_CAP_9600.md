@@ -1,0 +1,111 @@
+# Claude audit 20261013ai — T8 cap 9,600 @ 4fef52a3
+
+Both verdicts below are bound to the same exact source and spec:
+- **35 source files**, canonical source digest **28f42669…236b1d**
+- **spec 4ca2c55d…** (`student_t8_cap_9600_v1/ADMISSION.json`)
+
+## p008-t8-cap-9600-runtime-r1: **PASS-WITH-NOTES**
+
+### Owner authority
+`OWNER.json` records the direct reply "批准 9,600 秒及 $266.44 上限（推荐）" at 00:09:57 UTC, with the authority field "Direct human reply in this chat". `validate_owner` checks every field exactly, including its type:
+- caps 9,560 → 9,600 s;
+- reservation +40¢, stage 26,604 → 26,644¢;
+- only the original eight T8 runs; 1 call each; no retry;
+- at most 8 workers;
+- `original_N2_failed_retained` and `post_hoc_engineering_deviation` both true.
+
+I ran this check on the real ADMISSION and it passes.
+
+### Science unchanged
+- `original_spec` equals the published `student_admission_v1/ADMISSION.json` byte for byte (ab49b0a6). `configs` and `config_sha256` are unchanged, and the plan digest equals the original.
+- The registered 1,253¢ slot reservations are unchanged.
+- The config still says `max_seconds=9560`. The 9,600 s cap is an operational override held in the spec and intent.
+- `validate_original` is run against the **real historical G1 releases** (draws 1 and 2). The dependency gates (`required_terminals`, `pool_terminals`, `student_completion_owner`, `student_slot_transfer`, `upload`) must equal those G1 gates exactly.
+- Bundle versus the 34-file T8 bundle I reviewed at 860aa4cb: 33 files are identical. `modal_students_t8.py` is replaced by `modal_students_t8_cap.py`, and `student_t8_cap_binding.py` is added.
+- The entry diff touches only:
+  - the spec path and app name;
+  - the timer (9,600), `max_runtime_seconds` (9,630) and platform timeout (9,660);
+  - the dispatch-window checks (9,600 + 700);
+  - `register_amendment`, `reserve_supplement` and `verify_supplement`;
+  - the extra fields in intent and result;
+  - one supplement-absence check at dispatch.
+- The scientific call (`frozen_lr_block_student_runtime.run`), the block guard path and the evaluation are untouched.
+
+### No double calls
+- The worker acquires the **same original campaign/run claim** through the same RunGuard, so an old-entry worker and a new-entry worker race on one atomic claim.
+- The old 9,560 entry also cannot be admitted, because its N2 acceptance (with `N2_closed` at caps of 9,560) will never exist.
+- The supplement is create-only (`skip_if_exists`), bound to the winning claim digest and `attempt_id`, and re-verified before `finish`.
+- Dispatch rejects an existing supplement and any conflicting global amendment record.
+
+### Capacity and dependencies
+These are inherited unchanged from the T8 entry I already reviewed: both queues counted, unmatched containers counted, max 8, all 13 dependency terminals, all 13 stopped dependency apps.
+
+### Budget
+- ceil((9,600 + 700) × 4.393584 / 3600 × 100) = 1,258¢.
+- 8 slots × 5¢ = 40¢.
+- 16,232¢ (full meter, rounded up) + 26,644¢ = 42,876¢, which is ≤ 45,000¢. The code checks this.
+
+### Tests
+At 4fef52a3, locally, `test_p008_t8_cap_amendment` and `test_p008_t8_admission` give **24/24 OK**.
+
+### Notes
+- **R1 (LOW, labels).** The `PROJECT_BUDGET` labels are stale:
+  - `P008_full_reservation_usd` is "266.04";
+  - `deliberate_doublecount…` is "428.35", computed with $266.04.
+  
+  The request text and the code both use $266.44, which gives 428.75. Please correct the labels. This is not a blocker, since both figures are far below $450.
+- **R2 (LOW, failure mode).** `reserve_supplement` runs **before** the `try` block. If it raises (missing global record, claim not owned, or supplement already present), the original claim is left with no terminal and no `failure.json`. That fails closed and burns the slot, which is the stated intent. It does leave an open claim that the capacity count treats as occupied until it is reconciled by hand. Please document the reconciliation procedure, or move this step inside the `try` so that a failed terminal is written.
+- **R3 (disclosed limitation).** The setup and end bookkeeping is unbenchmarked: a few modal.Dict puts and gets, against about 18 s of headroom. I accept it as stated, since it is a few round trips at about 0.1 s each according to today's guard metrics.
+
+## p008-t8-cap-9600-numeric-r1: **PASS under the amended criterion; the original N2 stays FAILED**
+- **Inputs.** The unchanged original proposal 0fb18e74 is equal to `original_failed_timing_proposal`, and I reproduced it independently in 20261013ah pt1. The new spec binds it together with all 11 logical members, the 2 retained failed attempts, the 13 physical terminals, the 20% margin and the frozen v2 formula. No host is dropped and no outcome is read.
+- **Uniform reapplication to all 8 slots.**
+  - Seven forecasts are 9,550.78 s and `d1_b8_p4_depth` is 9,551.68 s. All are ≤ **9,570**, with 18.32–19.22 s of headroom.
+  - The binding still requires each frozen prediction to keep `engineering_criterion_passed=false` and `allowed_seconds=9530`, so the original failure stays visible in the gate.
+- **Exact acceptance:**
+  - runs: all 8 T8 cells (`d1/d2 × b8 × p0/p4 × breadth/depth _t8`);
+  - worker cap: 9,600 each;
+  - proposal digest: 0fb18e74…;
+  - source: 35 files, 28f42669…;
+  - spec: 4ca2c55d…;
+  - flags: `original_N2_passed=false`, `post_hoc_engineering_deviation=true`.
+- **Caveat.** The forecast is a conservative proxy (componentwise maxima plus 20%). It is not a probability of finishing within the cap. Actual workers stop at the hard 9,600 s cap.
+- **Reporting rule.** Any write-up must say that the pre-registered timing gate failed by about 21 s and that the cap was raised by owner decision before any T8 outcome existed.
+
+## p008-final-cpu-t8-cap-code-r1 @ 82c3912a: **PASS-WITH-NOTES (code only)**
+
+### Bundle
+The bundle has 19 files. 16 are byte-identical to the 17-file final CPU bundle I reviewed at 63fee8e6.
+- Added: `modal_audit_t8_cap.py`, `audit_cap_binding.py`, `audit_t8_cap_records.py`.
+- Removed: `modal_audit_replacements.py`.
+
+The entry diff touches only:
+- the spec path and app name;
+- the imports, now the cap binding and the cap-record verifier;
+- `require_remote_cap_records`, called at dispatch, before the work and after the source proofs;
+- extra result flags: `original_N2_passed=false` and `post_hoc_engineering_deviation=true`.
+
+`audit_cap_binding` wraps the reviewed replacement binding without changing it, and then adds the cap checks.
+
+### T8 label checks
+For each T8 label, `validate_cap_label` requires:
+- the original config (`max_seconds` 9,560, 2,048 updates, 4,194,296 targets) and the original campaign and run;
+- the **exact archived intent bytes**, matched to the artifact-manifest sha and length;
+- an intent release with spec 4ca2c55d and the exact 35-source roster;
+- both scoped reviews, `t8-cap-9600-runtime` and `t8-cap-9600-numeric`, against the same source and spec;
+- a numeric acceptance with `original_N2_passed=false`, the deviation flag true, all 8 runs at 9,600 and proposal 0fb18e74;
+- 1,253¢ in the intent, a total of 1,258¢ and a 5¢ supplement equal to the ledger;
+- a claim deadline of exactly claimed + 9,630. The float equality is exact, because both operands are multiples of 2⁻²² below 2³¹.
+- a terminal that is `completed` with 1,253¢;
+- a result that keeps 12.53, 0.05, 12.58 and `invoice=None` distinct;
+- a local oracle that binds 9,600, 1,258¢ and 5¢.
+
+Non-T8 labels must not carry T8 operational evidence. The 9 records, 1 global plus 8 supplements, are re-read from the claims store at entry and after the source proofs. `verify_packed_run` also requires that the intent which was actually unpacked equals the admitted bytes, and that the admission digest equals CAP_SPEC.
+
+The guard now allows only `modal_audit_t8_cap` as the entry.
+
+### Tests
+Locally, `test_p008_audit_t8_cap` + `test_p008_final_cpu_entry_guard` give **19/19 OK**.
+
+### Note
+**C1 (LOW, design consequence).** All 8 T8 terminals must be `completed`. If any T8 fails, this CPU code cannot be admitted, and a separate reviewed amendment would be needed. That is consistent with "never silently drop a failed source", but it should be stated in the CPU numeric admission plan.

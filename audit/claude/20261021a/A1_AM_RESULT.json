@@ -1,0 +1,150 @@
+{
+ "manifest_bad": [],
+ "n_raw": 2048,
+ "n_enc": 2048,
+ "cell_sizes": {
+  "D1": 1024,
+  "D2": 1024
+ },
+ "pairs_same_parent_in_order": true,
+ "selected_parent_list_matches_filter": true,
+ "teacher_sources": [
+  {
+   "am_thinking": 1024
+  },
+  {
+   "am_qwen3": 1024
+  }
+ ],
+ "unique_parents": 1024,
+ "dispositions_examined": 1079,
+ "dispositions_eligible": 1024,
+ "positions_contiguous": true,
+ "selected_equals_eligible_in_candidate_order": true,
+ "last_examined_is_eligible_1024th": true,
+ "chosen_rows_match": true,
+ "flag_counts_recomputed": {
+  "decontamination_hit": 2,
+  "am_thinking_incomplete": 0,
+  "am_qwen3_incomplete": 0,
+  "am_thinking_overlength": 48,
+  "am_qwen3_overlength": 13
+ },
+ "filter_counts_reported": {
+  "am_qwen3_incomplete": 0,
+  "am_qwen3_overlength": 13,
+  "am_thinking_incomplete": 0,
+  "am_thinking_overlength": 48,
+  "decontamination_hit": 2,
+  "eligible": 1024,
+  "examined_common_parents": 1079,
+  "excluded": 55,
+  "total_common_parents": 558126
+ },
+ "all_complete": true,
+ "decontam_hits_in_selected": 0,
+ "benchmark_counts": {
+  "math500": 500,
+  "aime24": 30,
+  "aime25": 30,
+  "amc23": 40
+ },
+ "encoding_bad": {
+  "structure": 0,
+  "parent_sha_mismatch": 0
+ },
+ "same_prefix_ids_across_teachers": true,
+ "prefix_head_ids": [
+  151644,
+  8948,
+  198,
+  2610,
+  525,
+  1207,
+  16948,
+  11,
+  3465,
+  553,
+  54364,
+  14817
+ ],
+ "all_prefixes_share_system_head": true,
+ "max_len": 16282,
+ "verify_score_selected": {
+  "D1": [
+   [
+    "1.0",
+    1024
+   ]
+  ],
+  "D2": [
+   [
+    "1.0",
+    1024
+   ]
+  ]
+ },
+ "response_starts_think": {
+  "D1": 1024,
+  "D2": 1024
+ },
+ "response_has_answer_tag": {
+  "D1": 1024,
+  "D2": 1024
+ },
+ "once_recomputed": {
+  "D1": 3310075,
+  "D2": 4070922
+ },
+ "dose": {
+  "A7_exactly_one_pass_required": false,
+  "B": 4070922,
+  "U": 64,
+  "dose_definition": "max_once_pass_tokens_across_original_cells",
+  "fixed_before_any_student_outcome": true,
+  "once_pass_tokens": {
+   "D1": 3310075,
+   "D2": 4070922
+  },
+  "owner_amendment_required": false
+ },
+ "B_is_max": true,
+ "D1_plan": {
+  "q": 1,
+  "n": 1024,
+  "updates": 64,
+  "U_ok": true,
+  "tokens": 4070922,
+  "tokens_eq_B": true,
+  "exposures_q_q1": true,
+  "passes_are_permutations": true,
+  "passes_match_seeded_shuffle": true,
+  "extras": 226,
+  "extras_unique": true,
+  "nonempty_updates": true,
+  "update_tokens_min_max": [
+   50576,
+   73788
+  ],
+  "exposures_field_ok": true
+ },
+ "D2_plan": {
+  "q": 1,
+  "n": 1024,
+  "updates": 64,
+  "U_ok": true,
+  "tokens": 4070922,
+  "tokens_eq_B": true,
+  "exposures_q_q1": true,
+  "passes_are_permutations": true,
+  "passes_match_seeded_shuffle": true,
+  "extras": 0,
+  "extras_unique": true,
+  "nonempty_updates": true,
+  "update_tokens_min_max": [
+   55133,
+   69971
+  ],
+  "exposures_field_ok": true
+ }
+}

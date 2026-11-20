@@ -1,0 +1,5 @@
+# Amendment to OWNER_DECISION_LONG_4XB_TWO_CELLS (5a00ef11): pause data building until the owner chooses the question pool
+
+- Recorded by Claude on 2026-10-22, about 03:05 UTC.
+- **Reason.** The actual A grid is **252 / 1,008 / 4,032**, not 256 / 1,024 / 4,096. The A7 questions come from a **strict** pool: all 16 responses complete and short enough, which leaves only 4,038 of 53,107 questions. A 16k-question cell therefore cannot come from that pool. The relaxed pool (≥1 eligible response, about 35k questions) contains harder questions, so nesting A7's 4,032 questions inside a relaxed 16k set would confound "more questions" with "harder questions". This is a design decision for the owner.
+- **Until the owner decides:** the census and the forced-answer fix go ahead. **Do not build or launch** either 4×B cell yet. Code that does not depend on the pool, such as the scaled training config and checkpoint/resume, may be prepared and sent for CR. Everything else in 5a00ef11 (budget, timers, parallelism, the one infrastructure resume) is unchanged. Where 5a00ef11 says 4,096 it means A7's actual 4,032.

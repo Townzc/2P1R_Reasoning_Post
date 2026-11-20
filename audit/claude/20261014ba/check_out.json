@@ -1,0 +1,157 @@
+{
+ "selftest_qwen_math_zero": {
+  "n": 500,
+  "reencode_mismatch": 0,
+  "max_prompt": 795,
+  "cap": 1024,
+  "fits": true,
+  "eos": 151643
+ },
+ "selftest_qwen_math_four": {
+  "n": 500,
+  "reencode_mismatch": 0,
+  "max_prompt": 978,
+  "cap": 1024,
+  "fits": true,
+  "eos": 151643
+ },
+ "selftest_qwen_gsm_zero_parity": {
+  "n": 1319,
+  "reencode_mismatch": 0,
+  "max_prompt": 192,
+  "cap": 512,
+  "fits": true,
+  "eos": 151643
+ },
+ "selftest_teacher_math_zero": {
+  "n": 500,
+  "reencode_mismatch": 0,
+  "max_prompt": 819,
+  "cap": 1024,
+  "fits": true,
+  "eos": 151645
+ },
+ "selftest_teacher_gsm_zero": {
+  "n": 1319,
+  "reencode_mismatch": 0,
+  "max_prompt": 216,
+  "cap": 512,
+  "fits": true,
+  "eos": 151645
+ },
+ "train_rows": 7500,
+ "train_unique": 7499,
+ "dup_groups": [
+  [
+   "math/algebra/train/925",
+   "math/algebra/train/959"
+  ]
+ ],
+ "train_m500_overlap": 0,
+ "m500_unique": 500,
+ "ids_unique": true,
+ "my_overflow": [
+  [
+   "math/counting_and_probability/train/603",
+   1063
+  ],
+  [
+   "math/geometry/train/101",
+   1682
+  ],
+  [
+   "math/geometry/train/388",
+   1536
+  ],
+  [
+   "math/geometry/train/522",
+   1198
+  ],
+  [
+   "math/geometry/train/543",
+   1320
+  ],
+  [
+   "math/prealgebra/train/1087",
+   1072
+  ],
+  [
+   "math/prealgebra/train/174",
+   1055
+  ]
+ ],
+ "claimed_overflow": [
+  [
+   "math/counting_and_probability/train/603",
+   1063
+  ],
+  [
+   "math/geometry/train/101",
+   1682
+  ],
+  [
+   "math/geometry/train/388",
+   1536
+  ],
+  [
+   "math/geometry/train/522",
+   1198
+  ],
+  [
+   "math/geometry/train/543",
+   1320
+  ],
+  [
+   "math/prealgebra/train/174",
+   1055
+  ],
+  [
+   "math/prealgebra/train/1087",
+   1072
+  ]
+ ],
+ "overflow_match": true,
+ "attempt_counts": {
+  "1": 7493,
+  "2": 500,
+  "3": 500,
+  "4": 500
+ },
+ "first_cover_supported": true,
+ "extra_parents": 500,
+ "extra_complete": true,
+ "extra_selection_reproduced": true,
+ "prompt_ids_match_mine": 0,
+ "candidate_unique": true,
+ "seeds_unique": true,
+ "order_first_attempts_before_extras": true,
+ "mdev_ids": [
+  "math/prealgebra/test/537",
+  "math/counting_and_probability/test/460",
+  "math/precalculus/test/320",
+  "math/prealgebra/test/744"
+ ],
+ "mdev_tokens": [
+  45,
+  52,
+  44,
+  42
+ ],
+ "mdev_disjoint_train_m500": true,
+ "mdev_from_test_split": true,
+ "m500_max_zero_prompt_mine": 795,
+ "per_example_limit_mine": 57,
+ "math_four_matches_construction": 0,
+ "math_zero_matches_construction": 0,
+ "teacher_math_zero_matches": 0,
+ "parity_vs_p008_prompts_mismatch": 0,
+ "parity_order_matches_test": true,
+ "teacher_gsm_zero_matches": 0,
+ "gdev_ids": [
+  "gsm8k/train/02125",
+  "gsm8k/train/04525",
+  "gsm8k/train/02445",
+  "gsm8k/train/06596"
+ ],
+ "gdev_test_overlap": 0
+}

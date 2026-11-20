@@ -1,0 +1,17 @@
+$ python3 g3_endpoint.py <codex-worktree>/reports/p008_20261013/base_v1 g3_base.json
+n 1319 order_ok True raw_files 83
+{'my_correct': 640, 'frozen_correct': 638, 'lastclaim_correct': 642, 'frozen_parsed': 1002, 'my_parsed': 1007, 'stop_new_problem_boundary': 302, 'stop_length_cap': 41, 'cap_frozen_correct': 0, 'cap_marked_correct_anyway': 6, 'stop_native_eos': 976}
+event_dis 0 []
+gen_tok 221196 summary 221196 padded 702841 summary 553136
+summary question_correct agrees with rows True 638
+row disagreements 2
+["gsm8k/test/00375", true, false, "parsed", "unresolved_marked_answer", [["stmt", "48"]], [["answer_statement", "Mrs. Sherman fed 48 pieces of bread rolls to the chickens."]], "to the chickens.\nYou are an AI assistant that helps people find information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."]
+["gsm8k/test/00507", true, false, "parsed", "unresolved_marked_answer", [["stmt", "2"]], [["answer_statement", "Janet would save $2/week by buying a weekly bus pass."]], "days in a week: $4.40/day * 5 days/week = $22/week. Then, subtract the cost of the weekly pass from the cost of the bus trips: $22/week - $20/week = $2/week.\nAnswer: Janet would save $2/week by buying a weekly bus pass.\n"]
+
+Notes: prompt_text_mismatch / row_mismatch / gen_tok_mismatch / padding_mismatch / gold_inconsistent are absent from the Counter => 0.
+"padded 702841" in my print is n*(prompt_width+steps) (includes prompt padding). Summary padded_tokens = sum of per-row
+batch_generated_steps = 702841 - sum(n*prompt_width) = 702841 - 149705 = 553136 (exact; prompt part from 370901-221196).
+
+Ledger check (separate snippet, device): 83 done entries, count sum 1319, raw_sha256 and scored_sha256 equal file bytes for
+all 83 batches; 83 unit entries have the same problem_ids and config {eval_batch_size 16, max_length 2048, max_new_tokens 512}; bad=0.
+File hashes on device == commit efeb6380 for gsm8k_test1319.jsonl (ea61d5f1…, == student_admission_v1 input set), result.json (a318f0a6…), batch_0000_raw.json (716c74bb…).

@@ -1,0 +1,71 @@
+problem_id,gold,teacher_modal_answer,agreement_of_8,label,reason,status
+gsm8k/train/00108,41,574,8,label_error,Question asks total over 14 days: (4×1.5+5×7)×14=574; gold 41 is the per-day cost,AI-judged by Claude; not human-verified
+gsm8k/train/00229,15,375,8,ambiguous_or_flawed,Unit unspecified: sections (15) vs feet (375),AI-judged by Claude; not human-verified
+gsm8k/train/00321,15400,14000,8,ambiguous_or_flawed,"""10 times more"" read as 10× or 11×",AI-judged by Claude; not human-verified
+gsm8k/train/00356,66,64,7,label_error,24 correct ×2=48 plus bonus for the 4 full rounds (16) = 64; gold 66 inconsistent with the stated rules,AI-judged by Claude; not human-verified
+gsm8k/train/00459,10080,12000,8,ambiguous_or_flawed,"""2/5 times less"" has no single reading",AI-judged by Claude; not human-verified
+gsm8k/train/00474,6,12,8,teacher_error,Teacher answered the mango-juice count (12) instead of orange (6),AI-judged by Claude; not human-verified
+gsm8k/train/00668,40,30,8,teacher_error,An orientation fits 2×5×4=40 blocks; teacher chose a worse orientation (30),AI-judged by Claude; not human-verified
+gsm8k/train/00869,3,0,8,teacher_error,Remainders 1+2=3 stickers; teacher says 0,AI-judged by Claude; not human-verified
+gsm8k/train/00902,6,9,8,label_error,"""an equal number of straws to the piglets"" = 180 → 9 each; reference uses the remainder (120) instead",AI-judged by Claude; not human-verified
+gsm8k/train/00975,112,160,8,ambiguous_or_flawed,"""How many free throws does he get"" = attempts (160) or makes (112)",AI-judged by Claude; not human-verified
+gsm8k/train/01052,25,30,8,label_error,Tim=2J−5=79 → John=42 → James=30; reference computes (79−5)/2,AI-judged by Claude; not human-verified
+gsm8k/train/01102,301,5,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/01138,60,140,8,ambiguous_or_flawed,"""How much will he have saved in a month"": cumulative (140) vs week-4 amount (60)",AI-judged by Claude; not human-verified
+gsm8k/train/01204,200,180,8,teacher_error,Asked for solar systems AND planets: 180+20=200; teacher omits planets,AI-judged by Claude; not human-verified
+gsm8k/train/01292,484,489,7,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/01780,675,1485/2,8,ambiguous_or_flawed,Overtime paid at 1.5× (742.5) or regular rate (675) not stated,AI-judged by Claude; not human-verified
+gsm8k/train/01802,207,399,7,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/02069,62,124,8,ambiguous_or_flawed,"""How many shoes"": pairs (62) vs individual shoes (124)",AI-judged by Claude; not human-verified
+gsm8k/train/02338,30,25,8,label_error,10×2+5×1=25; reference text itself computes 25 then writes 25+5,AI-judged by Claude; not human-verified
+gsm8k/train/02620,22,57,8,label_error,Parents bought 7×7=49 → 8+49=57; reference uses 2×7,AI-judged by Claude; not human-verified
+gsm8k/train/02770,106,108,8,label_error,50+20+18+20=108; gold 106 is an arithmetic slip,AI-judged by Claude; not human-verified
+gsm8k/train/02801,125,128,8,ambiguous_or_flawed,Leg count for chimps (2 vs 4) not given,AI-judged by Claude; not human-verified
+gsm8k/train/02830,4096,8190,8,ambiguous_or_flawed,"""have to spare and save by December"": total saved (8190) vs December amount (4096)",AI-judged by Claude; not human-verified
+gsm8k/train/02867,23,81/2,8,ambiguous_or_flawed,"""2/3 times as fast"" / ""1/3 times more time"" ill-defined",AI-judged by Claude; not human-verified
+gsm8k/train/02882,4,0,8,label_error,3/8+5/8 of one gallon used → 0 liters left; reference double-counts gallons,AI-judged by Claude; not human-verified
+gsm8k/train/03304,50,25/2,8,ambiguous_or_flawed,"""four times as many apples as oranges"" with 15 apples gives non-integer oranges; reference inverts it",AI-judged by Claude; not human-verified
+gsm8k/train/03363,28,32,7,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/03466,11,15,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/03489,44,356,8,ambiguous_or_flawed,"Typo ""2 132 contracts"" (2 contracts of 132 pages) read as 2,132",AI-judged by Claude; not human-verified
+gsm8k/train/03529,3,13,8,label_error,Problem says 40% and 34% → 50−20−17=13; reference uses 60%,AI-judged by Claude; not human-verified
+gsm8k/train/03703,1440,1240,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/03727,44,20,8,ambiguous_or_flawed,"""How many fried chickens"": pieces (44) vs drumstick+breast pairs",AI-judged by Claude; not human-verified
+gsm8k/train/03756,55,15,8,ambiguous_or_flawed,Equation as worded has no clean positive solution matching gold 55,AI-judged by Claude; not human-verified
+gsm8k/train/04099,360,2160,8,label_error,Nickel 10%=720 → total 7200 → copper 30%=2160; reference mixes percentages,AI-judged by Claude; not human-verified
+gsm8k/train/04121,24,6/25,7,representation_only,"Teacher gives probability 6/25 (=0.24), gold 24 expects a percent; same quantity only if the requested unit is percent",AI-judged by Claude; not human-verified
+gsm8k/train/04235,780,1260,7,label_error,After 4 halvings 60 → 960; P+100−400=960 → P=1260; gold 780,AI-judged by Claude; not human-verified
+gsm8k/train/04381,4,2,7,ambiguous_or_flawed,Folding semantics (folds per blanket vs total) undefined,AI-judged by Claude; not human-verified
+gsm8k/train/04414,70,50,8,teacher_error,30+15+25=70; teacher 50,AI-judged by Claude; not human-verified
+gsm8k/train/04555,4,2,7,ambiguous_or_flawed,"""each day after school"": school days (5/week) vs all days",AI-judged by Claude; not human-verified
+gsm8k/train/04556,3,107/50,8,ambiguous_or_flawed,"""one week"": 5 school days vs 7 days",AI-judged by Claude; not human-verified
+gsm8k/train/04778,480,120,8,label_error,"""bought at 20% of the initial price"" = $120; gold treats it as 20% off",AI-judged by Claude; not human-verified
+gsm8k/train/04876,25600000,25200000,8,ambiguous_or_flawed,Annual profit from daily earnings and monthly expenses: 365 vs 360 days,AI-judged by Claude; not human-verified
+gsm8k/train/04943,50,600,8,label_error,200 dozen = 2400 cookies → 600 half-gallons; reference uses 200 cookies,AI-judged by Claude; not human-verified
+gsm8k/train/04973,1100,900,8,ambiguous_or_flawed,"""twice as much tuna"" as trout or as salmon",AI-judged by Claude; not human-verified
+gsm8k/train/04979,52,130,8,ambiguous_or_flawed,Midterm week not stated,AI-judged by Claude; not human-verified
+gsm8k/train/05051,1600,2600,8,ambiguous_or_flawed,"""an additional 100 steps"" relative to which day",AI-judged by Claude; not human-verified
+gsm8k/train/05280,540,450,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/05391,1,0,7,ambiguous_or_flawed,Reggie's starting marbles not given,AI-judged by Claude; not human-verified
+gsm8k/train/05416,140,192,8,ambiguous_or_flawed,"""extend by 2 feet on each side"": one dimension or both, one side or two",AI-judged by Claude; not human-verified
+gsm8k/train/05460,2,7/2,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/05496,12,11,7,ambiguous_or_flawed,Whether the driver counts as a person on the trolley,AI-judged by Claude; not human-verified
+gsm8k/train/05599,184,344/5,7,ambiguous_or_flawed,Run/walk/jog wording inconsistent,AI-judged by Claude; not human-verified
+gsm8k/train/05703,4,0,8,ambiguous_or_flawed,"""2 people purchased 4"": 4 each or 4 total",AI-judged by Claude; not human-verified
+gsm8k/train/05782,380,330,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/05880,48,24,8,ambiguous_or_flawed,"""8 packs from Monday to Thursday"": per day or total",AI-judged by Claude; not human-verified
+gsm8k/train/05936,500,1400,8,label_error,9 cakes each → 18 cakes → 1800−400=1400 g; reference uses 9 cakes,AI-judged by Claude; not human-verified
+gsm8k/train/05967,57,53,8,unresolved,Problem text not fully reviewed (truncated in my view); previously counted as teacher_error,AI-judged by Claude; not human-verified
+gsm8k/train/06044,9,162,8,label_error,"9 rounds × 18 holes × 1 over par = 162; reference treats rounds as holes (ambiguity possible if ""round"" misused)",AI-judged by Claude; not human-verified
+gsm8k/train/06272,25,1/4,8,representation_only,Teacher 1/4 vs gold 25 (percent); same quantity only under a percent unit,AI-judged by Claude; not human-verified
+gsm8k/train/06284,220,217,7,ambiguous_or_flawed,Number of elevator stops (19 vs 20),AI-judged by Claude; not human-verified
+gsm8k/train/06427,19,16,8,ambiguous_or_flawed,"""equivalent of 6 full days"" (24h) vs 16h days",AI-judged by Claude; not human-verified
+gsm8k/train/06502,12,6,8,teacher_error,Two piggy banks → $12; teacher counts one,AI-judged by Claude; not human-verified
+gsm8k/train/06540,56,44,8,ambiguous_or_flawed,"""three times more""",AI-judged by Claude; not human-verified
+gsm8k/train/06672,10,5,8,label_error,Two siblings × 4 chores × 3 cookies = 24/week → 120/24=5; reference ignores the second sibling (arguably ambiguous),AI-judged by Claude; not human-verified
+gsm8k/train/06736,25,27,8,ambiguous_or_flawed,Whether Georgia optimizes with a dozen for the 14 friends,AI-judged by Claude; not human-verified
+gsm8k/train/06760,14,18,8,ambiguous_or_flawed,"""twice the amount of his sisters"": each sister or combined",AI-judged by Claude; not human-verified
+gsm8k/train/07197,3200,2400,8,teacher_error,"Total turtles 2400+800=3200; teacher omits green turtles (also ""twice more"" wording)",AI-judged by Claude; not human-verified
+gsm8k/train/07299,204,223,8,teacher_error,"""a tenth of its initial quantity"" each day → 204; teacher decays geometrically",AI-judged by Claude; not human-verified
+gsm8k/train/07425,150,60,8,ambiguous_or_flawed,"Whether baguettes count as ""breads""",AI-judged by Claude; not human-verified
+gsm8k/train/07457,400,88,8,label_error,"Question asks Mark's deposit, which is given ($88); gold answers Bryan (question typo)",AI-judged by Claude; not human-verified

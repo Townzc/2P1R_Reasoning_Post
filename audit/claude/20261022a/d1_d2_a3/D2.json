@@ -1,0 +1,134 @@
+{
+ "stats": {
+  "rows": 2980
+ },
+ "per_endpoint": {
+  "math500_sample": {
+   "length_cap": 1733,
+   "correct": 206,
+   "native_eos": 267,
+   "n": 2000,
+   "mean_tokens": 14458.7625
+  },
+  "math500_greedy": {
+   "length_cap": 466,
+   "correct": 30,
+   "native_eos": 34,
+   "n": 500,
+   "mean_tokens": 15378.764
+  },
+  "aime24_sample": {
+   "length_cap": 237,
+   "correct": 0,
+   "native_eos": 3,
+   "n": 240,
+   "mean_tokens": 16213.55
+  },
+  "aime25_sample": {
+   "length_cap": 235,
+   "correct": 0,
+   "native_eos": 5,
+   "n": 240,
+   "mean_tokens": 16092.25
+  }
+ },
+ "mismatches": [],
+ "string_equal_but_scored_false": [],
+ "true_without_string_equality": [
+  [
+   "math500:0023:sample:0",
+   "5",
+   "x=5"
+  ],
+  [
+   "math500:0031:sample:0",
+   "11\\sqrt{2}",
+   "11\\sqrt2"
+  ],
+  [
+   "math500:0067:sample:0",
+   "10\\%",
+   "10"
+  ],
+  [
+   "math500:0067:sample:3",
+   "10\\%",
+   "10"
+  ],
+  [
+   "math500:0098:sample:0",
+   "2 + 2k",
+   "2k+2"
+  ],
+  [
+   "math500:0106:sample:1",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0106:sample:2",
+   "\\dfrac{4}{3}",
+   "\\frac43"
+  ],
+  [
+   "math500:0198:sample:3",
+   "10080",
+   "10,\\!080"
+  ],
+  [
+   "math500:0227:sample:1",
+   "C",
+   "\\text{(C)}"
+  ],
+  [
+   "math500:0235:sample:0",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0235:sample:3",
+   "\\dfrac{5}{9}",
+   "\\frac 59"
+  ],
+  [
+   "math500:0305:sample:0",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:sample:1",
+   "\\frac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0305:greedy:0",
+   "\\dfrac{9}{19}",
+   "\\frac9{19}"
+  ],
+  [
+   "math500:0362:sample:1",
+   "\\dfrac{1}{4}",
+   "\\frac14"
+  ],
+  [
+   "math500:0388:sample:3",
+   "5.5",
+   "\\frac{11}{2}"
+  ],
+  [
+   "math500:0393:sample:2",
+   "\\frac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0393:sample:3",
+   "\\dfrac{3}{4}",
+   "\\frac 34"
+  ],
+  [
+   "math500:0456:sample:1",
+   "1, -2",
+   "-2,1"
+  ]
+ ]
+}

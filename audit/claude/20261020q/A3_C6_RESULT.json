@@ -1,0 +1,1331 @@
+{
+ "results_manifest_sha": "4062e5c7e35f26bc20ec729ec3a96ee30e40f52262ee06fa9f9a5484253acefe",
+ "results_manifest_bad": [],
+ "results_manifest_checked": 92,
+ "analysis_manifest_sha": "6b968592302349db6886dce258285fc57c44a83ee33cd1e1edb9c1d66c30d6c5",
+ "analysis_manifest_bad": [],
+ "analysis_manifest_checked": 18,
+ "inputs_archive_sha": "6006dc480a10423c75de48ec6cee9962ff561c3581d5696a29ed325ae73d6ceb",
+ "no_cue_tables_sha": "b75bbf8a8fa4c92146905e9a44c57c59471accd545c3a06d036fa23b7704e509",
+ "base_math": {
+  "roster_rows": 4500,
+  "raw_rows": 4500,
+  "raw_ids_eq_roster": true,
+  "raw_identity_mismatch": 0,
+  "cue_rows_ok": 2500,
+  "nocue_rows_ok": 2000,
+  "conditions": {
+   "no_cue/sample0": 500,
+   "no_cue/sample1": 500,
+   "no_cue/sample2": 500,
+   "no_cue/sample3": 500,
+   "cue/greedy": 500,
+   "cue/sample0": 500,
+   "cue/sample1": 500,
+   "cue/sample2": 500,
+   "cue/sample3": 500
+  },
+  "decoded_ids_eq_raw": true,
+  "stop_checks": {
+   "native_eos": 3898,
+   "eos_last_token": 3898,
+   "eos_seg_eq_stripped": 1725,
+   "seg_eq_scoring": 4500,
+   "length_cap": 550,
+   "cap_1024_noeos": 550,
+   "new_problem_boundary": 52
+  },
+  "question_correct_eq_journal": true,
+  "score_checks": {
+   "rows": 4500,
+   "journal_eq_question_table": 4500,
+   "status_compared": 3200,
+   "status_length_cap": 550,
+   "status_no_box": 745,
+   "right_string_differs": 157,
+   "symbolic_parse_failure": 5,
+   "status_parse_failure": 5,
+   "non_eos_correct": 6
+  },
+  "correct_counts": {
+   "cue/greedy": 175,
+   "cue/sample0": 152,
+   "cue/sample1": 165,
+   "cue/sample2": 169,
+   "cue/sample3": 152,
+   "no_cue/sample0": 117,
+   "no_cue/sample1": 121,
+   "no_cue/sample2": 117,
+   "no_cue/sample3": 120
+  },
+  "examples": {
+   "rsd": [
+    [
+     "5",
+     "x=5"
+    ],
+    [
+     "\\$78",
+     "78"
+    ],
+    [
+     "11\\sqrt{2}",
+     "11\\sqrt2"
+    ],
+    [
+     "10\\%",
+     "10"
+    ],
+    [
+     "\\frac{4}{3}",
+     "\\frac43"
+    ],
+    [
+     "\\frac{6}{5}",
+     "\\frac65"
+    ],
+    [
+     "10x - 14y + 22z + 8 = 0",
+     "5x - 7y + 11z + 4 = 0"
+    ],
+    [
+     "10080",
+     "10,\\!080"
+    ],
+    [
+     "\\text{C}",
+     "\\text{(C)}"
+    ],
+    [
+     "30",
+     "30^\\circ"
+    ],
+    [
+     "\\frac{5}{9}",
+     "\\frac 59"
+    ],
+    [
+     "\\text{E}",
+     "\\text{(E)}"
+    ]
+   ]
+  },
+  "rsd_unique": [
+   [
+    [
+     "\\text{C}",
+     "\\text{(C)}"
+    ],
+    9
+   ],
+   [
+    [
+     "10\\%",
+     "10"
+    ],
+    8
+   ],
+   [
+    [
+     "30",
+     "30^\\circ"
+    ],
+    8
+   ],
+   [
+    [
+     "\\frac{1}{4}",
+     "\\frac14"
+    ],
+    8
+   ],
+   [
+    [
+     "\\frac{5}{9}",
+     "\\frac 59"
+    ],
+    7
+   ],
+   [
+    [
+     "\\frac{9}{19}",
+     "\\frac9{19}"
+    ],
+    7
+   ],
+   [
+    [
+     "[-2, 7]",
+     "x \\in [-2,7]"
+    ],
+    7
+   ],
+   [
+    [
+     "\\begin{pmatrix} \\frac{16}{49} \\\\ \\frac{48}{49} \\\\ \\frac{24}{49} \\end{pmatrix}",
+     "\\begin{pmatrix} 16/49 \\\\ 48/49 \\\\ 24/49 \\end{pmatrix}"
+    ],
+    7
+   ],
+   [
+    [
+     "15",
+     "15\\mbox{ cm}^2"
+    ],
+    7
+   ],
+   [
+    [
+     "11\\sqrt{2}",
+     "11\\sqrt2"
+    ],
+    6
+   ],
+   [
+    [
+     "\\frac{4}{3}",
+     "\\frac43"
+    ],
+    6
+   ],
+   [
+    [
+     "\\frac{6}{5}",
+     "\\frac65"
+    ],
+    6
+   ],
+   [
+    [
+     "180",
+     "180^\\circ"
+    ],
+    6
+   ],
+   [
+    [
+     "5.5",
+     "\\frac{11}{2}"
+    ],
+    6
+   ],
+   [
+    [
+     "76",
+     "76^\\circ"
+    ],
+    5
+   ],
+   [
+    [
+     "36",
+     "\\$36"
+    ],
+    5
+   ],
+   [
+    [
+     "5",
+     "x=5"
+    ],
+    4
+   ],
+   [
+    [
+     "\\text{E}",
+     "\\text{(E)}"
+    ],
+    4
+   ],
+   [
+    [
+     "0.35625",
+     ".35625"
+    ],
+    4
+   ],
+   [
+    [
+     "864",
+     "864 \\mbox{ inches}^2"
+    ],
+    3
+   ],
+   [
+    [
+     "E",
+     "\\text{(E)}"
+    ],
+    3
+   ],
+   [
+    [
+     "\\frac{1}{\\sqrt{3}}",
+     "\\frac{\\sqrt{3}}{3}"
+    ],
+    3
+   ],
+   [
+    [
+     "\\$78",
+     "78"
+    ],
+    2
+   ],
+   [
+    [
+     "10080",
+     "10,\\!080"
+    ],
+    2
+   ],
+   [
+    [
+     "4210_5",
+     "4210_{5}"
+    ],
+    2
+   ],
+   [
+    [
+     "Evelyn",
+     "\\text{Evelyn}"
+    ],
+    2
+   ],
+   [
+    [
+     "\\frac{270}{7}",
+     "\\frac{270}7\\text{ degrees}"
+    ],
+    2
+   ],
+   [
+    [
+     "\\frac{3}{4}",
+     "\\frac 34"
+    ],
+    2
+   ],
+   [
+    [
+     "120^\\circ",
+     "120"
+    ],
+    2
+   ],
+   [
+    [
+     "10x - 14y + 22z + 8 = 0",
+     "5x - 7y + 11z + 4 = 0"
+    ],
+    1
+   ],
+   [
+    [
+     "\\tan \\left( \\frac{1}{2} \\sin^{-1} \\left( \\frac{1}{3} \\right) \\right), \\tan \\left( \\frac{1}{2} \\left( \\pi - \\sin^{-1} \\left( \\frac{1}{3} \\right) \\right) \\right)",
+     "3 \\pm 2 \\sqrt{2}"
+    ],
+    1
+   ],
+   [
+    [
+     "Navin",
+     "\\text{Navin}"
+    ],
+    1
+   ],
+   [
+    [
+     "3, 7, 5",
+     "3, 5, 7"
+    ],
+    1
+   ],
+   [
+    [
+     "36.0",
+     "\\$36"
+    ],
+    1
+   ],
+   [
+    [
+     "-5x + 7y - 11z - 4 = 0",
+     "5x - 7y + 11z + 4 = 0"
+    ],
+    1
+   ],
+   [
+    [
+     "(b+2)(a+5)",
+     "(a+5)(b+2)"
+    ],
+    1
+   ],
+   [
+    [
+     "k = 1",
+     "1"
+    ],
+    1
+   ],
+   [
+    [
+     "36",
+     "36^\\circ"
+    ],
+    1
+   ],
+   [
+    [
+     "1000 \\cdot 26",
+     "26000"
+    ],
+    1
+   ],
+   [
+    [
+     "\\frac{\\cos x}{\\sin x}",
+     "\\cot x"
+    ],
+    1
+   ],
+   [
+    [
+     "x=3",
+     "3"
+    ],
+    1
+   ],
+   [
+    [
+     "0.0000672",
+     ".0000672"
+    ],
+    1
+   ],
+   [
+    [
+     "120",
+     "120^\\circ"
+    ],
+    1
+   ]
+  ],
+  "n_disagree": 0
+ },
+ "base_gsm": {
+  "roster_rows": 11871,
+  "raw_rows": 11871,
+  "raw_ids_eq_roster": true,
+  "raw_identity_mismatch": 0,
+  "cue_rows_ok": 6595,
+  "nocue_rows_ok": 5276,
+  "conditions": {
+   "no_cue/sample0": 1319,
+   "no_cue/sample1": 1319,
+   "no_cue/sample2": 1319,
+   "no_cue/sample3": 1319,
+   "cue/greedy": 1319,
+   "cue/sample0": 1319,
+   "cue/sample1": 1319,
+   "cue/sample2": 1319,
+   "cue/sample3": 1319
+  },
+  "decoded_ids_eq_raw": true,
+  "stop_checks": {
+   "native_eos": 10336,
+   "eos_last_token": 10336,
+   "eos_seg_eq_stripped": 4151,
+   "seg_eq_scoring": 11871,
+   "new_problem_boundary": 1123,
+   "length_cap": 412,
+   "cap_1024_noeos": 0
+  },
+  "question_correct_eq_journal": true,
+  "score_checks": {
+   "rows": 11871,
+   "agree_independent_parser": 11351,
+   "journal_eq_question_table": 11871
+  },
+  "correct_counts": {
+   "no_cue/sample0": 381,
+   "no_cue/sample1": 515,
+   "no_cue/sample2": 565,
+   "no_cue/sample3": 547,
+   "cue/sample0": 621,
+   "cue/greedy": 723,
+   "cue/sample1": 698,
+   "cue/sample2": 611,
+   "cue/sample3": 622
+  },
+  "examples": {
+   "disagree": [
+    [
+     "no_cue/sample0/gsm/0010",
+     false,
+     true,
+     "native_eos",
+     "ber of downloads in the third month.\n180 * .7 = 126\nStep 3: Calculate the total number of downloads over the three months.\n180 + 60 + 126 = 366\nThe answer: 366."
+    ],
+    [
+     "no_cue/sample0/gsm/0013",
+     false,
+     true,
+     "native_eos",
+     " User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps."
+    ],
+    [
+     "no_cue/sample0/gsm/0014",
+     false,
+     true,
+     "native_eos",
+     "5: Calculate the percentage of students enrolled in hip-hop dance.\n12 students / 20 students * 100% = 60%\nAnswer: 60% of the students enrolled in hip-hop dance."
+    ],
+    [
+     "no_cue/sample0/gsm/0023",
+     false,
+     true,
+     "native_eos",
+     "s, the candle will melt by 2 centimeters/hour x 4 hours = 8 centimeters.\nAnswer: The candle will be 8 centimeters shorter after burning from 1:00 PM to 5:00 PM."
+    ],
+    [
+     "no_cue/sample0/gsm/0024",
+     false,
+     true,
+     "native_eos",
+     "ind information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+    ],
+    [
+     "no_cue/sample0/gsm/0042",
+     false,
+     true,
+     "native_eos",
+     "There were 5 * 8 = 40 pieces of pie baked.  So, the firemen ate 40 - 14 = 26 pieces. The answer is 26."
+    ],
+    [
+     "no_cue/sample0/gsm/0053",
+     false,
+     true,
+     "new_problem_boundary",
+     "60+$160 = $520.  On Friday, the mechanic earned $40*12 = $480 from the car tires.  So the mechanic earned $520-$480 = $40 more on Thursday.  The answer is 40.\n\n"
+    ],
+    [
+     "no_cue/sample0/gsm/0059",
+     false,
+     true,
+     "native_eos",
+     "it scattered across the bush.\nStep 3: Add the number of fruit in the clusters and scattered fruit.\nTotal number of raspberries = 120 + 67 = 187\nThe answer: 187."
+    ],
+    [
+     "no_cue/sample0/gsm/0073",
+     false,
+     true,
+     "native_eos",
+     "for the cell phones.\nThe monthly payment for the cell phones is $765 / 3 months = $255.\nTherefore, Shiela will pay $255 each month for 3 months.\nThe answer: 255"
+    ],
+    [
+     "no_cue/sample0/gsm/0074",
+     false,
+     true,
+     "native_eos",
+     "rtie will make.\nTotal amount = $36 + $18 + $34 = $88\nAnswer: Artie will make $88 from selling 12 pots of marigolds, 9 pots of petunias, and 17 pots of begonias."
+    ],
+    [
+     "no_cue/sample0/gsm/0101",
+     false,
+     true,
+     "native_eos",
+     " User will you give you a task. Your goal is to complete the task as faithfully as you can. While performing the task think step-by-step and justify your steps."
+    ],
+    [
+     "no_cue/sample0/gsm/0107",
+     false,
+     true,
+     "native_eos",
+     "ind information. User will you give you a question. Your task is to answer as faithfully as you can. While answering think step-by-step and justify your answer."
+    ]
+   ]
+  },
+  "rsd_unique": [],
+  "n_disagree": 520
+ },
+ "s1_n400_math": {
+  "roster_rows": 2500,
+  "raw_rows": 2500,
+  "raw_ids_eq_roster": true,
+  "raw_identity_mismatch": 0,
+  "cue_rows_ok": 2500,
+  "nocue_rows_ok": 0,
+  "conditions": {
+   "cue/greedy": 500,
+   "cue/sample0": 500,
+   "cue/sample1": 500,
+   "cue/sample2": 500,
+   "cue/sample3": 500
+  },
+  "decoded_ids_eq_raw": true,
+  "stop_checks": {
+   "native_eos": 2316,
+   "eos_last_token": 2316,
+   "eos_seg_eq_stripped": 0,
+   "seg_eq_scoring": 2500,
+   "length_cap": 184,
+   "cap_1024_noeos": 184
+  },
+  "question_correct_eq_journal": true,
+  "score_checks": {
+   "rows": 2500,
+   "journal_eq_question_table": 2500,
+   "status_compared": 2314,
+   "status_length_cap": 184,
+   "right_string_differs": 122,
+   "symbolic_parse_failure": 1,
+   "status_parse_failure": 1,
+   "status_no_box": 1
+  },
+  "correct_counts": {
+   "cue/greedy": 273,
+   "cue/sample0": 267,
+   "cue/sample1": 254,
+   "cue/sample2": 251,
+   "cue/sample3": 259
+  },
+  "examples": {
+   "rsd": [
+    [
+     "Evelyn",
+     "\\text{Evelyn}"
+    ],
+    [
+     "5",
+     "x=5"
+    ],
+    [
+     "11\\sqrt{2}",
+     "11\\sqrt2"
+    ],
+    [
+     "2516",
+     "2516_8"
+    ],
+    [
+     "\\frac{4}{3}",
+     "\\frac43"
+    ],
+    [
+     "4210_5",
+     "4210_{5}"
+    ],
+    [
+     "\\frac{6}{5}",
+     "\\frac65"
+    ],
+    [
+     "30",
+     "30^\\circ"
+    ],
+    [
+     "\\text{C}",
+     "\\text{(C)}"
+    ],
+    [
+     "30",
+     "30^\\circ"
+    ],
+    [
+     "\\frac{5}{9}",
+     "\\frac 59"
+    ],
+    [
+     "\\text{E}",
+     "\\text{(E)}"
+    ]
+   ]
+  },
+  "rsd_unique": [
+   [
+    [
+     "5",
+     "x=5"
+    ],
+    5
+   ],
+   [
+    [
+     "11\\sqrt{2}",
+     "11\\sqrt2"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{4}{3}",
+     "\\frac43"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{6}{5}",
+     "\\frac65"
+    ],
+    5
+   ],
+   [
+    [
+     "30",
+     "30^\\circ"
+    ],
+    5
+   ],
+   [
+    [
+     "\\text{C}",
+     "\\text{(C)}"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{5}{9}",
+     "\\frac 59"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{9}{19}",
+     "\\frac9{19}"
+    ],
+    5
+   ],
+   [
+    [
+     "58500",
+     "58,500"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{1}{4}",
+     "\\frac14"
+    ],
+    5
+   ],
+   [
+    [
+     "[-2, 7]",
+     "x \\in [-2,7]"
+    ],
+    5
+   ],
+   [
+    [
+     "5.5",
+     "\\frac{11}{2}"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{3}{4}",
+     "\\frac 34"
+    ],
+    5
+   ],
+   [
+    [
+     "\\begin{pmatrix} \\frac{16}{49} \\\\ \\frac{48}{49} \\\\ \\frac{24}{49} \\end{pmatrix}",
+     "\\begin{pmatrix} 16/49 \\\\ 48/49 \\\\ 24/49 \\end{pmatrix}"
+    ],
+    5
+   ],
+   [
+    [
+     "15",
+     "15\\mbox{ cm}^2"
+    ],
+    5
+   ],
+   [
+    [
+     "36",
+     "\\$36"
+    ],
+    5
+   ],
+   [
+    [
+     "2516",
+     "2516_8"
+    ],
+    4
+   ],
+   [
+    [
+     "4210_5",
+     "4210_{5}"
+    ],
+    4
+   ],
+   [
+    [
+     "\\text{E}",
+     "\\text{(E)}"
+    ],
+    4
+   ],
+   [
+    [
+     "120",
+     "120^\\circ"
+    ],
+    4
+   ],
+   [
+    [
+     "76",
+     "76^\\circ"
+    ],
+    3
+   ],
+   [
+    [
+     "0.35625",
+     ".35625"
+    ],
+    3
+   ],
+   [
+    [
+     "\\frac{1}{\\sqrt{3}}",
+     "\\frac{\\sqrt{3}}{3}"
+    ],
+    3
+   ],
+   [
+    [
+     "Evelyn",
+     "\\text{Evelyn}"
+    ],
+    2
+   ],
+   [
+    [
+     "Navin",
+     "\\text{Navin}"
+    ],
+    2
+   ],
+   [
+    [
+     "52",
+     "52_8"
+    ],
+    2
+   ],
+   [
+    [
+     "36",
+     "36^\\circ"
+    ],
+    2
+   ],
+   [
+    [
+     "\\text{B}",
+     "\\text{(B)}"
+    ],
+    2
+   ],
+   [
+    [
+     "0.0000672",
+     ".0000672"
+    ],
+    1
+   ],
+   [
+    [
+     "145",
+     "145^\\circ"
+    ],
+    1
+   ],
+   [
+    [
+     "4210",
+     "4210_{5}"
+    ],
+    1
+   ],
+   [
+    [
+     "east",
+     "\\text{east}"
+    ],
+    1
+   ],
+   [
+    [
+     "\\frac{270}{7}",
+     "\\frac{270}7\\text{ degrees}"
+    ],
+    1
+   ],
+   [
+    [
+     "4343",
+     "4343_6"
+    ],
+    1
+   ],
+   [
+    [
+     "1, -2",
+     "-2,1"
+    ],
+    1
+   ]
+  ],
+  "n_disagree": 0
+ },
+ "t72_n400_math": {
+  "roster_rows": 2500,
+  "raw_rows": 2500,
+  "raw_ids_eq_roster": true,
+  "raw_identity_mismatch": 0,
+  "cue_rows_ok": 2500,
+  "nocue_rows_ok": 0,
+  "conditions": {
+   "cue/greedy": 500,
+   "cue/sample0": 500,
+   "cue/sample1": 500,
+   "cue/sample2": 500,
+   "cue/sample3": 500
+  },
+  "decoded_ids_eq_raw": true,
+  "stop_checks": {
+   "native_eos": 2244,
+   "eos_last_token": 2244,
+   "eos_seg_eq_stripped": 0,
+   "seg_eq_scoring": 2500,
+   "length_cap": 256,
+   "cap_1024_noeos": 256
+  },
+  "question_correct_eq_journal": true,
+  "score_checks": {
+   "rows": 2500,
+   "journal_eq_question_table": 2500,
+   "status_compared": 2228,
+   "status_length_cap": 256,
+   "right_string_differs": 121,
+   "status_no_box": 15,
+   "symbolic_parse_failure": 1,
+   "status_parse_failure": 1
+  },
+  "correct_counts": {
+   "cue/greedy": 243,
+   "cue/sample0": 252,
+   "cue/sample1": 242,
+   "cue/sample2": 240,
+   "cue/sample3": 243
+  },
+  "examples": {
+   "rsd": [
+    [
+     "5",
+     "x=5"
+    ],
+    [
+     "11\\sqrt{2}",
+     "11\\sqrt2"
+    ],
+    [
+     "10\\%",
+     "10"
+    ],
+    [
+     "\\frac{4}{3}",
+     "\\frac43"
+    ],
+    [
+     "4210_5",
+     "4210_{5}"
+    ],
+    [
+     "\\frac{6}{5}",
+     "\\frac65"
+    ],
+    [
+     "10080",
+     "10,\\!080"
+    ],
+    [
+     "\\text{C}",
+     "\\text{(C)}"
+    ],
+    [
+     "30",
+     "30^\\circ"
+    ],
+    [
+     "\\frac{5}{9}",
+     "\\frac 59"
+    ],
+    [
+     "120",
+     "120^\\circ"
+    ],
+    [
+     "180",
+     "180^\\circ"
+    ]
+   ]
+  },
+  "rsd_unique": [
+   [
+    [
+     "11\\sqrt{2}",
+     "11\\sqrt2"
+    ],
+    5
+   ],
+   [
+    [
+     "10\\%",
+     "10"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{4}{3}",
+     "\\frac43"
+    ],
+    5
+   ],
+   [
+    [
+     "4210_5",
+     "4210_{5}"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{6}{5}",
+     "\\frac65"
+    ],
+    5
+   ],
+   [
+    [
+     "10080",
+     "10,\\!080"
+    ],
+    5
+   ],
+   [
+    [
+     "30",
+     "30^\\circ"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{5}{9}",
+     "\\frac 59"
+    ],
+    5
+   ],
+   [
+    [
+     "120",
+     "120^\\circ"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{9}{19}",
+     "\\frac9{19}"
+    ],
+    5
+   ],
+   [
+    [
+     "58500",
+     "58,500"
+    ],
+    5
+   ],
+   [
+    [
+     "\\frac{1}{4}",
+     "\\frac14"
+    ],
+    5
+   ],
+   [
+    [
+     "[-2, 7]",
+     "x \\in [-2,7]"
+    ],
+    5
+   ],
+   [
+    [
+     "\\begin{pmatrix} \\frac{16}{49} \\\\ \\frac{48}{49} \\\\ \\frac{24}{49} \\end{pmatrix}",
+     "\\begin{pmatrix} 16/49 \\\\ 48/49 \\\\ 24/49 \\end{pmatrix}"
+    ],
+    5
+   ],
+   [
+    [
+     "0.35625",
+     ".35625"
+    ],
+    5
+   ],
+   [
+    [
+     "15",
+     "15\\mbox{ cm}^2"
+    ],
+    5
+   ],
+   [
+    [
+     "106",
+     "106^\\circ"
+    ],
+    5
+   ],
+   [
+    [
+     "36",
+     "\\$36"
+    ],
+    4
+   ],
+   [
+    [
+     "5",
+     "x=5"
+    ],
+    3
+   ],
+   [
+    [
+     "\\text{C}",
+     "\\text{(C)}"
+    ],
+    3
+   ],
+   [
+    [
+     "180",
+     "180^\\circ"
+    ],
+    3
+   ],
+   [
+    [
+     "5.5",
+     "\\frac{11}{2}"
+    ],
+    3
+   ],
+   [
+    [
+     "76",
+     "76^\\circ"
+    ],
+    3
+   ],
+   [
+    [
+     "\\frac{3}{4}",
+     "\\frac 34"
+    ],
+    2
+   ],
+   [
+    [
+     "Evelyn",
+     "\\text{Evelyn}"
+    ],
+    2
+   ],
+   [
+    [
+     "\\text{E}",
+     "\\text{(E)}"
+    ],
+    2
+   ],
+   [
+    [
+     "0.09",
+     "\\frac{9}{100}"
+    ],
+    2
+   ],
+   [
+    [
+     "36",
+     "36^\\circ"
+    ],
+    2
+   ],
+   [
+    [
+     "Navin",
+     "\\text{Navin}"
+    ],
+    1
+   ],
+   [
+    [
+     "\\sqrt{117}",
+     "3\\sqrt{13}"
+    ],
+    1
+   ],
+   [
+    [
+     "3 + 2\\sqrt{2}, 3 - 2\\sqrt{2}",
+     "3 \\pm 2 \\sqrt{2}"
+    ],
+    1
+   ],
+   [
+    [
+     "0.00006714285714285714",
+     ".0000672"
+    ],
+    1
+   ],
+   [
+    [
+     "864",
+     "864 \\mbox{ inches}^2"
+    ],
+    1
+   ],
+   [
+    [
+     "(b + 2)(a + 5)",
+     "(a+5)(b+2)"
+    ],
+    1
+   ],
+   [
+    [
+     "75",
+     "75^\\circ"
+    ],
+    1
+   ]
+  ],
+  "n_disagree": 0
+ },
+ "nocue_t72_eq_audited_student_results": true,
+ "nocue_s1_eq_audited": true,
+ "nocue_base_totals": {
+  "math": 136,
+  "gsm": 650
+ },
+ "paired_mine": {
+  "math/greedy/base_math": [
+   7.8,
+   3.8,
+   11.8
+  ],
+  "math/greedy/s1_n400_math": [
+   0.0,
+   -1.0,
+   1.2
+  ],
+  "math/greedy/t72_n400_math": [
+   0.0,
+   -1.2,
+   1.2
+  ],
+  "math/sampled_mean_pass_at_1/base_math": [
+   8.15,
+   5.75,
+   10.55
+  ],
+  "math/sampled_mean_pass_at_1/s1_n400_math": [
+   -0.6,
+   -2.35,
+   1.2
+  ],
+  "math/sampled_mean_pass_at_1/t72_n400_math": [
+   -0.7,
+   -2.55,
+   1.2
+  ],
+  "gsm/greedy/base_gsm": [
+   5.534496,
+   2.27445,
+   8.794541
+  ],
+  "gsm/sampled_mean_pass_at_1/base_gsm": [
+   10.310842,
+   8.623958,
+   12.016679
+  ]
+ },
+ "paired_theirs": {
+  "math/greedy/base_math": [
+   7.8,
+   3.8,
+   11.8
+  ],
+  "math/greedy/s1_n400_math": [
+   0.0,
+   -1.0,
+   1.2
+  ],
+  "math/greedy/t72_n400_math": [
+   0.0,
+   -1.2,
+   1.2
+  ],
+  "math/sampled_mean_pass_at_1/base_math": [
+   8.15,
+   5.75,
+   10.55
+  ],
+  "math/sampled_mean_pass_at_1/s1_n400_math": [
+   -0.6,
+   -2.35,
+   1.2
+  ],
+  "math/sampled_mean_pass_at_1/t72_n400_math": [
+   -0.7,
+   -2.55,
+   1.2
+  ],
+  "gsm/greedy/base_gsm": [
+   5.534496,
+   2.27445,
+   8.794541
+  ],
+  "gsm/sampled_mean_pass_at_1/base_gsm": [
+   10.310842,
+   8.623958,
+   12.016679
+  ]
+ },
+ "paired_point_all_equal": true,
+ "paired_ci_all_equal": true,
+ "numpy_local": "2.5.3"
+}
