@@ -1,3 +1,11 @@
+# Current P012 — 2026-11-20T22:54:45.968500+00:00; A9 active, LogiQA pilot complete
+
+Owner ecda0914 scope continues: Modal exact fourteen-cell order and Tinker R04; no new experiments. Current receipt reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json, scoped budget BUDGET_CURRENT.json. R/M source unchanged from accepted b95c631e. Use only existing reviewed train/eval/scoring entrypoints and frozen A9 request parameters. Publish each endpoint and timestamped ecda binding before scoring. Retain checkpoints until accepted result audit; all A8 retained.
+
+LogiQA all5,544 outputs complete, packet bc3f0bbe pending full independent audit; original prompts/source/private prompt tokens remain private. Three frozen continuation conditions pass, but no full generation or training extension is authorized. Existing analysis adapter package3c797422 awaits Claude prereview; no real A9 bootstrap before acceptance. Core unchanged.
+
+Current R04 local process submits Tinker steps and requires awake/online host. Modal --detach protects submitted cloud calls only; queue advancement is through this active Codex task, no new controller. On exception inspect and record; no scientific retries. Never restart old controllers or freeze_grid.py. No account/billing/power changes, external messages, course prose or subagents. Preserve unrelated lt002. Shared Git/budget locks remain. Earlier status entries are historical.
+
 # Current P012 — 2026-11-20T22:31:03.367422+00:00; Amendment 9 authorized and admitted
 
 Owner authorized ecda09143c135a64512fec346fe13d38002c7951. Integration3af1e7f merged, then current audit ecda0914 merged at b95c631e. All old A8 results and audit status remain frozen. New scope: Modal R/M14 in exact A9 order; Tinker R04 seed29; LogiQA2.0 evaluation/sampling pilot only, no training. All exploratory outside H0–H3.

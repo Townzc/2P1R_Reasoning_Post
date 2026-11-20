@@ -5264,3 +5264,7 @@ Current balances: tangzhice16.96, townzc13.74, Tinker408.36. API usage reconcile
 Canonical admission reports/p012_20261111/amendment9_admission_v1. R/M scientific source unchanged at b95c631e; only frozen request JSON parameters change. No new R/M controller or stats path. Start R01 and R04 with existing reviewed launchers; proceed Modal order after verified completions. No duplicated calls. Every endpoint requires timestamped ecda0914 binding before score and independent audit. New T0 source/scorer exempt prereview by A9section4, full postaudit; NEVER publish LogiQA source passages/options or prompt tokens. Source data pinned955e1d3d, train12567/test1572.
 
 Retain checkpoints until accepted endpoint review; A8 retained. Do not restart old controllers or freeze_grid.py. Existing budget/Git locks throughpush. No external sends, course prose or subagents; preserve unrelatedlt002. Local Tinker submits steps and requires awake+online host; no power-setting changes. Earlier entries historical.
+
+## A9 execution progress — 2026-11-20T22:54:45.968500+00:00
+
+Codex verified complete LogiQA pilot outputs and private-input/public-hash alignment, published the full independent audit packet, and updated scoped budgets and queue status. Authorized R/M uses existing scientific source. No real new statistical analysis, frozen-label edits, external messages or account settings changes.
