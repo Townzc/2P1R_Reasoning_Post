@@ -1,4 +1,4 @@
-# Current P012 — 2026-11-20T23:10:35.007993+00:00; A9 active, LogiQA pilot complete
+# Current P012 — 2026-11-20T23:32:42.123347+00:00; A9 active, LogiQA pilot complete
 
 Owner ecda0914 scope continues: Modal exact fourteen-cell order and Tinker R04; no new experiments. Current receipt reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json, scoped budget BUDGET_CURRENT.json. R/M source unchanged from accepted b95c631e. Use only existing reviewed train/eval/scoring entrypoints and frozen A9 request parameters. Publish each endpoint and timestamped ecda binding before scoring. Retain checkpoints until accepted result audit; all A8 retained.
 

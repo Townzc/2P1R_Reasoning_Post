@@ -1,16 +1,16 @@
 {
-  "utc": "2026-11-20T23:10:35.007993+00:00",
+  "utc": "2026-11-20T23:32:42.123347+00:00",
   "Tinker_pre_A9_including_storage30_once": 398.20261724675004,
-  "R04_reserved_usd": 7.289850769,
+  "R04_reserved_usd": 6.5412343885,
   "T0_measured_uncached_cost_upper_usd": 4.931279325,
   "T0_released_reserve_usd": 15.068720675,
-  "combined_accounted_and_reserved_usd": 410.42374734075,
+  "combined_accounted_and_reserved_usd": 409.67513096025004,
   "cap_usd": 485,
   "storage_reserve_usd_included_once": 30,
   "R04_cap_usd": 10,
   "T0_cap_usd": 20,
   "Modal": {
-    "utc": "2026-11-20T23:09:40.599433+00:00",
+    "utc": "2026-11-20T23:24:13.144055+00:00",
     "cells": [
       {
         "id": "R01",
@@ -127,8 +127,8 @@
           },
           {
             "run_id": "a9_m01_llama_base_gsm8k_p2048_k2_e2_s29_greedy_20261120_v1",
-            "observed_api_billed_usd": 0.041455639999999995,
-            "complete": false,
+            "observed_api_billed_usd": 0.0897604,
+            "complete": true,
             "app_ids": [
               "ap-YYTFH5W8791CPEmbmUeuZV"
             ],
@@ -143,16 +143,20 @@
         "parts": [
           {
             "run_id": "a9_m02_llama_instruct_gsm8k_p2048_k2_e2_s29_20261120_v1",
-            "observed_api_billed_usd": 0,
-            "complete": false,
-            "app_ids": [],
+            "observed_api_billed_usd": 0.26859623,
+            "complete": true,
+            "app_ids": [
+              "ap-wuQ8Hmv22mhl2OuUvNpEwX"
+            ],
             "retained_reserve_usd": 0.41638278
           },
           {
             "run_id": "a9_m02_llama_instruct_gsm8k_p2048_k2_e2_s29_greedy_20261120_v1",
-            "observed_api_billed_usd": 0,
-            "complete": false,
-            "app_ids": [],
+            "observed_api_billed_usd": 0.08741427,
+            "complete": true,
+            "app_ids": [
+              "ap-lynCWpt90YV9088Mk9kR6m"
+            ],
             "retained_reserve_usd": 0.15527296499999999
           }
         ],
@@ -164,16 +168,20 @@
         "parts": [
           {
             "run_id": "a9_m03_qwen_instruct_gsm8k_p2048_k2_e2_s29_20261120_v1",
-            "observed_api_billed_usd": 0,
-            "complete": false,
-            "app_ids": [],
+            "observed_api_billed_usd": 0.42975352,
+            "complete": true,
+            "app_ids": [
+              "ap-drAUui6ZcTMCunDL76ziNd"
+            ],
             "retained_reserve_usd": 0.57870048
           },
           {
             "run_id": "a9_m03_qwen_instruct_gsm8k_p2048_k2_e2_s29_greedy_20261120_v1",
-            "observed_api_billed_usd": 0,
+            "observed_api_billed_usd": 0.05060824,
             "complete": false,
-            "app_ids": [],
+            "app_ids": [
+              "ap-ryPrHiCz1WbBfhkhhCzY9h"
+            ],
             "retained_reserve_usd": 0.16589527499999998
           }
         ],
@@ -334,16 +342,16 @@
     "workspace_gates": [
       {
         "workspace": "tangzhice",
-        "balance_usd_from_initial_confirmed_balance_plus_API_credit_delta": 15.410000000000004,
-        "API_credit_delta_usd": -1.5499999999999972,
+        "balance_usd_from_initial_confirmed_balance_plus_API_credit_delta": 15.100000000000001,
+        "API_credit_delta_usd": -1.8599999999999994,
         "protected_usd": 4,
         "conservative_all14_reserve_including_completed_parts_usd": 7.4199855150000005,
         "passes_even_without_releasing_completed_parts": true
       },
       {
         "workspace": "townzc",
-        "balance_usd_from_initial_confirmed_balance_plus_API_credit_delta": 13.390000000000002,
-        "API_credit_delta_usd": -0.34999999999999787,
+        "balance_usd_from_initial_confirmed_balance_plus_API_credit_delta": 12.750000000000002,
+        "API_credit_delta_usd": -0.9899999999999984,
         "protected_usd": 2,
         "conservative_all14_reserve_including_completed_parts_usd": 3.50266188,
         "passes_even_without_releasing_completed_parts": true
@@ -356,8 +364,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.12448648"
+        "resource": "Network Egress",
+        "cost": "1.8E-7"
       },
       {
         "workspace": "tangzhice",
@@ -383,8 +391,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "1.8E-7"
+        "resource": "H100",
+        "cost": "0.12448648"
       },
       {
         "workspace": "tangzhice",
@@ -392,8 +400,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.15141728"
+        "resource": "Network Egress",
+        "cost": "7E-8"
       },
       {
         "workspace": "tangzhice",
@@ -419,8 +427,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "7E-8"
+        "resource": "H100",
+        "cost": "0.15141728"
       },
       {
         "workspace": "tangzhice",
@@ -428,8 +436,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.39500046"
+        "resource": "Network Egress",
+        "cost": "7E-8"
       },
       {
         "workspace": "tangzhice",
@@ -455,8 +463,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "7E-8"
+        "resource": "H100",
+        "cost": "0.39500046"
       },
       {
         "workspace": "tangzhice",
@@ -464,8 +472,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.13386024"
+        "resource": "Network Egress",
+        "cost": "7E-8"
       },
       {
         "workspace": "tangzhice",
@@ -491,8 +499,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "7E-8"
+        "resource": "H100",
+        "cost": "0.13386024"
       },
       {
         "workspace": "tangzhice",
@@ -500,8 +508,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.26755594"
+        "resource": "Network Egress",
+        "cost": "7E-8"
       },
       {
         "workspace": "tangzhice",
@@ -527,8 +535,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "7E-8"
+        "resource": "H100",
+        "cost": "0.26755594"
       },
       {
         "workspace": "tangzhice",
@@ -536,8 +544,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.03954728"
+        "resource": "Network Egress",
+        "cost": "1.8E-7"
       },
       {
         "workspace": "tangzhice",
@@ -546,7 +554,7 @@
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
         "resource": "CPU",
-        "cost": "0.00094713"
+        "cost": "0.00205075"
       },
       {
         "workspace": "tangzhice",
@@ -555,7 +563,7 @@
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
         "resource": "Memory",
-        "cost": "0.00096115"
+        "cost": "0.00208109"
       },
       {
         "workspace": "tangzhice",
@@ -563,8 +571,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "8E-8"
+        "resource": "H100",
+        "cost": "0.08562838"
       },
       {
         "workspace": "tangzhice",
@@ -572,8 +580,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.09436064"
+        "resource": "Network Egress",
+        "cost": "1.8E-7"
       },
       {
         "workspace": "tangzhice",
@@ -599,8 +607,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Network Egress",
-        "cost": "1.8E-7"
+        "resource": "H100",
+        "cost": "0.09436064"
       },
       {
         "workspace": "tangzhice",
@@ -608,8 +616,8 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "H100",
-        "cost": "0.08941046"
+        "resource": "Network Egress",
+        "cost": "1.8E-7"
       },
       {
         "workspace": "tangzhice",
@@ -635,8 +643,80 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
+        "resource": "H100",
+        "cost": "0.08941046"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-lynCWpt90YV9088Mk9kR6m",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
         "resource": "Network Egress",
         "cost": "1.8E-7"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-lynCWpt90YV9088Mk9kR6m",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "CPU",
+        "cost": "0.00199774"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-lynCWpt90YV9088Mk9kR6m",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "Memory",
+        "cost": "0.00202669"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-lynCWpt90YV9088Mk9kR6m",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "H100",
+        "cost": "0.08338966"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-wuQ8Hmv22mhl2OuUvNpEwX",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "Network Egress",
+        "cost": "7E-8"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-wuQ8Hmv22mhl2OuUvNpEwX",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "CPU",
+        "cost": "0.01156225"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-wuQ8Hmv22mhl2OuUvNpEwX",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "Memory",
+        "cost": "0.01564448"
+      },
+      {
+        "workspace": "tangzhice",
+        "object_id": "ap-wuQ8Hmv22mhl2OuUvNpEwX",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "H100",
+        "cost": "0.24138943"
       },
       {
         "workspace": "townzc",
@@ -653,8 +733,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Memory",
-        "cost": "0.01269113"
+        "resource": "CPU",
+        "cost": "0.00942265"
       },
       {
         "workspace": "townzc",
@@ -662,8 +742,8 @@
         "description": "p012-standard-training-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "CPU",
-        "cost": "0.00942265"
+        "resource": "Memory",
+        "cost": "0.01269113"
       },
       {
         "workspace": "townzc",
@@ -689,15 +769,6 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
-        "resource": "Memory",
-        "cost": "0.00298328"
-      },
-      {
-        "workspace": "townzc",
-        "object_id": "ap-chvLJxLeQZFjAizNmGJ07D",
-        "description": "p012-g0-e-20261111",
-        "environment": "main",
-        "interval_start": "2026-11-20T00:00:00",
         "resource": "CPU",
         "cost": "0.00295620"
       },
@@ -707,45 +778,119 @@
         "description": "p012-g0-e-20261111",
         "environment": "main",
         "interval_start": "2026-11-20T00:00:00",
+        "resource": "Memory",
+        "cost": "0.00298328"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-chvLJxLeQZFjAizNmGJ07D",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
         "resource": "Network Egress",
         "cost": "8E-8"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-drAUui6ZcTMCunDL76ziNd",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "H100",
+        "cost": "0.38622273"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-drAUui6ZcTMCunDL76ziNd",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "CPU",
+        "cost": "0.01849958"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-drAUui6ZcTMCunDL76ziNd",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "Memory",
+        "cost": "0.02503114"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-drAUui6ZcTMCunDL76ziNd",
+        "description": "p012-standard-training-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "Network Egress",
+        "cost": "7E-8"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-ryPrHiCz1WbBfhkhhCzY9h",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "H100",
+        "cost": "0.04827865"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-ryPrHiCz1WbBfhkhhCzY9h",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "CPU",
+        "cost": "0.00115624"
+      },
+      {
+        "workspace": "townzc",
+        "object_id": "ap-ryPrHiCz1WbBfhkhhCzY9h",
+        "description": "p012-g0-e-20261111",
+        "environment": "main",
+        "interval_start": "2026-11-20T00:00:00",
+        "resource": "Memory",
+        "cost": "0.00117335"
       }
     ],
     "summaries": {
       "tangzhice": {
-        "metered_cost": "115.65332091",
+        "metered_cost": "115.96332142",
         "billed_cost": "0E-8",
         "adjustments": {
-          "network_egress_allowance": "-0.07374801",
+          "credits": "-74.36000000",
           "plan_cost": "0E-8",
-          "free_storage": "-41.52957290",
           "reservation_adjustment": "-0E-8",
-          "credits": "-74.05000000"
+          "free_storage": "-41.52957290",
+          "network_egress_allowance": "-0.07374853"
         },
         "metered_cost_breakdown": {
           "volumes": "42.87902930",
-          "ephemeral_apps": "72.69699598",
+          "network_egress": "0.07374853",
           "llm_tokens": "0E-8",
-          "network_egress": "0.07374801"
+          "ephemeral_apps": "73.00640348"
         }
       },
       "townzc": {
-        "metered_cost": "18.28506848",
+        "metered_cost": "18.92506855",
         "billed_cost": "0E-8",
         "adjustments": {
-          "plan_cost": "0E-8",
-          "credits": "-16.61000000",
-          "network_egress_allowance": "-0.00385868",
+          "free_storage": "-1.67120980",
           "reservation_adjustment": "-0E-8",
-          "free_storage": "-1.67120980"
+          "network_egress_allowance": "-0.00385875",
+          "credits": "-17.25000000",
+          "plan_cost": "0E-8"
         },
         "metered_cost_breakdown": {
-          "network_egress": "0.00385868",
-          "llm_tokens": "0E-8",
-          "ephemeral_apps": "16.60759977",
-          "volumes": "1.67120980"
+          "ephemeral_apps": "17.25400320",
+          "network_egress": "0.00385875",
+          "volumes": "1.67120980",
+          "llm_tokens": "0E-8"
         }
       }
     }
-  }
+  },
+  "R04_training_cost_or_reserve_usd": 1.2972327609999998,
+  "R04_eval_cost_or_reserve_usd": 5.2440016275
 }
