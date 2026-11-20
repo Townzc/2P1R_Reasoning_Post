@@ -1,0 +1,129 @@
+{
+  "utc": "2026-11-20T22:51:53.582947+00:00",
+  "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+  "outputs": 5544,
+  "test_results": [
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "correct": 1141,
+      "n": 1572,
+      "accuracy_percent": 72.58269720101781,
+      "answer_only_percent": 0.0,
+      "unfinished_percent": 11.068702290076336
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "correct": 1191,
+      "n": 1572,
+      "accuracy_percent": 75.76335877862596,
+      "answer_only_percent": 0.0,
+      "unfinished_percent": 9.987277353689567
+    }
+  ],
+  "sample": {
+    "utc": "2026-11-20T22:49:53.486996+00:00",
+    "run_id": "a9_t0_logiqa_9b_train_n8_v1",
+    "model": "Qwen/Qwen3.5-9B",
+    "source_sha256": "0611b495fbc796f0bd316ca9ee2f854b60971b3889238a098828d62dea7644dc",
+    "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+    "raw_sha256": "c0d4c9d4ba399b9e2bfc39636c37411b255b51a8a52bf0442fb9add94fa86a99",
+    "labels_sha256": "e66e6342e257a09c2a354a82b72f10eac7d68b97210eb075c3521bf7f1262dad",
+    "outputs": 2400,
+    "correct": 1827,
+    "accuracy": 0.76125,
+    "answer_only_count": 0,
+    "unfinished_count": 225,
+    "missing_box_count": 225,
+    "invalid_box_count": 0,
+    "correct_solution_token_lengths": {
+      "n": 1827,
+      "min": 355,
+      "p25": 671,
+      "median": 762,
+      "p75": 893,
+      "p90": 1128,
+      "p95": 1433,
+      "max": 2033,
+      "mean": 828.5057471264367
+    },
+    "usage": {
+      "prefill_tokens_uncached_upper": 587712,
+      "completion_tokens": 2299183,
+      "prompt_cache_hit_tokens": 392064,
+      "completed_calls": 2400,
+      "upper_token_cost_usd": 2.031754281
+    },
+    "independent_result_audit": "pending",
+    "training_authorized": false,
+    "exploratory": true,
+    "excluded_from_H0_H3": true,
+    "correct_of8_distribution": {
+      "0": 35,
+      "1": 11,
+      "2": 9,
+      "3": 10,
+      "4": 8,
+      "5": 12,
+      "6": 11,
+      "7": 22,
+      "8": 182
+    },
+    "at_least4_fraction": 0.7833333333333333,
+    "eight_identical_questions": 0,
+    "seeds_and_sequence_ids_all_distinct": true,
+    "projected_train_rows_at_least4": 9844.15,
+    "projected_full_train8_usd": 85.11018683108999
+  },
+  "tokenizer_identity": {
+    "Qwen/Qwen3.5-4B": {
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    },
+    "Qwen/Qwen3.5-9B": {
+      "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    }
+  },
+  "student_token_lengths_match_4B_and_9B": true,
+  "overlap": {
+    "primary": {
+      "text_scope": "passage only",
+      "exact_test_rows": 228,
+      "exact_train_rows": 320,
+      "13gram_test_rows": 311,
+      "13gram_train_rows": 459,
+      "exact_normalization": "none",
+      "13gram_normalization": "Unicode word regex, casefold; contiguous 13 words",
+      "filtered_rows": 0
+    },
+    "supplemental": {
+      "text_scope": "passage plus question",
+      "exact_test_rows": 217,
+      "exact_train_rows": 225,
+      "13gram_test_rows": 544,
+      "13gram_train_rows": 1598,
+      "exact_normalization": "none",
+      "13gram_normalization": "Unicode word regex, casefold; contiguous 13 words",
+      "filtered_rows": 0
+    }
+  },
+  "pilot_uncached_token_cost_upper_usd": 4.931279325,
+  "pilot_cap_usd": 20,
+  "full_generation_point_forecast_usd": 85.11018683108999,
+  "full_generation_with_1_5_admission_margin_usd": 127.66528024663498,
+  "continuation_conditions": {
+    "4B_accuracy_35_to80": true,
+    "projected_at_least4400": true,
+    "point_cost_at_most90": true
+  },
+  "full_generation_or_training_authorized": false,
+  "independent_result_audit": "pending",
+  "exploratory": true,
+  "excluded_from_H0_H3": true
+}
