@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-21T03:20:33.204436+00:00",
+  "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
+  "private_input_path": ".local/p012_20261111/amendment10_v1/evaluation1572.jsonl",
+  "private_input_sha256": "718d120302281071edf80c4a4d83e7bc303806a79ece832043c937633370b56d",
+  "public_identities_path": "reports/p012_20261111/amendment10_training_review_v1/EVALUATION_IDENTITIES.json",
+  "public_identities_sha256": "4454691f8826a68c96de369479ffba4f3a2fc55d749463e685adef57fa3b1659",
+  "count": 1572,
+  "max_tokens": 4096,
+  "max_context_tokens": 8192,
+  "same_prompt_and_order_as_pilot": true,
+  "template_sha256": "311f4e6aa46f8ee2a40c0142dd70d1fa6c8d3c765df5fc4dae8ae33177e3449d",
+  "all_contexts_fit": true,
+  "baseline_forecasts": [
+    {
+      "model": "Qwen/Qwen3.5-4B",
+      "pilot_actual_uncached_token_upper_usd": 1.5809818949999999,
+      "formerly_capped_outputs": 174,
+      "prediction_usd": 2.9086734824999994
+    },
+    {
+      "model": "Qwen/Qwen3.5-9B",
+      "pilot_actual_uncached_token_upper_usd": 1.318543149,
+      "formerly_capped_outputs": 157,
+      "prediction_usd": 2.3670340514999997
+    }
+  ],
+  "baseline_total_forecast_usd": 5.275707533999999,
+  "baseline_cap_usd": 6,
+  "forecast_basis": "Pilot measured token cost plus2048 additional tokens for every formerly capped output; whole sum times1.5",
+  "admitted": false,
+  "requires_combined_source_review_and_S1_queue_completion": true
+}
