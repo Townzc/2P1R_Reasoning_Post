@@ -1,0 +1,5 @@
+# A10 S1: one infrastructure retry, original generation source unchanged
+
+The Mac entered clamshell/maintenance sleep. The first S1 attempt persisted818outputs, then its original connection continued reporting heartbeat/JWT connection failures after wake. New read-only API clients worked. The stalled local process was stopped; all818outputs, original logs and fullUSD24.3112068reservation are retained. No partial answer labels were used.
+
+A10section5 authorizes one recorded infrastructure retry. Repeat the same complete first600rows and4800calls with the unchanged frozen generate function, same prompts, row order, seeds and sampling parameters. Only the run display name and attempt metadata change. The failed outputs do not enter selection; compare the818overlapping outputs after completion and report differences. The first attempt remains reserved until API charges settle. Combined failed-attempt reserve and new worst-case forecast including1.5margin:USD48.6224136, withinS1cap75 and independentA10cap200. No second retry is allowed automatically. The retry launches only this batch; later batches remain gated by completion and accounting.
