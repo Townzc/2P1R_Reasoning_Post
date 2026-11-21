@@ -13,7 +13,7 @@ import re
 import sys
 
 sys.path.insert(0, '.')
-PUBLIC = Path(__file__).parent
+PUBLIC = Path(__file__).resolve().parent.relative_to(Path.cwd())
 PILOT = Path('reports/p012_20261111/amendment9_logiqa_v1/logiqa_pilot.py')
 PILOT_SHA = '0611b495fbc796f0bd316ca9ee2f854b60971b3889238a098828d62dea7644dc'
 AUTHORITY = 'f42dcd1595807406f67ff694e5235447c6814ebc'

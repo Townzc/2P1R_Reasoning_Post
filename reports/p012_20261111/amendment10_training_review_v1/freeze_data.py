@@ -5,7 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 
-PUBLIC = Path(__file__).parent
+PUBLIC = Path(__file__).resolve().parent.relative_to(Path.cwd())
 LOCAL = Path('.local/p012_20261111/amendment10_v1')
 read = lambda p: json.loads(Path(p).read_text())
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()

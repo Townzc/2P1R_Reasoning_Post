@@ -16,7 +16,7 @@ import traceback
 
 sys.path.insert(0, '.')
 BASE = Path('reports/p012_20261111/amendment10_s1_v1')
-PUBLIC = Path(__file__).parent
+PUBLIC = Path(__file__).resolve().parent.relative_to(Path.cwd())
 LOCAL = Path('.local/p012_20261111/amendment10_v1')
 SOURCE_SHA = '1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74'
 read = lambda p: json.loads(Path(p).read_text())
@@ -47,7 +47,13 @@ def complete_batch(rows, directory, public, manifest, state, compare_failed=Fals
     freeze = {'utc':utc(),'authority_commit':s1.AUTHORITY,'generation_source_sha256':SOURCE_SHA,
               'controller_sha256':sha(__file__),'raw_sha256':sha(directory/'result/raw.jsonl'),
               'selection_rule':'at least4correct; first4whitespace-distinct correct by draw; fixed4300pool stopping'}
-    s1.write(public/'PREDICTION_BEFORE_SCORE.json',freeze)
+    prediction=public/'PREDICTION_BEFORE_SCORE.json'
+    if prediction.exists():
+        previous=read(prediction)
+        assert previous['authority_commit']==s1.AUTHORITY and previous['generation_source_sha256']==SOURCE_SHA
+        assert previous['raw_sha256']==freeze['raw_sha256']
+    else:
+        s1.write(prediction,freeze)
     s1.publish([public/'PREDICTION_BEFORE_SCORE.json'],'P012 A10 S1: bind frozen selection before scoring '+directory.name)
     if compare_failed:
         old = [json.loads(x) for x in (LOCAL/'batches/a10_s1_batch01_v1/result/raw.jsonl').read_text().splitlines()]
@@ -80,7 +86,11 @@ def main():
     assert sha(LOCAL/'ALL_INPUTS_PRIVATE.json') == manifest['private_input_sha256']
     assert read(BASE/'OWNER_BUDGET_DECISION.json')['A10_independent_cap_usd'] == 200
     rows = read(LOCAL/'ALL_INPUTS_PRIVATE.json')
-    assert not (LOCAL/'RECOVERY_QUEUE.json').exists(),'Do not restart this controller'
+    if (LOCAL/'RECOVERY_QUEUE.json').exists():
+        previous=read(LOCAL/'RECOVERY_QUEUE.json')
+        assert previous['status']=='stopped_for_inspection' and previous['completed_batches']==[]
+        assert read(PUBLIC/'PUBLICATION_PATH_FIX.json')['no_scoring_or_extra_model_calls_before_fix']
+        assert not (LOCAL/'a10_s1_batch01_infra_retry1_v1/labels.jsonl').exists()
     retry = LOCAL/'a10_s1_batch01_infra_retry1_v1'
     admission = read(PUBLIC/'ADMISSION.json')
     state = {'utc':utc(),'status':'awaiting_existing_first_batch_retry','authority_commit':s1.AUTHORITY,
