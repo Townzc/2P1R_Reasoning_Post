@@ -1,4 +1,4 @@
-# Current P012 — 2026-11-21T04:42:00.810759+00:00; A9 remaining M; A10 addenda active
+# Current P012 — 2026-11-21T04:42:00.810759+00:00; A9 runs complete; M review pending; A10 S1 active
 
 A10 first S1 batch independently passed f0369f2590dfd4f70dab909c81a9d386bde672ae. Its 4,800 outputs,501 qualifying parents,2,004 selected solutions and frozen labels remain immutable. Addendum1 accepts LogiQA-only training max length8,192; other tasks retain4,096 and generation/evaluation remain4,096. The accepted proposal is used only for CPU counts in the new S1 controller. First-batch token counts are an additive receipt. Do not truncate sequences. If the server rejects a training sequence above4,096, stop and report.
 
