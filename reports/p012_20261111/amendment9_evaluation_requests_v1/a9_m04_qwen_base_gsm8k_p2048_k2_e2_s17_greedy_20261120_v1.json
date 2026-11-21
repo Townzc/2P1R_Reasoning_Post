@@ -1,0 +1,55 @@
+{
+  "run_id": "a9_m04_qwen_base_gsm8k_p2048_k2_e2_s17_greedy_20261120_v1",
+  "code_commit": "b95c631e0e4f15418c35e84e10ae066efc59a3fb",
+  "config": {
+    "model": "/p012/training/a9_m04_qwen_base_gsm8k_p2048_k2_e2_s17_20261120_v1/checkpoint",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "protocol": "omi2",
+    "task": "gsm8k",
+    "template_family": "qwen",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "dtype": "bfloat16",
+    "n": 1,
+    "seed": 17,
+    "batch_size": 1319,
+    "apply_chat_template": true,
+    "chat_template_file": "/workspace/experiments/p012/templates/qwen.jinja",
+    "stop_strings": [],
+    "training_run_id": "a9_m04_qwen_base_gsm8k_p2048_k2_e2_s17_20261120_v1",
+    "checkpoint_manifest_sha256": "4a1ec937c16c3b992c5ac2b3fe4d340f5e8d4494d20a02df17ef18aae2e49c40"
+  },
+  "input_sha256": "5a9a4e2cae969a72cf7a71f6ce66059039c0f9e694ef689ab7d5fc86080f3176",
+  "source_sha256": {
+    "evaluation.py": "f5b2e34643a10b025f0e5b0035def7b6a6d7195654a6c360b6500940df21e53a",
+    "scoring.py": "2183b0a13c55456a8c74b68f851dd1b01710904d33096ea57c6ce8c03eae74ed",
+    "modal_g0.py": "e5a6d0a9c7642b30540cb5fc1b99f1148552c827676dc683ac49c7b19c72f0f1",
+    "g0_tools.py": "f6fe1c3211849a099b8608074123ddf77549c52908d99d12566418ba01ebf6aa",
+    "checkpoints.py": "89b3049da91b7e696c1f803fdecc4a9669e772e5691c3e06d57c8d0379a88240"
+  },
+  "forecast": {
+    "admitted": true,
+    "forecast_usd": 0.16589527499999998,
+    "reserved_evaluation_usd": 0.16589527499999998,
+    "workspace": "tangzhice",
+    "A9_cap_usd": 24,
+    "multiplier": 1.5,
+    "basis": "A8 same-budget measured closed training+evaluation billing",
+    "reference_run_prefix": "a8_c02",
+    "admission_file": "reports/p012_20261111/amendment9_admission_v1/MODAL_ADMISSION.json",
+    "admission_sha256": "f25e359eeda33b951d37eecbb2470cacc82e5ce08c096d869f28996972d07575"
+  },
+  "input_source": {
+    "canonical_prepared_source_sha256": "6ed85fc793efb0462006190e2bfeaa146bdd528fc7dee38287e56c79845b7ce7",
+    "transformation": "Retain all1319frozenid/problem/gold unchanged; dropC7messages foracceptedmain0shotrenderer"
+  },
+  "authority": "ecda09143c135a64512fec346fe13d38002c7951",
+  "accepted_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+  "prediction_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "A9_id": "M04"
+}
