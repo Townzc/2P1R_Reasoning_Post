@@ -1,0 +1,72 @@
+{
+  "run_id": "a9_m09_qwen_base_gsm8k_p1024_k4_e2_s29_20261120_v1",
+  "A9_id": "M09",
+  "cell": "K4",
+  "model": "Qwen/Qwen2.5-1.5B",
+  "seed": 29,
+  "task": "gsm8k",
+  "track": "A9_exploratory_full_finetuning",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "dose": {
+    "parents": 1024,
+    "paths_per_parent": 4,
+    "distinct_rows": 4096,
+    "epochs": 2,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "metrics": {
+    "responses": 1319,
+    "correct": 915,
+    "accuracy": 0.6937073540561031,
+    "length_cap_count": 15,
+    "length_cap_rate": 0.011372251705837756,
+    "loop_count": 13,
+    "capped_loop_count": 13,
+    "normally_terminated_count": 1304,
+    "normally_terminated_correct": 915,
+    "normally_terminated_accuracy": 0.7016871165644172
+  },
+  "R2": {
+    "global_step": 1024,
+    "expected_updates": 1024,
+    "Num_examples": 4096,
+    "expected_P_times_K": 4096,
+    "trainer_state_sha256": "14f6574e8dd9f57d7b9c5ef6c3444df615fb5ba8d11b7b6805f0fc2c757d986a",
+    "training_log_sha256": "55ccbd492d635e8e9095806ff4102802a47178481730bf13e5db6eb3caf4a911",
+    "passed": true
+  },
+  "prediction_before_score": {
+    "utc": "2026-11-21T04:38:46.676049+00:00",
+    "prediction_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+    "accepted_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "raw_sha256": "da4c5de07de3a00f65c3f89ac56f4a7195b0161087540752b342da6957ec58e0",
+    "training_run_id": "a9_m09_qwen_base_gsm8k_p1024_k4_e2_s29_20261120_v1",
+    "prediction": {
+      "id": "M09",
+      "setting": "qwen_base_gsm8k",
+      "cell": [
+        1024,
+        4,
+        2
+      ],
+      "seed": 29,
+      "platform": "modal",
+      "priority": 5
+    }
+  },
+  "data_sha256": "64d6e6efddcd754bd3c7711175cb7b7cea2a2238083d9e1a59ff24065dcb7765",
+  "accepted_source_review": "b24f787a4c92eab9993eb03702df161a6c64c989",
+  "source_commit": "b95c631e0e4f15418c35e84e10ae066efc59a3fb",
+  "training_run_id": "a9_m09_qwen_base_gsm8k_p1024_k4_e2_s29_20261120_v1",
+  "evaluation_run_id": "a9_m09_qwen_base_gsm8k_p1024_k4_e2_s29_greedy_20261120_v1",
+  "checkpoint_files_sha256": "6ffaa0452c6b08e9ff84a728c4ec48d07718d6446cb71c89227f2102fdb50dfd",
+  "raw_sha256": "da4c5de07de3a00f65c3f89ac56f4a7195b0161087540752b342da6957ec58e0",
+  "labels_sha256": "899df68d17459a10d401adf3e76760fe5c15fb564a8a0b5e7f601e380e5b47f5",
+  "independent_result_audit": "pending",
+  "weights_retained_until_result_audit": true
+}
