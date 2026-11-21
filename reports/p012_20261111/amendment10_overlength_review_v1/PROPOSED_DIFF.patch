@@ -1,0 +1,13 @@
+--- reports/p012_20261111/amendment10_training_review_v1/candidate/tinker_lora.py
++++ reports/p012_20261111/amendment10_overlength_review_v1/proposed_tinker_lora.py
+@@ -73 +73 @@
+-def rendered_datum(row, tokenizer, renderer):
++def rendered_datum(row, tokenizer, renderer, *, max_length=4096):
+@@ -94 +94,3 @@
+-    if len(ids) > 4096:
++    if max_length not in (4096,8192):
++        raise ValueError("Unregistered training length")
++    if len(ids) > max_length:
+@@ -216 +218 @@
+-                d,e=rendered_datum(row,tokenizer,renderer);datums.append(d);rendered.append(e)
++                d,e=rendered_datum(row,tokenizer,renderer,max_length=8192 if request.get("task")=="logiqa" else 4096);datums.append(d);rendered.append(e)
