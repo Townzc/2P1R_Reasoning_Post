@@ -77,13 +77,16 @@ def main():
     assert candidate.render_samples([row],[rendered]) == [dict(row,**rendered)]
     before = {x.name:ast.dump(x) for x in ast.parse(Path('experiments/p012/tinker_lora.py').read_text()).body if isinstance(x,ast.FunctionDef)}
     after = {x.name:ast.dump(x) for x in ast.parse((HERE/'candidate/tinker_lora.py').read_text()).body if isinstance(x,ast.FunctionDef)}
-    unchanged = ['epoch_order','cosine_lr','load_renderer','rendered_datum','normalize_batch','generation_messages']
+    unchanged = ['epoch_order','cosine_lr','load_renderer','normalize_batch','generation_messages']
     assert all(before[k] == after[k] for k in unchanged)
+    assert sha(HERE/'candidate/tinker_lora.py') == sha('reports/p012_20261111/amendment10_overlength_review_v1/proposed_tinker_lora.py')
     assert config.grid_dose('A10_R8')['expected_updates'] == 512
     result = {'paid_model_calls':0,'real_frozen_test_prompts_checked':1572,'public_prompt_privacy':True,
         'generation_prefix_matches_pilot_for_all1572':True,'invalid_doses_rejected':2,
         'legacy_math_generation_byte_identical':True,'private_training_preview':True,
         'unchanged_functions':unchanged,'R8_updates':512,
+        'accepted_LogiQA_length_review_commit':'f0369f2590dfd4f70dab909c81a9d386bde672ae',
+        'candidate_equals_accepted_overlength_proposal':True,
         'candidate_sha256':sha(HERE/'candidate/tinker_lora.py'),
         'training_config_candidate_sha256':sha(HERE/'candidate/training_config.py')}
     (HERE/'CPU_CHECKS.json').write_text(json.dumps(result,indent=2)+'\n')

@@ -2,7 +2,15 @@
 +++ reports/p012_20261111/amendment10_training_review_v1/candidate/tinker_lora.py
 @@ -10,0 +11 @@
 +import hashlib
-@@ -122,0 +124,12 @@
+@@ -72 +73 @@
+-def rendered_datum(row, tokenizer, renderer):
++def rendered_datum(row, tokenizer, renderer, *, max_length=4096):
+@@ -93 +94,3 @@
+-    if len(ids) > 4096:
++    if max_length not in (4096,8192):
++        raise ValueError("Unregistered training length")
++    if len(ids) > max_length:
+@@ -122,0 +126,12 @@
 +def render_samples(rows, rendered, private_task=False):
 +    if not private_task:
 +        return [dict(rows[i],**rendered[i]) for i in range(min(3,len(rows)))]
@@ -15,26 +23,28 @@
 +        for i in range(min(3,len(rows)))]
 +
 +
-@@ -128,0 +142,3 @@
+@@ -128,0 +144,3 @@
 +    private_task = input_spec['task'] == 'logiqa'
 +    if private_task and (n != 1 or temperature != 0 or len(rows) != 1572):
 +        raise ValueError('A10 LogiQA requires full1572 greedy evaluation')
-@@ -130 +146 @@
+@@ -130 +148 @@
 -         'protocol':'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
 +         'protocol':'logiqa_a10' if private_task else 'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
-@@ -137,0 +154,3 @@
+@@ -137,0 +156,3 @@
 +        if private_task and (not row.get('messages') or
 +                             len(row['messages']) != 1 or row['messages'][0]['role'] != 'user'):
 +            raise ValueError('A10 uses the frozen full prompt as one user message')
-@@ -156,0 +176,6 @@
+@@ -156,0 +178,6 @@
 +            if private_task:
 +                record=records[-1]
 +                record.pop('prompt_token_ids')
 +                record.update(prompt_tokens=prompt.length,
 +                    prompt_tokens_sha256=hashlib.sha256(json.dumps(prompt.to_ints()).encode()).hexdigest(),
 +                    prompt_sha256=hashlib.sha256(messages[0]['content'].encode()).hexdigest())
-@@ -192 +217 @@
+@@ -191,2 +218,2 @@
+-                d,e=rendered_datum(row,tokenizer,renderer);datums.append(d);rendered.append(e)
 -            write_json(output/'RENDER_SAMPLES.json',[dict(rows[i],**rendered[i]) for i in range(min(3,len(rows)))])
++                d,e=rendered_datum(row,tokenizer,renderer,max_length=8192 if request.get("task")=="logiqa" else 4096);datums.append(d);rendered.append(e)
 +            write_json(output/'RENDER_SAMPLES.json',render_samples(rows,rendered,request.get('task') == 'logiqa'))
 --- experiments/p012/training_config.py
 +++ reports/p012_20261111/amendment10_training_review_v1/candidate/training_config.py

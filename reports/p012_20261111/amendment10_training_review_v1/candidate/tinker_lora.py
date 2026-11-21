@@ -70,7 +70,7 @@ def load_renderer(request):
     return tokenizer, renderer
 
 
-def rendered_datum(row, tokenizer, renderer):
+def rendered_datum(row, tokenizer, renderer, *, max_length=4096):
     from tinker_cookbook import renderers
     from tinker_cookbook.supervised.common import datum_from_model_input_weights
     messages = [{'role':'user', 'content':row['problem']},
@@ -91,7 +91,9 @@ def rendered_datum(row, tokenizer, renderer):
         raise ValueError('Prompt mask or assistant response boundary changed')
     if ids[-1] != tokenizer.convert_tokens_to_ids('<|im_end|>') or w[-1] != 1:
         raise ValueError('Assistant end token must be scored')
-    if len(ids) > 4096:
+    if max_length not in (4096,8192):
+        raise ValueError("Unregistered training length")
+    if len(ids) > max_length:
         raise ValueError('Overlength training row; never truncate')
     datum = datum_from_model_input_weights(mi, weights, max_length=None, reduction='none')
     return datum, {'input_token_ids':ids, 'loss_weights':w, 'prompt_tokens':len(prompt),
@@ -213,7 +215,7 @@ def run(request, output):
         if mode in ('smoke','train','nll'):
             rows=read_rows(request['dataset']);datums=[];rendered=[]
             for row in rows:
-                d,e=rendered_datum(row,tokenizer,renderer);datums.append(d);rendered.append(e)
+                d,e=rendered_datum(row,tokenizer,renderer,max_length=8192 if request.get("task")=="logiqa" else 4096);datums.append(d);rendered.append(e)
             write_json(output/'RENDER_SAMPLES.json',render_samples(rows,rendered,request.get('task') == 'logiqa'))
             client=service.create_lora_training_client(base_model=request['model'],rank=32,seed=request['seed'],
                 train_mlp=True,train_attn=True,train_unembed=True).result()

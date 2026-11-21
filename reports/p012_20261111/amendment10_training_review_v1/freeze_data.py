@@ -15,6 +15,8 @@ def main():
     state = read(LOCAL/'RECOVERY_QUEUE.json')
     assert state['status'] == 'generation_complete_data_and_training_review_required'
     assert state['qualified_rows'] >= 4096
+    assert state['training_max_length'] == 8192
+    assert state['length_review_commit'] == 'f0369f2590dfd4f70dab909c81a9d386bde672ae'
     manifest = read('reports/p012_20261111/amendment10_s1_v1/MANIFEST.json')
     assert sha(LOCAL/'ALL_INPUTS_PRIVATE.json') == manifest['private_input_sha256']
     inputs = read(LOCAL/'ALL_INPUTS_PRIVATE.json')
@@ -23,7 +25,21 @@ def main():
     for batch in state['completed_batches']:
         directory=Path(batch['private_directory']); public=Path(batch['public_directory'])
         result=read(directory/'RESULTS.json')
-        assert not result['overlength_training_samples']
+        supplemental = {}
+        addendum = None
+        if batch.get('token_counts_addendum'):
+            addendum=read(batch['token_counts_addendum'])
+            assert addendum['accepted_review_commit'] == state['length_review_commit']
+            assert addendum['training_max_length'] == 8192
+            assert sha(directory/'QUALIFIED.json') == addendum['original_qualified_sha256']
+            assert sha(directory/'RESULTS.json') == addendum['original_result_sha256']
+            assert sha(addendum['supplemental_counts_path']) == addendum['supplemental_counts_sha256']
+            supplemental={(r['id'],r['draw']):r for r in read(addendum['supplemental_counts_path'])}
+            assert len(supplemental)==addendum['record_count']==2004
+            assert len(result['overlength_training_samples'])==4
+            assert all(4096 < r['full_sequence_tokens'] <= 8192 for r in result['overlength_training_samples'])
+        else:
+            assert not result['overlength_training_samples']
         assert result['raw_sha256'] == sha(directory/'result/raw.jsonl') == batch['raw_sha256']
         assert result['labels_sha256'] == sha(directory/'labels.jsonl')
         raw=[json.loads(x) for x in (directory/'result/raw.jsonl').read_text().splitlines()]
@@ -55,14 +71,27 @@ def main():
             assert len(group)==4 and [r['draw'] for r in group]==[x['draw'] for x in q['selected']]
             assert [(r['draw'],r['solution']) for r in group]==expected
             assert len({' '.join(r['solution'].split()) for r in group})==4
+            normalized_counts=[]
             for r,s in zip(group,q['selected'],strict=True):
                 assert r['problem'] == identities[ident]['prompt']
                 assert hashlib.sha256(r['solution'].encode()).hexdigest()==s['solution_sha256']==r['solution_hash']
-                assert s['full_sequence_tokens']<=4096
-            parents.append(q);selected[ident]=group;counts[ident]=q['selected']
+                c=dict(s)
+                if supplemental:
+                    extra=supplemental[ident,s['draw']]
+                    assert extra['solution_sha256']==s['solution_sha256']
+                    assert extra['full_tokens']==s['full_sequence_tokens']
+                    expected={'training_input_tokens':extra['training_input_tokens'],
+                        'supervised_target_tokens':extra['supervised_tokens']}
+                    assert all(k not in s or s[k]==v for k,v in expected.items())
+                    c.update(expected)
+                assert c['full_sequence_tokens']<=8192
+                assert c['training_input_tokens']==c['full_sequence_tokens']-1
+                normalized_counts.append(c)
+            parents.append(q);selected[ident]=group;counts[ident]=normalized_counts
         evidence.append({'public_directory':str(public),'archive_sha256':sha(public/'evidence.zip'),
             'qualified_sha256':sha(directory/'QUALIFIED.json'),'raw_sha256':result['raw_sha256'],
-            'labels_sha256':result['labels_sha256']})
+            'labels_sha256':result['labels_sha256'],
+            'token_counts_addendum':({'path':batch['token_counts_addendum'],'sha256':sha(batch['token_counts_addendum'])} if addendum else None)})
     assert len(parents)==state['qualified_rows']
     assert [q['row_index'] for q in parents] == sorted(q['row_index'] for q in parents)
     destination=LOCAL/'training_data';destination.mkdir(exist_ok=False)
@@ -94,6 +123,8 @@ def main():
             'training_input_tokens':dataset['training_input_tokens_one_epoch']*e})
     result={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'authority_commit':manifest['authority_commit'],
         'status':'data_ready_for_combined_pretraining_review','original_text_public':False,
+        'length_review_commit':state['length_review_commit'],'training_max_length':8192,
+        'cap_authority_commit':state['cap_authority_commit'],
         'datasets':datasets,'cells':cells,'source_batches':evidence,
         'qualified_pool_rows':len(parents),'selected_first4096_ids':parent_ids[:4096],
         'pool_correct_of8':dict(collections.Counter(q['correct_of8'] for q in parents)),
