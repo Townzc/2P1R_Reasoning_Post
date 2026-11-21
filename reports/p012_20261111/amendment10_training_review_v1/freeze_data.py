@@ -25,13 +25,35 @@ def main():
         result=read(directory/'RESULTS.json')
         assert not result['overlength_training_samples']
         assert result['raw_sha256'] == sha(directory/'result/raw.jsonl') == batch['raw_sha256']
+        assert result['labels_sha256'] == sha(directory/'labels.jsonl')
+        raw=[json.loads(x) for x in (directory/'result/raw.jsonl').read_text().splitlines()]
+        labels=[json.loads(x) for x in (directory/'labels.jsonl').read_text().splitlines()]
+        assert len(raw)==len(labels)==batch['rows']*8
+        raw_by_id=collections.defaultdict(list)
+        correct={}
+        for r,y in zip(raw,labels,strict=True):
+            assert (r['id'],r['draw'])==(y['id'],y['draw'])
+            assert r['prompt_sha256']==identities[r['id']]['prompt_sha256']
+            raw_by_id[r['id']].append(r);correct[r['id'],r['draw']]=y['correct']
         qualified=read(directory/'QUALIFIED.json')
         records=read(directory/'SELECTED_PRIVATE.json')
         assert len(records) == len(qualified)*4
         for q in qualified:
             ident=q['id']; assert ident not in selected
+            assert q['row_index']==identities[ident]['row_index']
+            original=raw_by_id[ident]
+            assert [r['draw'] for r in original]==list(range(8))
+            assert sum(correct[ident,r['draw']] for r in original)==q['correct_of8']>=4
+            expected=[];seen=set()
+            for r in original:
+                solution=r['text'].removesuffix('<|im_end|>')
+                normalized=' '.join(solution.split())
+                if correct[ident,r['draw']] and normalized not in seen:
+                    expected.append((r['draw'],solution));seen.add(normalized)
+                    if len(expected)==4:break
             group=[r for r in records if r['parent_id']==ident]
             assert len(group)==4 and [r['draw'] for r in group]==[x['draw'] for x in q['selected']]
+            assert [(r['draw'],r['solution']) for r in group]==expected
             assert len({' '.join(r['solution'].split()) for r in group})==4
             for r,s in zip(group,q['selected'],strict=True):
                 assert r['problem'] == identities[ident]['prompt']
