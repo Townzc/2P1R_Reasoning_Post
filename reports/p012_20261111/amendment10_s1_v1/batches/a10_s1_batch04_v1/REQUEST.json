@@ -1,0 +1,98 @@
+{
+  "utc": "2026-11-21T04:18:58.883051+00:00",
+  "run_id": "a10_s1_batch04_v1",
+  "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
+  "length_review_commit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
+  "cap_authority_commit": "c9a534808e65ec648da1995ba26ee52929509de9",
+  "training_max_length": 8192,
+  "CPU_render_source_sha256": "3360ca269fe2962638d041ef678720ce6a8276dfd794f08ea9776e50197d96a4",
+  "source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
+  "controller_sha256": "9d6a1ce29f3de015aa85e9fc16a62de5ac8161a4bed95a2cace583b299b5e086",
+  "teacher": {
+    "run_id": "a9_t0_logiqa_9b_train_n8_v1",
+    "model": "Qwen/Qwen3.5-9B",
+    "split": "train",
+    "n": 8,
+    "asset": {
+      "repo": "Qwen/Qwen3.5-9B",
+      "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-9B",
+      "files": [
+        {
+          "path": "chat_template.jinja",
+          "bytes": 7756,
+          "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+        },
+        {
+          "path": "config.json",
+          "bytes": 3126,
+          "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05"
+        },
+        {
+          "path": "merges.txt",
+          "bytes": 3353259,
+          "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 12807982,
+          "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 16710,
+          "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+        },
+        {
+          "path": "vocab.json",
+          "bytes": 6722759,
+          "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+        }
+      ]
+    },
+    "learning_rate": 0.00047297908091376354,
+    "renderer": "qwen3_5_disable_thinking",
+    "input_path": ".local/p012_20261111/amendment9_v1/logiqa/inputs/a9_t0_logiqa_9b_train_n8_v1.json",
+    "input_sha256": "30c7f3ab2b0b377c52b9ca6e3568601aecd8b0dfe78f2e197edef47ea56bc4af",
+    "template_sha256": "311f4e6aa46f8ee2a40c0142dd70d1fa6c8d3c765df5fc4dae8ae33177e3449d",
+    "max_tokens": 2048,
+    "temperature": 0.7,
+    "top_p": 1,
+    "top_k": -1,
+    "seed_base": 9000,
+    "seed_formula": "seed_base + row_index*n + draw",
+    "prices_per_million": {
+      "prefill": 0.3,
+      "sample": 0.807,
+      "train": 1.463
+    },
+    "source_sha256": "0611b495fbc796f0bd316ca9ee2f854b60971b3889238a098828d62dea7644dc",
+    "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+    "pre_review_exemption": "Amendment9 section4; full post-audit",
+    "worst_case_token_cost_usd": 4.142880000000001,
+    "buffered_forecast_usd": 6.214320000000001,
+    "forecast_basis": "Exact private prompt counts plus every output at2048token cap, multiplied by1.5",
+    "exploratory": true,
+    "excluded_from_H0_H3": true,
+    "training_authorized": false
+  },
+  "global_start": 1800,
+  "rows": 600,
+  "n": 8,
+  "max_tokens": 4096,
+  "temperature": 0.7,
+  "top_p": 1,
+  "seed_formula": "20000 + global_shuffled_row_index*8 + draw",
+  "prices_per_million": {
+    "prefill": 0.3,
+    "sample": 0.807,
+    "train": 1.463
+  },
+  "safe_inputs_sha256": "98561bba4d4ad00825901874f6ca1a9ea2138eb9b1d55a68a5d05706768f8605",
+  "forecast_usd": 7.055108280000001,
+  "forecast_basis": "Maximum completed-batch token cost per row times1.5",
+  "prior_accounted_and_failed_reserve_usd": 37.946085219,
+  "S1_cap_usd": 100,
+  "A10_independent_cap_usd": 200,
+  "no_other_A10_jobs_started": true
+}
