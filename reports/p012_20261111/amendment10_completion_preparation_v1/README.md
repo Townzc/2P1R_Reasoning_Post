@@ -1,0 +1,3 @@
+# Finite CPU completion of authorized A10 S1
+
+Wait for the existing S1 controller to finish. Then run the already prepared CPU data freezer, non-executable request/budget builder and complete review-packet binder, publishing the result. No model client, training, new sampling, experiment retry, source application, account change or external message. If S1 stops or a preparation check fails, preserve the reason and exit. All preparation sources are hash-pinned; no automatic restart. This is a local process and requires the Mac awake and online. The next action after success is the planned owner-relayed combined Claude review, not training.
