@@ -1,0 +1,5 @@
+# A9 R06 cancellation: no automatic replay
+
+At2026-11-20 15:45:22PST the remote call received a cancellation signal at6470/8192steps. Server STATUS is unsuccessful; the persisted directory has no model, optimizer or scheduler weights. No active Modal application remains. Lifecycle reports stopped but does not identify a stopping actor; the returned error says user cancellation or failure. Cause is unresolved.
+
+Observed call cost USD1.47972006. A complete same-configuration restart would reserve USD2.49464022, including the existing margin; stage and remaining-cash gates pass. This is a forecast only. No restart, remote rename or deletion has been performed. A retry would require preserving the original failed directory and local attempt evidence, then using the unchanged accepted source, seed and dataset with an explicit attempt receipt. Confirm that this was not an intentional owner cancellation before deciding to use the authorized infrastructure retry. Subsequent Modal cells remain queued. S1 continues independently.
