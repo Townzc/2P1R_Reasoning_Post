@@ -1,0 +1,105 @@
+{
+  "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+  "accepted_analysis_review_commit": "f1ee77b77b8a29d9a6dd47efadf46eb1987e7b8d",
+  "input_manifest_sha256": "da4ad03f7b5bf6d9b6b8b6158acb1dcad563ad687d9dc18e4a5880641b0d43b0",
+  "catalog_sha256": "623bb25809b133a1fc1f5dea591d622b22545d10b57164bba66cf1af1743f9ca",
+  "bootstrap_core_sha256": "b6973ad67c8eff3cec08806a553754911113944a044c9248bdb45aa1ac8d0b06",
+  "prediction_sha256": "fa3d186069b672c683f6300c174597124af8f970201aacf8bf050b9e57cac3b2",
+  "units": [
+    "R04"
+  ],
+  "prior_results": [
+    {
+      "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r_first/RESULTS.json",
+      "sha256": "955895c0ea56c77c258be3c7b5aff49fdd172f42ed0f4614746b3be60ea5ac1f"
+    }
+  ],
+  "available_units": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05"
+  ],
+  "policy": {
+    "replicates": 10000,
+    "seed": 20261111,
+    "generator": "PCG64",
+    "numpy_version": "2.5.4",
+    "quantile_method": "linear",
+    "unit": "question",
+    "order": "sorted frozen question ID",
+    "interval": "pointwise percentile 95%, conditional on observed seeds",
+    "noticeable": "abs(two-seed mean)>=3pp AND its joint question CI excludes0 AND both seeds have the same nonzero sign",
+    "policy_freeze_commit": "169754c427d8e2b748fb925e03d31bbabcf8ab9d",
+    "seed_uncertainty": "Mean CI measures question sampling only; two training seeds do not estimate training-seed uncertainty",
+    "primary_SFT_baseline": "baseline4",
+    "H1_primary_interpretation": "negative teacher NLL per character; pass@k is compromised in three annotated settings"
+  },
+  "R": {
+    "R04": {
+      "seed17_accuracy_pct": 61.32,
+      "seed29_accuracy_pct": 61.8,
+      "a8_prediction_pct": 66.94,
+      "seed17_residual_pp": -5.619999999999997,
+      "seed29_residual_pp": -5.140000000000001,
+      "mean_residual_pp": -5.379999999999999,
+      "same_sign": true,
+      "outside_band": true,
+      "miss_replicates": true,
+      "interpretation": "repeated_miss",
+      "seed29_minus_seed17": {
+        "n_questions": 5000,
+        "delta_pp": 0.48,
+        "lower95_pp": -0.6804999999999994,
+        "upper95_pp": 1.68,
+        "abs_delta_at_least_3pp": false,
+        "ci_excludes_zero": false,
+        "draws_sha256": "c6546575e54eb188b8fade2b26f54dea15116e9f76fc8ec1bb2f005b0c84a126"
+      }
+    }
+  },
+  "M": {},
+  "single_epoch_all_same_sign": true,
+  "single_epoch_at_least3_misses_repeat": false,
+  "interaction_failure_trigger": null,
+  "M_predictions": {
+    "M-1": null,
+    "M-2": null,
+    "M-3": null,
+    "M-4": null
+  },
+  "missing_units": {
+    "single_epoch_all_same_sign": [],
+    "single_epoch_at_least3_misses_repeat": [],
+    "interaction_failure_trigger": [
+      "R06"
+    ],
+    "M-1": [
+      "M:llama_base_gsm8k",
+      "M:llama_instruct_gsm8k",
+      "M:qwen_base_gsm8k",
+      "M:qwen_instruct_gsm8k"
+    ],
+    "M-2": [
+      "M:llama_base_gsm8k",
+      "M:llama_instruct_gsm8k",
+      "M:qwen_base_gsm8k",
+      "M:qwen_instruct_gsm8k"
+    ],
+    "M-3": [
+      "M:qwen_base_gsm8k"
+    ],
+    "M-4": [
+      "M:llama_base_gsm8k",
+      "M:llama_instruct_gsm8k",
+      "M:qwen_base_gsm8k",
+      "M:qwen_instruct_gsm8k"
+    ]
+  },
+  "predictor_refit_performed": false,
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "independent_numeric_audit": "pending",
+  "M1_limitation": "No noticeable difference does not establish equivalence; intervals condition on observed training seeds."
+}
