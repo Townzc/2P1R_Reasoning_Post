@@ -1,0 +1,5 @@
+# A10 S1 continuation under accepted addenda
+
+First batch passed independent review f0369f25. Continue from frozen row600 (batch2), with identical generation and selection functions. Only the CPU LogiQA length bound changes to8192; generation/evaluation remain4096. Original data, labels and selections remain immutable. The first batch uses an additive token-count receipt for its four over4096 solutions. The exact accepted rendering proposal is imported only for CPU counting, with no change to active experiment source.
+
+S1 cap100, A10 overall cap200, failed-attempt reserve24.3112068 retained until API settlement. No other A10 phase is active. Every next batch uses maximum observed completed-batch cost per row times1.5. Stop after the completed batch reaches4300 qualifying parents. No automatic model retries. On errors, majority identical outputs, over8192 selected rows or a budget failure, stop and preserve evidence. Complete data and training diff still require the single combined prereview. No model training or new baseline is launched here. Server rejection of over4096 training sequences is a stop condition, never a truncation instruction.
