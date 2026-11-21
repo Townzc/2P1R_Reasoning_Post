@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-21T03:40:05.329217+00:00",
-  "stage": "amendment9_R_M_plus_amendment10_S1",
-  "plan": "P012 plus owner-approved amendments1-10",
+  "updated_utc": "2026-11-21T03:47:07.088192+00:00",
+  "stage": "A9_remaining_M_and_A10_S1_addenda",
+  "plan": "P012 through A10 and accepted addenda1/2",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -1194,7 +1194,7 @@
   },
   "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json",
   "amendment9_current": {
-    "utc": "2026-11-21T03:40:05.329217+00:00",
+    "utc": "2026-11-21T03:47:07.088192+00:00",
     "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
     "Modal": [
       {
@@ -1274,14 +1274,14 @@
         "train_launched": true,
         "train_complete": true,
         "eval_launched": true,
-        "eval_complete": false,
-        "result_published": false
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M04",
         "run_id": "a9_m04_qwen_base_gsm8k_p2048_k2_e2_s17_20261120_v1",
         "workspace": "tangzhice",
-        "train_launched": false,
+        "train_launched": true,
         "train_complete": false,
         "eval_launched": false,
         "eval_complete": false,
@@ -1365,6 +1365,12 @@
           ]
         },
         {
+          "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r06/RESULTS.json",
+          "units": [
+            "R06"
+          ]
+        },
+        {
           "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r_first/RESULTS.json",
           "units": [
             "R01",
@@ -1402,22 +1408,26 @@
       }
     },
     "A10_summary": {
-      "status": "stopped_for_inspection",
-      "complete_first_batch_outputs": 4800,
-      "complete_first_batch_qualifying_questions": 501,
-      "controller_state": "exited after recorded length stop",
-      "pending_owner_decision": "LogiQA training length or frozen selection amendment; S1 remains stopped",
-      "overlength_review_packet_commit": "3b6ebaacb2ad074cf4951a4f01f669277dda64cf"
+      "status": "running",
+      "qualified_rows": 501,
+      "active_batch": {
+        "run_id": "a10_s1_batch02_v1",
+        "forecast_usd": 6.653767981500001
+      },
+      "S1_cap_usd": 100,
+      "A10_independent_cap_usd": 200,
+      "length_review_commit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
+      "cap_authority_commit": "c9a534808e65ec648da1995ba26ee52929509de9"
     }
   },
   "current_status_source": "reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json",
-  "historical_sections_note": "amendment9_current/amendment10_current supersede earlier stage snapshots",
+  "historical_sections_note": "Latest amendment9_current/amendment10_current supersede earlier snapshots",
   "amendment10_current": {
-    "utc": "2026-11-21T03:29:37.946649+00:00",
-    "status": "stopped_for_inspection",
+    "utc": "2026-11-21T03:45:14.730635+00:00",
+    "status": "running",
     "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
     "generation_source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
-    "controller_sha256": "0297066ab804f03e3aadb9fa8890f9e5ab2f2eb66fe275ea2f063faa6c75c603",
+    "controller_sha256": "9d6a1ce29f3de015aa85e9fc16a62de5ac8161a4bed95a2cace583b299b5e086",
     "infrastructure_retry_used": 1,
     "automatic_retries_remaining": 0,
     "failed_attempt_reserve_usd": 24.3112068,
@@ -1431,41 +1441,34 @@
         "token_cost_usd": 4.435845321,
         "raw_sha256": "fd994e37a947e4d2be9d17184e8364cc91411ddcaf5041279f5dca0e9ebaaa4d",
         "private_directory": ".local/p012_20261111/amendment10_v1/a10_s1_batch01_infra_retry1_v1",
-        "public_directory": "reports/p012_20261111/amendment10_s1_recovery_v1"
+        "public_directory": "reports/p012_20261111/amendment10_s1_recovery_v1",
+        "token_counts_addendum": "reports/p012_20261111/amendment10_s1_addenda_v1/FIRST_BATCH_COUNTS_ADDENDUM.json"
       }
     ],
-    "active_batch": null,
-    "S1_cap_usd": 75,
+    "active_batch": {
+      "run_id": "a10_s1_batch02_v1",
+      "forecast_usd": 6.653767981500001
+    },
+    "S1_cap_usd": 100,
     "A10_independent_cap_usd": 200,
     "no_other_A10_jobs": true,
-    "error": "Selected training sample exceeds4096: stop and report",
-    "first_retry_launch": {
-      "utc": "2026-11-21T03:08:38.145371+00:00",
-      "pid": 82472,
-      "source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
-      "request_sha256": "935edf3383f1a39425d67f5f18c055c758b2d41c19cc43194533e4897a43d419",
-      "infrastructure_retry": 1,
-      "only_first_batch_launched": true,
-      "same_frozen_generation_function": true,
-      "local_host_awake_online_required": true
+    "length_review_commit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
+    "cap_authority_commit": "c9a534808e65ec648da1995ba26ee52929509de9",
+    "training_max_length": 8192,
+    "CPU_render_source_sha256": "3360ca269fe2962638d041ef678720ce6a8276dfd794f08ea9776e50197d96a4",
+    "controller_launch": {
+      "utc": "2026-11-21T03:45:14.578668+00:00",
+      "pid": 85398,
+      "source_sha256": "9d6a1ce29f3de015aa85e9fc16a62de5ac8161a4bed95a2cace583b299b5e086",
+      "starts_at_global_row": 600,
+      "first_batch_preserved": true,
+      "automatic_retries_remaining": 0,
+      "local_host_awake_online_required": true,
+      "no_training_launched": true
     },
-    "continuation_launch": {
-      "utc": "2026-11-21T03:29:21.512986+00:00",
-      "pid": 84518,
-      "source_sha256": "0297066ab804f03e3aadb9fa8890f9e5ab2f2eb66fe275ea2f063faa6c75c603",
-      "resumes_completed_first_batch_publication_only": true,
-      "additional_model_retry": false
-    },
+    "first_batch_independent_audit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
     "training_candidate": "reports/p012_20261111/amendment10_training_review_v1",
     "training_and_baselines_started": false,
-    "independent_budget_owner_confirmation": "\u4fee\u8ba210\u72ec\u7acb\u4e0a\u9650$200",
-    "overlength_review_packet_commit": "3b6ebaacb2ad074cf4951a4f01f669277dda64cf",
-    "next_generation_admitted": false,
-    "pending_owner_decision": "LogiQA training length or frozen selection amendment; S1 remains stopped",
-    "complete_first_batch_outputs": 4800,
-    "complete_first_batch_qualifying_questions": 501,
-    "overlength_selected_solutions": 4,
-    "overlength_selected_questions": 3,
-    "controller_state": "exited after recorded length stop"
+    "independent_budget_owner_confirmation": "A10 independent USD200 overall hard cap"
   }
 }

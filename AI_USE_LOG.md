@@ -5284,3 +5284,7 @@ Codex accepted67f8eed9 via sidecars, preserved cancelledR06 evidence, applied ow
 ## A9/A10 status — 2026-11-21T03:40:05.329217+00:00
 
 Codex verified R06 retry training completion and launched the existing full evaluation path. First S1 batch is preserved and stopped at the frozen length guard. The isolated length proposal, complete first-batch evidence and unchanged overlapping outputs are published for owner/Claude decision. No second S1 batch, new training path or account setting change.
+
+## A9 / A10 addenda — 2026-11-21T03:47:07.088192+00:00
+
+Codex recorded accepted first-batch audit and owner-approved length/budget addenda. CPU replay preserves all4,800 labels and all2,004 selected solutions; only length counts use the accepted8,192 guard. Batch2 continuation launched with identical generation and selection functions; failed reserve retained. R06 retry output and final R analysis packaged. No course prose,external message,account setting or frozen-result edit.
