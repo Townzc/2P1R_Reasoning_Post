@@ -1,0 +1,115 @@
+{
+  "run_id": "a9_r04_tinker_lora_4b_math_p4096_k1_e1_s29_20261120_v1",
+  "A9_id": "R04",
+  "model": "Qwen/Qwen3.5-4B",
+  "task": "math",
+  "track": "Tinker_LoRA_A9_exploratory",
+  "cell": "A8_P4096_K1_E1",
+  "seed": 29,
+  "dose": {
+    "parents": 4096,
+    "paths_per_parent": 1,
+    "distinct_rows": 4096,
+    "epochs": 1,
+    "presentations": 4096,
+    "effective_batch": 8,
+    "expected_updates": 512,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "MATH": {
+    "responses": 5000,
+    "correct": 3090,
+    "accuracy": 0.618,
+    "length_cap_count": 470,
+    "length_cap_rate": 0.094,
+    "loop_count": 335,
+    "capped_loop_count": 331,
+    "normally_terminated_count": 4530,
+    "normally_terminated_correct": 3090,
+    "normally_terminated_accuracy": 0.6821192052980133
+  },
+  "MATH500": {
+    "responses": 500,
+    "correct": 309,
+    "accuracy": 0.618,
+    "length_cap_count": 57,
+    "length_cap_rate": 0.114,
+    "loop_count": 43,
+    "capped_loop_count": 41,
+    "normally_terminated_count": 443,
+    "normally_terminated_correct": 309,
+    "normally_terminated_accuracy": 0.6975169300225733
+  },
+  "dataset_sha256": "06767f89c8393e7c167e42b04987273f21711e5fe5f14977516f55d12077ffac",
+  "prediction_before_score": {
+    "utc": "2026-11-21T01:52:12.877375+00:00",
+    "prediction_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+    "accepted_source_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+    "raw_sha256": "89cc24d5cd3e58a5a7b724f6104e40394a6ed30f2576d86bdd10e86b68b50ec8",
+    "prediction": {
+      "utc": "2026-11-20T22:30:32.490787+00:00",
+      "commit": "ecda09143c135a64512fec346fe13d38002c7951",
+      "prediction": {
+        "id": "R04",
+        "setting": "tinker_4b_math",
+        "cell": [
+          4096,
+          1,
+          1
+        ],
+        "seed": 29,
+        "platform": "tinker",
+        "a8_prediction": 66.94,
+        "band_pp": 2.5,
+        "seed17_measured": 61.32,
+        "seed17_residual": -5.62,
+        "subjective": {
+          "same_sign": 0.9,
+          "outside_band": 0.8,
+          "point": 61.8
+        }
+      }
+    },
+    "training_run_id": "a9_r04_tinker_lora_4b_math_p4096_k1_e1_s29_20261120_v1"
+  },
+  "training_evidence": {
+    "run_id": "a9_r04_tinker_lora_4b_math_p4096_k1_e1_s29_20261120_v1",
+    "cell": "A8_P4096_K1_E1",
+    "seed": 29,
+    "model": "Qwen/Qwen3.5-4B",
+    "dataset_sha256": "06767f89c8393e7c167e42b04987273f21711e5fe5f14977516f55d12077ffac",
+    "updates": 512,
+    "request_sha256": "a16153229ea144ca91552090efbd2a2e27dfbade379ca99b092b7cb8725409b2",
+    "train_loss_sha256": "286d96874a4b3d6413ca4d4ef3e451c5b02e760ced9b4760eb2da84a8f9ce5f0",
+    "row_order_sha256": "5c0ac8206a6b167eab46917df6073abaaa807915ee918f4c14348215c2dd039d",
+    "sampler_manifest_sha256": "bed9c8bbab1db6886afa989d6f3e163d962edcc7b914aa036824f6086a07b566",
+    "state_manifest_sha256": "4f21e6baef23f17fc949b0881ab9b22f256e32c9ab39ade7b5a44d51d58996b3",
+    "each_epoch_complete_permutation": true
+  },
+  "training_usage": {
+    "training_input_tokens": 1760153,
+    "sampling": null,
+    "upper_token_cost_usd": 1.2972327609999998,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "evaluation_usage": {
+    "training_input_tokens": 0,
+    "sampling": {
+      "prefill_tokens_uncached_upper": 525003,
+      "completion_tokens": 3375777,
+      "prompt_cache_hit_tokens": 65664
+    },
+    "upper_token_cost_usd": 3.565906875,
+    "includes_cache_discount": false,
+    "storage_not_in_token_cost": true
+  },
+  "accepted_source_review_commit": "b24f787a4c92eab9993eb03702df161a6c64c989",
+  "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
+  "raw_sha256": "89cc24d5cd3e58a5a7b724f6104e40394a6ed30f2576d86bdd10e86b68b50ec8",
+  "labels_sha256": "8aa4262addd11f3864652908cc4a6154bf8b204a1bc748de051e26e1419612a6",
+  "independent_result_audit": "pending"
+}
