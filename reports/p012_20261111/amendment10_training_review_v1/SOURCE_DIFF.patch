@@ -1,0 +1,44 @@
+--- experiments/p012/tinker_lora.py
++++ reports/p012_20261111/amendment10_training_review_v1/candidate/tinker_lora.py
+@@ -10,0 +11 @@
++import hashlib
+@@ -122,0 +124,12 @@
++def render_samples(rows, rendered, private_task=False):
++    if not private_task:
++        return [dict(rows[i],**rendered[i]) for i in range(min(3,len(rows)))]
++    # Prompt text and reversible prompt tokens stay in private inputs.
++    return [{'parent_id':rows[i]['parent_id'],'solution_hash':rows[i]['solution_hash'],
++        'solution':rows[i]['solution'],'draw':rows[i]['draw'],
++        'prompt_sha256':hashlib.sha256(rows[i]['problem'].encode()).hexdigest(),
++        'rendered_tokens_sha256':hashlib.sha256(json.dumps(rendered[i]['input_token_ids']).encode()).hexdigest(),
++        **{k:rendered[i][k] for k in ('prompt_tokens','target_tokens','generation_parity','supervised_parity_through_im_end')}}
++        for i in range(min(3,len(rows)))]
++
++
+@@ -128,0 +142,3 @@
++    private_task = input_spec['task'] == 'logiqa'
++    if private_task and (n != 1 or temperature != 0 or len(rows) != 1572):
++        raise ValueError('A10 LogiQA requires full1572 greedy evaluation')
+@@ -130 +146 @@
+-         'protocol':'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
++         'protocol':'logiqa_a10' if private_task else 'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
+@@ -137,0 +154,3 @@
++        if private_task and (not row.get('messages') or
++                             len(row['messages']) != 1 or row['messages'][0]['role'] != 'user'):
++            raise ValueError('A10 uses the frozen full prompt as one user message')
+@@ -156,0 +176,6 @@
++            if private_task:
++                record=records[-1]
++                record.pop('prompt_token_ids')
++                record.update(prompt_tokens=prompt.length,
++                    prompt_tokens_sha256=hashlib.sha256(json.dumps(prompt.to_ints()).encode()).hexdigest(),
++                    prompt_sha256=hashlib.sha256(messages[0]['content'].encode()).hexdigest())
+@@ -192 +217 @@
+-            write_json(output/'RENDER_SAMPLES.json',[dict(rows[i],**rendered[i]) for i in range(min(3,len(rows)))])
++            write_json(output/'RENDER_SAMPLES.json',render_samples(rows,rendered,request.get('task') == 'logiqa'))
+--- experiments/p012/training_config.py
++++ reports/p012_20261111/amendment10_training_review_v1/candidate/training_config.py
+@@ -30,0 +31,3 @@
++
++# A10 LogiQA exploratory half-budget repetition control; review before use.
++CELLS.update({"A10_R8": (512, 1, 8)})
