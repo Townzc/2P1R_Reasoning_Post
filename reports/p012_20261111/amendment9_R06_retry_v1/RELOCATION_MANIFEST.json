@@ -1,0 +1,68 @@
+{
+  "utc": "2026-11-21T03:05:41.128931+00:00",
+  "volume": "p012-g0-assets-results-20261111",
+  "purpose": "Retain failed attempt under separate sibling; restore original logical run directory for unchanged accepted launcher",
+  "files": [
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/checkpoint/trainer_log.jsonl",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/checkpoint/trainer_log.jsonl",
+      "bytes": 1249571,
+      "expected_sha256": "8e1c40c6e233bd2cb03a7d05d849d7eac8a21cf82e41c795c96c23f1f018ed09"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/training.log",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/training.log",
+      "bytes": 1819795,
+      "expected_sha256": "a5428a332f85968b4637ff8649f6f2c86410ccce668ffa8a5df00f25f320ef38"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/STATUS.json",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/STATUS.json",
+      "bytes": 179,
+      "expected_sha256": "02f8d3258b7936c334f1a099008f2aac1cfdfc7defd0f3120a0224b83fc73dd2"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/GPU_MEMORY_SUMMARY.json",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/GPU_MEMORY_SUMMARY.json",
+      "bytes": 146,
+      "expected_sha256": "c254f8fc3470de220da9b48ffd0183a31b2fd052137326a9d279a24bc6c21c87"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/GPU_MEMORY_30S.csv",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/GPU_MEMORY_30S.csv",
+      "bytes": 1868,
+      "expected_sha256": "bed8b09e60d1402b41f8cdc7fa2d44fa485e91c17e708bac57d0bfdd40677bb9"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/inputs/examples.jsonl",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/inputs/examples.jsonl",
+      "bytes": 48382671,
+      "expected_sha256": "240d8a1211583372ef82f3696cf41589ea39b4f6610b55b6d780b777ae9cc89b"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/inputs/dataset_info.json",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/inputs/dataset_info.json",
+      "bytes": 181,
+      "expected_sha256": null
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/config.yaml",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/config.yaml",
+      "bytes": 1055,
+      "expected_sha256": "5269d85a5f785acc48ce33d544b975d8961ded5647aa48b957492b817d6160ff"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/MANIFEST.json",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/MANIFEST.json",
+      "bytes": 9886,
+      "expected_sha256": "1b173fc5a2672d0947e509f8b047d97454f3f12e4ef934c3aaa1fb7624738174"
+    },
+    {
+      "source": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1/HARDWARE.txt",
+      "retained_destination": "training/a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1_failed_attempt1/HARDWARE.txt",
+      "bytes": 44,
+      "expected_sha256": "ae46120ee6fe63ed62c04afe5404d9ef632e9ac2902e0576dc088a8ef14ae964"
+    }
+  ],
+  "rule": "Copy and verify every source/destination hash before removing old directory; all failed files retained; no checkpoints exist"
+}
