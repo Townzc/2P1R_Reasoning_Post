@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-21T03:15:10.213492+00:00",
+  "updated_utc": "2026-11-21T03:40:05.329217+00:00",
   "stage": "amendment9_R_M_plus_amendment10_S1",
   "plan": "P012 plus owner-approved amendments1-10",
   "C1": {
@@ -1194,7 +1194,7 @@
   },
   "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json",
   "amendment9_current": {
-    "utc": "2026-11-21T03:15:10.213492+00:00",
+    "utc": "2026-11-21T03:40:05.329217+00:00",
     "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
     "Modal": [
       {
@@ -1272,8 +1272,8 @@
         "run_id": "a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1",
         "workspace": "tangzhice",
         "train_launched": true,
-        "train_complete": false,
-        "eval_launched": false,
+        "train_complete": true,
+        "eval_launched": true,
         "eval_complete": false,
         "result_published": false
       },
@@ -1400,29 +1400,45 @@
         "request_sha256": "cedff29c4128d8a9a2cc625b6065b9a4a50b705d58839874c198970d3f575af5",
         "reserved_in": "reports/p012_20261111/amendment9_admission_v1/MODAL_ADMISSION.json"
       }
+    },
+    "A10_summary": {
+      "status": "stopped_for_inspection",
+      "complete_first_batch_outputs": 4800,
+      "complete_first_batch_qualifying_questions": 501,
+      "controller_state": "exited after recorded length stop",
+      "pending_owner_decision": "LogiQA training length or frozen selection amendment; S1 remains stopped",
+      "overlength_review_packet_commit": "3b6ebaacb2ad074cf4951a4f01f669277dda64cf"
     }
   },
-  "current_status_source": "reports/p012_20261111/amendment10_s1_recovery_v1/CURRENT_STATUS.json",
+  "current_status_source": "reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json",
   "historical_sections_note": "amendment9_current/amendment10_current supersede earlier stage snapshots",
   "amendment10_current": {
-    "utc": "2026-11-21T03:12:44.192670+00:00",
-    "status": "awaiting_existing_first_batch_retry",
+    "utc": "2026-11-21T03:29:37.946649+00:00",
+    "status": "stopped_for_inspection",
     "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
     "generation_source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
-    "controller_sha256": "1ba5e655fd8b06fe931d07800a5edfd3bdf374273c234ca5f91e02c5e69f9a2d",
+    "controller_sha256": "0297066ab804f03e3aadb9fa8890f9e5ab2f2eb66fe275ea2f063faa6c75c603",
     "infrastructure_retry_used": 1,
     "automatic_retries_remaining": 0,
     "failed_attempt_reserve_usd": 24.3112068,
-    "successful_attempts_token_cost_usd": 0,
-    "qualified_rows": 0,
-    "completed_batches": [],
-    "active_batch": {
-      "run_id": "a10_s1_batch01_infra_retry1_v1",
-      "forecast_usd": 24.3112068
-    },
+    "successful_attempts_token_cost_usd": 4.435845321,
+    "qualified_rows": 501,
+    "completed_batches": [
+      {
+        "run_id": "a10_s1_batch01_infra_retry1_v1",
+        "rows": 600,
+        "qualified": 501,
+        "token_cost_usd": 4.435845321,
+        "raw_sha256": "fd994e37a947e4d2be9d17184e8364cc91411ddcaf5041279f5dca0e9ebaaa4d",
+        "private_directory": ".local/p012_20261111/amendment10_v1/a10_s1_batch01_infra_retry1_v1",
+        "public_directory": "reports/p012_20261111/amendment10_s1_recovery_v1"
+      }
+    ],
+    "active_batch": null,
     "S1_cap_usd": 75,
     "A10_independent_cap_usd": 200,
     "no_other_A10_jobs": true,
+    "error": "Selected training sample exceeds4096: stop and report",
     "first_retry_launch": {
       "utc": "2026-11-21T03:08:38.145371+00:00",
       "pid": 82472,
@@ -1434,15 +1450,22 @@
       "local_host_awake_online_required": true
     },
     "continuation_launch": {
-      "utc": "2026-11-21T03:12:44.093609+00:00",
-      "pid": 82832,
-      "source_sha256": "1ba5e655fd8b06fe931d07800a5edfd3bdf374273c234ca5f91e02c5e69f9a2d",
-      "waits_for_existing_retry_then_only_remaining_frozen_S1_batches": true,
-      "new_model_retry_performed_by_controller": false,
-      "local_host_awake_online_required": true
+      "utc": "2026-11-21T03:29:21.512986+00:00",
+      "pid": 84518,
+      "source_sha256": "0297066ab804f03e3aadb9fa8890f9e5ab2f2eb66fe275ea2f063faa6c75c603",
+      "resumes_completed_first_batch_publication_only": true,
+      "additional_model_retry": false
     },
     "training_candidate": "reports/p012_20261111/amendment10_training_review_v1",
     "training_and_baselines_started": false,
-    "independent_budget_owner_confirmation": "\u4fee\u8ba210\u72ec\u7acb\u4e0a\u9650$200"
+    "independent_budget_owner_confirmation": "\u4fee\u8ba210\u72ec\u7acb\u4e0a\u9650$200",
+    "overlength_review_packet_commit": "3b6ebaacb2ad074cf4951a4f01f669277dda64cf",
+    "next_generation_admitted": false,
+    "pending_owner_decision": "LogiQA training length or frozen selection amendment; S1 remains stopped",
+    "complete_first_batch_outputs": 4800,
+    "complete_first_batch_qualifying_questions": 501,
+    "overlength_selected_solutions": 4,
+    "overlength_selected_questions": 3,
+    "controller_state": "exited after recorded length stop"
   }
 }

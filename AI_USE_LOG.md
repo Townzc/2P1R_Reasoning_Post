@@ -5280,3 +5280,7 @@ Codex verified complete LogiQA pilot outputs and private-input/public-hash align
 ## A9/A10 execution — 2026-11-21T03:15:10.213492+00:00
 
 Codex accepted67f8eed9 via sidecars, preserved cancelledR06 evidence, applied owner-authorized identical-source infrastructure retry, recorded independentA10budget200, froze10913S1inputs and retained818outputs afterhostsleep. S1 uses one authorized unchanged-function retry and guarded continuation. Candidate privacy checks cover1572realprompts with no modelcalls; trainingpathnotapplied. No courseprose,externalmessages,account/billing/powerchanges or frozen-label edits.
+
+## A9/A10 status — 2026-11-21T03:40:05.329217+00:00
+
+Codex verified R06 retry training completion and launched the existing full evaluation path. First S1 batch is preserved and stopped at the frozen length guard. The isolated length proposal, complete first-batch evidence and unchanged overlapping outputs are published for owner/Claude decision. No second S1 batch, new training path or account setting change.
