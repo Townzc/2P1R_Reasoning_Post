@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-21T04:07:28.072446+00:00",
-  "stage": "A9_remaining_M_and_A10_S1_addenda",
+  "updated_utc": "2026-11-21T04:42:00.810759+00:00",
+  "stage": "A9_M_review_pending_A10_S1_active",
   "plan": "P012 through A10 and accepted addenda1/2",
   "C1": {
     "assets_and_versions": "complete",
@@ -1194,7 +1194,7 @@
   },
   "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json",
   "amendment9_current": {
-    "utc": "2026-11-21T04:07:28.072446+00:00",
+    "utc": "2026-11-21T04:42:00.810759+00:00",
     "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
     "Modal": [
       {
@@ -1304,38 +1304,38 @@
         "train_launched": true,
         "train_complete": true,
         "eval_launched": true,
-        "eval_complete": false,
-        "result_published": false
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M07",
         "run_id": "a9_m07_llama_instruct_gsm8k_p1024_k4_e2_s29_20261120_v1",
         "workspace": "tangzhice",
-        "train_launched": false,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_launched": true,
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M08",
         "run_id": "a9_m08_qwen_instruct_gsm8k_p1024_k4_e2_s29_20261120_v1",
         "workspace": "townzc",
-        "train_launched": false,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_launched": true,
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M09",
         "run_id": "a9_m09_qwen_base_gsm8k_p1024_k4_e2_s29_20261120_v1",
         "workspace": "townzc",
-        "train_launched": false,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_launched": true,
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       }
     ],
     "R04": {
@@ -1358,6 +1358,15 @@
       "accepted_review_commit": "f1ee77b77b8a29d9a6dd47efadf46eb1987e7b8d",
       "review_pending": false,
       "formal_runs": [
+        {
+          "path": "reports/p012_20261111/amendment9_analysis_runs_v1/m_all/RESULTS.json",
+          "units": [
+            "M:llama_base_gsm8k",
+            "M:llama_instruct_gsm8k",
+            "M:qwen_base_gsm8k",
+            "M:qwen_instruct_gsm8k"
+          ]
+        },
         {
           "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r04/RESULTS.json",
           "units": [
@@ -1408,12 +1417,52 @@
         "reserved_in": "reports/p012_20261111/amendment9_admission_v1/MODAL_ADMISSION.json"
       }
     },
+    "M_complete_review": {
+      "commit": "a3125c846391008a87139a9a8a3de121f5b0c7ac",
+      "status": "independent_review_pending",
+      "new_outputs": 7914,
+      "analysis_endpoints": 32,
+      "bindings": 476,
+      "predictions": {
+        "M-1": true,
+        "M-2": true,
+        "M-3": true,
+        "M-4": true
+      }
+    },
+    "Modal_queue_complete": {
+      "utc": "2026-11-21T04:42:00.783199+00:00",
+      "source": "read-only Modal app list API via CLI",
+      "workspaces": [
+        {
+          "workspace": "tangzhice",
+          "listed_apps": 8,
+          "states": [
+            "stopped"
+          ],
+          "active_apps": 0
+        },
+        {
+          "workspace": "townzc",
+          "listed_apps": 6,
+          "states": [
+            "stopped"
+          ],
+          "active_apps": 0
+        }
+      ],
+      "all14_A9_Modal_endpoints_published": true,
+      "M_review_package_commit": "a3125c846391008a87139a9a8a3de121f5b0c7ac",
+      "remaining_Modal_queue": [],
+      "S1_and_CPU_completion_continue": true,
+      "account_billing_or_storage_settings_changed": false
+    },
     "A10_summary": {
       "status": "running",
-      "qualified_rows": 1002,
+      "qualified_rows": 1983,
       "active_batch": {
-        "run_id": "a10_s1_batch03_v1",
-        "forecast_usd": 6.743441366999999
+        "run_id": "a10_s1_batch05_v1",
+        "forecast_usd": 7.055108280000001
       },
       "S1_cap_usd": 100,
       "A10_independent_cap_usd": 200,
@@ -1424,7 +1473,7 @@
   "current_status_source": "reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json",
   "historical_sections_note": "Latest amendment9_current/amendment10_current supersede earlier snapshots",
   "amendment10_current": {
-    "utc": "2026-11-21T04:02:58.093070+00:00",
+    "utc": "2026-11-21T04:33:50.839636+00:00",
     "status": "running",
     "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
     "generation_source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
@@ -1432,8 +1481,8 @@
     "infrastructure_retry_used": 1,
     "automatic_retries_remaining": 0,
     "failed_attempt_reserve_usd": 24.3112068,
-    "successful_attempts_token_cost_usd": 8.931472899,
-    "qualified_rows": 1002,
+    "successful_attempts_token_cost_usd": 18.316767855000002,
+    "qualified_rows": 1983,
     "completed_batches": [
       {
         "run_id": "a10_s1_batch01_infra_retry1_v1",
@@ -1453,11 +1502,29 @@
         "raw_sha256": "565eb922b6dceb5c632883ae0630956073c7958239b17dc5bf8947c3d3300e8a",
         "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch02_v1",
         "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch02_v1"
+      },
+      {
+        "run_id": "a10_s1_batch03_v1",
+        "rows": 600,
+        "qualified": 503,
+        "token_cost_usd": 4.7034055200000005,
+        "raw_sha256": "f3bce85323785c6c15dae614cfb836a32d7fc401eb9c69c927062939619db43d",
+        "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch03_v1",
+        "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch03_v1"
+      },
+      {
+        "run_id": "a10_s1_batch04_v1",
+        "rows": 600,
+        "qualified": 478,
+        "token_cost_usd": 4.6818894360000005,
+        "raw_sha256": "d2b046f34412d8b6a6c9111bc425d4ad5e32a8cefcdc24d9da540f62046a867f",
+        "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch04_v1",
+        "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch04_v1"
       }
     ],
     "active_batch": {
-      "run_id": "a10_s1_batch03_v1",
-      "forecast_usd": 6.743441366999999
+      "run_id": "a10_s1_batch05_v1",
+      "forecast_usd": 7.055108280000001
     },
     "S1_cap_usd": 100,
     "A10_independent_cap_usd": 200,

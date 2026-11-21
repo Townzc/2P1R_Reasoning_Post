@@ -5292,3 +5292,7 @@ Codex recorded accepted first-batch audit and owner-approved length/budget adden
 ## A9 / A10 addenda — 2026-11-21T04:07:28.072446+00:00
 
 Codex recorded accepted first-batch audit and owner-approved length/budget addenda. CPU replay preserves all4,800 labels and all2,004 selected solutions; only length counts use the accepted8,192 guard. Batch2 continuation launched with identical generation and selection functions; failed reserve retained. R06 retry output and final R analysis packaged. No course prose,external message,account setting or frozen-result edit.
+
+## A9 / A10 addenda — 2026-11-21T04:42:00.810759+00:00
+
+Codex recorded accepted first-batch audit and owner-approved length/budget addenda. CPU replay preserves all4,800 labels and all2,004 selected solutions; only length counts use the accepted8,192 guard. Batch2 continuation launched with identical generation and selection functions; failed reserve retained. All A9 R/M runs and complete M numerical analysis are published; R is accepted and M review is pending. The unchanged S1 generator and pinned CPU completion continue. No course prose,external message,account setting or frozen-result edit.
