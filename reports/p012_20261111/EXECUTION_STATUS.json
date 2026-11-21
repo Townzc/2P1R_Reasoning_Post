@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-11-20T23:32:42.123347+00:00",
-  "stage": "amendment9_authorized_R_M_and_LogiQA",
-  "plan": "P012 v1 plus owner-approved amendments1-9",
+  "updated_utc": "2026-11-21T03:15:10.213492+00:00",
+  "stage": "amendment9_R_M_plus_amendment10_S1",
+  "plan": "P012 plus owner-approved amendments1-10",
   "C1": {
     "assets_and_versions": "complete",
     "official_llama_access": "1B, 1B-Instruct, 3B, 3B-Instruct passed",
@@ -1194,7 +1194,7 @@
   },
   "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json",
   "amendment9_current": {
-    "utc": "2026-11-20T23:32:42.123347+00:00",
+    "utc": "2026-11-21T03:15:10.213492+00:00",
     "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
     "Modal": [
       {
@@ -1344,7 +1344,7 @@
       "expected_updates": 512,
       "train_complete": true,
       "eval_launched": true,
-      "eval_complete": false
+      "eval_complete": true
     },
     "LogiQA": {
       "complete": true,
@@ -1359,6 +1359,12 @@
       "review_pending": false,
       "formal_runs": [
         {
+          "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r04/RESULTS.json",
+          "units": [
+            "R04"
+          ]
+        },
+        {
           "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r_first/RESULTS.json",
           "units": [
             "R01",
@@ -1371,8 +1377,72 @@
     },
     "R_M_scientific_source_changed": false,
     "local_Tinker_requires_awake_online_host": true,
-    "account_billing_power_settings_changed": false
+    "account_billing_power_settings_changed": false,
+    "accepted_endpoint_audits": {
+      "R01": "7a135e425baba89890e23912a8318d8651b9d761",
+      "R02": "7a135e425baba89890e23912a8318d8651b9d761",
+      "R03": "7a135e425baba89890e23912a8318d8651b9d761",
+      "R05": "7a135e425baba89890e23912a8318d8651b9d761",
+      "R04": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+      "M01": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+      "M02": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+      "M03": "67f8eed9df2eb7d7545acf69fba9622579d1631b"
+    },
+    "R06_infrastructure_retry": {
+      "authorized": true,
+      "number": 1,
+      "failed_attempt_cost_usd": 1.47972006,
+      "failure_preserved": "reports/p012_20261111/amendment9_R06_retry_v1",
+      "launch": {
+        "utc": "2026-11-21T03:08:47.471899+00:00",
+        "pid": 82511,
+        "run_id": "a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1",
+        "request_sha256": "cedff29c4128d8a9a2cc625b6065b9a4a50b705d58839874c198970d3f575af5",
+        "reserved_in": "reports/p012_20261111/amendment9_admission_v1/MODAL_ADMISSION.json"
+      }
+    }
   },
-  "current_status_source": "reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json",
-  "historical_sections_note": "Earlier stage-specific fields below are historical; amendment9_current is the live authorized queue."
+  "current_status_source": "reports/p012_20261111/amendment10_s1_recovery_v1/CURRENT_STATUS.json",
+  "historical_sections_note": "amendment9_current/amendment10_current supersede earlier stage snapshots",
+  "amendment10_current": {
+    "utc": "2026-11-21T03:12:44.192670+00:00",
+    "status": "awaiting_existing_first_batch_retry",
+    "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
+    "generation_source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
+    "controller_sha256": "1ba5e655fd8b06fe931d07800a5edfd3bdf374273c234ca5f91e02c5e69f9a2d",
+    "infrastructure_retry_used": 1,
+    "automatic_retries_remaining": 0,
+    "failed_attempt_reserve_usd": 24.3112068,
+    "successful_attempts_token_cost_usd": 0,
+    "qualified_rows": 0,
+    "completed_batches": [],
+    "active_batch": {
+      "run_id": "a10_s1_batch01_infra_retry1_v1",
+      "forecast_usd": 24.3112068
+    },
+    "S1_cap_usd": 75,
+    "A10_independent_cap_usd": 200,
+    "no_other_A10_jobs": true,
+    "first_retry_launch": {
+      "utc": "2026-11-21T03:08:38.145371+00:00",
+      "pid": 82472,
+      "source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
+      "request_sha256": "935edf3383f1a39425d67f5f18c055c758b2d41c19cc43194533e4897a43d419",
+      "infrastructure_retry": 1,
+      "only_first_batch_launched": true,
+      "same_frozen_generation_function": true,
+      "local_host_awake_online_required": true
+    },
+    "continuation_launch": {
+      "utc": "2026-11-21T03:12:44.093609+00:00",
+      "pid": 82832,
+      "source_sha256": "1ba5e655fd8b06fe931d07800a5edfd3bdf374273c234ca5f91e02c5e69f9a2d",
+      "waits_for_existing_retry_then_only_remaining_frozen_S1_batches": true,
+      "new_model_retry_performed_by_controller": false,
+      "local_host_awake_online_required": true
+    },
+    "training_candidate": "reports/p012_20261111/amendment10_training_review_v1",
+    "training_and_baselines_started": false,
+    "independent_budget_owner_confirmation": "\u4fee\u8ba210\u72ec\u7acb\u4e0a\u9650$200"
+  }
 }

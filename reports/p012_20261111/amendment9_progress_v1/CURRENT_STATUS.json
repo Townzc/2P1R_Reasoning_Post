@@ -1,5 +1,5 @@
 {
-  "utc": "2026-11-20T23:32:42.123347+00:00",
+  "utc": "2026-11-21T03:15:10.213492+00:00",
   "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
   "Modal": [
     {
@@ -149,7 +149,7 @@
     "expected_updates": 512,
     "train_complete": true,
     "eval_launched": true,
-    "eval_complete": false
+    "eval_complete": true
   },
   "LogiQA": {
     "complete": true,
@@ -164,6 +164,12 @@
     "review_pending": false,
     "formal_runs": [
       {
+        "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r04/RESULTS.json",
+        "units": [
+          "R04"
+        ]
+      },
+      {
         "path": "reports/p012_20261111/amendment9_analysis_runs_v1/r_first/RESULTS.json",
         "units": [
           "R01",
@@ -176,5 +182,28 @@
   },
   "R_M_scientific_source_changed": false,
   "local_Tinker_requires_awake_online_host": true,
-  "account_billing_power_settings_changed": false
+  "account_billing_power_settings_changed": false,
+  "accepted_endpoint_audits": {
+    "R01": "7a135e425baba89890e23912a8318d8651b9d761",
+    "R02": "7a135e425baba89890e23912a8318d8651b9d761",
+    "R03": "7a135e425baba89890e23912a8318d8651b9d761",
+    "R05": "7a135e425baba89890e23912a8318d8651b9d761",
+    "R04": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+    "M01": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+    "M02": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+    "M03": "67f8eed9df2eb7d7545acf69fba9622579d1631b"
+  },
+  "R06_infrastructure_retry": {
+    "authorized": true,
+    "number": 1,
+    "failed_attempt_cost_usd": 1.47972006,
+    "failure_preserved": "reports/p012_20261111/amendment9_R06_retry_v1",
+    "launch": {
+      "utc": "2026-11-21T03:08:47.471899+00:00",
+      "pid": 82511,
+      "run_id": "a9_r06_llama_base_gsm8k_p4096_k8_e2_s29_20261120_v1",
+      "request_sha256": "cedff29c4128d8a9a2cc625b6065b9a4a50b705d58839874c198970d3f575af5",
+      "reserved_in": "reports/p012_20261111/amendment9_admission_v1/MODAL_ADMISSION.json"
+    }
+  }
 }
