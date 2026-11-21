@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-21T03:47:07.088192+00:00",
+  "updated_utc": "2026-11-21T04:07:28.072446+00:00",
   "stage": "A9_remaining_M_and_A10_S1_addenda",
   "plan": "P012 through A10 and accepted addenda1/2",
   "C1": {
@@ -1194,7 +1194,7 @@
   },
   "current_2121b7cb": "reports/p012_20261111/review_2121b7cb/ACCEPTANCE.json",
   "amendment9_current": {
-    "utc": "2026-11-21T03:47:07.088192+00:00",
+    "utc": "2026-11-21T04:07:28.072446+00:00",
     "authority_commit": "ecda09143c135a64512fec346fe13d38002c7951",
     "Modal": [
       {
@@ -1282,28 +1282,28 @@
         "run_id": "a9_m04_qwen_base_gsm8k_p2048_k2_e2_s17_20261120_v1",
         "workspace": "tangzhice",
         "train_launched": true,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M05",
         "run_id": "a9_m05_qwen_base_gsm8k_p2048_k2_e2_s29_20261120_v1",
         "workspace": "townzc",
-        "train_launched": false,
-        "train_complete": false,
-        "eval_launched": false,
-        "eval_complete": false,
-        "result_published": false
+        "train_launched": true,
+        "train_complete": true,
+        "eval_launched": true,
+        "eval_complete": true,
+        "result_published": true
       },
       {
         "id": "M06",
         "run_id": "a9_m06_llama_base_gsm8k_p1024_k4_e2_s29_20261120_v1",
         "workspace": "tangzhice",
-        "train_launched": false,
-        "train_complete": false,
-        "eval_launched": false,
+        "train_launched": true,
+        "train_complete": true,
+        "eval_launched": true,
         "eval_complete": false,
         "result_published": false
       },
@@ -1392,7 +1392,8 @@
       "R04": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
       "M01": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
       "M02": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
-      "M03": "67f8eed9df2eb7d7545acf69fba9622579d1631b"
+      "M03": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
+      "R06": "5c32dcad69e980da981ad0521b1645149a912b8e"
     },
     "R06_infrastructure_retry": {
       "authorized": true,
@@ -1409,10 +1410,10 @@
     },
     "A10_summary": {
       "status": "running",
-      "qualified_rows": 501,
+      "qualified_rows": 1002,
       "active_batch": {
-        "run_id": "a10_s1_batch02_v1",
-        "forecast_usd": 6.653767981500001
+        "run_id": "a10_s1_batch03_v1",
+        "forecast_usd": 6.743441366999999
       },
       "S1_cap_usd": 100,
       "A10_independent_cap_usd": 200,
@@ -1423,7 +1424,7 @@
   "current_status_source": "reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json",
   "historical_sections_note": "Latest amendment9_current/amendment10_current supersede earlier snapshots",
   "amendment10_current": {
-    "utc": "2026-11-21T03:45:14.730635+00:00",
+    "utc": "2026-11-21T04:02:58.093070+00:00",
     "status": "running",
     "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
     "generation_source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
@@ -1431,8 +1432,8 @@
     "infrastructure_retry_used": 1,
     "automatic_retries_remaining": 0,
     "failed_attempt_reserve_usd": 24.3112068,
-    "successful_attempts_token_cost_usd": 4.435845321,
-    "qualified_rows": 501,
+    "successful_attempts_token_cost_usd": 8.931472899,
+    "qualified_rows": 1002,
     "completed_batches": [
       {
         "run_id": "a10_s1_batch01_infra_retry1_v1",
@@ -1443,11 +1444,20 @@
         "private_directory": ".local/p012_20261111/amendment10_v1/a10_s1_batch01_infra_retry1_v1",
         "public_directory": "reports/p012_20261111/amendment10_s1_recovery_v1",
         "token_counts_addendum": "reports/p012_20261111/amendment10_s1_addenda_v1/FIRST_BATCH_COUNTS_ADDENDUM.json"
+      },
+      {
+        "run_id": "a10_s1_batch02_v1",
+        "rows": 600,
+        "qualified": 501,
+        "token_cost_usd": 4.495627578,
+        "raw_sha256": "565eb922b6dceb5c632883ae0630956073c7958239b17dc5bf8947c3d3300e8a",
+        "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch02_v1",
+        "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch02_v1"
       }
     ],
     "active_batch": {
-      "run_id": "a10_s1_batch02_v1",
-      "forecast_usd": 6.653767981500001
+      "run_id": "a10_s1_batch03_v1",
+      "forecast_usd": 6.743441366999999
     },
     "S1_cap_usd": 100,
     "A10_independent_cap_usd": 200,
@@ -1469,6 +1479,22 @@
     "first_batch_independent_audit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
     "training_candidate": "reports/p012_20261111/amendment10_training_review_v1",
     "training_and_baselines_started": false,
-    "independent_budget_owner_confirmation": "A10 independent USD200 overall hard cap"
+    "independent_budget_owner_confirmation": "A10 independent USD200 overall hard cap",
+    "CPU_completion_processor": {
+      "launch": {
+        "utc": "2026-11-21T04:04:18.934717+00:00",
+        "pid": 86334,
+        "source_sha256": "d78e6d7d8fcb5e294b52342f89caaaa3cfc1572921b1152688ae4346ebea3ce7",
+        "paid_model_calls": 0,
+        "training_or_baseline_launch_allowed": false,
+        "local_host_awake_online_required": true
+      },
+      "status": {
+        "status": "waiting_for_existing_S1",
+        "paid_model_calls": 0,
+        "training_started": false,
+        "utc": "2026-11-21T04:04:18.966974+00:00"
+      }
+    }
   }
 }

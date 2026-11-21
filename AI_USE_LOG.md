@@ -5288,3 +5288,7 @@ Codex verified R06 retry training completion and launched the existing full eval
 ## A9 / A10 addenda — 2026-11-21T03:47:07.088192+00:00
 
 Codex recorded accepted first-batch audit and owner-approved length/budget addenda. CPU replay preserves all4,800 labels and all2,004 selected solutions; only length counts use the accepted8,192 guard. Batch2 continuation launched with identical generation and selection functions; failed reserve retained. R06 retry output and final R analysis packaged. No course prose,external message,account setting or frozen-result edit.
+
+## A9 / A10 addenda — 2026-11-21T04:07:28.072446+00:00
+
+Codex recorded accepted first-batch audit and owner-approved length/budget addenda. CPU replay preserves all4,800 labels and all2,004 selected solutions; only length counts use the accepted8,192 guard. Batch2 continuation launched with identical generation and selection functions; failed reserve retained. R06 retry output and final R analysis packaged. No course prose,external message,account setting or frozen-result edit.
