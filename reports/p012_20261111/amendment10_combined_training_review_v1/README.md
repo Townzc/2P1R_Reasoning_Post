@@ -1,6 +1,6 @@
 # A10 complete S1 data and training path: combined prereview requested
 
-S1 has completed: 5,400 questions,43,200 model outputs,4,469 qualifying parents. The batch stopping rule and global independent seeds/sequence IDs pass. All original batch outputs,labels,qualification records and usage are hash-bound. The first batch passed f0369f25; its frozen labels and selections remain unchanged. Four longer records use the accepted additive token counts. Failed-attempt evidence and reserve remain preserved.
+S1 has completed: 5,400 questions,43,200 model outputs,4,469 qualifying parents. The batch stopping rule and global independent seeds/sequence IDs pass. All original batch outputs,labels,qualification records and usage are hash-bound. The first batch passed f0369f25; its frozen labels and selections remain unchanged. Four longer records use the accepted additive token counts. Failed-attempt evidence remains preserved; its invoice-priced API settlement is recorded in BUDGET_SETTLED.json.
 
 | Dataset | Parents | Solutions each | Rows | SHA256 |
 |---|---:|---:|---:|---|
@@ -14,6 +14,8 @@ The private nested training files use the firstP qualifying parents and firstK d
 
 Please review all S1 outputs and the complete selected-data/nesting/dose construction together with SOURCE_DIFF.patch,scoring adapter and14 non-executable request templates under amendment10_training_review_v1. The runner candidate includes the accepted LogiQA-only8192 bound; other tasks and generation/evaluation limits retain4096. Prompt masks,optimizer,cosine and sampling parameters are unchanged. API capabilities report65536 context and trainable=true for4B/9B; any actual server rejection stops execution without truncation.
 
-Budget: S1 accounted plus retained failed reserve$65.3204; baselines forecast$5.2757;12 training/evaluations forecast$133.9061; overall$204.5022/200. Subcaps100/6/125 apply together with the hard200 total. These are preparation forecasts,not admissions. Recheck live budget and use baseline/L measurements before subsequent admission. No training or new baseline has started.
+Current budget after API settlement: S1 $40.3146/100 (including failed attempt $0.7988); baselines forecast $5.2757/6; twelve training/evaluations forecast $133.9061/125; whole phase $179.4964/200. BUDGET_SETTLED.json is the current financial receipt; BUDGET.json preserves the earlier conservative forecast with the old failed reserve. All financial gates pass: False. These forecasts do not authorize training; combined review and live admission remain required.
+
+Recovery: batch09 admission publication failed due to a GitHub connection reset. Fetch and normal push confirmed no divergence; API/session and local evidence showed batch09 had not started. Its original request was executed once under the owner's2026-11-22 instruction. The existing paid-generation, qualification and preparation functions remain unchanged. RECOVERY_INPUT_MANIFEST.json binds the full recovery and billing receipts. No account settings changed.
 
 INPUT_MANIFEST binds143 public files/archive members. All results exploratory,outsideH0–H3. Training awaits this combined review; no external message is sent by this program.
