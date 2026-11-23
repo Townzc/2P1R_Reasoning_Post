@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-23T14:53:06.475733+00:00",
+  "utc": "2026-11-23T17:21:42.212061+00:00",
   "status": "running",
-  "current_run": "a10_tinker_lora_4b_logiqa_s4_s17_v1",
+  "current_run": "a10_tinker_lora_4b_logiqa_s4_s17_greedy_v1",
   "reason": null,
   "order": [
     "a10_logiqa_4b_baseline4096_s17_v1",
@@ -86,11 +86,11 @@
     "S1_accounted_usd": 40.314645282,
     "spent": {
       "baseline": 3.3043039289999996,
-      "train_eval": 30.114254281000004
+      "train_eval": 37.15287107500001
     },
     "reserved": {
       "baseline": 0.0,
-      "train_eval": 13.648487581
+      "train_eval": 2.9905623899999996
     },
     "line_items": [
       {
@@ -174,16 +174,24 @@
         "exceeded_reference_limits": []
       },
       {
-        "run_id": "a10_tinker_lora_4b_logiqa_s4_s17_v1",
+        "run_id": "a10_tinker_lora_4b_logiqa_s4_s17_greedy_v1",
         "bucket": "train_eval",
         "completed": false,
         "token_upper_usd": 0,
-        "reserved_usd": 13.648487581,
+        "reserved_usd": 2.9905623899999996,
+        "exceeded_reference_limits": []
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_s4_s17_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 7.038616794,
+        "reserved_usd": 0,
         "exceeded_reference_limits": []
       }
     ],
-    "total_accounted_usd": 73.733203492,
-    "total_reserved_usd": 13.648487581
+    "total_accounted_usd": 80.77182028600001,
+    "total_reserved_usd": 2.9905623899999996
   },
   "remaining_queue_budget_authority": {
     "commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051",
