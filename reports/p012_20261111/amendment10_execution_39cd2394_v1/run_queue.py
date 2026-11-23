@@ -171,19 +171,43 @@ def resolve_request(name, parent=None, binding=None):
         return d,commit
 
 
-def status(stage,name=None,reason=None):
+def published_packets():
     packets = []
+    host = "https://github.com/Townzc/2P1R_Reasoning_Post/blob/"
+    lines = ["# A10 已发布端点", "", "每行链接固定在该端点首次发布的提交，可直接转交 Claude。", "",
+             "| 端点 | 答对 / 总数 | 准确率 | 审查包 | 独立复核 |", "|---|---:|---:|---|---|"]
     for endpoint in ORDER:
-        dest = PUB/"endpoints"/endpoint/"RESULTS.json"
-        if dest.exists():
-            x=read(dest)
-            packets.append(dict(endpoint=endpoint, packet=str(dest.parent/"README.md"),
-                                responses=x["responses"],correct=x["correct"],independent_audit="pending_or_see_audit_sidecar"))
+        dest = PUB/"endpoints"/endpoint
+        if not (dest/"RESULTS.json").exists():
+            continue
+        x = read(dest/"RESULTS.json")
+        first = git("log", "-1", "--diff-filter=A", "--format=%H", REMOTE,
+                    "--", dest/"INPUT_MANIFEST.json").decode().strip()
+        require(len(first) == 40, "Endpoint packet is missing on the execution branch: " + endpoint)
+        url = host + first + "/" + str(dest/"README.md")
+        acceptance = dest/"ACCEPTANCE.json"
+        audit = read(acceptance) if acceptance.exists() else {}
+        state = audit.get("independent_post_run_audit","pending")
+        audit_url = (host + audit["accepted_review_commit"] + "/" + audit["review_document"]) if audit else None
+        label = ("4B 基线" if endpoint == FIRST[0] else "9B 基线") if not x["training"] else (
+            x["training"]["cell"]["arm"] + " · seed " + str(x["training"]["cell"]["seed"]))
+        verdict = "[通过](" + audit_url + ")" if audit_url else "待复核"
+        lines.append(f"| {label} | {x['correct']} / {x['responses']} | {100*x['accuracy']:.2f}% "
+                     f"| [{first[:8]}]({url}) | {verdict} |")
+        packets.append(dict(endpoint=endpoint, packet=str(dest/"README.md"), packet_commit=first, packet_url=url,
+                            responses=x["responses"], correct=x["correct"], independent_audit=state,
+                            independent_audit_url=audit_url))
+    (PUB/"REVIEW_LINKS.md").write_text("\n".join(lines)+"\n")
+    return packets
+
+
+def status(stage,name=None,reason=None):
+    packets = published_packets()
     record = dict(utc=utc(),status=stage,current_run=name,reason=reason,order=ORDER,
                   endpoints_published=packets,expected_endpoints=14,budget=ledger(),
                   review_commit=REVIEW,scientific_source_commit=CODE)
     write(PUB/"STATUS.json",record)
-    publish([PUB/"STATUS.json"],"P012 A10: "+stage+" "+(name or "14 endpoints"))
+    publish([PUB/"REVIEW_LINKS.md",PUB/"STATUS.json"],"P012 A10: "+stage+" "+(name or "14 endpoints"))
 
 
 def await_run(name, parent=None, binding=None):

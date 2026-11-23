@@ -1,6 +1,6 @@
 # A10 LogiQA execution and endpoint reviews
 
-[Live queue, budgets and published packets](STATUS.json) · [Initial API receipt](INITIAL_BILLING_AND_STORAGE.json) · [Accepted data and source review](../../../audit/claude/20261122a/REVIEW_b8f08cc7_A10_combined_pretraining.md)
+[Direct links to published endpoint packets](REVIEW_LINKS.md) · [Live queue and budgets](STATUS.json) · [Initial API receipt](INITIAL_BILLING_AND_STORAGE.json) · [Accepted data and source review](../../../audit/claude/20261122a/REVIEW_b8f08cc7_A10_combined_pretraining.md)
 
 The 4B and 9B untrained baselines run first. The twelve 4B training arms follow the order in the amendment. Each trained checkpoint is evaluated on all 1,572 test items. Every endpoint gets a separate archive, manifest and result for independent review.
 
