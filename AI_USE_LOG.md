@@ -5308,3 +5308,5 @@ Codex also extracted a113-row diagnostic draft from299968existingoutputs and imm
 Codex applied the scientific source hashes accepted at 39cd2394 and launched the bounded 4B/9B baseline and twelve-arm queue. It implemented per-call admission, checkpoint binding, prediction publication and full endpoint archives. Nine offline accounting scenarios covered holds, release after measurement and retention of partial-call reservations. The repository contains hashed LogiQA inputs and allowed model outputs. The original input texts stay private.
 
 After 02713c98 accepted the candidate, Codex ran the diagnostic extractor and compared all 113 loss means to Claude’s independent reference. The maximum difference was zero. All 29 existing fields per row and the seven-row first-boxed appendix matched. Post-run material is in reports/p012_20261111/diagnostics_20261122_v2.
+
+Claude accepted the published diagnostic table v2 at dabb2a22. The acceptance receipt preserves the exact reviewed output hashes.

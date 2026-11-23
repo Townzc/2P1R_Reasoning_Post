@@ -4,7 +4,7 @@ The owner accepted Claude review 39cd2394 of all S1 evidence, the five reconstru
 
 S1 is complete at $40.314645282. Check each baseline against $6 and each training/evaluation against $125, with the A10 overall cap of $200. Use measured completed token upper bounds until provider settlement. Keep current reservations and apply the 1.5 forecast margin. Record a failed admission and stop. An overlength service rejection retains its inputs for inspection.
 
-Claude accepted the original 113 diagnostic rows in 39cd2394 and the final-64 column code in 02713c98. The updated table, all 113 per-run reference comparisons and the seven frozen first-boxed diagnostics are in `diagnostics_20261122_v2`. The post-run packet is c56a5c70. Earlier headers below describe historical states.
+Claude accepted the original 113 diagnostic rows in 39cd2394 and the final-64 column code in 02713c98. The updated table, all 113 per-run reference comparisons and the seven frozen first-boxed diagnostics are in `diagnostics_20261122_v2`. Claude accepted the post-run packet c56a5c70 at dabb2a22. Earlier headers below describe historical states.
 
 # Current P012 — 2026-11-23T06:41:27.958123+00:00; S1 complete, combined training review pending
 
