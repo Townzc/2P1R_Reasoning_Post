@@ -1,5 +1,5 @@
 {
-  "utc": "2026-11-23T07:41:00.126203+00:00",
+  "utc": "2026-11-23T07:51:55.078621+00:00",
   "status": "running",
   "current_run": "a10_tinker_lora_4b_logiqa_p_s17_v1",
   "reason": null,
@@ -68,39 +68,53 @@
         "bucket": "baseline",
         "completed": true,
         "token_upper_usd": 1.8243486749999998,
-        "reserved_usd": 0
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
       },
       {
         "run_id": "a10_logiqa_9b_baseline4096_s17_v1",
         "bucket": "baseline",
         "completed": true,
         "token_upper_usd": 1.479955254,
-        "reserved_usd": 0
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
       },
       {
         "run_id": "a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
         "bucket": "train_eval",
         "completed": true,
         "token_upper_usd": 1.9937082599999998,
-        "reserved_usd": 0
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
       },
       {
         "run_id": "a10_tinker_lora_4b_logiqa_l_s17_v1",
         "bucket": "train_eval",
         "completed": true,
         "token_upper_usd": 0.883850198,
-        "reserved_usd": 0
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
       },
       {
         "run_id": "a10_tinker_lora_4b_logiqa_p_s17_v1",
         "bucket": "train_eval",
         "completed": false,
         "token_upper_usd": 0,
-        "reserved_usd": 13.656243769
+        "reserved_usd": 13.656243769,
+        "exceeded_reference_limits": []
       }
     ],
     "total_accounted_usd": 46.496507668999996,
     "total_reserved_usd": 13.656243769
+  },
+  "remaining_queue_budget_authority": {
+    "commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051",
+    "path": "reports/p012_20261111/amendment10_execution_39cd2394_v1/OWNER_COMPLETION_BUDGET_20261122.json",
+    "original_reference_limits_usd": {
+      "train_eval": 125,
+      "A10_total": 200
+    },
+    "effect": "Publish any threshold crossing and continue the owner's frozen queue"
   },
   "review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
   "scientific_source_commit": "b76682c608e487e9ba2a0be7700430105d6a8792"
