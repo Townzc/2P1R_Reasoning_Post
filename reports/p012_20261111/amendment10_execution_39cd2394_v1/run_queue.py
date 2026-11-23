@@ -90,6 +90,8 @@ def ledger(replacing_evaluation=None):
     spent = {"baseline":0.0, "train_eval":0.0}
     reserved = dict(spent)
     details = []
+    pause_file = PUB / "OWNER_PAUSE_SEED29.json"
+    pause = read(pause_file) if pause_file.exists() else {}
     for p in sorted((PUB/"admissions").glob("*.json")):
         gate = read(p)
         if not gate["admitted"]:
@@ -104,10 +106,21 @@ def ledger(replacing_evaluation=None):
         if (gate.get("reserved_post_eval_usd") and ev != replacing_evaluation
                 and not (PUB/"admissions"/(ev+".json")).exists()):
             outstanding += gate["reserved_post_eval_usd"]
+        cancelled = name == pause.get("cancelled_training_run")
+        if cancelled:
+            usage_path = PUB / pause["training_usage_file"]
+            require(not done and sha(usage_path) == pause["training_usage_sha256"], "Cancelled training usage binding")
+            measured = read(usage_path)["incurred_training_token_cost_usd"]
+            require(measured == pause["incurred_training_token_cost_usd"], "Cancelled training charge")
+            outstanding = 0
         spent[bucket] += measured
         reserved[bucket] += outstanding
         details.append(dict(run_id=name,bucket=bucket,completed=done,token_upper_usd=measured,reserved_usd=outstanding,
                             exceeded_reference_limits=gate.get("exceeded_reference_limits", [])))
+        if cancelled:
+            details[-1].update(status="负责人暂停", failure=False, automatic_retry=False,
+                               provider_completed_updates=pause["provider_completed_updates"],
+                               training_input_tokens=pause["training_input_tokens"])
     s1 = read(PUB/"INITIAL_BILLING_AND_STORAGE.json")["S1_accounted_usd"]
     return dict(S1_accounted_usd=s1,spent=spent,reserved=reserved,line_items=details,
                 total_accounted_usd=s1+sum(spent.values()),total_reserved_usd=sum(reserved.values()))
@@ -349,6 +362,9 @@ def score(name, endpoint):
 
 
 def main():
+    if (PUB / "OWNER_PAUSE_SEED29.json").exists():
+        print("负责人暂停 A10 seed 29。")
+        return
     schedule_check()
     for endpoint in ORDER:
         packet = PUB/"endpoints"/endpoint

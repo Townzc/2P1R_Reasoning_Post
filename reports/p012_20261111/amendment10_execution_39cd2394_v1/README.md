@@ -2,6 +2,8 @@
 
 [Direct links to published endpoint packets](REVIEW_LINKS.md) · [Live queue and budgets](STATUS.json) · [Initial API receipt](INITIAL_BILLING_AND_STORAGE.json) · [Accepted data and source review](../../../audit/claude/20261122a/REVIEW_b8f08cc7_A10_combined_pretraining.md)
 
+On November 23 at 13:34 PST the owner paused seed 29. Tinker confirmed the interruption of P and recorded 587 completed updates, including one whose loss had not reached the local log. Its 5,478,983 training tokens cost $4.038010471 at the published rate. The P evaluation and the remaining four training arms had zero calls. The ledger holds $0 for the paused work. The two baseline and seven seed 17 packets are available above. [Owner decision](OWNER_PAUSE_SEED29.json) · [Per-step usage](pause_evidence/seed29_p_20261123/step_usage.jsonl)
+
 The 4B and 9B untrained baselines run first. The twelve 4B training arms follow the order in the amendment. Each trained checkpoint is evaluated on all 1,572 test items. Every endpoint gets a separate archive, manifest and result for independent review.
 
 Each call has a published [admission](admissions), [request](requests) and [launch receipt](launches). The timestamped prediction and output hash are published before scoring. Each finished packet is pushed before the next endpoint starts. The controller runs on the local Mac and needs connectivity and an awake system to submit later steps. User relays review requests to Claude.

@@ -9,6 +9,26 @@ import run_queue as q
 
 
 class CompletionBudgetTest(unittest.TestCase):
+    def test_cancelled_partial_call_is_booked_once_and_releases_its_evaluation(self):
+        books = q.ledger()
+        pause = q.read(q.PUB / "OWNER_PAUSE_SEED29.json")
+        partial = [x for x in books["line_items"] if x["run_id"] == pause["cancelled_training_run"]]
+        self.assertEqual(len(partial), 1)
+        self.assertFalse(partial[0]["completed"])
+        self.assertFalse(partial[0]["failure"])
+        self.assertEqual(partial[0]["token_upper_usd"], 4.038010471)
+        self.assertEqual(partial[0]["reserved_usd"], 0)
+        self.assertEqual(books["total_reserved_usd"], 0)
+        self.assertAlmostEqual(books["total_accounted_usd"], 98.010824751, places=9)
+
+    def test_owner_pause_exits_before_admission_or_any_training_call(self):
+        with TemporaryDirectory() as tmp, patch.object(q, "PUB", Path(tmp)):
+            (q.PUB / "OWNER_PAUSE_SEED29.json").write_text("{}")
+            with patch.object(q, "schedule_check") as check, patch.object(q, "await_run") as launch:
+                q.main()
+                check.assert_not_called()
+                launch.assert_not_called()
+
     def test_all_remaining_training_and_evaluations_cross_both_references(self):
         cells = q.read(q.OWNER_BUDGET)["remaining_training_endpoints"]
         self.assertEqual(cells, q.ORDER[3:])

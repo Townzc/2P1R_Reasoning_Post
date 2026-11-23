@@ -1,4 +1,8 @@
-# Current P012 — accepted A10 execution and diagnostic table, November 22, 2026 PST
+# Current P012 — A10 seed 29 paused by owner, November 23, 2026 PST
+
+The owner paused A10 seed 29 at 13:34 PST. Tinker acknowledged the interruption of P. The provider trace accounts for 587 completed updates and $4.038010471 of training. R, L, S2 and S4 have no launches. There is no outstanding reservation or automatic retry. The queue exits on its published `OWNER_PAUSE_SEED29.json` receipt. See `reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json` for the accounting and `REVIEW_LINKS.md` in that directory for the two baseline and seven seed 17 packets.
+
+# Historical P012 — accepted A10 execution and diagnostic table, November 22, 2026 PST
 
 The owner accepted Claude review 39cd2394 of all S1 evidence, the five reconstructed datasets and the A10 training and scoring sources. The finite A10 supervisor adopts the original 4B baseline and follows the frozen order through the 9B baseline and twelve 4B training arms. Use `reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json` for current progress, reservations and linked results. Each endpoint has a full evidence packet. Preserve existing calls when restoring the supervisor. The Mac must stay awake and online. Only the owner sends messages to Claude.
 

@@ -1,8 +1,8 @@
 {
-  "utc": "2026-11-23T20:15:24.361377+00:00",
-  "status": "running",
-  "current_run": "a10_tinker_lora_4b_logiqa_p_s29_v1",
-  "reason": null,
+  "utc": "2026-11-23T23:05:27.803109+00:00",
+  "status": "负责人暂停",
+  "current_run": null,
+  "reason": "负责人决定暂停 A10 的 seed 29，立即取消正在训练的 P，R、L、S2、S4 不启动。",
   "order": [
     "a10_logiqa_4b_baseline4096_s17_v1",
     "a10_logiqa_9b_baseline4096_s17_v1",
@@ -116,11 +116,11 @@
     "S1_accounted_usd": 40.314645282,
     "spent": {
       "baseline": 3.3043039289999996,
-      "train_eval": 50.353865068999994
+      "train_eval": 54.391875539999994
     },
     "reserved": {
       "baseline": 0.0,
-      "train_eval": 13.656243769
+      "train_eval": 0.0
     },
     "line_items": [
       {
@@ -191,9 +191,14 @@
         "run_id": "a10_tinker_lora_4b_logiqa_p_s29_v1",
         "bucket": "train_eval",
         "completed": false,
-        "token_upper_usd": 0,
-        "reserved_usd": 13.656243769,
-        "exceeded_reference_limits": []
+        "token_upper_usd": 4.038010471,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": [],
+        "status": "负责人暂停",
+        "failure": false,
+        "automatic_retry": false,
+        "provider_completed_updates": 587,
+        "training_input_tokens": 5478983
       },
       {
         "run_id": "a10_tinker_lora_4b_logiqa_r8_s17_greedy_v1",
@@ -260,8 +265,8 @@
         "exceeded_reference_limits": []
       }
     ],
-    "total_accounted_usd": 93.97281428,
-    "total_reserved_usd": 13.656243769
+    "total_accounted_usd": 98.010824751,
+    "total_reserved_usd": 0.0
   },
   "remaining_queue_budget_authority": {
     "commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051",
@@ -270,8 +275,47 @@
       "train_eval": 125,
       "A10_total": 200
     },
-    "effect": "Publish any threshold crossing and continue the owner's frozen queue"
+    "effect": "Publish any threshold crossing and continue the owner's frozen queue",
+    "seed29_paused_by": "reports/p012_20261111/amendment10_execution_39cd2394_v1/OWNER_PAUSE_SEED29.json"
   },
   "review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
-  "scientific_source_commit": "b76682c608e487e9ba2a0be7700430105d6a8792"
+  "scientific_source_commit": "b76682c608e487e9ba2a0be7700430105d6a8792",
+  "owner_pause": {
+    "decision_utc": "2026-11-23T21:34:34.173365+00:00",
+    "decision_pacific": "2026-11-23T13:34:34.173365-08:00",
+    "decision_file": "reports/p012_20261111/amendment10_execution_39cd2394_v1/OWNER_PAUSE_SEED29.json",
+    "decision_sha256": "bcf4562ff4ab3ed3423f03fc1d668827e0a0456f92e7f49286596293f9b6c52a",
+    "previous_status_commit": "b44a86551a9179d538d922a20ae8954832c5a85e",
+    "cancelled_training_run": "a10_tinker_lora_4b_logiqa_p_s29_v1",
+    "service_terminal_status": "interrupted",
+    "planned_updates": 1024,
+    "locally_logged_updates": 586,
+    "provider_completed_updates": 587,
+    "training_input_tokens": 5478983,
+    "incurred_training_token_cost_usd": 4.038010471,
+    "incurred_sampling_cost_usd": 0,
+    "provider_priced_invoice_usd": null,
+    "api_cost_data_through_utc": "2026-11-23T00:00:00Z",
+    "charge_basis": "Provider trace of 587 completed forward/backward batches, reconciled row by row at $0.737 per million training input tokens.",
+    "prior_training_and_evaluation_reservation_usd": 13.656243769,
+    "unspent_allowance_released_usd": 9.618233298,
+    "still_reserved_usd": 0,
+    "automatic_retry": false,
+    "failure": false,
+    "not_started_seed29_arms": [
+      "R",
+      "L",
+      "S2",
+      "S4"
+    ],
+    "not_started_seed29_runs": [
+      "a10_tinker_lora_4b_logiqa_r_s29_v1",
+      "a10_tinker_lora_4b_logiqa_l_s29_v1",
+      "a10_tinker_lora_4b_logiqa_s2_s29_v1",
+      "a10_tinker_lora_4b_logiqa_s4_s29_v1"
+    ],
+    "p_greedy_evaluation_started": false,
+    "seed17_trained_packets_published": 7,
+    "baseline_packets_published": 2
+  }
 }

@@ -5318,3 +5318,7 @@ The owner authorized completing the eleven remaining frozen training arms and th
 ## Tinker account model catalog — 2026-11-23
 
 Codex queried the authenticated SDK capabilities endpoint and joined all 40 returned IDs to the two official USD-per-million-token price feeds. The dated inventory includes the raw metadata, price snapshots, and total-parameter comparison. The inventory used zero paid calls.
+
+## A10 seed 29 owner pause — 2026-11-23
+
+Codex stopped the supervisor and P worker at the owner's direction and confirmed the interrupted session with Tinker. The service trace and frozen row order independently matched all 587 completed batches. The status books $4.038010471 of training and closes the reservation. The supervisor checks the pause receipt before admission or retry.

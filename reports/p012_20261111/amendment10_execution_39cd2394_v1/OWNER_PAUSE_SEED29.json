@@ -1,0 +1,58 @@
+{
+  "decision": "负责人暂停",
+  "reason": "负责人决定暂停 A10 的 seed 29，立即取消正在训练的 P，R、L、S2、S4 不启动。",
+  "decision_utc": "2026-11-23T21:34:34.173365+00:00",
+  "cancelled_training_run": "a10_tinker_lora_4b_logiqa_p_s29_v1",
+  "seed": 29,
+  "remaining_arms_paused": [
+    "R",
+    "L",
+    "S2",
+    "S4"
+  ],
+  "failure": false,
+  "automatic_retry": false,
+  "active_run": null,
+  "training_session_status": "client_finished",
+  "training_session_finish_reason": "interrupted",
+  "service_confirmation_utc": "2026-11-23T21:52:10.387942+00:00",
+  "cancelled_session_id_sha256": "284da5b43719f4ac28d12bd5d9734bcb9074d8cce03aee7098fc5e099a7113fb",
+  "cancelled_model_id_sha256": "c54e423d4572b6314a02ee4fc5a6fa41bb07a6c83a10c02073fed3c6c30dbe57",
+  "completed_packets_before_pause": 9,
+  "seed17_trained_packets_before_pause": 7,
+  "launched_utc": "2026-11-23T20:15:21.824986+00:00",
+  "planned_updates": 1024,
+  "last_local_loss_step": 586,
+  "provider_completed_updates": 587,
+  "training_input_tokens": 5478983,
+  "training_usd_per_million_tokens": 0.737,
+  "incurred_training_token_cost_usd": 4.038010471,
+  "incurred_evaluation_cost_usd": 0,
+  "future_reserved_usd": 0,
+  "estimated_net_invoice_charge_usd": null,
+  "charge_basis": "Completed Tinker training tokens times the published rate. The daily billing export has not yet priced this session.",
+  "training_usage_file": "pause_evidence/seed29_p_20261123/TRAINING_USAGE.json",
+  "training_usage_sha256": "11354d43ce96704a818ce49cfce310d62b43b5438d432eb4139102b2c54a6ec9",
+  "provider_verification": {
+    "queried_utc": "2026-11-23T23:04:34.152887+00:00",
+    "exact_match": "a10_tinker_lora_4b_logiqa_p_s29_v1",
+    "seed29_sessions": 1,
+    "seed29_arms_observed": [
+      "P"
+    ],
+    "last_training_request_time": "2026-11-23T21:34:19.410246+00:00",
+    "service_finish_type": "client_finished",
+    "service_finish_reason": "interrupted",
+    "checkpoints": 0,
+    "sampler_checkpoints": 0,
+    "seed29_completed_evaluations": 0
+  },
+  "billing_api": {
+    "method": "Tinker AdminClient.get_billing_usage",
+    "window_start_utc": "2026-11-22T00:00:00Z",
+    "window_end_utc": "2026-11-24T00:00:00Z",
+    "cost_data_through_utc": "2026-11-23T00:00:00Z",
+    "priced_rows_for_this_session": 0,
+    "private_response_sha256": "461683ee2e7fbecb5182b8d625c0ea13a651ba7896bac84eb505246a1a395af7"
+  }
+}
