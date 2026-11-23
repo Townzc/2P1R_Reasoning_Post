@@ -1,0 +1,18 @@
+--- a/reports/p012_20261111/diagnostics_20261122_v1/build_table.py
++++ b/reports/p012_20261111/diagnostics_20261122_v1/build_table.py
+@@ -180,0 +181,2 @@
++    assert expected_step >= 64
++    last64_mean = statistics.mean(step['loss'] for step in history[-64:])
+@@ -190,0 +193 @@
++        'last64_training_loss_mean':last64_mean,
+@@ -216 +219 @@
+-        '撞上限沿用原始输出的 length_capped 标记。token 长度是保存的 token_ids 数量，包含实际保存的终止 token；均值和中位数均包含撞上限输出。未撞上限准确率使用原标签并列出正确数/分母。最终损失取最后一个更新步的日志 loss，不使用全程平均 train_loss，也不是训练后重评损失；不同数据和模型的末批损失不能直接当作同一难度的评估分数。', '',
++        '撞上限沿用原始输出的 length_capped 标记。token 长度是保存的 token_ids 数量，包含实际保存的终止 token；均值和中位数均包含撞上限输出。未撞上限准确率使用原标签并列出正确数/分母。最终损失取最后一个更新步的日志 loss，不使用全程平均 train_loss，也不是训练后重评损失；不同数据和模型的末批损失不能直接当作同一难度的评估分数。最后 64 步训练损失均值按每步等权计算，包含最后一次更新。', '',
+@@ -218,2 +221,2 @@
+-        '| 范围/端点 | 模型 | 任务 | 平台 | 格 (P,K,E) | seed | 撞上限 % | token 均值 | token 中位数 | 未撞上限正确/总数 (%) | 最后一步 loss |',
+-        '|---|---|---|---|---|---:|---:|---:|---:|---|---:|']
++        '| 范围/端点 | 模型 | 任务 | 平台 | 格 (P,K,E) | seed | 撞上限 % | token 均值 | token 中位数 | 未撞上限正确/总数 (%) | 最后一步 loss | 最后 64 步训练损失均值 |',
++        '|---|---|---|---|---|---:|---:|---:|---:|---|---:|---:|']
+@@ -224 +227 @@
+-        lines.append(f"| {r['scope']}/{label} | {r['model'].split('/')[-1]} | {r['task']} | {r['platform']} | {pk} | {r['seed']} | {100*r['length_cap_rate']:.2f} | {r['output_tokens_mean']:.2f} | {r['output_tokens_median']:g} | {r['uncapped_correct']}/{r['uncapped_count']} ({accuracy}) | {r['final_training_loss']:.6f} |")
++        lines.append(f"| {r['scope']}/{label} | {r['model'].split('/')[-1]} | {r['task']} | {r['platform']} | {pk} | {r['seed']} | {100*r['length_cap_rate']:.2f} | {r['output_tokens_mean']:.2f} | {r['output_tokens_median']:g} | {r['uncapped_correct']}/{r['uncapped_count']} ({accuracy}) | {r['final_training_loss']:.6f} | {r['last64_training_loss_mean']:.6f} |")
