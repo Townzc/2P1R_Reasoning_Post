@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-21T04:42:00.810759+00:00",
-  "stage": "A9_M_review_pending_A10_S1_active",
+  "updated_utc": "2026-11-23T06:41:27.958123+00:00",
+  "stage": "S1_complete_combined_pretraining_and_diagnostics_review_pending",
   "plan": "P012 through A10 and accepted addenda1/2",
   "C1": {
     "assets_and_versions": "complete",
@@ -54,7 +54,7 @@
       "46e98da59753315694ebc4a0699f0b7c6c37a9c5",
       "b0d31d3a6793aff81735d1ca636f113f27e5af2d"
     ],
-    "pending_numeric_review": "4B GSM P plus retained R and conditional K8; all earlier b0 endpoints accepted. A8 Modal outputs not yet generated.",
+    "pending_numeric_review": "A10 S1 batch02-09 and complete nested data/source; diagnostic113-row draft. A8 and A9 R/M are fully accepted.",
     "registered_analysis_real_data_execution": "SUCCESS; accepted169754c4;13tests;run3a2984e3",
     "raw_outputs_immutable": true
   },
@@ -102,9 +102,9 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Amendment 8 is complete and independently audited; no experiment or automatic restart is queued.",
-    "Retain all A8 checkpoints and existing Tinker TTLs; report near 900 GiB of Modal volumes.",
-    "Before any separately authorized later Modal admission, read the first complete post-cleanup UTC storage day 11/16 after 11/17 00:00 UTC and apply 84404ebe."
+    "Owner relays A10 combined data/source packet b8f08cc7 and diagnostic draft to Claude.",
+    "Do not restart completed S1 generation or CPU packet scripts. Training/baselines await combined review and live financial admission.",
+    "Retain existing checkpoints and account settings; no further experiment authorized by this delivery."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -134,7 +134,8 @@
     "19af6f32186dbdc3f5286858abafa96b125256c3",
     "e84611a756c67fab41095db0e632cb48593dca86",
     "4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065",
-    "2121b7cb789e31a46e00692d5d5f88907850b75f"
+    "2121b7cb789e31a46e00692d5d5f88907850b75f",
+    "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -346,7 +347,9 @@
     "T4B_seed29_L_audit": "passed6af18b72",
     "T4B_seed29_all4_complete": true
   },
-  "pending_owner_actions": [],
+  "pending_owner_actions": [
+    "Relay complete A10 source/data review and diagnostic draft. Training/evaluation forecast133.906 exceeds125 subcap; retain existing gates and review forecast before later admission."
+  ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
     "arms": [
@@ -400,7 +403,11 @@
     "record": "review_53a565da/INTERPRETATION_CORRECTION.json"
   },
   "finite_continuation_queues": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
-  "background_status": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
+  "background_status": {
+    "S1_and_CPU_processors": "complete; exited",
+    "new_training_or_baselines": "not_started",
+    "remaining_authorized_execution_queue": []
+  },
   "amendment7_status": {
     "authorized": true,
     "authority_commit": "2289056089f9ff3467d490efe93a92a07effb063",
@@ -987,7 +994,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
+  "current_status_reference": "reports/p012_20261111/amendment10_push_recovery_20261122_v1/CURRENT_STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1402,7 +1409,13 @@
       "M01": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
       "M02": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
       "M03": "67f8eed9df2eb7d7545acf69fba9622579d1631b",
-      "R06": "5c32dcad69e980da981ad0521b1645149a912b8e"
+      "R06": "5c32dcad69e980da981ad0521b1645149a912b8e",
+      "M04": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+      "M05": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+      "M06": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+      "M07": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+      "M08": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+      "M09": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d"
     },
     "R06_infrastructure_retry": {
       "authorized": true,
@@ -1419,7 +1432,7 @@
     },
     "M_complete_review": {
       "commit": "a3125c846391008a87139a9a8a3de121f5b0c7ac",
-      "status": "independent_review_pending",
+      "status": "passed",
       "new_outputs": 7914,
       "analysis_endpoints": 32,
       "bindings": 476,
@@ -1428,7 +1441,8 @@
         "M-2": true,
         "M-3": true,
         "M-4": true
-      }
+      },
+      "accepted_review_commit": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d"
     },
     "Modal_queue_complete": {
       "utc": "2026-11-21T04:42:00.783199+00:00",
@@ -1458,110 +1472,52 @@
       "account_billing_or_storage_settings_changed": false
     },
     "A10_summary": {
-      "status": "running",
-      "qualified_rows": 1983,
-      "active_batch": {
-        "run_id": "a10_s1_batch05_v1",
-        "forecast_usd": 7.055108280000001
-      },
-      "S1_cap_usd": 100,
-      "A10_independent_cap_usd": 200,
-      "length_review_commit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
-      "cap_authority_commit": "c9a534808e65ec648da1995ba26ee52929509de9"
+      "stage": "S1_complete_combined_pretraining_and_diagnostics_review_pending",
+      "S1_qualified_pool": 4469,
+      "S1_outputs": 43200,
+      "active_batch": null,
+      "current_budget": {
+        "path": "reports/p012_20261111/amendment10_combined_training_review_v1/BUDGET_SETTLED.json",
+        "sha256": "d3e1c9afb16306f7e72a00f9c048bb71d55afb52e1e6451c6eaecd52528129ed"
+      }
     }
   },
-  "current_status_source": "reports/p012_20261111/amendment9_progress_v1/CURRENT_STATUS.json",
-  "historical_sections_note": "Latest amendment9_current/amendment10_current supersede earlier snapshots",
+  "current_status_source": "reports/p012_20261111/amendment10_push_recovery_20261122_v1/CURRENT_STATUS.json",
+  "historical_sections_note": "current_status_source, amendment10_current and current budget BUDGET_SETTLED.json supersede older snapshots. Historical generation reserve24.311 is released after settlement.",
   "amendment10_current": {
-    "utc": "2026-11-21T04:33:50.839636+00:00",
-    "status": "running",
-    "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
-    "generation_source_sha256": "1b113ab6ab5af4b465f93dd207820a7a8cd9a921df75d39c4f611ae16199cb74",
-    "controller_sha256": "9d6a1ce29f3de015aa85e9fc16a62de5ac8161a4bed95a2cace583b299b5e086",
-    "infrastructure_retry_used": 1,
-    "automatic_retries_remaining": 0,
-    "failed_attempt_reserve_usd": 24.3112068,
-    "successful_attempts_token_cost_usd": 18.316767855000002,
-    "qualified_rows": 1983,
-    "completed_batches": [
-      {
-        "run_id": "a10_s1_batch01_infra_retry1_v1",
-        "rows": 600,
-        "qualified": 501,
-        "token_cost_usd": 4.435845321,
-        "raw_sha256": "fd994e37a947e4d2be9d17184e8364cc91411ddcaf5041279f5dca0e9ebaaa4d",
-        "private_directory": ".local/p012_20261111/amendment10_v1/a10_s1_batch01_infra_retry1_v1",
-        "public_directory": "reports/p012_20261111/amendment10_s1_recovery_v1",
-        "token_counts_addendum": "reports/p012_20261111/amendment10_s1_addenda_v1/FIRST_BATCH_COUNTS_ADDENDUM.json"
-      },
-      {
-        "run_id": "a10_s1_batch02_v1",
-        "rows": 600,
-        "qualified": 501,
-        "token_cost_usd": 4.495627578,
-        "raw_sha256": "565eb922b6dceb5c632883ae0630956073c7958239b17dc5bf8947c3d3300e8a",
-        "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch02_v1",
-        "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch02_v1"
-      },
-      {
-        "run_id": "a10_s1_batch03_v1",
-        "rows": 600,
-        "qualified": 503,
-        "token_cost_usd": 4.7034055200000005,
-        "raw_sha256": "f3bce85323785c6c15dae614cfb836a32d7fc401eb9c69c927062939619db43d",
-        "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch03_v1",
-        "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch03_v1"
-      },
-      {
-        "run_id": "a10_s1_batch04_v1",
-        "rows": 600,
-        "qualified": 478,
-        "token_cost_usd": 4.6818894360000005,
-        "raw_sha256": "d2b046f34412d8b6a6c9111bc425d4ad5e32a8cefcdc24d9da540f62046a867f",
-        "private_directory": ".local/p012_20261111/amendment10_v1/batches/a10_s1_batch04_v1",
-        "public_directory": "reports/p012_20261111/amendment10_s1_v1/batches/a10_s1_batch04_v1"
-      }
-    ],
-    "active_batch": {
-      "run_id": "a10_s1_batch05_v1",
-      "forecast_usd": 7.055108280000001
+    "utc": "2026-11-23T06:41:27.958123+00:00",
+    "stage": "S1_complete_combined_pretraining_and_diagnostics_review_pending",
+    "S1_qualified_pool": 4469,
+    "S1_generated_questions": 5400,
+    "S1_outputs": 43200,
+    "batches": 9,
+    "active_batch": null,
+    "remaining_generation_queue": [],
+    "S1_and_CPU_processors_active": false,
+    "generation_and_qualification_sources_unchanged": true,
+    "review_packet_commit": "b8f08cc70d3e7d5b0fb9587855abcfa762c34ba0",
+    "review_packet": "reports/p012_20261111/amendment10_combined_training_review_v1/README.md",
+    "current_budget": {
+      "path": "reports/p012_20261111/amendment10_combined_training_review_v1/BUDGET_SETTLED.json",
+      "sha256": "d3e1c9afb16306f7e72a00f9c048bb71d55afb52e1e6451c6eaecd52528129ed"
     },
-    "S1_cap_usd": 100,
-    "A10_independent_cap_usd": 200,
-    "no_other_A10_jobs": true,
-    "length_review_commit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
-    "cap_authority_commit": "c9a534808e65ec648da1995ba26ee52929509de9",
-    "training_max_length": 8192,
-    "CPU_render_source_sha256": "3360ca269fe2962638d041ef678720ce6a8276dfd794f08ea9776e50197d96a4",
-    "controller_launch": {
-      "utc": "2026-11-21T03:45:14.578668+00:00",
-      "pid": 85398,
-      "source_sha256": "9d6a1ce29f3de015aa85e9fc16a62de5ac8161a4bed95a2cace583b299b5e086",
-      "starts_at_global_row": 600,
-      "first_batch_preserved": true,
-      "automatic_retries_remaining": 0,
-      "local_host_awake_online_required": true,
-      "no_training_launched": true
-    },
-    "first_batch_independent_audit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
-    "training_candidate": "reports/p012_20261111/amendment10_training_review_v1",
-    "training_and_baselines_started": false,
-    "independent_budget_owner_confirmation": "A10 independent USD200 overall hard cap",
-    "CPU_completion_processor": {
-      "launch": {
-        "utc": "2026-11-21T04:04:18.934717+00:00",
-        "pid": 86334,
-        "source_sha256": "d78e6d7d8fcb5e294b52342f89caaaa3cfc1572921b1152688ae4346ebea3ce7",
-        "paid_model_calls": 0,
-        "training_or_baseline_launch_allowed": false,
-        "local_host_awake_online_required": true
-      },
-      "status": {
-        "status": "waiting_for_existing_S1",
-        "paid_model_calls": 0,
-        "training_started": false,
-        "utc": "2026-11-21T04:04:18.966974+00:00"
-      }
-    }
+    "S1_accounted_usd": 40.314645282,
+    "failed_attempt_remaining_reserve_usd": 0,
+    "failed_attempt_settled_cost_usd": 0.79884687,
+    "historical_generation_ledger_note": "Original controller receipts preserve their conservative reserve at execution; current finances are BUDGET_SETTLED.json. Do not count the released failed reserve again.",
+    "training_evaluation_forecast_usd": 133.90605497099997,
+    "training_evaluation_subcap_usd": 125,
+    "whole_A10_forecast_usd": 179.49640778699998,
+    "A10_hard_cap_usd": 200,
+    "training_or_baselines_started": false,
+    "full_future_training_forecast_above_subcap": true,
+    "next": "Combined source/data review before any baseline or training; retain subcaps and live per-item admission. Refresh costs from baseline/L before subsequent admission.",
+    "diagnostic_table": "reports/p012_20261111/diagnostics_20261122_v1/TABLE.md",
+    "diagnostic_review_status": "draft_pending_Claude_review; prereview-order deviation recorded",
+    "A9_R_M_fully_accepted": true,
+    "M_review_commit": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+    "account_billing_or_power_settings_changed": false,
+    "external_messages_sent": false,
+    "local_keep_awake_needed_for_this_completed_scope": false
   }
 }

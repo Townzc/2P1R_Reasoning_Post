@@ -5296,3 +5296,9 @@ Codex recorded accepted first-batch audit and owner-approved length/budget adden
 ## A9 / A10 addenda — 2026-11-21T04:42:00.810759+00:00
 
 Codex recorded accepted first-batch audit and owner-approved length/budget addenda. CPU replay preserves all4,800 labels and all2,004 selected solutions; only length counts use the accepted8,192 guard. Batch2 continuation launched with identical generation and selection functions; failed reserve retained. All A9 R/M runs and complete M numerical analysis are published; R is accepted and M review is pending. The unchanged S1 generator and pinned CPU completion continue. No course prose,external message,account setting or frozen-result edit.
+
+## A10 recovery and requested diagnostics — 2026-11-23T06:41:27.958123+00:00
+
+Codex fetched and verified network-only push failure, used normal push, checked local and API evidence thatbatch09 had no prior paid call, and resumed its original request once using unchanged generation/selection functions. S1 reached4469parents from43200outputs and stopped. Pinned CPU scripts froze five nested datasets and prepared the combined source/data prereview. API settlement released the failed-attempt reserve; current budget and forecast133.906/125 are explicit. No training, account changes, source-text publication or external messages.
+
+Codex also extracted a113-row diagnostic draft from299968existingoutputs and immutable training logs. Material process deviation: the new descriptive script was run before Claude prereview required byP012section12. The deviation is recorded and disclosed; full table/source/input evidence is awaitingClaude review. Labels and original results remain unchanged. No course submission prose was drafted. A9Mreview2e35849a accepted via sidecars.
