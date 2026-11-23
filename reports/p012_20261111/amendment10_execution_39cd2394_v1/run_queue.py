@@ -115,12 +115,10 @@ def estimates(name, req, parent):
         return old["reserved_post_eval_usd"],0,"Previously reserved greedy evaluation forecast"
     training = req["cpu_counts"]["training_input_tokens"] * req["dose"]["epochs"] * req["prices_per_million"]["train"] / 1e6 * 1.5 + .10
     require(abs(training - req["forecast"]["training_buffered_usd"]) < 1e-9,"Reviewed training forecast")
-    refs = [FIRST[0]]
-    for endpoint in ORDER[2:ORDER.index(name)]:
-        if (PUB/"endpoints"/endpoint/"RESULTS.json").exists():
-            refs.append(evaluation_of(endpoint))
-    costs = [read(RUNS/ref/"result/USAGE.json")["upper_token_cost_usd"] for ref in refs]
-    return training,1.5*max(costs),"Frozen training tokens x train rate x 1.5 + $0.10; 1.5 x highest measured full 4B greedy token cost through preceding endpoint"
+    reference = FIRST[0] if name == ORDER[2] else evaluation_of(ORDER[2])
+    measured = read(RUNS/reference/"result/USAGE.json")["upper_token_cost_usd"]
+    return (training, 1.5 * measured,
+            "Frozen training tokens x train rate x 1.5 + $0.10; full 4B greedy token cost x 1.5 from " + reference)
 
 
 def resolve_request(name, parent=None, binding=None):

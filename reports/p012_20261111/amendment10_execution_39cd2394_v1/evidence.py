@@ -83,6 +83,9 @@ def training_binding(name):
     require(sum(step["target_tokens"] for step in losses) == cell["supervised_tokens"], "Target tokens")
     require(read(directory / "USAGE.json")["training_input_tokens"] == cell["training_input_tokens"],
             "Training input tokens")
+    server = read(directory / "SERVER_MODEL_INFO.json")
+    require(server["is_lora"] is True and server["lora_rank"] == req["rank"]
+            and server["model_data"]["model_name"] == req["model"], "Training service model and rank")
     sampler = read(directory / "SAMPLER.json")["path"]
     state = read(directory / "STATE.json")["path"]
     require(sampler.startswith("tinker://") and sampler.split("/")[2] == state.split("/")[2]
