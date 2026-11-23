@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-11-23T06:41:27.958123+00:00",
-  "stage": "S1_complete_combined_pretraining_and_diagnostics_review_pending",
+  "updated_utc": "2026-11-23T07:07:29.927603+00:00",
+  "stage": "A10_frozen_baselines_then_training_under_itemwise_gates",
   "plan": "P012 through A10 and accepted addenda1/2",
   "C1": {
     "assets_and_versions": "complete",
@@ -102,9 +102,8 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Owner relays A10 combined data/source packet b8f08cc7 and diagnostic draft to Claude.",
-    "Do not restart completed S1 generation or CPU packet scripts. Training/baselines await combined review and live financial admission.",
-    "Retain existing checkpoints and account settings; no further experiment authorized by this delivery."
+    "Use the active serial supervisor and reconcile each endpoint before the next admission.",
+    "Relay each independent-review packet and the refreshed diagnostic table to Claude."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -135,7 +134,9 @@
     "e84611a756c67fab41095db0e632cb48593dca86",
     "4f3bb1e1e0d4ab81b6f2ca5aa794a5da922ed065",
     "2121b7cb789e31a46e00692d5d5f88907850b75f",
-    "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d"
+    "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
+    "39cd239476400b4e0a1c5ada281e45f8879cb192",
+    "02713c9857f938b78df3af64aae62ff568d51264"
   ],
   "owner_pause_requested": false,
   "C3": {
@@ -236,17 +237,14 @@
     "amendment8_tinker_review_v1",
     "amendment8_A_results_review_v1",
     "review_204ad0ae",
-    "amendment8_T_admission_v1"
+    "amendment8_T_admission_v1",
+    "amendment10_execution_39cd2394_v1",
+    "diagnostics_20261122_v2"
   ],
   "latest_authorization": {
-    "utc": "2026-11-15T05:48:31.325840+00:00",
-    "authority_commit": "5e1f9128180f1dcd222fc1e33fe691ec01030f38",
-    "previous_result_audit": "b0d31d3a6793aff81735d1ca636f113f27e5af2d",
-    "GSM_queue": "amendment8_gsm_reduction_v1/K8_GATES.json",
-    "modal_source_review_commit": "ff567d06ba39fd1052a72c558e69dbe98f09dd24",
-    "modal_source_review_status": "accepted_and_applied_7883df08",
-    "T_group_status": "not_started_conditional_on_A_result_audit",
-    "cleanup_authority_commit": "fb5c77bbf5a46c5d30843fb9f00a94aef1255dfa"
+    "scope": "A10 baselines and twelve reviewed training arms",
+    "owner_accepted_review": "39cd239476400b4e0a1c5ada281e45f8879cb192",
+    "diagnostic_preuse_review": "02713c9857f938b78df3af64aae62ff568d51264"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -348,7 +346,7 @@
     "T4B_seed29_all4_complete": true
   },
   "pending_owner_actions": [
-    "Relay complete A10 source/data review and diagnostic draft. Training/evaluation forecast133.906 exceeds125 subcap; retain existing gates and review forecast before later admission."
+    "Relay the post-run diagnostic packet c56a5c701cef5042417d505f367c42566644cd74 and completed A10 endpoint packets."
   ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
@@ -404,9 +402,9 @@
   },
   "finite_continuation_queues": "reports/p012_20261111/review_2121b7cb/CURRENT_STATUS.json",
   "background_status": {
-    "S1_and_CPU_processors": "complete; exited",
-    "new_training_or_baselines": "not_started",
-    "remaining_authorized_execution_queue": []
+    "S1_and_CPU_processors": "complete",
+    "A10_finite_supervisor": "reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json",
+    "completion_rule": "14 published endpoint packets or the first failed hard gate"
   },
   "amendment7_status": {
     "authorized": true,
@@ -994,7 +992,7 @@
     "T_started": false,
     "T_forecast_usd": 33.99006259125
   },
-  "current_status_reference": "reports/p012_20261111/amendment10_push_recovery_20261122_v1/CURRENT_STATUS.json",
+  "current_status_reference": "reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json",
   "current_84404ebe": {
     "authority_commit": "84404ebe3ef55e5409f7f13cd94019f989d2444c",
     "manifest_commit": "d46bf25f311049719e86eb814d9733263e3c3a8a",
@@ -1105,19 +1103,10 @@
   },
   "overnight_policy_reference": "reports/p012_20261111/overnight_continuation_20261114_v1/POLICY_AND_HOST_CHECK.json",
   "overnight_host_dependency": {
-    "local_host_awake_required": false,
-    "network_required": false,
-    "currently_on_AC": true,
-    "owner_keepawake_command": "caffeinate -is -t 43200",
-    "assistant_executed_keepawake_command": false,
-    "owner_keepawake_command_observed_running": false,
-    "caffeinate_pid": 83568,
-    "sleep_assertions_active": false,
-    "remaining_seconds": 0,
-    "queue_complete_no_keepawake_needed": true,
-    "caffeinate_observed_running_now": false,
-    "scope": "Completed A8 and reduced GSM queues",
-    "observation_reference": "reports/p012_20261111/amendment8_T_results_review_v1/COMPLETION_AND_CHECKS.json"
+    "scope": "A10 serial execution and endpoint publication",
+    "local_host_awake_required": true,
+    "network_required": true,
+    "settings_changed": false
   },
   "current_night_progress_20261115": {
     "C_complete": 5,
@@ -1482,11 +1471,11 @@
       }
     }
   },
-  "current_status_source": "reports/p012_20261111/amendment10_push_recovery_20261122_v1/CURRENT_STATUS.json",
+  "current_status_source": "reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json",
   "historical_sections_note": "current_status_source, amendment10_current and current budget BUDGET_SETTLED.json supersede older snapshots. Historical generation reserve24.311 is released after settlement.",
   "amendment10_current": {
-    "utc": "2026-11-23T06:41:27.958123+00:00",
-    "stage": "S1_complete_combined_pretraining_and_diagnostics_review_pending",
+    "utc": "2026-11-23T07:07:29.927603+00:00",
+    "stage": "A10_frozen_baselines_then_training_under_itemwise_gates",
     "S1_qualified_pool": 4469,
     "S1_generated_questions": 5400,
     "S1_outputs": 43200,
@@ -1509,15 +1498,23 @@
     "training_evaluation_subcap_usd": 125,
     "whole_A10_forecast_usd": 179.49640778699998,
     "A10_hard_cap_usd": 200,
-    "training_or_baselines_started": false,
+    "training_or_baselines_started": true,
     "full_future_training_forecast_above_subcap": true,
-    "next": "Combined source/data review before any baseline or training; retain subcaps and live per-item admission. Refresh costs from baseline/L before subsequent admission.",
-    "diagnostic_table": "reports/p012_20261111/diagnostics_20261122_v1/TABLE.md",
-    "diagnostic_review_status": "draft_pending_Claude_review; prereview-order deviation recorded",
+    "next": [
+      "Use the active serial supervisor and reconcile each endpoint before the next admission.",
+      "Relay each independent-review packet and the refreshed diagnostic table to Claude."
+    ],
+    "diagnostic_table": "reports/p012_20261111/diagnostics_20261122_v2/TABLE.md",
+    "diagnostic_review_status": "113 original rows accepted; last64 pre-use accepted; 113 independent numerical matches; post-run packet ready",
     "A9_R_M_fully_accepted": true,
     "M_review_commit": "2e35849aaad355d9a23d9be2b4d7db4e42bdd33d",
     "account_billing_or_power_settings_changed": false,
     "external_messages_sent": false,
-    "local_keep_awake_needed_for_this_completed_scope": false
+    "local_keep_awake_needed_for_this_completed_scope": false,
+    "accepted_pretraining_review": "39cd239476400b4e0a1c5ada281e45f8879cb192",
+    "diagnostic_pre_use_review": "02713c9857f938b78df3af64aae62ff568d51264",
+    "diagnostic_postrun_packet": "c56a5c701cef5042417d505f367c42566644cd74",
+    "active_queue": "reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json",
+    "local_host_awake_and_network_required_for_active_A10": true
   }
 }

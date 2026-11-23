@@ -5302,3 +5302,9 @@ Codex recorded accepted first-batch audit and owner-approved length/budget adden
 Codex fetched and verified network-only push failure, used normal push, checked local and API evidence thatbatch09 had no prior paid call, and resumed its original request once using unchanged generation/selection functions. S1 reached4469parents from43200outputs and stopped. Pinned CPU scripts froze five nested datasets and prepared the combined source/data prereview. API settlement released the failed-attempt reserve; current budget and forecast133.906/125 are explicit. No training, account changes, source-text publication or external messages.
 
 Codex also extracted a113-row diagnostic draft from299968existingoutputs and immutable training logs. Material process deviation: the new descriptive script was run before Claude prereview required byP012section12. The deviation is recorded and disclosed; full table/source/input evidence is awaitingClaude review. Labels and original results remain unchanged. No course submission prose was drafted. A9Mreview2e35849a accepted via sidecars.
+
+## A10 accepted execution and diagnostic table update — 2026-11-23T07:07:29.927603+00:00
+
+Codex applied the scientific source hashes accepted at 39cd2394 and launched the bounded 4B/9B baseline and twelve-arm queue. It implemented per-call admission, checkpoint binding, prediction publication and full endpoint archives. Nine offline accounting scenarios covered holds, release after measurement and retention of partial-call reservations. The repository contains hashed LogiQA inputs and allowed model outputs. The original input texts stay private.
+
+After 02713c98 accepted the candidate, Codex ran the diagnostic extractor and compared all 113 loss means to Claude’s independent reference. The maximum difference was zero. All 29 existing fields per row and the seven-row first-boxed appendix matched. Post-run material is in reports/p012_20261111/diagnostics_20261122_v2.

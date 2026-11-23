@@ -1,3 +1,11 @@
+# Current P012 — accepted A10 execution and diagnostic table, November 22, 2026 PST
+
+The owner accepted Claude review 39cd2394 of all S1 evidence, the five reconstructed datasets and the A10 training and scoring sources. The finite A10 supervisor adopts the original 4B baseline and follows the frozen order through the 9B baseline and twelve 4B training arms. Use `reports/p012_20261111/amendment10_execution_39cd2394_v1/STATUS.json` for current progress, reservations and linked results. Each endpoint has a full evidence packet. Preserve existing calls when restoring the supervisor. The Mac must stay awake and online. Only the owner sends messages to Claude.
+
+S1 is complete at $40.314645282. Check each baseline against $6 and each training/evaluation against $125, with the A10 overall cap of $200. Use measured completed token upper bounds until provider settlement. Keep current reservations and apply the 1.5 forecast margin. Record a failed admission and stop. An overlength service rejection retains its inputs for inspection.
+
+Claude accepted the original 113 diagnostic rows in 39cd2394 and the final-64 column code in 02713c98. The updated table, all 113 per-run reference comparisons and the seven frozen first-boxed diagnostics are in `diagnostics_20261122_v2`. The post-run packet is c56a5c70. Earlier headers below describe historical states.
+
 # Current P012 — 2026-11-23T06:41:27.958123+00:00; S1 complete, combined training review pending
 
 Owner2026-11-22 recovery completed. Initial push failure was network curl56, not divergence; fetch and normal push passed, no force. Batch09 had never reached generate: no result directory and no API session. Its unchanged frozen request ran once. S1 stopped after batch09 with4,469 qualifying parents from5,400questions /43,200outputs. Five nested private datasets and14 candidate requests (2baselines,12training) are prepared. Generation and CPU packet processors exited; do not restart any old controller. No local keep-awake requirement remains for this finished scope.
