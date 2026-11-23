@@ -1,6 +1,6 @@
 {
-  "utc": "2026-11-23T07:05:52.427626+00:00",
-  "status": "running",
+  "utc": "2026-11-23T07:09:18.984715+00:00",
+  "status": "endpoint_published",
   "current_run": "a10_logiqa_4b_baseline4096_s17_v1",
   "reason": null,
   "order": [
@@ -19,29 +19,37 @@
     "a10_tinker_lora_4b_logiqa_s2_s29_v1",
     "a10_tinker_lora_4b_logiqa_s4_s29_v1"
   ],
-  "endpoints_published": [],
+  "endpoints_published": [
+    {
+      "endpoint": "a10_logiqa_4b_baseline4096_s17_v1",
+      "packet": "reports/p012_20261111/amendment10_execution_39cd2394_v1/endpoints/a10_logiqa_4b_baseline4096_s17_v1/README.md",
+      "responses": 1572,
+      "correct": 1198,
+      "independent_audit": "pending_or_see_audit_sidecar"
+    }
+  ],
   "expected_endpoints": 14,
   "budget": {
     "S1_accounted_usd": 40.314645282,
     "spent": {
-      "baseline": 0.0,
+      "baseline": 1.8243486749999998,
       "train_eval": 0.0
     },
     "reserved": {
-      "baseline": 2.9086734824999994,
+      "baseline": 0.0,
       "train_eval": 0.0
     },
     "line_items": [
       {
         "run_id": "a10_logiqa_4b_baseline4096_s17_v1",
         "bucket": "baseline",
-        "completed": false,
-        "token_upper_usd": 0,
-        "reserved_usd": 2.9086734824999994
+        "completed": true,
+        "token_upper_usd": 1.8243486749999998,
+        "reserved_usd": 0
       }
     ],
-    "total_accounted_usd": 40.314645282,
-    "total_reserved_usd": 2.9086734824999994
+    "total_accounted_usd": 42.138993957000004,
+    "total_reserved_usd": 0.0
   },
   "review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
   "scientific_source_commit": "b76682c608e487e9ba2a0be7700430105d6a8792"
