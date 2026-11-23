@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import importlib.metadata
+import hashlib
 import json
 import math
 import os
@@ -69,7 +70,7 @@ def load_renderer(request):
     return tokenizer, renderer
 
 
-def rendered_datum(row, tokenizer, renderer):
+def rendered_datum(row, tokenizer, renderer, *, max_length=4096):
     from tinker_cookbook import renderers
     from tinker_cookbook.supervised.common import datum_from_model_input_weights
     messages = [{'role':'user', 'content':row['problem']},
@@ -90,7 +91,9 @@ def rendered_datum(row, tokenizer, renderer):
         raise ValueError('Prompt mask or assistant response boundary changed')
     if ids[-1] != tokenizer.convert_tokens_to_ids('<|im_end|>') or w[-1] != 1:
         raise ValueError('Assistant end token must be scored')
-    if len(ids) > 4096:
+    if max_length not in (4096,8192):
+        raise ValueError("Unregistered training length")
+    if len(ids) > max_length:
         raise ValueError('Overlength training row; never truncate')
     datum = datum_from_model_input_weights(mi, weights, max_length=None, reduction='none')
     return datum, {'input_token_ids':ids, 'loss_weights':w, 'prompt_tokens':len(prompt),
@@ -120,14 +123,29 @@ def generation_messages(row):
     return [{'role':'user','content':prompt_text(row['problem'],'omi2')}]
 
 
+def render_samples(rows, rendered, private_task=False):
+    if not private_task:
+        return [dict(rows[i],**rendered[i]) for i in range(min(3,len(rows)))]
+    # Prompt text and reversible prompt tokens stay in private inputs.
+    return [{'parent_id':rows[i]['parent_id'],'solution_hash':rows[i]['solution_hash'],
+        'solution':rows[i]['solution'],'draw':rows[i]['draw'],
+        'prompt_sha256':hashlib.sha256(rows[i]['problem'].encode()).hexdigest(),
+        'rendered_tokens_sha256':hashlib.sha256(json.dumps(rendered[i]['input_token_ids']).encode()).hexdigest(),
+        **{k:rendered[i][k] for k in ('prompt_tokens','target_tokens','generation_parity','supervised_parity_through_im_end')}}
+        for i in range(min(3,len(rows)))]
+
+
 def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, temperature=0.0, seed=17,
              concurrency=32):
     import tinker
     if not isinstance(concurrency, int) or not 1 <= concurrency <= 64:
         raise ValueError('Sampling concurrency must be between1and64')
     output.mkdir(exist_ok=False)
+    private_task = input_spec['task'] == 'logiqa'
+    if private_task and (n != 1 or temperature != 0 or len(rows) != 1572):
+        raise ValueError('A10 LogiQA requires full1572 greedy evaluation')
     cfg={'model':client.model_path if getattr(client,'model_path',None) else 'tinker_lora',
-         'protocol':'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
+         'protocol':'logiqa_a10' if private_task else 'omi2','task':input_spec['task'],'n':n,'temperature':temperature,
          'top_p':1.0,'top_k':-1,'max_tokens':4096,'max_model_len':8192,'seed':seed}
     write_json(output/'MANIFEST.json',{'config':cfg,'input_sha256':input_spec['sha256'],
         'track':'tinker_lora','renderer':RENDERER,'stop_sequences':renderer.get_stop_sequences(),
@@ -135,6 +153,9 @@ def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, tempera
     usage={'prefill_tokens_uncached_upper':0,'completion_tokens':0,'prompt_cache_hit_tokens':0}
     def one(item):
         i,row,j=item
+        if private_task and (not row.get('messages') or
+                             len(row['messages']) != 1 or row['messages'][0]['role'] != 'user'):
+            raise ValueError('A10 uses the frozen full prompt as one user message')
         messages=generation_messages(row)
         prompt=renderer.build_generation_prompt(messages)
         hf=tokenizer.apply_chat_template(messages,add_generation_prompt=True,enable_thinking=False,return_dict=False)
@@ -154,6 +175,12 @@ def generate(client, tokenizer, renderer, rows, input_spec, output, n=1, tempera
                 'tinker_stop_reason':seq.stop_reason,'stopped_on_terminator':seq.stop_reason=='stop',
                 'length_capped':seq.stop_reason=='length','string_stop':False,
                 'sequence_id':seq.sequence_id,'sampling_seed':draw_seed})
+            if private_task:
+                record=records[-1]
+                record.pop('prompt_token_ids')
+                record.update(prompt_tokens=prompt.length,
+                    prompt_tokens_sha256=hashlib.sha256(json.dumps(prompt.to_ints()).encode()).hexdigest(),
+                    prompt_sha256=hashlib.sha256(messages[0]['content'].encode()).hexdigest())
         return records, prompt.length, response.prompt_cache_hit_tokens
     with (output/'raw.jsonl').open('x') as f, ThreadPoolExecutor(max_workers=concurrency) as pool:
         jobs=((i,row,j) for i,row in enumerate(rows) for j in range(n))
@@ -188,8 +215,8 @@ def run(request, output):
         if mode in ('smoke','train','nll'):
             rows=read_rows(request['dataset']);datums=[];rendered=[]
             for row in rows:
-                d,e=rendered_datum(row,tokenizer,renderer);datums.append(d);rendered.append(e)
-            write_json(output/'RENDER_SAMPLES.json',[dict(rows[i],**rendered[i]) for i in range(min(3,len(rows)))])
+                d,e=rendered_datum(row,tokenizer,renderer,max_length=8192 if request.get("task")=="logiqa" else 4096);datums.append(d);rendered.append(e)
+            write_json(output/'RENDER_SAMPLES.json',render_samples(rows,rendered,request.get('task') == 'logiqa'))
             client=service.create_lora_training_client(base_model=request['model'],rank=32,seed=request['seed'],
                 train_mlp=True,train_attn=True,train_unembed=True).result()
             write_json(output/'SERVER_MODEL_INFO.json',client.get_info().model_dump(mode='json'))

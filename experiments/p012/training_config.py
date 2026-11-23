@@ -29,6 +29,9 @@ CELLS.update({
 # A8 conditional Tinker T group; activation requires Claude A-group verdict.
 CELLS.update({"A8_P1024_K2_E4": (1024, 2, 4)})
 
+# A10 LogiQA exploratory half-budget repetition control; review before use.
+CELLS.update({"A10_R8": (512, 1, 8)})
+
 
 def training_config(model: str, revision: str, family: str, dataset: str,
                     dataset_dir: str, output_dir: str, seed: int | None = None,
