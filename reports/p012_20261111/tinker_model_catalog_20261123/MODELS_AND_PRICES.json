@@ -1,0 +1,771 @@
+{
+  "snapshot_date_pacific": "2026-11-23",
+  "capabilities_query": {
+    "method": "tinker.ServiceClient.get_server_capabilities",
+    "started_utc": "2026-11-23T17:22:52.647129+00:00",
+    "returned_utc": "2026-11-23T17:22:54.366588+00:00",
+    "returned_pacific": "2026-11-23T09:22:54.366588-08:00",
+    "sdk_version": "0.39.0",
+    "response_file": "CAPABILITIES.json",
+    "response_file_sha256": "fa52e8fed58fd1deeaa810270a700d49ca62a6b08121ffb1f1d0d4e43a80b25e"
+  },
+  "price_source_page": "https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/",
+  "price_sources": {
+    "models.json": {
+      "url": "https://tinker-docs.thinkingmachines.ai/tinker/models.json",
+      "retrieved_utc": "2026-11-23T17:24:24.102067+00:00",
+      "sha256": "b7ca85897d6b7f1d8c8d477a1873f38c5735f32b445522fda2df87ebf81a12f4",
+      "snapshot": "sources/models.json"
+    },
+    "serverless.json": {
+      "url": "https://tinker-docs.thinkingmachines.ai/tinker/serverless.json",
+      "retrieved_utc": "2026-11-23T17:24:24.376210+00:00",
+      "sha256": "ca6f74a667d6ff200e60fd5b707fbd9db20fce8b4c7b767d342eb10f6810854d",
+      "snapshot": "sources/serverless.json"
+    }
+  },
+  "currency": "USD",
+  "tokens_per_price_unit": 1000000,
+  "endpoints": 40,
+  "trainable_endpoints": 38,
+  "sampling_only_endpoints": 2,
+  "distinct_model_card_urls": 24,
+  "small_model_check": {
+    "threshold_total_parameters_exclusive": 4000000000,
+    "available_below_threshold": [],
+    "requested_llama_ids_returned": {
+      "meta-llama/Llama-3.2-1B": false,
+      "meta-llama/Llama-3.2-1B-Instruct": false,
+      "meta-llama/Llama-3.2-3B": false,
+      "meta-llama/Llama-3.2-3B-Instruct": false
+    },
+    "qwen35_below_threshold": [],
+    "smallest_total_parameters": 4000000000,
+    "smallest_available_ids": [
+      "Qwen/Qwen3.5-4B",
+      "Qwen/Qwen3.5-4B:peft:262144"
+    ]
+  },
+  "models": [
+    {
+      "model_id": "Qwen/Qwen3-8B",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 32768,
+      "model_card": "https://huggingface.co/Qwen/Qwen3-8B",
+      "total_parameters": 8200000000,
+      "active_parameters": 8200000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "0.44",
+        "sampling_output": "0.60",
+        "sampling_input": "0.195",
+        "sampling_cached_input": "0.039"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-35B-A3B-Base",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-35B-A3B-Base",
+      "total_parameters": 35000000000,
+      "active_parameters": 3000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.177",
+        "sampling_output": "1.335",
+        "sampling_input": "0.54",
+        "sampling_cached_input": "0.108"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-397B-A17B",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "total_parameters": 397000000000,
+      "active_parameters": 17000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "6.60",
+        "sampling_output": "7.50",
+        "sampling_input": "1.65",
+        "sampling_cached_input": "0.33"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-397B-A17B:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "total_parameters": 397000000000,
+      "active_parameters": 17000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "12.00",
+        "sampling_output": "7.50",
+        "sampling_input": "1.65",
+        "sampling_cached_input": "0.33"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-4B",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "total_parameters": 4000000000,
+      "active_parameters": 4000000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "0.737",
+        "sampling_output": "1.005",
+        "sampling_input": "0.33",
+        "sampling_cached_input": "0.066"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-4B:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "total_parameters": 4000000000,
+      "active_parameters": 4000000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.34",
+        "sampling_output": "1.005",
+        "sampling_input": "0.33",
+        "sampling_cached_input": "0.066"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-9B",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-9B",
+      "total_parameters": 9000000000,
+      "active_parameters": 9000000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.463",
+        "sampling_output": "0.807",
+        "sampling_input": "0.30",
+        "sampling_cached_input": "0.06"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.5-9B-Base",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.5-9B-Base",
+      "total_parameters": 9000000000,
+      "active_parameters": 9000000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.463",
+        "sampling_output": "0.807",
+        "sampling_input": "0.30",
+        "sampling_cached_input": "0.06"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.6-35B-A3B",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "total_parameters": 35000000000,
+      "active_parameters": 3000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.177",
+        "sampling_output": "1.335",
+        "sampling_input": "0.45",
+        "sampling_cached_input": "0.09"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.6-35B-A3B:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "total_parameters": 35000000000,
+      "active_parameters": 3000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "2.14",
+        "sampling_output": "1.335",
+        "sampling_input": "0.45",
+        "sampling_cached_input": "0.09"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.8-27B",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "total_parameters": 27000000000,
+      "active_parameters": 27000000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "4.103",
+        "sampling_output": "5.595",
+        "sampling_input": "0.6975",
+        "sampling_cached_input": "0.1395"
+      }
+    },
+    {
+      "model_id": "Qwen/Qwen3.8-27B:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "total_parameters": 27000000000,
+      "active_parameters": 27000000000,
+      "architecture": "Dense",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "7.46",
+        "sampling_output": "5.595",
+        "sampling_input": "0.6975",
+        "sampling_cached_input": "0.1395"
+      }
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "total_parameters": 552000000000,
+      "active_parameters": 16000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "4.98",
+        "sampling_output": "3.60",
+        "sampling_input": "0.60",
+        "sampling_cached_input": "0.12"
+      }
+    },
+    {
+      "model_id": "deepseek-ai/DeepSeek-V4.1-Flash:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "total_parameters": 552000000000,
+      "active_parameters": 16000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "4.98",
+        "sampling_output": "3.60",
+        "sampling_input": "0.60",
+        "sampling_cached_input": "0.12"
+      }
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 32768,
+      "model_card": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "total_parameters": 1000000000000,
+      "active_parameters": 32000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "4.84",
+        "sampling_output": "5.49",
+        "sampling_input": "2.205",
+        "sampling_cached_input": "0.441"
+      }
+    },
+    {
+      "model_id": "moonshotai/Kimi-K2.6:peft:131072",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 131072,
+      "model_card": "https://huggingface.co/moonshotai/Kimi-K2.6",
+      "total_parameters": 1000000000000,
+      "active_parameters": 32000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "15.40",
+        "sampling_output": "5.49",
+        "sampling_input": "2.205",
+        "sampling_cached_input": "0.441"
+      }
+    },
+    {
+      "model_id": "moonshotai/Kimi-K3.1-Pro:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+      "total_parameters": 2800000000000,
+      "active_parameters": 104000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "32.00",
+        "sampling_output": "25.00",
+        "sampling_input": "6.00",
+        "sampling_cached_input": "1.20"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "total_parameters": 120000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "1.276",
+        "sampling_output": "1.44",
+        "sampling_input": "0.57",
+        "sampling_cached_input": "0.114"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "total_parameters": 120000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "2.32",
+        "sampling_output": "1.44",
+        "sampling_input": "0.57",
+        "sampling_cached_input": "0.114"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "total_parameters": 550000000000,
+      "active_parameters": 55000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "5.478",
+        "sampling_output": "6.225",
+        "sampling_input": "1.80",
+        "sampling_cached_input": "0.36"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "total_parameters": 550000000000,
+      "active_parameters": 55000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "9.96",
+        "sampling_output": "6.225",
+        "sampling_input": "1.80",
+        "sampling_cached_input": "0.36"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "total_parameters": 30000000000,
+      "active_parameters": 3000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "0.44",
+        "sampling_output": "0.495",
+        "sampling_input": "0.184",
+        "sampling_cached_input": "0.0368"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "total_parameters": 30000000000,
+      "active_parameters": 3000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "0.80",
+        "sampling_output": "0.495",
+        "sampling_input": "0.184",
+        "sampling_cached_input": "0.0368"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "total_parameters": 120000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "1.276",
+        "sampling_output": "1.44",
+        "sampling_input": "0.57",
+        "sampling_cached_input": "0.114"
+      }
+    },
+    {
+      "model_id": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "total_parameters": 120000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": "Limited-time 50% discount",
+      "usd_per_million_tokens": {
+        "training": "2.32",
+        "sampling_output": "1.44",
+        "sampling_input": "0.57",
+        "sampling_cached_input": "0.114"
+      }
+    },
+    {
+      "model_id": "openai/gpt-oss-120b",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 32768,
+      "model_card": "https://huggingface.co/openai/gpt-oss-120b",
+      "total_parameters": 117000000000,
+      "active_parameters": 5100000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "0.737",
+        "sampling_output": "0.84",
+        "sampling_input": "0.33",
+        "sampling_cached_input": "0.066"
+      }
+    },
+    {
+      "model_id": "openai/gpt-oss-120b:peft:131072",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 131072,
+      "model_card": "https://huggingface.co/openai/gpt-oss-120b",
+      "total_parameters": 117000000000,
+      "active_parameters": 5100000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "2.33",
+        "sampling_output": "0.84",
+        "sampling_input": "0.33",
+        "sampling_cached_input": "0.066"
+      }
+    },
+    {
+      "model_id": "openai/gpt-oss-20b",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 32768,
+      "model_card": "https://huggingface.co/openai/gpt-oss-20b",
+      "total_parameters": 21000000000,
+      "active_parameters": 3600000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "0.396",
+        "sampling_output": "0.45",
+        "sampling_input": "0.18",
+        "sampling_cached_input": "0.036"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling",
+      "total_parameters": 975000000000,
+      "active_parameters": 41000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "5.61",
+        "sampling_output": "4.68",
+        "sampling_input": "1.87",
+        "sampling_cached_input": "0.374"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-2-Mini",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 1048576,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "total_parameters": 26400000000,
+      "active_parameters": 5400000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "0.75",
+        "sampling_output": "0.50",
+        "sampling_input": "0.15",
+        "sampling_cached_input": "0.015"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-2-Mini:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 1048576,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "total_parameters": 26400000000,
+      "active_parameters": 5400000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.50",
+        "sampling_output": "0.50",
+        "sampling_input": "0.15",
+        "sampling_cached_input": "0.015"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-2-Small",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 1048576,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+      "total_parameters": 594000000000,
+      "active_parameters": 17000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.50",
+        "sampling_output": "1.00",
+        "sampling_input": "0.30",
+        "sampling_cached_input": "0.03"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-2-Small:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 1048576,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+      "total_parameters": 594000000000,
+      "active_parameters": 17000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "3.00",
+        "sampling_output": "1.00",
+        "sampling_input": "0.30",
+        "sampling_cached_input": "0.03"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-Small",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 65536,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-Small",
+      "total_parameters": 276000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "1.73",
+        "sampling_output": "1.44",
+        "sampling_input": "0.58",
+        "sampling_cached_input": "0.116"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-Small:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-Small",
+      "total_parameters": 276000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "3.47",
+        "sampling_output": "1.44",
+        "sampling_input": "0.58",
+        "sampling_cached_input": "0.116"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling-Small:peft:262144:sampling-nvfp4",
+      "trainable": false,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling-Small",
+      "total_parameters": 276000000000,
+      "active_parameters": 12000000000,
+      "architecture": "MoE",
+      "pricing_source": "serverless.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": null,
+        "sampling_output": "1.20",
+        "sampling_input": "0.30",
+        "sampling_cached_input": "0.06"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling",
+      "total_parameters": 975000000000,
+      "active_parameters": 41000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "11.23",
+        "sampling_output": "4.68",
+        "sampling_input": "1.87",
+        "sampling_cached_input": "0.374"
+      }
+    },
+    {
+      "model_id": "thinkingmachines/Inkling:peft:262144:sampling-nvfp4",
+      "trainable": false,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/thinkingmachines/Inkling",
+      "total_parameters": 975000000000,
+      "active_parameters": 41000000000,
+      "architecture": "MoE",
+      "pricing_source": "serverless.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": null,
+        "sampling_output": "4.05",
+        "sampling_input": "1.00",
+        "sampling_cached_input": "0.17"
+      }
+    },
+    {
+      "model_id": "zai-org/GLM-5.3-Flash:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "total_parameters": 320000000000,
+      "active_parameters": 18000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "5.58",
+        "sampling_output": "2.11",
+        "sampling_input": "0.84",
+        "sampling_cached_input": "0.168"
+      }
+    },
+    {
+      "model_id": "zai-org/GLM-5.3:peft:262144",
+      "trainable": true,
+      "sampleable": true,
+      "max_context_length_reported_by_api": 262144,
+      "model_card": "https://huggingface.co/zai-org/GLM-5.3",
+      "total_parameters": 753000000000,
+      "active_parameters": 40000000000,
+      "architecture": "MoE",
+      "pricing_source": "models.json",
+      "price_note": null,
+      "usd_per_million_tokens": {
+        "training": "14.58",
+        "sampling_output": "12.15",
+        "sampling_input": "3.78",
+        "sampling_cached_input": "0.756"
+      }
+    }
+  ]
+}

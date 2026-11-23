@@ -5314,3 +5314,7 @@ Claude accepted the published diagnostic table v2 at dabb2a22. The acceptance re
 ## A10 overnight completion authority — 2026-11-23T07:51:09.855177+00:00
 
 The owner authorized completing the eleven remaining frozen training arms and their registered greedy evaluations even if the original dollar thresholds are crossed. Codex recorded the decision at c9fd5b59ba4b1c9a190df99d956098de6cb63051, scoped its effect to the frozen requests, retained individual charge forecasts and reservations, and added a final handoff manifest containing every published archive hash. The approved scientific runner and scorer remain pinned to their reviewed versions.
+
+## Tinker account model catalog — 2026-11-23
+
+Codex queried the authenticated SDK capabilities endpoint and joined all 40 returned IDs to the two official USD-per-million-token price feeds. The dated inventory includes the raw metadata, price snapshots, and total-parameter comparison. The inventory used zero paid calls.
