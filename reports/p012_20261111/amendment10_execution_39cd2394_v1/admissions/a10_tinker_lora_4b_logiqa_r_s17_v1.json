@@ -1,0 +1,84 @@
+{
+  "utc": "2026-11-23T10:09:14.629112+00:00",
+  "run_id": "a10_tinker_lora_4b_logiqa_r_s17_v1",
+  "review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
+  "template_sha256": "cd61a23714ff28167d6f970deef2774eb61a446a1ff1690f295a224be4d1f816",
+  "bucket": "train_eval",
+  "buffered_next_usd": 13.696764765999998,
+  "call_buffered_usd": 10.706202375999998,
+  "reserved_post_eval_usd": 2.9905623899999996,
+  "projected_bucket_usd": 25.578510355,
+  "projected_total_usd": 69.197459566,
+  "subcap_usd": 125,
+  "total_cap_usd": 200,
+  "basis": "Frozen training tokens x train rate x 1.5 + $0.10; full 4B greedy token cost x 1.5 from a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
+  "ledger_before": {
+    "S1_accounted_usd": 40.314645282,
+    "spent": {
+      "baseline": 3.3043039289999996,
+      "train_eval": 11.881745589000001
+    },
+    "reserved": {
+      "baseline": 0.0,
+      "train_eval": 0.0
+    },
+    "line_items": [
+      {
+        "run_id": "a10_logiqa_4b_baseline4096_s17_v1",
+        "bucket": "baseline",
+        "completed": true,
+        "token_upper_usd": 1.8243486749999998,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
+      },
+      {
+        "run_id": "a10_logiqa_9b_baseline4096_s17_v1",
+        "bucket": "baseline",
+        "completed": true,
+        "token_upper_usd": 1.479955254,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 1.9937082599999998,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_l_s17_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 0.883850198,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_p_s17_greedy_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 1.9603995449999998,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_p_s17_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 7.0437875860000005,
+        "reserved_usd": 0,
+        "exceeded_reference_limits": []
+      }
+    ],
+    "total_accounted_usd": 55.500694800000005,
+    "total_reserved_usd": 0.0
+  },
+  "replaces_eval_hold_from": null,
+  "admitted": true,
+  "exceeded_reference_limits": [],
+  "authorized_to_continue_over_reference_limits": true,
+  "owner_budget_authority_commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051",
+  "owner_budget_authority_sha256": "a21d8d806d9d5af7cc346f1c8adea6158deaae7588a5c4260860399abd373e29"
+}
