@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-23T07:32:12.948931+00:00",
-  "status": "running",
-  "current_run": "a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
+  "utc": "2026-11-23T07:37:13.893080+00:00",
+  "status": "endpoint_published",
+  "current_run": "a10_tinker_lora_4b_logiqa_l_s17_v1",
   "reason": null,
   "order": [
     "a10_logiqa_4b_baseline4096_s17_v1",
@@ -33,6 +33,13 @@
       "responses": 1572,
       "correct": 1254,
       "independent_audit": "pending_or_see_audit_sidecar"
+    },
+    {
+      "endpoint": "a10_tinker_lora_4b_logiqa_l_s17_v1",
+      "packet": "reports/p012_20261111/amendment10_execution_39cd2394_v1/endpoints/a10_tinker_lora_4b_logiqa_l_s17_v1/README.md",
+      "responses": 1572,
+      "correct": 1204,
+      "independent_audit": "pending_or_see_audit_sidecar"
     }
   ],
   "expected_endpoints": 14,
@@ -40,11 +47,11 @@
     "S1_accounted_usd": 40.314645282,
     "spent": {
       "baseline": 3.3043039289999996,
-      "train_eval": 0.883850198
+      "train_eval": 2.8775584579999998
     },
     "reserved": {
       "baseline": 0.0,
-      "train_eval": 2.7365230124999997
+      "train_eval": 0.0
     },
     "line_items": [
       {
@@ -64,9 +71,9 @@
       {
         "run_id": "a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
         "bucket": "train_eval",
-        "completed": false,
-        "token_upper_usd": 0,
-        "reserved_usd": 2.7365230124999997
+        "completed": true,
+        "token_upper_usd": 1.9937082599999998,
+        "reserved_usd": 0
       },
       {
         "run_id": "a10_tinker_lora_4b_logiqa_l_s17_v1",
@@ -76,8 +83,8 @@
         "reserved_usd": 0
       }
     ],
-    "total_accounted_usd": 44.502799409,
-    "total_reserved_usd": 2.7365230124999997
+    "total_accounted_usd": 46.496507668999996,
+    "total_reserved_usd": 0.0
   },
   "review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
   "scientific_source_commit": "b76682c608e487e9ba2a0be7700430105d6a8792"
