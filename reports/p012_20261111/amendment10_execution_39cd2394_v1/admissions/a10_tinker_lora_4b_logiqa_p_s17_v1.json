@@ -1,0 +1,60 @@
+{
+  "utc": "2026-11-23T07:37:15.990903+00:00",
+  "run_id": "a10_tinker_lora_4b_logiqa_p_s17_v1",
+  "review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
+  "template_sha256": "1c263d225138f6fad5e9db2e780adc931e62388d7312f4d80156ca2cd1dee1e3",
+  "bucket": "train_eval",
+  "buffered_next_usd": 13.656243769,
+  "call_buffered_usd": 10.665681379,
+  "reserved_post_eval_usd": 2.9905623899999996,
+  "projected_bucket_usd": 16.533802227,
+  "projected_total_usd": 60.152751437999996,
+  "subcap_usd": 125,
+  "total_cap_usd": 200,
+  "admitted": true,
+  "basis": "Frozen training tokens x train rate x 1.5 + $0.10; full 4B greedy token cost x 1.5 from a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
+  "ledger_before": {
+    "S1_accounted_usd": 40.314645282,
+    "spent": {
+      "baseline": 3.3043039289999996,
+      "train_eval": 2.8775584579999998
+    },
+    "reserved": {
+      "baseline": 0.0,
+      "train_eval": 0.0
+    },
+    "line_items": [
+      {
+        "run_id": "a10_logiqa_4b_baseline4096_s17_v1",
+        "bucket": "baseline",
+        "completed": true,
+        "token_upper_usd": 1.8243486749999998,
+        "reserved_usd": 0
+      },
+      {
+        "run_id": "a10_logiqa_9b_baseline4096_s17_v1",
+        "bucket": "baseline",
+        "completed": true,
+        "token_upper_usd": 1.479955254,
+        "reserved_usd": 0
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 1.9937082599999998,
+        "reserved_usd": 0
+      },
+      {
+        "run_id": "a10_tinker_lora_4b_logiqa_l_s17_v1",
+        "bucket": "train_eval",
+        "completed": true,
+        "token_upper_usd": 0.883850198,
+        "reserved_usd": 0
+      }
+    ],
+    "total_accounted_usd": 46.496507668999996,
+    "total_reserved_usd": 0.0
+  },
+  "replaces_eval_hold_from": null
+}
