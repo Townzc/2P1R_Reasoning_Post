@@ -1,0 +1,103 @@
+{
+  "task": "logiqa",
+  "authority_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
+  "prediction_commit": "f42dcd1595807406f67ff694e5235447c6814ebc",
+  "length_review_commit": "f0369f2590dfd4f70dab909c81a9d386bde672ae",
+  "cap_authority_commit": "c9a534808e65ec648da1995ba26ee52929509de9",
+  "source_sha256": "3360ca269fe2962638d041ef678720ce6a8276dfd794f08ea9776e50197d96a4",
+  "execution_training_config_sha256": "2611279593a7c82e37fd7273dd3ccc7d285958e4fc093b77be4767714c47578d",
+  "code_commit": "b76682c608e487e9ba2a0be7700430105d6a8792",
+  "accepted_review_commit": "39cd239476400b4e0a1c5ada281e45f8879cb192",
+  "review_status": "accepted",
+  "track": "tinker_lora",
+  "exploratory": true,
+  "excluded_from_H0_H3": true,
+  "rank": 32,
+  "sampling_concurrency": 32,
+  "training_max_length": 8192,
+  "cookbook_commit": "8486b8df2fc32e9713cf96dd5f75d43c7ef70a17",
+  "run_id": "a10_tinker_lora_4b_logiqa_p_s29_v1",
+  "mode": "train",
+  "model": "Qwen/Qwen3.5-4B",
+  "asset": {
+    "repo": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "path": ".local/p012_20261111/tinker_assets_v1/Qwen__Qwen3.5-4B",
+    "files": [
+      {
+        "path": "chat_template.jinja",
+        "bytes": 7756,
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+      },
+      {
+        "path": "config.json",
+        "bytes": 3161,
+        "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12807982,
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 16710,
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      }
+    ]
+  },
+  "seed": 29,
+  "learning_rate": 0.0004905250962784578,
+  "prices_per_million": {
+    "prefill": 0.33,
+    "sample": 1.005,
+    "train": 0.737
+  },
+  "cell": "P",
+  "A10_arm": "P",
+  "dose": {
+    "parents": 4096,
+    "paths_per_parent": 1,
+    "distinct_rows": 4096,
+    "epochs": 2,
+    "presentations": 8192,
+    "effective_batch": 8,
+    "expected_updates": 1024,
+    "constraint": "sample_presentations",
+    "equal_tokens_or_flops_claimed": false
+  },
+  "dataset": {
+    "path": ".local/p012_20261111/amendment10_v1/training_data/p4096_k1.jsonl",
+    "sha256": "926c81db0a57def15629951da13b4541ea3d20c21ff8d969ae0bdb50619e4d5a"
+  },
+  "cpu_counts": {
+    "training_input_tokens": 4778689,
+    "supervised_target_tokens": 3798342,
+    "max_sequence_tokens": 4344,
+    "dataset_rows": 4096,
+    "source_identities_sha256": "344484d9d1e0854a82cf5a806419e4601786e071ef5e817e84475bf438615f67"
+  },
+  "forecast": {
+    "admitted": true,
+    "training_buffered_usd": 10.665681379,
+    "reserved_greedy_usd": 2.9905623899999996,
+    "forecast_usd": 13.656243769,
+    "subcap_usd": 125,
+    "overall_cap_usd": 200,
+    "basis": "Frozen training tokens x train rate x 1.5 + $0.10; full 4B greedy token cost x 1.5 from a10_tinker_lora_4b_logiqa_l_s17_greedy_v1",
+    "admission_file": "reports/p012_20261111/amendment10_execution_39cd2394_v1/admissions/a10_tinker_lora_4b_logiqa_p_s29_v1.json",
+    "admission_sha256": "e4793cfc152abe29d20bbf6b3c0221a6e2378fc4f250efba5168f5d13cc8804f",
+    "owner_budget_authority_commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051",
+    "dollar_limits_are_reporting_thresholds": true
+  }
+}
