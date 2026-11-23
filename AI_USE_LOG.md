@@ -5310,3 +5310,7 @@ Codex applied the scientific source hashes accepted at 39cd2394 and launched the
 After 02713c98 accepted the candidate, Codex ran the diagnostic extractor and compared all 113 loss means to Claude’s independent reference. The maximum difference was zero. All 29 existing fields per row and the seven-row first-boxed appendix matched. Post-run material is in reports/p012_20261111/diagnostics_20261122_v2.
 
 Claude accepted the published diagnostic table v2 at dabb2a22. The acceptance receipt preserves the exact reviewed output hashes.
+
+## A10 overnight completion authority — 2026-11-23T07:51:09.855177+00:00
+
+The owner authorized completing the eleven remaining frozen training arms and their registered greedy evaluations even if the original dollar thresholds are crossed. Codex recorded the decision at c9fd5b59ba4b1c9a190df99d956098de6cb63051, scoped its effect to the frozen requests, retained individual charge forecasts and reservations, and added a final handoff manifest containing every published archive hash. The approved scientific runner and scorer remain pinned to their reviewed versions.

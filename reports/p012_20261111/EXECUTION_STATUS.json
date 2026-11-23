@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-11-23T07:40:23.481166+00:00",
+  "updated_utc": "2026-11-23T07:51:09.855177+00:00",
   "stage": "A10_frozen_baselines_then_training_under_itemwise_gates",
   "plan": "P012 through A10 and accepted addenda1/2",
   "C1": {
@@ -102,8 +102,8 @@
   },
   "retry": "Original infrastructure repair and extra R1 detached restart explicitly approved by owner; no scientific retries performed",
   "next": [
-    "Use the active serial supervisor and reconcile each endpoint before the next admission.",
-    "Relay each independent-review A10 endpoint packet to Claude."
+    "Finish every remaining frozen A10 training arm and its registered greedy evaluation in order.",
+    "Publish each independent review packet and the final commit-pinned handoff."
   ],
   "operational_notes": [
     "Tinker capability response was saved successfully; a later client.close() call without its required status argument raised TypeError. No repeated capability request or model call was used.",
@@ -248,7 +248,10 @@
   "latest_authorization": {
     "scope": "A10 baselines and twelve reviewed training arms",
     "owner_accepted_review": "39cd239476400b4e0a1c5ada281e45f8879cb192",
-    "diagnostic_preuse_review": "02713c9857f938b78df3af64aae62ff568d51264"
+    "diagnostic_preuse_review": "02713c9857f938b78df3af64aae62ff568d51264",
+    "owner_completion_budget_commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051",
+    "remaining_frozen_training_arms": 11,
+    "budget_threshold_action": "record crossing and continue through the final frozen evaluation"
   },
   "amendment4_progress": {
     "base_math": "ALL5_COMPLETE",
@@ -350,7 +353,7 @@
     "T4B_seed29_all4_complete": true
   },
   "pending_owner_actions": [
-    "Relay completed A10 endpoint packets for independent review as they become available."
+    "Relay published review links to Claude."
   ],
   "A6_2_finite_continuation": {
     "status": "complete; all six owned endpoints accepted53a565da/6af18b72;4B M512 posthoc full review passed",
@@ -1501,12 +1504,11 @@
     "training_evaluation_forecast_usd": 133.90605497099997,
     "training_evaluation_subcap_usd": 125,
     "whole_A10_forecast_usd": 179.49640778699998,
-    "A10_hard_cap_usd": 200,
     "training_or_baselines_started": true,
     "full_future_training_forecast_above_subcap": true,
     "next": [
-      "Use the active serial supervisor and reconcile each endpoint before the next admission.",
-      "Relay each independent-review A10 endpoint packet to Claude."
+      "Finish every remaining frozen A10 training arm and its registered greedy evaluation in order.",
+      "Publish each independent review packet and the final commit-pinned handoff."
     ],
     "diagnostic_table": "reports/p012_20261111/diagnostics_20261122_v2/TABLE.md",
     "diagnostic_review_status": "Final diagnostic table accepted by independent post-run audit",
@@ -1525,6 +1527,9 @@
       "a10_logiqa_4b_baseline4096_s17_v1": "c5c7b55541fe520fc2c64862764b76e7d2fa1683",
       "a10_logiqa_9b_baseline4096_s17_v1": "c0bf05a6374ccc5582ebf1e2af23cb620c40f46d",
       "a10_tinker_lora_4b_logiqa_l_s17_v1": "6f420af7dd69c3ac3294e1a493c650ccfd8d5085"
-    }
+    },
+    "original_A10_total_reference_usd": 200,
+    "remaining_queue_budget_authority": "reports/p012_20261111/amendment10_execution_39cd2394_v1/OWNER_COMPLETION_BUDGET_20261122.json",
+    "remaining_queue_budget_commit": "c9fd5b59ba4b1c9a190df99d956098de6cb63051"
   }
 }

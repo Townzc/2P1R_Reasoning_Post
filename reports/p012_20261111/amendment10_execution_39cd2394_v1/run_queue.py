@@ -2,6 +2,7 @@
 import datetime as dt
 import fcntl
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -10,7 +11,7 @@ import time
 import traceback
 
 from evidence import (PUB, PREP, PRIVATE, RUNS, AUTHORITY, REVIEW, CODE, read, write, sha,
-                      require, training_binding, package)
+                      require, training_binding, package, OWNER_BUDGET, OWNER_BUDGET_COMMIT, OWNER_BUDGET_SHA)
 
 LOCAL = Path(".local/p012_20261111")
 sys.path[:0] = [".", str(LOCAL / "amendment7_v1")]
@@ -70,6 +71,10 @@ def schedule_check():
         require(sha(path) == accepted[key+"_sha256"], "Accepted source bytes: "+key)
     cells = read(PREP/"DATA_MANIFEST.json")["cells"]
     require([(x["seed"],x["arm"]) for x in cells] == ARMS, "Frozen schedule")
+    require(sha(OWNER_BUDGET) == OWNER_BUDGET_SHA, "Budget authorization bytes")
+    owner = read(OWNER_BUDGET)
+    require(owner["remaining_training_endpoints"] == ORDER[3:] and owner["accepted_training_review_commit"] == REVIEW,
+            "Owner budget authorization scope")
     for name in ORDER:
         path = TEMPLATES / (name + ".json")
         require(path.read_bytes() == git("show",f"{COMBINED}:{path}"), "Frozen template "+name)
@@ -101,7 +106,8 @@ def ledger(replacing_evaluation=None):
             outstanding += gate["reserved_post_eval_usd"]
         spent[bucket] += measured
         reserved[bucket] += outstanding
-        details.append(dict(run_id=name,bucket=bucket,completed=done,token_upper_usd=measured,reserved_usd=outstanding))
+        details.append(dict(run_id=name,bucket=bucket,completed=done,token_upper_usd=measured,reserved_usd=outstanding,
+                            exceeded_reference_limits=gate.get("exceeded_reference_limits", [])))
     s1 = read(PUB/"INITIAL_BILLING_AND_STORAGE.json")["S1_accounted_usd"]
     return dict(S1_accounted_usd=s1,spent=spent,reserved=reserved,line_items=details,
                 total_accounted_usd=s1+sum(spent.values()),total_reserved_usd=sum(reserved.values()))
@@ -121,7 +127,30 @@ def estimates(name, req, parent):
             "Frozen training tokens x train rate x 1.5 + $0.10; full 4B greedy token cost x 1.5 from " + reference)
 
 
+def budget_decision(name, parent, bucket, projected_bucket, projected_total):
+    require(all(math.isfinite(v) and v >= 0 for v in (projected_bucket, projected_total)), "Invalid cost ledger")
+    require(sha(OWNER_BUDGET) == OWNER_BUDGET_SHA, "Owner budget decision hash")
+    endpoints = read(OWNER_BUDGET)["remaining_training_endpoints"]
+    endpoint = parent or name
+    covered = (bucket == "train_eval" and endpoint in endpoints
+               and (parent is None or name == evaluation_of(parent)))
+    exceeded = []
+    if projected_bucket > CAP[bucket]:
+        exceeded.append(bucket)
+    if projected_total > 200:
+        exceeded.append("A10_total")
+    decision = dict(admitted=covered or not exceeded, exceeded_reference_limits=exceeded,
+                    authorized_to_continue_over_reference_limits=covered)
+    if covered:
+        decision.update(owner_budget_authority_commit=OWNER_BUDGET_COMMIT, owner_budget_authority_sha256=OWNER_BUDGET_SHA)
+    return decision
+
+
 def resolve_request(name, parent=None, binding=None):
+    if parent is None:
+        require(name in ORDER, "Request is outside the frozen endpoint order")
+    else:
+        require(parent in ORDER[2:] and name == evaluation_of(parent), "Unregistered post-training evaluation")
     template = TEMPLATES/((FIRST[0] if parent else name)+".json")
     req = read(template)
     if parent:
@@ -142,8 +171,8 @@ def resolve_request(name, parent=None, binding=None):
             gate = dict(utc=utc(),run_id=name,review_commit=REVIEW,template_sha256=sha(template),
                         bucket=bucket,buffered_next_usd=next_cost,call_buffered_usd=call,reserved_post_eval_usd=hold,
                         projected_bucket_usd=bucket_cost,projected_total_usd=total_cost,subcap_usd=CAP[bucket],
-                        total_cap_usd=200,admitted=bucket_cost<=CAP[bucket] and total_cost<=200,
-                        basis=basis,ledger_before=books,replaces_eval_hold_from=parent)
+                        total_cap_usd=200, basis=basis,ledger_before=books,replaces_eval_hold_from=parent,
+                        **budget_decision(name,parent,bucket,bucket_cost,total_cost))
             write(gatepath, gate)
         gate = read(gatepath)
         if not gate["admitted"]:
@@ -153,6 +182,9 @@ def resolve_request(name, parent=None, binding=None):
             req["forecast"].update(admitted=True,forecast_usd=gate["buffered_next_usd"],basis=gate["basis"],
                                    subcap_usd=gate["subcap_usd"],overall_cap_usd=200,
                                    admission_file=str(gatepath),admission_sha256=sha(gatepath))
+            if gate.get("owner_budget_authority_commit"):
+                req["forecast"]["owner_budget_authority_commit"] = gate["owner_budget_authority_commit"]
+                req["forecast"]["dollar_limits_are_reporting_thresholds"] = True
             if req["mode"] == "train":
                 req["forecast"]["reserved_greedy_usd"] = gate["reserved_post_eval_usd"]
             write(reqpath,req)
@@ -201,13 +233,56 @@ def published_packets():
     return packets
 
 
+def final_review(packets, books):
+    require([item["endpoint"] for item in packets] == ORDER, "Missing endpoint in final review")
+    manifest = read(PREP/"DATA_MANIFEST.json")
+    expected = {(c["arm"], c["seed"]):c for c in manifest["cells"]}
+    bindings = []
+    updates = 0
+    for item in packets:
+        name = item["endpoint"]
+        directory = PUB/"endpoints"/name
+        result = read(directory/"RESULTS.json")
+        inputs = read(directory/"INPUT_MANIFEST.json")
+        require(result["responses"] == item["responses"] == 1572 and result["endpoint"] == name,
+                "Final endpoint coverage: " + name)
+        require(sha(directory/"evidence.zip") == inputs["archive_sha256"], "Final archive hash: " + name)
+        dose = None
+        if name not in FIRST:
+            dose = result["training"]["cell"]
+            require(dose == expected.pop((dose["arm"],dose["seed"])), "Final training identity: " + name)
+            updates += dose["updates"]
+        bindings.append(dict(endpoint=name, review_packet=item["packet_url"], packet_commit=item["packet_commit"],
+                             independent_audit_at_delivery=item["independent_audit"], dose=dose,
+                             correct=result["correct"], responses=result["responses"],
+                             raw_sha256=result["raw_sha256"], labels_sha256=result["labels_sha256"],
+                             evidence_zip_sha256=inputs["archive_sha256"], input_manifest_sha256=sha(directory/"INPUT_MANIFEST.json")))
+    require(not expected and updates == sum(c["updates"] for c in manifest["cells"]), "Final registered doses")
+    dest = PUB/"FINAL_REVIEW.json"
+    if dest.exists():
+        require(read(dest)["endpoints"] and [b["packet_commit"] for b in read(dest)["endpoints"]]
+                == [b["packet_commit"] for b in bindings], "Final delivery snapshot binding")
+        return dest
+    write(dest,dict(utc=utc(), scientific_review=REVIEW, frozen_plan=AUTHORITY,
+                    owner_budget_authority=OWNER_BUDGET_COMMIT, review_index=str(PUB/"REVIEW_LINKS.md"),
+                    endpoints=bindings, total_endpoints=len(bindings), total_training_updates=updates,
+                    total_greedy_outputs=sum(b["responses"] for b in bindings), final_token_ledger=books))
+    return dest
+
+
 def status(stage,name=None,reason=None):
     packets = published_packets()
     record = dict(utc=utc(),status=stage,current_run=name,reason=reason,order=ORDER,
                   endpoints_published=packets,expected_endpoints=14,budget=ledger(),
+                  remaining_queue_budget_authority=dict(commit=OWNER_BUDGET_COMMIT, path=str(OWNER_BUDGET),
+                      original_reference_limits_usd={"train_eval":125, "A10_total":200},
+                      effect="Publish any threshold crossing and continue the owner's frozen queue"),
                   review_commit=REVIEW,scientific_source_commit=CODE)
     write(PUB/"STATUS.json",record)
-    publish([PUB/"REVIEW_LINKS.md",PUB/"STATUS.json"],"P012 A10: "+stage+" "+(name or "14 endpoints"))
+    paths = [PUB/"REVIEW_LINKS.md",PUB/"STATUS.json"]
+    if stage == "complete":
+        paths.append(final_review(packets, record["budget"]))
+    publish(paths,"P012 A10: "+stage+" "+(name or "14 endpoints"))
 
 
 def await_run(name, parent=None, binding=None):

@@ -12,6 +12,9 @@ RUNS = PRIVATE / "runs"
 AUTHORITY = "f42dcd1595807406f67ff694e5235447c6814ebc"
 REVIEW = "39cd239476400b4e0a1c5ada281e45f8879cb192"
 CODE = "b76682c608e487e9ba2a0be7700430105d6a8792"
+OWNER_BUDGET = PUB / "OWNER_COMPLETION_BUDGET_20261122.json"
+OWNER_BUDGET_COMMIT = "c9fd5b59ba4b1c9a190df99d956098de6cb63051"
+OWNER_BUDGET_SHA = "a21d8d806d9d5af7cc346f1c8adea6158deaae7588a5c4260860399abd373e29"
 
 
 def read(path):
@@ -141,6 +144,12 @@ def package(endpoint, evaluation, binding=None):
     for name in dict.fromkeys((endpoint, evaluation)):
         for folder in ("requests", "admissions", "launches"):
             members[f"execution/{folder}/{name}.json"] = PUB / folder / (name + ".json")
+        gate = read(PUB / "admissions" / (name + ".json"))
+        if gate.get("owner_budget_authority_commit"):
+            require(gate["owner_budget_authority_commit"] == OWNER_BUDGET_COMMIT
+                    and gate["owner_budget_authority_sha256"] == sha(OWNER_BUDGET) == OWNER_BUDGET_SHA,
+                    "Owner budget decision binding")
+            members["execution/" + OWNER_BUDGET.name] = OWNER_BUDGET
     files("frozen", PREP, ["EVALUATION_IDENTITIES.json", "EVALUATION_MANIFEST.json", "ACCEPTED_REVIEW.json"])
     if binding:
         files("training", RUNS / endpoint, ["request.json", "result/REQUEST.json", "result/COMPLETE.json",
